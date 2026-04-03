@@ -1,7 +1,4 @@
-# Internal reports — not published
+# Internal reports — not published to GitHub
 Internal/
-
-# Stakeholder source — published via reports/ directory
-Stakeholder/
 
 .DS_Store
