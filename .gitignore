@@ -1,0 +1,7 @@
+# Internal reports — not published
+Internal/
+
+# Stakeholder source — published via reports/ directory
+Stakeholder/
+
+.DS_Store

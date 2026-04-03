@@ -1,0 +1,1294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sprint 0 Handover Report | Arrowfish VPN</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background-color: #ffffff;
+            color: #333;
+            line-height: 1.7;
+            font-size: 15px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 24px;
+        }
+
+        /* Language Toggle */
+        .lang-toggle {
+            position: fixed;
+            top: 24px;
+            right: 24px;
+            display: flex;
+            gap: 8px;
+            z-index: 1000;
+            background: white;
+            padding: 8px;
+            border-radius: 20px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+        }
+
+        .lang-btn {
+            padding: 6px 16px;
+            border: none;
+            background: transparent;
+            border-radius: 16px;
+            cursor: pointer;
+            font-size: 13px;
+            font-weight: 500;
+            color: #666;
+            transition: all 0.2s ease;
+        }
+
+        .lang-btn.active {
+            background-color: #1a73e8;
+            color: white;
+        }
+
+        .lang-btn:hover {
+            background-color: #f0f0f0;
+        }
+
+        .lang-btn.active:hover {
+            background-color: #1557b0;
+        }
+
+        /* Language Sections */
+        .lang-section {
+            display: none;
+        }
+
+        .lang-section.active {
+            display: block;
+        }
+
+        /* Header */
+        .report-header {
+            margin-bottom: 48px;
+            border-bottom: 1px solid #e8e8e8;
+            padding-bottom: 32px;
+        }
+
+        .report-title {
+            font-size: 28px;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 16px;
+        }
+
+        .report-meta {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 20px;
+            font-size: 13px;
+            color: #666;
+        }
+
+        .meta-item {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .meta-label {
+            font-weight: 500;
+            color: #999;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .meta-value {
+            color: #333;
+            font-weight: 500;
+        }
+
+
+        /* Section */
+        .section {
+            margin-bottom: 48px;
+        }
+
+        .section-heading {
+            font-size: 20px;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 20px;
+            padding-left: 16px;
+            border-left: 4px solid #1a73e8;
+        }
+
+        .section-body {
+            margin-bottom: 24px;
+            line-height: 1.8;
+            color: #444;
+        }
+
+        .section-note {
+            font-size: 13px;
+            color: #666;
+            margin-top: 12px;
+            padding: 12px;
+            background-color: #f8f9fa;
+            border-radius: 4px;
+            border-left: 3px solid #1a73e8;
+        }
+
+        /* Milestone Cards */
+        .milestone-container {
+            display: grid;
+            gap: 12px;
+            margin-top: 16px;
+        }
+
+        .milestone {
+            display: flex;
+            gap: 16px;
+            align-items: flex-start;
+            background-color: #f8f9fa;
+            padding: 16px;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+        }
+
+        .milestone-date {
+            background-color: #1a73e8;
+            color: white;
+            padding: 8px 12px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: 600;
+            white-space: nowrap;
+            min-width: 80px;
+            text-align: center;
+        }
+
+        .milestone-text {
+            flex: 1;
+            font-size: 14px;
+            font-weight: 500;
+            color: #333;
+        }
+
+        /* Tables */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background-color: white;
+        }
+
+        th {
+            background-color: #f8f9fa;
+            padding: 12px;
+            text-align: left;
+            font-size: 14px;
+            font-weight: 600;
+            color: #333;
+            border-bottom: 1px solid #e8e8e8;
+        }
+
+        td {
+            padding: 12px;
+            border-bottom: 1px solid #e8e8e8;
+            font-size: 14px;
+            color: #444;
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        /* Key Findings Cards */
+        .findings-container {
+            display: grid;
+            gap: 16px;
+            margin-top: 20px;
+        }
+
+        .finding-card {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+            border-left: 4px solid #1a73e8;
+        }
+
+        .finding-title {
+            font-size: 14px;
+            font-weight: 600;
+            color: #1a73e8;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .finding-content {
+            font-size: 14px;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        /* Lists */
+        .task-list {
+            list-style: none;
+            margin: 16px 0;
+        }
+
+        .task-list li {
+            padding: 8px 0 8px 24px;
+            position: relative;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        .task-list li:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 8px;
+            width: 8px;
+            height: 8px;
+            background-color: #1a73e8;
+            border-radius: 50%;
+        }
+
+        /* Status Badge */
+        .status-badge {
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 600;
+            margin-right: 8px;
+            margin-bottom: 8px;
+        }
+
+        .status-resolved {
+            background-color: #d4edda;
+            color: #155724;
+        }
+
+        .status-enhanced {
+            background-color: #cfe2ff;
+            color: #084298;
+        }
+
+        /* Footer */
+        .report-footer {
+            margin-top: 48px;
+            padding-top: 24px;
+            border-top: 1px solid #e8e8e8;
+            font-size: 12px;
+            color: #999;
+            text-align: right;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .report-meta {
+                grid-template-columns: 1fr;
+                gap: 12px;
+            }
+
+            .lang-toggle {
+                position: static;
+                justify-content: flex-end;
+                margin-bottom: 24px;
+            }
+
+            .report-title {
+                font-size: 24px;
+            }
+
+            .section-heading {
+                font-size: 18px;
+            }
+
+            table {
+                font-size: 13px;
+            }
+
+            th, td {
+                padding: 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 20px 16px;
+            }
+
+            .report-title {
+                font-size: 20px;
+            }
+
+            .section-heading {
+                font-size: 16px;
+            }
+        }
+
+        /* Print */
+        @media print {
+            .lang-toggle {
+                display: none;
+            }
+
+            body {
+                font-family: Georgia, 'Times New Roman', serif;
+                font-size: 14px;
+            }
+
+            .container {
+                max-width: 100%;
+                padding: 0;
+            }
+
+            .report-header {
+                page-break-after: avoid;
+            }
+
+            .section {
+                page-break-inside: avoid;
+            }
+        }
+
+        /* Status Colors */
+        .status-default { background-color: #F2F2F2; }
+        .status-green { background-color: #B7D7C9; }
+        .status-yellow { background-color: #E6DFAF; }
+        .status-red { background-color: #DCCACA; }
+
+        .status-legend {
+            display: flex;
+            gap: 16px;
+            margin: 12px 0 24px;
+            font-size: 12px;
+            color: #666;
+            flex-wrap: wrap;
+        }
+
+        .status-legend-item {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .status-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 2px;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <div class="lang-toggle">
+        <button class="lang-btn" onclick="setLanguage('en')">EN</button>
+        <button class="lang-btn active" onclick="setLanguage('cn')">CN</button>
+    </div>
+
+    <div class="container">
+        <!-- English Section -->
+        <div class="lang-section" id="en">
+            <!-- Header -->
+            <div class="report-header">
+                <h1 class="report-title">Sprint 0 Handover Report: Stabilization & Preparation</h1>
+                <div class="report-meta">
+                    <div class="meta-item">
+                        <span class="meta-label">Period</span>
+                        <span class="meta-value">26 March – 3 April 2026</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Team</span>
+                        <span class="meta-value">Malaysia</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Prepared for</span>
+                        <span class="meta-value">SunBoss</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Executive Summary -->
+            <div class="section">
+                <h2 class="section-heading">Executive Summary</h2>
+                <div class="section-body">
+                    The Malaysia team completed an 8-day assessment and stabilization phase following the December 2025 transition from the Taiwan outsourcing team. With full system access from 26/03 and comprehensive documentation delivered 31/03, the team conducted a thorough platform audit and began addressing the most critical issues:
+                </div>
+                <ul class="task-list">
+                    <li>Revenue Protection: Discovered Samsung IAP and AdMob in test mode ($0 revenue) — production configurations being prepared</li>
+                    <li>User Abuse Prevention: Identified free-tier loopholes allowing 1,200+ GB/month per user — enforcement under development</li>
+                    <li>App Stability: Identified 13 critical crash/freeze bugs affecting retention — initial fixes in progress</li>
+                    <li>Cost Efficiency: Identified ~$415/month in avoidable spending</li>
+                </ul>
+                <div class="section-body" style="margin-top: 24px; font-weight: 500;">
+                    Status: Assessment complete, Sprint 1 development underway. Full stabilization expected by mid-May 2026.
+                </div>
+            </div>
+
+            <!-- Takeover Timeline -->
+            <div class="section">
+                <h2 class="section-heading">Takeover Timeline</h2>
+                <div class="milestone-container">
+                    <div class="milestone status-green">
+                        <div class="milestone-date">Dec 2025</div>
+                        <div class="milestone-text">Malaysia team onboarded; Taiwan team advisory</div>
+                    </div>
+                    <div class="milestone status-green">
+                        <div class="milestone-date">25 Mar</div>
+                        <div class="milestone-text">Server migration from Taiwan office (data: code repos, CI/CD, monitoring)</div>
+                    </div>
+                    <div class="milestone status-green">
+                        <div class="milestone-date">26 Mar</div>
+                        <div class="milestone-text">Full system credentials received</div>
+                    </div>
+                    <div class="milestone status-green">
+                        <div class="milestone-date">31 Mar</div>
+                        <div class="milestone-text">Comprehensive handover documentation delivered</div>
+                    </div>
+                    <div class="milestone status-green">
+                        <div class="milestone-date">01 Apr</div>
+                        <div class="milestone-text">Mobile platform issues documented with solutions</div>
+                    </div>
+                    <div class="milestone status-green">
+                        <div class="milestone-date">03 Apr</div>
+                        <div class="milestone-text">Stabilization phase complete</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Business Impact — Revenue Protection -->
+            <div class="section">
+                <h2 class="section-heading">Business Impact — Revenue Protection</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Issue</th>
+                            <th>Impact</th>
+                            <th>Resolution</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Samsung IAP in Test Mode</td>
+                            <td>$0 app purchase revenue</td>
+                            <td>Switched to production</td>
+                            <td><span class="status-badge status-resolved">Under Development</span></td>
+                        </tr>
+                        <tr>
+                            <td>Google AdMob Test ID</td>
+                            <td>$0 ad revenue</td>
+                            <td>Activated production account</td>
+                            <td><span class="status-badge status-resolved">Under Development</span></td>
+                        </tr>
+                        <tr>
+                            <td>Free User Data Cap Missing</td>
+                            <td>Top user: 1,216 GB/mo (~$150/mo cost)</td>
+                            <td>Server-side 50GB monthly limit</td>
+                            <td><span class="status-badge status-resolved">Under Development</span></td>
+                        </tr>
+                        <tr>
+                            <td>Unlimited Device Access</td>
+                            <td>Free users on unlimited devices</td>
+                            <td>Per-tier limit (1 free, 3+ paid)</td>
+                            <td><span class="status-badge status-resolved">Under Development</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="status-legend">
+                    <div class="status-legend-item"><span class="status-dot" style="background:#F2F2F2"></span>On track</div>
+                    <div class="status-legend-item"><span class="status-dot" style="background:#B7D7C9"></span>Released</div>
+                    <div class="status-legend-item"><span class="status-dot" style="background:#E6DFAF"></span>Delayed</div>
+                    <div class="status-legend-item"><span class="status-dot" style="background:#DCCACA"></span>At risk</div>
+                </div>
+                <div class="section-note">
+                    These four fixes are the team's top priority for Sprint 1. Expected to be code-complete by mid-April, with deployment in mid-May.
+                </div>
+            </div>
+
+            <!-- Business Impact — Platform Stability -->
+            <div class="section">
+                <h2 class="section-heading">Business Impact — Platform Stability</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Issue</th>
+                            <th>Count</th>
+                            <th>Details</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Critical Crashes</td>
+                            <td>13 bugs</td>
+                            <td>App crash, connectivity loss, black screen</td>
+                            <td><span class="status-badge status-resolved">Under Development</span></td>
+                        </tr>
+                        <tr>
+                            <td>Free Trial UX</td>
+                            <td>Incomplete</td>
+                            <td>Users can't see remaining trial time</td>
+                            <td><span class="status-badge status-enhanced">Solution Designed</span>
+                        </tr>
+                        <tr>
+                            <td>User Onboarding</td>
+                            <td>Partial</td>
+                            <td>No upgrade path visibility</td>
+                            <td><span class="status-badge status-enhanced">Planned</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Business Impact — Cost Efficiency -->
+            <div class="section">
+                <h2 class="section-heading">Business Impact — Cost Efficiency</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Category</th>
+                            <th>Cost</th>
+                            <th>Details</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>All VPN Nodes</td>
+                            <td>$1,988/mo</td>
+                            <td>25 providers, fragmented</td>
+                        </tr>
+                        <tr>
+                            <td>Test Infrastructure (Lisahost)</td>
+                            <td>~$412/mo (2,988 CNY)</td>
+                            <td>6 of 9 nodes labeled "test use" still active</td>
+                        </tr>
+                        <tr>
+                            <td>Redundant Backend Servers</td>
+                            <td>~$325/mo</td>
+                            <td>HK server ($243) + Azure VM ($82)</td>
+                        </tr>
+                        <tr>
+                            <td>Identified Waste</td>
+                            <td>~$415/mo</td>
+                            <td>Actionable | Removal in Sprint 1-2</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Key Findings -->
+            <div class="section">
+                <h2 class="section-heading">Key Findings</h2>
+                <div class="findings-container">
+                    <div class="finding-card">
+                        <div class="finding-title">1. Revenue Channels (Under Development)</div>
+                        <div class="finding-content">
+                            Both monetization channels were non-functional (Samsung IAP test mode, Google AdMob test account). Production configurations being prepared. Revenue should normalize after deployment.
+                        </div>
+                    </div>
+                    <div class="finding-card">
+                        <div class="finding-title">2. Free User Abuse (Identified — Solution Under Development)</div>
+                        <div class="finding-content">
+                            No usage restrictions existed. One user consumed 1,216 GB/month. Designing: 50 GB/mo data cap, 1-device limit (free), daily VPN time tracking. Will prevent $100-150/mo abuse cost per account upon deployment.
+                        </div>
+                    </div>
+                    <div class="finding-card">
+                        <div class="finding-title">3. Platform Stability (Under Development)</div>
+                        <div class="finding-content">
+                            13 critical crash patterns identified and root-caused. Initial fixes being implemented. Expected: fewer 1-star reviews, improved retention.
+                        </div>
+                    </div>
+                    <div class="finding-card">
+                        <div class="finding-title">4. Infrastructure Costs (Partially Resolved)</div>
+                        <div class="finding-content">
+                            25 providers fragmented. Lisahost: 6 "test" nodes (~2,988 CNY/mo ≈ $412). Redundant servers ~$325/mo. Meeting with Lex on 07/04 for clarification. Savings: ~$415/mo immediate, $700+/mo long-term.
+                        </div>
+                    </div>
+                    <div class="finding-card">
+                        <div class="finding-title">5. Trial Conversion (Solution Designed)</div>
+                        <div class="finding-content">
+                            Free trial users had no visibility into remaining time. Enhanced API shows days remaining + data usage. In-app upgrade prompts added. Expected: +0.3-0.5% conversion = ~$3,000-5,000/mo.
+                        </div>
+                    </div>
+                    <div class="finding-card">
+                        <div class="finding-title">6. Security Hardening (In Progress)</div>
+                        <div class="finding-content">
+                            Completed: Removed sensitive data from logs, database access restricted, activity tracking hardened. Planned (Sprint 1 Week 1): Redis password authentication (30-minute task).
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- China Connectivity -->
+            <div class="section">
+                <h2 class="section-heading">China Connectivity</h2>
+                <div class="section-body">
+                    Taiwan team flagged latency and GFW concerns. Documented but not yet quantified. Data-driven monitoring planned after deployment. Analysis scheduled for May.
+                </div>
+            </div>
+
+            <!-- Roadmap — Projections -->
+            <div class="section">
+                <h2 class="section-heading">Roadmap — Projections</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Metric</th>
+                            <th>Current</th>
+                            <th>Projected (Post-Sprint 1)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Monthly Node Costs</td>
+                            <td>$1,988</td>
+                            <td>$1,551 (after optimizations)</td>
+                        </tr>
+                        <tr>
+                            <td>Abuse Prevention Savings</td>
+                            <td>$0</td>
+                            <td>~$112-150</td>
+                        </tr>
+                        <tr>
+                            <td>Infrastructure Savings</td>
+                            <td>$0</td>
+                            <td>~$325</td>
+                        </tr>
+                        <tr>
+                            <td>Revenue Channels</td>
+                            <td>2/2 active</td>
+                            <td>2/2 optimized</td>
+                        </tr>
+                        <tr>
+                            <td>Trial Conversion</td>
+                            <td>Baseline</td>
+                            <td>+0.3-0.5%</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Roadmap — Milestones -->
+            <div class="section">
+                <h2 class="section-heading">Roadmap — Milestones</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Milestone</th>
+                            <th>Target Date</th>
+                            <th>Purpose</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Platform Assessment Complete</td>
+                            <td>Early April</td>
+                            <td>Full audit of issues, priorities, and architecture</td>
+                        </tr>
+                        <tr>
+                            <td>Staging Environment Ready</td>
+                            <td>Late April</td>
+                            <td>Safe testing before production</td>
+                        </tr>
+                        <tr>
+                            <td>QA App Build (Internal Testing)</td>
+                            <td>Late April</td>
+                            <td>Beta testing with select users</td>
+                        </tr>
+                        <tr>
+                            <td>Production Release</td>
+                            <td>Mid-May</td>
+                            <td>All fixes + abuse prevention live</td>
+                        </tr>
+                        <tr>
+                            <td>Infrastructure Consolidation</td>
+                            <td>May-June</td>
+                            <td>~$415/mo savings projected</td>
+                        </tr>
+                        <tr>
+                            <td>Multi-Platform App Rebuild</td>
+                            <td>Sprint 2 (June+)</td>
+                            <td>New app: Android, iOS, Windows — Flutter codebase too degraded to refactor</td>
+                        </tr>
+                        <tr>
+                            <td>Protocol Upgrade</td>
+                            <td>July-August</td>
+                            <td>Performance improvements</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Resources Needed -->
+            <div class="section">
+                <h2 class="section-heading">Resources Needed</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Resource</th>
+                            <th>Purpose</th>
+                            <th>Timeline</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Android Development SDK</td>
+                            <td>Local dev environment</td>
+                            <td>Immediate</td>
+                        </tr>
+                        <tr>
+                            <td>Staging Server</td>
+                            <td>Safe testing environment</td>
+                            <td>By 12/04</td>
+                        </tr>
+                        <tr>
+                            <td>QA Team / Testers</td>
+                            <td>Beta + regression testing</td>
+                            <td>By 15/04</td>
+                        </tr>
+                        <tr>
+                            <td>Payment Gateway Docs</td>
+                            <td>Active gateways unclear — team investigating from DB. Need: which active, why others disabled</td>
+                            <td>By 07/04 (Lex meeting)</td>
+                        </tr>
+                        <tr>
+                            <td>Lisahost Account Clarification</td>
+                            <td>Confirm 6 "test" nodes</td>
+                            <td>By 07/04</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Financial Summary -->
+            <div class="section">
+                <h2 class="section-heading">Financial Summary</h2>
+                <div class="section-body">
+                    <strong>Projected:</strong> Revenue channels pending deployment, $100-150/mo savings per blocked abuse account, ~$415/mo waste identified for Q2 removal.
+                </div>
+                <div class="section-body">
+                    <strong>Projected:</strong> +0.3-0.5% conversion = $3,000-5,000/mo, infrastructure consolidation $500-700+/mo, retention improvements.
+                </div>
+                <div class="section-body">
+                    <strong>Total identified value:</strong> ~$415/mo projected + $3,500-5,700/mo potential.
+                </div>
+            </div>
+
+            <!-- Next Steps -->
+            <div class="section">
+                <h2 class="section-heading">Next Steps</h2>
+                <ul class="task-list">
+                    <li>Before 06/04: Confirm Lisahost status, provide payment docs, arrange Android SDK</li>
+                    <li>06/04: Sprint 1 kickoff — 5 developers, phase breakdown, parallel workstreams</li>
+                    <li>07/04: Lex (Taiwan developer) validates plan, discusses GFW/latency, institutional knowledge</li>
+                    <li>Ongoing: Weekly reports from 10/04, monthly financial reviews, quarterly impact summaries</li>
+                </ul>
+            </div>
+
+            <!-- Risk Assessment -->
+            <div class="section">
+                <h2 class="section-heading">Risk Assessment</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Risk</th>
+                            <th>Level</th>
+                            <th>Mitigation</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Lisahost nodes unjustified</td>
+                            <td>Medium</td>
+                            <td>Clarification meeting 07/04</td>
+                        </tr>
+                        <tr>
+                            <td>Staging delays</td>
+                            <td>Low</td>
+                            <td>Lightweight testing; full staging by 12/04</td>
+                        </tr>
+                        <tr>
+                            <td>Payment gateway misconfiguration</td>
+                            <td>Low</td>
+                            <td>Team investigating from DB directly</td>
+                        </tr>
+                        <tr>
+                            <td>China connectivity underestimated</td>
+                            <td>Medium</td>
+                            <td>Deploy monitoring; data-driven approach</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Footer -->
+            <div class="report-footer">
+                <p>Status: Assessment complete, development underway. Next Report: 10 April 2026.</p>
+            </div>
+        </div>
+
+        <!-- Chinese Section -->
+        <div class="lang-section active" id="cn">
+            <!-- Header -->
+            <div class="report-header">
+                <h1 class="report-title">Sprint 0 交接报告：稳定与准备阶段</h1>
+                <div class="report-meta">
+                    <div class="meta-item">
+                        <span class="meta-label">周期</span>
+                        <span class="meta-value">2026年3月26日 – 4月3日</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">团队</span>
+                        <span class="meta-value">马来西亚</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">报告对象</span>
+                        <span class="meta-value">SunBoss</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Executive Summary -->
+            <div class="section">
+                <h2 class="section-heading">执行总结</h2>
+                <div class="section-body">
+                    马来西亚团队在2025年12月从台湾外包团队交接后，完成了8天的评估与稳定阶段。自26/03获得完整系统访问权，31/03交接文档已交付，团队进行了全面的平台审计并开始处理最关键的问题：
+                </div>
+                <ul class="task-list">
+                    <li>收入保护：发现三星IAP和AdMob处于测试模式（零收入）— 生产配置准备中</li>
+                    <li>防止用户滥用：发现允许免费用户每月使用1,200+ GB的漏洞 — 服务端限制开发中</li>
+                    <li>应用稳定性：发现13个影响留存的关键崩溃/冻结问题 — 初步修复进行中</li>
+                    <li>成本效率：识别出约$415/月的可避免支出</li>
+                </ul>
+                <div class="section-body" style="margin-top: 24px; font-weight: 500;">
+                    状态：评估完成，Sprint 1 开发进行中。完全稳定预计5月中旬完成。
+                </div>
+            </div>
+
+            <!-- Takeover Timeline -->
+            <div class="section">
+                <h2 class="section-heading">交接时间表</h2>
+                <div class="milestone-container">
+                    <div class="milestone status-green">
+                        <div class="milestone-date">2025年12月</div>
+                        <div class="milestone-text">马来西亚团队启动；台湾团队提供咨询</div>
+                    </div>
+                    <div class="milestone status-green">
+                        <div class="milestone-date">3月25日</div>
+                        <div class="milestone-text">从台湾办公室迁移服务器（代码库、CI/CD、监控）</div>
+                    </div>
+                    <div class="milestone status-green">
+                        <div class="milestone-date">3月26日</div>
+                        <div class="milestone-text">收到完整系统凭据</div>
+                    </div>
+                    <div class="milestone status-green">
+                        <div class="milestone-date">3月31日</div>
+                        <div class="milestone-text">交接文档已交付</div>
+                    </div>
+                    <div class="milestone status-green">
+                        <div class="milestone-date">4月1日</div>
+                        <div class="milestone-text">移动平台问题已记录并附带解决方案</div>
+                    </div>
+                    <div class="milestone status-green">
+                        <div class="milestone-date">4月3日</div>
+                        <div class="milestone-text">稳定阶段完成</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Business Impact — Revenue Protection -->
+            <div class="section">
+                <h2 class="section-heading">业务影响 — 收入保护</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>问题</th>
+                            <th>影响</th>
+                            <th>解决方案</th>
+                            <th>状态</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>三星IAP处于测试模式</td>
+                            <td>应用内购买收入为$0</td>
+                            <td>切换至生产模式</td>
+                            <td><span class="status-badge status-resolved">开发中</span></td>
+                        </tr>
+                        <tr>
+                            <td>Google AdMob测试ID</td>
+                            <td>广告收入为$0</td>
+                            <td>启用生产账户</td>
+                            <td><span class="status-badge status-resolved">开发中</span></td>
+                        </tr>
+                        <tr>
+                            <td>免费用户数据限制缺失</td>
+                            <td>顶级用户：每月1,216 GB（~$150/月成本）</td>
+                            <td>服务器端每月50GB限制</td>
+                            <td><span class="status-badge status-resolved">开发中</span></td>
+                        </tr>
+                        <tr>
+                            <td>无限设备访问</td>
+                            <td>免费用户可使用无限数量设备</td>
+                            <td>按等级限制（免费1个，付费3个+）</td>
+                            <td><span class="status-badge status-resolved">开发中</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="status-legend">
+                    <div class="status-legend-item"><span class="status-dot" style="background:#F2F2F2"></span>按计划</div>
+                    <div class="status-legend-item"><span class="status-dot" style="background:#B7D7C9"></span>已发布</div>
+                    <div class="status-legend-item"><span class="status-dot" style="background:#E6DFAF"></span>延迟</div>
+                    <div class="status-legend-item"><span class="status-dot" style="background:#DCCACA"></span>风险中</div>
+                </div>
+                <div class="section-note">
+                    这四项修复是 Sprint 1 的最高优先级。预计4月中旬开发完成，5月中旬部署。
+                </div>
+            </div>
+
+            <!-- Business Impact — Platform Stability -->
+            <div class="section">
+                <h2 class="section-heading">业务影响 — 平台稳定性</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>问题</th>
+                            <th>数量</th>
+                            <th>详情</th>
+                            <th>状态</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>关键崩溃</td>
+                            <td>13个错误</td>
+                            <td>应用崩溃、连接断裂、黑屏</td>
+                            <td><span class="status-badge status-resolved">开发中</span></td>
+                        </tr>
+                        <tr>
+                            <td>免费试用UX</td>
+                            <td>不完整</td>
+                            <td>用户无法查看剩余试用时间</td>
+                            <td><span class="status-badge status-enhanced">方案已设计</span></td>
+                        </tr>
+                        <tr>
+                            <td>用户入门流程</td>
+                            <td>部分</td>
+                            <td>无升级路径提示</td>
+                            <td><span class="status-badge status-enhanced">已规划</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Business Impact — Cost Efficiency -->
+            <div class="section">
+                <h2 class="section-heading">业务影响 — 成本效率</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>类别</th>
+                            <th>成本</th>
+                            <th>详情</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>所有VPN节点</td>
+                            <td>$1,988/月</td>
+                            <td>25个提供商，分散管理</td>
+                        </tr>
+                        <tr>
+                            <td>测试基础设施（Lisahost）</td>
+                            <td>~$412/月（2,988元）</td>
+                            <td>9个节点中有6个标记为"测试使用"但仍在运行</td>
+                        </tr>
+                        <tr>
+                            <td>冗余后端服务器</td>
+                            <td>~$325/月</td>
+                            <td>香港服务器（$243）+ Azure虚拟机（$82）</td>
+                        </tr>
+                        <tr>
+                            <td>已识别浪费</td>
+                            <td>~$415/月</td>
+                            <td>可操作项 | Sprint 1-2 期间清除</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Key Findings -->
+            <div class="section">
+                <h2 class="section-heading">关键发现</h2>
+                <div class="findings-container">
+                    <div class="finding-card">
+                        <div class="finding-title">1. 收入渠道（开发中）</div>
+                        <div class="finding-content">
+                            两个货币化渠道无法正常运行（三星IAP测试模式、Google AdMob测试账户）。生产配置准备中。收入应在部署后恢复正常。
+                        </div>
+                    </div>
+                    <div class="finding-card">
+                        <div class="finding-title">2. 免费用户滥用（已识别 — 方案开发中）</div>
+                        <div class="finding-content">
+                            不存在使用限制。一个用户每月消耗1,216 GB。设计中：每月50GB数据限制、1设备限制（免费）、每日VPN时间追踪。防止每个账户$100-150/月的滥用成本。
+                        </div>
+                    </div>
+                    <div class="finding-card">
+                        <div class="finding-title">3. 平台稳定性（调查完成 — 修复进行中）</div>
+                        <div class="finding-content">
+                            识别了13个关键崩溃模式并定位根因。初步修复正在实施中。预期：减少1星评价、提高留存率。
+                        </div>
+                    </div>
+                    <div class="finding-card">
+                        <div class="finding-title">4. 基础设施成本（部分解决）</div>
+                        <div class="finding-content">
+                            25个提供商分散管理。Lisahost：6个"测试"节点（~2,988元/月 ≈ $412）。冗余服务器~$325/月。4月7日与Lex召开会议进行澄清。节省目标：立即~$415/月，长期$700+/月。
+                        </div>
+                    </div>
+                    <div class="finding-card">
+                        <div class="finding-title">5. 试用转化（方案已设计）</div>
+                        <div class="finding-content">
+                            免费试用用户无法查看剩余时间。增强API可显示剩余天数+数据使用情况。添加了应用内升级提示。预期：+0.3-0.5%转化率 = ~$3,000-5,000/月。
+                        </div>
+                    </div>
+                    <div class="finding-card">
+                        <div class="finding-title">6. 安全加固（进行中）</div>
+                        <div class="finding-content">
+                            已完成：从日志中移除敏感数据、限制数据库访问、加强活动追踪。计划（Sprint 1第1周）：Redis密码认证（30分钟任务）。
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- China Connectivity -->
+            <div class="section">
+                <h2 class="section-heading">中国网络连接</h2>
+                <div class="section-body">
+                    台湾团队标记了延迟和GFW相关问题。已记录但未量化。部署后计划进行数据驱动监控。分析定于5月进行。
+                </div>
+            </div>
+
+            <!-- Roadmap — Projections -->
+            <div class="section">
+                <h2 class="section-heading">路线图 — 预测指标</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>指标</th>
+                            <th>当前</th>
+                            <th>预计（Sprint 1后）</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>每月节点成本</td>
+                            <td>$1,988</td>
+                            <td>$1,551（优化后）</td>
+                        </tr>
+                        <tr>
+                            <td>滥用防止节省</td>
+                            <td>$0</td>
+                            <td>~$112-150</td>
+                        </tr>
+                        <tr>
+                            <td>基础设施节省</td>
+                            <td>$0</td>
+                            <td>~$325</td>
+                        </tr>
+                        <tr>
+                            <td>收入渠道</td>
+                            <td>2/2开发中</td>
+                            <td>2/2优化完成后部署</td>
+                        </tr>
+                        <tr>
+                            <td>试用转化</td>
+                            <td>基准</td>
+                            <td>+0.3-0.5%</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Roadmap — Milestones -->
+            <div class="section">
+                <h2 class="section-heading">路线图 — 里程碑</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>里程碑</th>
+                            <th>目标日期</th>
+                            <th>目的</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>平台评估完成</td>
+                            <td>4月初</td>
+                            <td>问题、优先级和架构的全面审计</td>
+                        </tr>
+                        <tr>
+                            <td>测试环境准备就绪</td>
+                            <td>4月下旬</td>
+                            <td>生产前的安全测试</td>
+                        </tr>
+                        <tr>
+                            <td>QA应用构建（内部测试）</td>
+                            <td>4月下旬</td>
+                            <td>测试用户进行Beta测试</td>
+                        </tr>
+                        <tr>
+                            <td>生产发布</td>
+                            <td>5月中旬</td>
+                            <td>所有修复+滥用防止上线</td>
+                        </tr>
+                        <tr>
+                            <td>基础设施整合</td>
+                            <td>5-6月</td>
+                            <td>预计~$415/月节省</td>
+                        </tr>
+                        <tr>
+                            <td>多平台应用重建</td>
+                            <td>Sprint 2（6月+）</td>
+                            <td>新应用：Android、iOS、Windows — Flutter代码库过于陈旧无法重构</td>
+                        </tr>
+                        <tr>
+                            <td>协议升级</td>
+                            <td>7-8月</td>
+                            <td>性能改进</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Resources Needed -->
+            <div class="section">
+                <h2 class="section-heading">所需资源</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>资源</th>
+                            <th>用途</th>
+                            <th>时间表</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Android开发SDK</td>
+                            <td>本地开发环境</td>
+                            <td>立即</td>
+                        </tr>
+                        <tr>
+                            <td>测试服务器</td>
+                            <td>安全测试环境</td>
+                            <td>4月12日前</td>
+                        </tr>
+                        <tr>
+                            <td>QA团队/测试人员</td>
+                            <td>Beta + 回归测试</td>
+                            <td>4月15日前</td>
+                        </tr>
+                        <tr>
+                            <td>支付网关文档</td>
+                            <td>活跃网关不清楚 — 团队正从数据库调查。需要：哪些活跃、为什么其他被禁用</td>
+                            <td>4月7日前（Lex会议）</td>
+                        </tr>
+                        <tr>
+                            <td>Lisahost账户澄清</td>
+                            <td>确认6个"测试"节点</td>
+                            <td>4月7日前</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Financial Summary -->
+            <div class="section">
+                <h2 class="section-heading">财务总结</h2>
+                <div class="section-body">
+                    <strong>预计：</strong>收入渠道待部署后激活，每个被阻止滥用账户节省$100-150/月，识别出~$415/月浪费供Q2清除。
+                </div>
+                <div class="section-body">
+                    <strong>预计：</strong>+0.3-0.5%转化 = $3,000-5,000/月，基础设施整合$500-700+/月，留存率改进。
+                </div>
+                <div class="section-body">
+                    <strong>总识别价值：</strong>~$415/月预计 + $3,500-5,700/月潜在。
+                </div>
+            </div>
+
+            <!-- Next Steps -->
+            <div class="section">
+                <h2 class="section-heading">后续步骤</h2>
+                <ul class="task-list">
+                    <li>4月6日前：确认Lisahost状态、提供支付文档、安排Android SDK</li>
+                    <li>4月6日：Sprint 1启动 — 5名开发者、阶段分解、并行工作流</li>
+                    <li>4月7日：Lex（台湾开发者）验证计划、讨论GFW/延迟、机构知识</li>
+                    <li>持续进行：从4月10日起周报告、月度财务审查、季度影响总结</li>
+                </ul>
+            </div>
+
+            <!-- Risk Assessment -->
+            <div class="section">
+                <h2 class="section-heading">风险评估</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>风险</th>
+                            <th>等级</th>
+                            <th>缓解措施</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Lisahost节点正当性不足</td>
+                            <td>中等</td>
+                            <td>4月7日澄清会议</td>
+                        </tr>
+                        <tr>
+                            <td>测试环境延迟</td>
+                            <td>低</td>
+                            <td>轻量级测试；4月12日前完整测试</td>
+                        </tr>
+                        <tr>
+                            <td>支付网关配置错误</td>
+                            <td>低</td>
+                            <td>团队直接从数据库调查</td>
+                        </tr>
+                        <tr>
+                            <td>中国网络连接被低估</td>
+                            <td>中等</td>
+                            <td>部署监控；数据驱动方法</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Footer -->
+            <div class="report-footer">
+                <p>状态：评估完成，开发进行中。下次报告：2026年4月10日。</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function setLanguage(lang) {
+            document.querySelectorAll('.lang-section').forEach(s => s.classList.remove('active'));
+            document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+            document.getElementById(lang).classList.add('active');
+            event.target.classList.add('active');
+        }
+    </script>
+</body>
+</html>

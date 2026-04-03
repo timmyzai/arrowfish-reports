@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrowfish VPN — Sprint Reports</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; height: 100vh; display: flex; flex-direction: column; }
+        .toolbar {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            padding: 12px 24px;
+            background: #fff;
+            border-bottom: 1px solid #e0e0e0;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+            flex-shrink: 0;
+        }
+        .toolbar h1 {
+            font-size: 16px;
+            font-weight: 600;
+            color: #1a73e8;
+            white-space: nowrap;
+        }
+        .toolbar select {
+            padding: 6px 12px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 14px;
+            background: #f8f9fa;
+            cursor: pointer;
+            min-width: 240px;
+        }
+        .toolbar select:focus { outline: none; border-color: #1a73e8; }
+        .toolbar .date { font-size: 13px; color: #888; }
+        iframe {
+            flex: 1;
+            width: 100%;
+            border: none;
+        }
+        .loading {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #888;
+            font-size: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="toolbar">
+        <h1>Arrowfish VPN</h1>
+        <select id="sprint-select"></select>
+        <span class="date" id="sprint-date"></span>
+    </div>
+    <div class="loading" id="loading">Loading reports...</div>
+    <iframe id="report-frame" style="display:none"></iframe>
+
+    <script>
+        const select = document.getElementById('sprint-select');
+        const frame = document.getElementById('report-frame');
+        const dateEl = document.getElementById('sprint-date');
+        const loading = document.getElementById('loading');
+        let sprints = [];
+
+        fetch('reports.json')
+            .then(r => r.json())
+            .then(data => {
+                sprints = data;
+                sprints.forEach((s, i) => {
+                    const opt = document.createElement('option');
+                    opt.value = i;
+                    opt.textContent = s.name;
+                    select.appendChild(opt);
+                });
+                // Default to latest (last in array)
+                select.value = sprints.length - 1;
+                loadSprint(sprints.length - 1);
+            })
+            .catch(() => {
+                loading.textContent = 'Failed to load reports.';
+            });
+
+        select.addEventListener('change', () => loadSprint(select.value));
+
+        function loadSprint(index) {
+            const sprint = sprints[index];
+            if (!sprint) return;
+            dateEl.textContent = sprint.date;
+            loading.style.display = 'none';
+            frame.style.display = 'block';
+            frame.src = sprint.file;
+        }
+    </script>
+</body>
+</html>
