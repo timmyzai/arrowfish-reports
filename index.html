@@ -75,15 +75,51 @@
                     opt.textContent = s.name;
                     select.appendChild(opt);
                 });
-                // Default to latest (last in array)
-                select.value = sprints.length - 1;
-                loadSprint(sprints.length - 1);
+                // Resolve from URL hash or default to latest
+                const index = resolveFromHash();
+                select.value = index;
+                loadSprint(index);
             })
             .catch(() => {
                 loading.textContent = 'Failed to load reports.';
             });
 
-        select.addEventListener('change', () => loadSprint(select.value));
+        select.addEventListener('change', () => {
+            const index = parseInt(select.value);
+            loadSprint(index);
+            updateHash(index);
+        });
+
+        window.addEventListener('hashchange', () => {
+            const index = resolveFromHash();
+            select.value = index;
+            loadSprint(index);
+        });
+
+        function resolveFromHash() {
+            const hash = decodeURIComponent(location.hash.slice(1));
+            if (!hash) return sprints.length - 1;
+            // Hash format: sprint-id/date  e.g. #sprint-0/20260403
+            const [id, date] = hash.split('/');
+            // Try exact match (id + date)
+            if (id && date) {
+                const exact = sprints.findIndex(s => s.id === id && s.date === date);
+                if (exact !== -1) return exact;
+            }
+            // Try id-only match (returns latest entry for that sprint)
+            if (id) {
+                let last = -1;
+                sprints.forEach((s, i) => { if (s.id === id) last = i; });
+                if (last !== -1) return last;
+            }
+            return sprints.length - 1;
+        }
+
+        function updateHash(index) {
+            const sprint = sprints[index];
+            if (!sprint) return;
+            history.replaceState(null, '', '#' + sprint.id + '/' + sprint.date);
+        }
 
         function loadSprint(index) {
             const sprint = sprints[index];
@@ -92,6 +128,7 @@
             loading.style.display = 'none';
             frame.style.display = 'block';
             frame.src = sprint.file;
+            updateHash(index);
         }
     </script>
 </body>
