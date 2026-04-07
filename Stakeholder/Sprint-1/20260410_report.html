@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>第1阶段周报（第1周）| Arrowfish VPN</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background-color: #fff; color: #333; line-height: 1.7; font-size: 15px; }
+        .container { max-width: 900px; margin: 0 auto; padding: 40px 24px; }
+        .report-header { margin-bottom: 48px; border-bottom: 1px solid #e8e8e8; padding-bottom: 32px; }
+        .report-title { font-size: 28px; font-weight: 600; color: #1a1a1a; margin-bottom: 16px; }
+        .report-meta { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; font-size: 13px; color: #666; }
+        .meta-item { display: flex; flex-direction: column; gap: 4px; }
+        .meta-label { font-weight: 500; color: #999; text-transform: uppercase; letter-spacing: 0.5px; }
+        .meta-value { color: #333; font-weight: 500; }
+        .section { margin-bottom: 48px; }
+        .section-heading { font-size: 20px; font-weight: 600; color: #1a1a1a; margin-bottom: 20px; padding-left: 16px; border-left: 4px solid #1a73e8; }
+        .section-body { margin-bottom: 24px; line-height: 1.8; color: #444; }
+        .section-note { font-size: 13px; color: #666; margin-top: 12px; padding: 12px; background-color: #f8f9fa; border-radius: 4px; border-left: 3px solid #1a73e8; }
+        .milestone-container { display: grid; gap: 12px; margin-top: 16px; }
+        .milestone { display: flex; gap: 16px; align-items: flex-start; background-color: #f8f9fa; padding: 16px; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.08); }
+        .milestone-date { background-color: #1a73e8; color: white; padding: 8px 12px; border-radius: 4px; font-size: 12px; font-weight: 600; white-space: nowrap; min-width: 80px; text-align: center; }
+        .milestone-text { flex: 1; font-size: 14px; font-weight: 500; color: #333; }
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; background-color: white; }
+        th { background-color: #f8f9fa; padding: 12px; text-align: left; font-size: 14px; font-weight: 600; color: #333; border-bottom: 1px solid #e8e8e8; }
+        td { padding: 12px; border-bottom: 1px solid #e8e8e8; font-size: 14px; color: #444; }
+        tr:last-child td { border-bottom: none; }
+        .findings-container { display: grid; gap: 16px; margin-top: 20px; }
+        .finding-card { background-color: #f8f9fa; padding: 20px; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.08); border-left: 4px solid #1a73e8; }
+        .finding-title { font-size: 14px; font-weight: 600; color: #1a73e8; margin-bottom: 8px; letter-spacing: 0.5px; }
+        .finding-content { font-size: 14px; color: #555; line-height: 1.6; }
+        .task-list { list-style: none; margin: 16px 0; }
+        .task-list li { padding: 8px 0 8px 24px; position: relative; color: #555; line-height: 1.6; }
+        .task-list li:before { content: ""; position: absolute; left: 0; top: 14px; width: 8px; height: 8px; background-color: #1a73e8; border-radius: 50%; }
+        .status-badge { display: inline-block; padding: 4px 10px; border-radius: 12px; font-size: 12px; font-weight: 600; }
+        .status-resolved { background-color: #d4edda; color: #155724; }
+        .status-enhanced { background-color: #cfe2ff; color: #084298; }
+        .report-footer { margin-top: 48px; padding-top: 24px; border-top: 1px solid #e8e8e8; font-size: 12px; color: #999; text-align: right; }
+        .status-default { background-color: #F2F2F2; }
+        .status-green { background-color: #B7D7C9; }
+        .status-yellow { background-color: #E6DFAF; }
+        .status-red { background-color: #DCCACA; }
+        .status-legend { display: flex; gap: 16px; margin: 12px 0 24px; font-size: 12px; color: #666; flex-wrap: wrap; }
+        .status-legend-item { display: flex; align-items: center; gap: 6px; }
+        .status-dot { width: 12px; height: 12px; border-radius: 2px; display: inline-block; }
+        @media (max-width: 768px) {
+            .report-meta { grid-template-columns: 1fr; gap: 12px; }
+            .report-title { font-size: 24px; }
+            .section-heading { font-size: 18px; }
+            table { font-size: 13px; }
+            th, td { padding: 10px; }
+        }
+        @media print {
+            body { font-family: Georgia, 'Times New Roman', serif; font-size: 14px; }
+            .container { max-width: 100%; padding: 0; }
+            .report-header { page-break-after: avoid; }
+            .section { page-break-inside: avoid; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="report-header">
+            <h1 class="report-title">第1阶段周报（第1周）：测试部署与自动化</h1>
+            <div class="report-meta">
+                <div class="meta-item">
+                    <span class="meta-label">周期</span>
+                    <span class="meta-value">2026年4月3日 – 4月10日</span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-label">团队</span>
+                    <span class="meta-value">马来西亚</span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-label">报告对象</span>
+                    <span class="meta-value">日总</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 执行总结 -->
+        <div class="section">
+            <h2 class="section-heading">执行总结</h2>
+            <div class="section-body">
+                第1阶段于4月6日正式启动，5名开发人员分三条并行线推进：后端服务、安卓应用、服务器基础设施。上阶段（第0阶段）的全部开发工作已完成，本周重点是搭建测试环境、构建QA测试版应用，并完成与台湾顾问Lex的技术对接会议。
+            </div>
+            <ul class="task-list">
+                <li>专线运营自动化：发现每周5.7–12小时的人工分配工作可全部自动化 — 开发中</li>
+                <li>数据库性能：发现历史遗留的158,000条慢查询记录，优化方案开发中</li>
+                <li>服务器审计：发现开发服务器资源浪费，已节省22 GB磁盘空间，进一步节省计划制定中</li>
+                <li>测试版应用：目标本周完成构建，计划下周生产上线</li>
+            </ul>
+            <div class="section-body" style="margin-top: 24px; font-weight: 500;">
+                状态：第0阶段开发完成，第1阶段测试与部署进行中。目标下周生产上线。
+            </div>
+        </div>
+
+        <!-- 里程碑进度 -->
+        <div class="section">
+            <h2 class="section-heading">里程碑进度</h2>
+            <div class="milestone-container">
+                <div class="milestone status-green">
+                    <div class="milestone-date">3月底</div>
+                    <div class="milestone-text">平台全面审计完成 — 发现所有遗留问题，开发立即启动</div>
+                </div>
+                <div class="milestone status-green">
+                    <div class="milestone-date">4月3日</div>
+                    <div class="milestone-text">第0阶段全部开发完成，代码提交主分支</div>
+                </div>
+                <div class="milestone status-green">
+                    <div class="milestone-date">4月6日</div>
+                    <div class="milestone-text">第1阶段正式启动，团队分工明确，进入并行开发</div>
+                </div>
+                <div class="milestone status-green">
+                    <div class="milestone-date">4月7日</div>
+                    <div class="milestone-text">与台湾顾问Lex完成技术对接会议，确认计划方向</div>
+                </div>
+                <div class="milestone status-default">
+                    <div class="milestone-date">4月8–10日</div>
+                    <div class="milestone-text">QA测试版APK构建 + 测试环境部署（本周目标）</div>
+                </div>
+                <div class="milestone status-default">
+                    <div class="milestone-date">4月中旬</div>
+                    <div class="milestone-text">内部全面测试：VPN连接、免费用户限制、专线分配</div>
+                </div>
+                <div class="milestone status-default">
+                    <div class="milestone-date">4月下旬</div>
+                    <div class="milestone-text">生产部署上线（目标）</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 本周亮点：节点运营自动化 -->
+        <div class="section">
+            <h2 class="section-heading">业务影响 — 专线运营自动化</h2>
+            <div class="section-body">
+                审计发现台湾团队对每笔专线/专用IP订单均需人工处理：管理员需手动在后台查找订单、选择节点、配置服务，整个流程耗时25–60分钟。下班和周末期间无人处理，客户等待数小时至数天。
+            </div>
+            <table>
+                <thead>
+                    <tr><th>指标</th><th>现状</th><th>自动化后</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>每笔订单处理时间</td><td>25–60 分钟（人工）</td><td>不超过 2 分钟（自动）</td></tr>
+                    <tr><td>每周运营人工时长</td><td>5.7–12 小时</td><td>目标低于 1 小时</td></tr>
+                    <tr><td>订单处理覆盖时间</td><td>仅工作时间</td><td>全天候 24/7</td></tr>
+                    <tr><td>可处理订单上限/周</td><td>约 20 笔</td><td>100+ 笔</td></tr>
+                    <tr><td>预计节省运营成本</td><td>—</td><td>约 $2,000–3,000/月</td></tr>
+                </tbody>
+            </table>
+            <div class="section-note">
+                同步改善：专用IP到期后系统自动回收并归还IP池，避免库存持续缩减的历史问题。IP库存不足时自动告警，管理员无需每日人工检查。目前正在开发中，预计随下版本部署上线。
+            </div>
+        </div>
+
+        <!-- 数据库性能优化 -->
+        <div class="section">
+            <h2 class="section-heading">业务影响 — 数据库性能</h2>
+            <div class="section-body">
+                本周对数据库进行了系统性审计，发现多项历史遗留问题正在影响平台稳定性和响应速度。
+            </div>
+            <table>
+                <thead>
+                    <tr><th>发现问题</th><th>影响</th><th>处理进度</th></tr>
+                </thead>
+                <tbody>
+                    <tr style="background-color: #E6DFAF">
+                        <td>历史积累的慢查询158,000条（单次超过3秒）</td>
+                        <td>数据库长期处于压力状态，影响响应速度</td>
+                        <td><span class="status-badge status-enhanced">优化中</span></td>
+                    </tr>
+                    <tr style="background-color: #E6DFAF">
+                        <td>数据库连接池配置300个，实际使用仅17个</td>
+                        <td>资源浪费，服务器内存占用不必要偏高</td>
+                        <td><span class="status-badge status-enhanced">优化中</span></td>
+                    </tr>
+                    <tr style="background-color: #E6DFAF">
+                        <td>读取副本数据库几乎从未启用（163次主库 vs 27次副库）</td>
+                        <td>所有查询压在主库，读写副本形同虚设</td>
+                        <td><span class="status-badge status-enhanced">优化中</span></td>
+                    </tr>
+                    <tr style="background-color: #E6DFAF">
+                        <td>缺少关键索引（含78万行的登录记录表）</td>
+                        <td>特定查询需全表扫描，速度慢</td>
+                        <td><span class="status-badge status-enhanced">优化中</span></td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="section-note">
+                所有优化已完成代码，测试环境部署后将一并上线。上线后数据库读取压力预计显著下降，平台整体响应速度和稳定性将得到改善。
+            </div>
+        </div>
+
+        <!-- 服务器基础设施审计 -->
+        <div class="section">
+            <h2 class="section-heading">业务影响 — 服务器基础设施审计</h2>
+            <div class="section-body">
+                本周对开发和生产服务器进行了全面盘查，发现多项资源浪费和隐性风险。
+            </div>
+            <table>
+                <thead>
+                    <tr><th>发现</th><th>影响</th><th>状态</th></tr>
+                </thead>
+                <tbody>
+                    <tr style="background-color: #DCCACA">
+                        <td>生产服务器运行着一个已停用的旧支付服务（台湾团队遗留，SSL证书2024年10月已过期，零流量）</td>
+                        <td>占用584 MB内存，存在安全风险</td>
+                        <td><span class="status-badge status-enhanced">清理计划制定中</span></td>
+                    </tr>
+                    <tr style="background-color: #E6DFAF">
+                        <td>开发服务器规格超出实际需求（内存利用率仅23%）</td>
+                        <td>每月多支出 $53，每年浪费约 $637</td>
+                        <td><span class="status-badge status-enhanced">降配计划制定中</span></td>
+                    </tr>
+                    <tr style="background-color: #B7D7C9">
+                        <td>生产服务器22 GB的无效日志文件（前团队遗留代码导致）</td>
+                        <td>占用36%磁盘空间</td>
+                        <td><span class="status-badge status-resolved">已清理（磁盘占用50%→33%）</span></td>
+                    </tr>
+                    <tr style="background-color: #E6DFAF">
+                        <td>生产服务器PHP进程14个空闲工作进程常驻内存</td>
+                        <td>约2 GB内存长期空占</td>
+                        <td><span class="status-badge status-enhanced">优化计划制定中</span></td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="section-note">
+                服务器日志清理已立即完成，释放22 GB磁盘空间。其余优化项目将在下次部署时一并处理，无需额外停机时间。
+            </div>
+        </div>
+
+        <!-- 第0阶段修复进度追踪 -->
+        <div class="section">
+            <h2 class="section-heading">进度追踪 — 上期报告遗留问题</h2>
+            <div class="section-body">以下为上次报告中提及问题的最新进展：</div>
+            <div class="status-legend">
+                <div class="status-legend-item"><span class="status-dot" style="background:#F2F2F2"></span>按计划</div>
+                <div class="status-legend-item"><span class="status-dot" style="background:#B7D7C9"></span>已完成</div>
+                <div class="status-legend-item"><span class="status-dot" style="background:#E6DFAF"></span>测试中</div>
+                <div class="status-legend-item"><span class="status-dot" style="background:#DCCACA"></span>风险中</div>
+            </div>
+            <table>
+                <thead>
+                    <tr><th>问题</th><th>上次状态</th><th>本周进展</th></tr>
+                </thead>
+                <tbody>
+                    <tr style="background-color: #E6DFAF">
+                        <td>13个应用崩溃/卡顿问题</td>
+                        <td>开发中</td>
+                        <td><span class="status-badge status-enhanced">开发完成，本周进入测试</span></td>
+                    </tr>
+                    <tr style="background-color: #E6DFAF">
+                        <td>免费用户服务端限制（时间/流量/设备数）</td>
+                        <td>开发中</td>
+                        <td><span class="status-badge status-enhanced">开发完成，本周测试环境验证</span></td>
+                    </tr>
+                    <tr style="background-color: #E6DFAF">
+                        <td>试用期升级引导（用户看不到试用进度）</td>
+                        <td>方案已设计</td>
+                        <td><span class="status-badge status-enhanced">后端完成，界面开发中</span></td>
+                    </tr>
+                    <tr style="background-color: #E6DFAF">
+                        <td>三星应用内购买测试模式</td>
+                        <td>开发中</td>
+                        <td><span class="status-badge status-enhanced">代码修复完成，等待部署验证</span></td>
+                    </tr>
+                    <tr style="background-color: #E6DFAF">
+                        <td>强制版本更新（原来从未启用）</td>
+                        <td>开发中</td>
+                        <td><span class="status-badge status-enhanced">已启用，测试环境验证中</span></td>
+                    </tr>
+                    <tr style="background-color: #E6DFAF">
+                        <td>读取副本数据库利用率不足</td>
+                        <td>开发中</td>
+                        <td><span class="status-badge status-enhanced">代码完成，随本次部署上线</span></td>
+                    </tr>
+                    <tr style="background-color: #F2F2F2">
+                        <td>冗余代理服务器整合（节省~$323/月）</td>
+                        <td>按计划</td>
+                        <td><span class="status-badge" style="background:#F2F2F2;color:#555">第1阶段部署后评估</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- 本周重点工作 -->
+        <div class="section">
+            <h2 class="section-heading">本周重点工作</h2>
+            <div class="section-body">以下为本周（4月7日–10日）的核心交付目标：</div>
+            <table>
+                <thead>
+                    <tr><th>交付项</th><th>目标日期</th><th>说明</th></tr>
+                </thead>
+                <tbody>
+                    <tr style="background-color: #F2F2F2">
+                        <td>QA测试版APK构建</td>
+                        <td>4月8日</td>
+                        <td>包含所有第0阶段修复，供内部测试使用</td>
+                    </tr>
+                    <tr style="background-color: #F2F2F2">
+                        <td>测试环境后端部署</td>
+                        <td>4月8日</td>
+                        <td>在测试服务器上部署完整后端，验证各项功能</td>
+                    </tr>
+                    <tr style="background-color: #F2F2F2">
+                        <td>端到端功能验证</td>
+                        <td>4月9日</td>
+                        <td>VPN连接、免费用户限制、专线分配全链路测试</td>
+                    </tr>
+                    <tr style="background-color: #F2F2F2">
+                        <td>崩溃回归测试</td>
+                        <td>4月10日</td>
+                        <td>复现第0阶段修复的崩溃场景，确认无回归</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- 财务总结 -->
+        <div class="section">
+            <h2 class="section-heading">财务总结</h2>
+            <div class="section-body">
+                <strong>本周新增确认：</strong>开发服务器降配可节省$53/月（$637/年）；清理无效日志服务器磁盘空间提升17个百分点，可延缓扩容需求。
+            </div>
+            <div class="section-body">
+                <strong>专线自动化节省（待部署）：</strong>预计减少运营人工成本约$2,000–3,000/月，同时支撑订单量扩展5倍以上而无需增加人手。
+            </div>
+            <div class="section-body">
+                <strong>上阶段确认（仍有效）：</strong>~$735/月基础设施浪费，Q2清除。转化率提升预估+0.3–0.5% = $3,000–5,000/月潜力。
+            </div>
+        </div>
+
+        <!-- 路线图里程碑 -->
+        <div class="section">
+            <h2 class="section-heading">路线图 — 更新后里程碑</h2>
+            <table>
+                <thead>
+                    <tr><th>里程碑</th><th>目标</th><th>说明</th></tr>
+                </thead>
+                <tbody>
+                    <tr style="background-color: #B7D7C9"><td>平台评估</td><td>已完成</td><td>全面审计完成，所有问题已识别</td></tr>
+                    <tr style="background-color: #B7D7C9"><td>第0阶段开发</td><td>已完成</td><td>所有修复代码已提交</td></tr>
+                    <tr style="background-color: #F2F2F2"><td>测试环境 + QA APK</td><td>4月8–10日</td><td>本周核心目标</td></tr>
+                    <tr style="background-color: #F2F2F2"><td>内部测试</td><td>4月中旬</td><td>VPN、限制、专线全链路验证</td></tr>
+                    <tr style="background-color: #F2F2F2"><td>生产部署</td><td>4月下旬</td><td>所有修复正式上线</td></tr>
+                    <tr style="background-color: #F2F2F2"><td>基础设施整合</td><td>5–6月</td><td>节省~$735/月（测试节点 + 冗余代理）</td></tr>
+                    <tr style="background-color: #F2F2F2"><td>多平台应用重建</td><td>第2阶段（6月+）</td><td>安卓/苹果/电脑 — 旧代码需重写</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- 风险 -->
+        <div class="section">
+            <h2 class="section-heading">风险评估</h2>
+            <table>
+                <thead>
+                    <tr><th>风险</th><th>等级</th><th>缓解</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>QA测试发现重大崩溃问题</td><td>低</td><td>所有13个崩溃场景已针对性修复，回归测试覆盖</td></tr>
+                    <tr><td>测试环境与生产环境存在差异</td><td>中</td><td>使用相同配置方式，Lex顾问提供环境差异说明</td></tr>
+                    <tr><td>部署后生产日志重新增长</td><td>低</td><td>已知原因（旧版本残留代码），新版部署后自动解决</td></tr>
+                    <tr><td>专线自动化区域匹配逻辑</td><td>中</td><td>测试环境验证覆盖所有区域（香港、韩国、日本）</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- 后续步骤 -->
+        <div class="section">
+            <h2 class="section-heading">后续步骤</h2>
+            <ul class="task-list">
+                <li>4月8日：QA测试版APK构建完成，测试环境后端上线</li>
+                <li>4月9–10日：内部端到端功能测试，崩溃回归验证</li>
+                <li>4月13日起：完整测试周期（50+测试用例）</li>
+                <li>4月下旬：生产正式部署，所有第0阶段修复上线</li>
+                <li>持续：专线自动化、数据库优化随部署包一并上线</li>
+            </ul>
+        </div>
+
+        <!-- Footer -->
+        <div class="report-footer">
+            <p>状态：第1阶段进行中。下次报告：2026年4月17日。</p>
+        </div>
+    </div>
+</body>
+</html>
