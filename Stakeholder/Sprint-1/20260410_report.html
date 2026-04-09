@@ -87,6 +87,7 @@
                 第1阶段于4月6日正式启动，5名开发人员分三条并行线推进：后端服务、安卓应用、服务器基础设施。上阶段（第0阶段）的全部开发工作已完成，本周重点是搭建测试环境、构建QA测试版应用，并完成与台湾顾问Lex的技术对接会议。
             </div>
             <ul class="task-list">
+                <li>数据库安全：发现生产数据库从未设置备份（台湾团队遗留），如不处理约3个月后将崩溃 — 发现当天已全部修复并启用备份</li>
                 <li>专线运营自动化：发现每周5.7–12小时的人工分配工作可全部自动化 — 开发中</li>
                 <li>数据库性能：发现历史遗留的158,000条慢查询记录，优化方案开发中</li>
                 <li>服务器审计：发现开发服务器资源浪费，已节省22 GB磁盘空间，进一步节省计划制定中</li>
@@ -132,6 +133,88 @@
             </div>
         </div>
 
+        <!-- 业务影响：数据库安全（最严重遗留风险 — 已解决） -->
+        <div class="section">
+            <h2 class="section-heading">业务影响 — 数据库安全（严重遗留风险）</h2>
+            <div class="section-body">
+                审计发现：<strong>生产数据库从未设置任何备份</strong>。台湾团队编写的一个每日维护脚本因缺少数据库密码，从2025年12月17日起连续114天每天运行失败，无人察觉。125万条过期数据持续堆积，两台数据库服务器磁盘占用达66%，且无任何灾难恢复手段。
+            </div>
+            <table>
+                <thead>
+                    <tr><th>如果未被发现</th><th>后果</th></tr>
+                </thead>
+                <tbody>
+                    <tr style="background-color: #DCCACA">
+                        <td>数据库磁盘约在7月中旬写满</td>
+                        <td>数据库崩溃，全平台停摆 — 用户无法登录、无法连接VPN、无法购买</td>
+                    </tr>
+                    <tr style="background-color: #DCCACA">
+                        <td>崩溃时无任何备份可用</td>
+                        <td><strong>29.3万用户账号、全部支付记录、全部服务器配置永久丢失</strong> — 无法恢复</td>
+                    </tr>
+                    <tr style="background-color: #DCCACA">
+                        <td>平台完全下线</td>
+                        <td>停摆期间收入归零，恢复需数天至数周（如果能恢复的话）</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="section-body" style="margin-top: 24px;">
+                <strong>发现当天已全部修复：</strong>
+            </div>
+            <table>
+                <thead>
+                    <tr><th>措施</th><th>效果</th></tr>
+                </thead>
+                <tbody>
+                    <tr style="background-color: #B7D7C9">
+                        <td>启用Azure每日自动备份（两台服务器）</td>
+                        <td>每日06:00自动备份，保留30天，7天内可即时恢复 — <strong>平台首次拥有灾难恢复能力</strong></td>
+                    </tr>
+                    <tr style="background-color: #B7D7C9">
+                        <td>修复114天失败的维护脚本</td>
+                        <td>125万条过期数据将被自动清理，磁盘压力解除</td>
+                    </tr>
+                    <tr style="background-color: #B7D7C9">
+                        <td>优化磁盘配置（两台服务器）</td>
+                        <td>磁盘占用从66%降至49%，释放约22 GB空间</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="section-note">
+                这是接手以来发现的最严重遗留风险。新增成本仅$25/月（两台服务器备份费用），但避免了约3个月后的全平台崩溃和全部用户数据永久丢失。
+            </div>
+        </div>
+
+        <!-- 整体进度概览 -->
+        <div class="section">
+            <h2 class="section-heading">整体进度概览</h2>
+            <div class="section-body">
+                接手至今，团队通过系统性审计累计发现<strong>48项遗留问题</strong>（含10项严重、10项高优先级），涵盖安全漏洞、性能瓶颈、收入损失、基础设施风险等。
+            </div>
+            <table>
+                <thead>
+                    <tr><th>指标</th><th>数量</th><th>说明</th></tr>
+                </thead>
+                <tbody>
+                    <tr style="background-color: #B7D7C9">
+                        <td>已修复</td>
+                        <td><strong>约30项</strong></td>
+                        <td>包括：13个崩溃问题、收入漏洞（三星测试模式）、数据库无备份、服务端限制缺失等</td>
+                    </tr>
+                    <tr style="background-color: #E6DFAF">
+                        <td>开发完成待部署</td>
+                        <td>约12项</td>
+                        <td>数据库优化、专线自动化、监控告警 — 随本次部署一并上线</td>
+                    </tr>
+                    <tr style="background-color: #F2F2F2">
+                        <td>计划中</td>
+                        <td>约6项</td>
+                        <td>服务器整合、旧服务清理 — 第1阶段后期处理</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
         <!-- 本周亮点：节点运营自动化 -->
         <div class="section">
             <h2 class="section-heading">业务影响 — 专线运营自动化</h2>
@@ -150,8 +233,59 @@
                     <tr><td>预计节省运营成本</td><td>—</td><td>约 $2,000–3,000/月</td></tr>
                 </tbody>
             </table>
+            <div class="section-body" style="margin-top: 24px;">
+                <strong>本周验证通过：节点快速部署</strong>
+            </div>
+            <div class="section-body">
+                后台管理系统的「快速创建节点」功能已测试通过 — 可在新服务器上一键部署 VPN 节点软件（Singbox Agent），并通过手机端实测 VPN 连接正常。这意味着新增节点从原来的人工 SSH 配置（15-30分钟/台）变为后台一键操作。
+            </div>
+            <div class="section-body" style="margin-top: 16px;">
+                <strong>下一步目标：全自动节点生命周期管理</strong>
+            </div>
+            <table>
+                <thead>
+                    <tr><th>能力</th><th>说明</th><th>状态</th></tr>
+                </thead>
+                <tbody>
+                    <tr style="background-color: #B7D7C9">
+                        <td>订单自动配发</td>
+                        <td>专线/专用IP订单支付后，系统自动匹配区域并分配节点，无需人工操作</td>
+                        <td><span class="status-badge status-resolved">开发完成</span></td>
+                    </tr>
+                    <tr style="background-color: #B7D7C9">
+                        <td>到期自动回收</td>
+                        <td>IP到期后自动归还IP池，节点释放给新订单</td>
+                        <td><span class="status-badge status-resolved">开发完成</span></td>
+                    </tr>
+                    <tr style="background-color: #B7D7C9">
+                        <td>库存自动监控</td>
+                        <td>IP/节点库存不足时自动通知管理员补货</td>
+                        <td><span class="status-badge status-resolved">开发完成</span></td>
+                    </tr>
+                    <tr style="background-color: #B7D7C9">
+                        <td>供应商稳定性追踪</td>
+                        <td>自动记录节点故障、计算供应商可用率、付款到期提醒</td>
+                        <td><span class="status-badge status-resolved">开发完成</span></td>
+                    </tr>
+                    <tr style="background-color: #F2F2F2">
+                        <td>智能节点管控</td>
+                        <td>系统根据使用量和付费周期自动判断节点是否满载，自动下线/恢复，管理员只需处理异常</td>
+                        <td><span class="status-badge" style="background:#F2F2F2;color:#555">规划中</span></td>
+                    </tr>
+                    <tr style="background-color: #F2F2F2">
+                        <td>智能采购建议</td>
+                        <td>系统分析各区域库存、订单趋势、利润率，自动推荐何时在哪个区域购买新节点</td>
+                        <td><span class="status-badge" style="background:#F2F2F2;color:#555">规划中</span></td>
+                    </tr>
+                    <tr style="background-color: #F2F2F2">
+                        <td>后台智能助手</td>
+                        <td>内置AI助手引导管理员完成节点采购、DNS配置、快速部署等操作，大幅降低学习成本</td>
+                        <td><span class="status-badge" style="background:#F2F2F2;color:#555">规划中</span></td>
+                    </tr>
+                </tbody>
+            </table>
             <div class="section-note">
-                同步改善：专用IP到期后系统自动回收并归还IP池，避免库存持续缩减的历史问题。IP库存不足时自动告警，管理员无需每日人工检查。目前正在开发中，预计随下版本部署上线。
+                最终目标：节点从采购到部署到退役全流程自动化。目前4项核心能力已开发完成，待部署后将大幅减少人工操作。智能采购建议和自动负载管理随监控体系建设推进，AI助手作为后期智能化阶段实现。
             </div>
         </div>
 
@@ -322,7 +456,7 @@
         <div class="section">
             <h2 class="section-heading">财务总结</h2>
             <div class="section-body">
-                <strong>本周新增确认：</strong>开发服务器降配可节省$53/月（$637/年）；清理无效日志服务器磁盘空间提升17个百分点，可延缓扩容需求。
+                <strong>本周新增确认：</strong>开发服务器降配可节省$53/月（$637/年）；清理无效日志释放22 GB磁盘空间。数据库备份新增成本仅$25/月，但避免了数据库在约3个月内崩溃导致29.3万用户数据永久丢失的风险。
             </div>
             <div class="section-body">
                 <strong>专线自动化节省（待部署）：</strong>预计减少运营人工成本约$2,000–3,000/月，同时支撑订单量扩展5倍以上而无需增加人手。
@@ -340,13 +474,15 @@
                     <tr><th>里程碑</th><th>目标</th><th>说明</th></tr>
                 </thead>
                 <tbody>
-                    <tr style="background-color: #B7D7C9"><td>平台评估</td><td>已完成</td><td>全面审计完成，所有问题已识别</td></tr>
-                    <tr style="background-color: #B7D7C9"><td>第0阶段开发</td><td>已完成</td><td>所有修复代码已提交</td></tr>
-                    <tr style="background-color: #F2F2F2"><td>测试环境 + QA APK</td><td>4月8–10日</td><td>本周核心目标</td></tr>
-                    <tr style="background-color: #F2F2F2"><td>内部测试</td><td>4月中旬</td><td>VPN、限制、专线全链路验证</td></tr>
-                    <tr style="background-color: #F2F2F2"><td>生产部署</td><td>4月下旬</td><td>所有修复正式上线</td></tr>
-                    <tr style="background-color: #F2F2F2"><td>基础设施整合</td><td>5–6月</td><td>节省~$735/月（测试节点 + 冗余代理）</td></tr>
-                    <tr style="background-color: #F2F2F2"><td>多平台应用重建</td><td>第2阶段（6月+）</td><td>安卓/苹果/电脑 — 旧代码需重写</td></tr>
+                    <tr style="background-color: #B7D7C9"><td>平台评估 + 第0阶段开发</td><td>已完成</td><td>全面审计，48项遗留问题已识别，约30项已修复</td></tr>
+                    <tr style="background-color: #E6DFAF"><td>① Arrowfish 稳定版</td><td>4月中下旬</td><td>QA测试 → 修复 → 生产部署 → 生产回归（Android为主，hiyou iOS）</td></tr>
+                    <tr style="background-color: #F2F2F2"><td>② 接入 Siqo 加密支付</td><td>5月</td><td>对接 Siqo Crypto Payment Gateway API，新增加密货币充值方式</td></tr>
+                    <tr style="background-color: #F2F2F2"><td>③ 发布 Arrowfish + 加密支付</td><td>5月</td><td>Arrowfish 正式发布新版本，包含稳定性修复 + 新支付方式</td></tr>
+                    <tr style="background-color: #F2F2F2"><td>④ 监控体系建设</td><td>5–6月</td><td>基础设施、后端服务、应用端全链路监控（节点迁移 Singbox Agent 同步进行）</td></tr>
+                    <tr style="background-color: #F2F2F2"><td>⑤ FFF Flutter 应用开发</td><td>6月+</td><td>全新 Flutter 重构版，先上 Android + Windows，功能优于 Arrowfish</td></tr>
+                    <tr style="background-color: #F2F2F2"><td>⑥ 用户迁移计划</td><td>FFF稳定后</td><td>Arrowfish 内弹窗引导用户升级至 FFF，后端逐步迁移，计划数月内下架 Arrowfish</td></tr>
+                    <tr style="background-color: #F2F2F2"><td>⑦ Apple Store + Mac</td><td>FFF迁移后</td><td>FFF 上架 Apple Store（iOS + macOS），需新 Apple 开发者账号</td></tr>
+                    <tr style="background-color: #F2F2F2"><td>⑧ AI 智能化</td><td>持续</td><td>后台运维AI助手、用户端智能客服、节点智能管控等</td></tr>
                 </tbody>
             </table>
         </div>
@@ -363,6 +499,7 @@
                     <tr><td>测试环境与生产环境存在差异</td><td>中</td><td>使用相同配置方式，Lex顾问提供环境差异说明</td></tr>
                     <tr><td>部署后生产日志重新增长</td><td>低</td><td>已知原因（旧版本残留代码），新版部署后自动解决</td></tr>
                     <tr><td>专线自动化区域匹配逻辑</td><td>中</td><td>测试环境验证覆盖所有区域（香港、韩国、日本）</td></tr>
+                    <tr><td>生产数据库此前无任何备份</td><td>高（已解决）</td><td>4月9日已启用Azure每日自动备份（30天保留），114天失败的维护脚本已修复，磁盘占用66%→49%</td></tr>
                 </tbody>
             </table>
         </div>
@@ -370,12 +507,33 @@
         <!-- 后续步骤 -->
         <div class="section">
             <h2 class="section-heading">后续步骤</h2>
+            <div class="section-body"><strong>① 当前：Arrowfish 稳定版（Android为主，hiyou iOS）</strong></div>
             <ul class="task-list">
-                <li>4月8日：QA测试版APK构建完成，测试环境后端上线</li>
-                <li>4月9–10日：内部端到端功能测试，崩溃回归验证</li>
-                <li>4月13日起：完整测试周期（50+测试用例）</li>
-                <li>4月下旬：生产正式部署，所有第0阶段修复上线</li>
-                <li>持续：专线自动化、数据库优化随部署包一并上线</li>
+                <li>尽快构建开发版 Arrowfish 稳定版 APK，交给 QA Amy 测试</li>
+                <li>整理端到端测试需求清单，Amy 在 Google Sheet 建立完整测试用例检查表</li>
+                <li>根据测试反馈修复和改进，部署生产后 Amy 再次回归测试</li>
+                <li>确认所有基础设施变更（数据库备份、磁盘优化等）在生产环境安全可靠</li>
+            </ul>
+            <div class="section-body" style="margin-top: 24px;"><strong>② 接入 Siqo 加密货币支付</strong></div>
+            <ul class="task-list">
+                <li>对接 Siqo Crypto Payment Gateway API，新增加密货币充值渠道</li>
+                <li>与 Arrowfish 稳定版一同发布，扩大支付方式覆盖面</li>
+            </ul>
+            <div class="section-body" style="margin-top: 24px;"><strong>③ 监控体系 + 节点迁移（与上述并行）</strong></div>
+            <ul class="task-list">
+                <li>搭建基础设施、后端服务、应用端全链路监控</li>
+                <li>156台节点逐步迁移至 Singbox Agent 新架构（快速部署已验证可行）</li>
+            </ul>
+            <div class="section-body" style="margin-top: 24px;"><strong>④ FFF 新应用开发（团队已启动准备）</strong></div>
+            <ul class="task-list">
+                <li>Flutter 全新重构，功能优于 Arrowfish，先上 Android + Windows</li>
+                <li>团队分工已启动：PM 排期、BA 重写文档、设计师研究 FFF 设计稿、QA 熟悉产品</li>
+            </ul>
+            <div class="section-body" style="margin-top: 24px;"><strong>⑤ 用户迁移 → Apple Store → AI 智能化</strong></div>
+            <ul class="task-list">
+                <li>FFF 稳定后，Arrowfish 内弹窗引导用户升级至 FFF，后端逐步迁移用户数据，计划数月内下架 Arrowfish</li>
+                <li>FFF 上架 Apple Store（iOS + macOS）</li>
+                <li>后台运维 AI 助手、用户端智能客服、节点智能管控等持续建设</li>
             </ul>
         </div>
 
