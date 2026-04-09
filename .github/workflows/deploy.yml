@@ -22,6 +22,35 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+
+      - name: Generate reports.json from HTML files
+        run: |
+          echo "[" > reports.json
+          first=true
+          find Stakeholder -name '*.html' | sort | while read -r file; do
+            # Extract sprint from path: Stakeholder/Sprint-1/file.html → sprint-1
+            sprint_dir=$(echo "$file" | cut -d'/' -f2)
+            sprint_id=$(echo "$sprint_dir" | tr '[:upper:]' '[:lower:]')
+
+            # Extract date from filename: 20260410_report.html → 2026-04-10
+            filename=$(basename "$file" .html)
+            raw_date=$(echo "$filename" | grep -oE '^[0-9]{8}')
+            if [ -z "$raw_date" ]; then continue; fi
+            date="${raw_date:0:4}-${raw_date:4:2}-${raw_date:6:2}"
+
+            # Extract <title> from HTML (strip " | Arrowfish VPN" suffix)
+            title=$(sed -n 's/.*<title>\(.*\)<\/title>.*/\1/p' "$file" | sed 's/ *[|｜] *Arrowfish VPN//')
+            if [ -z "$title" ]; then title="$sprint_dir — $date"; fi
+
+            if [ "$first" = true ]; then first=false; else echo "," >> reports.json; fi
+            printf '  {"id":"%s","name":"%s","date":"%s","file":"%s"}' \
+              "$sprint_id" "$title" "$date" "$file" >> reports.json
+          done
+          echo "" >> reports.json
+          echo "]" >> reports.json
+          echo "Generated reports.json:"
+          cat reports.json
+
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
