@@ -127,13 +127,17 @@
                     <div class="milestone-date">4月8–10日</div>
                     <div class="milestone-text">QA测试版APK构建 + 测试环境部署（进行中）</div>
                 </div>
-                <div class="milestone status-default">
-                    <div class="milestone-date">4月中旬</div>
-                    <div class="milestone-text">内部全面测试：VPN连接、免费用户限制、专线分配</div>
+                <div class="milestone status-yellow">
+                    <div class="milestone-date">4月10–11日</div>
+                    <div class="milestone-text">QA全面测试：Amy按测试清单执行完整测试（周末加班）</div>
                 </div>
                 <div class="milestone status-default">
-                    <div class="milestone-date">4月下旬</div>
-                    <div class="milestone-text">生产部署上线（目标）</div>
+                    <div class="milestone-date">4月中旬</div>
+                    <div class="milestone-text">根据QA结果修复 + 应用商店合规优化 + 生产环境部署</div>
+                </div>
+                <div class="milestone status-default">
+                    <div class="milestone-date">4月25日</div>
+                    <div class="milestone-text">Arrowfish Google Play 上线（目标）</div>
                 </div>
             </div>
         </div>
@@ -559,11 +563,11 @@
                 </thead>
                 <tbody>
                     <tr style="background-color: #B7D7C9"><td>平台评估 + 第0阶段开发</td><td>已完成</td><td>全面审计，50项遗留问题已识别，31项已修复</td></tr>
-                    <tr style="background-color: #E6DFAF"><td>① Arrowfish 稳定版</td><td>4月中下旬</td><td>QA测试 → 修复 → 生产部署 → 生产回归（Android为主，hiyou iOS）</td></tr>
-                    <tr style="background-color: #F2F2F2"><td>② 接入 Siqo 加密支付</td><td>5月</td><td>对接 Siqo Crypto Payment Gateway API，新增加密货币充值方式</td></tr>
-                    <tr style="background-color: #F2F2F2"><td>③ 发布 Arrowfish + 加密支付</td><td>5月</td><td>Arrowfish 正式发布新版本，包含稳定性修复 + 新支付方式</td></tr>
-                    <tr style="background-color: #F2F2F2"><td>④ 监控体系建设</td><td>5–6月</td><td>基础设施、后端服务、应用端全链路监控（节点迁移 Singbox Agent 同步进行）</td></tr>
-                    <tr style="background-color: #F2F2F2"><td>⑤ FFF Flutter 应用开发</td><td>6月+</td><td>全新 Flutter 重构版，先上 Android + Windows，功能优于 Arrowfish</td></tr>
+                    <tr style="background-color: #E6DFAF"><td>① Arrowfish 稳定版</td><td>4月25日</td><td>QA全面测试（4/10-11）→ 修复 → 合规优化 → 生产部署 → Google Play 提交</td></tr>
+                    <tr style="background-color: #F2F2F2"><td>② 接入 Siqo 加密支付</td><td>5月初</td><td>对接 Siqo Crypto Payment Gateway API，新增加密货币充值方式</td></tr>
+                    <tr style="background-color: #F2F2F2"><td>③ 安全加固 + FFF基础</td><td>5月</td><td>节点安全加固（防绕过）+ Flutter项目搭建 + VPN引擎集成</td></tr>
+                    <tr style="background-color: #F2F2F2"><td>④ FFF 核心功能</td><td>5–6月</td><td>登录注册、VPN连接、设备指纹防刷、多协议支持</td></tr>
+                    <tr style="background-color: #F2F2F2"><td>⑤ FFF 发布</td><td>6月下旬</td><td>iOS + Android + Windows 全平台发布</td></tr>
                     <tr style="background-color: #F2F2F2"><td>⑥ 用户迁移计划</td><td>FFF稳定后</td><td>Arrowfish 内弹窗引导用户升级至 FFF，后端逐步迁移，计划数月内下架 Arrowfish</td></tr>
                     <tr style="background-color: #F2F2F2"><td>⑦ Apple Store + Mac</td><td>FFF迁移后</td><td>FFF 上架 Apple Store（iOS + macOS），需新 Apple 开发者账号</td></tr>
                     <tr style="background-color: #F2F2F2"><td>⑧ AI 智能化</td><td>持续</td><td>后台运维AI助手、用户端智能客服、节点智能管控等</td></tr>
@@ -574,13 +578,13 @@
         <!-- 后续步骤 -->
         <div class="section">
             <h2 class="section-heading">后续步骤</h2>
-            <div class="section-body"><strong>① 当前：Arrowfish 稳定版（Android为主，hiyou iOS）</strong></div>
+            <div class="section-body"><strong>① 当前：Arrowfish 稳定版 → Google Play 上线（目标4月25日）</strong></div>
             <ul class="task-list">
-                <li>尽快构建开发版 Arrowfish 稳定版 APK，交给 QA Amy 测试</li>
-                <li>整理端到端测试需求清单，Amy 在 Google Sheet 建立完整测试用例检查表</li>
-                <li>根据测试反馈修复和改进，部署生产后 Amy 再次回归测试</li>
-                <li>确认所有基础设施变更（数据库备份、磁盘优化、Nginx安全拦截等）在生产环境安全可靠</li>
-                <li>将测试服务器和生产服务器的Azure网络安全组分离，收紧测试环境公网访问权限</li>
+                <li>QA Amy 正在执行全面测试（4/10-11，周末加班），结果预计本周末出</li>
+                <li>根据QA结果修复关键问题，应用商店合规优化（权限清理、前台服务类型调整）</li>
+                <li>部署生产环境（Redis加固、MySQL优化、后端全量部署），Amy回归测试</li>
+                <li>确认所有基础设施变更在生产环境安全可靠</li>
+                <li>Google Play 提交，目标4月25日上线</li>
             </ul>
             <div class="section-body" style="margin-top: 24px;"><strong>② 接入 Siqo 加密货币支付</strong></div>
             <ul class="task-list">
@@ -595,7 +599,7 @@
             <div class="section-body" style="margin-top: 24px;"><strong>④ FFF 新应用开发（团队已启动准备）</strong></div>
             <ul class="task-list">
                 <li>Flutter 全新重构，功能优于 Arrowfish，先上 Android + Windows</li>
-                <li>团队分工已启动：PM 排期、BA 重写文档、设计师研究 FFF 设计稿、QA 熟悉产品</li>
+                <li>Flutter 全新重构，先上 Android + Windows，功能优于 Arrowfish</li>
             </ul>
             <div class="section-body" style="margin-top: 24px;"><strong>⑤ 用户迁移 → Apple Store → AI 智能化</strong></div>
             <ul class="task-list">
@@ -607,7 +611,7 @@
 
         <!-- Footer -->
         <div class="report-footer">
-            <p>状态：第1阶段进行中。下次报告：2026年4月17日。</p>
+            <p>状态：第1阶段测试部署进行中。下次报告：2026年4月17日。</p>
         </div>
     </div>
 </body>

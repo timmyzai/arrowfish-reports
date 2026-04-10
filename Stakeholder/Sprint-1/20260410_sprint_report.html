@@ -141,21 +141,21 @@
 </table>
 
 <!-- Section 2: Sprint 1 -->
-<h2>二、Sprint 1 完成摘要（4/6–4/10）— 后端+Android稳定化</h2>
+<h2>二、Sprint 1 进展摘要（4/6–4/10）— 后端+Android稳定化</h2>
 
 <div class="card highlight">
 <table>
   <tr><th>完成项</th><th>状态</th><th>说明</th></tr>
-  <tr><td>后端架构整合</td><td><span class="status-done">✅ 完成</span></td><td>ProxyBackend代码消除，单一后端架构</td></tr>
-  <tr><td>MySQL优化</td><td><span class="status-done">✅ 完成</span></td><td>5个新索引、18K行清理、log_apis 13.1GB待清除</td></tr>
-  <tr><td>Redis加固</td><td><span class="status-done">✅ DEV完成</span></td><td>密码保护 + 内存限制 + AOF持久化</td></tr>
-  <tr><td>sing-box Agent</td><td><span class="status-done">✅ 完成</span></td><td>870行Go代码，替代XRayR，测试通过</td></tr>
-  <tr><td>节点自动化</td><td><span class="status-done">✅ 完成</span></td><td>自动分配、到期回收、库存监控、付款提醒</td></tr>
-  <tr><td>Android崩溃修复</td><td><span class="status-done">✅ 完成</span></td><td>21/22个Bug已修复，WebSocket泄漏、ANR、计时器竞态</td></tr>
-  <tr><td>Android代码清理</td><td><span class="status-done">✅ 完成</span></td><td>删除1,932行死代码、30个死文件、66个孤立资源</td></tr>
-  <tr><td>USDT支付重写</td><td><span class="status-done">✅ 紧急修复</span></td><td>Java崩溃20K+次 → Go重写：3.4MB内存，0崩溃</td></tr>
+  <tr><td>后端架构整合</td><td><span class="status-progress">🔄 开发完成，待部署</span></td><td>ProxyBackend代码消除，单一后端架构</td></tr>
+  <tr><td>MySQL优化</td><td><span class="status-progress">🔄 开发完成，待部署</span></td><td>5个新索引、18K行清理、log_apis 13.1GB待清除</td></tr>
+  <tr><td>Redis加固</td><td><span class="status-progress">🔄 DEV验证通过，待生产部署</span></td><td>密码保护 + 内存限制 + AOF持久化</td></tr>
+  <tr><td>sing-box Agent</td><td><span class="status-progress">🔄 开发完成，测试验证中</span></td><td>870行Go代码，替代XRayR，VPN连接已验证</td></tr>
+  <tr><td>节点自动化</td><td><span class="status-progress">🔄 开发完成，待部署</span></td><td>自动分配、到期回收、库存监控、付款提醒</td></tr>
+  <tr><td>Android崩溃修复</td><td><span class="status-progress">🔄 开发完成，QA测试中</span></td><td>21/22个Bug已修复，WebSocket泄漏、ANR、计时器竞态</td></tr>
+  <tr><td>Android代码清理</td><td><span class="status-progress">🔄 开发完成，待部署</span></td><td>删除1,932行死代码、30个死文件、66个孤立资源</td></tr>
+  <tr><td>USDT支付重写</td><td><span class="status-done">✅ 已上线生产</span></td><td>Java崩溃20K+次 → Go重写：3.4MB内存，0崩溃</td></tr>
 </table>
-<p style="margin-top: 0.75rem;"><strong>完成率：22/24 阶段完成</strong>（剩余2个为运维部署任务）</p>
+<p style="margin-top: 0.75rem;"><strong>开发进度：22/24 阶段代码完成</strong>，进入测试与生产部署阶段。为处理USDT支付紧急修复，QA测试版交付延迟1天。</p>
 </div>
 
 <h3>USDT支付紧急修复（4月9日）</h3>
@@ -168,7 +168,7 @@
 </div>
 
 <!-- Section 3: Delay -->
-<h2>三、Arrowfish上线 — 延迟1周</h2>
+<h2>三、Arrowfish上线 — 延迟2周</h2>
 
 <div class="card highlight">
 <table>
@@ -176,7 +176,7 @@
   <tr>
     <td>Google Play 上线</td>
     <td>4月11日</td>
-    <td><strong>4月19日（+1周）</strong></td>
+    <td><strong>4月25日（+2周）</strong></td>
   </tr>
 </table>
 </div>
@@ -207,14 +207,16 @@
     <td>跳过QA直接上线风险太高——台湾团队的教训就是缺乏测试导致线上崩溃</td>
   </tr>
 </table>
-<p style="margin-top: 0.75rem;"><strong>结论：</strong>延迟1周是为了保证质量，不是因为开发进度问题。代码已全部就绪，剩余工作是验证和部署。</p>
+<p style="margin-top: 0.75rem;"><strong>结论：</strong>延迟2周是为了保证质量，不是因为开发进度问题。代码已全部就绪，剩余工作是QA全面测试、应用商店合规优化和生产部署。</p>
 </div>
 
-<h3>下周工作（Sprint 2: 4/13–19）</h3>
+<h3>下阶段工作（4/13–25）</h3>
 <table>
   <tr><td>✅ 测试节点VPN连接已验证OK</td><td>完成流量上报 + 24小时稳定性测试</td></tr>
+  <tr><td>🔄 QA全面测试（4/10-11）</td><td>Amy按照测试清单进行全面测试，结果预计周末出</td></tr>
   <tr><td>🔄 生产环境部署</td><td>Redis加固、MySQL优化、后端全量部署</td></tr>
-  <tr><td>⏳ QA + 提交</td><td>Amy正式测试 → 修复 → Google Play 提交</td></tr>
+  <tr><td>🔄 应用商店合规优化</td><td>权限清理、前台服务类型调整、flavor一致性</td></tr>
+  <tr><td>⏳ 修复 + 提交</td><td>根据QA反馈修复 → Google Play 提交（目标4月25日上线）</td></tr>
 </table>
 
 <h3>Siqo Crypto 支付对接（待办任务）</h3>
@@ -222,35 +224,35 @@
 <table>
   <tr><td><strong>内容</strong></td><td>对接 Siqo Crypto 支付网关（API已就绪，需后端消费接入）</td></tr>
   <tr><td><strong>平台</strong></td><td>Arrowfish（当前Android应用）</td></tr>
-  <tr><td><strong>后端开发</strong></td><td>Sprint 2 开始（4/13）</td></tr>
-  <tr><td><strong>发布</strong></td><td>Sprint 3（4月底），Arrowfish更新版</td></tr>
+  <tr><td><strong>后端开发</strong></td><td>Sprint 2 开始（4/20）</td></tr>
+  <tr><td><strong>发布</strong></td><td>Sprint 3（5月初），Arrowfish更新版</td></tr>
 </table>
 </div>
 
 <div class="card">
-<strong>结论：</strong>Arrowfish 4月19日前上线（延迟1周），不影响后续FFF计划。Siqo Crypto支付将在稳定版之后的更新版本中上线（4月底）。
+<strong>结论：</strong>Arrowfish 目标4月25日上线（延迟2周，含QA全面测试和合规优化），不影响后续FFF计划。Siqo Crypto支付将在稳定版之后的更新版本中上线（5月初）。
 </div>
 
 <!-- Section 4: FFF Timeline -->
 <h2>四、FFF 上线时间表</h2>
 
 <div class="card highlight">
-<p style="margin-bottom: 0.75rem; color: var(--text-secondary);">Arrowfish上线后（4月19日），全力投入FFF开发。</p>
+<p style="margin-bottom: 0.75rem; color: var(--text-secondary);">Arrowfish上线后（4月25日），全力投入FFF开发。</p>
 <table>
   <tr><th>阶段</th><th>时间</th><th>内容</th></tr>
-  <tr><td>基础框架</td><td>4月20日–5月初</td><td>Flutter项目搭建、API对接、VPN引擎集成</td></tr>
-  <tr><td>核心功能</td><td>5月</td><td>登录注册、VPN连接、多协议支持（VLESS/Trojan/Hy2/TUIC）</td></tr>
-  <tr><td>完整功能</td><td>5月中–5月底</td><td>线路列表、商店订阅、支付、通知</td></tr>
-  <tr><td>测试发布</td><td>6月初–6月中</td><td>多语言、性能优化、应用商店提交</td></tr>
-  <tr><td style="font-weight:700; color: var(--accent);">🎯 FFF上线</td><td style="font-weight:700;">6月中旬</td><td style="font-weight:700;">iOS + Android + Windows 全平台发布</td></tr>
+  <tr><td>基础框架 + 安全加固</td><td>4月27日–5月10日</td><td>Flutter项目搭建、API对接、VPN引擎集成、节点安全加固</td></tr>
+  <tr><td>核心功能</td><td>5月中–5月底</td><td>登录注册、VPN连接、设备指纹防刷、网络稳定性优化</td></tr>
+  <tr><td>完整功能</td><td>5月底–6月初</td><td>线路列表、商店订阅、支付、多协议支持（VLESS/Trojan/Hy2/TUIC）</td></tr>
+  <tr><td>测试发布</td><td>6月初–6月下旬</td><td>多语言、性能优化、应用商店提交</td></tr>
+  <tr><td style="font-weight:700; color: var(--accent);">🎯 FFF上线</td><td style="font-weight:700;">6月下旬</td><td style="font-weight:700;">iOS + Android + Windows 全平台发布</td></tr>
 </table>
 </div>
 
 <h3>同步进行</h3>
 <table>
-  <tr><td>节点安全加固</td><td>防止用户绕过APP直连</td><td>5月初完成</td></tr>
-  <tr><td>设备指纹防刷</td><td>防止反复注册体验账号</td><td>5月中完成</td></tr>
-  <tr><td>多协议 + 节点迁移</td><td>156节点迁移至新架构</td><td>5–6月完成，每月节省 $243</td></tr>
+  <tr><td>节点安全加固</td><td>防止用户绕过APP直连</td><td>5月中完成</td></tr>
+  <tr><td>设备指纹防刷</td><td>防止反复注册体验账号</td><td>5月底完成</td></tr>
+  <tr><td>多协议 + 节点迁移</td><td>156节点迁移至新架构</td><td>5–7月完成，每月节省 $243</td></tr>
 </table>
 
 <!-- Section 5: Company Registration -->
@@ -291,12 +293,12 @@
 
 <div class="timeline">
   <div class="timeline-item">
-    <div class="timeline-date">4月19日</div>
-    <div class="timeline-text">Arrowfish Google Play 上线（延迟1周）</div>
+    <div class="timeline-date">4月25日</div>
+    <div class="timeline-text">Arrowfish Google Play 上线（延迟2周，含QA全面测试+合规优化）</div>
   </div>
   <div class="timeline-item">
-    <div class="timeline-date">4月20日</div>
-    <div class="timeline-text">FFF 开发启动（Flutter基础框架）</div>
+    <div class="timeline-date">4月27日</div>
+    <div class="timeline-text">FFF 开发启动（Flutter基础框架 + 安全加固）</div>
   </div>
   <div class="timeline-item">
     <div class="timeline-date">4月底</div>
@@ -311,15 +313,15 @@
     <div class="timeline-text"><strong>开始对接FFF支付网关 ← 关键路径</strong></div>
   </div>
   <div class="timeline-item">
-    <div class="timeline-date">5月底</div>
+    <div class="timeline-date">6月初</div>
     <div class="timeline-text">FFF MVP（能连VPN、能看线路）</div>
   </div>
   <div class="timeline-item milestone">
-    <div class="timeline-date" style="color: #EF4444;">6月中旬</div>
+    <div class="timeline-date" style="color: #EF4444;">6月下旬</div>
     <div class="timeline-text"><strong>FFF 全平台发布（iOS + Android + Windows）</strong></div>
   </div>
   <div class="timeline-item">
-    <div class="timeline-date">6月底</div>
+    <div class="timeline-date">7月初</div>
     <div class="timeline-text">节点迁移完成，Arrowfish用户引导迁移至FFF</div>
   </div>
 </div>
