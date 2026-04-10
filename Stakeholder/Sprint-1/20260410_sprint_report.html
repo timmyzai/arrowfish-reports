@@ -58,61 +58,10 @@
   .action-num { background: var(--accent); color: white; width: 20px; height: 20px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.7rem; font-weight: 700; flex-shrink: 0; margin-top: 2px; }
   .footer { margin-top: 2rem; padding-top: 1rem; border-top: 1px solid var(--border); font-size: 0.8rem; color: var(--text-secondary); text-align: center; }
 
-  /* === Auth Gate === */
-  #auth-gate {
-    position: fixed; inset: 0; z-index: 10000;
-    display: flex; align-items: center; justify-content: center;
-    background: #0F172A;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    transition: opacity 0.5s ease, visibility 0.5s ease;
-  }
-  #auth-gate.hidden { opacity: 0; visibility: hidden; pointer-events: none; }
-  .gate-card {
-    position: relative; width: 100%; max-width: 400px; padding: 40px 32px;
-    background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 20px;
-    backdrop-filter: blur(40px); -webkit-backdrop-filter: blur(40px);
-    box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5);
-    animation: cardIn 0.5s ease both;
-  }
-  @keyframes cardIn { from { opacity: 0; transform: translateY(16px); } }
-  .gate-title { font-size: 20px; font-weight: 700; color: #fff; text-align: center; margin-bottom: 6px; }
-  .gate-subtitle { font-size: 13px; color: #64748B; text-align: center; margin-bottom: 28px; }
-  .gate-input {
-    width: 100%; height: 48px; padding: 0 16px;
-    background: rgba(15,23,42,0.6); border: 1.5px solid rgba(255,255,255,0.1); border-radius: 10px;
-    color: #E2E8F0; font-size: 15px; outline: none; margin-bottom: 8px;
-  }
-  .gate-input:focus { border-color: #1E3A5F; box-shadow: 0 0 0 3px rgba(30,58,95,0.5); }
-  .gate-input.error { border-color: #EF4444; animation: shake 0.4s ease; }
-  @keyframes shake { 10%,90%{transform:translateX(-2px)} 20%,80%{transform:translateX(3px)} 30%,50%,70%{transform:translateX(-4px)} 40%,60%{transform:translateX(4px)} }
-  .gate-error { font-size: 13px; color: #EF4444; min-height: 20px; margin-bottom: 12px; }
-  .gate-submit {
-    width: 100%; height: 48px; background: linear-gradient(135deg, #22C55E, #16A34A);
-    border: none; border-radius: 10px; color: #fff; font-size: 15px; font-weight: 600; cursor: pointer;
-    transition: transform 0.15s, box-shadow 0.2s;
-  }
-  .gate-submit:hover { transform: translateY(-1px); box-shadow: 0 8px 24px rgba(34,197,94,0.25); }
-  .gate-footer { text-align: center; margin-top: 24px; font-size: 12px; color: #64748B; }
-  @media (max-width: 480px) { .gate-card { margin: 16px; padding: 32px 20px; } }
 </style>
+<script src="../../assets/auth-gate.js"></script>
 </head>
 <body>
-
-<!-- Auth Gate -->
-<div id="auth-gate">
-  <div class="gate-card">
-    <h2 class="gate-title">Arrowfish VPN</h2>
-    <p class="gate-subtitle">请输入访问密码查看报告</p>
-    <form id="gate-form" autocomplete="off">
-      <input type="password" id="gate-password" class="gate-input" placeholder="Access code" autocomplete="off" />
-      <div class="gate-error" id="gate-error"></div>
-      <button type="submit" class="gate-submit">解锁</button>
-    </form>
-    <div class="gate-footer">Protected access</div>
-  </div>
-</div>
-
-<div id="app-content" style="display:none;">
 
 <h1>Arrowfish VPN — 项目进度汇报</h1>
 <div class="subtitle">2026年4月10日 · Sprint 0 + Sprint 1 完成摘要 · 下阶段计划</div>
@@ -353,48 +302,6 @@
 <div class="footer">
   Arrowfish VPN · Sprint 0 + Sprint 1 汇报 · 2026-04-10
 </div>
-
-</div><!-- /app-content -->
-
-<script>
-(function() {
-    var PASS_HASH = 'a0f3285b07c26c0dcd2191447f391170d06035e8d57e31a048ba87074f3a9a15';
-    var CACHE_KEY = 'project_auth';
-    var CACHE_TTL = 30 * 60 * 1000;
-    var gate = document.getElementById('auth-gate');
-    var app = document.getElementById('app-content');
-    var form = document.getElementById('gate-form');
-    var input = document.getElementById('gate-password');
-    var errorEl = document.getElementById('gate-error');
-
-    function sha256(text) {
-        return crypto.subtle.digest('SHA-256', new TextEncoder().encode(text))
-            .then(function(buf) { return Array.from(new Uint8Array(buf)).map(function(b) { return b.toString(16).padStart(2,'0'); }).join(''); });
-    }
-    function isCacheValid() {
-        try { var ts = parseInt(localStorage.getItem(CACHE_KEY), 10); return ts && (Date.now() - ts) < CACHE_TTL; } catch(e) { return false; }
-    }
-    function setCache() {
-        try { localStorage.setItem(CACHE_KEY, Date.now().toString()); } catch(e) {}
-    }
-    function unlock() { gate.classList.add('hidden'); app.style.display = 'block'; }
-
-    if (isCacheValid()) { gate.style.display = 'none'; app.style.display = 'block'; }
-    else { input.focus(); }
-
-    form.addEventListener('submit', function(e) {
-        e.preventDefault();
-        var val = input.value.trim();
-        if (!val) { input.focus(); return; }
-        errorEl.textContent = '';
-        input.classList.remove('error');
-        sha256(val).then(function(hash) {
-            if (hash === PASS_HASH) { setCache(); unlock(); }
-            else { input.classList.add('error'); errorEl.textContent = '密码错误'; input.select(); setTimeout(function() { input.classList.remove('error'); }, 600); }
-        });
-    });
-})();
-</script>
 
 </body>
 </html>
