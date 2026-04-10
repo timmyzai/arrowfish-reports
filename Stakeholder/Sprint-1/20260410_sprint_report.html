@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Arrowfish VPN — Sprint 0+1 进度汇报 — 2026-04-10</title>
+<style>
+  :root {
+    --bg: #FAFAFA;
+    --card: #FFFFFF;
+    --border: #E5E7EB;
+    --text: #1F2937;
+    --text-secondary: #6B7280;
+    --accent: #2563EB;
+    --green: #B7D7C9;
+    --green-text: #166534;
+    --yellow: #E6DFAF;
+    --yellow-text: #854D0E;
+    --red: #DCCACA;
+    --red-text: #991B1B;
+    --grey: #F2F2F2;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans SC", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    padding: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  h1 { font-size: 1.5rem; margin-bottom: 0.25rem; }
+  h2 { font-size: 1.2rem; margin: 2rem 0 0.75rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--accent); }
+  h3 { font-size: 1rem; margin: 1.25rem 0 0.5rem; color: var(--text-secondary); }
+  .subtitle { color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 1.5rem; }
+  .card { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 1.25rem; margin: 0.75rem 0; }
+  .card.highlight { border-left: 4px solid var(--accent); }
+  .card.warning { border-left: 4px solid #F59E0B; background: #FFFBEB; }
+  .card.critical { border-left: 4px solid #EF4444; background: #FEF2F2; }
+  table { width: 100%; border-collapse: collapse; margin: 0.75rem 0; font-size: 0.9rem; }
+  th { background: var(--grey); text-align: left; padding: 0.5rem 0.75rem; font-weight: 600; }
+  td { padding: 0.5rem 0.75rem; border-bottom: 1px solid var(--border); }
+  .status-done { background: var(--green); color: var(--green-text); padding: 2px 8px; border-radius: 4px; font-size: 0.8rem; font-weight: 500; }
+  .status-progress { background: var(--yellow); color: var(--yellow-text); padding: 2px 8px; border-radius: 4px; font-size: 0.8rem; font-weight: 500; }
+  .status-pending { background: var(--grey); color: var(--text-secondary); padding: 2px 8px; border-radius: 4px; font-size: 0.8rem; font-weight: 500; }
+  .status-urgent { background: var(--red); color: var(--red-text); padding: 2px 8px; border-radius: 4px; font-size: 0.8rem; font-weight: 500; }
+  .timeline { position: relative; padding-left: 1.5rem; margin: 1rem 0; }
+  .timeline::before { content: ''; position: absolute; left: 0.35rem; top: 0.5rem; bottom: 0.5rem; width: 2px; background: var(--border); }
+  .timeline-item { position: relative; margin-bottom: 0.75rem; }
+  .timeline-item::before { content: ''; position: absolute; left: -1.15rem; top: 0.5rem; width: 10px; height: 10px; border-radius: 50%; background: var(--accent); border: 2px solid white; }
+  .timeline-item.milestone::before { background: #EF4444; width: 12px; height: 12px; left: -1.2rem; }
+  .timeline-date { font-weight: 600; font-size: 0.85rem; color: var(--accent); }
+  .timeline-text { font-size: 0.9rem; }
+  .action-list { list-style: none; padding: 0; }
+  .action-list li { padding: 0.5rem 0; border-bottom: 1px solid var(--border); display: flex; align-items: flex-start; gap: 0.5rem; }
+  .action-list li:last-child { border-bottom: none; }
+  .action-num { background: var(--accent); color: white; width: 20px; height: 20px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.7rem; font-weight: 700; flex-shrink: 0; margin-top: 2px; }
+  .footer { margin-top: 2rem; padding-top: 1rem; border-top: 1px solid var(--border); font-size: 0.8rem; color: var(--text-secondary); text-align: center; }
+
+  /* === Auth Gate === */
+  #auth-gate {
+    position: fixed; inset: 0; z-index: 10000;
+    display: flex; align-items: center; justify-content: center;
+    background: #0F172A;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+  }
+  #auth-gate.hidden { opacity: 0; visibility: hidden; pointer-events: none; }
+  .gate-card {
+    position: relative; width: 100%; max-width: 400px; padding: 40px 32px;
+    background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 20px;
+    backdrop-filter: blur(40px); -webkit-backdrop-filter: blur(40px);
+    box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5);
+    animation: cardIn 0.5s ease both;
+  }
+  @keyframes cardIn { from { opacity: 0; transform: translateY(16px); } }
+  .gate-title { font-size: 20px; font-weight: 700; color: #fff; text-align: center; margin-bottom: 6px; }
+  .gate-subtitle { font-size: 13px; color: #64748B; text-align: center; margin-bottom: 28px; }
+  .gate-input {
+    width: 100%; height: 48px; padding: 0 16px;
+    background: rgba(15,23,42,0.6); border: 1.5px solid rgba(255,255,255,0.1); border-radius: 10px;
+    color: #E2E8F0; font-size: 15px; outline: none; margin-bottom: 8px;
+  }
+  .gate-input:focus { border-color: #1E3A5F; box-shadow: 0 0 0 3px rgba(30,58,95,0.5); }
+  .gate-input.error { border-color: #EF4444; animation: shake 0.4s ease; }
+  @keyframes shake { 10%,90%{transform:translateX(-2px)} 20%,80%{transform:translateX(3px)} 30%,50%,70%{transform:translateX(-4px)} 40%,60%{transform:translateX(4px)} }
+  .gate-error { font-size: 13px; color: #EF4444; min-height: 20px; margin-bottom: 12px; }
+  .gate-submit {
+    width: 100%; height: 48px; background: linear-gradient(135deg, #22C55E, #16A34A);
+    border: none; border-radius: 10px; color: #fff; font-size: 15px; font-weight: 600; cursor: pointer;
+    transition: transform 0.15s, box-shadow 0.2s;
+  }
+  .gate-submit:hover { transform: translateY(-1px); box-shadow: 0 8px 24px rgba(34,197,94,0.25); }
+  .gate-footer { text-align: center; margin-top: 24px; font-size: 12px; color: #64748B; }
+  @media (max-width: 480px) { .gate-card { margin: 16px; padding: 32px 20px; } }
+</style>
+</head>
+<body>
+
+<!-- Auth Gate -->
+<div id="auth-gate">
+  <div class="gate-card">
+    <h2 class="gate-title">Arrowfish VPN</h2>
+    <p class="gate-subtitle">请输入访问密码查看报告</p>
+    <form id="gate-form" autocomplete="off">
+      <input type="password" id="gate-password" class="gate-input" placeholder="Access code" autocomplete="off" />
+      <div class="gate-error" id="gate-error"></div>
+      <button type="submit" class="gate-submit">解锁</button>
+    </form>
+    <div class="gate-footer">Protected access</div>
+  </div>
+</div>
+
+<div id="app-content" style="display:none;">
+
+<h1>Arrowfish VPN — 项目进度汇报</h1>
+<div class="subtitle">2026年4月10日 · Sprint 0 + Sprint 1 完成摘要 · 下阶段计划</div>
+
+<!-- Section 1: Sprint 0 -->
+<h2>一、Sprint 0 完成摘要（3/26–4/3）— 接手与稳定</h2>
+
+<div class="card highlight">
+<table>
+  <tr><th>指标</th><th>数据</th></tr>
+  <tr><td>提交次数</td><td><strong>90次</strong>（后端37 + Android 53）</td></tr>
+  <tr><td>合并分支</td><td>7个</td></tr>
+  <tr><td>解决问题</td><td><strong>49+</strong>（安全9、滥用6、收入2、设计8、基础设施5、依赖4、Android 15+）</td></tr>
+  <tr><td>修复崩溃</td><td><strong>13个关键Bug</strong>（启动崩溃、连接卡住、误报离线）</td></tr>
+  <tr><td>收入通道激活</td><td>2/2（Samsung IAP + Google AdMob，此前均为测试模式 = $0）</td></tr>
+  <tr><td>识别浪费</td><td>~$415/月（Lisahost测试节点 + 冗余服务）</td></tr>
+</table>
+</div>
+
+<h3>台湾团队遗留的关键发现</h3>
+<table>
+  <tr><td style="color: var(--red-text); font-weight:600;">Samsung IAP 测试模式</td><td>收入 = $0，已修复切换至生产模式</td></tr>
+  <tr><td style="color: var(--red-text); font-weight:600;">AdMob 测试模式</td><td>广告收入 = $0，已切换生产 Unit ID</td></tr>
+  <tr><td style="color: var(--red-text); font-weight:600;">iOS 连错误环境</td><td>HiYou连接DEV后端，已通过Cloudflare DNS修复指向生产</td></tr>
+  <tr><td style="color: var(--yellow-text); font-weight:600;">6个测试节点</td><td>~$412/月（2,988 CNY），标记"專線測試用"，待评估</td></tr>
+</table>
+
+<!-- Section 2: Sprint 1 -->
+<h2>二、Sprint 1 完成摘要（4/6–4/10）— 后端+Android稳定化</h2>
+
+<div class="card highlight">
+<table>
+  <tr><th>完成项</th><th>状态</th><th>说明</th></tr>
+  <tr><td>后端架构整合</td><td><span class="status-done">✅ 完成</span></td><td>ProxyBackend代码消除，单一后端架构</td></tr>
+  <tr><td>MySQL优化</td><td><span class="status-done">✅ 完成</span></td><td>5个新索引、18K行清理、log_apis 13.1GB待清除</td></tr>
+  <tr><td>Redis加固</td><td><span class="status-done">✅ DEV完成</span></td><td>密码保护 + 内存限制 + AOF持久化</td></tr>
+  <tr><td>sing-box Agent</td><td><span class="status-done">✅ 完成</span></td><td>870行Go代码，替代XRayR，测试通过</td></tr>
+  <tr><td>节点自动化</td><td><span class="status-done">✅ 完成</span></td><td>自动分配、到期回收、库存监控、付款提醒</td></tr>
+  <tr><td>Android崩溃修复</td><td><span class="status-done">✅ 完成</span></td><td>21/22个Bug已修复，WebSocket泄漏、ANR、计时器竞态</td></tr>
+  <tr><td>Android代码清理</td><td><span class="status-done">✅ 完成</span></td><td>删除1,932行死代码、30个死文件、66个孤立资源</td></tr>
+  <tr><td>USDT支付重写</td><td><span class="status-done">✅ 紧急修复</span></td><td>Java崩溃20K+次 → Go重写：3.4MB内存，0崩溃</td></tr>
+</table>
+<p style="margin-top: 0.75rem;"><strong>完成率：22/24 阶段完成</strong>（剩余2个为运维部署任务）</p>
+</div>
+
+<h3>USDT支付紧急修复（4月9日）</h3>
+<div class="card warning">
+<table>
+  <tr><td><strong>问题</strong></td><td>台湾团队的Java JAR崩溃20,000+次（内存溢出、无超时、O(n²)匹配），USDT支付完全瘫痪</td></tr>
+  <tr><td><strong>解决</strong></td><td>当天完成Go语言重写：内存从1024MB → 3.4MB，启动时自动完成9笔挂起订单</td></tr>
+  <tr><td><strong>状态</strong></td><td><span class="status-done">✅ 已上线生产</span> — TRC20 + ERC20 均测试OK</td></tr>
+</table>
+</div>
+
+<!-- Section 3: Delay -->
+<h2>三、Arrowfish上线 — 延迟1周</h2>
+
+<div class="card highlight">
+<table>
+  <tr><th>项目</th><th>原计划</th><th>实际</th></tr>
+  <tr>
+    <td>Google Play 上线</td>
+    <td>4月11日</td>
+    <td><strong>4月19日（+1周）</strong></td>
+  </tr>
+</table>
+</div>
+
+<h3>延迟原因</h3>
+<div class="card warning">
+<p style="margin-bottom: 0.75rem;">Sprint 1 代码开发（22/24阶段）已按计划完成，延迟来自<strong>测试验证与生产部署</strong>的不可压缩环节：</p>
+<table>
+  <tr><th>环节</th><th>说明</th><th>为什么不能跳过</th></tr>
+  <tr>
+    <td><strong>1. sing-box测试节点验证</strong></td>
+    <td>VPN连接已验证OK（4/9），但流量上报、自动更新、24小时稳定性测试仍在进行</td>
+    <td>新的sing-box架构替代旧XRayR，必须确保节点在生产环境稳定运行24小时以上才能上线</td>
+  </tr>
+  <tr>
+    <td><strong>2. 移动端Bug修复</strong></td>
+    <td>本地真机测试（4/9）发现多个UI + 错误提示Bug，Amy（QA）也报告了额外问题</td>
+    <td>台湾团队遗留的问题在真机上才暴露，必须修复后才能发QA版本</td>
+  </tr>
+  <tr>
+    <td><strong>3. 生产环境部署</strong></td>
+    <td>Redis加固、MySQL优化（13.1GB日志清理）、后端22个阶段代码合并部署</td>
+    <td>DEV环境已完成验证，但生产环境部署需要逐步执行，避免服务中断</td>
+  </tr>
+  <tr>
+    <td><strong>4. QA + 应用商店审核</strong></td>
+    <td>Amy需要2-3天完整测试，Google Play审核通常1-3天</td>
+    <td>跳过QA直接上线风险太高——台湾团队的教训就是缺乏测试导致线上崩溃</td>
+  </tr>
+</table>
+<p style="margin-top: 0.75rem;"><strong>结论：</strong>延迟1周是为了保证质量，不是因为开发进度问题。代码已全部就绪，剩余工作是验证和部署。</p>
+</div>
+
+<h3>下周工作（Sprint 2: 4/13–19）</h3>
+<table>
+  <tr><td>✅ 测试节点VPN连接已验证OK</td><td>完成流量上报 + 24小时稳定性测试</td></tr>
+  <tr><td>🔄 生产环境部署</td><td>Redis加固、MySQL优化、后端全量部署</td></tr>
+  <tr><td>⏳ QA + 提交</td><td>Amy正式测试 → 修复 → Google Play 提交</td></tr>
+</table>
+
+<h3>Siqo Crypto 支付对接（待办任务）</h3>
+<div class="card highlight">
+<table>
+  <tr><td><strong>内容</strong></td><td>对接 Siqo Crypto 支付网关（API已就绪，需后端消费接入）</td></tr>
+  <tr><td><strong>平台</strong></td><td>Arrowfish（当前Android应用）</td></tr>
+  <tr><td><strong>后端开发</strong></td><td>Sprint 2 开始（4/13）</td></tr>
+  <tr><td><strong>发布</strong></td><td>Sprint 3（4月底），Arrowfish更新版</td></tr>
+</table>
+</div>
+
+<div class="card">
+<strong>结论：</strong>Arrowfish 4月19日前上线（延迟1周），不影响后续FFF计划。Siqo Crypto支付将在稳定版之后的更新版本中上线（4月底）。
+</div>
+
+<!-- Section 4: FFF Timeline -->
+<h2>四、FFF 上线时间表</h2>
+
+<div class="card highlight">
+<p style="margin-bottom: 0.75rem; color: var(--text-secondary);">Arrowfish上线后（4月19日），全力投入FFF开发。</p>
+<table>
+  <tr><th>阶段</th><th>时间</th><th>内容</th></tr>
+  <tr><td>基础框架</td><td>4月20日–5月初</td><td>Flutter项目搭建、API对接、VPN引擎集成</td></tr>
+  <tr><td>核心功能</td><td>5月</td><td>登录注册、VPN连接、多协议支持（VLESS/Trojan/Hy2/TUIC）</td></tr>
+  <tr><td>完整功能</td><td>5月中–5月底</td><td>线路列表、商店订阅、支付、通知</td></tr>
+  <tr><td>测试发布</td><td>6月初–6月中</td><td>多语言、性能优化、应用商店提交</td></tr>
+  <tr><td style="font-weight:700; color: var(--accent);">🎯 FFF上线</td><td style="font-weight:700;">6月中旬</td><td style="font-weight:700;">iOS + Android + Windows 全平台发布</td></tr>
+</table>
+</div>
+
+<h3>同步进行</h3>
+<table>
+  <tr><td>节点安全加固</td><td>防止用户绕过APP直连</td><td>5月初完成</td></tr>
+  <tr><td>设备指纹防刷</td><td>防止反复注册体验账号</td><td>5月中完成</td></tr>
+  <tr><td>多协议 + 节点迁移</td><td>156节点迁移至新架构</td><td>5–6月完成，每月节省 $243</td></tr>
+</table>
+
+<!-- Section 5: Company Registration -->
+<h2>五、FFF 公司注册 — 需要配合</h2>
+
+<div class="card warning">
+<table>
+  <tr><th>项目</th><th>状态</th><th>需要</th></tr>
+  <tr>
+    <td>歐盟公司注册</td>
+    <td><span class="status-done">✅ 已完成</span></td>
+    <td>—</td>
+  </tr>
+  <tr>
+    <td>相关账号开设</td>
+    <td><span class="status-progress">🔄 进行中</span></td>
+    <td><strong>需要一个新号收FFF相关短信</strong> → 用瑞士号码（EUR号码）</td>
+  </tr>
+  <tr>
+    <td>FFF 支付通道</td>
+    <td><span class="status-pending">⏳ 待开始</span></td>
+    <td>公司账号开好后，立即对接新支付网关（FFF公司名义）</td>
+  </tr>
+</table>
+</div>
+
+<div class="card critical">
+<strong>⚠️ 支付通道是关键路径：</strong>
+<ul style="margin-top: 0.5rem; padding-left: 1.25rem;">
+  <li>FFF上线前必须完成支付网关对接</li>
+  <li>新公司名义 → 需要重新申请 微信/支付宝/Stripe 等通道</li>
+  <li>建议 <strong>5月中开始对接</strong>，给足审核时间（通常2–4周）</li>
+</ul>
+</div>
+
+<!-- Section 6: Milestones -->
+<h2>六、关键里程碑总览</h2>
+
+<div class="timeline">
+  <div class="timeline-item">
+    <div class="timeline-date">4月19日</div>
+    <div class="timeline-text">Arrowfish Google Play 上线（延迟1周）</div>
+  </div>
+  <div class="timeline-item">
+    <div class="timeline-date">4月20日</div>
+    <div class="timeline-text">FFF 开发启动（Flutter基础框架）</div>
+  </div>
+  <div class="timeline-item">
+    <div class="timeline-date">4月底</div>
+    <div class="timeline-text">Siqo Crypto 支付上线 Arrowfish 更新版</div>
+  </div>
+  <div class="timeline-item">
+    <div class="timeline-date">5月初</div>
+    <div class="timeline-text">瑞士号码到位 → 开设FFF相关账号</div>
+  </div>
+  <div class="timeline-item milestone">
+    <div class="timeline-date" style="color: #EF4444;">5月初</div>
+    <div class="timeline-text"><strong>开始对接FFF支付网关 ← 关键路径</strong></div>
+  </div>
+  <div class="timeline-item">
+    <div class="timeline-date">5月底</div>
+    <div class="timeline-text">FFF MVP（能连VPN、能看线路）</div>
+  </div>
+  <div class="timeline-item milestone">
+    <div class="timeline-date" style="color: #EF4444;">6月中旬</div>
+    <div class="timeline-text"><strong>FFF 全平台发布（iOS + Android + Windows）</strong></div>
+  </div>
+  <div class="timeline-item">
+    <div class="timeline-date">6月底</div>
+    <div class="timeline-text">节点迁移完成，Arrowfish用户引导迁移至FFF</div>
+  </div>
+</div>
+
+<!-- Section 7: Action Items -->
+<h2>七、需要日总决定 / 配合</h2>
+
+<div class="card highlight">
+<ol class="action-list">
+  <li>
+    <span class="action-num">1</span>
+    <div><strong>瑞士号码</strong> — 尽快安排，开账号需要收验证短信</div>
+  </li>
+  <li>
+    <span class="action-num">2</span>
+    <div><strong>支付网关</strong> — 公司账号开好后，需要启动申请流程（微信/支付宝优先，占收入94%）</div>
+  </li>
+  <li>
+    <span class="action-num">3</span>
+    <div><strong>品牌确认</strong> — FFF最终品牌名称确认（影响应用商店、支付通道、落地页）</div>
+  </li>
+  <li>
+    <span class="action-num">4</span>
+    <div><strong>Apple开发者账号</strong> — 用新FFF公司注册，iOS发布前必须到位</div>
+  </li>
+</ol>
+</div>
+
+<div class="footer">
+  Arrowfish VPN · Sprint 0 + Sprint 1 汇报 · 2026-04-10
+</div>
+
+</div><!-- /app-content -->
+
+<script>
+(function() {
+    var PASS_HASH = 'a0f3285b07c26c0dcd2191447f391170d06035e8d57e31a048ba87074f3a9a15';
+    var CACHE_KEY = 'project_auth';
+    var CACHE_TTL = 30 * 60 * 1000;
+    var gate = document.getElementById('auth-gate');
+    var app = document.getElementById('app-content');
+    var form = document.getElementById('gate-form');
+    var input = document.getElementById('gate-password');
+    var errorEl = document.getElementById('gate-error');
+
+    function sha256(text) {
+        return crypto.subtle.digest('SHA-256', new TextEncoder().encode(text))
+            .then(function(buf) { return Array.from(new Uint8Array(buf)).map(function(b) { return b.toString(16).padStart(2,'0'); }).join(''); });
+    }
+    function isCacheValid() {
+        try { var ts = parseInt(localStorage.getItem(CACHE_KEY), 10); return ts && (Date.now() - ts) < CACHE_TTL; } catch(e) { return false; }
+    }
+    function setCache() {
+        try { localStorage.setItem(CACHE_KEY, Date.now().toString()); } catch(e) {}
+    }
+    function unlock() { gate.classList.add('hidden'); app.style.display = 'block'; }
+
+    if (isCacheValid()) { gate.style.display = 'none'; app.style.display = 'block'; }
+    else { input.focus(); }
+
+    form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        var val = input.value.trim();
+        if (!val) { input.focus(); return; }
+        errorEl.textContent = '';
+        input.classList.remove('error');
+        sha256(val).then(function(hash) {
+            if (hash === PASS_HASH) { setCache(); unlock(); }
+            else { input.classList.add('error'); errorEl.textContent = '密码错误'; input.select(); setTimeout(function() { input.classList.remove('error'); }, 600); }
+        });
+    });
+})();
+</script>
+
+</body>
+</html>
