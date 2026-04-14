@@ -86,8 +86,52 @@
   <tr><td style="color: var(--red-text); font-weight:600;">Samsung IAP 测试模式</td><td>收入 = $0，已修复切换至生产模式</td></tr>
   <tr><td style="color: var(--red-text); font-weight:600;">AdMob 测试模式</td><td>广告收入 = $0，已切换生产 Unit ID</td></tr>
   <tr><td style="color: var(--red-text); font-weight:600;">iOS 连错误环境</td><td>HiYou连接DEV后端，已通过Cloudflare DNS修复指向生产</td></tr>
+  <tr><td style="color: var(--red-text); font-weight:600;">违反无日志政策（多处）</td><td>VPN服务器配置和密钥记录在安卓调试日志；客户端API追踪中间件记录用户IP；数据库积累13.1 GB请求日志（86%占比）— 第1阶段全部修复</td></tr>
   <tr><td style="color: var(--yellow-text); font-weight:600;">6个测试节点</td><td>~$412/月（2,988 CNY），标记"專線測試用"，待评估</td></tr>
 </table>
+
+<!-- Impact Categories -->
+<h2>一-B、Sprint 1 成果分类</h2>
+
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:1.5rem;">
+  <div class="card" style="border-left:4px solid #166534;background:#f0fdf4;">
+    <strong style="color:#166534;">成本节省</strong>
+    <ul style="margin-top:0.5rem;padding-left:1.2rem;font-size:0.9rem;">
+      <li>DEV 服务器降配节省 <strong>$53/月（$637/年）</strong></li>
+      <li>节点运营自动化节省 <strong>~$2,000–3,000/月运营人力</strong></li>
+      <li>订单处理时间：25–60 分钟 → 不超过 2 分钟</li>
+    </ul>
+  </div>
+  <div class="card" style="border-left:4px solid #991B1B;background:#fef2f2;">
+    <strong style="color:#991B1B;">安全改进（已修复）</strong>
+    <ul style="margin-top:0.5rem;padding-left:1.2rem;font-size:0.9rem;">
+      <li>无日志政策违规 4 处 — 全部修复（VPN 配置/密钥/IP 泄露）</li>
+      <li>数据库首次建立备份（Azure 每日备份，30天保留）</li>
+      <li>Nginx 安全漏洞修复（木马注入攻击入口关闭）</li>
+      <li>JWT 登出未失效漏洞修复</li>
+      <li>OTP 验证逻辑反向 Bug 修复</li>
+    </ul>
+  </div>
+  <div class="card" style="border-left:4px solid #1d4ed8;background:#eff6ff;">
+    <strong style="color:#1d4ed8;">性能提升</strong>
+    <ul style="margin-top:0.5rem;padding-left:1.2rem;font-size:0.9rem;">
+      <li>数据库磁盘：66% → 49%（释放 ~22 GB）</li>
+      <li>读取副本从未使用 → GET 请求全量分流至副本</li>
+      <li>SELECT * 查询缩减 74–93% 字段</li>
+      <li>N+1 查询 4 处 → 批量查询</li>
+    </ul>
+  </div>
+  <div class="card" style="border-left:4px solid #92400e;background:#fffbeb;">
+    <strong style="color:#92400e;">关键 Bug 修复（QA 第3周）</strong>
+    <ul style="margin-top:0.5rem;padding-left:1.2rem;font-size:0.9rem;">
+      <li>支出明细页空白（PAY_CHANNEL + IAP 过滤缺失）</li>
+      <li>最新版本弹出更新提示（版本字符串比较错误）</li>
+      <li>退出登录无效（JWT 在 Redis 加入黑名单）</li>
+      <li>连接按钮永久锁死（广告弹窗 + 空节点列表）</li>
+      <li>黑名单未触发断开连接</li>
+    </ul>
+  </div>
+</div>
 
 <!-- Section 2: Sprint 1 -->
 <h2>二、Sprint 1 进展摘要（4/6–4/10）— 后端+Android稳定化</h2>

@@ -129,6 +129,43 @@
             </div>
         </div>
 
+        <!-- 成果分类一览 -->
+        <div class="section">
+            <h2 class="section-heading">成果分类一览</h2>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:16px;">
+                <div style="background:#f0faf4;border-left:4px solid #2d8a5e;border-radius:6px;padding:16px;">
+                    <div style="font-weight:700;color:#2d8a5e;margin-bottom:10px;font-size:13px;text-transform:uppercase;letter-spacing:0.5px;">成本节省</div>
+                    <div style="font-size:14px;color:#444;">识别 ~$735/月基础设施浪费（测试节点 $412 + 冗余服务器 $323）</div>
+                    <div style="font-size:12px;color:#888;margin-top:6px;">防滥用部署后每封号节省 $100–150/月</div>
+                </div>
+                <div style="background:#fef9f0;border-left:4px solid #c0711a;border-radius:6px;padding:16px;">
+                    <div style="font-weight:700;color:#c0711a;margin-bottom:10px;font-size:13px;text-transform:uppercase;letter-spacing:0.5px;">收入保护</div>
+                    <div style="font-size:14px;color:#444;">三星应用内购买恢复（此前为测试模式 = $0）</div>
+                    <div style="font-size:12px;color:#888;margin-top:6px;">Google AdMob 生产 ID 已确认（服务端）</div>
+                </div>
+                <div style="background:#fef2f2;border-left:4px solid #c0392b;border-radius:6px;padding:16px;">
+                    <div style="font-weight:700;color:#c0392b;margin-bottom:10px;font-size:13px;text-transform:uppercase;letter-spacing:0.5px;">安全改进</div>
+                    <div style="font-size:14px;color:#444;">发现前团队违反无日志政策：VPN 配置写入调试日志、客户端 API 追踪日志记录用户 IP</div>
+                    <div style="font-size:12px;color:#888;margin-top:6px;">Redis 无密码、无内存限制、无持久化 — 第1阶段修复</div>
+                </div>
+                <div style="background:#f0f4ff;border-left:4px solid #1a73e8;border-radius:6px;padding:16px;">
+                    <div style="font-weight:700;color:#1a73e8;margin-bottom:10px;font-size:13px;text-transform:uppercase;letter-spacing:0.5px;">性能提升</div>
+                    <div style="font-size:14px;color:#444;">数据库查询量下降 94%（产品页），写入量下降 98%（用户流），API 调用下降 92%</div>
+                    <div style="font-size:12px;color:#888;margin-top:6px;">代理轮询由 600 次/分钟降至 0（Redis 缓存）</div>
+                </div>
+                <div style="background:#f8f9fa;border-left:4px solid #555;border-radius:6px;padding:16px;">
+                    <div style="font-weight:700;color:#333;margin-bottom:10px;font-size:13px;text-transform:uppercase;letter-spacing:0.5px;">关键 Bug 修复</div>
+                    <div style="font-size:14px;color:#444;">13 个崩溃/卡顿问题修复（启动、连接、误报离线）</div>
+                    <div style="font-size:12px;color:#888;margin-top:6px;">6 个稳定性强化修复；ANR、WebSocket 泄漏、计时器竞态</div>
+                </div>
+                <div style="background:#fff8f0;border-left:4px solid #e67e22;border-radius:6px;padding:16px;">
+                    <div style="font-weight:700;color:#e67e22;margin-bottom:10px;font-size:13px;text-transform:uppercase;letter-spacing:0.5px;">防滥用</div>
+                    <div style="font-size:14px;color:#444;">免费用户时间限制从客户端迁至服务端，修复绕过漏洞（最高滥用者月用 1,216 GB）</div>
+                    <div style="font-size:12px;color:#888;margin-top:6px;">设备数量限制、强制版本更新 — 均为代码完成待部署</div>
+                </div>
+            </div>
+        </div>
+
         <!-- 平台稳定性 -->
         <div class="section">
             <h2 class="section-heading">业务影响 — 平台稳定性</h2>
@@ -245,6 +282,48 @@
                     </tr>
                 </tbody>
             </table>
+        </div>
+
+        <!-- 无日志政策违规 -->
+        <div class="section">
+            <h2 class="section-heading">安全警示 — 前团队违反无日志政策</h2>
+            <div class="section-body">
+                平台作为 VPN 服务，承诺<strong>不记录用户活动</strong>。审计发现前团队在多处违反此政策，已列入第1阶段优先修复计划。
+            </div>
+            <table>
+                <thead>
+                    <tr><th>违规位置</th><th>违规内容</th><th>风险</th><th>状态</th></tr>
+                </thead>
+                <tbody>
+                    <tr style="background-color: #DCCACA">
+                        <td>安卓应用 MmkvManager.kt</td>
+                        <td>调试日志中记录完整 VPN 服务器配置、连接密钥、订阅 URL（5处日志语句）</td>
+                        <td>高</td>
+                        <td><span class="status-badge status-enhanced">第1阶段修复</span></td>
+                    </tr>
+                    <tr style="background-color: #DCCACA">
+                        <td>后端客户端 API 追踪中间件</td>
+                        <td>启用时记录用户 IP 和完整请求体 — 不符合无日志政策</td>
+                        <td>高</td>
+                        <td><span class="status-badge status-enhanced">第1阶段修复</span></td>
+                    </tr>
+                    <tr style="background-color: #E6DFAF">
+                        <td>生产数据库 log_apis 表</td>
+                        <td>13.1 GB API 请求日志（占数据库总量 86%），每日新增 163 MB，清理脚本失效 114 天</td>
+                        <td>中</td>
+                        <td><span class="status-badge status-enhanced">第1阶段清理</span></td>
+                    </tr>
+                    <tr style="background-color: #E6DFAF">
+                        <td>后端 middleware.Logger()</td>
+                        <td>旧版本将所有请求记录到磁盘 — 生成 22 GB PM2 日志文件（~350 MB/天增长）</td>
+                        <td>中</td>
+                        <td><span class="status-badge status-enhanced">代码已修复，待部署</span></td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="section-note">
+                节点级别合规（禁用 rsyslog/journald）列为第1阶段运维任务。
+            </div>
         </div>
 
         <!-- 关键发现 -->

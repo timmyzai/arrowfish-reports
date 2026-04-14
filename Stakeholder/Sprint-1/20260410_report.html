@@ -250,6 +250,48 @@
             </div>
         </div>
 
+        <!-- 无日志政策违规 -->
+        <div class="section">
+            <h2 class="section-heading">安全改进 — 无日志政策违规（已发现并修复）</h2>
+            <div class="section-body">
+                平台承诺"不记录用户活动"。本周审计发现<strong>前团队在多处违反了无日志政策</strong>，已当周全部修复。
+            </div>
+            <table>
+                <thead>
+                    <tr><th>违规位置</th><th>前团队遗留的问题</th><th>修复内容</th><th>状态</th></tr>
+                </thead>
+                <tbody>
+                    <tr style="background-color: #B7D7C9">
+                        <td>安卓 MmkvManager.kt</td>
+                        <td>调试日志记录完整 VPN 服务器配置、连接密钥、订阅 URL（5处日志语句）</td>
+                        <td>全部替换为无敏感信息的等效日志（仅记录数量，不记录内容）</td>
+                        <td><span class="status-badge status-resolved">已修复</span></td>
+                    </tr>
+                    <tr style="background-color: #B7D7C9">
+                        <td>后端客户端 API 追踪中间件</td>
+                        <td>启用时记录用户 IP 和完整请求体，违反无日志政策</td>
+                        <td>用合规请求日志（仅方法、路径、状态码、耗时，无用户数据）替换追踪中间件</td>
+                        <td><span class="status-badge status-resolved">已修复</span></td>
+                    </tr>
+                    <tr style="background-color: #B7D7C9">
+                        <td>后端 middleware.Logger()</td>
+                        <td>旧版本将所有请求写入磁盘 — 生成 22 GB PM2 日志文件</td>
+                        <td>替换为空操作日志器；生产日志文件已手动清空（磁盘 50%→33%）</td>
+                        <td><span class="status-badge status-resolved">已修复，待部署生效</span></td>
+                    </tr>
+                    <tr style="background-color: #B7D7C9">
+                        <td>数据库 log_apis 表（1,252,033 行）</td>
+                        <td>API 请求日志占数据库总量 86%（13.1 GB），清理脚本失效 114 天无人察觉</td>
+                        <td>修复清理脚本（补充数据库凭据）；约 1.25 万行将于 2026-04-10 自动清除</td>
+                        <td><span class="status-badge status-resolved">已修复</span></td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="section-note">
+                <strong>节点级别（待办）：</strong>全部 156 个 VPN 节点需禁用 rsyslog 和 journald 操作系统日志，计划在第2阶段运维任务中完成。
+            </div>
+        </div>
+
         <!-- 整体进度概览 -->
         <div class="section">
             <h2 class="section-heading">整体进度概览</h2>
