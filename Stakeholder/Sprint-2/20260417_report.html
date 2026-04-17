@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>第2阶段进展报告（第1周）| Arrowfish VPN</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background-color: #fff; color: #333; line-height: 1.7; font-size: 15px; }
+        .container { max-width: 900px; margin: 0 auto; padding: 40px 24px; }
+        .report-header { margin-bottom: 48px; border-bottom: 1px solid #e8e8e8; padding-bottom: 32px; }
+        .report-title { font-size: 28px; font-weight: 600; color: #1a1a1a; margin-bottom: 16px; }
+        .report-meta { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; font-size: 13px; color: #666; }
+        .meta-item { display: flex; flex-direction: column; gap: 4px; }
+        .meta-label { font-weight: 500; color: #999; text-transform: uppercase; letter-spacing: 0.5px; }
+        .meta-value { color: #333; font-weight: 500; }
+        .section { margin-bottom: 48px; }
+        .section-heading { font-size: 20px; font-weight: 600; color: #1a1a1a; margin-bottom: 20px; padding-left: 16px; border-left: 4px solid #1a73e8; }
+        .section-body { margin-bottom: 24px; line-height: 1.8; color: #444; }
+        .section-note { font-size: 13px; color: #666; margin-top: 12px; padding: 12px; background-color: #f8f9fa; border-radius: 4px; border-left: 3px solid #1a73e8; }
+        .milestone-container { display: grid; gap: 12px; margin-top: 16px; }
+        .milestone { display: flex; gap: 16px; align-items: flex-start; background-color: #f8f9fa; padding: 16px; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.08); }
+        .milestone-date { background-color: #1a73e8; color: white; padding: 8px 12px; border-radius: 4px; font-size: 12px; font-weight: 600; white-space: nowrap; min-width: 80px; text-align: center; }
+        .milestone-text { flex: 1; font-size: 14px; font-weight: 500; color: #333; }
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; background-color: white; }
+        th { background-color: #f8f9fa; padding: 12px; text-align: left; font-size: 14px; font-weight: 600; color: #333; border-bottom: 1px solid #e8e8e8; }
+        td { padding: 12px; border-bottom: 1px solid #e8e8e8; font-size: 14px; color: #444; }
+        tr:last-child td { border-bottom: none; }
+        .findings-container { display: grid; gap: 16px; margin-top: 20px; }
+        .finding-card { background-color: #f8f9fa; padding: 20px; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.08); border-left: 4px solid #1a73e8; }
+        .finding-card.risk { border-left-color: #c0392b; }
+        .finding-card.resolved { border-left-color: #27ae60; }
+        .finding-title { font-size: 14px; font-weight: 600; color: #1a73e8; margin-bottom: 8px; letter-spacing: 0.5px; }
+        .finding-title.risk { color: #c0392b; }
+        .finding-title.resolved { color: #27ae60; }
+        .finding-content { font-size: 14px; color: #555; line-height: 1.6; }
+        .task-list { list-style: none; margin: 16px 0; }
+        .task-list li { padding: 8px 0 8px 24px; position: relative; color: #555; line-height: 1.6; }
+        .task-list li:before { content: ""; position: absolute; left: 0; top: 14px; width: 8px; height: 8px; background-color: #1a73e8; border-radius: 50%; }
+        .status-badge { display: inline-block; padding: 4px 10px; border-radius: 12px; font-size: 12px; font-weight: 600; }
+        .status-default { background-color: #F2F2F2; color: #444; }
+        .status-green { background-color: #B7D7C9; color: #1a5c3a; }
+        .status-yellow { background-color: #E6DFAF; color: #5c4a00; }
+        .status-red { background-color: #DCCACA; color: #5c1a1a; }
+        .status-legend { display: flex; gap: 16px; margin: 12px 0 24px; font-size: 12px; color: #666; flex-wrap: wrap; }
+        .status-legend-item { display: flex; align-items: center; gap: 6px; }
+        .status-dot { width: 12px; height: 12px; border-radius: 2px; display: inline-block; }
+        .scorecard { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin: 20px 0; }
+        .score-item { background-color: #f8f9fa; padding: 16px; border-radius: 8px; text-align: center; }
+        .score-number { font-size: 32px; font-weight: 700; color: #1a73e8; }
+        .score-label { font-size: 12px; color: #888; margin-top: 4px; }
+        .report-footer { margin-top: 48px; padding-top: 24px; border-top: 1px solid #e8e8e8; font-size: 12px; color: #999; text-align: right; }
+        @media (max-width: 768px) {
+            .report-meta { grid-template-columns: 1fr; gap: 12px; }
+            .report-title { font-size: 24px; }
+            .section-heading { font-size: 18px; }
+            table { font-size: 13px; }
+            th, td { padding: 10px; }
+            .scorecard { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media print {
+            body { font-family: Georgia, 'Times New Roman', serif; font-size: 14px; }
+            .container { max-width: 100%; padding: 0; }
+            .report-header { page-break-after: avoid; }
+            .section { page-break-inside: avoid; }
+        }
+    </style>
+    <script src="../../assets/auth-gate.js"></script>
+</head>
+<body>
+    <div class="container">
+
+        <!-- Header -->
+        <div class="report-header">
+            <h1 class="report-title">第2阶段进展报告（第1周）：Arrowfish 发布冲刺</h1>
+            <div class="report-meta">
+                <div class="meta-item">
+                    <span class="meta-label">本期</span>
+                    <span class="meta-value">2026年4月13日 – 4月17日</span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-label">正式版目标</span>
+                    <span class="meta-value">4月底（QA验收通过后）</span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-label">报告对象</span>
+                    <span class="meta-value">日总</span>
+                </div>
+            </div>
+            <div style="margin-top: 20px; padding: 14px 16px; background-color: #f0f4ff; border-radius: 6px; border-left: 4px solid #1a73e8; font-size: 14px; color: #333; line-height: 1.7;">
+                <strong>本阶段目标：</strong>完成Arrowfish稳定版全面验收，通过QA测试后提交Google Play，4月底正式上线。第3阶段已相应顺延，待本阶段交付完成后启动。
+            </div>
+        </div>
+
+        <!-- 关键风险与技术债务 -->
+        <div class="section">
+            <h2 class="section-heading">关键风险与技术债务</h2>
+            <div class="section-body">
+                以下为本阶段发现的关键风险，均源自台湾团队遗留代码。按影响优先级排列，营收阻断类问题优先处理。
+            </div>
+
+            <div class="findings-container">
+
+                <div class="finding-card resolved">
+                    <div class="finding-title resolved">【营收风险·已处理】专属IP付款完全失效</div>
+                    <div class="finding-content">
+                        台湾遗留代码缺陷导致每笔专属IP购买均以失败告终，该品类自上线起即零收入。若未发现，用户投诉将在正式上线后集中爆发，影响应用评分与用户留存。团队发现后当天完成定位与修复，目前正在全流程测试验证中。
+                    </div>
+                </div>
+
+                <div class="finding-card">
+                    <div class="finding-title">【营收风险·修复中】付款页面未自动关闭——重复扣款隐患</div>
+                    <div class="finding-content">
+                        用户完成付款后，支付页面偶尔不会自动关闭。若用户误触重试，存在重复发起支付的风险。修复方案本周已启动，预计本阶段内完成验证。
+                    </div>
+                </div>
+
+                <div class="finding-card resolved">
+                    <div class="finding-title resolved">【安全风险·已处理】免费节点流量被大规模滥用——多层防护体系已建立</div>
+                    <div class="finding-content">
+                        <p style="margin-bottom: 12px;">台湾遗留系统允许同一设备通过多次注册无限重置每日免费额度，并可被模拟器自动批量注册。若不处理，随规模增长，带宽成本将持续被无转化价值的滥用流量侵蚀，付费用户连接质量也随之下降。</p>
+                        <p style="margin-bottom: 12px; font-weight: 500;">本阶段建立了五层防护机制（验证中），<span style="color: #27ae60;">正常免费用户不受任何影响，完整享有每日30分钟权益：</span></p>
+                        <table style="margin: 0; font-size: 13px;">
+                            <thead>
+                                <tr>
+                                    <th style="width: 30%;">防护层</th>
+                                    <th>机制</th>
+                                    <th>封堵的滥用行为</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>① 设备维度额度</td>
+                                    <td>同一设备所有账号共享每日额度，换号不重置</td>
+                                    <td>多账号循环重置试用时间</td>
+                                </tr>
+                                <tr>
+                                    <td>② 设备绑定</td>
+                                    <td>卸载重装后返回原账号，不发放新额度</td>
+                                    <td>卸载重装刷新试用资格</td>
+                                </tr>
+                                <tr>
+                                    <td>③ 模拟器检测</td>
+                                    <td>应用启动时检测模拟器环境，直接拦截注册</td>
+                                    <td>模拟器自动批量注册账号工厂</td>
+                                </tr>
+                                <tr>
+                                    <td>④ 注册速率限制</td>
+                                    <td>每个IP每天最多注册5个新账号</td>
+                                    <td>单IP批量注册</td>
+                                </tr>
+                                <tr>
+                                    <td>⑤ 单设备账号上限</td>
+                                    <td>每台设备最多绑定3个账号</td>
+                                    <td>单设备无限注册账号</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="finding-card resolved">
+                    <div class="finding-title resolved">【稳定性·已处理】免费用户核心使用流程多处中断</div>
+                    <div class="finding-content">
+                        测试中发现免费用户登录后VPN无法正常启动、切换账号后节点列表为空、计时器不显示等问题，均源于台湾遗留的会话状态管理缺陷。相关问题已完成排查，修复正在测试环境验证中。
+                    </div>
+                </div>
+
+                <div class="finding-card">
+                    <div class="finding-title">【运维·规划中】节点离线误报频繁——告警系统待优化</div>
+                    <div class="finding-content">
+                        当前系统对每次探测失败均发送告警，导致大量误报干扰运维判断。新方案将在发送通知前自动多次核验，并附带节点负载数据，区分真实故障与短暂波动。方案本阶段内启动开发。
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- 本期进展 -->
+        <div class="section">
+            <h2 class="section-heading">本期进展</h2>
+
+            <div class="section-body">
+                第2阶段于4月13日启动，以QA全量回归测试结果为基线，系统性清理遗留缺陷。本阶段最直观的成果是版本迭代速度：自第1阶段交付的v2.0.0起，团队已完成多轮修复迭代，应用稳定性、启动速度与流畅度均有明显提升。
+            </div>
+
+            <!-- 版本进展 -->
+            <div style="margin: 20px 0; padding: 20px; background: linear-gradient(135deg, #f0f4ff 0%, #f8f9fa 100%); border-radius: 8px; border: 1px solid #e0e8ff;">
+                <div style="font-size: 13px; font-weight: 600; color: #666; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 12px;">版本迭代进展</div>
+                <div style="display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">
+                    <span style="background:#e8eaf6; color:#3949ab; padding:6px 14px; border-radius:20px; font-size:13px; font-weight:600;">v2.0.0</span>
+                    <span style="color:#bbb; font-size:18px;">→</span>
+                    <span style="background:#e8eaf6; color:#3949ab; padding:6px 14px; border-radius:20px; font-size:13px; font-weight:600;">v2.0.2</span>
+                    <span style="color:#bbb; font-size:18px;">→</span>
+                    <span style="background:#e8eaf6; color:#3949ab; padding:6px 14px; border-radius:20px; font-size:13px; font-weight:600;">v2.0.3</span>
+                    <span style="color:#bbb; font-size:18px;">→</span>
+                    <span style="background:#e8eaf6; color:#3949ab; padding:6px 14px; border-radius:20px; font-size:13px; font-weight:600;">v2.0.4</span>
+                    <span style="color:#bbb; font-size:18px;">→</span>
+                    <span style="background:#e8eaf6; color:#3949ab; padding:6px 14px; border-radius:20px; font-size:13px; font-weight:600;">v2.0.5</span>
+                    <span style="color:#bbb; font-size:18px;">→</span>
+                    <span style="background:#1a73e8; color:white; padding:6px 14px; border-radius:20px; font-size:13px; font-weight:600;">v2.0.6 ✦ 本周</span>
+                </div>
+                <div style="margin-top: 12px; font-size: 13px; color: #555; line-height: 1.7;">
+                    v2.0.6相比v2.0.0：崩溃率显著下降、启动速度加快、连接更稳定流畅。每一版均经QA确认改善后方才推进。
+                </div>
+            </div>
+
+            <div class="milestone-container" style="margin-top: 24px;">
+                <div class="milestone">
+                    <div class="milestone-date">第1阶段<br>收尾</div>
+                    <div class="milestone-text"><strong>双团队QA测试启动，发现45项问题。</strong>台湾QA与马来西亚QA联合测试，发现30项缺陷及15项优化建议，其中付款失效、计费逻辑错误、界面异常为最高优先级，均已第一时间介入处理。</div>
+                </div>
+                <div class="milestone">
+                    <div class="milestone-date">第2阶段<br>第1周</div>
+                    <div class="milestone-text"><strong>缺陷修复与功能优化同步推进。</strong>按优先级分三类并行处理：营收阻断类（专属IP付款、订阅日期）、安全类（试用额度绕过、模拟器刷号）、稳定性类（连接流程、计时器、崩溃根因）。每批修复完成后发布新版本供QA复测，形成快速闭环。</div>
+                </div>
+                <div class="milestone">
+                    <div class="milestone-date">本周</div>
+                    <div class="milestone-text"><strong>测试环境自动化构建已上线。</strong>代码提交后自动编译并推送安装包，测试团队可即时获取最新版本，大幅缩短每轮验证周期——这是支撑v2.0.0→v2.0.6高频迭代的基础设施。</div>
+                </div>
+                <div class="milestone">
+                    <div class="milestone-date">本周</div>
+                    <div class="milestone-text"><strong>深层崩溃根因系统排查完成。</strong>AI辅助代码审查发现台湾原始代码中多处可能引发崩溃的深层问题，逐项修复后应用启动速度与稳定性均有明显改善，是v2.0.0→v2.0.6质量提升的核心驱动。</div>
+                </div>
+            </div>
+
+            <!-- 进度总览 -->
+            <div style="margin-top: 32px;">
+                <div class="section-body" style="font-weight: 500; margin-bottom: 12px;">本阶段进度总览</div>
+                <div class="status-legend">
+                    <div class="status-legend-item"><span class="status-dot" style="background:#B7D7C9;"></span>已上线</div>
+                    <div class="status-legend-item"><span class="status-dot" style="background:#E6DFAF;"></span>延迟</div>
+                    <div class="status-legend-item"><span class="status-dot" style="background:#DCCACA;"></span>风险</div>
+                    <div class="status-legend-item"><span class="status-dot" style="background:#F2F2F2;"></span>进行中</div>
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>项目</th>
+                            <th>状态</th>
+                            <th>说明</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>专属IP付款修复</strong>（营收优先）</td>
+                            <td><span class="status-badge status-default">验证中</span></td>
+                            <td>修复方案已完成，正在测试环境全流程验证</td>
+                        </tr>
+                        <tr>
+                            <td><strong>免费试用防滥用</strong>（保护转化率）</td>
+                            <td><span class="status-badge status-default">验证中</span></td>
+                            <td>设备维度额度限制 + 注册速率限制，测试验证中</td>
+                        </tr>
+                        <tr>
+                            <td>免费用户连接流程</td>
+                            <td><span class="status-badge status-default">修复中</span></td>
+                            <td>计时器、会话重置、试用时长计算等问题修复推进中</td>
+                        </tr>
+                        <tr>
+                            <td>付款页面重复支付风险</td>
+                            <td><span class="status-badge status-default">修复中</span></td>
+                            <td>付款成功后页面自动关闭逻辑，本周内完成</td>
+                        </tr>
+                        <tr>
+                            <td>应用稳定性深度修复</td>
+                            <td><span class="status-badge status-default">修复中</span></td>
+                            <td>AI审查发现的崩溃风险（内存泄漏、并发问题）逐项修复中</td>
+                        </tr>
+                        <tr>
+                            <td>测试环境自动构建（CI/CD）</td>
+                            <td><span class="status-badge status-green">已上线</span></td>
+                            <td>提交即自动构建推送，缩短测试版本交付时间</td>
+                        </tr>
+                        <tr>
+                            <td>后台节点管理自动化</td>
+                            <td><span class="status-badge status-default">测试中</span></td>
+                            <td>功能开发完成，预计下周上线</td>
+                        </tr>
+                        <tr>
+                            <td>节点告警智能化（误报过滤）</td>
+                            <td><span class="status-badge status-default">规划中</span></td>
+                            <td>多次核验 + 负载数据告警方案，本阶段内启动</td>
+                        </tr>
+                        <tr>
+                            <td>QA回归测试（进行中）</td>
+                            <td><span class="status-badge status-default">进行中</span></td>
+                            <td>双团队已发现30项缺陷 + 15项优化，开发与QA紧密协作，逐版本修复复测</td>
+                        </tr>
+                        <tr>
+                            <td>QA最终签核（上线门控）</td>
+                            <td><span class="status-badge status-yellow">待台湾QA返岗</span></td>
+                            <td>正式版须台湾QA与马来西亚QA双方联合签核后方可提交</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Arrowfish正式版上线</strong>（Google Play + 生产环境）</td>
+                            <td><span class="status-badge status-yellow">目标4月底</span></td>
+                            <td>QA双方签核后提交Play，同步部署生产环境（含所有后端修复）</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- 进度计数 -->
+            <div class="scorecard">
+                <div class="score-item">
+                    <div class="score-number">v2.0.6</div>
+                    <div class="score-label">本周最新版本（v2.0.0起共6次迭代）</div>
+                </div>
+                <div class="score-item">
+                    <div class="score-number">30</div>
+                    <div class="score-label">QA发现缺陷（双团队，修复推进中）</div>
+                </div>
+                <div class="score-item">
+                    <div class="score-number">15</div>
+                    <div class="score-label">功能优化项（双团队发现，处理中）</div>
+                </div>
+                <div class="score-item">
+                    <div class="score-number">4月底</div>
+                    <div class="score-label">正式版目标上线</div>
+                </div>
+            </div>
+            <div style="margin-top: 20px; padding: 20px; background-color: #f0f9f4; border-radius: 8px; border-left: 4px solid #27ae60;">
+                <div style="font-size: 13px; font-weight: 600; color: #27ae60; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 0.5px;">开发与QA紧密协作</div>
+                <div style="font-size: 14px; color: #444; line-height: 1.8;">
+                    本阶段开发团队与台湾、马来西亚两地QA保持高频协作——QA发现问题、开发当天定位修复、发布新版本、QA立即复测，形成快速闭环。
+                    45项问题（30缺陷 + 15优化）反映的是测试覆盖全面，而非产品不稳定；从v2.0.0到v2.0.6的6次迭代，每一版都是QA确认改善后才继续推进。
+                    用户在正式版上线后将感受到的提升：<strong>启动更快、连接更稳定、付款流程顺畅、试用体验一致可靠。</strong>
+                </div>
+            </div>
+        </div>
+
+        <!-- 阻塞与延迟 -->
+        <div class="section">
+            <h2 class="section-heading">阻塞与延迟</h2>
+
+            <div class="findings-container">
+                <div class="finding-card risk">
+                    <div class="finding-title risk">发布时间调整至4月底 — QA双团队验收门控</div>
+                    <div class="finding-content">
+                        Arrowfish正式版须同时通过台湾QA与马来西亚QA两方验收确认方可上线。台湾QA目前休假中，联合回归测试须等其返岗后启动；此外，本周代码审查发现遗留代码中额外的崩溃风险，这些问题必须修复并重新测试方可提交。团队决定以全面验收为优先，4月底为目标上线时间——正式版上线后应达到零崩溃标准，而非上线后再持续处理用户投诉。
+                    </div>
+                </div>
+            </div>
+
+            <ul class="task-list" style="margin-top: 16px;">
+                <li><strong>Google Play 提交</strong>：台湾QA返岗 → 联合回归 → 双方通过 → 提交，目标4月底完成</li>
+                <li><strong>正式版部署</strong>：与Play提交同步，第1阶段所有后端修复一并上线</li>
+                <li><strong>合规事项</strong>：瑞士注册号码及FFF品牌支付通道办理中，由项目对接方跟进，不影响Arrowfish发布</li>
+            </ul>
+        </div>
+
+        <!-- 下一步计划 -->
+        <div class="section">
+            <h2 class="section-heading">下一步计划</h2>
+            <div class="milestone-container">
+                <div class="milestone">
+                    <div class="milestone-date">本周完成</div>
+                    <div class="milestone-text"><strong>完成所有修复项测试环境验证</strong> — 专属IP付款、免费用户流程、稳定性修复全部在测试环境确认通过，形成最终候选版本</div>
+                </div>
+                <div class="milestone">
+                    <div class="milestone-date">下周</div>
+                    <div class="milestone-text"><strong>双团队QA联合回归测试</strong> — 台湾QA返岗后与马来西亚QA同步启动，覆盖第2阶段全部修复项；后台节点管理自动化系统正式上线</div>
+                </div>
+                <div class="milestone">
+                    <div class="milestone-date">4月底</div>
+                    <div class="milestone-text"><strong>Arrowfish正式版上线</strong> — QA双方通过后提交Google Play；生产环境全量部署（含第1、2阶段所有修复）；生产自动化构建上线（版本强制/可选更新配置自动同步后台）</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 中长期规划 -->
+        <div class="section">
+            <h2 class="section-heading">中长期规划</h2>
+            <div class="section-body">
+                以下为项目主要里程碑，按优先级顺序排列。Arrowfish正式版上线是所有后续计划的前提，第3阶段已顺延至正式版交付后启动。
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>优先级</th>
+                        <th>里程碑</th>
+                        <th>目标时间</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr style="background-color: #f0f4ff;">
+                        <td><strong>1</strong></td>
+                        <td><strong>Arrowfish 正式版上线</strong> — Google Play提交 + 生产环境部署</td>
+                        <td><strong>2026年4月底</strong></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>生产自动化构建上线 — 版本更新强制/可选配置自动同步后台</td>
+                        <td>2026年4月底</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>第3阶段启动（Arrowfish正式版上线后）— 节点合规配置、后台自动化完善</td>
+                        <td>2026年5月初起</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>FFF 新产品底层基础完成，主应用开发正式启动</td>
+                        <td>第3阶段</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>FFF 正式版发布（Android / Windows / iOS）</td>
+                        <td>第3–6阶段</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="section-note">
+                第3阶段因Arrowfish发布顺延而推迟启动。FFF新产品底层技术储备工作目前已在并行推进，不影响Arrowfish交付节奏。
+            </div>
+        </div>
+
+        <!-- 财务影响 -->
+        <div class="section">
+            <h2 class="section-heading">财务影响</h2>
+            <div class="findings-container">
+                <div class="finding-card resolved">
+                    <div class="finding-title resolved">专属IP营收通道 — 修复后可正常接收付款</div>
+                    <div class="finding-content">
+                        当前月收入约¥35,000，94%来自支付宝与微信。专属IP属高单价品类，付款修复后将直接新增该营收来源，验证进行中。
+                    </div>
+                </div>
+                <div class="finding-card resolved">
+                    <div class="finding-title resolved">免费节点带宽滥用成本 — 防护体系验证中</div>
+                    <div class="finding-content">
+                        每日约400–500个新注册，部分为无转化价值的刷号账号，每个高频滥用账号每月带宽成本约¥700–¥1,000。五层防护机制上线后，带宽资源将集中服务真实付费潜力用户，预计同步提升0.3–0.5个百分点付费转化率。
+                    </div>
+                </div>
+                <div class="finding-card">
+                    <div class="finding-title">重复扣款风险 — 修复验证中</div>
+                    <div class="finding-content">
+                        付款页面偶发不关闭问题存在重复扣款隐患。当前月交易量约5,000笔，修复上线后消除该财务风险与潜在退款纠纷。
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="report-footer">
+            报告日期：2026年4月17日 · 下次更新：2026年4月24日（第2周收尾） · 阶段截止：2026年4月底
+        </div>
+    </div>
+</body>
+</html>
