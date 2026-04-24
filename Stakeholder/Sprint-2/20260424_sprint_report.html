@@ -76,28 +76,20 @@
   </div>
 </div>
 
-<!-- 一、需要日总决定 -->
-<h2>一、需要日总决定 / 配合</h2>
+<!-- 一、需要知悉事项 -->
+<h2>一、需要知悉事项</h2>
 <ul class="action-list">
   <li>
     <span class="action-num">1</span>
-    <div><strong>越南节点策略</strong> — 越南节点供应商出问题，用户白名单选越南后看不到节点。请决定：(A) 重新采购供应商；或 (B) 暂时隐藏越南选项。不影响本周发布。</div>
+    <div><strong>FFF 公司事项进展</strong> — FFF 公司欧盟电话号码注册与新支付通道办理仍在 Roy 一侧推进，进度待同步。</div>
   </li>
   <li>
     <span class="action-num">2</span>
-    <div><strong>专属IP 年度方案价格</strong> — 数据库里年度价不等于月度 × 12，疑似遗留配置错误。请确认正确价格，由后端通过迁移脚本统一修正。不影响本周发布。</div>
+    <div><strong>🔴 合规预警</strong> — 本周审计发现后端 <code>user_flows</code> 表在长期保存「用户 × 节点 × 小时」的使用记录，与 VaaS 无日志承诺冲突。已排入第3阶段优先项（<em>mod-efficiency Phase 12</em>）拆表处理。<strong>在此修复完成前，对外不宜把「无日志」作为正式宣传语</strong>，尤其是 FFF 欧盟上线时的合规材料。详见第九节。</div>
   </li>
   <li>
     <span class="action-num">3</span>
-    <div><strong>FFF 上线策略</strong> — FFF 公司欧盟电话号码（Roy 跟进）与新支付通道仍在对接中。请决定：(A) 等两项就绪一并上线；或 (B) 先以邮箱免密 + 无支付的 MVP 形式上线，收集真实反馈，后续补齐。影响 FFF 第3阶段排期。</div>
-  </li>
-  <li>
-    <span class="action-num">4</span>
-    <div><strong>FFF 公司事项推进</strong> — FFF 公司欧盟电话号码注册（Roy 跟进）与新支付通道办理状态？请 Roy 同步进展。</div>
-  </li>
-  <li>
-    <span class="action-num">5</span>
-    <div><strong>🔴 知悉事项（合规）</strong> — 本周审计发现后端 <code>user_flows</code> 表在长期保存「用户 × 节点 × 小时」的使用记录，与 VaaS 无日志承诺冲突。已排入第3阶段优先项（<em>mod-efficiency Phase 12</em>）拆表处理。无需决策，但希望日总知悉：<strong>在此修复完成前，对外不宜把「无日志」作为正式宣传语</strong>，尤其是 FFF 欧盟上线时的合规材料。详见第九节。</div>
+    <div><strong>专属线路（专线）续费体验缺口 — 新发现</strong> — 现有付费客户的专线到期后，<strong>系统不允许在同一个节点续费，必须重新购买一条新的专线</strong>。重新购买会重新分配节点，客户原有的 IP 与路由习惯被打断，属于付费用户流失风险点。<br><br><strong>团队规划：</strong>引入「自动续费扣款」 — 到期前自动从余额 / 绑定支付通道扣款，<strong>保留原节点绑定不变</strong>（无需重新购买、无需重新分配节点）。第3阶段范围已锁定，列入<strong>第4阶段候选</strong>，与节点自动化路线图、FFF 通用支付模块共用，避免两个产品各做一套。<br><br><strong>商业价值：</strong>专线是高客单价品类，续费摩擦直接影响 LTV；自动续费可同时降低客服干预与支付失败导致的非自愿流失。</div>
   </li>
 </ul>
 
