@@ -316,8 +316,57 @@
   </tr>
 </table>
 
-<!-- 八、为什么必须先清理技术债 -->
-<h2>八、为什么第3阶段必须先清理技术债 — FFF 复用同一套后端</h2>
+<!-- 八、安全与权限管理 -->
+<h2>八、安全与权限管理</h2>
+<div class="card highlight">
+  <strong>原则：最小权限（Least Privilege）。</strong>每个人只能看到自己工作所需的资源，不开放冗余权限。
+</div>
+
+<h3>源代码访问权限收敛</h3>
+<table>
+  <tr><th>角色</th><th>GitLab 源代码访问</th><th>说明</th></tr>
+  <tr><td><strong>Roy</strong>（项目对接）</td><td>✅ 保留</td><td>需了解项目结构以推进商务对接</td></tr>
+  <tr><td><strong>Morgan</strong>（项目相关）</td><td>✅ 保留</td><td>历史项目背景</td></tr>
+  <tr><td><strong>Lex</strong>（中国 Flutter）</td><td>✅ 保留</td><td>FFF 重建工作必须访问代码</td></tr>
+  <tr><td><strong>马来西亚开发团队</strong></td><td>✅ 保留</td><td>当前主开发力量</td></tr>
+  <tr><td>其他台湾团队成员</td><td>❌ 已收回</td><td>移交完成后访问权限收回，符合最小权限原则</td></tr>
+</table>
+
+<h3>接手时发现的安全 / 基础设施隐患（持续整改）</h3>
+<table>
+  <tr><th>问题</th><th>风险</th><th>状态</th></tr>
+  <tr>
+    <td><strong>Staging 与 Production 共用同一个 Azure NSG（网络安全组）</strong></td>
+    <td>测试环境改动可能波及生产；攻击面无法隔离</td>
+    <td>已识别，第3阶段隔离 NSG</td>
+  </tr>
+  <tr>
+    <td><strong>数据库无定期备份</strong></td>
+    <td>磁盘损坏 / 误操作 / 攻击会导致全量数据丢失，无法恢复</td>
+    <td>第3阶段优先项，启用自动备份 + 异地副本</td>
+  </tr>
+  <tr>
+    <td><strong>HK VM 上的 Proxybackend 服务长期不稳定</strong></td>
+    <td>影响节点状态同步；该服务本应已被新版后端替代</td>
+    <td>第3阶段彻底淘汰 Proxybackend，全量切到 orebackend</td>
+  </tr>
+  <tr>
+    <td><strong>SSH 访问未统一使用 PEM 密钥</strong></td>
+    <td>密码登录易被暴力破解；密钥泄露时无法精细回收</td>
+    <td>部分已 PEM 化（如 AWS 台湾 GitLab 服务器）；第3阶段全面铺开</td>
+  </tr>
+  <tr>
+    <td><strong>读写分离副本未被使用</strong></td>
+    <td>主库承担全部读写流量，故障 / 性能问题影响面大</td>
+    <td>✅ <strong>本阶段已修复</strong> — 100% 客户端读取流量已走只读副本</td>
+  </tr>
+</table>
+<div class="card warning">
+  <strong>本阶段已修一项（读写分离），剩余项已纳入第3阶段。</strong>这些都是台湾团队遗留的基础设施问题，不是新增风险。接手后必须正视并依次清理，否则上线规模一扩大就会暴露。
+</div>
+
+<!-- 九、为什么必须先清理技术债 -->
+<h2>九、为什么第3阶段必须先清理技术债 — FFF 复用同一套后端</h2>
 <div class="card critical">
   <strong>关键背景：</strong>FFF 新产品将复用 orebackend 后端。技术债不修，会被 FFF 继承一遍，问题翻倍。第3阶段的后端通用化不是「锦上添花」，而是 FFF 顺利上线的前提。
 </div>
