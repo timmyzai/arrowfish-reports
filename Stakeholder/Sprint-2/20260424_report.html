@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>第2阶段进展报告（第2周）| Arrowfish VPN</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background-color: #fff; color: #333; line-height: 1.7; font-size: 15px; }
+        .container { max-width: 900px; margin: 0 auto; padding: 40px 24px; }
+        .report-header { margin-bottom: 40px; border-bottom: 1px solid #e8e8e8; padding-bottom: 32px; }
+        .report-title { font-size: 28px; font-weight: 600; color: #1a1a1a; margin-bottom: 16px; }
+        .report-meta { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; font-size: 13px; color: #666; }
+        .meta-item { display: flex; flex-direction: column; gap: 4px; }
+        .meta-label { font-weight: 500; color: #999; text-transform: uppercase; letter-spacing: 0.5px; }
+        .meta-value { color: #333; font-weight: 500; }
+        .section { margin-bottom: 44px; }
+        .section-heading { font-size: 20px; font-weight: 600; color: #1a1a1a; margin-bottom: 20px; padding-left: 16px; border-left: 4px solid #1a73e8; }
+        .section-body { margin-bottom: 20px; line-height: 1.8; color: #444; }
+        .section-note { font-size: 13px; color: #666; margin-top: 12px; padding: 12px; background-color: #f8f9fa; border-radius: 4px; border-left: 3px solid #1a73e8; }
+        .milestone-container { display: grid; gap: 12px; margin-top: 16px; }
+        .milestone { display: flex; gap: 16px; align-items: flex-start; background-color: #f8f9fa; padding: 16px; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.08); }
+        .milestone-date { background-color: #1a73e8; color: white; padding: 8px 12px; border-radius: 4px; font-size: 12px; font-weight: 600; white-space: nowrap; min-width: 80px; text-align: center; }
+        .milestone-text { flex: 1; font-size: 14px; font-weight: 500; color: #333; }
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; background-color: white; }
+        th { background-color: #f8f9fa; padding: 12px; text-align: left; font-size: 14px; font-weight: 600; color: #333; border-bottom: 1px solid #e8e8e8; }
+        td { padding: 12px; border-bottom: 1px solid #e8e8e8; font-size: 14px; color: #444; }
+        tr:last-child td { border-bottom: none; }
+        .findings-container { display: grid; gap: 16px; margin-top: 20px; }
+        .finding-card { background-color: #f8f9fa; padding: 20px; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.08); border-left: 4px solid #1a73e8; }
+        .finding-card.risk { border-left-color: #c0392b; }
+        .finding-card.resolved { border-left-color: #27ae60; }
+        .finding-card.action { border-left-color: #f39c12; background-color: #fff8e7; }
+        .finding-title { font-size: 14px; font-weight: 600; color: #1a73e8; margin-bottom: 8px; letter-spacing: 0.5px; }
+        .finding-title.risk { color: #c0392b; }
+        .finding-title.resolved { color: #27ae60; }
+        .finding-title.action { color: #d68910; }
+        .finding-content { font-size: 14px; color: #555; line-height: 1.6; }
+        .task-list { list-style: none; margin: 16px 0; }
+        .task-list li { padding: 8px 0 8px 24px; position: relative; color: #555; line-height: 1.6; }
+        .task-list li:before { content: ""; position: absolute; left: 0; top: 14px; width: 8px; height: 8px; background-color: #1a73e8; border-radius: 50%; }
+        .status-badge { display: inline-block; padding: 4px 10px; border-radius: 12px; font-size: 12px; font-weight: 600; }
+        .status-default { background-color: #F2F2F2; color: #444; }
+        .status-green { background-color: #B7D7C9; color: #1a5c3a; }
+        .status-yellow { background-color: #E6DFAF; color: #5c4a00; }
+        .status-red { background-color: #DCCACA; color: #5c1a1a; }
+        .status-legend { display: flex; gap: 16px; margin: 12px 0 24px; font-size: 12px; color: #666; flex-wrap: wrap; }
+        .status-legend-item { display: flex; align-items: center; gap: 6px; }
+        .status-dot { width: 12px; height: 12px; border-radius: 2px; display: inline-block; }
+        .scorecard { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin: 20px 0; }
+        .score-item { background-color: #f8f9fa; padding: 16px; border-radius: 8px; text-align: center; }
+        .score-number { font-size: 32px; font-weight: 700; color: #1a73e8; }
+        .score-label { font-size: 12px; color: #888; margin-top: 4px; }
+        .tldr { background: linear-gradient(135deg, #f0f4ff 0%, #ffffff 100%); border-radius: 8px; padding: 20px 24px; border: 1px solid #d0deff; margin-bottom: 20px; }
+        .tldr-label { font-size: 12px; font-weight: 600; color: #1a73e8; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px; }
+        .tldr-text { font-size: 15px; color: #1a1a1a; line-height: 1.7; }
+        .report-footer { margin-top: 48px; padding-top: 24px; border-top: 1px solid #e8e8e8; font-size: 12px; color: #999; text-align: right; }
+        @media (max-width: 768px) {
+            .report-meta { grid-template-columns: 1fr; gap: 12px; }
+            .report-title { font-size: 24px; }
+            .section-heading { font-size: 18px; }
+            table { font-size: 13px; }
+            th, td { padding: 10px; }
+            .scorecard { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media print {
+            body { font-family: Georgia, 'Times New Roman', serif; font-size: 14px; }
+            .container { max-width: 100%; padding: 0; }
+            .report-header { page-break-after: avoid; }
+            .section { page-break-inside: avoid; }
+        }
+    </style>
+    <script src="../../assets/auth-gate.js"></script>
+</head>
+<body>
+    <div class="container">
+
+        <!-- Header -->
+        <div class="report-header">
+            <h1 class="report-title">第2阶段进展报告（第2周）：发布前收尾</h1>
+            <div class="report-meta">
+                <div class="meta-item">
+                    <span class="meta-label">本期</span>
+                    <span class="meta-value">2026年4月20日 – 4月24日</span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-label">正式版目标</span>
+                    <span class="meta-value">下周内</span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-label">报告对象</span>
+                    <span class="meta-value">日总</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 一句话总结（最高优先级） -->
+        <div class="section">
+            <div class="tldr">
+                <div class="tldr-label">一句话总结</div>
+                <div class="tldr-text">
+                    第2阶段所有计划修复完成，对外发布版本 <strong>v2.0.0</strong>（生产基线 v1.7.38 → v2.0.0；内部 staging 经历 11 次迭代验证）已就绪。下周双团队 QA 联合签核 → 后端 v2.2.72 上 prod → Google Play 提交。
+                    Arrowfish 正式版预计<strong>下周内</strong>上线。
+                </div>
+            </div>
+        </div>
+
+        <!-- 需要日总决策的事项（第二高优先级） -->
+        <div class="section">
+            <h2 class="section-heading">需要日总决策的事项</h2>
+            <div class="findings-container">
+                <div class="finding-card action">
+                    <div class="finding-title action">① 越南节点策略</div>
+                    <div class="finding-content">
+                        越南节点供应商出问题，用户白名单选越南后看不到节点。<strong>需决定：(A) 重新采购供应商；或 (B) 暂时隐藏越南选项。</strong> 不影响本周发布，但越早决策越好。
+                    </div>
+                </div>
+                <div class="finding-card action">
+                    <div class="finding-title action">② 专属IP 年度方案价格</div>
+                    <div class="finding-content">
+                        当前数据库年度价不等于月度 × 12，疑似遗留配置错误。<strong>需日总确认正确价格</strong>，由后端通过迁移脚本统一修正。不影响本周发布。
+                    </div>
+                </div>
+                <div class="finding-card action">
+                    <div class="finding-title action">③ FFF 上线策略</div>
+                    <div class="finding-content">
+                        FFF 公司欧盟电话号码（Roy 跟进）与新支付通道仍在对接中。<strong>需决定：(A) 等两项就绪一并上线；或 (B) 先以邮箱免密 + 无支付的 MVP 形式上线，收集真实用户反馈，后续补齐。</strong> 影响 FFF 第3阶段排期。
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 本期成果（关键完成项） -->
+        <div class="section">
+            <h2 class="section-heading">本期成果（按影响排序）</h2>
+
+            <div class="findings-container">
+                <div class="finding-card resolved">
+                    <div class="finding-title resolved">【营收·已修复】专属IP付款 — 全流程修复完成</div>
+                    <div class="finding-content">
+                        上周报告的零收入品类，本周完成测试环境全流程验证。同步修复关联缺陷：续费后到期日不刷新（用户需重登才能看到新到期日）。两项均待 QA 双方签核后随正式版上线，<strong>专属IP 营收通道恢复</strong>。
+                    </div>
+                </div>
+
+                <div class="finding-card resolved">
+                    <div class="finding-title resolved">【营收·已修复】余额支付卡顿 — 流程升级</div>
+                    <div class="finding-content">
+                        遗留代码中余额支付走外部网页跳转，用户偶发卡在「处理中」需手动返回。本周由后端新增专用移动端 JSON 接口，App 内直接调用，1 秒内显示结果。当前月余额支付约占总交易 15%，预期<strong>减少相关客服咨询与退款申请</strong>。<br>
+                        <span style="color: #666; font-size: 13px;">兼容性已验证：旧版本 PC（v2.2.71）与 iOS（v2.2.71）客户端无需更新。</span>
+                    </div>
+                </div>
+
+                <div class="finding-card resolved">
+                    <div class="finding-title resolved">【稳定性·已修复】免费用户启动 / 连接 / 计时器三类深层缺陷</div>
+                    <div class="finding-content">
+                        本周收尾上周遗留的稳定性问题：启动卡死（后端字段类型不一致根因修复）、试用计时器漂移与方向错误、切账号后会话残余。<strong>用户在正式版将明显感受到：开 App 不卡死、试用时间真实可信、切账号立即可用。</strong>
+                    </div>
+                </div>
+
+                <div class="finding-card resolved">
+                    <div class="finding-title resolved">【体验·已修复】错误提示「Api Exception」改为本地化清晰说明</div>
+                    <div class="finding-content">
+                        遗留代码所有后端错误统一显示英文「Api Exception / server error」，用户无法理解。本周完成统一错误码映射：设备超过限制、账号被锁、余额不足等场景均有明确中文提示，<strong>直接降低客服咨询量</strong>。
+                    </div>
+                </div>
+
+                <div class="finding-card resolved">
+                    <div class="finding-title resolved">【收尾·已修复】9 项缺陷 + 9 项体验优化</div>
+                    <div class="finding-content">
+                        本周新增修复包含：升级 App 闪退、连接按钮快速点击异常、推荐分享 QR 图片首次安装不显示、空白名单切换静默屏蔽所有线路、收件箱已读状态延迟更新、抽奖弹窗图层重叠等。<strong>每项均为独立提交（共 16 个），可单独回滚不影响其他</strong>，QA 阶段如发现新问题风险可控。
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 数据看板 -->
+        <div class="section">
+            <h2 class="section-heading">本周数据</h2>
+            <div class="scorecard">
+                <div class="score-item">
+                    <div class="score-number">v2.0.0</div>
+                    <div class="score-label">最新版本（本阶段累计 5 次迭代）</div>
+                </div>
+                <div class="score-item">
+                    <div class="score-number">9+9</div>
+                    <div class="score-label">本周修复缺陷 + 体验优化</div>
+                </div>
+                <div class="score-item">
+                    <div class="score-number">−29%</div>
+                    <div class="score-label">App 大小累计减少（vs 起点）</div>
+                </div>
+                <div class="score-item">
+                    <div class="score-number">下周</div>
+                    <div class="score-label">正式版上线目标</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 下一步计划 -->
+        <div class="section">
+            <h2 class="section-heading">下一步计划</h2>
+            <div class="milestone-container">
+                <div class="milestone">
+                    <div class="milestone-date">下周一</div>
+                    <div class="milestone-text"><strong>双团队 QA 全量回归测试启动</strong> — 台湾 QA 已返岗，与马来西亚 QA 同步覆盖本阶段全部修复项</div>
+                </div>
+                <div class="milestone">
+                    <div class="milestone-date">下周中</div>
+                    <div class="milestone-text"><strong>QA 双方签核 → 后端 v2.2.72 上 prod</strong> — 后端先于客户端上线，监控 1 小时确认稳定再推送 App</div>
+                </div>
+                <div class="milestone">
+                    <div class="milestone-date">下周末</div>
+                    <div class="milestone-text"><strong>Arrowfish v2.0.0 提交 Google Play</strong> — 同步部署四个 Android 渠道（Google / Official / Huawei / Samsung）</div>
+                </div>
+                <div class="milestone">
+                    <div class="milestone-date">5月初</div>
+                    <div class="milestone-text"><strong>启动第3阶段</strong> — 后端通用化（FFF 复用同一套后端模块）+ 节点自动化（信心打分 + 采购助手）+ FFF Flutter 重建</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 本阶段后端改动的特殊挑战 -->
+        <div class="section">
+            <h2 class="section-heading">本阶段后端改动的特殊挑战</h2>
+            <div class="section-body">
+                后端同时服务 3 类生产客户端，<strong>其中 2 类目前无法升级</strong>，每次后端改动都必须额外保证向后兼容。
+            </div>
+            <table>
+                <tr><th>客户端</th><th>当前生产版本</th><th>能否升级</th><th>对后端改动的影响</th></tr>
+                <tr>
+                    <td><strong>Android</strong>（Arrowfish）</td>
+                    <td>v1.7.38</td>
+                    <td>可升级（本周发 v2.0.0）</td>
+                    <td>新接口可正常使用</td>
+                </tr>
+                <tr>
+                    <td><strong>iOS</strong>（HiYou）</td>
+                    <td>v1.3.0（已冻结）</td>
+                    <td><strong>不能升级</strong> — Apple 开发者账号被封禁，无法提交 App Store 更新</td>
+                    <td>所有后端接口必须对 iOS v1.3.0 完全兼容；新功能不能假设 iOS 会更新</td>
+                </tr>
+                <tr>
+                    <td><strong>Windows PC</strong>（skytree_pc）</td>
+                    <td>v2.2.71（已冻结）</td>
+                    <td><strong>暂时不能升级</strong> — Windows 部署机制尚未研究清楚；原签名方案 WoSign（硬件签名，需配合 Windows SSL Wizard 工具）证书已过期，需研究虚拟签名替代方案后才能再发版</td>
+                    <td>所有后端接口必须对 PC v2.2.71 完全兼容；分页等新功能只能 opt-in 增加，不能改变默认响应格式</td>
+                </tr>
+            </table>
+            <div class="finding-card" style="margin-top: 16px;">
+                <div class="finding-title">本阶段付出的额外成本与下阶段需推进的事项</div>
+                <div class="finding-content">
+                    <strong>本阶段：</strong>每一项后端改动（余额支付 JSON 接口、交易记录分页、错误码扩展）均额外做了向后兼容设计 + 实测验证。新接口采用「新路径」或「opt-in 查询参数」，原接口完全不动，确保 iOS / PC 用户零感知。开发团队为此付出额外约 30% 的设计与测试时间。<br><br>
+                    <strong>下阶段需推进：</strong>(1) iOS Apple 账号申诉 / 新账号注册；(2) Windows 虚拟签名方案研究 + 部署流程文档化。两项不解决，后端长期被「兼容包袱」拖累，重大架构改动会越来越困难。
+                </div>
+            </div>
+        </div>
+
+        <!-- FFF 并行进展（实时口径） -->
+        <div class="section">
+            <h2 class="section-heading">FFF 新产品并行进展（实时口径）</h2>
+            <div class="section-body">
+                Lex 团队（中国）按惯例以实时进度汇报。本周已完成的 FFF 技术储备，与 Arrowfish 发布并行推进，不互相影响。
+            </div>
+            <div class="findings-container">
+                <div class="finding-card">
+                    <div class="finding-title">Flutter 框架技术评估完成</div>
+                    <div class="finding-content">
+                        基于现有 flutter_vpn 代码库评估：底层 service / VPN 层可保留，UI 与状态层需重写（原代码缺乏分层、状态管理混乱、依赖库版本已弃用）。下阶段以全新结构重建。
+                    </div>
+                </div>
+                <div class="finding-card">
+                    <div class="finding-title">FFF 后端架构方案确认</div>
+                    <div class="finding-content">
+                        遵循日总 4 月 10 日决定：FFF 后端独立、数据库独立，不与 Arrowfish 共账户。本周完成后端复用范围评估 — 支付、配额、节点管理等公共逻辑可作为共享模块复用，避免代码重复。
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 阶段进度总览（详细表，放后面） -->
+        <div class="section">
+            <h2 class="section-heading">阶段进度总览</h2>
+            <div class="status-legend">
+                <div class="status-legend-item"><span class="status-dot" style="background:#B7D7C9;"></span>已完成</div>
+                <div class="status-legend-item"><span class="status-dot" style="background:#E6DFAF;"></span>下周</div>
+                <div class="status-legend-item"><span class="status-dot" style="background:#F2F2F2;"></span>进行中</div>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>项目</th>
+                        <th>状态</th>
+                        <th>说明</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>专属IP付款修复</strong>（营收优先）</td>
+                        <td><span class="status-badge status-green">完成</span></td>
+                        <td>测试环境全流程验证通过，待 QA 双方签核</td>
+                    </tr>
+                    <tr>
+                        <td><strong>免费试用防滥用</strong>（保护转化率）</td>
+                        <td><span class="status-badge status-green">完成</span></td>
+                        <td>设备维度额度 + 注册速率限制 + 模拟器检测均上线</td>
+                    </tr>
+                    <tr>
+                        <td>免费用户连接流程（计时器、会话、试用）</td>
+                        <td><span class="status-badge status-green">完成</span></td>
+                        <td>三类深层缺陷本周完成修复并通过测试环境验证</td>
+                    </tr>
+                    <tr>
+                        <td>错误提示本地化（统一错误码映射）</td>
+                        <td><span class="status-badge status-green">完成</span></td>
+                        <td>注册路径已覆盖；下阶段扩展到全部接口</td>
+                    </tr>
+                    <tr>
+                        <td>余额支付卡顿修复（移动端 JSON 接口）</td>
+                        <td><span class="status-badge status-green">完成</span></td>
+                        <td>新接口上线，旧客户端兼容性已验证</td>
+                    </tr>
+                    <tr>
+                        <td>交易记录分页（接口性能）</td>
+                        <td><span class="status-badge status-green">完成</span></td>
+                        <td>分页机制上线，旧客户端不受影响</td>
+                    </tr>
+                    <tr>
+                        <td>升级 App 闪退修复</td>
+                        <td><span class="status-badge status-green">完成</span></td>
+                        <td>下载链接异常或缺应用商店时友好提示，不再崩溃</td>
+                    </tr>
+                    <tr>
+                        <td>QA 回归测试（双团队联合）</td>
+                        <td><span class="status-badge status-default">进行中</span></td>
+                        <td>台湾 QA 已返岗，下周一启动联合回归</td>
+                    </tr>
+                    <tr>
+                        <td>QA 最终签核（上线门控）</td>
+                        <td><span class="status-badge status-yellow">下周</span></td>
+                        <td>双方完成全量回归后联合签核</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Arrowfish 正式版上线</strong>（后端先 → Google Play）</td>
+                        <td><span class="status-badge status-yellow">下周</span></td>
+                        <td>后端 v2.2.72 → App v2.0.0 → Google Play</td>
+                    </tr>
+                    <tr>
+                        <td>FFF 新产品技术评估</td>
+                        <td><span class="status-badge status-default">并行</span></td>
+                        <td>Lex 团队完成 Flutter 框架评估；FFF 后端独立</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- 接手项目固有问题（背景说明，放最后） -->
+        <div class="section">
+            <h2 class="section-heading">背景：接手项目固有问题</h2>
+            <div class="section-body">
+                本团队接手项目时仅有 4–5 天交接窗口，台湾团队来不及覆盖所有细节。本阶段边修边发现以下结构性问题，按优先级先后清理，剩余项已纳入下阶段。<strong>策略：每阶段集中清理一两项，避免一次性大重构的回归风险。</strong>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 36%;">问题</th>
+                        <th style="width: 30%;">本阶段处理</th>
+                        <th>下阶段计划</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>列表接口普遍无分页（高活用户响应数 MB）</td>
+                        <td>修了交易记录接口</td>
+                        <td>站内信、邀请记录、优惠券等剩余接口</td>
+                    </tr>
+                    <tr>
+                        <td>错误处理不统一</td>
+                        <td>注册路径错误码映射已上线</td>
+                        <td>扩展到全部接口</td>
+                    </tr>
+                    <tr>
+                        <td>缺乏跨端调试 / 监控工具</td>
+                        <td>崩溃监控已接入</td>
+                        <td>跨前后端 trace ID 串联</td>
+                    </tr>
+                    <tr>
+                        <td>数据库关系设计不规范</td>
+                        <td>设备表已重构</td>
+                        <td>用户 / 订单 / 节点关系审计</td>
+                    </tr>
+                    <tr>
+                        <td>5 个支付通道代码重复粘贴</td>
+                        <td>—</td>
+                        <td>抽公共接口 + FFF 复用</td>
+                    </tr>
+                    <tr>
+                        <td>依赖库即将 EOL（MySQL 5.7、Redis 6.2、Go 1.20）</td>
+                        <td>风险记录</td>
+                        <td>评估升级窗口与回归成本</td>
+                    </tr>
+                    <tr>
+                        <td>节点维护手工操作多（每节点每周 ~0.5 人时）</td>
+                        <td>4 项自动化已完成</td>
+                        <td>信心打分 + 采购助手两项</td>
+                    </tr>
+                    <tr>
+                        <td>交接资料缺失（域名 → 仓库映射不全）</td>
+                        <td>边做边补</td>
+                        <td>剩余空白向台湾团队询问</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Footer -->
+        <div class="report-footer">
+            报告日期：2026年4月24日 · 下次更新：2026年5月初（第3阶段启动） · Arrowfish 正式版目标：下周内
+        </div>
+    </div>
+</body>
+</html>

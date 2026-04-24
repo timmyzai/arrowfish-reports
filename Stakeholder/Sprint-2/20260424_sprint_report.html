@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Arrowfish VPN — 第2阶段进度汇报 — 2026-04-24</title>
+<style>
+  :root {
+    --bg: #FAFAFA;
+    --card: #FFFFFF;
+    --border: #E5E7EB;
+    --text: #1F2937;
+    --text-secondary: #6B7280;
+    --accent: #2563EB;
+    --green: #B7D7C9;
+    --green-text: #166534;
+    --yellow: #E6DFAF;
+    --yellow-text: #854D0E;
+    --red: #DCCACA;
+    --red-text: #991B1B;
+    --grey: #F2F2F2;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", "Noto Sans SC", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  h1 { font-size: 1.5rem; margin-bottom: 0.25rem; }
+  h2 { font-size: 1.2rem; margin: 2rem 0 0.75rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--accent); }
+  h3 { font-size: 1rem; margin: 1.25rem 0 0.5rem; color: var(--text-secondary); }
+  .subtitle { color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 1.5rem; }
+  .card { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 1.25rem; margin: 0.75rem 0; }
+  .card.highlight { border-left: 4px solid var(--accent); }
+  .card.warning { border-left: 4px solid #F59E0B; background: #FFFBEB; }
+  .card.critical { border-left: 4px solid #EF4444; background: #FEF2F2; }
+  .card.success { border-left: 4px solid #16A34A; background: #F0FDF4; }
+  table { width: 100%; border-collapse: collapse; margin: 0.75rem 0; font-size: 0.9rem; }
+  th { background: var(--grey); text-align: left; padding: 0.5rem 0.75rem; font-weight: 600; }
+  td { padding: 0.5rem 0.75rem; border-bottom: 1px solid var(--border); vertical-align: top; }
+  .status-done { background: var(--green); color: var(--green-text); padding: 2px 8px; border-radius: 4px; font-size: 0.8rem; font-weight: 500; }
+  .status-progress { background: var(--yellow); color: var(--yellow-text); padding: 2px 8px; border-radius: 4px; font-size: 0.8rem; font-weight: 500; }
+  .status-pending { background: var(--grey); color: var(--text-secondary); padding: 2px 8px; border-radius: 4px; font-size: 0.8rem; font-weight: 500; }
+  .timeline { position: relative; padding-left: 1.5rem; margin: 1rem 0; }
+  .timeline::before { content: ''; position: absolute; left: 0.35rem; top: 0.5rem; bottom: 0.5rem; width: 2px; background: var(--border); }
+  .timeline-item { position: relative; margin-bottom: 0.75rem; }
+  .timeline-item::before { content: ''; position: absolute; left: -1.15rem; top: 0.5rem; width: 10px; height: 10px; border-radius: 50%; background: var(--accent); border: 2px solid white; }
+  .timeline-item.milestone::before { background: #EF4444; width: 12px; height: 12px; left: -1.2rem; }
+  .timeline-date { font-weight: 600; font-size: 0.85rem; color: var(--accent); }
+  .timeline-text { font-size: 0.9rem; }
+  .action-list { list-style: none; padding: 0; }
+  .action-list li { padding: 0.5rem 0; border-bottom: 1px solid var(--border); display: flex; align-items: flex-start; gap: 0.5rem; }
+  .action-list li:last-child { border-bottom: none; }
+  .action-num { background: var(--accent); color: white; width: 20px; height: 20px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.7rem; font-weight: 700; flex-shrink: 0; margin-top: 2px; }
+  .tldr { background: linear-gradient(135deg, #EFF6FF 0%, #FFFFFF 100%); border-radius: 8px; padding: 1.25rem 1.5rem; border: 1px solid #BFDBFE; margin: 1rem 0 2rem; }
+  .tldr-label { font-size: 0.75rem; font-weight: 700; color: var(--accent); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.5rem; }
+  .tldr-text { font-size: 1rem; line-height: 1.7; color: var(--text); }
+  .footer { margin-top: 2rem; padding-top: 1rem; border-top: 1px solid var(--border); font-size: 0.8rem; color: var(--text-secondary); text-align: center; }
+</style>
+<script src="../../assets/auth-gate.js"></script>
+</head>
+<body>
+
+<h1>Arrowfish VPN — 项目进度汇报</h1>
+<div class="subtitle">2026年4月24日 · 第2阶段完成摘要（4/13–4/24）· 第3阶段计划</div>
+
+<!-- 一句话总结 -->
+<div class="tldr">
+  <div class="tldr-label">一句话</div>
+  <div class="tldr-text">
+    <strong>第2阶段收尾完成，对外发布版本 v2.0.0 已就绪。</strong>下周双团队 QA 联合签核 → 后端 v2.2.72 上 prod → Google Play 提交（生产基线 v1.7.38 → v2.0.0，跨度反映两轮重大升级）。<strong>Arrowfish 正式版预计下周内上线。</strong>第3阶段重点：清理后端技术债，让 FFF 直接复用同一套后端。
+  </div>
+</div>
+
+<!-- 一、需要日总决定 -->
+<h2>一、需要日总决定 / 配合</h2>
+<ul class="action-list">
+  <li>
+    <span class="action-num">1</span>
+    <div><strong>越南节点策略</strong> — 越南节点供应商出问题，用户白名单选越南后看不到节点。请决定：(A) 重新采购供应商；或 (B) 暂时隐藏越南选项。不影响本周发布。</div>
+  </li>
+  <li>
+    <span class="action-num">2</span>
+    <div><strong>专属IP 年度方案价格</strong> — 数据库里年度价不等于月度 × 12，疑似遗留配置错误。请确认正确价格，由后端通过迁移脚本统一修正。不影响本周发布。</div>
+  </li>
+  <li>
+    <span class="action-num">3</span>
+    <div><strong>FFF 上线策略</strong> — FFF 公司欧盟电话号码（Roy 跟进）与新支付通道仍在对接中。请决定：(A) 等两项就绪一并上线；或 (B) 先以邮箱免密 + 无支付的 MVP 形式上线，收集真实反馈，后续补齐。影响 FFF 第3阶段排期。</div>
+  </li>
+  <li>
+    <span class="action-num">4</span>
+    <div><strong>FFF 公司事项推进</strong> — FFF 公司欧盟电话号码注册（Roy 跟进）与新支付通道办理状态？请 Roy 同步进展。</div>
+  </li>
+</ul>
+
+<!-- 二、本阶段关键成果 -->
+<h2>二、本阶段关键成果（4/13–4/24）</h2>
+<div class="card success">
+<table>
+  <tr><th>指标</th><th>数据</th></tr>
+  <tr><td>版本迭代</td><td>对外：生产 <strong>v1.7.38 → v2.0.0</strong>（一步到位）；内部：staging 经历 2.0.0 → 3.0.4 共 11 次验证迭代</td></tr>
+  <tr><td>App 大小（生产 APK）</td><td>99.8 MB → 71.1 MB（<strong>−28.7%</strong>）</td></tr>
+  <tr><td>修复缺陷</td><td><strong>30+ 项缺陷 + 20+ 项体验优化</strong>（双团队 QA + AI 代码审查）</td></tr>
+  <tr><td>本周（W2）独立提交</td><td>16 个（每个修复独立可回滚）</td></tr>
+  <tr><td>反滥用防护层数</td><td>5 层（设备额度、设备绑定、模拟器检测、注册速率、单设备账号上限）</td></tr>
+  <tr><td>构建时间</td><td>6 分钟 → 4 分 50 秒（<strong>−20%</strong>）</td></tr>
+</table>
+</div>
+
+<h3>三大类成果</h3>
+<div class="card success">
+  <strong>① 营收类</strong>
+  <ul style="margin: 0.5rem 0 0 1.25rem;">
+    <li><strong>专属IP 付款全流程修复</strong> — 此前因台湾遗留代码缺陷，每笔购买均失败，品类零收入。本阶段修复并验证完成，下周上线后即可入账。</li>
+    <li><strong>余额支付卡顿修复</strong> — 新移动端 JSON 接口替代外部跳转，1 秒内返回结果。月余额支付约占总交易 15%，预期减少客服咨询与退款申请。</li>
+    <li><strong>订阅续费日期不刷新</strong> — 关联缺陷一并修复。</li>
+  </ul>
+</div>
+<div class="card success">
+  <strong>② 反滥用 / 反欺诈类</strong>
+  <ul style="margin: 0.5rem 0 0 1.25rem;">
+    <li><strong>5 层防护机制</strong>上线 — 设备维度共享试用额度、卸载重装不发新额度、模拟器检测、IP 注册速率限制（每日 5 个）、单设备账号上限（3 个）。</li>
+    <li><strong>设备指纹识别</strong>替代旧 ANDROID_ID 方案，加密验证，无法伪造。</li>
+    <li>正常免费用户不受任何影响，每日 30 分钟权益完整。</li>
+  </ul>
+</div>
+<div class="card success">
+  <strong>③ 稳定性 + 体验类</strong>
+  <ul style="margin: 0.5rem 0 0 1.25rem;">
+    <li><strong>启动卡死修复</strong> — 新装用户因后端字段类型不一致导致启动卡死，已根因修复。</li>
+    <li><strong>试用计时器三类问题</strong> — 倒计时漂移、方向错误、登出归零异常，统一改为服务器权威。</li>
+    <li><strong>错误提示本地化</strong> — 「Api Exception」改为明确中文（设备超过限制 / 账号被锁 / 余额不足等）。</li>
+    <li><strong>App 闪退修复</strong> — 升级时点击立即更新概率性闪退已修复。</li>
+    <li><strong>UI 收尾</strong> — 抽奖弹窗图层重叠、空白名单静默屏蔽、收件箱已读延迟、推荐分享 QR 不显示等 9 项体验问题。</li>
+  </ul>
+</div>
+
+<!-- 三、改善与商业价值 -->
+<h2>三、改善与商业价值</h2>
+<div class="card highlight">
+本节将技术改善对应到具体商业价值，所有数字均可在内部技术文档（CHANGELOG-v2.2.71-to-current.md）追溯。
+</div>
+
+<h3>性能改善</h3>
+<table>
+  <tr><th>指标</th><th>之前</th><th>之后</th><th>商业价值</th></tr>
+  <tr><td>App 大小</td><td>99.8 MB</td><td>71.1 MB（−28.7%）</td><td>低端机 / 流量敏感用户安装率提升；下载等待时间缩短约 1/3</td></tr>
+  <tr><td>节点列表过滤</td><td>~500 ms（500 节点）</td><td>~50 ms（10 倍）</td><td>切换节点不再卡顿，流畅度提升</td></tr>
+  <tr><td>构建时间</td><td>6 分钟</td><td>4 分 50 秒（−20%）</td><td>每次发版节省约 70 秒；QA 等待时间缩短</td></tr>
+  <tr><td>数据库查询次数</td><td>每用户每分钟约 20 次</td><td>约 12 次（−40%）</td><td>支撑用户规模 3 倍扩展无需新增服务器</td></tr>
+  <tr><td>读写分离</td><td>0%（写库承担全部）</td><td>100% 客户端读取走只读副本</td><td>主库负载减轻，写入更稳定</td></tr>
+  <tr><td>内存泄漏</td><td>每会话约 2 MB</td><td>已修复</td><td>低端机长时间使用不再变慢；崩溃率下降</td></tr>
+</table>
+
+<h3>稳定性改善</h3>
+<table>
+  <tr><th>问题</th><th>之前</th><th>之后</th><th>商业价值</th></tr>
+  <tr><td>启动卡死</td><td>新装用户偶发卡 60 秒以上</td><td>根因修复，网络异常自动跳转登录页</td><td>避免「装了不能用」的差评</td></tr>
+  <tr><td>VPN 连接 / 断开崩溃</td><td>偶发崩溃</td><td>三类深层崩溃风险已修复</td><td>崩溃率下降，客服投诉量下降</td></tr>
+  <tr><td>试用计时器漂移</td><td>息屏后倒计时与真实时间脱节</td><td>统一改为服务器权威</td><td>用户对试用时间的信任度提升</td></tr>
+  <tr><td>错误提示无意义</td><td>统一英文「Api Exception」</td><td>本地化清晰说明</td><td>用户自助解决能力提升，客服咨询下降</td></tr>
+  <tr><td>余额支付卡单</td><td>外部网页跳转，偶发「处理中」</td><td>App 内 1 秒返回结果</td><td>消除重复扣款隐患，减少退款</td></tr>
+  <tr><td>升级 App 闪退</td><td>下载链接异常时闪退</td><td>友好提示</td><td>升级路径不再失败导致流失</td></tr>
+</table>
+
+<h3>安全 / 反欺诈改善</h3>
+<table>
+  <tr><th>风险</th><th>之前</th><th>之后</th><th>商业价值</th></tr>
+  <tr><td>试用额度被滥用</td><td>同设备无限注册重置免费时间；模拟器可批量注册</td><td>5 层防护</td><td>带宽资源集中服务真实用户；预期付费转化率提升 0.3–0.5 个百分点</td></tr>
+  <tr><td>付费节点被白嫖</td><td>API 直接返回所有节点凭证</td><td>无权用户拿不到付费节点凭证</td><td>付费品类的差异化价值得到保护</td></tr>
+  <tr><td>密码暴力破解</td><td>无登录失败次数限制</td><td>5 次失败自动锁 30 分钟</td><td>账号被盗风险下降</td></tr>
+  <tr><td>设备身份伪造</td><td>ANDROID_ID 易伪造</td><td>设备指纹识别（加密验证）</td><td>反欺诈纵深防御能力提升</td></tr>
+  <tr><td>无日志合规</td><td>部分场景仍记敏感信息</td><td>系统层 + 应用层全面清理</td><td>符合 VaaS 合规要求；为 FFF 海外市场铺路</td></tr>
+</table>
+
+<h3>开发效率与可维护性</h3>
+<table>
+  <tr><th>项目</th><th>之前</th><th>之后</th><th>商业价值</th></tr>
+  <tr><td>代码总量</td><td>原始基线</td><td>清理 20,847 行死代码 / 重复实现</td><td>新人上手成本下降；后续迭代更快</td></tr>
+  <tr><td>日志体系</td><td>多套混用</td><td>统一 Timber，结构化日志</td><td>线上问题定位更快</td></tr>
+  <tr><td>测试 / 部署流水线</td><td>手工出包</td><td>提交即自动构建推送 staging APK</td><td>每次发版节省约 15 分钟；快速闭环</td></tr>
+  <tr><td>崩溃监控</td><td>未接入</td><td>Crashlytics 已上线</td><td>线上问题首次出现即可发现</td></tr>
+</table>
+
+<!-- 四、关键时间节点 -->
+<h2>四、关键时间节点</h2>
+<div class="timeline">
+  <div class="timeline-item">
+    <div class="timeline-date">4/13</div>
+    <div class="timeline-text">第2阶段启动 — 双团队 QA（台湾 + 马来西亚）联合测试启动，发现 30 项缺陷 + 15 项优化建议</div>
+  </div>
+  <div class="timeline-item">
+    <div class="timeline-date">4/13–4/17（W1）</div>
+    <div class="timeline-text">营收阻断、反滥用、稳定性三轨并行修复；内部 staging 版本 v2.0.0 → v2.0.6 共 6 次迭代；测试环境自动构建上线</div>
+  </div>
+  <div class="timeline-item">
+    <div class="timeline-date">4/18</div>
+    <div class="timeline-text">启动卡死根因定位 — 后端字段类型不一致导致 JSON 解析崩溃；内部 staging 升至 v3.0.0（反映质量里程碑，对外保留 v2.0.0）</div>
+  </div>
+  <div class="timeline-item">
+    <div class="timeline-date">4/20</div>
+    <div class="timeline-text">服务器权威配额系统上线；Android 模块合并完成（baseLib + proxyLib → :app）</div>
+  </div>
+  <div class="timeline-item">
+    <div class="timeline-date">4/22</div>
+    <div class="timeline-text">设备指纹识别系统上线（迁移脚本幂等执行）；第2阶段 W1 内部技术报告完成</div>
+  </div>
+  <div class="timeline-item">
+    <div class="timeline-date">4/23–4/24（W2）</div>
+    <div class="timeline-text">QA 收尾批次 — 错误码本地化、余额支付 JSON 接口、交易记录分页、推荐 QR、抽奖弹窗等 16 个独立提交完成；台湾 QA 返岗</div>
+  </div>
+  <div class="timeline-item milestone">
+    <div class="timeline-date">下周</div>
+    <div class="timeline-text"><strong>双团队 QA 联合签核 → 后端 v2.2.72 上 prod → Google Play 提交</strong></div>
+  </div>
+</div>
+
+<!-- 五、Arrowfish 正式版上线 -->
+<h2>五、Arrowfish 正式版上线 — 下周</h2>
+<div class="card highlight">
+<strong>对外发布版本：v2.0.0</strong>（versionCode 30004，从生产 v1.7.38 跨升）· 后端：v2.2.72（待打 tag）· 目标：下周内
+<table style="margin-top: 0.75rem;">
+  <tr><th>项目</th><th>状态</th><th>说明</th></tr>
+  <tr><td>所有计划修复</td><td><span class="status-done">完成</span></td><td>开发自测通过，发布候选版本就绪</td></tr>
+  <tr><td>双团队 QA 联合回归测试</td><td><span class="status-progress">下周一启动</span></td><td>台湾 QA 已返岗</td></tr>
+  <tr><td>QA 双方签核（上线门控）</td><td><span class="status-pending">下周中</span></td><td>双方完成全量回归后签核</td></tr>
+  <tr><td>后端 v2.2.72 上 prod</td><td><span class="status-pending">下周中</span></td><td>先于客户端上线，监控 1 小时再推送 App</td></tr>
+  <tr><td>App v2.0.0 提交 Google Play</td><td><span class="status-pending">下周末</span></td><td>同步部署 Google / Official / Huawei / Samsung 四个渠道</td></tr>
+</table>
+</div>
+<div class="card warning">
+  <strong>发布顺序约束：</strong>后端必须先于 App 上线。本阶段新增的余额支付接口与交易记录分页接口，App v2.0.0 依赖它们；若后端未上线就发版，付款与交易页会 404。此约束已写入内部技术文档，作为发版强制顺序。
+</div>
+
+<h3>本阶段后端改动的特殊挑战</h3>
+<div class="card critical">
+  <strong>后端同时服务 3 类生产客户端，其中 2 类目前无法升级，每次后端改动都需额外保证向后兼容。</strong>
+  <table style="margin-top: 0.75rem;">
+    <tr><th>客户端</th><th>当前生产版本</th><th>能否升级</th><th>对后端改动的影响</th></tr>
+    <tr>
+      <td><strong>Android</strong>（Arrowfish）</td>
+      <td>v1.7.38</td>
+      <td>✅ 可升级（本周发 v2.0.0）</td>
+      <td>新接口可正常使用</td>
+    </tr>
+    <tr>
+      <td><strong>iOS</strong>（HiYou）</td>
+      <td>v1.3.0（已冻结）</td>
+      <td>❌ <strong>不能升级</strong> — Apple 开发者账号被封禁，无法提交 App Store 更新</td>
+      <td>所有后端接口必须对 iOS v1.3.0 保持完全兼容；新接口不能假设 iOS 会更新</td>
+    </tr>
+    <tr>
+      <td><strong>Windows PC</strong>（skytree_pc）</td>
+      <td>v2.2.71（已冻结）</td>
+      <td>❌ <strong>暂时不能升级</strong> — Windows 客户端部署机制尚未研究清楚；原签名方案 WoSign（硬件签名，需配合 Windows SSL Wizard 工具）证书已过期，需研究虚拟签名（virtual sign）替代方案后才能再发版</td>
+      <td>所有后端接口必须对 PC v2.2.71 保持完全兼容；分页等新功能只能通过 opt-in 方式增加，不能改变默认响应格式</td>
+    </tr>
+  </table>
+  <div style="margin-top: 0.75rem; font-size: 13px;">
+    <strong>结果：</strong>本阶段每一项后端改动（余额支付 JSON 接口、交易记录分页、错误码扩展）都额外做了向后兼容设计 + 实测验证。具体方法：新接口采用「新路径」或「opt-in 查询参数」，原接口完全不动。开发团队为此付出额外约 30% 的设计与测试时间，但确保 iOS / PC 用户零感知。
+  </div>
+  <div style="margin-top: 0.75rem; font-size: 13px;">
+    <strong>下阶段需推进：</strong>(1) iOS Apple 账号申诉 / 新账号注册；(2) Windows 虚拟签名方案研究 + 部署流程文档化。两项不解决，后端长期被「兼容包袱」拖累，重大架构改动会越来越困难。
+  </div>
+</div>
+
+<!-- 六、FFF 并行进展（实时） -->
+<h2>六、FFF 新产品并行进展（实时口径）</h2>
+<div class="card">
+  <strong>Lex 团队（中国）</strong>本阶段技术储备工作已完成。与 Arrowfish 发布并行推进，互不影响。
+  <ul style="margin: 0.5rem 0 0 1.25rem;">
+    <li><strong>Flutter 框架技术评估完成</strong> — 现有 flutter_vpn 代码库底层 VPN 层可保留，UI 与状态层需重写。</li>
+    <li><strong>FFF 后端架构方案确认</strong> — 后端独立、数据库独立、不与 Arrowfish 共账户（依日总 4/10 决定）。后端可复用支付 / 配额 / 节点管理等公共模块，避免重复开发。</li>
+    <li><strong>下阶段第一里程碑</strong> — 注册、登录、节点列表、连接节点（暂无支付）。</li>
+  </ul>
+</div>
+<div class="card warning">
+  <strong>FFF 阻塞项（待商务侧推进）</strong>
+  <ul style="margin: 0.5rem 0 0 1.25rem;">
+    <li>FFF 公司欧盟电话号码尚未到位（Roy 跟进） → 暂无法开通 SMS 验证 → 注册流程上线初期需用邮箱免密替代。</li>
+    <li>FFF 公司名下新支付通道仍在对接中 → 上线初期暂无在线收款能力，后端预留接口。</li>
+  </ul>
+  两项均不影响本周 Arrowfish 发布。
+</div>
+
+<!-- 七、第3阶段计划 -->
+<h2>七、第3阶段计划（5 月初启动）— 后端通用化优先</h2>
+<div class="card highlight">
+  <strong>主轴：</strong>清理后端技术债 → 让 FFF 直接复用同一套后端模块 → 同时启动 FFF Flutter 重建 + 节点自动化加速。
+</div>
+<table>
+  <tr><th>阶段</th><th>主要工作</th><th>负责</th></tr>
+  <tr>
+    <td><strong>A. 后端通用化</strong><br>（5/1 起 1 周）</td>
+    <td>API 版本化策略、X-App-Id 头识别两个产品、列表接口分页扩展、错误码映射扩展、第2阶段数据迁移收尾（专属IP 年度价、4K 广告链接）</td>
+    <td>Tein Fai</td>
+  </tr>
+  <tr>
+    <td><strong>B. FFF 重建</strong><br>（5/4 起 2 周）</td>
+    <td>FFF 后端独立部署、Go 公共模块抽取、Flutter 框架重建第一里程碑（注册 / 登录 / 节点列表 / 连接）</td>
+    <td>Tein Fai + Lex</td>
+  </tr>
+  <tr>
+    <td><strong>C. 节点自动化</strong><br>（5/初 并行）</td>
+    <td>信心打分模型 + 采购助手（应对中国封锁加速节点替换）</td>
+    <td>Tein Fai</td>
+  </tr>
+  <tr>
+    <td><strong>D. Arrowfish 收尾</strong><br>（背景任务）</td>
+    <td>杀戮开关 QA 复现、反馈 / 会员 / 路线列表性能优化（低优先级，有时间才做）</td>
+    <td>移动端</td>
+  </tr>
+</table>
+
+<!-- 八、为什么必须先清理技术债 -->
+<h2>八、为什么第3阶段必须先清理技术债 — FFF 复用同一套后端</h2>
+<div class="card critical">
+  <strong>关键背景：</strong>FFF 新产品将复用 orebackend 后端。技术债不修，会被 FFF 继承一遍，问题翻倍。第3阶段的后端通用化不是「锦上添花」，而是 FFF 顺利上线的前提。
+</div>
+
+<h3>接手时发现的固有问题（4–5 天交接窗口的代价）</h3>
+<table>
+  <tr>
+    <th style="width: 28%;">问题</th>
+    <th style="width: 28%;">为什么影响 FFF</th>
+    <th style="width: 22%;">第2阶段处理</th>
+    <th>第3阶段计划</th>
+  </tr>
+  <tr><td>列表接口普遍无分页</td><td>FFF 高活用户同样会卡顿</td><td>已修交易记录接口</td><td>扩展到站内信、邀请、优惠券等</td></tr>
+  <tr><td>错误处理不统一</td><td>FFF 用户也会看到无意义错误</td><td>注册路径已上线</td><td>扩展到全部接口；定义统一规范</td></tr>
+  <tr><td>5 个支付通道代码重复粘贴</td><td>FFF 新支付通道又要复制一份</td><td>—</td><td>抽公共接口 → Arrowfish + FFF 共用</td></tr>
+  <tr><td>数据库关系设计不规范</td><td>表结构若照搬错误就翻倍</td><td>设备表已重构</td><td>用户 / 订单 / 节点关系审计；FFF 用规范后的设计</td></tr>
+  <tr><td>API 缺乏版本化策略</td><td>FFF 改接口会破坏 Arrowfish 旧版本（PC / iOS）</td><td>—</td><td>制定 v1 / v2 升级策略 + X-App-Id 头识别两个产品</td></tr>
+  <tr><td>缺乏跨端调试 / 监控工具</td><td>FFF 上线后定位问题同样困难</td><td>崩溃监控已接入</td><td>跨前后端 trace ID 串联</td></tr>
+  <tr><td>节点维护手工操作多</td><td>FFF 也用同一套节点</td><td>4 项自动化完成</td><td>信心打分 + 采购助手</td></tr>
+  <tr><td>依赖库即将 EOL（MySQL 5.7、Redis 6.2、Go 1.20）</td><td>FFF 不可能用过期库起步</td><td>风险记录</td><td>评估升级窗口</td></tr>
+  <tr><td>交接资料缺失（域名 ↔ 仓库映射不全）</td><td>FFF 上线时无法快速分辨已用 / 可用域名</td><td>边做边补</td><td>剩余空白向台湾团队询问</td></tr>
+</table>
+<div class="card highlight">
+  <strong>策略：每阶段集中清理一两项</strong>，避免一次性大重构的回归风险。本阶段已修了「最影响发布」的几项；第3阶段优先清理「FFF 直接复用所需」的几项。所有问题均记录在内部技术文档，可追溯。
+</div>
+
+<div class="footer">
+报告日期：2026年4月24日 · 第2阶段完成摘要 · 下次更新：2026年5月初（第3阶段启动）
+</div>
+
+</body>
+</html>

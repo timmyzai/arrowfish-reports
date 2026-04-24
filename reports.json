@@ -16,5 +16,23 @@
     "name": "Sprint 0+1 — Progress Summary",
     "date": "2026-04-10",
     "file": "Stakeholder/Sprint-1/20260410_sprint_report.html"
+  },
+  {
+    "id": "sprint-2-w1",
+    "name": "Sprint 2 Week 1 — Release Sprint",
+    "date": "2026-04-17",
+    "file": "Stakeholder/Sprint-2/20260417_report.html"
+  },
+  {
+    "id": "sprint-2-w2",
+    "name": "Sprint 2 Week 2 — Pre-Release Closeout",
+    "date": "2026-04-24",
+    "file": "Stakeholder/Sprint-2/20260424_report.html"
+  },
+  {
+    "id": "sprint-2-summary",
+    "name": "Sprint 2 — Progress Summary",
+    "date": "2026-04-24",
+    "file": "Stakeholder/Sprint-2/20260424_sprint_report.html"
   }
 ]
