@@ -72,7 +72,7 @@
 <div class="tldr">
   <div class="tldr-label">一句话</div>
   <div class="tldr-text">
-    <strong>第2阶段收尾完成，对外发布版本 v2.0.0 已就绪。</strong>下周双团队 QA 联合签核 → 后端 v2.2.72 上 prod → Google Play 提交（生产基线 v1.7.38 → v2.0.0，跨度反映两轮重大升级）。<strong>Arrowfish 正式版预计下周内上线。</strong>第3阶段重点：清理后端技术债，让 FFF 直接复用同一套后端。
+    <strong>第2阶段收尾完成，对外发布版本 v3.0.4 已就绪。</strong>下周双团队 QA 联合签核 → 后端 v2.2.72 上 prod → Google Play 提交（生产基线 v1.7.38 → v3.0.4，跨度反映两轮重大升级）。<strong>Arrowfish 正式版预计下周内上线。</strong>第3阶段重点：清理后端技术债，让 FFF 直接复用同一套后端。
   </div>
 </div>
 
@@ -98,7 +98,7 @@
 <div class="card success">
 <table>
   <tr><th>指标</th><th>数据</th></tr>
-  <tr><td>版本迭代</td><td>对外：生产 <strong>v1.7.38 → v2.0.0</strong>（一步到位）；内部：staging 经历 2.0.0 → 3.0.4 共 11 次验证迭代</td></tr>
+  <tr><td>版本迭代</td><td>对外：生产 <strong>v1.7.38 → v3.0.4</strong>（一步到位，版本号与内部 versionCode 30004 对齐，避免后台强更逻辑误判）；内部：staging 经历 2.0.0 → 3.0.4 共 11 次验证迭代</td></tr>
   <tr><td>App 大小（生产 APK）</td><td>99.8 MB → 71.1 MB（<strong>−28.7%</strong>）</td></tr>
   <tr><td>修复缺陷</td><td><strong>30+ 项缺陷 + 20+ 项体验优化</strong>（双团队 QA + AI 代码审查）</td></tr>
   <tr><td>本周（W2）独立提交</td><td>16 个（每个修复独立可回滚）</td></tr>
@@ -195,7 +195,7 @@
   </div>
   <div class="timeline-item">
     <div class="timeline-date">4/18</div>
-    <div class="timeline-text">启动卡死根因定位 — 后端字段类型不一致导致 JSON 解析崩溃；内部 staging 升至 v3.0.0（反映质量里程碑，对外保留 v2.0.0）</div>
+    <div class="timeline-text">启动卡死根因定位 — 后端字段类型不一致导致 JSON 解析崩溃；内部 staging 升至 v3.0.0</div>
   </div>
   <div class="timeline-item">
     <div class="timeline-date">4/20</div>
@@ -218,18 +218,18 @@
 <!-- 五、Arrowfish 正式版上线 -->
 <h2>五、Arrowfish 正式版上线 — 下周</h2>
 <div class="card highlight">
-<strong>对外发布版本：v2.0.0</strong>（versionCode 30004，从生产 v1.7.38 跨升）· 后端：v2.2.72（待打 tag）· 目标：下周内
+<strong>对外发布版本：v3.0.4</strong>（versionCode 30004，版本号与 versionCode 完全对齐；从生产 v1.7.38 跨升）· 后端：v2.2.72（待打 tag）· 目标：下周内
 <table style="margin-top: 0.75rem;">
   <tr><th>项目</th><th>状态</th><th>说明</th></tr>
   <tr><td>所有计划修复</td><td><span class="status-done">完成</span></td><td>开发自测通过，发布候选版本就绪</td></tr>
   <tr><td>双团队 QA 联合回归测试</td><td><span class="status-progress">下周一启动</span></td><td>台湾 QA 已返岗</td></tr>
   <tr><td>QA 双方签核（上线门控）</td><td><span class="status-pending">下周中</span></td><td>双方完成全量回归后签核</td></tr>
   <tr><td>后端 v2.2.72 上 prod</td><td><span class="status-pending">下周中</span></td><td>先于客户端上线，监控 1 小时再推送 App</td></tr>
-  <tr><td>App v2.0.0 提交 Google Play</td><td><span class="status-pending">下周末</span></td><td>同步部署 Google / Official / Huawei / Samsung 四个渠道</td></tr>
+  <tr><td>App v3.0.4 提交 Google Play</td><td><span class="status-pending">下周末</span></td><td>同步部署 Google / Official / Huawei / Samsung 四个渠道</td></tr>
 </table>
 </div>
 <div class="card warning">
-  <strong>发布顺序约束：</strong>后端必须先于 App 上线。本阶段新增的余额支付接口与交易记录分页接口，App v2.0.0 依赖它们；若后端未上线就发版，付款与交易页会 404。此约束已写入内部技术文档，作为发版强制顺序。
+  <strong>发布顺序约束：</strong>后端必须先于 App 上线。本阶段新增的余额支付接口与交易记录分页接口，App v3.0.4 依赖它们；若后端未上线就发版，付款与交易页会 404。此约束已写入内部技术文档，作为发版强制顺序。
 </div>
 
 <h3>本阶段后端改动的特殊挑战</h3>
@@ -240,7 +240,7 @@
     <tr>
       <td><strong>Android</strong>（Arrowfish）</td>
       <td>v1.7.38</td>
-      <td>✅ 可升级（本周发 v2.0.0）</td>
+      <td>✅ 可升级（本周发 v3.0.4）</td>
       <td>新接口可正常使用</td>
     </tr>
     <tr>
