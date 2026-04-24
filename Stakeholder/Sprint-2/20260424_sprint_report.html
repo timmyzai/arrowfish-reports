@@ -95,6 +95,10 @@
     <span class="action-num">4</span>
     <div><strong>FFF 公司事项推进</strong> — FFF 公司欧盟电话号码注册（Roy 跟进）与新支付通道办理状态？请 Roy 同步进展。</div>
   </li>
+  <li>
+    <span class="action-num">5</span>
+    <div><strong>🔴 知悉事项（合规）</strong> — 本周审计发现后端 <code>user_flows</code> 表在长期保存「用户 × 节点 × 小时」的使用记录，与 VaaS 无日志承诺冲突。已排入第3阶段优先项（<em>mod-efficiency Phase 12</em>）拆表处理。无需决策，但希望日总知悉：<strong>在此修复完成前，对外不宜把「无日志」作为正式宣传语</strong>，尤其是 FFF 欧盟上线时的合规材料。详见第九节。</div>
+  </li>
 </ul>
 
 <!-- 二、本阶段关键成果 -->
@@ -174,7 +178,7 @@
   <tr><td>付费节点被白嫖</td><td>API 直接返回所有节点凭证</td><td>无权用户拿不到付费节点凭证</td><td>付费品类的差异化价值得到保护</td></tr>
   <tr><td>密码暴力破解</td><td>无登录失败次数限制</td><td>5 次失败自动锁 30 分钟</td><td>账号被盗风险下降</td></tr>
   <tr><td>设备身份伪造</td><td>ANDROID_ID 易伪造</td><td>设备指纹识别（加密验证）</td><td>反欺诈纵深防御能力提升</td></tr>
-  <tr><td>无日志合规</td><td>部分场景仍记敏感信息</td><td>系统层 + 应用层全面清理</td><td>符合 VaaS 合规要求；为 FFF 海外市场铺路</td></tr>
+  <tr><td>无日志合规</td><td>部分场景仍记敏感信息</td><td>系统层 + 应用层大部分已清理（详见第九节新发现一项，第3阶段 Phase 12 处理）</td><td>完成后方可正式对外宣传「无日志」，亦是 FFF 欧盟上线前提</td></tr>
 </table>
 
 <h3>开发效率与可维护性</h3>
@@ -295,8 +299,8 @@
 <table>
   <tr><th>阶段</th><th>主要工作</th><th>负责</th></tr>
   <tr>
-    <td><strong>A. 后端通用化</strong><br>（5/1 起 1 周）</td>
-    <td>API 版本化策略、X-App-Id 头识别两个产品、列表接口分页扩展、错误码映射扩展、第2阶段数据迁移收尾（专属IP 年度价、4K 广告链接）</td>
+    <td><strong>A. 后端通用化</strong><br>（5/1 起 1 周密集，Sprint-3 内滚动收尾）</td>
+    <td>API 版本化策略、X-App-Id 头识别两个产品、列表接口分页扩展、错误码映射扩展、第2阶段数据迁移收尾（专属IP 年度价、4K 广告链接），<strong>外加 4/24 审计新增 5 项结构级遗留债 + 1 项合规 P0</strong>（详见第九节）— Phase A 主题不变，范围扩展到约 13 项</td>
     <td>Tein Fai</td>
   </tr>
   <tr>
@@ -371,7 +375,33 @@
   <strong>关键背景：</strong>FFF 新产品将复用 orebackend 后端。技术债不修，会被 FFF 继承一遍，问题翻倍。第3阶段的后端通用化不是「锦上添花」，而是 FFF 顺利上线的前提。
 </div>
 
-<h3>接手时发现的固有问题（4–5 天交接窗口的代价）</h3>
+<h3>🔴 本周审计新发现的合规级问题（已有大量清理，但仍剩一项须修）</h3>
+<div class="card critical">
+  <strong>背景：</strong>第1、2阶段已经在无日志方向做了大量清理 — 节点侧关闭 rsyslog / journald、应用侧移除敏感字段、反欺诈从 ANDROID_ID 改为指纹、节点凭证权限收紧。这些都已在第三节「安全 / 反欺诈改善」汇总。
+  <br><br>
+  <strong>本周新发现：</strong>流量记录表 <code>user_flows</code> 以「每小时」粒度把「某用户 × 某节点」的使用量持久化到数据库。语义上等同于「长期保存每位用户用过哪些节点、在哪个时段」。当前 280 万行，每月继续增长。
+  <br><br>
+  <strong>为什么是 P0：</strong>VaaS 无日志政策（日总已明确指示、未来 FFF 合规前提）禁止记录「用户连接到哪些节点」。这是前面清理工作里漏掉的最后一块 — 因为它表面上是「流量统计」，不是「用户行为日志」，很容易被忽略。
+  <br><br>
+  <strong>业务影响：</strong>
+  <ul style="margin: 0.4rem 0 0 1.1rem;">
+    <li>合规风险 — 在此修复完成前，对外宣传「无日志」的语句暂不成立</li>
+    <li>FFF 欧盟体系更严格（GDPR + 爱沙尼亚法律），若照搬同一张表上线，监管敞口翻倍。<strong>GDPR 违规罚款上限为全球年营收 4% 或 2,000 万欧元（取高）</strong>，远超此次清理成本</li>
+    <li>数据体量 — <code>user_flows</code> 已 280 万行、约 2.8 GB，每月按活跃用户数持续增长，占用主库空间并拖慢统计查询</li>
+  </ul>
+  <strong>处理方案：</strong>已排入第3阶段 <em>mod-efficiency Phase 12</em>，拆成两张表 — 一张只保留「用户 × 日期」总量（免费额度统计用），另一张只保留「节点 × 小时」总量（节点健康监控用），彼此不再交叉。灰度期双写、验证一致后删除旧表。
+  <br><br>
+  <strong>发现路径：</strong>团队本周主动对后端做结构审计（非 Bug 触发），同日定位 → 同日排期 → 同日写入执行计划。<strong>能找到这一项，说明无日志清理的节奏在持续推进，不是一次性工作。</strong>
+</div>
+
+<h3>接手时发现的固有问题（已清理不少，仍有优化空间）</h3>
+<div class="card highlight">
+  <strong>第2阶段已清理 4 项重大遗留债</strong> — 读写分离、专属 IP 支付链路、试用额度滥用、错误提示本地化（详见第二、三节，每项均有实测数据）。这些是「最影响发布」的坑，拦掉了不少用户投诉与营收损失。
+  <br><br>
+  <strong>同时，第2阶段收尾审计又新找出 5 项结构级优化空间</strong>（表格中标【本周新增】）。不是新 Bug，而是「可以做得更好」的长期优化 — 不修不会立刻出事，但继续迭代代码就会越来越重、FFF 复用时就会继承同一套负担。
+  <br><br>
+  <strong>节奏上选「边清边稳」</strong>：每阶段集中处理一两个方向，不做一次性大重构，降低回归风险。台湾团队 8 年迭代 + 4–5 天交接的历史包袱，我们以结构化方式、分期清理。
+</div>
 <table>
   <tr>
     <th style="width: 28%;">问题</th>
@@ -379,18 +409,42 @@
     <th style="width: 22%;">第2阶段处理</th>
     <th>第3阶段计划</th>
   </tr>
-  <tr><td>列表接口普遍无分页</td><td>FFF 高活用户同样会卡顿</td><td>已修交易记录接口</td><td>扩展到站内信、邀请、优惠券等</td></tr>
+  <tr><td>列表接口普遍无分页（本周又新识别 10 个接口）</td><td>FFF 高活用户同样会卡顿</td><td>已修交易记录接口</td><td>扩展到优惠券、站内信、活动、FAQ 等 10 个接口</td></tr>
   <tr><td>错误处理不统一</td><td>FFF 用户也会看到无意义错误</td><td>注册路径已上线</td><td>扩展到全部接口；定义统一规范</td></tr>
-  <tr><td>5 个支付通道代码重复粘贴</td><td>FFF 新支付通道又要复制一份</td><td>—</td><td>抽公共接口 → Arrowfish + FFF 共用</td></tr>
+  <tr><td>支付回调代码重复粘贴（审计发现有 7 个通道，每个约 130 行高度相似）</td><td>FFF 新支付通道又要复制一份；Bug 修一处要改 7 处（单次维护成本 ×7）</td><td>—</td><td>抽公共服务 <code>internal/payment/callback</code> → Arrowfish + FFF 共用（mod-efficiency Phase 15），一次接入复用于所有通道</td></tr>
   <tr><td>数据库关系设计不规范</td><td>表结构若照搬错误就翻倍</td><td>设备表已重构</td><td>用户 / 订单 / 节点关系审计；FFF 用规范后的设计</td></tr>
   <tr><td>API 缺乏版本化策略</td><td>FFF 改接口会破坏 Arrowfish 旧版本（PC / iOS）</td><td>—</td><td>制定 v1 / v2 升级策略 + X-App-Id 头识别两个产品</td></tr>
   <tr><td>缺乏跨端调试 / 监控工具</td><td>FFF 上线后定位问题同样困难</td><td>崩溃监控已接入</td><td>跨前后端 trace ID 串联</td></tr>
   <tr><td>节点维护手工操作多</td><td>FFF 也用同一套节点</td><td>4 项自动化完成</td><td>信心打分 + 采购助手</td></tr>
   <tr><td>依赖库即将 EOL（MySQL 5.7、Redis 6.2、Go 1.20）</td><td>FFF 不可能用过期库起步</td><td>风险记录</td><td>评估升级窗口</td></tr>
   <tr><td>交接资料缺失（域名 ↔ 仓库映射不全）</td><td>FFF 上线时无法快速分辨已用 / 可用域名</td><td>边做边补</td><td>剩余空白向台湾团队询问</td></tr>
+  <tr><td>【本周新增】用户 ↔ 设备关系未正规化 — 设备品牌 / 型号 / 指纹 / IMEI 在每条绑定记录里重复存储</td><td>FFF 想做「同一设备多账号」风控，目前全表扫描才能查到；同样问题会带入 FFF</td><td>—</td><td>新增 <code>devices</code> 主表 + 正规化多对多关系（Phase 14），去重约数万行冗余数据</td></tr>
+  <tr><td>【本周新增】代码层级边界被打破 — 通用包反向依赖业务包（9 处违规 import）</td><td>Arrowfish 和 FFF 无法各自独立构建、重用；改一处牵连全局</td><td>—</td><td>Phase 13 — 把 cron、错误提示等业务逻辑从通用包抽出，恢复单向依赖</td></tr>
+  <tr><td>【本周新增】<code>mod/tables</code> 与 <code>mod/models</code> 字段重复定义（User 等核心实体两处维护）</td><td>FFF 新增字段时要在两处改，漏改一处就是线上 Bug（线上数据不一致定位成本约 0.5–1 人日/次）</td><td>—</td><td>Phase 16 — 用类型别名合并，删除约 4,600 行冗余代码</td></tr>
+  <tr><td>【本周新增】测试覆盖率约 4%，核心支付回调无任何自动化测试</td><td>FFF 若复用这些回调，一次回归就能把两个产品一起打挂</td><td>—</td><td>Phase 15 拆出公共服务的同时补表驱动测试</td></tr>
+  <tr><td>【本周新增】请求上下文链断裂（68 处使用空 context）</td><td>FFF 问题定位同样困难；请求追踪、超时传递、慢查询排查全部失效</td><td>—</td><td>Phase 17 — 统一改用请求 context，支持贯穿全链路的 trace</td></tr>
 </table>
+
+<div class="card warning">
+  <strong>提醒：</strong>Phase 12（拆 <code>user_flows</code>）、Phase 14（设备表正规化）、Phase 15（支付回调抽象）等所有新排期的后端改动，都受 <strong>iOS HiYou v1.3.0 / Windows skytree_pc v2.2.71 冻结客户端</strong>约束 — 必须通过 v1 / v2 接口并存策略保持向后兼容。详细情况与根本解除前提见第五节「本阶段后端改动的特殊挑战」。
+</div>
+
 <div class="card highlight">
-  <strong>策略：每阶段集中清理一两项</strong>，避免一次性大重构的回归风险。本阶段已修了「最影响发布」的几项；第3阶段优先清理「FFF 直接复用所需」的几项。所有问题均记录在内部技术文档，可追溯。
+  <strong>Sprint-3 范围说明（诚实口径）：</strong>本周新增 5 项结构级遗留债 + 1 项合规 P0，合并到 Sprint-3 原定 Phase A「后端通用化」中 — <strong>Phase A 主题不变（backend hardening for FFF reuse），但范围扩大</strong>，从最初的 5–6 项扩展到约 13 项。Phase A 是 Sprint-3 头等目标，容量从一开始就预留给后端清理；Phases B（FFF 启动）、C（节点自动化）、D（Arrowfish 收尾）、E（基础设施）未被挤占。若执行中发现 Phase A 吃满容量，优先保留 Phase 12（合规）与 Phase 15（FFF 复用），其他项顺延至 Sprint-4。Sprint 总容量不变。
+</div>
+
+<div class="card highlight">
+  <strong>遗留债进度看板（截至 2026-04-24）</strong>
+  <table style="margin-top: 0.5rem;">
+    <tr><th>状态</th><th>数量</th><th>项目</th></tr>
+    <tr><td>✅ Sprint-2 完整交付</td><td>4 项</td><td>读写分离、专属 IP 支付、反滥用 5 层防护、错误提示本地化（详见第二、三节）</td></tr>
+    <tr><td>🟢 Sprint-2 部分收尾</td><td>5 项</td><td>分页（交易记录）、错误处理（注册路径）、数据库关系（设备表）、节点维护（4 项自动化）、跨端调试（崩溃监控）— 剩余部分 Sprint-3 收尾</td></tr>
+    <tr><td>🟠 Sprint-3 排期</td><td>8 项</td><td>含本周新增 5 项 + 合规 P0（user_flows）+ 支付回调抽象 + API 版本化</td></tr>
+    <tr><td>🔵 后续阶段</td><td>2 项</td><td>依赖库升级窗口、交接资料补全</td></tr>
+    <tr><td><strong>累计识别</strong></td><td><strong>19 项</strong></td><td>Sprint-2 结束清理率 <strong>21%</strong>（4 / 19）；Sprint-3 结束预计 <strong>89%</strong>（17 / 19）</td></tr>
+  </table>
+  <br>
+  <strong>关键信息：</strong>每次深入一个模块都可能再找出 1–2 项优化空间 — 这是「手工作坊 → 工程化」必经过程，不是失控。所有项均在内部技术计划 <code>plans/mod-efficiency</code> 留痕，编号可追溯。
 </div>
 
 <div class="footer">
