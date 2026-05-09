@@ -1,0 +1,961 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Arrowfish VPN — 第3阶段完整汇报 — 2026-05-09</title>
+<style>
+  :root {
+    --bg: #FAFAFA;
+    --card: #FFFFFF;
+    --border: #E5E7EB;
+    --text: #1F2937;
+    --text-secondary: #6B7280;
+    --accent: #2563EB;
+    --accent-soft: #EFF6FF;
+    --green: #B7D7C9;
+    --green-text: #166534;
+    --green-soft: #F0FDF4;
+    --yellow: #E6DFAF;
+    --yellow-text: #854D0E;
+    --yellow-soft: #FFFBEB;
+    --red: #DCCACA;
+    --red-text: #991B1B;
+    --red-soft: #FEF2F2;
+    --grey: #F2F2F2;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", "Noto Sans SC", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  h1 { font-size: 1.5rem; margin-bottom: 0.25rem; }
+  h2 { font-size: 1.2rem; margin: 1.5rem 0 0.75rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--accent); }
+  h3 { font-size: 1rem; margin: 1.25rem 0 0.5rem; color: var(--text-secondary); }
+  h4 { font-size: 0.95rem; margin: 1rem 0 0.4rem; color: var(--text); font-weight: 600; }
+  .subtitle { color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 1.5rem; }
+  .card { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 1.1rem 1.25rem; margin: 0.75rem 0; }
+  .card.highlight { border-left: 4px solid var(--accent); background: var(--accent-soft); }
+  .card.warning { border-left: 4px solid #F59E0B; background: var(--yellow-soft); }
+  .card.critical { border-left: 4px solid #EF4444; background: var(--red-soft); }
+  .card.success { border-left: 4px solid #16A34A; background: var(--green-soft); }
+  table { width: 100%; border-collapse: collapse; margin: 0.6rem 0; font-size: 0.9rem; }
+  th { background: var(--grey); text-align: left; padding: 0.5rem 0.75rem; font-weight: 600; }
+  td { padding: 0.5rem 0.75rem; border-bottom: 1px solid var(--border); vertical-align: top; }
+  ul { padding-left: 1.25rem; margin: 0.4rem 0; }
+  ul li { margin: 0.25rem 0; }
+  .status-done { background: var(--green); color: var(--green-text); padding: 2px 8px; border-radius: 4px; font-size: 0.78rem; font-weight: 600; }
+  .status-progress { background: var(--yellow); color: var(--yellow-text); padding: 2px 8px; border-radius: 4px; font-size: 0.78rem; font-weight: 600; }
+  .status-defer { background: var(--grey); color: var(--text-secondary); padding: 2px 8px; border-radius: 4px; font-size: 0.78rem; font-weight: 600; }
+  .status-critical { background: var(--red); color: var(--red-text); padding: 2px 8px; border-radius: 4px; font-size: 0.78rem; font-weight: 600; }
+  .tldr { background: linear-gradient(135deg, #EFF6FF 0%, #FFFFFF 100%); border-radius: 10px; padding: 1.25rem 1.5rem; border: 1px solid #BFDBFE; margin: 1rem 0 2rem; }
+  .tldr-label { font-size: 0.75rem; font-weight: 700; color: var(--accent); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.5rem; }
+  .tldr-text { font-size: 1rem; line-height: 1.7; color: var(--text); }
+  .tabs { display: flex; flex-wrap: wrap; gap: 0; border-bottom: 2px solid var(--border); margin: 1.5rem 0 1rem; position: sticky; top: 0; background: var(--bg); z-index: 5; padding-top: 0.5rem; }
+  .tab-button {
+    padding: 0.6rem 1rem;
+    background: transparent;
+    border: none;
+    border-bottom: 3px solid transparent;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+    transition: color 0.15s, border-color 0.15s;
+    font-family: inherit;
+  }
+  .tab-button:hover { color: var(--text); }
+  .tab-button.active { color: var(--accent); border-bottom-color: var(--accent); font-weight: 600; }
+  .tab-panel { display: none; animation: fadeIn 0.2s ease; }
+  .tab-panel.active { display: block; }
+  @keyframes fadeIn { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: translateY(0); } }
+  .metric-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 0.75rem; margin: 1rem 0; }
+  .metric-card { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 0.9rem 1rem; }
+  .metric-label { font-size: 0.78rem; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 0.3rem; }
+  .metric-value { font-size: 1.4rem; font-weight: 700; color: var(--accent); }
+  .metric-sub { font-size: 0.78rem; color: var(--text-secondary); margin-top: 0.2rem; }
+  .footer { margin-top: 2.5rem; padding-top: 1rem; border-top: 1px solid var(--border); font-size: 0.8rem; color: var(--text-secondary); text-align: center; }
+  code { font-family: SFMono-Regular, Menlo, Consolas, monospace; background: var(--grey); padding: 1px 5px; border-radius: 3px; font-size: 0.85em; }
+  .nowrap { white-space: nowrap; }
+  .timeline { position: relative; padding-left: 1.5rem; margin: 1rem 0; }
+  .timeline::before { content: ''; position: absolute; left: 0.35rem; top: 0.5rem; bottom: 0.5rem; width: 2px; background: var(--border); }
+  .timeline-item { position: relative; margin-bottom: 0.75rem; }
+  .timeline-item::before { content: ''; position: absolute; left: -1.15rem; top: 0.6rem; width: 10px; height: 10px; border-radius: 50%; background: var(--accent); border: 2px solid white; }
+  .timeline-date { font-weight: 600; font-size: 0.85rem; color: var(--accent); }
+  .timeline-text { font-size: 0.9rem; }
+  .action-list { list-style: none; padding: 0; }
+  .action-list li { padding: 0.6rem 0; border-bottom: 1px solid var(--border); display: flex; align-items: flex-start; gap: 0.6rem; }
+  .action-list li:last-child { border-bottom: none; }
+  .action-num { background: var(--accent); color: white; width: 22px; height: 22px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.72rem; font-weight: 700; flex-shrink: 0; margin-top: 2px; }
+</style>
+<script src="../../assets/auth-gate.js"></script>
+</head>
+<body>
+
+<h1>Arrowfish VPN — 第3阶段完整汇报</h1>
+<div class="subtitle">2026年5月9日 · 第3阶段提前收官（4/27–5/9）· 稳定版 v3.2.0 已上线</div>
+
+<!-- ============================================ -->
+<!-- TL;DR — 一句话 -->
+<!-- ============================================ -->
+<div class="tldr">
+  <div class="tldr-label">TL;DR · 一句话</div>
+  <div class="tldr-text">
+    <strong>Arrowfish 安卓 v3.2.0 稳定版正式上线</strong>，是接手项目以来第一个由本团队完整把控的稳定版本（QA 主体复验通过）。后端发布提速 4–6 倍，节点开通由 SSH 手工 20 分钟降至后台一键 30 秒。<strong>第3阶段以「稳定上线 + 节点配置定型」作为关门标准提前收官；FFF Flutter 重写与基础设施加固（数据库异地备份 / 网络隔离）锁定第4阶段 P0 优先级。</strong>下一里程碑：v3.2.0 产线 7 天观察期 + 第4阶段 5/12 启动。
+  </div>
+</div>
+
+<!-- ============================================ -->
+<!-- 需要知悉 / 配合 -->
+<!-- ============================================ -->
+<h2>一、需要知悉与配合事项</h2>
+<ul class="action-list">
+  <li>
+    <span class="action-num">1</span>
+    <div><strong>v3.2.0 产线观察期</strong> — 已上线进入 7 天稳定性观察。期间发现的回归问题以热修分支处理，不影响第4阶段并行推进。下载入口：<code>apk.arrowfishadv.com</code>（双语，Google Play / 官网 / 华为同步发布）。</div>
+  </li>
+  <li>
+    <span class="action-num">2</span>
+    <div><strong>FFF 公司事项进展（Roy 跟进）</strong> — FFF 公司欧盟电话号码注册与新支付通道办理仍在 Roy 一侧推进，进度待同步。这是 FFF 上线前的硬性外部依赖；本团队已为重写工作就绪基础平台，等外部条件具备即可启动 Flutter 端。</div>
+  </li>
+  <li>
+    <span class="action-num">3</span>
+    <div><strong>专属线路（专线）续费缺口仍未关闭</strong> — 现有付费客户专线到期后必须重新购买，节点会被重新分配，导致 IP 与路由习惯被打断。第3阶段已完成「到期自动释放节点回库存」的清理动作；<strong>「自动续费扣款 + 保留原节点绑定」</strong>列入第4阶段 P1，与 FFF 通用支付模块共用。是付费用户流失风险的核心修复点。</div>
+  </li>
+  <li>
+    <span class="action-num">4</span>
+    <div><strong>无日志合规对外宣传时机</strong> — 本周 v3.2.0 上线建议只主推「稳定 + 可靠 + 速度」三个产品要点；<strong>「无日志承诺」等到第4阶段节点系统层加固完成后再统一对外发布</strong>（节点端 rsyslog/journald 持久化关闭、25 端口阻断、Ansible 配置完整性纳管）。FFF 上线前的合规白皮书也按这个节奏。详见「合规与日志」标签页。</div>
+  </li>
+  <li>
+    <span class="action-num">5</span>
+    <div><strong>iOS / Windows 老客户端冻结现状</strong>（运营层面已知）— iOS HiYou v1.3.0 因 Apple 账号封禁冻结；Windows skytree_pc v2.2.71 因签名证书问题冻结。这两端目前依赖后端的<strong>向后兼容承诺</strong>持续运转；本阶段所有后端改动已遵守此约束（详见「后端改动的特殊挑战」）。<strong>解锁路径</strong>：iOS 账号申诉恢复；Windows 虚拟签名方案调研 — 这两项是运营/商务侧议程，但若延期，会持续约束后端设计速度。</div>
+  </li>
+</ul>
+
+<!-- ============================================ -->
+<!-- 本阶段关键成果 (scorecard) -->
+<!-- ============================================ -->
+<h2>二、本阶段关键成果（Scorecard）</h2>
+<div class="card success">
+<table>
+  <tr><th>类别</th><th>成果</th><th>状态</th></tr>
+  <tr>
+    <td>移动端</td>
+    <td>Arrowfish 安卓 <strong>v3.2.0</strong> 上线（接手后首个本团队完整把控的稳定版）；APK 体积比接手时缩小 67%（101 MB → 33 MB）</td>
+    <td><span class="status-done">已上线</span></td>
+  </tr>
+  <tr>
+    <td>QA 复验</td>
+    <td>V3.2.0 测试单：复验通过 22 + 已结案 5；待复验 5、待讨论 7、待处理 3。V2.0.0 测试单合并到 V3.2.0 闭环（V2.0.0 复验通过 42 + 已结案 13）</td>
+    <td><span class="status-done">主体完成</span></td>
+  </tr>
+  <tr>
+    <td>后端发布速度</td>
+    <td>CI/CD 流水线由<strong>平均 2:30–3:00 提速到 0:30–0:50</strong>（4–6 倍）；MR 路径化构建；数据库迁移自动校验</td>
+    <td><span class="status-done">生产</span></td>
+  </tr>
+  <tr>
+    <td>移动端发布</td>
+    <td>一次构建 4 个渠道 APK 自动上传至下载站（Google / 官网 / 华为，三星已下线），<strong>全程 ~15:52 无人值守</strong></td>
+    <td><span class="status-done">生产</span></td>
+  </tr>
+  <tr>
+    <td>节点运维</td>
+    <td>开通由 SSH 手工 20 分钟降为后台一键 ~30 秒；回收被封节点由「手工卸载残留再装」降为一键 Format ~2 分钟</td>
+    <td><span class="status-done">生产</span></td>
+  </tr>
+  <tr>
+    <td>节点架构升级</td>
+    <td>从 XRayR（外部维护、配置散落多处）切换到 singbox-agent（自研 870 行、配置中心化、自更新）；新节点单一供应链，老节点 Format 时自动迁移</td>
+    <td><span class="status-progress">攻击式攒移中</span></td>
+  </tr>
+  <tr>
+    <td>共享平台</td>
+    <td>Arrowfish 与 FFF 共用的关联日志、协程崩溃保护、Swagger 自动文档、共享日志模板、多语言后端字段</td>
+    <td><span class="status-done">基础完成</span></td>
+  </tr>
+  <tr>
+    <td>P0 收入保护</td>
+    <td>App Store / Google Play 续订代币推进修复（解决「客户已扣款但 VIP 没生效」）；免费注册跨账号串号修复</td>
+    <td><span class="status-done">已修复</span></td>
+  </tr>
+  <tr>
+    <td>FFF Flutter 重写</td>
+    <td>未启动；产能用于稳定 v3.2.0 + 中国应对自动化 + 后端基础平台</td>
+    <td><span class="status-defer">顺延 S4</span></td>
+  </tr>
+  <tr>
+    <td>基础设施加固</td>
+    <td>数据库异地备份 / 网络隔离 / 旧代理服下线 / SSH 全量证书化</td>
+    <td><span class="status-defer">S4 P0</span></td>
+  </tr>
+</table>
+</div>
+
+<!-- ============================================ -->
+<!-- 改善与商业价值 -->
+<!-- ============================================ -->
+<h2>三、改善与商业价值（技术指标 → 业务影响）</h2>
+
+<h3>研发与发布效率</h3>
+<div class="card highlight">
+<table>
+  <tr><th>项目</th><th>第3阶段前</th><th>第3阶段后</th><th>商业价值</th></tr>
+  <tr>
+    <td>后端发布流水线</td>
+    <td>2:30–3:00</td>
+    <td><strong>0:30–0:50</strong>（−4 至 −6 倍）</td>
+    <td>每位开发者每天少等 ~30 分钟反馈；紧急修复（如 IAP 续订）可在 2 分钟内发布到测试环境，<strong>降低支付故障窗口的客户流失</strong></td>
+  </tr>
+  <tr>
+    <td>移动端发布</td>
+    <td>逐渠道单次构建，需要人工组合 4 套 APK</td>
+    <td><strong>~15:52 一次构建 4 渠道</strong>，无人值守上传至下载站</td>
+    <td>QA 与内部测试人员自助拉测；<strong>节省每次发布 1-2 个工时的人工组合时间</strong>；版本上架等待大幅缩短</td>
+  </tr>
+  <tr>
+    <td>新节点开通</td>
+    <td>~20 分钟 SSH 手工，操作风险高</td>
+    <td><strong>~30 秒后台点击</strong>，零 SSH 介入</td>
+    <td>大批量新增节点时<strong>每台节省 ~19 分钟</strong>；操作员失误造成的故障窗口被消除；中国封锁期间的快速换网能力数量级提升</td>
+  </tr>
+  <tr>
+    <td>回收被封节点</td>
+    <td>需要手工卸载残留服务再重装</td>
+    <td><strong>一键 Format ~2 分钟</strong>，自动清理旧版残留</td>
+    <td>节点采购成本被节省（<strong>原本需要弃用的 VM 现在可以重用</strong>）</td>
+  </tr>
+  <tr>
+    <td>批量节点升级</td>
+    <td>对每台 SSH 串行，全部 ~150 节点需数小时</td>
+    <td>并行最多 12 台，每台独立进度条 + 失败可单独重试</td>
+    <td>计划内升级窗口缩短一个数量级；<strong>不再需要安排夜间专门窗口</strong></td>
+  </tr>
+</table>
+</div>
+
+<h3>用户体验</h3>
+<div class="card highlight">
+<table>
+  <tr><th>项目</th><th>变化</th><th>用户感知</th></tr>
+  <tr>
+    <td>APK 体积</td>
+    <td>101 MB → 33 MB（−67%）</td>
+    <td>下载更快、占用存储更少；流量套餐受限的用户感知最明显（中国农村 + 欧盟移动数据用户）</td>
+  </tr>
+  <tr>
+    <td>VPN 网络切换稳定性</td>
+    <td>Wi-Fi ↔ 4G/5G 切换会断开 → <strong>隧道保持不中断</strong></td>
+    <td>用户不再需要在每次出门 / 进电梯后手动重连</td>
+  </tr>
+  <tr>
+    <td>VPN 闪断（Wi-Fi 抖动）</td>
+    <td>Android 旧接口误判触发断开 → 现代接口 + 直接 ping 绑定</td>
+    <td>「连着连着断了」类客诉减少；产品口碑直接受益</td>
+  </tr>
+  <tr>
+    <td>升级安装包后的连接</td>
+    <td>v2.x 升级 v3.x 用户曾会连接失败 → 自愈</td>
+    <td>升级流失率降低；老用户保留</td>
+  </tr>
+  <tr>
+    <td>免费额度断开后显示</td>
+    <td>显示旧缓存值，造成误解 → 实时真实余额</td>
+    <td>客诉减少；额度透明度提升</td>
+  </tr>
+  <tr>
+    <td>选择线路时</td>
+    <td>双重重连抖动 → 单次切换</td>
+    <td>切换体验流畅；连接成功率上升</td>
+  </tr>
+</table>
+</div>
+
+<h3>收入保护</h3>
+<div class="card critical">
+<strong>影响金额估算（保守）</strong>：本阶段修复的两个 P0 收入路径合计影响所有月续订用户的第二个月生效与免费注册路径。具体金额数据需要 1-2 周财务侧对账确认；初步评估：续订代币推进修复直接关闭了「客户已扣款但 VIP 没生效」的客诉来源 — 在以前的回执路径下，<strong>这类客诉每月以个位数比例出现并需要客服一对一退款</strong>。
+</div>
+
+<h3>合规姿态</h3>
+<ul>
+  <li><strong>滥用观察检测器以无日志方式实现</strong> — 节点端单向哈希源 IP，仅计数上报后端；后端不持有任何原始 IP — 是「无日志合规」与「滥用治理」共存的范式样板</li>
+  <li><strong>跨端可追溯日志（关联 ID）</strong>不涉及用户访问内容、目的地、流量元数据 — 仅用于「错误诊断」</li>
+  <li><strong>14 天数据保留策略</strong>纳入两个新增表（节点用量 / 异常计数）</li>
+</ul>
+
+<!-- ============================================ -->
+<!-- 关键时间节点 -->
+<!-- ============================================ -->
+<h2>四、关键时间节点（本阶段）</h2>
+<div class="timeline">
+  <div class="timeline-item">
+    <div class="timeline-date">4/27 — 第3阶段启动</div>
+    <div class="timeline-text">i18n 清理；Android 构建优化基线；多仓代码审查启动</div>
+  </div>
+  <div class="timeline-item">
+    <div class="timeline-date">4/28</div>
+    <div class="timeline-text">Tier 1 构建清理 + utilcodex 移除 + 收藏夹改为后端权威</div>
+  </div>
+  <div class="timeline-item">
+    <div class="timeline-date">5/2</div>
+    <div class="timeline-text">免费用户额度由节点驱动（关闭 UUID 提取无限免费 VPN 漏洞）+ 节点身份重构 + 智能节点健康状态机</div>
+  </div>
+  <div class="timeline-item">
+    <div class="timeline-date">5/3 — 第3阶段第1周收尾</div>
+    <div class="timeline-text">反滥用防护（iptables connlimit + 异常观察 + 代理回路间隔可调）+ 关联 ID 日志基础设施 + 数据保留 + 迁移检查 CI</div>
+  </div>
+  <div class="timeline-item">
+    <div class="timeline-date">5/4 – 5/5</div>
+    <div class="timeline-text">后台一键开通节点 + 流式安装日志 + Format 切换 + 管理后台流水线独立化 + 线路分级配置</div>
+  </div>
+  <div class="timeline-item">
+    <div class="timeline-date">5/6</div>
+    <div class="timeline-text">免费注册跨账号串号修复 + ASN 段滥用上限；专线到期自动释放节点</div>
+  </div>
+  <div class="timeline-item">
+    <div class="timeline-date">5/7</div>
+    <div class="timeline-text">Swagger 自动文档；抽奖在线时长由节点统计；并发结算竞争修复</div>
+  </div>
+  <div class="timeline-item">
+    <div class="timeline-date">5/8</div>
+    <div class="timeline-text">VPN 隧道持久重连；自动重连配置；节点 IPv4 出站强制；NAT 表自动清理</div>
+  </div>
+  <div class="timeline-item">
+    <div class="timeline-date">5/9 — 第3阶段提前收官 · v3.2.0 上线</div>
+    <div class="timeline-text">Android 系统接口现代化；自动重连默认开启；闲置自动断开按政策回滚；v3.2.0 稳定版正式发布</div>
+  </div>
+</div>
+
+<!-- ============================================ -->
+<!-- 上线计划 + 后端改动特殊挑战 -->
+<!-- ============================================ -->
+<h2>五、上线计划与后端改动特殊挑战</h2>
+
+<h3>上线节奏</h3>
+<table>
+  <tr><th>节点</th><th>动作</th><th>状态</th></tr>
+  <tr><td>5/9</td><td>v3.2.0 稳定版上线（Google Play / 官网 / 华为）</td><td><span class="status-done">本日完成</span></td></tr>
+  <tr><td>5/9 – 5/16</td><td>7 天产线观察期 — 任何回归走热修分支</td><td><span class="status-progress">观察中</span></td></tr>
+  <tr><td>5/12</td><td>第4阶段启动 — 数据库异地备份 + 网络隔离（P0 优先开工）</td><td><span class="status-progress">下周</span></td></tr>
+  <tr><td>5/16+</td><td>第4阶段 v3.7.0 进入 QA 周期（自动重连默认开启 + Android 接口现代化）</td><td><span class="status-defer">下阶段</span></td></tr>
+</table>
+
+<h3>后端改动的特殊挑战（多客户端兼容约束）</h3>
+<div class="card warning">
+<p>本阶段后端发布需要同时服务以下客户端，其中两个已冻结、不能要求其升级：</p>
+<ul>
+  <li><strong>Android（可升级）</strong> — 主流量端，本阶段升级至 v3.2.0</li>
+  <li><strong>iOS HiYou v1.3.0（已冻结）</strong> — Apple 账号封禁导致无法发版；后端必须保持向后兼容</li>
+  <li><strong>Windows skytree_pc v2.2.71（已冻结）</strong> — 签名证书过期；后端必须保持向后兼容</li>
+</ul>
+<p>由此，本阶段每个后端改动都需要额外的「不破坏老客户端」的设计与测试成本（估计 ~30% 设计与测试开销加在每张工单上）。本阶段未发生因后端改动导致 iOS / Windows 失效的事件 — 兼容性纪律保持。</p>
+<p><strong>解锁路径</strong>（运营 / 商务侧议程）：</p>
+<ol>
+  <li>iOS 账号申诉恢复 — 才能让冻结版本退役</li>
+  <li>Windows 虚拟签名方案调研 — 才能让冻结版本升级</li>
+</ol>
+<p>这两项推进越快，后端越早能从兼容约束中解放，FFF 重写也越容易共享后端代码（现在 FFF 后端默认从 Arrowfish 后端分叉）。</p>
+</div>
+
+<!-- ============================================ -->
+<!-- FFF 并行进展 -->
+<!-- ============================================ -->
+<h2>六、FFF 并行进展（Lex 实时口径）</h2>
+<div class="card">
+<p>第3阶段 FFF Flutter 重写工作未启动 — 产能集中于 Arrowfish 稳定 v3.2.0 + 节点自动化 + 后端基础平台。<strong>这次延后是有意的</strong>：第3阶段已完成的关联日志、协程崩溃保护、Swagger 自动文档、多语言字段等基础平台设施，都将作为 FFF 后端的初始能力直接继承，避免了到第4阶段再回头补建。</p>
+<p><strong>FFF 启动外部依赖</strong>（Roy 跟进）：</p>
+<ul>
+  <li><strong>欧盟电话号码注册与 SMS</strong> — Roy 商务侧推进</li>
+  <li><strong>新支付通道（FFF 公司主体）</strong> — Roy 商务侧推进</li>
+</ul>
+<p><strong>第4阶段 FFF 工程侧计划</strong>：</p>
+<ul>
+  <li>新建 Flutter 项目（FFF 品牌、分层结构与 flutter_vpn 一致）— Lex 主导</li>
+  <li>FFF 后端从 Arrowfish 后端分叉，独立数据库；剥离 Arrowfish 专用表 — 后端侧</li>
+  <li>共享 Go 模块化（先行 <code>pkg/util/*</code> 与 <code>internal/freequota/</code>）</li>
+  <li>第一个里程碑：能注册、登录、列出节点、连接节点（无支付 / 抽奖 / 客服）</li>
+</ul>
+<p><strong>SMS / 支付通道未到位的退路</strong>：Flutter 端先以 mock 后端推进 UI；登录走邮件无密码作为 MVP；支付屏放在功能开关后面，UI 上线但不开启商务功能，第4阶段后期补全。</p>
+</div>
+
+<!-- ============================================ -->
+<!-- 安全与权限管理 -->
+<!-- ============================================ -->
+<h2>七、安全与权限管理</h2>
+
+<h3>源代码访问最小化</h3>
+<table>
+  <tr><th>角色</th><th>访问权限</th><th>状态</th></tr>
+  <tr><td>Roy</td><td>GitLab 全仓权限</td><td><span class="status-done">维持</span></td></tr>
+  <tr><td>Morgan</td><td>GitLab 全仓权限</td><td><span class="status-done">维持</span></td></tr>
+  <tr><td>Lex</td><td>GitLab 全仓权限</td><td><span class="status-done">维持</span></td></tr>
+  <tr><td>大马团队</td><td>GitLab 全仓权限</td><td><span class="status-done">维持</span></td></tr>
+  <tr><td>其他台湾团队成员</td><td>已撤销</td><td><span class="status-done">已撤销</span></td></tr>
+</table>
+<p>第4阶段会落地<strong>权限审计</strong>：每阶段对账一次 GitLab 实际成员与上述白名单一致，记录在执行报告中。</p>
+
+<h3>遗留基础设施安全缺口（接手清理项）</h3>
+<table>
+  <tr><th>项目</th><th>问题</th><th>风险</th><th>状态</th></tr>
+  <tr>
+    <td>测试 / 生产网络隔离</td>
+    <td>当前共用一个网络安全组（NSG）</td>
+    <td>测试环境的变更可能反向影响生产</td>
+    <td><span class="status-defer">第4阶段 P0</span></td>
+  </tr>
+  <tr>
+    <td>数据库异地备份</td>
+    <td>当前无定时备份</td>
+    <td>单点风险；数据中心层级故障无恢复机制</td>
+    <td><span class="status-defer">第4阶段 P0</span></td>
+  </tr>
+  <tr>
+    <td>香港旧 ProxyBackend 下线</td>
+    <td>长期不稳定且已被新版后端取代</td>
+    <td>资源浪费 + 攻击面残留</td>
+    <td><span class="status-defer">第4阶段 P1</span></td>
+  </tr>
+  <tr>
+    <td>SSH 全量证书化</td>
+    <td>部分节点仍允许密码登录</td>
+    <td>密码爆破攻击面</td>
+    <td><span class="status-defer">第4阶段 P1</span></td>
+  </tr>
+  <tr>
+    <td>主从读写分离</td>
+    <td>客户端只读流量未走读副本</td>
+    <td>主库压力</td>
+    <td><span class="status-done">✅ 第2阶段已完成</span></td>
+  </tr>
+  <tr>
+    <td>登录失败锁定（5 次 / 30 分钟）</td>
+    <td>缺乏暴力破解保护</td>
+    <td>账户接管风险</td>
+    <td><span class="status-done">✅ 第2阶段已完成</span></td>
+  </tr>
+  <tr>
+    <td>设备注册速率限制（每 IP 每天 5 次 / 每设备 3 次）</td>
+    <td>缺乏注册滥用保护</td>
+    <td>免费配额滥用</td>
+    <td><span class="status-done">✅ 第2阶段已完成</span></td>
+  </tr>
+  <tr>
+    <td>免费注册跨账号串号</td>
+    <td>同设备指纹可能匹配到他人账户</td>
+    <td>账户隔离失效 + 配额误判</td>
+    <td><span class="status-done">✅ 本阶段已修复</span></td>
+  </tr>
+  <tr>
+    <td>App Store / Google Play 续订代币推进</td>
+    <td>第二个月续订验证用旧代币 → 客户已扣款但 VIP 不发</td>
+    <td>支付成功但功能未生效（直接收入路径）</td>
+    <td><span class="status-done">✅ 本阶段已修复</span></td>
+  </tr>
+  <tr>
+    <td>iptables NAT 表脏数据</td>
+    <td>配置变更后留下旧端口转发</td>
+    <td>客户端连接不稳定（隐性故障）</td>
+    <td><span class="status-done">✅ 本阶段已修复</span></td>
+  </tr>
+</table>
+
+<h3>新增安全姿态</h3>
+<ul>
+  <li><strong>节点引导一次性令牌</strong>（Redis 1 小时 TTL，单次使用，读取后失效）— 替代静态 API 密钥嵌入 YAML 的旧模式</li>
+  <li><strong>sing-box 二进制本地镜像 + SHA256 校验</strong> — 既是中国封锁应对，也是供应链防御（上游 GitHub 发布被篡改不会传播到本地节点）</li>
+  <li><strong>节点进程统一为 systemd</strong>（新节点）— 消除 PM2 / Docker 混杂带来的供应链不一致面</li>
+  <li><strong>Agent token 在 re-heal 时轮换</strong> — 长期凭据自动轮换，被泄漏后 next heal 自然失效</li>
+</ul>
+
+<!-- ============================================ -->
+<!-- 关键风险与技术债务 -->
+<!-- ============================================ -->
+<h2>八、关键风险与技术债务（开口风险）</h2>
+
+<h3>当前阶段开口风险</h3>
+<table>
+  <tr><th>风险</th><th>影响范围</th><th>状态</th><th>缓解</th></tr>
+  <tr>
+    <td><strong>v3.2.0 产线观察期内的回归</strong></td>
+    <td>所有 Android 用户</td>
+    <td>本阶段已上线，进入 7 天观察</td>
+    <td>热修分支模板就绪；下载站保留全渠道全版本，故障可即时回滚；Crashlytics 监控由本阶段新引入的关联 ID 直达后端日志</td>
+  </tr>
+  <tr>
+    <td><strong>数据库无异地备份</strong></td>
+    <td>全平台</td>
+    <td>遗留缺口</td>
+    <td>第4阶段 P0 第一项 — Azure SQL 自动每日备份 + 7 天保留 + 跨区域副本，先在测试环境验证恢复流程</td>
+  </tr>
+  <tr>
+    <td><strong>测试 / 生产共用网络安全组</strong></td>
+    <td>全平台</td>
+    <td>遗留缺口</td>
+    <td>第4阶段 P0 第二项 — 拆分 nsg-prod / nsg-staging，收紧生产入站规则</td>
+  </tr>
+  <tr>
+    <td><strong>专线续费仍需重新购买</strong></td>
+    <td>专线付费客户</td>
+    <td>到期释放节点已修复，自动续费保留绑定待开发</td>
+    <td>第4阶段 P1 — 自动续费 + 保留原节点绑定；与节点自动化路线图共用</td>
+  </tr>
+  <tr>
+    <td><strong>XRayR 老节点尚未全部迁移</strong></td>
+    <td>~150 个老节点</td>
+    <td>新节点全部 singbox-agent；老节点按 Format 触发自然替换</td>
+    <td>有明确的迁移路径（Format toggle）+ 风险下降的过渡期；第4阶段定义最终 sunset 日期</td>
+  </tr>
+  <tr>
+    <td><strong>v3.7.0 默认改动尚未通过 QA</strong></td>
+    <td>下一版 Android</td>
+    <td>开发分支储备</td>
+    <td>第4阶段进入 QA 流程后再发布</td>
+  </tr>
+</table>
+
+<h3>遗留技术债务（接手时已有，当前阶段已闭环或排期）</h3>
+<table>
+  <tr><th>遗留项</th><th>本阶段处理</th></tr>
+  <tr><td>列表接口缺少分页</td><td>分页审计 + 按需加上「可选分页」格式（保持老客户端裸数组兼容）</td></tr>
+  <tr><td>移动端错误信封处理不一致</td><td>已统一文档化为 <code>{code, msg, data}</code>；扩展错误映射；Swagger 自动反映真实结构</td></tr>
+  <tr><td>支付通道 / 免费配额代码重复</td><td>抽出共享 Go 模块基础设施已就位（<code>pkg/util/*</code> + <code>internal/freequota/</code>），FFF 第4阶段直接复用</td></tr>
+  <tr><td>节点运维全手工</td><td>本阶段闭环（一键开通 + 一键 Format + 流式日志 + 批量升级）</td></tr>
+  <tr><td>被封节点 TG 告警校验</td><td>本阶段验证已抑制（按 Sun Boss 政策不触发 TG）</td></tr>
+  <tr><td>节点配置散落多处</td><td>singbox-agent 架构下后端是唯一真相源；节点端零手工配置</td></tr>
+</table>
+
+<!-- ============================================ -->
+<!-- 阻塞与延迟 -->
+<!-- ============================================ -->
+<h2>九、阻塞与延迟</h2>
+<div class="card">
+<p><strong>本阶段无影响发布的工程阻塞。</strong>FFF Flutter 重写未启动属于<strong>有意延后</strong>（产能用于稳定版与基础平台，详见上文）。</p>
+<p>外部依赖项（运营 / 商务侧推进，引擎工程不直接拥有）：</p>
+<ul>
+  <li><strong>FFF 欧盟电话号码 / SMS 通道</strong> — Roy 跟进</li>
+  <li><strong>FFF 新支付通道</strong> — Roy 跟进</li>
+  <li><strong>iOS HiYou 账号申诉</strong> — 运营 / 商务侧</li>
+  <li><strong>Windows skytree_pc 虚拟签名方案</strong> — 运营 / 商务侧</li>
+</ul>
+<p>这些事项不影响第4阶段工程侧规划开工 — Flutter 可以以 mock 后端推进 UI；老 iOS / Windows 客户端持续靠后端兼容承诺运转。</p>
+</div>
+
+<!-- ============================================ -->
+<!-- 下一步计划 -->
+<!-- ============================================ -->
+<h2>十、下一步计划（第4阶段 5/12 启动）</h2>
+<table>
+  <tr><th>序</th><th>事项</th><th>优先级</th><th>目标</th></tr>
+  <tr><td>1</td><td>数据库异地备份（Azure SQL 自动每日 + 7 天保留 + 跨区副本）</td><td>P0</td><td>5/12 周 完成</td></tr>
+  <tr><td>2</td><td>测试 / 生产网络隔离（NSG 拆分）</td><td>P0</td><td>5/12 周 完成</td></tr>
+  <tr><td>3</td><td>FFF Flutter 重写启动（项目搭建 + 后端分叉）</td><td>P0</td><td>5/12-5/26</td></tr>
+  <tr><td>4</td><td>FFF 后端共享 Go 模块化（<code>pkg/util/*</code> + <code>internal/freequota/</code> 先行）</td><td>P0</td><td>5/12-5/19</td></tr>
+  <tr><td>5</td><td>专线自动续费（保留原节点绑定）</td><td>P1</td><td>第4阶段</td></tr>
+  <tr><td>6</td><td>节点置信度评分（接入本阶段已完成的 BO 一键回收流）</td><td>P1</td><td>第4阶段</td></tr>
+  <tr><td>7</td><td>v3.7.0 安卓稳定版 QA 流程</td><td>P1</td><td>5/16-5/23</td></tr>
+  <tr><td>8</td><td>香港旧 ProxyBackend 下线</td><td>P1</td><td>第4阶段</td></tr>
+  <tr><td>9</td><td>SSH 全量证书化 + 权限审计</td><td>P1</td><td>第4阶段</td></tr>
+  <tr><td>10</td><td>FFF 第一个里程碑（注册 / 登录 / 列出节点 / 连接节点）</td><td>P0</td><td>第4阶段后期</td></tr>
+</table>
+
+<!-- ============================================ -->
+<!-- 中长期规划 -->
+<!-- ============================================ -->
+<h2>十一、中长期规划</h2>
+<div class="card">
+<ol>
+  <li><strong>第4阶段 — 加固与启动</strong>（5/12 起）— 基础设施加固 + FFF 启动 + 节点置信度评分接入</li>
+  <li><strong>第5阶段 — FFF 上线准备</strong>（待 Roy 商务侧到位） — Flutter 完整流程、FFF 支付通道接入、FFF 合规白皮书</li>
+  <li><strong>第6阶段 — 中国应对自动化深化</strong> — 采购建议（评分跌破阈值时建议「从供应商 X 买 N 台」）；全自动节点替换</li>
+  <li><strong>持续路线</strong>：管理员客服聊天机器人；客户客服聊天机器人；购买引导（线路选择助手）— 基于本阶段开始积累的运营数据</li>
+  <li><strong>从 Arrowfish 解锁后端兼容约束</strong>：iOS / Windows 老客户端解锁后，后端可以更激进地演进，且 Arrowfish↔FFF 后端共享比例可以提高</li>
+</ol>
+</div>
+
+<!-- ============================================ -->
+<!-- 财务影响 -->
+<!-- ============================================ -->
+<h2>十二、财务影响（节省与避险）</h2>
+<table>
+  <tr><th>项目</th><th>性质</th><th>估算</th></tr>
+  <tr>
+    <td>续订代币推进修复</td>
+    <td>收入恢复</td>
+    <td>关闭「客户已扣款但 VIP 没生效」的客诉路径；以前每月以个位数比例出现并需客服一对一退款。具体金额需 1-2 周财务侧对账（保守口径，避免无依据估算）</td>
+  </tr>
+  <tr>
+    <td>节点开通自动化</td>
+    <td>人力节省</td>
+    <td>每台节点节省 ~19 分钟开通时间。150 台规模换网时整体可节省一个工程日</td>
+  </tr>
+  <tr>
+    <td>节点回收（Format）</td>
+    <td>资本节省</td>
+    <td>原本需要弃用的被封 VM 可以重用；具体节省取决于换网频率，中国封锁加剧时这是关键节省项</td>
+  </tr>
+  <tr>
+    <td>后端发布提速 4-6 倍</td>
+    <td>人力节省 + 故障窗口</td>
+    <td>每位开发者每天少等 ~30 分钟反馈；紧急故障的修复窗口由小时级降至分钟级</td>
+  </tr>
+  <tr>
+    <td>移动端 4 渠道一次构建</td>
+    <td>人力节省</td>
+    <td>每次发布节省 1-2 个工时的人工组合时间</td>
+  </tr>
+  <tr>
+    <td>APK 体积 −67%</td>
+    <td>用户体验 → 留存</td>
+    <td>下载流量节省直接受益用户；进而降低流量套餐紧张用户的卸载率</td>
+  </tr>
+  <tr>
+    <td>移除 utilcodex（约 5MB + 80 个传递依赖）</td>
+    <td>供应链风险下降</td>
+    <td>第三方组件减少 → 漏洞 / 维护风险下降</td>
+  </tr>
+</table>
+
+<!-- ============================================ -->
+<!-- 为什么必须先清理技术债 — FFF 复用同一套后端 -->
+<!-- ============================================ -->
+<h2>十三、为什么必须先清理技术债</h2>
+<div class="card highlight">
+<p>第3阶段把产能优先放在<strong>共用后端基础平台</strong>而不是直接启动 FFF 重写，关键判断是：</p>
+<ol>
+  <li><strong>FFF 后端是 Arrowfish 后端的分叉</strong> — 任何在 Arrowfish 后端今天清理掉的技术债，FFF 不需要再清理一遍</li>
+  <li><strong>关联日志、协程崩溃保护、Swagger 自动文档、共享日志模板、多语言字段</strong>这些基础设施<strong>越早进 main 分支越便宜</strong> — 多客户端跨调试、多支付通道、多语言上线都是 FFF 的天然需求</li>
+  <li><strong>节点运维自动化是 FFF 上线的硬依赖</strong> — FFF 也需要节点；如果节点开通仍是手工，FFF 上线时会再次面临中国封锁应对的人力瓶颈</li>
+  <li><strong>第3阶段的安卓稳定 v3.2.0 是「我们能交付稳定版」的对外信号</strong> — 接手以来第一个本团队完整把控的版本；这是 FFF 商务侧合规材料的产品依据</li>
+</ol>
+<p>反过来说：如果第3阶段先启动 FFF Flutter 重写，要么会从一个尚未清理的后端分叉（继承 Arrowfish 所有遗留债），要么会让 Arrowfish 进入与 FFF 长期分叉但都没修好的状态。先清债再开新分支是更高效率的顺序。</p>
+</div>
+
+<!-- ============================================ -->
+<!-- TABS for detail drill-downs -->
+<!-- ============================================ -->
+<h2>十四、专题详情（按类别浏览）</h2>
+<div class="tabs" role="tablist">
+  <button class="tab-button active" data-tab="android">Android 客户端</button>
+  <button class="tab-button" data-tab="backend">后端 API</button>
+  <button class="tab-button" data-tab="infra">节点与基础设施</button>
+  <button class="tab-button" data-tab="cicd">研发与发布流水线</button>
+  <button class="tab-button" data-tab="compliance">合规与日志</button>
+  <button class="tab-button" data-tab="bugfix">Bug 修复</button>
+  <button class="tab-button" data-tab="automation">自动化与运维</button>
+</div>
+
+<!-- ============================================ -->
+<!-- Android 客户端 -->
+<!-- ============================================ -->
+<section class="tab-panel active" id="tab-android">
+
+<h3>稳定版 v3.2.0 + 3.6.x 可靠性流</h3>
+<p>第3阶段移动端是接手以来第一次<strong>由本团队完整把控的稳定版周期</strong>。QA 已对 V3.2.0 与合并自 V2.0.0 的测试单完成主体复验。</p>
+
+<h4>包体积变化（与接手时 v1.7.38 对比）</h4>
+<div class="card success">
+<table>
+  <tr><th>构建类型</th><th>v1.7.38</th><th>v3.2.0</th><th>变化</th></tr>
+  <tr><td>开发版（测试用）</td><td>117 MB</td><td>52 MB</td><td><strong>−65 MB（−55%）</strong></td></tr>
+  <tr><td>生产版（用户下载）</td><td>101 MB</td><td>33 MB</td><td><strong>−68 MB（−67%）</strong></td></tr>
+</table>
+</div>
+
+<h4>VPN 连接可靠性</h4>
+<ul>
+  <li><strong>网络切换不掉线</strong> — Wi-Fi ↔ 4G/5G 切换时 VPN 隧道保持；底层连接自动迁移</li>
+  <li><strong>网络瞬断误判修复</strong> — 接手时存在「Wi-Fi 抖动 VPN 就断」，根因为旧的系统接口；已迁移到 Android 推荐的现代接口</li>
+  <li><strong>自动重连配置</strong> — VIP 默认开启；下一版（v3.7.0）所有用户默认开启</li>
+  <li><strong>升级老版本不掉连接</strong> — v2.x → v3.x 用户曾会连接失败，现已自愈</li>
+  <li><strong>选择线路不抖动</strong> — 切换线路从两次重连合并为一次</li>
+</ul>
+
+<h4>体验打磨</h4>
+<table>
+  <tr><th>类别</th><th>内容</th></tr>
+  <tr><td>支付</td><td>所有支付路径成功弹窗统一；钱包充值显示 Stripe 选项；VIP 充值后立即生效</td></tr>
+  <tr><td>抽奖 / 广告</td><td>主页抽奖与广告流更新；广告关闭按钮统一到右上角；广告弹窗顺序冲突修复；VIP 不再看到展示广告与过期签到弹窗；账号切换清空抽奖缓存</td></tr>
+  <tr><td>免费额度</td><td>断开 VPN 即时显示真实剩余；零额度连接 + 看广告奖励计时修复；额度异常状态强化显示</td></tr>
+  <tr><td>购买 / 重置</td><td>购买专属 IP 后线路与 IP 列表立即刷新；客服重置套餐后同样自动刷新</td></tr>
+  <tr><td>登录 / 注册</td><td>错登他人账号显示具体引导；密码错误等校验项也改为具体说明；无密注册转换后的资料正确保留</td></tr>
+  <tr><td>设备管理</td><td>本地设备数已达上限时显示具体提示，不再误导用户进入绑定流程</td></tr>
+  <tr><td>启动稳定性</td><td>启动时若服务器 token 已被吊销，自动清理本地会话</td></tr>
+</table>
+
+<h4>政策回滚 — 闲置自动断开</h4>
+<div class="card warning">
+本阶段先后两次尝试「闲置 5 分钟自动断开」，按既定政策<strong>全部移除</strong>：VPN 永远不因闲置主动断开，仅手动断开 / 网络丢失 / 配额到期可以触发。
+</div>
+
+<h4>分发与构建流水线重构</h4>
+<ul>
+  <li><strong>4 渠道独立打包发布</strong>（Google Play / 官网 / 华为 — 三星已下线）</li>
+  <li><strong>双语下载页</strong>（简体中文默认 + 英文切换）</li>
+  <li><strong>构建/发布解耦</strong> — 一次构建产物，多渠道发布；变量与代码分离</li>
+  <li><strong>下载站点稳定性</strong> — 自动创建 S3 桶、增量上传、CI 配置变更不再触发完整构建</li>
+</ul>
+
+<h4>代码瘦身</h4>
+<ul>
+  <li><strong>移除 utilcodex（约 5MB + 80 个传递依赖）</strong>—第三方工具库最大块，仅用其中 7 个 API；全部替换为 Android 原生</li>
+  <li><strong>Compose 框架完全下线</strong>— 仅在「设置」与「日志」两页使用，已重写为 XML</li>
+  <li><strong>原生计费库简化</strong>— 弃用 Kotlin 拓展层，直接使用基础 API</li>
+</ul>
+</section>
+
+<!-- ============================================ -->
+<!-- 后端 API -->
+<!-- ============================================ -->
+<section class="tab-panel" id="tab-backend">
+
+<h3>共享平台基础设施（Arrowfish + FFF 共用）</h3>
+<div class="card highlight">
+<p>第3阶段最大的不可见投资。FFF Flutter 重写在第4阶段启动时，可直接复用以下平台能力：</p>
+<ul>
+  <li><strong>请求关联 ID</strong> — 客户端每个请求带唯一 ID；后端日志、Seq 关联检索、错误监控（Crashlytics）面包屑全部以这个 ID 串联</li>
+  <li><strong>协程崩溃安全</strong> — 后端任意后台任务发生 panic 不再让整个进程倒下；日志先写入再优雅退出</li>
+  <li><strong>Swagger 自动 API 文档</strong> — 之前依赖人工维护的 80+ 接口注释飘移率约 30%；现在直接从代码读取响应结构</li>
+  <li><strong>共享日志模板</strong> — 字段可被监控平台直接过滤，不再依赖全文搜索</li>
+  <li><strong>多语言后端字段</strong> — 三种语言对齐（zh-CN / zh-TW / en-US）</li>
+</ul>
+</div>
+
+<h3>P0 收入保护修复</h3>
+<table>
+  <tr><th>问题</th><th>影响</th><th>解决</th></tr>
+  <tr><td>App Store / Google Play 续订代币未推进</td><td>第二个月续订验证仍用第一个月代币 — <strong>客户已扣款但 VIP 没生效</strong></td><td>续订处理改为先推进代币再发 VIP；移动端「余额支付失败但 BE 已发 VIP」与之同源已统一</td></tr>
+  <tr><td>免费注册接口跨账号串号</td><td>同一台设备指纹可能匹配到他人账户</td><td>设备绑定强校验 + ASN 段维度滥用上限</td></tr>
+  <tr><td>专线到期不释放节点</td><td>到期后绑定节点不归还库存，专线池虚耗</td><td>每日定时释放过期专线占用；释放事件计数纳入库存监控</td></tr>
+</table>
+
+<h3>免费额度准确性</h3>
+<ul>
+  <li><strong>断开后即时显示真实余额</strong>（VPN 关闭响应直接附带最新值）</li>
+  <li><strong>同步与连接前置校验</strong>（响应直接附带额度状态）</li>
+  <li><strong>抽奖在线时长由节点统计</strong>（不再被「挂着不用」绕过）</li>
+  <li><strong>抽奖结算并发 + 重复领取</strong>修复</li>
+</ul>
+
+<h3>线路与产品配置</h3>
+<ul>
+  <li><strong>线路分级能力配置</strong>统一驱动（专属 IP / 抽奖资格 / 家庭共享 …）</li>
+  <li><strong>产品菜单一致化</strong>（消除多个管理页对同一产品开关项不一致）</li>
+  <li><strong>线路缓存收紧</strong>（「收藏后立即列出」改为读主库，避免主从延迟）</li>
+</ul>
+
+<h3>管理后台流水线独立化</h3>
+<p>之前管理后台前端编译错误（如 i18n 重复键）会拖垮整个后端流水线；现已拆分，互不影响。</p>
+</section>
+
+<!-- ============================================ -->
+<!-- 节点与基础设施 -->
+<!-- ============================================ -->
+<section class="tab-panel" id="tab-infra">
+
+<h3>新管理后台流程</h3>
+<table>
+  <tr><th>动作</th><th>原来</th><th>现在</th></tr>
+  <tr><td>开通新节点</td><td>SSH 进 VM、手工跑安装脚本、确认心跳、配置防火墙、推送配置（~20 分钟）</td><td>后台输入 IP + 域名 + 名称，点确认；后端自动 SSH 引导（~30 秒）</td></tr>
+  <tr><td>回收被封节点</td><td>SSH、手工卸载残留服务、清理脚本、再装一遍</td><td>勾选 Format 全擦写后重装（~2 分钟一台）</td></tr>
+  <tr><td>批量升级</td><td>对每台 SSH 跑升级，一台一台等</td><td>后台一次选 N 台，每台独立进度条；失败可单独重试</td></tr>
+  <tr><td>失败排查</td><td>翻 SSH 历史与日志</td><td>每台「查看日志」按钮直接展示分阶段失败信息</td></tr>
+</table>
+
+<h3>节点架构升级 — XRayR → singbox-agent</h3>
+<div class="card highlight">
+<table>
+  <tr><th></th><th>XRayR（接手）</th><th>singbox-agent（目标）</th></tr>
+  <tr><td>谁拥有代码</td><td>外部维护、上游 fork</td><td><strong>本团队拥有</strong>（870 行 Go）</td></tr>
+  <tr><td>配置位置</td><td>节点本地 YAML 手工维护 + 后端单独一份</td><td>后端唯一真相源；节点零手工配置</td></tr>
+  <tr><td>支持协议</td><td>VMess / VLESS / Trojan / SS</td><td>新增 <strong>Hysteria2 / TUIC</strong>（中国应对必需）</td></tr>
+  <tr><td>iptables</td><td>不管</td><td>从后端拉取并应用（防火墙也是后端制品）</td></tr>
+  <tr><td>自更新</td><td>无 — 运维 SSH 升级</td><td>SHA256 校验 + 健康检查 + 原子替换</td></tr>
+  <tr><td>进程管理</td><td>PM2 / systemd / Docker 混杂</td><td>仅 systemd</td></tr>
+  <tr><td>认证方式</td><td>静态 API Key 写入 YAML</td><td>一次性引导令牌（1 小时 TTL）→ 长期 Bearer，re-heal 时轮换</td></tr>
+</table>
+<p><strong>迁移状态</strong>：新开通节点全部走 singbox-agent；老节点在 Format 升级时自动替换 XRayR；过渡期 BO 可同时正确显示两种节点的健康。</p>
+</div>
+
+<h3>节点配置加固（根因修复）</h3>
+<ul>
+  <li><strong>NAT 表脏数据自动清理</strong>（每次防火墙刷新显式清空 NAT 表）</li>
+  <li><strong>分协议端口正确解析</strong>（修正 hy2 线路被错误路由到其他端口的历史飘移）</li>
+  <li><strong>强制 IPv4 出站</strong>（避免一些中国 ISP 的 IPv6 解析路径绕过出站策略并触发节点封禁）</li>
+  <li><strong>使用新版 sing-box 字段</strong>（迁移到 ≥1.12 字段，旧字段已弃用）</li>
+  <li><strong>历史节点状态自动识别</strong>（升级流程自动识别老式节点并改走全擦重装）</li>
+  <li><strong>SSH 端口标准化为 35698</strong>（全局统一，个别可覆盖）</li>
+</ul>
+
+<h3>中国封锁应对的工程支撑</h3>
+<ul>
+  <li><strong>sing-box 二进制本地镜像</strong>（节点不再依赖 GitHub）+ <strong>SHA256 校验</strong>（供应链防御）</li>
+  <li><strong>自有 Git 仓库地址</strong>（默认指向自托管 GitLab）</li>
+</ul>
+
+<h3>新管理后台页（5 个）</h3>
+<ul>
+  <li><strong>VM 主机</strong> — 后台直接管理的所有 VM；状态徽章；版本/心跳/升级时间</li>
+  <li><strong>节点健康设置</strong> — 阈值可视化调整，不需改代码</li>
+  <li><strong>DNS 清理</strong> — 系统管理的 DNS 记录与历史；避免 GoDaddy/Cloudflare 上累积无效记录</li>
+  <li><strong>供应商总览</strong> — 按供应商汇总节点数、成本、健康状态</li>
+  <li><strong>异常观察</strong> — 同 UUID 多 IP 等模式的合规观察（仅计数，不持有原始 IP）</li>
+</ul>
+</section>
+
+<!-- ============================================ -->
+<!-- CI/CD -->
+<!-- ============================================ -->
+<section class="tab-panel" id="tab-cicd">
+
+<h3>后端发布流水线（orebackend）</h3>
+<div class="card success">
+<table>
+  <tr><th>指标</th><th>第3阶段前</th><th>第3阶段后</th><th>变化</th></tr>
+  <tr><td>平均流水线耗时</td><td>2 分 30 秒 – 3 分</td><td><strong>30 – 50 秒</strong></td><td><strong>4–6 倍提速</strong></td></tr>
+  <tr><td>MR 路径化构建</td><td>无 — 任何改动都跑全套</td><td>仅相关路径触发对应阶段</td><td>大量 MR 跳过无关阶段</td></tr>
+  <tr><td>数据库迁移校验</td><td>无 — 失败发现于部署阶段</td><td>临时 MySQL 容器跑 <code>--install</code> 全套校验</td><td>迁移类回归在合并前拦截</td></tr>
+  <tr><td>CI 配置变更</td><td>触发完整流水线</td><td>跳过</td><td>每次省 ~2 分钟</td></tr>
+  <tr><td>构建产物复用</td><td>每阶段重新构建</td><td>同 SHA 复用</td><td>省 60-90 秒</td></tr>
+</table>
+</div>
+<p>这意味着：开发同学的反馈周期由分钟级降至秒级；紧急修复（如 IAP 续订 P0）可在 2 分钟内发布到测试环境；管理后台前端编译错误也不再阻塞后端发布。</p>
+
+<h3>移动端发布流水线（proxy_android2）</h3>
+<div class="card success">
+<table>
+  <tr><th>指标</th><th>第3阶段前</th><th>第3阶段后</th></tr>
+  <tr><td>每次发布产出</td><td>1-2 个渠道 APK，部分需要人工组合</td><td><strong>4 个渠道 APK 一次性产出</strong>（Google / 官网 / 华为 / 三星 — 三星本阶段下线）</td></tr>
+  <tr><td>总耗时</td><td>不可比（每次手工不同）</td><td><strong>00:15:52</strong>（构建 + 上传到下载站）</td></tr>
+  <tr><td>QA 取测试包</td><td>需要找开发同学要</td><td>下载站自助拉取（双语门户）</td></tr>
+  <tr><td>渠道增减</td><td>改代码 + 改 CI 配置</td><td>调整 GitLab CI/CD 变量即可</td></tr>
+</table>
+</div>
+
+<h3>新增 MR 质量门</h3>
+<ul>
+  <li>管理后台 lint + 构建在 MR 事件触发（捕获合并前的 i18n 重复键等编译错误）</li>
+  <li>数据库迁移在临时 MySQL 容器跑全套（保护测试 / 生产）</li>
+  <li>部署阶段强制依赖构建产物存在（之前缺产物会静默无操作，运维 10 分钟后才发现）</li>
+</ul>
+</section>
+
+<!-- ============================================ -->
+<!-- 合规与日志 -->
+<!-- ============================================ -->
+<section class="tab-panel" id="tab-compliance">
+
+<h3>无日志合规承诺</h3>
+<div class="card warning">
+本阶段对所有新增的后端日志路径做了无日志合规审查。<strong>滥用观察检测器</strong>采用「源 IP 在节点端单向哈希、仅计数上报后端」的设计 — 后端拿到的是「同一 UUID 在多少个 IP 上出现」这一计数，<strong>没有任何原始 IP 落地</strong>。这是新增能力进入生产前的合规默认姿态。
+</div>
+
+<h3>无日志合规仍待加固（第4阶段并行）</h3>
+<ul>
+  <li><strong>节点系统日志</strong> — 关闭 rsyslog / journald 的持久化（依节点角色按需保留），避免系统层面意外留下流量元数据</li>
+  <li><strong>SMTP 端口阻断</strong> — 节点出口阻断 25 端口</li>
+  <li><strong>Ansible 配置完整性</strong> — 节点配置以代码形式管理</li>
+  <li><strong>FFF 后端从第一天开始不写任何日志</strong> — 第3阶段已搭好基础设施层；FFF 第4阶段直接享用</li>
+</ul>
+
+<h3>跨端可追溯日志（不涉用户行为）</h3>
+<p>所有 API 调用都有一个唯一关联 ID，从客户端发出到后端处理到节点接收，<strong>整链路可串联</strong>。仅用于「错误诊断」用途；<strong>不记录用户访问内容、目的地、流量元数据</strong>。客户端崩溃时直接关联到后端那一次请求；后端日志按 ID 检索就能看到同一客户端的请求序列。</p>
+
+<h3>无日志承诺的对外宣传时机</h3>
+<div class="card">
+本周 v3.2.0 上线建议只主推「稳定 + 可靠 + 速度」三个产品要点；<strong>「无日志承诺」等到第4阶段节点系统层加固完成后再统一对外发布</strong>。具体材料语言待第4阶段一并定稿，避免出现宣传与实际节点状态之间的差距。FFF 上线前的合规白皮书也按这个节奏。
+</div>
+</section>
+
+<!-- ============================================ -->
+<!-- Bug 修复 -->
+<!-- ============================================ -->
+<section class="tab-panel" id="tab-bugfix">
+
+<h3>高影响修复</h3>
+<table>
+  <tr><th>序</th><th>问题</th><th>影响范围</th></tr>
+  <tr><td>1</td><td>续订代币未推进 → VIP 静默不发</td><td>所有月续订用户的第二个月</td></tr>
+  <tr><td>2</td><td>免费注册跨账号串号</td><td>免费用户登录他人账号</td></tr>
+  <tr><td>3</td><td>专线到期不释放节点</td><td>专线节点池长期虚耗</td></tr>
+  <tr><td>4</td><td>网络瞬断导致 VPN 掉线</td><td>所有移动用户在 Wi-Fi 抖动 / 4G 切换时</td></tr>
+  <tr><td>5</td><td>升级安装包后无法连接</td><td>v2.x 升级到 v3.x 的全部用户</td></tr>
+  <tr><td>6</td><td>断开 VPN 显示旧额度</td><td>免费用户断开后短时间内</td></tr>
+  <tr><td>7</td><td>抽奖结算并发竞争 → 极端情况下重复领取</td><td>抽奖参与用户</td></tr>
+  <tr><td>8</td><td>选择线路时连接抖动</td><td>所有切换线路的用户</td></tr>
+  <tr><td>9</td><td>启动时主页空指针崩溃</td><td>冷启动场景</td></tr>
+  <tr><td>10</td><td>无密注册转换后的资料丢失</td><td>无密注册再补充资料的用户</td></tr>
+</table>
+
+<h3>历史飘移修正（接手项目带过来的问题）</h3>
+<ul>
+  <li>设备 ID 初始化路径不统一（华为渠道独立分支）→ 全渠道统一</li>
+  <li>外部出站签名过滤未完成迁移 → 迁移完成；避免画出无上游的路由</li>
+  <li>线路与节点的若干管理后台绑定字段重置错位 → 全部修正</li>
+  <li>启动屏后弹窗顺序冲突 → 统一调度</li>
+  <li>页面密度按折叠状态判断（不可靠）→ 改用屏幕宽度</li>
+  <li>请求中 Authorization 注解逐接口冗余 → 升级到接口规范级别声明</li>
+  <li>管理后台 Quasar v2 迁移留下的若干工具栏动作失效 → 已修复</li>
+  <li>swagger 文档浏览器缓存导致部署后看到旧 spec → 已禁用缓存</li>
+</ul>
+</section>
+
+<!-- ============================================ -->
+<!-- 自动化与运维 -->
+<!-- ============================================ -->
+<section class="tab-panel" id="tab-automation">
+
+<h3>节点全生命周期自动化路线图</h3>
+<table>
+  <tr><th>阶段</th><th>能力</th><th>状态</th></tr>
+  <tr><td>已完成</td><td>自动分配（专线下单后自动绑定库存里的节点）</td><td><span class="status-done">生产</span></td></tr>
+  <tr><td>已完成</td><td>到期自动释放节点回库存</td><td><span class="status-done">生产</span></td></tr>
+  <tr><td>已完成</td><td>库存监控告警（不足时管理后台显示横幅）</td><td><span class="status-done">生产</span></td></tr>
+  <tr><td>已完成</td><td>供应商总览（按供应商汇总节点 / 成本 / 健康）</td><td><span class="status-done">生产</span></td></tr>
+  <tr><td>已完成</td><td>节点健康状态机</td><td><span class="status-done">生产</span></td></tr>
+  <tr><td>已完成</td><td>DNS 自动化（GoDaddy + Cloudflare 双供应商抽象）</td><td><span class="status-done">生产</span></td></tr>
+  <tr><td>已完成</td><td>后台一键开通 / 一键 Format / 流式日志 / 批量升级</td><td><span class="status-done">生产</span></td></tr>
+  <tr><td>第4阶段</td><td>置信度评分（按响应、丢包、被封概率打分）</td><td><span class="status-defer">S4</span></td></tr>
+  <tr><td>第4阶段</td><td>采购建议（评分跌破阈值时建议「从供应商 X 买 N 台」）</td><td><span class="status-defer">S4</span></td></tr>
+  <tr><td>计划中</td><td>管理员客服聊天机器人（基于运营数据）</td><td><span class="status-defer">未启动</span></td></tr>
+  <tr><td>计划中</td><td>客户客服聊天机器人</td><td><span class="status-defer">未启动</span></td></tr>
+  <tr><td>计划中</td><td>购买引导（线路选择助手）</td><td><span class="status-defer">未启动</span></td></tr>
+</table>
+
+<h3>滥用观察（合规优先）</h3>
+<p>新增<strong>同 UUID 多 IP</strong>异常观察检测器。仅观察、不自动处置；管理后台「异常观察」页面查看汇总。计数由节点端在源 IP 哈希后上报，后端不持有任何原始 IP。本阶段暂不基于该数据自动封停账户，需先观察一段时间再确定阈值。</p>
+
+<h3>数据库版本管理</h3>
+<p>新增 SQL 迁移流水线检查 — 涉及数据库结构变更的提交合并到主干前，先在临时 MySQL 容器跑一遍迁移。本阶段累计 11 个数据库迁移文件随发布上线。</p>
+
+<h3>数据保留策略</h3>
+<p>两个新表（节点用量、异常计数）启用 14 天自动清理 — 已结算的用量数据保留两周后清空；异常计数同样两周。配合既定的无日志合规姿态。</p>
+
+<h3>客户端崩溃可追溯</h3>
+<p>移动端崩溃报告中现在嵌入了请求关联 ID — 客户端任意一次崩溃都能在后端日志中检索到对应那次请求的完整上下文，缩短复现成本。</p>
+</section>
+
+<div class="footer">
+Arrowfish VPN — 第3阶段完整汇报 · 2026-05-09<br>
+配套一页摘要：<a href="20260509_summary.html">第3阶段一页摘要</a>
+</div>
+
+<script>
+  document.querySelectorAll('.tab-button').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const target = btn.dataset.tab;
+      document.querySelectorAll('.tab-button').forEach(b => b.classList.remove('active'));
+      document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+      btn.classList.add('active');
+      const panel = document.getElementById('tab-' + target);
+      if (panel) panel.classList.add('active');
+    });
+  });
+</script>
+
+</body>
+</html>

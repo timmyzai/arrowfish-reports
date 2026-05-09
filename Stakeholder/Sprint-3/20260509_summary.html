@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Arrowfish VPN — 第3阶段一页摘要 — 2026-05-09</title>
+<style>
+  :root {
+    --bg: #FAFAFA;
+    --card: #FFFFFF;
+    --border: #E5E7EB;
+    --text: #1F2937;
+    --text-secondary: #6B7280;
+    --accent: #2563EB;
+    --accent-soft: #EFF6FF;
+    --green: #B7D7C9;
+    --green-text: #166534;
+    --green-soft: #F0FDF4;
+    --yellow: #E6DFAF;
+    --yellow-text: #854D0E;
+    --yellow-soft: #FFFBEB;
+    --red: #DCCACA;
+    --red-text: #991B1B;
+    --red-soft: #FEF2F2;
+    --grey: #F2F2F2;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", "Noto Sans SC", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.65;
+    padding: 1.75rem;
+    max-width: 880px;
+    margin: 0 auto;
+  }
+  h1 { font-size: 1.4rem; margin-bottom: 0.2rem; }
+  h2 { font-size: 1.05rem; margin: 1.2rem 0 0.5rem; padding-bottom: 0.4rem; border-bottom: 2px solid var(--accent); }
+  h3 { font-size: 0.95rem; margin: 0.8rem 0 0.4rem; color: var(--text-secondary); }
+  .subtitle { color: var(--text-secondary); font-size: 0.85rem; margin-bottom: 1.2rem; }
+  .card { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 0.9rem 1.1rem; margin: 0.6rem 0; }
+  .card.highlight { border-left: 4px solid var(--accent); background: var(--accent-soft); }
+  .card.warning { border-left: 4px solid #F59E0B; background: var(--yellow-soft); }
+  .card.success { border-left: 4px solid #16A34A; background: var(--green-soft); }
+  .card.critical { border-left: 4px solid #EF4444; background: var(--red-soft); }
+  table { width: 100%; border-collapse: collapse; margin: 0.5rem 0; font-size: 0.86rem; }
+  th { background: var(--grey); text-align: left; padding: 0.4rem 0.6rem; font-weight: 600; }
+  td { padding: 0.4rem 0.6rem; border-bottom: 1px solid var(--border); vertical-align: top; }
+  ul { padding-left: 1.2rem; margin: 0.3rem 0; }
+  ul li { margin: 0.18rem 0; font-size: 0.92rem; }
+  .status-done { background: var(--green); color: var(--green-text); padding: 1px 7px; border-radius: 4px; font-size: 0.74rem; font-weight: 600; }
+  .status-progress { background: var(--yellow); color: var(--yellow-text); padding: 1px 7px; border-radius: 4px; font-size: 0.74rem; font-weight: 600; }
+  .status-defer { background: var(--grey); color: var(--text-secondary); padding: 1px 7px; border-radius: 4px; font-size: 0.74rem; font-weight: 600; }
+  .tldr { background: linear-gradient(135deg, #EFF6FF 0%, #FFFFFF 100%); border-radius: 10px; padding: 1.1rem 1.3rem; border: 1px solid #BFDBFE; margin: 0.8rem 0 1.4rem; }
+  .tldr-label { font-size: 0.72rem; font-weight: 700; color: var(--accent); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.4rem; }
+  .tldr-text { font-size: 0.96rem; line-height: 1.65; color: var(--text); }
+  .metric-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 0.6rem; margin: 0.7rem 0; }
+  .metric-card { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 0.7rem 0.85rem; }
+  .metric-label { font-size: 0.72rem; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 0.2rem; }
+  .metric-value { font-size: 1.2rem; font-weight: 700; color: var(--accent); }
+  .metric-sub { font-size: 0.73rem; color: var(--text-secondary); margin-top: 0.15rem; }
+  .footer { margin-top: 1.5rem; padding-top: 0.8rem; border-top: 1px solid var(--border); font-size: 0.78rem; color: var(--text-secondary); text-align: center; }
+  .col2 { display: grid; grid-template-columns: 1fr 1fr; gap: 0.8rem; }
+  @media (max-width: 700px) { .col2 { grid-template-columns: 1fr; } }
+</style>
+<script src="../../assets/auth-gate.js"></script>
+</head>
+<body>
+
+<h1>Arrowfish VPN — 第3阶段一页摘要</h1>
+<div class="subtitle">2026年5月9日 · 第3阶段提前收官 · 关键决策点速览</div>
+
+<div class="tldr">
+  <div class="tldr-label">TL;DR</div>
+  <div class="tldr-text">
+    <strong>Arrowfish 安卓 v3.2.0 稳定版本日上线</strong> — 接手以来首个本团队完整把控的稳定版（QA 主体复验通过）。<strong>后端发布 4–6 倍提速</strong>，<strong>节点开通由 SSH 手工 20 分钟降至后台一键 30 秒</strong>。第3阶段以「稳定上线 + 节点配置定型」作为关门标准提前收官；FFF Flutter 重写与基础设施加固（数据库异地备份 / 网络隔离）锁定第4阶段 P0。
+  </div>
+</div>
+
+<h2>一、关键指标</h2>
+<div class="metric-grid">
+  <div class="metric-card">
+    <div class="metric-label">稳定版</div>
+    <div class="metric-value">v3.2.0</div>
+    <div class="metric-sub">已上线</div>
+  </div>
+  <div class="metric-card">
+    <div class="metric-label">APK 体积</div>
+    <div class="metric-value">−67%</div>
+    <div class="metric-sub">33 MB（接手时 101 MB）</div>
+  </div>
+  <div class="metric-card">
+    <div class="metric-label">后端 CI</div>
+    <div class="metric-value">4–6×</div>
+    <div class="metric-sub">2:30–3:00 → 30–50 秒</div>
+  </div>
+  <div class="metric-card">
+    <div class="metric-label">节点开通</div>
+    <div class="metric-value">~30 秒</div>
+    <div class="metric-sub">原 SSH 手工 ~20 分钟</div>
+  </div>
+  <div class="metric-card">
+    <div class="metric-label">移动端 4 渠道构建</div>
+    <div class="metric-value">15:52</div>
+    <div class="metric-sub">无人值守上传至下载站</div>
+  </div>
+  <div class="metric-card">
+    <div class="metric-label">QA 复验</div>
+    <div class="metric-value">22 / 5</div>
+    <div class="metric-sub">通过 / 已结案</div>
+  </div>
+</div>
+
+<h2>二、需要知悉与配合</h2>
+<div class="card warning">
+<ol>
+  <li><strong>v3.2.0 产线观察期 7 天</strong>（5/9–5/16）— 任何回归走热修分支，不影响第4阶段并行</li>
+  <li><strong>FFF 公司事项（Roy 跟进）</strong> — 欧盟电话号码 + 新支付通道，工程侧基础平台已就绪</li>
+  <li><strong>专线续费缺口</strong> — 到期释放已修复；自动续费保留绑定列入第4阶段 P1</li>
+  <li><strong>无日志合规对外宣传时机</strong> — 等第4阶段节点系统层加固完后再统一发布；本周 v3.2.0 只主推稳定/可靠/速度</li>
+  <li><strong>iOS / Windows 老客户端</strong>（运营 / 商务议程） — 后端继续兼容承诺；解锁路径：iOS 账号申诉 + Windows 虚拟签名调研</li>
+</ol>
+</div>
+
+<h2>三、本阶段关键成果</h2>
+<div class="col2">
+  <div class="card success">
+    <h3>移动端</h3>
+    <ul>
+      <li><strong>v3.2.0</strong> 上线（接手后首个本团队稳定版）</li>
+      <li>APK 体积 −67%（−68 MB）</li>
+      <li>VPN 网络切换不掉线（隧道持久重连）</li>
+      <li>VPN 闪断（Wi-Fi 抖动）误判修复</li>
+      <li>升级 v2.x → v3.x 不再连接失败</li>
+      <li>切换线路单次重连不抖动</li>
+      <li>移除 utilcodex（5 MB + 80 个传递依赖）</li>
+      <li>Compose 框架完全下线</li>
+    </ul>
+  </div>
+  <div class="card success">
+    <h3>后端</h3>
+    <ul>
+      <li>P0：续订代币推进修复（关闭「扣款没生效」）</li>
+      <li>P0：免费注册跨账号串号修复</li>
+      <li>专线到期自动释放节点</li>
+      <li>免费额度断开后实时显示真实余额</li>
+      <li>抽奖在线时长由节点统计 + 并发结算修复</li>
+      <li>线路分级能力配置统一化</li>
+      <li>Swagger 自动文档（80+ 接口）</li>
+    </ul>
+  </div>
+  <div class="card success">
+    <h3>节点 / 基础设施</h3>
+    <ul>
+      <li><strong>后台一键开通节点 ~30 秒</strong>（原 SSH 手工 20 分钟）</li>
+      <li><strong>一键 Format 回收被封节点 ~2 分钟</strong></li>
+      <li>批量升级并行 12 台 + 失败可单独重试</li>
+      <li>XRayR → singbox-agent 渐进迁移（自研、配置中心化）</li>
+      <li>NAT 表脏数据自动清理（连接稳定性）</li>
+      <li>强制 IPv4 出站（中国 ISP 兼容）</li>
+      <li>sing-box 二进制本地镜像 + SHA256（中国封锁应对 + 供应链防御）</li>
+      <li>5 个新管理后台页（VM 主机 / 节点健康 / DNS / 供应商 / 异常观察）</li>
+    </ul>
+  </div>
+  <div class="card success">
+    <h3>研发与发布</h3>
+    <ul>
+      <li><strong>后端 CI 4–6 倍提速</strong>（2:30 → 30 秒）</li>
+      <li>移动端 4 渠道一次构建 15:52，自动上传下载站</li>
+      <li>QA 自助拉取双语下载页</li>
+      <li>MR 路径化构建 + 数据库迁移自动校验</li>
+      <li>管理后台流水线独立化（不再阻塞后端发布）</li>
+      <li>三星渠道下线（保留 Google / 官网 / 华为）</li>
+    </ul>
+  </div>
+</div>
+
+<h2>四、改善与商业价值（精选）</h2>
+<table>
+  <tr><th>项目</th><th>商业价值</th></tr>
+  <tr><td>续订代币推进修复</td><td>关闭「客户已扣款但 VIP 没生效」直接收入路径（具体金额需 1-2 周财务对账）</td></tr>
+  <tr><td>节点开通 20 分钟 → 30 秒</td><td>大批量换网时每台节省 ~19 分钟；操作员失误风险消除</td></tr>
+  <tr><td>节点回收 Format 一键</td><td>原本需弃用的被封 VM 可重用 — 中国封锁加剧时关键节省</td></tr>
+  <tr><td>后端发布 4-6 倍提速</td><td>每位开发每天少等 30 分钟；紧急修复发布窗口由小时降至分钟</td></tr>
+  <tr><td>4 渠道一次构建</td><td>每次发布节省 1-2 工时人工组合</td></tr>
+  <tr><td>APK −67%</td><td>下载流量节省直接受益用户；流量套餐紧张用户卸载率下降</td></tr>
+  <tr><td>移除 utilcodex</td><td>第三方组件减少 → 漏洞 / 维护风险下降</td></tr>
+</table>
+
+<h2>五、关键风险（开口）</h2>
+<table>
+  <tr><th>风险</th><th>缓解</th></tr>
+  <tr><td><strong>v3.2.0 产线 7 天观察</strong></td><td>热修分支模板 + 全渠道全版本下载站可即时回滚 + Crashlytics 新接关联 ID</td></tr>
+  <tr><td><strong>数据库无异地备份</strong>（遗留缺口）</td><td>第4阶段 P0 第一项 — Azure SQL 自动每日 + 7 天保留 + 跨区副本</td></tr>
+  <tr><td><strong>测试 / 生产共用网络安全组</strong>（遗留缺口）</td><td>第4阶段 P0 第二项 — NSG 拆分 + 收紧生产入站规则</td></tr>
+  <tr><td><strong>专线续费仍需重新购买</strong></td><td>第4阶段 P1 — 自动续费 + 保留原节点绑定</td></tr>
+  <tr><td><strong>XRayR 老节点尚未全部迁移</strong></td><td>新节点全部 singbox-agent；老节点 Format 时自然替换；第4阶段定 sunset 日期</td></tr>
+</table>
+
+<h2>六、安全与权限</h2>
+<table>
+  <tr><th>项目</th><th>状态</th></tr>
+  <tr><td>源代码访问最小化（Roy / Morgan / Lex / 大马团队）</td><td><span class="status-done">维持</span></td></tr>
+  <tr><td>读写分离（客户端只读走副本）</td><td><span class="status-done">✅ 第2阶段</span></td></tr>
+  <tr><td>登录失败锁定 + 设备注册速率限制</td><td><span class="status-done">✅ 第2阶段</span></td></tr>
+  <tr><td>免费注册跨账号串号修复（含 ASN 段滥用上限）</td><td><span class="status-done">✅ 本阶段</span></td></tr>
+  <tr><td>iptables NAT 表脏数据自动清理</td><td><span class="status-done">✅ 本阶段</span></td></tr>
+  <tr><td>节点 systemd 单一供应商 + 一次性引导令牌（1h TTL）</td><td><span class="status-done">✅ 本阶段</span></td></tr>
+  <tr><td>sing-box 二进制 SHA256 校验（供应链防御）</td><td><span class="status-done">✅ 本阶段</span></td></tr>
+  <tr><td>数据库异地备份</td><td><span class="status-defer">第4阶段 P0</span></td></tr>
+  <tr><td>测试 / 生产网络隔离</td><td><span class="status-defer">第4阶段 P0</span></td></tr>
+  <tr><td>香港旧 ProxyBackend 下线</td><td><span class="status-defer">第4阶段 P1</span></td></tr>
+  <tr><td>SSH 全量证书化</td><td><span class="status-defer">第4阶段 P1</span></td></tr>
+</table>
+
+<h2>七、第4阶段 5/12 启动 — 锁定优先级</h2>
+<div class="card highlight">
+<ol>
+  <li><strong>P0</strong> 数据库异地备份（5/12 周完成）</li>
+  <li><strong>P0</strong> 测试 / 生产网络隔离（5/12 周完成）</li>
+  <li><strong>P0</strong> FFF Flutter 重写启动（5/12-5/26）</li>
+  <li><strong>P0</strong> FFF 后端共享 Go 模块化（5/12-5/19）</li>
+  <li><strong>P1</strong> 专线自动续费（保留原节点绑定）</li>
+  <li><strong>P1</strong> 节点置信度评分（接入本阶段已完成的 BO 一键回收流）</li>
+  <li><strong>P1</strong> v3.7.0 安卓稳定版 QA 流程（5/16-5/23）</li>
+  <li><strong>P1</strong> 香港旧 ProxyBackend 下线 + SSH 全量证书化 + 权限审计</li>
+  <li><strong>P0</strong> FFF 第一个里程碑：注册 / 登录 / 列出节点 / 连接节点</li>
+</ol>
+</div>
+
+<div class="footer">
+查看完整版（按类别浏览）：<a href="20260509_full_report.html">第3阶段完整汇报</a>
+</div>
+
+</body>
+</html>

@@ -34,5 +34,17 @@
     "name": "Sprint 2 — Progress Summary",
     "date": "2026-04-24",
     "file": "Stakeholder/Sprint-2/20260424_sprint_report.html"
+  },
+  {
+    "id": "sprint-3-full",
+    "name": "Sprint 3 — Full Report (Tabs by Category)",
+    "date": "2026-05-09",
+    "file": "Stakeholder/Sprint-3/20260509_full_report.html"
+  },
+  {
+    "id": "sprint-3-summary",
+    "name": "Sprint 3 — One-Page Summary",
+    "date": "2026-05-09",
+    "file": "Stakeholder/Sprint-3/20260509_summary.html"
   }
 ]
