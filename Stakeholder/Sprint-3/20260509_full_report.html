@@ -98,7 +98,7 @@
 <body>
 
 <h1>Arrowfish VPN — 第3阶段完整汇报</h1>
-<div class="subtitle">2026年5月9日 · 第3阶段提前收官（4/27–5/9）· 稳定版 v3.2.0 已上线</div>
+<div class="subtitle">2026年5月9日 · 第3阶段提前收官（4/27–5/9）· 稳定测试版 v3.7.0 进入最终 QA</div>
 
 <!-- ============================================ -->
 <!-- TL;DR — 一句话 -->
@@ -106,7 +106,7 @@
 <div class="tldr">
   <div class="tldr-label">TL;DR · 一句话</div>
   <div class="tldr-text">
-    <strong>Arrowfish 安卓 v3.2.0 稳定版正式上线</strong>，是接手项目以来第一个由本团队完整把控的稳定版本（QA 主体复验通过）。后端发布提速 4–6 倍，节点开通由 SSH 手工 20 分钟降至后台一键 30 秒。<strong>第3阶段以「稳定上线 + 节点配置定型」作为关门标准提前收官；FFF Flutter 重写与基础设施加固（数据库异地备份 / 网络隔离）锁定第4阶段 P0 优先级。</strong>下一里程碑：v3.2.0 产线 7 天观察期 + 第4阶段 5/12 启动。
+    <strong>Arrowfish 安卓 v3.7.0 稳定测试版进入最终 QA</strong> — 是接手项目以来第一个由本团队完整把控的稳定基线（前期 V3.2.0 / V2.0.0 测试单合并复验主体已通过；最终 QA 通过即发布生产）。后端发布提速 4–6 倍，节点开通由 SSH 手工 20 分钟降至后台一键 30 秒。<strong>第3阶段以「稳定基线定型 + 节点配置就绪」作为关门标准提前收官；FFF Flutter 重写与基础设施加固（数据库异地备份 / 网络隔离）锁定第4阶段 P0 优先级。</strong>下一里程碑：v3.7.0 最终 QA 通过 → 生产发布 + 第4阶段 5/12 启动。
   </div>
 </div>
 
@@ -117,7 +117,7 @@
 <ul class="action-list">
   <li>
     <span class="action-num">1</span>
-    <div><strong>v3.2.0 产线观察期</strong> — 已上线进入 7 天稳定性观察。期间发现的回归问题以热修分支处理，不影响第4阶段并行推进。下载入口：<code>apk.arrowfishadv.com</code>（双语，Google Play / 官网 / 华为同步发布）。</div>
+    <div><strong>v3.7.0 最终 QA 进行中</strong> — 当前已是稳定测试版基线，最终 QA 通过后即发布生产（Google Play / 官网 / 华为同步）。期间发现的问题以热修分支处理，不影响第4阶段并行推进。下载入口：<code>apk.arrowfishadv.com</code>（双语，QA 与内部同事可自助拉取）。</div>
   </li>
   <li>
     <span class="action-num">2</span>
@@ -129,7 +129,7 @@
   </li>
   <li>
     <span class="action-num">4</span>
-    <div><strong>无日志合规对外宣传时机</strong> — 本周 v3.2.0 上线建议只主推「稳定 + 可靠 + 速度」三个产品要点；<strong>「无日志承诺」等到第4阶段节点系统层加固完成后再统一对外发布</strong>（节点端 rsyslog/journald 持久化关闭、25 端口阻断、Ansible 配置完整性纳管）。FFF 上线前的合规白皮书也按这个节奏。详见「合规与日志」标签页。</div>
+    <div><strong>无日志合规对外宣传时机</strong> — v3.7.0 生产发布建议只主推「稳定 + 可靠 + 速度」三个产品要点；<strong>「无日志承诺」等到第4阶段节点系统层加固完成后再统一对外发布</strong>（节点端 rsyslog/journald 持久化关闭、25 端口阻断、Ansible 配置完整性纳管）。FFF 上线前的合规白皮书也按这个节奏。详见「合规与日志」标签页。</div>
   </li>
   <li>
     <span class="action-num">5</span>
@@ -146,13 +146,13 @@
   <tr><th>类别</th><th>成果</th><th>状态</th></tr>
   <tr>
     <td>移动端</td>
-    <td>Arrowfish 安卓 <strong>v3.2.0</strong> 上线（接手后首个本团队完整把控的稳定版）；APK 体积比接手时缩小 67%（101 MB → 33 MB）</td>
-    <td><span class="status-done">已上线</span></td>
+    <td>Arrowfish 安卓 <strong>v3.7.0</strong> 稳定测试版定型（接手后首个本团队完整把控的稳定基线）；APK 体积比接手时缩小 67%（101 MB → 33 MB）</td>
+    <td><span class="status-progress">最终 QA</span></td>
   </tr>
   <tr>
     <td>QA 复验</td>
-    <td>V3.2.0 测试单：复验通过 22 + 已结案 5；待复验 5、待讨论 7、待处理 3。V2.0.0 测试单合并到 V3.2.0 闭环（V2.0.0 复验通过 42 + 已结案 13）</td>
-    <td><span class="status-done">主体完成</span></td>
+    <td>V3.2.0 测试单（QA 跟踪清单）：复验通过 22 + 已结案 5；待复验 5、待讨论 7、待处理 3。V2.0.0 测试单合并到 V3.2.0 闭环（V2.0.0 复验通过 42 + 已结案 13）。当前测试基线为 v3.7.0 构建包，最终 QA 进行中</td>
+    <td><span class="status-progress">最终 QA</span></td>
   </tr>
   <tr>
     <td>后端发布速度</td>
@@ -186,7 +186,7 @@
   </tr>
   <tr>
     <td>FFF Flutter 重写</td>
-    <td>未启动；产能用于稳定 v3.2.0 + 中国应对自动化 + 后端基础平台</td>
+    <td>未启动；产能用于稳定 v3.7.0 + 中国应对自动化 + 后端基础平台</td>
     <td><span class="status-defer">顺延 S4</span></td>
   </tr>
   <tr>
@@ -366,8 +366,8 @@
     <div class="timeline-text">VPN 隧道持久重连；自动重连配置；节点 IPv4 出站强制；NAT 表自动清理</div>
   </div>
   <div class="timeline-item">
-    <div class="timeline-date">5/9 — 第3阶段提前收官 · v3.2.0 上线</div>
-    <div class="timeline-text">Android 系统接口现代化；自动重连默认开启；闲置自动断开按政策回滚；v3.2.0 稳定版正式发布</div>
+    <div class="timeline-date">5/9 — 第3阶段提前收官 · v3.7.0 进入最终 QA</div>
+    <div class="timeline-text">Android 系统接口现代化；自动重连默认开启；闲置自动断开按政策回滚；v3.7.0 稳定测试版定型并启动最终 QA，通过后发布生产</div>
   </div>
 </div>
 
@@ -379,17 +379,17 @@
 <h3>上线节奏</h3>
 <table>
   <tr><th>节点</th><th>动作</th><th>状态</th></tr>
-  <tr><td>5/9</td><td>v3.2.0 稳定版上线（Google Play / 官网 / 华为）</td><td><span class="status-done">本日完成</span></td></tr>
-  <tr><td>5/9 – 5/16</td><td>7 天产线观察期 — 任何回归走热修分支</td><td><span class="status-progress">观察中</span></td></tr>
+  <tr><td>5/9</td><td>v3.7.0 稳定测试版定型 → 启动最终 QA</td><td><span class="status-progress">本日启动</span></td></tr>
+  <tr><td>5/9 – 5/16</td><td>v3.7.0 最终 QA — 通过后即发布生产（Google Play / 官网 / 华为）</td><td><span class="status-progress">QA 中</span></td></tr>
   <tr><td>5/12</td><td>第4阶段启动 — 数据库异地备份 + 网络隔离（P0 优先开工）</td><td><span class="status-progress">下周</span></td></tr>
-  <tr><td>5/16+</td><td>第4阶段 v3.7.0 进入 QA 周期（自动重连默认开启 + Android 接口现代化）</td><td><span class="status-defer">下阶段</span></td></tr>
+  <tr><td>QA 通过后</td><td>v3.7.0 生产发布；任何回归走热修分支</td><td><span class="status-defer">待 QA</span></td></tr>
 </table>
 
 <h3>后端改动的特殊挑战（多客户端兼容约束）</h3>
 <div class="card warning">
 <p>本阶段后端发布需要同时服务以下客户端，其中两个已冻结、不能要求其升级：</p>
 <ul>
-  <li><strong>Android（可升级）</strong> — 主流量端，本阶段升级至 v3.2.0</li>
+  <li><strong>Android（可升级）</strong> — 主流量端，本阶段升级至 v3.7.0（最终 QA 中）</li>
   <li><strong>iOS HiYou v1.3.0（已冻结）</strong> — Apple 账号封禁导致无法发版；后端必须保持向后兼容</li>
   <li><strong>Windows skytree_pc v2.2.71（已冻结）</strong> — 签名证书过期；后端必须保持向后兼容</li>
 </ul>
@@ -407,7 +407,7 @@
 <!-- ============================================ -->
 <h2>六、FFF 并行进展（Lex 实时口径）</h2>
 <div class="card">
-<p>第3阶段 FFF Flutter 重写工作未启动 — 产能集中于 Arrowfish 稳定 v3.2.0 + 节点自动化 + 后端基础平台。<strong>这次延后是有意的</strong>：第3阶段已完成的关联日志、协程崩溃保护、Swagger 自动文档、多语言字段等基础平台设施，都将作为 FFF 后端的初始能力直接继承，避免了到第4阶段再回头补建。</p>
+<p>第3阶段 FFF Flutter 重写工作未启动 — 产能集中于 Arrowfish 稳定 v3.7.0 + 节点自动化 + 后端基础平台。<strong>这次延后是有意的</strong>：第3阶段已完成的关联日志、协程崩溃保护、Swagger 自动文档、多语言字段等基础平台设施，都将作为 FFF 后端的初始能力直接继承，避免了到第4阶段再回头补建。</p>
 <p><strong>FFF 启动外部依赖</strong>（Roy 跟进）：</p>
 <ul>
   <li><strong>欧盟电话号码注册与 SMS</strong> — Roy 商务侧推进</li>
@@ -521,7 +521,7 @@
 <table>
   <tr><th>风险</th><th>影响范围</th><th>状态</th><th>缓解</th></tr>
   <tr>
-    <td><strong>v3.2.0 产线观察期内的回归</strong></td>
+    <td><strong>v3.7.0 最终 QA 期间的回归</strong></td>
     <td>所有 Android 用户</td>
     <td>本阶段已上线，进入 7 天观察</td>
     <td>热修分支模板就绪；下载站保留全渠道全版本，故障可即时回滚；Crashlytics 监控由本阶段新引入的关联 ID 直达后端日志</td>
@@ -670,7 +670,7 @@
   <li><strong>FFF 后端是 Arrowfish 后端的分叉</strong> — 任何在 Arrowfish 后端今天清理掉的技术债，FFF 不需要再清理一遍</li>
   <li><strong>关联日志、协程崩溃保护、Swagger 自动文档、共享日志模板、多语言字段</strong>这些基础设施<strong>越早进 main 分支越便宜</strong> — 多客户端跨调试、多支付通道、多语言上线都是 FFF 的天然需求</li>
   <li><strong>节点运维自动化是 FFF 上线的硬依赖</strong> — FFF 也需要节点；如果节点开通仍是手工，FFF 上线时会再次面临中国封锁应对的人力瓶颈</li>
-  <li><strong>第3阶段的安卓稳定 v3.2.0 是「我们能交付稳定版」的对外信号</strong> — 接手以来第一个本团队完整把控的版本；这是 FFF 商务侧合规材料的产品依据</li>
+  <li><strong>第3阶段的安卓稳定 v3.7.0 是「我们能交付稳定版」的对外信号</strong> — 接手以来第一个本团队完整把控的稳定基线（最终 QA 通过即发布生产）；这是 FFF 商务侧合规材料的产品依据</li>
 </ol>
 <p>反过来说：如果第3阶段先启动 FFF Flutter 重写，要么会从一个尚未清理的后端分叉（继承 Arrowfish 所有遗留债），要么会让 Arrowfish 进入与 FFF 长期分叉但都没修好的状态。先清债再开新分支是更高效率的顺序。</p>
 </div>
@@ -694,13 +694,13 @@
 <!-- ============================================ -->
 <section class="tab-panel active" id="tab-android">
 
-<h3>稳定版 v3.2.0 + 3.6.x 可靠性流</h3>
-<p>第3阶段移动端是接手以来第一次<strong>由本团队完整把控的稳定版周期</strong>。QA 已对 V3.2.0 与合并自 V2.0.0 的测试单完成主体复验。</p>
+<h3>稳定测试版 v3.7.0（最终 QA）+ 3.6.x 可靠性流</h3>
+<p>第3阶段移动端是接手以来第一次<strong>由本团队完整把控的稳定版周期</strong>。前期 V3.2.0 与合并自 V2.0.0 的测试单（QA 跟踪清单）已完成主体复验；当前 v3.7.0 构建包正在最终 QA，通过后即发布生产。</p>
 
 <h4>包体积变化（与接手时 v1.7.38 对比）</h4>
 <div class="card success">
 <table>
-  <tr><th>构建类型</th><th>v1.7.38</th><th>v3.2.0</th><th>变化</th></tr>
+  <tr><th>构建类型</th><th>v1.7.38</th><th>v3.7.0</th><th>变化</th></tr>
   <tr><td>开发版（测试用）</td><td>117 MB</td><td>52 MB</td><td><strong>−65 MB（−55%）</strong></td></tr>
   <tr><td>生产版（用户下载）</td><td>101 MB</td><td>33 MB</td><td><strong>−68 MB（−67%）</strong></td></tr>
 </table>
@@ -941,7 +941,7 @@
 
 <h3>无日志承诺的对外宣传时机</h3>
 <div class="card">
-本周 v3.2.0 上线建议只主推「稳定 + 可靠 + 速度」三个产品要点；<strong>「无日志承诺」等到第4阶段节点系统层加固完成后再统一对外发布</strong>。具体材料语言待第4阶段一并定稿，避免出现宣传与实际节点状态之间的差距。FFF 上线前的合规白皮书也按这个节奏。
+v3.7.0 生产发布建议只主推「稳定 + 可靠 + 速度」三个产品要点；<strong>「无日志承诺」等到第4阶段节点系统层加固完成后再统一对外发布</strong>。具体材料语言待第4阶段一并定稿，避免出现宣传与实际节点状态之间的差距。FFF 上线前的合规白皮书也按这个节奏。
 </div>
 </section>
 

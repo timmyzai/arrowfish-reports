@@ -73,16 +73,16 @@
 <div class="tldr">
   <div class="tldr-label">TL;DR</div>
   <div class="tldr-text">
-    <strong>Arrowfish 安卓 v3.2.0 稳定版本日上线</strong> — 接手以来首个本团队完整把控的稳定版（QA 主体复验通过）。<strong>后端发布 4–6 倍提速</strong>，<strong>节点开通由 SSH 手工 20 分钟降至后台一键 30 秒</strong>。第3阶段以「稳定上线 + 节点配置定型」作为关门标准提前收官；FFF Flutter 重写与基础设施加固（数据库异地备份 / 网络隔离）锁定第4阶段 P0。
+    <strong>Arrowfish 安卓 v3.7.0 稳定测试版进入最终 QA</strong> — 接手以来首个本团队完整把控的稳定基线（前期 V3.2.0 / V2.0.0 测试单合并复验主体已通过；最终 QA 通过即发布生产）。<strong>后端发布 4–6 倍提速</strong>，<strong>节点开通由 SSH 手工 20 分钟降至后台一键 30 秒</strong>。第3阶段以「稳定基线定型 + 节点配置就绪」作为关门标准提前收官；FFF Flutter 重写与基础设施加固（数据库异地备份 / 网络隔离）锁定第4阶段 P0。
   </div>
 </div>
 
 <h2>一、关键指标</h2>
 <div class="metric-grid">
   <div class="metric-card">
-    <div class="metric-label">稳定版</div>
-    <div class="metric-value">v3.2.0</div>
-    <div class="metric-sub">已上线</div>
+    <div class="metric-label">稳定测试版</div>
+    <div class="metric-value">v3.7.0</div>
+    <div class="metric-sub">最终 QA 中</div>
   </div>
   <div class="metric-card">
     <div class="metric-label">APK 体积</div>
@@ -135,10 +135,10 @@
 <h2>二、需要知悉与配合</h2>
 <div class="card warning">
 <ol>
-  <li><strong>v3.2.0 产线观察期 7 天</strong>（5/9–5/16）— 任何回归走热修分支，不影响第4阶段并行</li>
+  <li><strong>v3.7.0 最终 QA 进行中</strong> — 通过后即发布生产（Google Play / 官网 / 华为）；任何回归走热修分支</li>
   <li><strong>FFF 公司事项（Roy 跟进）</strong> — 欧盟电话号码 + 新支付通道，工程侧基础平台已就绪</li>
   <li><strong>专线续费缺口</strong> — 到期释放已修复；自动续费保留绑定列入第4阶段 P1</li>
-  <li><strong>无日志合规对外宣传时机</strong> — 等第4阶段节点系统层加固完后再统一发布；本周 v3.2.0 只主推稳定/可靠/速度</li>
+  <li><strong>无日志合规对外宣传时机</strong> — 等第4阶段节点系统层加固完后再统一发布；v3.7.0 生产发布只主推稳定/可靠/速度</li>
   <li><strong>iOS / Windows 老客户端</strong>（运营 / 商务议程） — 后端继续兼容承诺；解锁路径：iOS 账号申诉 + Windows 虚拟签名调研</li>
 </ol>
 </div>
@@ -148,7 +148,7 @@
   <div class="card success">
     <h3>移动端</h3>
     <ul>
-      <li><strong>v3.2.0</strong> 上线（接手后首个本团队稳定版）</li>
+      <li><strong>v3.7.0</strong> 稳定测试版定型（接手后首个本团队稳定基线，最终 QA 中）</li>
       <li>APK 体积 −67%（−68 MB）</li>
       <li>VPN 网络切换不掉线（隧道持久重连）</li>
       <li>VPN 闪断（Wi-Fi 抖动）误判修复</li>
@@ -234,7 +234,7 @@
 <h2>六、关键风险（开口）</h2>
 <table>
   <tr><th>风险</th><th>缓解</th></tr>
-  <tr><td><strong>v3.2.0 产线 7 天观察</strong></td><td>热修分支模板 + 全渠道全版本下载站可即时回滚 + Crashlytics 新接关联 ID</td></tr>
+  <tr><td><strong>v3.7.0 最终 QA 期间的回归</strong></td><td>热修分支模板 + 全渠道全版本下载站可即时回滚 + Crashlytics 新接关联 ID</td></tr>
   <tr><td><strong>数据库无异地备份</strong>（遗留缺口）</td><td>第4阶段 P0 第一项 — Azure SQL 自动每日 + 7 天保留 + 跨区副本</td></tr>
   <tr><td><strong>测试 / 生产共用网络安全组</strong>（遗留缺口）</td><td>第4阶段 P0 第二项 — NSG 拆分 + 收紧生产入站规则</td></tr>
   <tr><td><strong>专线续费仍需重新购买</strong></td><td>第4阶段 P1 — 自动续费 + 保留原节点绑定</td></tr>
@@ -266,7 +266,7 @@
   <li><strong>P0</strong> FFF 后端共享 Go 模块化（5/12-5/19）</li>
   <li><strong>P1</strong> 专线自动续费（保留原节点绑定）</li>
   <li><strong>P1</strong> 节点置信度评分（接入本阶段已完成的 BO 一键回收流）</li>
-  <li><strong>P1</strong> v3.7.0 安卓稳定版 QA 流程（5/16-5/23）</li>
+  <li><strong>P0</strong> v3.7.0 最终 QA 通过 → 生产发布</li>
   <li><strong>P1</strong> 香港旧 ProxyBackend 下线 + SSH 全量证书化 + 权限审计</li>
   <li><strong>P0</strong> FFF 第一个里程碑：注册 / 登录 / 列出节点 / 连接节点</li>
 </ol>
