@@ -1,49 +1,49 @@
 [
   {
     "id": "sprint-0",
-    "name": "Sprint 0 — Handover",
+    "name": "交接报告（第0阶段）",
     "date": "2026-04-03",
     "file": "Stakeholder/Sprint-0/20260403_report.html"
   },
   {
     "id": "sprint-1",
-    "name": "Sprint 1 Week 1 — Testing & Automation",
+    "name": "第1阶段周报（第1周）",
     "date": "2026-04-10",
     "file": "Stakeholder/Sprint-1/20260410_report.html"
   },
   {
     "id": "sprint-0-1-summary",
-    "name": "Sprint 0+1 — Progress Summary",
+    "name": "Sprint 0+1 进度汇报 — 2026-04-10",
     "date": "2026-04-10",
     "file": "Stakeholder/Sprint-1/20260410_sprint_report.html"
   },
   {
     "id": "sprint-2-w1",
-    "name": "Sprint 2 Week 1 — Release Sprint",
+    "name": "第2阶段进展报告（第1周）",
     "date": "2026-04-17",
     "file": "Stakeholder/Sprint-2/20260417_report.html"
   },
   {
     "id": "sprint-2-w2",
-    "name": "Sprint 2 Week 2 — Pre-Release Closeout",
+    "name": "第2阶段进展报告（第2周）",
     "date": "2026-04-24",
     "file": "Stakeholder/Sprint-2/20260424_report.html"
   },
   {
     "id": "sprint-2-summary",
-    "name": "Sprint 2 — Progress Summary",
+    "name": "第2阶段进度汇报 — 2026-04-24",
     "date": "2026-04-24",
     "file": "Stakeholder/Sprint-2/20260424_sprint_report.html"
   },
   {
     "id": "sprint-3-full",
-    "name": "Sprint 3 — Full Report (Tabs by Category)",
+    "name": "第3阶段完整汇报 — 2026-05-09",
     "date": "2026-05-09",
     "file": "Stakeholder/Sprint-3/20260509_full_report.html"
   },
   {
     "id": "sprint-3-summary",
-    "name": "Sprint 3 — One-Page Summary",
+    "name": "第3阶段一页摘要 — 2026-05-09",
     "date": "2026-05-09",
     "file": "Stakeholder/Sprint-3/20260509_summary.html"
   }
