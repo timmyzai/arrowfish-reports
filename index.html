@@ -501,7 +501,7 @@
                         opt.textContent = s.name;
                         select.appendChild(opt);
                     });
-                    const index = resolveFromHash();
+                    const index = sprints.length - 1;
                     select.value = index;
                     loadSprint(index);
                 })
