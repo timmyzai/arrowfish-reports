@@ -384,6 +384,9 @@
     </div>
 
     <script>
+        /* ── App init flag (hoisted above IIFE so initApp() can read it during cache-valid auto-unlock) ── */
+        let appInitialized = false;
+
         /* ── Auth Gate Logic ── */
         (function() {
             // SHA-256 hash of the access password — change by running in browser console:
@@ -478,7 +481,6 @@
         })();
 
         /* ── App Logic ── */
-        let appInitialized = false;
         function initApp() {
             if (appInitialized) return;
             appInitialized = true;
