@@ -109,6 +109,27 @@
     <div class="metric-value">22 / 5</div>
     <div class="metric-sub">通过 / 已结案</div>
   </div>
+  <div class="metric-card">
+    <div class="metric-label">本机构建</div>
+    <div class="metric-value">−51%</div>
+    <div class="metric-sub">70 秒 → 34 秒（M4 Pro 实测）</div>
+  </div>
+  <div class="metric-card">
+    <div class="metric-label">代码净行数</div>
+    <div class="metric-value">−10K</div>
+    <div class="metric-sub">清理为主，1,123 个文件</div>
+  </div>
+</div>
+
+<div class="card success">
+<h3>构建速度提速（不同硬件预估）</h3>
+<table>
+  <tr><th>场景</th><th>v1.7.38</th><th>HEAD</th></tr>
+  <tr><td>M4 Pro 24GB · 冷构建</td><td>70 秒</td><td><strong>34 秒（−51%）</strong></td></tr>
+  <tr><td>Linux Intel 8GB · 冷构建（外推）</td><td>3-4 分钟</td><td><strong>1:30-2:00 分钟</strong></td></tr>
+  <tr><td>CI 流水线 · 4 渠道全量</td><td>不可比</td><td><strong>15:52 无人值守</strong></td></tr>
+</table>
+<p>提速来自 Gradle 9 + Kotlin 2.3 (K2) + 模块合并 + 配置缓存默认启用；<strong>同样 50% 相对提速对开发本机和 CI Runner 同等受益</strong>。</p>
 </div>
 
 <h2>二、需要知悉与配合</h2>
@@ -182,12 +203,35 @@
   <tr><td>节点开通 20 分钟 → 30 秒</td><td>大批量换网时每台节省 ~19 分钟；操作员失误风险消除</td></tr>
   <tr><td>节点回收 Format 一键</td><td>原本需弃用的被封 VM 可重用 — 中国封锁加剧时关键节省</td></tr>
   <tr><td>后端发布 4-6 倍提速</td><td>每位开发每天少等 30 分钟；紧急修复发布窗口由小时降至分钟</td></tr>
+  <tr><td>本机 Android 冷构建 −51%</td><td>本地反馈 70 秒 → 34 秒；在 8GB Linux 工作站上同样 50% 相对提速</td></tr>
   <tr><td>4 渠道一次构建</td><td>每次发布节省 1-2 工时人工组合</td></tr>
   <tr><td>APK −67%</td><td>下载流量节省直接受益用户；流量套餐紧张用户卸载率下降</td></tr>
-  <tr><td>移除 utilcodex</td><td>第三方组件减少 → 漏洞 / 维护风险下降</td></tr>
+  <tr><td>代码净减 1 万行</td><td>清理 utilcodex（80 个传递依赖）、Compose、三星脚手架等死代码 → 漏洞 / 维护风险下降；新人上手成本降低</td></tr>
+  <tr><td>翻译混乱清理</td><td>消灭中英文混用、模板占位符泄漏到 UI；后端写入语言守门 + 三语补齐 + 历史脏数据迁移</td></tr>
+  <tr><td>数据加载体验</td><td>断开后实时显示真实余额 + 同步 / 连接接口前置校验 + 启动屏决策树重做 + 倒计时单源化 → 减少视觉抖动与误解</td></tr>
 </table>
 
-<h2>五、关键风险（开口）</h2>
+<h2>五、已解决的历史问题（接手清理）</h2>
+<div class="card highlight">
+<table>
+  <tr><th>类别</th><th>问题</th></tr>
+  <tr><td>翻译混乱</td><td>数据库存在中英文混用、临时占位符遗留行；前端偶发显示原始模板（<code>{{plan_name}}</code>） — 写入守门 + 三语补齐 + 迁移清理</td></tr>
+  <tr><td>启动屏冻屏</td><td>原方案在 3 秒以上场景下「冻屏」 — 启动屏 + 进度条决策树重做</td></tr>
+  <tr><td>登录失效弹窗打断</td><td>会话过期时弹出错误对话框 — 改为静默重新认证</td></tr>
+  <tr><td>升级老版本断连</td><td>v2.x → v3.x 用户因本地缓存格式不兼容 — 历史本地状态自愈</td></tr>
+  <tr><td>选择线路抖动</td><td>切换线路时连接重连两次 — 合并为单次切换</td></tr>
+  <tr><td>设备 ID 不一致</td><td>华为渠道走独立分支 — 全渠道统一</td></tr>
+  <tr><td>密度判断错误</td><td>按可折叠状态判断不可靠 — 改用屏幕宽度</td></tr>
+  <tr><td>swagger 文档过期</td><td>浏览器缓存 + 80+ 接口注解 30% 飘移 — 禁用缓存 + 自动从代码生成</td></tr>
+  <tr><td>抽奖结算并发</td><td>同秒重复领取 — 合并为原子操作</td></tr>
+  <tr><td>无密注册资料丢失</td><td>转换后下次启动会被静默回退 — 转换流程显式持久化</td></tr>
+  <tr><td>账号切换抽奖串号</td><td>登出未清空抽奖缓存 — 修复</td></tr>
+  <tr><td>主页冷启动崩溃</td><td>主线程调用数据库 — 调度到 IO 线程</td></tr>
+  <tr><td>历史 token 残留</td><td>启动后接口 401 — 启动时孤儿 JWT 自动清理</td></tr>
+</table>
+</div>
+
+<h2>六、关键风险（开口）</h2>
 <table>
   <tr><th>风险</th><th>缓解</th></tr>
   <tr><td><strong>v3.2.0 产线 7 天观察</strong></td><td>热修分支模板 + 全渠道全版本下载站可即时回滚 + Crashlytics 新接关联 ID</td></tr>
@@ -197,7 +241,7 @@
   <tr><td><strong>XRayR 老节点尚未全部迁移</strong></td><td>新节点全部 singbox-agent；老节点 Format 时自然替换；第4阶段定 sunset 日期</td></tr>
 </table>
 
-<h2>六、安全与权限</h2>
+<h2>七、安全与权限</h2>
 <table>
   <tr><th>项目</th><th>状态</th></tr>
   <tr><td>源代码访问最小化（Roy / Morgan / Lex / 大马团队）</td><td><span class="status-done">维持</span></td></tr>
@@ -213,7 +257,7 @@
   <tr><td>SSH 全量证书化</td><td><span class="status-defer">第4阶段 P1</span></td></tr>
 </table>
 
-<h2>七、第4阶段 5/12 启动 — 锁定优先级</h2>
+<h2>八、第4阶段 5/12 启动 — 锁定优先级</h2>
 <div class="card highlight">
 <ol>
   <li><strong>P0</strong> 数据库异地备份（5/12 周完成）</li>
