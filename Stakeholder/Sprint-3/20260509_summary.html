@@ -139,7 +139,13 @@
   <li><strong>FFF 公司事项（Roy 跟进）</strong> — 欧盟电话号码 + 新支付通道，工程侧基础平台已就绪</li>
   <li><strong>专线续费缺口</strong> — 到期释放已修复；自动续费保留绑定列入第4阶段 P1</li>
   <li><strong>无日志合规对外宣传时机</strong> — 等第4阶段节点系统层加固完后再统一发布；v3.7.0 生产发布只主推稳定/可靠/速度</li>
-  <li><strong>iOS / Windows 老客户端</strong>（运营 / 商务议程） — 后端继续兼容承诺；解锁路径：iOS 账号申诉 + Windows 虚拟签名调研</li>
+  <li><strong>iOS / Windows 老客户端 — 持续抽走产能的真实税负</strong>（运营 / 商务议程）：
+    <ul>
+      <li><strong>iOS HiYou v1.3.0</strong>：Apple 账号被标记 / 封禁，无法发布更新 → 后端必须保持向后兼容</li>
+      <li><strong>Windows skytree_pc v2.2.71</strong>：<strong>WoSign 实体物理设备签名证书过期</strong> → 新版可以编但<strong>无法签名 → 用户安装被 SmartScreen 阻断</strong>。需要 (a) 研究 WoSign 续签 + (b) 迁移到云代码签名（CI 自动签）</li>
+      <li><strong>每个后端 / API 改动需 +~30% 兼容矩阵设计 + 测试开销</strong> — 每个 Sprint 产能预估必须计入</li>
+    </ul>
+  </li>
 </ol>
 </div>
 

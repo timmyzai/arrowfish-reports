@@ -133,7 +133,13 @@
   </li>
   <li>
     <span class="action-num">5</span>
-    <div><strong>iOS / Windows 老客户端冻结现状</strong>（运营层面已知）— iOS HiYou v1.3.0 因 Apple 账号封禁冻结；Windows skytree_pc v2.2.71 因签名证书问题冻结。这两端目前依赖后端的<strong>向后兼容承诺</strong>持续运转；本阶段所有后端改动已遵守此约束（详见「后端改动的特殊挑战」）。<strong>解锁路径</strong>：iOS 账号申诉恢复；Windows 虚拟签名方案调研 — 这两项是运营/商务侧议程，但若延期，会持续约束后端设计速度。</div>
+    <div><strong>iOS / Windows 老客户端冻结 — 持续拖慢节奏的真实约束</strong>（运营层面已知）。两个生产端共用一套后端，改任何接口都要兼顾它们：
+      <ul style="margin:.4rem 0 0 0;font-size:.92em;">
+        <li><strong>iOS HiYou v1.3.0</strong> — Apple 开发者账号被标记 / 封禁，<strong>无法发布任何更新</strong>。后端必须对 v1.3.0 的接口结构保持向后兼容</li>
+        <li><strong>Windows skytree_pc v2.2.71</strong> — <strong>WoSign 实体物理设备代码签名证书已过期</strong>，新版可以编但<strong>无法签名 → 安装会被 SmartScreen 阻断</strong>。需要 (a) 研究 WoSign 续签流程（实体 USB Token，签发 5–15 个工作日）+ (b) 迁移到<strong>云代码签名</strong>（摆脱物理设备依赖，CI 自动签，但需重走 EV 验证 1–3 周）</li>
+      </ul>
+      实际拖累：后端 / 管理后台 / API / 数据库 schema 任何一处改动都需 <strong>+~30% 设计与测试开销</strong>跑兼容矩阵。详见「后端改动的特殊挑战」。<strong>解锁前请在产能预估中保留这部分税负</strong>。
+    </div>
   </li>
 </ul>
 
@@ -419,21 +425,67 @@
   <tr><td>QA 通过后</td><td>v3.7.0 生产发布；任何回归走热修分支</td><td><span class="status-defer">待 QA</span></td></tr>
 </table>
 
-<h3>后端改动的特殊挑战（多客户端兼容约束）</h3>
+<h3>后端改动的特殊挑战（多客户端兼容约束）— <strong>持续拖慢节奏的真实税负</strong></h3>
 <div class="card warning">
-<p>本阶段后端发布需要同时服务以下客户端，其中两个已冻结、不能要求其升级：</p>
+<p>这是<strong>本阶段最显著的「看不见的拖累」</strong>。后端 / 管理后台 / API / 数据库 schema 任意一处改动，都需要同时服务以下三个共用一套后端的客户端，其中两个已冻结、不能要求用户升级：</p>
+<table>
+  <tr><th>客户端</th><th>版本 / 状态</th><th>冻结根因</th><th>对开发节奏的影响</th></tr>
+  <tr>
+    <td><strong>Android（Arrowfish）</strong></td>
+    <td>v3.7.0（最终 QA）</td>
+    <td>可升级</td>
+    <td>无约束 — 改动可随时上线</td>
+  </tr>
+  <tr>
+    <td><strong>iOS HiYou SSH</strong></td>
+    <td>v1.3.0（生产 · 冻结）</td>
+    <td>Apple 开发者账号<strong>被标记 / 封禁</strong>，无法发布任何更新版本</td>
+    <td>后端任意接口都不能破坏 v1.3.0 的请求 / 响应结构；新增字段必须可选；移除字段或改语义直接砍掉这部分用户的服务</td>
+  </tr>
+  <tr>
+    <td><strong>Windows skytree_pc</strong></td>
+    <td>v2.2.71（生产 · 冻结）</td>
+    <td>WoSign <strong>实体物理设备代码签名证书已过期</strong>；可以编新版但<strong>无法签名 → 用户安装会被 SmartScreen 阻断</strong>。续签 + 迁移到云签流程都需要专门窗口研究</td>
+    <td>同上后端兼容约束；此外当前已开发但未签名的 Windows 改动堆积在仓库中</td>
+  </tr>
+</table>
+
+<h4>WoSign 详细说明</h4>
 <ul>
-  <li><strong>Android（可升级）</strong> — 主流量端，本阶段升级至 v3.7.0（最终 QA 中）</li>
-  <li><strong>iOS HiYou v1.3.0（已冻结）</strong> — Apple 账号封禁导致无法发版；后端必须保持向后兼容</li>
-  <li><strong>Windows skytree_pc v2.2.71（已冻结）</strong> — 签名证书过期；后端必须保持向后兼容</li>
+  <li>当前签名证书形态：<strong>WoSign 实体 USB Token</strong>（物理设备代码签名）— 团队接手时证书已过期，无法签出新的可信 Windows 安装包</li>
+  <li>需要做的事（按估时排序）：
+    <ol>
+      <li>研究 WoSign 续签流程与现行成本（实体证书签发周期通常 5-15 个工作日）</li>
+      <li><strong>迁移到云代码签名</strong>（Cloud Code Signing：Azure / GCP / DigiCert KeyLocker / SSL.com 等）— 不再依赖物理 Token，CI 可自动签名；但需要重新走 EV 验证流程（机构身份核验 1-3 周）</li>
+      <li>过渡期内积压的 Windows 端 bug 修复无法发布</li>
+    </ol>
+  </li>
+  <li>云签的副作用：CI 可签 = Windows 也能像 Android 一样自动化发版，但首次成本（验证流程）短期不可省略</li>
 </ul>
-<p>由此，本阶段每个后端改动都需要额外的「不破坏老客户端」的设计与测试成本（估计 ~30% 设计与测试开销加在每张工单上）。本阶段未发生因后端改动导致 iOS / Windows 失效的事件 — 兼容性纪律保持。</p>
-<p><strong>解锁路径</strong>（运营 / 商务侧议程）：</p>
+
+<h4>对节奏的真实拖累（已观察）</h4>
+<ul>
+  <li><strong>每个后端工单约 +30% 设计 / 测试开销</strong> — 工程师必须跑兼容矩阵（v1.3.0 iOS curl、v2.2.71 Windows 抓包），不能只看 Android 是否好用</li>
+  <li><strong>需求侧的「这个能不能改」会议变多</strong> — 接口契约改动需要先确认是否影响冻结版本</li>
+  <li><strong>API 版本化负担</strong> — 一些改动只能走 <code>/v2</code> 新接口，老 <code>/v1</code> 不能动 — 维护两套实现的隐性成本</li>
+  <li><strong>知识依赖</strong> — 团队必须维护对 v1.3.0 / v2.2.71 行为的精确认知（KB <code>hiyou-ssh.md</code> + <code>mobile-api-usage.md</code> 中已审计 38/39 接口的兼容性）</li>
+  <li><strong>本阶段未发生因后端改动导致 iOS / Windows 失效的事件</strong> — 兼容性纪律保持，但代价已经付了</li>
+</ul>
+
+<h4>解锁路径与时序</h4>
 <ol>
-  <li>iOS 账号申诉恢复 — 才能让冻结版本退役</li>
-  <li>Windows 虚拟签名方案调研 — 才能让冻结版本升级</li>
+  <li><strong>iOS — Apple 账号申诉恢复</strong>（运营 / 商务侧议程）— 周期不可控（Apple 不公开审核时长）；申诉成功后才能为 v1.3.0 用户推送替代版</li>
+  <li><strong>Windows — 双轨推进</strong>：
+    <ul>
+      <li>短期：研究 WoSign 续签 → 至少能发出修复版（治标）</li>
+      <li>中期：迁移到云代码签名 → 摆脱物理设备依赖，CI 自动签（治本）</li>
+    </ul>
+  </li>
+  <li>两端解锁前，<strong>每个 sprint 都要把这部分隐性成本计入产能预估</strong>（保守按 ~30% 设计 / 测试时间）</li>
+  <li>FFF 后端默认从 Arrowfish 后端分叉，<strong>越早解锁这两端，FFF 与 Arrowfish 越早能共享更多后端代码</strong>（不必为冻结版本保留兼容路径）</li>
 </ol>
-<p>这两项推进越快，后端越早能从兼容约束中解放，FFF 重写也越容易共享后端代码（现在 FFF 后端默认从 Arrowfish 后端分叉）。</p>
+
+<p><strong>建议</strong>：iOS 账号申诉与 Windows 云签调研是<strong>外部商务 / 流程任务</strong>，不是工程能在内部解决的。建议<strong>第4阶段把它们作为外部并行项跟进</strong>，每周同步进度；本团队不主动承担外部沟通，但需要在解锁后立即响应（一周内出更新版本）。</p>
 </div>
 
 <!-- ============================================ -->
@@ -608,15 +660,39 @@
 <!-- ============================================ -->
 <h2>九、阻塞与延迟</h2>
 <div class="card">
-<p><strong>本阶段无影响发布的工程阻塞。</strong>FFF Flutter 重写未启动属于<strong>有意延后</strong>（产能用于稳定版与基础平台，详见上文）。</p>
-<p>外部依赖项（运营 / 商务侧推进，引擎工程不直接拥有）：</p>
-<ul>
-  <li><strong>FFF 欧盟电话号码 / SMS 通道</strong> — Roy 跟进</li>
-  <li><strong>FFF 新支付通道</strong> — Roy 跟进</li>
-  <li><strong>iOS HiYou 账号申诉</strong> — 运营 / 商务侧</li>
-  <li><strong>Windows skytree_pc 虚拟签名方案</strong> — 运营 / 商务侧</li>
-</ul>
-<p>这些事项不影响第4阶段工程侧规划开工 — Flutter 可以以 mock 后端推进 UI；老 iOS / Windows 客户端持续靠后端兼容承诺运转。</p>
+<p><strong>本阶段无影响发布的工程阻塞</strong> — 但有两类<strong>外部依赖正在持续抽走产能</strong>，需要并行推进解锁：</p>
+
+<h3>持续抽税的外部依赖（影响每个 Sprint 的产能）</h3>
+<table>
+  <tr><th>事项</th><th>状态</th><th>对工程节奏的影响</th><th>主导方</th></tr>
+  <tr>
+    <td><strong>iOS HiYou 账号申诉</strong></td>
+    <td>申诉中（周期不可控）</td>
+    <td>v1.3.0 用户继续靠后端向后兼容承诺；每个后端改动 +~30% 兼容测试开销</td>
+    <td>运营 / 商务</td>
+  </tr>
+  <tr>
+    <td><strong>Windows WoSign 续签 → 云签迁移</strong></td>
+    <td>未启动调研</td>
+    <td>当前积压的 Windows 端修复无法签名发布；同样消耗后端兼容产能；问题不限于「能不能编」，而是「编了不能签 + 用户安装被阻断」</td>
+    <td>运营 / 商务（执行）+ 工程（技术评估）</td>
+  </tr>
+  <tr>
+    <td>FFF 欧盟电话号码 / SMS 通道</td>
+    <td>Roy 推进中</td>
+    <td>FFF Flutter 端可以先用 mock 后端推进 UI；启动用户验证流程时硬阻塞</td>
+    <td>Roy</td>
+  </tr>
+  <tr>
+    <td>FFF 新支付通道（FFF 公司主体）</td>
+    <td>Roy 推进中</td>
+    <td>FFF UI 可先放在功能开关后；商务流程上线前硬阻塞</td>
+    <td>Roy</td>
+  </tr>
+</table>
+
+<h3>本阶段不被这些阻塞，但代价已经付了</h3>
+<p>FFF Flutter 重写未启动属于<strong>有意延后</strong>（产能用于稳定 v3.7.0 + 节点自动化 + 基础平台）。第4阶段工程侧可以正常开工 — Flutter 可以以 mock 后端推进；老 iOS / Windows 客户端持续靠后端兼容承诺运转 — <strong>但每个 Sprint 的产能预估都需要把上述兼容税（~30%）计入</strong>，否则计划会持续偏紧。</p>
 </div>
 
 <!-- ============================================ -->
