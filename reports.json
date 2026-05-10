@@ -46,5 +46,11 @@
     "name": "第3阶段一页摘要 — 2026-05-09",
     "date": "2026-05-09",
     "file": "Stakeholder/Sprint-3/20260509_summary.html"
+  },
+  {
+    "id": "sprint-3-node-format-benchmark",
+    "name": "节点回收实测 — 后台一键 Format & 重装（2026-05-10）",
+    "date": "2026-05-10",
+    "file": "Stakeholder/Sprint-3/20260510_node_format_benchmark.html"
   }
 ]

@@ -71,9 +71,12 @@
 <div class="subtitle">2026年5月9日 · 第3阶段提前收官 · 关键决策点速览</div>
 
 <div class="tldr">
-  <div class="tldr-label">TL;DR</div>
+  <div class="tldr-label">TL;DR · 三句话</div>
   <div class="tldr-text">
-    <strong>Arrowfish 安卓 v3.7.0 稳定测试版进入最终 QA</strong> — 接手以来首个本团队完整把控的稳定基线（前期 V3.2.0 / V2.0.0 测试单合并复验主体已通过；最终 QA 通过即发布生产）。<strong>后端发布 4–6 倍提速</strong>，<strong>节点开通由 SSH 手工 20 分钟降至后台一键 30 秒</strong>。第3阶段以「稳定基线定型 + 节点配置就绪」作为关门标准提前收官；FFF Flutter 重写与基础设施加固（数据库异地备份 / 网络隔离）锁定第4阶段 P0。
+    <strong>第一，Arrowfish 安卓 v3.7.0 进入最终 QA — 接手以来首个本团队完整把控的稳定基线，QA 通过即发布生产。</strong>
+    <p style="margin-top:0.4rem;"><strong>第二，本阶段补齐三项基础加固：Azure 数据库自动备份首次开启、读副本真正被后端使用（之前一直「有但没用」）、香港旧 ProxyBackend 退出客户端关键路径；USDT 支付由台湾团队遗留 Java 黑盒重写为团队自有 Go 服务，ETH + TRX 双链联测通过。</strong></p>
+    <p style="margin-top:0.4rem;"><strong>第三，5/12 启动第4阶段，P0 锁定测试 / 生产网络隔离 + FFF Flutter 重写启动。</strong></p>
+    <p style="margin-top:0.55rem;font-size:0.9rem;color:var(--text-secondary);">支撑数字：后端发布 4–6 倍提速 · 节点开通 20 分钟 → 30 秒 · 移动端 4 渠道全量发布 35 分钟 → 15:52 无人值守 · 本机 Kotlin 冷编译 70 → 34 秒。</p>
   </div>
 </div>
 
@@ -121,15 +124,21 @@
   </div>
 </div>
 
+<div class="card highlight">
+  <h3 style="margin-top:0;">★ 现场实测（5/10）— 测试环境全部 7 台节点跨 3 大洲并行回收</h3>
+  <p style="margin:0.3rem 0;">单次后台 API 调用同时触发 7 台节点全擦重装（中国 / 香港 / 越南 / 菲律宾 / 丹麦 / 加拿大 / 法国）：<strong>最快 15 秒（Vancouver 175 ms RTT 最远反而最快）· 最慢 44 秒（广州 ACME 走 GFW）· 整批端到端 44 秒 · 0 失败</strong>。</p>
+  <p style="margin:0.4rem 0;"><strong>真正的赢面不是「44 秒」，而是「学习曲线归零」</strong> — 接手时要翻文档、判断节点系统、选进程管理器、SSH 跑命令、看日志验证（老员工也要开手册）；现在勾「全擦重装」→ 选主机 → 点确认即可，第一天报到的新人都能做。同时消除「关键人物风险」、统一了节点池上 7 种不同的进程管理装法。</p>
+  <p style="margin:0.3rem 0;">→ <strong><a href="20260510_node_format_benchmark.html">详细实测报告（7 国节点规格、地理 RTT、时间线、学习曲线对比、可复现步骤）</a></strong></p>
+</div>
+
 <div class="card success">
-<h3>构建速度提速（不同硬件预估）</h3>
+<h3>构建速度提速（两端实测）</h3>
 <table>
-  <tr><th>场景</th><th>v1.7.38</th><th>HEAD</th></tr>
-  <tr><td>M4 Pro 24GB · 冷构建</td><td>70 秒</td><td><strong>34 秒（−51%）</strong></td></tr>
-  <tr><td>Linux Intel 8GB · 冷构建（外推）</td><td>3-4 分钟</td><td><strong>1:30-2:00 分钟</strong></td></tr>
-  <tr><td>CI 流水线 · 4 渠道全量</td><td>不可比</td><td><strong>15:52 无人值守</strong></td></tr>
+  <tr><th>场景</th><th>接手时</th><th>现在</th></tr>
+  <tr><td>开发本机 · Kotlin 冷编译<br><span style="font-size:0.78rem;color:var(--text-secondary);">M4 Pro 24GB 实测</span></td><td>70 秒</td><td><strong>34 秒（−51%）</strong></td></tr>
+  <tr><td>CI 流水线 · 4 渠道全量发布<br><span style="font-size:0.78rem;color:var(--text-secondary);">8GB Linux CI Runner 实测</span></td><td>~35 分钟<br><span style="font-size:0.78rem;color:var(--text-secondary);">单渠道、需人工组合</span></td><td><strong>15:52 无人值守</strong><br><span style="font-size:0.78rem;color:var(--text-secondary);">4 渠道一次构建 + 签名 + 上传</span></td></tr>
 </table>
-<p>提速来自 Gradle 9 + Kotlin 2.3 (K2) + 模块合并 + 配置缓存默认启用；<strong>同样 50% 相对提速对开发本机和 CI Runner 同等受益</strong>。</p>
+<p>本机提速来自 Gradle 9 + Kotlin 2.3 (K2) + 模块合并 + 配置缓存默认启用；CI 提速来自流水线重构（构建/发布解耦、按 SHA 复用产物、增量上传）。<strong>同一台 CI Runner 上，4 渠道完整发布所需时间比接手时单渠道还少约 55%。</strong></p>
 </div>
 
 <h2>二、需要知悉与配合</h2>
@@ -137,6 +146,7 @@
 <ol>
   <li><strong>v3.7.0 最终 QA 进行中</strong> — 通过后即发布生产（Google Play / 官网 / 华为）；任何回归走热修分支</li>
   <li><strong>FFF 公司事项（Roy 跟进）</strong> — 欧盟电话号码 + 新支付通道，工程侧基础平台已就绪</li>
+  <li><strong>数据库备份「能真正恢复」演练待做</strong> — 本阶段已开启 Azure 自动每日备份（接手时是「完全没备份」）；第4阶段 P0 把恢复演练 + 异地副本流程化补齐</li>
   <li><strong>专线续费缺口</strong> — 到期释放已修复；自动续费保留绑定列入第4阶段 P1</li>
   <li><strong>无日志合规对外宣传时机</strong> — 等第4阶段节点系统层加固完后再统一发布；v3.7.0 生产发布只主推稳定/可靠/速度</li>
   <li><strong>iOS / Windows 老客户端 — 持续抽走产能的真实税负</strong>（运营 / 商务议程）：
@@ -179,18 +189,30 @@
   <div class="card success">
     <h3>节点 / 基础设施</h3>
     <ul>
-      <li><strong>后台一键开通节点 ~30 秒</strong>（原 SSH 手工 20 分钟）</li>
-      <li><strong>一键 Format 回收被封节点 ~2 分钟</strong></li>
-      <li>批量升级并行 12 台 + 失败可单独重试</li>
+      <li><strong>后台一键开通节点 ~30 秒</strong>（原 SSH 手工 20 分钟） — <strong>本汇报附图</strong>所示「安装新节点」</li>
+      <li><strong>一键全擦回收被封节点 ~2 分钟</strong> — 附图所示「全擦重装」勾选后批量擦 XrayR / sing-box / singbox-agent 并重装</li>
+      <li>批量升级并行 12 台 + 流式进度 + 失败可单独重试</li>
       <li>XRayR → singbox-agent 渐进迁移（自研、配置中心化）</li>
       <li>NAT 表脏数据自动清理（连接稳定性）</li>
       <li>强制 IPv4 出站（中国 ISP 兼容）</li>
       <li>sing-box 二进制本地镜像 + SHA256（中国封锁应对 + 供应链防御）</li>
-      <li>5 个新管理后台页（VM 主机 / 节点健康 / DNS / 供应商 / 异常观察）</li>
+      <li>5 个新管理后台页（VM 主机 ✅ / 节点健康 ✅ / 测试中：DNS 孤立清理 / 供应商总览 / 异常观察）</li>
+      <li><strong>HK 旧 ProxyBackend 退出移动客户端关键路径 → 每次请求少一跳跨区延迟</strong></li>
     </ul>
   </div>
   <div class="card success">
-    <h3>研发与发布</h3>
+    <h3>数据库 / 后端基础</h3>
+    <ul>
+      <li><strong>Azure 数据库自动备份首次开启</strong>（接手时是「完全没备份」）</li>
+      <li><strong>读副本真正接入</strong>（基础设施第2阶段已有，但<strong>后端从未使用</strong>过；本阶段把客户端只读路径切到读副本）</li>
+      <li>主库 CPU / IO 压力下降；客户端冷启动 + 重连查询延迟下降</li>
+      <li>SQL 迁移流水线门（合并前必须能在临时 MySQL 跑通）</li>
+      <li><strong>USDT 支付 Java→Go 重写</strong>：原台湾团队遗留 jar（需 CFR 反编译才能改）→ 团队自有 Go 服务；ETH + TRX 双链联测验证</li>
+      <li>共享平台基础（关联日志 / 协程崩溃保护 / Swagger 自动 / 共享日志模板 / 多语言字段）— FFF 第4阶段直接复用</li>
+    </ul>
+  </div>
+  <div class="card success">
+    <h3>研发与发布 + 工作流</h3>
     <ul>
       <li><strong>后端 CI 4–6 倍提速</strong>（2:30 → 30 秒）</li>
       <li>移动端 4 渠道一次构建 15:52，自动上传下载站</li>
@@ -198,16 +220,18 @@
       <li>MR 路径化构建 + 数据库迁移自动校验</li>
       <li>管理后台流水线独立化（不再阻塞后端发布）</li>
       <li>三星渠道下线（保留 Google / 官网 / 华为）</li>
+      <li><strong>统一 Git 流</strong>：分支命名 (<code>fea/enh/fix/hot/ref/</code>) + MR 标题即 Release Note；多人并行 + AI 协作（Claude Code 技能 / 规则 / 知识库均走仓库内 MR 评审）</li>
+      <li><strong>工具链整体升级</strong>：Gradle 9 + Kotlin 2.3 (K2) + AGP 9.1（本机冷编译 −51%）；Go 1.26 + gocron v2</li>
     </ul>
   </div>
 </div>
 
 <div class="card critical">
 <h3>★ 业务安全核心改造 — 免费额度由「客户端记账」改为「节点记账」</h3>
-<p>接手时<strong>移动 App 自己计时</strong>免费时长，再「告诉」后端 — 任何修改 App / 抓包伪造汇报的人都能拿到无限免费 VPN。本阶段把这条信任链整体反转：<strong>由 VPN 节点（服务器侧）按真实流量计时，节点每 30 秒上报，后端为唯一真相</strong>。</p>
+<p>接手时<strong>移动 App 自己计时</strong>免费时长，再「告诉」后端 — 任何修改 App / 抓包伪造汇报的人都能拿到无限免费 VPN。本阶段把这条信任链整体反转：<strong>由 VPN 节点（服务器侧）按真实流量计时，节点每 30 秒上报，后端是唯一记账依据</strong>。</p>
 <table>
   <tr><th>维度</th><th>改造前</th><th>改造后</th></tr>
-  <tr><td>谁说了算</td><td>移动 App 自己计时</td><td>VPN 节点 + 后端为唯一真相</td></tr>
+  <tr><td>谁说了算</td><td>移动 App 自己计时</td><td>VPN 节点上报真实流量，后端是唯一记账依据</td></tr>
   <tr><td>UUID 被抽取</td><td>=「无限免费 VPN」</td><td>后端可即时撤销账号，节点立即踢出</td></tr>
   <tr><td>挂 VPN 不用</td><td>计时仍累积</td><td>不产生流量 = 不计时</td></tr>
   <tr><td>抽奖在线时长</td><td>客户端可被绕过</td><td>由节点统计真实通信时长</td></tr>
@@ -219,15 +243,20 @@
 <table>
   <tr><th>项目</th><th>商业价值</th></tr>
   <tr><td>续订代币推进修复</td><td>关闭「客户已扣款但 VIP 没生效」直接收入路径（具体金额需 1-2 周财务对账）</td></tr>
+  <tr><td><strong>USDT 支付 Java→Go 重写</strong>（ETH + TRX 双链联测）</td><td>关闭「关键收入路径黑盒」风险；TRX 不再因 jar 内部路径异常失败；后续 USDT 通道扩展不需外协</td></tr>
+  <tr><td><strong>HK 旧 ProxyBackend 退出关键路径</strong></td><td>移动端每次登录 / 同步 / 连接 / 充值少一跳跨区中继；攻击面同步缩小一层</td></tr>
+  <tr><td><strong>读副本真正接入</strong>（之前是「有但没用」）</td><td>主库 CPU / IO 压力下降；客户端冷启动 + 重连查询延迟下降；写超时可以收紧而不影响客户端读 SLA</td></tr>
+  <tr><td><strong>数据库自动备份开启</strong>（接手时完全没备份）</td><td>从「区级故障即丢库」升级到「日级 RPO」；恢复演练第4阶段补齐</td></tr>
   <tr><td>节点开通 20 分钟 → 30 秒</td><td>大批量换网时每台节省 ~19 分钟；操作员失误风险消除</td></tr>
-  <tr><td>节点回收 Format 一键</td><td>原本需弃用的被封 VM 可重用 — 中国封锁加剧时关键节省</td></tr>
-  <tr><td>后端发布 4-6 倍提速</td><td>每位开发每天少等 30 分钟；紧急修复发布窗口由小时降至分钟</td></tr>
+  <tr><td>节点回收 全擦一键</td><td>原本需弃用的被封 VM 可重用 — 中国封锁加剧时关键节省</td></tr>
+  <tr><td>后端发布 4-6 倍提速</td><td>开发反馈周期由分钟级降至秒级；紧急修复发布窗口由小时降至分钟</td></tr>
   <tr><td>本机 Android 冷构建 −51%</td><td>本地反馈 70 秒 → 34 秒；在 8GB Linux 工作站上同样 50% 相对提速</td></tr>
   <tr><td>4 渠道一次构建</td><td>每次发布节省 1-2 工时人工组合</td></tr>
   <tr><td>APK −67%</td><td>下载流量节省直接受益用户；流量套餐紧张用户卸载率下降</td></tr>
   <tr><td>代码净减 1 万行</td><td>清理 utilcodex（80 个传递依赖）、Compose、三星脚手架等死代码 → 漏洞 / 维护风险下降；新人上手成本降低</td></tr>
   <tr><td>翻译混乱清理</td><td>消灭中英文混用、模板占位符泄漏到 UI；后端写入语言守门 + 三语补齐 + 历史脏数据迁移</td></tr>
   <tr><td>数据加载体验</td><td>断开后实时显示真实余额 + 同步 / 连接接口前置校验 + 启动屏决策树重做 + 倒计时单源化 → 减少视觉抖动与误解</td></tr>
+  <tr><td>统一 Git 流 + AI 协作工作模型（仓库内 MR 评审）</td><td>多人并行不互相阻塞；FFF 启动后双线推进的工作系统已经实战过</td></tr>
 </table>
 
 <h2>五、已解决的历史问题（接手清理）</h2>
@@ -254,40 +283,47 @@
 <table>
   <tr><th>风险</th><th>缓解</th></tr>
   <tr><td><strong>v3.7.0 最终 QA 期间的回归</strong></td><td>热修分支模板 + 全渠道全版本下载站可即时回滚 + Crashlytics 新接关联 ID</td></tr>
-  <tr><td><strong>数据库无异地备份</strong>（遗留缺口）</td><td>第4阶段 P0 第一项 — Azure SQL 自动每日 + 7 天保留 + 跨区副本</td></tr>
-  <tr><td><strong>测试 / 生产共用网络安全组</strong>（遗留缺口）</td><td>第4阶段 P0 第二项 — NSG 拆分 + 收紧生产入站规则</td></tr>
+  <tr><td><strong>数据库备份开启但恢复演练未做</strong></td><td>第4阶段 P0 — 把备份恢复成临时库 + 跑 smoke 查询；落地保留期与异地副本运维手册</td></tr>
+  <tr><td><strong>测试 / 生产共用网络安全组</strong>（遗留缺口）</td><td>第4阶段 P0 — NSG 拆分 + 收紧生产入站规则</td></tr>
+  <tr><td><strong>HK 旧 ProxyBackend 已退出关键路径，但仓库 / Azure 实例尚未最终下架</strong></td><td>已不在客户端调用路径上；第4阶段 P1 走最终下架（关闭实例 + 归档仓库）</td></tr>
   <tr><td><strong>专线续费仍需重新购买</strong></td><td>第4阶段 P1 — 自动续费 + 保留原节点绑定</td></tr>
-  <tr><td><strong>XRayR 老节点尚未全部迁移</strong></td><td>新节点全部 singbox-agent；老节点 Format 时自然替换；第4阶段定 sunset 日期</td></tr>
+  <tr><td><strong>XRayR 老节点尚未全部迁移</strong></td><td>新节点全部 singbox-agent；老节点全擦时自然替换；第4阶段定下线日期</td></tr>
+  <tr><td>测试中的管理后台页（供应商总览 / DNS 孤立清理 / 异常观察 / 自动分配节点）尚未驱动决策</td><td>需要更长 soak 期定型阈值；第4阶段晋升为决策驱动</td></tr>
 </table>
 
 <h2>七、安全与权限</h2>
 <table>
   <tr><th>项目</th><th>状态</th></tr>
   <tr><td>源代码访问最小化（Roy / Morgan / Lex / 大马团队）</td><td><span class="status-done">维持</span></td></tr>
-  <tr><td>读写分离（客户端只读走副本）</td><td><span class="status-done">✅ 第2阶段</span></td></tr>
+  <tr><td><strong>数据库备份（Azure 自动每日）</strong></td><td><span class="status-done">✅ 本阶段开启（接手时完全无备份）</span></td></tr>
+  <tr><td><strong>读副本真正接入后端</strong>（之前是「有但没用」）</td><td><span class="status-done">✅ 本阶段</span></td></tr>
+  <tr><td><strong>HK 旧 ProxyBackend 退出客户端关键路径</strong></td><td><span class="status-done">✅ 本阶段</span></td></tr>
   <tr><td>登录失败锁定 + 设备注册速率限制</td><td><span class="status-done">✅ 第2阶段</span></td></tr>
   <tr><td>免费注册跨账号串号修复（含 ASN 段滥用上限）</td><td><span class="status-done">✅ 本阶段</span></td></tr>
+  <tr><td>免费额度由「客户端记账」改为「节点记账」（关闭 UUID 抽取无限免费 VPN 漏洞）</td><td><span class="status-done">✅ 本阶段</span></td></tr>
   <tr><td>iptables NAT 表脏数据自动清理</td><td><span class="status-done">✅ 本阶段</span></td></tr>
   <tr><td>节点 systemd 单一供应商 + 一次性引导令牌（1h TTL）</td><td><span class="status-done">✅ 本阶段</span></td></tr>
   <tr><td>sing-box 二进制 SHA256 校验（供应链防御）</td><td><span class="status-done">✅ 本阶段</span></td></tr>
-  <tr><td>数据库异地备份</td><td><span class="status-defer">第4阶段 P0</span></td></tr>
-  <tr><td>测试 / 生产网络隔离</td><td><span class="status-defer">第4阶段 P0</span></td></tr>
-  <tr><td>香港旧 ProxyBackend 下线</td><td><span class="status-defer">第4阶段 P1</span></td></tr>
-  <tr><td>SSH 全量证书化</td><td><span class="status-defer">第4阶段 P1</span></td></tr>
+  <tr><td>USDT 支付（Java 黑盒 → Go 自有服务，systemd 接管）</td><td><span class="status-done">✅ 本阶段</span></td></tr>
+  <tr><td>数据库备份恢复演练（备份本身已开启）</td><td><span class="status-defer">第4阶段 P0</span></td></tr>
+  <tr><td>测试 / 生产网络隔离（NSG 拆分）</td><td><span class="status-defer">第4阶段 P0</span></td></tr>
+  <tr><td>HK 旧 ProxyBackend 仓库 + Azure 实例最终下架</td><td><span class="status-defer">第4阶段 P1</span></td></tr>
+  <tr><td>SSH 全量证书化 + 权限审计</td><td><span class="status-defer">第4阶段 P1</span></td></tr>
 </table>
 
 <h2>八、第4阶段 5/12 启动 — 锁定优先级</h2>
 <div class="card highlight">
 <ol>
-  <li><strong>P0</strong> 数据库异地备份（5/12 周完成）</li>
-  <li><strong>P0</strong> 测试 / 生产网络隔离（5/12 周完成）</li>
-  <li><strong>P0</strong> FFF Flutter 重写启动（5/12-5/26）</li>
-  <li><strong>P0</strong> FFF 后端共享 Go 模块化（5/12-5/19）</li>
-  <li><strong>P1</strong> 专线自动续费（保留原节点绑定）</li>
-  <li><strong>P1</strong> 节点置信度评分（接入本阶段已完成的 BO 一键回收流）</li>
   <li><strong>P0</strong> v3.7.0 最终 QA 通过 → 生产发布</li>
-  <li><strong>P1</strong> 香港旧 ProxyBackend 下线 + SSH 全量证书化 + 权限审计</li>
-  <li><strong>P0</strong> FFF 第一个里程碑：注册 / 登录 / 列出节点 / 连接节点</li>
+  <li><strong>P0</strong> 数据库备份「能真正恢复」演练 + 异地副本流程化（备份本身已开）</li>
+  <li><strong>P0</strong> 测试 / 生产网络隔离（5/12 当周完成）</li>
+  <li><strong>P0</strong> FFF Flutter 重写启动（5/12 – 5/26）</li>
+  <li><strong>P0</strong> FFF 后端共享公用模块化（5/12 – 5/19）</li>
+  <li><strong>P0</strong> FFF 第一里程碑：注册 / 登录 / 列出节点 / 连接节点</li>
+  <li><strong>P1</strong> 专线自动续费（保留原节点绑定）</li>
+  <li><strong>P1</strong> 节点置信度评分（接入本阶段已完成的后台一键回收流）</li>
+  <li><strong>P1</strong> SSH 全量证书化 + 权限审计 + HK 旧 ProxyBackend 仓库 / 实例最终下架</li>
+  <li><strong>P1</strong> 测试中的管理后台页晋升为决策驱动（供应商总览 → 采购建议；异常观察 → 触发暂停；DNS 孤立 → 批量清理）</li>
 </ol>
 </div>
 
