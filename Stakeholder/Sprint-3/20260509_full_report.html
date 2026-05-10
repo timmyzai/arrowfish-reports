@@ -145,9 +145,279 @@
 </ul>
 
 <!-- ============================================ -->
+<!-- NEW 二: 本阶段三大件主要变动（版本级 diff） -->
+<!-- ============================================ -->
+<h2>二、本阶段三大件主要变动（后端 / 移动端 / 基础设施）</h2>
+<p style="color:var(--text-secondary);font-size:0.92rem;">这是本阶段「我们改了什么」的版本级摘要。三大件并行推进；每一件下方都有一组「之前 → 现在」对照，让 SunBoss 一眼看到落差。</p>
+
+<h3>A. 后端 <code>orebackend</code> — 接手基线 v2.2.71-hotfix1 → 当前 main</h3>
+<div class="card success">
+<table>
+  <tr><th>维度</th><th>之前（接手时）</th><th>现在</th></tr>
+  <tr><td>累计提交（自 v2.2.71-hotfix1 起）</td><td>0</td><td><strong>637 个非合并提交</strong>（本阶段窗内 147 个）</td></tr>
+  <tr><td>免费额度信任链</td><td>移动 App 自己计时上报，UUID 抽取 = 无限免费 VPN</td><td><strong>节点驱动：节点按真实流量计时，后端是唯一可信来源</strong></td></tr>
+  <tr><td>IAP 续订代币</td><td>第二个月续订仍用第一个月代币 → 客户已扣款但 VIP 没生效</td><td><strong>续订处理改为先推进代币再发 VIP，已修复</strong></td></tr>
+  <tr><td>免费注册账户隔离</td><td>同设备指纹会匹配到他人账户（账户串号）</td><td><strong>设备绑定强校验 + ASN 段维度滥用上限</strong></td></tr>
+  <tr><td>专线到期处理</td><td>到期不释放节点，专线池虚耗</td><td><strong>每日定时释放 + 释放事件计数纳入库存监控</strong></td></tr>
+  <tr><td>USDT 支付通道</td><td>台湾团队遗留 Java jar（需 CFR 反编译才能改）</td><td><strong>团队自有 Go 服务；ETH + TRX 双链联测验证</strong></td></tr>
+  <tr><td>跨端关联日志</td><td>无 — 客户端崩溃无法关联回后端日志</td><td><strong>X-Request-ID 端到端，Crashlytics 与 Seq 自动串联</strong></td></tr>
+  <tr><td>协程崩溃</td><td>后台 goroutine panic 直接拖垮整个进程</td><td><strong>顶层 defer recover + safego.Go 包装；进程不再被单个任务搞崩</strong></td></tr>
+  <tr><td>API 文档</td><td>80+ 接口注解人工维护，与真实结构漂移率约 30%</td><td><strong>Swagger UI 从代码自动检测响应类型</strong></td></tr>
+  <tr><td>分页与读路径</td><td>列表接口部分无分页；客户端只读全部走主库</td><td><strong>分页全审计 + 客户端只读路径切到读副本</strong></td></tr>
+  <tr><td>语言字段</td><td>数据库存在中英文混用、模板占位符泄漏到 UI</td><td><strong>写入语言守门 + 三语补齐 + 历史脏数据迁移</strong></td></tr>
+</table>
+</div>
+
+<h3>B. 移动端 <code>proxy_android2</code> — 接手基线 v1.7.38 → 测试中 v3.7.0</h3>
+<div class="card success">
+<table>
+  <tr><th>维度</th><th>v1.7.38（接手时）</th><th>v3.7.0（测试中）</th></tr>
+  <tr><td>累计提交</td><td>0</td><td><strong>509 个非合并提交</strong>（本阶段窗内 228 个）</td></tr>
+  <tr><td>APK 体积（生产渠道）</td><td>101 MB</td><td><strong>33 MB（−67%）</strong></td></tr>
+  <tr><td>本机 Kotlin 冷编译</td><td>70 秒</td><td><strong>34 秒（−51%）</strong></td></tr>
+  <tr><td>工具链</td><td>Gradle 8.14 / Kotlin 2.1 / AGP 8.11 / Java 17</td><td><strong>Gradle 9.3 / Kotlin 2.3 (K2) / AGP 9.1 / Java 22</strong></td></tr>
+  <tr><td>VPN 网络切换</td><td>Wi-Fi ↔ 4G/5G 切换会断开</td><td><strong>隧道保持不中断；底层连接自动迁移</strong></td></tr>
+  <tr><td>VPN 闪断（Wi-Fi 抖动）</td><td>旧系统接口误判触发断开</td><td><strong>迁移到 Android 现代接口 + 直接 ping 绑定</strong></td></tr>
+  <tr><td>升级断连</td><td>v2.x → v3.x 用户因本地缓存格式不兼容而连接失败</td><td><strong>历史本地状态自愈</strong></td></tr>
+  <tr><td>免费额度展示</td><td>断开后短时间内显示旧缓存值</td><td><strong>断开 / 同步 / 连接接口直接附带真实余额</strong></td></tr>
+  <tr><td>第三方组件 utilcodex</td><td>5 MB + 80 个传递依赖（仅用 7 个 API）</td><td><strong>移除，改用 Android 原生</strong></td></tr>
+  <tr><td>Compose 框架</td><td>仅在 2 页用过却付出运行时成本</td><td><strong>完全下线，重写为 XML</strong></td></tr>
+  <tr><td>渠道支持</td><td>1-2 个渠道（人工组合）</td><td><strong>4 渠道一次构建（Google / 官网 / 华为，三星已下线）</strong></td></tr>
+  <tr><td>CI 全量发布</td><td>~35 分钟（单渠道，需人工组合）</td><td><strong>00:15:52 无人值守（4 渠道 + 自动签名 + S3 上传）</strong></td></tr>
+  <tr><td>QA 取测试包</td><td>找开发同事要</td><td><strong>双语下载站自助拉取 <code>apk.arrowfishadv.com</code></strong></td></tr>
+</table>
+</div>
+
+<h3>C. 基础设施 — 数据层 + 节点层 + 路由层</h3>
+<div class="card success">
+<table>
+  <tr><th>维度</th><th>之前（接手时）</th><th>现在</th></tr>
+  <tr><td><strong>数据库备份</strong></td><td><strong>完全没有自动备份</strong> — 区级 / 误操作均无恢复路径</td><td><strong>Azure 自动每日备份开启</strong>（恢复演练 + 异地副本第4阶段补齐）</td></tr>
+  <tr><td><strong>读副本接入</strong></td><td>读副本基础设施第2阶段已搭好，<strong>后端从未使用过</strong>，所有读都打主库</td><td><strong>客户端只读路径（产品 / 用户 / 抽奖 / FAQ / 反馈 / 优惠券 / 订单）切到读副本</strong></td></tr>
+  <tr><td><strong>HK 旧 ProxyBackend</strong></td><td>移动端所有授权请求都先打 HK 中继再回 orebackend；长期不稳定</td><td><strong>移动端直连 orebackend；HK 中继退出关键路径</strong>（每次请求少一跳跨区 RTT + 攻击面缩小）</td></tr>
+  <tr><td><strong>节点代理软件</strong></td><td>XRayR（外部维护、配置散落、PM2/systemd/Docker 混杂）</td><td><strong>singbox-agent（自研 870 行 Go、配置中心化、systemd 单一）</strong>；新节点 100%、老节点全擦时替换</td></tr>
+  <tr><td><strong>节点协议</strong></td><td>VMess / VLESS / Trojan / SS</td><td>+ <strong>Hysteria2 / TUIC（中国应对必需）</strong></td></tr>
+  <tr><td>节点引导认证</td><td>静态 API 密钥嵌入 YAML</td><td><strong>一次性引导令牌（Redis 1 h TTL）→ 长期 Bearer，re-heal 时轮换</strong></td></tr>
+  <tr><td>sing-box 二进制来源</td><td>每台节点直接从 GitHub 拉取（中国封锁后失败）</td><td><strong>本地镜像 <code>apk.arrowfishadv.com</code> + SHA256 校验</strong>（中国封锁应对 + 供应链防御）</td></tr>
+  <tr><td>节点 iptables 策略</td><td>三套并存的应用路径（agent / admin / 脚本）</td><td><strong>统一为 <code>apply-iptables.sh</code> + 标准 <code>iptables-policy.json</code> 单一来源</strong></td></tr>
+  <tr><td>NAT 表脏数据</td><td>配置变更后留下旧端口转发，连接不稳</td><td><strong>每次防火墙刷新显式清空 NAT 表</strong></td></tr>
+  <tr><td>节点出站</td><td>部分中国 ISP 走 v6 路径绕过出口策略，触发节点封禁</td><td><strong>强制 IPv4 出站</strong></td></tr>
+  <tr><td>节点 SSH 端口</td><td>各供应商不一，靠运维记忆</td><td><strong>项目标准 35698（全局可覆盖）</strong></td></tr>
+</table>
+</div>
+
+<!-- ============================================ -->
+<!-- NEW 三: 节点与后台自动化 -->
+<!-- ============================================ -->
+<h2>三、节点与后台自动化（本阶段最大的运维杠杆）</h2>
+<p style="color:var(--text-secondary);font-size:0.92rem;">中国封锁加剧期，节点更换频次显著上升。把节点全生命周期从「人工 SSH」改为「后台一键」是本阶段最大的运维杠杆 — 既缩短窗口，也<strong>消除「关键人物风险」</strong>（不再依赖某个老员工记得正确命令）。</p>
+
+<h3>已上线（生产稳定）</h3>
+<div class="card highlight">
+<table>
+  <tr><th>能力</th><th>之前（人工 SSH）</th><th>现在（后台一键）</th></tr>
+  <tr><td><strong>安装新节点</strong></td><td>~20 分钟 / 台<br><span style="font-size:0.78rem;color:var(--text-secondary);">SSH → 装依赖 → 申请证书 → 编辑 YAML → 选进程管理器 → 验证心跳 → 应用 iptables</span></td><td><strong>~30 秒 / 台</strong>，输入域名 + IP + 名称 → 点确认</td></tr>
+  <tr><td><strong>全擦重装回收被封节点</strong></td><td>~30+ 分钟 / 台<br><span style="font-size:0.78rem;color:var(--text-secondary);">手工卸载 XrayR / 残留 → 重装 → 失败靠经验</span></td><td><strong>~25 ~ 60 秒 / 台</strong>，勾「全擦重装」→ 选主机 → 点确认</td></tr>
+  <tr><td>批量升级</td><td>逐台 SSH 串行；150 台数小时</td><td><strong>并行最多 12 台 + 流式进度 + 失败可单独重试</strong></td></tr>
+  <tr><td>失败排查</td><td>翻 SSH 输出找哪一步报错</td><td><strong>分阶段错误码 + 「查看日志」按钮直接看 systemd 输出</strong></td></tr>
+  <tr><td>Reheal（令牌轮换）</td><td>—</td><td>已部署节点的令牌轮换 + 重新自注册（解决 IP 改变 / token 失效）</td></tr>
+  <tr><td>SSH 防火墙策略下发</td><td>—</td><td>单台 / 批量 一键应用</td></tr>
+  <tr><td>专线下单 → 自动绑定库存节点</td><td>人工指派</td><td>主流程已上线（续订 / 重购等边界仍在测试）</td></tr>
+  <tr><td>到期自动释放节点回库存</td><td>—</td><td>每日跑批</td></tr>
+  <tr><td>DNS 自动化（GoDaddy + Cloudflare）</td><td>人工记录</td><td>「安装新节点」时自动建 DNS 记录</td></tr>
+  <tr><td>节点健康状态机</td><td>—</td><td>billing_dead / temp_down / flow_cap 自动下线 + 恢复时自动上线</td></tr>
+</table>
+</div>
+
+<h3>5 个新管理后台页（本汇报附图所示「VM 主机」页 + 配套 4 页）</h3>
+<table>
+  <tr><th>页面</th><th>用途</th><th>状态</th></tr>
+  <tr><td><strong>VM 主机</strong></td><td>所有 VM 状态徽章 / 版本 / 心跳 / 升级时间；<strong>「安装新节点」一键开通 + 「全擦重装」批量擦 XrayR / sing-box / singbox-agent 重装新代理</strong></td><td><span class="status-done">生产</span></td></tr>
+  <tr><td>节点健康设置</td><td>阈值可视化调整，不需改代码</td><td><span class="status-done">生产</span></td></tr>
+  <tr><td>DNS 孤立记录清理</td><td>列出 GoDaddy / Cloudflare 上没有对应活节点的 DNS 记录</td><td><span class="status-progress">测试中</span> · 列表可见，<strong>批量删除暂未开放</strong></td></tr>
+  <tr><td>供应商总览</td><td>按供应商汇总节点数 / 成本 / 健康状态</td><td><span class="status-progress">测试中</span> · 已可见，<strong>暂未驱动采购决策</strong></td></tr>
+  <tr><td>异常观察（同 UUID 多 IP）</td><td>合规设计：源 IP 在节点端单向哈希，仅计数上报</td><td><span class="status-progress">测试中</span> · 仅观察，<strong>不自动处置账户</strong></td></tr>
+</table>
+
+<h3>5/10 实测（含跨 3 大洲 7 节点并行实证）</h3>
+<div class="card success">
+<p>5/10 把测试环境节点池<strong>全部 7 台</strong>（中国 / 香港 / 越南 / 菲律宾 / 丹麦 / 加拿大 / 法国，规格 0.4 GB ~ 1.8 GB RAM）<strong>用单次后台 API 调用</strong>同时触发全擦重装：</p>
+<ul>
+  <li><strong>0 / 7 失败 · 整批端到端 44 秒</strong>（最快 15 秒 — Vancouver 175 ms RTT 最远反而最快）</li>
+  <li><strong>地理距离不是瓶颈</strong>；中国大陆 ACME 走 GFW 是唯一明显拖累（44 秒）</li>
+  <li><strong>0.4 GB 极小内存的法国节点也跑通</strong>，证明流程对内存要求不高</li>
+</ul>
+<p style="margin:0.4rem 0;">→ <strong><a href="20260510_node_format_benchmark.html">查看完整实测报告（7 国节点规格 / 地理 RTT 分析 / 学习曲线对比 / 可复现步骤）</a></strong></p>
+</div>
+
+<!-- ============================================ -->
+<!-- NEW 四: 大重构 + 堆灭的技术债 -->
+<!-- ============================================ -->
+<h2>四、大重构 + 堆灭的技术债</h2>
+<p style="color:var(--text-secondary);font-size:0.92rem;">本阶段把<strong>接手时积累的多处「能用但不健康」的架构</strong>整体翻新。每一项重构都有<u>明确堆灭的具体债务</u>，不是为重构而重构。</p>
+
+<div class="card highlight">
+<table>
+  <tr><th>重构项</th><th>之前的债务</th><th>现在的状态</th></tr>
+  <tr>
+    <td><strong>免费配额信任链反转</strong></td>
+    <td>客户端记账 → 后端听 App 的话 → UUID 一旦泄露就是无限免费 VPN</td>
+    <td>节点按真实流量记账 → 后端为唯一可信来源 → 移动端只显示，不决定</td>
+  </tr>
+  <tr>
+    <td><strong>节点配置单源化</strong></td>
+    <td>配置散落两处：后端 nodes 表 + 节点本地 <code>/project/xrayr/config.yml</code> 手工维护，运维 SSH 改 YAML 是日常 → 漂移不可避</td>
+    <td>后端是唯一可信来源，节点端零手工配置；新装节点全部从后端拉取</td>
+  </tr>
+  <tr>
+    <td><strong>节点进程管理统一化</strong></td>
+    <td>~150 台节点上有 <strong>7 种不同的进程管理装法</strong>（PM2 / systemd / Docker 混用），不同时间不同人手装的差异</td>
+    <td>新节点全部 systemd 单一管控；老节点全擦时替换</td>
+  </tr>
+  <tr>
+    <td><strong>节点身份重构</strong></td>
+    <td>节点靠数字 ID 通信，运维要记每台节点的内部编号</td>
+    <td>节点自注册（main_ip 标识），<code>/agent/register-or-heal</code> 自动建立身份；配合后台「安装新节点」</td>
+  </tr>
+  <tr>
+    <td><strong>节点防火墙策略统一</strong></td>
+    <td>三套应用路径并存（agent 推 / admin 推 / 脚本本地跑），三处分别有自己的规则版本</td>
+    <td>统一到 <code>apply-iptables.sh</code> + 标准 <code>iptables-policy.json</code> 单一来源</td>
+  </tr>
+  <tr>
+    <td><strong>USDT 支付 Java → Go 重写</strong></td>
+    <td>台湾团队遗留 jar，需 CFR 反编译才能阅读 / 改动；TRX 链路偶发异常无法根因诊断；PM2 兜底</td>
+    <td>团队自有 Go 服务，CI 构建发布；ETH + TRX 双链与台湾团队联测验证；systemd 管控</td>
+  </tr>
+  <tr>
+    <td><strong>后台 SPA 流水线独立化</strong></td>
+    <td>管理后台前端编译错误（如 i18n 重复键）会拖垮整个后端流水线 → 阻塞所有后端发布</td>
+    <td>已拆分；admin 失败不再阻塞后端 deploy</td>
+  </tr>
+  <tr>
+    <td><strong>后端 CI 重构（4-6× 提速）</strong></td>
+    <td>6 阶段流水线，阶段间重做工作；2:30 ~ 3:00 / 次</td>
+    <td>4 阶段单一职责；MR 路径化构建；同 SHA 复用产物 — <strong>30 ~ 50 秒 / 次</strong></td>
+  </tr>
+  <tr>
+    <td><strong>协程崩溃保护</strong></td>
+    <td>后端任意后台 goroutine panic 可让整个进程倒下</td>
+    <td>顶层 <code>defer recover</code> + <code>safego.Go</code> 包装所有后台任务；崩溃日志先写入再优雅退出</td>
+  </tr>
+  <tr>
+    <td><strong>跨端关联日志</strong></td>
+    <td>客户端崩溃没法关联回后端那次请求；80+ 接口注解人工维护漂移</td>
+    <td>X-Request-ID 端到端，Crashlytics 自动嵌入；Swagger UI 从代码自动检测响应类型</td>
+  </tr>
+  <tr>
+    <td><strong>移动端架构清理</strong></td>
+    <td>utilcodex 工具库（5 MB + 80 传递依赖，仅用 7 个 API）；Compose 仅 2 页却带运行时成本；三星渠道脚手架（从未上架）；3 个 Gradle 模块</td>
+    <td>全部移除或合并；HEAD 比 v1.7.38 净减约 1 万行代码（+19,274 / −30,236 / 1,123 文件）</td>
+  </tr>
+  <tr>
+    <td><strong>移动端工具链跃升</strong></td>
+    <td>Gradle 8.14 / Kotlin 2.1 / AGP 8.11 / Java 17 / 旧 <code>allNetworks</code> 弃用 API（释放构建失败）</td>
+    <td>Gradle 9.3 / Kotlin 2.3 (K2) / AGP 9.1 / Java 22 / 现代 <code>activeNetwork</code> + capabilities — 本机冷编译 −51%</td>
+  </tr>
+  <tr>
+    <td><strong>多语言 / 翻译清理</strong></td>
+    <td>数据库存在中英文混用、临时占位符（<code>[EN]</code> / <code>{{plan_name}}</code>）残留行；前端会偶发显示原始模板</td>
+    <td>后端写入语言守门 + 三语补齐 + 历史脏数据迁移清理</td>
+  </tr>
+  <tr>
+    <td><strong>Sing-box schema 现代化</strong></td>
+    <td>使用已弃用的 <code>domain_strategy</code> 字段；释放构建会断</td>
+    <td>迁移到 <code>domain_resolver</code>（sing-box ≥1.12 schema）</td>
+  </tr>
+</table>
+</div>
+
+<!-- ============================================ -->
+<!-- NEW 五: 堆灭的风险与滥用 -->
+<!-- ============================================ -->
+<h2>五、堆灭的风险与滥用（接手时存在 → 本阶段堵住）</h2>
+<p style="color:var(--text-secondary);font-size:0.92rem;">把上面重构带来的<u>具体风险闭环</u>逐条列出。每条都是真实存在过的攻击面或合规缺口，<strong>不是想象的「未来风险」</strong>。</p>
+
+<div class="card critical">
+<table>
+  <tr><th>风险 / 漏洞</th><th>影响</th><th>本阶段处理</th></tr>
+  <tr>
+    <td><strong>UUID 抽取 = 无限免费 VPN</strong></td>
+    <td>抽取节点 UUID 写入第三方客户端 → 绕过付费转化路径，<strong>结构性蛀蚀付费比率（约 5%）的护城河</strong></td>
+    <td>免费配额改为节点驱动 — 节点按真实流量记账，账号撤销后下次拉用户列表立即踢出</td>
+  </tr>
+  <tr>
+    <td><strong>挂时长绕过抽奖在线时长</strong></td>
+    <td>客户端可声称「在线」而无实际流量，无限累积抽奖资格</td>
+    <td>抽奖在线时长改由节点统计真实通信时长 + 并发结算竞争修复（Lua 原子）</td>
+  </tr>
+  <tr>
+    <td><strong>免费注册跨账号串号</strong></td>
+    <td>同设备指纹会匹配到他人账户 → 账户隔离失效 + 免费配额误判</td>
+    <td>设备绑定强校验 + ASN 段维度滥用上限</td>
+  </tr>
+  <tr>
+    <td><strong>IAP 续订代币不推进</strong></td>
+    <td>第二个月续订仍用第一个月代币 → <strong>客户已扣款但 VIP 没生效</strong>（直接收入路径漏出）</td>
+    <td>续订处理改为先推进代币再发 VIP；客服一对一退款的场景关闭</td>
+  </tr>
+  <tr>
+    <td><strong>专线到期不释放节点</strong></td>
+    <td>到期后绑定节点不归还库存，<strong>专线池长期虚耗</strong>，影响新订单可分配的节点供给</td>
+    <td>每日定时释放过期专线占用；释放事件计数纳入库存监控</td>
+  </tr>
+  <tr>
+    <td><strong>iptables NAT 表脏数据</strong></td>
+    <td>配置变更后留下旧端口转发 → <strong>客户端连接不稳定的隐性故障</strong>，难复现难定位</td>
+    <td>每次防火墙刷新显式清空 NAT 表（singbox-agent 自动）</td>
+  </tr>
+  <tr>
+    <td><strong>数据库无任何自动备份</strong></td>
+    <td>区级故障 / 误操作均无恢复路径 — <strong>单点丢库风险</strong></td>
+    <td>Azure 自动每日备份开启；恢复演练 + 异地副本第4阶段补齐</td>
+  </tr>
+  <tr>
+    <td><strong>读副本「有但没用」</strong></td>
+    <td>主从读副本基础设施第2阶段就已存在，<strong>后端从未真正使用</strong>，所有读都打主库 — 主库压力 + 写超时无法收紧</td>
+    <td>客户端只读路径（产品 / 用户 / 抽奖 / FAQ / 反馈 / 优惠券 / 订单）切到读副本</td>
+  </tr>
+  <tr>
+    <td><strong>HK 旧 ProxyBackend 长期不稳定</strong></td>
+    <td>移动端所有授权请求都先打 HK 中继再回 orebackend → <strong>跨区延迟 + 资源浪费 + 攻击面残留</strong></td>
+    <td>移动端切为直连 orebackend；HK 中继退出关键路径，仓库 + Azure 实例进入观察期</td>
+  </tr>
+  <tr>
+    <td><strong>USDT 支付黑盒</strong></td>
+    <td>关键收入路径是 jar 黑盒（需反编译才能改），TRX 链路偶发异常无根因可查</td>
+    <td>用 Go 重写并源码进 GitLab，CI 构建发布；ETH + TRX 双链联测验证</td>
+  </tr>
+  <tr>
+    <td><strong>节点 7 种装法漂移</strong></td>
+    <td>~150 台节点累积了 PM2 / systemd / Docker 混用的 7 种进程管理装法 → <strong>「这台节点是张工装的所以特殊」式的运维负债</strong></td>
+    <td>新节点 100% systemd 单一；老节点全擦时替换</td>
+  </tr>
+  <tr>
+    <td><strong>swagger 文档过期</strong></td>
+    <td>浏览器缓存导致部署后看到旧 spec；80+ 接口注解漂移率 30% — <strong>移动端开发依赖错的契约</strong></td>
+    <td>禁用浏览器缓存 + Swagger UI 从代码自动检测响应结构</td>
+  </tr>
+  <tr>
+    <td><strong>节点 sing-box 二进制依赖 GitHub</strong></td>
+    <td>中国封锁后，节点无法拉取 sing-box 二进制 → <strong>新节点开通失败 + 现有节点升级断流</strong></td>
+    <td>本地镜像 <code>apk.arrowfishadv.com</code> + SHA256 校验（既应对封锁，也防供应链篡改）</td>
+  </tr>
+  <tr>
+    <td><strong>合规：滥用观察检测器原始 IP 落地</strong></td>
+    <td>「同 UUID 多 IP」滥用观察的原始 IP 一旦落地 = 违反 VPN 无日志承诺</td>
+    <td>设计为「源 IP 在节点端单向哈希、仅计数上报后端」 — 后端不持有任何原始 IP</td>
+  </tr>
+</table>
+</div>
+
+<!-- ============================================ -->
 <!-- 本阶段关键成果 (scorecard) -->
 <!-- ============================================ -->
-<h2>二、本阶段关键成果（Scorecard）</h2>
+<h2>六、本阶段关键成果（Scorecard）</h2>
 <div class="card success">
 <table>
   <tr><th>类别</th><th>成果</th><th>状态</th></tr>
@@ -230,235 +500,35 @@
 </div>
 
 <!-- ============================================ -->
-<!-- 改善与商业价值 -->
+<!-- USDT 支付重写 -->
 <!-- ============================================ -->
-<h2>三、改善与商业价值（技术指标 → 业务影响）</h2>
-
-<h3>研发与发布效率</h3>
+<h2>七、USDT 支付通道：从台湾团队遗留 Java 黑盒 → 团队自有 Go 服务</h2>
 <div class="card highlight">
-<table>
-  <tr><th>项目</th><th>第3阶段前</th><th>第3阶段后</th><th>商业价值</th></tr>
-  <tr>
-    <td>后端发布流水线</td>
-    <td>2:30–3:00</td>
-    <td><strong>0:30–0:50</strong>（−4 至 −6 倍）</td>
-    <td>开发反馈周期由分钟级降至秒级；紧急修复（如 IAP 续订）可在 2 分钟内发布到测试环境，<strong>降低支付故障窗口的客户流失</strong></td>
-  </tr>
-  <tr>
-    <td>移动端发布</td>
-    <td>逐渠道单次构建，需要人工组合 4 套 APK</td>
-    <td><strong>~15:52 一次构建 4 渠道</strong>，无人值守上传至下载站</td>
-    <td>QA 与内部测试人员自助拉测；<strong>节省每次发布 1-2 个工时的人工组合时间</strong>；版本上架等待大幅缩短</td>
-  </tr>
-  <tr>
-    <td>新节点开通</td>
-    <td>~20 分钟 SSH 手工，操作风险高</td>
-    <td><strong>~30 秒后台点击</strong>，零 SSH 介入</td>
-    <td>大批量新增节点时<strong>每台节省 ~19 分钟</strong>；操作员失误造成的故障窗口被消除；中国封锁期间的快速换网能力数量级提升</td>
-  </tr>
-  <tr>
-    <td>回收被封节点</td>
-    <td>需要手工卸载残留服务再重装</td>
-    <td><strong>一键全擦 ~2 分钟</strong>，自动清理旧版残留</td>
-    <td>节点采购成本被节省（<strong>原本需要弃用的 VM 现在可以重用</strong>）</td>
-  </tr>
-  <tr>
-    <td>批量节点升级</td>
-    <td>对每台 SSH 串行，全部 ~150 节点需数小时</td>
-    <td>并行最多 12 台，每台独立进度条 + 失败可单独重试</td>
-    <td>计划内升级窗口缩短一个数量级；<strong>不再需要安排夜间专门窗口</strong></td>
-  </tr>
-  <tr>
-    <td>USDT 支付（充值钱包通道）</td>
-    <td>台湾团队遗留 Java jar，需 CFR 反编译才能阅读 / 改动；TRX 链历史路径不稳；PM2 兜底</td>
-    <td><strong>团队自有 Go 服务</strong>，源码可读 / 可审 / 可 CI 构建；ETH + TRX 双链与台湾团队联测验证；systemd 管控</td>
-    <td>关闭「关键路径黑盒」风险；TRX 充值不再因 jar 内部路径异常而失败；后续 USDT 通道扩展不再需要外协</td>
-  </tr>
-  <tr>
-    <td>HK 旧 ProxyBackend</td>
-    <td>移动端所有授权请求都先打 HK 中继再回 orebackend</td>
-    <td><strong>移动端直连 orebackend</strong>；HK 中继退出关键路径</td>
-    <td>每次登录 / 同步 / 连接 / 充值都少一跳跨区 RTT；攻击面同时缩小一层；旧仓库 + Azure 镇守实例进入下线观察期</td>
-  </tr>
-  <tr>
-    <td>数据库备份</td>
-    <td><strong>完全没有备份</strong>（接手时遗留）</td>
-    <td>Azure 自动每日备份开启</td>
-    <td>从「区级故障无恢复手段」升级到「日级 RPO」；恢复演练 + 异地副本第4阶段补齐</td>
-  </tr>
-  <tr>
-    <td>读副本（主从读写分离）</td>
-    <td>读副本基础设施第2阶段已搭好，<strong>后端实际从未使用</strong>，所有查询都打主库</td>
-    <td>客户端只读路径（产品 / 用户 / 抽奖 / FAQ / 反馈 / 优惠券 / 订单）切到读副本</td>
-    <td>主库压力下降；客户端冷启动 + 重连等热点查询延迟下降；写超时可以收紧而不影响客户端读 SLA</td>
-  </tr>
-</table>
-</div>
-
-<h3>用户体验</h3>
-<div class="card highlight">
-<table>
-  <tr><th>项目</th><th>变化</th><th>用户感知</th></tr>
-  <tr>
-    <td>APK 体积</td>
-    <td>101 MB → 33 MB（−67%）</td>
-    <td>下载更快、占用存储更少；流量套餐受限的用户感知最明显（中国农村 + 欧盟移动数据用户）</td>
-  </tr>
-  <tr>
-    <td>VPN 网络切换稳定性</td>
-    <td>Wi-Fi ↔ 4G/5G 切换会断开 → <strong>隧道保持不中断</strong></td>
-    <td>用户不再需要在每次出门 / 进电梯后手动重连</td>
-  </tr>
-  <tr>
-    <td>VPN 闪断（Wi-Fi 抖动）</td>
-    <td>Android 旧接口误判触发断开 → 现代接口 + 直接 ping 绑定</td>
-    <td>「连着连着断了」类客诉减少；产品口碑直接受益</td>
-  </tr>
-  <tr>
-    <td>升级安装包后的连接</td>
-    <td>v2.x 升级 v3.x 用户曾会连接失败 → 自愈</td>
-    <td>升级流失率降低；老用户保留</td>
-  </tr>
-  <tr>
-    <td>免费额度断开后显示</td>
-    <td>显示旧缓存值，造成误解 → 实时真实余额</td>
-    <td>客诉减少；额度透明度提升</td>
-  </tr>
-  <tr>
-    <td>选择线路时</td>
-    <td>双重重连抖动 → 单次切换</td>
-    <td>切换体验流畅；连接成功率上升</td>
-  </tr>
-</table>
-</div>
-
-<h3>业务安全核心改造 — 免费额度由「客户端记账」改为「节点记账」</h3>
-<div class="card critical">
-<p><strong>这是本阶段对业务收入与防滥用最关键的架构升级。</strong>接手项目时，免费用户的剩余时长由<strong>移动 App 自己计时</strong>，App 定期向后端「汇报」已用时长。这意味着「我们相信用户的设备说了什么」 — 任何能修改 App 或抓包伪造汇报的人，都能拿到无限免费 VPN。</p>
-<p>本阶段把这条信任链整体反转：<strong>由 VPN 节点（服务器侧）按真实流量计时</strong>，节点每 30 秒主动上报到后端，后端以节点上报为唯一记账依据。移动端只「显示」剩余时长，不再「决定」剩余时长。</p>
-<table>
-  <tr><th>维度</th><th>改造前（客户端记账）</th><th>改造后（节点记账）</th></tr>
-  <tr><td>谁说了算</td><td>移动 App 自己计时 + 心跳上报</td><td>VPN 节点按真实流量计时，后端是唯一记账依据</td></tr>
-  <tr><td>UUID 被抽取后</td><td>=「无限免费 VPN」（关键漏洞）</td><td>后端可即时撤销账号，节点下次拉取用户列表时立即踢出</td></tr>
-  <tr><td>挂着 VPN 不用 / 暂停</td><td>计时仍在累积（被「挂时长」绕过）</td><td>不产生流量 = 不计时</td></tr>
-  <tr><td>App 显示与真实余额</td><td>会出现偏差（缓存与服务器不一致）</td><td>断开时后端直接返回真实余额 + 同步 / 连接接口前置校验</td></tr>
-  <tr><td>抽奖在线时长</td><td>客户端上报，可被「挂着不用」绕过</td><td>由节点统计真实通信时长</td></tr>
-  <tr><td>滥用观察的数据基础</td><td>客户端汇报的数据，可被伪造</td><td>节点真实流量 + 同 UUID 多 IP 异常计数（合规：节点端单向哈希源 IP，后端不持有原始 IP）</td></tr>
-</table>
-<p><strong>对业务的直接保护</strong>：</p>
+<p>USDT 是钱包充值通道之一（ETH + TRX 双链）。接手时该服务是台湾团队留下的 <strong>Java 编译产物（jar）+ PHP 后台</strong>：源码不在仓库里，需要用 CFR 反编译器把 <code>usdt-pay-api.jar</code> 拆成 .class 再反编译成 Java，才能阅读和打补丁；运行靠 PM2 兜底。这是一条<strong>关键收入路径上的「黑盒」</strong>：</p>
 <ul>
-  <li><strong>关闭「Trojan UUID 提取 = 无限免费 VPN」漏洞</strong> — 抽取 UUID 写入第三方客户端的玩法不再成立，因为节点会按账号状态实时校验</li>
-  <li><strong>消除「挂时长」绕过</strong> — 不真实使用 VPN 不再积累时长，免费配额由消耗事实决定</li>
-  <li><strong>免费额度展示真实可信</strong> — 用户看到的就是后端记的；客诉「明明还有时长却断了」类问题归零</li>
-  <li><strong>付费转化路径不被无限免费蛀蚀</strong> — 这是<strong>付费转化率（约 5%）的护城河</strong>；漏洞放任的话付费理由会被持续侵蚀</li>
-  <li><strong>留下了节点级真实数据</strong> — 后续做付费转化优化、节点购买决策、采购建议都建立在真实数据上，不是 App 上报的伪数据</li>
+  <li>任何 bug 修复都要先完整反编译 → 找改动点 → 改完源码 → 重新编 jar → 部署，链路长且容易出错</li>
+  <li>历史观察 TRX 链路在某些路径下不稳，但因为是黑盒，只能凭日志推断而非根因诊断</li>
+  <li>没有 CI 构建产物可追溯；没有源码评审；没有标准 systemd 管控（靠 PM2）</li>
 </ul>
-<p><strong>同一架构带来的衍生收益</strong>：</p>
-<ul>
-  <li>移动端心跳轮询代码全部移除（少一类客户端 bug 来源）</li>
-  <li>节点身份重构：原本依赖数字 ID 通信，改为节点自注册（main_ip）— 配合后台一键开通流程</li>
-  <li>智能节点健康状态机就此运转：「计费失联 vs 临时不可达」可被区分，避免误踢正常节点</li>
-</ul>
-</div>
-
-<h3>收入保护</h3>
-<div class="card critical">
-<strong>影响金额估算（保守）</strong>：本阶段修复的两个 P0 收入路径合计影响所有月续订用户的第二个月生效与免费注册路径。具体金额数据需要 1-2 周财务侧对账确认；初步评估：续订代币推进修复直接关闭了「客户已扣款但 VIP 没生效」的客诉来源 — 在以前的回执路径下，<strong>这类客诉每月以个位数比例出现并需要客服一对一退款</strong>。<strong>免费额度节点记账改造（上一节）的金额影响更难量化</strong>，但属于<strong>结构性堵漏</strong>，未改造前的滥用规模会随用户量线性增长。
-</div>
-
-<h3>合规姿态</h3>
-<ul>
-  <li><strong>滥用观察检测器以无日志方式实现</strong> — 节点端单向哈希源 IP，仅计数上报后端；后端不持有任何原始 IP — 是「无日志合规」与「滥用治理」共存的范式样板</li>
-  <li><strong>跨端可追溯日志（关联 ID）</strong>不涉及用户访问内容、目的地、流量元数据 — 仅用于「错误诊断」</li>
-  <li><strong>14 天数据保留策略</strong>纳入两个新增表（节点用量 / 异常计数）</li>
-</ul>
-
-<h3>构建速度提升（开发效率）</h3>
-<div class="card success">
+<p>本阶段把整个支付服务<strong>用 Go 重写，源码进 GitLab，CI 构建发布</strong>，并与<strong>台湾团队联合做了端到端联测</strong>，确认 <strong>ETH + TRX 双链</strong>都能正确收单 / 通知 / 入账。配套修复了 QR 码图片在 nginx 静态规则下被拦截的若干显示问题，使后台地址管理页能正常预览和服务二维码。</p>
 <table>
-  <tr><th>构建场景</th><th>接手时</th><th>现在</th><th>实测设备 / 配置</th></tr>
-  <tr><td>本机 Kotlin 冷编译</td><td>70 秒</td><td><strong>34 秒（−51%）</strong></td><td>Apple M4 Pro · 24 GB 内存（实测设备）</td></tr>
-  <tr><td>本机 Kotlin 热编译</td><td>1 秒</td><td>0.4 秒</td><td>同上</td></tr>
-  <tr><td>CI 流水线全量发布</td><td>~35 分钟（单渠道，需人工组合）</td><td><strong>15:52 无人值守</strong></td><td>8 GB Linux CI Runner — 4 渠道一次构建 + 自动签名 + 自动上传</td></tr>
+  <tr><th>维度</th><th>改造前（Java jar）</th><th>改造后（Go service）</th></tr>
+  <tr><td>源码可读性</td><td>需 CFR 反编译，注释丢失</td><td>团队自有 Go 源码，可 review</td></tr>
+  <tr><td>构建发布</td><td>本地编 jar 上传服务器</td><td>GitLab CI 标准流水线</td></tr>
+  <tr><td>支付链路</td><td>ETH 可用，TRX 偶发异常</td><td>ETH + TRX 双链联测验证打通</td></tr>
+  <tr><td>进程管理</td><td>PM2</td><td>systemd（与节点策略一致）</td></tr>
+  <tr><td>QR 码 / 后台展示</td><td>偶发被 nginx 静态规则拦截</td><td>服务规则修正后稳定</td></tr>
+  <tr><td>新增 USDT 通道</td><td>需要外协，台湾团队改 jar</td><td>团队内部直接扩展</td></tr>
 </table>
-<p>本机提速来自 Gradle 9 + Kotlin 2.3 (K2) + 模块合并 + 配置缓存默认启用；CI 提速来自流水线重构（构建/发布解耦、按 SHA 复用产物、增量上传）。<strong>同一台 CI Runner 上，4 渠道完整发布所需时间比接手时单渠道还少约 55%。</strong></p>
+<p><strong>对业务的意义</strong>：USDT 是一个收入通道，「黑盒」状态下哪怕只是改一个文案、加一个回调路径都需要外协协作；现在可以由团队<strong>内部独立维护与扩展</strong>。这也是本阶段「让接手项目真正归属本团队」叙事中的关键一块。</p>
 </div>
 
-<h3>已解决的历史问题（接手清理）</h3>
-<div class="card highlight">
-<p>除了上文逐项点出的成果，本阶段还顺手清理了一批接手时积累的「能用但磨人」的历史问题：</p>
-<table>
-  <tr><th>类别</th><th>问题</th><th>处置</th></tr>
-  <tr><td>翻译混乱</td><td>数据库存在中英文混用、临时占位符（如 <code>[EN]</code> / <code>(簡)</code>）残留行；前端偶发显示原始模板（如 <code>{{plan_name}}</code>）</td><td>后端写入语言守门 + 三语补齐 + 历史脏数据迁移清理；下载页严格按语言切换</td></tr>
-  <tr><td>死代码 / 未上线特性</td><td>抽奖在线时长老方案；三星渠道脚手架；移动端心跳轮询；Compose 仅用于 2 页却付出运行时成本；utilcodex 工具库 80 个传递依赖却仅用 7 个 API</td><td>全部删除或下线；HEAD 净行数比 v1.7.38 少约 1 万行</td></tr>
-  <tr><td>页面加载抖动</td><td>启动屏在 3 秒以上场景下「冻屏」；倒计时多个数据源造成视觉抖动；登录失效弹出错误对话框打断用户</td><td>启动屏 + 进度条决策树重做；倒计时单源化；登录失效改为静默重新认证</td></tr>
-  <tr><td>免费额度展示偏差</td><td>断开 VPN 后短时间内显示旧缓存额度</td><td>断开响应直接附带真实余额；同步 / 连接接口前置校验</td></tr>
-  <tr><td>选择线路抖动</td><td>切换线路时连接重连两次（事件 + 路由）</td><td>合并为单次切换</td></tr>
-  <tr><td>升级版本断连</td><td>v2.x → v3.x 用户因本地缓存格式不兼容导致连接失败</td><td>历史本地状态自愈逻辑</td></tr>
-  <tr><td>设备 ID 不一致</td><td>华为渠道走独立分支生成设备 ID，跨渠道数据对账困难</td><td>全渠道统一一套</td></tr>
-  <tr><td>支付弹窗不一致</td><td>各种支付路径成功提示样式不一，存在重复弹窗</td><td>统一样式与时序</td></tr>
-  <tr><td>错登他人账号提示</td><td>密码错误等情况下显示通用错误，用户不知发生了什么</td><td>显示具体引导文案</td></tr>
-  <tr><td>本地设备数已满</td><td>会误导用户进入绑定流程，但其实本地达到限制</td><td>显示具体提示</td></tr>
-  <tr><td>密度判断错误</td><td>页面密度按可折叠状态判断，对真折叠机不可靠</td><td>改用屏幕宽度</td></tr>
-  <tr><td>swagger 文档过期</td><td>浏览器缓存导致部署后看到旧版文档；80+ 接口的响应注解与真实结构飘移率约 30%</td><td>禁用浏览器缓存 + 自动从代码生成响应结构</td></tr>
-  <tr><td>管理后台动作失效</td><td>Quasar 升级后部分工具栏按钮静默失效</td><td>逐项修复</td></tr>
-  <tr><td>启动屏后弹窗打架</td><td>启动屏关闭后两类弹窗顺序冲突，可能盖住用户首页</td><td>统一调度</td></tr>
-  <tr><td>账号切换抽奖串号</td><td>抽奖缓存未在登出时清空，下一个账号会读到上一个账号的数据</td><td>登出清空抽奖缓存</td></tr>
-  <tr><td>无密注册资料丢失</td><td>无密注册转换后再补充资料，下次启动会被静默回退</td><td>转换流程显式持久化</td></tr>
-  <tr><td>抽奖结算并发竞争</td><td>同一秒内两次请求都过校验导致重复领取</td><td>合并为原子操作（Lua 脚本）</td></tr>
-  <tr><td>Authorization 注解冗余</td><td>逐接口标注重复</td><td>升级到接口规范级别声明</td></tr>
-  <tr><td>主页数据库读阻塞</td><td>updateOutbounds 在主线程调用 Room 导致冷启动崩溃</td><td>调度到 IO 线程</td></tr>
-  <tr><td>历史 token 残留</td><td>后端 token 已被吊销但客户端仍持有，启动后接口 401</td><td>启动时孤儿 JWT 自动清理</td></tr>
-</table>
-</div>
 
-<!-- ============================================ -->
-<!-- 关键时间节点 -->
-<!-- ============================================ -->
-<h2>四、关键时间节点（本阶段）</h2>
-<div class="timeline">
-  <div class="timeline-item">
-    <div class="timeline-date">4/27 — 第3阶段启动</div>
-    <div class="timeline-text">i18n 清理；Android 构建优化基线；多仓代码审查启动</div>
-  </div>
-  <div class="timeline-item">
-    <div class="timeline-date">4/28</div>
-    <div class="timeline-text">Tier 1 构建清理 + utilcodex 移除 + 收藏夹改为后端权威</div>
-  </div>
-  <div class="timeline-item">
-    <div class="timeline-date">5/2</div>
-    <div class="timeline-text">免费用户额度由节点驱动（关闭 UUID 提取无限免费 VPN 漏洞）+ 节点身份重构 + 智能节点健康状态机</div>
-  </div>
-  <div class="timeline-item">
-    <div class="timeline-date">5/3 — 第3阶段第1周收尾</div>
-    <div class="timeline-text">反滥用防护（iptables connlimit + 异常观察 + 代理回路间隔可调）+ 关联 ID 日志基础设施 + 数据保留 + 迁移检查 CI</div>
-  </div>
-  <div class="timeline-item">
-    <div class="timeline-date">5/4 – 5/5</div>
-    <div class="timeline-text">后台一键开通节点 + 流式安装日志 + 全擦切换 + 管理后台流水线独立化 + 线路分级配置</div>
-  </div>
-  <div class="timeline-item">
-    <div class="timeline-date">5/6</div>
-    <div class="timeline-text">免费注册跨账号串号修复 + ASN 段滥用上限；专线到期自动释放节点</div>
-  </div>
-  <div class="timeline-item">
-    <div class="timeline-date">5/7</div>
-    <div class="timeline-text">Swagger 自动文档；抽奖在线时长由节点统计；并发结算竞争修复</div>
-  </div>
-  <div class="timeline-item">
-    <div class="timeline-date">5/8</div>
-    <div class="timeline-text">VPN 隧道持久重连；自动重连配置；节点 IPv4 出站强制；NAT 表自动清理</div>
-  </div>
-  <div class="timeline-item">
-    <div class="timeline-date">5/9 — 第3阶段提前收官 · v3.7.0 进入最终 QA</div>
-    <div class="timeline-text">Android 系统接口现代化；自动重连默认开启；闲置自动断开按政策回滚；v3.7.0 稳定测试版定型并启动最终 QA，通过后发布生产</div>
-  </div>
-</div>
 
 <!-- ============================================ -->
 <!-- 上线计划 + 后端改动特殊挑战 -->
 <!-- ============================================ -->
-<h2>五、上线计划与后端改动特殊挑战</h2>
+<h2>八、上线计划与后端改动特殊挑战</h2>
 
 <h3>上线节奏</h3>
 <table>
@@ -533,30 +603,51 @@
 </div>
 
 <!-- ============================================ -->
-<!-- FFF 并行进展 -->
+<!-- 持续交付与 AI 协作 -->
 <!-- ============================================ -->
-<h2>六、FFF 并行进展（Lex 实时口径）</h2>
-<div class="card">
-<p><strong>第3阶段 FFF Flutter 重写按计划顺延至第4阶段</strong> — 为巩固 v3.7.0 稳定基线 + 节点自动化基础设施，原本可能与 FFF 平行启动的 Flutter 工作在第3阶段集中让出。<strong>这次延后是有意的</strong>：第3阶段已完成的关联日志、协程崩溃保护、Swagger 自动文档、多语言字段等基础平台设施，都将作为 FFF 后端的初始能力直接继承 — FFF 启动时不必重复清理一遍，节奏反而更紧。</p>
-<p><strong>FFF 启动外部依赖</strong>（Roy 跟进）：</p>
+<h2>九、持续交付与 AI 协作（多线工程并行的工作流）</h2>
+<div class="card highlight">
+<p>本阶段除了交付的具体特性，还有一项「过程层」的产出：让多个工程方向能并行推进而互不阻塞，并且把 AI 编码助手（Claude Code）以可审计的方式嵌入到日常流程里。这是接下来 FFF 与 Arrowfish 同步推进所必需的工作模型。</p>
+
+<h3>统一的 Git 流（写在仓库规则里）</h3>
 <ul>
-  <li><strong>欧盟电话号码注册与 SMS</strong> — Roy 商务侧推进</li>
-  <li><strong>新支付通道（FFF 公司主体）</strong> — Roy 商务侧推进</li>
+  <li><strong>分支命名规范</strong>：<code>fea/</code>（功能）、<code>enh/</code>（增强）、<code>fix/</code>（缺陷）、<code>hot/</code>（热修）、<code>ref/</code>（重构） + 短横线连字符的简短描述</li>
+  <li><strong>MR 标题即 Release Note</strong>：用 <code>Add</code> / <code>Fix</code> / <code>Update</code> / <code>Remove</code> / <code>Improve</code> 做前缀，72 字符内；标签 <code>feature</code> / <code>enhancement</code> 进入「新功能」段，<code>bug</code> / <code>fix</code> 进入「修复」段</li>
+  <li><strong>分支从 <code>main</code> 拉，合并前 rebase，合并后本地 + 远端清理</strong>；一个 MR 只解决一个关注点</li>
+  <li><strong><code>main</code> → 测试环境，打版本 tag → 生产环境</strong>：没有意外的自动部署，发布是显式的</li>
 </ul>
-<p><strong>第4阶段 FFF 工程侧计划</strong>：</p>
+
+<h3>本阶段实际并行的分支（节选）</h3>
+<table>
+  <tr><th>方向</th><th>同期推进的特性 / 修复分支</th></tr>
+  <tr><td>后端节点运维</td><td><code>enh/vm-setup-upgrade</code> · <code>enh/auto-detect-legacy-upgrade</code> · <code>enh/admin-firewall-canonical-template</code> · <code>fea/node-port-per-protocol</code> · <code>fix/sing-box-domain-resolver</code> · <code>fix/ipv4-only-outbound</code> · <code>fea/ssh-port-uniform</code> · <code>fea/drop-pm2-from-format</code> · <code>enh/format-full-wipe</code> · <code>enh/soft-delete-handling</code></td></tr>
+  <tr><td>后端业务 / CI</td><td><code>fea/node-driven-quota</code> · <code>fix/lottery-home-backend</code> · <code>enh/line-tier-config-and-product-menu-cleanup</code> · <code>enh/split-admin-cicd</code> · <code>fea/agent-latency-flap-fix</code></td></tr>
+  <tr><td>移动端</td><td><code>enh/auto-reconnect-default-on</code> · <code>enh/remove-idle-auto-disconnect</code> · <code>fix/upgrade-cache-wipe</code> · <code>fix/kill_Switch_auto_reconnect</code> · <code>fix/free_quota_zero-state</code> · <code>fix/standardize_font_size</code> · <code>fix/wrong_error_message_login</code> 等</td></tr>
+</table>
+<p>这些分支能<strong>真正并行而不冲突</strong>，靠的是：每条分支落地前先在 <code>vpn-internal-reports/plans/</code> 写一个明确的<strong>计划文件</strong>声明范围；落地后在 <code>execution-reports/</code> 写一份执行报告。范围在写代码之前就已经划清。</p>
+
+<h3>AI 协作如何嵌入（不是黑盒）</h3>
 <ul>
-  <li>新建 Flutter 项目（FFF 品牌、分层结构与 flutter_vpn 一致）— Lex 主导</li>
-  <li>FFF 后端从 Arrowfish 后端分叉，独立数据库；剥离 Arrowfish 专用表 — 后端侧</li>
-  <li>共享后端公用模块化（公用工具模块 + 免费额度模块先行）</li>
-  <li>第一个里程碑：能注册、登录、列出节点、连接节点（无支付 / 抽奖 / 客服）</li>
+  <li><strong>技能（Skills）</strong>是项目专属的工作流：<code>/plan</code>（每个任务的计划与设计）、<code>/commit</code>（生成符合 Release-Note 规范的 MR 标题与标签）、<code>/code-reviewer</code>、<code>/db-study</code>（只读的生产 DB 查询）、<code>/api-spec</code>（移动端契约差异）、<code>/knowledge-base-updater</code>（沉淀新发现）。这些技能定义在 <code>.claude/skills/</code> 里，<strong>像代码一样走 MR 评审</strong>。</li>
+  <li><strong>规则（Rules）</strong>是每个会话都加载的硬约束：原则 / Git / 安全 / 日志 / 数据访问 / Sprint 工作流 / 模型选择 / 效率，加上按文件类型限定的语言规范（Go / Kotlin / Flutter）。技能引用规则，但<strong>不重复规则的内容</strong>。</li>
+  <li><strong>知识库（Knowledge Base）</strong>记的是「事实」而不是「决定」：DB 表结构片段、生产 IP、踩过的坑。新发现统一通过 <code>/knowledge-base-updater</code> 入库，下一个动同一区域的人不必再发现一遍。</li>
+  <li><strong>Token 纪律</strong>是规则而不是口号：<code>rules/general/efficiency.md</code> 强制「能用 2-3 个 grep / read 解决就别开 sub-agent」；默认主模型走 <code>opusplan</code>（Opus 规划 / Sonnet 实现），sub-agent 必须显式标 model — 这把 AI 协作的成本控制在合理范围内。</li>
+  <li><strong>会话钩子</strong>自动跑工作区初始化（符号链接、MCP、索引），不需要人工敲 <code>/start</code>。</li>
 </ul>
-<p><strong>SMS / 支付通道未到位的退路</strong>：Flutter 端先以 mock 后端推进 UI；登录走邮件无密码作为 MVP；支付屏放在功能开关后面，UI 上线但不开启商务功能，第4阶段后期补全。</p>
+
+<h3>这套工作模型为什么对第4阶段重要</h3>
+<ol>
+  <li><strong>FFF 启动后 Arrowfish + FFF 双线并行</strong>，对分支隔离与计划范围管理的要求会更高；本阶段的 git-flow + 计划文件流程已经是经过实战的工作系统</li>
+  <li><strong>后端兼容矩阵（iOS HiYou v1.3.0 + Windows skytree_pc v2.2.71）持续抽税</strong>，每个改动都需要在多客户端上跑兼容验证；MR 标题规范 + 计划文件让多人评审在不丢上下文的情况下高速运转</li>
+  <li><strong>知识库的复利</strong>：本阶段沉淀的 DB schema、节点防火墙策略、CI 踩坑等知识进入仓库后，下一阶段做同领域工作时 Claude 直接基于这些事实决策，不会重新发现一遍</li>
+  <li><strong>所有 AI 协作流程对内可审</strong>：技能、规则、提示词都是仓库内文件，新人 onboarding 看到的是同一份系统</li>
+</ol>
 </div>
 
 <!-- ============================================ -->
 <!-- 安全与权限管理 -->
 <!-- ============================================ -->
-<h2>七、安全与权限管理</h2>
+<h2>十、安全与权限管理</h2>
 
 <h3>源代码访问最小化</h3>
 <table>
@@ -643,100 +734,32 @@
 </ul>
 
 <!-- ============================================ -->
-<!-- 关键风险与技术债务 -->
+<!-- FFF 并行进展 -->
 <!-- ============================================ -->
-<h2>八、关键风险与技术债务</h2>
-
-<h3>本阶段已闭环的遗留技术债（接手时已有，当前阶段处理完）</h3>
-<table>
-  <tr><th>遗留项</th><th>本阶段处理</th></tr>
-  <tr><td>节点运维全手工</td><td>本阶段闭环（一键开通 + 一键全擦 + 流式日志 + 批量升级）</td></tr>
-  <tr><td>节点配置散落多处</td><td>singbox-agent 架构下后端是唯一权威配置源；节点端零手工配置</td></tr>
-  <tr><td>支付通道 / 免费配额代码重复</td><td>共享后端公用模块基础设施已就位（公用工具 + 免费额度），FFF 第4阶段直接复用</td></tr>
-  <tr><td>移动端错误信封处理不一致</td><td>已统一为标准错误响应结构；扩展错误映射；Swagger 自动反映真实结构</td></tr>
-  <tr><td>列表接口缺少分页</td><td>分页审计 + 按需加上「可选分页」格式（保持老客户端裸数组兼容）</td></tr>
-  <tr><td>被封节点 TG 告警校验</td><td>本阶段验证已抑制（按 Sun Boss 政策不触发 TG）</td></tr>
-</table>
-
-<h3>仍在开口的风险（按影响范围排序）</h3>
-<table>
-  <tr><th>风险</th><th>影响范围</th><th>状态</th><th>缓解</th></tr>
-  <tr>
-    <td><strong>数据库备份开启但<u>恢复演练未做</u></strong></td>
-    <td>全平台</td>
-    <td>本阶段 Azure 自动备份已开（接手时是「完全没备份」）；但「真能恢复出来」尚未演练验证</td>
-    <td>第4阶段 P0 — 把备份恢复成临时库 + 跑 smoke 查询；落地保留期与异地副本策略的运维手册</td>
-  </tr>
-  <tr>
-    <td><strong>测试 / 生产共用网络安全组</strong></td>
-    <td>全平台</td>
-    <td>遗留缺口</td>
-    <td>第4阶段 P0 — 拆分生产 / 测试 NSG，收紧生产入站规则</td>
-  </tr>
-  <tr>
-    <td><strong>v3.7.0 最终 QA 期间的回归</strong></td>
-    <td>所有 Android 用户</td>
-    <td>QA 中</td>
-    <td>热修分支模板就绪；下载站保留全渠道全版本，故障可即时回滚；Crashlytics 监控由本阶段新引入的关联 ID 直达后端日志</td>
-  </tr>
-  <tr>
-    <td><strong>专线续费仍需重新购买</strong></td>
-    <td>专线付费客户</td>
-    <td>到期释放节点已修复，自动续费保留绑定待开发</td>
-    <td>第4阶段 P1 — 自动续费 + 保留原节点绑定；与节点自动化路线图共用</td>
-  </tr>
-  <tr>
-    <td><strong>XRayR 老节点尚未全部迁移</strong></td>
-    <td>~150 个老节点</td>
-    <td>新节点全部 singbox-agent；老节点按全擦触发自然替换</td>
-    <td>有明确的迁移路径（全擦开关）+ 风险下降的过渡期；第4阶段定义最终下线日期</td>
-  </tr>
-</table>
-
-<!-- ============================================ -->
-<!-- 阻塞与延迟 -->
-<!-- ============================================ -->
-<h2>九、阻塞与延迟</h2>
+<h2>十一、FFF 并行进展（Lex 实时口径）</h2>
 <div class="card">
-<p><strong>本阶段无影响发布的工程阻塞</strong> — 但有两类<strong>外部依赖正在持续抽走产能</strong>，需要并行推进解锁：</p>
-
-<h3>持续抽税的外部依赖（影响每个 Sprint 的产能）</h3>
-<table>
-  <tr><th>事项</th><th>状态</th><th>对工程节奏的影响</th><th>主导方</th></tr>
-  <tr>
-    <td><strong>iOS HiYou 账号申诉</strong></td>
-    <td>申诉中（周期不可控）</td>
-    <td>v1.3.0 用户继续靠后端向后兼容承诺；每个后端改动 +~30% 兼容测试开销</td>
-    <td>运营 / 商务</td>
-  </tr>
-  <tr>
-    <td><strong>Windows WoSign 续签 → 云签迁移</strong></td>
-    <td>未启动调研</td>
-    <td>当前积压的 Windows 端修复无法签名发布；同样消耗后端兼容产能；问题不限于「能不能编」，而是「编了不能签 + 用户安装被阻断」</td>
-    <td>运营 / 商务（执行）+ 工程（技术评估）</td>
-  </tr>
-  <tr>
-    <td>FFF 欧盟电话号码 / SMS 通道</td>
-    <td>Roy 推进中</td>
-    <td>FFF Flutter 端可以先用 mock 后端推进 UI；启动用户验证流程时硬阻塞</td>
-    <td>Roy</td>
-  </tr>
-  <tr>
-    <td>FFF 新支付通道（FFF 公司主体）</td>
-    <td>Roy 推进中</td>
-    <td>FFF UI 可先放在功能开关后；商务流程上线前硬阻塞</td>
-    <td>Roy</td>
-  </tr>
-</table>
-
-<h3>本阶段不被这些阻塞，但代价已经付了</h3>
-<p>FFF Flutter 重写未启动属于<strong>有意延后</strong>（产能用于稳定 v3.7.0 + 节点自动化 + 基础平台）。第4阶段工程侧可以正常开工 — Flutter 可以以 mock 后端推进；老 iOS / Windows 客户端持续靠后端兼容承诺运转 — <strong>但每个 Sprint 的产能预估都需要把上述兼容税（~30%）计入</strong>，否则计划会持续偏紧。</p>
+<p><strong>第3阶段 FFF Flutter 重写按计划顺延至第4阶段</strong> — 为巩固 v3.7.0 稳定基线 + 节点自动化基础设施，原本可能与 FFF 平行启动的 Flutter 工作在第3阶段集中让出。<strong>这次延后是有意的</strong>：第3阶段已完成的关联日志、协程崩溃保护、Swagger 自动文档、多语言字段等基础平台设施，都将作为 FFF 后端的初始能力直接继承 — FFF 启动时不必重复清理一遍，节奏反而更紧。</p>
+<p><strong>FFF 启动外部依赖</strong>（Roy 跟进）：</p>
+<ul>
+  <li><strong>欧盟电话号码注册与 SMS</strong> — Roy 商务侧推进</li>
+  <li><strong>新支付通道（FFF 公司主体）</strong> — Roy 商务侧推进</li>
+</ul>
+<p><strong>第4阶段 FFF 工程侧计划</strong>：</p>
+<ul>
+  <li>新建 Flutter 项目（FFF 品牌、分层结构与 flutter_vpn 一致）— Lex 主导</li>
+  <li>FFF 后端从 Arrowfish 后端分叉，独立数据库；剥离 Arrowfish 专用表 — 后端侧</li>
+  <li>共享后端公用模块化（公用工具模块 + 免费额度模块先行）</li>
+  <li>第一个里程碑：能注册、登录、列出节点、连接节点（无支付 / 抽奖 / 客服）</li>
+</ul>
+<p><strong>SMS / 支付通道未到位的退路</strong>：Flutter 端先以 mock 后端推进 UI；登录走邮件无密码作为 MVP；支付屏放在功能开关后面，UI 上线但不开启商务功能，第4阶段后期补全。</p>
 </div>
+
+
 
 <!-- ============================================ -->
 <!-- 下一步计划 -->
 <!-- ============================================ -->
-<h2>十、下一步计划（第4阶段 5/12 启动）</h2>
+<h2>十二、下一步计划（第4阶段 5/12 启动）</h2>
 <table>
   <tr><th>序</th><th>事项</th><th>优先级</th><th>目标</th></tr>
   <tr><td>1</td><td>v3.7.0 安卓稳定版最终 QA 通过 → 生产发布</td><td>P0</td><td>5/16 – 5/23</td></tr>
@@ -755,7 +778,7 @@
 <!-- ============================================ -->
 <!-- 中长期规划 -->
 <!-- ============================================ -->
-<h2>十一、中长期规划</h2>
+<h2>十三、中长期规划</h2>
 <div class="card">
 <ol>
   <li><strong>第4阶段 — 加固与启动</strong>（5/12 起）— 基础设施加固 + FFF 启动 + 节点置信度评分接入</li>
@@ -769,7 +792,7 @@
 <!-- ============================================ -->
 <!-- 财务影响 -->
 <!-- ============================================ -->
-<h2>十二、财务影响（节省与避险）</h2>
+<h2>十四、财务影响（节省与避险）</h2>
 <table>
   <tr><th>项目</th><th>性质</th><th>估算</th></tr>
   <tr>
@@ -837,7 +860,7 @@
 <!-- ============================================ -->
 <!-- 为什么必须先清理技术债 — FFF 复用同一套后端 -->
 <!-- ============================================ -->
-<h2>十三、为什么必须先清理技术债</h2>
+<h2>十五、为什么必须先清理技术债</h2>
 <div class="card highlight">
 <p>第3阶段把产能优先放在<strong>共用后端基础平台</strong>而不是直接启动 FFF 重写，关键判断是：</p>
 <ol>
@@ -847,72 +870,6 @@
   <li><strong>第3阶段的安卓稳定 v3.7.0 是「我们能交付稳定版」的对外信号</strong> — 接手以来第一个本团队完整把控的稳定基线（最终 QA 通过即发布生产）；这是 FFF 商务侧合规材料的产品依据</li>
 </ol>
 <p>反过来说：如果第3阶段先启动 FFF Flutter 重写，要么会从一个尚未清理的后端分叉（继承 Arrowfish 所有遗留债），要么会让 Arrowfish 进入与 FFF 长期分叉但都没修好的状态。先清债再开新分支是更高效率的顺序。</p>
-</div>
-
-<!-- ============================================ -->
-<!-- USDT 支付重写 -->
-<!-- ============================================ -->
-<h2>十四、USDT 支付通道：从台湾团队遗留 Java 黑盒 → 团队自有 Go 服务</h2>
-<div class="card highlight">
-<p>USDT 是钱包充值通道之一（ETH + TRX 双链）。接手时该服务是台湾团队留下的 <strong>Java 编译产物（jar）+ PHP 后台</strong>：源码不在仓库里，需要用 CFR 反编译器把 <code>usdt-pay-api.jar</code> 拆成 .class 再反编译成 Java，才能阅读和打补丁；运行靠 PM2 兜底。这是一条<strong>关键收入路径上的「黑盒」</strong>：</p>
-<ul>
-  <li>任何 bug 修复都要先完整反编译 → 找改动点 → 改完源码 → 重新编 jar → 部署，链路长且容易出错</li>
-  <li>历史观察 TRX 链路在某些路径下不稳，但因为是黑盒，只能凭日志推断而非根因诊断</li>
-  <li>没有 CI 构建产物可追溯；没有源码评审；没有标准 systemd 管控（靠 PM2）</li>
-</ul>
-<p>本阶段把整个支付服务<strong>用 Go 重写，源码进 GitLab，CI 构建发布</strong>，并与<strong>台湾团队联合做了端到端联测</strong>，确认 <strong>ETH + TRX 双链</strong>都能正确收单 / 通知 / 入账。配套修复了 QR 码图片在 nginx 静态规则下被拦截的若干显示问题，使后台地址管理页能正常预览和服务二维码。</p>
-<table>
-  <tr><th>维度</th><th>改造前（Java jar）</th><th>改造后（Go service）</th></tr>
-  <tr><td>源码可读性</td><td>需 CFR 反编译，注释丢失</td><td>团队自有 Go 源码，可 review</td></tr>
-  <tr><td>构建发布</td><td>本地编 jar 上传服务器</td><td>GitLab CI 标准流水线</td></tr>
-  <tr><td>支付链路</td><td>ETH 可用，TRX 偶发异常</td><td>ETH + TRX 双链联测验证打通</td></tr>
-  <tr><td>进程管理</td><td>PM2</td><td>systemd（与节点策略一致）</td></tr>
-  <tr><td>QR 码 / 后台展示</td><td>偶发被 nginx 静态规则拦截</td><td>服务规则修正后稳定</td></tr>
-  <tr><td>新增 USDT 通道</td><td>需要外协，台湾团队改 jar</td><td>团队内部直接扩展</td></tr>
-</table>
-<p><strong>对业务的意义</strong>：USDT 是一个收入通道，「黑盒」状态下哪怕只是改一个文案、加一个回调路径都需要外协协作；现在可以由团队<strong>内部独立维护与扩展</strong>。这也是本阶段「让接手项目真正归属本团队」叙事中的关键一块。</p>
-</div>
-
-<!-- ============================================ -->
-<!-- 持续交付与 AI 协作 -->
-<!-- ============================================ -->
-<h2>十五、持续交付与 AI 协作（多线工程并行的工作流）</h2>
-<div class="card highlight">
-<p>本阶段除了交付的具体特性，还有一项「过程层」的产出：让多个工程方向能并行推进而互不阻塞，并且把 AI 编码助手（Claude Code）以可审计的方式嵌入到日常流程里。这是接下来 FFF 与 Arrowfish 同步推进所必需的工作模型。</p>
-
-<h3>统一的 Git 流（写在仓库规则里）</h3>
-<ul>
-  <li><strong>分支命名规范</strong>：<code>fea/</code>（功能）、<code>enh/</code>（增强）、<code>fix/</code>（缺陷）、<code>hot/</code>（热修）、<code>ref/</code>（重构） + 短横线连字符的简短描述</li>
-  <li><strong>MR 标题即 Release Note</strong>：用 <code>Add</code> / <code>Fix</code> / <code>Update</code> / <code>Remove</code> / <code>Improve</code> 做前缀，72 字符内；标签 <code>feature</code> / <code>enhancement</code> 进入「新功能」段，<code>bug</code> / <code>fix</code> 进入「修复」段</li>
-  <li><strong>分支从 <code>main</code> 拉，合并前 rebase，合并后本地 + 远端清理</strong>；一个 MR 只解决一个关注点</li>
-  <li><strong><code>main</code> → 测试环境，打版本 tag → 生产环境</strong>：没有意外的自动部署，发布是显式的</li>
-</ul>
-
-<h3>本阶段实际并行的分支（节选）</h3>
-<table>
-  <tr><th>方向</th><th>同期推进的特性 / 修复分支</th></tr>
-  <tr><td>后端节点运维</td><td><code>enh/vm-setup-upgrade</code> · <code>enh/auto-detect-legacy-upgrade</code> · <code>enh/admin-firewall-canonical-template</code> · <code>fea/node-port-per-protocol</code> · <code>fix/sing-box-domain-resolver</code> · <code>fix/ipv4-only-outbound</code> · <code>fea/ssh-port-uniform</code> · <code>fea/drop-pm2-from-format</code> · <code>enh/format-full-wipe</code> · <code>enh/soft-delete-handling</code></td></tr>
-  <tr><td>后端业务 / CI</td><td><code>fea/node-driven-quota</code> · <code>fix/lottery-home-backend</code> · <code>enh/line-tier-config-and-product-menu-cleanup</code> · <code>enh/split-admin-cicd</code> · <code>fea/agent-latency-flap-fix</code></td></tr>
-  <tr><td>移动端</td><td><code>enh/auto-reconnect-default-on</code> · <code>enh/remove-idle-auto-disconnect</code> · <code>fix/upgrade-cache-wipe</code> · <code>fix/kill_Switch_auto_reconnect</code> · <code>fix/free_quota_zero-state</code> · <code>fix/standardize_font_size</code> · <code>fix/wrong_error_message_login</code> 等</td></tr>
-</table>
-<p>这些分支能<strong>真正并行而不冲突</strong>，靠的是：每条分支落地前先在 <code>vpn-internal-reports/plans/</code> 写一个明确的<strong>计划文件</strong>声明范围；落地后在 <code>execution-reports/</code> 写一份执行报告。范围在写代码之前就已经划清。</p>
-
-<h3>AI 协作如何嵌入（不是黑盒）</h3>
-<ul>
-  <li><strong>技能（Skills）</strong>是项目专属的工作流：<code>/plan</code>（每个任务的计划与设计）、<code>/commit</code>（生成符合 Release-Note 规范的 MR 标题与标签）、<code>/code-reviewer</code>、<code>/db-study</code>（只读的生产 DB 查询）、<code>/api-spec</code>（移动端契约差异）、<code>/knowledge-base-updater</code>（沉淀新发现）。这些技能定义在 <code>.claude/skills/</code> 里，<strong>像代码一样走 MR 评审</strong>。</li>
-  <li><strong>规则（Rules）</strong>是每个会话都加载的硬约束：原则 / Git / 安全 / 日志 / 数据访问 / Sprint 工作流 / 模型选择 / 效率，加上按文件类型限定的语言规范（Go / Kotlin / Flutter）。技能引用规则，但<strong>不重复规则的内容</strong>。</li>
-  <li><strong>知识库（Knowledge Base）</strong>记的是「事实」而不是「决定」：DB 表结构片段、生产 IP、踩过的坑。新发现统一通过 <code>/knowledge-base-updater</code> 入库，下一个动同一区域的人不必再发现一遍。</li>
-  <li><strong>Token 纪律</strong>是规则而不是口号：<code>rules/general/efficiency.md</code> 强制「能用 2-3 个 grep / read 解决就别开 sub-agent」；默认主模型走 <code>opusplan</code>（Opus 规划 / Sonnet 实现），sub-agent 必须显式标 model — 这把 AI 协作的成本控制在合理范围内。</li>
-  <li><strong>会话钩子</strong>自动跑工作区初始化（符号链接、MCP、索引），不需要人工敲 <code>/start</code>。</li>
-</ul>
-
-<h3>这套工作模型为什么对第4阶段重要</h3>
-<ol>
-  <li><strong>FFF 启动后 Arrowfish + FFF 双线并行</strong>，对分支隔离与计划范围管理的要求会更高；本阶段的 git-flow + 计划文件流程已经是经过实战的工作系统</li>
-  <li><strong>后端兼容矩阵（iOS HiYou v1.3.0 + Windows skytree_pc v2.2.71）持续抽税</strong>，每个改动都需要在多客户端上跑兼容验证；MR 标题规范 + 计划文件让多人评审在不丢上下文的情况下高速运转</li>
-  <li><strong>知识库的复利</strong>：本阶段沉淀的 DB schema、节点防火墙策略、CI 踩坑等知识进入仓库后，下一阶段做同领域工作时 Claude 直接基于这些事实决策，不会重新发现一遍</li>
-  <li><strong>所有 AI 协作流程对内可审</strong>：技能、规则、提示词都是仓库内文件，新人 onboarding 看到的是同一份系统</li>
-</ol>
 </div>
 
 <!-- ============================================ -->
@@ -1085,7 +1042,7 @@
 <table>
   <tr><th></th><th>XRayR（接手）</th><th>singbox-agent（目标）</th></tr>
   <tr><td>谁拥有代码</td><td>外部维护、上游 fork</td><td><strong>本团队拥有</strong>（870 行 Go）</td></tr>
-  <tr><td>配置位置</td><td>节点本地 YAML 手工维护 + 后端单独一份</td><td>后端是唯一权威配置源；节点零手工配置</td></tr>
+  <tr><td>配置位置</td><td>节点本地 YAML 手工维护 + 后端单独一份</td><td>后端是唯一可信来源；节点零手工配置</td></tr>
   <tr><td>支持协议</td><td>VMess / VLESS / Trojan / SS</td><td>新增 <strong>Hysteria2 / TUIC</strong>（中国应对必需）</td></tr>
   <tr><td>iptables</td><td>不管</td><td>从后端拉取并应用（防火墙也是后端制品）</td></tr>
   <tr><td>自更新</td><td>无 — 运维 SSH 升级</td><td>SHA256 校验 + 健康检查 + 原子替换</td></tr>
