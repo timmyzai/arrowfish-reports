@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>第3阶段完整汇报 — 2026-05-09</title>
+<title>第3阶段完整汇报 — 2026-05-10</title>
 <style>
   :root {
     --bg: #FAFAFA;
@@ -98,7 +98,7 @@
 <body>
 
 <h1>Arrowfish VPN — 第3阶段完整汇报</h1>
-<div class="subtitle">2026年5月9日 · 第3阶段提前收官（4/27–5/9）· 稳定测试版 v3.7.0 进入最终 QA · 含 USDT 支付重写 / 数据库备份开启 / 读副本接入 / 旧代理下线</div>
+<div class="subtitle">2026年5月10日 · 第3阶段提前收官（4/27–5/10）· 稳定测试版 v3.7.0 进入最终 QA · 含 USDT 支付重写 / 数据库备份开启 / 读副本接入 / 旧代理下线</div>
 
 <!-- ============================================ -->
 <!-- TL;DR — 一句话 -->
@@ -533,8 +533,8 @@
 <h3>上线节奏</h3>
 <table>
   <tr><th>节点</th><th>动作</th><th>状态</th></tr>
-  <tr><td>5/9</td><td>v3.7.0 稳定测试版定型 → 启动最终 QA</td><td><span class="status-progress">本日启动</span></td></tr>
-  <tr><td>5/9 – 5/16</td><td>v3.7.0 最终 QA — 通过后即发布生产（Google Play / 官网 / 华为）</td><td><span class="status-progress">QA 中</span></td></tr>
+  <tr><td>5/10</td><td>v3.7.0 稳定测试版定型 → 启动最终 QA</td><td><span class="status-progress">本日启动</span></td></tr>
+  <tr><td>5/10 – 5/17</td><td>v3.7.0 最终 QA — 通过后即发布生产（Google Play / 官网 / 华为）</td><td><span class="status-progress">QA 中</span></td></tr>
   <tr><td>5/12</td><td>第4阶段启动 — 数据库异地备份 + 网络隔离（P0 优先开工）</td><td><span class="status-progress">下周</span></td></tr>
   <tr><td>QA 通过后</td><td>v3.7.0 生产发布；任何回归走热修分支</td><td><span class="status-defer">待 QA</span></td></tr>
 </table>
@@ -903,7 +903,7 @@
 </table>
 </div>
 
-<h4>本地构建速度基准（5/9 12:15 实测）</h4>
+<h4>本地构建速度基准（实测）</h4>
 <div class="card success">
 <p>测试设备：<strong>Apple M4 Pro · 24 GB 内存 · Oracle JDK 22.0.1</strong>。测试任务：开发包 Kotlin 编译。</p>
 <table>
@@ -1079,8 +1079,8 @@
 </table>
 
 <div class="card highlight">
-<h3 style="margin-top:0;">★ 现场实测 — 测试环境全量 7 台节点跨 3 大洲一键全擦 &amp; 重装（2026-05-10）</h3>
-<p>为给「节点开通 ~30 秒、回收 Format ~2 分钟」的承诺一个可复现的真实数字，5/10 把 测试环境节点池<strong>全部 7 台</strong>（地理上覆盖 6 国 / 3 大洲，规格从 0.4 GB RAM 到 2 vCPU + 1.7 GB）通过<strong>后台单一 API 调用</strong> <code>POST /api/v1/node-host/bulk-upgrade { format: true }</code> 并行触发 Format &amp; 重装。</p>
+<h3 style="margin-top:0;">★ 现场实测 — 测试环境全量 7 台节点跨 3 大洲一键全擦重装（2026-05-10）</h3>
+<p>为给「节点开通 ~30 秒、回收全擦 ~2 分钟」的承诺一个可复现的真实数字，5/10 把 测试环境节点池<strong>全部 7 台</strong>（地理上覆盖 6 国 / 3 大洲，规格从 0.4 GB RAM 到 2 vCPU + 1.7 GB）通过<strong>后台单一 API 调用</strong> <code>POST /api/v1/node-host/bulk-upgrade { format: true }</code> 并行触发全擦重装。</p>
 <table>
   <tr><th>主机</th><th>地理</th><th>RTT 至 后台</th><th>规格</th><th>用时</th><th>结果</th></tr>
   <tr><td>172.93.32.133</td><td>🇨🇦 Vancouver</td><td><strong>175 ms（最远）</strong></td><td>2 vCPU / 1 GB</td><td><strong>15 s ⚡</strong></td><td>✅</td></tr>
@@ -1247,7 +1247,7 @@ v3.7.0 生产发布建议只主推「稳定 + 可靠 + 速度」三个产品要�
 </section>
 
 <div class="footer">
-Arrowfish VPN — 第3阶段完整汇报 · 2026-05-09<br>
+Arrowfish VPN — 第3阶段完整汇报 · 2026-05-10<br>
 配套一页摘要：<a href="20260509_summary.html">第3阶段一页摘要</a>
 </div>
 
