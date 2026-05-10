@@ -76,7 +76,7 @@
     <strong>第一，Arrowfish 安卓 v3.7.0 进入最终 QA — 接手以来首个本团队完整把控的稳定基线，QA 通过即发布生产。</strong>
     <p style="margin-top:0.4rem;"><strong>第二，本阶段补齐三项基础加固：Azure 数据库自动备份首次开启、读副本真正被后端使用（之前一直「有但没用」）、香港旧 ProxyBackend 退出客户端关键路径；USDT 支付由台湾团队遗留 Java 黑盒重写为团队自有 Go 服务，ETH + TRX 双链联测通过。</strong></p>
     <p style="margin-top:0.4rem;"><strong>第三，5/12 启动第4阶段，P0 锁定测试 / 生产网络隔离 + FFF Flutter 重写启动。</strong></p>
-    <p style="margin-top:0.55rem;font-size:0.9rem;color:var(--text-secondary);">支撑数字：后端发布 4–6 倍提速 · 节点开通 20 分钟 → 30 秒 · 移动端 4 渠道全量发布 35 分钟 → 15:52 无人值守 · 本机 Kotlin 冷编译 70 → 34 秒。</p>
+    <p style="margin-top:0.55rem;font-size:0.9rem;color:var(--text-secondary);">支撑数字：后端发布 4–6 倍提速 · 节点开通 20 分钟 → 30 秒 · 移动端 4 渠道全量发布 35 分钟 → 15 分 52 秒（全自动） · 本机 Kotlin 冷编译 70 → 34 秒。</p>
   </div>
 </div>
 
@@ -104,8 +104,8 @@
   </div>
   <div class="metric-card">
     <div class="metric-label">移动端 4 渠道构建</div>
-    <div class="metric-value">15:52</div>
-    <div class="metric-sub">无人值守上传至下载站</div>
+    <div class="metric-value">15 分 52 秒</div>
+    <div class="metric-sub">全自动上传至下载站</div>
   </div>
   <div class="metric-card">
     <div class="metric-label">QA 复验</div>
@@ -129,7 +129,7 @@
 <table>
   <tr><th>场景</th><th>接手时</th><th>现在</th></tr>
   <tr><td>开发本机 · Kotlin 冷编译<br><span style="font-size:0.78rem;color:var(--text-secondary);">M4 Pro 24GB 实测</span></td><td>70 秒</td><td><strong>34 秒（−51%）</strong></td></tr>
-  <tr><td>CI 流水线 · 4 渠道全量发布<br><span style="font-size:0.78rem;color:var(--text-secondary);">8GB Linux CI Runner 实测</span></td><td>~35 分钟<br><span style="font-size:0.78rem;color:var(--text-secondary);">单渠道、需人工组合</span></td><td><strong>15:52 无人值守</strong><br><span style="font-size:0.78rem;color:var(--text-secondary);">4 渠道一次构建 + 签名 + 上传</span></td></tr>
+  <tr><td>CI 流水线 · 4 渠道全量发布<br><span style="font-size:0.78rem;color:var(--text-secondary);">8GB Linux CI Runner 实测</span></td><td>~35 分钟<br><span style="font-size:0.78rem;color:var(--text-secondary);">单渠道、需人工组合</span></td><td><strong>15 分 52 秒（全自动）</strong><br><span style="font-size:0.78rem;color:var(--text-secondary);">4 渠道一次构建 + 签名 + 上传</span></td></tr>
 </table>
 <p>本机提速来自 Gradle 9 + Kotlin 2.3 (K2) + 模块合并 + 配置缓存默认启用；CI 提速来自流水线重构（构建/发布解耦、按 SHA 复用产物、增量上传）。<strong>同一台 CI Runner 上，4 渠道完整发布所需时间比接手时单渠道还少约 55%。</strong></p>
 </div>
@@ -176,7 +176,7 @@
       <li>工具链：Gradle 8.14→9.3 / Kotlin 2.1→2.3 (K2) / AGP 8.11→9.1 / Java 17→22</li>
       <li>VPN 网络切换不掉线 + 闪断误判修复 + 升级 v2.x→v3.x 自愈</li>
       <li>移除 utilcodex（5 MB + 80 传递依赖）+ Compose 完全下线 + 三星渠道下线</li>
-      <li>4 渠道一次构建 <strong>~35 分钟 → 15:52 无人值守</strong></li>
+      <li>4 渠道一次构建 <strong>~35 分钟 → 15 分 52 秒（全自动）</strong></li>
     </ul>
   </div>
   <div class="card success">
@@ -326,7 +326,7 @@
     <h3>研发与发布 + 工作流</h3>
     <ul>
       <li><strong>后端 CI 4–6 倍提速</strong>（2:30 → 30 秒）</li>
-      <li>移动端 4 渠道一次构建 15:52，自动上传下载站</li>
+      <li>移动端 4 渠道一次构建 15 分 52 秒，全自动上传下载站</li>
       <li>QA 自助拉取双语下载页</li>
       <li>MR 路径化构建 + 数据库迁移自动校验</li>
       <li>管理后台流水线独立化（不再阻塞后端发布）</li>
