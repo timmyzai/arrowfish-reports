@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Arrowfish VPN - Sprint 4-6 进展补报</title>
+  <style>
+    :root {
+      --bg: #f7f8fa;
+      --paper: #ffffff;
+      --text: #202124;
+      --muted: #5f6368;
+      --line: #e5e7eb;
+      --blue: #1a73e8;
+      --green: #16a34a;
+      --yellow: #f59e0b;
+      --red: #dc2626;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft YaHei", sans-serif;
+      line-height: 1.62;
+    }
+    main {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 32px 20px 56px;
+    }
+    header {
+      padding: 28px 0 18px;
+      border-bottom: 1px solid var(--line);
+      margin-bottom: 24px;
+    }
+    .eyebrow {
+      color: var(--blue);
+      font-size: 14px;
+      font-weight: 700;
+      margin: 0 0 8px;
+    }
+    h1 {
+      font-size: 34px;
+      line-height: 1.2;
+      margin: 0 0 10px;
+      letter-spacing: 0;
+    }
+    .meta {
+      color: var(--muted);
+      margin: 0;
+      font-size: 15px;
+    }
+    section {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 22px;
+      margin: 18px 0;
+    }
+    h2 {
+      font-size: 21px;
+      margin: 0 0 14px;
+      letter-spacing: 0;
+    }
+    p { margin: 0 0 12px; }
+    .tldr {
+      border-left: 5px solid var(--blue);
+      background: #f0f6ff;
+      font-size: 18px;
+      font-weight: 650;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 8px;
+      font-size: 15px;
+    }
+    th, td {
+      border: 1px solid var(--line);
+      padding: 10px 12px;
+      text-align: left;
+      vertical-align: top;
+    }
+    th {
+      background: #f3f4f6;
+      font-weight: 700;
+    }
+    .score {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 12px;
+    }
+    .metric {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 14px;
+      background: #fbfcfe;
+    }
+    .metric strong {
+      display: block;
+      font-size: 22px;
+      margin-bottom: 4px;
+    }
+    .metric span {
+      color: var(--muted);
+      font-size: 13px;
+    }
+    .note {
+      color: var(--muted);
+      font-size: 14px;
+      margin-top: 12px;
+    }
+    .ok { color: var(--green); font-weight: 700; }
+    .watch { color: var(--yellow); font-weight: 700; }
+    .risk { color: var(--red); font-weight: 700; }
+    @media (max-width: 760px) {
+      main { padding: 20px 12px 40px; }
+      h1 { font-size: 26px; }
+      section { padding: 16px; }
+      .score { grid-template-columns: 1fr; }
+      table { font-size: 14px; }
+      th, td { padding: 8px; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <p class="eyebrow">Arrowfish VPN · Sprint 4-6 进展补报</p>
+      <h1>2026-06-19 项目进展与基础设施成本优化报告</h1>
+      <p class="meta">覆盖范围：2026-05-10 至 2026-06-19。上一次对外报告截止于 2026-05-10，本报告补齐之后的执行进展。</p>
+    </header>
+
+    <section class="tldr">
+      TL;DR：平台已完成 Sprint 4-6 对外补报：我们清掉遗留基础设施债务，在成本更低的情况下承载更多系统能力；下一步是完成 6 月账单核对、FFF 需求确认和 Sprint 7 生产稳定性规划。
+    </section>
+
+    <section>
+      <h2>一、需要配合 / 决策</h2>
+      <table>
+        <thead><tr><th>事项</th><th>需要配合</th><th>原因</th></tr></thead>
+        <tbody>
+          <tr><td>导出 6 月 AWS/Azure 账单</td><td>财务 / 运维</td><td>把目前 <strong>USD 485-635/月</strong> 的节省预估变成发票级确认。</td></tr>
+          <tr><td>继续保留生产观察窗口</td><td>项目负责人</td><td>WebSocket 控制面、节点筛选、流量归因和 cron 拆分需要完整周期观察。</td></tr>
+          <tr><td>FFF 最新需求文件</td><td>Roy / 商务侧</td><td>Roy 从 2026-06-11 开始准备，预计约 2 周；后端需等最新需求确认后才能开发给 FFF 网站调用的 API。</td></tr>
+          <tr><td>多端兼容风险保持可见</td><td>项目负责人</td><td>后端必须兼容可升级 Android，以及已冻结的 iOS/Windows 客户端。</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>二、本阶段关键成果</h2>
+      <div class="score">
+        <div class="metric"><strong>8 类</strong><span>Sprint 4 执行报告已纳入补报</span></div>
+        <div class="metric"><strong>5 个</strong><span>核心 repo 本地日志/标签已核对</span></div>
+        <div class="metric"><strong>USD 485-635</strong><span>预计每月节省</span></div>
+        <div class="metric"><strong>USD 4.48/day</strong><span>AWS 6 月 15 日成本参考值</span></div>
+      </div>
+      <table>
+        <thead><tr><th>方向</th><th>成果</th><th>业务价值</th></tr></thead>
+        <tbody>
+          <tr><td>Android 稳定性</td><td>修复断网重连、计时器、免费用户配额、广告奖励前强制断开，并推进 Google Play 生产轨道 CI。</td><td>降低用户断线和配额误差，减少手动发版风险。</td></tr>
+          <tr><td>VPN 控制面</td><td>从 agent 定时拉取改为后端 WebSocket 推送，agent ack 后才进入 ready 状态。</td><td>用户权限变化更实时，减少节点用户表漂移。</td></tr>
+          <tr><td>singbox-agent</td><td>增加 graceful reload、telemetry、流量归因恢复、多协议用户注入和速度策略承载。</td><td>节点行为更可控，为多协议和精确计费打基础。</td></tr>
+          <tr><td>BO 后台</td><td><code>bo_orebackend</code> 独立，增加 VM/节点恢复、协议控制、支付通道选项、专属 IP 修复。</td><td>后台和主后端职责更清楚，降低互相影响。</td></tr>
+          <tr><td>cron 拆分</td><td><code>orebackend-cron</code> 独立，定时任务、会员权益、专属购买提醒和免费配额扫描更清晰。</td><td>后台任务不再混在主 API 里，运维和排错更简单。</td></tr>
+          <tr><td>基础设施</td><td>GitLab、runner、AWS/Azure 服务器和旧组件完成清理、降配、删除无用资源。</td><td>做更多系统能力，但预计每月节省 <strong>USD 485-635</strong>。</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>三、之前遗留的基础设施问题</h2>
+      <table>
+        <thead><tr><th>遗留问题</th><th>风险</th><th>本阶段处理</th></tr></thead>
+        <tbody>
+          <tr><td>服务器规格过高</td><td>实际负载不需要这么高规格，但仍持续产生固定成本。</td><td>AWS/Azure 服务器完成降配和右 sizing。</td></tr>
+          <tr><td>服务器内垃圾太多</td><td>旧服务、旧安装包、旧缓存、旧部署文件、临时数据长期累积，增加排错和磁盘风险。</td><td>清理旧 YApi/MongoDB/Node SSR/local installer/日志/缓存/迁移残留。</td></tr>
+          <tr><td>数据库 VM 定位不正确</td><td>数据库是核心数据层，不应比周边 app/runtime 层更弱或更随意。</td><td>现在按“数据库优先，应用其次”处理，prod DB 保持比 app server 更强。</td></tr>
+          <tr><td>缺少保留期清理</td><td>没有固定 retention，旧日志、旧 artifacts、quarantine/temp 数据容易越积越多。</td><td>已清理一轮，后续纳入月度清理和账单观察。</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>四、改善与商业价值</h2>
+      <table>
+        <thead><tr><th>改善</th><th>当前结果</th><th>商业价值</th></tr></thead>
+        <tbody>
+          <tr><td>云资源瘦身</td><td>AWS GitLab/执行器降配，Azure 生产/开发服务器重建为更小实例，旧代理后端、读库 VM、Node/YApi/MongoDB 等退出现役架构。</td><td>降低固定成本和维护噪音。</td></tr>
+          <tr><td>做更多但成本更低</td><td>从本地桌面机迁移到 AWS 独立 GitLab 服务器，新增 AWS 执行器、Kotlin/Android 自动化构建、APK 签名/构建/上传、APK 签名服务器能力，并维护预发/生产 Seq 观测能力。</td><td>平台能力增加，但通过清理和降配降低固定月成本。</td></tr>
+          <tr><td>CI/CD 提速</td><td>后端 CI 路径简化，Android 构建、签名、上传自动化，GitLab 执行器职责更清楚，GitLab 升级到当前已验证稳定版本。</td><td>减少手动发布错误，加快问题修复速度。</td></tr>
+          <tr><td>节点控制面升级</td><td>用户列表由后端主动推送，agent 统一上报健康、用量、延迟和流量。</td><td>为多协议、精确计费、自动化节点运维打基础。</td></tr>
+          <tr><td>成本预估</td><td>当前综合节省预估 <strong>USD 485-635/月</strong>；AWS 6 月 15 日第一天干净日运行成本参考值为 <strong>USD 4.48/day</strong>。</td><td>账单确认后可作为月度成本下降指标。</td></tr>
+        </tbody>
+      </table>
+      <p class="note">说明：成本数字来自 2026-06-16 内部成本报告，仍需 6 月底 AWS 完整账单和 Azure 发票导出确认。</p>
+    </section>
+
+    <section>
+      <h2>五、安全与访问控制</h2>
+      <table>
+        <thead><tr><th>项目</th><th>本阶段变化</th><th>价值</th></tr></thead>
+        <tbody>
+          <tr><td>旧用户访问</td><td>移除旧用户/无效用户访问，按最小权限原则保留必要访问。</td><td>降低源码和服务器访问面。</td></tr>
+          <tr><td>Azure SSH</td><td>Azure 实例访问从用户密码模式转向仅 PEM 密钥访问。</td><td>降低密码泄露和共享账号风险。</td></tr>
+          <tr><td>GitLab/执行器</td><td>GitLab 服务器专用化，执行器职责拆开，减少一个机器混跑所有东西。</td><td>降低互相影响和权限边界混乱。</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>六、FFF 当前状态与阻塞</h2>
+      <table>
+        <thead><tr><th>项目</th><th>当前状态</th><th>下一步</th></tr></thead>
+        <tbody>
+          <tr><td>FFF 网站</td><td>前端/web 侧已完成。</td><td>等后端 API 需求确认后接入。</td></tr>
+          <tr><td>FFF 后端 API</td><td>暂停等待最新需求。</td><td>Roy 从 2026-06-11 开始准备需求文件，预计约 2 周；确认后后端开始开发。</td></tr>
+          <tr><td>FFF Android 预发版</td><td>2026-06-09 已有预发测试 app。</td><td>等测试反馈后继续增强。</td></tr>
+          <tr><td>FFF 后端复用</td><td>继续复用 Arrowfish 后端基础能力。</td><td>需求确认后进入 Sprint 7/后续 sprint 排期。</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>七、关键时间线</h2>
+      <table>
+        <thead><tr><th>日期</th><th>事件</th></tr></thead>
+        <tbody>
+          <tr><td>2026-05-10</td><td>上一次对外报告截止点。</td></tr>
+          <tr><td>2026-05-22</td><td>Sprint 4 关键重构：后端 WebSocket 控制面、Redis 计费、agent 确认流程落地。</td></tr>
+          <tr><td>2026-05-25</td><td>Sprint 4 收尾，确认 Android、控制面、预发环境、CI/CD、计费加固进入 Sprint 5。</td></tr>
+          <tr><td>2026-05-31</td><td>完成跨 repo 深度代码审查，并产出 BO 拆分计划。</td></tr>
+          <tr><td>2026-06-04</td><td>完成 ePay 兜底域名和流量归因完整修复计划。</td></tr>
+          <tr><td>2026-06-09</td><td>FFF staging Android app 已可测试。</td></tr>
+          <tr><td>2026-06-11</td><td>Roy 开始准备 FFF 最新需求文件，预计约 2 周。</td></tr>
+          <tr><td>2026-06-12</td><td>完成 GitLab/AWS 执行器清理和规格调整 review。</td></tr>
+          <tr><td>2026-06-15</td><td>完成 AWS/Azure 基础设施清理总 review。</td></tr>
+          <tr><td>2026-06-16</td><td>完成成本节省估算，预估 <strong>USD 485-635/月</strong>。</td></tr>
+          <tr><td>2026-06-19</td><td>发布 Sprint 4-6 补报。</td></tr>
+          <tr><td>2026-06-22</td><td>下周进入 Sprint 7 规划/启动。</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>八、风险与阻塞</h2>
+      <table>
+        <thead><tr><th>风险</th><th>当前状态</th><th>下一步</th></tr></thead>
+        <tbody>
+          <tr><td>账单确认</td><td><span class="watch">待确认</span>：成本仍是估算和日成本参考值，Azure 还需要发票导出。</td><td>6 月底后核对 AWS，Azure 发票出来后补实数。</td></tr>
+          <tr><td>多端兼容</td><td><span class="watch">持续约束</span>：后端改动必须兼容 Android、冻结 iOS HiYou、冻结 Windows 客户端。</td><td>大改动继续使用功能开关和分阶段验证。</td></tr>
+          <tr><td>FFF 需求</td><td><span class="watch">等待中</span>：后端 API 开发等待 Roy 的最新需求文件。</td><td>预计 2026-06-11 起约 2 周后确认，再开始后端开发。</td></tr>
+          <tr><td>会话身份 v2</td><td><span class="watch">计划明确</span>：但涉及后端、Android、agent 三端协议迁移。</td><td>先稳定生产，再按阶段切换。</td></tr>
+          <tr><td>多协议切换</td><td><span class="watch">推进中</span>：HY2/VLESS/REALITY 方向已明确。</td><td>以 Trojan 兼容为底线推进常量统一、后端配置和 Android 兜底连接。</td></tr>
+          <tr><td>流量归因</td><td><span class="ok">已定位</span>：root cause 和修复责任已经拆清楚。</td><td>上线后观察 Telegram/report 数据是否持续恢复。</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>九、Sprint 7 下周计划</h2>
+      <table>
+        <thead><tr><th>时间</th><th>动作</th></tr></thead>
+        <tbody>
+          <tr><td>2026-06-19</td><td>完成对外补报发布。</td></tr>
+          <tr><td>2026-06-30 后</td><td>用完整 6 月 AWS 账单替换单日成本参考值。</td></tr>
+          <tr><td>Azure 发票导出后</td><td>用 Azure 实际费用确认旧 VM、读库 VM、代理后端节省。</td></tr>
+          <tr><td>2026-07-01 至 2026-07-07</td><td>观察一完整周成本、预发排程、节点控制面和流量归因。</td></tr>
+          <tr><td>Sprint 7</td><td>从 2026-06-22 开始规划/启动，重点是生产稳定性、FFF 需求确认后的后端 API、会话身份 v2、多协议和账单核对。</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>十、结论</h2>
+      <p>这次补报不是单个功能上线，而是把 5 月 10 日之后没有正式对外同步的工程工作补齐。核心结果是：过去高规格、垃圾多、保留期缺失、访问控制松散的基础设施债务已经被集中处理；现在系统能力更多，但成本更低，后续 FFF 复用同一套后端的风险也更可控。</p>
+    </section>
+  </main>
+</body>
+</html>
