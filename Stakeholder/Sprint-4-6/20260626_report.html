@@ -165,17 +165,36 @@
         <tbody>
           <tr><td>Android 稳定性</td><td>修复断网重连、免费额度、活动弹窗、延迟探测、连接状态和繁中文案等问题。</td><td>降低用户误判网络被封锁、连接卡住和切线失败的概率。</td></tr>
           <tr><td>后端多协议</td><td>多协议支持已放到测试环境给 QA 验证。</td><td>支撑 Arrowfish Android 新版，也为 FFF 后端复用打底。</td></tr>
-          <tr><td>BO / Cron 拆分</td><td>BO 与 cron 已从旧 all-in-one 后端拆出，公共工具和迁移流程继续收敛。</td><td>从“能跑”推进到“可维护、可复制”。</td></tr>
-          <tr><td>基础设施清理</td><td>Azure、AWS、Nginx、数据库、GitLab runner 和旧文件 / 日志完成主要整理。</td><td>生产环境更安全，成本和维护噪音更低。</td></tr>
-          <tr><td>网站发布链路</td><td>生产 Nginx 路由与多个静态网站 CI/CD 已标准化。</td><td>减少部署错误、错误路径和线上 routing 漂移。</td></tr>
-          <tr><td>Windows 客户端</td><td>已开始接最新后端 API、Docker 构建和签名路线。</td><td>目标先出测试版给 QA，再评估正式发布时间。</td></tr>
-          <tr><td>FFF</td><td>已收到完整需求差异，但尚未完成拆解。</td><td>Sprint 7 先研究需求、拆任务，再给更准确时间线。</td></tr>
+          <tr><td>Go 公共工具</td><td>公共 CLI、迁移、日志、遮罩、Seq、HTTP 防护和限流工具已抽出，进入验证。</td><td>减少后端、BO、cron 的重复工具代码，为 FFF 后端复制基线打底。</td></tr>
+          <tr><td>后端 / BO / Cron</td><td>三套服务开始改用共享私有模块，并统一环境变量、数据库迁移和部署流程；本地开发工作区不进入 CI。</td><td>从“能跑”推进到“可维护、可复制”，但仍需测试环境和生产门控验证。</td></tr>
+          <tr><td>基础设施清理</td><td>Azure、AWS、Nginx、数据库、GitLab runner、旧 proxybackend 和旧文件 / 日志完成主要整理。</td><td>生产环境更安全，成本和维护噪音更低。</td></tr>
+          <tr><td>网站 / Nginx 链路</td><td>已花时间梳理台湾团队遗留 Nginx 配置债，并标准化生产路由与静态网站 CI/CD。</td><td>arrowfishvpn.com -> /project/arrowfishvpn，/landing/ -> /project/arrowfishlandingpage，jianyu-ip-proxy.com -> /project/skytreelandingpagewebnet，减少错站、错路径和线上 routing 漂移。</td></tr>
+          <tr><td>营销弹窗 / 倒计时</td><td>后端与 BO 支持限时活动、倒计时背景、购买按钮和排序配置。</td><td>原本硬编码倒计时的活动，转为从 BO 动态配置，运营可自行新增倒计时弹窗广告。</td></tr>
+          <tr><td>节点控制链路</td><td>旧 XRayR / proxybackend 方向已从活跃架构退出，转向 orebackend + sing-box agent。</td><td>用户验证、userlist 下发、速度策略和节点更新从手工路径推进到后端驱动。</td></tr>
+          <tr><td>Windows 客户端</td><td>已开始接最新后端 API、Docker 可复现构建、运行日志和核心包按需生成路线。</td><td>目标先出测试版给 QA；签名方案未确认前不承诺正式发布时间。</td></tr>
+          <tr><td>FFF</td><td>FFF staging website 已部署到 staging server；已收到完整需求差异，但尚未完成拆解。</td><td>Staging 站点用于前期联调，Sprint 7 再拆完整 FFF 需求与后端排期。</td></tr>
         </tbody>
       </table>
     </section>
 
     <section>
-      <h2>三、成本节省与 AWS 投入口径</h2>
+      <h2>三、改善与商业价值</h2>
+      <table>
+        <thead><tr><th>改善</th><th>当前结果</th><th>商业价值</th></tr></thead>
+        <tbody>
+          <tr><td>成本节省</td><td>Azure 与 LisaHost 直接节省约 USD 612.21/月，AWS 单独作为平台投入核算。</td><td>成本下降口径更清楚，避免把必要平台投入误算成亏损。</td></tr>
+          <tr><td>数据库安全</td><td>生产 MySQL 已无公网 IP，仅保留私网访问和受控通道。</td><td>降低数据库被扫描、攻击和误暴露的风险。</td></tr>
+          <tr><td>网站 / Nginx 治理</td><td>主站、landing、Jianyu 站点路由与部署路径已标准化。</td><td>减少错站发布、错误路径和线上 routing 漂移。</td></tr>
+          <tr><td>动态活动配置</td><td>倒计时弹窗广告改为后端 / BO 配置，支持活动类型、排序、倒计时背景和购买按钮。</td><td>运营可以直接调整活动，不再依赖硬编码倒计时。</td></tr>
+          <tr><td>节点架构收敛</td><td>旧 proxybackend 退出活跃架构，sing-box agent 继续承接 userlist、用户验证、流量归因和速度策略。</td><td>节点更新更可控，也为按线路类型控制免费线速度打基础。</td></tr>
+          <tr><td>后端通用化</td><td>公共工具抽出到共享模块，后端、BO、cron 开始统一迁移和部署流程。</td><td>减少重复代码，为 FFF 后端复制和后续扩展做准备。</td></tr>
+          <tr><td>Windows 构建</td><td>Windows 构建路径开始改为 Docker 可复现流程，核心包改为按需生成。</td><td>降低本地环境差异，方便生成测试版；正式发布仍依赖签名方案确认。</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>四、成本节省与 AWS 投入口径</h2>
       <p>本节为管理层主口径：Azure 与 LisaHost 是直接成本下降；AWS 是替代已不可继续使用的本地 GitLab、runner 和生产网站，并新增 CI/CD 与日志观测能力的平台投入，不能简单合并成直接节省。</p>
       <table>
         <thead><tr><th>成本项</th><th>口径</th><th>当前结果</th><th>月化影响</th></tr></thead>
@@ -201,7 +220,7 @@
     </section>
 
     <section>
-      <h2>四、业务健康度与 DB 指标</h2>
+      <h2>五、业务健康度与 DB 指标</h2>
       <table>
         <thead><tr><th>5 月指标</th><th>结果</th></tr></thead>
         <tbody>
@@ -228,7 +247,7 @@
     </section>
 
     <section>
-      <h2>五、基础设施与安全状态</h2>
+      <h2>六、基础设施、安全与访问控制</h2>
       <table>
         <thead><tr><th>项目</th><th>当前状态</th><th>价值 / 观察点</th></tr></thead>
         <tbody>
@@ -239,42 +258,67 @@
           <tr><td>Azure 公网 IP</td><td>当前只保留 2 个公网 IP：DEV app 与 PROD app。</td><td>公网暴露面降低。</td></tr>
           <tr><td>生产 MySQL</td><td>无公网 IP，仅保留私网 10.0.0.101。</td><td>数据库不再直接暴露互联网。</td></tr>
           <tr><td>生产 Nginx</td><td>已清理备份 / 旧配置残留，禁用无效 file host 路由。</td><td>降低错误路由、目录暴露和误部署风险。</td></tr>
+          <tr><td>生产网站路由</td><td>已标准化：arrowfishvpn.com -> /project/arrowfishvpn，/landing/ -> /project/arrowfishlandingpage，jianyu-ip-proxy.com -> /project/skytreelandingpagewebnet。</td><td>部署路径与 Nginx 路由配对，降低错站和错目录发布风险。</td></tr>
+          <tr><td>旧 proxybackend</td><td>HK proxybackend 与 Azure proxybackend 已退出活跃架构。</td><td>节点控制回到 orebackend + sing-box agent 主线，减少旧服务维护成本。</td></tr>
+        </tbody>
+      </table>
+      <table>
+        <thead><tr><th>访问项</th><th>当前控制</th><th>状态</th></tr></thead>
+        <tbody>
+          <tr><td>源代码访问</td><td>当前按最小权限控制，保留 Roy、Morgan、Lex、马来西亚开发侧访问。</td><td>台湾旧成员访问按前期交接要求撤回；如有新增人员，需要单独审批。</td></tr>
+          <tr><td>生产数据库访问</td><td>MySQL 已无公网 IP，仅通过私网和受控通道访问。</td><td>本阶段已修复公网暴露风险。</td></tr>
+          <tr><td>Nginx 路由治理</td><td>生产 Nginx 已完成配置梳理，清理旧备份、重复路由和无效 file host。</td><td>主站、landing 与 Jianyu 站点路径固定，降低错误发布和目录暴露风险。</td></tr>
+          <tr><td>发布与 CI/CD 权限</td><td>后端、BO、cron、Android、静态网站和 Windows 均在整理独立构建 / 部署路径。</td><td>减少手工发布和环境混用带来的风险。</td></tr>
+          <tr><td>Windows 签名</td><td>旧硬件签名路径不可继续依赖，已开始整理云签名或新证书方案。</td><td>签名方案仍是 Windows 正式版发布门控。</td></tr>
+        </tbody>
+      </table>
+      <table>
+        <thead><tr><th>台湾团队遗留安全缺口</th><th>风险</th><th>本阶段状态</th></tr></thead>
+        <tbody>
+          <tr><td>生产数据库曾有公网入口</td><td>数据库暴露在直接扫描和攻击风险中。</td><td>本阶段已修复：公网 IP 已移除，保留私网访问。</td></tr>
+          <tr><td>数据库网络规则过宽</td><td>后端以外来源可触达数据库服务。</td><td>本阶段已收紧：数据库只保留后端私网来源。</td></tr>
+          <tr><td>数据库备份口径不清</td><td>故障恢复依赖 VM 级备份，恢复成本高。</td><td>已改为数据库级备份路径，保留恢复验证门控。</td></tr>
+          <tr><td>部署密钥与发布路径不统一</td><td>密钥回收和发布追踪困难。</td><td>推进中：后端、BO、cron 继续统一 PEM / 部署流程。</td></tr>
+          <tr><td>旧 XRayR / proxybackend 节点链路</td><td>用户验证、速度限制和节点更新分散，免费线速度也难由 BO 统一控制。</td><td>已转向 orebackend + sing-box agent：后端控制 userlist、节点验证、流量归因和按线路类型的速度策略。</td></tr>
+          <tr><td>Windows 旧签名链路失效</td><td>新版公开发布会出现未知发布者或不可签名风险。</td><td>待确认：需要云签名或新的有效证书。</td></tr>
         </tbody>
       </table>
     </section>
 
     <section>
-      <h2>六、之前遗留的技术债处理</h2>
+      <h2>七、之前遗留的技术债处理</h2>
       <table>
         <thead><tr><th>遗留问题</th><th>风险</th><th>本阶段处理</th></tr></thead>
         <tbody>
           <tr><td>Android 连接体验债</td><td>连接卡住、误报网络被阻挡、切线状态闪烁，会直接影响用户体验。</td><td>集中修复延迟探测、重连、免费额度、活动弹窗和连接状态显示。</td></tr>
-          <tr><td>网站部署和路由债</td><td>静态站点部署路径不清，Nginx 配置过散，容易出现路由漂移。</td><td>完成生产 Nginx routing 清理，并标准化静态网站 CI/CD。</td></tr>
+          <tr><td>网站部署和路由债</td><td>静态站点部署路径不清，Nginx 配置过散，容易出现路由漂移。</td><td>完成生产 Nginx routing 清理，并标准化三个静态网站 CI/CD：Arrowfish 主站、Arrowfish landing、Jianyu IP Proxy。</td></tr>
           <tr><td>基础设施安全债</td><td>旧机器、旧日志、旧 artifacts 和数据库公网暴露会增加排错与安全风险。</td><td>生产 MySQL 已无公网 IP，旧文件和日志清理进入持续整理。</td></tr>
-          <tr><td>后端 all-in-one 债</td><td>主后端、BO、cron 长期混在一起，后续 FFF 复用会继承同一套包袱。</td><td>BO 与 cron 已拆出，公共工具和迁移流程正在抽离。</td></tr>
-          <tr><td>Windows 旧客户端债</td><td>旧客户端接旧后端接口，签名路径过期，无法稳定发新版。</td><td>已开始升级到最新后端 API，并整理 Docker 构建和云签名路线。</td></tr>
+          <tr><td>后端 all-in-one 债</td><td>主后端、BO、cron 长期混在一起，后续 FFF 复用会继承同一套包袱。</td><td>BO 与 cron 已拆出，公共工具、共享模块和迁移 / 部署流程正在收敛。</td></tr>
+          <tr><td>旧 XRayR / proxybackend 节点债</td><td>旧链路依赖 proxybackend 与节点侧配置，用户验证、速度限制和节点更新都很难统一由 BO 控制。</td><td>HK / Azure proxybackend 已退出活跃架构；sing-box agent 改为后端控制 userlist、节点验证和按线路类型的速度策略。</td></tr>
+          <tr><td>Windows 旧客户端债</td><td>旧客户端接旧后端接口，签名路径过期，无法稳定发新版。</td><td>已开始升级到最新后端 API，并整理 Docker 构建、核心包生成和云签名路线。</td></tr>
         </tbody>
       </table>
     </section>
 
     <section>
-      <h2>七、发布计划与多端兼容挑战</h2>
+      <h2>八、发布计划与多端兼容挑战</h2>
       <table>
         <thead><tr><th>项目</th><th>当前状态</th><th>下一步</th></tr></thead>
         <tbody>
           <tr><td>Arrowfish Android</td><td>3.8.4 发布候选，连接、延迟、活动弹窗和繁中文案继续收尾。</td><td>目标 2026-06-29 发布，仍以 QA 结果为准。</td></tr>
           <tr><td>后端多协议</td><td>测试环境已交给 QA 验证。</td><td>配合 Android 发布，并保持旧客户端兼容。</td></tr>
           <tr><td>冻结客户端</td><td>后端仍需兼容冻结 iOS HiYou v1.3.0 与旧 Windows skytree_pc v2.2.71。</td><td>大改继续使用兼容响应和分阶段验证。</td></tr>
-          <tr><td>Windows 新版</td><td>已开始接最新后端 API、修连接问题、整理 Docker 构建和签名路线。</td><td>先出测试版给 QA；签名路线确认后再评估正式发布时间。</td></tr>
+          <tr><td>Windows 新版</td><td>已开始接最新后端 API、修连接问题、整理 Docker 构建、运行日志和核心包生成路线。</td><td>先出测试版给 QA；签名路线确认后再评估正式发布时间。</td></tr>
         </tbody>
       </table>
     </section>
 
     <section>
-      <h2>八、FFF 当前状态与阻塞（实时口径）</h2>
+      <h2>九、FFF 当前状态与阻塞（实时口径）</h2>
       <table>
         <thead><tr><th>项目</th><th>当前状态</th><th>下一步</th></tr></thead>
         <tbody>
+          <tr><td>FFF staging 网站</td><td>2026-06-16 已部署到 staging server：<a href="https://stg-fffvpn.store/">https://stg-fffvpn.store/</a>。</td><td>可先用于 FFF 页面联调；正式上线仍需等需求拆解和发布计划。</td></tr>
           <tr><td>需求文件</td><td>2026-06-23 已收到 Roy PRD / AF-vs-FFF 需求差异。</td><td>Sprint 7 先做需求研究、差异拆解和任务排期。</td></tr>
           <tr><td>FFF 后端</td><td>暂不立即承诺完整上线时间。</td><td>先完成后端重构和可复用基线，再按 FFF 需求新增功能。</td></tr>
           <tr><td>预计周期</td><td>初步估算：后端重构约 1-2 周，FFF 新需求后端改动约 3 周。</td><td>Sprint 7 研究后给更准确时间线。</td></tr>
@@ -284,7 +328,7 @@
     </section>
 
     <section>
-      <h2>九、关键时间线</h2>
+      <h2>十、关键时间线</h2>
       <table>
         <thead><tr><th>日期</th><th>事件</th></tr></thead>
         <tbody>
@@ -292,9 +336,12 @@
           <tr><td>2026-05-22 至 2026-05-25</td><td>Sprint 4 关键重构落地：后端控制面、计费、Android 重连、预发环境和 CI/CD 进入稳定推进。</td></tr>
           <tr><td>2026-05-31 至 2026-06-08</td><td>完成跨 repo 审查、BO 拆分计划、流量归因、多协议与 Sprint 5 稳定化方向。</td></tr>
           <tr><td>2026-06-12 至 2026-06-17</td><td>完成 GitLab/AWS/Azure 基础设施清理、成本估算、DB 公网 IP 移除与安全收敛。</td></tr>
+          <tr><td>2026-06-16</td><td>FFF staging website 部署到 staging server，并完成 FFF web CI / Nginx 路线整理。</td></tr>
           <tr><td>2026-06-18 至 2026-06-25</td><td>后端、BO、Android 完成活动、诊断、免费额度、重连和延迟探测等稳定性闭环。</td></tr>
+          <tr><td>2026-06-19</td><td>后端与 BO 完成限时活动 / 倒计时弹窗配置能力，替代硬编码倒计时活动。</td></tr>
+          <tr><td>2026-06-23 至 2026-06-24</td><td>生产 Nginx 遗留配置完成梳理，三个静态网站 CI/CD 和部署路径标准化。</td></tr>
           <tr><td>2026-06-23</td><td>收到 Roy PRD / AF-vs-FFF 完整需求差异。</td></tr>
-          <tr><td>2026-06-26</td><td>公共 Go 工具、后端体系重构、Windows Docker / 签名路线进入整理。</td></tr>
+          <tr><td>2026-06-26</td><td>公共 Go 工具抽出，后端 / BO / cron 改用共享模块与统一迁移流程，Windows 进入最新后端 API、Docker 构建和签名路线整理。</td></tr>
           <tr><td>2026-06-29</td><td>目标发布 Arrowfish Android 与配套后端，多协议支持随 QA 结果推进。</td></tr>
           <tr><td>2026-06-29 至 2026-07-10</td><td>Sprint 7：Windows 重构、后端重构、FFF PRD 研究与排期。</td></tr>
         </tbody>
@@ -302,7 +349,7 @@
     </section>
 
     <section>
-      <h2>十、风险与观察项</h2>
+      <h2>十一、风险与观察项</h2>
       <table>
         <thead><tr><th>风险</th><th>当前状态</th><th>下一步</th></tr></thead>
         <tbody>
@@ -310,6 +357,8 @@
           <tr><td>注册下降</td><td><span class="watch">需观察</span>：清理后一周注册下降 13.8%。</td><td>结合渠道投放、版本发布、地区访问和广告流量继续核对。</td></tr>
           <tr><td>Windows 签名</td><td><span class="watch">待确认</span>：旧签名路径不可继续依赖。</td><td>尽快确认云签名或新证书路线。</td></tr>
           <tr><td>FFF 需求</td><td><span class="watch">待拆解</span>：需求刚收到，不能直接承诺完整上线日。</td><td>Sprint 7 输出正式时间线与任务拆分。</td></tr>
+          <tr><td>后端迁移 / 部署流程</td><td><span class="watch">验证中</span>：共享工具和统一迁移流程影响后端、BO、cron 三套服务。</td><td>先在测试环境验证，再逐步进入生产。</td></tr>
+          <tr><td>节点速度控制</td><td><span class="watch">验证中</span>：按线路类型控制速度已进入 sing-box agent 主线方向，但免费线速度仍需确认 BO 配置和节点下发一致。</td><td>Sprint 7 继续验证 BO 配置、后端 userlist 和节点生效结果。</td></tr>
           <tr><td>AWS runner 规格</td><td><span class="watch">需复核</span>：gitlab-runner-kotlin-amd 当前显示 t3.large。</td><td>确认是否为 Android Kotlin CI/CD 必要容量。</td></tr>
           <tr><td>账单确认</td><td><span class="watch">待月结</span>：当前使用 2026-06-24 前完整日数据。</td><td>2026-07-01 后用完整 6 月账单复核。</td></tr>
         </tbody>
@@ -317,7 +366,7 @@
     </section>
 
     <section>
-      <h2>十一、Sprint 7 计划</h2>
+      <h2>十二、Sprint 7 计划</h2>
       <table>
         <thead><tr><th>时间</th><th>动作</th></tr></thead>
         <tbody>
@@ -329,7 +378,7 @@
     </section>
 
     <section>
-      <h2>十二、结论</h2>
+      <h2>十三、结论</h2>
       <p>Sprint 4-6 的重点不是单一功能上线，而是把台湾团队遗留的基础设施、Android、网站、后端和发布链路技术债集中收敛。现在生产数据库更安全，云资源更清楚，网站发布更可控，Android 和后端多协议已进入发布收尾。</p>
       <p>下一阶段的关键，是先把 Arrowfish Android 与后端多协议稳定发布，再完成 Windows 测试版和后端通用化；FFF 则在 Sprint 7 先完成需求拆解和排期，避免在范围未确认前承诺不准确时间。</p>
     </section>

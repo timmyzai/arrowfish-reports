@@ -134,11 +134,25 @@
     </header>
 
     <section class="tldr">
-      TL;DR：Sprint 4-6 已把主要基础设施、Android、网站和后端拆分技术债收敛到可发布状态；成本直接节省约 USD 612.21/月，下一阶段重点是 2026-06-29 Android 发布、Windows 升级、后端重构和 FFF 排期。
+      TL;DR：Sprint 4-6 已把基础设施、Android、网站/Nginx 和后端拆分技术债收敛到发布收尾；成本直接节省约 USD 612.21/月，下一阶段重点是 2026-06-29 Android 发布、Windows 测试版、后端共享工具验证和 FFF 排期。
     </section>
 
     <section>
-      <h2>一、核心结论</h2>
+      <h2>一、需要管理层注意</h2>
+      <table>
+        <thead><tr><th>事项</th><th>原因</th></tr></thead>
+        <tbody>
+          <tr><td>Android 发布</td><td>若 QA 发现 P0 / P1 bug，2026-06-29 发布时间需顺延。</td></tr>
+          <tr><td>Windows 签名</td><td>旧硬件签名路径已不可继续依赖，需要尽快确认云签名或新证书路线。</td></tr>
+          <tr><td>后端迁移流程</td><td>共享工具和统一迁移流程影响后端、BO、cron 三套服务，需要先完成测试环境验证。</td></tr>
+          <tr><td>节点速度控制</td><td>按线路类型控制速度已进入 sing-box agent 主线方向；免费线速度仍需继续确认 BO 配置和节点下发的一致性。</td></tr>
+          <tr><td>FFF 时间线</td><td>需求刚在 2026-06-23 收到，不能在未拆解前承诺完整上线日。</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>二、核心结论</h2>
       <div class="score">
         <div class="metric"><strong>USD 612.21/月</strong><span>Azure + LisaHost 直接节省</span></div>
         <div class="metric"><strong>USD 461.00/月</strong><span>扣除 AWS 平台后的现金流改善估算</span></div>
@@ -149,22 +163,28 @@
         <thead><tr><th>主题</th><th>结论</th></tr></thead>
         <tbody>
           <tr><td>成本</td><td>Azure 与 LisaHost 是直接节省；AWS 是替代本地 GitLab、runner、生产网站，并新增 CI/CD 与日志观测能力的平台投入。</td></tr>
-          <tr><td>安全</td><td>生产 MySQL 已无公网 IP，Nginx 与旧文件 / 旧路由已整理，公网暴露面降低。</td></tr>
+          <tr><td>安全</td><td>生产 MySQL 已无公网 IP，源码访问按最小权限控制，Nginx 与旧文件 / 旧路由已整理。</td></tr>
+          <tr><td>网站 / Nginx</td><td>已梳理遗留 Nginx 配置债，标准化 Arrowfish 主站、/landing/ 与 Jianyu 站点的生产路由和静态网站 CI/CD。</td></tr>
+          <tr><td>活动弹窗</td><td>限时活动和倒计时弹窗从硬编码改为后端 / BO 动态配置，运营可在 BO 新增倒计时活动素材。</td></tr>
+          <tr><td>节点架构</td><td>旧 XRayR / proxybackend 方向退出活跃架构，转向 orebackend + sing-box agent 的用户验证、userlist 和线路速度策略。</td></tr>
           <tr><td>发布</td><td>Arrowfish Android 与后端多协议进入测试收尾，目标 2026-06-29 发布。</td></tr>
-          <tr><td>技术债</td><td>Android、基础设施、网站发布链路已基本收敛；后端与 Windows 技术债进入 Sprint 7 主处理窗口。</td></tr>
-          <tr><td>FFF</td><td>2026-06-23 收到完整需求差异；Sprint 7 先拆解需求，再给正式时间线。</td></tr>
+          <tr><td>后端 / BO / Cron</td><td>公共 Go 工具已抽出，三套服务开始统一迁移、环境变量和部署流程；新流程仍需回归验证。</td></tr>
+          <tr><td>Windows</td><td>已开始接最新后端 API、Docker 可复现构建、运行日志和核心包按需生成路线；签名方案仍是门控。</td></tr>
+          <tr><td>技术债</td><td>Android、基础设施、网站发布链路已基本收敛；后端共享工具和 Windows 技术债进入 Sprint 7 主处理窗口。</td></tr>
+          <tr><td>FFF</td><td>2026-06-16 staging website 已部署到 staging server；2026-06-23 收到 Roy PRD / AF-vs-FFF 需求差异，Sprint 7 先拆解需求。</td></tr>
         </tbody>
       </table>
     </section>
 
     <section>
-      <h2>二、成本与业务健康度</h2>
+      <h2>三、成本与业务健康度</h2>
       <table>
         <thead><tr><th>项目</th><th>结果</th></tr></thead>
         <tbody>
           <tr><td>Azure 直接节省</td><td>从 2026 年 1-5 月平均 USD 599.33/月降至当前 run-rate USD 234.07/月，节省约 USD 365.26/月。</td></tr>
           <tr><td>LisaHost HK 机器</td><td>6 月已退订，RMB 1,680/月停止；按 2026-06-24 公开参考汇率 1 USD = 6.8029 CNY，约 USD 246.95/月。</td></tr>
           <tr><td>AWS 平台投入</td><td>清理后约 USD 151.21/月；用于替代本地 GitLab / runner / 生产网站，并承接 Android Kotlin CI/CD 与 Seq logging。</td></tr>
+          <tr><td>成本口径</td><td>当前使用 2026-06-24 前完整日数据；7 月初需用完整 6 月账单复核。</td></tr>
           <tr><td>清理后业务指标</td><td>活跃用户 +2.3%，流量 +5.4%，已完成付费订单 +4.6%，已完成付费金额 +8.4%。</td></tr>
           <tr><td>观察项</td><td>新注册用户 6,161 -> 5,310，下降 13.8%，需要结合渠道、投放、地区访问与版本变化继续观察。</td></tr>
         </tbody>
@@ -172,26 +192,13 @@
     </section>
 
     <section>
-      <h2>三、发布与 Sprint 7 计划</h2>
+      <h2>四、发布与 Sprint 7 计划</h2>
       <table>
         <thead><tr><th>时间</th><th>动作</th></tr></thead>
         <tbody>
           <tr><td>2026-06-29</td><td>目标发布 Arrowfish Android 与配套后端多协议支持；以 QA 回归结果为上线门控。</td></tr>
-          <tr><td>2026-06-29 至 2026-07-03</td><td>继续修 QA 缺陷，推进 Windows 接最新后端 API、连接修复、Docker 构建和云签名路线。</td></tr>
-          <tr><td>2026-07-06 至 2026-07-10</td><td>准备 Windows 测试版给 QA，继续后端安全 / 性能 / 可扩展性重构，输出 FFF 时间线与任务拆解。</td></tr>
-        </tbody>
-      </table>
-    </section>
-
-    <section>
-      <h2>四、需要管理层注意</h2>
-      <table>
-        <thead><tr><th>事项</th><th>原因</th></tr></thead>
-        <tbody>
-          <tr><td>Android 发布</td><td>若 QA 发现 P0 / P1 bug，2026-06-29 发布时间需顺延。</td></tr>
-          <tr><td>Windows 签名</td><td>旧硬件签名路径已不可继续依赖，需要尽快确认云签名或新证书路线。</td></tr>
-          <tr><td>FFF 时间线</td><td>需求刚在 2026-06-23 收到，不能在未拆解前承诺完整上线日。</td></tr>
-          <tr><td>6 月账单</td><td>当前成本使用 2026-06-24 前完整日数据；7 月初需用完整 6 月账单复核。</td></tr>
+          <tr><td>2026-06-29 至 2026-07-03</td><td>继续修 QA 缺陷，推进 Windows 接最新后端 API、连接修复、Docker 构建、核心包生成和云签名路线。</td></tr>
+          <tr><td>2026-07-06 至 2026-07-10</td><td>准备 Windows 测试版给 QA，验证后端 / BO / cron 共享工具和迁移流程，输出 FFF 时间线与任务拆解。</td></tr>
         </tbody>
       </table>
       <p class="note">完整细节请看同目录的 20260626 Sprint 4-6 完整报告。</p>
