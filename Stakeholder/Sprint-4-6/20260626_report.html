@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Arrowfish VPN - 2026-06-26 进展报告</title>
+  <style>
+    :root {
+      --bg: #f7f8fa;
+      --paper: #ffffff;
+      --text: #202124;
+      --muted: #5f6368;
+      --line: #e5e7eb;
+      --blue: #1a73e8;
+      --green: #16a34a;
+      --yellow: #f59e0b;
+      --red: #dc2626;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft YaHei", sans-serif;
+      line-height: 1.62;
+    }
+    main {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 32px 20px 56px;
+    }
+    header {
+      padding: 28px 0 18px;
+      border-bottom: 1px solid var(--line);
+      margin-bottom: 24px;
+    }
+    .eyebrow {
+      color: var(--blue);
+      font-size: 14px;
+      font-weight: 700;
+      margin: 0 0 8px;
+    }
+    h1 {
+      font-size: 34px;
+      line-height: 1.2;
+      margin: 0 0 10px;
+      letter-spacing: 0;
+    }
+    .meta {
+      color: var(--muted);
+      margin: 0;
+      font-size: 15px;
+    }
+    section {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 22px;
+      margin: 18px 0;
+    }
+    h2 {
+      font-size: 21px;
+      margin: 0 0 14px;
+      letter-spacing: 0;
+    }
+    p { margin: 0 0 12px; }
+    .tldr {
+      border-left: 5px solid var(--blue);
+      background: #f0f6ff;
+      font-size: 18px;
+      font-weight: 650;
+    }
+    .action {
+      border-left: 5px solid #f39c12;
+      background: #fff8e7;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 8px;
+      font-size: 15px;
+    }
+    th, td {
+      border: 1px solid var(--line);
+      padding: 10px 12px;
+      text-align: left;
+      vertical-align: top;
+    }
+    th {
+      background: #f3f4f6;
+      font-weight: 700;
+    }
+    .score {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 12px;
+    }
+    .metric {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 14px;
+      background: #fbfcfe;
+    }
+    .metric strong {
+      display: block;
+      font-size: 22px;
+      margin-bottom: 4px;
+    }
+    .metric span {
+      color: var(--muted);
+      font-size: 13px;
+    }
+    .note {
+      color: var(--muted);
+      font-size: 14px;
+      margin-top: 12px;
+    }
+    .ok { color: var(--green); font-weight: 700; }
+    .watch { color: var(--yellow); font-weight: 700; }
+    .risk { color: var(--red); font-weight: 700; }
+    @media (max-width: 760px) {
+      main { padding: 20px 12px 40px; }
+      h1 { font-size: 26px; }
+      section { padding: 16px; }
+      .score { grid-template-columns: 1fr; }
+      table { font-size: 14px; }
+      th, td { padding: 8px; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <p class="eyebrow">Arrowfish VPN · Sprint 4-6 周五更新</p>
+      <h1>2026-06-26 发布准备与 Sprint 7 规划报告</h1>
+      <p class="meta">覆盖范围：2026-06-18 至 2026-06-26。本报告接续 2026-06-19 对外补报，更新本周发布准备、技术债收敛和 Sprint 7 计划。</p>
+    </header>
+
+    <section class="tldr">
+      TL;DR：Arrowfish Android 与后端多协议支持已进入测试收尾，目标 2026-06-29 发布；基础设施、网站和 Android 技术债已基本收敛，下一步集中处理 Windows 客户端、后端重构，并在 Sprint 7 拆解 FFF 新需求。
+    </section>
+
+    <section>
+      <h2>一、需要配合 / 决策</h2>
+      <table>
+        <thead><tr><th>事项</th><th>需要配合</th><th>原因</th></tr></thead>
+        <tbody>
+          <tr><td>Arrowfish Android 发布窗口</td><td>项目负责人 / QA</td><td>当前版本已推进到 <strong>3.8.4</strong>，目标下周一发布；最终仍以 QA 回归结果为门控。</td></tr>
+          <tr><td>Windows 签名方案</td><td>项目负责人 / 运维</td><td>台湾旧硬件签名路径已不可继续依赖，Windows 新版需要云签名或新的有效代码签名证书。</td></tr>
+          <tr><td>FFF 需求拆解</td><td>Roy / 产品侧</td><td>6 月 23 日才收到完整 AF-vs-FFF 需求差异，Sprint 7 需先评估范围，再给正式排期。</td></tr>
+          <tr><td>后端重构窗口</td><td>项目负责人</td><td>后端需要先清理成可复用基线，再复制为 FFF 后端；直接叠新需求会放大维护风险。</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>二、本阶段关键成果</h2>
+      <div class="score">
+        <div class="metric"><strong>3.8.4</strong><span>Android 发布候选版本</span></div>
+        <div class="metric"><strong>06/29</strong><span>Android 目标发布日</span></div>
+        <div class="metric"><strong>USD 612/月</strong><span>Azure + LisaHost 直接节省口径</span></div>
+        <div class="metric"><strong>06/23</strong><span>收到 FFF 需求差异</span></div>
+      </div>
+      <table>
+        <thead><tr><th>方向</th><th>当前状态</th><th>管理层解读</th></tr></thead>
+        <tbody>
+          <tr><td>Android 正式版</td><td><span class="watch">测试中</span>：连接、延迟探测、活动弹窗和繁中文案继续收尾。</td><td>目标下周一发布，仍以 QA 结果为准。</td></tr>
+          <tr><td>后端多协议</td><td><span class="watch">测试中</span>：测试环境已交给 QA 验证。</td><td>支撑 Android 新版，也为 FFF 后端打底。</td></tr>
+          <tr><td>基础设施</td><td><span class="ok">主要清理完成</span>：Azure、Nginx、数据库和 GitLab runner 均已有成本与安全报告。</td><td>生产环境更安全，成本 run-rate 已降低。</td></tr>
+          <tr><td>网站链路</td><td><span class="ok">已标准化</span>：生产 Nginx 路由与多个静态网站 CI/CD 已整理。</td><td>减少部署错误和线上路由漂移。</td></tr>
+          <tr><td>后端 / BO / Cron</td><td><span class="watch">重构中</span>：BO 与 cron 已拆出，公共工具和迁移流程继续收敛。</td><td>从“能跑”推进到“可维护、可复制”。</td></tr>
+          <tr><td>Windows 客户端</td><td><span class="watch">开发中</span>：已开始接最新后端 API、Docker 构建和签名路线。</td><td>目标先出测试版给 QA，再评估正式发布时间。</td></tr>
+          <tr><td>FFF</td><td><span class="watch">待拆解</span>：6 月 23 日收到完整需求差异。</td><td>Sprint 7 先研究需求、拆任务，再给更准确时间线。</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>三、之前遗留的技术债处理</h2>
+      <table>
+        <thead><tr><th>遗留问题</th><th>风险</th><th>本阶段处理</th></tr></thead>
+        <tbody>
+          <tr><td>Android 连接体验债</td><td>用户会遇到连接卡住、误报网络被阻挡、切线状态闪烁等问题。</td><td>集中修复延迟探测、重连、免费额度、活动弹窗和连接状态显示。</td></tr>
+          <tr><td>网站部署和路由债</td><td>静态站点部署路径不清，Nginx 配置过散，容易出现路由漂移。</td><td>完成生产 Nginx routing 清理，并标准化三个静态网站 CI/CD。</td></tr>
+          <tr><td>基础设施安全债</td><td>旧机器、旧日志、旧 artifacts 和数据库公网暴露会增加排错与安全风险。</td><td>生产 MySQL 已无公网 IP，旧文件和日志清理进入持续整理。</td></tr>
+          <tr><td>后端 all-in-one 债</td><td>主后端、BO、cron 长期混在一起，后续 FFF 复用会继承同一套包袱。</td><td>BO 与 cron 已拆出，公共工具和迁移流程正在抽离。</td></tr>
+          <tr><td>Windows 旧客户端债</td><td>旧客户端接旧后端接口，签名路径过期，无法稳定发新版。</td><td>已开始升级到最新后端 API，并整理 Docker 构建和云签名路线。</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>四、改善与商业价值</h2>
+      <table>
+        <thead><tr><th>改善</th><th>当前结果</th><th>商业价值</th></tr></thead>
+        <tbody>
+          <tr><td>Android 稳定性</td><td>连接、延迟探测、活动弹窗、重连和文案问题持续收尾。</td><td>降低用户误判网络被封锁、连接卡住和切线失败的概率。</td></tr>
+          <tr><td>多协议测试</td><td>后端多协议支持已放到测试环境给 QA 验证。</td><td>后续可按地区和网络环境切换更合适协议，提高连接成功率。</td></tr>
+          <tr><td>数据库安全</td><td>生产 MySQL 已无公网 IP，仅保留私网访问。</td><td>数据库不再直接暴露互联网，安全风险明显降低。</td></tr>
+          <tr><td>网站发布</td><td>Nginx routing 与静态网站 CI/CD 已标准化。</td><td>官网、landing 和下载入口发布更可控，减少人为部署错误。</td></tr>
+          <tr><td>成本节省</td><td>LisaHost HK 机器已退订，Azure 当前 run-rate 明显下降。</td><td>成本节省已有实际依据，后续等完整账单再做月结确认。</td></tr>
+          <tr><td>后端通用化</td><td>公共工具开始从三个后端 repo 中抽离。</td><td>减少重复代码，为 FFF 后端复制和后续扩展做准备。</td></tr>
+          <tr><td>Windows Docker 化</td><td>Windows 构建路径开始改为可复现的 Docker 流程。</td><td>降低本地环境差异，方便生成测试版和正式版。</td></tr>
+        </tbody>
+      </table>
+      <p class="note">说明：成本口径沿用 2026-06-25 内部刷新。Azure 与 LisaHost 属于直接持续节省；AWS 是替代原本本地 GitLab、runner 和生产网站，并新增 CI/CD 与日志观测能力的平台成本，不合并为直接节省。</p>
+    </section>
+
+    <section>
+      <h2>五、安全与访问控制</h2>
+      <table>
+        <thead><tr><th>项目</th><th>本阶段变化</th><th>价值</th></tr></thead>
+        <tbody>
+          <tr><td>生产数据库</td><td>MySQL 已无公网 IP，仅通过私网和受控通道访问。</td><td>降低数据库被直接扫描和攻击的风险。</td></tr>
+          <tr><td>生产 Nginx</td><td>已清理备份 / 旧配置残留，禁用无效 file host 路由。</td><td>降低错误路由、目录暴露和误部署风险。</td></tr>
+          <tr><td>CI/CD 环境</td><td>后端、BO、cron、Android、静态网站和 Windows 均在整理独立构建 / 部署路径。</td><td>减少手工发布和环境混用带来的风险。</td></tr>
+          <tr><td>Windows 签名</td><td>旧硬件签名路径不可继续依赖，已开始整理云签名方案。</td><td>新版 Windows 若要公开发布，必须避免“未知发布者”风险。</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>六、FFF 当前状态与阻塞（实时口径）</h2>
+      <table>
+        <thead><tr><th>项目</th><th>当前状态</th><th>下一步</th></tr></thead>
+        <tbody>
+          <tr><td>需求文件</td><td>2026-06-23 已收到 Roy PRD / AF-vs-FFF 需求差异。</td><td>Sprint 7 先做需求研究、差异拆解和任务排期。</td></tr>
+          <tr><td>FFF 后端</td><td>暂不立即承诺完整上线时间。</td><td>先完成后端重构和可复用基线，再按 FFF 需求新增功能。</td></tr>
+          <tr><td>预计周期</td><td>初步估算：后端重构约 1-2 周，FFF 新需求后端改动约 3 周。</td><td>Sprint 7 研究后给更准确时间线。</td></tr>
+          <tr><td>范围风险</td><td>AF Android 发布和 Windows 升级本周占用主要窗口。</td><td>避免在未完整评估需求前承诺固定上线日。</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>七、关键时间线</h2>
+      <table>
+        <thead><tr><th>日期</th><th>事件</th></tr></thead>
+        <tbody>
+          <tr><td>2026-06-15</td><td>基础设施清理完成主要动作，Azure / AWS / Nginx / DB 安全进入观察。</td></tr>
+          <tr><td>2026-06-18 至 2026-06-25</td><td>后端、BO、Android 完成活动、诊断、免费额度、重连和延迟探测等稳定性闭环。</td></tr>
+          <tr><td>2026-06-23</td><td>收到 Roy PRD / AF-vs-FFF 完整需求差异。</td></tr>
+          <tr><td>2026-06-24 至 2026-06-25</td><td>Android 活动弹窗、延迟探测、连接状态和繁中文案继续修复。</td></tr>
+          <tr><td>2026-06-26</td><td>公共 Go 工具、后端体系重构、Windows Docker / 签名路线进入整理。</td></tr>
+          <tr><td>2026-06-29</td><td>目标发布 Arrowfish Android 与配套后端，多协议支持随 QA 结果推进。</td></tr>
+          <tr><td>2026-06-29 至 2026-07-10</td><td>Sprint 7：Windows 重构、后端重构、FFF PRD 研究与排期。</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>八、风险与阻塞</h2>
+      <table>
+        <thead><tr><th>风险</th><th>当前状态</th><th>下一步</th></tr></thead>
+        <tbody>
+          <tr><td>Android QA</td><td><span class="watch">测试中</span>：若出现 P0 / P1 bug，下周一发布时间需顺延。</td><td>以 QA 回归结果作为上线门控。</td></tr>
+          <tr><td>多端兼容</td><td><span class="watch">持续约束</span>：后端需兼容可升级 Android、冻结 iOS 和旧 Windows。</td><td>大改继续使用兼容响应和分阶段验证。</td></tr>
+          <tr><td>Windows 签名</td><td><span class="watch">待确认</span>：旧签名路径不可继续依赖。</td><td>尽快确认云签名或新证书路线。</td></tr>
+          <tr><td>FFF 需求</td><td><span class="watch">待拆解</span>：需求刚收到，不能直接承诺完整上线日。</td><td>Sprint 7 输出正式时间线与任务拆分。</td></tr>
+          <tr><td>后端重构</td><td><span class="watch">推进中</span>：公共工具和迁移流程影响面较大。</td><td>先在测试环境验证，再逐步进入生产。</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>九、Sprint 7 下周计划</h2>
+      <table>
+        <thead><tr><th>时间</th><th>动作</th></tr></thead>
+        <tbody>
+          <tr><td>2026-06-29 至 2026-07-03</td><td>完成 Arrowfish Android / 后端多协议发布门控；继续修 QA 缺陷；推进 Windows 重构主线；开始 FFF PRD 研究。</td></tr>
+          <tr><td>2026-07-06 至 2026-07-10</td><td>准备 Windows 测试版、确认签名路径；继续后端安全 / 性能 / 可扩展性重构；输出 FFF 时间线与任务拆解。</td></tr>
+          <tr><td>Sprint 7 结束前</td><td>给出 FFF 更准确排期，并确认后端复制基线是否可以进入 FFF 专属改动。</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>十、结论</h2>
+      <p>本周的重点不是新增单一功能，而是为下周发布和 Sprint 7 交接清理风险：Android 正式版进入测试收尾，基础设施、网站和 Android 技术债已基本收敛，后端与 Windows 技术债开始进入主处理窗口。</p>
+      <p>下一阶段的关键，是先把 Arrowfish Android 与后端多协议稳定发布，再完成 Windows 测试版和后端通用化；FFF 则在 Sprint 7 先完成需求拆解和排期，避免在范围未确认前承诺不准确时间。</p>
+    </section>
+
+  </main>
+</body>
+</html>
