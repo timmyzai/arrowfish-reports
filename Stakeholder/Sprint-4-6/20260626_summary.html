@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Arrowfish VPN - Sprint 4-6 一页摘要</title>
+  <style>
+    :root {
+      --bg: #f7f8fa;
+      --paper: #ffffff;
+      --text: #202124;
+      --muted: #5f6368;
+      --line: #e5e7eb;
+      --blue: #1a73e8;
+      --green: #16a34a;
+      --yellow: #f59e0b;
+      --red: #dc2626;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft YaHei", sans-serif;
+      line-height: 1.62;
+    }
+    main {
+      max-width: 1040px;
+      margin: 0 auto;
+      padding: 32px 20px 56px;
+    }
+    header {
+      padding: 28px 0 18px;
+      border-bottom: 1px solid var(--line);
+      margin-bottom: 24px;
+    }
+    .eyebrow {
+      color: var(--blue);
+      font-size: 14px;
+      font-weight: 700;
+      margin: 0 0 8px;
+    }
+    h1 {
+      font-size: 34px;
+      line-height: 1.2;
+      margin: 0 0 10px;
+      letter-spacing: 0;
+    }
+    .meta {
+      color: var(--muted);
+      margin: 0;
+      font-size: 15px;
+    }
+    section {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 22px;
+      margin: 18px 0;
+    }
+    h2 {
+      font-size: 21px;
+      margin: 0 0 14px;
+      letter-spacing: 0;
+    }
+    p { margin: 0 0 12px; }
+    .tldr {
+      border-left: 5px solid var(--blue);
+      background: #f0f6ff;
+      font-size: 18px;
+      font-weight: 650;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 8px;
+      font-size: 15px;
+    }
+    th, td {
+      border: 1px solid var(--line);
+      padding: 10px 12px;
+      text-align: left;
+      vertical-align: top;
+    }
+    th {
+      background: #f3f4f6;
+      font-weight: 700;
+    }
+    .score {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 12px;
+    }
+    .metric {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 14px;
+      background: #fbfcfe;
+    }
+    .metric strong {
+      display: block;
+      font-size: 22px;
+      margin-bottom: 4px;
+    }
+    .metric span {
+      color: var(--muted);
+      font-size: 13px;
+    }
+    .note {
+      color: var(--muted);
+      font-size: 14px;
+      margin-top: 12px;
+    }
+    .ok { color: var(--green); font-weight: 700; }
+    .watch { color: var(--yellow); font-weight: 700; }
+    @media (max-width: 760px) {
+      main { padding: 20px 12px 40px; }
+      h1 { font-size: 26px; }
+      section { padding: 16px; }
+      .score { grid-template-columns: 1fr; }
+      table { font-size: 14px; }
+      th, td { padding: 8px; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <p class="eyebrow">Arrowfish VPN · Sprint 4-6 一页摘要</p>
+      <h1>2026-06-26 管理层摘要</h1>
+      <p class="meta">覆盖范围：2026-05-10 至 2026-06-26。本页是完整报告的快速阅读版。</p>
+    </header>
+
+    <section class="tldr">
+      TL;DR：Sprint 4-6 已把主要基础设施、Android、网站和后端拆分技术债收敛到可发布状态；成本直接节省约 USD 612.21/月，下一阶段重点是 2026-06-29 Android 发布、Windows 升级、后端重构和 FFF 排期。
+    </section>
+
+    <section>
+      <h2>一、核心结论</h2>
+      <div class="score">
+        <div class="metric"><strong>USD 612.21/月</strong><span>Azure + LisaHost 直接节省</span></div>
+        <div class="metric"><strong>USD 461.00/月</strong><span>扣除 AWS 平台后的现金流改善估算</span></div>
+        <div class="metric"><strong>3.8.4</strong><span>Android 发布候选版本</span></div>
+        <div class="metric"><strong>0</strong><span>生产 MySQL 公网 IP</span></div>
+      </div>
+      <table>
+        <thead><tr><th>主题</th><th>结论</th></tr></thead>
+        <tbody>
+          <tr><td>成本</td><td>Azure 与 LisaHost 是直接节省；AWS 是替代本地 GitLab、runner、生产网站，并新增 CI/CD 与日志观测能力的平台投入。</td></tr>
+          <tr><td>安全</td><td>生产 MySQL 已无公网 IP，Nginx 与旧文件 / 旧路由已整理，公网暴露面降低。</td></tr>
+          <tr><td>发布</td><td>Arrowfish Android 与后端多协议进入测试收尾，目标 2026-06-29 发布。</td></tr>
+          <tr><td>技术债</td><td>Android、基础设施、网站发布链路已基本收敛；后端与 Windows 技术债进入 Sprint 7 主处理窗口。</td></tr>
+          <tr><td>FFF</td><td>2026-06-23 收到完整需求差异；Sprint 7 先拆解需求，再给正式时间线。</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>二、成本与业务健康度</h2>
+      <table>
+        <thead><tr><th>项目</th><th>结果</th></tr></thead>
+        <tbody>
+          <tr><td>Azure 直接节省</td><td>从 2026 年 1-5 月平均 USD 599.33/月降至当前 run-rate USD 234.07/月，节省约 USD 365.26/月。</td></tr>
+          <tr><td>LisaHost HK 机器</td><td>6 月已退订，RMB 1,680/月停止；按 2026-06-24 公开参考汇率 1 USD = 6.8029 CNY，约 USD 246.95/月。</td></tr>
+          <tr><td>AWS 平台投入</td><td>清理后约 USD 151.21/月；用于替代本地 GitLab / runner / 生产网站，并承接 Android Kotlin CI/CD 与 Seq logging。</td></tr>
+          <tr><td>清理后业务指标</td><td>活跃用户 +2.3%，流量 +5.4%，已完成付费订单 +4.6%，已完成付费金额 +8.4%。</td></tr>
+          <tr><td>观察项</td><td>新注册用户 6,161 -> 5,310，下降 13.8%，需要结合渠道、投放、地区访问与版本变化继续观察。</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>三、发布与 Sprint 7 计划</h2>
+      <table>
+        <thead><tr><th>时间</th><th>动作</th></tr></thead>
+        <tbody>
+          <tr><td>2026-06-29</td><td>目标发布 Arrowfish Android 与配套后端多协议支持；以 QA 回归结果为上线门控。</td></tr>
+          <tr><td>2026-06-29 至 2026-07-03</td><td>继续修 QA 缺陷，推进 Windows 接最新后端 API、连接修复、Docker 构建和云签名路线。</td></tr>
+          <tr><td>2026-07-06 至 2026-07-10</td><td>准备 Windows 测试版给 QA，继续后端安全 / 性能 / 可扩展性重构，输出 FFF 时间线与任务拆解。</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>四、需要管理层注意</h2>
+      <table>
+        <thead><tr><th>事项</th><th>原因</th></tr></thead>
+        <tbody>
+          <tr><td>Android 发布</td><td>若 QA 发现 P0 / P1 bug，2026-06-29 发布时间需顺延。</td></tr>
+          <tr><td>Windows 签名</td><td>旧硬件签名路径已不可继续依赖，需要尽快确认云签名或新证书路线。</td></tr>
+          <tr><td>FFF 时间线</td><td>需求刚在 2026-06-23 收到，不能在未拆解前承诺完整上线日。</td></tr>
+          <tr><td>6 月账单</td><td>当前成本使用 2026-06-24 前完整日数据；7 月初需用完整 6 月账单复核。</td></tr>
+        </tbody>
+      </table>
+      <p class="note">完整细节请看同目录的 20260626 Sprint 4-6 完整报告。</p>
+    </section>
+  </main>
+</body>
+</html>

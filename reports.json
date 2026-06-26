@@ -54,15 +54,15 @@
     "file": "Stakeholder/Sprint-3/20260509_summary.html"
   },
   {
-    "id": "sprint-4-6-catchup",
-    "name": "Arrowfish VPN — Sprint 4-6 进展补报 · 2026-06-19",
-    "date": "2026-06-19",
-    "file": "Stakeholder/Sprint-4-6/20260619_report.html"
-  },
-  {
-    "id": "sprint-4-6-20260626",
-    "name": "Arrowfish VPN — 发布准备与 Sprint 7 计划 · 2026-06-26",
+    "id": "sprint-4-6-full",
+    "name": "Arrowfish VPN — Sprint 4-6 完整报告 · 2026-06-26",
     "date": "2026-06-26",
     "file": "Stakeholder/Sprint-4-6/20260626_report.html"
+  },
+  {
+    "id": "sprint-4-6-summary",
+    "name": "Arrowfish VPN — Sprint 4-6 一页摘要 · 2026-06-26",
+    "date": "2026-06-26",
+    "file": "Stakeholder/Sprint-4-6/20260626_summary.html"
   }
 ]

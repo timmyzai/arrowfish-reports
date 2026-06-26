@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="noindex, nofollow">
-  <title>Arrowfish VPN - 2026-06-26 进展报告</title>
+  <title>Arrowfish VPN - Sprint 4-6 完整报告</title>
   <style>
     :root {
       --bg: #f7f8fa;
@@ -71,10 +71,6 @@
       font-size: 18px;
       font-weight: 650;
     }
-    .action {
-      border-left: 5px solid #f39c12;
-      background: #fff8e7;
-    }
     table {
       width: 100%;
       border-collapse: collapse;
@@ -133,13 +129,13 @@
 <body>
   <main>
     <header>
-      <p class="eyebrow">Arrowfish VPN · Sprint 4-6 周五更新</p>
-      <h1>2026-06-26 发布准备与 Sprint 7 规划报告</h1>
-      <p class="meta">覆盖范围：2026-06-18 至 2026-06-26。本报告接续 2026-06-19 对外补报，更新本周发布准备、技术债收敛和 Sprint 7 计划。</p>
+      <p class="eyebrow">Arrowfish VPN · Sprint 4-6 完整报告</p>
+      <h1>2026-06-26 Sprint 4-6 完整进展、成本与发布规划报告</h1>
+      <p class="meta">覆盖范围：2026-05-10 至 2026-06-26。本报告合并原 2026-06-19 补报与 2026-06-26 更新，作为 Sprint 4-6 唯一完整版本。</p>
     </header>
 
     <section class="tldr">
-      TL;DR：Arrowfish Android 与后端多协议支持已进入测试收尾，目标 2026-06-29 发布；基础设施、网站和 Android 技术债已基本收敛，下一步集中处理 Windows 客户端、后端重构，并在 Sprint 7 拆解 FFF 新需求。
+      TL;DR：Sprint 4-6 已完成基础设施、Android、网站和后端拆分的主要技术债收敛；Azure + LisaHost 直接节省约 USD 612.21/月，Arrowfish Android 与后端多协议进入发布收尾，Sprint 7 重点转向 Windows、后端重构和 FFF 需求拆解。
     </section>
 
     <section>
@@ -147,10 +143,11 @@
       <table>
         <thead><tr><th>事项</th><th>需要配合</th><th>原因</th></tr></thead>
         <tbody>
-          <tr><td>Arrowfish Android 发布窗口</td><td>项目负责人 / QA</td><td>当前版本已推进到 <strong>3.8.4</strong>，目标下周一发布；最终仍以 QA 回归结果为门控。</td></tr>
+          <tr><td>Arrowfish Android 发布窗口</td><td>项目负责人 / QA</td><td>当前版本已推进到 <strong>3.8.4</strong>，目标 2026-06-29 发布；最终仍以 QA 回归结果为门控。</td></tr>
           <tr><td>Windows 签名方案</td><td>项目负责人 / 运维</td><td>台湾旧硬件签名路径已不可继续依赖，Windows 新版需要云签名或新的有效代码签名证书。</td></tr>
-          <tr><td>FFF 需求拆解</td><td>Roy / 产品侧</td><td>6 月 23 日才收到完整 AF-vs-FFF 需求差异，Sprint 7 需先评估范围，再给正式排期。</td></tr>
+          <tr><td>FFF 需求拆解</td><td>Roy / 产品侧</td><td>2026-06-23 才收到完整 AF-vs-FFF 需求差异，Sprint 7 需先评估范围，再给正式排期。</td></tr>
           <tr><td>后端重构窗口</td><td>项目负责人</td><td>后端需要先清理成可复用基线，再复制为 FFF 后端；直接叠新需求会放大维护风险。</td></tr>
+          <tr><td>成本月结确认</td><td>财务 / 运维</td><td>当前成本口径来自 2026-06-24 前完整日数据；7 月初需用完整 6 月账单做最终确认。</td></tr>
         </tbody>
       </table>
     </section>
@@ -158,32 +155,101 @@
     <section>
       <h2>二、本阶段关键成果</h2>
       <div class="score">
+        <div class="metric"><strong>USD 612.21/月</strong><span>Azure + LisaHost 直接节省</span></div>
         <div class="metric"><strong>3.8.4</strong><span>Android 发布候选版本</span></div>
-        <div class="metric"><strong>06/29</strong><span>Android 目标发布日</span></div>
-        <div class="metric"><strong>USD 612/月</strong><span>Azure + LisaHost 直接节省口径</span></div>
+        <div class="metric"><strong>0</strong><span>生产 MySQL 公网 IP</span></div>
         <div class="metric"><strong>06/23</strong><span>收到 FFF 需求差异</span></div>
       </div>
       <table>
-        <thead><tr><th>方向</th><th>当前状态</th><th>管理层解读</th></tr></thead>
+        <thead><tr><th>方向</th><th>当前结果</th><th>管理层解读</th></tr></thead>
         <tbody>
-          <tr><td>Android 正式版</td><td><span class="watch">测试中</span>：连接、延迟探测、活动弹窗和繁中文案继续收尾。</td><td>目标下周一发布，仍以 QA 结果为准。</td></tr>
-          <tr><td>后端多协议</td><td><span class="watch">测试中</span>：测试环境已交给 QA 验证。</td><td>支撑 Android 新版，也为 FFF 后端打底。</td></tr>
-          <tr><td>基础设施</td><td><span class="ok">主要清理完成</span>：Azure、Nginx、数据库和 GitLab runner 均已有成本与安全报告。</td><td>生产环境更安全，成本 run-rate 已降低。</td></tr>
-          <tr><td>网站链路</td><td><span class="ok">已标准化</span>：生产 Nginx 路由与多个静态网站 CI/CD 已整理。</td><td>减少部署错误和线上路由漂移。</td></tr>
-          <tr><td>后端 / BO / Cron</td><td><span class="watch">重构中</span>：BO 与 cron 已拆出，公共工具和迁移流程继续收敛。</td><td>从“能跑”推进到“可维护、可复制”。</td></tr>
-          <tr><td>Windows 客户端</td><td><span class="watch">开发中</span>：已开始接最新后端 API、Docker 构建和签名路线。</td><td>目标先出测试版给 QA，再评估正式发布时间。</td></tr>
-          <tr><td>FFF</td><td><span class="watch">待拆解</span>：6 月 23 日收到完整需求差异。</td><td>Sprint 7 先研究需求、拆任务，再给更准确时间线。</td></tr>
+          <tr><td>Android 稳定性</td><td>修复断网重连、免费额度、活动弹窗、延迟探测、连接状态和繁中文案等问题。</td><td>降低用户误判网络被封锁、连接卡住和切线失败的概率。</td></tr>
+          <tr><td>后端多协议</td><td>多协议支持已放到测试环境给 QA 验证。</td><td>支撑 Arrowfish Android 新版，也为 FFF 后端复用打底。</td></tr>
+          <tr><td>BO / Cron 拆分</td><td>BO 与 cron 已从旧 all-in-one 后端拆出，公共工具和迁移流程继续收敛。</td><td>从“能跑”推进到“可维护、可复制”。</td></tr>
+          <tr><td>基础设施清理</td><td>Azure、AWS、Nginx、数据库、GitLab runner 和旧文件 / 日志完成主要整理。</td><td>生产环境更安全，成本和维护噪音更低。</td></tr>
+          <tr><td>网站发布链路</td><td>生产 Nginx 路由与多个静态网站 CI/CD 已标准化。</td><td>减少部署错误、错误路径和线上 routing 漂移。</td></tr>
+          <tr><td>Windows 客户端</td><td>已开始接最新后端 API、Docker 构建和签名路线。</td><td>目标先出测试版给 QA，再评估正式发布时间。</td></tr>
+          <tr><td>FFF</td><td>已收到完整需求差异，但尚未完成拆解。</td><td>Sprint 7 先研究需求、拆任务，再给更准确时间线。</td></tr>
         </tbody>
       </table>
     </section>
 
     <section>
-      <h2>三、之前遗留的技术债处理</h2>
+      <h2>三、成本节省与 AWS 投入口径</h2>
+      <p>本节为管理层主口径：Azure 与 LisaHost 是直接成本下降；AWS 是替代已不可继续使用的本地 GitLab、runner 和生产网站，并新增 CI/CD 与日志观测能力的平台投入，不能简单合并成直接节省。</p>
+      <table>
+        <thead><tr><th>成本项</th><th>口径</th><th>当前结果</th><th>月化影响</th></tr></thead>
+        <tbody>
+          <tr><td>Azure</td><td>2026 年 1-5 月平均实际费用 vs 当前清理后 run-rate</td><td>从 USD 599.33/月降至 USD 234.07/月</td><td><strong>节省 USD 365.26/月</strong></td></tr>
+          <tr><td>LisaHost HK 机器</td><td>6 月已退订固定供应商费用</td><td>RMB 1,680/月已停止，按 2026-06-24 公开参考汇率 1 USD = 6.8029 CNY 换算</td><td><strong>节省约 USD 246.95/月</strong></td></tr>
+          <tr><td>直接节省小计</td><td>Azure + LisaHost</td><td>不含 AWS 平台投入</td><td><strong>节省约 USD 612.21/月</strong></td></tr>
+          <tr><td>AWS 平台</td><td>替代本地 GitLab / runner / 生产网站，并新增 Seq logging 与 Android Kotlin CI/CD</td><td>清理后当前 run-rate 约 USD 151.21/月</td><td>必要平台投入，不计入直接节省</td></tr>
+          <tr><td>现金流改善估算</td><td>直接节省扣除当前 AWS run-rate，未计旧本地机器维护成本</td><td>用于管理层粗估</td><td><strong>改善约 USD 461.00/月</strong></td></tr>
+        </tbody>
+      </table>
+      <table>
+        <thead><tr><th>云成本指标</th><th>数值</th></tr></thead>
+        <tbody>
+          <tr><td>AWS 2026-04 实际 / 估算账单</td><td>USD 207.50</td></tr>
+          <tr><td>AWS 2026-05 实际 / 估算账单</td><td>USD 235.10</td></tr>
+          <tr><td>AWS 清理后月化 run-rate</td><td>USD 151.21/月</td></tr>
+          <tr><td>Azure 2026-01 到 2026-05 平均实际费用</td><td>USD 599.33/月</td></tr>
+          <tr><td>Azure 清理后月化 run-rate</td><td>USD 234.07/月</td></tr>
+        </tbody>
+      </table>
+      <p class="note">说明：AWS 1-2 月几乎没有费用，3 月也还不是成熟使用状态，因此 4 月以后更接近 AWS 平台成熟使用状态。AWS 主要用于说明必要平台投入与内部优化，不建议与 Azure/LisaHost 一起合并成“直接节省”。</p>
+    </section>
+
+    <section>
+      <h2>四、业务健康度与 DB 指标</h2>
+      <table>
+        <thead><tr><th>5 月指标</th><th>结果</th></tr></thead>
+        <tbody>
+          <tr><td>5 月不重复付费会员数</td><td>1,112</td></tr>
+          <tr><td>2026-04-30 23:59:59 仍有订阅的用户数</td><td>1,300</td></tr>
+          <tr><td>4 月底有订阅但到 5 月底未续订用户数</td><td>461</td></tr>
+          <tr><td>5 月首次付费会员数，所有设备</td><td>573</td></tr>
+          <tr><td>5 月首次付费会员数，APP 设备</td><td>549</td></tr>
+        </tbody>
+      </table>
+      <table>
+        <thead><tr><th>6 月清理前后指标</th><th>清理前 06/08-06/14</th><th>清理后 06/15-06/21</th><th>变化</th></tr></thead>
+        <tbody>
+          <tr><td>新注册用户</td><td>6,161</td><td>5,310</td><td><span class="watch">-13.8%</span></td></tr>
+          <tr><td>活跃 VPN 用户</td><td>2,659</td><td>2,720</td><td><span class="ok">+2.3%</span></td></tr>
+          <tr><td>流量</td><td>4,186.04 GB</td><td>4,414.14 GB</td><td><span class="ok">+5.4%</span></td></tr>
+          <tr><td>已完成付费订单，状态 3/4</td><td>239</td><td>250</td><td><span class="ok">+4.6%</span></td></tr>
+          <tr><td>已完成付费用户</td><td>232</td><td>227</td><td><span class="watch">-2.2%</span></td></tr>
+          <tr><td>已完成付费金额</td><td>USD 5,594.86</td><td>USD 6,062.64</td><td><span class="ok">+8.4%</span></td></tr>
+          <tr><td>会员 / 独享订单金额</td><td>USD 5,138.86</td><td>USD 6,012.64</td><td><span class="ok">+17.0%</span></td></tr>
+        </tbody>
+      </table>
+      <p class="note">口径：已完成付费订单使用 orders.status IN (3,4)，即已付款 / 已交付。清理后活跃、流量、订单量和金额没有下降；注册下降是下一阶段需要继续观察的业务信号。</p>
+    </section>
+
+    <section>
+      <h2>五、基础设施与安全状态</h2>
+      <table>
+        <thead><tr><th>项目</th><th>当前状态</th><th>价值 / 观察点</th></tr></thead>
+        <tbody>
+          <tr><td>AWS EC2</td><td>当前 5 台 running EC2；未发现 unattached EBS volume。</td><td>资源边界更清晰，继续复核 runner 规格。</td></tr>
+          <tr><td>GitLab / Runner</td><td>GitLab server 与 GitLab runner 已从本地机器迁移到 AWS。</td><td>避免本地机器放弃后的单点风险，并支撑集中 CI/CD。</td></tr>
+          <tr><td>AWS runner 规格</td><td>gitlab-runner-kotlin-amd 当前查询显示 t3.large。</td><td>需确认是否为 Android Kotlin CI/CD 必要容量；若不是，再评估降配。</td></tr>
+          <tr><td>Azure VM</td><td>当前保留 3 台 VM：vpn-dev-02、vpn-prod-002、vpn-prod-mysql-01。</td><td>旧 proxy/backend 与冗余资产已清理。</td></tr>
+          <tr><td>Azure 公网 IP</td><td>当前只保留 2 个公网 IP：DEV app 与 PROD app。</td><td>公网暴露面降低。</td></tr>
+          <tr><td>生产 MySQL</td><td>无公网 IP，仅保留私网 10.0.0.101。</td><td>数据库不再直接暴露互联网。</td></tr>
+          <tr><td>生产 Nginx</td><td>已清理备份 / 旧配置残留，禁用无效 file host 路由。</td><td>降低错误路由、目录暴露和误部署风险。</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>六、之前遗留的技术债处理</h2>
       <table>
         <thead><tr><th>遗留问题</th><th>风险</th><th>本阶段处理</th></tr></thead>
         <tbody>
-          <tr><td>Android 连接体验债</td><td>用户会遇到连接卡住、误报网络被阻挡、切线状态闪烁等问题。</td><td>集中修复延迟探测、重连、免费额度、活动弹窗和连接状态显示。</td></tr>
-          <tr><td>网站部署和路由债</td><td>静态站点部署路径不清，Nginx 配置过散，容易出现路由漂移。</td><td>完成生产 Nginx routing 清理，并标准化三个静态网站 CI/CD。</td></tr>
+          <tr><td>Android 连接体验债</td><td>连接卡住、误报网络被阻挡、切线状态闪烁，会直接影响用户体验。</td><td>集中修复延迟探测、重连、免费额度、活动弹窗和连接状态显示。</td></tr>
+          <tr><td>网站部署和路由债</td><td>静态站点部署路径不清，Nginx 配置过散，容易出现路由漂移。</td><td>完成生产 Nginx routing 清理，并标准化静态网站 CI/CD。</td></tr>
           <tr><td>基础设施安全债</td><td>旧机器、旧日志、旧 artifacts 和数据库公网暴露会增加排错与安全风险。</td><td>生产 MySQL 已无公网 IP，旧文件和日志清理进入持续整理。</td></tr>
           <tr><td>后端 all-in-one 债</td><td>主后端、BO、cron 长期混在一起，后续 FFF 复用会继承同一套包袱。</td><td>BO 与 cron 已拆出，公共工具和迁移流程正在抽离。</td></tr>
           <tr><td>Windows 旧客户端债</td><td>旧客户端接旧后端接口，签名路径过期，无法稳定发新版。</td><td>已开始升级到最新后端 API，并整理 Docker 构建和云签名路线。</td></tr>
@@ -192,57 +258,42 @@
     </section>
 
     <section>
-      <h2>四、改善与商业价值</h2>
+      <h2>七、发布计划与多端兼容挑战</h2>
       <table>
-        <thead><tr><th>改善</th><th>当前结果</th><th>商业价值</th></tr></thead>
+        <thead><tr><th>项目</th><th>当前状态</th><th>下一步</th></tr></thead>
         <tbody>
-          <tr><td>Android 稳定性</td><td>连接、延迟探测、活动弹窗、重连和文案问题持续收尾。</td><td>降低用户误判网络被封锁、连接卡住和切线失败的概率。</td></tr>
-          <tr><td>多协议测试</td><td>后端多协议支持已放到测试环境给 QA 验证。</td><td>后续可按地区和网络环境切换更合适协议，提高连接成功率。</td></tr>
-          <tr><td>数据库安全</td><td>生产 MySQL 已无公网 IP，仅保留私网访问。</td><td>数据库不再直接暴露互联网，安全风险明显降低。</td></tr>
-          <tr><td>网站发布</td><td>Nginx routing 与静态网站 CI/CD 已标准化。</td><td>官网、landing 和下载入口发布更可控，减少人为部署错误。</td></tr>
-          <tr><td>成本节省</td><td>LisaHost HK 机器已退订，Azure 当前 run-rate 明显下降。</td><td>成本节省已有实际依据，后续等完整账单再做月结确认。</td></tr>
-          <tr><td>后端通用化</td><td>公共工具开始从三个后端 repo 中抽离。</td><td>减少重复代码，为 FFF 后端复制和后续扩展做准备。</td></tr>
-          <tr><td>Windows Docker 化</td><td>Windows 构建路径开始改为可复现的 Docker 流程。</td><td>降低本地环境差异，方便生成测试版和正式版。</td></tr>
-        </tbody>
-      </table>
-      <p class="note">说明：成本口径沿用 2026-06-25 内部刷新。Azure 与 LisaHost 属于直接持续节省；AWS 是替代原本本地 GitLab、runner 和生产网站，并新增 CI/CD 与日志观测能力的平台成本，不合并为直接节省。</p>
-    </section>
-
-    <section>
-      <h2>五、安全与访问控制</h2>
-      <table>
-        <thead><tr><th>项目</th><th>本阶段变化</th><th>价值</th></tr></thead>
-        <tbody>
-          <tr><td>生产数据库</td><td>MySQL 已无公网 IP，仅通过私网和受控通道访问。</td><td>降低数据库被直接扫描和攻击的风险。</td></tr>
-          <tr><td>生产 Nginx</td><td>已清理备份 / 旧配置残留，禁用无效 file host 路由。</td><td>降低错误路由、目录暴露和误部署风险。</td></tr>
-          <tr><td>CI/CD 环境</td><td>后端、BO、cron、Android、静态网站和 Windows 均在整理独立构建 / 部署路径。</td><td>减少手工发布和环境混用带来的风险。</td></tr>
-          <tr><td>Windows 签名</td><td>旧硬件签名路径不可继续依赖，已开始整理云签名方案。</td><td>新版 Windows 若要公开发布，必须避免“未知发布者”风险。</td></tr>
+          <tr><td>Arrowfish Android</td><td>3.8.4 发布候选，连接、延迟、活动弹窗和繁中文案继续收尾。</td><td>目标 2026-06-29 发布，仍以 QA 结果为准。</td></tr>
+          <tr><td>后端多协议</td><td>测试环境已交给 QA 验证。</td><td>配合 Android 发布，并保持旧客户端兼容。</td></tr>
+          <tr><td>冻结客户端</td><td>后端仍需兼容冻结 iOS HiYou v1.3.0 与旧 Windows skytree_pc v2.2.71。</td><td>大改继续使用兼容响应和分阶段验证。</td></tr>
+          <tr><td>Windows 新版</td><td>已开始接最新后端 API、修连接问题、整理 Docker 构建和签名路线。</td><td>先出测试版给 QA；签名路线确认后再评估正式发布时间。</td></tr>
         </tbody>
       </table>
     </section>
 
     <section>
-      <h2>六、FFF 当前状态与阻塞（实时口径）</h2>
+      <h2>八、FFF 当前状态与阻塞（实时口径）</h2>
       <table>
         <thead><tr><th>项目</th><th>当前状态</th><th>下一步</th></tr></thead>
         <tbody>
           <tr><td>需求文件</td><td>2026-06-23 已收到 Roy PRD / AF-vs-FFF 需求差异。</td><td>Sprint 7 先做需求研究、差异拆解和任务排期。</td></tr>
           <tr><td>FFF 后端</td><td>暂不立即承诺完整上线时间。</td><td>先完成后端重构和可复用基线，再按 FFF 需求新增功能。</td></tr>
           <tr><td>预计周期</td><td>初步估算：后端重构约 1-2 周，FFF 新需求后端改动约 3 周。</td><td>Sprint 7 研究后给更准确时间线。</td></tr>
-          <tr><td>范围风险</td><td>AF Android 发布和 Windows 升级本周占用主要窗口。</td><td>避免在未完整评估需求前承诺固定上线日。</td></tr>
+          <tr><td>范围风险</td><td>Arrowfish Android 发布和 Windows 升级占用主要窗口。</td><td>避免在未完整评估需求前承诺固定上线日。</td></tr>
         </tbody>
       </table>
     </section>
 
     <section>
-      <h2>七、关键时间线</h2>
+      <h2>九、关键时间线</h2>
       <table>
         <thead><tr><th>日期</th><th>事件</th></tr></thead>
         <tbody>
-          <tr><td>2026-06-15</td><td>基础设施清理完成主要动作，Azure / AWS / Nginx / DB 安全进入观察。</td></tr>
+          <tr><td>2026-05-10</td><td>上一次对外报告截止点。</td></tr>
+          <tr><td>2026-05-22 至 2026-05-25</td><td>Sprint 4 关键重构落地：后端控制面、计费、Android 重连、预发环境和 CI/CD 进入稳定推进。</td></tr>
+          <tr><td>2026-05-31 至 2026-06-08</td><td>完成跨 repo 审查、BO 拆分计划、流量归因、多协议与 Sprint 5 稳定化方向。</td></tr>
+          <tr><td>2026-06-12 至 2026-06-17</td><td>完成 GitLab/AWS/Azure 基础设施清理、成本估算、DB 公网 IP 移除与安全收敛。</td></tr>
           <tr><td>2026-06-18 至 2026-06-25</td><td>后端、BO、Android 完成活动、诊断、免费额度、重连和延迟探测等稳定性闭环。</td></tr>
           <tr><td>2026-06-23</td><td>收到 Roy PRD / AF-vs-FFF 完整需求差异。</td></tr>
-          <tr><td>2026-06-24 至 2026-06-25</td><td>Android 活动弹窗、延迟探测、连接状态和繁中文案继续修复。</td></tr>
           <tr><td>2026-06-26</td><td>公共 Go 工具、后端体系重构、Windows Docker / 签名路线进入整理。</td></tr>
           <tr><td>2026-06-29</td><td>目标发布 Arrowfish Android 与配套后端，多协议支持随 QA 结果推进。</td></tr>
           <tr><td>2026-06-29 至 2026-07-10</td><td>Sprint 7：Windows 重构、后端重构、FFF PRD 研究与排期。</td></tr>
@@ -251,21 +302,22 @@
     </section>
 
     <section>
-      <h2>八、风险与阻塞</h2>
+      <h2>十、风险与观察项</h2>
       <table>
         <thead><tr><th>风险</th><th>当前状态</th><th>下一步</th></tr></thead>
         <tbody>
-          <tr><td>Android QA</td><td><span class="watch">测试中</span>：若出现 P0 / P1 bug，下周一发布时间需顺延。</td><td>以 QA 回归结果作为上线门控。</td></tr>
-          <tr><td>多端兼容</td><td><span class="watch">持续约束</span>：后端需兼容可升级 Android、冻结 iOS 和旧 Windows。</td><td>大改继续使用兼容响应和分阶段验证。</td></tr>
+          <tr><td>Android QA</td><td><span class="watch">测试中</span>：若出现 P0 / P1 bug，2026-06-29 发布时间需顺延。</td><td>以 QA 回归结果作为上线门控。</td></tr>
+          <tr><td>注册下降</td><td><span class="watch">需观察</span>：清理后一周注册下降 13.8%。</td><td>结合渠道投放、版本发布、地区访问和广告流量继续核对。</td></tr>
           <tr><td>Windows 签名</td><td><span class="watch">待确认</span>：旧签名路径不可继续依赖。</td><td>尽快确认云签名或新证书路线。</td></tr>
           <tr><td>FFF 需求</td><td><span class="watch">待拆解</span>：需求刚收到，不能直接承诺完整上线日。</td><td>Sprint 7 输出正式时间线与任务拆分。</td></tr>
-          <tr><td>后端重构</td><td><span class="watch">推进中</span>：公共工具和迁移流程影响面较大。</td><td>先在测试环境验证，再逐步进入生产。</td></tr>
+          <tr><td>AWS runner 规格</td><td><span class="watch">需复核</span>：gitlab-runner-kotlin-amd 当前显示 t3.large。</td><td>确认是否为 Android Kotlin CI/CD 必要容量。</td></tr>
+          <tr><td>账单确认</td><td><span class="watch">待月结</span>：当前使用 2026-06-24 前完整日数据。</td><td>2026-07-01 后用完整 6 月账单复核。</td></tr>
         </tbody>
       </table>
     </section>
 
     <section>
-      <h2>九、Sprint 7 下周计划</h2>
+      <h2>十一、Sprint 7 计划</h2>
       <table>
         <thead><tr><th>时间</th><th>动作</th></tr></thead>
         <tbody>
@@ -277,11 +329,10 @@
     </section>
 
     <section>
-      <h2>十、结论</h2>
-      <p>本周的重点不是新增单一功能，而是为下周发布和 Sprint 7 交接清理风险：Android 正式版进入测试收尾，基础设施、网站和 Android 技术债已基本收敛，后端与 Windows 技术债开始进入主处理窗口。</p>
+      <h2>十二、结论</h2>
+      <p>Sprint 4-6 的重点不是单一功能上线，而是把台湾团队遗留的基础设施、Android、网站、后端和发布链路技术债集中收敛。现在生产数据库更安全，云资源更清楚，网站发布更可控，Android 和后端多协议已进入发布收尾。</p>
       <p>下一阶段的关键，是先把 Arrowfish Android 与后端多协议稳定发布，再完成 Windows 测试版和后端通用化；FFF 则在 Sprint 7 先完成需求拆解和排期，避免在范围未确认前承诺不准确时间。</p>
     </section>
-
   </main>
 </body>
 </html>
