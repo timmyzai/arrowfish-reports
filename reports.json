@@ -1,79 +1,79 @@
 [
   {
     "id": "sprint-0",
-    "name": "交接报告（第0阶段）",
+    "name": "第0阶段 · 交接报告 · 2026-04-03",
     "date": "2026-04-03",
     "file": "Stakeholder/Sprint-0/20260403_report.html"
   },
   {
     "id": "sprint-1",
-    "name": "第1阶段周报（第1周）",
+    "name": "第1阶段 · 周报（第1周）· 2026-04-10",
     "date": "2026-04-10",
     "file": "Stakeholder/Sprint-1/20260410_report.html"
   },
   {
     "id": "sprint-0-1-summary",
-    "name": "Sprint 0+1 进度汇报 — 2026-04-10",
+    "name": "第0-1阶段 · 进度汇报 · 2026-04-10",
     "date": "2026-04-10",
     "file": "Stakeholder/Sprint-1/20260410_sprint_report.html"
   },
   {
     "id": "sprint-2-w1",
-    "name": "第2阶段进展报告（第1周）",
+    "name": "第2阶段 · 进展报告（第1周）· 2026-04-17",
     "date": "2026-04-17",
     "file": "Stakeholder/Sprint-2/20260417_report.html"
   },
   {
     "id": "sprint-2-w2",
-    "name": "第2阶段进展报告（第2周）",
+    "name": "第2阶段 · 进展报告（第2周）· 2026-04-24",
     "date": "2026-04-24",
     "file": "Stakeholder/Sprint-2/20260424_report.html"
   },
   {
     "id": "sprint-2-summary",
-    "name": "第2阶段进度汇报 — 2026-04-24",
+    "name": "第2阶段 · 进度汇报 · 2026-04-24",
     "date": "2026-04-24",
     "file": "Stakeholder/Sprint-2/20260424_sprint_report.html"
   },
   {
     "id": "sprint-3-full",
-    "name": "第3阶段完整汇报 — 2026-05-10",
+    "name": "第3阶段 · 完整报告 · 2026-05-10",
     "date": "2026-05-10",
     "file": "Stakeholder/Sprint-3/20260509_full_report.html"
   },
   {
     "id": "sprint-3-node-format-benchmark",
-    "name": "第3阶段节点回收实测 — 后台一键全擦重装（2026-05-10）",
+    "name": "第3阶段 · 节点回收实测（后台一键全擦重装）· 2026-05-10",
     "date": "2026-05-10",
     "file": "Stakeholder/Sprint-3/20260510_node_format_benchmark.html"
   },
   {
     "id": "sprint-3",
-    "name": "Arrowfish VPN — 第3阶段一页摘要 · 2026-05-10",
+    "name": "第3阶段 · 一页摘要 · 2026-05-10",
     "date": "2026-05-10",
     "file": "Stakeholder/Sprint-3/20260509_summary.html"
   },
   {
     "id": "sprint-4-6-full",
-    "name": "Arrowfish VPN — Sprint 4-6 完整报告 · 2026-06-26",
+    "name": "第4-6阶段 · 完整报告 · 2026-06-26",
     "date": "2026-06-26",
     "file": "Stakeholder/Sprint-4-6/20260626_report.html"
   },
   {
     "id": "sprint-4-6-summary",
-    "name": "Arrowfish VPN — Sprint 4-6 一页摘要 · 2026-06-26",
+    "name": "第4-6阶段 · 一页摘要 · 2026-06-26",
     "date": "2026-06-26",
     "file": "Stakeholder/Sprint-4-6/20260626_summary.html"
   },
   {
     "id": "sprint-7-full",
-    "name": "Arrowfish VPN — Sprint 7 完整报告 · 2026-07-10",
+    "name": "第7阶段 · 完整报告 · 2026-07-10",
     "date": "2026-07-10",
     "file": "Stakeholder/Sprint-7/20260710_report.html"
   },
   {
     "id": "sprint-7-summary",
-    "name": "Arrowfish VPN — Sprint 7 一页摘要 · 2026-07-10",
+    "name": "第7阶段 · 一页摘要 · 2026-07-10",
     "date": "2026-07-10",
     "file": "Stakeholder/Sprint-7/20260710_summary.html"
   }
