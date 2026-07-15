@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Arrowfish VPN - Sprint 7 一页摘要</title>
+  <style>
+    :root {
+      --bg: #f7f8fa;
+      --paper: #ffffff;
+      --text: #202124;
+      --muted: #5f6368;
+      --line: #e5e7eb;
+      --blue: #1a73e8;
+      --green: #16a34a;
+      --yellow: #f59e0b;
+      --red: #dc2626;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", "Segoe UI", sans-serif;
+      line-height: 1.62;
+    }
+    main {
+      max-width: 1040px;
+      margin: 0 auto;
+      padding: 32px 20px 56px;
+    }
+    header {
+      padding: 28px 0 18px;
+      border-bottom: 1px solid var(--line);
+      margin-bottom: 24px;
+    }
+    .eyebrow { color: var(--blue); font-size: 14px; font-weight: 700; margin: 0 0 8px; }
+    h1 { font-size: 32px; line-height: 1.2; margin: 0 0 10px; }
+    .meta { color: var(--muted); margin: 0; font-size: 15px; }
+    section { background: var(--paper); border: 1px solid var(--line); border-radius: 8px; padding: 22px; margin: 18px 0; }
+    h2 { font-size: 21px; margin: 0 0 14px; }
+    p { margin: 0 0 12px; }
+    .tldr { border-left: 5px solid var(--blue); background: #f0f6ff; font-size: 18px; font-weight: 650; }
+    table { width: 100%; border-collapse: collapse; margin-top: 8px; font-size: 15px; }
+    th, td { border: 1px solid var(--line); padding: 10px 12px; text-align: left; vertical-align: top; }
+    th { background: #f3f4f6; font-weight: 700; }
+    .score { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; margin-top: 12px; }
+    .metric { border: 1px solid var(--line); border-radius: 8px; padding: 14px; background: #fbfcfe; }
+    .metric strong { display: block; font-size: 22px; margin-bottom: 4px; }
+    .metric span { color: var(--muted); font-size: 13px; }
+    .note { color: var(--muted); font-size: 14px; margin-top: 12px; }
+    .ok { color: var(--green); font-weight: 700; }
+    .watch { color: var(--yellow); font-weight: 700; }
+    .risk { color: var(--red); font-weight: 700; }
+    @media (max-width: 760px) {
+      main { padding: 20px 12px 40px; }
+      h1 { font-size: 26px; }
+      section { padding: 16px; }
+      .score { grid-template-columns: 1fr; }
+      table { font-size: 14px; }
+      th, td { padding: 8px; }
+    }
+  </style>
+  <script src="../../assets/auth-gate.js"></script>
+</head>
+<body>
+  <main>
+    <header>
+      <p class="eyebrow">Arrowfish VPN · Sprint 7 一页摘要</p>
+      <h1>2026-07-10 管理层摘要</h1>
+      <p class="meta">覆盖范围：2026-06-27 至 2026-07-10。本页是完整报告的快速阅读版。</p>
+    </header>
+
+    <section class="tldr">
+      TL;DR：Windows 安装包体积降低 82.4%，协议 bootstrap 三端统一；针对 sing-box GPL3.0 / App Store 合规风险，团队已选定自研引擎 SkyTunnel 方案，节点侧已验证可用；中国网络自测工具 4 天交付，七项协议全绿，已交台湾团队测试。
+    </section>
+
+    <section>
+      <h2>一、需要管理层关注</h2>
+      <table>
+        <thead><tr><th>事项</th><th>说明</th></tr></thead>
+        <tbody>
+          <tr><td><span class="risk">设备额度识别缺陷</span></td><td>本阶段新发现，同一设备被不同账号使用时会互相顶号；方案已定，Sprint 8 排期修复。</td></tr>
+          <tr><td>Windows 签名</td><td>已提交 SSL.com 审核，预计 3-5 个工作日；审核完成前先出未签名测试包给 QA（目标 7/17）。</td></tr>
+          <tr><td>sing-box 合规</td><td>团队已选定自研引擎 SkyTunnel + 自研节点程序，不依赖任何第三方 GPL 开源内核。</td></tr>
+          <tr><td>FFF 商务事项</td><td>欧盟电话号码与新支付通道仍由 Roy 跟进，不影响 Arrowfish 发布。</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>二、核心结论</h2>
+      <div class="score">
+        <div class="metric"><strong>-82.4%</strong><span>Windows 安装包体积</span></div>
+        <div class="metric"><strong>4 天</strong><span>协议自测工具交付周期</span></div>
+        <div class="metric"><strong>7 / 7</strong><span>自测工具协议全绿</span></div>
+        <div class="metric"><strong>3 个</strong><span>共用 go-utilities 的后端仓库</span></div>
+      </div>
+      <table>
+        <thead><tr><th>主题</th><th>结论</th></tr></thead>
+        <tbody>
+          <tr><td>Windows</td><td>打包体积测量完成（98.8MB→17.4MB），底层迁移至 Tauri；代码签名与 QA 发布验证仍是门控。</td></tr>
+          <tr><td>合规方向</td><td>sing-box 的 GPL3.0 与 App Store 冲突已确认无可行合规路径；团队自研 SkyTunnel 客户端引擎与节点程序，节点侧 7/10 验证可用。</td></tr>
+          <tr><td>协议自测工具</td><td>7/6 立项，7/8 建站，7/10 交付并移交台湾团队，七项协议全绿。</td></tr>
+          <tr><td>后端复用</td><td>公共 Go 模块 go-utilities 被三个后端仓库正式引用，节点健康分类等能力一处修改多处生效。</td></tr>
+          <tr><td>Arrowfish 客户端</td><td>Android 持续迭代（3.8.5→3.8.10）；Windows 新版尚未对外发布，等待签名与 QA。</td></tr>
+          <tr><td>FFF</td><td>Lex 持续推进线路页面重构与会话状态管理；欧盟电话号码与支付通道仍待 Roy 商务侧推进。</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>三、下阶段计划（Sprint 8）</h2>
+      <table>
+        <thead><tr><th>方向</th><th>计划内容</th></tr></thead>
+        <tbody>
+          <tr><td>SkyTunnel 验证</td><td>完成 Android / Windows 双端验证，规划扩展至更多客户端平台。</td></tr>
+          <tr><td>Windows 发布</td><td>跟进签名审核结果；7/17 前先出未签名测试包给 QA。</td></tr>
+          <tr><td>续费功能</td><td>与台湾团队完成 FFF 需求梳理，续费功能（Arrowfish + FFF 通用）定为高优先级，先出 PRD。</td></tr>
+        </tbody>
+      </table>
+      <p class="note">完整细节请看同目录的 20260710 Sprint 7 完整报告。</p>
+    </section>
+  </main>
+</body>
+</html>
