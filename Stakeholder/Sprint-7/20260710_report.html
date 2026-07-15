@@ -269,10 +269,10 @@
       <h2>四、关键时间节点</h2>
       <div class="timeline">
         <div class="titem"><div class="tdate">6/27</div><div class="ttext">Sprint 7 启动，Windows 构建流程迁入 Docker 执行器，打包体积优化启动；日总提出 sing-box GPL3.0 / App Store 合规预警</div></div>
-        <div class="titem"><div class="tdate">6/29–6/30</div><div class="ttext">Android 启动/连接稳定性集中修复；Windows 客户端由 Electron 迁移至 Tauri</div></div>
+        <div class="titem"><div class="tdate">6/29–6/30</div><div class="ttext">Android 启动/连接稳定性集中修复；Windows 客户端从 Electron 全面重写为 Rust（Tauri 框架）</div></div>
         <div class="titem"><div class="tdate">7/1</div><div class="ttext">Windows 安装包体积测量完成（-82.4%）；Google Play 内购流程改为服务端权威校验</div></div>
         <div class="titem"><div class="tdate">7/2</div><div class="ttext">Arrowfish 统一下载中心单日建成上线</div></div>
-        <div class="titem"><div class="tdate">7/6</div><div class="ttext">中国网络协议自测工具立项；Windows CI 工具链集中修复</div></div>
+        <div class="titem"><div class="tdate">7/6</div><div class="ttext">中国网络协议自测工具立项；Windows 自建 CI/CD 流水线集中修复（Rust 工具链、MSVC 环境、x64/ARM64 双架构）</div></div>
         <div class="titem"><div class="tdate">7/7</div><div class="ttext">Android 线路刷新迁移至统一协议 bootstrap；go-utilities 节点健康分类能力上线并被两个后端仓库同日采用</div></div>
         <div class="titem"><div class="tdate">7/8</div><div class="ttext">协议自测工具建站并部署到测试环境（同日完成）</div></div>
         <div class="titem milestone"><div class="tdate">7/10</div><div class="ttext"><strong>节点侧原生协议方案验证可用；自研客户端引擎 SkyTunnel 建仓；协议自测工具 v1 移交台湾团队，七项协议全绿</strong></div></div>
@@ -285,7 +285,7 @@
         <thead><tr><th>客户端</th><th>本阶段状态</th><th>说明</th></tr></thead>
         <tbody>
           <tr><td>Android</td><td><span class="badge progress">持续迭代</span></td><td>内部版本号从 3.8.5 迭代至 3.8.10，随协议 bootstrap、连接与购买流程修复持续验证，对外发布节奏以官方结果为准。</td></tr>
-          <tr><td>Windows（新版，Tauri）</td><td><span class="badge pending">未对外发布</span></td><td>打包体积已测量完成，仍需完成代码签名与 QA 安装/连接/更新/卸载验证后才具备对外发布条件。</td></tr>
+          <tr><td>Windows（新版，Rust/Tauri 全面重写）</td><td><span class="badge pending">未对外发布</span></td><td>打包体积已测量完成，仍需完成代码签名与 QA 安装/连接/更新/卸载验证后才具备对外发布条件。</td></tr>
         </tbody>
       </table>
       <h3>本阶段后端改动的特殊挑战</h3>
