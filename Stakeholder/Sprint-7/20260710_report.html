@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="noindex, nofollow">
-  <title>Arrowfish VPN · 第7阶段 · 完整报告 · 2026-07-10</title>
+  <title>第7阶段 · 完整报告 · 2026-07-10</title>
   <style>
     :root {
       --bg: #f7f8fa;
@@ -240,7 +240,8 @@
       <table>
         <thead><tr><th>方向</th><th>本阶段结果</th><th>管理层解读</th></tr></thead>
         <tbody>
-          <tr><td>Windows 打包体积</td><td>安装包从 98.8 MB 降至 17.4 MB；安装后占用从 273 MB 降至 52.1 MB。客户端底层由 Electron 迁移至 Tauri。</td><td>下载与安装门槛大幅降低，尤其利好网络/存储条件有限的用户；为后续正式发布打好基础。</td></tr>
+          <tr><td>Windows 客户端全面重写</td><td>整个 PC 客户端从 Electron（JavaScript）全面重写为 Rust（Tauri 框架）—— 不是打包工具切换，而是技术栈整体更换；安装包从 98.8 MB 降至 17.4 MB，安装后占用从 273 MB 降至 52.1 MB。</td><td>下载与安装门槛大幅降低；自有 Rust 代码库也为后续维护和跨平台扩展打好基础。</td></tr>
+          <tr><td>Windows 自建构建流水线</td><td>配合 Rust 重写，团队自建了一整套 Windows CI/CD 流水线：Docker 化构建执行器、Rust 工具链自举（rustup）、MSVC 编译环境配置、x64/ARM64 双架构支持、NSIS 安装包打包自动化、构建产物 S3 分发与本地缓存。</td><td>发版不再依赖开发者本机环境，构建结果可重复、可追溯，为签名与正式发布铺路。</td></tr>
           <tr><td>协议 bootstrap 稳定化</td><td>Android、Windows、后端三端统一改用后端控制的协议选择与刷新机制，处理候选协议选择、失败重试、延迟上报等环节。</td><td>切换协议/线路更稳定，减少「连不上却查不出原因」的客服工单。</td></tr>
           <tr><td>sing-box 合规风险应对</td><td>7/10 完成节点侧原生协议监听与自研节点程序验证；客户端自研引擎 SkyTunnel 同日建仓，Android 端持续验证中。</td><td>直接回应日总 6/27 提出的紧急合规预警，避免未来 iOS 重新上架或 GPL 纠纷风险。</td></tr>
           <tr><td>中国网络协议自测工具</td><td>7/6 提出想法，7/8 建站并部署测试环境，7/10 交付 v1 并移交台湾团队，七项协议（Shadowsocks / Trojan / VLESS+REALITY / Hysteria2 / TUIC / AnyTLS / ShadowTLS）测试全部通过。</td><td>无需安装 APK 即可测网络连通性，且可直接在浏览器提交调试日志，大幅缩短排障沟通成本。</td></tr>
