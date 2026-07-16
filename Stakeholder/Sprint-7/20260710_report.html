@@ -351,42 +351,9 @@
     </section>
 
     <section>
-      <h2>八、安全与访问控制</h2>
-      <p><strong>原则：最小权限（Least Privilege）。</strong>本阶段访问权限控制与 Sprint 4-6 保持一致，未发生变更。</p>
-      <table>
-        <thead><tr><th>角色</th><th>GitLab 源代码访问</th><th>说明</th></tr></thead>
-        <tbody>
-          <tr><td><strong>Roy</strong>（项目对接）</td><td>✅ 保留</td><td>需了解项目结构以推进商务对接</td></tr>
-          <tr><td><strong>Morgan</strong>（项目相关）</td><td>✅ 保留</td><td>历史项目背景</td></tr>
-          <tr><td><strong>Lex</strong>（中国 Flutter）</td><td>✅ 保留</td><td>FFF 重建工作必须访问代码</td></tr>
-          <tr><td><strong>马来西亚开发团队</strong></td><td>✅ 保留</td><td>当前主开发力量</td></tr>
-          <tr><td>其他台湾团队成员</td><td>❌ 已收回</td><td>移交完成后访问权限收回，符合最小权限原则</td></tr>
-        </tbody>
-      </table>
-      <h3>接手时发现的基础设施安全缺口（持续整改，状态延续 Sprint 4-6）</h3>
-      <table>
-        <thead><tr><th>问题</th><th>风险</th><th>状态</th></tr></thead>
-        <tbody>
-          <tr><td>Staging 与 Production 共用同一个 Azure NSG（网络安全组）</td><td>测试环境改动可能波及生产；攻击面无法隔离</td><td><span class="badge pending">待处理</span></td></tr>
-          <tr><td>数据库备份路径需持续验证恢复门控</td><td>故障恢复依赖验证是否完整可用</td><td><span class="badge progress">推进中</span></td></tr>
-          <tr><td>HK VM 上的 Proxybackend 服务</td><td>旧服务已退出活跃架构，待彻底下线</td><td><span class="badge progress">推进中</span></td></tr>
-          <tr><td>SSH 访问未统一使用 PEM 密钥</td><td>密码登录易被暴力破解</td><td><span class="badge progress">部分完成</span></td></tr>
-        </tbody>
-      </table>
-      <div class="note">本阶段无新增源码权限变更；上述基础设施缺口均为台湾团队遗留问题，非本阶段新增风险，将按既定节奏继续清理。</div>
-    </section>
-
-    <section>
-      <h2>九、财务影响</h2>
+      <h2>八、FFF 新产品并行进展（实时口径，更新至 7/15）</h2>
       <div class="callout">
-        本阶段以工程/合规方向工作为主，未执行新的成本审计。Sprint 4-6 已确认的 Azure + LisaHost 直接节省约 <strong>USD 612.21/月</strong> 持续生效，下一次完整月度账单复核将在后续报告中更新。商业价值明细见第三节。
-      </div>
-    </section>
-
-    <section>
-      <h2>十、FFF 新产品并行进展（实时口径，更新至 7/15）</h2>
-      <div class="callout">
-        <strong>补录说明：</strong>本节现汇总 FFF 自 Sprint 1 开始（5/18）至 7/15 的全部 Git 可追溯客户端进展。<strong>Lex</strong>在 <code>fff_vpn</code> 累计完成 <strong>357</strong> 次非合并提交：5/18–5/28 为 80 次、6/3–6/26 为 175 次、6/27–7/9 为 93 次、7/13–7/14 为 9 次。FFF 与 Arrowfish 发布并行推进、互不影响。以下为按模块归纳的客户端开发交付；上线与验收状态另行确认：
+        <strong>补录说明：</strong>本节现汇总 FFF 自 Sprint 0 开始（5/18）至 7/15 的全部 Git 可追溯客户端进展。<strong>Lex</strong>在 <code>fff_vpn</code> 累计完成 <strong>357</strong> 次非合并提交：5/18–5/28 为 80 次、6/3–6/26 为 175 次、6/27–7/9 为 93 次、7/13–7/14 为 9 次。迁移前的 <code>flutter_vpn</code> 旧代码库有 280 次历史提交，作为迁移基础，不计入上述 FFF Sprint 0 之后的统计。FFF 与 Arrowfish 发布并行推进、互不影响。以下为按模块归纳的客户端开发交付；上线与验收状态另行确认：
         <table style="margin-top: 10px;">
           <thead><tr><th>功能</th><th>时间</th><th>交付内容</th></tr></thead>
           <tbody>
@@ -434,7 +401,7 @@
     </section>
 
     <section>
-      <h2>十一、结论</h2>
+      <h2>九、结论</h2>
       <p>Sprint 7 的重点不是单一功能上线，而是把 Windows 客户端打包体积、协议 bootstrap 稳定性，以及日总提出的 sing-box 合规风险三条线同时推进。Windows 体积已测量完成，协议 bootstrap 已在三端统一，合规风险已有明确的自研技术路线并在节点侧验证可用。</p>
       <p>下一阶段的关键，是完成 SkyTunnel 客户端侧验证、拿到 Windows 签名结果并完成 QA 发布门控，同时锁定 FFF 续费功能的需求范围并产出 PRD。</p>
     </section>
