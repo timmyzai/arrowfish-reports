@@ -217,7 +217,7 @@
           </tr>
           <tr>
             <td><strong>sing-box 合规方向已定</strong></td>
-            <td>sing-box 采用 GPL3.0 协议，与闭源商业客户端、尤其是 iOS App Store 上架存在结构性冲突（详见第八节）。</td>
+            <td>sing-box 采用 GPL3.0 协议，与闭源商业客户端、尤其是 iOS App Store 上架存在结构性冲突（详见第七节）。</td>
             <td>团队方案：自研客户端引擎 <strong>SkyTunnel</strong> + 自研节点程序，完全不依赖 sing-box / libbox 或任何第三方开源 VPN 内核。节点侧 7/10 已验证可用，客户端侧持续验证中。</td>
           </tr>
           <tr>
@@ -246,7 +246,7 @@
           <tr><td>sing-box 合规风险应对</td><td>7/10 完成节点侧原生协议监听与自研节点程序验证；客户端自研引擎 SkyTunnel 同日建仓，Android 端持续验证中。</td><td>直接回应日总 6/27 提出的紧急合规预警，避免未来 iOS 重新上架或 GPL 纠纷风险。</td></tr>
           <tr><td>中国网络协议自测工具</td><td>7/6 提出想法，7/8 建站并部署测试环境，7/10 交付 v1 并移交台湾团队，七项协议（Shadowsocks / Trojan / VLESS+REALITY / Hysteria2 / TUIC / AnyTLS / ShadowTLS）测试全部通过。</td><td>无需安装 APK 即可测网络连通性，且可直接在浏览器提交调试日志，大幅缩短排障沟通成本。</td></tr>
           <tr><td>后端公共模块复用</td><td>共享 Go 模块 <code>go-utilities</code> 被 <code>orebackend</code>、<code>bo_orebackend</code>、<code>orebackend-cron</code> 三个仓库以正式版本依赖方式引用，7/7 新增的节点健康分类能力当天即被两个仓库同步采用。</td><td>共用逻辑改一次、多处生效，减少重复实现和后续维护成本；也是 SkyTunnel 客户端共享模块方案的先例。</td></tr>
-          <tr><td>Arrowfish 发布下载中心</td><td>新增统一下载中心站点，7/2 单日建成上线，按环境分类、支持简体中文、每个发布版本可关联具体代码提交。</td><td>对内对外发布信息更透明，QA 与团队核对版本更快。</td></tr>
+          <tr><td>安装包分发标准化</td><td>新增 <code>arrowfish-download-center</code>（apk.arrowfishadv.com），7/2 单日建成上线：统一 Android / Windows / macOS 三平台安装包，按 staging / production 环境分类，每个版本可直接关联对应代码提交。</td><td>取代过去各平台分头发布安装包的方式，QA 与团队核对版本来源更快。</td></tr>
         </tbody>
       </table>
     </section>
@@ -271,7 +271,7 @@
         <div class="titem"><div class="tdate">6/27</div><div class="ttext">Sprint 7 启动，Windows 构建流程迁入 Docker 执行器，打包体积优化启动；日总提出 sing-box GPL3.0 / App Store 合规预警</div></div>
         <div class="titem"><div class="tdate">6/29–6/30</div><div class="ttext">Android 启动/连接稳定性集中修复；Windows 客户端从 Electron 全面重写为 Rust（Tauri 框架）</div></div>
         <div class="titem"><div class="tdate">7/1</div><div class="ttext">Windows 安装包体积测量完成（-82.4%）；Google Play 内购流程改为服务端权威校验</div></div>
-        <div class="titem"><div class="tdate">7/2</div><div class="ttext">Arrowfish 统一下载中心单日建成上线</div></div>
+        <div class="titem"><div class="tdate">7/2</div><div class="ttext"><code>arrowfish-download-center</code> 单日建成上线，统一 Android/Windows/macOS 安装包分发</div></div>
         <div class="titem"><div class="tdate">7/6</div><div class="ttext">中国网络协议自测工具立项；Windows 自建 CI/CD 流水线集中修复（Rust 工具链、MSVC 环境、x64/ARM64 双架构）</div></div>
         <div class="titem"><div class="tdate">7/7</div><div class="ttext">Android 线路刷新迁移至统一协议 bootstrap；go-utilities 节点健康分类能力上线并被两个后端仓库同日采用</div></div>
         <div class="titem"><div class="tdate">7/8</div><div class="ttext">协议自测工具建站并部署到测试环境（同日完成）</div></div>
@@ -302,27 +302,7 @@
     </section>
 
     <section>
-      <h2>六、FFF 新产品并行进展（实时口径）</h2>
-      <div class="callout">
-        <strong>Lex 团队（中国）</strong>本阶段持续推进 FFF 客户端功能与体验重构，与 Arrowfish 发布并行，互不影响。
-        <ul style="margin: 8px 0 0 20px;">
-          <li>线路（Outbounds）页面重构 —— 拆分专属 IP 与专属代理页面，支持按类型加载，替换原探索页面</li>
-          <li>会话状态管理重构 —— <code>SessionService</code> 改为 <code>SessionCubit</code>，统一状态管理模式</li>
-          <li>设备指纹上报简化 —— 认证流程改为直接上报 <code>device_fingerprint</code></li>
-          <li>新增修改密码页面（UI + 表单校验）、免密用户转正规账号功能</li>
-        </ul>
-      </div>
-      <div class="callout watch">
-        <strong>FFF 阻塞项（待商务侧推进，不影响本阶段 Arrowfish 发布）</strong>
-        <ul style="margin: 8px 0 0 20px;">
-          <li>FFF 公司无法开通实体欧盟电话号码，改用虚拟号码（<strong>Roy</strong> 跟进）→ SMS 验证开通中</li>
-          <li>FFF 公司名下新支付通道账户仍需开设（改由 <strong>Kevin</strong> 跟进）→ 暂无在线收款能力</li>
-        </ul>
-      </div>
-    </section>
-
-    <section>
-      <h2>七、下阶段计划（Sprint 8，7/11 起）</h2>
+      <h2>六、下阶段计划（Sprint 8，7/11 起）</h2>
       <div class="callout">
         <strong>主轴：</strong>SkyTunnel 客户端验证收尾 → Windows 签名与 QA 发布门控 → FFF 续费功能需求锁定。
       </div>
@@ -338,11 +318,13 @@
     </section>
 
     <section>
-      <h2>八、为什么必须先清理技术债 — FFF 复用同一套后端</h2>
+      <h2>七、为什么必须先清理技术债 — FFF 复用同一套后端</h2>
       <div class="callout risk">
         <strong>关键背景：</strong>日总 6/27 指出，团队原计划「sing-box 作内核 + 自研业务逻辑」的闭源方案在 iOS 上行不通 —— iOS VPN 客户端必须通过 Apple 的 NetworkExtension 实现，内核与业务逻辑无法彻底解耦，等同于整个客户端都要开源；且 App Store 对「GPL3.0 + DRM/订阅保护」的组合历来不批准上架，即使上架也可能因版权投诉被下架。团队研究后确认，在 iOS 上继续使用 sing-box 没有可行的合规路径。
+        <br><br>
+        除合规问题外，团队同时确认了第二个独立风险：sing-box 上游存在 VLESS + REALITY 协议下有效客户端被错误拒绝的已知缺陷（借用的 TLS 证书记录超过硬编码的 8,192 字节上限即失败，见上游 issue <code>SagerNet/sing-box#4234</code>）。该问题尚未在马来西亚或中国节点复现记录，但意味着即使不考虑 iOS 合规问题，继续依赖 sing-box 作为节点/客户端内核也存在协议层面的可靠性风险。
       </div>
-      <p><strong>团队方案：</strong>不做「简化版/改名版 sing-box」，而是投入研发原创方案 —— 客户端引擎 <strong>SkyTunnel</strong> 与节点侧原创程序，完全不依赖 sing-box / libbox 或任何第三方开源 VPN 内核。节点侧方案已于 7/10 验证可用，客户端侧 Android 持续验证中。这一自研方向同时也为 FFF 复用同一套引擎打下基础 —— FFF 与未来客户端可以直接复用 SkyTunnel，无需重新面对同样的合规问题。</p>
+      <p><strong>团队方案：</strong>不做「简化版/改名版 sing-box」，而是投入研发原创方案 —— 客户端引擎 <strong>SkyTunnel</strong> 与节点侧原创程序，完全不依赖 sing-box / libbox 或任何第三方开源 VPN 内核。节点侧方案已于 7/10 验证可用，客户端侧 Android 持续验证中。除解决上述两项风险外，服务端与客户端均改用原创代码，团队维护与修复节奏不再受第三方开源项目的版本变动、缺陷修复排期或授权变更影响，管理与掌控力更高。这一自研方向同时也为 FFF 复用同一套引擎打下基础 —— FFF 与未来客户端可以直接复用 SkyTunnel，无需重新面对同样的合规与可靠性问题。</p>
       <table>
         <thead><tr><th>问题</th><th>为什么影响 FFF</th><th>本阶段处理</th></tr></thead>
         <tbody>
@@ -351,10 +333,25 @@
           <tr><td>「账号 + 设备」身份判断在连接会话层未落实</td><td>FFF 若沿用同一套会话逻辑，会带着同样的设备顶号问题一起继承</td><td>根因已确认，Sprint 8 排期实现「账号+设备」组合身份判断</td></tr>
         </tbody>
       </table>
+      <h3>七项协议实现方式 — 原创代码 vs. 开源函式库依赖</h3>
+      <p>「不依赖第三方开源 VPN 内核」specifically 指不使用 sing-box（或其他 GPL 授权的完整 VPN 引擎）的程式码。七项协议的认证与封包逻辑均为团队原创实现；其中两项因标准库无法满足特定需求，引用了窄范围的宽松授权（MIT/BSD）函式库，非 GPL，不构成开源合规风险。</p>
+      <table>
+        <thead><tr><th>协议</th><th>实现方式</th><th>依赖函式库</th></tr></thead>
+        <tbody>
+          <tr><td>Shadowsocks</td><td>原创实现</td><td>仅 Go 标准 / 扩展加密库</td></tr>
+          <tr><td>Trojan</td><td>原创实现</td><td>仅 Go 标准库（TLS、SHA-256）</td></tr>
+          <tr><td>VLESS + REALITY</td><td>原创实现</td><td><code>metacubex/utls</code>（BSD 授权，用于 TLS 指纹伪装，抗审查必需）</td></tr>
+          <tr><td>Hysteria2</td><td>原创实现（认证与封包自行开发）</td><td><code>quic-go</code>（MIT 授权，QUIC 传输层）</td></tr>
+          <tr><td>TUIC</td><td>原创实现（认证与封包自行开发）</td><td><code>quic-go</code>（MIT 授权，QUIC 传输层）</td></tr>
+          <tr><td>AnyTLS</td><td>原创实现</td><td>仅 Go 标准库</td></tr>
+          <tr><td>ShadowTLS</td><td>原创实现</td><td><code>metacubex/utls</code>（BSD 授权，用于 TLS 指纹伪装）</td></tr>
+        </tbody>
+      </table>
+      <div class="note">七项协议均无 sing-box 程式码、无 GPL 依赖；仅 REALITY / ShadowTLS 的 TLS 指纹伪装与 Hysteria2 / TUIC 的 QUIC 传输层引用了业界通用的 MIT/BSD 授权函式库（标准库无法实现的部分），不影响闭源商业分发。</div>
     </section>
 
     <section>
-      <h2>九、安全与访问控制</h2>
+      <h2>八、安全与访问控制</h2>
       <p><strong>原则：最小权限（Least Privilege）。</strong>本阶段访问权限控制与 Sprint 4-6 保持一致，未发生变更。</p>
       <table>
         <thead><tr><th>角色</th><th>GitLab 源代码访问</th><th>说明</th></tr></thead>
@@ -380,18 +377,36 @@
     </section>
 
     <section>
-      <h2>十、财务影响</h2>
+      <h2>九、财务影响</h2>
       <div class="callout">
-        本阶段以工程/合规方向工作为主，未执行新的成本审计。Sprint 4-6 已确认的 Azure + LisaHost 直接节省约 <strong>USD 612.21/月</strong> 持续生效，下一次完整月度账单复核将在后续报告中更新。
+        本阶段以工程/合规方向工作为主，未执行新的成本审计。Sprint 4-6 已确认的 Azure + LisaHost 直接节省约 <strong>USD 612.21/月</strong> 持续生效，下一次完整月度账单复核将在后续报告中更新。商业价值明细见第三节。
       </div>
-      <table>
-        <thead><tr><th>项目</th><th>商业价值</th></tr></thead>
-        <tbody>
-          <tr><td>Windows 安装包体积 -82.4%</td><td>降低下载流量成本与安装失败率，间接降低客服与重试带来的支持成本</td></tr>
-          <tr><td>中国网络自测工具（4 天交付）</td><td>减少远程排障所需的人工沟通轮次，降低支持成本</td></tr>
-          <tr><td>go-utilities 共享后端模块</td><td>减少后端 3 个服务的重复实现与维护工时</td></tr>
-        </tbody>
-      </table>
+    </section>
+
+    <section>
+      <h2>十、FFF 新产品并行进展（实时口径）</h2>
+      <div class="callout">
+        <strong>Lex 团队（中国）</strong>本阶段 <code>fff_vpn</code> 仓库 <strong>94</strong> 次提交（6/27–7/9），为本轮所有仓库中第二高（仅次于 orebackend 的 57 次），与 Arrowfish 发布并行、互不影响。以下均为从零到上线的完整功能：
+        <table style="margin-top: 10px;">
+          <thead><tr><th>功能</th><th>时间</th><th>交付内容</th></tr></thead>
+          <tbody>
+            <tr><td>设备绑定</td><td>6/29–7/1</td><td>绑定列表、解绑确认、当前设备标记、绑定数上限显示</td></tr>
+            <tr><td>账户与安全页面</td><td>7/1</td><td>新页面+路由、登出确认弹窗、免密账号截图/复制</td></tr>
+            <tr><td>创建账号页面</td><td>7/2</td><td>完整注册流程、推荐人字段、多语言文案</td></tr>
+            <tr><td>免密转正规账号</td><td>7/3</td><td>免密用户升级为正规账号，含表单校验</td></tr>
+            <tr><td>修改密码页面</td><td>7/6</td><td>UI、表单校验、多语言、状态管理、测试</td></tr>
+            <tr><td>会话状态管理重构</td><td>7/7–7/9</td><td><code>SessionService</code> → <code>SessionCubit</code>，统一状态管理模式</td></tr>
+            <tr><td>线路（Outbounds）页面重构</td><td>7/8–7/9</td><td>拆分专属 IP/专属代理页面、多级分类标签、吸顶滚动、Material 3 样式</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="callout watch">
+        <strong>FFF 阻塞项（待商务侧推进，不影响本阶段 Arrowfish 发布）</strong>
+        <ul style="margin: 8px 0 0 20px;">
+          <li>FFF 公司无法开通实体欧盟电话号码，改用虚拟号码（<strong>Roy</strong> 跟进）→ SMS 验证开通中</li>
+          <li>FFF 公司名下新支付通道账户仍需开设（改由 <strong>Kevin</strong> 跟进）→ 暂无在线收款能力</li>
+        </ul>
+      </div>
     </section>
 
     <section>

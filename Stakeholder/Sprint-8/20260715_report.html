@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>第8阶段 · 进展报告 · 2026-07-15</title>
+  <style>
+    :root {
+      --bg: #f7f8fa;
+      --paper: #ffffff;
+      --text: #202124;
+      --muted: #5f6368;
+      --line: #e5e7eb;
+      --blue: #1a73e8;
+      --green: #16a34a;
+      --green-bg: #f0fdf4;
+      --yellow: #f59e0b;
+      --yellow-bg: #fffbeb;
+      --red: #dc2626;
+      --red-bg: #fef2f2;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", "Segoe UI", sans-serif;
+      line-height: 1.68;
+      -webkit-font-smoothing: antialiased;
+    }
+    main { max-width: 1120px; margin: 0 auto; padding: 32px 20px 56px; }
+    header { padding: 28px 0 18px; border-bottom: 1px solid var(--line); margin-bottom: 24px; }
+    .eyebrow { color: var(--blue); font-size: 14px; font-weight: 700; margin: 0 0 8px; }
+    h1 { font-size: 32px; line-height: 1.25; margin: 0 0 10px; }
+    .meta { color: var(--muted); margin: 0; font-size: 15px; }
+    section { background: var(--paper); border: 1px solid var(--line); border-radius: 8px; padding: 22px; margin: 18px 0; }
+    h2 { font-size: 21px; margin: 0 0 14px; display: flex; align-items: center; gap: 8px; }
+    h3 { font-size: 16px; margin: 18px 0 8px; color: var(--text); }
+    p { margin: 0 0 12px; }
+    p:last-child { margin-bottom: 0; }
+    .tldr { border-left: 5px solid var(--blue); background: #f0f6ff; font-size: 18px; font-weight: 650; }
+    table { width: 100%; border-collapse: collapse; margin-top: 8px; font-size: 14.5px; }
+    th, td { border: 1px solid var(--line); padding: 10px 12px; text-align: left; vertical-align: top; }
+    th { background: #f3f4f6; font-weight: 700; }
+    .score { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; margin: 12px 0; }
+    .metric { border: 1px solid var(--line); border-radius: 8px; padding: 14px; background: #fbfcfe; }
+    .metric strong { display: block; font-size: 21px; margin-bottom: 4px; }
+    .metric span { color: var(--muted); font-size: 12.5px; }
+    .note { color: var(--muted); font-size: 13.5px; margin-top: 10px; }
+    .ok { color: var(--green); font-weight: 700; }
+    .watch { color: var(--yellow); font-weight: 700; }
+    .risk { color: var(--red); font-weight: 700; }
+    .callout { border-radius: 8px; padding: 14px 16px; margin: 10px 0; border-left: 4px solid var(--blue); background: #f0f6ff; font-size: 14.5px; }
+    .callout.risk { border-left-color: var(--red); background: var(--red-bg); color: var(--text); }
+    .callout.watch { border-left-color: var(--yellow); background: var(--yellow-bg); color: var(--text); }
+    .callout.ok { border-left-color: var(--green); background: var(--green-bg); color: var(--text); }
+    .badge { display: inline-block; padding: 2px 9px; border-radius: 4px; font-size: 12.5px; font-weight: 700; }
+    .badge.done { background: #dcfce7; color: #166534; }
+    .badge.progress { background: #fef3c7; color: #92400e; }
+    .badge.pending { background: #f1f5f9; color: #475569; }
+    .timeline { position: relative; padding-left: 22px; margin: 10px 0; }
+    .timeline::before { content: ''; position: absolute; left: 5px; top: 6px; bottom: 6px; width: 2px; background: var(--line); }
+    .titem { position: relative; margin-bottom: 12px; }
+    .titem::before { content: ''; position: absolute; left: -22px; top: 5px; width: 10px; height: 10px; border-radius: 50%; background: var(--blue); border: 2px solid white; }
+    .titem.milestone::before { background: var(--red); width: 12px; height: 12px; left: -23px; }
+    .tdate { font-weight: 700; font-size: 13.5px; color: var(--blue); }
+    .ttext { font-size: 14.5px; }
+    .footer { margin-top: 24px; padding-top: 14px; border-top: 1px solid var(--line); font-size: 12.5px; color: var(--muted); text-align: center; }
+    code { background: #f1f5f9; padding: 1px 6px; border-radius: 4px; font-size: 13px; }
+    @media (max-width: 760px) {
+      main { padding: 20px 12px 40px; }
+      h1 { font-size: 24px; }
+      section { padding: 16px; }
+      .score { grid-template-columns: 1fr 1fr; }
+      table { font-size: 13px; }
+      th, td { padding: 7px 8px; }
+    }
+    @media (max-width: 480px) { .score { grid-template-columns: 1fr; } }
+  </style>
+  <script src="../../assets/auth-gate.js"></script>
+</head>
+<body>
+  <main>
+    <header>
+      <p class="eyebrow">Arrowfish VPN · 第8阶段 · 进展报告</p>
+      <h1>2026-07-15 Sprint 8 进展报告（进行中）</h1>
+      <p class="meta">覆盖范围：2026-07-11 至 2026-07-15。承接 Sprint 7（截至 2026-07-10）。本报告为阶段中更新，Sprint 8 尚未收尾。</p>
+    </header>
+
+    <section class="tldr">
+      TL;DR：自研引擎 <strong>SkyTunnel</strong> 在 Android 端 7/13 验证通过，可替代 sing-box/libbox；Windows 端验证进行中。Windows 安装包持续缩小至 7.7MB。代码签名仍未完成，7/17 前先出未签名测试包。FFF 需求优先级 7/14 定案，续费功能列最高优先。新增关注项：中国用户续费受阻会直接断服，续费 PRD 需纳入提前缴费方案。
+    </section>
+
+    <section>
+      <h2>一、需要配合 / 关注事项</h2>
+      <table>
+        <thead><tr><th>事项</th><th>提出</th><th>开始</th><th>完成</th><th>需要的配合</th></tr></thead>
+        <tbody>
+          <tr>
+            <td><span class="badge progress">新增</span><br><strong>中国用户续费受阻风险</strong></td>
+            <td>7/15</td><td>未开始</td><td>未完成</td>
+            <td>若中国用户因支付通道受阻无法完成续费，服务会直接中断、目前无缓解方案。团队方案：续费 PRD 范围需纳入「提前缴费」（在支付通道可用时提前续期），已列入 Sprint 8 待办。</td>
+          </tr>
+          <tr>
+            <td><strong>Windows 代码签名</strong></td>
+            <td>—</td><td>7/8 提交</td><td>未完成</td>
+            <td>SSL.com 厂商预计 3-5 工作日，仍未收到结果；7/17 前先出未签名测试包给 QA，避免测试进度被卡住。</td>
+          </tr>
+          <tr>
+            <td><strong>SkyTunnel Windows 端验证</strong></td>
+            <td>6/27</td><td>7/11</td><td>未完成</td>
+            <td>验证标准与 Android 端一致，需 QA 配合完整测试。</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>二、本阶段关键成果（7/11–7/15）</h2>
+      <div class="score">
+        <div class="metric"><strong>7/13</strong><span>SkyTunnel Android 验证通过</span></div>
+        <div class="metric"><strong>7.7MB</strong><span>Windows 安装包（2.0.4）</span></div>
+        <div class="metric"><strong>92%</strong><span>安装包体积较初版缩减</span></div>
+        <div class="metric"><strong>7/14</strong><span>FFF 需求优先级定案</span></div>
+      </div>
+      <table>
+        <thead><tr><th>方向</th><th>提出</th><th>开始</th><th>完成</th><th>结果</th></tr></thead>
+        <tbody>
+          <tr><td>SkyTunnel — Android</td><td>6/27（合规决策）</td><td>7/10（建仓）</td><td>7/13</td><td>验证通过，可完全替代 sing-box/libbox；7/14 迁移至共享版本化模块，供 Windows 与未来客户端复用。</td></tr>
+          <tr><td>SkyTunnel — Windows</td><td>6/27</td><td>7/11</td><td>未完成</td><td>原生七协议核心已接入，验证进行中。</td></tr>
+          <tr><td>Windows 安装包体积</td><td>—</td><td>持续（Sprint 7 起）</td><td>持续</td><td>2.0.4：7.7MB 安装包 / 18.7MB 占用（对比 2.0.0 的 14MB / 41.2MB，对比初版 1.0.0 的 100MB / 273MB）。</td></tr>
+          <tr><td>中国网络自测工具增强</td><td>—</td><td>7/13</td><td>7/13</td><td>由静态配置改为动态查询节点数据，减少人工维护测试配置的成本。</td></tr>
+          <tr><td>FFF 需求优先级</td><td>—</td><td>7/14（与台湾团队过一遍全部文档）</td><td>7/14</td><td>续费功能（Arrowfish + FFF 通用）定为最高优先，需先出 PRD；一般业务模式类需求优先级最低。</td></tr>
+          <tr><td>FFF 客户端 API 层加固</td><td>—</td><td>7/13</td><td>7/14</td><td><code>fff_vpn</code> 9 次提交：统一请求拦截器（RequestId/Locale/Cache）、解耦 <code>fff_sing_box</code> 直接依赖、新增英文+繁体中文(台湾) 本地化。</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>三、改善与商业价值</h2>
+      <table>
+        <thead><tr><th>技术改善</th><th>之前</th><th>之后</th><th>商业价值</th></tr></thead>
+        <tbody>
+          <tr><td>Windows 安装包体积</td><td>14MB / 41.2MB（2.0.0）</td><td>7.7MB / 18.7MB（2.0.4）</td><td>下载与安装门槛进一步降低</td></tr>
+          <tr><td>中国网络排障效率</td><td>静态配置需人工维护更新</td><td>动态查询节点数据</td><td>降低测试配置的人工维护成本</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>四、关键时间节点</h2>
+      <div class="timeline">
+        <div class="titem"><div class="tdate">7/11</div><div class="ttext">Windows 首次接入原生七协议核心</div></div>
+        <div class="titem milestone"><div class="tdate">7/13</div><div class="ttext"><strong>SkyTunnel Android 端验证通过；移至共享版本化模块；协议自测工具改为动态查询节点</strong>；<code>fff_vpn</code> 新增调试配置与 VPN 错误日志</div></div>
+        <div class="titem"><div class="tdate">7/14</div><div class="ttext">Android 完成共享模块迁移；FFF 全量文档与台湾团队过一遍，需求优先级定案；<code>fff_vpn</code> 完成 API 拦截器层重构与英文/繁中(台湾) 多语言支持</div></div>
+        <div class="titem"><div class="tdate">7/15（本次截止）</div><div class="ttext">提出中国用户续费受阻风险，纳入续费 PRD 范围</div></div>
+      </div>
+    </section>
+
+    <section>
+      <h2>五、Arrowfish 客户端进展与后端改动特殊挑战</h2>
+      <div class="callout risk">
+        <strong>沿用 Sprint 7 的多端兼容约束：</strong>后端同时服务 Android（可升级）、iOS HiYou v1.3.0（已冻结）、Windows skytree_pc v2.2.71（已冻结）三类生产客户端。本阶段改动未破坏冻结客户端既有响应格式。
+      </div>
+    </section>
+
+    <section>
+      <h2>六、FFF 新产品并行进展（实时口径）</h2>
+      <div class="callout">
+        <strong>7/14</strong>：与台湾团队完成 FFF 全量文档过一遍，定案需求优先级 —— 续费功能（Arrowfish + FFF 通用）最高优先，需先出 PRD；FFF 功能开发顺序参照 <strong>Lex</strong> 实测其他 VPN 产品得出的常见流程，先做通用流程再迭代；一般业务模式类需求优先级最低。
+      </div>
+      <div class="callout">
+        <strong>代码侧：</strong>延续 Sprint 7 的 94 次提交（详见 Sprint 7 完整报告 · 第十节），本阶段 <code>fff_vpn</code> 再提交 <strong>9</strong> 次（7/13–7/14）—— 为 Sprint 7 建的设备绑定、账户安全、修改密码、线路页面等功能补上统一的 API 拦截器层，并新增英文、繁体中文(台湾) 本地化，不再只支持简体中文。
+      </div>
+    </section>
+
+    <section>
+      <h2>七、下阶段计划</h2>
+      <table>
+        <thead><tr><th>方向</th><th>计划内容</th></tr></thead>
+        <tbody>
+          <tr><td>SkyTunnel Windows</td><td>完成端到端验证，规划扩展至更多客户端平台。</td></tr>
+          <tr><td>Windows 发布</td><td>跟进签名审核结果；7/17 前先出未签名测试包给 QA。</td></tr>
+          <tr><td>续费功能 PRD</td><td>纳入中国用户提前缴费方案，锁定范围后排期开发。</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>八、技术债延续说明</h2>
+      <p>Sprint 7 报告已补充完整合规背景：sing-box GPL3.0/App Store 冲突（日总 6/27 提出）、VLESS+REALITY 协议层可靠性风险（上游 <code>SagerNet/sing-box#4234</code>）、七项协议原创实现与依赖函式库明细（均无 GPL 依赖）。详见 <a href="../Sprint-7/20260710_report.html">Sprint 7 完整报告 · 第七节</a>。Sprint 8 本阶段无新增技术债项目。</p>
+    </section>
+
+    <section>
+      <h2>九、安全与访问控制</h2>
+      <p>访问权限与基础设施安全缺口状态延续 Sprint 7，本阶段无变更。</p>
+    </section>
+
+    <section>
+      <h2>十、财务影响</h2>
+      <div class="callout">本阶段以工程验证工作为主，未执行新的成本审计。Sprint 4-6 已确认的 Azure + LisaHost 直接节省约 <strong>USD 612.21/月</strong> 持续生效。</div>
+    </section>
+
+    <section>
+      <h2>十一、结论</h2>
+      <p>SkyTunnel Android 端已验证可替代 sing-box，Windows 端验证进行中；Windows 安装包持续缩小；FFF 续费功能优先级已定案，PRD 待产出，需纳入中国用户提前缴费方案，避免续费受阻导致断服。</p>
+    </section>
+
+    <div class="footer">报告日期：2026年7月15日 · Sprint 8 阶段中更新 · 下次更新：Sprint 8 收尾</div>
+  </main>
+</body>
+</html>
