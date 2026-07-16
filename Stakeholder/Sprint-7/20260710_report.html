@@ -223,7 +223,7 @@
           <tr>
             <td><strong>FFF 商务侧事项</strong></td>
             <td>FFF 公司无法开通实体欧盟电话号码；新支付通道账户仍需开设。</td>
-            <td>欧盟电话号码改用虚拟号码，由 <strong>Roy</strong> 推进；新支付通道账户改由 <strong>Kevin</strong> 负责推进。均不影响 Arrowfish 本阶段发布节奏。</td>
+            <td>欧盟电话号码改用虚拟号码、新支付通道账户待开设，均由 <strong>Roy</strong> 推进。均不影响 Arrowfish 本阶段发布节奏。</td>
           </tr>
         </tbody>
       </table>
@@ -384,27 +384,41 @@
     </section>
 
     <section>
-      <h2>十、FFF 新产品并行进展（实时口径）</h2>
+      <h2>十、FFF 新产品并行进展（实时口径，更新至 7/15）</h2>
       <div class="callout">
-        <strong>Lex 团队（中国）</strong>本阶段 <code>fff_vpn</code> 仓库 <strong>94</strong> 次提交（6/27–7/9），为本轮所有仓库中第二高（仅次于 orebackend 的 57 次），与 Arrowfish 发布并行、互不影响。以下均为从零到上线的完整功能：
+        <strong>Lex</strong>在 <code>fff_vpn</code> 于 6/27–7/9 完成 <strong>93</strong> 次非合并提交；7/13–7/14 再完成 <strong>9</strong> 次。FFF 进展按实时口径补充至 7/15，与 Arrowfish 发布并行、互不影响。以下为已完成的客户端交付：
         <table style="margin-top: 10px;">
           <thead><tr><th>功能</th><th>时间</th><th>交付内容</th></tr></thead>
           <tbody>
+            <tr><td>延迟测量稳定性</td><td>6/27–6/29</td><td>按站点隔离取消动作；单一站点失败不再中断整批测速，并补齐状态多语言文案</td></tr>
             <tr><td>设备绑定</td><td>6/29–7/1</td><td>绑定列表、解绑确认、当前设备标记、绑定数上限显示</td></tr>
+            <tr><td>用户资料与登出状态</td><td>6/30–7/9</td><td>统一用户资料状态；登出流程改为标准状态管理模式，并修复登出失败后旧资料残留</td></tr>
             <tr><td>账户与安全页面</td><td>7/1</td><td>新页面+路由、登出确认弹窗、免密账号截图/复制</td></tr>
             <tr><td>创建账号页面</td><td>7/2</td><td>完整注册流程、推荐人字段、多语言文案</td></tr>
             <tr><td>免密转正规账号</td><td>7/3</td><td>免密用户升级为正规账号，含表单校验</td></tr>
+            <tr><td>桌面端兼容</td><td>7/4</td><td>补齐 Windows/Linux 本地规则集路径处理，并处理 Windows 编译兼容问题</td></tr>
             <tr><td>修改密码页面</td><td>7/6</td><td>UI、表单校验、多语言、状态管理、测试</td></tr>
+            <tr><td>后端启动配置适配</td><td>7/6</td><td>适配新版启动接口返回结构，清理已废弃的客户端处理路径</td></tr>
+            <tr><td>连接时长与设备标识</td><td>7/7</td><td>新增 VPN 连接时长显示，简化 Android 设备 ID/指纹上报逻辑</td></tr>
             <tr><td>会话状态管理重构</td><td>7/7–7/9</td><td><code>SessionService</code> → <code>SessionCubit</code>，统一状态管理模式</td></tr>
             <tr><td>线路（Outbounds）页面重构</td><td>7/8–7/9</td><td>拆分专属 IP/专属代理页面、多级分类标签、吸顶滚动、Material 3 样式</td></tr>
+            <tr><td>客户端 API 层加固</td><td>7/13–7/14</td><td>新增请求 ID、语言、缓存三层拦截器，统一网络配置；解除界面状态层对 VPN 内核的直接依赖</td></tr>
+            <tr><td>多语言与诊断</td><td>7/13–7/14</td><td>新增英文及繁体中文（台湾），补充调试配置和 VPN 错误日志</td></tr>
           </tbody>
         </table>
+      </div>
+      <div class="callout">
+        <strong>FFF 产品模块梳理（已完成研究，尚未进入功能开发）：</strong>
+        DNS 保护、企业账号、部署方案、VPN SDK、推荐计划、消费者 VPN 功能及合作伙伴计划共七个模块已完成现状盘点、缺口分析和产品问题清单。此工作用于与产品/市场对齐范围，不代表上述模块已经上线或进入开发排期。
+      </div>
+      <div class="callout">
+        <strong>产品优先级已定：</strong>7/14 与台湾团队完成 FFF 文档梳理后，Arrowfish 与 FFF 共用的「续费功能」列为最高优先，先完成 PRD 再排期；FFF 功能按成熟 VPN 产品的通用用户流程推进；一般 VPN 商业模式类工作暂列最低优先。中国用户若续费受阻可能直接断服，续费 PRD 需纳入提前缴费方案。
       </div>
       <div class="callout watch">
         <strong>FFF 阻塞项（待商务侧推进，不影响本阶段 Arrowfish 发布）</strong>
         <ul style="margin: 8px 0 0 20px;">
           <li>FFF 公司无法开通实体欧盟电话号码，改用虚拟号码（<strong>Roy</strong> 跟进）→ SMS 验证开通中</li>
-          <li>FFF 公司名下新支付通道账户仍需开设（改由 <strong>Kevin</strong> 跟进）→ 暂无在线收款能力</li>
+          <li>FFF 公司名下新支付通道账户仍需开设（<strong>Roy</strong> 跟进）→ 暂无在线收款能力</li>
         </ul>
       </div>
     </section>
