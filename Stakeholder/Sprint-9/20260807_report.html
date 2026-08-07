@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>第9阶段 · 完整报告 · 2026-08-07</title>
+  <style>
+    :root {
+      --bg: #f7f8fa;
+      --paper: #ffffff;
+      --text: #202124;
+      --muted: #5f6368;
+      --line: #e5e7eb;
+      --blue: #1a73e8;
+      --green: #16a34a;
+      --green-bg: #f0fdf4;
+      --yellow: #f59e0b;
+      --yellow-bg: #fffbeb;
+      --red: #dc2626;
+      --red-bg: #fef2f2;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", "Segoe UI", sans-serif;
+      line-height: 1.68;
+      -webkit-font-smoothing: antialiased;
+    }
+    main { max-width: 1120px; margin: 0 auto; padding: 32px 20px 56px; }
+    header { padding: 28px 0 18px; border-bottom: 1px solid var(--line); margin-bottom: 24px; }
+    .eyebrow { color: var(--blue); font-size: 14px; font-weight: 700; margin: 0 0 8px; }
+    h1 { font-size: 32px; line-height: 1.25; margin: 0 0 10px; letter-spacing: 0; }
+    .meta { color: var(--muted); margin: 0; font-size: 15px; }
+    section { background: var(--paper); border: 1px solid var(--line); border-radius: 8px; padding: 22px; margin: 18px 0; }
+    h2 { font-size: 21px; margin: 0 0 14px; letter-spacing: 0; display: flex; align-items: center; gap: 8px; }
+    h3 { font-size: 16px; margin: 18px 0 8px; color: var(--text); }
+    p { margin: 0 0 12px; }
+    p:last-child { margin-bottom: 0; }
+    .tldr { border-left: 5px solid var(--blue); background: #f0f6ff; font-size: 18px; font-weight: 650; }
+    table { width: 100%; border-collapse: collapse; margin-top: 8px; font-size: 14.5px; }
+    th, td { border: 1px solid var(--line); padding: 10px 12px; text-align: left; vertical-align: top; }
+    th { background: #f3f4f6; font-weight: 700; }
+    .score { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; margin: 12px 0; }
+    .metric { border: 1px solid var(--line); border-radius: 8px; padding: 14px; background: #fbfcfe; }
+    .metric strong { display: block; font-size: 21px; margin-bottom: 4px; }
+    .metric span { color: var(--muted); font-size: 12.5px; }
+    .note { color: var(--muted); font-size: 13.5px; margin-top: 10px; }
+    .ok { color: var(--green); font-weight: 700; }
+    .watch { color: var(--yellow); font-weight: 700; }
+    .risk { color: var(--red); font-weight: 700; }
+    .callout { border-radius: 8px; padding: 14px 16px; margin: 10px 0; border-left: 4px solid var(--blue); background: #f0f6ff; font-size: 14.5px; }
+    .callout.risk { border-left-color: var(--red); background: var(--red-bg); color: var(--text); }
+    .callout.watch { border-left-color: var(--yellow); background: var(--yellow-bg); color: var(--text); }
+    .callout.ok { border-left-color: var(--green); background: var(--green-bg); color: var(--text); }
+    .badge { display: inline-block; padding: 2px 9px; border-radius: 4px; font-size: 12.5px; font-weight: 700; }
+    .badge.done { background: #dcfce7; color: #166534; }
+    .badge.progress { background: #fef3c7; color: #92400e; }
+    .badge.pending { background: #f1f5f9; color: #475569; }
+    .timeline { position: relative; padding-left: 22px; margin: 10px 0; }
+    .timeline::before { content: ''; position: absolute; left: 5px; top: 6px; bottom: 6px; width: 2px; background: var(--line); }
+    .titem { position: relative; margin-bottom: 12px; }
+    .titem::before { content: ''; position: absolute; left: -22px; top: 5px; width: 10px; height: 10px; border-radius: 50%; background: var(--blue); border: 2px solid white; }
+    .titem.milestone::before { background: var(--red); width: 12px; height: 12px; left: -23px; }
+    .tdate { font-weight: 700; font-size: 13.5px; color: var(--blue); }
+    .ttext { font-size: 14.5px; }
+    .part {
+      margin: 30px 0 4px;
+      padding: 16px 20px;
+      border-radius: 8px;
+      background: linear-gradient(90deg, #1a73e8 0%, #4f93ec 100%);
+      color: #fff;
+    }
+    .part .pnum { font-size: 12.5px; font-weight: 700; opacity: .85; letter-spacing: .08em; }
+    .part .ptitle { font-size: 22px; font-weight: 700; margin-top: 2px; }
+    .part .psub { font-size: 13.5px; opacity: .9; margin-top: 4px; }
+    .part.fff { background: linear-gradient(90deg, #7c3aed 0%, #a78bfa 100%); }
+    .footer { margin-top: 24px; padding-top: 14px; border-top: 1px solid var(--line); font-size: 12.5px; color: var(--muted); text-align: center; }
+    code { background: #f1f5f9; padding: 1px 6px; border-radius: 4px; font-size: 13px; }
+    @media (max-width: 760px) {
+      main { padding: 20px 12px 40px; }
+      h1 { font-size: 24px; }
+      section { padding: 16px; }
+      .score { grid-template-columns: 1fr 1fr; }
+      table { font-size: 13px; }
+      th, td { padding: 7px 8px; }
+    }
+    @media (max-width: 480px) { .score { grid-template-columns: 1fr; } }
+  </style>
+  <script src="../../assets/auth-gate.js"></script>
+</head>
+<body>
+  <main>
+    <header>
+      <p class="eyebrow">Arrowfish VPN · 第9阶段 · 完整报告</p>
+      <h1>2026-08-07 Sprint 9 投放归因、API 面收敛与 iOS 合规审计报告</h1>
+      <p class="meta">覆盖范围：2026-07-25 至 2026-08-07。本阶段重点为后端主导的安装归因链路、后端 API 面收敛、Windows 构建效率优化，以及针对新 Apple 开发者账号的 iOS 客户端合规审计。</p>
+    </header>
+
+    <section class="tldr">
+      TL;DR：<strong>Android 已于 8/4 通过 Google 审核，上线日排定 8/12 早上 5 点</strong>，与同日凌晨的生产环境单机整合合并为同一个上线窗口；Windows 新版本已于 8/3 交付 QA 测试，安装包约 8 MB；后端接口精简 <strong>32%</strong>，Android 端同步清理历史遗留代码与文件；Siqo 支付已上测试环境，支持币种较原有通道更广。iOS 方面 8/6 收到 Apple 正式回覆确认账号终止原因，8/7 启动以自有代码与自研 SkyTunnel 引擎重建的大规模重构。
+    </section>
+
+    <div class="part">
+      <div class="pnum">第一部分</div>
+      <div class="ptitle">Arrowfish VPN</div>
+      <div class="psub">Arrowfish VPN 本阶段的交付、风险、上线计划与安全管控（阶段口径，覆盖 7/25–8/7）</div>
+    </div>
+
+    <section>
+      <h2>一、本阶段关键决策与状态</h2>
+      <table>
+        <thead><tr><th>事项</th><th>说明</th><th>决策 / 现况</th></tr></thead>
+        <tbody>
+          <tr>
+            <td><span class="badge progress">最高优先</span><br><strong>8/12 合并上线窗口</strong></td>
+            <td>同一天完成两件事：<strong>凌晨 04:55</strong> 生产环境单机整合切换，<strong>早上 5 点</strong> Android 新版本上线（已于 8/4 通过 Google 审核）。准备工作 8/6–8/11 进行，不触碰线上请求路径、不影响现有用户。维护公告已于 8/4 同步上线至官网与手机 App。</td>
+            <td>窗口已定。切换前须完成备份还原演练与时间量测，任一准备阶段未完成即构成不切换条件。</td>
+          </tr>
+          <tr>
+            <td><span class="badge done">方案已定</span><br><strong>私有 VM 存取方式</strong></td>
+            <td>原跳板机只允许单一固定 IP 连入，运维人员换 IP 即无法作业，且每次调整都是一次生产安全边界变更。</td>
+            <td>决定<strong>移除跳板机</strong>，改用 <strong>Azure Bastion</strong> 存取私有 VM。白名单维护问题一并消除，存取路径也更符合最小权限原则。</td>
+          </tr>
+          <tr>
+            <td><span class="badge progress">本阶段新发现</span><br><strong>iOS 重新上架路径</strong></td>
+            <td>8/6 收到 Apple 正式回覆，确认原账号被终止的依据。新 Apple <strong>企业（Organization）</strong>开发者账号已就绪，账号形态符合 Apple 对 VPN 类应用的强制要求。审计发现现有 iOS 代码存在结构性障碍，不可直接重新上架（详见第六节）。</td>
+            <td>8/7 已启动大规模重构，技术方案已明确。剩余待厘清项为新账号主体资格，团队跟进中。</td>
+          </tr>
+          <tr>
+            <td><strong>续费功能业务规则</strong></td>
+            <td>需求已完成代码现况核实。核实过程中发现一项既有缺陷（见第三节）。</td>
+            <td>规则已锁定：<strong>升级即时生效、降级次周期生效、专属 IP／专属节点可续期不断号</strong>。整个模块将一次性上到测试环境供 QA 整体验收。</td>
+          </tr>
+          <tr>
+            <td><strong>FFF 商务侧事项</strong></td>
+            <td>FFF 欧盟虚拟电话号码已于 <strong>7/15 开通完成</strong>；新支付通道账户仍在开设中。</td>
+            <td>支付通道账户由 <strong>Roy</strong> 推进，不影响 Arrowfish 发布节奏。</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>二、本阶段关键成果（7/25–8/7）</h2>
+      <div class="score">
+        <div class="metric"><strong>-32%</strong><span>后端接口数量（207 → 141）</span></div>
+        <div class="metric"><strong>约 8 MB</strong><span>Windows 安装包（安装后 19.6 MB）</span></div>
+        <div class="metric"><strong>7 类</strong><span>USDTPay 错误根因（原 233 笔散乱报错）</span></div>
+        <div class="metric"><strong>8/12</strong><span>Android 上线日（8/4 已过审）</span></div>
+      </div>
+      <table>
+        <thead><tr><th>方向</th><th>本阶段结果</th><th>管理层解读</th></tr></thead>
+        <tbody>
+          <tr><td>后端主导的安装归因</td><td>投放真实性从「仅靠客户端记录」改为后端持有安装记录：投放链接 → 后端点击／下载记录 → 安装标识 → 账号绑定 → 注册／激活／首购／付费／续费指标 → 后台归因漏斗与营收字段。</td><td>投放花费可以对应到真实营收，而不是只能看到下载量。这是广告投放能否放大的前提。</td></tr>
+          <tr><td>后端 API 面收敛</td><td>后端注册接口从 207 个降至 141 个，移除 66 条冗余路由。未新增替代接口、未变更数据结构。</td><td>维护面缩小三成，后端每次改动需要回归验证的范围同步下降，也降低了向后兼容的负担。</td></tr>
+          <tr><td>Android 端历史遗留代码清理</td><td>配合后端收敛，Android 客户端同步清理不再使用的接口声明（从 120 条降至 108 条）与历史遗留的无用代码、无用文件。</td><td>前后端一起清，避免只清一边导致客户端仍保留已废弃的调用路径。代码库越小，新人接手与后续排查越快。</td></tr>
+          <tr><td>Android 通过 Google 审核</td><td>8/4 通过 Google Play 审核，上线日排定 8/12 早上 5 点；同日即完成维护公告内容更新并上传至后台，官网与手机 App 同步显示。</td><td>上线日期确定，且提前 8 天就向用户预告维护窗口，降低当日客诉。</td></tr>
+          <tr><td>Windows 交付 QA 测试</td><td>8/3 将新测试版本交付 QA：x64 安装包 7.9 MB、ARM64 7.1 MB，安装后占用约 19.6 MB。</td><td>Windows 从「构建可用」推进到「QA 实测中」，是对外发布前的最后一道关卡。</td></tr>
+          <tr><td>Siqo 支付通道接入完成</td><td>Siqo 支付已完成接入并上到测试环境，8/7 通知 QA 开始测试。相较原有的 USDTPay 单一通道，Siqo 支持 <strong>BTC、ETH、Polygon、Tron、BNB</strong> 等多条链。</td><td>支付币种选择变多，直接影响充值成功率与用户覆盖面。Windows 端待 Amy 完成缺陷验证后接入。</td></tr>
+          <tr><td>USDTPay 错误收敛</td><td>将 233 笔留存错误归并为 <strong>7 类唯一根因</strong>，确认绝大多数为第三方区块链查询接口的连线逾时与回传非预期格式（回传网页而非数据）。</td><td>把一堆看似杂乱的报错收敛成 7 个明确问题，才能判断哪些该重试、哪些该换通道 —— 这也支持了引入 Siqo 作为多链替代方案的决策。</td></tr>
+          <tr><td>Windows 构建效率优化</td><td>持久化构建缓存使成功构建从 15分37秒 降至 7分01秒；重复版本构建在 12.8–20.3 秒内即中止，不再浪费完整构建。x64 与 ARM64 双架构均通过测试环境签名。</td><td>发版等待时间减半，重复构建浪费被消除。</td></tr>
+          <tr><td>IPv6 出口兼容性完成</td><td>承接 Sprint 8 的 IPv6 根因修复，本阶段在后端、Android、桌面端与自研引擎间完成纯 IPv6／双栈出口的一致性适配。</td><td>Sprint 8 的修复从「单点修复」推进到「全链路一致」。</td></tr>
+          <tr><td>桌面端引擎对齐</td><td>Windows 客户端完成与 Android 相同的自研引擎能力对齐。</td><td>两端功能一致，QA 与后续维护不再需要区分平台差异。</td></tr>
+          <tr><td>iOS 客户端合规审计</td><td>新 Apple 企业开发者账号就绪；针对现有 iOS 代码完成全面合规审计，定位<strong>三项</strong>结构性障碍并排除四类高风险猜测，同时精确测量出重建范围 —— 自有代码 162 个文件可完整分离。</td><td>把「iOS 何时能回来」从不确定问题变成有明确范围的工程任务。详见第六节。</td></tr>
+          <tr><td>内部研发流程标准化</td><td>建立计划与执行报告的标准化管理机制，并完成跨仓库知识库整合。</td><td>交付过程可追溯，减少同一问题重复研究的成本。</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>三、改善与商业价值</h2>
+      <table>
+        <thead><tr><th>技术改善</th><th>之前</th><th>之后</th><th>商业价值</th></tr></thead>
+        <tbody>
+          <tr><td>投放归因</td><td>投放数据仅存于客户端，无法对应真实营收</td><td>后端持有完整链路，可追踪至首购与续费</td><td>广告投放 ROI 可量化，是加大投放前的必要条件</td></tr>
+          <tr><td>后端接口数量</td><td>207 个注册接口</td><td>141 个（-32%）</td><td>维护与回归测试范围缩小三成，向后兼容负担下降</td></tr>
+          <tr><td>Windows 构建时间</td><td>15 分 37 秒</td><td>7 分 01 秒（-55%）</td><td>发版周期缩短，紧急修复可更快送达用户</td></tr>
+          <tr><td>重复构建浪费</td><td>相同版本会重跑完整构建流程</td><td>12.8–20.3 秒内中止</td><td>构建资源成本降低</td></tr>
+          <tr><td>iOS 重建范围</td><td>「需要重做」但范围不明</td><td>自有代码 162 个文件确认可完整分离，连线引擎复用自研 SkyTunnel</td><td>把不确定风险转为可排期的工程量，且不需外部依赖</td></tr>
+          <tr><td>加密货币支付币种</td><td>仅 USDT 单一通道</td><td>新增 Siqo，支持 BTC、ETH、Polygon、Tron、BNB</td><td>用户可用的充值方式增加，降低因不持有特定币种而放弃付款的流失</td></tr>
+          <tr><td>支付错误可诊断性</td><td>233 笔错误散落无规律，难以判断问题所在</td><td>收敛为 7 类唯一根因</td><td>能明确区分「该重试」与「该换通道」，支付成功率有了可优化的抓手</td></tr>
+          <tr><td>Windows 安装包</td><td>100 MB 下载 / 273 MB 占用（最初 Electron 版）</td><td>约 8 MB 下载 / 19.6 MB 占用</td><td>下载与安装门槛大幅降低，已进入 QA 实测</td></tr>
+        </tbody>
+      </table>
+      <h3>核实需求时发现的既有缺陷</h3>
+      <div class="callout watch">
+        <strong>降级排程重复执行风险。</strong>在核实续费需求的过程中，团队发现「降级次周期生效」的排程任务同时被两处程序执行，其中一处没有并发锁 —— 存在同一笔降级被重复套用的风险。此为交接时既存的实作，非本阶段引入。处理方案已确定：统一由具备分布式锁的排程服务执行，移除无锁的那一处。
+      </div>
+    </section>
+
+    <section>
+      <h2>四、关键时间节点</h2>
+      <div class="timeline">
+        <div class="titem"><div class="tdate">7/25–7/28</div><div class="ttext">桌面端完成与 Android 的自研引擎能力对齐；建立内部计划与执行报告标准化机制</div></div>
+        <div class="titem"><div class="tdate">7/31</div><div class="ttext"><strong>Windows 构建缓存优化完成</strong>，构建时间从 15分37秒 降至 7分01秒；纯 IPv6 出口能力在后端与 Android 端完成</div></div>
+        <div class="titem"><div class="tdate">8/1</div><div class="ttext">投放归因链路在后端、后台与 Android 三端完成；本阶段前半段共 46 次非合并提交，覆盖 5 个仓库</div></div>
+        <div class="titem"><div class="tdate">8/3</div><div class="ttext"><strong>Windows 新测试版本交付 QA</strong>（x64 7.9 MB／ARM64 7.1 MB）；续费／升级／降级需求完成代码现况核实，发现降级排程重复执行缺陷</div></div>
+        <div class="titem milestone"><div class="tdate">8/4</div><div class="ttext"><strong>Android 通过 Google 审核，上线日排定 8/12 早上 5 点</strong>；同日完成维护公告内容更新并上传后台，官网与手机 App 同步显示</div></div>
+        <div class="titem"><div class="tdate">8/5</div><div class="ttext"><strong>后端 API 面收敛完成</strong>，接口从 207 个降至 141 个，Android 端同步清理遗留代码与文件；启动 8/12 生产上线规划；Android 持续迭代新测试版本</div></div>
+        <div class="titem"><div class="tdate">8/6</div><div class="ttext"><strong>收到 Apple 正式回覆</strong>，确认 iOS 账号被终止的依据；生产环境单机整合准备工作启动（8/6–8/11），不触碰线上请求路径</div></div>
+        <div class="titem milestone"><div class="tdate">8/7</div><div class="ttext"><strong>iOS 合规审计完成并启动大规模重构规划</strong>；通知 QA 开始测试 Siqo 支付通道</div></div>
+        <div class="titem milestone"><div class="tdate">8/12（计划）</div><div class="ttext"><strong>合并上线窗口：凌晨 04:55 生产环境单机整合切换，早上 5 点 Android 新版本上线</strong></div></div>
+      </div>
+    </section>
+
+    <section>
+      <h2>五、上线计划与后端改动特殊挑战</h2>
+      <table>
+        <thead><tr><th>客户端</th><th>本阶段状态</th><th>说明</th></tr></thead>
+        <tbody>
+          <tr><td>Android</td><td><span class="badge done">已过审，8/12 上线</span></td><td>8/4 通过 Google 审核，上线日排定 8/12 早上 5 点。本阶段完成安装归因接入、IPv6 出口适配、接口精简与遗留代码清理，并持续迭代测试版本。</td></tr>
+          <tr><td>Windows（自研 Rust 版）</td><td><span class="badge progress">QA 测试中</span></td><td>8/3 交付 QA 测试（x64 7.9 MB／ARM64 7.1 MB，安装后约 19.6 MB）。测试环境构建、签名、上传全链路通过，但<strong>正式环境标签构建尚未演练</strong>，正式环境的变量、路径与发布链接均未验证，仍不具备对外发布条件。</td></tr>
+          <tr><td>iOS（HiYou）</td><td><span class="badge progress">重构已启动</span></td><td>8/7 启动大规模重构：移除第三方开源代码、改用自研 SkyTunnel 引擎、重做界面设计、功能对齐 Android 最新版本，并以 TestFlight 与自动化流水线验证。详见第六节。</td></tr>
+        </tbody>
+      </table>
+      <h3>本阶段后端改动的特殊挑战</h3>
+      <div class="callout risk">
+        <strong>后端同时服务 3 类生产客户端，其中 2 类目前无法升级，每次后端改动都需额外保证向后兼容。</strong>
+        <table style="margin-top: 10px;">
+          <tr><th>客户端</th><th>当前生产版本</th><th>能否升级</th></tr>
+          <tr><td><strong>Android</strong>（Arrowfish）</td><td>3.9.x 系列</td><td>✅ 可升级</td></tr>
+          <tr><td><strong>iOS</strong>（HiYou）</td><td>v1.3.0（已冻结）</td><td>❌ 不能升级 — 原开发者账号被终止；新账号已就绪，代码待合规重建</td></tr>
+          <tr><td><strong>Windows PC</strong>（旧版）</td><td>v2.2.71（已冻结）</td><td>⚠️ 新签名方案测试环境已验收，待正式环境验证</td></tr>
+        </table>
+        <div class="note">本阶段的 API 面收敛特别注意了这项约束：移除 66 条冗余路由时未新增替代接口、未变更数据结构，确保冻结中的 iOS 与 Windows 旧客户端不受影响。此项约束使后端每次改动额外增加约 30% 的设计与测试成本；两项解除条件本阶段均有进展 —— Windows 待正式环境验证，iOS 重建范围已明确。</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>六、关键风险与技术债务 — iOS 客户端合规审计</h2>
+      <div class="callout ok">
+        <strong>好消息先说：</strong>新 Apple 开发者账号为<strong>企业（Organization）形态</strong>。Apple 明文要求 VPN 类应用只能由企业账号发布，个人账号一律不受理 —— 这项前提已满足。账号内尚无任何应用记录，等同全新起点；应用标识与所需权限均已预先注册完成。
+      </div>
+      <p>在此基础上，团队对现有 iOS 代码做了完整合规审计，结论是：<strong>现有代码不可直接以新账号重新上架</strong>。三项结构性障碍如下，均为台湾团队交接时既存的问题，非本阶段新增：</p>
+      <table>
+        <thead><tr><th>发现</th><th>业务影响</th><th>处理方案</th></tr></thead>
+        <tbody>
+          <tr>
+            <td><strong>1. 授权合规 — 与 sing-box 同类问题</strong><br>现有 iOS 客户端是在一个第三方 GPL-3.0 开源终端软件的基础上改建的，代码库中 233 个文件带有该开源授权声明，且未附带任何授权文件。</td>
+            <td>这正是日总 6/27 就 sing-box 提出的同一类问题 —— GPL-3.0 与 App Store 闭源商业分发存在结构性冲突。差别在于：sing-box 的问题在 Sprint 7 已提前避开，而 iOS 客户端的这项债务是随交接一并继承的。</td>
+            <td>移除全部第三方开源代码，仅保留自有代码重建。<strong>审计已确认可行</strong>：自有的账号、连线、内购等 162 个文件完全不依赖该开源代码，可完整分离。</td>
+          </tr>
+          <tr>
+            <td><strong>2. 产品定位与实际功能不一致</strong><br>该应用以「SSH 终端工具」的名义提交审核，商店分类亦登记为开发者工具，但实际主要功能是 VPN 连线。</td>
+            <td>Apple 明确禁止应用的实际功能与商店描述不符。这项不一致本身即构成上架障碍，且与原账号被终止的时间点相关。</td>
+            <td>以真实身份重新提交：更正商店分类、名称与描述，如实说明 VPN 功能与所用协议。新账号预先注册的应用标识已使用 VPN 命名，方向一致。</td>
+          </tr>
+          <tr>
+            <td><strong>3. 核心网络组件无源码</strong><br>负责承载全部用户流量的核心网络组件是一个 42 MB 的预编译二进制文件，由外部人员在其个人电脑上编译提供，代码库内无源码、无构建脚本，其内部静态链接的 76 个第三方组件亦无任何授权声明。</td>
+            <td>团队无法说明自家应用内究竟包含什么，无法修补其中任何一个组件的安全漏洞，也无法重新构建。这是供应链风险，不只是授权问题。</td>
+            <td><span class="badge done">方案已定</span> 直接改用团队自研的 <strong>SkyTunnel</strong> 引擎 —— 即 Sprint 7 立项、Sprint 8 已在 Android 验证可完全取代第三方内核、并已接入 Windows 的同一套引擎。<strong>不需要向外部索取源码</strong>，这项风险随组件替换一并消除。</td>
+          </tr>
+        </tbody>
+      </table>
+      <h3>审计的正面结论</h3>
+      <div class="callout ok">
+        审计同时确认了几项<strong>没有问题</strong>的部分，这些原本是风险较高的猜测方向，经逐项排查后排除：应用<strong>不存在</strong>针对审核人员改变行为的机制；<strong>不含</strong>任何广告、追踪或数据分析套件；<strong>不存在</strong>绕过 Apple 内购的支付通道；<strong>不存在</strong>刷评价或刷安装的机制。这意味着重建工作聚焦在上述三项，范围可控。
+      </div>
+      <h3>重构范围（8/7 启动）</h3>
+      <table>
+        <thead><tr><th>#</th><th>工作项</th><th>目的</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td>移除全部第三方开源终端代码，仅保留自有的 162 个文件重建</td><td>解除授权风险，同时清掉大量历史遗留的无用代码与文件</td></tr>
+          <tr><td>2</td><td>连线引擎改用自研 <strong>SkyTunnel</strong>，连接自有节点</td><td>与 Android、Windows 使用完全相同的引擎，消除外部预编译组件的供应链风险</td></tr>
+          <tr><td>3</td><td>界面与操作流程重新设计，功能对齐 Android 最新版本</td><td>三端体验一致；也让商店定位与实际功能真正相符</td></tr>
+          <tr><td>4</td><td>以 TestFlight 与自动化流水线验证发布链路</td><td>发布过程可重复、可追溯，不依赖个人电脑环境</td></tr>
+        </tbody>
+      </table>
+      <div class="callout ok">
+        <strong>战略意义：</strong>重构完成后，Android、Windows、iOS <strong>三端将统一运行在同一套自研引擎上</strong>；FFF 与未来客户端可直接复用，不必再重新面对同一轮授权与供应链问题。
+      </div>
+      <div class="note">审计的完整技术细节与逐项处理清单已归档于内部工程记录，不在本报告展开。</div>
+    </section>
+
+    <section>
+      <h2>七、安全与权限管控</h2>
+      <h3>源代码访问（最小权限原则）</h3>
+      <table>
+        <thead><tr><th>项目</th><th>当前状态</th></tr></thead>
+        <tbody>
+          <tr><td>GitLab 源代码访问白名单</td><td>Roy、Morgan、Lex 及马来西亚开发人员；其余台湾团队成员访问权限已回收</td></tr>
+          <tr><td>Apple 开发者账号凭证</td><td>新账号的发布凭证以受保护变量形式存放于 CI，不落地于代码库；已核实代码库内无任何凭证、私钥或描述文件</td></tr>
+          <tr><td>旧 Apple 账号凭证清理</td><td><span class="badge progress">本阶段提出，待执行</span> — 被终止账号的发布金钥仍存在于构建机，已列入凭证清理工作项</td></tr>
+        </tbody>
+      </table>
+      <h3>台湾团队交接遗留的基础设施安全缺口</h3>
+      <table>
+        <thead><tr><th>问题</th><th>风险</th><th>状态</th></tr></thead>
+        <tbody>
+          <tr><td>私有 VM 存取路径</td><td>跳板机采单一 IP 白名单，运维换 IP 即受阻，且每次调整都是一次生产安全边界变更</td><td><span class="badge done">✅ 方案已定</span> 移除跳板机，改用 Azure Bastion，随 8/12 整合一并落地</td></tr>
+          <tr><td>数据库备份与还原</td><td>交接时无可验证的还原流程</td><td><span class="badge progress">备份容器已建立，还原演练排定于 8/6–8/11 整合准备期内完成并量测耗时</span></td></tr>
+          <tr><td>Staging／Prod 网络隔离</td><td>测试与生产环境边界不清晰</td><td><span class="badge progress">单机整合将一并收敛</span></td></tr>
+          <tr><td>SSH 密钥登入</td><td>交接时依赖密码登入，权限回收困难</td><td><span class="badge progress">PEM 密钥方案推进中</span></td></tr>
+          <tr><td>读写分离（读库利用）</td><td>读写压力集中在主库</td><td><span class="badge done">✅ 已完成（Sprint 2）</span></td></tr>
+        </tbody>
+      </table>
+      <div class="note">以上均为台湾团队交接时既存的项目，非本阶段新增风险。8/12 的单机整合会一并处理其中数项。</div>
+    </section>
+
+
+    <section>
+      <h2>八、下阶段计划（Sprint 10，8/8 起）</h2>
+      <div class="callout">
+        <strong>主轴：</strong>8/12 合并上线 → iOS 大规模重构 → 支付稳定性（USDTPay 收敛 + Siqo 扩展） → Android 延迟探测优化。
+      </div>
+      <table>
+        <thead><tr><th>优先级</th><th>方向</th><th>计划内容与目标时间</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td>8/12 合并上线</td><td>8/11 完成全部准备与还原演练，<strong>8/12 凌晨 04:55 单机整合切换、早上 5 点 Android 上线</strong>。同步移除跳板机、改用 Azure Bastion 存取私有 VM。</td></tr>
+          <tr><td>2</td><td>iOS 大规模重构</td><td>移除第三方开源代码、改用自研 SkyTunnel 引擎、界面重新设计、功能对齐 Android，并以 TestFlight 与自动化流水线验证。需先确认账号资格前提。</td></tr>
+          <tr><td>3</td><td>USDTPay 错误收敛处理</td><td>针对已归并出的 7 类根因逐项处理 —— 主要为第三方查询接口逾时与回传非预期格式，方向为重试策略调整与通道分流。</td></tr>
+          <tr><td>4</td><td>Android 延迟探测优化</td><td>优化线路延迟探测的生命周期管理，减少无效探测与资源占用。</td></tr>
+          <tr><td>5</td><td>Siqo 支付扩展至 Windows</td><td>QA 完成测试环境验证、Amy 完成缺陷确认后，接入 Windows 端。</td></tr>
+          <tr><td>6</td><td>续费功能实作</td><td>升级即时生效、降级次周期生效、专属 IP／专属节点可续期不断号；同步修复降级排程重复执行缺陷。整个模块一次性上测试环境供 QA 整体验收。</td></tr>
+          <tr><td>7</td><td>Windows 正式环境发布</td><td>QA 测试通过后，演练正式环境标签构建与签名，完成安装／连接／更新／卸载验证后对外发布。</td></tr>
+          <tr><td>8</td><td>设备额度识别</td><td><span class="badge pending">连续两阶段顺延</span> 「账号+设备」组合身份判断。本阶段容量优先投入投放归因、API 收敛与单机整合准备，该项未进入实作。</td></tr>
+        </tbody>
+      </table>
+      <div class="note">按固定容量原则，本阶段新增的 iOS 合规审计工作，对应顺延了设备额度识别一项。容量固定、范围可变是团队一贯的排期方式。</div>
+    </section>
+
+
+    <div class="part fff">
+      <div class="pnum">第二部分</div>
+      <div class="ptitle">FFF 新产品</div>
+      <div class="psub">由 Lex 负责的独立产品线，采实时口径，与 Arrowfish 发布节奏互不影响</div>
+    </div>
+
+    <section>
+      <h2>九、FFF 新产品并行进展（Lex，实时口径）</h2>
+      <div class="callout">
+        <strong>本阶段（7/25–8/7）</strong><strong>Lex</strong> 在 <code>fff_vpn</code> 完成 <strong>82</strong> 次非合并提交。交付方向以<strong>书签分类功能</strong>为主（本阶段占比最高），另包含分享与推荐奖励页面、意见反馈提交、营销渠道归因与事件上报接口对接（7/28），以及「我的」页面状态管理重构与设置页。客户端版本为 <code>1.0.4</code>。
+        <div class="note" style="margin-top: 10px;">以上为客户端实作进度。该仓库目前尚无构建流水线记录，本阶段未执行测试、打包、商店上传或部署，因此不代表已上线或已验收。FFF 采用实时口径，与 Arrowfish 的阶段口径不同。</div>
+      </div>
+      <div class="callout watch">
+        <strong>FFF 商务侧事项（不影响 Arrowfish 发布节奏）</strong>
+        <ul style="margin: 8px 0 0 20px;">
+          <li><span class="badge done">已完成</span> FFF 公司欧盟虚拟电话号码已于 <strong>7/15 开通</strong>，SMS 验证能力就位</li>
+          <li>FFF 公司名下新支付通道账户仍需开设（<strong>Roy</strong> 推进中）</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>十、结论</h2>
+      <p>Sprint 9 同时推进了「交付」与「打基础」两条线。交付端：Android 于 8/4 通过 Google 审核并排定 8/12 上线，Windows 交付 QA 实测，Siqo 支付上到测试环境。基础端：投放归因链路让广告花费第一次可以对应到真实营收；后端接口精简三成、Android 端同步清理遗留代码；Windows 构建时间减半；USDTPay 的散乱报错收敛为 7 类可处理的根因。</p>
+      <p>iOS 合规审计是本阶段最重要的一项发现。结论虽然是「现有代码不能直接上架」，但它把一个长期不确定的问题变成了范围明确的工程任务。更关键的是，其中最棘手的一项 —— 核心连线组件来自外部、无源码、无法重建 —— <strong>因为团队早在 Sprint 7 就决定自研引擎，现在直接换用 SkyTunnel 即可解决，不需要向任何外部方索取</strong>。重构完成后三端将统一运行在同一套自研引擎上。目前需要决策的，只剩新账号主体资格这一项。</p>
+      <p>下阶段的关键节点是 <strong>8/12 的合并上线窗口</strong>（凌晨 04:55 单机整合切换、早上 5 点 Android 上线）。维护公告已于 8/4 提前上线，用户端预告已就位；同一窗口内也会移除跳板机、改用 Azure Bastion 存取私有 VM，顺带解决长期的白名单维护问题。</p>
+    </section>
+
+    <div class="footer">报告日期：2026年8月7日 · Sprint 9 完整报告 · 下次更新：Sprint 10 收尾</div>
+  </main>
+</body>
+</html>

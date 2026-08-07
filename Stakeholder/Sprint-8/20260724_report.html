@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>第8阶段 · 完整报告 · 2026-07-24</title>
+  <style>
+    :root {
+      --bg: #f7f8fa;
+      --paper: #ffffff;
+      --text: #202124;
+      --muted: #5f6368;
+      --line: #e5e7eb;
+      --blue: #1a73e8;
+      --green: #16a34a;
+      --green-bg: #f0fdf4;
+      --yellow: #f59e0b;
+      --yellow-bg: #fffbeb;
+      --red: #dc2626;
+      --red-bg: #fef2f2;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", "Segoe UI", sans-serif;
+      line-height: 1.68;
+      -webkit-font-smoothing: antialiased;
+    }
+    main { max-width: 1120px; margin: 0 auto; padding: 32px 20px 56px; }
+    header { padding: 28px 0 18px; border-bottom: 1px solid var(--line); margin-bottom: 24px; }
+    .eyebrow { color: var(--blue); font-size: 14px; font-weight: 700; margin: 0 0 8px; }
+    h1 { font-size: 32px; line-height: 1.25; margin: 0 0 10px; letter-spacing: 0; }
+    .meta { color: var(--muted); margin: 0; font-size: 15px; }
+    section { background: var(--paper); border: 1px solid var(--line); border-radius: 8px; padding: 22px; margin: 18px 0; }
+    h2 { font-size: 21px; margin: 0 0 14px; letter-spacing: 0; display: flex; align-items: center; gap: 8px; }
+    h3 { font-size: 16px; margin: 18px 0 8px; color: var(--text); }
+    p { margin: 0 0 12px; }
+    p:last-child { margin-bottom: 0; }
+    .tldr { border-left: 5px solid var(--blue); background: #f0f6ff; font-size: 18px; font-weight: 650; }
+    table { width: 100%; border-collapse: collapse; margin-top: 8px; font-size: 14.5px; }
+    th, td { border: 1px solid var(--line); padding: 10px 12px; text-align: left; vertical-align: top; }
+    th { background: #f3f4f6; font-weight: 700; }
+    .score { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; margin: 12px 0; }
+    .metric { border: 1px solid var(--line); border-radius: 8px; padding: 14px; background: #fbfcfe; }
+    .metric strong { display: block; font-size: 21px; margin-bottom: 4px; }
+    .metric span { color: var(--muted); font-size: 12.5px; }
+    .note { color: var(--muted); font-size: 13.5px; margin-top: 10px; }
+    .ok { color: var(--green); font-weight: 700; }
+    .watch { color: var(--yellow); font-weight: 700; }
+    .risk { color: var(--red); font-weight: 700; }
+    .callout { border-radius: 8px; padding: 14px 16px; margin: 10px 0; border-left: 4px solid var(--blue); background: #f0f6ff; font-size: 14.5px; }
+    .callout.risk { border-left-color: var(--red); background: var(--red-bg); color: var(--text); }
+    .callout.watch { border-left-color: var(--yellow); background: var(--yellow-bg); color: var(--text); }
+    .callout.ok { border-left-color: var(--green); background: var(--green-bg); color: var(--text); }
+    .badge { display: inline-block; padding: 2px 9px; border-radius: 4px; font-size: 12.5px; font-weight: 700; }
+    .badge.done { background: #dcfce7; color: #166534; }
+    .badge.progress { background: #fef3c7; color: #92400e; }
+    .badge.pending { background: #f1f5f9; color: #475569; }
+    .timeline { position: relative; padding-left: 22px; margin: 10px 0; }
+    .timeline::before { content: ''; position: absolute; left: 5px; top: 6px; bottom: 6px; width: 2px; background: var(--line); }
+    .titem { position: relative; margin-bottom: 12px; }
+    .titem::before { content: ''; position: absolute; left: -22px; top: 5px; width: 10px; height: 10px; border-radius: 50%; background: var(--blue); border: 2px solid white; }
+    .titem.milestone::before { background: var(--red); width: 12px; height: 12px; left: -23px; }
+    .tdate { font-weight: 700; font-size: 13.5px; color: var(--blue); }
+    .ttext { font-size: 14.5px; }
+    .part {
+      margin: 30px 0 4px;
+      padding: 16px 20px;
+      border-radius: 8px;
+      background: linear-gradient(90deg, #1a73e8 0%, #4f93ec 100%);
+      color: #fff;
+    }
+    .part .pnum { font-size: 12.5px; font-weight: 700; opacity: .85; letter-spacing: .08em; }
+    .part .ptitle { font-size: 22px; font-weight: 700; margin-top: 2px; }
+    .part .psub { font-size: 13.5px; opacity: .9; margin-top: 4px; }
+    .part.fff { background: linear-gradient(90deg, #7c3aed 0%, #a78bfa 100%); }
+    .footer { margin-top: 24px; padding-top: 14px; border-top: 1px solid var(--line); font-size: 12.5px; color: var(--muted); text-align: center; }
+    code { background: #f1f5f9; padding: 1px 6px; border-radius: 4px; font-size: 13px; }
+    @media (max-width: 760px) {
+      main { padding: 20px 12px 40px; }
+      h1 { font-size: 24px; }
+      section { padding: 16px; }
+      .score { grid-template-columns: 1fr 1fr; }
+      table { font-size: 13px; }
+      th, td { padding: 7px 8px; }
+    }
+    @media (max-width: 480px) { .score { grid-template-columns: 1fr; } }
+  </style>
+  <script src="../../assets/auth-gate.js"></script>
+</head>
+<body>
+  <main>
+    <header>
+      <p class="eyebrow">Arrowfish VPN · 第8阶段 · 完整报告</p>
+      <h1>2026-07-24 Sprint 8 自研引擎落地、Windows 签名打通与连接稳定性修复报告</h1>
+      <p class="meta">覆盖范围：2026-07-11 至 2026-07-24。承接 Sprint 7（截至 2026-07-10）确定的自研方向，本阶段重点为 SkyTunnel 在真实客户端的验证落地、Windows 签名与体积收敛，以及一批影响用户连接成功率的根因修复。</p>
+    </header>
+
+    <section class="tldr">
+      TL;DR：Sprint 7 确定的自研路线在本阶段完成验证 —— <strong>SkyTunnel 已在 Android 上证明可完全取代 sing-box/libbox</strong>，Windows 端同步接入同一套自研协议核心；Windows 安装包相较最初的 Electron 版本已缩减 <strong>92%</strong>，代码签名方案打通并在测试环境签发成功；同时定位并修复了一项影响用户「连上但没有流量」的 IPv6 网络兼容根因。下阶段进入线上收敛与续费功能开发。
+    </section>
+
+    <div class="part">
+      <div class="pnum">第一部分</div>
+      <div class="ptitle">Arrowfish VPN</div>
+      <div class="psub">Arrowfish VPN 本阶段的交付、风险、上线计划与安全管控（阶段口径，覆盖 7/11–7/24）</div>
+    </div>
+
+    <section>
+      <h2>一、本阶段关键决策与状态</h2>
+      <table>
+        <thead><tr><th>事项</th><th>说明</th><th>决策 / 现况</th></tr></thead>
+        <tbody>
+          <tr>
+            <td><span class="badge done">已完成</span><br><strong>Windows 代码签名</strong></td>
+            <td>Sprint 7 报告中「等待厂商审核」的外部阻塞项已解除。SSL.com eSigner 签名方案于 7/22 完成落地，测试环境 x64 与 ARM64 两个架构均已成功签发。</td>
+            <td>签名工作已完成，交由 <strong>Amy</strong> 进行测试。正式环境签名演练列入下阶段。</td>
+          </tr>
+          <tr>
+            <td><span class="badge done">已取得</span><br><strong>续费功能 PRD</strong></td>
+            <td>7/14 与台湾团队完成 FFF 全量文档梳理，确认「续费功能」为 Arrowfish 与 FFF 共用的最高优先需求。</td>
+            <td><strong>PRD 已于 7/15 由 Roy 提供</strong>。业务规则：升级即时生效、降级次周期生效、专属 IP／专属节点可续期不断号。团队据此排期开发。</td>
+          </tr>
+          <tr>
+            <td><span class="badge progress">Sprint 7 遗留</span><br><strong>设备额度识别缺陷</strong></td>
+            <td>Sprint 7 报告提出的「同一部设备被不同账号使用会互相顶号」问题，根因已确认，本阶段未进入实作排期 —— 容量优先投入自研引擎验证与连接稳定性根因修复。</td>
+            <td>按固定容量原则顺延至下阶段。方案不变：连接状态改用「账号+设备」组合身份判断。</td>
+          </tr>
+          <tr>
+            <td><span class="badge done">本阶段完成</span><br><strong>FFF 欧盟虚拟号码</strong></td>
+            <td>Sprint 7 报告中的 FFF 商务侧阻塞项之一。</td>
+            <td><strong>7/15 已开通完成</strong>，SMS 验证能力就位。新支付通道账户仍由 <strong>Roy</strong> 推进，不影响 Arrowfish 发布节奏。</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>二、本阶段关键成果（7/11–7/24）</h2>
+      <div class="score">
+        <div class="metric"><strong>-92%</strong><span>Windows 安装包体积（对比最初 Electron 版）</span></div>
+        <div class="metric"><strong>1 项</strong><span>「连上无流量」根因定位并修复</span></div>
+        <div class="metric"><strong>2 端</strong><span>接入自研引擎（Android 已验证／Windows 测试中）</span></div>
+        <div class="metric"><strong>9 个</strong><span>本阶段并行推进的代码仓库</span></div>
+      </div>
+      <table>
+        <thead><tr><th>方向</th><th>本阶段结果</th><th>管理层解读</th></tr></thead>
+        <tbody>
+          <tr><td>SkyTunnel Android 验证通过</td><td>7/13 证明 Android 可完全以 SkyTunnel 取代 sing-box/libbox 运行；7/14 消费端改为引用正式版本号的共享模块，不再依赖开发者本机路径。</td><td>Sprint 7 提出的自研方案从「方向」变成「已验证」，iOS 上架合规与 GPL 授权风险的技术前提已落地。</td></tr>
+          <tr><td>Windows 接入同一套自研核心</td><td>7/11 起 Windows 客户端接入相同的七协议自研核心，7/13 与 Android 统一为同一共享模块的相同依赖形态。</td><td>两端共用一套引擎，同一个修复一次生效；也是 FFF 与未来客户端复用的基础。</td></tr>
+          <tr><td>Windows 安装包持续瘦身</td><td>安装包 7.7 MB、安装后占用 18.7 MB。对比最初 Electron 版本的 100 MB／273 MB，下载体积减少约 92%、安装占用减少约 93%。</td><td>在 Sprint 7 已大幅缩减的基础上再进一步，下载与安装门槛持续降低。</td></tr>
+          <tr><td>Windows 代码签名打通</td><td>7/22 完成 SSL.com eSigner 签名方案落地，测试环境 x64 与 ARM64 双架构签发成功。</td><td>Sprint 7 的外部阻塞项解除，Windows 正式发布不再卡在签名环节。</td></tr>
+          <tr><td>「连上无流量」根因修复</td><td>7/23 定位到 IPv6 网络环境下的地址族不匹配问题 —— 用户显示已连接但实际无流量；同日完成动态出口方案实作，7/24 通过真机验收。</td><td>直接影响用户「连上却不能用」的体感，属于客服工单高发类型。</td></tr>
+          <tr><td>协议能力扩充</td><td>7/22 完成 ShadowTLS v3 内层 Shadowsocks 2022 的实作与编解码测试。</td><td>抗封锁协议组合再增一项，中国网络环境下可用线路选择更多。</td></tr>
+          <tr><td>Android 连接体验修复</td><td>7/23–7/24 集中修复断网保护开关、通知栏状态、连接状态显示等 QA 提出的缺陷，并完成启动页与一批界面问题的整体修复。</td><td>启动与连接是用户每次使用的必经路径，这类修复直接影响留存。</td></tr>
+          <tr><td>节点运维缺陷修复</td><td>7/20 修复节点程序重启时因主机名告警被误判为「重启失败」的问题。</td><td>减少运维误报，节点状态判断更可信。</td></tr>
+          <tr><td>中国网络自测工具增强</td><td>7/13 从写死的协议／节点配置改为动态查询节点，减少人工维护测试配置的成本。</td><td>兑现 Sprint 7 承诺的迭代方向，QA 使用成本下降。</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>三、改善与商业价值</h2>
+      <table>
+        <thead><tr><th>技术改善</th><th>之前</th><th>之后</th><th>商业价值</th></tr></thead>
+        <tbody>
+          <tr><td>Windows 安装包下载体积</td><td>100 MB（Electron 版）</td><td>7.7 MB（-92%）</td><td>下载失败率与流量成本进一步降低，安装转化率预期提升</td></tr>
+          <tr><td>Windows 安装后占用</td><td>273 MB</td><td>18.7 MB（-93%）</td><td>低配置机器可用性提升，卸载顾虑降低</td></tr>
+          <tr><td>IPv6 网络下的连接可用性</td><td>部分 IPv6 环境用户显示已连接但无实际流量</td><td>根因修复并通过真机验收</td><td>减少「连上却不能用」类客服工单与退款争议</td></tr>
+          <tr><td>VPN 核心引擎授权风险</td><td>依赖 GPL 授权的第三方开源内核</td><td>Android 已验证可完全以自研引擎取代</td><td>解除 iOS 重新上架的结构性障碍，并消除版权投诉风险</td></tr>
+          <tr><td>双端引擎维护成本</td><td>Android 与 Windows 各自维护协议实现</td><td>统一共享模块，按版本号分发</td><td>同一修复改一次、两端生效，降低行为漂移</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>四、关键时间节点</h2>
+      <div class="timeline">
+        <div class="titem"><div class="tdate">7/11</div><div class="ttext">Windows 客户端接入第一个自研协议核心；共享日志模块升级并被后端采用</div></div>
+        <div class="titem milestone"><div class="tdate">7/13</div><div class="ttext"><strong>SkyTunnel 在 Android 上验证可完全取代 sing-box/libbox</strong>；Android 与 Windows 同步改用共享版本化模块；中国网络自测工具改为动态节点查询</div></div>
+        <div class="titem"><div class="tdate">7/14</div><div class="ttext">Android 完成 SkyTunnel 迁移；Windows 付费节点与 ShadowTLS 路由修复；与台湾团队完成 FFF 需求梳理，确认续费功能为双产品最高优先</div></div>
+        <div class="titem"><div class="tdate">7/20</div><div class="ttext">修复节点程序重启被误判为失败的运维缺陷</div></div>
+        <div class="titem"><div class="tdate">7/22</div><div class="ttext"><strong>Windows 代码签名方案打通</strong>，测试环境 x64／ARM64 双架构签发成功；ShadowTLS v3 内层 Shadowsocks 2022 实作与测试完成</div></div>
+        <div class="titem milestone"><div class="tdate">7/23</div><div class="ttext"><strong>定位「连上无流量」根因为 IPv6 地址族不匹配</strong>，同日完成动态出口方案实作；Android 断网保护与连接状态缺陷修复</div></div>
+        <div class="titem"><div class="tdate">7/24</div><div class="ttext">IPv6 动态出口方案通过真机验收；Android 启动页与界面批次修复完成</div></div>
+      </div>
+    </section>
+
+    <section>
+      <h2>五、上线计划与后端改动特殊挑战</h2>
+      <table>
+        <thead><tr><th>客户端</th><th>本阶段状态</th><th>说明</th></tr></thead>
+        <tbody>
+          <tr><td>Android</td><td><span class="badge progress">持续迭代</span></td><td>本阶段完成 SkyTunnel 迁移、连接状态与启动流程修复，对外发布节奏以官方结果为准。</td></tr>
+          <tr><td>Windows（自研 Rust 版）</td><td><span class="badge progress">签名已打通，待发布门控</span></td><td>体积与签名两项前置条件均已具备；正式环境签名与 QA 安装／连接／更新／卸载验证尚未完成，仍不具备对外发布条件。</td></tr>
+        </tbody>
+      </table>
+      <h3>本阶段后端改动的特殊挑战</h3>
+      <div class="callout risk">
+        <strong>后端同时服务 3 类生产客户端，其中 2 类目前无法升级，每次后端改动都需额外保证向后兼容。</strong>
+        <table style="margin-top: 10px;">
+          <tr><th>客户端</th><th>当前生产版本</th><th>能否升级</th></tr>
+          <tr><td><strong>Android</strong>（Arrowfish）</td><td>3.8.x 系列</td><td>✅ 可升级</td></tr>
+          <tr><td><strong>iOS</strong>（HiYou）</td><td>v1.3.0（已冻结）</td><td>❌ 不能升级 — Apple 开发者账号被终止，无法提交 App Store 更新</td></tr>
+          <tr><td><strong>Windows PC</strong>（旧版）</td><td>v2.2.71（已冻结）</td><td>⚠️ 签名方案本阶段已打通，待正式环境验证后可恢复升级能力</td></tr>
+        </table>
+        <div class="note">本阶段的 IPv6 出口、协议扩充等后端改动均以新增字段／新增路径方式实现，未改变冻结客户端所依赖的既有响应格式。此项约束使后端每次改动额外增加约 30% 的设计与测试成本；要彻底解除，需要 (a) iOS 账号恢复与客户端合规重建、(b) Windows 新签名方案完成正式环境验证 —— 其中 (b) 本阶段已取得实质进展。</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>六、安全与权限管控</h2>
+      <h3>源代码访问（最小权限原则）</h3>
+      <table>
+        <thead><tr><th>项目</th><th>当前状态</th></tr></thead>
+        <tbody>
+          <tr><td>GitLab 源代码访问白名单</td><td>Roy、Morgan、Lex 及马来西亚开发人员；其余台湾团队成员访问权限已回收</td></tr>
+          <tr><td>FFF 客户端仓库</td><td>私有项目，独立于 Arrowfish 仓库权限</td></tr>
+        </tbody>
+      </table>
+      <h3>台湾团队交接遗留的基础设施安全缺口</h3>
+      <table>
+        <thead><tr><th>问题</th><th>风险</th><th>状态</th></tr></thead>
+        <tbody>
+          <tr><td>Staging／Prod 网络隔离</td><td>测试环境与生产环境网络边界不清晰</td><td><span class="badge progress">持续收敛中</span></td></tr>
+          <tr><td>数据库备份</td><td>交接时无可验证的备份与还原流程</td><td><span class="badge progress">备份容器已建立，还原演练列入下阶段</span></td></tr>
+          <tr><td>SSH 密钥登入</td><td>交接时依赖密码登入，权限回收困难</td><td><span class="badge progress">PEM 密钥方案推进中</span></td></tr>
+          <tr><td>读写分离（读库利用）</td><td>读写压力集中在主库</td><td><span class="badge done">✅ 已完成（Sprint 2）</span></td></tr>
+        </tbody>
+      </table>
+      <div class="note">以上均为台湾团队交接时既存的项目，非本阶段新增风险。按优先级与生产影响面逐阶段收敛。</div>
+    </section>
+
+
+    <section>
+      <h2>七、下阶段计划（Sprint 9，7/25 起）</h2>
+      <div class="callout">
+        <strong>主轴：</strong>Windows 正式环境发布验证 → 后端 API 面收敛 → 续费功能实作 → 生产环境架构整合准备。
+      </div>
+      <table>
+        <thead><tr><th>方向</th><th>计划内容</th></tr></thead>
+        <tbody>
+          <tr><td>Windows 正式发布</td><td>完成正式环境签名演练与构建缓存优化，推进 QA 发布门控。</td></tr>
+          <tr><td>续费功能</td><td>依 7/15 取得的 PRD 进入实作：升级即时生效、降级次周期生效、专属 IP／专属节点可续期不断号。</td></tr>
+          <tr><td>后端 API 面收敛</td><td>清理历史遗留的冗余接口，降低后端与客户端的维护面。</td></tr>
+          <tr><td>设备额度识别</td><td>实作「账号+设备」组合身份判断，向下兼容冻结中的 iOS／Windows 旧客户端。</td></tr>
+          <tr><td>生产环境架构整合</td><td>启动生产环境单机整合的前置准备工作。</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+
+    <div class="part fff">
+      <div class="pnum">第二部分</div>
+      <div class="ptitle">FFF 新产品</div>
+      <div class="psub">由 Lex 负责的独立产品线，采实时口径，与 Arrowfish 发布节奏互不影响</div>
+    </div>
+
+    <section>
+      <h2>八、FFF 新产品并行进展（Lex，实时口径）</h2>
+      <div class="callout">
+        <strong>本阶段（7/11–7/24）</strong><strong>Lex</strong> 在 <code>fff_vpn</code> 完成 <strong>77</strong> 次非合并提交，延续 Sprint 7 的 Flutter 客户端重建工作。交付方向以<strong>签到与抽奖流程</strong>为主（本阶段占比最高，含每日签到、抽奖结果弹窗与防重复弹出逻辑），另包含调试与 VPN 错误日志、客户端 API 拦截器层（请求 ID／语言／缓存三层）、英文与繁体中文（台湾）多语言，以及关于与常见问题内容页。
+        <div class="note" style="margin-top: 10px;">以上为客户端实作进度，不代表已上线或已验收。FFF 与 Arrowfish 发布并行推进、互不影响。FFF 采用实时口径，与 Arrowfish 的阶段口径不同。</div>
+      </div>
+      <div class="callout watch">
+        <strong>FFF 商务侧事项（不影响 Arrowfish 发布节奏）</strong>
+        <ul style="margin: 8px 0 0 20px;">
+          <li><span class="badge done">本阶段已完成</span> FFF 公司欧盟虚拟电话号码于 <strong>7/15 开通完成</strong> —— Sprint 7 报告中的阻塞项已解除，SMS 验证能力就位</li>
+          <li>FFF 公司名下新支付通道账户仍需开设（<strong>Roy</strong> 推进中）</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>九、结论</h2>
+      <p>Sprint 8 是 Sprint 7 自研方向的验证阶段。三条主线均取得实质进展：SkyTunnel 在 Android 上完成替代验证并与 Windows 统一为共享模块；Windows 签名这项外部阻塞项解除，安装包体积相较最初版本已缩减 92%；以及一项影响用户实际可用性的 IPv6 连接根因被定位并修复。</p>
+      <p>下阶段的关键，是把 Windows 从「测试环境可签名」推进到「正式环境可发布」，并启动续费功能与生产环境架构整合两项与营收和稳定性直接相关的工作。</p>
+    </section>
+
+    <div class="footer">报告日期：2026年7月24日 · Sprint 8 完整报告 · 下次更新：Sprint 9 收尾</div>
+  </main>
+</body>
+</html>

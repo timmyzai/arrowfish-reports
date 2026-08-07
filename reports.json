@@ -76,5 +76,17 @@
     "name": "第7阶段 · 一页摘要 · 2026-07-10",
     "date": "2026-07-10",
     "file": "Stakeholder/Sprint-7/20260710_summary.html"
+  },
+  {
+    "id": "sprint-8-full",
+    "name": "第8阶段 · 完整报告 · 2026-07-24",
+    "date": "2026-07-24",
+    "file": "Stakeholder/Sprint-8/20260724_report.html"
+  },
+  {
+    "id": "sprint-9-full",
+    "name": "第9阶段 · 完整报告 · 2026-08-07",
+    "date": "2026-08-07",
+    "file": "Stakeholder/Sprint-9/20260807_report.html"
   }
 ]
