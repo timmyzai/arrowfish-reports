@@ -1,5 +1,8 @@
 # ProjectManagementReports
 
+Follow the ancestor workspace instructions for exploration, safety, git, and
+verification.
+
 ## Purpose
 
 Static stakeholder-report site for published Arrowfish VPN sprint summaries and
