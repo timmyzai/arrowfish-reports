@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="noindex, nofollow">
-  <meta name="description" content="Arrowfish 第10阶段进展报告，工程范围 2026年8月8日至8月21日">
+  <meta name="description" content="Arrowfish 第10阶段进展报告，含2026年7月整月与8月至26日的增长及收入数据">
   <title>第10阶段 · 完整报告 · 2026-08-26</title>
   <style>
     :root {
@@ -93,11 +93,11 @@
   <header>
     <p class="eyebrow">Arrowfish VPN · 第10阶段 · 完整报告</p>
     <h1>2026-08-26 Sprint 10 生产整合、iOS 合规重建与协议兼容报告</h1>
-    <p class="meta">覆盖范围：2026-08-08 至 2026-08-21。生产经营数据更新至 2026-08-25；FFF 按实时口径更新至 2026-08-26。</p>
+    <p class="meta">覆盖范围：2026-08-08 至 2026-08-21。完整周数据截至 8/25；月度快照截至 8/26 18:40:41 MYT（26 日未结束）；FFF 按实时口径更新至 8/26。</p>
   </header>
 
   <section class="tldr">
-    TL;DR：<strong>8 月 12 日生产环境整合已完成，业务指标持续高于整合前基线</strong>；下一阶段重点是补齐异地备份、完成 iOS 真机验收，并关闭两项协议兼容问题的端到端验证。
+    TL;DR：<strong>8 月 12 日生产环境整合已完成，8 月截至 26 日 18:40 的收入已达到 7 月整月的 83.1%</strong>；下一阶段重点是补齐异地备份、完成 iOS 真机验收，并关闭两项协议兼容问题的端到端验证。
   </section>
 
   <div class="part">
@@ -123,12 +123,21 @@
   <section>
     <h2>二、本阶段关键成果</h2>
     <div class="score">
-      <div class="metric"><b>953</b><span>8/19–8/25 新注册</span></div>
-      <div class="metric"><b>173 / 174</b><span>付费用户 / 付费订单</span></div>
-      <div class="metric"><b>CNY 4,890.01</b><span>付费订单总额</span></div>
-      <div class="metric"><b>+140.3%</b><span>较整合前付费金额</span></div>
+      <div class="metric"><b>CNY 16,472.04</b><span>7 月完整月收入</span></div>
+      <div class="metric"><b>CNY 13,684.23</b><span>8 月累计收入，截至 8/26 18:40</span></div>
+      <div class="metric"><b>3,113</b><span>8 月累计注册</span></div>
+      <div class="metric"><b>CNY 4,890.01</b><span>8/19–8/25 完整周收入</span></div>
       <div class="metric"><b>2 / 2 / 0</b><span>高风险问题：发现 / 源码修复 / 验收关闭</span></div>
     </div>
+    <h3>月度增长与收入</h3>
+    <table>
+      <thead><tr><th>马来西亚时间</th><th>注册</th><th>付费用户</th><th>付费订单</th><th>付费订单总额</th><th>数据完整性</th></tr></thead>
+      <tbody>
+        <tr><td>7/1–7/31</td><td>3,163</td><td>626</td><td>775</td><td><strong>CNY 16,472.04</strong></td><td>完整月份</td></tr>
+        <tr><td>8/1–8/26</td><td>3,113</td><td>511</td><td>616</td><td><strong>CNY 13,684.23</strong></td><td>截至 8/26 18:40:41，当日未结束</td></tr>
+      </tbody>
+    </table>
+    <p>截至 8 月 26 日 18:40，8 月累计注册已达到 7 月整月的 98.4%，收入达到 83.1%。这只是未完整月份与完整月份的进度对照，不是同比增长率，也不作月底预测。</p>
     <p>8 月 12 日整合后的首周注册为 1,026、付费金额为 CNY 4,535.49；次周注册回落至 953，但付费金额进一步升至 CNY 4,890.01。该时间相关性值得持续观察，但不能证明增长由上线单独造成，因为 97.6% 的新注册仍缺少营销归因。</p>
     <table>
       <thead><tr><th>类别</th><th>本阶段结果</th><th>当前边界</th></tr></thead>
@@ -259,6 +268,7 @@
   <section>
     <h2>十一、财务影响</h2>
     <ul>
+      <li>7/1–7/31 完整月份付费订单总额为 <strong>CNY 16,472.04</strong>；8/1–8/26 18:40:41 的月累计为 <strong>CNY 13,684.23</strong>，已达到 7 月整月的 83.1%。8 月 26 日尚未结束，不把该数值描述为完整月收入。</li>
       <li>8/19–8/25 付费订单总额为 <strong>CNY 4,890.01</strong>，较前一周增长 7.8%，较整合前 8/5–8/11 增长 140.3%。</li>
       <li>续费 / 重复付费用户贡献 <strong>CNY 4,064.31</strong>，占 83.1%；续费可靠性是当前最直接的收入保护点。</li>
       <li>单笔 CNY 995 的两年高级套餐占周收入 20.35%，因此平均客单价上升不能直接解读为整体价格带改善。</li>
