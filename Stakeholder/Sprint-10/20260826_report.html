@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Arrowfish 第10阶段进展报告，工程范围 2026年8月8日至8月21日">
+  <title>Arrowfish 第10阶段进展报告 · 2026-08-26</title>
+  <style>
+    :root { --ink:#172033; --muted:#657087; --line:#dce3ec; --blue:#1a73e8; --navy:#16325c; --green:#16794b; --amber:#a86100; --red:#b42318; --bg:#f5f7fb; }
+    * { box-sizing: border-box; }
+    body { margin:0; background:var(--bg); color:var(--ink); font:15px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI","Microsoft YaHei",sans-serif; }
+    main { width:min(1120px,calc(100% - 32px)); margin:28px auto 56px; }
+    header,section { background:#fff; border:1px solid var(--line); border-radius:14px; box-shadow:0 4px 18px rgba(22,50,92,.05); }
+    header { padding:28px 32px; border-top:5px solid var(--blue); }
+    section { margin-top:18px; padding:24px 28px; }
+    h1 { margin:0; color:var(--navy); font-size:30px; line-height:1.25; }
+    h2 { margin:0 0 16px; color:var(--navy); font-size:21px; }
+    h3 { margin:22px 0 10px; font-size:17px; }
+    p { margin:10px 0; }
+    .meta { color:var(--muted); margin-top:7px; }
+    .tldr { margin-top:18px; padding:16px 18px; background:#eef5ff; border-left:5px solid var(--blue); border-radius:8px; font-size:17px; font-weight:650; }
+    .grid { display:grid; grid-template-columns:repeat(5,1fr); gap:10px; }
+    .metric { padding:14px; border:1px solid var(--line); border-radius:10px; background:#fbfcfe; }
+    .metric b { display:block; color:var(--navy); font-size:22px; line-height:1.2; }
+    .metric span { color:var(--muted); font-size:13px; }
+    table { width:100%; border-collapse:collapse; margin:10px 0 4px; }
+    th,td { padding:10px 12px; border:1px solid var(--line); text-align:left; vertical-align:top; }
+    th { background:#edf2f8; color:var(--navy); font-weight:700; }
+    tr:nth-child(even) td { background:#fafbfd; }
+    .badge { display:inline-block; padding:2px 8px; border-radius:999px; font-size:12px; font-weight:700; white-space:nowrap; }
+    .done { color:#0e5f3a; background:#dcf4e7; }
+    .progress { color:#785000; background:#fff1c7; }
+    .risk { color:#8f1d16; background:#fde4e1; }
+    .callout { margin:14px 0; padding:14px 16px; border-radius:8px; border-left:5px solid var(--amber); background:#fff8e7; }
+    .critical { border-color:#ef4444; background:#fef2f2; }
+    ol,ul { padding-left:22px; }
+    li { margin:6px 0; }
+    .note { color:var(--muted); font-size:13px; }
+    footer { color:var(--muted); text-align:center; margin-top:22px; font-size:13px; }
+    @media (max-width:850px) { .grid { grid-template-columns:repeat(2,1fr); } table { display:block; overflow-x:auto; } header,section { padding:20px; } }
+    @media print { body { background:#fff; } main { width:100%; margin:0; } header,section { box-shadow:none; break-inside:avoid; } }
+  </style>
+  <script src="../../assets/auth-gate.js"></script>
+</head>
+<body>
+<main>
+  <header>
+    <h1>Arrowfish 第10阶段进展报告</h1>
+    <div class="meta">工程范围：2026-08-08 至 2026-08-21 · 生产经营数据截至 2026-08-25 · FFF 实时口径截至 2026-08-26</div>
+    <div class="tldr">8 月 12 日生产环境整合已完成且业务指标持续高于整合前基线；下一阶段重点是补齐异地备份、完成 iOS 真机验收，并关闭两项协议兼容问题的端到端验证。</div>
+  </header>
+
+  <section>
+    <h2>一、本阶段关键决策与状态</h2>
+    <table>
+      <thead><tr><th>决策 / 现况</th><th>状态</th><th>说明</th></tr></thead>
+      <tbody>
+        <tr><td>生产环境整合至单一主机</td><td><span class="badge done">已执行</span></td><td>应用、MySQL 与 Redis 已于 8 月 12 日完成切换，旧数据主机及专属资源已退役。</td></tr>
+        <tr><td>VPN 对外能力收敛为三条核心路线</td><td><span class="badge done">方案已锁定</span></td><td>VLESS Reality、ShadowTLS、Trojan 为用户可选路线；Shadowsocks 仅作为 ShadowTLS 内层，不单独对外。</td></tr>
+        <tr><td>iOS 采用干净源码与自研 SkyTunnel 重建</td><td><span class="badge progress">测试中</span></td><td>已移除继承的 GPL 代码与不透明二进制依赖；尚未完成 TestFlight 与真机验收。</td></tr>
+        <tr><td>FFF 复用 SkyTunnel</td><td><span class="badge progress">Lex 实时推进</span></td><td>config 加载及 Trojan、VLESS、ShadowTLS 手动连线已确认；自动分组仍在开发。</td></tr>
+        <tr><td>生产异地恢复能力</td><td><span class="badge risk">高风险待完成</span></td><td>现有最终数据库备份仍在生产主机本机，尚未形成异地主机恢复副本。</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2>二、本阶段关键成果</h2>
+    <div class="grid">
+      <div class="metric"><b>953</b><span>8/19–8/25 新注册</span></div>
+      <div class="metric"><b>173 / 174</b><span>付费用户 / 付费订单</span></div>
+      <div class="metric"><b>CNY 4,890.01</b><span>付费订单总额</span></div>
+      <div class="metric"><b>+140.3%</b><span>较整合前付费金额</span></div>
+      <div class="metric"><b>2 / 2 / 0</b><span>高风险问题：发现 / 源码修复 / 验收关闭</span></div>
+    </div>
+    <p>8 月 12 日整合后的首周注册为 1,026、付费金额为 CNY 4,535.49；次周注册回落至 953，但付费金额进一步升至 CNY 4,890.01。该时间相关性值得持续观察，但不能证明增长由上线单独造成，因为 97.6% 的新注册仍缺少营销归因。</p>
+    <table>
+      <thead><tr><th>类别</th><th>本阶段结果</th><th>当前边界</th></tr></thead>
+      <tbody>
+        <tr><td>生产稳定性</td><td>应用、数据库与缓存完成同机整合；公开 API 与核心服务检查通过。</td><td>完整人工业务验收未全部留档；异地恢复缺口仍在。</td></tr>
+        <tr><td>支付保护</td><td>Apple 退款与撤销通知接入签名验证及既有退款流程。</td><td>生产生效仍取决于 App Store Connect 通知地址配置。</td></tr>
+        <tr><td>iOS 合规</td><td>建立无继承 Git 历史、无 GPL 源码的干净工程，继续收敛依赖与 VPN 主路径。</td><td>仍处于构建与验证口径，不能描述为可发布。</td></tr>
+        <tr><td>数据库安全</td><td>Go 模型生成可审查 SQL，并在测试环境完成迁移回放与服务验收。</td><td>生产变更继续按独立发布窗口执行。</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2>三、改善与商业价值</h2>
+    <table>
+      <thead><tr><th>改善</th><th>之前</th><th>当前</th><th>商业价值</th></tr></thead>
+      <tbody>
+        <tr><td>生产拓扑</td><td>应用与数据跨主机依赖</td><td>应用、MySQL、Redis 集中至主机内网回环</td><td>减少网络依赖、旧主机与维护面；未取得可归属账单，不宣称具体节省金额。</td></tr>
+        <tr><td>数据库变更</td><td>历史 SQL 与运行时建表逻辑并存</td><td>统一生成、审查、前向执行</td><td>降低结构漂移和不可回放变更风险。</td></tr>
+        <tr><td>凭证管理</td><td>测试环境仍有多处变量与数据库明文入口</td><td>三个后端服务已改用 Azure Key Vault</td><td>缩小凭证暴露与手工轮换范围；生产尚未切换。</td></tr>
+        <tr><td>隐私合规</td><td>官网曾声称记录 IP 与浏览历史</td><td>源码已改为与无日志政策一致</td><td>降低商店声明与实际行为冲突；网页变更仍待发布。</td></tr>
+        <tr><td>iOS 供应链</td><td>继承 GPL 代码、外部预编译核心与 13 个 Swift 包</td><td>干净工程；移除 5 个包并迁移敏感凭证至 Keychain</td><td>降低授权、供应链与凭证泄漏风险；仍需真机与升级回归。</td></tr>
+        <tr><td>Windows 构建资源</td><td>签名 Runner 持续运行</td><td>符合条件的流水线自动启停</td><td>避免闲置计算资源持续运行；下一次实际流水线仍是验收点。</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2>四、关键时间节点</h2>
+    <table>
+      <thead><tr><th>日期</th><th>里程碑</th></tr></thead>
+      <tbody>
+        <tr><td>8/10</td><td>iOS 干净源码工程建立；核心合规重建路径确认。</td></tr>
+        <tr><td>8/12</td><td><strong>生产环境整合完成</strong>，旧数据主机和专属 Azure 资源退役。</td></tr>
+        <tr><td>8/14</td><td>Apple 退款通知、CI/CD 权责分离与流水线卫生改进进入测试环境。</td></tr>
+        <tr><td>8/15</td><td>数据库迁移工具完成测试环境验收；Key Vault 测试环境切换完成。</td></tr>
+        <tr><td>8/17</td><td>删除 3 个过期 S3 存储桶；Windows 签名 Runner 改为按需启停。</td></tr>
+        <tr><td>8/19–8/21</td><td>iOS 依赖、隐私政策、VPN 配置与 API 错误处理继续收敛并进入构建验证。</td></tr>
+        <tr><td>8/24–8/26</td><td>两项协议问题均已有源码修复；测试环境与客户端端到端验收仍未关闭。</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2>五、上线计划与后端改动特殊挑战</h2>
+    <table>
+      <thead><tr><th>客户端 / 服务</th><th>当前口径</th><th>下一道门槛</th></tr></thead>
+      <tbody>
+        <tr><td>Android</td><td><span class="badge progress">测试中</span> 生产版本可升级；新 bootstrap 会话安全改动尚未发布。</td><td>多进程、进程死亡、失败注入与三协议真机矩阵。</td></tr>
+        <tr><td>iOS</td><td><span class="badge progress">构建验证中</span> 干净工程与 VPN 主路径已实现。</td><td>完整 Xcode、签名描述文件、TestFlight 与真机连接验收。</td></tr>
+        <tr><td>Windows</td><td><span class="badge risk">旧版冻结</span> v2.2.71 仍在生产。</td><td>新签名方案与正式环境发布链路验收。</td></tr>
+        <tr><td>后端</td><td><span class="badge done">生产整合完成</span> 后续安全与协议变更分阶段验证。</td><td>持续保证旧 iOS 与 Windows 客户端向后兼容。</td></tr>
+      </tbody>
+    </table>
+    <div class="callout"><strong>特殊挑战：</strong>后端同时服务可升级的 Android、冻结的 iOS HiYou v1.3.0 与冻结的 Windows v2.2.71。两类旧客户端无法同步升级，因此协议、bootstrap 与数据库调整都必须保留旧契约。</div>
+  </section>
+
+  <section>
+    <h2>六、安全与权限管控</h2>
+    <h3>源代码与凭证</h3>
+    <table>
+      <thead><tr><th>项目</th><th>当前状态</th></tr></thead>
+      <tbody>
+        <tr><td>GitLab 源代码白名单</td><td>Roy、Morgan、Lex 及马来西亚开发人员；其他台湾团队成员权限已回收。</td></tr>
+        <tr><td>后端运行时凭证</td><td>测试环境已通过托管身份从 Azure Key Vault 读取；生产尚未执行该切换。</td></tr>
+        <tr><td>iOS 本地敏感资料</td><td>token、密码与 VPN 凭证已由普通偏好存储迁移至 Keychain；升级回归待验证。</td></tr>
+      </tbody>
+    </table>
+    <h3>台湾团队交接遗留的基础设施缺口</h3>
+    <div class="callout critical"><strong>最高风险：生产异地备份仍未关闭。</strong>现有最终备份与运行服务位于同一生产主机，无法证明主机级故障后的恢复能力。下一阶段必须建立异地副本并实际演练恢复。</div>
+    <table>
+      <thead><tr><th>问题</th><th>风险</th><th>状态</th></tr></thead>
+      <tbody>
+        <tr><td>生产 SSH 边界</td><td>公开 SSH 增加攻击面</td><td><span class="badge done">本阶段已修复</span> 只允许私网跳转路径，其余来源明确拒绝。</td></tr>
+        <tr><td>日志管理入口</td><td>公开管理端暴露运维面</td><td><span class="badge done">本阶段已修复</span> Seq 管理置于 WireGuard 后，写入走私网。</td></tr>
+        <tr><td>测试环境凭证散布</td><td>多处变量与别名扩大泄漏面</td><td><span class="badge done">本阶段已修复</span> 三个服务切入 Key Vault，并清理冗余别名。</td></tr>
+        <tr><td>用户网络资料留存</td><td>外部地理查询和持久化真实 IP 与无日志承诺冲突</td><td><span class="badge progress">源码已修复</span> 改为本地查询且不持久化，部署验收待完成。</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2>七、FFF 并行进展（Lex 实时口径，截至 8/26）</h2>
+    <p>Lex 已完成分享赚钱、VPN 设置、网址导航、连接/断开和节点切换交互。FFF Android 核心已从 libbox 迁移至内部 SkyTunnel；config 加载及 Trojan、VLESS、ShadowTLS 手动连线已确认，自动分组仍在开发，Shadowsocks 尚未补测，且本轮没有可追溯的 APK、完整测试或测试环境验收记录。</p>
+    <p class="note">FFF 公司注册、欧盟电话号码与支付网关前置事项属于 Roy 的商务范围，不计入工程交付；本期没有可核验的新状态写入报告。</p>
+  </section>
+
+  <section>
+    <h2>八、阻塞与延迟</h2>
+    <table>
+      <thead><tr><th>阻塞</th><th>影响</th><th>当前处理</th></tr></thead>
+      <tbody>
+        <tr><td>生产异地备份缺失</td><td>无法证明主机级故障后的恢复能力</td><td>下一阶段建立异地备份并记录恢复时长。</td></tr>
+        <tr><td>iOS 缺少完整 Xcode / 真机验收</td><td>不能描述为可发布</td><td>在 macOS Runner 完成构建、签名、TestFlight 与真机连接矩阵。</td></tr>
+        <tr><td>两项高优先级协议问题未关闭</td><td>FFF 自动回退、Android 路线显示与 BO 节点管理仍缺完整验收</td><td>源码修复已完成，补齐测试环境 bootstrap、BO 与客户端实连记录后关闭。</td></tr>
+        <tr><td>97.6% 注册缺少营销归因</td><td>无法判断整合后增长来自产品、渠道或外部需求</td><td>补齐产品页、套餐、结账、支付回调与渠道埋点。</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2>九、下阶段计划</h2>
+    <ol>
+      <li>建立生产数据库异地备份，执行一次恢复演练并记录恢复时间。</li>
+      <li>完成 iOS 干净工程的提交整理、完整构建、签名检查、TestFlight 与真机验收。</li>
+      <li>对两项协议问题完成测试环境、BO、Android 与 FFF 的端到端验证并正式关闭。</li>
+      <li>为新用户注册到下单之间的漏斗补齐埋点；当前 69.05% 新用户使用过 VPN，但只有 4.72% 发起订单。</li>
+      <li>完成 Apple 生产通知地址配置前的真实签名通知验收，不在此之前宣称退款自动化已在生产生效。</li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>十、中长期规划</h2>
+    <ol>
+      <li>解除多客户端兼容负担：完成新 iOS 与 Windows 发布链路后，再逐步退出冻结客户端契约。</li>
+      <li>建立协议发布闭环：共享模块、服务端 Agent、三端客户端使用可追溯的不可变版本，并纳入区域化合成测试。</li>
+      <li>建立收入质量看板：分别追踪续费成功、支付失败恢复、D1/D7/D30 转化、退款与实际结算净额。</li>
+      <li>统一官网法律文件来源，补齐适用法律与运营主体两项仍未决定的法律信息。</li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>十一、财务影响</h2>
+    <ul>
+      <li>8/19–8/25 付费订单总额为 <strong>CNY 4,890.01</strong>，较前一周增长 7.8%，较整合前 8/5–8/11 增长 140.3%。</li>
+      <li>续费 / 重复付费用户贡献 <strong>CNY 4,064.31</strong>，占 83.1%；续费可靠性是当前最直接的收入保护点。</li>
+      <li>单笔 CNY 995 的两年高级套餐占周收入 20.35%，因此平均客单价上升不能直接解读为整体价格带改善。</li>
+      <li>生产主机与 AWS 资源清理确实缩小维护面，但账单证据不足，本报告不宣称具体云成本节省。</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>十二、为什么继续清理技术债</h2>
+    <p>Sprint 7 已说明 FFF 与 Arrowfish 复用同一套后端与 SkyTunnel，本期不重复旧表。新增事实是两项协议契约缺口同时影响 Arrowfish、FFF 与后台管理，因此端到端关闭这些问题比继续扩展新功能更优先。</p>
+  </section>
+
+  <footer>Arrowfish · 第10阶段 · 2026-08-26</footer>
+</main>
+</body>
+</html>
