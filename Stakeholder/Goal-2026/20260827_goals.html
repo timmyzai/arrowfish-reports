@@ -4,142 +4,75 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="noindex, nofollow">
-  <meta name="description" content="Arrowfish 与 FFF 2026 年六项重点目标、当前进度、剩余工作与交付窗口总览">
-  <title>2026 目标与进度总览 · 2026-08-27</title>
+  <meta name="description" content="Arrowfish 与 FFF 2026 年 3 月至 8 月工作回顾、独立模块进度与年底目标">
+  <title>2026 六个月工作回顾与年底目标 · 2026-08-27</title>
   <style>
     :root {
-      --bg: #f5f7fb;
-      --paper: #ffffff;
-      --text: #172033;
-      --muted: #637083;
-      --line: #dfe5ee;
-      --navy: #173b67;
-      --blue: #2563eb;
-      --blue-bg: #eff6ff;
-      --green: #15803d;
-      --green-bg: #edf9f1;
-      --amber: #a16207;
-      --amber-bg: #fff8e6;
-      --red: #b42318;
-      --red-bg: #fff1f0;
+      --bg: #f5f7fb; --paper: #fff; --text: #172033; --muted: #637083;
+      --line: #dfe5ee; --navy: #173b67; --blue: #2563eb; --blue-bg: #eff6ff;
+      --green: #15803d; --green-bg: #edf9f1; --amber: #a16207; --amber-bg: #fff8e6;
+      --red: #b42318; --red-bg: #fff1f0; --purple: #7c3aed; --purple-bg: #f5f0ff;
       --slate-bg: #f1f5f9;
-      --purple: #7c3aed;
-      --purple-bg: #f5f0ff;
     }
     * { box-sizing: border-box; }
     html { scroll-behavior: smooth; }
-    body {
-      margin: 0;
-      background: var(--bg);
-      color: var(--text);
-      font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", "Segoe UI", sans-serif;
-      line-height: 1.65;
-      -webkit-font-smoothing: antialiased;
-    }
+    body { margin: 0; background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", "Segoe UI", sans-serif; line-height: 1.65; -webkit-font-smoothing: antialiased; }
     main { max-width: 1180px; margin: 0 auto; padding: 32px 22px 64px; }
-    header {
-      position: relative;
-      overflow: hidden;
-      color: #fff;
-      background: linear-gradient(125deg, #102b4c 0%, #174f88 62%, #2477bb 100%);
-      border-radius: 18px;
-      padding: 34px 36px;
-      box-shadow: 0 16px 40px rgba(23, 59, 103, .16);
-    }
-    header::after {
-      content: "";
-      position: absolute;
-      width: 320px;
-      height: 320px;
-      border-radius: 50%;
-      right: -110px;
-      top: -170px;
-      background: rgba(255, 255, 255, .08);
-    }
+    header { position: relative; overflow: hidden; color: #fff; background: linear-gradient(125deg, #102b4c 0%, #174f88 62%, #2477bb 100%); border-radius: 18px; padding: 34px 36px; box-shadow: 0 16px 40px rgba(23,59,103,.16); }
+    header::after { content: ""; position: absolute; width: 320px; height: 320px; border-radius: 50%; right: -110px; top: -170px; background: rgba(255,255,255,.08); }
     .eyebrow { margin: 0 0 8px; font-size: 13px; font-weight: 750; letter-spacing: .12em; opacity: .82; }
-    h1 { margin: 0 0 10px; font-size: clamp(28px, 4vw, 42px); line-height: 1.18; letter-spacing: -.025em; }
-    .header-copy { max-width: 820px; margin: 0; font-size: 16px; opacity: .9; }
-    .updated {
-      display: inline-flex;
-      align-items: center;
-      gap: 7px;
-      margin-top: 20px;
-      padding: 7px 11px;
-      border: 1px solid rgba(255,255,255,.22);
-      border-radius: 999px;
-      background: rgba(255,255,255,.1);
-      font-size: 13px;
-      font-weight: 650;
-    }
+    h1 { margin: 0 0 10px; font-size: clamp(28px,4vw,42px); line-height: 1.18; letter-spacing: -.025em; }
+    .header-copy { max-width: 880px; margin: 0; font-size: 16px; opacity: .9; }
+    .updated { display: inline-flex; align-items: center; gap: 7px; margin-top: 20px; padding: 7px 11px; border: 1px solid rgba(255,255,255,.22); border-radius: 999px; background: rgba(255,255,255,.1); font-size: 13px; font-weight: 650; }
     .updated::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: #7ee2a8; box-shadow: 0 0 0 4px rgba(126,226,168,.15); }
-    nav {
-      display: flex;
-      gap: 8px;
-      overflow-x: auto;
-      padding: 14px 2px 4px;
-      scrollbar-width: thin;
-    }
-    nav a {
-      flex: 0 0 auto;
-      color: var(--navy);
-      background: var(--paper);
-      border: 1px solid var(--line);
-      border-radius: 999px;
-      padding: 7px 12px;
-      font-size: 13px;
-      font-weight: 700;
-      text-decoration: none;
-    }
+    nav { display: flex; gap: 8px; overflow-x: auto; padding: 14px 2px 4px; scrollbar-width: thin; }
+    nav a { flex: 0 0 auto; color: var(--navy); background: var(--paper); border: 1px solid var(--line); border-radius: 999px; padding: 7px 12px; font-size: 13px; font-weight: 700; text-decoration: none; }
     nav a:hover, nav a:focus-visible { border-color: #8ab4e8; background: var(--blue-bg); outline: none; }
     section { margin-top: 22px; }
-    .panel {
-      background: var(--paper);
-      border: 1px solid var(--line);
-      border-radius: 14px;
-      padding: 24px;
-      box-shadow: 0 5px 18px rgba(39, 57, 78, .045);
-    }
+    .panel { background: var(--paper); border: 1px solid var(--line); border-radius: 14px; padding: 24px; box-shadow: 0 5px 18px rgba(39,57,78,.045); }
     h2 { margin: 0 0 15px; font-size: 22px; line-height: 1.3; letter-spacing: -.015em; }
-    h3 { margin: 0 0 8px; font-size: 16px; }
+    h3 { margin: 0 0 8px; font-size: 17px; }
     p { margin: 0 0 12px; }
     p:last-child { margin-bottom: 0; }
-    .tldr { border-left: 5px solid var(--blue); background: linear-gradient(90deg, #f0f6ff 0%, #fff 80%); font-size: 17px; }
+    ul, ol { margin: 8px 0 0; padding-left: 21px; }
+    li { margin: 5px 0; }
+    .tldr { border-left: 5px solid var(--blue); background: linear-gradient(90deg,#f0f6ff 0%,#fff 80%); font-size: 17px; }
     .tldr strong { color: var(--navy); }
-    .score-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; }
+    .score-grid { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 12px; }
     .metric { border: 1px solid var(--line); border-radius: 12px; padding: 16px; background: #fbfcfe; }
     .metric .value { display: block; font-size: 28px; line-height: 1.1; font-weight: 800; letter-spacing: -.03em; }
     .metric .label { display: block; margin-top: 5px; color: var(--muted); font-size: 12.5px; }
-    .metric.done .value { color: var(--green); }
-    .metric.progress .value { color: var(--amber); }
-    .metric.planned .value { color: #64748b; }
-    .metric.risk .value { color: var(--red); }
-    .progress-bar { display: flex; height: 11px; overflow: hidden; border-radius: 999px; margin: 16px 0 7px; background: var(--slate-bg); }
-    .progress-bar span:nth-child(1) { width: 23.08%; background: #3ba266; }
-    .progress-bar span:nth-child(2) { width: 53.84%; background: #e0ad39; }
-    .progress-bar span:nth-child(3) { width: 23.08%; background: #94a3b8; }
-    .legend { color: var(--muted); font-size: 12.5px; }
-    .goal-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
-    .goal-card { border: 1px solid var(--line); border-radius: 14px; padding: 20px; background: var(--paper); }
-    .goal-card.arrowfish { border-top: 5px solid var(--blue); }
-    .goal-card.fff { border-top: 5px solid var(--purple); }
-    .goal-card.shared { border-top: 5px solid var(--green); grid-column: 1 / -1; }
-    .goal-card p { color: #39465a; }
-    .goal-card ul { margin: 10px 0 0; padding-left: 20px; }
-    .goal-card li { margin: 5px 0; }
+    .metric.done .value { color: var(--green); } .metric.progress .value { color: var(--amber); } .metric.planned .value { color: #64748b; }
+    .module-group { margin-top: 18px; padding-top: 18px; border-top: 1px solid var(--line); }
+    .module-group:first-of-type { margin-top: 4px; padding-top: 0; border-top: 0; }
+    .group-label { margin-bottom: 10px; color: var(--muted); font-size: 12px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
+    .module-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 14px; }
+    .module-card { border: 1px solid var(--line); border-radius: 13px; padding: 19px; background: #fff; }
+    .module-card.growth { border-top: 4px solid var(--blue); }
+    .module-card.platform { border-top: 4px solid var(--green); }
+    .module-card.product { border-top: 4px solid var(--purple); }
+    .module-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 10px; }
+    .module-card .summary { color: #39465a; }
+    .module-card dl { display: grid; grid-template-columns: 88px 1fr; gap: 7px 10px; margin: 13px 0 0; font-size: 13.5px; }
+    .module-card dt { color: var(--muted); font-weight: 750; }
+    .module-card dd { margin: 0; }
     .badge { display: inline-block; white-space: nowrap; border-radius: 999px; padding: 3px 9px; font-size: 12px; font-weight: 750; }
-    .badge.done { color: var(--green); background: #dcfce7; }
-    .badge.progress { color: #8a5607; background: #fef3c7; }
-    .badge.planned { color: #475569; background: #e9eef5; }
-    .badge.risk { color: var(--red); background: #fee2e2; }
-    .badge.info { color: #1d4ed8; background: #dbeafe; }
+    .badge.done { color: var(--green); background: #dcfce7; } .badge.progress { color: #8a5607; background: #fef3c7; } .badge.planned { color: #475569; background: #e9eef5; } .badge.risk { color: var(--red); background: #fee2e2; } .badge.info { color: #1d4ed8; background: #dbeafe; }
+    .callout { margin-top: 12px; border-left: 4px solid var(--blue); border-radius: 9px; padding: 14px 16px; background: var(--blue-bg); }
+    .callout.success { border-left-color: var(--green); background: var(--green-bg); }
+    .callout.warning { border-left-color: #e7a817; background: var(--amber-bg); }
+    .callout.critical { border-left-color: var(--red); background: var(--red-bg); }
+    .callout strong { display: block; margin-bottom: 3px; }
+    .flow { display: grid; grid-template-columns: repeat(5,minmax(0,1fr)); gap: 8px; margin-top: 14px; }
+    .flow-step { position: relative; border: 1px solid #bfd5f5; border-radius: 10px; padding: 13px 11px; background: var(--blue-bg); font-size: 13px; }
+    .flow-step:not(:last-child)::after { content: "→"; position: absolute; right: -9px; top: 50%; z-index: 2; transform: translateY(-50%); color: var(--blue); font-weight: 900; }
+    .flow-step b { display: block; margin-bottom: 3px; color: var(--navy); }
     .table-wrap { overflow-x: auto; }
     table { width: 100%; min-width: 820px; border-collapse: collapse; font-size: 14px; }
     th, td { padding: 11px 12px; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; }
-    th { background: #f4f7fb; color: #354258; font-size: 12.5px; letter-spacing: .01em; }
+    th { background: #f4f7fb; color: #354258; font-size: 12.5px; }
     tbody tr:last-child td { border-bottom: 0; }
-    tbody tr:hover { background: #fafcff; }
-    .milestone-name { font-weight: 750; color: var(--text); }
-    .subtle { color: var(--muted); font-size: 12.5px; }
+    .milestone-name { font-weight: 750; }
     .timeline { position: relative; margin: 8px 0 0; padding-left: 27px; }
     .timeline::before { content: ""; position: absolute; left: 8px; top: 8px; bottom: 8px; width: 2px; background: #d5deea; }
     .timeline-item { position: relative; padding: 0 0 18px; }
@@ -149,121 +82,191 @@
     .timeline-item .date { color: var(--blue); font-weight: 750; font-size: 13px; }
     .timeline-item .title { margin: 2px 0 3px; font-weight: 750; }
     .timeline-item .copy { color: var(--muted); font-size: 14px; }
-    .callout { margin-top: 12px; border-left: 4px solid var(--blue); border-radius: 9px; padding: 14px 16px; background: var(--blue-bg); }
-    .callout.success { border-left-color: var(--green); background: var(--green-bg); }
-    .callout.warning { border-left-color: #e7a817; background: var(--amber-bg); }
-    .callout.critical { border-left-color: var(--red); background: var(--red-bg); }
-    .callout strong { display: block; margin-bottom: 3px; }
-    .blocker-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
-    .blocker { border: 1px solid #f1c8c4; border-radius: 12px; padding: 16px; background: #fffafa; }
-    .blocker.watch { border-color: #ead9a5; background: #fffdf7; }
-    .blocker .impact { color: var(--red); font-size: 13px; font-weight: 700; margin: 6px 0; }
-    .blocker.watch .impact { color: var(--amber); }
-    .resolved-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
-    .resolved-item { display: flex; gap: 10px; padding: 13px; border: 1px solid #cde8d6; border-radius: 10px; background: var(--green-bg); }
-    .resolved-item::before { content: "✓"; display: grid; place-items: center; flex: 0 0 22px; width: 22px; height: 22px; color: #fff; background: var(--green); border-radius: 50%; font-size: 13px; font-weight: 800; }
-    .principles { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
-    .principle { border: 1px solid var(--line); border-radius: 12px; padding: 16px; background: #fbfcfe; }
-    .principle .num { color: var(--blue); font-size: 12px; font-weight: 800; letter-spacing: .08em; }
     .footer { margin-top: 28px; padding: 18px 4px 0; border-top: 1px solid var(--line); color: var(--muted); font-size: 12.5px; text-align: center; }
-    @media (max-width: 850px) {
-      .score-grid { grid-template-columns: 1fr 1fr; }
-      .goal-grid, .blocker-grid, .resolved-list, .principles { grid-template-columns: 1fr; }
-      .goal-card.shared { grid-column: auto; }
-    }
-    @media (max-width: 520px) {
-      main { padding: 14px 10px 40px; }
-      header { padding: 25px 20px; border-radius: 13px; }
-      .panel { padding: 18px 15px; border-radius: 11px; }
-      .score-grid { grid-template-columns: 1fr; }
-      h2 { font-size: 19px; }
-    }
-    @media print {
-      body { background: #fff; }
-      main { max-width: none; padding: 0; }
-      nav { display: none; }
-      header, .panel, .goal-card { box-shadow: none; break-inside: avoid; }
-      section { break-inside: auto; }
-    }
+    @media (max-width: 850px) { .score-grid, .module-grid { grid-template-columns: 1fr 1fr; } .flow { grid-template-columns: 1fr; } .flow-step:not(:last-child)::after { content: "↓"; right: 50%; top: auto; bottom: -17px; transform: translateX(50%); } }
+    @media (max-width: 600px) { main { padding: 14px 10px 40px; } header { padding: 25px 20px; border-radius: 13px; } .panel { padding: 18px 15px; } .score-grid, .module-grid { grid-template-columns: 1fr; } h2 { font-size: 19px; } .module-card dl { grid-template-columns: 1fr; gap: 1px; } .module-card dd { margin-bottom: 7px; } }
+    @media print { body { background: #fff; } main { max-width: none; padding: 0; } nav { display: none; } header, .panel, .module-card { box-shadow: none; break-inside: avoid; } }
   </style>
   <script src="../../assets/auth-gate.js"></script>
 </head>
 <body>
 <main>
   <header>
-    <p class="eyebrow">ARROWFISH × FFF · 2026 重点目标</p>
-    <h1>目标与进度总览</h1>
-    <p class="header-copy">集中跟踪公司主体迁移、百度广告网站、自研 VPN 平台、Siqo 支付、FFF 智能路由和 Arrowfish iOS 重构。</p>
+    <p class="eyebrow">ARROWFISH × FFF · 2026 年 3 月至 8 月</p>
+    <h1>六个月工作回顾与年底目标</h1>
+    <p class="header-copy">将广告追踪、订阅续费、节点自动化、VPN 核心、支付与各客户端工作拆成独立模块，清楚说明目前完成到哪里，以及 2026 年底要达到什么结果。</p>
     <div class="updated">最后更新：2026-08-27（马来西亚时间）</div>
   </header>
 
   <nav aria-label="页面目录">
-    <a href="#overview">总览</a>
-    <a href="#goals">六项目标</a>
-    <a href="#platform">自研平台明细</a>
-    <a href="#delivery">交付顺序</a>
+    <a href="#overview">总览</a><a href="#modules">11 个独立模块</a><a href="#tracking">广告追踪</a><a href="#subscription">订阅续费</a><a href="#nodes">节点自动化</a><a href="#roadmap">年底路线图</a>
   </nav>
 
   <section class="panel tldr">
-    <strong>一句话：</strong>Google 平台主体迁移、自研 SkyTunnel、SkyNode 和三协议中国区 QA 已完成；8 月集中完成百度广告网站与 Unbound 私有 DNS，10 月完成 FFF 智能路由完整功能，同时继续推进其他应用平台主体迁移、Siqo 多平台支付和 iOS 新账号重新提交。
+    <strong>一句话：</strong>过去六个月已完成自研隧道、三协议和后台节点简易部署三项核心交付；下一阶段优先补齐广告到付费的端到端追踪及订阅续费闭环，并在年底前继续关闭其余产品与平台目标。
   </section>
 
   <section id="overview" class="panel">
     <h2>一、管理层 60 秒总览</h2>
     <div class="score-grid">
-      <div class="metric"><span class="value">6</span><span class="label">当前重点目标</span></div>
-      <div class="metric done"><span class="value">3</span><span class="label">自研核心交付已完成并验证</span></div>
-      <div class="metric progress"><span class="value">2</span><span class="label">目标在 2026 年 8 月完成</span></div>
-      <div class="metric planned"><span class="value">1</span><span class="label">目标在 2026 年 10 月完成</span></div>
+      <div class="metric"><span class="value">11</span><span class="label">独立工作模块，不再混合汇报</span></div>
+      <div class="metric done"><span class="value">3</span><span class="label">核心交付已完成或阶段完成</span></div>
+      <div class="metric progress"><span class="value">6</span><span class="label">正在开发、迁移或验证</span></div>
+      <div class="metric planned"><span class="value">2</span><span class="label">方案已定，等待进入开发</span></div>
     </div>
-    <p class="legend">“3 项已完成并验证”指 SkyTunnel、SkyNode 和三协议；不代表包含 Unbound 私有 DNS 的整个自研平台目标已经关闭。</p>
-    <div class="callout success"><strong>已验证的核心能力</strong>SkyTunnel、SkyNode 和三协议已完成，并由 QA 在中国网络环境验证。</div>
-    <div class="callout warning"><strong>最近交付窗口</strong>百度广告新网站与基于 Unbound 的私有 DNS 解析器目标在 2026 年 8 月完成；FFF 智能路由完整功能目标在 2026 年 10 月完成。</div>
+    <div class="callout warning"><strong>当前业务优先级</strong>第一优先是让广告来源能够贯穿下载、安装、注册、首次付费及续费；第二优先是让用户可提前续费、自动续费并正确管理 Stripe 订阅。</div>
   </section>
 
-  <section id="goals" class="panel">
-    <h2>二、六项目标与当前进度</h2>
+  <section id="modules" class="panel">
+    <h2>二、11 个独立模块：目前做到哪里</h2>
+
+    <div class="module-group">
+      <div class="group-label">增长与收入</div>
+      <div class="module-grid">
+        <article class="module-card growth">
+          <div class="module-head"><h3>G1 · 广告归因与付费分析</h3><span class="badge planned">方案已定</span></div>
+          <p class="summary">已完成台湾团队 Adjust 方案研究，并确认现有使用方式无法稳定覆盖广告到付费的完整链路，因此不再把 Adjust 当作主要归因方案。</p>
+          <dl><dt>已有基础</dt><dd>Adjust 已有安装、注册、付费事件；GTM 由广告运营侧维护。</dd><dt>已发现问题</dt><dd>付费事件触发规则及其与后台数据落差待确认；落地页和 APK 安装无法稳定带入推广人。</dd><dt>年底目标</dt><dd>完成自研 CID + 唯一 Token 的端到端归因，并提供 1D、3D、7D、14D、30D 首次付费统计。</dd></dl>
+        </article>
+        <article id="subscription" class="module-card growth">
+          <div class="module-head"><h3>G2 · 套餐续费与订阅管理</h3><span class="badge planned">待开发</span></div>
+          <p class="summary">当前用户无法提前续费，也没有完整的自动续费流程；Stripe 订阅管理尚未形成可控的业务闭环。</p>
+          <dl><dt>业务问题</dt><dd>续费窗口受限，自动续费与订阅状态管理不完整，影响收入连续性及客服处理。</dd><dt>工作范围</dt><dd>提前续费、自动续费、取消与恢复、支付失败处理、Stripe 订阅状态同步。</dd><dt>年底目标</dt><dd>用户可正常续费并管理订阅，后台可准确反映套餐、账单与订阅状态。</dd></dl>
+        </article>
+        <article class="module-card growth">
+          <div class="module-head"><h3>G3 · 百度广告新网站</h3><span class="badge progress">Staging 开发中</span></div>
+          <p class="summary">新设计已进入 staging 开发；网站交付与广告归因分开管理，避免把“页面完成”误当成“追踪完成”。</p>
+          <dl><dt>已完成</dt><dd>新设计进入 staging。</dd><dt>剩余工作</dt><dd>完成开发、验收与发布；归因链路由 G1 独立验收。</dd><dt>目标窗口</dt><dd>2026 年 8 月。</dd></dl>
+        </article>
+        <article class="module-card growth">
+          <div class="module-head"><h3>G4 · Siqo 多平台支付接入</h3><span class="badge progress">部分完成</span></div>
+          <p class="summary">Android 已在 staging 完成，Windows 与其他平台仍需逐个平台接入和验收。</p>
+          <dl><dt>已完成</dt><dd>Android staging 接入。</dd><dt>剩余工作</dt><dd>Windows 与其他平台接入、回归和发布。</dd><dt>完成标准</dt><dd>每个平台分别通过支付、回调及订单状态验证。</dd></dl>
+        </article>
+      </div>
+    </div>
+
+    <div class="module-group">
+      <div class="group-label">基础设施与 VPN 核心</div>
+      <div class="module-grid">
+        <article id="nodes" class="module-card platform">
+          <div class="module-head"><h3>G5 · 节点部署与管理自动化</h3><span class="badge done">第一阶段完成</span></div>
+          <p class="summary">节点已可从 BO 简易设置。操作者不再需要 SSH 登录、手动执行脚本或针对不同操作系统处理安装细节。</p>
+          <dl><dt>标准规格</dt><dd>1 核 CPU、1 GB 内存、10 GB 硬盘、Debian 12–13、700 GB 至不限流量、固定公网 IPv4；中国节点优先支持 IPv6。</dd><dt>业务价值</dt><dd>降低开节点门槛，减少人工步骤与不同服务器环境造成的部署偏差。</dd><dt>年底目标</dt><dd>以 BO 为统一入口，继续扩展节点日常管理自动化，并形成可重复验证的标准流程。</dd></dl>
+        </article>
+        <article class="module-card platform">
+          <div class="module-head"><h3>G6 · SkyTunnel 自研隧道</h3><span class="badge done">已完成</span></div>
+          <p class="summary">自研 VPN 隧道核心已交付，不再与节点 Agent、协议或 DNS 合并计算进度。</p>
+          <dl><dt>当前结果</dt><dd>SkyTunnel 已作为自研隧道核心交付。</dd><dt>后续工作</dt><dd>持续回归、客户端整合与版本维护。</dd><dt>完成口径</dt><dd>核心交付已完成，后续属于维护和扩展。</dd></dl>
+        </article>
+        <article class="module-card platform">
+          <div class="module-head"><h3>G7 · 三协议支持</h3><span class="badge done">已完成并验证</span></div>
+          <p class="summary">Trojan + ECH、ShadowTLS + Shadowsocks 2022、VLESS + Reality 已完成，并通过中国网络环境 QA。</p>
+          <dl><dt>当前结果</dt><dd>三套协议能力独立完成并验证。</dd><dt>后续工作</dt><dd>纳入各客户端持续回归。</dd><dt>业务价值</dt><dd>建立面向中国网络环境的多协议选择能力。</dd></dl>
+        </article>
+        <article class="module-card platform">
+          <div class="module-head"><h3>G8 · Unbound 私有 DNS</h3><span class="badge progress">开发中</span></div>
+          <p class="summary">自研私有 DNS 解析器是独立交付，不再并入“自研 VPN 平台已完成”的笼统表述。</p>
+          <dl><dt>当前状态</dt><dd>处于实现阶段，尚未标记完成。</dd><dt>剩余工作</dt><dd>实现、集成及验证。</dd><dt>目标窗口</dt><dd>2026 年 8 月。</dd></dl>
+        </article>
+      </div>
+    </div>
+
+    <div class="module-group">
+      <div class="group-label">产品与平台</div>
+      <div class="module-grid">
+        <article class="module-card product">
+          <div class="module-head"><h3>G9 · 新公司主体迁移</h3><span class="badge progress">进行中</span></div>
+          <p class="summary">Google 平台主体迁移已完成；华为、Samsung 与 OPPO 分别继续推进。</p>
+          <dl><dt>已完成</dt><dd>Google 平台。</dd><dt>进行中</dt><dd>华为、Samsung、OPPO。</dd><dt>完成标准</dt><dd>每个平台分别完成主体、账号及发布资格迁移。</dd></dl>
+        </article>
+        <article class="module-card product">
+          <div class="module-head"><h3>G10 · FFF 智能路由完整功能</h3><span class="badge progress">Staging 部分完成</span></div>
+          <p class="summary">基础智能路由能力已在 staging 完成，完整功能仍在补齐。</p>
+          <dl><dt>已完成</dt><dd>Staging 基础能力。</dd><dt>剩余工作</dt><dd>补齐完整范围并通过 staging 验收。</dd><dt>目标窗口</dt><dd>2026 年 10 月。</dd></dl>
+        </article>
+        <article class="module-card product">
+          <div class="module-head"><h3>G11 · Arrowfish iOS 重构与重新提交</h3><span class="badge progress">开发与修复中</span></div>
+          <p class="summary">已推进大规模重构、文案重写、功能精简与轻量化；节点列表及 VPN 连接主流程已可运行。</p>
+          <dl><dt>剩余工作</dt><dd>清理遗留二进制代码、稳定核心流程，完成新 Apple 账号签名、测试与重新提交。</dd><dt>外部门槛</dt><dd>新 Apple 账号与重新提交条件。</dd><dt>目标</dt><dd>开发和账号门槛关闭后进入发布。</dd></dl>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="tracking" class="panel">
+    <h2>三、广告追踪：从旧 Adjust 方案转为自研端到端链路</h2>
+    <div class="callout critical"><strong>为什么需要重做</strong>台湾团队遗留的 Adjust 接入虽然记录安装、注册和付费事件，但没有被正确用于完整归因。现阶段无法稳定回答“哪一次广告点击最终产生注册、首次付费和续费”。</div>
+
+    <h3 style="margin-top:18px;">已确认的现况</h3>
     <div class="table-wrap">
       <table>
-        <thead><tr><th>编号</th><th>目标</th><th>状态</th><th>已完成</th><th>剩余工作</th><th>目标窗口</th></tr></thead>
+        <thead><tr><th>范围</th><th>目前情况</th><th>需要关闭的问题</th></tr></thead>
         <tbody>
-          <tr><td>G1</td><td class="milestone-name">Arrowfish 转移至新公司主体</td><td><span class="badge progress">进行中</span></td><td>Google 平台主体迁移已完成。</td><td>华为、Samsung 和 OPPO 平台主体迁移正在进行中。</td><td>待排期</td></tr>
-          <tr><td>G2</td><td class="milestone-name">百度广告新网站</td><td><span class="badge progress">Staging 开发中</span></td><td>新设计已进入 staging 开发。</td><td>完成新设计、staging 验收与发布。</td><td>2026 年 8 月</td></tr>
-          <tr><td>G3</td><td class="milestone-name">自研 VPN 平台核心</td><td><span class="badge progress">大部分完成</span></td><td>SkyTunnel、SkyNode 和三协议已完成；三协议已通过中国区 QA 验证。</td><td>完成基于 Unbound 的自研私有 DNS 解析器。</td><td>2026 年 8 月</td></tr>
-          <tr><td>G4</td><td class="milestone-name">Siqo Payment Gateway 多平台接入</td><td><span class="badge progress">部分完成</span></td><td>Android 已在 staging 完成。</td><td>Windows 和其他平台尚未完成；后续逐个平台接入并完成 staging 验收。</td><td>待排期</td></tr>
-          <tr><td>G5</td><td class="milestone-name">FFF 智能路由完整功能</td><td><span class="badge progress">Staging 部分完成</span></td><td>基础智能路由能力已在 staging 完成。</td><td>补齐完整功能范围并完成 staging 验收。</td><td>2026 年 10 月</td></tr>
-          <tr><td>G6</td><td class="milestone-name">Arrowfish iOS 大规模重构与重新提交</td><td><span class="badge progress">开发与修复中</span></td><td>大规模重构已推进；已重写文案、移除多余功能并完成轻量化，节点列表和 VPN 连接主流程已可正常运行。</td><td>继续清理遗留二进制代码、修复并稳定核心流程，完成新 Apple 账号下的签名、测试和重新提交。</td><td>待开发与账号门槛关闭后确定</td></tr>
+          <tr><td class="milestone-name">Adjust</td><td>已有 Install、Register、Purchase。</td><td>确认 Purchase 是仅首次付费触发，还是每次付费／续费触发；查明 Adjust 与后台付费数据落差。</td></tr>
+          <tr><td class="milestone-name">Landing / Backend</td><td>广告进入 <code>/landing/</code> 后，后台无法稳定带入推广人；部分 APK 安装也会丢失推广人，重装时曾带入测试推广码。</td><td>移除不可靠的推广人继承方式，以唯一 CID 和 Token 建立确定关系。</td></tr>
+          <tr><td class="milestone-name">付费周期</td><td>后台尚未直接提供完整归因周期统计。</td><td>提供 1D、3D、7D、14D、30D 内完成首次付费的统计。</td></tr>
+          <tr><td class="milestone-name">暂不纳入</td><td>Meta Pixel、Facebook Event、AppsFlyer 当前未用于投放。</td><td>本阶段不开发；GTM 事件继续由广告运营侧管理，需要代码改动时再提需求。</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3 style="margin-top:20px;">已确定的实现方案</h3>
+    <div class="flow" aria-label="广告归因实现流程">
+      <div class="flow-step"><b>1 · 页面生成 CID</b>载入页面时只生成一次，并在整个页面会话复用。</div>
+      <div class="flow-step"><b>2 · 首次点击下载</b>按钮立即禁用或防抖，只发送一次带 CID 的下载请求。</div>
+      <div class="flow-step"><b>3 · 后端幂等处理</b>按 CID 查询归因记录；存在则复用，不存在才创建，CID 设唯一索引。</div>
+      <div class="flow-step"><b>4 · Token 绑定</b>后端生成唯一 Token，与本次 APK 下载及 CID 归因记录绑定。</div>
+      <div class="flow-step"><b>5 · 贯穿业务事件</b>安装、注册、首次付费、续费及金额回传同一归因链路。</div>
+    </div>
+    <div class="callout success"><strong>方案结果</strong>用户第二、第三、第四次点击不会增加请求；MIUI 或 Android DownloadManager 重试时仍携带同一个 CID。系统重试无法完全避免，但后端会复用同一归因记录，不重复计算访客。</div>
+    <div class="callout"><strong>设计边界</strong>不增加专门生成 CID 的 API，不依赖 IP／User-Agent 推测，不使用重定向技巧，也不针对特定 OEM 写例外逻辑。</div>
+  </section>
+
+  <section class="panel">
+    <h2>四、订阅续费：要解决的完整业务闭环</h2>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>独立能力</th><th>当前问题</th><th>年底完成标准</th></tr></thead>
+        <tbody>
+          <tr><td class="milestone-name">提前续费</td><td>用户目前不能在套餐到期前正常续费。</td><td>明确续费规则，付款后套餐期限与权益正确衔接。</td></tr>
+          <tr><td class="milestone-name">自动续费</td><td>自动续费流程尚未形成完整闭环。</td><td>到期扣款、成功续期、失败处理与用户通知均可追踪。</td></tr>
+          <tr><td class="milestone-name">Stripe 订阅管理</td><td>订阅状态与后台套餐状态无法完整管理。</td><td>创建、变更、取消、恢复及状态同步都有明确规则，并避免重复处理。</td></tr>
+          <tr><td class="milestone-name">收入分析</td><td>续费与首次付费无法完整按来源及周期分析。</td><td>与 G1 归因链路连接，区分首次付费、每次续费、金额及实际订单状态。</td></tr>
         </tbody>
       </table>
     </div>
   </section>
 
-  <section id="platform" class="panel">
-    <h2>三、自研 VPN 平台组件明细</h2>
+  <section class="panel">
+    <h2>五、节点自动化：已完成的第一阶段</h2>
+    <div class="callout success"><strong>当前成果</strong>新节点可直接通过 BO 设置；日常操作者无需 SSH、无需执行安装脚本，也无需自行处理操作系统差异。</div>
     <div class="table-wrap">
       <table>
-        <thead><tr><th>组件</th><th>实现</th><th>状态</th><th>验证口径</th><th>下一步</th></tr></thead>
+        <thead><tr><th>项目</th><th>统一标准</th><th>目的</th></tr></thead>
         <tbody>
-          <tr><td class="milestone-name">自研 VPN Tunnel</td><td>SkyTunnel</td><td><span class="badge done">已完成</span></td><td>已作为自研 VPN 隧道核心交付。</td><td>持续回归与版本维护。</td></tr>
-          <tr><td class="milestone-name">自研 Node Agent</td><td>SkyNode</td><td><span class="badge done">已完成</span></td><td>已作为自研节点 Agent 交付。</td><td>持续回归与版本维护。</td></tr>
-          <tr><td class="milestone-name">三协议支持</td><td>Trojan + ECH；ShadowTLS + Shadowsocks 2022；VLESS + Reality</td><td><span class="badge done">已完成并验证</span></td><td>QA 已在中国网络环境完成验证。</td><td>纳入各客户端持续回归。</td></tr>
-          <tr><td class="milestone-name">自研私有 DNS 解析器</td><td>Unbound</td><td><span class="badge progress">开发中</span></td><td>当前处于实现阶段，尚未标记为完成。</td><td>2026 年 8 月完成实现、集成与验证。</td></tr>
+          <tr><td class="milestone-name">计算资源</td><td>最低 1 核 CPU、1 GB 内存、10 GB 硬盘</td><td>形成可采购、可验收的最低基线。</td></tr>
+          <tr><td class="milestone-name">操作系统</td><td>Debian 12–13</td><td>减少不同发行版带来的部署偏差。</td></tr>
+          <tr><td class="milestone-name">流量与网络</td><td>700 GB 至不限流量；固定公网 IPv4</td><td>保证节点具备明确的服务基础。</td></tr>
+          <tr><td class="milestone-name">中国节点优先项</td><td>有 IPv6 优先</td><td>作为中国节点采购与部署的优先条件。</td></tr>
         </tbody>
       </table>
     </div>
+    <div class="callout warning"><strong>下一阶段</strong>“一键部署”只是节点自动化的第一阶段。年底前继续把节点管理动作收敛到 BO，并为每项新增自动化建立清楚的验收标准。</div>
   </section>
 
-  <section id="delivery" class="panel">
-    <h2>四、交付顺序与完成标准</h2>
+  <section id="roadmap" class="panel">
+    <h2>六、从现在到 2026 年底的交付顺序</h2>
     <div class="timeline">
-      <div class="timeline-item"><div class="date">2026 年 8 月</div><div class="title">关闭两个近期交付</div><div class="copy">完成百度广告新网站的 staging 验收与发布；完成 Unbound 私有 DNS 解析器的实现、集成和验证。</div></div>
-      <div class="timeline-item future"><div class="date">2026 年 10 月</div><div class="title">完成 FFF 智能路由完整功能</div><div class="copy">在现有 staging 基础能力上补齐完整范围，并通过 staging 验收。</div></div>
-      <div class="timeline-item future"><div class="date">日期待排</div><div class="title">完成其余平台与商店工作</div><div class="copy">依次关闭华为、Samsung、OPPO 主体迁移，Siqo Windows 与其他平台支付接入，以及 Arrowfish iOS 新 Apple 账号重新提交。</div></div>
+      <div class="timeline-item"><div class="date">2026 年 8 月</div><div class="title">关闭当前近期交付</div><div class="copy">完成百度广告网站及 Unbound 私有 DNS 的实现、集成与验证；网站发布与广告归因分别验收。</div></div>
+      <div class="timeline-item future"><div class="date">下一优先阶段</div><div class="title">先解决收入链路</div><div class="copy">实施 CID + Token 端到端广告归因，同时完成提前续费、自动续费及 Stripe 订阅管理设计与开发。</div></div>
+      <div class="timeline-item future"><div class="date">2026 年 10 月</div><div class="title">完成 FFF 智能路由完整功能</div><div class="copy">在现有 staging 基础上补齐完整范围，并通过 staging 验收。</div></div>
+      <div class="timeline-item future"><div class="date">2026 年底前</div><div class="title">关闭年度剩余目标</div><div class="copy">完成广告到付费统计闭环、订阅续费闭环，并继续推进节点管理自动化、平台主体迁移、多平台支付和 iOS 重新提交。</div></div>
     </div>
-    <div class="callout warning"><strong>完成标准</strong>Staging 完成只表示该环境可用，不等于全平台发布完成。每项目标必须在对应平台完成集成、测试和发布门槛后，才会标记为“已完成”。</div>
+    <div class="callout warning"><strong>后端改动的特殊约束</strong>后端同时服务可升级的 Android，以及目前冻结的 iOS HiYou v1.3.0 和 Windows skytree_pc v2.2.71。归因、订阅和支付改动必须保持旧客户端兼容，并分别验证，不能以单一客户端通过代表全部完成。</div>
   </section>
 
-  <div class="footer">Arrowfish × FFF · 2026 重点目标与进度 · 内部管理层阅读</div>
+  <div class="footer">Arrowfish × FFF · 2026 年 3 月至 8 月工作回顾与年底目标 · 内部管理层阅读</div>
 </main>
 </body>
 </html>
