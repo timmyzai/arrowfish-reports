@@ -320,14 +320,29 @@
             box-shadow: 0 1px 3px rgba(0,0,0,0.06); flex-shrink: 0;
         }
         .toolbar h1 { font-size: 16px; font-weight: 600; color: #1a73e8; white-space: nowrap; }
+        .view-tabs { display: flex; align-items: center; gap: 4px; padding: 3px; background: #f1f3f4; border-radius: 8px; }
+        .view-tab {
+            min-height: 36px; padding: 7px 12px; border: 0; border-radius: 6px;
+            color: #5f6368; background: transparent; font: inherit; font-size: 14px;
+            font-weight: 600; cursor: pointer;
+        }
+        .view-tab:hover { color: #174ea6; background: rgba(255,255,255,.65); }
+        .view-tab:focus-visible { outline: 2px solid #1a73e8; outline-offset: 2px; }
+        .view-tab[aria-selected="true"] { color: #174ea6; background: #fff; box-shadow: 0 1px 2px rgba(60,64,67,.18); }
         .toolbar select {
             padding: 6px 12px; border: 1px solid #ddd; border-radius: 6px;
-            font-size: 14px; background: #f8f9fa; cursor: pointer; min-width: 240px;
+            min-height: 36px; font-size: 14px; background: #f8f9fa; cursor: pointer; min-width: 240px;
         }
-        .toolbar select:focus { outline: none; border-color: #1a73e8; }
+        .toolbar select:focus-visible { outline: 2px solid #1a73e8; outline-offset: 2px; border-color: #1a73e8; }
         .toolbar .date { font-size: 13px; color: #888; }
         iframe { flex: 1; width: 100%; border: none; }
         .loading { flex: 1; display: flex; align-items: center; justify-content: center; color: #888; font-size: 15px; }
+        @media (max-width: 720px) {
+            .toolbar { flex-wrap: wrap; gap: 8px; padding: 10px 12px; }
+            .toolbar h1 { width: 100%; margin: 0; }
+            .toolbar select { flex: 1; min-width: 0; }
+            .toolbar .date { display: none; }
+        }
     </style>
 </head>
 <body>
@@ -376,11 +391,15 @@
     <div id="app-content" style="display:none; flex-direction:column; height:100vh;">
         <div class="toolbar">
             <h1>Arrowfish VPN</h1>
-            <select id="sprint-select"></select>
+            <div class="view-tabs" role="tablist" aria-label="报告视图">
+                <button class="view-tab" id="goals-tab" type="button" role="tab" aria-controls="report-frame" aria-selected="false">项目目标</button>
+                <button class="view-tab" id="reports-tab" type="button" role="tab" aria-controls="report-frame" aria-selected="true">阶段报告</button>
+            </div>
+            <select id="sprint-select" aria-label="选择阶段报告"></select>
             <span class="date" id="sprint-date"></span>
         </div>
         <div class="loading" id="loading">Loading reports...</div>
-        <iframe id="report-frame" style="display:none"></iframe>
+        <iframe id="report-frame" role="tabpanel" aria-labelledby="reports-tab" title="阶段报告内容" style="display:none"></iframe>
     </div>
 
     <script>
@@ -489,66 +508,103 @@
             const frame = document.getElementById('report-frame');
             const dateEl = document.getElementById('sprint-date');
             const loading = document.getElementById('loading');
+            const goalsTab = document.getElementById('goals-tab');
+            const reportsTab = document.getElementById('reports-tab');
             let sprints = [];
+            let goal = null;
 
             fetch('reports.json')
                 .then(r => r.json())
                 .then(data => {
-                    sprints = data;
+                    goal = data.find(isGoal) || null;
+                    sprints = data
+                        .filter(report => !isGoal(report))
+                        .map((report, sourceIndex) => ({ ...report, sourceIndex }))
+                        .sort((a, b) => a.date.localeCompare(b.date) || a.sourceIndex - b.sourceIndex);
                     sprints.forEach((s, i) => {
                         const opt = document.createElement('option');
                         opt.value = i;
                         opt.textContent = s.name;
                         select.appendChild(opt);
                     });
-                    const index = sprints.length - 1;
-                    select.value = index;
-                    loadSprint(index);
+                    goalsTab.hidden = !goal;
+                    loadFromHash();
                 })
                 .catch(() => { loading.textContent = 'Failed to load reports.'; });
 
             select.addEventListener('change', () => {
                 const index = parseInt(select.value);
                 loadSprint(index);
-                updateHash(index);
             });
 
-            window.addEventListener('hashchange', () => {
-                const index = resolveFromHash();
-                select.value = index;
+            goalsTab.addEventListener('click', () => {
+                if (goal) loadEntry(goal, 'goals');
+            });
+
+            reportsTab.addEventListener('click', () => {
+                const index = Number.isInteger(parseInt(select.value)) ? parseInt(select.value) : sprints.length - 1;
                 loadSprint(index);
             });
 
-            function resolveFromHash() {
+            window.addEventListener('hashchange', loadFromHash);
+
+            function isGoal(report) {
+                return report.id.startsWith('goal-') || report.file.includes('/Goal-');
+            }
+
+            function loadFromHash() {
                 const hash = decodeURIComponent(location.hash.slice(1));
-                if (!hash) return sprints.length - 1;
+                if (!hash) {
+                    loadSprint(sprints.length - 1);
+                    return;
+                }
                 const [id, date] = hash.split('/');
+                if (goal && id === goal.id && (!date || date === goal.date)) {
+                    loadEntry(goal, 'goals', false);
+                    return;
+                }
                 if (id && date) {
                     const exact = sprints.findIndex(s => s.id === id && s.date === date);
-                    if (exact !== -1) return exact;
+                    if (exact !== -1) {
+                        loadSprint(exact, false);
+                        return;
+                    }
                 }
                 if (id) {
                     let last = -1;
                     sprints.forEach((s, i) => { if (s.id === id) last = i; });
-                    if (last !== -1) return last;
+                    if (last !== -1) {
+                        loadSprint(last, false);
+                        return;
+                    }
                 }
-                return sprints.length - 1;
+                loadSprint(sprints.length - 1, false);
             }
 
-            function updateHash(index) {
-                const sprint = sprints[index];
-                if (!sprint) return;
-                history.replaceState(null, '', '#' + sprint.id + '/' + sprint.date);
+            function updateHash(entry) {
+                if (!entry) return;
+                history.replaceState(null, '', '#' + entry.id + '/' + entry.date);
             }
 
-            function loadSprint(index) {
+            function loadSprint(index, updateLocation = true) {
                 const sprint = sprints[index];
                 if (!sprint) return;
-                dateEl.textContent = sprint.date;
+                select.value = index;
+                loadEntry(sprint, 'reports', updateLocation);
+            }
+
+            function loadEntry(entry, view, updateLocation = true) {
+                const showingGoals = view === 'goals';
+                goalsTab.setAttribute('aria-selected', showingGoals);
+                reportsTab.setAttribute('aria-selected', !showingGoals);
+                select.disabled = showingGoals;
+                frame.setAttribute('aria-labelledby', showingGoals ? 'goals-tab' : 'reports-tab');
+                frame.title = showingGoals ? '项目目标内容' : '阶段报告内容';
+                dateEl.textContent = entry.date;
                 loading.style.display = 'none';
                 frame.style.display = 'block';
-                frame.src = sprint.file;
-                updateHash(index);
+                if (frame.getAttribute('src') !== entry.file) frame.src = entry.file;
+                if (updateLocation) updateHash(entry);
             }
         }
     </script>

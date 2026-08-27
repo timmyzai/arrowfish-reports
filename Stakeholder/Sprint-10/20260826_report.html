@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="noindex, nofollow">
-  <meta name="description" content="Arrowfish 第10阶段进展报告，含2026年7月整月与8月至26日的增长及收入数据">
-  <title>第10阶段 · 完整报告 · 2026-08-26</title>
+  <meta name="description" content="Arrowfish 与 FFF 第10阶段进展报告；两条产品线独立呈现">
+  <title>第10阶段 · 进展报告 · 2026-08-26</title>
   <style>
     :root {
       --bg: #f7f8fa;
@@ -91,9 +91,9 @@
 <body>
 <main>
   <header>
-    <p class="eyebrow">Arrowfish VPN · 第10阶段 · 完整报告</p>
-    <h1>2026-08-26 Sprint 10 生产整合、iOS 合规重建与协议兼容报告</h1>
-    <p class="meta">覆盖范围：2026-08-08 至 2026-08-21。完整周数据截至 8/25；月度快照截至 8/26 18:40:41 MYT（26 日未结束）；FFF 按实时口径更新至 8/26。</p>
+    <p class="eyebrow">第10阶段 · 产品进展报告</p>
+    <h1>2026-08-26 Sprint 10 进展报告</h1>
+    <p class="meta">报告分为上下两个独立产品区块。阶段数据覆盖 2026-08-08 至 2026-08-21，完整周数据截至 8/25，月度快照截至 8/26 18:40:41 MYT（26 日未结束）。</p>
   </header>
 
   <section class="tldr">
@@ -114,7 +114,6 @@
         <tr><td>生产环境整合至单一主机</td><td><span class="badge done">已执行</span></td><td>应用、MySQL 与 Redis 已于 8 月 12 日完成切换，旧数据主机及专属资源已退役。</td></tr>
         <tr><td>VPN 对外能力收敛为三条核心路线</td><td><span class="badge done">方案已锁定</span></td><td>VLESS Reality、ShadowTLS、Trojan 为用户可选路线；Shadowsocks 仅作为 ShadowTLS 内层，不单独对外。</td></tr>
         <tr><td>iOS 采用干净源码与自研 SkyTunnel 重建</td><td><span class="badge progress">测试中</span></td><td>已移除继承的 GPL 代码与不透明二进制依赖；尚未完成 TestFlight 与真机验收。</td></tr>
-        <tr><td>FFF 复用 SkyTunnel</td><td><span class="badge progress">Lex 实时推进</span></td><td>config 加载及 Trojan、VLESS、ShadowTLS 手动连线已确认；自动分组仍在开发。</td></tr>
         <tr><td>生产异地恢复能力</td><td><span class="badge risk">高风险待完成</span></td><td>现有最终数据库备份仍在生产主机本机，尚未形成异地主机恢复副本。</td></tr>
       </tbody>
     </table>
@@ -219,44 +218,32 @@
     </table>
   </section>
 
-  <div class="part fff">
-    <div class="pnum">第二部分</div>
-    <div class="ptitle">FFF 新产品</div>
-    <div class="psub">由 Lex 负责的独立产品线，采用实时口径，与 Arrowfish 发布节奏互不影响</div>
-  </div>
-
   <section>
-    <h2>七、FFF 并行进展（Lex 实时口径，截至 8/26）</h2>
-    <p>Lex 已完成分享赚钱、VPN 设置、网址导航、连接/断开和节点切换交互。FFF Android 核心已从 libbox 迁移至内部 SkyTunnel；config 加载及 Trojan、VLESS、ShadowTLS 手动连线已确认，自动分组仍在开发，Shadowsocks 尚未补测，且本轮没有可追溯的 APK、完整测试或测试环境验收记录。</p>
-    <p class="note">FFF 公司注册、欧盟电话号码与支付网关前置事项属于 Roy 的商务范围，不计入工程交付；本期没有可核验的新状态写入报告。</p>
-  </section>
-
-  <section>
-    <h2>八、阻塞与延迟</h2>
+    <h2>七、阻塞与延迟</h2>
     <table>
       <thead><tr><th>阻塞</th><th>影响</th><th>当前处理</th></tr></thead>
       <tbody>
         <tr><td>生产异地备份缺失</td><td>无法证明主机级故障后的恢复能力</td><td>下一阶段建立异地备份并记录恢复时长。</td></tr>
         <tr><td>iOS 缺少完整 Xcode / 真机验收</td><td>不能描述为可发布</td><td>在 macOS Runner 完成构建、签名、TestFlight 与真机连接矩阵。</td></tr>
-        <tr><td>两项高优先级协议问题未关闭</td><td>FFF 自动回退、Android 路线显示与 BO 节点管理仍缺完整验收</td><td>源码修复已完成，补齐测试环境 bootstrap、BO 与客户端实连记录后关闭。</td></tr>
+        <tr><td>两项高优先级协议问题未关闭</td><td>Android 路线显示与 BO 节点管理仍缺完整验收</td><td>源码修复已完成，补齐测试环境 bootstrap、BO 与 Android 实连记录后关闭。</td></tr>
         <tr><td>97.6% 注册缺少营销归因</td><td>无法判断整合后增长来自产品、渠道或外部需求</td><td>补齐产品页、套餐、结账、支付回调与渠道埋点。</td></tr>
       </tbody>
     </table>
   </section>
 
   <section>
-    <h2>九、下阶段计划</h2>
+    <h2>八、Arrowfish 下阶段计划</h2>
     <ol>
       <li>建立生产数据库异地备份，执行一次恢复演练并记录恢复时间。</li>
       <li>完成 iOS 干净工程的提交整理、完整构建、签名检查、TestFlight 与真机验收。</li>
-      <li>对两项协议问题完成测试环境、BO、Android 与 FFF 的端到端验证并正式关闭。</li>
+      <li>对两项协议问题完成测试环境、BO 与 Android 的端到端验证并正式关闭。</li>
       <li>为新用户注册到下单之间的漏斗补齐埋点；当前 69.05% 新用户使用过 VPN，但只有 4.72% 发起订单。</li>
       <li>完成 Apple 生产通知地址配置前的真实签名通知验收，不在此之前宣称退款自动化已在生产生效。</li>
     </ol>
   </section>
 
   <section>
-    <h2>十、中长期规划</h2>
+    <h2>九、Arrowfish 中长期规划</h2>
     <ol>
       <li>解除多客户端兼容负担：完成新 iOS 与 Windows 发布链路后，再逐步退出冻结客户端契约。</li>
       <li>建立协议发布闭环：共享模块、服务端 Agent、三端客户端使用可追溯的不可变版本，并纳入区域化合成测试。</li>
@@ -266,7 +253,7 @@
   </section>
 
   <section>
-    <h2>十一、财务影响</h2>
+    <h2>十、Arrowfish 财务进展</h2>
     <ul>
       <li>7/1–7/31 完整月份付费订单总额为 <strong>CNY 16,472.04</strong>；8/1–8/26 18:40:41 的月累计为 <strong>CNY 13,684.23</strong>，已达到 7 月整月的 83.1%。8 月 26 日尚未结束，不把该数值描述为完整月收入。</li>
       <li>8/19–8/25 付费订单总额为 <strong>CNY 4,890.01</strong>，较前一周增长 7.8%，较整合前 8/5–8/11 增长 140.3%。</li>
@@ -276,12 +263,27 @@
     </ul>
   </section>
 
+  <div class="part fff">
+    <div class="pnum">第二部分</div>
+    <div class="ptitle">FFF 新产品</div>
+    <div class="psub">由 Lex 负责的独立产品线，采用实时口径，与 Arrowfish 发布节奏互不影响</div>
+  </div>
+
   <section>
-    <h2>十二、为什么继续清理技术债</h2>
-    <p>Sprint 7 已说明 FFF 与 Arrowfish 复用同一套后端与 SkyTunnel，本期不重复旧表。新增事实是两项协议契约缺口同时影响 Arrowfish、FFF 与后台管理，因此端到端关闭这些问题比继续扩展新功能更优先。</p>
+    <h2>十一、FFF 产品进展（Lex 实时口径，截至 8/26）</h2>
+    <table>
+      <thead><tr><th>进展项</th><th>当前状态</th><th>下一步</th></tr></thead>
+      <tbody>
+        <tr><td>产品交互</td><td><span class="badge done">已完成</span> 分享赚钱、VPN 设置、网址导航、连接 / 断开和节点切换交互。</td><td>纳入完整产品验收。</td></tr>
+        <tr><td>Android 核心</td><td><span class="badge done">迁移完成</span> 已由 libbox 迁移至内部 SkyTunnel。</td><td>补齐可追溯 APK 与测试记录。</td></tr>
+        <tr><td>协议连线</td><td><span class="badge progress">验证中</span> config 加载及 Trojan、VLESS、ShadowTLS 手动连线已确认。</td><td>补测 Shadowsocks，并完成测试环境验收。</td></tr>
+        <tr><td>自动分组</td><td><span class="badge progress">开发中</span></td><td>完成开发后执行协议回退与节点切换验证。</td></tr>
+      </tbody>
+    </table>
+    <p class="note">FFF 公司注册、欧盟电话号码与支付网关前置事项属于 Roy 的商务范围，不计入工程交付；本期没有可核验的新状态写入报告。</p>
   </section>
 
-  <div class="footer">报告日期：2026年8月26日 · Sprint 10 完整报告 · 下次更新：Sprint 11 收尾</div>
+  <div class="footer">报告日期：2026年8月26日 · Sprint 10 进展报告 · 下次更新：Sprint 11 收尾</div>
 </main>
 </body>
 </html>

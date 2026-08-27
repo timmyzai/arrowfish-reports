@@ -32,7 +32,8 @@ jobs:
         run: |
           echo "[" > reports.json
           first=true
-          find Stakeholder -name '*.html' | sort | while read -r file; do
+          # Version sort keeps Sprint-10 after Sprint-9 instead of after Sprint-1.
+          find Stakeholder -name '*.html' | sort -V | while read -r file; do
             # Extract sprint from path: Stakeholder/Sprint-1/file.html → sprint-1
             sprint_dir=$(echo "$file" | cut -d'/' -f2)
             sprint_id=$(echo "$sprint_dir" | tr '[:upper:]' '[:lower:]')
@@ -43,13 +44,22 @@ jobs:
             if [ -z "$raw_date" ]; then continue; fi
             date="${raw_date:0:4}-${raw_date:4:2}-${raw_date:6:2}"
 
+            # Keep primary report and Goal IDs short; add the report type for
+            # same-day summary/full/benchmark files so deep links stay unique.
+            report_type="${filename#${raw_date}_}"
+            if [[ "$sprint_id" == goal-* || "$report_type" == "report" ]]; then
+              report_id="$sprint_id"
+            else
+              report_id="$sprint_id-${report_type//_/-}"
+            fi
+
             # Extract <title> from HTML (strip " | Arrowfish VPN" suffix)
             title=$(sed -n 's/.*<title>\(.*\)<\/title>.*/\1/p' "$file" | sed 's/ *[|｜] *Arrowfish VPN//')
             if [ -z "$title" ]; then title="$sprint_dir — $date"; fi
 
             if [ "$first" = true ]; then first=false; else echo "," >> reports.json; fi
             printf '  {"id":"%s","name":"%s","date":"%s","file":"%s"}' \
-              "$sprint_id" "$title" "$date" "$file" >> reports.json
+              "$report_id" "$title" "$date" "$file" >> reports.json
           done
           echo "" >> reports.json
           echo "]" >> reports.json
