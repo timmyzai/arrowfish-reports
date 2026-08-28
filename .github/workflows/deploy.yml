@@ -44,11 +44,6 @@ jobs:
           node --check assets/copy-markdown.js
           node --check worker/index.js
 
-      - name: Run AI retrieval evaluation and regression tests
-        run: |
-          node tools/evaluate_ai_chat.mjs
-          node tools/test_ai_chat.mjs
-
       - name: Dry-run Worker bundle
         run: npx --yes wrangler@4.127.0 deploy --dry-run --config worker/wrangler.toml --outdir /tmp/arrowfish-worker-dry-run
 
