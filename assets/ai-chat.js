@@ -401,30 +401,24 @@
   }
 
   function renderAnswer(container, message, messageIndex) {
-    var sourceIds = new Set((message.sources || []).map(function (source) { return source.id; }));
-    var pattern = /\[(S\d+)\]/g;
-    var cursor = 0;
-    var match;
-
-    while ((match = pattern.exec(message.content))) {
-      container.appendChild(document.createTextNode(message.content.slice(cursor, match.index)));
-      if (sourceIds.has(match[1])) {
-        var source = (message.sources || []).find(function (item) { return item.id === match[1]; });
+    var sources = message.sources || [];
+    var sourceMap = new Map(sources.map(function (source) { return [source.id, source]; }));
+    Evidence.citationParts(message.content, Array.from(sourceMap.keys())).forEach(function (part) {
+      if (part.type === 'citation') {
+        var source = sourceMap.get(part.sourceId);
         var link = document.createElement('a');
         link.className = 'ai-citation';
         link.href = detailHref(source);
         link.dataset.messageIndex = String(messageIndex);
-        link.dataset.sourceId = match[1];
-        link.setAttribute('aria-label', '查看报告详情：' + (source.section || match[1]));
+        link.dataset.sourceId = source.id;
+        link.setAttribute('aria-label', part.text + '；查看报告详情：' + (source.section || source.id));
         link.title = '查看报告详情';
-        link.textContent = match[1].slice(1);
+        link.textContent = part.text;
         container.appendChild(link);
       } else {
-        container.appendChild(document.createTextNode(match[0]));
+        container.appendChild(document.createTextNode(part.text));
       }
-      cursor = pattern.lastIndex;
-    }
-    container.appendChild(document.createTextNode(message.content.slice(cursor)));
+    });
   }
 
   function renderSourceList(sources, messageIndex) {
@@ -492,7 +486,7 @@
     var message = messages[messageIndex];
     if (!message || !message.content) return;
     try {
-      await navigator.clipboard.writeText(message.content);
+      await navigator.clipboard.writeText(Evidence.stripCitationMarkers(message.content));
       button.textContent = '已复制';
       setTimeout(function () { button.textContent = '复制回答'; }, 1600);
     } catch (error) {
@@ -515,8 +509,8 @@
     var block = source.blockId && (currentReport.blocks || []).find(function (item) {
       return item.id === source.blockId;
     });
-    var blockText = Evidence.normalizeText(block && block.text);
-    var quote = Evidence.normalizeText(source.quote || (block && block.text));
+    var blockText = Evidence.locatorText(block && block.text);
+    var quote = Evidence.locatorText(source.quote || (block && block.text));
     if (!quote) {
       showStatus('这条依据没有可定位的报告内容。');
       return;
@@ -524,11 +518,11 @@
     var candidates = typedBlockCandidates(doc, block);
     var duplicateIndex = duplicateBlockIndex(currentReport.blocks || [], block);
     var exactMatches = candidates.filter(function (element) {
-      return blockText && Evidence.normalizeText(element.textContent) === blockText;
+      return blockText && Evidence.locatorText(element.textContent) === blockText;
     });
     var exactMatch = exactMatches[duplicateIndex] || exactMatches[0] || null;
     var match = candidates.map(function (element) {
-      var text = Evidence.normalizeText(element.textContent);
+      var text = Evidence.locatorText(element.textContent);
       var score = 0;
       if (blockText && text === blockText) score = 100;
       else if (blockText && text.indexOf(blockText) !== -1) score = 70;
@@ -589,12 +583,12 @@
 
   function duplicateBlockIndex(blocks, target) {
     if (!target) return 0;
-    var targetText = Evidence.normalizeText(target.text);
+    var targetText = Evidence.locatorText(target.text);
     var occurrence = 0;
     for (var index = 0; index < blocks.length; index += 1) {
       var block = blocks[index];
       if (block.id === target.id) return occurrence;
-      if (block.type === target.type && Evidence.normalizeText(block.text) === targetText) occurrence += 1;
+      if (block.type === target.type && Evidence.locatorText(block.text) === targetText) occurrence += 1;
     }
     return 0;
   }

@@ -341,28 +341,23 @@
 }
 
 .ai-citation {
-    display: inline-flex;
-    min-width: 24px;
-    height: 24px;
-    align-items: center;
-    justify-content: center;
-    margin: 0 2px;
-    padding: 0 7px;
-    border: 1px solid #bfd3f2;
-    border-radius: 999px;
-    background: #eef4ff;
     color: #174ea6;
     font: inherit;
-    font-size: 12px;
-    font-weight: 700;
-    line-height: 1;
+    font-weight: 600;
+    text-decoration-line: underline;
+    text-decoration-color: #8ab4f8;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
     cursor: pointer;
-    text-decoration: none;
-    vertical-align: baseline;
+}
+
+.ai-citation:visited {
+    color: #174ea6;
 }
 
 .ai-citation:hover {
-    background: #c7dcff;
+    color: #0b57d0;
+    text-decoration-color: currentColor;
 }
 
 .ai-sources {

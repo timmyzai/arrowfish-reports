@@ -53,6 +53,59 @@
       .toLowerCase();
   }
 
+  function locatorText(value) {
+    return normalizeText(value).replace(/\s+/g, '');
+  }
+
+  function stripCitationMarkers(value) {
+    return String(value || '').replace(/\s*\[S\d+\]/g, '');
+  }
+
+  function citationParts(value, validSourceIds) {
+    var content = String(value || '');
+    var sourceIds = new Set(validSourceIds || []);
+    var parts = [];
+    var markerPattern = /\[(S\d+)\]/g;
+    var cursor = 0;
+    var match;
+
+    function appendText(text) {
+      if (!text) return;
+      var previous = parts[parts.length - 1];
+      if (previous && previous.type === 'text') previous.text += text;
+      else parts.push({ type: 'text', text: text });
+    }
+
+    function appendCitationText(text, sourceId) {
+      var trailingWhitespace = (text.match(/\s*$/) || [''])[0];
+      var visibleText = text.slice(0, text.length - trailingWhitespace.length);
+      var sentenceEnd = visibleText.length;
+      while (sentenceEnd > 0 && /[。！？；.!?;]/.test(visibleText.charAt(sentenceEnd - 1))) sentenceEnd -= 1;
+      var boundary = -1;
+      var sentencePattern = /[\n。！？；.!?;]/g;
+      var sentenceMatch;
+      while ((sentenceMatch = sentencePattern.exec(visibleText.slice(0, sentenceEnd)))) {
+        boundary = sentenceMatch.index;
+      }
+
+      var linkStart = boundary + 1;
+      while (/\s/.test(visibleText.charAt(linkStart))) linkStart += 1;
+      appendText(visibleText.slice(0, linkStart));
+      if (visibleText.slice(linkStart)) {
+        parts.push({ type: 'citation', text: visibleText.slice(linkStart), sourceId: sourceId });
+      }
+    }
+
+    while ((match = markerPattern.exec(content))) {
+      var precedingText = content.slice(cursor, match.index);
+      if (sourceIds.has(match[1])) appendCitationText(precedingText, match[1]);
+      else appendText(precedingText + match[0]);
+      cursor = markerPattern.lastIndex;
+    }
+    appendText(content.slice(cursor));
+    return parts;
+  }
+
   function baseTokens(value) {
     var normalized = normalizeText(value);
     var tokens = normalized.match(/[a-z][a-z0-9.+%-]{1,}|\d+(?:[.,:/-]\d+)*%?|[\u3400-\u9fff]{2,}/g) || [];
@@ -196,7 +249,10 @@
   }
 
   return {
+    citationParts: citationParts,
+    locatorText: locatorText,
     normalizeText: normalizeText,
-    selectEvidence: selectEvidence
+    selectEvidence: selectEvidence,
+    stripCitationMarkers: stripCitationMarkers
   };
 });

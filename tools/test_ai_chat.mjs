@@ -111,6 +111,23 @@ const retrievalReport = {
 };
 const selected = Evidence.selectEvidence(retrievalReport, '平台发布与验收安排是什么？', [], { maxSources: 8, maxChars: 7000 });
 assert.ok(selected.length <= 8, 'Browser retrieval observes the eight-block contract');
+assert.equal(
+  Evidence.locatorText('ARROWFISH · 第10阶段细节 01 缺口已确认 广告追踪与付费分析'),
+  Evidence.locatorText('ARROWFISH · 第10阶段细节 01缺口已确认广告追踪与付费分析'),
+  'Citation locator ignores whitespace introduced between adjacent inline elements'
+);
+const inlineCitations = Evidence.citationParts('第一项已完成 [S1]。第二项仍待验收。[S2]', ['S1', 'S2']);
+assert.deepEqual(
+  inlineCitations.filter((part) => part.type === 'citation').map((part) => part.text),
+  ['第一项已完成', '第二项仍待验收。'],
+  'Citation markers before or after punctuation become links on the supported sentence text'
+);
+assert.equal(
+  inlineCitations.map((part) => part.text).join(''),
+  '第一项已完成。第二项仍待验收。',
+  'Visible answer text contains no numbered citation markers'
+);
+assert.equal(Evidence.stripCitationMarkers('事实 [S1]。'), '事实。', 'Copied answers omit citation markers');
 
 assert.match(browserSource, /sessionStorage\.setItem/);
 assert.match(browserSource, /reportKey: currentReport\.file/);
@@ -118,10 +135,13 @@ assert.match(browserSource, /reportVersion: currentReport\.version/);
 assert.match(browserSource, /event\.key === 'Escape'/);
 assert.match(browserSource, /ancestor\.tagName === 'DETAILS'/);
 assert.match(browserSource, /scrollIntoView/);
+assert.match(browserSource, /Evidence\.citationParts/);
+assert.match(browserSource, /Evidence\.stripCitationMarkers/);
+assert.doesNotMatch(browserSource, /link\.textContent = match\[1\]\.slice/);
 assert.match(browserSource, /currentReport\.file !== reportKey \|\| reportLoadToken !== requestReportToken/);
 assert.match(browserStyles, /min-height:\s*44px/);
 assert.match(browserStyles, /prefers-reduced-motion:\s*reduce/);
-assert.match(landingPage, /assets\/ai-chat\.css\?v=20260828-8/);
-assert.match(landingPage, /assets\/ai-chat\.js\?v=20260828-8/);
+assert.match(landingPage, /assets\/ai-chat\.css\?v=20260828-9/);
+assert.match(landingPage, /assets\/ai-chat\.js\?v=20260828-9/);
 
 console.log('AI assistant regression tests: all assertions passed');
