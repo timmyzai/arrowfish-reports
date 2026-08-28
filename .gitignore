@@ -1,4 +1,5 @@
 Internal/
 worker/.dev.vars*
+__pycache__/
 
 .DS_Store

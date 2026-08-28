@@ -40,6 +40,7 @@ jobs:
           node --check assets/auth-gate.js
           node --check assets/report-evidence.js
           node --check assets/ai-chat.js
+          node --check assets/copy-markdown.js
           node --check worker/index.js
 
       - name: Run AI retrieval evaluation and regression tests

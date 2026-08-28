@@ -95,11 +95,11 @@
       '  <h2 class="ag-title">Arrowfish VPN</h2>',
       '  <p class="ag-subtitle">\u8BF7\u8F93\u5165\u8BBF\u95EE\u5BC6\u7801\u67E5\u770B\u62A5\u544A</p>',
       '  <form id="ag-form" autocomplete="off">',
-      '    <input type="password" id="ag-password" class="ag-input" placeholder="Access code" autocomplete="off" />',
+      '    <input type="password" id="ag-password" class="ag-input" placeholder="访问密码" autocomplete="off" aria-label="访问密码" />',
       '    <div class="ag-error" id="ag-error"></div>',
       '    <button type="submit" class="ag-submit">\u89E3\u9501</button>',
       '  </form>',
-      '  <div class="ag-footer">Protected access</div>',
+      '  <div class="ag-footer">受保护的访问</div>',
       '</div>'
     ].join('');
     document.body.insertBefore(gate, document.body.firstChild);

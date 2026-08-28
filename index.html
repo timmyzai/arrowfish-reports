@@ -1,27 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="noindex, nofollow">
-    <title>Arrowfish VPN — Sprint Reports</title>
+    <title>Arrowfish VPN — 阶段报告</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/ai-chat.css?v=20260828-8">
+    <link rel="stylesheet" href="assets/copy-markdown.css">
+    <script src="assets/report-evidence.js?v=20260828-8" defer></script>
+    <script src="assets/ai-chat.js?v=20260828-8" defer></script>
+    <script src="assets/copy-markdown.js" defer></script>
     <style>
         /* ── Auth Gate ── */
         *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
         :root {
             --gate-bg: #0F172A;
-            --gate-surface: rgba(30, 58, 95, 0.12);
             --gate-glass: rgba(255, 255, 255, 0.04);
             --gate-glass-border: rgba(255, 255, 255, 0.08);
             --gate-text: #E2E8F0;
             --gate-muted: #64748B;
             --gate-accent: #22C55E;
-            --gate-accent-glow: rgba(34, 197, 94, 0.15);
             --gate-primary: #1E3A5F;
             --gate-error: #EF4444;
             --gate-ring: rgba(30, 58, 95, 0.5);
@@ -359,19 +361,19 @@
                 </svg>
             </div>
             <h2 class="gate-title">Arrowfish VPN</h2>
-            <p class="gate-subtitle">Enter the access code to view Sprint Reports</p>
+            <p class="gate-subtitle">请输入访问密码以查看阶段报告</p>
             <form id="gate-form" autocomplete="off">
                 <div class="gate-input-group">
                     <input
                         type="password"
                         id="gate-password"
                         class="gate-input"
-                        placeholder="Access code"
+                        placeholder="访问密码"
                         autocomplete="off"
                         spellcheck="false"
-                        aria-label="Access code"
+                        aria-label="访问密码"
                     />
-                    <button type="button" class="gate-toggle" id="gate-toggle" aria-label="Toggle password visibility">
+                    <button type="button" class="gate-toggle" id="gate-toggle" aria-label="显示或隐藏密码">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
                             <circle cx="12" cy="12" r="3"/>
@@ -380,11 +382,11 @@
                 </div>
                 <div class="gate-error" id="gate-error" role="alert"></div>
                 <button type="submit" class="gate-submit" id="gate-submit">
-                    <span class="btn-text">Unlock</span>
+                    <span class="btn-text">解锁</span>
                     <span class="spinner"></span>
                 </button>
             </form>
-            <div class="gate-footer">Protected access &middot; Arrowfish VPN</div>
+            <div class="gate-footer">受保护的访问 &middot; Arrowfish VPN</div>
         </div>
     </div>
 
@@ -398,8 +400,21 @@
             </div>
             <select id="sprint-select" aria-label="选择阶段报告"></select>
             <span class="date" id="sprint-date"></span>
+            <div class="copy-markdown-action">
+                <button class="copy-markdown-button" id="copy-markdown-button" type="button" disabled aria-describedby="copy-markdown-status">
+                    <svg class="copy-markdown-icon copy-markdown-icon-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <rect width="14" height="14" x="8" y="8" rx="2"/>
+                        <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/>
+                    </svg>
+                    <svg class="copy-markdown-icon copy-markdown-icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="m5 12 4 4L19 6"/>
+                    </svg>
+                    <span class="copy-markdown-label">复制为 Markdown</span>
+                </button>
+                <span class="copy-markdown-status" id="copy-markdown-status" role="status" aria-live="polite"></span>
+            </div>
         </div>
-        <div class="loading" id="loading">Loading reports...</div>
+        <div class="loading" id="loading">正在加载报告…</div>
         <iframe id="report-frame" role="tabpanel" aria-labelledby="reports-tab" title="阶段报告内容" style="display:none"></iframe>
     </div>
 
@@ -489,15 +504,12 @@
                     submitBtn.classList.remove('loading');
                     submitBtn.disabled = false;
                     input.classList.add('error');
-                    errorEl.textContent = 'Invalid access code. Please try again.';
+                    errorEl.textContent = '访问密码错误，请重试。';
                     input.select();
                     setTimeout(() => input.classList.remove('error'), 600);
                 }
             });
 
-            input.addEventListener('keydown', (e) => {
-                if (e.key === 'Enter') form.requestSubmit();
-            });
         })();
 
         /* ── App Logic ── */
@@ -531,7 +543,7 @@
                     goalsTab.hidden = !goal;
                     loadFromHash();
                 })
-                .catch(() => { loading.textContent = 'Failed to load reports.'; });
+                .catch(() => { loading.textContent = '报告加载失败。'; });
 
             select.addEventListener('change', () => {
                 const index = parseInt(select.value);
@@ -554,7 +566,13 @@
             }
 
             function loadFromHash() {
-                const hash = decodeURIComponent(location.hash.slice(1));
+                let hash = '';
+                try {
+                    hash = decodeURIComponent(location.hash.slice(1));
+                } catch (error) {
+                    loadSprint(sprints.length - 1, false);
+                    return;
+                }
                 if (!hash) {
                     loadSprint(sprints.length - 1);
                     return;
@@ -604,12 +622,13 @@
                 dateEl.textContent = entry.date;
                 loading.style.display = 'none';
                 frame.style.display = 'block';
-                if (frame.getAttribute('src') !== entry.file) frame.src = entry.file;
+                const frameSrc = entry.version
+                    ? `${entry.file}?v=${encodeURIComponent(entry.version)}`
+                    : entry.file;
+                if (frame.getAttribute('src') !== frameSrc) frame.src = frameSrc;
                 if (updateLocation) updateHash(entry);
             }
         }
     </script>
-    <script defer src="assets/report-evidence.js?v=20260828-8"></script>
-    <script defer src="assets/ai-chat.js?v=20260828-8"></script>
 </body>
 </html>
