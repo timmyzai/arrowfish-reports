@@ -48,7 +48,7 @@ const conversation = Array.from({ length: 9 }, (_, index) => ({
 const cleaned = Worker.cleanConversation(conversation);
 assert.ok(cleaned.length <= 6, 'Worker keeps at most six conversation messages');
 assert.equal(cleaned[0].role, 'user', 'Conversation never begins with an assistant message');
-assert.ok(cleaned.every((message) => !/\[S\d+\]/.test(message.content)), 'Old citation markers are removed from conversation context');
+assert.ok(cleaned.every((message) => message.role === 'user'), 'Historical assistant answers are never reused as factual context');
 
 const responseFormat = Worker.buildResponseFormat(canonical);
 const schema = responseFormat.json_schema.schema;

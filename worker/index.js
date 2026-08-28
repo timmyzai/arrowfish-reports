@@ -2,7 +2,7 @@ import REPORT_CONTEXT from '../report-context.json';
 
 var DEFAULT_ORIGINS = ['https://timmyzai.github.io'];
 var DEFAULT_MODEL = 'openai/gpt-oss-20b';
-var PROMPT_VERSION = 'chat-v17-normalized-single-unit-markers';
+var PROMPT_VERSION = 'chat-v18-user-context-only';
 var MAX_BODY_BYTES = 60000;
 var MAX_QUESTION_CHARS = 1500;
 var MAX_SOURCES = 8;
@@ -642,13 +642,11 @@ function canonicalSources(value, report) {
 function cleanConversation(value) {
   if (!Array.isArray(value)) return [];
   var messages = value.slice(-MAX_CONVERSATION_MESSAGES).reduce(function (items, message) {
-    if (!message || (message.role !== 'user' && message.role !== 'assistant')) return items;
+    if (!message || message.role !== 'user') return items;
     var content = cleanText(message.content, 900);
-    if (message.role === 'assistant') content = content.replace(/\[S\d+\]/g, '').replace(/\s{2,}/g, ' ').trim();
-    if (content) items.push({ role: message.role, content: content });
+    if (content) items.push({ role: 'user', content: content });
     return items;
   }, []);
-  while (messages.length && messages[0].role === 'assistant') messages.shift();
   return messages;
 }
 
