@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">AI chatbot</title>
+  <desc id="desc">A luminous robot face inside a futuristic rounded chat badge.</desc>
+  <defs>
+    <linearGradient id="shell" x1="70" y1="42" x2="438" y2="470" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#101A43"/>
+      <stop offset="0.52" stop-color="#172B68"/>
+      <stop offset="1" stop-color="#351C72"/>
+    </linearGradient>
+    <linearGradient id="rim" x1="54" y1="68" x2="454" y2="444" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#59F3FF"/>
+      <stop offset="0.48" stop-color="#4C8DFF"/>
+      <stop offset="1" stop-color="#A86BFF"/>
+    </linearGradient>
+    <linearGradient id="face" x1="137" y1="141" x2="373" y2="369" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#162A63" stop-opacity="0.92"/>
+      <stop offset="1" stop-color="#20144E" stop-opacity="0.96"/>
+    </linearGradient>
+    <linearGradient id="eye" x1="181" y1="225" x2="332" y2="261" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#6BFAFF"/>
+      <stop offset="1" stop-color="#90A8FF"/>
+    </linearGradient>
+    <radialGradient id="ambient" cx="0" cy="0" r="1" gradientTransform="translate(256 242) rotate(90) scale(224)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#388BFF" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#09102A" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="softGlow" x="-80%" y="-80%" width="260%" height="260%" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="170%" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="16" stdDeviation="18" flood-color="#050918" flood-opacity="0.5"/>
+    </filter>
+  </defs>
+  <rect x="20" y="20" width="472" height="472" rx="148" fill="url(#shell)"/>
+  <rect x="20" y="20" width="472" height="472" rx="148" fill="url(#ambient)"/>
+  <rect x="30" y="30" width="452" height="452" rx="138" fill="none" stroke="url(#rim)" stroke-width="4"/>
+  <path d="M103 57h52M57 103v52M409 455h-52M455 409v-52" fill="none" stroke="url(#rim)" stroke-width="8" stroke-linecap="round" opacity="0.72"/>
+  <g fill="none" stroke="#6FEFFF" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" opacity="0.48">
+    <path d="M78 225h36l18-18"/>
+    <path d="M434 225h-36l-18-18"/>
+    <path d="M99 352h33l20 20h27"/>
+    <path d="M413 352h-33l-20 20h-27"/>
+  </g>
+  <g fill="#79F5FF" opacity="0.8">
+    <circle cx="78" cy="225" r="6"/>
+    <circle cx="434" cy="225" r="6"/>
+    <circle cx="99" cy="352" r="6"/>
+    <circle cx="413" cy="352" r="6"/>
+  </g>
+  <g filter="url(#softGlow)">
+    <path d="M256 143v-38" fill="none" stroke="#DFFBFF" stroke-width="14" stroke-linecap="round"/>
+    <path d="M256 70l9 18-9 18-9-18 9-18Z" fill="#70F5FF" stroke="#E7FDFF" stroke-width="5" stroke-linejoin="round"/>
+  </g>
+  <g filter="url(#shadow)">
+    <path d="M168 143h176c34 0 62 28 62 62v100c0 34-28 62-62 62h-35l-49 42c-9 8-23 1-21-11l6-31h-77c-34 0-62-28-62-62V205c0-34 28-62 62-62Z" fill="url(#face)" stroke="#F1FCFF" stroke-width="16" stroke-linejoin="round"/>
+    <path d="M106 225H91c-12 0-21 9-21 21v25c0 12 9 21 21 21h15M406 225h15c12 0 21 9 21 21v25c0 12-9 21-21 21h-15" fill="#18265A" stroke="#B9F8FF" stroke-width="12" stroke-linecap="round"/>
+  </g>
+  <g filter="url(#softGlow)">
+    <rect x="164" y="218" width="75" height="51" rx="25.5" fill="url(#eye)"/>
+    <rect x="273" y="218" width="75" height="51" rx="25.5" fill="url(#eye)"/>
+  </g>
+  <circle cx="202" cy="243.5" r="10" fill="#10245A"/>
+  <circle cx="310" cy="243.5" r="10" fill="#10245A"/>
+  <path d="M205 308c14 15 31 22 51 22s37-7 51-22" fill="none" stroke="#EAFDFF" stroke-width="13" stroke-linecap="round"/>
+  <circle cx="180" cy="304" r="5" fill="#69F4FF" opacity="0.65"/>
+  <circle cx="332" cy="304" r="5" fill="#69F4FF" opacity="0.65"/>
+  <circle cx="388" cy="127" r="19" fill="#66F3FF" opacity="0.13"/>
+  <circle cx="388" cy="127" r="9" fill="#76F7FF"/>
+</svg>

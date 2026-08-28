@@ -1,0 +1,17 @@
+name = "arrowfish-report-ai"
+main = "index.js"
+compatibility_date = "2026-08-28"
+workers_dev = true
+preview_urls = false
+
+[vars]
+ALLOWED_ORIGINS = "https://timmyzai.github.io,http://localhost:8000,http://127.0.0.1:8000"
+GROQ_MODEL = "openai/gpt-oss-20b"
+
+[[ratelimits]]
+name = "CHAT_RATE_LIMITER"
+namespace_id = "20260828"
+
+  [ratelimits.simple]
+  limit = 20
+  period = 60

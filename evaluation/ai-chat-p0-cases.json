@@ -1,0 +1,51 @@
+[
+  {
+    "id": "fff-platform-order",
+    "reportId": "goal-2026-20260827",
+    "question": "FFF 多平台发布顺序是什么？",
+    "expectedAll": ["Android → Windows → macOS+iOS → Linux"]
+  },
+  {
+    "id": "fff-payment-gate",
+    "reportId": "goal-2026-20260827",
+    "question": "支付闭环为什么是 Android 首发门槛？",
+    "expectedAll": ["支付接口尚无完成", "作为 Android 首发门槛关闭"]
+  },
+  {
+    "id": "fff-routing-gaps",
+    "reportId": "goal-2026-20260827",
+    "question": "智能路由还缺什么？",
+    "expectedAll": ["自动分组仍在开发", "Shadowsocks 补测"]
+  },
+  {
+    "id": "goal-numeric",
+    "reportId": "goal-2026-20260827",
+    "question": "缺少营销归因的新注册比例是多少？",
+    "expectedAll": ["97.6%"]
+  },
+  {
+    "id": "follow-up-pronoun",
+    "reportId": "goal-2026-20260827",
+    "question": "那项完成了吗？",
+    "conversation": ["支付接口与支付闭环目前进展如何？"],
+    "expectedAll": ["客户端支付接口尚无完成"]
+  },
+  {
+    "id": "exact-five-point-summary",
+    "reportId": "goal-2026-20260827",
+    "question": "请用不超过五个要点总结本报告的主要内容。",
+    "minimumSources": 5
+  },
+  {
+    "id": "shared-capability-category",
+    "reportId": "goal-2026-20260827",
+    "question": "AI 报告助手属于 Arrowfish 还是 FFF？",
+    "expectedAll": ["不归属任一产品线", "共享管理能力"]
+  },
+  {
+    "id": "unrelated-weather",
+    "reportId": "goal-2026-20260827",
+    "question": "今天天气怎么样？",
+    "answerable": false
+  }
+]
