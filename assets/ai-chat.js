@@ -3,6 +3,7 @@
 
   var API_URL = 'https://arrowfish-report-ai.yang-fan-node.workers.dev/api/chat';
   var CONTEXT_URL = 'report-context.json';
+  var INDEX_URL = 'report-index.json';
   var STORAGE_KEY = 'arrowfish_ai_chat';
   var MAX_HISTORY_MESSAGES = 6;
   var MAX_QUESTION_CHARS = 1500;
@@ -23,9 +24,12 @@
   var sendButton;
   var statusEl;
   var quickButtons;
+  var handoffEl;
   var clearButton;
   var closeButton;
   var currentReport = null;
+  var allReports = [];
+  var reportIndex = null;
   var contextPromise = null;
   var messages = [];
   var busy = false;
@@ -35,6 +39,8 @@
   var highlightTimer = null;
   var highlightedElement = null;
   var reportLoadToken = 0;
+  var pendingChatNavigation = null;
+  var preserveMessagesOnLoad = false;
 
   function init() {
     var app = document.getElementById('app-content');
@@ -79,10 +85,11 @@
       '    </div>',
       '  </header>',
       '  <div class="ai-quick-actions" aria-label="建议问题">',
-      '    <button class="ai-quick-action" type="button" data-prompt="请用不超过五个要点总结本报告的主要内容。"><span aria-hidden="true">✦</span>主要内容</button>',
-      '    <button class="ai-quick-action" type="button" data-prompt="请提供一份简短的执行摘要。"><span aria-hidden="true">≡</span>简短摘要</button>',
-      '    <button class="ai-quick-action" type="button" data-prompt="本报告有哪些主要风险、阻碍和下一步行动？"><span aria-hidden="true">↗</span>风险与下一步</button>',
+      '    <button class="ai-quick-action" type="button" data-action="roadmap"><span aria-hidden="true">⌁</span>进展路线图</button>',
+      '    <button class="ai-quick-action" type="button" data-action="results"><span aria-hidden="true">✦</span>重要成果</button>',
+      '    <button class="ai-quick-action" type="button" data-action="blockers"><span aria-hidden="true">!</span>现在卡在哪</button>',
       '  </div>',
+      '  <div class="ai-handoff" hidden></div>',
       '  <div class="ai-messages" role="log" aria-live="polite" aria-relevant="additions"></div>',
       '  <div class="ai-status" role="alert"></div>',
       '  <form class="ai-composer">',
@@ -93,7 +100,7 @@
       '        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg>',
       '      </button>',
       '    </div>',
-      '    <p class="ai-note">回答仅基于本报告中的已验证依据。相关报告片段将发送至 Groq。</p>',
+      '    <p class="ai-note">回答仅基于已验证报告依据。选中的相关报告片段将发送至 Groq。</p>',
       '  </form>',
       '</aside>'
     ].join('');
@@ -113,6 +120,7 @@
     sendButton = app.querySelector('.ai-send');
     statusEl = app.querySelector('.ai-status');
     quickButtons = Array.from(app.querySelectorAll('.ai-quick-action'));
+    handoffEl = app.querySelector('.ai-handoff');
     clearButton = app.querySelector('.ai-clear');
     closeButton = app.querySelector('.ai-close');
     drawer.inert = true;
@@ -131,7 +139,14 @@
     window.addEventListener('popstate', revealLinkedDetail);
 
     quickButtons.forEach(function (button) {
-      button.addEventListener('click', function () { sendQuestion(button.getAttribute('data-prompt')); });
+      button.addEventListener('click', function () { renderShortcut(button.getAttribute('data-action')); });
+    });
+    handoffEl.addEventListener('click', function (event) {
+      var link = event.target.closest('[data-report-key]');
+      if (!link) return;
+      event.preventDefault();
+      pendingChatNavigation = { reportKey: link.dataset.reportKey };
+      location.hash = link.getAttribute('href');
     });
 
     form.addEventListener('submit', function (event) {
@@ -155,11 +170,15 @@
   }
 
   async function loadContext() {
-    var response = await fetch(CONTEXT_URL, { cache: 'no-cache' });
-    if (!response.ok) throw new Error('无法加载报告上下文。');
-    var payload = await response.json();
-    if (!payload || !Array.isArray(payload.reports)) throw new Error('报告上下文格式无效。');
-    return payload.reports;
+    var responses = await Promise.all([
+      fetch(CONTEXT_URL, { cache: 'no-cache' }),
+      fetch(INDEX_URL, { cache: 'no-cache' })
+    ]);
+    if (!responses[0].ok || !responses[1].ok) throw new Error('无法加载报告索引。');
+    var payloads = await Promise.all(responses.map(function (response) { return response.json(); }));
+    if (!payloads[0] || !Array.isArray(payloads[0].reports)) throw new Error('报告上下文格式无效。');
+    if (!payloads[1] || !Array.isArray(payloads[1].order) || !payloads[1].workstreams) throw new Error('报告索引格式无效。');
+    return { reports: payloads[0].reports, index: payloads[1] };
   }
 
   function normalizeReportKey(value) {
@@ -172,14 +191,20 @@
   }
 
   function resetForReportChange() {
+    var nextKey = normalizeReportKey(frame.getAttribute('src'));
+    preserveMessagesOnLoad = Boolean(
+      pendingChatNavigation && normalizeReportKey(pendingChatNavigation.reportKey) === nextKey
+    );
     reportLoadToken += 1;
     if (activeController) activeController.abort();
     activeController = null;
     busy = false;
     clearSourceHighlight();
     currentReport = null;
-    messages = [];
-    removeSavedConversation();
+    if (!preserveMessagesOnLoad) {
+      messages = [];
+      removeSavedConversation();
+    }
     reportTitleEl.textContent = '正在加载所选报告…';
     reportDateEl.textContent = '';
     reportDateEl.removeAttribute('datetime');
@@ -198,8 +223,11 @@
     reportTitleEl.textContent = '正在索引所选报告…';
     setReady(false);
     try {
-      var reports = await contextPromise;
+      var data = await contextPromise;
       if (token !== reportLoadToken) return;
+      var reports = data.reports;
+      allReports = reports;
+      reportIndex = data.index;
       var activePath = '';
       try {
         activePath = decodeURIComponent(frame.contentWindow.location.pathname || '');
@@ -212,7 +240,9 @@
       }) || null;
       if (!nextReport) throw new Error('所选报告尚未建立索引。');
 
-      if (currentReport && (currentReport.file !== nextReport.file || currentReport.version !== nextReport.version)) {
+      var preserveConversation = preserveMessagesOnLoad && pendingChatNavigation &&
+        normalizeReportKey(pendingChatNavigation.reportKey) === normalizeReportKey(nextReport.file);
+      if (!preserveConversation && currentReport && (currentReport.file !== nextReport.file || currentReport.version !== nextReport.version)) {
         if (activeController) activeController.abort();
         activeController = null;
         busy = false;
@@ -227,7 +257,17 @@
       reportDateEl.setAttribute('datetime', currentReport.date);
       connectionEl.classList.add('is-ready');
       connectionLabelEl.textContent = '报告已连接';
-      restoreConversation(currentReport.file);
+      if (preserveConversation) {
+        pendingChatNavigation = null;
+        preserveMessagesOnLoad = false;
+        saveConversation();
+        renderMessages();
+      } else {
+        pendingChatNavigation = null;
+        preserveMessagesOnLoad = false;
+        restoreConversation(currentReport.file);
+      }
+      updateHandoff();
       showStatus('');
       setReady(true);
       revealLinkedDetail();
@@ -370,11 +410,11 @@
       else bubble.textContent = message.content;
 
       item.appendChild(bubble);
-      if (message.role === 'assistant' && Array.isArray(message.sources) && message.sources.length) {
-        item.appendChild(renderSourceList(message.sources, messageIndex));
-      }
       if (message.role === 'assistant' && message.answerable !== false) {
         item.appendChild(renderMessageActions(message, messageIndex));
+      }
+      if (message.role === 'assistant' && Array.isArray(message.followUps) && message.followUps.length) {
+        item.appendChild(renderFollowUps(message.followUps));
       }
       messagesEl.appendChild(item);
     });
@@ -406,51 +446,39 @@
     Evidence.citationParts(message.content, Array.from(sourceMap.keys())).forEach(function (part) {
       if (part.type === 'citation') {
         var source = sourceMap.get(part.sourceId);
+        var superscript = document.createElement('sup');
+        superscript.className = 'ai-citation-chip';
         var link = document.createElement('a');
         link.className = 'ai-citation';
         link.href = detailHref(source);
         link.dataset.messageIndex = String(messageIndex);
         link.dataset.sourceId = source.id;
-        link.setAttribute('aria-label', part.text + '；查看报告详情：' + (source.section || source.id));
-        link.title = '查看报告详情';
-        link.textContent = part.text;
-        container.appendChild(link);
+        link.setAttribute('aria-label', '查看依据 ' + source.id + '：' + (source.reportTitle || '报告') + '，' + (source.section || '报告概览'));
+        link.title = [
+          source.reportTitle || '报告',
+          source.reportDate || '',
+          source.section || '报告概览',
+          source.quote || source.text || ''
+        ].filter(Boolean).join('\n');
+        link.textContent = source.id;
+        superscript.appendChild(link);
+        container.appendChild(superscript);
       } else {
         container.appendChild(document.createTextNode(part.text));
       }
     });
   }
 
-  function renderSourceList(sources, messageIndex) {
+  function renderFollowUps(followUps) {
     var wrapper = document.createElement('div');
-    wrapper.className = 'ai-sources';
-    var label = document.createElement('div');
-    label.className = 'ai-sources-label';
-    label.textContent = '相关详情';
-    wrapper.appendChild(label);
-
-    sources.forEach(function (source) {
-      var link = document.createElement('a');
-      link.className = 'ai-source-link';
-      link.href = detailHref(source);
-      link.dataset.messageIndex = String(messageIndex);
-      link.dataset.sourceId = source.id;
-
-      var content = document.createElement('span');
-      content.className = 'ai-source-content';
-      var heading = document.createElement('strong');
-      heading.textContent = (source.reportTitle || '当前报告') + ' · ' + (source.section || '报告概览');
-      var quote = document.createElement('q');
-      quote.textContent = source.quote || '';
-      content.appendChild(heading);
-      content.appendChild(quote);
-      var arrow = document.createElement('span');
-      arrow.className = 'ai-source-arrow';
-      arrow.setAttribute('aria-hidden', 'true');
-      arrow.textContent = '↗';
-      link.appendChild(content);
-      link.appendChild(arrow);
-      wrapper.appendChild(link);
+    wrapper.className = 'ai-follow-ups';
+    followUps.slice(0, 3).forEach(function (followUp) {
+      var button = document.createElement('button');
+      button.type = 'button';
+      button.className = 'ai-follow-up';
+      button.dataset.followUp = followUp.question;
+      button.textContent = followUp.label;
+      wrapper.appendChild(button);
     });
     return wrapper;
   }
@@ -464,6 +492,11 @@
   }
 
   function handleMessageClick(event) {
+    var followUpTarget = event.target.closest('[data-follow-up]');
+    if (followUpTarget) {
+      sendQuestion(followUpTarget.dataset.followUp);
+      return;
+    }
     var copyTarget = event.target.closest('[data-copy-message]');
     if (copyTarget) {
       copyMessage(Number(copyTarget.dataset.copyMessage), copyTarget);
@@ -477,7 +510,6 @@
       return item.id === target.dataset.sourceId;
     });
     if (source) {
-      history.pushState(null, '', detailHref(source));
       revealSource(source);
     }
   }
@@ -495,7 +527,13 @@
   }
 
   function revealSource(source) {
-    if (!currentReport || source.reportKey !== currentReport.file || source.reportVersion !== currentReport.version) {
+    if (!currentReport) return;
+    if (source.reportKey !== currentReport.file) {
+      pendingChatNavigation = { reportKey: source.reportKey };
+      location.hash = detailHref(source);
+      return;
+    }
+    if (source.reportVersion !== currentReport.version) {
       showStatus('这条依据不属于当前报告版本，无法打开。');
       return;
     }
@@ -633,6 +671,161 @@
     });
   }
 
+  function updateHandoff() {
+    handoffEl.textContent = '';
+    handoffEl.hidden = true;
+    if (!currentReport || !reportIndex || !/\/Goal-|^goal-/.test(currentReport.file + currentReport.id)) return;
+    var target = reportIndex.order.map(function (reportId) {
+      return allReports.find(function (report) { return report.id === reportId; });
+    }).find(function (report) {
+      return report && report.id !== currentReport.id && !/\/Goal-|^goal-/.test(report.file + report.id);
+    });
+    if (!target) return;
+    var link = document.createElement('a');
+    link.href = '#' + [target.id, target.date].map(encodeURIComponent).join('/');
+    link.dataset.reportKey = target.file;
+    link.textContent = '查看' + displayReportName(target) + ' →';
+    handoffEl.appendChild(link);
+    handoffEl.hidden = false;
+  }
+
+  function indexedSource(entry, id) {
+    var report = entry && allReports.find(function (item) { return item.id === entry.reportId; });
+    var block = report && (report.blocks || []).find(function (item) { return item.id === entry.blockId; });
+    if (!report || !block || block.type === 'heading') return null;
+    return {
+      id: id,
+      blockId: block.id,
+      reportId: report.id,
+      reportKey: report.file,
+      reportTitle: report.name,
+      reportDate: report.date,
+      reportVersion: report.version,
+      section: block.section,
+      line: block.line,
+      text: block.text,
+      quote: block.text
+    };
+  }
+
+  function addIndexedLine(lines, sources, text, entry) {
+    var source = indexedSource(entry, 'S' + (sources.length + 1));
+    if (!source) return;
+    sources.push(source);
+    lines.push(text + ' [' + source.id + ']');
+  }
+
+  function allGoals() {
+    return workstreamsInOrder().reduce(function (items, workstream) {
+      return items.concat((workstream && workstream.goals) || []);
+    }, []);
+  }
+
+  function workstreamsInOrder() {
+    if (!reportIndex || !reportIndex.workstreams) return [];
+    return Object.keys(reportIndex.workstreams).map(function (key) {
+      return reportIndex.workstreams[key];
+    });
+  }
+
+  function followUpsForSources(sources, useFallback) {
+    var goals = allGoals();
+    var matched = goals.filter(function (goal) {
+      return (sources || []).some(function (source) {
+        return (goal.reportId === source.reportId && goal.blockId === source.blockId) ||
+          Evidence.normalizeText(source.quote || source.text).indexOf(Evidence.normalizeText(goal.id + ' ' + goal.title)) !== -1;
+      });
+    });
+    if (!matched.length && useFallback) {
+      matched = goals.filter(function (goal) { return goal.statusGroup !== 'done'; });
+    }
+    var seen = new Set();
+    return matched.reduce(function (items, goal) {
+      var label = goal.id + ' ' + goal.title;
+      if (items.length >= 3 || seen.has(label)) return items;
+      seen.add(label);
+      items.push({ label: label, question: label + '现在进展如何？' });
+      return items;
+    }, []);
+  }
+
+  function roadmapShortcut() {
+    var lines = [];
+    var sources = [];
+    workstreamsInOrder().forEach(function (workstream) {
+      lines.push(workstream.label);
+      (workstream.phases || []).filter(function (phase) { return !phase.future; }).forEach(function (phase) {
+        addIndexedLine(lines, sources, phase.label + ' · ' + phase.title + ' — ' + phase.result, phase);
+      });
+      Object.keys(workstream.statusLabels || {}).forEach(function (status) {
+        var label = workstream.statusLabels[status];
+        (workstream.goals || []).filter(function (goal) { return goal.statusGroup === status; }).forEach(function (goal) {
+          addIndexedLine(lines, sources, label + ' · ' + goal.id + ' ' + goal.title + ' · ' + goal.deadline, goal);
+        });
+      });
+      (workstream.phases || []).filter(function (phase) { return phase.future; }).forEach(function (phase) {
+        addIndexedLine(lines, sources, phase.label + ' · ' + phase.title + ' — ' + phase.result, phase);
+      });
+    });
+    return { content: lines.join('\n'), sources: sources };
+  }
+
+  function resultsShortcut() {
+    var lines = [];
+    var sources = [];
+    var phases = workstreamsInOrder().reduce(function (items, workstream) {
+      return items.concat((workstream && workstream.phases) || []);
+    }, []).filter(function (phase) {
+      return !phase.future && /^结果[:：]/.test(phase.result);
+    }).reverse();
+    phases.forEach(function (phase) {
+      addIndexedLine(lines, sources, phase.label + ' · ' + phase.result.replace(/^结果[:：]\s*/, '') + ' ↗', phase);
+    });
+    return { content: lines.join('\n'), sources: sources };
+  }
+
+  function blockersShortcut() {
+    var lines = [];
+    var sources = [];
+    var used = new Set();
+    allGoals().filter(function (goal) { return goal.statusGroup !== 'done'; }).forEach(function (goal) {
+      addIndexedLine(
+        lines,
+        sources,
+        goal.id + ' ' + goal.title + ' · ' + goal.status + ' — ' + goal.evidence + ' 下一步：' + goal.nextAction,
+        goal
+      );
+      used.add(goal.reportId + '\u0000' + goal.blockId);
+    });
+    (reportIndex.blockers || []).forEach(function (blocker) {
+      var key = blocker.reportId + '\u0000' + blocker.blockId;
+      if (used.has(key)) return;
+      used.add(key);
+      addIndexedLine(lines, sources, blocker.reportDate + ' · ' + blocker.section + ' — ' + blocker.text, blocker);
+    });
+    return { content: lines.join('\n'), sources: sources };
+  }
+
+  function renderShortcut(action) {
+    if (!currentReport || !reportIndex || busy) return;
+    var labels = { roadmap: '进展路线图', results: '重要成果', blockers: '现在卡在哪' };
+    var builders = { roadmap: roadmapShortcut, results: resultsShortcut, blockers: blockersShortcut };
+    if (!builders[action]) return;
+    var result = builders[action]();
+    messages.push({ role: 'user', content: labels[action] });
+    messages.push({
+      role: 'assistant',
+      content: result.content || '当前没有可展示的索引内容。',
+      answerable: Boolean(result.sources.length),
+      sources: result.sources,
+      followUps: followUpsForSources(result.sources, false),
+      meta: { result: 'local_' + action, reportVersion: currentReport.version }
+    });
+    messages = messages.slice(-MAX_HISTORY_MESSAGES);
+    renderMessages();
+    saveConversation();
+  }
+
   function setBusy(nextBusy) {
     busy = nextBusy;
     drawer.setAttribute('aria-busy', busy ? 'true' : 'false');
@@ -679,7 +872,9 @@
     });
     var sources = Evidence.selectEvidence(currentReport, question, recentConversation, {
       maxSources: 8,
-      maxChars: 7000
+      maxChars: 7000,
+      reports: allReports,
+      index: reportIndex
     });
 
     messages.push({ role: 'user', content: question });
@@ -691,12 +886,13 @@
     renderMessages();
     saveConversation();
 
-    if (!sources.length) {
+    if (!sources.length && !Evidence.reportMetadataIntent(question).allowed) {
       messages.push({
         role: 'assistant',
-        content: '本报告没有可直接支持该问题的相关信息。',
+        content: '当前报告没有直接答案。',
         answerable: false,
         sources: [],
+        followUps: followUpsForSources([], true),
         meta: { result: 'no_local_evidence', reportVersion: currentReport.version }
       });
       messages = messages.slice(-MAX_HISTORY_MESSAGES);
@@ -752,6 +948,7 @@
         content: payload.answer,
         answerable: payload.answerable === true,
         sources: Array.isArray(payload.sources) ? payload.sources : [],
+        followUps: followUpsForSources(Array.isArray(payload.sources) ? payload.sources : [], false),
         meta: payload.meta || null
       });
       messages = messages.slice(-MAX_HISTORY_MESSAGES);

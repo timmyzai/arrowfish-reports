@@ -32,8 +32,9 @@ jobs:
         run: |
           python3 -m json.tool reports.json >/dev/null
           python3 -m json.tool report-context.json >/dev/null
+          python3 -m json.tool report-index.json >/dev/null
           python3 tools/generate_report_context.py
-          git diff --exit-code -- report-context.json
+          git diff --exit-code -- report-context.json report-index.json
 
       - name: Check browser and Worker JavaScript
         run: |

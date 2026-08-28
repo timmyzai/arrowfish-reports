@@ -221,6 +221,78 @@
     .route-goals strong { color: var(--project); }
     .route-result { display: block; margin-top: 14px; padding-top: 12px; border-top: 1px solid var(--border); color: var(--muted); font-size: 12px; line-height: 1.5; }
 
+    /* Arrowfish delivery history: 1→4, turn down, then 5→8 right-to-left. */
+    .route-snake { --snake-gap: 22px; position: relative; z-index: 1; }
+    .route-snake-row {
+      position: relative;
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 16px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .route-snake-row + .route-snake-row { margin-top: var(--snake-gap); }
+    .route-snake-row::before {
+      content: "";
+      position: absolute;
+      top: 18px;
+      left: 12.5%;
+      right: 12.5%;
+      z-index: 0;
+      height: 4px;
+      border-radius: 999px;
+      background: #22c55e;
+    }
+    .route-snake-row:first-child::after {
+      content: "";
+      position: absolute;
+      top: 18px;
+      left: 87.5%;
+      right: -8px;
+      z-index: 0;
+      height: calc(100% + var(--snake-gap));
+      border-top: 4px solid #22c55e;
+      border-right: 4px solid #22c55e;
+      border-bottom: 4px solid #22c55e;
+      border-radius: 0 20px 20px 0;
+    }
+    .route-snake-row-return::before { background: linear-gradient(90deg, #f59e0b 0%, #22c55e 28%, #22c55e 100%); }
+    .route-snake-row-return .route-stage:nth-child(1) { grid-column: 4; }
+    .route-snake-row-return .route-stage:nth-child(2) { grid-column: 3; grid-row: 1; }
+    .route-snake-row-return .route-stage:nth-child(3) { grid-column: 2; grid-row: 1; }
+    .route-snake-row-return .route-stage:nth-child(4) { grid-column: 1; grid-row: 1; }
+    .route-snake .route-stage::before { content: attr(data-step); }
+    .route-snake .route-card { min-height: 276px; }
+    .route-snake .route-goals { margin: 0; padding-left: 18px; }
+    .route-snake .route-goals li { margin: 4px 0; }
+
+    .route-future { position: relative; z-index: 1; margin-top: 30px; padding-top: 24px; border-top: 1px solid rgba(255, 255, 255, .2); }
+    .route-future-head { display: flex; align-items: flex-end; justify-content: space-between; gap: 24px; margin-bottom: 14px; }
+    .route-future-head h3 { margin: 0; color: #fff; font-size: 18px; }
+    .route-future-head p { max-width: 720px; margin: 0; color: #cbd5e1; font-size: 12.5px; line-height: 1.55; text-align: right; }
+    .route-future-track { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+    .route-future-card {
+      display: flex;
+      flex-direction: column;
+      min-height: 238px;
+      padding: 20px;
+      border: 1px solid rgba(219, 228, 239, .95);
+      border-top: 5px solid #94a3b8;
+      border-radius: var(--radius-md);
+      color: var(--text);
+      background: rgba(255, 255, 255, .98);
+      box-shadow: 0 14px 32px rgba(2, 8, 23, .2);
+    }
+    .route-future-card.current { border-top-color: #d97706; }
+    .route-future-card.next { border-top-color: var(--project); }
+    .route-future-card h4 { margin: 8px 0 10px; font-size: 16px; line-height: 1.35; }
+    .route-future-card .route-goals { margin: 0; padding-left: 18px; }
+    .route-future-card .route-goals li { margin: 4px 0; }
+    .route-status { align-self: flex-start; padding: 3px 8px; border-radius: 999px; color: #92400e; background: #fef3c7; font-size: 10.5px; font-weight: 850; letter-spacing: .04em; }
+    .route-future-card.next .route-status { color: #1d4ed8; background: #dbeafe; }
+    .route-future-card.planned .route-status { color: #475569; background: #e2e8f0; }
+
     /* Goal overview */
     .goals-section { border-top: 4px solid var(--project); }
     .status-summary { display: grid; grid-template-columns: repeat(3, minmax(88px, 1fr)); flex: 0 0 auto; gap: 8px; }
@@ -256,7 +328,7 @@
 
     /* Latest updates */
     .updates-section { background: linear-gradient(135deg, #ffffff, #f7faff); }
-    .updates-by-project { display: grid; grid-template-columns: minmax(0, 3fr) minmax(260px, 1fr); gap: 16px; }
+    .updates-by-project { display: grid; grid-template-columns: minmax(0, 1fr); gap: 16px; }
     .update-group { padding: 18px; border: 1px solid var(--border); border-radius: var(--radius-md); background: rgba(247, 249, 252, .78); }
     .update-group h3 { margin-bottom: 14px; color: var(--primary); font-size: 15px; }
     .update-group.project-fff h3, .update-group.project-fff .update-id { color: var(--fff); }
@@ -312,13 +384,15 @@
     .footer { margin-top: 36px; padding: 22px 12px 0; border-top: 1px solid var(--border); color: var(--muted); font-size: 12px; text-align: center; }
 
     @media (max-width: 1100px) {
-      .updates-by-project { grid-template-columns: 1fr; }
       .update-group .updates-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+      .route-snake .route-card { min-height: 304px; padding: 18px; }
       .flow { grid-template-columns: 1fr; }
       .flow-step { min-height: 0; padding: 16px; }
       .flow-step:not(:last-child)::after { top: auto; right: auto; bottom: -13px; left: 25px; width: 2px; height: 14px; }
     }
     @media (max-width: 920px) {
+      .update-group .updates-grid { grid-template-columns: 1fr; }
+      .update-card { min-height: 0; }
       .roadmap-section { padding: 26px; }
       .roadmap-section .section-head { display: block; }
       .route-legend { justify-content: flex-start; margin-top: 16px; }
@@ -329,6 +403,19 @@
       .route-stage { padding-top: 0; }
       .route-stage::before { top: 18px; left: -40px; transform: none; }
       .route-card { min-height: 0; }
+      .route-snake { padding-left: 58px; }
+      .route-snake::before { content: ""; position: absolute; top: 18px; bottom: 18px; left: 18px; width: 4px; border-radius: 999px; background: linear-gradient(180deg, #22c55e 0%, #22c55e 86%, #f59e0b 100%); }
+      .route-snake-row { grid-template-columns: 1fr; gap: 14px; }
+      .route-snake-row + .route-snake-row { margin-top: 14px; }
+      .route-snake-row::before, .route-snake-row:first-child::after { display: none; }
+      .route-snake-row-return .route-stage:nth-child(n) { grid-column: 1; grid-row: auto; }
+      .route-snake .route-stage { padding-top: 0; }
+      .route-snake .route-stage::before { top: 18px; left: -40px; transform: none; }
+      .route-snake .route-card { min-height: 0; }
+      .route-future-head { display: block; }
+      .route-future-head p { margin-top: 6px; text-align: left; }
+      .route-future-track { grid-template-columns: 1fr; }
+      .route-future-card { min-height: 0; }
     }
     @media (max-width: 780px) {
       main { width: min(100% - 20px, 1380px); padding-top: 10px; }
@@ -390,6 +477,10 @@
       .route-track, .route-track.route-track-4, .route-track.route-track-3 { padding-left: 50px; }
       .route-stage::before { left: -36px; }
       .route-card { padding: 17px; }
+      .route-snake { padding-left: 50px; }
+      .route-snake::before { left: 14px; }
+      .route-snake .route-stage::before { left: -36px; }
+      .route-snake .route-card, .route-future-card { padding: 17px; }
       .route-legend span { padding-inline: 8px; }
       .status-summary { grid-template-columns: repeat(3, minmax(0, 1fr)); }
       .status-count { padding: 10px 8px; text-align: center; }
@@ -405,9 +496,13 @@
       main { width: 100%; padding: 0; }
       .page-nav { display: none; }
       .surface, .detail-shell { box-shadow: none; break-inside: avoid; }
-      .roadmap-section { color: var(--text); background: #fff; border: 1px solid var(--border); }
+      .roadmap-section { color: var(--text); background: #fff; border: 1px solid var(--border); break-inside: auto; }
       .roadmap-section h2 { color: var(--text); }
       .roadmap-section .section-copy { color: var(--muted); }
+      .route-future { border-top-color: var(--border); }
+      .route-future-head h3 { color: var(--text); }
+      .route-future-head p { color: var(--muted); }
+      .route-card, .route-future-card { box-shadow: none; break-inside: avoid; }
       .route-legend { display: none; }
       details > .detail-body, details > .sub-detail-content { display: block !important; }
     }
@@ -434,44 +529,153 @@
       <div>
         <p class="section-kicker">项目 01 · VPN · 资料截至第10阶段</p>
         <div class="project-title-row"><h2 id="arrowfish-route-title">Arrowfish 2026 路线图</h2><span class="project-label">独立项目</span></div>
-        <p class="section-copy">第10阶段及以前的交付进度，与第10阶段之后的目标分开呈现；不混入 FFF 的计划。</p>
+        <p class="section-copy">先按阶段回顾第0–10阶段已落地的能力，再单列第10阶段之后的收口与目标；不混入 FFF 的计划。</p>
       </div>
-      <div class="route-legend" role="list" aria-label="路线状态图例"><span class="complete" role="listitem">已完成</span><span class="current" role="listitem">当前阶段</span><span class="next" role="listitem">下一阶段</span></div>
+      <div class="route-legend" role="list" aria-label="路线状态图例"><span class="complete" role="listitem">已完成</span><span class="current" role="listitem">当前收口</span><span class="next" role="listitem">后续目标</span></div>
     </div>
-    <ol class="route-track route-track-4" aria-label="Arrowfish 2026 年目标交付路线">
-      <li class="route-stage complete">
-        <div class="route-card">
-          <span class="route-date">第1–10阶段累计</span>
-          <h3>核心能力已交付</h3>
-          <p class="route-goals"><strong>G6</strong> SkyTunnel<br><strong>G7</strong> 三协议中国区验证</p>
-          <span class="route-result">结果：2 项核心交付完成</span>
-        </div>
-      </li>
-      <li class="route-stage current">
-        <div class="route-card">
-          <span class="route-date">第10阶段收口</span>
-          <h3>关闭当前验证缺口</h3>
-          <p class="route-goals"><strong>G11</strong> iOS 构建与真机验收<br><strong>G1</strong> 营销归因缺口<br><strong>G5</strong> 协议与 BO 端到端验证</p>
+    <div class="route-snake" aria-label="Arrowfish 第0至第10阶段历史交付路线">
+      <ol class="route-snake-row route-snake-row-forward">
+        <li class="route-stage complete" data-step="1">
+          <div class="route-card">
+            <span class="route-date">第0–1阶段</span>
+            <h3>接手止血与收入恢复</h3>
+            <ul class="route-goals">
+              <li>Samsung IAP、AdMob 恢复生产配置</li>
+              <li>USDTPay 从 Java 黑盒重写为 Go 服务</li>
+              <li>无日志、安全与 Android 稳定性集中修复</li>
+            </ul>
+            <span class="route-result">结果：处理 49+ 项问题，恢复 2 条收入通道</span>
+          </div>
+        </li>
+        <li class="route-stage complete" data-step="2">
+          <div class="route-card">
+            <span class="route-date">第2阶段</span>
+            <h3>营收、反滥用与体验加固</h3>
+            <ul class="route-goals">
+              <li>专属 IP、余额支付与续费日期问题修复</li>
+              <li>五层反滥用防护落地</li>
+              <li>读写分离与自动测试构建落地</li>
+            </ul>
+            <span class="route-result">结果：30+ 项缺陷、20+ 项体验优化，APK 缩减 28.7%</span>
+          </div>
+        </li>
+        <li class="route-stage complete" data-step="3">
+          <div class="route-card">
+            <span class="route-date">第3阶段</span>
+            <h3>后端、基础设施与节点自动化</h3>
+            <ul class="route-goals">
+              <li>免费配额改为节点权威记账</li>
+              <li>自动备份、读副本与旧 ProxyBackend 退场</li>
+              <li>后台一键安装、回收、批量升级与健康管理</li>
+            </ul>
+            <span class="route-result">结果：7 台跨区域节点 44 秒完成回收，0 失败</span>
+          </div>
+        </li>
+        <li class="route-stage complete" data-step="4">
+          <div class="route-card">
+            <span class="route-date">第4–6阶段</span>
+            <h3>发布体系与运营能力收敛</h3>
+            <ul class="route-goals">
+              <li>Android、后端与 CI/CD 发布链路现代化</li>
+              <li>动态活动及 BO 配置能力落地</li>
+              <li>Arrowfish 新官网进入 staging</li>
+            </ul>
+            <span class="route-result">结果：可核验云资源成本节省约 USD 612.21／月</span>
+          </div>
+        </li>
+      </ol>
+      <ol class="route-snake-row route-snake-row-return" start="5">
+        <li class="route-stage complete" data-step="5">
+          <div class="route-card">
+            <span class="route-date">第7阶段</span>
+            <h3>中国网络与跨平台基础</h3>
+            <ul class="route-goals">
+              <li>四天交付中国网络协议测试工具</li>
+              <li>七项协议全部通过测试</li>
+              <li>Android、Windows 与节点协议配置统一</li>
+            </ul>
+            <span class="route-result">结果：Windows 安装包缩减 82.4%，确定 SkyTunnel 自研路线</span>
+          </div>
+        </li>
+        <li class="route-stage complete" data-step="6">
+          <div class="route-card">
+            <span class="route-date">第8阶段</span>
+            <h3>SkyTunnel 与连接稳定性</h3>
+            <ul class="route-goals">
+              <li>Android 完成 SkyTunnel 替代验证</li>
+              <li>Windows 接入相同共享核心</li>
+              <li>测试环境代码签名链路打通</li>
+            </ul>
+            <span class="route-result">结果：IPv6“已连接但无流量”根因修复并完成真机验收</span>
+          </div>
+        </li>
+        <li class="route-stage complete" data-step="7">
+          <div class="route-card">
+            <span class="route-date">第9阶段</span>
+            <h3>归因、支付与桌面交付</h3>
+            <ul class="route-goals">
+              <li>后端主导的 Android 投放归因链路完成</li>
+              <li>API 从 207 条收敛至 141 条</li>
+              <li>Siqo 多链支付进入测试环境</li>
+            </ul>
+            <span class="route-result">结果：Windows 约 8 MB 测试包交付 QA，构建时间减半</span>
+          </div>
+        </li>
+        <li class="route-stage current" data-step="8">
+          <div class="route-card">
+            <span class="route-date">第10阶段</span>
+            <h3>生产整合与 iOS 合规重建</h3>
+            <ul class="route-goals">
+              <li>8 月 12 日生产环境整合完成</li>
+              <li>iOS 干净源码工程及 VPN 主路径建立</li>
+              <li>数据库迁移与 CI/CD 权责分离完成测试环境验证</li>
+            </ul>
+            <span class="route-result">边界：iOS 真机、TestFlight 及两项协议端到端验收尚未关闭</span>
+          </div>
+        </li>
+      </ol>
+    </div>
+
+    <div class="route-future" aria-labelledby="arrowfish-future-title">
+      <div class="route-future-head">
+        <h3 id="arrowfish-future-title">第10阶段之后</h3>
+        <p>以下均为后续目标，不计入上方已交付成果；按部署、测试与验收证据分别关闭。</p>
+      </div>
+      <div class="route-future-track">
+        <article class="route-future-card current">
+          <span class="route-status">当前收口</span>
+          <h4>关闭第10阶段遗留门槛</h4>
+          <ul class="route-goals">
+            <li>生产异地备份与恢复演练</li>
+            <li><strong>G11</strong> iOS 构建、签名、TestFlight 与真机验收</li>
+            <li><strong>G1</strong> 营销归因覆盖缺口</li>
+            <li><strong>G5</strong> 协议、BO 与 Android 端到端验收</li>
+          </ul>
           <span class="route-result">口径：源码完成不等于部署或验收完成</span>
-        </div>
-      </li>
-      <li class="route-stage next">
-        <div class="route-card">
-          <span class="route-date">下一优先阶段</span>
-          <h3>节点采购自动化</h3>
-          <p class="route-goals"><strong>G5</strong> API + 受控 AI 浏览器 Agent<br>缺货时自动购买 VM／IP</p>
-          <span class="route-result">目标：采购后自动进入 BO 设置与配发</span>
-        </div>
-      </li>
-      <li class="route-stage">
-        <div class="route-card">
-          <span class="route-date">2026 年底前</span>
-          <h3>关闭 Arrowfish 剩余目标</h3>
-          <p class="route-goals"><strong>G1–G2</strong> 归因与续费<br><strong>G4</strong> 多平台支付<br><strong>G9／G11</strong> 主体迁移与 iOS</p>
+        </article>
+        <article class="route-future-card next">
+          <span class="route-status">下一优先</span>
+          <h4>节点采购自动化</h4>
+          <ul class="route-goals">
+            <li><strong>G5</strong> 供应商 API + 受控 AI 浏览器 Agent</li>
+            <li>缺货时自动购买 VM／IP</li>
+            <li>采购后自动进入 BO 设置、节点部署与配发</li>
+          </ul>
+          <span class="route-result">目标：把采购接入既有节点管理闭环</span>
+        </article>
+        <article class="route-future-card planned">
+          <span class="route-status">2026 年底前</span>
+          <h4>关闭 Arrowfish 剩余目标</h4>
+          <ul class="route-goals">
+            <li><strong>G1–G2</strong> 归因、续费与订阅闭环</li>
+            <li><strong>G3／G4</strong> 新网站与 Siqo 多平台支付</li>
+            <li><strong>G8</strong> 私有 DNS</li>
+            <li><strong>G9／G11</strong> 主体迁移与 iOS 正式发布</li>
+          </ul>
           <span class="route-result">按优先级逐项关闭并分别验收</span>
-        </div>
-      </li>
-    </ol>
+        </article>
+      </div>
+    </div>
   </section>
 
   <section id="arrowfish-goals" class="surface project-section project-arrowfish goals-section" data-goal-group="arrowfish" aria-labelledby="arrowfish-goals-title">
@@ -494,13 +698,13 @@
         <thead><tr><th>目标</th><th>状态</th><th>最新进展</th><th>下一里程碑</th><th>目标时间</th></tr></thead>
         <tbody>
           <tr class="group-row"><th colspan="5">增长与收入</th></tr>
-          <tr class="goal-row" data-status="planned"><td class="goal-name"><span class="goal-id">G1</span>广告归因与付费分析</td><td><span class="badge planned">缺口已确认</span></td><td>第10阶段确认 97.6% 的新注册缺少营销归因，现有数据无法判断增长来源。</td><td>补齐产品页、套餐、结账、支付回调和渠道埋点，并建立 D1／D7／D30 转化视图。</td><td class="goal-target">年底前<small>D1／D7／D30</small></td></tr>
+          <tr class="goal-row" data-status="progress"><td class="goal-name"><span class="goal-id">G1</span>广告归因与付费分析</td><td><span class="badge progress">基础完成，覆盖待补</span></td><td>第9阶段已完成投放链接、安装标识、账号绑定及注册／激活／首购／付费／续费的后端归因链路；第10阶段实际数据仍显示 97.6% 的新注册缺少归因。</td><td>补齐产品页、套餐、结账、支付回调和渠道埋点，并建立 D1／D7／D30 转化视图。</td><td class="goal-target">年底前<small>D1／D7／D30</small></td></tr>
           <tr class="goal-row" data-status="planned"><td class="goal-name"><span class="goal-id">G2</span>套餐续费与订阅管理</td><td><span class="badge planned">待开发</span></td><td>第10阶段确认续费／重复付费贡献周收入 83.1%；尚无订阅闭环完成记录。</td><td>确定提前续费、自动续费与订阅状态同步规则，再进入开发和验收。</td><td class="goal-target">年底前<small>提前续费、自动续费、订阅管理</small></td></tr>
           <tr class="goal-row" data-status="progress"><td class="goal-name"><span class="goal-id">G3</span>百度广告新网站</td><td><span class="badge progress">Staging 开发中</span></td><td>新设计已进入 staging 开发。</td><td>完成验收与发布；广告归因由 G1 独立验收。</td><td class="goal-target">2026 年 8 月</td></tr>
           <tr class="goal-row" data-status="progress"><td class="goal-name"><span class="goal-id">G4</span>Siqo 多平台支付</td><td><span class="badge progress">部分完成</span></td><td>Android staging 接入完成。</td><td>Windows 与其他平台逐一接入、回归和发布。</td><td class="goal-target">待排期<small>按平台分别验收</small></td></tr>
 
           <tr class="group-row"><th colspan="5">基础设施与 VPN 核心</th></tr>
-          <tr class="goal-row" data-status="progress"><td class="goal-name"><span class="goal-id">G5</span>节点部署与管理自动化</td><td><span class="badge progress">基础存在，验收未关闭</span></td><td>供应商概览与部分节点自动化已有历史基础；第10阶段两项协议问题完成源码修复，但测试环境、BO 与客户端端到端关闭数仍为 0。供应商自动采购未完成。</td><td>先关闭协议与 BO 验收，再把供应商 API／受控浏览器采购接入同一任务闭环。</td><td class="goal-target">年底前<small>采购至配发闭环</small></td></tr>
+          <tr class="goal-row" data-status="progress"><td class="goal-name"><span class="goal-id">G5</span>节点部署与管理自动化</td><td><span class="badge progress">基础已交付，闭环进行中</span></td><td>已具备后台一键安装、全擦回收、12 台并行升级、到期释放和健康状态机；第10阶段两项协议问题完成源码修复，但测试环境、BO 与客户端端到端关闭数仍为 0，供应商自动采购也未完成。</td><td>先关闭协议与 BO 验收，再把供应商 API／受控浏览器采购接入同一任务闭环。</td><td class="goal-target">年底前<small>采购至配发闭环</small></td></tr>
           <tr class="goal-row" data-status="done"><td class="goal-name"><span class="goal-id">G6</span>SkyTunnel 自研隧道</td><td><span class="badge done">已完成</span></td><td>自研 VPN 隧道核心已交付。</td><td>持续回归、客户端整合与版本维护。</td><td class="goal-target">持续维护</td></tr>
           <tr class="goal-row" data-status="done"><td class="goal-name"><span class="goal-id">G7</span>三协议支持</td><td><span class="badge done">已完成并验证</span></td><td>三套协议已完成，并通过中国网络环境 QA。</td><td>纳入各客户端持续回归。</td><td class="goal-target">持续维护</td></tr>
           <tr class="goal-row" data-status="progress"><td class="goal-name"><span class="goal-id">G8</span>Unbound 私有 DNS</td><td><span class="badge progress">开发中</span></td><td>自研私有 DNS 解析器开发中。</td><td>完成实现、集成及验证。</td><td class="goal-target">2026 年 8 月</td></tr>

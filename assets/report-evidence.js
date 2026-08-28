@@ -18,8 +18,8 @@
 
   var SYNONYM_GROUPS = [
     ['summary', 'summarize', 'overview', 'highlight', 'main', 'point', '摘要', '概述', '重点', '要点', '总结'],
-    ['risk', 'risks', 'blocker', 'blockers', 'blocked', '风险', '阻塞', '延迟', '缺口'],
-    ['next', 'action', 'actions', 'plan', 'plans', 'roadmap', '下一步', '计划', '规划', '门槛'],
+    ['risk', 'risks', 'blocker', 'blockers', 'blocked', '风险', '阻塞', '阻塞中', '卡住', '延迟', '缺口', '欠', '缺', '待办', '未完成'],
+    ['next', 'action', 'actions', 'plan', 'plans', 'roadmap', '下一步', '计划', '规划', '门槛', '什么时候', '上线时间'],
     ['status', 'state', 'progress', 'complete', 'completed', '状态', '进展', '完成', '验收'],
     ['revenue', 'income', 'sales', 'payment', 'paid', '收入', '营收', '付费', '订单', '金额'],
     ['user', 'users', 'registration', 'registrations', 'signup', '用户', '注册', '新增'],
@@ -61,6 +61,22 @@
     return String(value || '').replace(/\s*\[S\d+\]/g, '');
   }
 
+  function reportMetadataIntent(value) {
+    var text = normalizeText(value).replace(/[.!?。！？,，;；:：'"“”‘’]+/g, ' ').trim();
+    var reportContext = /报告|报表|页面|文档|内容|report|page|document/.test(text);
+    var viewingContext = /(?:我|我们|当前|现在|正在|这|此).{0,8}(?:看|浏览|打开|阅读)|(?:看|浏览|打开|阅读).{0,8}(?:什么|哪|名称|标题)|\b(?:i|we)\b.{0,20}\b(?:view|viewing|look|looking|open|opened|read|reading)\b|\b(?:current|open)\b.{0,12}\b(?:report|page|document)\b/i.test(text);
+    var asksDate = /日期|哪天|什么时候|何时|更新时间|\bdate\b|\bwhen\b|last updated/i.test(text);
+    var asksIdentity = /什么|哪(?:一)?(?:份|个)|名称|名字|标题|叫什|\bwhat\b|\bwhich\b|\bname\b|\btitle\b/i.test(text);
+    var explicitTitle = /哪(?:一)?份|哪(?:一)?个报告|什么报告|报告.{0,8}(?:名称|名字|标题|叫什么)|(?:名称|名字|标题).{0,8}报告|\b(?:which|what)\s+(?:report|document)\b|\bwhat\s+is\s+(?:this|the)\s+(?:report|document)\b|\b(?:report|document)\b.{0,12}\b(?:name|title)\b/i.test(text);
+    var titleIntent = explicitTitle || (asksIdentity && viewingContext);
+    var dateIntent = asksDate && (reportContext || viewingContext);
+    return {
+      allowed: titleIntent || dateIntent,
+      asksDate: dateIntent,
+      asksTitle: titleIntent
+    };
+  }
+
   function citationParts(value, validSourceIds) {
     var content = String(value || '');
     var sourceIds = new Set(validSourceIds || []);
@@ -76,29 +92,12 @@
       else parts.push({ type: 'text', text: text });
     }
 
-    function appendCitationText(text, sourceId) {
-      var trailingWhitespace = (text.match(/\s*$/) || [''])[0];
-      var visibleText = text.slice(0, text.length - trailingWhitespace.length);
-      var sentenceEnd = visibleText.length;
-      while (sentenceEnd > 0 && /[。！？；.!?;]/.test(visibleText.charAt(sentenceEnd - 1))) sentenceEnd -= 1;
-      var boundary = -1;
-      var sentencePattern = /[\n。！？；.!?;]/g;
-      var sentenceMatch;
-      while ((sentenceMatch = sentencePattern.exec(visibleText.slice(0, sentenceEnd)))) {
-        boundary = sentenceMatch.index;
-      }
-
-      var linkStart = boundary + 1;
-      while (/\s/.test(visibleText.charAt(linkStart))) linkStart += 1;
-      appendText(visibleText.slice(0, linkStart));
-      if (visibleText.slice(linkStart)) {
-        parts.push({ type: 'citation', text: visibleText.slice(linkStart), sourceId: sourceId });
-      }
-    }
-
     while ((match = markerPattern.exec(content))) {
       var precedingText = content.slice(cursor, match.index);
-      if (sourceIds.has(match[1])) appendCitationText(precedingText, match[1]);
+      if (sourceIds.has(match[1])) {
+        appendText(precedingText);
+        parts.push({ type: 'citation', text: match[1], sourceId: match[1] });
+      }
       else appendText(precedingText + match[0]);
       cursor = markerPattern.lastIndex;
     }
@@ -136,7 +135,7 @@
     return Array.from(new Set(tokens));
   }
 
-  function scoreBlock(report, block, currentTokens, contextTokens, overview, followUp) {
+  function scoreBlock(report, block, currentTokens, contextTokens, overview, followUp, goalTerms) {
     if (!block || !block.text || block.type === 'heading') return -1;
     if (isLowInformationBlock(block)) return -1;
     if (overview && block.id === 'b0001' && block.text.length < 120) return -1;
@@ -161,6 +160,9 @@
       if (block.id === 'b0002' || block.id === 'b0003') score += 16;
     }
     if (block.type === 'table-row') score += 1;
+    if ((goalTerms || []).some(function (term) {
+      return body.indexOf(term) !== -1 || section.indexOf(term) !== -1;
+    })) score += 12;
     return score;
   }
 
@@ -185,41 +187,52 @@
       /(它|这个|那个|这项|那项|上述|前面|刚才|其)(?:\s|在|的|是|有|已|还|呢|吗|么|中|里|后|前|要|会|可|能)/.test(question) ||
       /\b(?:it|this|that|these|those|them|this one|that one|the former|the latter)\b/i.test(question)
     ) && contextTokens.length > 0;
-
-    var ranked = (report.blocks || []).map(function (block, index) {
-      return {
-        block: block,
-        index: index,
-        score: scoreBlock(report, block, currentTokens, contextTokens, overview, followUp)
-      };
-    }).filter(function (item) {
-      return item.score >= (overview ? 5 : 3);
-    }).sort(function (left, right) {
-      return right.score - left.score || left.index - right.index;
-    });
-
+    var reportMap = new Map((options.reports || [report]).map(function (item) { return [item.id, item]; }));
+    reportMap.set(report.id, report);
+    var reports = [report];
+    if (!overview && options.index && Array.isArray(options.index.order)) {
+      options.index.order.forEach(function (reportId) {
+        var candidate = reportMap.get(reportId);
+        if (candidate && candidate.id !== report.id) reports.push(candidate);
+      });
+    }
+    var normalizedQuestion = normalizeText(question);
+    var goalTerms = [];
+    if (options.index && options.index.workstreams) {
+      Object.keys(options.index.workstreams).forEach(function (key) {
+        (options.index.workstreams[key].goals || []).forEach(function (goal) {
+          var goalId = normalizeText(goal.id);
+          var title = normalizeText(goal.title);
+          var idPattern = goalId && new RegExp('(?:^|[^a-z0-9])' + goalId.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '(?:$|[^a-z0-9])', 'i');
+          if ((idPattern && idPattern.test(normalizedQuestion)) || (title && normalizedQuestion.indexOf(title) !== -1)) {
+            goalTerms.push(goalId, title);
+          }
+        });
+      });
+    }
+    goalTerms = Array.from(new Set(goalTerms.filter(Boolean)));
     var selected = [];
     var sectionCounts = Object.create(null);
     var usedChars = 0;
 
-    function addItem(item) {
+    function addItem(item, sourceReport) {
       var block = item.block;
       var sectionKey = normalizeText(block.section);
       if (overview && (sectionCounts[sectionKey] || 0) >= 2) return false;
       if (isNearDuplicate(block.text, selected)) return false;
 
-      var cost = block.text.length + block.section.length + report.name.length + 40;
+      var cost = block.text.length + block.section.length + sourceReport.name.length + 40;
       if (selected.length && usedChars + cost > maxChars) return false;
       if (!selected.length && cost > maxChars) block = Object.assign({}, block, { text: block.text.slice(0, maxChars - 300) });
 
       selected.push({
         id: 'S' + (selected.length + 1),
         blockId: block.id,
-        reportId: report.id,
-        reportKey: report.file,
-        reportTitle: report.name,
-        reportDate: report.date,
-        reportVersion: report.version,
+        reportId: sourceReport.id,
+        reportKey: sourceReport.file,
+        reportTitle: sourceReport.name,
+        reportDate: sourceReport.date,
+        reportVersion: sourceReport.version,
         section: block.section,
         line: block.line,
         text: block.text
@@ -229,20 +242,43 @@
       return true;
     }
 
-    if (overview) {
-      OVERVIEW_CATEGORIES.forEach(function (pattern) {
-        if (selected.length >= maxSources) return;
-        var candidate = ranked.find(function (item) {
-          return pattern.test(item.block.section + ' ' + item.block.text) && !isNearDuplicate(item.block.text, selected);
-        });
-        if (candidate) addItem(candidate);
+    var scannedReports = 0;
+    reports.some(function (sourceReport) {
+      if (selected.length >= maxSources || selected.length >= 4 || scannedReports >= 3) return true;
+      scannedReports += 1;
+      var ranked = (sourceReport.blocks || []).map(function (block, index) {
+        return {
+          block: block,
+          index: index,
+          score: scoreBlock(sourceReport, block, currentTokens, contextTokens, overview, followUp, goalTerms)
+        };
+      }).filter(function (item) {
+        return item.score >= 0;
+      }).sort(function (left, right) {
+        return right.score - left.score || left.index - right.index;
       });
-    }
+      var topScore = ranked.length ? ranked[0].score : 0;
+      var scoreFloor = overview ? 5 : Math.max(3, topScore * 0.25);
+      ranked = ranked.filter(function (item) { return item.score >= scoreFloor; });
+      var reportSourceCount = 0;
+      var reportSourceLimit = overview ? maxSources : 3;
 
-    ranked.some(function (item) {
-      if (selected.length >= maxSources) return true;
-      addItem(item);
-      return selected.length >= maxSources;
+      if (overview) {
+        OVERVIEW_CATEGORIES.forEach(function (pattern) {
+          if (selected.length >= maxSources || reportSourceCount >= reportSourceLimit) return;
+          var candidate = ranked.find(function (item) {
+            return pattern.test(item.block.section + ' ' + item.block.text) && !isNearDuplicate(item.block.text, selected);
+          });
+          if (candidate && addItem(candidate, sourceReport)) reportSourceCount += 1;
+        });
+      }
+
+      ranked.some(function (item) {
+        if (selected.length >= maxSources || reportSourceCount >= reportSourceLimit) return true;
+        if (addItem(item, sourceReport)) reportSourceCount += 1;
+        return selected.length >= maxSources || reportSourceCount >= reportSourceLimit;
+      });
+      return selected.length >= 4 || scannedReports >= 3;
     });
 
     return selected;
@@ -252,6 +288,7 @@
     citationParts: citationParts,
     locatorText: locatorText,
     normalizeText: normalizeText,
+    reportMetadataIntent: reportMetadataIntent,
     selectEvidence: selectEvidence,
     stripCitationMarkers: stripCitationMarkers
   };

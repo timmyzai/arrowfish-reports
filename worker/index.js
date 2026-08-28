@@ -2,7 +2,7 @@ import REPORT_CONTEXT from '../report-context.json';
 
 var DEFAULT_ORIGINS = ['https://timmyzai.github.io'];
 var DEFAULT_MODEL = 'openai/gpt-oss-20b';
-var PROMPT_VERSION = 'chat-v18-user-context-only';
+var PROMPT_VERSION = 'chat-v19-cross-report-recency';
 var MAX_BODY_BYTES = 60000;
 var MAX_QUESTION_CHARS = 1500;
 var MAX_SOURCES = 8;
@@ -201,6 +201,7 @@ function buildMessages(question, report, sources, conversation) {
     return [
       '<document id="' + source.id + '">',
       '<report>' + promptEscape(source.reportTitle) + '</report>',
+      '<date>' + promptEscape(source.reportDate) + '</date>',
       '<section>' + promptEscape(source.section) + '</section>',
       '<content>' + promptEscape(source.text) + '</content>',
       '</document>'
@@ -218,7 +219,8 @@ function buildMessages(question, report, sources, conversation) {
         '2. 纯问候、致谢、能力说明，以及询问当前报告名称或日期时使用 kind=conversation；回答名称或日期时必须逐字使用 report_context 中的 title 或 date，citations 必须为空。',
         '3. 只要回答包含报告的进展、数字、日期、决定、风险、限制或计划，就使用 kind=grounded。混合了寒暄和报告问题时也使用 grounded。',
         '4. grounded 的每个事实句或要点末尾必须紧跟一个或多个 [S1] 引用。citations 最多五个，必须给出对应 source_id，以及该 document content 中连续、逐字一致的最短充分 quote。数字、日期或完成状态的 quote 必须在同一段连续原文中同时包含事实主体和对应的值或状态；只引用孤立数字、日期或状态词不充分。',
-        '5. documents 无法完整支持报告问题时使用 kind=unanswerable，简短说明当前报告没有足够信息；不要用常识、推测或旧对话补答案。',
+        '5. 引用非当前报告时，回答必须写明「截至 <date>」或对应阶段名；同一事实有多份报告时，以日期最新的报告为准。',
+        '6. documents 无法完整支持报告问题时使用 kind=unanswerable，简短说明当前报告没有足够信息；不要用常识、推测或旧对话补答案。',
         '</instructions>',
         '<grounding_process>回答前在内部完成：识别意图；从 documents 选取最小充分证据；核对数字、日期、否定词、状态和范围；确认每个事实都有引用。不要输出这个过程。</grounding_process>',
         '<constraints>',
@@ -391,15 +393,30 @@ function conversationQuestionAllowed(question) {
   if (/^(?:bye|goodbye|再见|拜拜)$/.test(text)) return true;
   var withoutGreeting = text.replace(/^(?:hi|hello|hey|good (?:morning|afternoon|evening)|你好|您好|嗨|早上好|下午好|晚上好)\s*/, '');
   if (/^(?:what can you do|how can you help(?: me)?|how do i use (?:this|you)|who are you|how are you|你能做什么|你会什么|怎么用|如何使用|可以问什么|你能帮我什么|你是谁|你好吗)$/.test(withoutGreeting)) return true;
-  return /(?:报告|report).*(?:日期|date|哪天|什么时候)|(?:日期|date).*(?:报告|report)|(?:哪份|哪个|什么|当前|这份).{0,8}(?:报告)|(?:report).*(?:name|title|open|current)/i.test(question);
+  return reportMetadataIntent(question).allowed;
 }
 
 function reportMetadataAnswerSupported(question, answer, report) {
-  var asksDate = /(?:报告|report).*(?:日期|date|哪天|什么时候)|(?:日期|date).*(?:报告|report)/i.test(question);
-  var asksTitle = /(?:哪份|哪个|什么|当前|这份).{0,8}(?:报告)|(?:report).*(?:name|title|open|current)/i.test(question);
-  if (asksDate && answer.indexOf(report.date) === -1) return false;
-  if (asksTitle && normalized(answer).indexOf(normalized(report.title)) === -1) return false;
+  var intent = reportMetadataIntent(question);
+  if (intent.asksDate && answer.indexOf(report.date) === -1) return false;
+  if (intent.asksTitle && normalized(answer).indexOf(normalized(report.title)) === -1) return false;
   return true;
+}
+
+function reportMetadataIntent(value) {
+  var text = normalized(value).replace(/[.!?。！？,，;；:：'"“”‘’]+/g, ' ').trim();
+  var reportContext = /报告|报表|页面|文档|内容|report|page|document/.test(text);
+  var viewingContext = /(?:我|我们|当前|现在|正在|这|此).{0,8}(?:看|浏览|打开|阅读)|(?:看|浏览|打开|阅读).{0,8}(?:什么|哪|名称|标题)|\b(?:i|we)\b.{0,20}\b(?:view|viewing|look|looking|open|opened|read|reading)\b|\b(?:current|open)\b.{0,12}\b(?:report|page|document)\b/i.test(text);
+  var asksDate = /日期|哪天|什么时候|何时|更新时间|\bdate\b|\bwhen\b|last updated/i.test(text);
+  var asksIdentity = /什么|哪(?:一)?(?:份|个)|名称|名字|标题|叫什|\bwhat\b|\bwhich\b|\bname\b|\btitle\b/i.test(text);
+  var explicitTitle = /哪(?:一)?份|哪(?:一)?个报告|什么报告|报告.{0,8}(?:名称|名字|标题|叫什么)|(?:名称|名字|标题).{0,8}报告|\b(?:which|what)\s+(?:report|document)\b|\bwhat\s+is\s+(?:this|the)\s+(?:report|document)\b|\b(?:report|document)\b.{0,12}\b(?:name|title)\b/i.test(text);
+  var titleIntent = explicitTitle || (asksIdentity && viewingContext);
+  var dateIntent = asksDate && (reportContext || viewingContext);
+  return {
+    allowed: titleIntent || dateIntent,
+    asksDate: dateIntent,
+    asksTitle: titleIntent
+  };
 }
 
 function groundedUnitsSupported(answer, citations) {
@@ -614,22 +631,32 @@ function canonicalSources(value, report) {
   return value.slice(0, MAX_SOURCES).reduce(function (items, source, index) {
     if (!source || typeof source !== 'object') return items;
     var id = cleanText(source.id, 10);
+    var reportId = cleanText(source.reportId, 100) || report.id;
     var blockId = cleanText(source.blockId, 30);
-    var block = report.blocks.find(function (item) { return item.id === blockId; });
-    if (id !== 'S' + (index + 1) || !block || block.type === 'heading' || seen[id] || seen[blockId]) return items;
+    var sourceReport = reportId === report.id ? {
+      id: report.id,
+      file: report.key,
+      name: report.title,
+      date: report.date,
+      version: report.version,
+      blocks: report.blocks
+    } : (REPORT_CONTEXT.reports || []).find(function (item) { return item.id === reportId; });
+    var block = sourceReport && (sourceReport.blocks || []).find(function (item) { return item.id === blockId; });
+    var sourceKey = reportId + '\u0000' + blockId;
+    if (id !== 'S' + (index + 1) || !sourceReport || !block || block.type === 'heading' || seen[id] || seen[sourceKey]) return items;
     var text = cleanText(block.text, MAX_SOURCE_CHARS);
     if (!text) return items;
     if (total + text.length > MAX_EVIDENCE_CHARS) return items;
     total += text.length;
     seen[id] = true;
-    seen[blockId] = true;
+    seen[sourceKey] = true;
     items.push({
       id: id,
-      reportId: report.id,
-      reportKey: report.key,
-      reportTitle: report.title,
-      reportDate: report.date,
-      reportVersion: report.version,
+      reportId: sourceReport.id,
+      reportKey: sourceReport.file,
+      reportTitle: sourceReport.name,
+      reportDate: sourceReport.date,
+      reportVersion: sourceReport.version,
       blockId: block.id,
       section: cleanText(block.section, 300) || '报告概览',
       line: Number.isFinite(Number(block.line)) ? Number(block.line) : 0,

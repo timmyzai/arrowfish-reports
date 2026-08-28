@@ -1,0 +1,678 @@
+{
+  "order": [
+    "goal-2026-20260827",
+    "sprint-10-full",
+    "sprint-9-full",
+    "sprint-8-full",
+    "sprint-7-full",
+    "sprint-7-summary",
+    "sprint-4-6-full",
+    "sprint-4-6-summary",
+    "sprint-3-full",
+    "sprint-3-node-format-benchmark",
+    "sprint-3",
+    "sprint-2-w2",
+    "sprint-2-summary",
+    "sprint-2-w1",
+    "sprint-1",
+    "sprint-0-1-summary",
+    "sprint-0"
+  ],
+  "workstreams": {
+    "arrowfish": {
+      "label": "Arrowfish",
+      "statusLabels": {
+        "done": "已完成",
+        "progress": "进行中",
+        "planned": "待开发"
+      },
+      "phases": [
+        {
+          "label": "第0–1阶段",
+          "title": "接手止血与收入恢复",
+          "result": "结果：处理 49+ 项问题，恢复 2 条收入通道",
+          "future": false,
+          "reportId": "goal-2026-20260827",
+          "blockId": "b0010"
+        },
+        {
+          "label": "第2阶段",
+          "title": "营收、反滥用与体验加固",
+          "result": "结果：30+ 项缺陷、20+ 项体验优化，APK 缩减 28.7%",
+          "future": false,
+          "reportId": "goal-2026-20260827",
+          "blockId": "b0015"
+        },
+        {
+          "label": "第3阶段",
+          "title": "后端、基础设施与节点自动化",
+          "result": "结果：7 台跨区域节点 44 秒完成回收，0 失败",
+          "future": false,
+          "reportId": "goal-2026-20260827",
+          "blockId": "b0020"
+        },
+        {
+          "label": "第4–6阶段",
+          "title": "发布体系与运营能力收敛",
+          "result": "结果：可核验云资源成本节省约 USD 612.21／月",
+          "future": false,
+          "reportId": "goal-2026-20260827",
+          "blockId": "b0025"
+        },
+        {
+          "label": "第7阶段",
+          "title": "中国网络与跨平台基础",
+          "result": "结果：Windows 安装包缩减 82.4%，确定 SkyTunnel 自研路线",
+          "future": false,
+          "reportId": "goal-2026-20260827",
+          "blockId": "b0030"
+        },
+        {
+          "label": "第8阶段",
+          "title": "SkyTunnel 与连接稳定性",
+          "result": "结果：IPv6“已连接但无流量”根因修复并完成真机验收",
+          "future": false,
+          "reportId": "goal-2026-20260827",
+          "blockId": "b0035"
+        },
+        {
+          "label": "第9阶段",
+          "title": "归因、支付与桌面交付",
+          "result": "结果：Windows 约 8 MB 测试包交付 QA，构建时间减半",
+          "future": false,
+          "reportId": "goal-2026-20260827",
+          "blockId": "b0040"
+        },
+        {
+          "label": "第10阶段",
+          "title": "生产整合与 iOS 合规重建",
+          "result": "边界：iOS 真机、TestFlight 及两项协议端到端验收尚未关闭",
+          "future": false,
+          "reportId": "goal-2026-20260827",
+          "blockId": "b0045"
+        },
+        {
+          "label": "当前收口",
+          "title": "关闭第10阶段遗留门槛",
+          "result": "口径：源码完成不等于部署或验收完成",
+          "future": true,
+          "reportId": "goal-2026-20260827",
+          "blockId": "b0053"
+        },
+        {
+          "label": "下一优先",
+          "title": "节点采购自动化",
+          "result": "目标：把采购接入既有节点管理闭环",
+          "future": true,
+          "reportId": "goal-2026-20260827",
+          "blockId": "b0058"
+        },
+        {
+          "label": "2026 年底前",
+          "title": "关闭 Arrowfish 剩余目标",
+          "result": "按优先级逐项关闭并分别验收",
+          "future": true,
+          "reportId": "goal-2026-20260827",
+          "blockId": "b0064"
+        }
+      ],
+      "goals": [
+        {
+          "id": "G1",
+          "title": "广告归因与付费分析",
+          "status": "基础完成，覆盖待补",
+          "statusGroup": "progress",
+          "evidence": "第9阶段已完成投放链接、安装标识、账号绑定及注册／激活／首购／付费／续费的后端归因链路；第10阶段实际数据仍显示 97.6% 的新注册缺少归因。",
+          "nextAction": "补齐产品页、套餐、结账、支付回调和渠道埋点，并建立 D1／D7／D30 转化视图。",
+          "deadline": "年底前 D1／D7／D30",
+          "reportId": "goal-2026-20260827",
+          "blockId": "b0070"
+        },
+        {
+          "id": "G2",
+          "title": "套餐续费与订阅管理",
+          "status": "待开发",
+          "statusGroup": "planned",
+          "evidence": "第10阶段确认续费／重复付费贡献周收入 83.1%；尚无订阅闭环完成记录。",
+          "nextAction": "确定提前续费、自动续费与订阅状态同步规则，再进入开发和验收。",
+          "deadline": "年底前 提前续费、自动续费、订阅管理",
+          "reportId": "goal-2026-20260827",
+          "blockId": "b0071"
+        },
+        {
+          "id": "G3",
+          "title": "百度广告新网站",
+          "status": "Staging 开发中",
+          "statusGroup": "progress",
+          "evidence": "新设计已进入 staging 开发。",
+          "nextAction": "完成验收与发布；广告归因由 G1 独立验收。",
+          "deadline": "2026 年 8 月",
+          "reportId": "goal-2026-20260827",
+          "blockId": "b0072"
+        },
+        {
+          "id": "G4",
+          "title": "Siqo 多平台支付",
+          "status": "部分完成",
+          "statusGroup": "progress",
+          "evidence": "Android staging 接入完成。",
+          "nextAction": "Windows 与其他平台逐一接入、回归和发布。",
+          "deadline": "待排期 按平台分别验收",
+          "reportId": "goal-2026-20260827",
+          "blockId": "b0073"
+        },
+        {
+          "id": "G5",
+          "title": "节点部署与管理自动化",
+          "status": "基础已交付，闭环进行中",
+          "statusGroup": "progress",
+          "evidence": "已具备后台一键安装、全擦回收、12 台并行升级、到期释放和健康状态机；第10阶段两项协议问题完成源码修复，但测试环境、BO 与客户端端到端关闭数仍为 0，供应商自动采购也未完成。",
+          "nextAction": "先关闭协议与 BO 验收，再把供应商 API／受控浏览器采购接入同一任务闭环。",
+          "deadline": "年底前 采购至配发闭环",
+          "reportId": "goal-2026-20260827",
+          "blockId": "b0075"
+        },
+        {
+          "id": "G6",
+          "title": "SkyTunnel 自研隧道",
+          "status": "已完成",
+          "statusGroup": "done",
+          "evidence": "自研 VPN 隧道核心已交付。",
+          "nextAction": "持续回归、客户端整合与版本维护。",
+          "deadline": "持续维护",
+          "reportId": "goal-2026-20260827",
+          "blockId": "b0076"
+        },
+        {
+          "id": "G7",
+          "title": "三协议支持",
+          "status": "已完成并验证",
+          "statusGroup": "done",
+          "evidence": "三套协议已完成，并通过中国网络环境 QA。",
+          "nextAction": "纳入各客户端持续回归。",
+          "deadline": "持续维护",
+          "reportId": "goal-2026-20260827",
+          "blockId": "b0077"
+        },
+        {
+          "id": "G8",
+          "title": "Unbound 私有 DNS",
+          "status": "开发中",
+          "statusGroup": "progress",
+          "evidence": "自研私有 DNS 解析器开发中。",
+          "nextAction": "完成实现、集成及验证。",
+          "deadline": "2026 年 8 月",
+          "reportId": "goal-2026-20260827",
+          "blockId": "b0078"
+        },
+        {
+          "id": "G9",
+          "title": "新公司主体迁移",
+          "status": "进行中",
+          "statusGroup": "progress",
+          "evidence": "Google 平台完成；华为、Samsung、OPPO 进行中。",
+          "nextAction": "逐个平台关闭主体、账号及发布资格迁移。",
+          "deadline": "待排期 按平台分别验收",
+          "reportId": "goal-2026-20260827",
+          "blockId": "b0080"
+        },
+        {
+          "id": "G11",
+          "title": "Arrowfish iOS 重构",
+          "status": "构建验证中",
+          "statusGroup": "progress",
+          "evidence": "第10阶段已建立干净源码工程并实现 VPN 主路径；无签名设备构建通过，但尚无真机连接与 TestFlight 验收。",
+          "nextAction": "完成签名描述文件、TestFlight、真机连接及升级回归。",
+          "deadline": "验收门槛关闭后 重新提交",
+          "reportId": "goal-2026-20260827",
+          "blockId": "b0081"
+        }
+      ]
+    },
+    "fff": {
+      "label": "FFF",
+      "statusLabels": {
+        "done": "已完成",
+        "progress": "进行中",
+        "planned": "待开发"
+      },
+      "phases": [
+        {
+          "label": "第10阶段已完成",
+          "title": "客户端基础收口",
+          "result": "Lex 实时开发口径；尚不是发布验收",
+          "future": false,
+          "reportId": "goal-2026-20260827",
+          "blockId": "b0087"
+        },
+        {
+          "label": "当前首发阶段",
+          "title": "Android 首发收口",
+          "result": "完成构建、测试环境与端到端验收后发布",
+          "future": false,
+          "reportId": "goal-2026-20260827",
+          "blockId": "b0090"
+        },
+        {
+          "label": "Android 发布后",
+          "title": "Windows",
+          "result": "Android 验收关闭后才进入正式发布阶段",
+          "future": false,
+          "reportId": "goal-2026-20260827",
+          "blockId": "b0093"
+        },
+        {
+          "label": "Windows 验收后",
+          "title": "macOS + iOS",
+          "result": "构建、签名、实机连接与发布资格分别关闭",
+          "future": false,
+          "reportId": "goal-2026-20260827",
+          "blockId": "b0096"
+        },
+        {
+          "label": "苹果平台阶段后",
+          "title": "Linux",
+          "result": "最后进入 Linux 发布验收",
+          "future": false,
+          "reportId": "goal-2026-20260827",
+          "blockId": "b0099"
+        }
+      ],
+      "goals": [
+        {
+          "id": "G10",
+          "title": "智能路由完整范围",
+          "status": "开发与验证中",
+          "statusGroup": "progress",
+          "evidence": "客户端核心已迁移至 SkyTunnel；config 加载及 Trojan、VLESS、ShadowTLS 手动连线已确认，自动分组仍在开发。第10阶段没有 staging 验收记录。",
+          "nextAction": "完成自动分组与 Shadowsocks 补测，产出可追溯 APK、测试运行和测试环境验收记录。",
+          "deadline": "2026 年 10 月",
+          "reportId": "goal-2026-20260827",
+          "blockId": "b0105"
+        },
+        {
+          "id": "G12",
+          "title": "支付接口与支付闭环",
+          "status": "待调试",
+          "statusGroup": "planned",
+          "evidence": "套餐、确认订单、优惠券与支付通道基础页面已存在；客户端支付接口尚无完成与端到端验收记录。支付网关前置事项由 Roy 负责。",
+          "nextAction": "完成客户端支付接口调试、成功与失败路径回归、订单状态核对，并作为 Android 首发门槛关闭。",
+          "deadline": "Android 首发前 完成后才进入发布验收",
+          "reportId": "goal-2026-20260827",
+          "blockId": "b0107"
+        },
+        {
+          "id": "G13",
+          "title": "多平台顺序发布",
+          "status": "待发布",
+          "statusGroup": "planned",
+          "evidence": "应用已有跨屏幕与桌面布局基础，但第10阶段没有 Android、Windows、macOS、iOS 或 Linux 发布验收记录。",
+          "nextAction": "严格按 Android → Windows → macOS+iOS → Linux 推进；上一阶段验收关闭后才启动下一阶段发布。",
+          "deadline": "按平台门控 每个平台独立构建与验收",
+          "reportId": "goal-2026-20260827",
+          "blockId": "b0109"
+        }
+      ]
+    },
+    "shared": {
+      "label": "共享管理能力",
+      "statusLabels": {
+        "done": "已完成",
+        "progress": "进行中",
+        "planned": "待开发"
+      },
+      "phases": [],
+      "goals": [
+        {
+          "id": "G1",
+          "title": "证据化 AI 报告助手 POC",
+          "status": "上线准备中",
+          "statusGroup": "progress",
+          "evidence": "该能力不归属任一产品线。已实现当前报告隔离、本地证据检索、可验证引用、对话与摘要边界；自动检索评测与回归测试均为 100%。",
+          "nextAction": "完成 Worker 与报告站点发布，并通过生产环境的摘要、数字问答、拒答、引用深链及移动端验收。",
+          "deadline": "POC 首发 生产验收后关闭",
+          "reportId": "goal-2026-20260827",
+          "blockId": "b0115"
+        }
+      ]
+    }
+  },
+  "blockers": [
+    {
+      "reportId": "goal-2026-20260827",
+      "blockId": "b0045",
+      "reportDate": "2026-08-27",
+      "section": "生产整合与 iOS 合规重建",
+      "text": "第10阶段 生产整合与 iOS 合规重建 8 月 12 日生产环境整合完成 iOS 干净源码工程及 VPN 主路径建立 数据库迁移与 CI/CD 权责分离完成测试环境验证 边界：iOS 真机、TestFlight 及两项协议端到端验收尚未关闭"
+    },
+    {
+      "reportId": "goal-2026-20260827",
+      "blockId": "b0075",
+      "reportDate": "2026-08-27",
+      "section": "Arrowfish 目标清单",
+      "text": "G5 节点部署与管理自动化 基础已交付，闭环进行中 已具备后台一键安装、全擦回收、12 台并行升级、到期释放和健康状态机；第10阶段两项协议问题完成源码修复，但测试环境、BO 与客户端端到端关闭数仍为 0，供应商自动采购也未完成。 先关闭协议与 BO 验收，再把供应商 API／受控浏览器采购接入同一任务闭环。 年底前 采购至配发闭环"
+    },
+    {
+      "reportId": "goal-2026-20260827",
+      "blockId": "b0120",
+      "reportDate": "2026-08-27",
+      "section": "Arrowfish",
+      "text": "两项协议问题已有源码修复，但测试环境、BO 与客户端实连记录仍未完整关闭。"
+    },
+    {
+      "reportId": "goal-2026-20260827",
+      "blockId": "b0121",
+      "reportDate": "2026-08-27",
+      "section": "Arrowfish",
+      "text": "G5 端到端验收仍未关闭 两项协议问题已有源码修复，但测试环境、BO 与客户端实连记录仍未完整关闭。"
+    },
+    {
+      "reportId": "goal-2026-20260827",
+      "blockId": "b0124",
+      "reportDate": "2026-08-27",
+      "section": "Arrowfish",
+      "text": "干净源码与 VPN 主路径已实现；TestFlight、签名和真机连接验收仍未完成。"
+    },
+    {
+      "reportId": "goal-2026-20260827",
+      "blockId": "b0125",
+      "reportDate": "2026-08-27",
+      "section": "Arrowfish",
+      "text": "G11 iOS 干净工程验证中 干净源码与 VPN 主路径已实现；TestFlight、签名和真机连接验收仍未完成。"
+    },
+    {
+      "reportId": "goal-2026-20260827",
+      "blockId": "b0128",
+      "reportDate": "2026-08-27",
+      "section": "FFF · Lex 实时口径截至第10阶段",
+      "text": "G10 核心迁移完成，验收未关闭 三协议手动连线已确认，自动分组仍在开发；第10阶段没有 staging 验收记录。"
+    },
+    {
+      "reportId": "goal-2026-20260827",
+      "blockId": "b0131",
+      "reportDate": "2026-08-27",
+      "section": "FFF · Lex 实时口径截至第10阶段",
+      "text": "客户端支付接口调试尚未完成，必须在 Android 首发前完成成功、失败与订单状态回归。"
+    },
+    {
+      "reportId": "goal-2026-20260827",
+      "blockId": "b0132",
+      "reportDate": "2026-08-27",
+      "section": "FFF · Lex 实时口径截至第10阶段",
+      "text": "G12 支付闭环仍是首发缺口 客户端支付接口调试尚未完成，必须在 Android 首发前完成成功、失败与订单状态回归。"
+    },
+    {
+      "reportId": "goal-2026-20260827",
+      "blockId": "b0151",
+      "reportDate": "2026-08-27",
+      "section": "订阅续费闭环",
+      "text": "第10阶段结论 续费／重复付费用户贡献周收入 83.1%，说明续费可靠性是直接的收入保护点；第10阶段没有订阅闭环开发完成或验收记录。"
+    },
+    {
+      "reportId": "goal-2026-20260827",
+      "blockId": "b0159",
+      "reportDate": "2026-08-27",
+      "section": "节点部署与管理自动化",
+      "text": "ARROWFISH · 第10阶段细节 03 验收未关闭 节点部署与管理自动化 第10阶段证据、供应商采购缺口与后续目标"
+    },
+    {
+      "reportId": "goal-2026-20260827",
+      "blockId": "b0164",
+      "reportDate": "2026-08-27",
+      "section": "节点部署与管理自动化",
+      "text": "协议与 BO 验收 第10阶段发现 2 项高优先级协议问题，源码修复 2 项，端到端验收关闭 0 项。 补齐测试环境 bootstrap、BO、Android 与 FFF 实连记录后关闭。 验收未关闭"
+    },
+    {
+      "reportId": "sprint-10-full",
+      "blockId": "b0008",
+      "reportDate": "2026-08-26",
+      "section": "一、本阶段关键决策与状态",
+      "text": "iOS 采用干净源码与自研 SkyTunnel 重建 测试中 已移除继承的 GPL 代码与不透明二进制依赖；尚未完成 TestFlight 与真机验收。"
+    },
+    {
+      "reportId": "sprint-10-full",
+      "blockId": "b0021",
+      "reportDate": "2026-08-26",
+      "section": "月度增长与收入",
+      "text": "8 月 12 日整合后的首周注册为 1,026、付费金额为 CNY 4,535.49；次周注册回落至 953，但付费金额进一步升至 CNY 4,890.01。该时间相关性值得持续观察，但不能证明增长由上线单独造成，因为 97.6% 的新注册仍缺少营销归因。"
+    },
+    {
+      "reportId": "sprint-10-full",
+      "blockId": "b0025",
+      "reportDate": "2026-08-26",
+      "section": "月度增长与收入",
+      "text": "iOS 合规 建立无继承 Git 历史、无 GPL 源码的干净工程，继续收敛依赖与 VPN 主路径。 仍处于构建与验证口径，不能描述为可发布。"
+    },
+    {
+      "reportId": "sprint-10-full",
+      "blockId": "b0043",
+      "reportDate": "2026-08-26",
+      "section": "四、关键时间节点",
+      "text": "8/24–8/26 两项协议问题均已有源码修复；测试环境与客户端端到端验收仍未关闭。"
+    },
+    {
+      "reportId": "sprint-10-full",
+      "blockId": "b0046",
+      "reportDate": "2026-08-26",
+      "section": "五、上线计划与后端改动特殊挑战",
+      "text": "Android 测试中 生产版本可升级；新 bootstrap 会话安全改动尚未发布。 多进程、进程死亡、失败注入与三协议真机矩阵。"
+    },
+    {
+      "reportId": "sprint-10-full",
+      "blockId": "b0066",
+      "reportDate": "2026-08-26",
+      "section": "七、阻塞与延迟",
+      "text": "iOS 缺少完整 Xcode / 真机验收 不能描述为可发布 在 macOS Runner 完成构建、签名、TestFlight 与真机连接矩阵。"
+    },
+    {
+      "reportId": "sprint-10-full",
+      "blockId": "b0067",
+      "reportDate": "2026-08-26",
+      "section": "七、阻塞与延迟",
+      "text": "两项高优先级协议问题未关闭 Android 路线显示与 BO 节点管理仍缺完整验收 源码修复已完成，补齐测试环境 bootstrap、BO 与 Android 实连记录后关闭。"
+    },
+    {
+      "reportId": "sprint-9-full",
+      "blockId": "b0006",
+      "reportDate": "2026-08-07",
+      "section": "一、本阶段关键决策与状态",
+      "text": "最高优先 8/12 合并上线窗口 同一天完成两件事： 凌晨 04:55 生产环境单机整合切换， 早上 5 点 Android 新版本上线（已于 8/4 通过 Google 审核）。准备工作 8/6–8/11 进行，不触碰线上请求路径、不影响现有用户。维护公告已于 8/4 同步上线至官网与手机 App。 窗口已定。切换前须完成备份还原演练与时间量测，任一准备阶段未完成即构成不切换条件。"
+    },
+    {
+      "reportId": "sprint-8-full",
+      "blockId": "b0048",
+      "reportDate": "2026-07-24",
+      "section": "五、上线计划与后端改动特殊挑战",
+      "text": "Windows（自研 Rust 版） 签名已打通，待发布门控 体积与签名两项前置条件均已具备；正式环境签名与 QA 安装／连接／更新／卸载验证尚未完成，仍不具备对外发布条件。"
+    },
+    {
+      "reportId": "sprint-7-full",
+      "blockId": "b0049",
+      "reportDate": "2026-07-10",
+      "section": "五、Arrowfish 客户端进展与后端改动特殊挑战",
+      "text": "Windows（新版，Rust/Tauri 全面重写） 未对外发布 打包体积已测量完成，仍需完成代码签名与 QA 安装/连接/更新/卸载验证后才具备对外发布条件。"
+    },
+    {
+      "reportId": "sprint-7-full",
+      "blockId": "b0079",
+      "reportDate": "2026-07-10",
+      "section": "七项协议实现方式 — 原创代码 vs. 开源函式库依赖",
+      "text": "七项协议均无 sing-box 程式码、无 GPL 依赖；仅 REALITY / ShadowTLS 的 TLS 指纹伪装与 Hysteria2 / TUIC 的 QUIC 传输层引用了业界通用的 MIT/BSD 授权函式库（标准库无法实现的部分），不影响闭源商业分发。"
+    },
+    {
+      "reportId": "sprint-7-summary",
+      "blockId": "b0020",
+      "reportDate": "2026-07-10",
+      "section": "二、核心结论",
+      "text": "Arrowfish 客户端 Android 持续迭代（3.8.5→3.8.10）；Windows 新版尚未对外发布，等待签名与 QA。"
+    },
+    {
+      "reportId": "sprint-4-6-full",
+      "blockId": "b0026",
+      "reportDate": "2026-06-26",
+      "section": "二、本阶段关键成果",
+      "text": "FFF FFF staging website 已部署到 staging server；已收到完整需求差异，但尚未完成拆解。 Staging 站点用于前期联调，Sprint 7 再拆完整 FFF 需求与后端排期。"
+    },
+    {
+      "reportId": "sprint-4-6-full",
+      "blockId": "b0037",
+      "reportDate": "2026-06-26",
+      "section": "四、成本节省与 AWS 投入口径",
+      "text": "本节为管理层主口径：Azure 与 LisaHost 是直接成本下降；AWS 是替代已不可继续使用的本地 GitLab、runner 和生产网站，并新增 CI/CD 与日志观测能力的平台投入，不能简单合并成直接节省。"
+    },
+    {
+      "reportId": "sprint-4-6-full",
+      "blockId": "b0090",
+      "reportDate": "2026-06-26",
+      "section": "六、基础设施、安全与访问控制",
+      "text": "Windows 旧签名链路失效 新版公开发布会出现未知发布者或不可签名风险。 待确认：需要云签名或新的有效证书。"
+    },
+    {
+      "reportId": "sprint-4-6-full",
+      "blockId": "b0131",
+      "reportDate": "2026-06-26",
+      "section": "十一、风险与观察项",
+      "text": "FFF 需求 待拆解 ：需求刚收到，不能直接承诺完整上线日。 Sprint 7 输出正式时间线与任务拆分。"
+    },
+    {
+      "reportId": "sprint-3-full",
+      "blockId": "b0009",
+      "reportDate": "2026-05-10",
+      "section": "一、需要知悉与配合事项",
+      "text": "3 专属线路（专线）续费缺口仍未关闭 — 现有付费客户专线到期后必须重新购买，节点会被重新分配，导致 IP 与路由习惯被打断。第3阶段已完成「到期自动释放节点回库存」的清理动作； 「自动续费扣款 + 保留原节点绑定」 列入第4阶段 P1，与 FFF 通用支付模块共用。是付费用户流失风险的核心修复点。"
+    },
+    {
+      "reportId": "sprint-3-full",
+      "blockId": "b0011",
+      "reportDate": "2026-05-10",
+      "section": "一、需要知悉与配合事项",
+      "text": "iOS HiYou v1.3.0 — Apple 开发者账号被标记 / 封禁， 无法发布任何更新 。后端必须对 v1.3.0 的接口结构保持向后兼容"
+    },
+    {
+      "reportId": "sprint-3-full",
+      "blockId": "b0013",
+      "reportDate": "2026-05-10",
+      "section": "一、需要知悉与配合事项",
+      "text": "5 iOS / Windows 老客户端冻结 — 持续拖慢节奏的真实约束 （运营层面已知）。两个生产端共用一套后端，改任何接口都要兼顾它们： iOS HiYou v1.3.0 — Apple 开发者账号被标记 / 封禁， 无法发布任何更新 。后端必须对 v1.3.0 的接口结构保持向后兼容 Windows skytree_pc v2.2.71 — WoSign 实体物理设备代码签名证书已过期 ，新版可以编但 无法签名 → 安装会被 SmartScreen 阻断 。需要 (a) 研究 WoSign 续签流程（实体 USB Token，签发 5–15 个工作日）+ (b) 迁移到 云代码签名 （摆脱物理设备依赖，CI 自动签，但需重走 EV 验证 1–3 周） 实际拖累：后端 / 管理后台 / API / 数据库 schema 任何一处改动都需 +~30% 设计与测试开销 跑兼容矩阵。详见「后端改动的特殊挑战」。 解锁前请在产能预估中保留这部分税负 。"
+    },
+    {
+      "reportId": "sprint-3-full",
+      "blockId": "b0047",
+      "reportDate": "2026-05-10",
+      "section": "C. 基础设施 — 数据层 + 节点层 + 路由层",
+      "text": "读副本接入 读副本基础设施第2阶段已搭好， 后端从未使用过 ，所有读都打主库 客户端只读路径（产品 / 用户 / 抽奖 / FAQ / 反馈 / 优惠券 / 订单）切到读副本"
+    },
+    {
+      "reportId": "sprint-3-full",
+      "blockId": "b0111",
+      "reportDate": "2026-05-10",
+      "section": "五、堆灭的风险与滥用（接手时存在 → 本阶段堵住）",
+      "text": "读副本「有但没用」 主从读副本基础设施第2阶段就已存在， 后端从未真正使用 ，所有读都打主库 — 主库压力 + 写超时无法收紧 客户端只读路径（产品 / 用户 / 抽奖 / FAQ / 反馈 / 优惠券 / 订单）切到读副本"
+    },
+    {
+      "reportId": "sprint-3-full",
+      "blockId": "b0160",
+      "reportDate": "2026-05-10",
+      "section": "后端改动的特殊挑战（多客户端兼容约束）— 持续拖慢节奏的真实税负",
+      "text": "iOS HiYou SSH v1.3.0（生产 · 冻结） Apple 开发者账号 被标记 / 封禁 ，无法发布任何更新版本 后端任意接口都不能破坏 v1.3.0 的请求 / 响应结构；新增字段必须可选；移除字段或改语义直接砍掉这部分用户的服务"
+    },
+    {
+      "reportId": "sprint-3-full",
+      "blockId": "b0166",
+      "reportDate": "2026-05-10",
+      "section": "WoSign 详细说明",
+      "text": "过渡期内积压的 Windows 端 bug 修复无法发布"
+    },
+    {
+      "reportId": "sprint-3-full",
+      "blockId": "b0167",
+      "reportDate": "2026-05-10",
+      "section": "WoSign 详细说明",
+      "text": "需要做的事（按估时排序）： 研究 WoSign 续签流程与现行成本（实体证书签发周期通常 5-15 个工作日） 迁移到云代码签名 （Cloud Code Signing：Azure / GCP / DigiCert KeyLocker / SSL.com 等）— 不再依赖物理 Token，CI 可自动签名；但需要重新走 EV 验证流程（机构身份核验 1-3 周） 过渡期内积压的 Windows 端 bug 修复无法发布"
+    },
+    {
+      "reportId": "sprint-3-full",
+      "blockId": "b0219",
+      "reportDate": "2026-05-10",
+      "section": "遗留基础设施安全缺口（接手清理项）",
+      "text": "读副本接入 （接手以来「有但没用」） 主从读副本基础设施第2阶段就已存在， 后端从未真正使用 ，所有读都打主库 主库压力 + 写超时无法收紧 ✅ 本阶段把客户端只读路径切到读副本（产品 / 用户 / 抽奖 / FAQ / 反馈 / 优惠券 / 订单）"
+    },
+    {
+      "reportId": "sprint-3-full",
+      "blockId": "b0306",
+      "reportDate": "2026-05-10",
+      "section": "代码瘦身与可读性提升",
+      "text": "移除「死代码」（无业务价值的历史包袱） ：utilcodex 工具库（5 MB + 80 个传递依赖，仅用了 7 个 API，其余全是垃圾）；Compose 框架运行时（仅在 2 页用过，付出运行时成本却无价值）；三星渠道脚手架（从未上架）；Kotlin 计费扩展层（一层无意义封装）；上一轮未上线的抽奖在线时长方案；冗余的设备 ID 初始化分支；过期数据类与未使用的观察者；移动端心跳轮询（已被节点驱动方案替换）；将 baseLib 与 proxyLib 模块合并到 app —— 减少 Gradle 配置复杂度。"
+    },
+    {
+      "reportId": "sprint-3-full",
+      "blockId": "b0456",
+      "reportDate": "2026-05-10",
+      "section": "历史飘移修正（接手项目带过来的问题）",
+      "text": "外部出站签名过滤未完成迁移 → 迁移完成；避免画出无上游的路由"
+    },
+    {
+      "reportId": "sprint-3",
+      "blockId": "b0053",
+      "reportDate": "2026-05-10",
+      "section": "二、需要知悉与配合",
+      "text": "iOS HiYou v1.3.0 ：Apple 账号被标记 / 封禁，无法发布更新 → 后端必须保持向后兼容"
+    },
+    {
+      "reportId": "sprint-3",
+      "blockId": "b0056",
+      "reportDate": "2026-05-10",
+      "section": "二、需要知悉与配合",
+      "text": "iOS / Windows 老客户端 — 持续抽走产能的真实税负 （运营 / 商务议程）： iOS HiYou v1.3.0 ：Apple 账号被标记 / 封禁，无法发布更新 → 后端必须保持向后兼容 Windows skytree_pc v2.2.71 ： WoSign 实体物理设备签名证书过期 → 新版可以编但 无法签名 → 用户安装被 SmartScreen 阻断 。需要 (a) 研究 WoSign 续签 + (b) 迁移到云代码签名（CI 自动签） 每个后端 / API 改动需 +~30% 兼容矩阵设计 + 测试开销 — 每个 Sprint 产能预估必须计入"
+    },
+    {
+      "reportId": "sprint-3",
+      "blockId": "b0124",
+      "reportDate": "2026-05-10",
+      "section": "数据库 / 后端基础",
+      "text": "读副本真正接入 （基础设施第2阶段已有，但 后端从未使用 过；本阶段把客户端只读路径切到读副本）"
+    },
+    {
+      "reportId": "sprint-2-w2",
+      "blockId": "b0039",
+      "reportDate": "2026-04-24",
+      "section": "安全与权限管理",
+      "text": "SSH 访问未统一使用 PEM 密钥 部分已 PEM 化，第3阶段全面铺开"
+    },
+    {
+      "reportId": "sprint-2-w2",
+      "blockId": "b0040",
+      "reportDate": "2026-04-24",
+      "section": "安全与权限管理",
+      "text": "读写分离副本未被使用（主库承担全部流量） ✅ 本阶段已修复 ，100% 读取走只读副本"
+    },
+    {
+      "reportId": "sprint-2-summary",
+      "blockId": "b0097",
+      "reportDate": "2026-04-24",
+      "section": "接手时发现的安全 / 基础设施隐患（持续整改）",
+      "text": "SSH 访问未统一使用 PEM 密钥 密码登录易被暴力破解；密钥泄露时无法精细回收 部分已 PEM 化（如 AWS 台湾 GitLab 服务器）；第3阶段全面铺开"
+    },
+    {
+      "reportId": "sprint-2-summary",
+      "blockId": "b0098",
+      "reportDate": "2026-04-24",
+      "section": "接手时发现的安全 / 基础设施隐患（持续整改）",
+      "text": "读写分离副本未被使用 主库承担全部读写流量，故障 / 性能问题影响面大 ✅ 本阶段已修复 — 100% 客户端读取流量已走只读副本"
+    },
+    {
+      "reportId": "sprint-0-1-summary",
+      "blockId": "b0026",
+      "reportDate": "2026-04-10",
+      "section": "一-B、Sprint 1 成果分类",
+      "text": "读取副本从未使用 → GET 请求全量分流至副本"
+    },
+    {
+      "reportId": "sprint-0",
+      "blockId": "b0028",
+      "reportDate": "2026-04-03",
+      "section": "遗留技术债务",
+      "text": "基础设施 读取副本数据库从未使用（仅1次连接）。无故障转移。两个冗余代理服务器应合并。 高 开发中"
+    }
+  ]
+}

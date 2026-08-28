@@ -13828,951 +13828,1280 @@
       "name": "Arrowfish、FFF 与共享管理能力 · 截至第10阶段的独立目标与路线 · 2026-08-27",
       "date": "2026-08-27",
       "file": "Stakeholder/Goal-2026/20260827_goals.html",
-      "version": "ef705216914df6a7",
+      "version": "c65aceca6ad22a79",
       "blocks": [
         {
           "id": "b0001",
           "section": "Report overview",
           "type": "heading",
-          "line": 420,
+          "line": 515,
           "text": "Arrowfish、FFF 与共享管理能力 2026 目标与路线"
         },
         {
           "id": "b0002",
           "section": "Report overview",
           "type": "p",
-          "line": 422,
+          "line": 517,
           "text": "产品进展截至第10阶段（2026-08-26）· 共享能力更新至 2026-08-28"
         },
         {
           "id": "b0003",
           "section": "Report overview",
           "type": "p",
-          "line": 435,
+          "line": 530,
           "text": "项目 01 · VPN · 资料截至第10阶段"
         },
         {
           "id": "b0004",
           "section": "Arrowfish 2026 路线图",
           "type": "heading",
-          "line": 436,
+          "line": 531,
           "text": "Arrowfish 2026 路线图"
         },
         {
           "id": "b0005",
           "section": "Arrowfish 2026 路线图",
           "type": "p",
-          "line": 437,
-          "text": "第10阶段及以前的交付进度，与第10阶段之后的目标分开呈现；不混入 FFF 的计划。"
+          "line": 532,
+          "text": "先按阶段回顾第0–10阶段已落地的能力，再单列第10阶段之后的收口与目标；不混入 FFF 的计划。"
         },
         {
           "id": "b0006",
-          "section": "核心能力已交付",
+          "section": "接手止血与收入恢复",
           "type": "heading",
-          "line": 445,
-          "text": "核心能力已交付"
+          "line": 541,
+          "text": "接手止血与收入恢复"
         },
         {
           "id": "b0007",
-          "section": "核心能力已交付",
-          "type": "p",
-          "line": 446,
-          "text": "G6 SkyTunnel G7 三协议中国区验证"
+          "section": "接手止血与收入恢复",
+          "type": "li",
+          "line": 543,
+          "text": "Samsung IAP、AdMob 恢复生产配置"
         },
         {
           "id": "b0008",
-          "section": "核心能力已交付",
+          "section": "接手止血与收入恢复",
           "type": "li",
-          "line": 442,
-          "text": "第1–10阶段累计 核心能力已交付 G6 SkyTunnel G7 三协议中国区验证 结果：2 项核心交付完成"
+          "line": 544,
+          "text": "USDTPay 从 Java 黑盒重写为 Go 服务"
         },
         {
           "id": "b0009",
-          "section": "关闭当前验证缺口",
-          "type": "heading",
-          "line": 453,
-          "text": "关闭当前验证缺口"
+          "section": "接手止血与收入恢复",
+          "type": "li",
+          "line": 545,
+          "text": "无日志、安全与 Android 稳定性集中修复"
         },
         {
           "id": "b0010",
-          "section": "关闭当前验证缺口",
-          "type": "p",
-          "line": 454,
-          "text": "G11 iOS 构建与真机验收 G1 营销归因缺口 G5 协议与 BO 端到端验证"
+          "section": "接手止血与收入恢复",
+          "type": "li",
+          "line": 538,
+          "text": "第0–1阶段 接手止血与收入恢复 Samsung IAP、AdMob 恢复生产配置 USDTPay 从 Java 黑盒重写为 Go 服务 无日志、安全与 Android 稳定性集中修复 结果：处理 49+ 项问题，恢复 2 条收入通道"
         },
         {
           "id": "b0011",
-          "section": "关闭当前验证缺口",
-          "type": "li",
-          "line": 450,
-          "text": "第10阶段收口 关闭当前验证缺口 G11 iOS 构建与真机验收 G1 营销归因缺口 G5 协议与 BO 端到端验证 口径：源码完成不等于部署或验收完成"
+          "section": "营收、反滥用与体验加固",
+          "type": "heading",
+          "line": 553,
+          "text": "营收、反滥用与体验加固"
         },
         {
           "id": "b0012",
-          "section": "节点采购自动化",
-          "type": "heading",
-          "line": 461,
-          "text": "节点采购自动化"
+          "section": "营收、反滥用与体验加固",
+          "type": "li",
+          "line": 555,
+          "text": "专属 IP、余额支付与续费日期问题修复"
         },
         {
           "id": "b0013",
-          "section": "节点采购自动化",
-          "type": "p",
-          "line": 462,
-          "text": "G5 API + 受控 AI 浏览器 Agent 缺货时自动购买 VM／IP"
+          "section": "营收、反滥用与体验加固",
+          "type": "li",
+          "line": 556,
+          "text": "五层反滥用防护落地"
         },
         {
           "id": "b0014",
-          "section": "节点采购自动化",
+          "section": "营收、反滥用与体验加固",
           "type": "li",
-          "line": 458,
-          "text": "下一优先阶段 节点采购自动化 G5 API + 受控 AI 浏览器 Agent 缺货时自动购买 VM／IP 目标：采购后自动进入 BO 设置与配发"
+          "line": 557,
+          "text": "读写分离与自动测试构建落地"
         },
         {
           "id": "b0015",
-          "section": "关闭 Arrowfish 剩余目标",
-          "type": "heading",
-          "line": 469,
-          "text": "关闭 Arrowfish 剩余目标"
+          "section": "营收、反滥用与体验加固",
+          "type": "li",
+          "line": 550,
+          "text": "第2阶段 营收、反滥用与体验加固 专属 IP、余额支付与续费日期问题修复 五层反滥用防护落地 读写分离与自动测试构建落地 结果：30+ 项缺陷、20+ 项体验优化，APK 缩减 28.7%"
         },
         {
           "id": "b0016",
-          "section": "关闭 Arrowfish 剩余目标",
-          "type": "p",
-          "line": 470,
-          "text": "G1–G2 归因与续费 G4 多平台支付 G9／G11 主体迁移与 iOS"
+          "section": "后端、基础设施与节点自动化",
+          "type": "heading",
+          "line": 565,
+          "text": "后端、基础设施与节点自动化"
         },
         {
           "id": "b0017",
-          "section": "关闭 Arrowfish 剩余目标",
+          "section": "后端、基础设施与节点自动化",
           "type": "li",
-          "line": 466,
-          "text": "2026 年底前 关闭 Arrowfish 剩余目标 G1–G2 归因与续费 G4 多平台支付 G9／G11 主体迁移与 iOS 按优先级逐项关闭并分别验收"
+          "line": 567,
+          "text": "免费配额改为节点权威记账"
         },
         {
           "id": "b0018",
-          "section": "关闭 Arrowfish 剩余目标",
-          "type": "p",
-          "line": 480,
-          "text": "Arrowfish · 目标清单"
+          "section": "后端、基础设施与节点自动化",
+          "type": "li",
+          "line": 568,
+          "text": "自动备份、读副本与旧 ProxyBackend 退场"
         },
         {
           "id": "b0019",
-          "section": "Arrowfish 目标清单",
-          "type": "heading",
-          "line": 481,
-          "text": "Arrowfish 目标清单"
+          "section": "后端、基础设施与节点自动化",
+          "type": "li",
+          "line": 569,
+          "text": "后台一键安装、回收、批量升级与健康管理"
         },
         {
           "id": "b0020",
-          "section": "Arrowfish 目标清单",
-          "type": "p",
-          "line": 482,
-          "text": "状态与最新进展只采用第10阶段及以前的证据；下一里程碑和目标时间属于后续计划。"
+          "section": "后端、基础设施与节点自动化",
+          "type": "li",
+          "line": 562,
+          "text": "第3阶段 后端、基础设施与节点自动化 免费配额改为节点权威记账 自动备份、读副本与旧 ProxyBackend 退场 后台一键安装、回收、批量升级与健康管理 结果：7 台跨区域节点 44 秒完成回收，0 失败"
         },
         {
           "id": "b0021",
-          "section": "Arrowfish 目标清单",
-          "type": "table-row",
-          "line": 494,
-          "text": "目标 状态 最新进展 下一里程碑 目标时间"
+          "section": "发布体系与运营能力收敛",
+          "type": "heading",
+          "line": 577,
+          "text": "发布体系与运营能力收敛"
         },
         {
           "id": "b0022",
-          "section": "Arrowfish 目标清单",
-          "type": "table-row",
-          "line": 496,
-          "text": "增长与收入"
+          "section": "发布体系与运营能力收敛",
+          "type": "li",
+          "line": 579,
+          "text": "Android、后端与 CI/CD 发布链路现代化"
         },
         {
           "id": "b0023",
-          "section": "Arrowfish 目标清单",
-          "type": "table-row",
-          "line": 497,
-          "text": "G1 广告归因与付费分析 缺口已确认 第10阶段确认 97.6% 的新注册缺少营销归因，现有数据无法判断增长来源。 补齐产品页、套餐、结账、支付回调和渠道埋点，并建立 D1／D7／D30 转化视图。 年底前 D1／D7／D30"
+          "section": "发布体系与运营能力收敛",
+          "type": "li",
+          "line": 580,
+          "text": "动态活动及 BO 配置能力落地"
         },
         {
           "id": "b0024",
-          "section": "Arrowfish 目标清单",
-          "type": "table-row",
-          "line": 498,
-          "text": "G2 套餐续费与订阅管理 待开发 第10阶段确认续费／重复付费贡献周收入 83.1%；尚无订阅闭环完成记录。 确定提前续费、自动续费与订阅状态同步规则，再进入开发和验收。 年底前 提前续费、自动续费、订阅管理"
+          "section": "发布体系与运营能力收敛",
+          "type": "li",
+          "line": 581,
+          "text": "Arrowfish 新官网进入 staging"
         },
         {
           "id": "b0025",
-          "section": "Arrowfish 目标清单",
-          "type": "table-row",
-          "line": 499,
-          "text": "G3 百度广告新网站 Staging 开发中 新设计已进入 staging 开发。 完成验收与发布；广告归因由 G1 独立验收。 2026 年 8 月"
+          "section": "发布体系与运营能力收敛",
+          "type": "li",
+          "line": 574,
+          "text": "第4–6阶段 发布体系与运营能力收敛 Android、后端与 CI/CD 发布链路现代化 动态活动及 BO 配置能力落地 Arrowfish 新官网进入 staging 结果：可核验云资源成本节省约 USD 612.21／月"
         },
         {
           "id": "b0026",
-          "section": "Arrowfish 目标清单",
-          "type": "table-row",
-          "line": 500,
-          "text": "G4 Siqo 多平台支付 部分完成 Android staging 接入完成。 Windows 与其他平台逐一接入、回归和发布。 待排期 按平台分别验收"
+          "section": "中国网络与跨平台基础",
+          "type": "heading",
+          "line": 591,
+          "text": "中国网络与跨平台基础"
         },
         {
           "id": "b0027",
-          "section": "Arrowfish 目标清单",
-          "type": "table-row",
-          "line": 502,
-          "text": "基础设施与 VPN 核心"
+          "section": "中国网络与跨平台基础",
+          "type": "li",
+          "line": 593,
+          "text": "四天交付中国网络协议测试工具"
         },
         {
           "id": "b0028",
-          "section": "Arrowfish 目标清单",
-          "type": "table-row",
-          "line": 503,
-          "text": "G5 节点部署与管理自动化 基础存在，验收未关闭 供应商概览与部分节点自动化已有历史基础；第10阶段两项协议问题完成源码修复，但测试环境、BO 与客户端端到端关闭数仍为 0。供应商自动采购未完成。 先关闭协议与 BO 验收，再把供应商 API／受控浏览器采购接入同一任务闭环。 年底前 采购至配发闭环"
+          "section": "中国网络与跨平台基础",
+          "type": "li",
+          "line": 594,
+          "text": "七项协议全部通过测试"
         },
         {
           "id": "b0029",
-          "section": "Arrowfish 目标清单",
-          "type": "table-row",
-          "line": 504,
-          "text": "G6 SkyTunnel 自研隧道 已完成 自研 VPN 隧道核心已交付。 持续回归、客户端整合与版本维护。 持续维护"
+          "section": "中国网络与跨平台基础",
+          "type": "li",
+          "line": 595,
+          "text": "Android、Windows 与节点协议配置统一"
         },
         {
           "id": "b0030",
-          "section": "Arrowfish 目标清单",
-          "type": "table-row",
-          "line": 505,
-          "text": "G7 三协议支持 已完成并验证 三套协议已完成，并通过中国网络环境 QA。 纳入各客户端持续回归。 持续维护"
+          "section": "中国网络与跨平台基础",
+          "type": "li",
+          "line": 588,
+          "text": "第7阶段 中国网络与跨平台基础 四天交付中国网络协议测试工具 七项协议全部通过测试 Android、Windows 与节点协议配置统一 结果：Windows 安装包缩减 82.4%，确定 SkyTunnel 自研路线"
         },
         {
           "id": "b0031",
-          "section": "Arrowfish 目标清单",
-          "type": "table-row",
-          "line": 506,
-          "text": "G8 Unbound 私有 DNS 开发中 自研私有 DNS 解析器开发中。 完成实现、集成及验证。 2026 年 8 月"
+          "section": "SkyTunnel 与连接稳定性",
+          "type": "heading",
+          "line": 603,
+          "text": "SkyTunnel 与连接稳定性"
         },
         {
           "id": "b0032",
-          "section": "Arrowfish 目标清单",
-          "type": "table-row",
-          "line": 508,
-          "text": "产品与平台"
+          "section": "SkyTunnel 与连接稳定性",
+          "type": "li",
+          "line": 605,
+          "text": "Android 完成 SkyTunnel 替代验证"
         },
         {
           "id": "b0033",
-          "section": "Arrowfish 目标清单",
-          "type": "table-row",
-          "line": 509,
-          "text": "G9 新公司主体迁移 进行中 Google 平台完成；华为、Samsung、OPPO 进行中。 逐个平台关闭主体、账号及发布资格迁移。 待排期 按平台分别验收"
+          "section": "SkyTunnel 与连接稳定性",
+          "type": "li",
+          "line": 606,
+          "text": "Windows 接入相同共享核心"
         },
         {
           "id": "b0034",
-          "section": "Arrowfish 目标清单",
-          "type": "table-row",
-          "line": 510,
-          "text": "G11 Arrowfish iOS 重构 构建验证中 第10阶段已建立干净源码工程并实现 VPN 主路径；无签名设备构建通过，但尚无真机连接与 TestFlight 验收。 完成签名描述文件、TestFlight、真机连接及升级回归。 验收门槛关闭后 重新提交"
+          "section": "SkyTunnel 与连接稳定性",
+          "type": "li",
+          "line": 607,
+          "text": "测试环境代码签名链路打通"
         },
         {
           "id": "b0035",
-          "section": "Arrowfish 目标清单",
-          "type": "p",
-          "line": 519,
-          "text": "项目 02 · 新产品 · Lex 实时口径截至第10阶段"
+          "section": "SkyTunnel 与连接稳定性",
+          "type": "li",
+          "line": 600,
+          "text": "第8阶段 SkyTunnel 与连接稳定性 Android 完成 SkyTunnel 替代验证 Windows 接入相同共享核心 测试环境代码签名链路打通 结果：IPv6“已连接但无流量”根因修复并完成真机验收"
         },
         {
           "id": "b0036",
-          "section": "FFF 2026 路线图",
+          "section": "归因、支付与桌面交付",
           "type": "heading",
-          "line": 520,
-          "text": "FFF 2026 路线图"
+          "line": 615,
+          "text": "归因、支付与桌面交付"
         },
         {
           "id": "b0037",
-          "section": "FFF 2026 路线图",
-          "type": "p",
-          "line": 521,
-          "text": "由 Lex 负责，实时口径截止 2026-08-26。这里只呈现第10阶段及以前的 FFF 进度；与 Arrowfish 发布节奏互不影响。"
+          "section": "归因、支付与桌面交付",
+          "type": "li",
+          "line": 617,
+          "text": "后端主导的 Android 投放归因链路完成"
         },
         {
           "id": "b0038",
-          "section": "客户端基础收口",
-          "type": "heading",
-          "line": 529,
-          "text": "客户端基础收口"
+          "section": "归因、支付与桌面交付",
+          "type": "li",
+          "line": 618,
+          "text": "API 从 207 条收敛至 141 条"
         },
         {
           "id": "b0039",
-          "section": "客户端基础收口",
-          "type": "p",
-          "line": 530,
-          "text": "G10 SkyTunnel 核心迁移 客户端功能与交互缺口完成收口"
+          "section": "归因、支付与桌面交付",
+          "type": "li",
+          "line": 619,
+          "text": "Siqo 多链支付进入测试环境"
         },
         {
           "id": "b0040",
-          "section": "客户端基础收口",
+          "section": "归因、支付与桌面交付",
           "type": "li",
-          "line": 526,
-          "text": "第10阶段已完成 客户端基础收口 G10 SkyTunnel 核心迁移 客户端功能与交互缺口完成收口 Lex 实时开发口径；尚不是发布验收"
+          "line": 612,
+          "text": "第9阶段 归因、支付与桌面交付 后端主导的 Android 投放归因链路完成 API 从 207 条收敛至 141 条 Siqo 多链支付进入测试环境 结果：Windows 约 8 MB 测试包交付 QA，构建时间减半"
         },
         {
           "id": "b0041",
-          "section": "Android 首发收口",
+          "section": "生产整合与 iOS 合规重建",
           "type": "heading",
-          "line": 537,
-          "text": "Android 首发收口"
+          "line": 627,
+          "text": "生产整合与 iOS 合规重建"
         },
         {
           "id": "b0042",
-          "section": "Android 首发收口",
-          "type": "p",
-          "line": 538,
-          "text": "G10 自动分组与 Shadowsocks 补测 G12 支付接口与支付闭环"
+          "section": "生产整合与 iOS 合规重建",
+          "type": "li",
+          "line": 629,
+          "text": "8 月 12 日生产环境整合完成"
         },
         {
           "id": "b0043",
-          "section": "Android 首发收口",
+          "section": "生产整合与 iOS 合规重建",
           "type": "li",
-          "line": 534,
-          "text": "当前首发阶段 Android 首发收口 G10 自动分组与 Shadowsocks 补测 G12 支付接口与支付闭环 完成构建、测试环境与端到端验收后发布"
+          "line": 630,
+          "text": "iOS 干净源码工程及 VPN 主路径建立"
         },
         {
           "id": "b0044",
-          "section": "Windows",
-          "type": "heading",
-          "line": 545,
-          "text": "Windows"
+          "section": "生产整合与 iOS 合规重建",
+          "type": "li",
+          "line": 631,
+          "text": "数据库迁移与 CI/CD 权责分离完成测试环境验证"
         },
         {
           "id": "b0045",
-          "section": "Windows",
-          "type": "p",
-          "line": 546,
-          "text": "G13 桌面构建、VPN 主路径、支付与升级回归"
+          "section": "生产整合与 iOS 合规重建",
+          "type": "li",
+          "line": 624,
+          "text": "第10阶段 生产整合与 iOS 合规重建 8 月 12 日生产环境整合完成 iOS 干净源码工程及 VPN 主路径建立 数据库迁移与 CI/CD 权责分离完成测试环境验证 边界：iOS 真机、TestFlight 及两项协议端到端验收尚未关闭"
         },
         {
           "id": "b0046",
-          "section": "Windows",
-          "type": "li",
-          "line": 542,
-          "text": "Android 发布后 Windows G13 桌面构建、VPN 主路径、支付与升级回归 Android 验收关闭后才进入正式发布阶段"
+          "section": "第10阶段之后",
+          "type": "heading",
+          "line": 641,
+          "text": "第10阶段之后"
         },
         {
           "id": "b0047",
-          "section": "macOS + iOS",
-          "type": "heading",
-          "line": 553,
-          "text": "macOS + iOS"
+          "section": "第10阶段之后",
+          "type": "p",
+          "line": 642,
+          "text": "以下均为后续目标，不计入上方已交付成果；按部署、测试与验收证据分别关闭。"
         },
         {
           "id": "b0048",
-          "section": "macOS + iOS",
-          "type": "p",
-          "line": 554,
-          "text": "G13 两个苹果平台在同一阶段推进，分别验收"
+          "section": "关闭第10阶段遗留门槛",
+          "type": "heading",
+          "line": 647,
+          "text": "关闭第10阶段遗留门槛"
         },
         {
           "id": "b0049",
-          "section": "macOS + iOS",
+          "section": "关闭第10阶段遗留门槛",
           "type": "li",
-          "line": 550,
-          "text": "Windows 验收后 macOS + iOS G13 两个苹果平台在同一阶段推进，分别验收 构建、签名、实机连接与发布资格分别关闭"
+          "line": 649,
+          "text": "生产异地备份与恢复演练"
         },
         {
           "id": "b0050",
-          "section": "Linux",
-          "type": "heading",
-          "line": 561,
-          "text": "Linux"
+          "section": "关闭第10阶段遗留门槛",
+          "type": "li",
+          "line": 650,
+          "text": "G11 iOS 构建、签名、TestFlight 与真机验收"
         },
         {
           "id": "b0051",
-          "section": "Linux",
-          "type": "p",
-          "line": 562,
-          "text": "G13 完成 Linux 桌面适配、打包与连接回归"
+          "section": "关闭第10阶段遗留门槛",
+          "type": "li",
+          "line": 651,
+          "text": "G1 营销归因覆盖缺口"
         },
         {
           "id": "b0052",
-          "section": "Linux",
+          "section": "关闭第10阶段遗留门槛",
           "type": "li",
-          "line": 558,
-          "text": "苹果平台阶段后 Linux G13 完成 Linux 桌面适配、打包与连接回归 最后进入 Linux 发布验收"
+          "line": 652,
+          "text": "G5 协议、BO 与 Android 端到端验收"
         },
         {
           "id": "b0053",
-          "section": "Linux",
-          "type": "p",
-          "line": 572,
-          "text": "FFF · 目标清单 · Lex 实时口径截至第10阶段"
+          "section": "关闭第10阶段遗留门槛",
+          "type": "highlight",
+          "line": 645,
+          "text": "当前收口 关闭第10阶段遗留门槛 生产异地备份与恢复演练 G11 iOS 构建、签名、TestFlight 与真机验收 G1 营销归因覆盖缺口 G5 协议、BO 与 Android 端到端验收 口径：源码完成不等于部署或验收完成"
         },
         {
           "id": "b0054",
-          "section": "FFF 目标清单",
+          "section": "节点采购自动化",
           "type": "heading",
-          "line": 573,
-          "text": "FFF 目标清单"
+          "line": 658,
+          "text": "节点采购自动化"
         },
         {
           "id": "b0055",
-          "section": "FFF 目标清单",
-          "type": "p",
-          "line": 574,
-          "text": "FFF 当前有 3 项在途目标；开发完成、构建、测试环境验收与正式发布分别记录，不互相替代。"
+          "section": "节点采购自动化",
+          "type": "li",
+          "line": 660,
+          "text": "G5 供应商 API + 受控 AI 浏览器 Agent"
         },
         {
           "id": "b0056",
-          "section": "FFF 目标清单",
-          "type": "table-row",
-          "line": 586,
-          "text": "目标 状态 最新进展 下一里程碑 目标时间"
+          "section": "节点采购自动化",
+          "type": "li",
+          "line": 661,
+          "text": "缺货时自动购买 VM／IP"
         },
         {
           "id": "b0057",
-          "section": "FFF 目标清单",
-          "type": "table-row",
-          "line": 588,
-          "text": "智能路由"
+          "section": "节点采购自动化",
+          "type": "li",
+          "line": 662,
+          "text": "采购后自动进入 BO 设置、节点部署与配发"
         },
         {
           "id": "b0058",
-          "section": "FFF 目标清单",
-          "type": "table-row",
-          "line": 589,
-          "text": "FFF · G10 智能路由完整范围 开发与验证中 客户端核心已迁移至 SkyTunnel；config 加载及 Trojan、VLESS、ShadowTLS 手动连线已确认，自动分组仍在开发。第10阶段没有 staging 验收记录。 完成自动分组与 Shadowsocks 补测，产出可追溯 APK、测试运行和测试环境验收记录。 2026 年 10 月"
+          "section": "节点采购自动化",
+          "type": "highlight",
+          "line": 656,
+          "text": "下一优先 节点采购自动化 G5 供应商 API + 受控 AI 浏览器 Agent 缺货时自动购买 VM／IP 采购后自动进入 BO 设置、节点部署与配发 目标：把采购接入既有节点管理闭环"
         },
         {
           "id": "b0059",
-          "section": "FFF 目标清单",
-          "type": "table-row",
-          "line": 591,
-          "text": "支付闭环"
+          "section": "关闭 Arrowfish 剩余目标",
+          "type": "heading",
+          "line": 668,
+          "text": "关闭 Arrowfish 剩余目标"
         },
         {
           "id": "b0060",
-          "section": "FFF 目标清单",
-          "type": "table-row",
-          "line": 592,
-          "text": "FFF · G12 支付接口与支付闭环 待调试 套餐、确认订单、优惠券与支付通道基础页面已存在；客户端支付接口尚无完成与端到端验收记录。支付网关前置事项由 Roy 负责。 完成客户端支付接口调试、成功与失败路径回归、订单状态核对，并作为 Android 首发门槛关闭。 Android 首发前 完成后才进入发布验收"
+          "section": "关闭 Arrowfish 剩余目标",
+          "type": "li",
+          "line": 670,
+          "text": "G1–G2 归因、续费与订阅闭环"
         },
         {
           "id": "b0061",
-          "section": "FFF 目标清单",
-          "type": "table-row",
-          "line": 594,
-          "text": "多平台发布"
+          "section": "关闭 Arrowfish 剩余目标",
+          "type": "li",
+          "line": 671,
+          "text": "G3／G4 新网站与 Siqo 多平台支付"
         },
         {
           "id": "b0062",
-          "section": "FFF 目标清单",
-          "type": "table-row",
-          "line": 595,
-          "text": "FFF · G13 多平台顺序发布 待发布 应用已有跨屏幕与桌面布局基础，但第10阶段没有 Android、Windows、macOS、iOS 或 Linux 发布验收记录。 严格按 Android → Windows → macOS+iOS → Linux 推进；上一阶段验收关闭后才启动下一阶段发布。 按平台门控 每个平台独立构建与验收"
+          "section": "关闭 Arrowfish 剩余目标",
+          "type": "li",
+          "line": 672,
+          "text": "G8 私有 DNS"
         },
         {
           "id": "b0063",
-          "section": "FFF 目标清单",
-          "type": "p",
-          "line": 604,
-          "text": "跨产品 · 管理与交付基础设施 · 更新至 2026-08-28"
+          "section": "关闭 Arrowfish 剩余目标",
+          "type": "li",
+          "line": 673,
+          "text": "G9／G11 主体迁移与 iOS 正式发布"
         },
         {
           "id": "b0064",
-          "section": "共享管理能力",
-          "type": "heading",
-          "line": 605,
-          "text": "共享管理能力"
+          "section": "关闭 Arrowfish 剩余目标",
+          "type": "highlight",
+          "line": 666,
+          "text": "2026 年底前 关闭 Arrowfish 剩余目标 G1–G2 归因、续费与订阅闭环 G3／G4 新网站与 Siqo 多平台支付 G8 私有 DNS G9／G11 主体迁移与 iOS 正式发布 按优先级逐项关闭并分别验收"
         },
         {
           "id": "b0065",
-          "section": "共享管理能力",
+          "section": "关闭 Arrowfish 剩余目标",
           "type": "p",
-          "line": 606,
-          "text": "承载 Arrowfish 与 FFF 共用的管理、报告和交付能力；目标与完成率独立统计，避免稀释任一产品线的进度。"
+          "line": 684,
+          "text": "Arrowfish · 目标清单"
         },
         {
           "id": "b0066",
-          "section": "共享管理能力",
-          "type": "table-row",
-          "line": 618,
-          "text": "目标 状态 最新进展 下一里程碑 目标时间"
+          "section": "Arrowfish 目标清单",
+          "type": "heading",
+          "line": 685,
+          "text": "Arrowfish 目标清单"
         },
         {
           "id": "b0067",
-          "section": "共享管理能力",
-          "type": "table-row",
-          "line": 620,
-          "text": "管理决策效率"
+          "section": "Arrowfish 目标清单",
+          "type": "p",
+          "line": 686,
+          "text": "状态与最新进展只采用第10阶段及以前的证据；下一里程碑和目标时间属于后续计划。"
         },
         {
           "id": "b0068",
-          "section": "共享管理能力",
+          "section": "Arrowfish 目标清单",
           "type": "table-row",
-          "line": 621,
-          "text": "SHARED · G1 证据化 AI 报告助手 POC 上线准备中 该能力不归属任一产品线。已实现当前报告隔离、本地证据检索、可验证引用、对话与摘要边界；自动检索评测与回归测试均为 100%。 完成 Worker 与报告站点发布，并通过生产环境的摘要、数字问答、拒答、引用深链及移动端验收。 POC 首发 生产验收后关闭"
+          "line": 698,
+          "text": "目标 状态 最新进展 下一里程碑 目标时间"
         },
         {
           "id": "b0069",
-          "section": "共享管理能力",
-          "type": "p",
-          "line": 630,
-          "text": "本次变化"
+          "section": "Arrowfish 目标清单",
+          "type": "table-row",
+          "line": 700,
+          "text": "增长与收入"
         },
         {
           "id": "b0070",
-          "section": "第10阶段收口更新",
-          "type": "heading",
-          "line": 631,
-          "text": "第10阶段收口更新"
+          "section": "Arrowfish 目标清单",
+          "type": "table-row",
+          "line": 701,
+          "text": "G1 广告归因与付费分析 基础完成，覆盖待补 第9阶段已完成投放链接、安装标识、账号绑定及注册／激活／首购／付费／续费的后端归因链路；第10阶段实际数据仍显示 97.6% 的新注册缺少归因。 补齐产品页、套餐、结账、支付回调和渠道埋点，并建立 D1／D7／D30 转化视图。 年底前 D1／D7／D30"
         },
         {
           "id": "b0071",
-          "section": "第10阶段收口更新",
-          "type": "p",
-          "line": 632,
-          "text": "只列截至 2026-08-26 已有证据的状态；第10阶段之后的计划或执行结果不计入。"
+          "section": "Arrowfish 目标清单",
+          "type": "table-row",
+          "line": 702,
+          "text": "G2 套餐续费与订阅管理 待开发 第10阶段确认续费／重复付费贡献周收入 83.1%；尚无订阅闭环完成记录。 确定提前续费、自动续费与订阅状态同步规则，再进入开发和验收。 年底前 提前续费、自动续费、订阅管理"
         },
         {
           "id": "b0072",
-          "section": "Arrowfish",
-          "type": "heading",
-          "line": 637,
-          "text": "Arrowfish"
+          "section": "Arrowfish 目标清单",
+          "type": "table-row",
+          "line": 703,
+          "text": "G3 百度广告新网站 Staging 开发中 新设计已进入 staging 开发。 完成验收与发布；广告归因由 G1 独立验收。 2026 年 8 月"
         },
         {
           "id": "b0073",
-          "section": "Arrowfish",
-          "type": "p",
-          "line": 639,
-          "text": "两项协议问题已有源码修复，但测试环境、BO 与客户端实连记录仍未完整关闭。"
+          "section": "Arrowfish 目标清单",
+          "type": "table-row",
+          "line": 704,
+          "text": "G4 Siqo 多平台支付 部分完成 Android staging 接入完成。 Windows 与其他平台逐一接入、回归和发布。 待排期 按平台分别验收"
         },
         {
           "id": "b0074",
-          "section": "Arrowfish",
-          "type": "highlight",
-          "line": 639,
-          "text": "G5 端到端验收仍未关闭 两项协议问题已有源码修复，但测试环境、BO 与客户端实连记录仍未完整关闭。"
+          "section": "Arrowfish 目标清单",
+          "type": "table-row",
+          "line": 706,
+          "text": "基础设施与 VPN 核心"
         },
         {
           "id": "b0075",
-          "section": "Arrowfish",
-          "type": "p",
-          "line": 640,
-          "text": "第10阶段确认 97.6% 的新注册缺少营销归因，下一步是补齐关键漏斗埋点。"
+          "section": "Arrowfish 目标清单",
+          "type": "table-row",
+          "line": 707,
+          "text": "G5 节点部署与管理自动化 基础已交付，闭环进行中 已具备后台一键安装、全擦回收、12 台并行升级、到期释放和健康状态机；第10阶段两项协议问题完成源码修复，但测试环境、BO 与客户端端到端关闭数仍为 0，供应商自动采购也未完成。 先关闭协议与 BO 验收，再把供应商 API／受控浏览器采购接入同一任务闭环。 年底前 采购至配发闭环"
         },
         {
           "id": "b0076",
-          "section": "Arrowfish",
-          "type": "highlight",
-          "line": 640,
-          "text": "G1 营销归因缺口已量化 第10阶段确认 97.6% 的新注册缺少营销归因，下一步是补齐关键漏斗埋点。"
+          "section": "Arrowfish 目标清单",
+          "type": "table-row",
+          "line": 708,
+          "text": "G6 SkyTunnel 自研隧道 已完成 自研 VPN 隧道核心已交付。 持续回归、客户端整合与版本维护。 持续维护"
         },
         {
           "id": "b0077",
-          "section": "Arrowfish",
-          "type": "p",
-          "line": 641,
-          "text": "干净源码与 VPN 主路径已实现；TestFlight、签名和真机连接验收仍未完成。"
+          "section": "Arrowfish 目标清单",
+          "type": "table-row",
+          "line": 709,
+          "text": "G7 三协议支持 已完成并验证 三套协议已完成，并通过中国网络环境 QA。 纳入各客户端持续回归。 持续维护"
         },
         {
           "id": "b0078",
-          "section": "Arrowfish",
-          "type": "highlight",
-          "line": 641,
-          "text": "G11 iOS 干净工程验证中 干净源码与 VPN 主路径已实现；TestFlight、签名和真机连接验收仍未完成。"
+          "section": "Arrowfish 目标清单",
+          "type": "table-row",
+          "line": 710,
+          "text": "G8 Unbound 私有 DNS 开发中 自研私有 DNS 解析器开发中。 完成实现、集成及验证。 2026 年 8 月"
         },
         {
           "id": "b0079",
-          "section": "FFF · Lex 实时口径截至第10阶段",
-          "type": "heading",
-          "line": 645,
-          "text": "FFF · Lex 实时口径截至第10阶段"
+          "section": "Arrowfish 目标清单",
+          "type": "table-row",
+          "line": 712,
+          "text": "产品与平台"
         },
         {
           "id": "b0080",
-          "section": "FFF · Lex 实时口径截至第10阶段",
-          "type": "p",
-          "line": 647,
-          "text": "三协议手动连线已确认，自动分组仍在开发；第10阶段没有 staging 验收记录。"
+          "section": "Arrowfish 目标清单",
+          "type": "table-row",
+          "line": 713,
+          "text": "G9 新公司主体迁移 进行中 Google 平台完成；华为、Samsung、OPPO 进行中。 逐个平台关闭主体、账号及发布资格迁移。 待排期 按平台分别验收"
         },
         {
           "id": "b0081",
-          "section": "FFF · Lex 实时口径截至第10阶段",
-          "type": "highlight",
-          "line": 647,
-          "text": "G10 核心迁移完成，验收未关闭 三协议手动连线已确认，自动分组仍在开发；第10阶段没有 staging 验收记录。"
+          "section": "Arrowfish 目标清单",
+          "type": "table-row",
+          "line": 714,
+          "text": "G11 Arrowfish iOS 重构 构建验证中 第10阶段已建立干净源码工程并实现 VPN 主路径；无签名设备构建通过，但尚无真机连接与 TestFlight 验收。 完成签名描述文件、TestFlight、真机连接及升级回归。 验收门槛关闭后 重新提交"
         },
         {
           "id": "b0082",
-          "section": "FFF · Lex 实时口径截至第10阶段",
+          "section": "Arrowfish 目标清单",
           "type": "p",
-          "line": 648,
-          "text": "分享赚钱、VPN 设置、网址导航、连接与断开交互、代理节点切换交互已完成；这是 Lex 实时开发口径，不等于发布验收。"
+          "line": 723,
+          "text": "项目 02 · 新产品 · Lex 实时口径截至第10阶段"
         },
         {
           "id": "b0083",
-          "section": "FFF · Lex 实时口径截至第10阶段",
-          "type": "highlight",
-          "line": 648,
-          "text": "S10 五项客户端缺口完成 分享赚钱、VPN 设置、网址导航、连接与断开交互、代理节点切换交互已完成；这是 Lex 实时开发口径，不等于发布验收。"
+          "section": "FFF 2026 路线图",
+          "type": "heading",
+          "line": 724,
+          "text": "FFF 2026 路线图"
         },
         {
           "id": "b0084",
-          "section": "FFF · Lex 实时口径截至第10阶段",
+          "section": "FFF 2026 路线图",
           "type": "p",
-          "line": 649,
-          "text": "客户端支付接口调试尚未完成，必须在 Android 首发前完成成功、失败与订单状态回归。"
+          "line": 725,
+          "text": "由 Lex 负责，实时口径截止 2026-08-26。这里只呈现第10阶段及以前的 FFF 进度；与 Arrowfish 发布节奏互不影响。"
         },
         {
           "id": "b0085",
-          "section": "FFF · Lex 实时口径截至第10阶段",
-          "type": "highlight",
-          "line": 649,
-          "text": "G12 支付闭环仍是首发缺口 客户端支付接口调试尚未完成，必须在 Android 首发前完成成功、失败与订单状态回归。"
+          "section": "客户端基础收口",
+          "type": "heading",
+          "line": 733,
+          "text": "客户端基础收口"
         },
         {
           "id": "b0086",
-          "section": "广告追踪与付费分析",
-          "type": "heading",
-          "line": 658,
-          "text": "广告追踪与付费分析"
+          "section": "客户端基础收口",
+          "type": "p",
+          "line": 734,
+          "text": "G10 SkyTunnel 核心迁移 客户端功能与交互缺口完成收口"
         },
         {
           "id": "b0087",
-          "section": "广告追踪与付费分析",
-          "type": "p",
-          "line": 658,
-          "text": "第10阶段已量化的归因缺口与后续埋点目标"
+          "section": "客户端基础收口",
+          "type": "li",
+          "line": 730,
+          "text": "第10阶段已完成 客户端基础收口 G10 SkyTunnel 核心迁移 客户端功能与交互缺口完成收口 Lex 实时开发口径；尚不是发布验收"
         },
         {
           "id": "b0088",
-          "section": "广告追踪与付费分析",
-          "type": "details-summary",
-          "line": 657,
-          "text": "ARROWFISH · 第10阶段细节 01 缺口已确认 广告追踪与付费分析 第10阶段已量化的归因缺口与后续埋点目标"
+          "section": "Android 首发收口",
+          "type": "heading",
+          "line": 741,
+          "text": "Android 首发收口"
         },
         {
           "id": "b0089",
-          "section": "截至第10阶段的事实与缺口",
-          "type": "heading",
-          "line": 662,
-          "text": "截至第10阶段的事实与缺口"
+          "section": "Android 首发收口",
+          "type": "p",
+          "line": 742,
+          "text": "G10 自动分组与 Shadowsocks 补测 G12 支付接口与支付闭环"
         },
         {
           "id": "b0090",
-          "section": "截至第10阶段的事实与缺口",
-          "type": "table-row",
-          "line": 665,
-          "text": "范围 目前情况 需要关闭的问题"
+          "section": "Android 首发收口",
+          "type": "li",
+          "line": 738,
+          "text": "当前首发阶段 Android 首发收口 G10 自动分组与 Shadowsocks 补测 G12 支付接口与支付闭环 完成构建、测试环境与端到端验收后发布"
         },
         {
           "id": "b0091",
-          "section": "截至第10阶段的事实与缺口",
-          "type": "table-row",
-          "line": 667,
-          "text": "归因覆盖 97.6% 的新注册缺少营销归因。 先建立可核验的渠道来源与注册关系。"
+          "section": "Windows",
+          "type": "heading",
+          "line": 749,
+          "text": "Windows"
         },
         {
           "id": "b0092",
-          "section": "截至第10阶段的事实与缺口",
-          "type": "table-row",
-          "line": 668,
-          "text": "核心漏斗 现有报告无法稳定连接产品页、套餐、结账、支付回调与渠道。 为五个关键环节补齐一致的事件与关联字段。"
+          "section": "Windows",
+          "type": "p",
+          "line": 750,
+          "text": "G13 桌面构建、VPN 主路径、支付与升级回归"
         },
         {
           "id": "b0093",
-          "section": "截至第10阶段的事实与缺口",
-          "type": "table-row",
-          "line": 669,
-          "text": "转化周期 尚无按来源拆分的完整转化周期视图。 先提供 D1、D7、D30 首次付费转化；续费与金额在 G2 规则明确后接入。"
+          "section": "Windows",
+          "type": "li",
+          "line": 746,
+          "text": "Android 发布后 Windows G13 桌面构建、VPN 主路径、支付与升级回归 Android 验收关闭后才进入正式发布阶段"
         },
         {
           "id": "b0094",
-          "section": "第10阶段之后的目标顺序",
+          "section": "macOS + iOS",
           "type": "heading",
-          "line": 673,
-          "text": "第10阶段之后的目标顺序"
+          "line": 757,
+          "text": "macOS + iOS"
         },
         {
           "id": "b0095",
-          "section": "第10阶段之后的目标顺序",
-          "type": "highlight",
-          "line": 675,
-          "text": "1 · 定义事件口径 统一渠道、访问、套餐、结账、支付与首次付费定义。"
+          "section": "macOS + iOS",
+          "type": "p",
+          "line": 758,
+          "text": "G13 两个苹果平台在同一阶段推进，分别验收"
         },
         {
           "id": "b0096",
-          "section": "第10阶段之后的目标顺序",
-          "type": "highlight",
-          "line": 676,
-          "text": "2 · 补齐关联字段 保证各环节可以连接到同一来源，并避免重复计算。"
+          "section": "macOS + iOS",
+          "type": "li",
+          "line": 754,
+          "text": "Windows 验收后 macOS + iOS G13 两个苹果平台在同一阶段推进，分别验收 构建、签名、实机连接与发布资格分别关闭"
         },
         {
           "id": "b0097",
-          "section": "第10阶段之后的目标顺序",
-          "type": "highlight",
-          "line": 677,
-          "text": "3 · 数据核对 将埋点结果与后台注册、订单和实际支付记录逐项对账。"
+          "section": "Linux",
+          "type": "heading",
+          "line": 765,
+          "text": "Linux"
         },
         {
           "id": "b0098",
-          "section": "第10阶段之后的目标顺序",
-          "type": "highlight",
-          "line": 678,
-          "text": "4 · 周期视图 先交付 D1、D7、D30 首次付费转化。"
+          "section": "Linux",
+          "type": "p",
+          "line": 766,
+          "text": "G13 完成 Linux 桌面适配、打包与连接回归"
         },
         {
           "id": "b0099",
-          "section": "第10阶段之后的目标顺序",
-          "type": "highlight",
-          "line": 679,
-          "text": "5 · 接入续费 G2 规则明确后，再区分首次付费、续费、金额和订单状态。"
+          "section": "Linux",
+          "type": "li",
+          "line": 762,
+          "text": "苹果平台阶段后 Linux G13 完成 Linux 桌面适配、打包与连接回归 最后进入 Linux 发布验收"
         },
         {
           "id": "b0100",
-          "section": "第10阶段之后的目标顺序",
-          "type": "highlight",
-          "line": 681,
-          "text": "范围边界 以上是第10阶段确认的目标顺序，不表示具体技术方案已经锁定或开发完成。"
+          "section": "Linux",
+          "type": "p",
+          "line": 776,
+          "text": "FFF · 目标清单 · Lex 实时口径截至第10阶段"
         },
         {
           "id": "b0101",
-          "section": "订阅续费闭环",
+          "section": "FFF 目标清单",
           "type": "heading",
-          "line": 689,
-          "text": "订阅续费闭环"
+          "line": 777,
+          "text": "FFF 目标清单"
         },
         {
           "id": "b0102",
-          "section": "订阅续费闭环",
+          "section": "FFF 目标清单",
           "type": "p",
-          "line": 689,
-          "text": "第10阶段收入事实与后续订阅闭环目标"
+          "line": 778,
+          "text": "FFF 当前有 3 项在途目标；开发完成、构建、测试环境验收与正式发布分别记录，不互相替代。"
         },
         {
           "id": "b0103",
-          "section": "订阅续费闭环",
-          "type": "details-summary",
-          "line": 688,
-          "text": "ARROWFISH · 第10阶段细节 02 待开发 订阅续费闭环 第10阶段收入事实与后续订阅闭环目标"
+          "section": "FFF 目标清单",
+          "type": "table-row",
+          "line": 790,
+          "text": "目标 状态 最新进展 下一里程碑 目标时间"
         },
         {
           "id": "b0104",
-          "section": "订阅续费闭环",
-          "type": "highlight",
-          "line": 692,
-          "text": "第10阶段结论 续费／重复付费用户贡献周收入 83.1%，说明续费可靠性是直接的收入保护点；第10阶段没有订阅闭环开发完成或验收记录。"
+          "section": "FFF 目标清单",
+          "type": "table-row",
+          "line": 792,
+          "text": "智能路由"
         },
         {
           "id": "b0105",
-          "section": "订阅续费闭环",
+          "section": "FFF 目标清单",
           "type": "table-row",
-          "line": 695,
-          "text": "独立能力 当前问题 年底完成标准"
+          "line": 793,
+          "text": "FFF · G10 智能路由完整范围 开发与验证中 客户端核心已迁移至 SkyTunnel；config 加载及 Trojan、VLESS、ShadowTLS 手动连线已确认，自动分组仍在开发。第10阶段没有 staging 验收记录。 完成自动分组与 Shadowsocks 补测，产出可追溯 APK、测试运行和测试环境验收记录。 2026 年 10 月"
         },
         {
           "id": "b0106",
-          "section": "订阅续费闭环",
+          "section": "FFF 目标清单",
           "type": "table-row",
-          "line": 697,
-          "text": "提前续费 用户目前不能在套餐到期前正常续费。 明确续费规则，付款后套餐期限与权益正确衔接。"
+          "line": 795,
+          "text": "支付闭环"
         },
         {
           "id": "b0107",
-          "section": "订阅续费闭环",
+          "section": "FFF 目标清单",
           "type": "table-row",
-          "line": 698,
-          "text": "自动续费 自动续费流程尚未形成完整闭环。 到期扣款、成功续期、失败处理与用户通知均可追踪。"
+          "line": 796,
+          "text": "FFF · G12 支付接口与支付闭环 待调试 套餐、确认订单、优惠券与支付通道基础页面已存在；客户端支付接口尚无完成与端到端验收记录。支付网关前置事项由 Roy 负责。 完成客户端支付接口调试、成功与失败路径回归、订单状态核对，并作为 Android 首发门槛关闭。 Android 首发前 完成后才进入发布验收"
         },
         {
           "id": "b0108",
-          "section": "订阅续费闭环",
+          "section": "FFF 目标清单",
           "type": "table-row",
-          "line": 699,
-          "text": "Stripe 订阅管理 订阅状态与后台套餐状态无法完整管理。 创建、变更、取消、恢复及状态同步都有明确规则，并避免重复处理。"
+          "line": 798,
+          "text": "多平台发布"
         },
         {
           "id": "b0109",
-          "section": "订阅续费闭环",
+          "section": "FFF 目标清单",
           "type": "table-row",
-          "line": 700,
-          "text": "收入分析 续费与首次付费无法完整按来源及周期分析。 与 G1 归因链路连接，区分首次付费、每次续费、金额及实际订单状态。"
+          "line": 799,
+          "text": "FFF · G13 多平台顺序发布 待发布 应用已有跨屏幕与桌面布局基础，但第10阶段没有 Android、Windows、macOS、iOS 或 Linux 发布验收记录。 严格按 Android → Windows → macOS+iOS → Linux 推进；上一阶段验收关闭后才启动下一阶段发布。 按平台门控 每个平台独立构建与验收"
         },
         {
           "id": "b0110",
-          "section": "节点部署与管理自动化",
-          "type": "heading",
-          "line": 712,
-          "text": "节点部署与管理自动化"
+          "section": "FFF 目标清单",
+          "type": "p",
+          "line": 808,
+          "text": "跨产品 · 管理与交付基础设施 · 更新至 2026-08-28"
         },
         {
           "id": "b0111",
-          "section": "节点部署与管理自动化",
-          "type": "p",
-          "line": 712,
-          "text": "第10阶段证据、供应商采购缺口与后续目标"
+          "section": "共享管理能力",
+          "type": "heading",
+          "line": 809,
+          "text": "共享管理能力"
         },
         {
           "id": "b0112",
-          "section": "节点部署与管理自动化",
-          "type": "details-summary",
-          "line": 711,
-          "text": "ARROWFISH · 第10阶段细节 03 验收未关闭 节点部署与管理自动化 第10阶段证据、供应商采购缺口与后续目标"
+          "section": "共享管理能力",
+          "type": "p",
+          "line": 810,
+          "text": "承载 Arrowfish 与 FFF 共用的管理、报告和交付能力；目标与完成率独立统计，避免稀释任一产品线的进度。"
         },
         {
           "id": "b0113",
-          "section": "节点部署与管理自动化",
-          "type": "highlight",
-          "line": 716,
-          "text": "资料边界 第10阶段之后的 BO 节点管理、迁移与验证结果不计入本页进展。下方只保留第10阶段及以前可核验的基线，以及清楚标记的后续目标。"
+          "section": "共享管理能力",
+          "type": "table-row",
+          "line": 822,
+          "text": "目标 状态 最新进展 下一里程碑 目标时间"
         },
         {
           "id": "b0114",
-          "section": "节点部署与管理自动化",
-          "type": "details-summary",
-          "line": 720,
-          "text": "第10阶段节点自动化证据"
+          "section": "共享管理能力",
+          "type": "table-row",
+          "line": 824,
+          "text": "管理决策效率"
         },
         {
           "id": "b0115",
-          "section": "节点部署与管理自动化",
+          "section": "共享管理能力",
           "type": "table-row",
-          "line": 723,
-          "text": "范围 第10阶段及以前证据 还要完成 截止状态"
+          "line": 825,
+          "text": "SHARED · G1 证据化 AI 报告助手 POC 上线准备中 该能力不归属任一产品线。已实现当前报告隔离、本地证据检索、可验证引用、对话与摘要边界；自动检索评测与回归测试均为 100%。 完成 Worker 与报告站点发布，并通过生产环境的摘要、数字问答、拒答、引用深链及移动端验收。 POC 首发 生产验收后关闭"
         },
         {
           "id": "b0116",
-          "section": "节点部署与管理自动化",
-          "type": "table-row",
-          "line": 725,
-          "text": "供应商概览 第3阶段已有供应商节点数、成本和健康概览，但当时明确尚未用于采购决策。 校准生产数据，并把库存、成本和稳定性转成可审查的采购条件。 历史基础"
+          "section": "共享管理能力",
+          "type": "p",
+          "line": 834,
+          "text": "本次变化"
         },
         {
           "id": "b0117",
-          "section": "节点部署与管理自动化",
-          "type": "table-row",
-          "line": 726,
-          "text": "协议与 BO 验收 第10阶段发现 2 项高优先级协议问题，源码修复 2 项，端到端验收关闭 0 项。 补齐测试环境 bootstrap、BO、Android 与 FFF 实连记录后关闭。 验收未关闭"
+          "section": "第10阶段收口更新",
+          "type": "heading",
+          "line": 835,
+          "text": "第10阶段收口更新"
         },
         {
           "id": "b0118",
-          "section": "节点部署与管理自动化",
-          "type": "table-row",
-          "line": 727,
-          "text": "VM／IP 自动采购 第10阶段没有供应商自动下单、付款／Top Up 或取得新 VM／IP 的完成证据。 建立统一采购任务；有 API 时直接接入，无 API 时才评估受控浏览器执行。 核心缺口"
+          "section": "第10阶段收口更新",
+          "type": "p",
+          "line": 836,
+          "text": "只列截至 2026-08-26 已有证据的状态；第10阶段之后的计划或执行结果不计入。"
         },
         {
           "id": "b0119",
-          "section": "节点部署与管理自动化",
-          "type": "details-summary",
-          "line": 734,
-          "text": "第10阶段之后：API + AI 浏览器 Agent 混合采购建议"
+          "section": "Arrowfish",
+          "type": "heading",
+          "line": 841,
+          "text": "Arrowfish"
         },
         {
           "id": "b0120",
-          "section": "节点部署与管理自动化",
-          "type": "table-row",
-          "line": 738,
-          "text": "供应商类型 执行方式 必要控制"
+          "section": "Arrowfish",
+          "type": "p",
+          "line": 843,
+          "text": "两项协议问题已有源码修复，但测试环境、BO 与客户端实连记录仍未完整关闭。"
         },
         {
           "id": "b0121",
-          "section": "节点部署与管理自动化",
-          "type": "table-row",
-          "line": 740,
-          "text": "有完整 API BO 直接查询库存和价格，创建 VM／IP，取得访问资料，并执行续费、取消、重启或重建。 供应商、区域、规格及金额白名单；幂等键防止重复购买；失败自动重试。"
+          "section": "Arrowfish",
+          "type": "highlight",
+          "line": 843,
+          "text": "G5 端到端验收仍未关闭 两项协议问题已有源码修复，但测试环境、BO 与客户端实连记录仍未完整关闭。"
         },
         {
           "id": "b0122",
-          "section": "节点部署与管理自动化",
-          "type": "table-row",
-          "line": 741,
-          "text": "只有部分 API API 负责现有 VM 生命周期；缺少的购买或付款步骤交给 AI 浏览器 Agent，再回到同一 BO 采购任务。 每一步保存状态；API 与浏览器不能同时重复执行同一订单。"
+          "section": "Arrowfish",
+          "type": "p",
+          "line": 844,
+          "text": "第10阶段确认 97.6% 的新注册缺少营销归因，下一步是补齐关键漏斗埋点。"
         },
         {
           "id": "b0123",
-          "section": "节点部署与管理自动化",
-          "type": "table-row",
-          "line": 742,
-          "text": "无 API／无 Top Up 使用 OpenClaw 类受控浏览器 Agent 登录供应商网站、选择批准的套餐和区域、建立新订单；不能 Top Up 时购买新的已批准 SKU。 首阶段付款前人工确认；2FA／验证码转人工；限制单笔、每日及每月金额；保存页面证据、订单号和账单。"
+          "section": "Arrowfish",
+          "type": "highlight",
+          "line": 844,
+          "text": "G1 营销归因缺口已量化 第10阶段确认 97.6% 的新注册缺少营销归因，下一步是补齐关键漏斗埋点。"
         },
         {
           "id": "b0124",
-          "section": "节点部署与管理自动化",
-          "type": "details-summary",
-          "line": 751,
-          "text": "后续目标：新节点统一标准"
+          "section": "Arrowfish",
+          "type": "p",
+          "line": 845,
+          "text": "干净源码与 VPN 主路径已实现；TestFlight、签名和真机连接验收仍未完成。"
         },
         {
           "id": "b0125",
-          "section": "节点部署与管理自动化",
-          "type": "table-row",
-          "line": 754,
-          "text": "项目 统一标准 目的"
+          "section": "Arrowfish",
+          "type": "highlight",
+          "line": 845,
+          "text": "G11 iOS 干净工程验证中 干净源码与 VPN 主路径已实现；TestFlight、签名和真机连接验收仍未完成。"
         },
         {
           "id": "b0126",
-          "section": "节点部署与管理自动化",
-          "type": "table-row",
-          "line": 756,
-          "text": "计算资源 最低 1 核 CPU、1 GB 内存、10 GB 硬盘 形成可采购、可验收的最低基线。"
+          "section": "FFF · Lex 实时口径截至第10阶段",
+          "type": "heading",
+          "line": 849,
+          "text": "FFF · Lex 实时口径截至第10阶段"
         },
         {
           "id": "b0127",
-          "section": "节点部署与管理自动化",
-          "type": "table-row",
-          "line": 757,
-          "text": "操作系统 Debian 12–13 减少不同发行版带来的部署偏差。"
+          "section": "FFF · Lex 实时口径截至第10阶段",
+          "type": "p",
+          "line": 851,
+          "text": "三协议手动连线已确认，自动分组仍在开发；第10阶段没有 staging 验收记录。"
         },
         {
           "id": "b0128",
-          "section": "节点部署与管理自动化",
-          "type": "table-row",
-          "line": 758,
-          "text": "流量与网络 700 GB 至不限流量；固定公网 IPv4 保证节点具备明确的服务基础。"
+          "section": "FFF · Lex 实时口径截至第10阶段",
+          "type": "highlight",
+          "line": 851,
+          "text": "G10 核心迁移完成，验收未关闭 三协议手动连线已确认，自动分组仍在开发；第10阶段没有 staging 验收记录。"
         },
         {
           "id": "b0129",
-          "section": "节点部署与管理自动化",
-          "type": "table-row",
-          "line": 759,
-          "text": "中国节点优先项 有 IPv6 优先 作为中国节点采购与部署的优先条件。"
+          "section": "FFF · Lex 实时口径截至第10阶段",
+          "type": "p",
+          "line": 852,
+          "text": "分享赚钱、VPN 设置、网址导航、连接与断开交互、代理节点切换交互已完成；这是 Lex 实时开发口径，不等于发布验收。"
         },
         {
           "id": "b0130",
-          "section": "节点部署与管理自动化",
-          "type": "details-summary",
-          "line": 766,
-          "text": "第10阶段之后：节点自动化闭环顺序"
+          "section": "FFF · Lex 实时口径截至第10阶段",
+          "type": "highlight",
+          "line": 852,
+          "text": "S10 五项客户端缺口完成 分享赚钱、VPN 设置、网址导航、连接与断开交互、代理节点切换交互已完成；这是 Lex 实时开发口径，不等于发布验收。"
         },
         {
           "id": "b0131",
-          "section": "节点部署与管理自动化",
-          "type": "highlight",
-          "line": 769,
-          "text": "1 · 供应商分级 记录可用 API、网页登录、付款、Top Up、2FA、区域、规格和预算规则。"
+          "section": "FFF · Lex 实时口径截至第10阶段",
+          "type": "p",
+          "line": 853,
+          "text": "客户端支付接口调试尚未完成，必须在 Android 首发前完成成功、失败与订单状态回归。"
         },
         {
           "id": "b0132",
-          "section": "节点部署与管理自动化",
+          "section": "FFF · Lex 实时口径截至第10阶段",
           "type": "highlight",
-          "line": 770,
-          "text": "2 · 建立采购任务 BO 保存触发原因、审批、金额、步骤、订单号、VM ID、IP、失败和重试。"
+          "line": 853,
+          "text": "G12 支付闭环仍是首发缺口 客户端支付接口调试尚未完成，必须在 Android 首发前完成成功、失败与订单状态回归。"
         },
         {
           "id": "b0133",
-          "section": "节点部署与管理自动化",
-          "type": "highlight",
-          "line": 771,
-          "text": "3 · 双驱动试点 完成一个 API 供应商和一个无 API 供应商的 AI 浏览器采购，并保留付款前确认。"
+          "section": "广告追踪与付费分析",
+          "type": "heading",
+          "line": 862,
+          "text": "广告追踪与付费分析"
         },
         {
           "id": "b0134",
-          "section": "节点部署与管理自动化",
-          "type": "highlight",
-          "line": 772,
-          "text": "4 · 打通自动补货 缺货时自动采购、DNS、部署、健康检查、入库及配发。"
+          "section": "广告追踪与付费分析",
+          "type": "p",
+          "line": 862,
+          "text": "第10阶段已量化的归因缺口与后续埋点目标"
         },
         {
           "id": "b0135",
+          "section": "广告追踪与付费分析",
+          "type": "details-summary",
+          "line": 861,
+          "text": "ARROWFISH · 第10阶段细节 01 缺口已确认 广告追踪与付费分析 第10阶段已量化的归因缺口与后续埋点目标"
+        },
+        {
+          "id": "b0136",
+          "section": "截至第10阶段的事实与缺口",
+          "type": "heading",
+          "line": 866,
+          "text": "截至第10阶段的事实与缺口"
+        },
+        {
+          "id": "b0137",
+          "section": "截至第10阶段的事实与缺口",
+          "type": "table-row",
+          "line": 869,
+          "text": "范围 目前情况 需要关闭的问题"
+        },
+        {
+          "id": "b0138",
+          "section": "截至第10阶段的事实与缺口",
+          "type": "table-row",
+          "line": 871,
+          "text": "归因覆盖 97.6% 的新注册缺少营销归因。 先建立可核验的渠道来源与注册关系。"
+        },
+        {
+          "id": "b0139",
+          "section": "截至第10阶段的事实与缺口",
+          "type": "table-row",
+          "line": 872,
+          "text": "核心漏斗 现有报告无法稳定连接产品页、套餐、结账、支付回调与渠道。 为五个关键环节补齐一致的事件与关联字段。"
+        },
+        {
+          "id": "b0140",
+          "section": "截至第10阶段的事实与缺口",
+          "type": "table-row",
+          "line": 873,
+          "text": "转化周期 尚无按来源拆分的完整转化周期视图。 先提供 D1、D7、D30 首次付费转化；续费与金额在 G2 规则明确后接入。"
+        },
+        {
+          "id": "b0141",
+          "section": "第10阶段之后的目标顺序",
+          "type": "heading",
+          "line": 877,
+          "text": "第10阶段之后的目标顺序"
+        },
+        {
+          "id": "b0142",
+          "section": "第10阶段之后的目标顺序",
+          "type": "highlight",
+          "line": 879,
+          "text": "1 · 定义事件口径 统一渠道、访问、套餐、结账、支付与首次付费定义。"
+        },
+        {
+          "id": "b0143",
+          "section": "第10阶段之后的目标顺序",
+          "type": "highlight",
+          "line": 880,
+          "text": "2 · 补齐关联字段 保证各环节可以连接到同一来源，并避免重复计算。"
+        },
+        {
+          "id": "b0144",
+          "section": "第10阶段之后的目标顺序",
+          "type": "highlight",
+          "line": 881,
+          "text": "3 · 数据核对 将埋点结果与后台注册、订单和实际支付记录逐项对账。"
+        },
+        {
+          "id": "b0145",
+          "section": "第10阶段之后的目标顺序",
+          "type": "highlight",
+          "line": 882,
+          "text": "4 · 周期视图 先交付 D1、D7、D30 首次付费转化。"
+        },
+        {
+          "id": "b0146",
+          "section": "第10阶段之后的目标顺序",
+          "type": "highlight",
+          "line": 883,
+          "text": "5 · 接入续费 G2 规则明确后，再区分首次付费、续费、金额和订单状态。"
+        },
+        {
+          "id": "b0147",
+          "section": "第10阶段之后的目标顺序",
+          "type": "highlight",
+          "line": 885,
+          "text": "范围边界 以上是第10阶段确认的目标顺序，不表示具体技术方案已经锁定或开发完成。"
+        },
+        {
+          "id": "b0148",
+          "section": "订阅续费闭环",
+          "type": "heading",
+          "line": 893,
+          "text": "订阅续费闭环"
+        },
+        {
+          "id": "b0149",
+          "section": "订阅续费闭环",
+          "type": "p",
+          "line": 893,
+          "text": "第10阶段收入事实与后续订阅闭环目标"
+        },
+        {
+          "id": "b0150",
+          "section": "订阅续费闭环",
+          "type": "details-summary",
+          "line": 892,
+          "text": "ARROWFISH · 第10阶段细节 02 待开发 订阅续费闭环 第10阶段收入事实与后续订阅闭环目标"
+        },
+        {
+          "id": "b0151",
+          "section": "订阅续费闭环",
+          "type": "highlight",
+          "line": 896,
+          "text": "第10阶段结论 续费／重复付费用户贡献周收入 83.1%，说明续费可靠性是直接的收入保护点；第10阶段没有订阅闭环开发完成或验收记录。"
+        },
+        {
+          "id": "b0152",
+          "section": "订阅续费闭环",
+          "type": "table-row",
+          "line": 899,
+          "text": "独立能力 当前问题 年底完成标准"
+        },
+        {
+          "id": "b0153",
+          "section": "订阅续费闭环",
+          "type": "table-row",
+          "line": 901,
+          "text": "提前续费 用户目前不能在套餐到期前正常续费。 明确续费规则，付款后套餐期限与权益正确衔接。"
+        },
+        {
+          "id": "b0154",
+          "section": "订阅续费闭环",
+          "type": "table-row",
+          "line": 902,
+          "text": "自动续费 自动续费流程尚未形成完整闭环。 到期扣款、成功续期、失败处理与用户通知均可追踪。"
+        },
+        {
+          "id": "b0155",
+          "section": "订阅续费闭环",
+          "type": "table-row",
+          "line": 903,
+          "text": "Stripe 订阅管理 订阅状态与后台套餐状态无法完整管理。 创建、变更、取消、恢复及状态同步都有明确规则，并避免重复处理。"
+        },
+        {
+          "id": "b0156",
+          "section": "订阅续费闭环",
+          "type": "table-row",
+          "line": 904,
+          "text": "收入分析 续费与首次付费无法完整按来源及周期分析。 与 G1 归因链路连接，区分首次付费、每次续费、金额及实际订单状态。"
+        },
+        {
+          "id": "b0157",
+          "section": "节点部署与管理自动化",
+          "type": "heading",
+          "line": 916,
+          "text": "节点部署与管理自动化"
+        },
+        {
+          "id": "b0158",
+          "section": "节点部署与管理自动化",
+          "type": "p",
+          "line": 916,
+          "text": "第10阶段证据、供应商采购缺口与后续目标"
+        },
+        {
+          "id": "b0159",
+          "section": "节点部署与管理自动化",
+          "type": "details-summary",
+          "line": 915,
+          "text": "ARROWFISH · 第10阶段细节 03 验收未关闭 节点部署与管理自动化 第10阶段证据、供应商采购缺口与后续目标"
+        },
+        {
+          "id": "b0160",
           "section": "节点部署与管理自动化",
           "type": "highlight",
-          "line": 773,
+          "line": 920,
+          "text": "资料边界 第10阶段之后的 BO 节点管理、迁移与验证结果不计入本页进展。下方只保留第10阶段及以前可核验的基线，以及清楚标记的后续目标。"
+        },
+        {
+          "id": "b0161",
+          "section": "节点部署与管理自动化",
+          "type": "details-summary",
+          "line": 924,
+          "text": "第10阶段节点自动化证据"
+        },
+        {
+          "id": "b0162",
+          "section": "节点部署与管理自动化",
+          "type": "table-row",
+          "line": 927,
+          "text": "范围 第10阶段及以前证据 还要完成 截止状态"
+        },
+        {
+          "id": "b0163",
+          "section": "节点部署与管理自动化",
+          "type": "table-row",
+          "line": 929,
+          "text": "供应商概览 第3阶段已有供应商节点数、成本和健康概览，但当时明确尚未用于采购决策。 校准生产数据，并把库存、成本和稳定性转成可审查的采购条件。 历史基础"
+        },
+        {
+          "id": "b0164",
+          "section": "节点部署与管理自动化",
+          "type": "table-row",
+          "line": 930,
+          "text": "协议与 BO 验收 第10阶段发现 2 项高优先级协议问题，源码修复 2 项，端到端验收关闭 0 项。 补齐测试环境 bootstrap、BO、Android 与 FFF 实连记录后关闭。 验收未关闭"
+        },
+        {
+          "id": "b0165",
+          "section": "节点部署与管理自动化",
+          "type": "table-row",
+          "line": 931,
+          "text": "VM／IP 自动采购 第10阶段没有供应商自动下单、付款／Top Up 或取得新 VM／IP 的完成证据。 建立统一采购任务；有 API 时直接接入，无 API 时才评估受控浏览器执行。 核心缺口"
+        },
+        {
+          "id": "b0166",
+          "section": "节点部署与管理自动化",
+          "type": "details-summary",
+          "line": 938,
+          "text": "第10阶段之后：API + AI 浏览器 Agent 混合采购建议"
+        },
+        {
+          "id": "b0167",
+          "section": "节点部署与管理自动化",
+          "type": "table-row",
+          "line": 942,
+          "text": "供应商类型 执行方式 必要控制"
+        },
+        {
+          "id": "b0168",
+          "section": "节点部署与管理自动化",
+          "type": "table-row",
+          "line": 944,
+          "text": "有完整 API BO 直接查询库存和价格，创建 VM／IP，取得访问资料，并执行续费、取消、重启或重建。 供应商、区域、规格及金额白名单；幂等键防止重复购买；失败自动重试。"
+        },
+        {
+          "id": "b0169",
+          "section": "节点部署与管理自动化",
+          "type": "table-row",
+          "line": 945,
+          "text": "只有部分 API API 负责现有 VM 生命周期；缺少的购买或付款步骤交给 AI 浏览器 Agent，再回到同一 BO 采购任务。 每一步保存状态；API 与浏览器不能同时重复执行同一订单。"
+        },
+        {
+          "id": "b0170",
+          "section": "节点部署与管理自动化",
+          "type": "table-row",
+          "line": 946,
+          "text": "无 API／无 Top Up 使用 OpenClaw 类受控浏览器 Agent 登录供应商网站、选择批准的套餐和区域、建立新订单；不能 Top Up 时购买新的已批准 SKU。 首阶段付款前人工确认；2FA／验证码转人工；限制单笔、每日及每月金额；保存页面证据、订单号和账单。"
+        },
+        {
+          "id": "b0171",
+          "section": "节点部署与管理自动化",
+          "type": "details-summary",
+          "line": 955,
+          "text": "后续目标：新节点统一标准"
+        },
+        {
+          "id": "b0172",
+          "section": "节点部署与管理自动化",
+          "type": "table-row",
+          "line": 958,
+          "text": "项目 统一标准 目的"
+        },
+        {
+          "id": "b0173",
+          "section": "节点部署与管理自动化",
+          "type": "table-row",
+          "line": 960,
+          "text": "计算资源 最低 1 核 CPU、1 GB 内存、10 GB 硬盘 形成可采购、可验收的最低基线。"
+        },
+        {
+          "id": "b0174",
+          "section": "节点部署与管理自动化",
+          "type": "table-row",
+          "line": 961,
+          "text": "操作系统 Debian 12–13 减少不同发行版带来的部署偏差。"
+        },
+        {
+          "id": "b0175",
+          "section": "节点部署与管理自动化",
+          "type": "table-row",
+          "line": 962,
+          "text": "流量与网络 700 GB 至不限流量；固定公网 IPv4 保证节点具备明确的服务基础。"
+        },
+        {
+          "id": "b0176",
+          "section": "节点部署与管理自动化",
+          "type": "table-row",
+          "line": 963,
+          "text": "中国节点优先项 有 IPv6 优先 作为中国节点采购与部署的优先条件。"
+        },
+        {
+          "id": "b0177",
+          "section": "节点部署与管理自动化",
+          "type": "details-summary",
+          "line": 970,
+          "text": "第10阶段之后：节点自动化闭环顺序"
+        },
+        {
+          "id": "b0178",
+          "section": "节点部署与管理自动化",
+          "type": "highlight",
+          "line": 973,
+          "text": "1 · 供应商分级 记录可用 API、网页登录、付款、Top Up、2FA、区域、规格和预算规则。"
+        },
+        {
+          "id": "b0179",
+          "section": "节点部署与管理自动化",
+          "type": "highlight",
+          "line": 974,
+          "text": "2 · 建立采购任务 BO 保存触发原因、审批、金额、步骤、订单号、VM ID、IP、失败和重试。"
+        },
+        {
+          "id": "b0180",
+          "section": "节点部署与管理自动化",
+          "type": "highlight",
+          "line": 975,
+          "text": "3 · 双驱动试点 完成一个 API 供应商和一个无 API 供应商的 AI 浏览器采购，并保留付款前确认。"
+        },
+        {
+          "id": "b0181",
+          "section": "节点部署与管理自动化",
+          "type": "highlight",
+          "line": 976,
+          "text": "4 · 打通自动补货 缺货时自动采购、DNS、部署、健康检查、入库及配发。"
+        },
+        {
+          "id": "b0182",
+          "section": "节点部署与管理自动化",
+          "type": "highlight",
+          "line": 977,
           "text": "5 · 逐步放宽 稳定后才对低金额白名单 SKU 取消人工确认；异常和高金额始终转人工。"
         }
       ]
