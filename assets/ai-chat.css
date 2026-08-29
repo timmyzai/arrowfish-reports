@@ -614,9 +614,102 @@
     }
 }
 
-/* Temporarily hide the report assistant UI while keeping the feature available in code. */
+.ai-brief-strip {
+    display: flex;
+    flex: 0 0 auto;
+    align-items: baseline;
+    gap: 10px;
+    width: 100%;
+    padding: 10px 18px;
+    border: 0;
+    border-bottom: 1px solid var(--ai-strip-border, rgba(120, 130, 150, 0.25));
+    background: var(--ai-strip-bg, rgba(99, 102, 241, 0.07));
+    font: inherit;
+    font-size: 0.86rem;
+    text-align: left;
+    color: inherit;
+    cursor: pointer;
+}
+
+.ai-brief-strip[hidden] {
+    display: none;
+}
+
+.ai-brief-strip:hover,
+.ai-brief-strip:focus-visible {
+    background: var(--ai-strip-bg-hover, rgba(99, 102, 241, 0.13));
+}
+
+.ai-strip-badge {
+    flex: 0 0 auto;
+    opacity: 0.75;
+}
+
+.ai-strip-text {
+    flex: 1 1 auto;
+    min-width: 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    opacity: 0.85;
+}
+
+.ai-strip-cta {
+    flex: 0 0 auto;
+    font-weight: 600;
+    white-space: nowrap;
+    opacity: 0.9;
+}
+
+.ai-starters {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    width: 100%;
+    margin-top: 14px;
+}
+
+.ai-starters-heading {
+    font-size: 0.78rem;
+    opacity: 0.7;
+    margin-bottom: 2px;
+}
+
+.ai-starter {
+    min-height: 44px;
+    padding: 9px 12px;
+    border: 1px solid rgba(120, 130, 150, 0.3);
+    border-radius: 10px;
+    background: transparent;
+    font: inherit;
+    font-size: 0.82rem;
+    line-height: 1.4;
+    text-align: left;
+    color: inherit;
+    cursor: pointer;
+}
+
+.ai-starter:hover,
+.ai-starter:focus-visible {
+    border-color: rgba(99, 102, 241, 0.6);
+    background: rgba(99, 102, 241, 0.08);
+}
+
+.ai-scope {
+    opacity: 0.6;
+}
+
+@media (max-width: 640px) {
+    .ai-strip-cta {
+        display: none;
+    }
+}
+
 .ai-launcher,
 .ai-backdrop,
-.ai-drawer {
+.ai-drawer,
+.ai-brief-strip {
     display: none !important;
 }

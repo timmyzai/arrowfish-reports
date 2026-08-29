@@ -7,10 +7,14 @@
   var STORAGE_KEY = 'arrowfish_ai_chat';
   var MAX_HISTORY_MESSAGES = 6;
   var MAX_QUESTION_CHARS = 1500;
+  var TIMELINE_INTENT_RE = /时间线|时间表|排期|进度表|什么时候|何时|多久|预计|上线时间|发布日期|交付日期|estimate|timeline|schedule|\bwhen\b|\beta\b|launch date|release date|delivery date/i;
   var REQUEST_TIMEOUT_MS = 35000;
 
   var Evidence = window.ArrowfishEvidence;
+  var Brief = window.ArrowfishBrief;
   var frame;
+  var strip;
+  var stripText;
   var drawer;
   var backdrop;
   var launcher;
@@ -64,7 +68,7 @@
   function init() {
     var app = document.getElementById('app-content');
     frame = document.getElementById('report-frame');
-    if (!app || !frame || !Evidence) return;
+    if (!app || !frame || !Evidence || !Brief) return;
 
     buildInterface(app);
     bindEvents();
@@ -106,6 +110,7 @@
       '    <button class="ai-quick-action" type="button" data-action="roadmap"><span aria-hidden="true">⌁</span><span data-ai-label="roadmap">' + t('ai.roadmap') + '</span></button>',
       '    <button class="ai-quick-action" type="button" data-action="results"><span aria-hidden="true">✦</span><span data-ai-label="results">' + t('ai.results') + '</span></button>',
       '    <button class="ai-quick-action" type="button" data-action="blockers"><span aria-hidden="true">!</span><span data-ai-label="blockers">' + t('ai.blockers') + '</span></button>',
+      '    <button class="ai-quick-action" type="button" data-action="portfolio"><span aria-hidden="true">◇</span><span data-ai-label="portfolio">' + t('ai.portfolio') + '</span></button>',
       '  </div>',
       '  <div class="ai-handoff" hidden></div>',
       '  <div class="ai-messages" role="log" aria-live="polite" aria-relevant="additions"></div>',
@@ -141,6 +146,8 @@
     handoffEl = app.querySelector('.ai-handoff');
     clearButton = app.querySelector('.ai-clear');
     closeButton = app.querySelector('.ai-close');
+    strip = document.getElementById('ai-brief-strip');
+    stripText = strip && strip.querySelector('.ai-strip-text');
     drawer.inert = true;
     setReady(false);
     renderMessages();
@@ -186,6 +193,9 @@
     });
 
     drawer.addEventListener('keydown', trapFocus);
+    if (strip) {
+      strip.addEventListener('click', function () { setOpen(true); });
+    }
   }
 
   function localizeInterface() {
@@ -196,7 +206,7 @@
     clearButton.title = t('ai.clear');
     closeButton.setAttribute('aria-label', t('ai.close'));
     drawer.querySelector('.ai-quick-actions').setAttribute('aria-label', t('ai.suggestions'));
-    ['roadmap', 'results', 'blockers'].forEach(function (action) {
+    ['roadmap', 'results', 'blockers', 'portfolio'].forEach(function (action) {
       var label = drawer.querySelector('[data-ai-label="' + action + '"]');
       if (label) label.textContent = t('ai.' + action);
     });
@@ -275,6 +285,7 @@
     connectionLabelEl.textContent = t('ai.connecting');
     showStatus('');
     setReady(false);
+    updateStrip(null);
     renderMessages();
   }
 
@@ -334,6 +345,7 @@
       updateHandoff();
       showStatus('');
       setReady(true);
+      showBrief();
       revealLinkedDetail();
     } catch (error) {
       if (token !== reportLoadToken) return;
@@ -472,6 +484,7 @@
         empty.innerHTML = '<span class="ai-empty-icon" aria-hidden="true">✦</span><strong></strong><span></span>';
         empty.querySelector('strong').textContent = t('ai.emptyTitle');
         empty.querySelector('span:last-child').textContent = t('ai.emptyBody');
+        empty.appendChild(renderStarters());
       } else {
         empty.textContent = t('ai.emptyNoReport');
       }
@@ -500,6 +513,34 @@
     scrollMessages();
   }
 
+  function renderStarters() {
+    var wrapper = document.createElement('div');
+    wrapper.className = 'ai-starters';
+    var heading = document.createElement('span');
+    heading.className = 'ai-starters-heading';
+    heading.textContent = t('ai.starterHeading');
+    wrapper.appendChild(heading);
+    ['ai.starter1', 'ai.starter2', 'ai.starter3', 'ai.starter4', 'ai.starter5', 'ai.starter6'].forEach(function (key) {
+      var question = t(key);
+      var button = document.createElement('button');
+      button.type = 'button';
+      button.className = 'ai-starter';
+      button.dataset.followUp = question;
+      button.textContent = question;
+      wrapper.appendChild(button);
+    });
+    return wrapper;
+  }
+
+  function corpusScope() {
+    return {
+      reports: allReports.length,
+      blocks: allReports.reduce(function (total, report) {
+        return total + ((report.blocks || []).length);
+      }, 0)
+    };
+  }
+
   function renderMessageActions(message, messageIndex) {
     var actions = document.createElement('div');
     actions.className = 'ai-message-actions';
@@ -511,10 +552,26 @@
     copy.textContent = t('ai.copyAnswer');
     actions.appendChild(copy);
 
+    if (message.meta && message.meta.result === 'local_brief') {
+      var explain = document.createElement('button');
+      explain.type = 'button';
+      explain.className = 'ai-message-action ai-explain';
+      explain.dataset.explain = 'brief';
+      explain.textContent = t('ai.explain');
+      actions.appendChild(explain);
+    }
+
     if (Array.isArray(message.sources) && message.sources.length) {
       var count = document.createElement('span');
       count.textContent = tn('ai.sources', message.sources.length);
       actions.appendChild(count);
+    }
+
+    if (message.meta && message.meta.result && message.meta.result.indexOf('local_') !== 0) {
+      var scope = document.createElement('span');
+      scope.className = 'ai-scope';
+      scope.textContent = t('ai.searchScope', corpusScope());
+      actions.appendChild(scope);
     }
     return actions;
   }
@@ -575,6 +632,11 @@
   }
 
   function handleMessageClick(event) {
+    var explainTarget = event.target.closest('[data-explain]');
+    if (explainTarget) {
+      sendQuestion(t('ai.explainQuestion'));
+      return;
+    }
     var followUpTarget = event.target.closest('[data-follow-up]');
     if (followUpTarget) {
       sendQuestion(followUpTarget.dataset.followUp);
@@ -778,47 +840,19 @@
     handoffEl.hidden = false;
   }
 
-  function indexedSource(entry, id) {
-    var report = entry && allReports.find(function (item) { return item.id === entry.reportId; });
-    var block = report && (report.blocks || []).find(function (item) { return item.id === entry.blockId; });
-    if (!report || !block || block.type === 'heading') return null;
-    return {
-      id: id,
-      blockId: block.id,
-      reportId: report.id,
-      reportKey: report.file,
-      reportTitle: report.name,
-      reportDate: report.date,
-      reportVersion: report.version,
-      section: block.section,
-      line: block.line,
-      text: block.text,
-      quote: block.text
+  function briefOptions(extra) {
+    var options = {
+      index: reportIndex,
+      reports: allReports,
+      t: t,
+      formatDate: displayReportDate
     };
-  }
-
-  function addIndexedLine(lines, sources, text, entry) {
-    var source = indexedSource(entry, 'S' + (sources.length + 1));
-    if (!source) return;
-    sources.push(source);
-    lines.push(text + ' [' + source.id + ']');
-  }
-
-  function allGoals() {
-    return workstreamsInOrder().reduce(function (items, workstream) {
-      return items.concat((workstream && workstream.goals) || []);
-    }, []);
-  }
-
-  function workstreamsInOrder() {
-    if (!reportIndex || !reportIndex.workstreams) return [];
-    return Object.keys(reportIndex.workstreams).map(function (key) {
-      return reportIndex.workstreams[key];
-    });
+    Object.keys(extra || {}).forEach(function (key) { options[key] = extra[key]; });
+    return options;
   }
 
   function followUpsForSources(sources, useFallback) {
-    var goals = allGoals();
+    var goals = Brief.allGoals(reportIndex);
     var matched = goals.filter(function (goal) {
       return (sources || []).some(function (source) {
         return (goal.reportId === source.reportId && goal.blockId === source.blockId) ||
@@ -838,69 +872,67 @@
     }, []);
   }
 
-  function roadmapShortcut() {
-    var lines = [];
-    var sources = [];
-    workstreamsInOrder().forEach(function (workstream) {
-      lines.push(workstream.label);
-      (workstream.phases || []).filter(function (phase) { return !phase.future; }).forEach(function (phase) {
-        addIndexedLine(lines, sources, phase.label + ' · ' + phase.title + ' — ' + phase.result, phase);
-      });
-      Object.keys(workstream.statusLabels || {}).forEach(function (status) {
-        var label = workstream.statusLabels[status];
-        (workstream.goals || []).filter(function (goal) { return goal.statusGroup === status; }).forEach(function (goal) {
-          addIndexedLine(lines, sources, label + ' · ' + goal.id + ' ' + goal.title + ' · ' + goal.deadline, goal);
-        });
-      });
-      (workstream.phases || []).filter(function (phase) { return phase.future; }).forEach(function (phase) {
-        addIndexedLine(lines, sources, phase.label + ' · ' + phase.title + ' — ' + phase.result, phase);
-      });
-    });
-    return { content: lines.join('\n'), sources: sources };
+  function updateStrip(brief) {
+    if (!strip || !stripText) return;
+    var lead = brief && brief.content
+      ? Evidence.stripCitationMarkers(brief.content).split('\n').find(function (line) { return line.trim(); })
+      : '';
+    if (!lead) {
+      strip.hidden = true;
+      stripText.textContent = '';
+      return;
+    }
+    var cta = strip.querySelector('.ai-strip-cta');
+    if (cta) cta.textContent = t('ai.stripCta');
+    stripText.textContent = lead.trim();
+    strip.setAttribute('aria-label', t('ai.briefHeading') + ': ' + lead.trim());
+    strip.hidden = false;
   }
 
-  function resultsShortcut() {
-    var lines = [];
-    var sources = [];
-    var phases = workstreamsInOrder().reduce(function (items, workstream) {
-      return items.concat((workstream && workstream.phases) || []);
-    }, []).filter(function (phase) {
-      return !phase.future && /^(?:结果|Result)[:：]/i.test(phase.result);
-    }).reverse();
-    phases.forEach(function (phase) {
-      addIndexedLine(lines, sources, phase.label + ' · ' + phase.result.replace(/^(?:结果|Result)[:：]\s*/i, '') + ' ↗', phase);
-    });
-    return { content: lines.join('\n'), sources: sources };
+  function timelineAnswer(question) {
+    if (!reportIndex || !TIMELINE_INTENT_RE.test(question)) return null;
+    var workstream = Evidence.detectWorkstream(question, reportIndex);
+    if (!workstream) return null;
+    var chain = Brief.deliveryChain(briefOptions({ workstream: workstream }));
+    return chain.content && chain.sources.length ? chain : null;
   }
 
-  function blockersShortcut() {
-    var lines = [];
-    var sources = [];
-    var used = new Set();
-    allGoals().filter(function (goal) { return goal.statusGroup !== 'done'; }).forEach(function (goal) {
-      addIndexedLine(
-        lines,
-        sources,
-        goal.id + ' ' + goal.title + ' · ' + goal.status + ' — ' + goal.evidence + ' ' + t('ai.nextStep') + goal.nextAction,
-        goal
-      );
-      used.add(goal.reportId + '\u0000' + goal.blockId);
+  function showBrief() {
+    if (!currentReport || !reportIndex) {
+      updateStrip(null);
+      return;
+    }
+    var brief = Brief.reportBrief(briefOptions({ report: currentReport }));
+    updateStrip(brief);
+    if (messages.length || !brief.content) return;
+    messages.push({
+      role: 'assistant',
+      content: brief.content,
+      answerable: Boolean(brief.sources.length),
+      sources: brief.sources,
+      followUps: followUpsForSources(brief.sources, true),
+      meta: { result: 'local_brief', reportVersion: currentReport.version }
     });
-    (reportIndex.blockers || []).forEach(function (blocker) {
-      var key = blocker.reportId + '\u0000' + blocker.blockId;
-      if (used.has(key)) return;
-      used.add(key);
-      addIndexedLine(lines, sources, displayReportDate(blocker.reportDate) + ' · ' + blocker.section + ' — ' + blocker.text, blocker);
-    });
-    return { content: lines.join('\n'), sources: sources };
+    renderMessages();
+    saveConversation();
   }
 
   function renderShortcut(action) {
     if (!currentReport || !reportIndex || busy) return;
-    var labels = { roadmap: t('ai.roadmap'), results: t('ai.results'), blockers: t('ai.blockers') };
-    var builders = { roadmap: roadmapShortcut, results: resultsShortcut, blockers: blockersShortcut };
+    var labels = {
+      roadmap: t('ai.roadmap'),
+      results: t('ai.results'),
+      blockers: t('ai.blockers'),
+      portfolio: t('ai.portfolio')
+    };
+    var builders = {
+      roadmap: Brief.milestoneTimeline,
+      results: Brief.resultsSummary,
+      blockers: Brief.blockerSummary,
+      portfolio: Brief.portfolioBrief
+    };
     if (!builders[action]) return;
-    var result = builders[action]();
+    var result = builders[action](briefOptions());
     messages.push({ role: 'user', content: labels[action] });
     messages.push({
       role: 'assistant',
@@ -991,6 +1023,24 @@
 
     renderMessages();
     saveConversation();
+
+    var chain = timelineAnswer(question);
+    if (chain) {
+      messages.push({
+        role: 'assistant',
+        content: chain.content,
+        answerable: true,
+        sources: chain.sources,
+        followUps: followUpsForSources(chain.sources, false),
+        meta: { result: 'local_timeline', reportVersion: currentReport.version }
+      });
+      messages = messages.slice(-MAX_HISTORY_MESSAGES);
+      renderMessages();
+      saveConversation();
+      input.focus();
+      return;
+    }
+
     setBusy(true);
 
     var responseData;
@@ -1014,7 +1064,7 @@
     if (!sources.length && !Evidence.reportMetadataIntent(question).allowed) {
       messages.push({
         role: 'assistant',
-        content: t('ai.noDirectAnswer'),
+        content: t('ai.noDirectAnswer', corpusScope()),
         answerable: false,
         sources: [],
         followUps: followUpsForSources([], true),

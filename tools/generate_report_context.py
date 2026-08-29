@@ -35,6 +35,24 @@ NEGATIVE_STATUS_RE_EN = re.compile(
     r"\b(?:not\s+yet|not|never|no\s+longer|cannot|can't|unable|pending|blocked|incomplete|outstanding)\b",
     re.IGNORECASE,
 )
+STAGE_STATES = ("complete", "current", "next", "planned")
+TIMELINE_RULES = (
+    ("dated", re.compile(r"20\d{2}-\d{2}-\d{2}|20\d{2}\s*[-–]\s*\d{2}|20\d{2}\s*年\s*\d{1,2}\s*月")),
+    ("next-release", re.compile(r"下一发布窗口|下次生产发布前|下一管理看板")),
+    ("gated", re.compile(r"验收后|验收前|验证后|首发前|关闭后|完成后|门槛|门控")),
+    ("year-end", re.compile(r"年底前|持续至年底")),
+    ("ongoing", re.compile(r"持续")),
+    ("unscheduled", re.compile(r"待排期")),
+    ("now", re.compile(r"\bP0\b")),
+)
+AT_RISK_RE = re.compile(r"进度风险")
+
+
+def goal_timeline(source_deadline: str) -> str:
+    for name, pattern in TIMELINE_RULES:
+        if pattern.search(source_deadline):
+            return name
+    return "unscheduled"
 
 
 def normalize_text(value: str) -> str:
@@ -149,10 +167,6 @@ class ReportParser(HTMLParser):
         if not kind:
             return
 
-        # Block identity is canonical to the Chinese source. Two distinct source
-        # blocks may legitimately share the same English translation, so using
-        # translated text for de-duplication can drop blocks and shift every
-        # following block ID in the English context.
         if self.blocks and self.blocks[-1]["_source_text"] == source_text:
             return
 
@@ -194,6 +208,7 @@ class ReportIndexParser(HTMLParser):
                 "tag": tag,
                 "attrs": dict(attrs),
                 "parts": [],
+                "source_parts": [],
                 "fields": {},
             }
         )
@@ -205,9 +220,10 @@ class ReportIndexParser(HTMLParser):
     def handle_data(self, data: str) -> None:
         if self.skip_depth or not data.strip():
             return
-        data = self.translations.translate(data)
+        translated = self.translations.translate(data)
         for node in self.stack:
-            node["parts"].append(data)
+            node["parts"].append(translated)
+            node["source_parts"].append(data)
 
     def nearest(self, class_name: str) -> dict | None:
         return next(
@@ -244,6 +260,7 @@ class ReportIndexParser(HTMLParser):
         if self.skip_depth:
             return
         text = normalize_text(" ".join(node["parts"]))
+        source_text = normalize_text(" ".join(node["source_parts"]))
         classes = class_names(node)
 
         if tag == "h2":
@@ -279,6 +296,7 @@ class ReportIndexParser(HTMLParser):
         goal_row = self.nearest("goal-row")
         if goal_row is not None and tag == "td":
             goal_row["fields"].setdefault("cells", []).append(text)
+            goal_row["fields"].setdefault("sourceCells", []).append(source_text)
 
         if "route-stage" in classes or "route-future-card" in classes:
             workstream = self.workstream()
@@ -291,6 +309,10 @@ class ReportIndexParser(HTMLParser):
                         "title": fields["title"],
                         "result": fields["result"],
                         "future": "route-future-card" in classes,
+                        "stage": next(
+                            (name for name in classes if name in STAGE_STATES),
+                            "planned",
+                        ),
                         "text": text,
                     }
                 )
@@ -298,6 +320,8 @@ class ReportIndexParser(HTMLParser):
         if "goal-row" in classes:
             workstream = self.workstream()
             cells = node["fields"].get("cells", [])
+            source_cells = node["fields"].get("sourceCells", [])
+            source_deadline = source_cells[4] if len(source_cells) >= 5 else ""
             goal_match = re.match(r"(?:(?:FFF|SHARED)\s*·\s*)?(G\d+)\s*(.*)", cells[0]) if cells else None
             if workstream and len(cells) >= 5 and goal_match:
                 self.goals.append(
@@ -310,6 +334,8 @@ class ReportIndexParser(HTMLParser):
                         "evidence": cells[2],
                         "nextAction": cells[3],
                         "deadline": cells[4],
+                        "timeline": goal_timeline(source_deadline),
+                        "atRisk": bool(AT_RISK_RE.search(source_deadline)),
                         "text": text,
                     }
                 )
@@ -380,7 +406,7 @@ def build_report_index(
         for phase in phases:
             block = matching_block(
                 report["blocks"], phase.pop("text"),
-                "highlight" if phase["future"] else "li",
+                "highlight" if phase.pop("future") else "li",
             )
             if not block:
                 continue

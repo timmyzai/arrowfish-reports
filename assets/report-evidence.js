@@ -33,6 +33,7 @@
   ];
 
   var OVERVIEW_RE = /summary|summarize|overview|main points?|highlights?|摘要|概述|重点|要点|总结|主要内容|报告内容|说了什么|讲了什么|看到了什么|看到什么|说说.*报告|介绍.*报告|这份报告.*(?:讲|说)/i;
+  var REPORT_ANCHOR_RE = /第\s*\d+[–-]?\d*\s*阶段|阶段\s*\d+|\bsprint\s*-?\s*\d+|\b20\d{2}\s*[-\/年]\s*\d{1,2}|本报告|这份报告|当前报告|该报告|\bthis\s+report\b|\bcurrent\s+report\b/i;
   var OVERVIEW_SECTION_RE = /tldr|summary|overview|highlights?|摘要|概述|重点|关键|成果|状态|风险|阻塞|下一步|计划|结论/i;
   var OVERVIEW_CATEGORIES = [
     /tldr|summary|overview|摘要|概述|一句话|报告总览/i,
@@ -41,6 +42,31 @@
     /风险|阻塞|挑战|限制|安全|risk|blocker|challenge/i,
     /下一步|计划|行动|规划|next|plan|action|roadmap/i
   ];
+
+  function detectWorkstream(question, index) {
+    if (!index || !index.workstreams) return '';
+    var text = normalizeText(question);
+    var match = '';
+    Object.keys(index.workstreams).forEach(function (key) {
+      var label = normalizeText(index.workstreams[key].label || '');
+      var keyPattern = new RegExp('(?:^|[^a-z0-9])' + key.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '(?:$|[^a-z0-9])', 'i');
+      if (keyPattern.test(text) || (label && text.indexOf(label) !== -1)) match = key;
+    });
+    return match;
+  }
+
+  function workstreamBlockKeys(index, keys) {
+    var owned = new Set();
+    if (!index || !index.workstreams) return owned;
+    keys.forEach(function (key) {
+      var workstream = index.workstreams[key];
+      if (!workstream) return;
+      ((workstream.goals || []).concat(workstream.phases || [])).forEach(function (entry) {
+        if (entry && entry.reportId && entry.blockId) owned.add(entry.reportId + '\u0000' + entry.blockId);
+      });
+    });
+    return owned;
+  }
 
   function isLowInformationBlock(block) {
     return block.type === 'table-row' && block.text.length < 32 && !/\d/.test(block.text);
@@ -130,9 +156,6 @@
     var tokens = baseTokens(value);
     SYNONYM_GROUPS.forEach(function (group) {
       if (group.some(function (term) {
-        // Latin synonym terms must match whole tokens. Substring matching made
-        // words such as "remains" trigger the "main" summary synonym group,
-        // which displaced the relevant evidence for focused English queries.
         return /[\u3400-\u9fff]/.test(term)
           ? normalized.indexOf(term) !== -1
           : tokens.indexOf(term) !== -1;
@@ -143,9 +166,13 @@
     return Array.from(new Set(tokens));
   }
 
-  function scoreBlock(report, block, currentTokens, contextTokens, overview, followUp, goalTerms) {
+  function scoreBlock(report, block, currentTokens, contextTokens, overview, followUp, goalTerms, focus) {
     if (!block || !block.text || block.type === 'heading') return -1;
     if (isLowInformationBlock(block)) return -1;
+    if (focus) {
+      var key = report.id + '\u0000' + block.id;
+      if (focus.excluded.has(key)) return -1;
+    }
     if (overview && block.id === 'b0001' && block.text.length < 120) return -1;
     var body = normalizeText(block.text);
     var section = normalizeText(block.section);
@@ -171,6 +198,7 @@
     if ((goalTerms || []).some(function (term) {
       return body.indexOf(term) !== -1 || section.indexOf(term) !== -1;
     })) score += 12;
+    if (focus && focus.owned.has(report.id + '\u0000' + block.id)) score += 20;
     return score;
   }
 
@@ -219,6 +247,19 @@
       });
     }
     goalTerms = Array.from(new Set(goalTerms.filter(Boolean)));
+    var focusKey = detectWorkstream(question, options.index);
+    var focus = null;
+    if (focusKey && options.index && options.index.workstreams) {
+      focus = {
+        owned: workstreamBlockKeys(options.index, [focusKey]),
+        excluded: workstreamBlockKeys(options.index, Object.keys(options.index.workstreams).filter(function (key) {
+          return key !== focusKey;
+        }))
+      };
+      focus.excluded.forEach(function (key) {
+        if (focus.owned.has(key)) focus.excluded.delete(key);
+      });
+    }
     var selected = [];
     var sectionCounts = Object.create(null);
     var usedChars = 0;
@@ -250,15 +291,18 @@
       return true;
     }
 
+    var anchored = REPORT_ANCHOR_RE.test(question);
+    var sourceCeiling = anchored ? 4 : maxSources;
+    var reportCeiling = anchored ? 3 : 5;
     var scannedReports = 0;
     reports.some(function (sourceReport) {
-      if (selected.length >= maxSources || selected.length >= 4 || scannedReports >= 3) return true;
+      if (selected.length >= maxSources || selected.length >= sourceCeiling || scannedReports >= reportCeiling) return true;
       scannedReports += 1;
       var ranked = (sourceReport.blocks || []).map(function (block, index) {
         return {
           block: block,
           index: index,
-          score: scoreBlock(sourceReport, block, currentTokens, contextTokens, overview, followUp, goalTerms)
+          score: scoreBlock(sourceReport, block, currentTokens, contextTokens, overview, followUp, goalTerms, focus)
         };
       }).filter(function (item) {
         return item.score >= 0;
@@ -286,7 +330,7 @@
         if (addItem(item, sourceReport)) reportSourceCount += 1;
         return selected.length >= maxSources || reportSourceCount >= reportSourceLimit;
       });
-      return selected.length >= 4 || scannedReports >= 3;
+      return selected.length >= sourceCeiling || scannedReports >= reportCeiling;
     });
 
     return selected;
@@ -294,6 +338,7 @@
 
   return {
     citationParts: citationParts,
+    detectWorkstream: detectWorkstream,
     locatorText: locatorText,
     normalizeText: normalizeText,
     reportMetadataIntent: reportMetadataIntent,

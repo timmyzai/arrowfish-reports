@@ -71,8 +71,6 @@
   --shadow-md: 0 18px 50px var(--af-shadow);
 }
 
-/* Shared sizing baseline: padding and borders must never make 100%-wide UI
-   controls or report content wider than their parent. */
 *,
 *::before,
 *::after {
@@ -181,8 +179,6 @@ body.auth-locked > *:not(#auth-gate) { display: none !important; }
   margin-left: auto;
 }
 
-/* Flex rows in older reports contain long URLs and identifiers. Allow their
-   content column to shrink before text can widen the page. */
 .action-list li > * { min-width: 0; }
 
 [data-report-header] { position: relative; }
@@ -322,8 +318,6 @@ html[data-theme="dark"] #ai-question { color: var(--af-text); }
 }
 
 @media (max-width: 768px) {
-  /* Older reports use plain tables without a wrapper. Keep wide data inside
-     the viewport while preserving every column for horizontal inspection. */
   :where(table) {
     display: block;
     width: 100%;

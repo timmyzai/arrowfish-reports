@@ -13,532 +13,532 @@
           "id": "b0001",
           "section": "Report overview",
           "type": "heading",
-          "line": 71,
+          "line": 73,
           "text": "交接报告（第0阶段）：稳定与准备阶段"
         },
         {
           "id": "b0002",
           "section": "执行总结",
           "type": "heading",
-          "line": 90,
+          "line": 92,
           "text": "执行总结"
         },
         {
           "id": "b0003",
           "section": "执行总结",
           "type": "li",
-          "line": 95,
+          "line": 97,
           "text": "应用稳定性：13个崩溃/冻结问题 — 修复进行中"
         },
         {
           "id": "b0004",
           "section": "执行总结",
           "type": "li",
-          "line": 96,
+          "line": 98,
           "text": "防滥用：免费用户时间限制仅在客户端，容易绕过 — 服务端限制开发中"
         },
         {
           "id": "b0005",
           "section": "执行总结",
           "type": "li",
-          "line": 97,
+          "line": 99,
           "text": "收入保护：三星应用内购买处于测试模式（零收入）— 已修复"
         },
         {
           "id": "b0006",
           "section": "执行总结",
           "type": "li",
-          "line": 98,
+          "line": 100,
           "text": "成本优化：发现约$735/月可节省（测试节点 + 冗余代理服务器）"
         },
         {
           "id": "b0007",
           "section": "交接时间表",
           "type": "heading",
-          "line": 107,
+          "line": 109,
           "text": "交接时间表"
         },
         {
           "id": "b0008",
           "section": "成果分类一览",
           "type": "heading",
-          "line": 138,
+          "line": 140,
           "text": "成果分类一览"
         },
         {
           "id": "b0009",
           "section": "业务影响 — 平台稳定性",
           "type": "heading",
-          "line": 175,
+          "line": 177,
           "text": "业务影响 — 平台稳定性"
         },
         {
           "id": "b0010",
           "section": "业务影响 — 平台稳定性",
           "type": "table-row",
-          "line": 178,
+          "line": 180,
           "text": "问题 数量 详情 状态"
         },
         {
           "id": "b0011",
           "section": "业务影响 — 平台稳定性",
           "type": "table-row",
-          "line": 181,
+          "line": 183,
           "text": "崩溃问题 13个 启动崩溃、连接卡住、黑屏、应用无响应 开发中"
         },
         {
           "id": "b0012",
           "section": "业务影响 — 平台稳定性",
           "type": "table-row",
-          "line": 185,
+          "line": 187,
           "text": "试用体验 缺失 用户看不到剩余试用时间，无升级提示 方案已设计"
         },
         {
           "id": "b0013",
           "section": "业务影响 — 平台稳定性",
           "type": "highlight",
-          "line": 191,
+          "line": 193,
           "text": "稳定性直接影响留存率和复费率。预计4月中旬开发完成，5月中旬部署。"
         },
         {
           "id": "b0014",
           "section": "业务影响 — 防滥用与收入保护",
           "type": "heading",
-          "line": 198,
+          "line": 200,
           "text": "业务影响 — 防滥用与收入保护"
         },
         {
           "id": "b0015",
           "section": "业务影响 — 防滥用与收入保护",
           "type": "table-row",
-          "line": 201,
+          "line": 203,
           "text": "问题 影响 解决方案 状态"
         },
         {
           "id": "b0016",
           "section": "业务影响 — 防滥用与收入保护",
           "type": "table-row",
-          "line": 204,
+          "line": 206,
           "text": "时间限制仅客户端 90分钟/天限制容易绕过，最高滥用者月用1,216 GB 服务端时间追踪 + 月流量上限 开发中"
         },
         {
           "id": "b0017",
           "section": "业务影响 — 防滥用与收入保护",
           "type": "table-row",
-          "line": 210,
+          "line": 212,
           "text": "无设备数量限制 免费用户可用无限设备 按等级限制（免费1台，付费3+台） 开发中"
         },
         {
           "id": "b0018",
           "section": "业务影响 — 防滥用与收入保护",
           "type": "table-row",
-          "line": 216,
+          "line": 218,
           "text": "三星应用内购买测试模式 上线以来应用内购买收入$0 已切换生产模式 开发中"
         },
         {
           "id": "b0019",
           "section": "业务影响 — 成本",
           "type": "heading",
-          "line": 234,
+          "line": 236,
           "text": "业务影响 — 成本"
         },
         {
           "id": "b0020",
           "section": "业务影响 — 成本",
           "type": "table-row",
-          "line": 237,
+          "line": 239,
           "text": "类别 月费 详情"
         },
         {
           "id": "b0021",
           "section": "业务影响 — 成本",
           "type": "table-row",
-          "line": 240,
+          "line": 242,
           "text": "全部VPN节点 $1,988 25个提供商，分散管理"
         },
         {
           "id": "b0022",
           "section": "业务影响 — 成本",
           "type": "table-row",
-          "line": 241,
+          "line": 243,
           "text": "Lisahost测试节点 ~$412（2,988元） 9个节点中6个标\"测试\"仍在运行"
         },
         {
           "id": "b0023",
           "section": "业务影响 — 成本",
           "type": "table-row",
-          "line": 242,
+          "line": 244,
           "text": "冗余代理服务器 ~$323 香港云霸（1,680元，不稳定）+ Azure（$93）"
         },
         {
           "id": "b0024",
           "section": "业务影响 — 成本",
           "type": "table-row",
-          "line": 243,
+          "line": 245,
           "text": "可节省 ~$735/月 第1-2阶段清除"
         },
         {
           "id": "b0025",
           "section": "遗留技术债务",
           "type": "heading",
-          "line": 250,
+          "line": 252,
           "text": "遗留技术债务"
         },
         {
           "id": "b0026",
           "section": "遗留技术债务",
           "type": "table-row",
-          "line": 254,
+          "line": 256,
           "text": "领域 问题 风险 状态"
         },
         {
           "id": "b0027",
           "section": "遗留技术债务",
           "type": "table-row",
-          "line": 257,
+          "line": 259,
           "text": "安全 日志中有敏感配置数据。强制更新从未启用 — 1,417名旧版本用户近两周活跃，完全绕过限制。最老版本落后2-4个月。 高 开发中"
         },
         {
           "id": "b0028",
           "section": "遗留技术债务",
           "type": "table-row",
-          "line": 263,
+          "line": 265,
           "text": "基础设施 读取副本数据库从未使用（仅1次连接）。无故障转移。两个冗余代理服务器应合并。 高 开发中"
         },
         {
           "id": "b0029",
           "section": "遗留技术债务",
           "type": "table-row",
-          "line": 269,
+          "line": 271,
           "text": "数据库 86%为日志数据（15 GB中13 GB）。4个关键索引缺失。管理后台框架已停止维护。 中 部分解决"
         },
         {
           "id": "b0030",
           "section": "遗留技术债务",
           "type": "table-row",
-          "line": 275,
+          "line": 277,
           "text": "依赖库 后端4个已升级。安卓端7个主要库过时（第2阶段处理）。 中 部分解决"
         },
         {
           "id": "b0031",
           "section": "遗留技术债务",
           "type": "table-row",
-          "line": 281,
+          "line": 283,
           "text": "App代码质量 50+问题：崩溃、1,932行无用代码、每次打开应用12个重复请求、7个并发问题。 中 开发中"
         },
         {
           "id": "b0032",
           "section": "安全警示 — 前团队违反无日志政策",
           "type": "heading",
-          "line": 293,
+          "line": 295,
           "text": "安全警示 — 前团队违反无日志政策"
         },
         {
           "id": "b0033",
           "section": "安全警示 — 前团队违反无日志政策",
           "type": "table-row",
-          "line": 299,
+          "line": 301,
           "text": "违规位置 违规内容 风险 状态"
         },
         {
           "id": "b0034",
           "section": "安全警示 — 前团队违反无日志政策",
           "type": "table-row",
-          "line": 302,
+          "line": 304,
           "text": "安卓应用 MmkvManager.kt 调试日志中记录完整 VPN 服务器配置、连接密钥、订阅 URL（5处日志语句） 高 第1阶段修复"
         },
         {
           "id": "b0035",
           "section": "安全警示 — 前团队违反无日志政策",
           "type": "table-row",
-          "line": 308,
+          "line": 310,
           "text": "后端客户端 API 追踪中间件 启用时记录用户 IP 和完整请求体 — 不符合无日志政策 高 第1阶段修复"
         },
         {
           "id": "b0036",
           "section": "安全警示 — 前团队违反无日志政策",
           "type": "table-row",
-          "line": 314,
+          "line": 316,
           "text": "生产数据库 log_apis 表 13.1 GB API 请求日志（占数据库总量 86%），每日新增 163 MB，清理脚本失效 114 天 中 第1阶段清理"
         },
         {
           "id": "b0037",
           "section": "安全警示 — 前团队违反无日志政策",
           "type": "table-row",
-          "line": 320,
+          "line": 322,
           "text": "后端 middleware.Logger() 旧版本将所有请求记录到磁盘 — 生成 22 GB PM2 日志文件（~350 MB/天增长） 中 代码已修复，待部署"
         },
         {
           "id": "b0038",
           "section": "安全警示 — 前团队违反无日志政策",
           "type": "highlight",
-          "line": 328,
+          "line": 330,
           "text": "节点级别合规（禁用 rsyslog/journald）列为第1阶段运维任务。"
         },
         {
           "id": "b0039",
           "section": "关键发现（2026年3月数据）",
           "type": "heading",
-          "line": 335,
+          "line": 337,
           "text": "关键发现（2026年3月数据）"
         },
         {
           "id": "b0040",
           "section": "中国网络连接",
           "type": "heading",
-          "line": 378,
+          "line": 380,
           "text": "中国网络连接"
         },
         {
           "id": "b0041",
           "section": "路线图 — 预测指标",
           "type": "heading",
-          "line": 386,
+          "line": 388,
           "text": "路线图 — 预测指标"
         },
         {
           "id": "b0042",
           "section": "路线图 — 预测指标",
           "type": "table-row",
-          "line": 389,
+          "line": 391,
           "text": "指标 当前 第1阶段后预计"
         },
         {
           "id": "b0043",
           "section": "路线图 — 预测指标",
           "type": "table-row",
-          "line": 392,
+          "line": 394,
           "text": "节点月费 $1,988 $1,551"
         },
         {
           "id": "b0044",
           "section": "路线图 — 预测指标",
           "type": "table-row",
-          "line": 393,
+          "line": 395,
           "text": "防滥用节省 $0 ~$112-150"
         },
         {
           "id": "b0045",
           "section": "路线图 — 预测指标",
           "type": "table-row",
-          "line": 394,
+          "line": 396,
           "text": "基础设施节省 $0 ~$323（代理合并）"
         },
         {
           "id": "b0046",
           "section": "路线图 — 预测指标",
           "type": "table-row",
-          "line": 395,
+          "line": 397,
           "text": "收入渠道 开发中 部署后激活"
         },
         {
           "id": "b0047",
           "section": "路线图 — 预测指标",
           "type": "table-row",
-          "line": 396,
+          "line": 398,
           "text": "试用转化 基准 +0.3-0.5%"
         },
         {
           "id": "b0048",
           "section": "路线图 — 里程碑",
           "type": "heading",
-          "line": 403,
+          "line": 405,
           "text": "路线图 — 里程碑"
         },
         {
           "id": "b0049",
           "section": "路线图 — 里程碑",
           "type": "table-row",
-          "line": 406,
+          "line": 408,
           "text": "里程碑 目标 说明"
         },
         {
           "id": "b0050",
           "section": "路线图 — 里程碑",
           "type": "table-row",
-          "line": 409,
+          "line": 411,
           "text": "平台评估 4月初 全面审计完成"
         },
         {
           "id": "b0051",
           "section": "路线图 — 里程碑",
           "type": "table-row",
-          "line": 410,
+          "line": 412,
           "text": "测试环境 4月下旬 生产前测试"
         },
         {
           "id": "b0052",
           "section": "路线图 — 里程碑",
           "type": "table-row",
-          "line": 411,
+          "line": 413,
           "text": "内部测试版 4月下旬 内部体验测试"
         },
         {
           "id": "b0053",
           "section": "路线图 — 里程碑",
           "type": "table-row",
-          "line": 412,
+          "line": 414,
           "text": "生产部署 5月中旬 全部修复上线"
         },
         {
           "id": "b0054",
           "section": "路线图 — 里程碑",
           "type": "table-row",
-          "line": 413,
+          "line": 415,
           "text": "基础设施整合 5-6月 节省~$735/月"
         },
         {
           "id": "b0055",
           "section": "路线图 — 里程碑",
           "type": "table-row",
-          "line": 414,
+          "line": 416,
           "text": "多平台应用重建 第2阶段（6月+） 安卓/苹果/电脑 — 旧代码太差需重写"
         },
         {
           "id": "b0056",
           "section": "路线图 — 里程碑",
           "type": "table-row",
-          "line": 415,
+          "line": 417,
           "text": "协议升级 7-8月 连接性能提升"
         },
         {
           "id": "b0057",
           "section": "所需资源",
           "type": "heading",
-          "line": 422,
+          "line": 424,
           "text": "所需资源"
         },
         {
           "id": "b0058",
           "section": "所需资源",
           "type": "table-row",
-          "line": 425,
+          "line": 427,
           "text": "资源 用途 时间"
         },
         {
           "id": "b0059",
           "section": "所需资源",
           "type": "table-row",
-          "line": 428,
+          "line": 430,
           "text": "安卓开发工具 开发环境 立即"
         },
         {
           "id": "b0060",
           "section": "所需资源",
           "type": "table-row",
-          "line": 429,
+          "line": 431,
           "text": "测试服务器 测试环境 4月12日前"
         },
         {
           "id": "b0061",
           "section": "所需资源",
           "type": "table-row",
-          "line": 430,
+          "line": 432,
           "text": "测试人员 内部体验 + 回归测试 4月15日前"
         },
         {
           "id": "b0062",
           "section": "所需资源",
           "type": "table-row",
-          "line": 431,
+          "line": 433,
           "text": "支付通道文档 哪些通道在用、为什么其他被关 4月7日（Lex会议）"
         },
         {
           "id": "b0063",
           "section": "所需资源",
           "type": "table-row",
-          "line": 432,
+          "line": 434,
           "text": "Lisahost确认 6个\"测试\"节点是否还需要 4月7日"
         },
         {
           "id": "b0064",
           "section": "财务总结",
           "type": "heading",
-          "line": 439,
+          "line": 441,
           "text": "财务总结"
         },
         {
           "id": "b0065",
           "section": "后续步骤",
           "type": "heading",
-          "line": 453,
+          "line": 455,
           "text": "后续步骤"
         },
         {
           "id": "b0066",
           "section": "后续步骤",
           "type": "li",
-          "line": 455,
+          "line": 457,
           "text": "4月6日前：确认Lisahost节点、提供支付文档、安排安卓开发工具"
         },
         {
           "id": "b0067",
           "section": "后续步骤",
           "type": "li",
-          "line": 456,
+          "line": 458,
           "text": "4月6日：第1阶段启动"
         },
         {
           "id": "b0068",
           "section": "后续步骤",
           "type": "li",
-          "line": 457,
+          "line": 459,
           "text": "4月7日：Lex会议 — 验证计划、GFW/延迟、知识转移"
         },
         {
           "id": "b0069",
           "section": "后续步骤",
           "type": "li",
-          "line": 458,
+          "line": 460,
           "text": "4月10日起：周报告"
         },
         {
           "id": "b0070",
           "section": "风险评估",
           "type": "heading",
-          "line": 464,
+          "line": 466,
           "text": "风险评估"
         },
         {
           "id": "b0071",
           "section": "风险评估",
           "type": "table-row",
-          "line": 467,
+          "line": 469,
           "text": "风险 等级 缓解"
         },
         {
           "id": "b0072",
           "section": "风险评估",
           "type": "table-row",
-          "line": 470,
+          "line": 472,
           "text": "Lisahost节点正当性不足 中 4月7日会议确认"
         },
         {
           "id": "b0073",
           "section": "风险评估",
           "type": "table-row",
-          "line": 471,
+          "line": 473,
           "text": "测试环境延迟 低 4月12日前完成"
         },
         {
           "id": "b0074",
           "section": "风险评估",
           "type": "table-row",
-          "line": 472,
+          "line": 474,
           "text": "支付网关不明 低 从DB调查 + Lex确认"
         },
         {
           "id": "b0075",
           "section": "风险评估",
           "type": "table-row",
-          "line": 473,
+          "line": 475,
           "text": "中国连接问题 中 部署后数据驱动监控"
         },
         {
           "id": "b0076",
           "section": "风险评估",
           "type": "p",
-          "line": 480,
+          "line": 482,
           "text": "状态：评估完成，开发进行中。下次报告：2026年4月10日。"
         }
       ]
@@ -1410,672 +1410,672 @@
           "id": "b0001",
           "section": "Report overview",
           "type": "heading",
-          "line": 71,
+          "line": 76,
           "text": "Arrowfish VPN — 项目进度汇报"
         },
         {
           "id": "b0002",
           "section": "一、Sprint 0 完成摘要（3/26–4/3）— 接手与稳定",
           "type": "heading",
-          "line": 76,
+          "line": 81,
           "text": "一、Sprint 0 完成摘要（3/26–4/3）— 接手与稳定"
         },
         {
           "id": "b0003",
           "section": "一、Sprint 0 完成摘要（3/26–4/3）— 接手与稳定",
           "type": "table-row",
-          "line": 80,
+          "line": 85,
           "text": "指标 数据"
         },
         {
           "id": "b0004",
           "section": "一、Sprint 0 完成摘要（3/26–4/3）— 接手与稳定",
           "type": "table-row",
-          "line": 81,
+          "line": 86,
           "text": "提交次数 90次 （后端37 + Android 53）"
         },
         {
           "id": "b0005",
           "section": "一、Sprint 0 完成摘要（3/26–4/3）— 接手与稳定",
           "type": "table-row",
-          "line": 82,
+          "line": 87,
           "text": "合并分支 7个"
         },
         {
           "id": "b0006",
           "section": "一、Sprint 0 完成摘要（3/26–4/3）— 接手与稳定",
           "type": "table-row",
-          "line": 83,
+          "line": 88,
           "text": "解决问题 49+ （安全9、滥用6、收入2、设计8、基础设施5、依赖4、Android 15+）"
         },
         {
           "id": "b0007",
           "section": "一、Sprint 0 完成摘要（3/26–4/3）— 接手与稳定",
           "type": "table-row",
-          "line": 84,
+          "line": 89,
           "text": "修复崩溃 13个关键Bug （启动崩溃、连接卡住、误报离线）"
         },
         {
           "id": "b0008",
           "section": "一、Sprint 0 完成摘要（3/26–4/3）— 接手与稳定",
           "type": "table-row",
-          "line": 85,
+          "line": 90,
           "text": "收入通道激活 2/2（Samsung IAP + Google AdMob，此前均为测试模式 = $0）"
         },
         {
           "id": "b0009",
           "section": "一、Sprint 0 完成摘要（3/26–4/3）— 接手与稳定",
           "type": "table-row",
-          "line": 86,
+          "line": 91,
           "text": "识别浪费 ~$415/月（Lisahost测试节点 + 冗余服务）"
         },
         {
           "id": "b0010",
           "section": "台湾团队遗留的关键发现",
           "type": "heading",
-          "line": 90,
+          "line": 95,
           "text": "台湾团队遗留的关键发现"
         },
         {
           "id": "b0011",
           "section": "台湾团队遗留的关键发现",
           "type": "table-row",
-          "line": 92,
+          "line": 97,
           "text": "Samsung IAP 测试模式 收入 = $0，已修复切换至生产模式"
         },
         {
           "id": "b0012",
           "section": "台湾团队遗留的关键发现",
           "type": "table-row",
-          "line": 93,
+          "line": 98,
           "text": "AdMob 测试模式 广告收入 = $0，已切换生产 Unit ID"
         },
         {
           "id": "b0013",
           "section": "台湾团队遗留的关键发现",
           "type": "table-row",
-          "line": 94,
+          "line": 99,
           "text": "iOS 连错误环境 HiYou连接DEV后端，已通过Cloudflare DNS修复指向生产"
         },
         {
           "id": "b0014",
           "section": "台湾团队遗留的关键发现",
           "type": "table-row",
-          "line": 95,
+          "line": 100,
           "text": "违反无日志政策（多处） VPN服务器配置和密钥记录在安卓调试日志；客户端API追踪中间件记录用户IP；数据库积累13.1 GB请求日志（86%占比）— 第1阶段全部修复"
         },
         {
           "id": "b0015",
           "section": "台湾团队遗留的关键发现",
           "type": "table-row",
-          "line": 96,
+          "line": 101,
           "text": "6个测试节点 ~$412/月（2,988 CNY），标记\"專線測試用\"，待评估"
         },
         {
           "id": "b0016",
           "section": "一-B、Sprint 1 成果分类",
           "type": "heading",
-          "line": 100,
+          "line": 105,
           "text": "一-B、Sprint 1 成果分类"
         },
         {
           "id": "b0017",
           "section": "一-B、Sprint 1 成果分类",
           "type": "li",
-          "line": 106,
+          "line": 111,
           "text": "DEV 服务器降配节省 $53/月（$637/年）"
         },
         {
           "id": "b0018",
           "section": "一-B、Sprint 1 成果分类",
           "type": "li",
-          "line": 107,
+          "line": 112,
           "text": "节点运营自动化节省 ~$2,000–3,000/月运营人力"
         },
         {
           "id": "b0019",
           "section": "一-B、Sprint 1 成果分类",
           "type": "li",
-          "line": 108,
+          "line": 113,
           "text": "订单处理时间：25–60 分钟 → 不超过 2 分钟"
         },
         {
           "id": "b0020",
           "section": "一-B、Sprint 1 成果分类",
           "type": "li",
-          "line": 114,
+          "line": 119,
           "text": "无日志政策违规 4 处 — 全部修复（VPN 配置/密钥/IP 泄露）"
         },
         {
           "id": "b0021",
           "section": "一-B、Sprint 1 成果分类",
           "type": "li",
-          "line": 115,
+          "line": 120,
           "text": "数据库首次建立备份（Azure 每日备份，30天保留）"
         },
         {
           "id": "b0022",
           "section": "一-B、Sprint 1 成果分类",
           "type": "li",
-          "line": 116,
+          "line": 121,
           "text": "Nginx 安全漏洞修复（木马注入攻击入口关闭）"
         },
         {
           "id": "b0023",
           "section": "一-B、Sprint 1 成果分类",
           "type": "li",
-          "line": 117,
+          "line": 122,
           "text": "JWT 登出未失效漏洞修复"
         },
         {
           "id": "b0024",
           "section": "一-B、Sprint 1 成果分类",
           "type": "li",
-          "line": 118,
+          "line": 123,
           "text": "OTP 验证逻辑反向 Bug 修复"
         },
         {
           "id": "b0025",
           "section": "一-B、Sprint 1 成果分类",
           "type": "li",
-          "line": 124,
+          "line": 129,
           "text": "数据库磁盘：66% → 49%（释放 ~22 GB）"
         },
         {
           "id": "b0026",
           "section": "一-B、Sprint 1 成果分类",
           "type": "li",
-          "line": 125,
+          "line": 130,
           "text": "读取副本从未使用 → GET 请求全量分流至副本"
         },
         {
           "id": "b0027",
           "section": "一-B、Sprint 1 成果分类",
           "type": "li",
-          "line": 126,
+          "line": 131,
           "text": "SELECT * 查询缩减 74–93% 字段"
         },
         {
           "id": "b0028",
           "section": "一-B、Sprint 1 成果分类",
           "type": "li",
-          "line": 127,
+          "line": 132,
           "text": "N+1 查询 4 处 → 批量查询"
         },
         {
           "id": "b0029",
           "section": "一-B、Sprint 1 成果分类",
           "type": "li",
-          "line": 133,
+          "line": 138,
           "text": "支出明细页空白（PAY_CHANNEL + IAP 过滤缺失）"
         },
         {
           "id": "b0030",
           "section": "一-B、Sprint 1 成果分类",
           "type": "li",
-          "line": 134,
+          "line": 139,
           "text": "最新版本弹出更新提示（版本字符串比较错误）"
         },
         {
           "id": "b0031",
           "section": "一-B、Sprint 1 成果分类",
           "type": "li",
-          "line": 135,
+          "line": 140,
           "text": "退出登录无效（JWT 在 Redis 加入黑名单）"
         },
         {
           "id": "b0032",
           "section": "一-B、Sprint 1 成果分类",
           "type": "li",
-          "line": 136,
+          "line": 141,
           "text": "连接按钮永久锁死（广告弹窗 + 空节点列表）"
         },
         {
           "id": "b0033",
           "section": "一-B、Sprint 1 成果分类",
           "type": "li",
-          "line": 137,
+          "line": 142,
           "text": "黑名单未触发断开连接"
         },
         {
           "id": "b0034",
           "section": "二、Sprint 1 进展摘要（4/6–4/10）— 后端+Android稳定化",
           "type": "heading",
-          "line": 143,
+          "line": 148,
           "text": "二、Sprint 1 进展摘要（4/6–4/10）— 后端+Android稳定化"
         },
         {
           "id": "b0035",
           "section": "二、Sprint 1 进展摘要（4/6–4/10）— 后端+Android稳定化",
           "type": "table-row",
-          "line": 147,
+          "line": 152,
           "text": "完成项 状态 说明"
         },
         {
           "id": "b0036",
           "section": "二、Sprint 1 进展摘要（4/6–4/10）— 后端+Android稳定化",
           "type": "table-row",
-          "line": 148,
+          "line": 153,
           "text": "后端架构整合 🔄 开发完成，待部署 ProxyBackend代码消除，单一后端架构"
         },
         {
           "id": "b0037",
           "section": "二、Sprint 1 进展摘要（4/6–4/10）— 后端+Android稳定化",
           "type": "table-row",
-          "line": 149,
+          "line": 154,
           "text": "MySQL优化 🔄 开发完成，待部署 5个新索引、18K行清理、log_apis 13.1GB待清除"
         },
         {
           "id": "b0038",
           "section": "二、Sprint 1 进展摘要（4/6–4/10）— 后端+Android稳定化",
           "type": "table-row",
-          "line": 150,
+          "line": 155,
           "text": "Redis加固 🔄 DEV验证通过，待生产部署 密码保护 + 内存限制 + AOF持久化"
         },
         {
           "id": "b0039",
           "section": "二、Sprint 1 进展摘要（4/6–4/10）— 后端+Android稳定化",
           "type": "table-row",
-          "line": 151,
+          "line": 156,
           "text": "sing-box Agent 🔄 开发完成，测试验证中 870行Go代码，替代XRayR，VPN连接已验证"
         },
         {
           "id": "b0040",
           "section": "二、Sprint 1 进展摘要（4/6–4/10）— 后端+Android稳定化",
           "type": "table-row",
-          "line": 152,
+          "line": 157,
           "text": "节点自动化 🔄 开发完成，待部署 自动分配、到期回收、库存监控、付款提醒"
         },
         {
           "id": "b0041",
           "section": "二、Sprint 1 进展摘要（4/6–4/10）— 后端+Android稳定化",
           "type": "table-row",
-          "line": 153,
+          "line": 158,
           "text": "Android崩溃修复 🔄 开发完成，QA测试中 21/22个Bug已修复，WebSocket泄漏、ANR、计时器竞态"
         },
         {
           "id": "b0042",
           "section": "二、Sprint 1 进展摘要（4/6–4/10）— 后端+Android稳定化",
           "type": "table-row",
-          "line": 154,
+          "line": 159,
           "text": "Android代码清理 🔄 开发完成，待部署 删除1,932行死代码、30个死文件、66个孤立资源"
         },
         {
           "id": "b0043",
           "section": "二、Sprint 1 进展摘要（4/6–4/10）— 后端+Android稳定化",
           "type": "table-row",
-          "line": 155,
+          "line": 160,
           "text": "USDT支付重写 ✅ 已上线生产 Java崩溃20K+次 → Go重写：3.4MB内存，0崩溃"
         },
         {
           "id": "b0044",
           "section": "二、Sprint 1 进展摘要（4/6–4/10）— 后端+Android稳定化",
           "type": "p",
-          "line": 157,
+          "line": 162,
           "text": "开发进度：22/24 阶段代码完成 ，进入测试与生产部署阶段。为处理USDT支付紧急修复，QA测试版交付延迟1天。"
         },
         {
           "id": "b0045",
           "section": "USDT支付紧急修复（4月9日）",
           "type": "heading",
-          "line": 160,
+          "line": 165,
           "text": "USDT支付紧急修复（4月9日）"
         },
         {
           "id": "b0046",
           "section": "USDT支付紧急修复（4月9日）",
           "type": "table-row",
-          "line": 163,
+          "line": 168,
           "text": "问题 台湾团队的Java JAR崩溃20,000+次（内存溢出、无超时、O(n²)匹配），USDT支付完全瘫痪"
         },
         {
           "id": "b0047",
           "section": "USDT支付紧急修复（4月9日）",
           "type": "table-row",
-          "line": 164,
+          "line": 169,
           "text": "解决 当天完成Go语言重写：内存从1024MB → 3.4MB，启动时自动完成9笔挂起订单"
         },
         {
           "id": "b0048",
           "section": "USDT支付紧急修复（4月9日）",
           "type": "table-row",
-          "line": 165,
+          "line": 170,
           "text": "状态 ✅ 已上线生产 — TRC20 + ERC20 均测试OK"
         },
         {
           "id": "b0049",
           "section": "三、Arrowfish上线 — 延迟2周",
           "type": "heading",
-          "line": 170,
+          "line": 175,
           "text": "三、Arrowfish上线 — 延迟2周"
         },
         {
           "id": "b0050",
           "section": "三、Arrowfish上线 — 延迟2周",
           "type": "table-row",
-          "line": 174,
+          "line": 179,
           "text": "项目 原计划 实际"
         },
         {
           "id": "b0051",
           "section": "三、Arrowfish上线 — 延迟2周",
           "type": "table-row",
-          "line": 175,
+          "line": 180,
           "text": "Google Play 上线 4月11日 4月25日（+2周）"
         },
         {
           "id": "b0052",
           "section": "延迟原因",
           "type": "heading",
-          "line": 183,
+          "line": 188,
           "text": "延迟原因"
         },
         {
           "id": "b0053",
           "section": "延迟原因",
           "type": "p",
-          "line": 185,
+          "line": 190,
           "text": "Sprint 1 代码开发（22/24阶段）已按计划完成，延迟来自 测试验证与生产部署 的不可压缩环节："
         },
         {
           "id": "b0054",
           "section": "延迟原因",
           "type": "table-row",
-          "line": 187,
+          "line": 192,
           "text": "环节 说明 为什么不能跳过"
         },
         {
           "id": "b0055",
           "section": "延迟原因",
           "type": "table-row",
-          "line": 188,
+          "line": 193,
           "text": "1. sing-box测试节点验证 VPN连接已验证OK（4/9），但流量上报、自动更新、24小时稳定性测试仍在进行 新的sing-box架构替代旧XRayR，必须确保节点在生产环境稳定运行24小时以上才能上线"
         },
         {
           "id": "b0056",
           "section": "延迟原因",
           "type": "table-row",
-          "line": 193,
+          "line": 198,
           "text": "2. 移动端Bug修复 本地真机测试（4/9）发现多个UI + 错误提示Bug，Amy（QA）也报告了额外问题 台湾团队遗留的问题在真机上才暴露，必须修复后才能发QA版本"
         },
         {
           "id": "b0057",
           "section": "延迟原因",
           "type": "table-row",
-          "line": 198,
+          "line": 203,
           "text": "3. 生产环境部署 Redis加固、MySQL优化（13.1GB日志清理）、后端22个阶段代码合并部署 DEV环境已完成验证，但生产环境部署需要逐步执行，避免服务中断"
         },
         {
           "id": "b0058",
           "section": "延迟原因",
           "type": "table-row",
-          "line": 203,
+          "line": 208,
           "text": "4. QA + 应用商店审核 Amy需要2-3天完整测试，Google Play审核通常1-3天 跳过QA直接上线风险太高——台湾团队的教训就是缺乏测试导致线上崩溃"
         },
         {
           "id": "b0059",
           "section": "延迟原因",
           "type": "p",
-          "line": 209,
+          "line": 214,
           "text": "结论： 延迟2周是为了保证质量，不是因为开发进度问题。代码已全部就绪，剩余工作是QA全面测试、应用商店合规优化和生产部署。"
         },
         {
           "id": "b0060",
           "section": "下阶段工作（4/13–25）",
           "type": "heading",
-          "line": 212,
+          "line": 217,
           "text": "下阶段工作（4/13–25）"
         },
         {
           "id": "b0061",
           "section": "下阶段工作（4/13–25）",
           "type": "table-row",
-          "line": 214,
+          "line": 219,
           "text": "✅ 测试节点VPN连接已验证OK 完成流量上报 + 24小时稳定性测试"
         },
         {
           "id": "b0062",
           "section": "下阶段工作（4/13–25）",
           "type": "table-row",
-          "line": 215,
+          "line": 220,
           "text": "🔄 QA全面测试（4/10-11） Amy按照测试清单进行全面测试，结果预计周末出"
         },
         {
           "id": "b0063",
           "section": "下阶段工作（4/13–25）",
           "type": "table-row",
-          "line": 216,
+          "line": 221,
           "text": "🔄 生产环境部署 Redis加固、MySQL优化、后端全量部署"
         },
         {
           "id": "b0064",
           "section": "下阶段工作（4/13–25）",
           "type": "table-row",
-          "line": 217,
+          "line": 222,
           "text": "🔄 应用商店合规优化 权限清理、前台服务类型调整、flavor一致性"
         },
         {
           "id": "b0065",
           "section": "下阶段工作（4/13–25）",
           "type": "table-row",
-          "line": 218,
+          "line": 223,
           "text": "⏳ 修复 + 提交 根据QA反馈修复 → Google Play 提交（目标4月25日上线）"
         },
         {
           "id": "b0066",
           "section": "Siqo Crypto 支付对接（待办任务）",
           "type": "heading",
-          "line": 221,
+          "line": 226,
           "text": "Siqo Crypto 支付对接（待办任务）"
         },
         {
           "id": "b0067",
           "section": "Siqo Crypto 支付对接（待办任务）",
           "type": "table-row",
-          "line": 224,
+          "line": 229,
           "text": "内容 对接 Siqo Crypto 支付网关（API已就绪，需后端消费接入）"
         },
         {
           "id": "b0068",
           "section": "Siqo Crypto 支付对接（待办任务）",
           "type": "table-row",
-          "line": 225,
+          "line": 230,
           "text": "平台 Arrowfish（当前Android应用）"
         },
         {
           "id": "b0069",
           "section": "Siqo Crypto 支付对接（待办任务）",
           "type": "table-row",
-          "line": 226,
+          "line": 231,
           "text": "后端开发 Sprint 2 开始（4/20）"
         },
         {
           "id": "b0070",
           "section": "Siqo Crypto 支付对接（待办任务）",
           "type": "table-row",
-          "line": 227,
+          "line": 232,
           "text": "发布 Sprint 3（5月初），Arrowfish更新版"
         },
         {
           "id": "b0071",
           "section": "四、FFF 上线时间表",
           "type": "heading",
-          "line": 236,
+          "line": 241,
           "text": "四、FFF 上线时间表"
         },
         {
           "id": "b0072",
           "section": "四、FFF 上线时间表",
           "type": "p",
-          "line": 239,
+          "line": 244,
           "text": "Arrowfish上线后（4月25日），全力投入FFF开发。"
         },
         {
           "id": "b0073",
           "section": "四、FFF 上线时间表",
           "type": "table-row",
-          "line": 241,
+          "line": 246,
           "text": "阶段 时间 内容"
         },
         {
           "id": "b0074",
           "section": "四、FFF 上线时间表",
           "type": "table-row",
-          "line": 242,
+          "line": 247,
           "text": "基础框架 + 安全加固 4月27日–5月10日 Flutter项目搭建、API对接、VPN引擎集成、节点安全加固"
         },
         {
           "id": "b0075",
           "section": "四、FFF 上线时间表",
           "type": "table-row",
-          "line": 243,
+          "line": 248,
           "text": "核心功能 5月中–5月底 登录注册、VPN连接、设备指纹防刷、网络稳定性优化"
         },
         {
           "id": "b0076",
           "section": "四、FFF 上线时间表",
           "type": "table-row",
-          "line": 244,
+          "line": 249,
           "text": "完整功能 5月底–6月初 线路列表、商店订阅、支付、多协议支持（VLESS/Trojan/Hy2/TUIC）"
         },
         {
           "id": "b0077",
           "section": "四、FFF 上线时间表",
           "type": "table-row",
-          "line": 245,
+          "line": 250,
           "text": "测试发布 6月初–6月下旬 多语言、性能优化、应用商店提交"
         },
         {
           "id": "b0078",
           "section": "四、FFF 上线时间表",
           "type": "table-row",
-          "line": 246,
+          "line": 251,
           "text": "🎯 FFF上线 6月下旬 iOS + Android + Windows 全平台发布"
         },
         {
           "id": "b0079",
           "section": "同步进行",
           "type": "heading",
-          "line": 250,
+          "line": 255,
           "text": "同步进行"
         },
         {
           "id": "b0080",
           "section": "同步进行",
           "type": "table-row",
-          "line": 252,
+          "line": 257,
           "text": "节点安全加固 防止用户绕过APP直连 5月中完成"
         },
         {
           "id": "b0081",
           "section": "同步进行",
           "type": "table-row",
-          "line": 253,
+          "line": 258,
           "text": "设备指纹防刷 防止反复注册体验账号 5月底完成"
         },
         {
           "id": "b0082",
           "section": "同步进行",
           "type": "table-row",
-          "line": 254,
+          "line": 259,
           "text": "多协议 + 节点迁移 156节点迁移至新架构 5–7月完成，每月节省 $243"
         },
         {
           "id": "b0083",
           "section": "五、FFF 公司注册 — 需要配合",
           "type": "heading",
-          "line": 258,
+          "line": 263,
           "text": "五、FFF 公司注册 — 需要配合"
         },
         {
           "id": "b0084",
           "section": "五、FFF 公司注册 — 需要配合",
           "type": "table-row",
-          "line": 262,
+          "line": 267,
           "text": "项目 状态 需要"
         },
         {
           "id": "b0085",
           "section": "五、FFF 公司注册 — 需要配合",
           "type": "table-row",
-          "line": 263,
+          "line": 268,
           "text": "歐盟公司注册 ✅ 已完成 —"
         },
         {
           "id": "b0086",
           "section": "五、FFF 公司注册 — 需要配合",
           "type": "table-row",
-          "line": 268,
+          "line": 273,
           "text": "相关账号开设 🔄 进行中 需要一个新号收FFF相关短信 → 用瑞士号码（EUR号码）"
         },
         {
           "id": "b0087",
           "section": "五、FFF 公司注册 — 需要配合",
           "type": "table-row",
-          "line": 273,
+          "line": 278,
           "text": "FFF 支付通道 ⏳ 待开始 公司账号开好后，立即对接新支付网关（FFF公司名义）"
         },
         {
           "id": "b0088",
           "section": "五、FFF 公司注册 — 需要配合",
           "type": "li",
-          "line": 284,
+          "line": 289,
           "text": "FFF上线前必须完成支付网关对接"
         },
         {
           "id": "b0089",
           "section": "五、FFF 公司注册 — 需要配合",
           "type": "li",
-          "line": 285,
+          "line": 290,
           "text": "新公司名义 → 需要重新申请 微信/支付宝/Stripe 等通道"
         },
         {
           "id": "b0090",
           "section": "五、FFF 公司注册 — 需要配合",
           "type": "li",
-          "line": 286,
+          "line": 291,
           "text": "建议 5月中开始对接 ，给足审核时间（通常2–4周）"
         },
         {
           "id": "b0091",
           "section": "六、关键里程碑总览",
           "type": "heading",
-          "line": 291,
+          "line": 296,
           "text": "六、关键里程碑总览"
         },
         {
           "id": "b0092",
           "section": "七、需要日总决定 / 配合",
           "type": "heading",
-          "line": 329,
+          "line": 334,
           "text": "七、需要日总决定 / 配合"
         },
         {
           "id": "b0093",
           "section": "七、需要日总决定 / 配合",
           "type": "li",
-          "line": 333,
+          "line": 338,
           "text": "1 瑞士号码 — 尽快安排，开账号需要收验证短信"
         },
         {
           "id": "b0094",
           "section": "七、需要日总决定 / 配合",
           "type": "li",
-          "line": 337,
+          "line": 342,
           "text": "2 支付网关 — 公司账号开好后，需要启动申请流程（微信/支付宝优先，占收入94%）"
         },
         {
           "id": "b0095",
           "section": "七、需要日总决定 / 配合",
           "type": "li",
-          "line": 341,
+          "line": 346,
           "text": "3 品牌确认 — FFF最终品牌名称确认（影响应用商店、支付通道、落地页）"
         },
         {
           "id": "b0096",
           "section": "七、需要日总决定 / 配合",
           "type": "li",
-          "line": 345,
+          "line": 350,
           "text": "4 Apple开发者账号 — 用新FFF公司注册，iOS发布前必须到位"
         }
       ]
@@ -14376,1743 +14376,1743 @@
           "id": "b0001",
           "section": "Report overview",
           "type": "heading",
-          "line": 538,
+          "line": 540,
           "text": "Arrowfish、FFF 与共享管理能力 2026 目标与路线"
         },
         {
           "id": "b0002",
           "section": "Report overview",
           "type": "p",
-          "line": 540,
+          "line": 542,
           "text": "产品交付截至第10阶段 · 生产部署边界复核更新至 2026-08-29"
         },
         {
           "id": "b0003",
           "section": "Report overview",
           "type": "p",
-          "line": 553,
+          "line": 555,
           "text": "日总／管理层 · 60 秒看板 · 截至 2026-08-29"
         },
         {
           "id": "b0004",
           "section": "项目组合现况与下一顺序",
           "type": "heading",
-          "line": 554,
+          "line": 556,
           "text": "项目组合现况与下一顺序"
         },
         {
           "id": "b0005",
           "section": "项目组合现况与下一顺序",
           "type": "p",
-          "line": 555,
+          "line": 557,
           "text": "结论： 从 2026 年 3 月交接开始，Arrowfish 的任务顺序始终是先理解全系统，再把台湾团队遗留的黑盒、手工作业与风险逐模块改造成可测试、可发布、可恢复的平台。当前后端权威配额与 SkyTunnel 核心已经落地；先关闭安全、Windows 发布、设备身份、异地恢复和生产验收五个 P0，再推进协议 rollout、简化 UI、智能分流与中国地区验收。FFF 先建立隔离 backend／DB／Redis 与可回滚 staging baseline，再做专属重构。"
         },
         {
           "id": "b0006",
           "section": "从接手止血进入平台化收口",
           "type": "heading",
-          "line": 561,
+          "line": 563,
           "text": "从接手止血进入平台化收口"
         },
         {
           "id": "b0007",
           "section": "从接手止血进入平台化收口",
           "type": "p",
-          "line": 562,
+          "line": 564,
           "text": "21 项目标按五个不重叠模块管理：系统治理、安全与工程质量、VPN 核心、用户与收入、多平台增长。Android + Windows 占最近可识别 VPN 用户 94.86%；后续优先级以现有用户保护与可验证发布为先。"
         },
         {
           "id": "b0008",
           "section": "客户端持续开发，后端隔离是首发门槛",
           "type": "heading",
-          "line": 566,
+          "line": 568,
           "text": "客户端持续开发，后端隔离是首发门槛"
         },
         {
           "id": "b0009",
           "section": "客户端持续开发，后端隔离是首发门槛",
           "type": "p",
-          "line": 567,
+          "line": 569,
           "text": "Lex 客户端口径更新至 8 月 28 日：新 APK 已交 QA，结果待回。同日锁定新 GitLab repo、独立 staging 与独立数据层；不复制 Arrowfish 的生产账号、数据库或 secrets。"
         },
         {
           "id": "b0010",
           "section": "先保护现有用户，再扩大变更面",
           "type": "heading",
-          "line": 571,
+          "line": 573,
           "text": "先保护现有用户，再扩大变更面"
         },
         {
           "id": "b0011",
           "section": "先保护现有用户，再扩大变更面",
           "type": "li",
-          "line": 573,
+          "line": 575,
           "text": "P0：安全边界、Windows 官网 signed release、设备 identity/CORS、异地备份恢复、生产发布证据闭环。"
         },
         {
           "id": "b0012",
           "section": "先保护现有用户，再扩大变更面",
           "type": "li",
-          "line": 574,
+          "line": 576,
           "text": "P1：三协议 fleet rollout、简化 UI、智能分流、Android／Windows 回归、中国地区可达性。"
         },
         {
           "id": "b0013",
           "section": "先保护现有用户，再扩大变更面",
           "type": "li",
-          "line": 575,
+          "line": 577,
           "text": "随后：FFF 隔离 baseline → smoke test → 专属 schema／API refactor。"
         },
         {
           "id": "b0014",
           "section": "先保护现有用户，再扩大变更面",
           "type": "p",
-          "line": 584,
+          "line": 586,
           "text": "项目 01 · VPN · 2026年3月接手至第10阶段 + 8月29日部署边界复核"
         },
         {
           "id": "b0015",
           "section": "Arrowfish 2026 路线图",
           "type": "heading",
-          "line": 585,
+          "line": 587,
           "text": "Arrowfish 2026 路线图"
         },
         {
           "id": "b0016",
           "section": "Arrowfish 2026 路线图",
           "type": "p",
-          "line": 586,
+          "line": 588,
           "text": "这条路线按真实先后讲清楚：接手与审计 → 用户和收入止血 → 架构及运维工程化 → 自研协议核心 → 多平台发布与增长。8月28日只读生产数据用于校正用户规模、配额、设备、协议与平台目标；FFF 仍独立列示。"
         },
         {
           "id": "b0017",
           "section": "接手止血与收入恢复",
           "type": "heading",
-          "line": 595,
+          "line": 597,
           "text": "接手止血与收入恢复"
         },
         {
           "id": "b0018",
           "section": "接手止血与收入恢复",
           "type": "li",
-          "line": 597,
+          "line": 599,
           "text": "从有限交接资料进入代码、生产、基础设施、收入链路与客户端全系统审计"
         },
         {
           "id": "b0019",
           "section": "接手止血与收入恢复",
           "type": "li",
-          "line": 598,
+          "line": 600,
           "text": "Samsung IAP、AdMob 恢复生产配置"
         },
         {
           "id": "b0020",
           "section": "接手止血与收入恢复",
           "type": "li",
-          "line": 599,
+          "line": 601,
           "text": "USDTPay 从 Java 黑盒重写为 Go 服务"
         },
         {
           "id": "b0021",
           "section": "接手止血与收入恢复",
           "type": "li",
-          "line": 600,
+          "line": 602,
           "text": "无日志、安全与 Android 稳定性集中修复"
         },
         {
           "id": "b0022",
           "section": "接手止血与收入恢复",
           "type": "li",
-          "line": 592,
+          "line": 594,
           "text": "2026-03 交接启动 · 03-26取得完整生产访问 · 第0–1阶段 接手止血与收入恢复 从有限交接资料进入代码、生产、基础设施、收入链路与客户端全系统审计 Samsung IAP、AdMob 恢复生产配置 USDTPay 从 Java 黑盒重写为 Go 服务 无日志、安全与 Android 稳定性集中修复 结果：识别 56+ 项关键问题；第0–1阶段处理 49+ 项并恢复 2 条收入通道"
         },
         {
           "id": "b0023",
           "section": "营收、反滥用与体验加固",
           "type": "heading",
-          "line": 608,
+          "line": 610,
           "text": "营收、反滥用与体验加固"
         },
         {
           "id": "b0024",
           "section": "营收、反滥用与体验加固",
           "type": "li",
-          "line": 610,
+          "line": 612,
           "text": "专属 IP、余额支付与续费日期问题修复"
         },
         {
           "id": "b0025",
           "section": "营收、反滥用与体验加固",
           "type": "li",
-          "line": 611,
+          "line": 613,
           "text": "设备指纹、账号绑定与五层反滥用防护落地"
         },
         {
           "id": "b0026",
           "section": "营收、反滥用与体验加固",
           "type": "li",
-          "line": 612,
+          "line": 614,
           "text": "读写分离与自动测试构建落地"
         },
         {
           "id": "b0027",
           "section": "营收、反滥用与体验加固",
           "type": "li",
-          "line": 605,
+          "line": 607,
           "text": "2026-04-13–04-24 · 第2阶段 营收、反滥用与体验加固 专属 IP、余额支付与续费日期问题修复 设备指纹、账号绑定与五层反滥用防护落地 读写分离与自动测试构建落地 结果：30+ 项缺陷、20+ 项体验优化，APK 缩减 28.7%"
         },
         {
           "id": "b0028",
           "section": "后端、基础设施与节点自动化",
           "type": "heading",
-          "line": 620,
+          "line": 622,
           "text": "后端、基础设施与节点自动化"
         },
         {
           "id": "b0029",
           "section": "后端、基础设施与节点自动化",
           "type": "li",
-          "line": 622,
+          "line": 624,
           "text": "免费配额改为节点权威记账"
         },
         {
           "id": "b0030",
           "section": "后端、基础设施与节点自动化",
           "type": "li",
-          "line": 623,
+          "line": 625,
           "text": "自动备份、读副本与旧 ProxyBackend 退场"
         },
         {
           "id": "b0031",
           "section": "后端、基础设施与节点自动化",
           "type": "li",
-          "line": 624,
+          "line": 626,
           "text": "后台一键安装、回收、批量升级与健康管理"
         },
         {
           "id": "b0032",
           "section": "后端、基础设施与节点自动化",
           "type": "li",
-          "line": 617,
+          "line": 619,
           "text": "2026-04-27–05-10 · 第3阶段 后端、基础设施与节点自动化 免费配额改为节点权威记账 自动备份、读副本与旧 ProxyBackend 退场 后台一键安装、回收、批量升级与健康管理 结果：7 台跨区域节点 44 秒完成回收，0 失败"
         },
         {
           "id": "b0033",
           "section": "发布体系与运营能力收敛",
           "type": "heading",
-          "line": 632,
+          "line": 634,
           "text": "发布体系与运营能力收敛"
         },
         {
           "id": "b0034",
           "section": "发布体系与运营能力收敛",
           "type": "li",
-          "line": 634,
+          "line": 636,
           "text": "Android、后端与 CI/CD 发布链路现代化"
         },
         {
           "id": "b0035",
           "section": "发布体系与运营能力收敛",
           "type": "li",
-          "line": 635,
+          "line": 637,
           "text": "动态活动及 BO 配置能力落地"
         },
         {
           "id": "b0036",
           "section": "发布体系与运营能力收敛",
           "type": "li",
-          "line": 636,
+          "line": 638,
           "text": "Arrowfish 新官网进入 staging"
         },
         {
           "id": "b0037",
           "section": "发布体系与运营能力收敛",
           "type": "li",
-          "line": 637,
+          "line": 639,
           "text": "5 月 25 日生产 session accounting 开始；设备身份改善，但用户可用性指标同步下降"
         },
         {
           "id": "b0038",
           "section": "发布体系与运营能力收敛",
           "type": "li",
-          "line": 629,
+          "line": 631,
           "text": "2026-05-10–06-26 · 第4–6阶段 发布体系与运营能力收敛 Android、后端与 CI/CD 发布链路现代化 动态活动及 BO 配置能力落地 Arrowfish 新官网进入 staging 5 月 25 日生产 session accounting 开始；设备身份改善，但用户可用性指标同步下降 结果：控制能力进入生产并节省约 USD 612.21／月；5 月 25 日完整发布范围仍需与 release operations 记录对齐"
         },
         {
           "id": "b0039",
           "section": "中国连接事件与自研路线决策",
           "type": "heading",
-          "line": 647,
+          "line": 649,
           "text": "中国连接事件与自研路线决策"
         },
         {
           "id": "b0040",
           "section": "中国连接事件与自研路线决策",
           "type": "li",
-          "line": 649,
+          "line": 651,
           "text": "MY／TW QA 可连而中国 QA 不可连，形成中国地区测试判断；数据库不能证明 GFW 是整体下降的唯一原因"
         },
         {
           "id": "b0041",
           "section": "中国连接事件与自研路线决策",
           "type": "li",
-          "line": 650,
+          "line": 652,
           "text": "四天交付协议自测工具，七项实现测试全绿"
         },
         {
           "id": "b0042",
           "section": "中国连接事件与自研路线决策",
           "type": "li",
-          "line": 651,
+          "line": 653,
           "text": "决定自研 SkyNode、SkyTunnel 与加固协议"
         },
         {
           "id": "b0043",
           "section": "中国连接事件与自研路线决策",
           "type": "li",
-          "line": 644,
+          "line": 646,
           "text": "2026-06-27–07-10 · 第7阶段 中国连接事件与自研路线决策 MY／TW QA 可连而中国 QA 不可连，形成中国地区测试判断；数据库不能证明 GFW 是整体下降的唯一原因 四天交付协议自测工具，七项实现测试全绿 决定自研 SkyNode、SkyTunnel 与加固协议 结果：停止依赖旧单一 Trojan 与第三方核心；地区可达性仍需独立验收"
         },
         {
           "id": "b0044",
           "section": "SkyTunnel 与连接稳定性",
           "type": "heading",
-          "line": 659,
+          "line": 661,
           "text": "SkyTunnel 与连接稳定性"
         },
         {
           "id": "b0045",
           "section": "SkyTunnel 与连接稳定性",
           "type": "li",
-          "line": 661,
+          "line": 663,
           "text": "Android 完成 SkyTunnel 替代验证"
         },
         {
           "id": "b0046",
           "section": "SkyTunnel 与连接稳定性",
           "type": "li",
-          "line": 662,
+          "line": 664,
           "text": "Windows 接入相同共享核心"
         },
         {
           "id": "b0047",
           "section": "SkyTunnel 与连接稳定性",
           "type": "li",
-          "line": 663,
+          "line": 665,
           "text": "Windows 测试签名链路打通并持续收敛"
         },
         {
           "id": "b0048",
           "section": "SkyTunnel 与连接稳定性",
           "type": "li",
-          "line": 656,
+          "line": 658,
           "text": "2026-07-11–07-24 · 第8阶段 SkyTunnel 与连接稳定性 Android 完成 SkyTunnel 替代验证 Windows 接入相同共享核心 Windows 测试签名链路打通并持续收敛 结果：IPv6“已连接但无流量”根因修复并完成真机验收"
         },
         {
           "id": "b0049",
           "section": "归因、支付与桌面交付",
           "type": "heading",
-          "line": 671,
+          "line": 673,
           "text": "归因、支付与桌面交付"
         },
         {
           "id": "b0050",
           "section": "归因、支付与桌面交付",
           "type": "li",
-          "line": 673,
+          "line": 675,
           "text": "后端主导的 Android 投放归因链路完成"
         },
         {
           "id": "b0051",
           "section": "归因、支付与桌面交付",
           "type": "li",
-          "line": 674,
+          "line": 676,
           "text": "API 从 207 条收敛至 141 条"
         },
         {
           "id": "b0052",
           "section": "归因、支付与桌面交付",
           "type": "li",
-          "line": 675,
+          "line": 677,
           "text": "Siqo 多链支付进入测试环境"
         },
         {
           "id": "b0053",
           "section": "归因、支付与桌面交付",
           "type": "li",
-          "line": 668,
+          "line": 670,
           "text": "2026-07-25–08-07 · 第9阶段 归因、支付与桌面交付 后端主导的 Android 投放归因链路完成 API 从 207 条收敛至 141 条 Siqo 多链支付进入测试环境 结果：Windows 约 8 MB 测试包交付 QA，构建时间减半"
         },
         {
           "id": "b0054",
           "section": "生产整合与 iOS 合规重建",
           "type": "heading",
-          "line": 683,
+          "line": 685,
           "text": "生产整合与 iOS 合规重建"
         },
         {
           "id": "b0055",
           "section": "生产整合与 iOS 合规重建",
           "type": "li",
-          "line": 685,
+          "line": 687,
           "text": "8 月 12 日生产环境整合部署完成，产品 acceptance 仍为 partial"
         },
         {
           "id": "b0056",
           "section": "生产整合与 iOS 合规重建",
           "type": "li",
-          "line": 686,
+          "line": 688,
           "text": "iOS 干净源码工程及 VPN 主路径建立"
         },
         {
           "id": "b0057",
           "section": "生产整合与 iOS 合规重建",
           "type": "li",
-          "line": 687,
+          "line": 689,
           "text": "数据库迁移与 CI/CD 权责分离完成测试环境验证"
         },
         {
           "id": "b0058",
           "section": "生产整合与 iOS 合规重建",
           "type": "li",
-          "line": 688,
+          "line": 690,
           "text": "生产研究量化用户质量、配额、设备和平台影响"
         },
         {
           "id": "b0059",
           "section": "生产整合与 iOS 合规重建",
           "type": "li",
-          "line": 680,
+          "line": 682,
           "text": "2026-08-08–08-21 · 生产研究 08-28 · 第10阶段 生产整合与 iOS 合规重建 8 月 12 日生产环境整合部署完成，产品 acceptance 仍为 partial iOS 干净源码工程及 VPN 主路径建立 数据库迁移与 CI/CD 权责分离完成测试环境验证 生产研究量化用户质量、配额、设备和平台影响 边界：iOS 真机、TestFlight 及两项协议端到端验收尚未关闭"
         },
         {
           "id": "b0060",
           "section": "第10阶段之后",
           "type": "heading",
-          "line": 698,
+          "line": 700,
           "text": "第10阶段之后"
         },
         {
           "id": "b0061",
           "section": "第10阶段之后",
           "type": "p",
-          "line": 699,
+          "line": 701,
           "text": "以下均为后续目标，不计入上方已交付成果；按部署、测试与验收证据分别关闭。"
         },
         {
           "id": "b0062",
           "section": "关闭五个 P0 用户保护门槛",
           "type": "heading",
-          "line": 704,
+          "line": 706,
           "text": "关闭五个 P0 用户保护门槛"
         },
         {
           "id": "b0063",
           "section": "关闭五个 P0 用户保护门槛",
           "type": "li",
-          "line": 706,
+          "line": 708,
           "text": "G12 安全、无日志、网络边界与最小权限收口"
         },
         {
           "id": "b0064",
           "section": "关闭五个 P0 用户保护门槛",
           "type": "li",
-          "line": 707,
+          "line": 709,
           "text": "G16 Windows 官网 signed release 验收"
         },
         {
           "id": "b0065",
           "section": "关闭五个 P0 用户保护门槛",
           "type": "li",
-          "line": 708,
+          "line": 710,
           "text": "G15 identity header、CORS 与 Android／Windows 兼容验证"
         },
         {
           "id": "b0066",
           "section": "关闭五个 P0 用户保护门槛",
           "type": "li",
-          "line": 709,
+          "line": 711,
           "text": "G17 生产异地备份与实际恢复演练"
         },
         {
           "id": "b0067",
           "section": "关闭五个 P0 用户保护门槛",
           "type": "li",
-          "line": 710,
+          "line": 712,
           "text": "G19 补齐 release、runtime、DB migration、产品 smoke 与地区 QA 五类证据"
         },
         {
           "id": "b0068",
           "section": "关闭五个 P0 用户保护门槛",
           "type": "highlight",
-          "line": 702,
+          "line": 704,
           "text": "当前收口 关闭五个 P0 用户保护门槛 G12 安全、无日志、网络边界与最小权限收口 G16 Windows 官网 signed release 验收 G15 identity header、CORS 与 Android／Windows 兼容验证 G17 生产异地备份与实际恢复演练 G19 补齐 release、runtime、DB migration、产品 smoke 与地区 QA 五类证据 关闭标准：安装、连接、版本兼容与恢复证据齐全"
         },
         {
           "id": "b0069",
           "section": "协议 rollout、简化 UI、智能分流与中国地区验收",
           "type": "heading",
-          "line": 716,
+          "line": 718,
           "text": "协议 rollout、简化 UI、智能分流与中国地区验收"
         },
         {
           "id": "b0070",
           "section": "协议 rollout、简化 UI、智能分流与中国地区验收",
           "type": "li",
-          "line": 718,
+          "line": 720,
           "text": "G7 三协议从 34 台扩展到目标 fleet"
         },
         {
           "id": "b0071",
           "section": "协议 rollout、简化 UI、智能分流与中国地区验收",
           "type": "li",
-          "line": 719,
+          "line": 721,
           "text": "G5／G7 BO、Android 与 Windows 端到端回归"
         },
         {
           "id": "b0072",
           "section": "协议 rollout、简化 UI、智能分流与中国地区验收",
           "type": "li",
-          "line": 720,
+          "line": 722,
           "text": "G20 Android 先行、Windows 接续，再覆盖其余五个平台"
         },
         {
           "id": "b0073",
           "section": "协议 rollout、简化 UI、智能分流与中国地区验收",
           "type": "li",
-          "line": 721,
+          "line": 723,
           "text": "G21 中国网站与本地资源直连，其他公网流量继续走 VPN"
         },
         {
           "id": "b0074",
           "section": "协议 rollout、简化 UI、智能分流与中国地区验收",
           "type": "li",
-          "line": 722,
+          "line": 724,
           "text": "中国 QA 独立关闭地区可达性，不以 MY／TW 结果替代"
         },
         {
           "id": "b0075",
           "section": "协议 rollout、简化 UI、智能分流与中国地区验收",
           "type": "highlight",
-          "line": 714,
+          "line": 716,
           "text": "P1 · P0 后 协议 rollout、简化 UI、智能分流与中国地区验收 G7 三协议从 34 台扩展到目标 fleet G5／G7 BO、Android 与 Windows 端到端回归 G20 Android 先行、Windows 接续，再覆盖其余五个平台 G21 中国网站与本地资源直连，其他公网流量继续走 VPN 中国 QA 独立关闭地区可达性，不以 MY／TW 结果替代 关闭标准：部署、客户端回归与地区验收分别留证"
         },
         {
           "id": "b0076",
           "section": "关闭 Arrowfish 剩余目标",
           "type": "heading",
-          "line": 728,
+          "line": 730,
           "text": "关闭 Arrowfish 剩余目标"
         },
         {
           "id": "b0077",
           "section": "关闭 Arrowfish 剩余目标",
           "type": "li",
-          "line": 730,
+          "line": 732,
           "text": "G1–G2／G18 归因、续费与用户质量看板"
         },
         {
           "id": "b0078",
           "section": "关闭 Arrowfish 剩余目标",
           "type": "li",
-          "line": 731,
+          "line": 733,
           "text": "G3／G4 新网站与 Siqo 多平台支付"
         },
         {
           "id": "b0079",
           "section": "关闭 Arrowfish 剩余目标",
           "type": "li",
-          "line": 732,
+          "line": 734,
           "text": "G5／G8 节点采购自动化与私有 DNS"
         },
         {
           "id": "b0080",
           "section": "关闭 Arrowfish 剩余目标",
           "type": "li",
-          "line": 733,
+          "line": 735,
           "text": "G9／G11 主体迁移与 Apple 平台恢复"
         },
         {
           "id": "b0081",
           "section": "关闭 Arrowfish 剩余目标",
           "type": "li",
-          "line": 734,
+          "line": 736,
           "text": "G10／G13 模块化重构与七平台工程质量标准持续收敛"
         },
         {
           "id": "b0082",
           "section": "关闭 Arrowfish 剩余目标",
           "type": "highlight",
-          "line": 726,
+          "line": 728,
           "text": "2026 年底前 关闭 Arrowfish 剩余目标 G1–G2／G18 归因、续费与用户质量看板 G3／G4 新网站与 Siqo 多平台支付 G5／G8 节点采购自动化与私有 DNS G9／G11 主体迁移与 Apple 平台恢复 G10／G13 模块化重构与七平台工程质量标准持续收敛 按优先级逐项关闭并分别验收"
         },
         {
           "id": "b0083",
           "section": "关闭 Arrowfish 剩余目标",
           "type": "p",
-          "line": 745,
+          "line": 747,
           "text": "Arrowfish · 目标清单"
         },
         {
           "id": "b0084",
           "section": "Arrowfish 目标清单",
           "type": "heading",
-          "line": 746,
+          "line": 748,
           "text": "Arrowfish 目标清单"
         },
         {
           "id": "b0085",
           "section": "Arrowfish 目标清单",
           "type": "p",
-          "line": 747,
+          "line": 749,
           "text": "按五个可独立验收的模块排序，而不是按 Sprint 重复拆项。G1–G20 保持稳定编号；G21 是 8 月 28 日新增的中国智能分流目标。G10 系统重构、G12 安全治理、G13 工程质量，以及 tag、runtime、DB migration、产品 smoke 与地区验收均分别验收。"
         },
         {
           "id": "b0086",
           "section": "Arrowfish 目标清单",
           "type": "table-row",
-          "line": 759,
+          "line": 761,
           "text": "目标 状态 最新进展 下一里程碑 目标时间"
         },
         {
           "id": "b0087",
           "section": "Arrowfish 目标清单",
           "type": "table-row",
-          "line": 761,
+          "line": 763,
           "text": "01 · 接手、架构与工程治理"
         },
         {
           "id": "b0088",
           "section": "Arrowfish 目标清单",
           "type": "table-row",
-          "line": 762,
+          "line": 764,
           "text": "G10 全系统接管、架构梳理与模块化重构 主干已重构，启动契约进行中 3月取得完整生产访问后，完成客户端、后端、数据库、基础设施、支付与节点链路审计；旧 ProxyBackend 退场，API 从 207 条收敛至 141 条。针对 line v1、line v2 与 bootstrap 多套返回并存的问题，已锁定由节点目录、用户资格与连接凭证组成的统一客户端启动标准，并使用稳定 endpoint ID，减少七个平台各自兼容不同返回格式的重复工作与连接差异。 完成统一契约实施、旧接口退出及 Android／Windows／iOS 兼容迁移；以 staging 和跨端连接验收关闭，不把标准已定写成部署完成。 持续至年底 每个模块独立验收"
         },
         {
           "id": "b0089",
           "section": "Arrowfish 目标清单",
           "type": "table-row",
-          "line": 763,
+          "line": 765,
           "text": "G12 安全、无日志与最小权限治理 核心修复完成，边界待关 接手后修复4处无日志政策违规、13.1 GB 请求日志、Nginx 攻击入口、JWT 登出与 OTP 逻辑；源代码访问已按最小权限收敛，测试环境凭证开始迁入 Key Vault。 关闭 staging／production 网络隔离、SSH PEM、生产 secrets 迁移、节点系统日志保留与定期权限复核。 P0 与生产韧性同步收口"
         },
         {
           "id": "b0090",
           "section": "Arrowfish 目标清单",
           "type": "table-row",
-          "line": 764,
+          "line": 766,
           "text": "G13 CI/CD、自动测试与全链路可观测 核心体系已建立 从手工出包推进到提交自动生成 staging APK；Android 四渠道构建与上传全自动约15分52秒，后端流水线缩短至30–50秒，并加入数据库迁移校验、MR质量门、Crashlytics及跨端 request ID。 把构建来源、测试结果、签名、artifact、部署与回滚证据统一到 Android、Windows、iOS、macOS 和 Linux，并补齐生产告警闭环。 持续工程标准 七平台逐项覆盖"
         },
         {
           "id": "b0091",
           "section": "Arrowfish 目标清单",
           "type": "table-row",
-          "line": 765,
+          "line": 767,
           "text": "G17 生产韧性、监控、异地备份与恢复 整合完成，高风险未关 读副本、节点健康状态机与请求级诊断能力已建立；8月12日应用、MySQL 与 Redis 完成生产整合。当前最终数据库备份仍与生产主机同机，无法证明主机级故障恢复能力。 建立异地副本，执行实际恢复演练，补齐服务与节点告警，并记录 RTO、数据完整性和回切步骤。 P0"
         },
         {
           "id": "b0092",
           "section": "Arrowfish 目标清单",
           "type": "table-row",
-          "line": 766,
+          "line": 768,
           "text": "G19 可追溯生产发布与用户可用性验收 证据框架已建立 5月25日有 release tags 与首条生产 session，但 Sprint 4 报告仍写作 QA/preprod closeout；8月12日 deployment 与 DB restore 可证明，产品 acceptance 仍为 partial。 把 tag、runtime、DB migration、产品 smoke、地区 QA 与发布后 KPI 分开留证；G13 负责流水线质量，本目标负责真实发布与用户结果。 P0 下次生产发布前"
         },
         {
           "id": "b0093",
           "section": "Arrowfish 目标清单",
           "type": "table-row",
-          "line": 768,
+          "line": 770,
           "text": "02 · VPN 核心、节点与网络能力"
         },
         {
           "id": "b0094",
           "section": "Arrowfish 目标清单",
           "type": "table-row",
-          "line": 769,
+          "line": 771,
           "text": "G5 节点部署与管理自动化 基础已交付，闭环进行中 已具备后台一键安装、全擦回收、12 台并行升级、到期释放和健康状态机；第10阶段两项协议问题完成源码修复，但测试环境、BO 与客户端端到端关闭数仍为 0，供应商自动采购也未完成。 先关闭协议与 BO 验收，再把供应商 API／受控浏览器采购接入同一任务闭环。 年底前 采购至配发闭环"
         },
         {
           "id": "b0095",
           "section": "Arrowfish 目标清单",
           "type": "table-row",
-          "line": 770,
+          "line": 772,
           "text": "G6 SkyTunnel 自研隧道 核心已完成 自研 VPN 隧道核心已交付；Android 完成替代验证，Windows 已接入共享版本化核心。 持续回归并完成 Windows 正式发布与 Apple 平台接入。 持续维护"
         },
         {
           "id": "b0096",
           "section": "Arrowfish 目标清单",
           "type": "table-row",
-          "line": 771,
+          "line": 773,
           "text": "G7 三协议实现、全量 rollout 与中国验收 核心完成，验收未关闭 Trojan、VLESS Reality、ShadowTLS 核心已实现；34 台主机三协议监听就绪，64 台仍是 Trojan-only，external reachability 仍为 unverified。 分别关闭监听、全 fleet rollout、Android／Windows 回归和中国地区可达性验收，不再用单一“完成”覆盖四道门槛。 P1 P0 关闭后分阶段验收"
         },
         {
           "id": "b0097",
           "section": "Arrowfish 目标清单",
           "type": "table-row",
-          "line": 772,
+          "line": 774,
           "text": "G21 智能分流与中国站点直连 目标已确认，待开发 8月28日决定把原先仅规划于 FFF 的智能分流加入 Arrowfish。目标是中国用户访问中国网站和本地资源时直接连接，减少不必要的跨境绕行与延迟；其他公网流量继续通过所选 VPN。现有 SkyTunnel／sing-box 已有 routing、direct outbound 与 ruleset 基础，但没有 Arrowfish 完整实现、部署或验收记录。 建立可版本化的中国域名／IP 规则与分流 DNS，规则无效时禁止公网流量静默绕过 VPN；先由 Android 验证，再覆盖 Windows 与其余平台并完成中国网络 QA。 待排期 不自动加入 Sprint 11"
         },
         {
           "id": "b0098",
           "section": "Arrowfish 目标清单",
           "type": "table-row",
-          "line": 773,
+          "line": 775,
           "text": "G8 Unbound 私有 DNS 开发中 自研私有 DNS 解析器开发中；截至 8 月 28 日尚无集成与验收记录。 完成实现、集成及验证。 原定 2026 年 8 月 当前有进度风险"
         },
         {
           "id": "b0099",
           "section": "Arrowfish 目标清单",
           "type": "table-row",
-          "line": 775,
+          "line": 777,
           "text": "03 · 用户资格、身份与收入保护"
         },
         {
           "id": "b0100",
           "section": "Arrowfish 目标清单",
           "type": "table-row",
-          "line": 776,
+          "line": 778,
           "text": "G14 后端权威配额、计时与会话 核心已完成 8月29日复核时，同账号和同设备多 ACTIVE 均为 0；未付费用户最高月流量从3月 1,216.7 GiB 降至6月 39.0 GiB，4月后无人超过 100 GiB。5月25日同时出现活跃与流量骤降，因此不能把全部降幅只归因于配额成功。 持续监控 denial、expiry、replacement、免费流量分位数和用户可用性，并为 Redis 配额补充可审计快照。 持续监控"
         },
         {
           "id": "b0101",
           "section": "Arrowfish 目标清单",
           "type": "table-row",
-          "line": 777,
+          "line": 779,
           "text": "G15 唯一设备绑定与账号连续性 新流程有效，兼容待关 5月25日当周设备绑定率从83.08%升至93.61%，目前回看共享 device ID 率从21.73%降至2.59%；8月12日切换周却升至38.89%。这些比例是按8月29日现有关系回看，不是历史快照。 关闭 identity header、生产 CORS、Android／Windows 版本与 legacy fallback 验证，再制定历史关系治理方案。 P0 兼容验证后治理历史资料"
         },
         {
           "id": "b0102",
           "section": "Arrowfish 目标清单",
           "type": "table-row",
-          "line": 778,
+          "line": 780,
           "text": "G2 套餐续费与订阅管理 待开发 第10阶段确认续费／重复付费贡献周收入 83.1%；尚无订阅闭环完成记录。 确定提前续费、自动续费与订阅状态同步规则，再进入开发和验收。 年底前 提前续费、自动续费、订阅管理"
         },
         {
           "id": "b0103",
           "section": "Arrowfish 目标清单",
           "type": "table-row",
-          "line": 779,
+          "line": 781,
           "text": "G4 Siqo 多平台支付 部分完成 Android staging 接入完成。 Windows 与其他平台逐一接入、回归和发布。 待排期 按平台分别验收"
         },
         {
           "id": "b0104",
           "section": "Arrowfish 目标清单",
           "type": "table-row",
-          "line": 781,
+          "line": 783,
           "text": "04 · 多平台产品与易用性"
         },
         {
           "id": "b0105",
           "section": "Arrowfish 目标清单",
           "type": "table-row",
-          "line": 782,
+          "line": 784,
           "text": "G20 七平台简化 UI 与高级协议模式 目标已确认，待开发 现有新版 UI 支持 Trojan、VLESS Reality、ShadowTLS 三协议，但会取代原来“一国一个选项”的简单体验；非技术用户不应被迫理解协议。 增加可切换的简化／高级模式：简化模式一国一个选项，连接时自动选可用协议。先交 Android，再交 Windows x64／ARM64 测试版；之后覆盖 iOS、macOS Apple Silicon／Intel 与 Linux。 2026-08-31–09-04 Android → Windows 测试版；其余平台随后逐项验收"
         },
         {
           "id": "b0106",
           "section": "Arrowfish 目标清单",
           "type": "table-row",
-          "line": 783,
+          "line": 785,
           "text": "G9 新公司主体迁移 进行中 Google 平台完成；华为、Samsung、OPPO 进行中。 逐个平台关闭主体、账号及发布资格迁移。 待排期 按平台分别验收"
         },
         {
           "id": "b0107",
           "section": "Arrowfish 目标清单",
           "type": "table-row",
-          "line": 784,
+          "line": 786,
           "text": "G11 iOS 与 macOS Apple 平台恢复 iOS 重建，审核待关 第10阶段建立 iOS 干净源码工程及 VPN 主路径；iOS + macOS 仍有 108 个最近30日 VPN 用户和 12 个当前 VIP，但新核心需要 Apple 发布批准。 完成 iOS 签名、TestFlight、真机、App Store；为 macOS 建立相同的干净构建、签名和发布验收。 按 Apple 门槛 两个平台分别验收"
         },
         {
           "id": "b0108",
           "section": "Arrowfish 目标清单",
           "type": "table-row",
-          "line": 785,
+          "line": 787,
           "text": "G16 Windows 云签名与官网恢复发布 签名就绪，发布待验收 Windows 占最近30日 VPN 用户 1,625、当前 VIP 357；团队确认云签名已正确完成，可进入官网下载发布路径。 完成干净机器安装、签名验证、VPN 连接、升级／卸载和官网下载链路验收后发布。 P0 下一发布窗口"
         },
         {
           "id": "b0109",
           "section": "Arrowfish 目标清单",
           "type": "table-row",
-          "line": 787,
+          "line": 789,
           "text": "05 · 增长、转化与市场入口"
         },
         {
           "id": "b0110",
           "section": "Arrowfish 目标清单",
           "type": "table-row",
-          "line": 788,
+          "line": 790,
           "text": "G1 广告归因与付费分析 基础完成，覆盖待补 第9阶段已完成投放链接、安装标识、账号绑定及注册／激活／首购／付费／续费的后端归因链路；第10阶段实际数据仍显示 97.6% 的新注册缺少归因。 补齐产品页、套餐、结账、支付回调和渠道埋点，并建立 D1／D7／D30 转化视图。 年底前 D1／D7／D30"
         },
         {
           "id": "b0111",
           "section": "Arrowfish 目标清单",
           "type": "table-row",
-          "line": 789,
+          "line": 791,
           "text": "G18 真实用户质量与转化看板 基线已量化 生产有 400,347 个账号，但最近30日 VPN 活跃仅 4,938（1.23%），历史付费 19,476（4.86%）；总注册量不能代表真实用户规模。 将注册、绑定、VPN-active、ever-paid、current VIP 与 cohort 转化分开呈现，并标记资料完整性。 下一管理看板"
         },
         {
           "id": "b0112",
           "section": "Arrowfish 目标清单",
           "type": "table-row",
-          "line": 790,
+          "line": 792,
           "text": "G3 百度广告新网站 Staging 开发中 新设计已进入 staging 开发；截至 8 月 28 日尚无正式发布验收记录。 完成验收与发布；广告归因由 G1 独立验收。 原定 2026 年 8 月 当前有进度风险"
         },
         {
           "id": "b0113",
           "section": "Arrowfish 目标清单",
           "type": "p",
-          "line": 799,
+          "line": 801,
           "text": "项目 02 · 新产品 · Lex 进展 + 8月28日后端分离决策"
         },
         {
           "id": "b0114",
           "section": "FFF 2026 路线图",
           "type": "heading",
-          "line": 800,
+          "line": 802,
           "text": "FFF 2026 路线图"
         },
         {
           "id": "b0115",
           "section": "FFF 2026 路线图",
           "type": "p",
-          "line": 801,
+          "line": 803,
           "text": "客户端进展按 Lex 实时口径截至8月28日，新 APK 已交 QA、结果待回；同日新增架构决策：克隆受控代码基线，但使用独立 GitLab repo、staging、数据库和迁移，避免 Arrowfish live data 风险。"
         },
         {
           "id": "b0116",
           "section": "客户端基础与智能连接验收",
           "type": "heading",
-          "line": 809,
+          "line": 811,
           "text": "客户端基础与智能连接验收"
         },
         {
           "id": "b0117",
           "section": "客户端基础与智能连接验收",
           "type": "p",
-          "line": 810,
+          "line": 812,
           "text": "G10 SkyTunnel 核心迁移与自动选线 智能分流仍待接入和验收"
         },
         {
           "id": "b0118",
           "section": "客户端基础与智能连接验收",
           "type": "li",
-          "line": 806,
+          "line": 808,
           "text": "2026-05-18–08-28 · 客户端实时口径 客户端基础与智能连接验收 G10 SkyTunnel 核心迁移与自动选线 智能分流仍待接入和验收 8月28日新 APK 已交 QA；自动分组、流量分流与测试结果仍未关闭"
         },
         {
           "id": "b0119",
           "section": "独立后端与 staging",
           "type": "heading",
-          "line": 817,
+          "line": 819,
           "text": "独立后端与 staging"
         },
         {
           "id": "b0120",
           "section": "独立后端与 staging",
           "type": "p",
-          "line": 818,
+          "line": 820,
           "text": "G14 新 GitLab repo 与隔离 runtime G15 验收后独立 refactor"
         },
         {
           "id": "b0121",
           "section": "独立后端与 staging",
           "type": "li",
-          "line": 814,
+          "line": 816,
           "text": "2026-08-28 决策 · 当前架构门槛 独立后端与 staging G14 新 GitLab repo 与隔离 runtime G15 验收后独立 refactor 不复制 Arrowfish 生产账号、数据库或 secrets"
         },
         {
           "id": "b0122",
           "section": "Android 首发收口",
           "type": "heading",
-          "line": 825,
+          "line": 827,
           "text": "Android 首发收口"
         },
         {
           "id": "b0123",
           "section": "Android 首发收口",
           "type": "p",
-          "line": 826,
+          "line": 828,
           "text": "G10 自动分组、协议补测与流量分流 G12 支付接口与支付闭环"
         },
         {
           "id": "b0124",
           "section": "Android 首发收口",
           "type": "li",
-          "line": 822,
+          "line": 824,
           "text": "G14 staging smoke test 后 Android 首发收口 G10 自动分组、协议补测与流量分流 G12 支付接口与支付闭环 构建、staging 与端到端验收后发布"
         },
         {
           "id": "b0125",
           "section": "Windows",
           "type": "heading",
-          "line": 833,
+          "line": 835,
           "text": "Windows"
         },
         {
           "id": "b0126",
           "section": "Windows",
           "type": "p",
-          "line": 834,
+          "line": 836,
           "text": "G13 桌面构建、VPN 主路径、支付与升级回归"
         },
         {
           "id": "b0127",
           "section": "Windows",
           "type": "li",
-          "line": 830,
+          "line": 832,
           "text": "Android 发布后 Windows G13 桌面构建、VPN 主路径、支付与升级回归 Android 验收关闭后才进入正式发布阶段"
         },
         {
           "id": "b0128",
           "section": "Apple 平台 → Linux",
           "type": "heading",
-          "line": 841,
+          "line": 843,
           "text": "Apple 平台 → Linux"
         },
         {
           "id": "b0129",
           "section": "Apple 平台 → Linux",
           "type": "p",
-          "line": 842,
+          "line": 844,
           "text": "G13 macOS+iOS 分别验收，再进入 Linux 适配"
         },
         {
           "id": "b0130",
           "section": "Apple 平台 → Linux",
           "type": "li",
-          "line": 838,
+          "line": 840,
           "text": "Windows 验收后 Apple 平台 → Linux G13 macOS+iOS 分别验收，再进入 Linux 适配 每个平台构建、签名、连接与发布资格独立关闭"
         },
         {
           "id": "b0131",
           "section": "Apple 平台 → Linux",
           "type": "p",
-          "line": 852,
+          "line": 854,
           "text": "FFF · 目标清单 · 更新至 2026-08-28"
         },
         {
           "id": "b0132",
           "section": "FFF 目标清单",
           "type": "heading",
-          "line": 853,
+          "line": 855,
           "text": "FFF 目标清单"
         },
         {
           "id": "b0133",
           "section": "FFF 目标清单",
           "type": "p",
-          "line": 854,
+          "line": 856,
           "text": "FFF 当前有5项独立目标；后端隔离是客户端首发前的架构门槛，开发完成、构建、staging 验收与正式发布分别记录。"
         },
         {
           "id": "b0134",
           "section": "FFF 目标清单",
           "type": "table-row",
-          "line": 866,
+          "line": 868,
           "text": "目标 状态 最新进展 下一里程碑 目标时间"
         },
         {
           "id": "b0135",
           "section": "FFF 目标清单",
           "type": "table-row",
-          "line": 868,
+          "line": 870,
           "text": "01 · 独立后端与数据边界"
         },
         {
           "id": "b0136",
           "section": "FFF 目标清单",
           "type": "table-row",
-          "line": 869,
+          "line": 871,
           "text": "FFF · G14 独立 GitLab repo 与 staging backend 决策已定，待执行 确认复用 Arrowfish 成熟代码基线，但不复用其生产 runtime、数据库、账号或 secrets；避免对 400,347 个 live 账号和历史关系做高风险原地改造。 锁定 baseline，新建 repo、CI/CD、独立 backend／DB／Redis／域名，并用合成数据完成核心 smoke test。 Android 首发验收前"
         },
         {
           "id": "b0137",
           "section": "FFF 目标清单",
           "type": "table-row",
-          "line": 870,
+          "line": 872,
           "text": "FFF · G15 FFF 专属 schema、API 与模块重构 隔离验收后开始 重构范围尚未在隔离环境启动；当前原则是先得到行为一致、可回滚的 staging baseline，再改变 schema 和契约。 建立独立 migration history，按 FFF 需求重构；共享能力仅通过版本化源码模块接入。 G14 验收后"
         },
         {
           "id": "b0138",
           "section": "FFF 目标清单",
           "type": "table-row",
-          "line": 872,
+          "line": 874,
           "text": "02 · Android 首发闭环"
         },
         {
           "id": "b0139",
           "section": "FFF 目标清单",
           "type": "table-row",
-          "line": 873,
+          "line": 875,
           "text": "FFF · G10 智能连接、自动选线与流量分流 APK 已交 QA，范围未验收 客户端核心已迁移至 SkyTunnel；config 加载及 Trojan、VLESS、ShadowTLS 手动连线已确认。8月28日新 APK 已交 QA，但自动分组仍待关闭；引擎虽支持 direct 和域名规则，blacklist／whitelist 尚未接入配置生成，也没有完整分流 UI 与验收记录。 记录可追溯 APK 资料，完成自动分组与协议补测；再接入中国／本地流量直连、其他流量走 VPN 的规则，并完成测试环境端到端验收。 2026 年 10 月"
         },
         {
           "id": "b0140",
           "section": "FFF 目标清单",
           "type": "table-row",
-          "line": 874,
+          "line": 876,
           "text": "FFF · G12 支付接口与支付闭环 待调试 套餐、确认订单、优惠券与支付通道基础页面已存在；客户端支付接口尚无完成与端到端验收记录。支付网关前置事项由 Roy 负责。 完成客户端支付接口调试、成功与失败路径回归、订单状态核对，并作为 Android 首发门槛关闭。 Android 首发前 完成后才进入发布验收"
         },
         {
           "id": "b0141",
           "section": "FFF 目标清单",
           "type": "table-row",
-          "line": 876,
+          "line": 878,
           "text": "03 · 多平台发布"
         },
         {
           "id": "b0142",
           "section": "FFF 目标清单",
           "type": "table-row",
-          "line": 877,
+          "line": 879,
           "text": "FFF · G13 多平台顺序发布 待发布 应用已有跨屏幕与桌面布局基础，但第10阶段没有 Android、Windows、macOS、iOS 或 Linux 发布验收记录。 严格按 Android → Windows → macOS+iOS → Linux 推进；上一阶段验收关闭后才启动下一阶段发布。 按平台门控 每个平台独立构建与验收"
         },
         {
           "id": "b0143",
           "section": "FFF 目标清单",
           "type": "p",
-          "line": 886,
+          "line": 888,
           "text": "跨产品 · 管理与交付基础设施 · 更新至 2026-08-28"
         },
         {
           "id": "b0144",
           "section": "共享管理能力",
           "type": "heading",
-          "line": 887,
+          "line": 889,
           "text": "共享管理能力"
         },
         {
           "id": "b0145",
           "section": "共享管理能力",
           "type": "p",
-          "line": 888,
+          "line": 890,
           "text": "承载 Arrowfish 与 FFF 共用的管理、报告和交付能力；目标与完成率独立统计，避免稀释任一产品线的进度。"
         },
         {
           "id": "b0146",
           "section": "共享管理能力",
           "type": "table-row",
-          "line": 900,
+          "line": 902,
           "text": "目标 状态 最新进展 下一里程碑 目标时间"
         },
         {
           "id": "b0147",
           "section": "共享管理能力",
           "type": "table-row",
-          "line": 902,
+          "line": 904,
           "text": "管理决策效率"
         },
         {
           "id": "b0148",
           "section": "共享管理能力",
           "type": "table-row",
-          "line": 903,
+          "line": 905,
           "text": "SHARED · G1 证据化 AI 报告助手 POC 上线准备中 该能力不归属任一产品线。已实现当前报告隔离、本地证据检索、可验证引用、对话与摘要边界；自动检索评测与回归测试均为 100%。 完成 Worker 与报告站点发布，并通过生产环境的摘要、数字问答、拒答、引用深链及移动端验收。 POC 首发 生产验收后关闭"
         },
         {
           "id": "b0149",
           "section": "共享管理能力",
           "type": "p",
-          "line": 912,
+          "line": 914,
           "text": "本次变化"
         },
         {
           "id": "b0150",
           "section": "第10阶段收口与生产研究更新",
           "type": "heading",
-          "line": 913,
+          "line": 915,
           "text": "第10阶段收口与生产研究更新"
         },
         {
           "id": "b0151",
           "section": "第10阶段收口与生产研究更新",
           "type": "p",
-          "line": 914,
+          "line": 916,
           "text": "工程交付保持第10阶段口径；8月28日新增只读生产数据、平台影响、FFF 架构决策与 Arrowfish 智能分流目标，并清楚标记后续计划。"
         },
         {
           "id": "b0152",
           "section": "Arrowfish",
           "type": "heading",
-          "line": 919,
+          "line": 921,
           "text": "Arrowfish"
         },
         {
           "id": "b0153",
           "section": "Arrowfish",
           "type": "p",
-          "line": 921,
+          "line": 923,
           "text": "两项协议问题已有源码修复，但测试环境、BO 与客户端实连记录仍未完整关闭。"
         },
         {
           "id": "b0154",
           "section": "Arrowfish",
           "type": "highlight",
-          "line": 921,
+          "line": 923,
           "text": "G5 端到端验收仍未关闭 两项协议问题已有源码修复，但测试环境、BO 与客户端实连记录仍未完整关闭。"
         },
         {
           "id": "b0155",
           "section": "Arrowfish",
           "type": "p",
-          "line": 922,
+          "line": 924,
           "text": "同账号／设备多 ACTIVE 均为0；未付费极端流量结束，但5月25日可用性同步下降，不能单因果解读。"
         },
         {
           "id": "b0156",
           "section": "Arrowfish",
           "type": "highlight",
-          "line": 922,
+          "line": 924,
           "text": "G14 后端配额效果已量化 同账号／设备多 ACTIVE 均为0；未付费极端流量结束，但5月25日可用性同步下降，不能单因果解读。"
         },
         {
           "id": "b0157",
           "section": "Arrowfish",
           "type": "p",
-          "line": 923,
+          "line": 925,
           "text": "5月25日身份质量明显改善，但8月12日切换周共享 device ID 回升至38.89%，先查 header、CORS 与 legacy fallback。"
         },
         {
           "id": "b0158",
           "section": "Arrowfish",
           "type": "highlight",
-          "line": 923,
+          "line": 925,
           "text": "G15 设备绑定需补兼容验证 5月25日身份质量明显改善，但8月12日切换周共享 device ID 回升至38.89%，先查 header、CORS 与 legacy fallback。"
         },
         {
           "id": "b0159",
           "section": "Arrowfish",
           "type": "p",
-          "line": 924,
+          "line": 926,
           "text": "5月25日证明 session accounting 开始，但完整部署范围记录冲突；8月12日部署完成、产品 acceptance partial。"
         },
         {
           "id": "b0160",
           "section": "Arrowfish",
           "type": "highlight",
-          "line": 924,
+          "line": 926,
           "text": "G19 生产发布证据分层 5月25日证明 session accounting 开始，但完整部署范围记录冲突；8月12日部署完成、产品 acceptance partial。"
         },
         {
           "id": "b0161",
           "section": "Arrowfish",
           "type": "p",
-          "line": 925,
+          "line": 927,
           "text": "Windows 占最近30日 VPN 用户 1,625、当前 VIP 357；云签名就绪，官网发布验收是下一门槛。"
         },
         {
           "id": "b0162",
           "section": "Arrowfish",
           "type": "highlight",
-          "line": 925,
+          "line": 927,
           "text": "G16 Windows 恢复发布优先 Windows 占最近30日 VPN 用户 1,625、当前 VIP 357；云签名就绪，官网发布验收是下一门槛。"
         },
         {
           "id": "b0163",
           "section": "Arrowfish",
           "type": "p",
-          "line": 926,
+          "line": 928,
           "text": "34台三协议监听就绪，64台仍是 Trojan-only；全量 rollout 与中国可达性验收未关闭。"
         },
         {
           "id": "b0164",
           "section": "Arrowfish",
           "type": "highlight",
-          "line": 926,
+          "line": 928,
           "text": "G7 三协议改为四道门槛 34台三协议监听就绪，64台仍是 Trojan-only；全量 rollout 与中国可达性验收未关闭。"
         },
         {
           "id": "b0165",
           "section": "Arrowfish",
           "type": "p",
-          "line": 927,
+          "line": 929,
           "text": "line v1、line v2 与 bootstrap 的重复职责收敛为节点目录、用户资格和连接凭证三部分；实施、旧接口退出与跨端验收仍在进行。"
         },
         {
           "id": "b0166",
           "section": "Arrowfish",
           "type": "highlight",
-          "line": 927,
+          "line": 929,
           "text": "G10 统一客户端启动标准已锁定 line v1、line v2 与 bootstrap 的重复职责收敛为节点目录、用户资格和连接凭证三部分；实施、旧接口退出与跨端验收仍在进行。"
         },
         {
           "id": "b0167",
           "section": "Arrowfish",
           "type": "p",
-          "line": 928,
+          "line": 930,
           "text": "增加简化／高级模式；Android 先行，Windows x64／ARM64 接续，再覆盖 iOS、macOS 双架构与 Linux。"
         },
         {
           "id": "b0168",
           "section": "Arrowfish",
           "type": "highlight",
-          "line": 928,
+          "line": 930,
           "text": "G20 协议能力与易用性分层 增加简化／高级模式；Android 先行，Windows x64／ARM64 接续，再覆盖 iOS、macOS 双架构与 Linux。"
         },
         {
           "id": "b0169",
           "section": "Arrowfish",
           "type": "p",
-          "line": 929,
+          "line": 931,
           "text": "减少中国站点跨境绕行与延迟，其他公网流量继续走 VPN；不与协议 rollout 或简化 UI 合并验收。"
         },
         {
           "id": "b0170",
           "section": "Arrowfish",
           "type": "highlight",
-          "line": 929,
+          "line": 931,
           "text": "G21 中国智能分流成为独立目标 减少中国站点跨境绕行与延迟，其他公网流量继续走 VPN；不与协议 rollout 或简化 UI 合并验收。"
         },
         {
           "id": "b0171",
           "section": "Arrowfish",
           "type": "p",
-          "line": 930,
+          "line": 932,
           "text": "400,347个账号中最近30日 VPN 活跃4,938、历史付费19,476，后续按质量漏斗报告。"
         },
         {
           "id": "b0172",
           "section": "Arrowfish",
           "type": "highlight",
-          "line": 930,
+          "line": 932,
           "text": "G18 注册量不再代表用户规模 400,347个账号中最近30日 VPN 活跃4,938、历史付费19,476，后续按质量漏斗报告。"
         },
         {
           "id": "b0173",
           "section": "FFF · Lex 实时口径截至 2026-08-28",
           "type": "heading",
-          "line": 934,
+          "line": 936,
           "text": "FFF · Lex 实时口径截至 2026-08-28"
         },
         {
           "id": "b0174",
           "section": "FFF · Lex 实时口径截至 2026-08-28",
           "type": "p",
-          "line": 936,
+          "line": 938,
           "text": "8月28日完成 QA handoff；构建来源、自动分组、协议补测、分流规则与测试结果仍需留证后关闭。"
         },
         {
           "id": "b0175",
           "section": "FFF · Lex 实时口径截至 2026-08-28",
           "type": "highlight",
-          "line": 936,
+          "line": 938,
           "text": "G10 新 APK 已交 QA，智能分流仍待完成 8月28日完成 QA handoff；构建来源、自动分组、协议补测、分流规则与测试结果仍需留证后关闭。"
         },
         {
           "id": "b0176",
           "section": "FFF · Lex 实时口径截至 2026-08-28",
           "type": "p",
-          "line": 937,
+          "line": 939,
           "text": "新 GitLab repo、独立 staging backend／DB／Redis；不复制 Arrowfish 生产账号或 secrets。"
         },
         {
           "id": "b0177",
           "section": "FFF · Lex 实时口径截至 2026-08-28",
           "type": "highlight",
-          "line": 937,
+          "line": 939,
           "text": "G14 后端分离路径已决定 新 GitLab repo、独立 staging backend／DB／Redis；不复制 Arrowfish 生产账号或 secrets。"
         },
         {
           "id": "b0178",
           "section": "FFF · Lex 实时口径截至 2026-08-28",
           "type": "p",
-          "line": 938,
+          "line": 940,
           "text": "核心 smoke test 通过后才建立 FFF 专属 migration、schema 和 API 变更。"
         },
         {
           "id": "b0179",
           "section": "FFF · Lex 实时口径截至 2026-08-28",
           "type": "highlight",
-          "line": 938,
+          "line": 940,
           "text": "G15 先验收 baseline 再重构 核心 smoke test 通过后才建立 FFF 专属 migration、schema 和 API 变更。"
         },
         {
           "id": "b0180",
           "section": "用户质量、配额、设备、平台与关键部署",
           "type": "heading",
-          "line": 947,
+          "line": 949,
           "text": "用户质量、配额、设备、平台与关键部署"
         },
         {
           "id": "b0181",
           "section": "用户质量、配额、设备、平台与关键部署",
           "type": "p",
-          "line": 947,
+          "line": 949,
           "text": "把注册总量还原为真实活跃与商业用户，并分开校正部署、可用性、身份与地区验收状态"
         },
         {
           "id": "b0182",
           "section": "用户质量、配额、设备、平台与关键部署",
           "type": "details-summary",
-          "line": 946,
+          "line": 948,
           "text": "ARROWFISH · 生产研究与部署边界复核 2026-08-29 只读聚合 用户质量、配额、设备、平台与关键部署 把注册总量还原为真实活跃与商业用户，并分开校正部署、可用性、身份与地区验收状态"
         },
         {
           "id": "b0183",
           "section": "用户质量、配额、设备、平台与关键部署",
           "type": "table-row",
-          "line": 953,
+          "line": 955,
           "text": "目标 / 影响 生产证据 管理结论"
         },
         {
           "id": "b0184",
           "section": "用户质量、配额、设备、平台与关键部署",
           "type": "table-row",
-          "line": 955,
+          "line": 957,
           "text": "5月25日边界 release tags 指向06:14起的Git objects，06:52出现首条生产session；当周设备身份改善，但D7激活、付费、用户和流量均骤降。 G14控制能力有证据；G19继续对齐完整部署范围与发布后可用性，不能单因果归功。"
         },
         {
           "id": "b0185",
           "section": "用户质量、配额、设备、平台与关键部署",
           "type": "table-row",
-          "line": 956,
+          "line": 958,
           "text": "8月12日边界 05:00开始cutover，06:05–06:09 DB restore metadata吻合；D7与订单指标改善，但共享device ID率升至38.89%。 基础设施deployment完成、产品acceptance partial；G15身份兼容回归仍需关闭。"
         },
         {
           "id": "b0186",
           "section": "用户质量、配额、设备、平台与关键部署",
           "type": "table-row",
-          "line": 957,
+          "line": 959,
           "text": "后端配额与 session 8月29日复核同账号和同设备多 ACTIVE 均为0。未付费最高月流量从3月 1,216.7 GiB 降至6月 39.0 GiB。 G14 核心完成；继续补 Redis 配额快照、denial原因和用户可用性监控。"
         },
         {
           "id": "b0187",
           "section": "用户质量、配额、设备、平台与关键部署",
           "type": "table-row",
-          "line": 958,
+          "line": 960,
           "text": "设备绑定 5月25日当周共享device ID率目前回看从21.73%降至2.59%；8月12日切换周升至38.89%。 G15 保持进行中；先查 identity header、CORS、客户端版本与 legacy fallback，不批量删除历史关系。"
         },
         {
           "id": "b0188",
           "section": "用户质量、配额、设备、平台与关键部署",
           "type": "table-row",
-          "line": 959,
+          "line": 961,
           "text": "中国连接 中国 VPN 活跃用户从5月11,457降至6月3,842；5月25日前后 MY/TW 注册地 cohort 也同步下降。MY/TW QA 可用而中国不可用属于独立运维测试证据。 DB 不证明 GFW 是整体下降的唯一原因；G7 仍需中国地区独立验收。"
         },
         {
           "id": "b0189",
           "section": "用户质量、配额、设备、平台与关键部署",
           "type": "table-row",
-          "line": 960,
+          "line": 962,
           "text": "三协议 rollout 34台主机三协议监听全部 ready；64台仍是 Trojan-only；external state unverified。 G7 从“完成”改为“核心完成、rollout 与中国验收未关闭”。"
         },
         {
           "id": "b0190",
           "section": "用户质量、配额、设备、平台与关键部署",
           "type": "table-row",
-          "line": 961,
+          "line": 963,
           "text": "平台优先级 Android + Windows 占最近可识别 VPN 用户94.86%、近期流量94.15%、订单金额89.04%。 优先 Android 与 Windows；Apple 平台保留恢复路线，不描述为永久放弃。"
         },
         {
           "id": "b0191",
           "section": "克隆代码基线，但隔离生产数据",
           "type": "heading",
-          "line": 973,
+          "line": 975,
           "text": "克隆代码基线，但隔离生产数据"
         },
         {
           "id": "b0192",
           "section": "克隆代码基线，但隔离生产数据",
           "type": "p",
-          "line": 973,
+          "line": 975,
           "text": "保护 Arrowfish live users，同时给 FFF 独立重构空间"
         },
         {
           "id": "b0193",
           "section": "克隆代码基线，但隔离生产数据",
           "type": "details-summary",
-          "line": 972,
+          "line": 974,
           "text": "FFF · 架构决策 2026-08-28 待执行 克隆代码基线，但隔离生产数据 保护 Arrowfish live users，同时给 FFF 独立重构空间"
         },
         {
           "id": "b0194",
           "section": "克隆代码基线，但隔离生产数据",
           "type": "highlight",
-          "line": 976,
+          "line": 978,
           "text": "为什么分离 Arrowfish 已承载400,347个账号及持续中的订阅、设备、session和流量资料。大范围原地 refactor 会放大数据丢失和冻结客户端兼容风险。FFF 复用的是成熟源码基线，不是 Arrowfish production runtime 或数据库。"
         },
         {
           "id": "b0195",
           "section": "克隆代码基线，但隔离生产数据",
           "type": "highlight",
-          "line": 978,
+          "line": 980,
           "text": "1 · 锁定 baseline 标记可克隆的 Arrowfish backend 版本、依赖与行为边界。"
         },
         {
           "id": "b0196",
           "section": "克隆代码基线，但隔离生产数据",
           "type": "highlight",
-          "line": 979,
+          "line": 981,
           "text": "2 · 新建 repo FFF 使用独立 GitLab ownership、CI/CD、secrets 与发布历史。"
         },
         {
           "id": "b0197",
           "section": "克隆代码基线，但隔离生产数据",
           "type": "highlight",
-          "line": 980,
+          "line": 982,
           "text": "3 · 隔离 staging 部署独立 backend、DB、Redis、域名和配置；不复制生产账号或凭证。"
         },
         {
           "id": "b0198",
           "section": "克隆代码基线，但隔离生产数据",
           "type": "highlight",
-          "line": 981,
+          "line": 983,
           "text": "4 · 合成数据验收 验证注册、登录、bootstrap、节点、session、设备绑定与支付 stub。"
         },
         {
           "id": "b0199",
           "section": "克隆代码基线，但隔离生产数据",
           "type": "highlight",
-          "line": 982,
+          "line": 984,
           "text": "5 · 独立 refactor 通过 smoke test 后，才改变 FFF schema、module 和 API。"
         },
         {
           "id": "b0200",
           "section": "广告追踪与付费分析",
           "type": "heading",
-          "line": 992,
+          "line": 994,
           "text": "广告追踪与付费分析"
         },
         {
           "id": "b0201",
           "section": "广告追踪与付费分析",
           "type": "p",
-          "line": 992,
+          "line": 994,
           "text": "第10阶段已量化的归因缺口与后续埋点目标"
         },
         {
           "id": "b0202",
           "section": "广告追踪与付费分析",
           "type": "details-summary",
-          "line": 991,
+          "line": 993,
           "text": "ARROWFISH · 第10阶段细节 01 缺口已确认 广告追踪与付费分析 第10阶段已量化的归因缺口与后续埋点目标"
         },
         {
           "id": "b0203",
           "section": "截至第10阶段的事实与缺口",
           "type": "heading",
-          "line": 996,
+          "line": 998,
           "text": "截至第10阶段的事实与缺口"
         },
         {
           "id": "b0204",
           "section": "截至第10阶段的事实与缺口",
           "type": "table-row",
-          "line": 999,
+          "line": 1001,
           "text": "范围 目前情况 需要关闭的问题"
         },
         {
           "id": "b0205",
           "section": "截至第10阶段的事实与缺口",
           "type": "table-row",
-          "line": 1001,
+          "line": 1003,
           "text": "归因覆盖 97.6% 的新注册缺少营销归因。 先建立可核验的渠道来源与注册关系。"
         },
         {
           "id": "b0206",
           "section": "截至第10阶段的事实与缺口",
           "type": "table-row",
-          "line": 1002,
+          "line": 1004,
           "text": "核心漏斗 现有报告无法稳定连接产品页、套餐、结账、支付回调与渠道。 为五个关键环节补齐一致的事件与关联字段。"
         },
         {
           "id": "b0207",
           "section": "截至第10阶段的事实与缺口",
           "type": "table-row",
-          "line": 1003,
+          "line": 1005,
           "text": "转化周期 尚无按来源拆分的完整转化周期视图。 先提供 D1、D7、D30 首次付费转化；续费与金额在 G2 规则明确后接入。"
         },
         {
           "id": "b0208",
           "section": "第10阶段之后的目标顺序",
           "type": "heading",
-          "line": 1007,
+          "line": 1009,
           "text": "第10阶段之后的目标顺序"
         },
         {
           "id": "b0209",
           "section": "第10阶段之后的目标顺序",
           "type": "highlight",
-          "line": 1009,
+          "line": 1011,
           "text": "1 · 定义事件口径 统一渠道、访问、套餐、结账、支付与首次付费定义。"
         },
         {
           "id": "b0210",
           "section": "第10阶段之后的目标顺序",
           "type": "highlight",
-          "line": 1010,
+          "line": 1012,
           "text": "2 · 补齐关联字段 保证各环节可以连接到同一来源，并避免重复计算。"
         },
         {
           "id": "b0211",
           "section": "第10阶段之后的目标顺序",
           "type": "highlight",
-          "line": 1011,
+          "line": 1013,
           "text": "3 · 数据核对 将埋点结果与后台注册、订单和实际支付记录逐项对账。"
         },
         {
           "id": "b0212",
           "section": "第10阶段之后的目标顺序",
           "type": "highlight",
-          "line": 1012,
+          "line": 1014,
           "text": "4 · 周期视图 先交付 D1、D7、D30 首次付费转化。"
         },
         {
           "id": "b0213",
           "section": "第10阶段之后的目标顺序",
           "type": "highlight",
-          "line": 1013,
+          "line": 1015,
           "text": "5 · 接入续费 G2 规则明确后，再区分首次付费、续费、金额和订单状态。"
         },
         {
           "id": "b0214",
           "section": "第10阶段之后的目标顺序",
           "type": "highlight",
-          "line": 1015,
+          "line": 1017,
           "text": "范围边界 以上是第10阶段确认的目标顺序，不表示具体技术方案已经锁定或开发完成。"
         },
         {
           "id": "b0215",
           "section": "订阅续费闭环",
           "type": "heading",
-          "line": 1023,
+          "line": 1025,
           "text": "订阅续费闭环"
         },
         {
           "id": "b0216",
           "section": "订阅续费闭环",
           "type": "p",
-          "line": 1023,
+          "line": 1025,
           "text": "第10阶段收入事实与后续订阅闭环目标"
         },
         {
           "id": "b0217",
           "section": "订阅续费闭环",
           "type": "details-summary",
-          "line": 1022,
+          "line": 1024,
           "text": "ARROWFISH · 第10阶段细节 02 待开发 订阅续费闭环 第10阶段收入事实与后续订阅闭环目标"
         },
         {
           "id": "b0218",
           "section": "订阅续费闭环",
           "type": "highlight",
-          "line": 1026,
+          "line": 1028,
           "text": "第10阶段结论 续费／重复付费用户贡献周收入 83.1%，说明续费可靠性是直接的收入保护点；第10阶段没有订阅闭环开发完成或验收记录。"
         },
         {
           "id": "b0219",
           "section": "订阅续费闭环",
           "type": "table-row",
-          "line": 1029,
+          "line": 1031,
           "text": "独立能力 当前问题 年底完成标准"
         },
         {
           "id": "b0220",
           "section": "订阅续费闭环",
           "type": "table-row",
-          "line": 1031,
+          "line": 1033,
           "text": "提前续费 用户目前不能在套餐到期前正常续费。 明确续费规则，付款后套餐期限与权益正确衔接。"
         },
         {
           "id": "b0221",
           "section": "订阅续费闭环",
           "type": "table-row",
-          "line": 1032,
+          "line": 1034,
           "text": "自动续费 自动续费流程尚未形成完整闭环。 到期扣款、成功续期、失败处理与用户通知均可追踪。"
         },
         {
           "id": "b0222",
           "section": "订阅续费闭环",
           "type": "table-row",
-          "line": 1033,
+          "line": 1035,
           "text": "Stripe 订阅管理 订阅状态与后台套餐状态无法完整管理。 创建、变更、取消、恢复及状态同步都有明确规则，并避免重复处理。"
         },
         {
           "id": "b0223",
           "section": "订阅续费闭环",
           "type": "table-row",
-          "line": 1034,
+          "line": 1036,
           "text": "收入分析 续费与首次付费无法完整按来源及周期分析。 与 G1 归因链路连接，区分首次付费、每次续费、金额及实际订单状态。"
         },
         {
           "id": "b0224",
           "section": "节点部署与管理自动化",
           "type": "heading",
-          "line": 1046,
+          "line": 1048,
           "text": "节点部署与管理自动化"
         },
         {
           "id": "b0225",
           "section": "节点部署与管理自动化",
           "type": "p",
-          "line": 1046,
+          "line": 1048,
           "text": "第10阶段证据、供应商采购缺口与后续目标"
         },
         {
           "id": "b0226",
           "section": "节点部署与管理自动化",
           "type": "details-summary",
-          "line": 1045,
+          "line": 1047,
           "text": "ARROWFISH · 第10阶段细节 03 验收未关闭 节点部署与管理自动化 第10阶段证据、供应商采购缺口与后续目标"
         },
         {
           "id": "b0227",
           "section": "节点部署与管理自动化",
           "type": "highlight",
-          "line": 1050,
+          "line": 1052,
           "text": "资料边界 本页新增8月28日只读生产状态，但不把第10阶段之后的源码或 BO 操作描述为第10阶段交付。监听 ready、全量 rollout 与中国地区验收分别记录。"
         },
         {
           "id": "b0228",
           "section": "节点部署与管理自动化",
           "type": "details-summary",
-          "line": 1054,
+          "line": 1056,
           "text": "第10阶段节点自动化证据"
         },
         {
           "id": "b0229",
           "section": "节点部署与管理自动化",
           "type": "table-row",
-          "line": 1057,
+          "line": 1059,
           "text": "范围 第10阶段及以前证据 还要完成 截止状态"
         },
         {
           "id": "b0230",
           "section": "节点部署与管理自动化",
           "type": "table-row",
-          "line": 1059,
+          "line": 1061,
           "text": "供应商概览 第3阶段已有供应商节点数、成本和健康概览，但当时明确尚未用于采购决策。 校准生产数据，并把库存、成本和稳定性转成可审查的采购条件。 历史基础"
         },
         {
           "id": "b0231",
           "section": "节点部署与管理自动化",
           "type": "table-row",
-          "line": 1060,
+          "line": 1062,
           "text": "协议与 BO 验收 第10阶段发现 2 项高优先级协议问题，源码修复 2 项，端到端验收关闭 0 项。 补齐测试环境 bootstrap、BO、Android 与 FFF 实连记录后关闭。 验收未关闭"
         },
         {
           "id": "b0232",
           "section": "节点部署与管理自动化",
           "type": "table-row",
-          "line": 1061,
+          "line": 1063,
           "text": "VM／IP 自动采购 第10阶段没有供应商自动下单、付款／Top Up 或取得新 VM／IP 的完成证据。 建立统一采购任务；有 API 时直接接入，无 API 时才评估受控浏览器执行。 核心缺口"
         },
         {
           "id": "b0233",
           "section": "节点部署与管理自动化",
           "type": "details-summary",
-          "line": 1068,
+          "line": 1070,
           "text": "第10阶段之后：API + AI 浏览器 Agent 混合采购建议"
         },
         {
           "id": "b0234",
           "section": "节点部署与管理自动化",
           "type": "table-row",
-          "line": 1072,
+          "line": 1074,
           "text": "供应商类型 执行方式 必要控制"
         },
         {
           "id": "b0235",
           "section": "节点部署与管理自动化",
           "type": "table-row",
-          "line": 1074,
+          "line": 1076,
           "text": "有完整 API BO 直接查询库存和价格，创建 VM／IP，取得访问资料，并执行续费、取消、重启或重建。 供应商、区域、规格及金额白名单；幂等键防止重复购买；失败自动重试。"
         },
         {
           "id": "b0236",
           "section": "节点部署与管理自动化",
           "type": "table-row",
-          "line": 1075,
+          "line": 1077,
           "text": "只有部分 API API 负责现有 VM 生命周期；缺少的购买或付款步骤交给 AI 浏览器 Agent，再回到同一 BO 采购任务。 每一步保存状态；API 与浏览器不能同时重复执行同一订单。"
         },
         {
           "id": "b0237",
           "section": "节点部署与管理自动化",
           "type": "table-row",
-          "line": 1076,
+          "line": 1078,
           "text": "无 API／无 Top Up 使用 OpenClaw 类受控浏览器 Agent 登录供应商网站、选择批准的套餐和区域、建立新订单；不能 Top Up 时购买新的已批准 SKU。 首阶段付款前人工确认；2FA／验证码转人工；限制单笔、每日及每月金额；保存页面证据、订单号和账单。"
         },
         {
           "id": "b0238",
           "section": "节点部署与管理自动化",
           "type": "details-summary",
-          "line": 1085,
+          "line": 1087,
           "text": "后续目标：新节点统一标准"
         },
         {
           "id": "b0239",
           "section": "节点部署与管理自动化",
           "type": "table-row",
-          "line": 1088,
+          "line": 1090,
           "text": "项目 统一标准 目的"
         },
         {
           "id": "b0240",
           "section": "节点部署与管理自动化",
           "type": "table-row",
-          "line": 1090,
+          "line": 1092,
           "text": "计算资源 最低 1 核 CPU、1 GB 内存、10 GB 硬盘 形成可采购、可验收的最低基线。"
         },
         {
           "id": "b0241",
           "section": "节点部署与管理自动化",
           "type": "table-row",
-          "line": 1091,
+          "line": 1093,
           "text": "操作系统 Debian 12–13 减少不同发行版带来的部署偏差。"
         },
         {
           "id": "b0242",
           "section": "节点部署与管理自动化",
           "type": "table-row",
-          "line": 1092,
+          "line": 1094,
           "text": "流量与网络 700 GB 至不限流量；固定公网 IPv4 保证节点具备明确的服务基础。"
         },
         {
           "id": "b0243",
           "section": "节点部署与管理自动化",
           "type": "table-row",
-          "line": 1093,
+          "line": 1095,
           "text": "中国节点优先项 有 IPv6 优先 作为中国节点采购与部署的优先条件。"
         },
         {
           "id": "b0244",
           "section": "节点部署与管理自动化",
           "type": "details-summary",
-          "line": 1100,
+          "line": 1102,
           "text": "第10阶段之后：节点自动化闭环顺序"
         },
         {
           "id": "b0245",
           "section": "节点部署与管理自动化",
           "type": "highlight",
-          "line": 1103,
+          "line": 1105,
           "text": "1 · 供应商分级 记录可用 API、网页登录、付款、Top Up、2FA、区域、规格和预算规则。"
         },
         {
           "id": "b0246",
           "section": "节点部署与管理自动化",
           "type": "highlight",
-          "line": 1104,
+          "line": 1106,
           "text": "2 · 建立采购任务 BO 保存触发原因、审批、金额、步骤、订单号、VM ID、IP、失败和重试。"
         },
         {
           "id": "b0247",
           "section": "节点部署与管理自动化",
           "type": "highlight",
-          "line": 1105,
+          "line": 1107,
           "text": "3 · 双驱动试点 完成一个 API 供应商和一个无 API 供应商的 AI 浏览器采购，并保留付款前确认。"
         },
         {
           "id": "b0248",
           "section": "节点部署与管理自动化",
           "type": "highlight",
-          "line": 1106,
+          "line": 1108,
           "text": "4 · 打通自动补货 缺货时自动采购、DNS、部署、健康检查、入库及配发。"
         },
         {
           "id": "b0249",
           "section": "节点部署与管理自动化",
           "type": "highlight",
-          "line": 1107,
+          "line": 1109,
           "text": "5 · 逐步放宽 稳定后才对低金额白名单 SKU 取消人工确认；异常和高金额始终转人工。"
         }
       ]

@@ -47,6 +47,7 @@ jobs:
           node --check assets/site-preferences.js
           node --check assets/auth-gate.js
           node --check assets/report-evidence.js
+          node --check assets/report-brief.js
           node --check assets/ai-chat.js
           node --check assets/copy-markdown.js
           node --check worker/index.js
