@@ -21,12 +21,12 @@
         .toolbar {
             display: flex; align-items: center; gap: 16px; padding: 12px 24px;
             background: var(--af-surface); border-bottom: 1px solid var(--af-border);
-            color: var(--af-text); box-shadow: 0 1px 3px var(--af-shadow); flex-shrink: 0;
+            color: var(--af-text); box-shadow: 0 1px 3px var(--af-shadow); flex-shrink: 0; flex-wrap: wrap;
         }
         .toolbar h1 { font-size: 16px; font-weight: 600; color: var(--af-primary); white-space: nowrap; }
         .view-tabs { display: flex; align-items: center; gap: 4px; padding: 3px; background: var(--af-surface-muted); border-radius: 8px; }
         .view-tab {
-            min-height: 36px; padding: 7px 12px; border: 0; border-radius: 6px;
+            min-height: 44px; padding: 7px 12px; border: 0; border-radius: 6px;
             color: var(--af-text-muted); background: transparent; font: inherit; font-size: 14px;
             font-weight: 600; cursor: pointer;
         }
@@ -35,7 +35,7 @@
         .view-tab[aria-selected="true"] { color: var(--af-primary); background: var(--af-surface); box-shadow: 0 1px 2px var(--af-shadow); }
         .toolbar select {
             padding: 6px 12px; border: 1px solid var(--af-border); border-radius: 6px; color: var(--af-text);
-            min-height: 36px; font-size: 14px; background: var(--af-surface-muted); cursor: pointer; min-width: 240px;
+            min-height: 44px; font-size: 14px; background: var(--af-surface-muted); cursor: pointer; min-width: 240px;
         }
         .toolbar select:focus-visible { outline: 2px solid var(--af-focus); outline-offset: 2px; border-color: var(--af-focus); }
         .toolbar .date { font-size: 13px; color: var(--af-text-muted); }

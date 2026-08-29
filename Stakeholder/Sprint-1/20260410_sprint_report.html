@@ -60,6 +60,11 @@
   .action-list li:last-child { border-bottom: none; }
   .action-num { background: var(--accent); color: white; width: 20px; height: 20px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.7rem; font-weight: 700; flex-shrink: 0; margin-top: 2px; }
   .footer { margin-top: 2rem; padding-top: 1rem; border-top: 1px solid var(--border); font-size: 0.8rem; color: var(--text-secondary); text-align: center; }
+  .impact-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin-bottom: 1.5rem; }
+  @media (max-width: 640px) {
+    body { padding: 1rem; }
+    .impact-grid { grid-template-columns: 1fr; }
+  }
 
 </style>
 <script src="../../assets/auth-gate.js"></script>
@@ -99,7 +104,7 @@
 <!-- Impact Categories -->
 <h2>一-B、Sprint 1 成果分类</h2>
 
-<div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:1.5rem;">
+<div class="impact-grid">
   <div class="card" style="border-left:4px solid var(--af-success);background:var(--af-success-soft);">
     <strong style="color:var(--af-success);">成本节省</strong>
     <ul style="margin-top:0.5rem;padding-left:1.2rem;font-size:0.9rem;">
