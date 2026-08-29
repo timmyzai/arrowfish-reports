@@ -285,6 +285,6 @@ assert.match(browserStyles, /prefers-reduced-motion:\s*reduce/);
 assert.doesNotMatch(browserStyles, /\.ai-quick-action/, 'Removed shortcut controls leave no dead CSS');
 assert.match(landingPage, /assets\/ai-chat\.css\?v=20260829-13/);
 assert.match(landingPage, /assets\/ai-chat\.js\?v=20260829-13/);
-assert.match(browserStyles, /\.ai-launcher,\s*\.ai-backdrop,\s*\.ai-drawer,\s*\.ai-brief-strip\s*\{\s*display:\s*none !important;/);
+assert.doesNotMatch(browserStyles, /\.ai-launcher,\s*\.ai-backdrop,\s*\.ai-drawer,\s*\.ai-brief-strip\s*\{\s*display:\s*none !important;/);
 
 console.log('AI assistant regression tests: all assertions passed');

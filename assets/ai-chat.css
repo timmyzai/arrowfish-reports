@@ -663,10 +663,3 @@
         display: none;
     }
 }
-
-.ai-launcher,
-.ai-backdrop,
-.ai-drawer,
-.ai-brief-strip {
-    display: none !important;
-}
