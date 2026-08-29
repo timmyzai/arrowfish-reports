@@ -15,7 +15,7 @@
     "id": "fff-routing-gaps",
     "reportId": "goal-2026-20260827",
     "question": "智能路由还缺什么？",
-    "expectedAll": ["自动分组仍在开发", "Shadowsocks 补测"]
+    "expectedAll": ["自动分组仍待关闭", "blacklist／whitelist 尚未接入配置生成"]
   },
   {
     "id": "goal-numeric",

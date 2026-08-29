@@ -15,7 +15,7 @@
     "id": "fff-routing-gaps",
     "reportId": "goal-2026-20260827",
     "question": "What remains for smart routing?",
-    "expectedAll": ["Shadowsocks"]
+    "expectedAll": ["auto grouping remains open", "blacklist/whitelist data is not wired into config generation"]
   },
   {
     "id": "goal-numeric",

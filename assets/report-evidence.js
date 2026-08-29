@@ -28,7 +28,8 @@
     ['privacy', 'security', 'permission', 'access', '隐私', '安全', '权限', '访问'],
     ['release', 'launch', 'publish', 'deployment', '上线', '发布', '部署'],
     ['cost', 'saving', 'budget', '成本', '节省', '预算'],
-    ['backup', 'restore', 'recovery', '备份', '恢复', '异地']
+    ['backup', 'restore', 'recovery', '备份', '恢复', '异地'],
+    ['routing', 'route', 'splitting', 'split', '智能路由', '智能连接', '自动选线', '流量分流', '分流']
   ];
 
   var OVERVIEW_RE = /summary|summarize|overview|main points?|highlights?|摘要|概述|重点|要点|总结|主要内容|报告内容|说了什么|讲了什么|看到了什么|看到什么|说说.*报告|介绍.*报告|这份报告.*(?:讲|说)/i;

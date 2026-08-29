@@ -60,6 +60,16 @@ assert.equal(schema.properties.answer.maxLength, 600, 'Answer schema enforces th
 assert.equal(schema.properties.citations.maxItems, 5, 'Citation schema permits at most five sources');
 assert.match(schema.properties.citations.items.properties.quote.description, /事实主体/);
 
+const systemPrompt = Worker.buildMessages('支付接口完成了吗？', report, canonical, [], 'zh-CN')[0].content;
+assert.match(systemPrompt, /利益相关者报告分析助手/, 'Prompt defines the stakeholder-facing role');
+assert.match(systemPrompt, /值、单位和范围/, 'Prompt constrains period and project comparisons');
+assert.match(systemPrompt, /指代只能从先前 user 消息解析/, 'Prompt limits conversation history to referent resolution');
+assert.match(systemPrompt, /完成状态仍必须来自 documents/, 'Prompt example keeps follow-up facts grounded');
+assert.match(systemPrompt, /不使用模型常识作答/, 'Prompt example refuses unsupported general-knowledge questions');
+assert.match(workerSource, /max_completion_tokens:\s*1024/);
+assert.match(workerSource, /reasoning_effort:\s*'medium'/);
+assert.match(workerSource, /include_reasoning:\s*false/);
+
 const summary = Worker.extractiveFallback('请用不超过五个要点总结本报告的主要内容。', report, canonical, env, 'test');
 assert.equal(summary.answer.split('\n').length, 5, 'Extractive summary contains exactly five points when five sources are available');
 assert.equal(summary.sources.length, 5, 'Extractive summary exposes five verified sources');
