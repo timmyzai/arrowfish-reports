@@ -552,14 +552,14 @@
       <div>
         <p class="section-kicker">日总／管理层 · 60 秒看板 · 截至 2026-08-29</p>
         <h2 id="executive-title">项目组合现况与下一顺序</h2>
-        <p class="executive-lead"><strong>结论：</strong>从 2026 年 3 月交接开始，Arrowfish 的任务顺序始终是先理解全系统，再把台湾团队遗留的黑盒、手工作业与风险逐模块改造成可测试、可发布、可恢复的平台。当前后端权威配额与 SkyTunnel 核心已经落地；先关闭安全、Windows 发布、设备身份、异地恢复和生产验收五个 P0，再推进协议 rollout、简化 UI 与中国地区验收。FFF 先建立隔离 backend／DB／Redis 与可回滚 staging baseline，再做专属重构。</p>
+        <p class="executive-lead"><strong>结论：</strong>从 2026 年 3 月交接开始，Arrowfish 的任务顺序始终是先理解全系统，再把台湾团队遗留的黑盒、手工作业与风险逐模块改造成可测试、可发布、可恢复的平台。当前后端权威配额与 SkyTunnel 核心已经落地；先关闭安全、Windows 发布、设备身份、异地恢复和生产验收五个 P0，再推进协议 rollout、简化 UI、智能分流与中国地区验收。FFF 先建立隔离 backend／DB／Redis 与可回滚 staging baseline，再做专属重构。</p>
       </div>
     </div>
     <div class="executive-grid">
       <article class="executive-card arrowfish">
-        <div class="executive-card-head"><span class="executive-card-label">Arrowfish</span><span class="badge progress">2 完成 · 16 进行中 · 2 待开发</span></div>
+        <div class="executive-card-head"><span class="executive-card-label">Arrowfish</span><span class="badge progress">2 完成 · 16 进行中 · 3 待开发</span></div>
         <h3>从接手止血进入平台化收口</h3>
-        <p>20 项目标按五个不重叠模块管理：系统治理、安全与工程质量、VPN 核心、用户与收入、多平台增长。Android + Windows 占最近可识别 VPN 用户 94.86%；后续优先级以现有用户保护与可验证发布为先。</p>
+        <p>21 项目标按五个不重叠模块管理：系统治理、安全与工程质量、VPN 核心、用户与收入、多平台增长。Android + Windows 占最近可识别 VPN 用户 94.86%；后续优先级以现有用户保护与可验证发布为先。</p>
       </article>
       <article class="executive-card fff">
         <div class="executive-card-head"><span class="executive-card-label">FFF</span><span class="badge progress">1 进行中 · 4 待执行</span></div>
@@ -571,7 +571,7 @@
         <h3>先保护现有用户，再扩大变更面</h3>
         <ol>
           <li>P0：安全边界、Windows 官网 signed release、设备 identity/CORS、异地备份恢复、生产发布证据闭环。</li>
-          <li>P1：三协议 fleet rollout、简化 UI、Android／Windows 回归、中国地区可达性。</li>
+          <li>P1：三协议 fleet rollout、简化 UI、智能分流、Android／Windows 回归、中国地区可达性。</li>
           <li>随后：FFF 隔离 baseline → smoke test → 专属 schema／API refactor。</li>
         </ol>
       </article>
@@ -713,11 +713,12 @@
         </article>
         <article class="route-future-card next">
           <span class="route-status">P1 · P0 后</span>
-          <h4>协议 rollout、简化 UI 与中国地区验收</h4>
+          <h4>协议 rollout、简化 UI、智能分流与中国地区验收</h4>
           <ul class="route-goals">
             <li><strong>G7</strong> 三协议从 34 台扩展到目标 fleet</li>
             <li><strong>G5／G7</strong> BO、Android 与 Windows 端到端回归</li>
             <li><strong>G20</strong> Android 先行、Windows 接续，再覆盖其余五个平台</li>
+            <li><strong>G21</strong> 中国网站与本地资源直连，其他公网流量继续走 VPN</li>
             <li>中国 QA 独立关闭地区可达性，不以 MY／TW 结果替代</li>
           </ul>
           <span class="route-result">关闭标准：部署、客户端回归与地区验收分别留证</span>
@@ -742,8 +743,8 @@
     <div class="section-head">
       <div>
         <p class="section-kicker">Arrowfish · 目标清单</p>
-        <div class="project-title-row"><h2 id="arrowfish-goals-title">Arrowfish 目标清单</h2><span class="project-label">20 项目标</span></div>
-        <p class="section-copy">按五个可独立验收的模块排序，而不是按 Sprint 重复拆项。G1–G20 保持稳定编号；本次补回原清单遗漏的 G10 系统重构、G12 安全治理、G13 工程质量。tag、runtime、DB migration、产品 smoke 与地区验收不互相替代。</p>
+        <div class="project-title-row"><h2 id="arrowfish-goals-title">Arrowfish 目标清单</h2><span class="project-label">21 项目标</span></div>
+        <p class="section-copy">按五个可独立验收的模块排序，而不是按 Sprint 重复拆项。G1–G20 保持稳定编号；G21 是 8 月 28 日新增的中国智能分流目标。G10 系统重构、G12 安全治理、G13 工程质量，以及 tag、runtime、DB migration、产品 smoke 与地区验收均分别验收。</p>
       </div>
       <div class="status-summary" data-status-summary aria-label="Arrowfish 目标状态统计">
         <div class="status-count done"><b data-count="done">0</b><span>已完成</span></div>
@@ -753,12 +754,12 @@
     </div>
     <div class="goal-table-wrap">
       <table class="goal-table" aria-labelledby="arrowfish-goals-title">
-        <caption class="sr-only">Arrowfish 2026 年 20 项目标的状态、进展、下一里程碑与目标时间</caption>
+        <caption class="sr-only">Arrowfish 2026 年 21 项目标的状态、进展、下一里程碑与目标时间</caption>
         <colgroup><col><col><col><col><col></colgroup>
         <thead><tr><th>目标</th><th>状态</th><th>最新进展</th><th>下一里程碑</th><th>目标时间</th></tr></thead>
         <tbody>
           <tr class="group-row"><th colspan="5">01 · 接手、架构与工程治理</th></tr>
-          <tr class="goal-row" data-status="progress"><td class="goal-name"><span class="goal-id">G10</span>全系统接管、架构梳理与模块化重构</td><td><span class="badge progress">主干已重构，持续收敛</span></td><td>3月取得完整生产访问后，完成代码、客户端、后端、数据库、基础设施、支付与节点链路审计；旧 ProxyBackend 退场，API 从 207 条收敛至 141 条，黑盒与重复职责逐步改为可维护模块。</td><td>完成 BO／节点管理边界、订阅支付领域与数据库职责分离；新客户端覆盖后再退出冻结客户端兼容路径。</td><td class="goal-target">持续至年底<small>每个模块独立验收</small></td></tr>
+          <tr class="goal-row" data-status="progress"><td class="goal-name"><span class="goal-id">G10</span>全系统接管、架构梳理与模块化重构</td><td><span class="badge progress">主干已重构，启动契约进行中</span></td><td>3月取得完整生产访问后，完成客户端、后端、数据库、基础设施、支付与节点链路审计；旧 ProxyBackend 退场，API 从 207 条收敛至 141 条。针对 line v1、line v2 与 bootstrap 多套返回并存的问题，已锁定由节点目录、用户资格与连接凭证组成的统一客户端启动标准，并使用稳定 endpoint ID，减少七个平台各自兼容不同返回格式的重复工作与连接差异。</td><td>完成统一契约实施、旧接口退出及 Android／Windows／iOS 兼容迁移；以 staging 和跨端连接验收关闭，不把标准已定写成部署完成。</td><td class="goal-target">持续至年底<small>每个模块独立验收</small></td></tr>
           <tr class="goal-row" data-status="progress"><td class="goal-name"><span class="goal-id">G12</span>安全、无日志与最小权限治理</td><td><span class="badge progress">核心修复完成，边界待关</span></td><td>接手后修复4处无日志政策违规、13.1 GB 请求日志、Nginx 攻击入口、JWT 登出与 OTP 逻辑；源代码访问已按最小权限收敛，测试环境凭证开始迁入 Key Vault。</td><td>关闭 staging／production 网络隔离、SSH PEM、生产 secrets 迁移、节点系统日志保留与定期权限复核。</td><td class="goal-target">P0<small>与生产韧性同步收口</small></td></tr>
           <tr class="goal-row" data-status="progress"><td class="goal-name"><span class="goal-id">G13</span>CI/CD、自动测试与全链路可观测</td><td><span class="badge progress">核心体系已建立</span></td><td>从手工出包推进到提交自动生成 staging APK；Android 四渠道构建与上传全自动约15分52秒，后端流水线缩短至30–50秒，并加入数据库迁移校验、MR质量门、Crashlytics及跨端 request ID。</td><td>把构建来源、测试结果、签名、artifact、部署与回滚证据统一到 Android、Windows、iOS、macOS 和 Linux，并补齐生产告警闭环。</td><td class="goal-target">持续工程标准<small>七平台逐项覆盖</small></td></tr>
           <tr class="goal-row" data-status="progress"><td class="goal-name"><span class="goal-id">G17</span>生产韧性、监控、异地备份与恢复</td><td><span class="badge progress">整合完成，高风险未关</span></td><td>读副本、节点健康状态机与请求级诊断能力已建立；8月12日应用、MySQL 与 Redis 完成生产整合。当前最终数据库备份仍与生产主机同机，无法证明主机级故障恢复能力。</td><td>建立异地副本，执行实际恢复演练，补齐服务与节点告警，并记录 RTO、数据完整性和回切步骤。</td><td class="goal-target">P0</td></tr>
@@ -768,6 +769,7 @@
           <tr class="goal-row" data-status="progress"><td class="goal-name"><span class="goal-id">G5</span>节点部署与管理自动化</td><td><span class="badge progress">基础已交付，闭环进行中</span></td><td>已具备后台一键安装、全擦回收、12 台并行升级、到期释放和健康状态机；第10阶段两项协议问题完成源码修复，但测试环境、BO 与客户端端到端关闭数仍为 0，供应商自动采购也未完成。</td><td>先关闭协议与 BO 验收，再把供应商 API／受控浏览器采购接入同一任务闭环。</td><td class="goal-target">年底前<small>采购至配发闭环</small></td></tr>
           <tr class="goal-row" data-status="done"><td class="goal-name"><span class="goal-id">G6</span>SkyTunnel 自研隧道</td><td><span class="badge done">核心已完成</span></td><td>自研 VPN 隧道核心已交付；Android 完成替代验证，Windows 已接入共享版本化核心。</td><td>持续回归并完成 Windows 正式发布与 Apple 平台接入。</td><td class="goal-target">持续维护</td></tr>
           <tr class="goal-row" data-status="progress"><td class="goal-name"><span class="goal-id">G7</span>三协议实现、全量 rollout 与中国验收</td><td><span class="badge progress">核心完成，验收未关闭</span></td><td>Trojan、VLESS Reality、ShadowTLS 核心已实现；34 台主机三协议监听就绪，64 台仍是 Trojan-only，external reachability 仍为 unverified。</td><td>分别关闭监听、全 fleet rollout、Android／Windows 回归和中国地区可达性验收，不再用单一“完成”覆盖四道门槛。</td><td class="goal-target">P1<small>P0 关闭后分阶段验收</small></td></tr>
+          <tr class="goal-row" data-status="planned"><td class="goal-name"><span class="goal-id">G21</span>智能分流与中国站点直连</td><td><span class="badge planned">目标已确认，待开发</span></td><td>8月28日决定把原先仅规划于 FFF 的智能分流加入 Arrowfish。目标是中国用户访问中国网站和本地资源时直接连接，减少不必要的跨境绕行与延迟；其他公网流量继续通过所选 VPN。现有 SkyTunnel／sing-box 已有 routing、direct outbound 与 ruleset 基础，但没有 Arrowfish 完整实现、部署或验收记录。</td><td>建立可版本化的中国域名／IP 规则与分流 DNS，规则无效时禁止公网流量静默绕过 VPN；先由 Android 验证，再覆盖 Windows 与其余平台并完成中国网络 QA。</td><td class="goal-target">待排期<small>不自动加入 Sprint 11</small></td></tr>
           <tr class="goal-row" data-status="progress"><td class="goal-name"><span class="goal-id">G8</span>Unbound 私有 DNS</td><td><span class="badge progress">开发中</span></td><td>自研私有 DNS 解析器开发中；截至 8 月 28 日尚无集成与验收记录。</td><td>完成实现、集成及验证。</td><td class="goal-target">原定 2026 年 8 月<small>当前有进度风险</small></td></tr>
 
           <tr class="group-row"><th colspan="5">03 · 用户资格、身份与收入保护</th></tr>
@@ -801,12 +803,12 @@
       <div class="route-legend" role="list" aria-label="路线状态图例"><span class="complete" role="listitem">已完成</span><span class="current" role="listitem">当前阶段</span><span class="next" role="listitem">下一阶段</span></div>
     </div>
     <ol class="route-track" aria-label="FFF 2026 年目标交付路线">
-      <li class="route-stage complete">
+      <li class="route-stage current">
         <div class="route-card">
           <span class="route-date">2026-05-18–08-28 · 客户端实时口径</span>
-          <h3>客户端基础收口</h3>
-          <p class="route-goals"><strong>G10</strong> SkyTunnel 核心迁移<br>客户端功能与交互缺口完成收口</p>
-          <span class="route-result">8月28日新 APK 已交 QA；测试结果待回，尚不是发布验收</span>
+          <h3>客户端基础与智能连接验收</h3>
+          <p class="route-goals"><strong>G10</strong> SkyTunnel 核心迁移与自动选线<br>智能分流仍待接入和验收</p>
+          <span class="route-result">8月28日新 APK 已交 QA；自动分组、流量分流与测试结果仍未关闭</span>
         </div>
       </li>
       <li class="route-stage current">
@@ -821,7 +823,7 @@
         <div class="route-card">
           <span class="route-date">G14 staging smoke test 后</span>
           <h3>Android 首发收口</h3>
-          <p class="route-goals"><strong>G10</strong> 自动分组与协议补测<br><strong>G12</strong> 支付接口与支付闭环</p>
+          <p class="route-goals"><strong>G10</strong> 自动分组、协议补测与流量分流<br><strong>G12</strong> 支付接口与支付闭环</p>
           <span class="route-result">构建、staging 与端到端验收后发布</span>
         </div>
       </li>
@@ -868,7 +870,7 @@
           <tr class="goal-row" data-status="planned"><td class="goal-name"><span class="goal-id">FFF · G15</span>FFF 专属 schema、API 与模块重构</td><td><span class="badge planned">隔离验收后开始</span></td><td>重构范围尚未在隔离环境启动；当前原则是先得到行为一致、可回滚的 staging baseline，再改变 schema 和契约。</td><td>建立独立 migration history，按 FFF 需求重构；共享能力仅通过版本化源码模块接入。</td><td class="goal-target">G14 验收后</td></tr>
 
           <tr class="group-row"><th colspan="5">02 · Android 首发闭环</th></tr>
-          <tr class="goal-row" data-status="progress"><td class="goal-name"><span class="goal-id">FFF · G10</span>智能路由完整范围</td><td><span class="badge progress">APK 已交 QA，验收中</span></td><td>客户端核心已迁移至 SkyTunnel；config 加载及 Trojan、VLESS、ShadowTLS 手动连线已确认。8月28日新 APK 已交 QA；自动分组、构建来源与测试结果仍未关闭。</td><td>记录可追溯 APK 资料，完成自动分组、Shadowsocks 补测及测试环境端到端验收。</td><td class="goal-target">2026 年 10 月</td></tr>
+          <tr class="goal-row" data-status="progress"><td class="goal-name"><span class="goal-id">FFF · G10</span>智能连接、自动选线与流量分流</td><td><span class="badge progress">APK 已交 QA，范围未验收</span></td><td>客户端核心已迁移至 SkyTunnel；config 加载及 Trojan、VLESS、ShadowTLS 手动连线已确认。8月28日新 APK 已交 QA，但自动分组仍待关闭；引擎虽支持 direct 和域名规则，blacklist／whitelist 尚未接入配置生成，也没有完整分流 UI 与验收记录。</td><td>记录可追溯 APK 资料，完成自动分组与协议补测；再接入中国／本地流量直连、其他流量走 VPN 的规则，并完成测试环境端到端验收。</td><td class="goal-target">2026 年 10 月</td></tr>
           <tr class="goal-row" data-status="planned"><td class="goal-name"><span class="goal-id">FFF · G12</span>支付接口与支付闭环</td><td><span class="badge planned">待调试</span></td><td>套餐、确认订单、优惠券与支付通道基础页面已存在；客户端支付接口尚无完成与端到端验收记录。支付网关前置事项由 Roy 负责。</td><td>完成客户端支付接口调试、成功与失败路径回归、订单状态核对，并作为 Android 首发门槛关闭。</td><td class="goal-target">Android 首发前<small>完成后才进入发布验收</small></td></tr>
 
           <tr class="group-row"><th colspan="5">03 · 多平台发布</th></tr>
@@ -909,7 +911,7 @@
       <div>
         <p class="section-kicker">本次变化</p>
         <h2 id="latest-title">第10阶段收口与生产研究更新</h2>
-        <p class="section-copy">工程交付保持第10阶段口径；8月28日新增只读生产数据、平台影响和 FFF 架构决策，并清楚标记后续计划。</p>
+        <p class="section-copy">工程交付保持第10阶段口径；8月28日新增只读生产数据、平台影响、FFF 架构决策与 Arrowfish 智能分流目标，并清楚标记后续计划。</p>
       </div>
     </div>
     <div class="updates-by-project">
@@ -922,14 +924,16 @@
           <article class="update-card"><span class="update-id">G19</span><strong>生产发布证据分层</strong><p>5月25日证明 session accounting 开始，但完整部署范围记录冲突；8月12日部署完成、产品 acceptance partial。</p></article>
           <article class="update-card"><span class="update-id">G16</span><strong>Windows 恢复发布优先</strong><p>Windows 占最近30日 VPN 用户 1,625、当前 VIP 357；云签名就绪，官网发布验收是下一门槛。</p></article>
           <article class="update-card"><span class="update-id">G7</span><strong>三协议改为四道门槛</strong><p>34台三协议监听就绪，64台仍是 Trojan-only；全量 rollout 与中国可达性验收未关闭。</p></article>
+          <article class="update-card"><span class="update-id">G10</span><strong>统一客户端启动标准已锁定</strong><p>line v1、line v2 与 bootstrap 的重复职责收敛为节点目录、用户资格和连接凭证三部分；实施、旧接口退出与跨端验收仍在进行。</p></article>
           <article class="update-card"><span class="update-id">G20</span><strong>协议能力与易用性分层</strong><p>增加简化／高级模式；Android 先行，Windows x64／ARM64 接续，再覆盖 iOS、macOS 双架构与 Linux。</p></article>
+          <article class="update-card"><span class="update-id">G21</span><strong>中国智能分流成为独立目标</strong><p>减少中国站点跨境绕行与延迟，其他公网流量继续走 VPN；不与协议 rollout 或简化 UI 合并验收。</p></article>
           <article class="update-card"><span class="update-id">G18</span><strong>注册量不再代表用户规模</strong><p>400,347个账号中最近30日 VPN 活跃4,938、历史付费19,476，后续按质量漏斗报告。</p></article>
         </div>
       </div>
       <div class="update-group project-fff" aria-labelledby="fff-updates-title">
         <h3 id="fff-updates-title">FFF · Lex 实时口径截至 2026-08-28</h3>
         <div class="updates-grid">
-          <article class="update-card"><span class="update-id">G10</span><strong>新 APK 已交 QA</strong><p>8月28日完成 QA handoff；构建来源、自动分组、协议补测与测试结果仍需留证后关闭。</p></article>
+          <article class="update-card"><span class="update-id">G10</span><strong>新 APK 已交 QA，智能分流仍待完成</strong><p>8月28日完成 QA handoff；构建来源、自动分组、协议补测、分流规则与测试结果仍需留证后关闭。</p></article>
           <article class="update-card"><span class="update-id">G14</span><strong>后端分离路径已决定</strong><p>新 GitLab repo、独立 staging backend／DB／Redis；不复制 Arrowfish 生产账号或 secrets。</p></article>
           <article class="update-card"><span class="update-id">G15</span><strong>先验收 baseline 再重构</strong><p>核心 smoke test 通过后才建立 FFF 专属 migration、schema 和 API 变更。</p></article>
         </div>

@@ -102,11 +102,11 @@
         },
         {
           "label": "P1 · P0 后",
-          "title": "协议 rollout、简化 UI 与中国地区验收",
+          "title": "协议 rollout、简化 UI、智能分流与中国地区验收",
           "result": "关闭标准：部署、客户端回归与地区验收分别留证",
           "future": true,
           "reportId": "goal-2026-20260827",
-          "blockId": "b0074"
+          "blockId": "b0075"
         },
         {
           "label": "2026 年底前",
@@ -114,20 +114,20 @@
           "result": "按优先级逐项关闭并分别验收",
           "future": true,
           "reportId": "goal-2026-20260827",
-          "blockId": "b0081"
+          "blockId": "b0082"
         }
       ],
       "goals": [
         {
           "id": "G10",
           "title": "全系统接管、架构梳理与模块化重构",
-          "status": "主干已重构，持续收敛",
+          "status": "主干已重构，启动契约进行中",
           "statusGroup": "progress",
-          "evidence": "3月取得完整生产访问后，完成代码、客户端、后端、数据库、基础设施、支付与节点链路审计；旧 ProxyBackend 退场，API 从 207 条收敛至 141 条，黑盒与重复职责逐步改为可维护模块。",
-          "nextAction": "完成 BO／节点管理边界、订阅支付领域与数据库职责分离；新客户端覆盖后再退出冻结客户端兼容路径。",
+          "evidence": "3月取得完整生产访问后，完成客户端、后端、数据库、基础设施、支付与节点链路审计；旧 ProxyBackend 退场，API 从 207 条收敛至 141 条。针对 line v1、line v2 与 bootstrap 多套返回并存的问题，已锁定由节点目录、用户资格与连接凭证组成的统一客户端启动标准，并使用稳定 endpoint ID，减少七个平台各自兼容不同返回格式的重复工作与连接差异。",
+          "nextAction": "完成统一契约实施、旧接口退出及 Android／Windows／iOS 兼容迁移；以 staging 和跨端连接验收关闭，不把标准已定写成部署完成。",
           "deadline": "持续至年底 每个模块独立验收",
           "reportId": "goal-2026-20260827",
-          "blockId": "b0087"
+          "blockId": "b0088"
         },
         {
           "id": "G12",
@@ -138,7 +138,7 @@
           "nextAction": "关闭 staging／production 网络隔离、SSH PEM、生产 secrets 迁移、节点系统日志保留与定期权限复核。",
           "deadline": "P0 与生产韧性同步收口",
           "reportId": "goal-2026-20260827",
-          "blockId": "b0088"
+          "blockId": "b0089"
         },
         {
           "id": "G13",
@@ -149,7 +149,7 @@
           "nextAction": "把构建来源、测试结果、签名、artifact、部署与回滚证据统一到 Android、Windows、iOS、macOS 和 Linux，并补齐生产告警闭环。",
           "deadline": "持续工程标准 七平台逐项覆盖",
           "reportId": "goal-2026-20260827",
-          "blockId": "b0089"
+          "blockId": "b0090"
         },
         {
           "id": "G17",
@@ -160,7 +160,7 @@
           "nextAction": "建立异地副本，执行实际恢复演练，补齐服务与节点告警，并记录 RTO、数据完整性和回切步骤。",
           "deadline": "P0",
           "reportId": "goal-2026-20260827",
-          "blockId": "b0090"
+          "blockId": "b0091"
         },
         {
           "id": "G19",
@@ -171,7 +171,7 @@
           "nextAction": "把 tag、runtime、DB migration、产品 smoke、地区 QA 与发布后 KPI 分开留证；G13 负责流水线质量，本目标负责真实发布与用户结果。",
           "deadline": "P0 下次生产发布前",
           "reportId": "goal-2026-20260827",
-          "blockId": "b0091"
+          "blockId": "b0092"
         },
         {
           "id": "G5",
@@ -182,7 +182,7 @@
           "nextAction": "先关闭协议与 BO 验收，再把供应商 API／受控浏览器采购接入同一任务闭环。",
           "deadline": "年底前 采购至配发闭环",
           "reportId": "goal-2026-20260827",
-          "blockId": "b0093"
+          "blockId": "b0094"
         },
         {
           "id": "G6",
@@ -193,7 +193,7 @@
           "nextAction": "持续回归并完成 Windows 正式发布与 Apple 平台接入。",
           "deadline": "持续维护",
           "reportId": "goal-2026-20260827",
-          "blockId": "b0094"
+          "blockId": "b0095"
         },
         {
           "id": "G7",
@@ -204,7 +204,18 @@
           "nextAction": "分别关闭监听、全 fleet rollout、Android／Windows 回归和中国地区可达性验收，不再用单一“完成”覆盖四道门槛。",
           "deadline": "P1 P0 关闭后分阶段验收",
           "reportId": "goal-2026-20260827",
-          "blockId": "b0095"
+          "blockId": "b0096"
+        },
+        {
+          "id": "G21",
+          "title": "智能分流与中国站点直连",
+          "status": "目标已确认，待开发",
+          "statusGroup": "planned",
+          "evidence": "8月28日决定把原先仅规划于 FFF 的智能分流加入 Arrowfish。目标是中国用户访问中国网站和本地资源时直接连接，减少不必要的跨境绕行与延迟；其他公网流量继续通过所选 VPN。现有 SkyTunnel／sing-box 已有 routing、direct outbound 与 ruleset 基础，但没有 Arrowfish 完整实现、部署或验收记录。",
+          "nextAction": "建立可版本化的中国域名／IP 规则与分流 DNS，规则无效时禁止公网流量静默绕过 VPN；先由 Android 验证，再覆盖 Windows 与其余平台并完成中国网络 QA。",
+          "deadline": "待排期 不自动加入 Sprint 11",
+          "reportId": "goal-2026-20260827",
+          "blockId": "b0097"
         },
         {
           "id": "G8",
@@ -215,7 +226,7 @@
           "nextAction": "完成实现、集成及验证。",
           "deadline": "原定 2026 年 8 月 当前有进度风险",
           "reportId": "goal-2026-20260827",
-          "blockId": "b0096"
+          "blockId": "b0098"
         },
         {
           "id": "G14",
@@ -226,7 +237,7 @@
           "nextAction": "持续监控 denial、expiry、replacement、免费流量分位数和用户可用性，并为 Redis 配额补充可审计快照。",
           "deadline": "持续监控",
           "reportId": "goal-2026-20260827",
-          "blockId": "b0098"
+          "blockId": "b0100"
         },
         {
           "id": "G15",
@@ -237,7 +248,7 @@
           "nextAction": "关闭 identity header、生产 CORS、Android／Windows 版本与 legacy fallback 验证，再制定历史关系治理方案。",
           "deadline": "P0 兼容验证后治理历史资料",
           "reportId": "goal-2026-20260827",
-          "blockId": "b0099"
+          "blockId": "b0101"
         },
         {
           "id": "G2",
@@ -248,7 +259,7 @@
           "nextAction": "确定提前续费、自动续费与订阅状态同步规则，再进入开发和验收。",
           "deadline": "年底前 提前续费、自动续费、订阅管理",
           "reportId": "goal-2026-20260827",
-          "blockId": "b0100"
+          "blockId": "b0102"
         },
         {
           "id": "G4",
@@ -259,7 +270,7 @@
           "nextAction": "Windows 与其他平台逐一接入、回归和发布。",
           "deadline": "待排期 按平台分别验收",
           "reportId": "goal-2026-20260827",
-          "blockId": "b0101"
+          "blockId": "b0103"
         },
         {
           "id": "G20",
@@ -270,7 +281,7 @@
           "nextAction": "增加可切换的简化／高级模式：简化模式一国一个选项，连接时自动选可用协议。先交 Android，再交 Windows x64／ARM64 测试版；之后覆盖 iOS、macOS Apple Silicon／Intel 与 Linux。",
           "deadline": "2026-08-31–09-04 Android → Windows 测试版；其余平台随后逐项验收",
           "reportId": "goal-2026-20260827",
-          "blockId": "b0103"
+          "blockId": "b0105"
         },
         {
           "id": "G9",
@@ -281,7 +292,7 @@
           "nextAction": "逐个平台关闭主体、账号及发布资格迁移。",
           "deadline": "待排期 按平台分别验收",
           "reportId": "goal-2026-20260827",
-          "blockId": "b0104"
+          "blockId": "b0106"
         },
         {
           "id": "G11",
@@ -292,7 +303,7 @@
           "nextAction": "完成 iOS 签名、TestFlight、真机、App Store；为 macOS 建立相同的干净构建、签名和发布验收。",
           "deadline": "按 Apple 门槛 两个平台分别验收",
           "reportId": "goal-2026-20260827",
-          "blockId": "b0105"
+          "blockId": "b0107"
         },
         {
           "id": "G16",
@@ -303,7 +314,7 @@
           "nextAction": "完成干净机器安装、签名验证、VPN 连接、升级／卸载和官网下载链路验收后发布。",
           "deadline": "P0 下一发布窗口",
           "reportId": "goal-2026-20260827",
-          "blockId": "b0106"
+          "blockId": "b0108"
         },
         {
           "id": "G1",
@@ -314,7 +325,7 @@
           "nextAction": "补齐产品页、套餐、结账、支付回调和渠道埋点，并建立 D1／D7／D30 转化视图。",
           "deadline": "年底前 D1／D7／D30",
           "reportId": "goal-2026-20260827",
-          "blockId": "b0108"
+          "blockId": "b0110"
         },
         {
           "id": "G18",
@@ -325,7 +336,7 @@
           "nextAction": "将注册、绑定、VPN-active、ever-paid、current VIP 与 cohort 转化分开呈现，并标记资料完整性。",
           "deadline": "下一管理看板",
           "reportId": "goal-2026-20260827",
-          "blockId": "b0109"
+          "blockId": "b0111"
         },
         {
           "id": "G3",
@@ -336,7 +347,7 @@
           "nextAction": "完成验收与发布；广告归因由 G1 独立验收。",
           "deadline": "原定 2026 年 8 月 当前有进度风险",
           "reportId": "goal-2026-20260827",
-          "blockId": "b0110"
+          "blockId": "b0112"
         }
       ]
     },
@@ -350,11 +361,11 @@
       "phases": [
         {
           "label": "2026-05-18–08-28 · 客户端实时口径",
-          "title": "客户端基础收口",
-          "result": "8月28日新 APK 已交 QA；测试结果待回，尚不是发布验收",
+          "title": "客户端基础与智能连接验收",
+          "result": "8月28日新 APK 已交 QA；自动分组、流量分流与测试结果仍未关闭",
           "future": false,
           "reportId": "goal-2026-20260827",
-          "blockId": "b0116"
+          "blockId": "b0118"
         },
         {
           "label": "2026-08-28 决策 · 当前架构门槛",
@@ -362,7 +373,7 @@
           "result": "不复制 Arrowfish 生产账号、数据库或 secrets",
           "future": false,
           "reportId": "goal-2026-20260827",
-          "blockId": "b0119"
+          "blockId": "b0121"
         },
         {
           "label": "G14 staging smoke test 后",
@@ -370,7 +381,7 @@
           "result": "构建、staging 与端到端验收后发布",
           "future": false,
           "reportId": "goal-2026-20260827",
-          "blockId": "b0122"
+          "blockId": "b0124"
         },
         {
           "label": "Android 发布后",
@@ -378,7 +389,7 @@
           "result": "Android 验收关闭后才进入正式发布阶段",
           "future": false,
           "reportId": "goal-2026-20260827",
-          "blockId": "b0125"
+          "blockId": "b0127"
         },
         {
           "label": "Windows 验收后",
@@ -386,7 +397,7 @@
           "result": "每个平台构建、签名、连接与发布资格独立关闭",
           "future": false,
           "reportId": "goal-2026-20260827",
-          "blockId": "b0128"
+          "blockId": "b0130"
         }
       ],
       "goals": [
@@ -399,7 +410,7 @@
           "nextAction": "锁定 baseline，新建 repo、CI/CD、独立 backend／DB／Redis／域名，并用合成数据完成核心 smoke test。",
           "deadline": "Android 首发验收前",
           "reportId": "goal-2026-20260827",
-          "blockId": "b0134"
+          "blockId": "b0136"
         },
         {
           "id": "G15",
@@ -410,18 +421,18 @@
           "nextAction": "建立独立 migration history，按 FFF 需求重构；共享能力仅通过版本化源码模块接入。",
           "deadline": "G14 验收后",
           "reportId": "goal-2026-20260827",
-          "blockId": "b0135"
+          "blockId": "b0137"
         },
         {
           "id": "G10",
-          "title": "智能路由完整范围",
-          "status": "APK 已交 QA，验收中",
+          "title": "智能连接、自动选线与流量分流",
+          "status": "APK 已交 QA，范围未验收",
           "statusGroup": "progress",
-          "evidence": "客户端核心已迁移至 SkyTunnel；config 加载及 Trojan、VLESS、ShadowTLS 手动连线已确认。8月28日新 APK 已交 QA；自动分组、构建来源与测试结果仍未关闭。",
-          "nextAction": "记录可追溯 APK 资料，完成自动分组、Shadowsocks 补测及测试环境端到端验收。",
+          "evidence": "客户端核心已迁移至 SkyTunnel；config 加载及 Trojan、VLESS、ShadowTLS 手动连线已确认。8月28日新 APK 已交 QA，但自动分组仍待关闭；引擎虽支持 direct 和域名规则，blacklist／whitelist 尚未接入配置生成，也没有完整分流 UI 与验收记录。",
+          "nextAction": "记录可追溯 APK 资料，完成自动分组与协议补测；再接入中国／本地流量直连、其他流量走 VPN 的规则，并完成测试环境端到端验收。",
           "deadline": "2026 年 10 月",
           "reportId": "goal-2026-20260827",
-          "blockId": "b0137"
+          "blockId": "b0139"
         },
         {
           "id": "G12",
@@ -432,7 +443,7 @@
           "nextAction": "完成客户端支付接口调试、成功与失败路径回归、订单状态核对，并作为 Android 首发门槛关闭。",
           "deadline": "Android 首发前 完成后才进入发布验收",
           "reportId": "goal-2026-20260827",
-          "blockId": "b0138"
+          "blockId": "b0140"
         },
         {
           "id": "G13",
@@ -443,7 +454,7 @@
           "nextAction": "严格按 Android → Windows → macOS+iOS → Linux 推进；上一阶段验收关闭后才启动下一阶段发布。",
           "deadline": "按平台门控 每个平台独立构建与验收",
           "reportId": "goal-2026-20260827",
-          "blockId": "b0140"
+          "blockId": "b0142"
         }
       ]
     },
@@ -465,7 +476,7 @@
           "nextAction": "完成 Worker 与报告站点发布，并通过生产环境的摘要、数字问答、拒答、引用深链及移动端验收。",
           "deadline": "POC 首发 生产验收后关闭",
           "reportId": "goal-2026-20260827",
-          "blockId": "b0146"
+          "blockId": "b0148"
         }
       ]
     }
@@ -480,77 +491,84 @@
     },
     {
       "reportId": "goal-2026-20260827",
-      "blockId": "b0093",
+      "blockId": "b0094",
       "reportDate": "2026-08-29",
       "section": "Arrowfish 目标清单",
       "text": "G5 节点部署与管理自动化 基础已交付，闭环进行中 已具备后台一键安装、全擦回收、12 台并行升级、到期释放和健康状态机；第10阶段两项协议问题完成源码修复，但测试环境、BO 与客户端端到端关闭数仍为 0，供应商自动采购也未完成。 先关闭协议与 BO 验收，再把供应商 API／受控浏览器采购接入同一任务闭环。 年底前 采购至配发闭环"
     },
     {
       "reportId": "goal-2026-20260827",
-      "blockId": "b0095",
+      "blockId": "b0096",
       "reportDate": "2026-08-29",
       "section": "Arrowfish 目标清单",
       "text": "G7 三协议实现、全量 rollout 与中国验收 核心完成，验收未关闭 Trojan、VLESS Reality、ShadowTLS 核心已实现；34 台主机三协议监听就绪，64 台仍是 Trojan-only，external reachability 仍为 unverified。 分别关闭监听、全 fleet rollout、Android／Windows 回归和中国地区可达性验收，不再用单一“完成”覆盖四道门槛。 P1 P0 关闭后分阶段验收"
     },
     {
       "reportId": "goal-2026-20260827",
-      "blockId": "b0137",
+      "blockId": "b0118",
       "reportDate": "2026-08-29",
-      "section": "FFF 目标清单",
-      "text": "FFF · G10 智能路由完整范围 APK 已交 QA，验收中 客户端核心已迁移至 SkyTunnel；config 加载及 Trojan、VLESS、ShadowTLS 手动连线已确认。8月28日新 APK 已交 QA；自动分组、构建来源与测试结果仍未关闭。 记录可追溯 APK 资料，完成自动分组、Shadowsocks 补测及测试环境端到端验收。 2026 年 10 月"
+      "section": "客户端基础与智能连接验收",
+      "text": "2026-05-18–08-28 · 客户端实时口径 客户端基础与智能连接验收 G10 SkyTunnel 核心迁移与自动选线 智能分流仍待接入和验收 8月28日新 APK 已交 QA；自动分组、流量分流与测试结果仍未关闭"
     },
     {
       "reportId": "goal-2026-20260827",
-      "blockId": "b0151",
+      "blockId": "b0139",
+      "reportDate": "2026-08-29",
+      "section": "FFF 目标清单",
+      "text": "FFF · G10 智能连接、自动选线与流量分流 APK 已交 QA，范围未验收 客户端核心已迁移至 SkyTunnel；config 加载及 Trojan、VLESS、ShadowTLS 手动连线已确认。8月28日新 APK 已交 QA，但自动分组仍待关闭；引擎虽支持 direct 和域名规则，blacklist／whitelist 尚未接入配置生成，也没有完整分流 UI 与验收记录。 记录可追溯 APK 资料，完成自动分组与协议补测；再接入中国／本地流量直连、其他流量走 VPN 的规则，并完成测试环境端到端验收。 2026 年 10 月"
+    },
+    {
+      "reportId": "goal-2026-20260827",
+      "blockId": "b0153",
       "reportDate": "2026-08-29",
       "section": "Arrowfish",
       "text": "两项协议问题已有源码修复，但测试环境、BO 与客户端实连记录仍未完整关闭。"
     },
     {
       "reportId": "goal-2026-20260827",
-      "blockId": "b0152",
+      "blockId": "b0154",
       "reportDate": "2026-08-29",
       "section": "Arrowfish",
       "text": "G5 端到端验收仍未关闭 两项协议问题已有源码修复，但测试环境、BO 与客户端实连记录仍未完整关闭。"
     },
     {
       "reportId": "goal-2026-20260827",
-      "blockId": "b0161",
+      "blockId": "b0163",
       "reportDate": "2026-08-29",
       "section": "Arrowfish",
       "text": "34台三协议监听就绪，64台仍是 Trojan-only；全量 rollout 与中国可达性验收未关闭。"
     },
     {
       "reportId": "goal-2026-20260827",
-      "blockId": "b0162",
+      "blockId": "b0164",
       "reportDate": "2026-08-29",
       "section": "Arrowfish",
       "text": "G7 三协议改为四道门槛 34台三协议监听就绪，64台仍是 Trojan-only；全量 rollout 与中国可达性验收未关闭。"
     },
     {
       "reportId": "goal-2026-20260827",
-      "blockId": "b0183",
+      "blockId": "b0189",
       "reportDate": "2026-08-29",
       "section": "用户质量、配额、设备、平台与关键部署",
       "text": "三协议 rollout 34台主机三协议监听全部 ready；64台仍是 Trojan-only；external state unverified。 G7 从“完成”改为“核心完成、rollout 与中国验收未关闭”。"
     },
     {
       "reportId": "goal-2026-20260827",
-      "blockId": "b0212",
+      "blockId": "b0218",
       "reportDate": "2026-08-29",
       "section": "订阅续费闭环",
       "text": "第10阶段结论 续费／重复付费用户贡献周收入 83.1%，说明续费可靠性是直接的收入保护点；第10阶段没有订阅闭环开发完成或验收记录。"
     },
     {
       "reportId": "goal-2026-20260827",
-      "blockId": "b0220",
+      "blockId": "b0226",
       "reportDate": "2026-08-29",
       "section": "节点部署与管理自动化",
       "text": "ARROWFISH · 第10阶段细节 03 验收未关闭 节点部署与管理自动化 第10阶段证据、供应商采购缺口与后续目标"
     },
     {
       "reportId": "goal-2026-20260827",
-      "blockId": "b0225",
+      "blockId": "b0231",
       "reportDate": "2026-08-29",
       "section": "节点部署与管理自动化",
       "text": "协议与 BO 验收 第10阶段发现 2 项高优先级协议问题，源码修复 2 项，端到端验收关闭 0 项。 补齐测试环境 bootstrap、BO、Android 与 FFF 实连记录后关闭。 验收未关闭"
