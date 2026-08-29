@@ -3,7 +3,7 @@ import REPORT_CONTEXT_EN from '../report-context.en.json';
 
 var DEFAULT_ORIGINS = ['https://timmyzai.github.io'];
 var DEFAULT_MODEL = 'openai/gpt-oss-20b';
-var PROMPT_VERSION = 'chat-v23-reliable-concise-fallback';
+var PROMPT_VERSION = 'chat-v24-citation-marker-recovery';
 var MAX_BODY_BYTES = 60000;
 var MAX_QUESTION_CHARS = 1500;
 var MAX_SOURCES = 8;
@@ -13,6 +13,17 @@ var MAX_CONVERSATION_MESSAGES = 6;
 var MAX_ANSWER_CHARS = 600;
 var MAX_CITATIONS = 5;
 var UPSTREAM_TIMEOUT_MS = 28000;
+// Reasons where the model attempted a cited answer, or never produced one at all,
+// and quoting the selected evidence is more truthful than claiming the report has none.
+var EXTRACTIVE_FALLBACK_REASONS = [
+  'generation_failed',
+  'invalid_model_response',
+  'response_too_long',
+  'missing_citation_markers',
+  'citation_marker_mismatch',
+  'invalid_citation_quotes',
+  'unsupported_grounded_units'
+];
 var AUTH_FAILURE_COOLDOWN_MS = 30 * 60 * 1000;
 var keyCursor = Math.floor(Math.random() * 3);
 var keyCooldowns = new Map();
@@ -381,9 +392,12 @@ function validateAnswer(output, question, report, inputSources, env) {
   var markerIds = Array.from(new Set(Array.from(answer.matchAll(/\[(S\d+)\]/g), function (match) {
     return match[1];
   })));
-  if (!markerIds.length && citations.length && answerUnits(answer, true).length === 1) {
-    answer = appendCitationMarkers(answer, Array.from(citedIds));
-    markerIds = Array.from(citedIds);
+  if (!markerIds.length && citations.length) {
+    var attached = attachCitationMarkers(answer, citations);
+    if (attached) {
+      answer = attached.answer;
+      markerIds = attached.ids;
+    }
   }
   if (!markerIds.length) {
     return fallbackOrRefusal(question, report, inputSources, env, 'missing_citation_markers');
@@ -422,6 +436,60 @@ function appendCitationMarkers(answer, sourceIds) {
   var match = String(answer || '').match(/([。！？.!?])$/);
   if (!match) return String(answer || '').trim() + ' ' + markers;
   return String(answer || '').slice(0, -1).trimEnd() + ' ' + markers + match[1];
+}
+
+function attachCitationMarkers(answer, citations) {
+  var segments = markerSegments(answer);
+  var usedIds = [];
+  var marked = [];
+
+  for (var index = 0; index < segments.parts.length; index += 1) {
+    var part = segments.parts[index];
+    if (!part.trim()) {
+      marked.push(part);
+      continue;
+    }
+    var supporting = citations.filter(function (citation) {
+      return groundedAnswerSupported(part, [citation]);
+    });
+    if (!supporting.length && groundedAnswerSupported(part, citations)) supporting = citations;
+    if (!supporting.length) return null;
+    var ids = closestCitationIds(part, supporting);
+    var indent = part.match(/^\s*/)[0];
+    marked.push(indent + appendCitationMarkers(part, ids));
+    usedIds = usedIds.concat(ids);
+  }
+
+  if (!usedIds.length) return null;
+  return { answer: marked.join(segments.separator), ids: Array.from(new Set(usedIds)) };
+}
+
+function closestCitationIds(unit, citations) {
+  var scored = citations.map(function (citation) {
+    return {
+      id: citation.source.id,
+      ratio: supportOverlap(unit.replace(/\[S\d+\]/g, ''), citation.quote).ratio
+    };
+  });
+  var best = scored.reduce(function (highest, entry) {
+    return entry.ratio > highest ? entry.ratio : highest;
+  }, 0);
+  return Array.from(new Set(scored.filter(function (entry) {
+    return entry.ratio >= best;
+  }).map(function (entry) { return entry.id; })));
+}
+
+function markerSegments(answer) {
+  var value = String(answer || '');
+  var lines = value.split(/\n+/);
+  if (lines.filter(function (line) { return line.trim(); }).length > 1) {
+    return { separator: '\n', parts: lines };
+  }
+  var parts = value
+    .replace(/(\d)\.(\d)/g, '$1\u0001$2')
+    .split(/(?<=[。！？.!?])/)
+    .map(function (part) { return part.replace(/\u0001/g, '.'); });
+  return { separator: '', parts: parts };
 }
 
 function conversationQuestionAllowed(question) {
@@ -510,11 +578,17 @@ function answerUnits(answer, stripMarkers) {
 }
 
 function lexicalSupport(answer, evidence) {
+  var overlap = supportOverlap(answer, evidence);
+  if (!overlap.tokens) return true;
+  return overlap.matches >= Math.min(2, overlap.tokens) && overlap.ratio >= 0.12;
+}
+
+function supportOverlap(answer, evidence) {
   var answerTokens = supportTokens(answer);
-  if (!answerTokens.length) return true;
+  if (!answerTokens.length) return { tokens: 0, matches: 0, ratio: 0 };
   var evidenceTokens = new Set(supportTokens(evidence));
   var matches = answerTokens.filter(function (token) { return evidenceTokens.has(token); }).length;
-  return matches >= Math.min(2, answerTokens.length) && matches / answerTokens.length >= 0.12;
+  return { tokens: answerTokens.length, matches: matches, ratio: matches / answerTokens.length };
 }
 
 function supportTokens(value) {
@@ -587,7 +661,7 @@ function extractiveFallback(question, report, sources, env, reason) {
     };
   }
 
-  if (reason !== 'generation_failed' && reason !== 'invalid_model_response') return null;
+  if (EXTRACTIVE_FALLBACK_REASONS.indexOf(reason) === -1) return null;
   var primarySource = sources[0];
   var primaryQuote = compactQuote(primarySource.text, 220);
   return {

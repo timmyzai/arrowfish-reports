@@ -142,6 +142,31 @@ const normalizedMarker = Worker.validateAnswer({
 assert.equal(normalizedMarker.answerable, true, 'Worker adds verified markers to a single grounded fact unit');
 assert.match(normalizedMarker.answer, /\[S1\]。$/);
 
+const multiUnitMarkers = Worker.validateAnswer({
+  kind: 'grounded',
+  answer: '客户端支付接口调试尚未完成。Android 发布验收尚未完成。',
+  citations: [
+    { source_id: 'S1', quote: '客户端支付接口调试尚未完成' },
+    { source_id: 'S2', quote: 'Android 发布验收尚未完成' }
+  ]
+}, '首发前还有哪些未完成项？', report, canonical, env);
+assert.equal(multiUnitMarkers.answerable, true, 'Multi-sentence answers keep their citations instead of being refused');
+assert.match(multiUnitMarkers.answer, /客户端支付接口调试尚未完成 \[S1\]。/, 'Each fact unit receives the marker of the citation supporting it');
+assert.match(multiUnitMarkers.answer, /Android 发布验收尚未完成 \[S2\]。$/, 'Markers stay inside their own fact unit');
+assert.equal(multiUnitMarkers.sources.length, 2, 'Both supporting sources are returned');
+
+const unsupportedMarkers = Worker.validateAnswer({
+  kind: 'grounded',
+  answer: '支付网关前置事项由外部团队负责。',
+  citations: [{ source_id: 'S1', quote: '客户端支付接口调试尚未完成' }]
+}, '支付接口完成了吗？', report, canonical, env);
+assert.equal(unsupportedMarkers.answerable, true, 'A rejected model answer falls back to evidence instead of denying the report has any');
+assert.match(unsupportedMarkers.meta.result, /^extractive_.*_missing_citation_markers$/, 'The fallback records why the model answer was rejected');
+assert.ok(
+  canonical.some((source) => source.text.includes(unsupportedMarkers.sources[0].quote)),
+  'The fallback quote is verbatim evidence from the report'
+);
+
 const unrelated = Worker.validateAnswer({ kind: 'broken', answer: '', citations: [] }, '今天天气怎么样？', report, canonical, env);
 assert.equal(unrelated.answerable, false, 'Invalid unrelated model output is refused');
 assert.equal(unrelated.sources.length, 0, 'Refusal never exposes irrelevant sources');
