@@ -161,6 +161,7 @@
                         opt.textContent = localizedName(s);
                         select.appendChild(opt);
                     });
+                    select.value = defaultSprintIndex();
                     goalsTab.hidden = !goal;
                     loadFromHash();
                 })
@@ -176,7 +177,8 @@
             });
 
             reportsTab.addEventListener('click', () => {
-                const index = Number.isInteger(parseInt(select.value)) ? parseInt(select.value) : sprints.length - 1;
+                const selectedIndex = parseInt(select.value);
+                const index = Number.isInteger(selectedIndex) ? selectedIndex : defaultSprintIndex();
                 loadSprint(index);
             });
 
@@ -229,7 +231,14 @@
                     loadEntry(goal, 'goals', updateLocation);
                     return;
                 }
-                loadSprint(sprints.length - 1, updateLocation);
+                loadSprint(defaultSprintIndex(), updateLocation);
+            }
+
+            function defaultSprintIndex() {
+                for (let index = sprints.length - 1; index >= 0; index -= 1) {
+                    if (sprints[index].defaultForSprintPage !== false) return index;
+                }
+                return sprints.length - 1;
             }
 
             function updateHash(entry) {

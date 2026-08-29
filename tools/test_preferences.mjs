@@ -8,6 +8,7 @@ const catalogueSource = await readFile(new URL('../assets/ui-i18n.js', import.me
 const preferencesSource = await readFile(new URL('../assets/site-preferences.js', import.meta.url), 'utf8');
 const themeSource = await readFile(new URL('../assets/site-theme.css', import.meta.url), 'utf8');
 const indexSource = await readFile(new URL('../index.html', import.meta.url), 'utf8');
+const reports = JSON.parse(await readFile(new URL('../reports.json', import.meta.url), 'utf8'));
 
 function runtime({ languages = ['zh-CN'], dark = false, stored = null, storageThrows = false, locale = '' } = {}) {
   const values = new Map(stored ? [['arrowfish_preferences_v1', JSON.stringify(stored)]] : []);
@@ -140,5 +141,10 @@ assert.match(indexSource, /id="goals-tab"[^>]+aria-selected="true"/, 'the Goal t
 assert.match(indexSource, /id="report-frame"[^>]+aria-labelledby="goals-tab"/, 'the initial report frame belongs to the Goal tab');
 assert.match(indexSource, /if \(!hash\) \{\s*loadDefault\(\);/, 'an empty URL opens the Goal page by default');
 assert.match(indexSource, /function loadDefault\([\s\S]*?loadEntry\(goal, 'goals', updateLocation\)/, 'default navigation prefers the registered Goal entry');
+assert.match(indexSource, /select\.value = defaultSprintIndex\(\);/, 'the report selector is initialized independently from the Goal view');
+const selectableReports = reports.filter(report => !report.id.startsWith('goal-') && !report.file.includes('/Goal-'));
+const defaultReport = [...selectableReports].reverse().find(report => report.defaultForSprintPage !== false);
+assert.equal(defaultReport?.id, 'sprint-10-full', 'the Sprint page defaults to the 2026-08-26 Sprint 10 progress report');
+assert.equal(defaultReport?.date, '2026-08-26', 'the default Sprint report has the requested publication date');
 
 console.log('Preference and UI i18n tests: all assertions passed');
