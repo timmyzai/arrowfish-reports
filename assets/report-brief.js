@@ -16,6 +16,8 @@
     unscheduled: 'ai.bucketUnscheduled'
   };
   var MAX_CHAIN_BLOCKERS = 6;
+  var MAX_BRIEF_SOURCES = 3;
+  var MAX_BRIEF_EXCERPT_CHARS = 150;
   var RESULT_PREFIX_RE = /^(?:结果|Result)[:：]\s*/i;
 
   function evidence() {
@@ -72,6 +74,30 @@
     return { content: lines.join('\n').trim(), sources: sources };
   }
 
+  function briefExcerpt(value) {
+    var text = String(value || '').replace(/\s+/g, ' ').trim();
+    if (text.length <= MAX_BRIEF_EXCERPT_CHARS) return text;
+    var candidate = text.slice(0, MAX_BRIEF_EXCERPT_CHARS);
+    var boundary = Math.max(
+      candidate.lastIndexOf('。'),
+      candidate.lastIndexOf('；'),
+      candidate.lastIndexOf('. '),
+      candidate.lastIndexOf('; ')
+    );
+    return (boundary >= 80 ? candidate.slice(0, boundary + 1) : candidate).trim();
+  }
+
+  function addBriefLine(lines, sources, source) {
+    if (!source || sources.length >= MAX_BRIEF_SOURCES) return false;
+    var excerpt = briefExcerpt(source.text);
+    if (!excerpt) return false;
+    source.id = 'S' + (sources.length + 1);
+    source.quote = excerpt;
+    sources.push(source);
+    lines.push('• ' + excerpt + (excerpt.length < source.text.length ? '…' : '') + ' [' + source.id + ']');
+    return true;
+  }
+
   function reportBrief(options) {
     options = options || {};
     var report = options.report;
@@ -83,25 +109,21 @@
     if (!report) return result(lines, sources);
 
     evidence().selectEvidence(report, t('ai.briefQuery'), [], {
-      maxSources: 5,
-      maxChars: 4000
+      maxSources: 2,
+      maxChars: 2400
     }).forEach(function (source) {
-      source.id = 'S' + (sources.length + 1);
-      source.quote = source.quote || source.text;
-      sources.push(source);
-      lines.push(source.text + ' [' + source.id + ']');
+      addBriefLine(lines, sources, source);
     });
 
     var openItems = ((index && index.blockers) || []).filter(function (blocker) {
       return blocker.reportId === report.id;
     });
-    if (openItems.length) {
-      lines.push('');
-      lines.push(t('ai.briefOpenItems', { count: openItems.length }));
-      openItems.slice(0, 3).forEach(function (blocker) {
-        addIndexedLine(lines, sources, reports, blocker.section + ' - ' + blocker.text, blocker);
+    openItems.some(function (blocker) {
+      var duplicate = sources.some(function (source) {
+        return source.reportId === blocker.reportId && source.blockId === blocker.blockId;
       });
-    }
+      return !duplicate && addBriefLine(lines, sources, indexedSource(reports, blocker, ''));
+    });
     return result(lines, sources);
   }
 

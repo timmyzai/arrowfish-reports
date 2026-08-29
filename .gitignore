@@ -2,5 +2,6 @@ Internal/
 worker/.dev.vars*
 __pycache__/
 _site/
+.wrangler/
 
 .DS_Store

@@ -18,6 +18,18 @@
     "expectedAll": ["auto grouping remains open", "blacklist/whitelist data is not wired into config generation"]
   },
   {
+    "id": "fff-multihop-scope",
+    "reportId": "goal-2026-20260827",
+    "question": "Does FFF support multi-hop VPN yet?",
+    "expectedAll": ["multi-hop eligibility and hop-count data", "general two-node chain", "client-selected entry and exit"]
+  },
+  {
+    "id": "fff-full-smart-routing",
+    "reportId": "goal-2026-20260827",
+    "question": "What is included in FFF full smart routing?",
+    "expectedAll": ["blacklist/whitelist data is not wired into config generation", "split DNS", "fail closed"]
+  },
+  {
     "id": "goal-numeric",
     "reportId": "goal-2026-20260827",
     "question": "What percentage of new registrations lack marketing attribution?",

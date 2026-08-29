@@ -404,7 +404,7 @@
         {
           "label": "2026-05-18–08-28 · 客户端实时口径",
           "title": "客户端基础与智能连接验收",
-          "result": "8月28日新 APK 已交 QA；自动分组、流量分流与测试结果仍未关闭",
+          "result": "8月28日新 APK 已交 QA；自动分组、协议补测与测试结果仍未关闭",
           "stage": "current",
           "reportId": "goal-2026-20260827",
           "blockId": "b0118"
@@ -471,16 +471,42 @@
         },
         {
           "id": "G10",
-          "title": "智能连接、自动选线与流量分流",
+          "title": "连接基础、自动选线与协议回归",
           "status": "APK 已交 QA，范围未验收",
           "statusGroup": "progress",
-          "evidence": "客户端核心已迁移至 SkyTunnel；config 加载及 Trojan、VLESS、ShadowTLS 手动连线已确认。8月28日新 APK 已交 QA，但自动分组仍待关闭；引擎虽支持 direct 和域名规则，blacklist／whitelist 尚未接入配置生成，也没有完整分流 UI 与验收记录。",
-          "nextAction": "记录可追溯 APK 资料，完成自动分组与协议补测；再接入中国／本地流量直连、其他流量走 VPN 的规则，并完成测试环境端到端验收。",
+          "evidence": "客户端已具备配置加载及 Trojan、VLESS、ShadowTLS 手动连线基础。8月28日新 APK 已交 QA，但自动分组仍待关闭，协议补测与测试结果也未关闭；本目标不再代替多跳 VPN 或完整智能路由的验收。",
+          "nextAction": "记录可追溯 APK 资料，完成自动分组、协议补测与测试环境端到端验收，为 G16 与 G17 提供稳定连接基线。",
           "deadline": "2026 年 10 月",
           "timeline": "dated",
           "atRisk": false,
           "reportId": "goal-2026-20260827",
           "blockId": "b0139"
+        },
+        {
+          "id": "G16",
+          "title": "多跳 VPN（入口／出口双节点）",
+          "status": "范围已确认，待开发",
+          "statusGroup": "planned",
+          "evidence": "套餐和用户资料已有多跳资格与跳数资料，但客户端尚未建立入口节点、出口节点与连接链；当前隧道核心也没有可供 FFF 验收的通用双节点链路。SkyNode 可作为普通入口或出口，服务端指定上游节点的链式转发不在当前能力内。",
+          "nextAction": "采用客户端选择入口与出口的两跳方案；完成隧道核心链式拨号、后端拓扑与凭证配置、FFF 节点选择及状态／失败处理，并验证出口 IP、断线保护、性能与 Android 端到端连接。",
+          "deadline": "待排期 若纳入首发，将影响当前时间线",
+          "timeline": "unscheduled",
+          "atRisk": false,
+          "reportId": "goal-2026-20260827",
+          "blockId": "b0140"
+        },
+        {
+          "id": "G17",
+          "title": "完整智能路由与分流策略",
+          "status": "基础存在，完整能力待开发",
+          "statusGroup": "planned",
+          "evidence": "现有引擎具备 direct、域名规则和路由基础，但 blacklist／whitelist 尚未接入配置生成，也尚未形成可发布的完整能力：版本化规则、国内／本地资源直连、其他公网流量走 VPN、分流 DNS、规则失效保护、用户模式和跨平台验收均未关闭。",
+          "nextAction": "建立可版本化的域名／IP／应用规则与 split DNS；提供全局 VPN、智能路由和必要的用户例外模式；规则缺失或损坏时 fail closed，并依次完成 Android、Windows、Apple／Linux 与中国网络 QA。",
+          "deadline": "待排期 G10 稳定连接基线后实施",
+          "timeline": "unscheduled",
+          "atRisk": false,
+          "reportId": "goal-2026-20260827",
+          "blockId": "b0141"
         },
         {
           "id": "G12",
@@ -493,7 +519,7 @@
           "timeline": "gated",
           "atRisk": false,
           "reportId": "goal-2026-20260827",
-          "blockId": "b0140"
+          "blockId": "b0142"
         },
         {
           "id": "G13",
@@ -506,7 +532,7 @@
           "timeline": "gated",
           "atRisk": false,
           "reportId": "goal-2026-20260827",
-          "blockId": "b0142"
+          "blockId": "b0144"
         }
       ]
     },
@@ -530,7 +556,7 @@
           "timeline": "gated",
           "atRisk": false,
           "reportId": "goal-2026-20260827",
-          "blockId": "b0148"
+          "blockId": "b0150"
         }
       ]
     }
@@ -562,67 +588,74 @@
       "blockId": "b0118",
       "reportDate": "2026-08-29",
       "section": "客户端基础与智能连接验收",
-      "text": "2026-05-18–08-28 · 客户端实时口径 客户端基础与智能连接验收 G10 SkyTunnel 核心迁移与自动选线 智能分流仍待接入和验收 8月28日新 APK 已交 QA；自动分组、流量分流与测试结果仍未关闭"
+      "text": "2026-05-18–08-28 · 客户端实时口径 客户端基础与智能连接验收 G10 SkyTunnel 核心迁移、自动选线与协议回归 8月28日新 APK 已交 QA；自动分组、协议补测与测试结果仍未关闭"
     },
     {
       "reportId": "goal-2026-20260827",
       "blockId": "b0139",
       "reportDate": "2026-08-29",
       "section": "FFF 目标清单",
-      "text": "FFF · G10 智能连接、自动选线与流量分流 APK 已交 QA，范围未验收 客户端核心已迁移至 SkyTunnel；config 加载及 Trojan、VLESS、ShadowTLS 手动连线已确认。8月28日新 APK 已交 QA，但自动分组仍待关闭；引擎虽支持 direct 和域名规则，blacklist／whitelist 尚未接入配置生成，也没有完整分流 UI 与验收记录。 记录可追溯 APK 资料，完成自动分组与协议补测；再接入中国／本地流量直连、其他流量走 VPN 的规则，并完成测试环境端到端验收。 2026 年 10 月"
+      "text": "FFF · G10 连接基础、自动选线与协议回归 APK 已交 QA，范围未验收 客户端已具备配置加载及 Trojan、VLESS、ShadowTLS 手动连线基础。8月28日新 APK 已交 QA，但自动分组仍待关闭，协议补测与测试结果也未关闭；本目标不再代替多跳 VPN 或完整智能路由的验收。 记录可追溯 APK 资料，完成自动分组、协议补测与测试环境端到端验收，为 G16 与 G17 提供稳定连接基线。 2026 年 10 月"
     },
     {
       "reportId": "goal-2026-20260827",
-      "blockId": "b0153",
+      "blockId": "b0141",
+      "reportDate": "2026-08-29",
+      "section": "FFF 目标清单",
+      "text": "FFF · G17 完整智能路由与分流策略 基础存在，完整能力待开发 现有引擎具备 direct、域名规则和路由基础，但 blacklist／whitelist 尚未接入配置生成，也尚未形成可发布的完整能力：版本化规则、国内／本地资源直连、其他公网流量走 VPN、分流 DNS、规则失效保护、用户模式和跨平台验收均未关闭。 建立可版本化的域名／IP／应用规则与 split DNS；提供全局 VPN、智能路由和必要的用户例外模式；规则缺失或损坏时 fail closed，并依次完成 Android、Windows、Apple／Linux 与中国网络 QA。 待排期 G10 稳定连接基线后实施"
+    },
+    {
+      "reportId": "goal-2026-20260827",
+      "blockId": "b0155",
       "reportDate": "2026-08-29",
       "section": "Arrowfish",
       "text": "两项协议问题已有源码修复，但测试环境、BO 与客户端实连记录仍未完整关闭。"
     },
     {
       "reportId": "goal-2026-20260827",
-      "blockId": "b0154",
+      "blockId": "b0156",
       "reportDate": "2026-08-29",
       "section": "Arrowfish",
       "text": "G5 端到端验收仍未关闭 两项协议问题已有源码修复，但测试环境、BO 与客户端实连记录仍未完整关闭。"
     },
     {
       "reportId": "goal-2026-20260827",
-      "blockId": "b0163",
+      "blockId": "b0165",
       "reportDate": "2026-08-29",
       "section": "Arrowfish",
       "text": "34台三协议监听就绪，64台仍是 Trojan-only；全量 rollout 与中国可达性验收未关闭。"
     },
     {
       "reportId": "goal-2026-20260827",
-      "blockId": "b0164",
+      "blockId": "b0166",
       "reportDate": "2026-08-29",
       "section": "Arrowfish",
       "text": "G7 三协议改为四道门槛 34台三协议监听就绪，64台仍是 Trojan-only；全量 rollout 与中国可达性验收未关闭。"
     },
     {
       "reportId": "goal-2026-20260827",
-      "blockId": "b0189",
+      "blockId": "b0195",
       "reportDate": "2026-08-29",
       "section": "用户质量、配额、设备、平台与关键部署",
       "text": "三协议 rollout 34台主机三协议监听全部 ready；64台仍是 Trojan-only；external state unverified。 G7 从“完成”改为“核心完成、rollout 与中国验收未关闭”。"
     },
     {
       "reportId": "goal-2026-20260827",
-      "blockId": "b0218",
+      "blockId": "b0224",
       "reportDate": "2026-08-29",
       "section": "订阅续费闭环",
       "text": "第10阶段结论 续费／重复付费用户贡献周收入 83.1%，说明续费可靠性是直接的收入保护点；第10阶段没有订阅闭环开发完成或验收记录。"
     },
     {
       "reportId": "goal-2026-20260827",
-      "blockId": "b0226",
+      "blockId": "b0232",
       "reportDate": "2026-08-29",
       "section": "节点部署与管理自动化",
       "text": "ARROWFISH · 第10阶段细节 03 验收未关闭 节点部署与管理自动化 第10阶段证据、供应商采购缺口与后续目标"
     },
     {
       "reportId": "goal-2026-20260827",
-      "blockId": "b0231",
+      "blockId": "b0237",
       "reportDate": "2026-08-29",
       "section": "节点部署与管理自动化",
       "text": "协议与 BO 验收 第10阶段发现 2 项高优先级协议问题，源码修复 2 项，端到端验收关闭 0 项。 补齐测试环境 bootstrap、BO、Android 与 FFF 实连记录后关闭。 验收未关闭"

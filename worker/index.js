@@ -3,7 +3,7 @@ import REPORT_CONTEXT_EN from '../report-context.en.json';
 
 var DEFAULT_ORIGINS = ['https://timmyzai.github.io'];
 var DEFAULT_MODEL = 'openai/gpt-oss-20b';
-var PROMPT_VERSION = 'chat-v22-stakeholder-complete-answer';
+var PROMPT_VERSION = 'chat-v23-reliable-concise-fallback';
 var MAX_BODY_BYTES = 60000;
 var MAX_QUESTION_CHARS = 1500;
 var MAX_SOURCES = 8;
@@ -117,7 +117,7 @@ export default {
             messages: messages,
             response_format: responseFormat,
             temperature: 0,
-            max_completion_tokens: 1024,
+            max_completion_tokens: 4096,
             reasoning_effort: 'medium',
             include_reasoning: false,
             stream: false
@@ -142,7 +142,9 @@ export default {
         continue;
       }
 
-      if (upstream.status === 400 || upstream.status === 422) return errorResponse('GENERATION_FAILED', 502, allowedOrigin, uiLocale);
+      if (upstream.status === 400 || upstream.status === 422) {
+        return jsonResponse(fallbackOrRefusal(question, report, sources, env, 'generation_failed'), 200, allowedOrigin);
+      }
       if (!upstream.ok) return errorResponse('UPSTREAM_FAILED', 502, allowedOrigin, uiLocale);
 
       var result;
@@ -158,7 +160,7 @@ export default {
       try {
         modelOutput = JSON.parse(content);
       } catch (error) {
-        return errorResponse('INVALID_MODEL_RESPONSE', 502, allowedOrigin, uiLocale);
+        return jsonResponse(fallbackOrRefusal(question, report, sources, env, 'invalid_model_response'), 200, allowedOrigin);
       }
 
       return jsonResponse(validateAnswer(modelOutput, question, report, sources, env), 200, allowedOrigin);
@@ -299,21 +301,19 @@ function buildResponseFormat(sources) {
           kind: { type: 'string', enum: ['grounded', 'conversation', 'unanswerable'] },
           answer: {
             type: 'string',
-            maxLength: MAX_ANSWER_CHARS,
-            description: '面向非技术利益相关者的完整短答；数字答案必须包含指标主体和值，不得只返回裸数字。'
+            description: '面向非技术利益相关者的完整短答，最多 ' + MAX_ANSWER_CHARS +
+              ' 个字符；数字答案必须包含指标主体和值，不得只返回裸数字。'
           },
           citations: {
             type: 'array',
-            maxItems: MAX_CITATIONS,
+            description: '最多 ' + MAX_CITATIONS + ' 条引用；conversation 与 unanswerable 必须为空数组。',
             items: {
               type: 'object',
               properties: {
                 source_id: { type: 'string', enum: sources.length ? sources.map(function (source) { return source.id; }) : ['NONE'] },
                 quote: {
                   type: 'string',
-                  minLength: 4,
-                  maxLength: 500,
-                  description: 'document content 中逐字一致的连续原文；数字、日期和状态必须连同事实主体一起引用。'
+                  description: 'document content 中逐字一致的连续原文，至少 4 个、最多 500 个字符；数字、日期和状态必须连同事实主体一起引用。'
                 }
               },
               required: ['source_id', 'quote'],
@@ -587,7 +587,15 @@ function extractiveFallback(question, report, sources, env, reason) {
     };
   }
 
-  return null;
+  if (reason !== 'generation_failed' && reason !== 'invalid_model_response') return null;
+  var primarySource = sources[0];
+  var primaryQuote = compactQuote(primarySource.text, 220);
+  return {
+    answerable: true,
+    answer: primaryQuote + ' [' + primarySource.id + ']',
+    sources: [sourcePayload(primarySource, primaryQuote)],
+    meta: responseMeta(report, env, 'extractive_answer_' + reason)
+  };
 }
 
 function isSummaryQuestion(question) {

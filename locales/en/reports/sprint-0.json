@@ -18,7 +18,7 @@
       "source": "交接报告（第0阶段）：稳定与准备阶段",
       "occurrence": 0,
       "target": "Handover Report (Sprint 0): Stability and Preparation Phase",
-      "context": "h1.report-title @ line 71"
+      "context": "h1.report-title @ line 73"
     },
     {
       "id": "u_dee1a9ffa3ae6c1a",
@@ -26,7 +26,7 @@
       "source": "周期",
       "occurrence": 0,
       "target": "Duration",
-      "context": "span.meta-label @ line 74"
+      "context": "span.meta-label @ line 76"
     },
     {
       "id": "u_3e4a26c2d2130b0c",
@@ -34,7 +34,7 @@
       "source": "2026年3月26日 – 4月3日",
       "occurrence": 0,
       "target": "March 26, 2026 – April 3, 2026",
-      "context": "span.meta-value @ line 75"
+      "context": "span.meta-value @ line 77"
     },
     {
       "id": "u_5f2a4513c0a05b91",
@@ -42,7 +42,7 @@
       "source": "团队",
       "occurrence": 0,
       "target": "Team",
-      "context": "span.meta-label @ line 78"
+      "context": "span.meta-label @ line 80"
     },
     {
       "id": "u_8b6c41a2eea4bd74",
@@ -50,7 +50,7 @@
       "source": "马来西亚",
       "occurrence": 0,
       "target": "Malaysia",
-      "context": "span.meta-value @ line 79"
+      "context": "span.meta-value @ line 81"
     },
     {
       "id": "u_5c80539d155e8d6c",
@@ -58,7 +58,7 @@
       "source": "报告对象",
       "occurrence": 0,
       "target": "Recipient of Report",
-      "context": "span.meta-label @ line 82"
+      "context": "span.meta-label @ line 84"
     },
     {
       "id": "u_36552b9319342aba",
@@ -66,7 +66,7 @@
       "source": "日总",
       "occurrence": 0,
       "target": "General Manager Ri",
-      "context": "span.meta-value @ line 83"
+      "context": "span.meta-value @ line 85"
     },
     {
       "id": "u_36b80505a15efac0",
@@ -74,7 +74,7 @@
       "source": "执行总结",
       "occurrence": 0,
       "target": "Execution Summary",
-      "context": "h2.section-heading @ line 90"
+      "context": "h2.section-heading @ line 92"
     },
     {
       "id": "u_bddaac7d7dcfb9c3",
@@ -82,7 +82,7 @@
       "source": "公司于2025年12月接手项目。新负责人2月底正式接手，3月26日获得系统权限，31日收到交接文档。团队用8天完成平台审计，发现问题后立即安排开发：",
       "occurrence": 0,
       "target": "The company took over the project in December 2025. The new manager officially assumed responsibility at the end of February. On March 26, they received system access and on March 31, they were handed over documentation. The team completed the platform audit within 8 days and immediately scheduled development after identifying issues:",
-      "context": "div.section-body @ line 91"
+      "context": "div.section-body @ line 93"
     },
     {
       "id": "u_baaa5c01e6f261e7",
@@ -90,7 +90,7 @@
       "source": "应用稳定性：13个崩溃/冻结问题 — 修复进行中",
       "occurrence": 0,
       "target": "Application Stability: 13 crashes/freezes – ongoing fixes",
-      "context": "li @ line 95"
+      "context": "li @ line 97"
     },
     {
       "id": "u_59889f9c532476d0",
@@ -98,7 +98,7 @@
       "source": "防滥用：免费用户时间限制仅在客户端，容易绕过 — 服务端限制开发中",
       "occurrence": 0,
       "target": "Anti-abuse: Free user time limits only on the client side, easily bypassed – server-side restrictions in development",
-      "context": "li @ line 96"
+      "context": "li @ line 98"
     },
     {
       "id": "u_21caf6aa8d09d327",
@@ -106,7 +106,7 @@
       "source": "收入保护：三星应用内购买处于测试模式（零收入）— 已修复",
       "occurrence": 0,
       "target": "Revenue Protection: Samsung in-app purchases are in test mode (zero revenue) – fixed",
-      "context": "li @ line 97"
+      "context": "li @ line 99"
     },
     {
       "id": "u_f7d9f747c10d031b",
@@ -114,7 +114,7 @@
       "source": "成本优化：发现约$735/月可节省（测试节点 + 冗余代理服务器）",
       "occurrence": 0,
       "target": "Cost Optimization: Approximately $735/month savings identified (test VPN node + redundant proxy servers)",
-      "context": "li @ line 98"
+      "context": "li @ line 100"
     },
     {
       "id": "u_d83c37202ffe2dca",
@@ -122,7 +122,7 @@
       "source": "状态：评估完成，第1阶段开发进行中。预计5月中旬部署上线。",
       "occurrence": 0,
       "target": "Status: Evaluation completed, Sprint 1 development in progress. Expected release mid-May.",
-      "context": "div.section-body @ line 100"
+      "context": "div.section-body @ line 102"
     },
     {
       "id": "u_d822a391af8777ca",
@@ -130,7 +130,7 @@
       "source": "交接时间表",
       "occurrence": 0,
       "target": "Handover Timeline",
-      "context": "h2.section-heading @ line 107"
+      "context": "h2.section-heading @ line 109"
     },
     {
       "id": "u_a0eadb290bd115f9",
@@ -138,7 +138,7 @@
       "source": "2025年12月",
       "occurrence": 0,
       "target": "December 2025",
-      "context": "div.milestone-date @ line 110"
+      "context": "div.milestone-date @ line 112"
     },
     {
       "id": "u_01a2d918d7f76c27",
@@ -146,7 +146,7 @@
       "source": "公司接手项目；台湾团队转为顾问",
       "occurrence": 0,
       "target": "Company took over the project; Taiwan team became consultants",
-      "context": "div.milestone-text @ line 111"
+      "context": "div.milestone-text @ line 113"
     },
     {
       "id": "u_ae8b77824df5856d",
@@ -154,7 +154,7 @@
       "source": "2月底",
       "occurrence": 0,
       "target": "End of February",
-      "context": "div.milestone-date @ line 114"
+      "context": "div.milestone-date @ line 116"
     },
     {
       "id": "u_1b9641d696b0a28b",
@@ -162,7 +162,7 @@
       "source": "新负责人接手，开始收集资料",
       "occurrence": 0,
       "target": "New leader took over, began collecting information",
-      "context": "div.milestone-text @ line 115"
+      "context": "div.milestone-text @ line 117"
     },
     {
       "id": "u_2c59da2a57e8c0ab",
@@ -170,7 +170,7 @@
       "source": "3月25日",
       "occurrence": 0,
       "target": "March 25",
-      "context": "div.milestone-date @ line 118"
+      "context": "div.milestone-date @ line 120"
     },
     {
       "id": "u_c0e141ff436f0219",
@@ -178,7 +178,7 @@
       "source": "服务器从台湾迁移（代码库、自动化构建、监控系统）",
       "occurrence": 0,
       "target": "Migrated servers from Taiwan (code repository, automated builds, monitoring systems)",
-      "context": "div.milestone-text @ line 119"
+      "context": "div.milestone-text @ line 121"
     },
     {
       "id": "u_62e275acff7b0d53",
@@ -186,7 +186,7 @@
       "source": "3月26日",
       "occurrence": 0,
       "target": "March 26",
-      "context": "div.milestone-date @ line 122"
+      "context": "div.milestone-date @ line 124"
     },
     {
       "id": "u_dbf2d305fb27c0b1",
@@ -194,7 +194,7 @@
       "source": "收到全部系统凭据",
       "occurrence": 0,
       "target": "Received full system credentials",
-      "context": "div.milestone-text @ line 123"
+      "context": "div.milestone-text @ line 125"
     },
     {
       "id": "u_0930c449a53c3e0c",
@@ -202,7 +202,7 @@
       "source": "3月31日",
       "occurrence": 0,
       "target": "March 31",
-      "context": "div.milestone-date @ line 126"
+      "context": "div.milestone-date @ line 128"
     },
     {
       "id": "u_5c7d0107547ea0b3",
@@ -210,7 +210,7 @@
       "source": "交接文档交付",
       "occurrence": 0,
       "target": "Handover documentation delivered",
-      "context": "div.milestone-text @ line 127"
+      "context": "div.milestone-text @ line 129"
     },
     {
       "id": "u_0f8a8c425c70eb48",
@@ -218,7 +218,7 @@
       "source": "8天评估 — 发现问题，开发人员立即开工",
       "occurrence": 0,
       "target": "8-day assessment — identified issues, developers started work immediately",
-      "context": "div.milestone-text @ line 131"
+      "context": "div.milestone-text @ line 133"
     },
     {
       "id": "u_837c53f33028848e",
@@ -226,7 +226,7 @@
       "source": "成果分类一览",
       "occurrence": 0,
       "target": "Outcome categorization overview",
-      "context": "h2.section-heading @ line 138"
+      "context": "h2.section-heading @ line 140"
     },
     {
       "id": "u_9f27d1e23aac813e",
@@ -234,7 +234,7 @@
       "source": "成本节省",
       "occurrence": 0,
       "target": "Cost savings",
-      "context": "div @ line 141"
+      "context": "div @ line 143"
     },
     {
       "id": "u_468419add5fea04e",
@@ -242,7 +242,7 @@
       "source": "识别 ~$735/月基础设施浪费（测试节点 $412 + 冗余服务器 $323）",
       "occurrence": 0,
       "target": "Identify $735/month infrastructure waste (test VPN node $412 + redundant servers $323)",
-      "context": "div @ line 142"
+      "context": "div @ line 144"
     },
     {
       "id": "u_3ec6d44d4e0be597",
@@ -250,7 +250,7 @@
       "source": "防滥用部署后每封号节省 $100–150/月",
       "occurrence": 0,
       "target": "$100–150/month per account saved on abuse prevention deployment",
-      "context": "div @ line 143"
+      "context": "div @ line 145"
     },
     {
       "id": "u_b7066d3f744e4731",
@@ -258,7 +258,7 @@
       "source": "收入保护",
       "occurrence": 0,
       "target": "Revenue protection",
-      "context": "div @ line 146"
+      "context": "div @ line 148"
     },
     {
       "id": "u_3f57f85bbf2a4016",
@@ -266,7 +266,7 @@
       "source": "三星应用内购买恢复（此前为测试模式 = $0）",
       "occurrence": 0,
       "target": "Samsung in-app purchase restored (previously in test mode = $0)",
-      "context": "div @ line 147"
+      "context": "div @ line 149"
     },
     {
       "id": "u_3ecc36bc8c897659",
@@ -274,7 +274,7 @@
       "source": "Google AdMob 生产 ID 已确认（服务端）",
       "occurrence": 0,
       "target": "Google AdMob production ID confirmed (server-side)",
-      "context": "div @ line 148"
+      "context": "div @ line 150"
     },
     {
       "id": "u_c8c9a3e50e4836c5",
@@ -282,7 +282,7 @@
       "source": "安全改进",
       "occurrence": 0,
       "target": "Security improvements",
-      "context": "div @ line 151"
+      "context": "div @ line 153"
     },
     {
       "id": "u_80d3ff67621b4a21",
@@ -290,7 +290,7 @@
       "source": "发现前团队违反无日志政策：VPN 配置写入调试日志、客户端 API 追踪日志记录用户 IP",
       "occurrence": 0,
       "target": "Prior team violated logless policy: VPN configuration written to debug logs, client API tracking logged user IP",
-      "context": "div @ line 152"
+      "context": "div @ line 154"
     },
     {
       "id": "u_3dcdda086370575a",
@@ -298,7 +298,7 @@
       "source": "Redis 无密码、无内存限制、无持久化 — 第1阶段修复",
       "occurrence": 0,
       "target": "Redis passwordless, memory-limited, no persistence — Fix in Sprint 1",
-      "context": "div @ line 153"
+      "context": "div @ line 155"
     },
     {
       "id": "u_32e7507782a10357",
@@ -306,7 +306,7 @@
       "source": "性能提升",
       "occurrence": 0,
       "target": "Performance improvements",
-      "context": "div @ line 156"
+      "context": "div @ line 158"
     },
     {
       "id": "u_b117f407186326f4",
@@ -314,7 +314,7 @@
       "source": "数据库查询量下降 94%（产品页），写入量下降 98%（用户流），API 调用下降 92%",
       "occurrence": 0,
       "target": "Database query volume decreased by 94% (product page), write volume decreased by 98% (user flow), API calls decreased by 92%",
-      "context": "div @ line 157"
+      "context": "div @ line 159"
     },
     {
       "id": "u_d8ed6a42e37a3789",
@@ -322,7 +322,7 @@
       "source": "代理轮询由 600 次/分钟降至 0（Redis 缓存）",
       "occurrence": 0,
       "target": "Proxy polling reduced from 600 times/minute to 0 (Redis caching)",
-      "context": "div @ line 158"
+      "context": "div @ line 160"
     },
     {
       "id": "u_b7d32aaa152b201f",
@@ -330,7 +330,7 @@
       "source": "关键 Bug 修复",
       "occurrence": 0,
       "target": "Critical bug fixes",
-      "context": "div @ line 161"
+      "context": "div @ line 163"
     },
     {
       "id": "u_58856c08083cc2ba",
@@ -338,7 +338,7 @@
       "source": "13 个崩溃/卡顿问题修复（启动、连接、误报离线）",
       "occurrence": 0,
       "target": "13 issues fixed (launch crashes, connection hangs, false offline reports)",
-      "context": "div @ line 162"
+      "context": "div @ line 164"
     },
     {
       "id": "u_4e7b5f294fdbf177",
@@ -346,7 +346,7 @@
       "source": "6 个稳定性强化修复；ANR、WebSocket 泄漏、计时器竞态",
       "occurrence": 0,
       "target": "6 stability enhancements; ANR, WebSocket leaks, timer race conditions",
-      "context": "div @ line 163"
+      "context": "div @ line 165"
     },
     {
       "id": "u_9adebdf191941a13",
@@ -354,7 +354,7 @@
       "source": "防滥用",
       "occurrence": 0,
       "target": "Preventing abuse",
-      "context": "div @ line 166"
+      "context": "div @ line 168"
     },
     {
       "id": "u_a947057a631da3b1",
@@ -362,7 +362,7 @@
       "source": "免费用户时间限制从客户端迁至服务端，修复绕过漏洞（最高滥用者月用 1,216 GB）",
       "occurrence": 0,
       "target": "Migrated free user time limits to the server, fixed bypass vulnerabilities (highest abuser used 1,216 GB per month)",
-      "context": "div @ line 167"
+      "context": "div @ line 169"
     },
     {
       "id": "u_4744a006e6ab7a16",
@@ -370,7 +370,7 @@
       "source": "设备数量限制、强制版本更新 — 均为代码完成待部署",
       "occurrence": 0,
       "target": "Device quantity restrictions and mandatory version updates — both code complete for deployment",
-      "context": "div @ line 168"
+      "context": "div @ line 170"
     },
     {
       "id": "u_3d7e9ec815581b54",
@@ -378,7 +378,7 @@
       "source": "业务影响 — 平台稳定性",
       "occurrence": 0,
       "target": "Business impact - Platform stability",
-      "context": "h2.section-heading @ line 175"
+      "context": "h2.section-heading @ line 177"
     },
     {
       "id": "u_3c71d8a2c2a89f80",
@@ -386,7 +386,7 @@
       "source": "问题",
       "occurrence": 0,
       "target": "Issue",
-      "context": "th @ line 178 · surrounding text: 问题 数量 详情 状态"
+      "context": "th @ line 180 · surrounding text: 问题 数量 详情 状态"
     },
     {
       "id": "u_d2fdf471e13eda16",
@@ -394,7 +394,7 @@
       "source": "数量",
       "occurrence": 0,
       "target": "Quantity",
-      "context": "th @ line 178 · surrounding text: 问题 数量 详情 状态"
+      "context": "th @ line 180 · surrounding text: 问题 数量 详情 状态"
     },
     {
       "id": "u_925da4b87d188b48",
@@ -402,7 +402,7 @@
       "source": "详情",
       "occurrence": 0,
       "target": "Details",
-      "context": "th @ line 178 · surrounding text: 问题 数量 详情 状态"
+      "context": "th @ line 180 · surrounding text: 问题 数量 详情 状态"
     },
     {
       "id": "u_0262b2c2bb84e7bc",
@@ -410,7 +410,7 @@
       "source": "状态",
       "occurrence": 0,
       "target": "Status",
-      "context": "th @ line 178 · surrounding text: 问题 数量 详情 状态"
+      "context": "th @ line 180 · surrounding text: 问题 数量 详情 状态"
     },
     {
       "id": "u_b44b35a6aed1ef4e",
@@ -418,7 +418,7 @@
       "source": "崩溃问题",
       "occurrence": 0,
       "target": "Crash issues",
-      "context": "td @ line 182 · surrounding text: 崩溃问题 13个 启动崩溃、连接卡住、黑屏、应用无响应"
+      "context": "td @ line 184 · surrounding text: 崩溃问题 13个 启动崩溃、连接卡住、黑屏、应用无响应"
     },
     {
       "id": "u_f93d83b4c94a7fc8",
@@ -426,7 +426,7 @@
       "source": "13个",
       "occurrence": 0,
       "target": "13",
-      "context": "td @ line 182 · surrounding text: 崩溃问题 13个 启动崩溃、连接卡住、黑屏、应用无响应"
+      "context": "td @ line 184 · surrounding text: 崩溃问题 13个 启动崩溃、连接卡住、黑屏、应用无响应"
     },
     {
       "id": "u_5d59ab24c42375e1",
@@ -434,7 +434,7 @@
       "source": "启动崩溃、连接卡住、黑屏、应用无响应",
       "occurrence": 0,
       "target": "Launch crashes, connection hangs, black screen, application unresponsive",
-      "context": "td @ line 182 · surrounding text: 崩溃问题 13个 启动崩溃、连接卡住、黑屏、应用无响应"
+      "context": "td @ line 184 · surrounding text: 崩溃问题 13个 启动崩溃、连接卡住、黑屏、应用无响应"
     },
     {
       "id": "u_bc0c9f9115b1e161",
@@ -442,7 +442,7 @@
       "source": "开发中",
       "occurrence": 0,
       "target": "In Development",
-      "context": "span.status-badge.status-enhanced @ line 183"
+      "context": "span.status-badge.status-enhanced @ line 185"
     },
     {
       "id": "u_a0aaa93854e698fa",
@@ -450,7 +450,7 @@
       "source": "试用体验",
       "occurrence": 0,
       "target": "Trial experience",
-      "context": "td @ line 186 · surrounding text: 试用体验 缺失 用户看不到剩余试用时间，无升级提示"
+      "context": "td @ line 188 · surrounding text: 试用体验 缺失 用户看不到剩余试用时间，无升级提示"
     },
     {
       "id": "u_ff33e37242a9661e",
@@ -458,7 +458,7 @@
       "source": "缺失",
       "occurrence": 0,
       "target": "Missing",
-      "context": "td @ line 186 · surrounding text: 试用体验 缺失 用户看不到剩余试用时间，无升级提示"
+      "context": "td @ line 188 · surrounding text: 试用体验 缺失 用户看不到剩余试用时间，无升级提示"
     },
     {
       "id": "u_b58d1803212301a0",
@@ -466,7 +466,7 @@
       "source": "用户看不到剩余试用时间，无升级提示",
       "occurrence": 0,
       "target": "Users cannot see remaining trial time, no upgrade prompts",
-      "context": "td @ line 186 · surrounding text: 试用体验 缺失 用户看不到剩余试用时间，无升级提示"
+      "context": "td @ line 188 · surrounding text: 试用体验 缺失 用户看不到剩余试用时间，无升级提示"
     },
     {
       "id": "u_d358563efe735a53",
@@ -474,7 +474,7 @@
       "source": "方案已设计",
       "occurrence": 0,
       "target": "Solution designed",
-      "context": "span.status-badge.status-enhanced @ line 187"
+      "context": "span.status-badge.status-enhanced @ line 189"
     },
     {
       "id": "u_6da03e38c5578c70",
@@ -482,7 +482,7 @@
       "source": "稳定性直接影响留存率和复费率。预计4月中旬开发完成，5月中旬部署。",
       "occurrence": 0,
       "target": "Stability directly impacts retention and re-engagement rates. Expected development completion in mid-April, deployment in mid-May.",
-      "context": "div.section-note @ line 191"
+      "context": "div.section-note @ line 193"
     },
     {
       "id": "u_2334e4f90220d43a",
@@ -490,7 +490,7 @@
       "source": "业务影响 — 防滥用与收入保护",
       "occurrence": 0,
       "target": "Business Impact — Abuse Prevention and Revenue Protection",
-      "context": "h2.section-heading @ line 198"
+      "context": "h2.section-heading @ line 200"
     },
     {
       "id": "u_02415fd86d97b1b9",
@@ -498,7 +498,7 @@
       "source": "问题",
       "occurrence": 1,
       "target": "Issue",
-      "context": "th @ line 201 · surrounding text: 问题 影响 解决方案 状态"
+      "context": "th @ line 203 · surrounding text: 问题 影响 解决方案 状态"
     },
     {
       "id": "u_2d19a89de1b174af",
@@ -506,7 +506,7 @@
       "source": "影响",
       "occurrence": 0,
       "target": "Impact",
-      "context": "th @ line 201 · surrounding text: 问题 影响 解决方案 状态"
+      "context": "th @ line 203 · surrounding text: 问题 影响 解决方案 状态"
     },
     {
       "id": "u_8592c30c234da948",
@@ -514,7 +514,7 @@
       "source": "解决方案",
       "occurrence": 0,
       "target": "Solution",
-      "context": "th @ line 201 · surrounding text: 问题 影响 解决方案 状态"
+      "context": "th @ line 203 · surrounding text: 问题 影响 解决方案 状态"
     },
     {
       "id": "u_47242db695ba39b7",
@@ -522,7 +522,7 @@
       "source": "状态",
       "occurrence": 1,
       "target": "Status",
-      "context": "th @ line 201 · surrounding text: 问题 影响 解决方案 状态"
+      "context": "th @ line 203 · surrounding text: 问题 影响 解决方案 状态"
     },
     {
       "id": "u_92ed253b910ba37d",
@@ -530,7 +530,7 @@
       "source": "时间限制仅客户端",
       "occurrence": 0,
       "target": "Client-side time limit only",
-      "context": "td @ line 205"
+      "context": "td @ line 207"
     },
     {
       "id": "u_64c7ad34780f4efd",
@@ -538,7 +538,7 @@
       "source": "90分钟/天限制容易绕过，最高滥用者月用1,216 GB",
       "occurrence": 0,
       "target": "Daily 90-minute limit easily bypassed, highest abuser used 1,216 GB/month",
-      "context": "td @ line 206"
+      "context": "td @ line 208"
     },
     {
       "id": "u_80c9e91e2c5a064c",
@@ -546,7 +546,7 @@
       "source": "服务端时间追踪 + 月流量上限",
       "occurrence": 0,
       "target": "Server-side time tracking + monthly traffic cap",
-      "context": "td @ line 207"
+      "context": "td @ line 209"
     },
     {
       "id": "u_7dcb9caadfb7b6f4",
@@ -554,7 +554,7 @@
       "source": "开发中",
       "occurrence": 1,
       "target": "In Development",
-      "context": "span.status-badge.status-enhanced @ line 208"
+      "context": "span.status-badge.status-enhanced @ line 210"
     },
     {
       "id": "u_723c81e3c269d81f",
@@ -562,7 +562,7 @@
       "source": "无设备数量限制",
       "occurrence": 0,
       "target": "No device quantity limit",
-      "context": "td @ line 211"
+      "context": "td @ line 213"
     },
     {
       "id": "u_c803afd412323dae",
@@ -570,7 +570,7 @@
       "source": "免费用户可用无限设备",
       "occurrence": 0,
       "target": "Free users can use unlimited devices",
-      "context": "td @ line 212"
+      "context": "td @ line 214"
     },
     {
       "id": "u_78396f293cca820e",
@@ -578,7 +578,7 @@
       "source": "按等级限制（免费1台，付费3+台）",
       "occurrence": 0,
       "target": "Device limitation by tier (free: 1, paid: 3+)",
-      "context": "td @ line 213"
+      "context": "td @ line 215"
     },
     {
       "id": "u_dd37d091e65bbde6",
@@ -586,7 +586,7 @@
       "source": "开发中",
       "occurrence": 2,
       "target": "In Development",
-      "context": "span.status-badge.status-enhanced @ line 214"
+      "context": "span.status-badge.status-enhanced @ line 216"
     },
     {
       "id": "u_9263d49665b48f29",
@@ -594,7 +594,7 @@
       "source": "三星应用内购买测试模式",
       "occurrence": 0,
       "target": "Samsung In-App Purchase Test Mode",
-      "context": "td @ line 217"
+      "context": "td @ line 219"
     },
     {
       "id": "u_1fbc54a6b7215548",
@@ -602,7 +602,7 @@
       "source": "上线以来应用内购买收入$0",
       "occurrence": 0,
       "target": "Revenue from in-app purchases since release: $0",
-      "context": "td @ line 218"
+      "context": "td @ line 220"
     },
     {
       "id": "u_cdfd6e4eacafa7f6",
@@ -610,7 +610,7 @@
       "source": "已切换生产模式",
       "occurrence": 0,
       "target": "Production mode activated",
-      "context": "td @ line 219"
+      "context": "td @ line 221"
     },
     {
       "id": "u_b172b1caeb089c55",
@@ -618,7 +618,7 @@
       "source": "开发中",
       "occurrence": 3,
       "target": "In Development",
-      "context": "span.status-badge.status-enhanced @ line 220"
+      "context": "span.status-badge.status-enhanced @ line 222"
     },
     {
       "id": "u_18a0a954db4cf70c",
@@ -626,7 +626,7 @@
       "source": "按计划",
       "occurrence": 0,
       "target": "On schedule",
-      "context": "div.status-legend-item @ line 225"
+      "context": "div.status-legend-item @ line 227"
     },
     {
       "id": "u_86e6aea24b05051f",
@@ -634,7 +634,7 @@
       "source": "已发布",
       "occurrence": 0,
       "target": "Released",
-      "context": "div.status-legend-item @ line 226"
+      "context": "div.status-legend-item @ line 228"
     },
     {
       "id": "u_0530eec7071669c3",
@@ -642,7 +642,7 @@
       "source": "延迟",
       "occurrence": 0,
       "target": "Delayed",
-      "context": "div.status-legend-item @ line 227"
+      "context": "div.status-legend-item @ line 229"
     },
     {
       "id": "u_eaa7c5e2f995df59",
@@ -650,7 +650,7 @@
       "source": "风险中",
       "occurrence": 0,
       "target": "At risk",
-      "context": "div.status-legend-item @ line 228"
+      "context": "div.status-legend-item @ line 230"
     },
     {
       "id": "u_6be6e5460b76103d",
@@ -658,7 +658,7 @@
       "source": "业务影响 — 成本",
       "occurrence": 0,
       "target": "Business Impact - Cost",
-      "context": "h2.section-heading @ line 234"
+      "context": "h2.section-heading @ line 236"
     },
     {
       "id": "u_6f48e32f0eb8a7e0",
@@ -666,7 +666,7 @@
       "source": "类别",
       "occurrence": 0,
       "target": "Category",
-      "context": "th @ line 237 · surrounding text: 类别 月费 详情"
+      "context": "th @ line 239 · surrounding text: 类别 月费 详情"
     },
     {
       "id": "u_7bf0de747ae597d3",
@@ -674,7 +674,7 @@
       "source": "月费",
       "occurrence": 0,
       "target": "Monthly Fee",
-      "context": "th @ line 237 · surrounding text: 类别 月费 详情"
+      "context": "th @ line 239 · surrounding text: 类别 月费 详情"
     },
     {
       "id": "u_4402d803aab2765a",
@@ -682,7 +682,7 @@
       "source": "详情",
       "occurrence": 1,
       "target": "Details",
-      "context": "th @ line 237 · surrounding text: 类别 月费 详情"
+      "context": "th @ line 239 · surrounding text: 类别 月费 详情"
     },
     {
       "id": "u_4b3c0ce11d4f48b4",
@@ -690,7 +690,7 @@
       "source": "全部VPN节点",
       "occurrence": 0,
       "target": "All VPN nodes",
-      "context": "td @ line 240 · surrounding text: 全部VPN节点 $1,988 25个提供商，分散管理"
+      "context": "td @ line 242 · surrounding text: 全部VPN节点 $1,988 25个提供商，分散管理"
     },
     {
       "id": "u_19c1c0a0859fe49a",
@@ -698,7 +698,7 @@
       "source": "25个提供商，分散管理",
       "occurrence": 0,
       "target": "25 providers, decentralized management",
-      "context": "td @ line 240 · surrounding text: 全部VPN节点 $1,988 25个提供商，分散管理"
+      "context": "td @ line 242 · surrounding text: 全部VPN节点 $1,988 25个提供商，分散管理"
     },
     {
       "id": "u_fceaface99524567",
@@ -706,7 +706,7 @@
       "source": "Lisahost测试节点",
       "occurrence": 0,
       "target": "Lisahost acceptance testing VPN node",
-      "context": "td @ line 241 · surrounding text: Lisahost测试节点 ~$412（2,988元） 9个节点中6个标\"测试\"仍在运行"
+      "context": "td @ line 243 · surrounding text: Lisahost测试节点 ~$412（2,988元） 9个节点中6个标\"测试\"仍在运行"
     },
     {
       "id": "u_71938d58fe4153d1",
@@ -714,7 +714,7 @@
       "source": "~$412（2,988元）",
       "occurrence": 0,
       "target": "~$412 (2,988 RMB)",
-      "context": "td @ line 241 · surrounding text: Lisahost测试节点 ~$412（2,988元） 9个节点中6个标\"测试\"仍在运行"
+      "context": "td @ line 243 · surrounding text: Lisahost测试节点 ~$412（2,988元） 9个节点中6个标\"测试\"仍在运行"
     },
     {
       "id": "u_ee620c814451685c",
@@ -722,7 +722,7 @@
       "source": "9个节点中6个标\"测试\"仍在运行",
       "occurrence": 0,
       "target": "Of the 9 VPN nodes, 6 marked 'test' are still running",
-      "context": "td @ line 241 · surrounding text: Lisahost测试节点 ~$412（2,988元） 9个节点中6个标\"测试\"仍在运行"
+      "context": "td @ line 243 · surrounding text: Lisahost测试节点 ~$412（2,988元） 9个节点中6个标\"测试\"仍在运行"
     },
     {
       "id": "u_f7c0a21cbb6a307f",
@@ -730,7 +730,7 @@
       "source": "冗余代理服务器",
       "occurrence": 0,
       "target": "Redundant proxy servers",
-      "context": "td @ line 242 · surrounding text: 冗余代理服务器 ~$323 香港云霸（1,680元，不稳定）+ Azure（$93）"
+      "context": "td @ line 244 · surrounding text: 冗余代理服务器 ~$323 香港云霸（1,680元，不稳定）+ Azure（$93）"
     },
     {
       "id": "u_d416767a837a743b",
@@ -738,7 +738,7 @@
       "source": "香港云霸（1,680元，不稳定）+ Azure（$93）",
       "occurrence": 0,
       "target": "Hong Kong CloudMaster (1,680 RMB, unstable) + Azure ($93)",
-      "context": "td @ line 242 · surrounding text: 冗余代理服务器 ~$323 香港云霸（1,680元，不稳定）+ Azure（$93）"
+      "context": "td @ line 244 · surrounding text: 冗余代理服务器 ~$323 香港云霸（1,680元，不稳定）+ Azure（$93）"
     },
     {
       "id": "u_bb97edce7cfdb27f",
@@ -746,7 +746,7 @@
       "source": "可节省",
       "occurrence": 0,
       "target": "Savings",
-      "context": "strong @ line 243 · surrounding text: 可节省 ~$735/月 第1-2阶段清除"
+      "context": "strong @ line 245 · surrounding text: 可节省 ~$735/月 第1-2阶段清除"
     },
     {
       "id": "u_ee626544aafe6b09",
@@ -754,7 +754,7 @@
       "source": "~$735/月",
       "occurrence": 0,
       "target": "~$735/month",
-      "context": "strong @ line 243 · surrounding text: 可节省 ~$735/月 第1-2阶段清除"
+      "context": "strong @ line 245 · surrounding text: 可节省 ~$735/月 第1-2阶段清除"
     },
     {
       "id": "u_21e3714dd0671f20",
@@ -762,7 +762,7 @@
       "source": "第1-2阶段清除",
       "occurrence": 0,
       "target": "Stabilization of Sprints 1–2",
-      "context": "td @ line 243 · surrounding text: 可节省 ~$735/月 第1-2阶段清除"
+      "context": "td @ line 245 · surrounding text: 可节省 ~$735/月 第1-2阶段清除"
     },
     {
       "id": "u_bee33e6988edcaff",
@@ -770,7 +770,7 @@
       "source": "遗留技术债务",
       "occurrence": 0,
       "target": "Outstanding Technical Debt",
-      "context": "h2.section-heading @ line 250"
+      "context": "h2.section-heading @ line 252"
     },
     {
       "id": "u_3f6f519e8fe7139e",
@@ -778,7 +778,7 @@
       "source": "平台审计中发现前团队遗留的技术问题：",
       "occurrence": 0,
       "target": "Technical Issues Identified During Platform Audit from Previous Team:",
-      "context": "div.section-body @ line 251"
+      "context": "div.section-body @ line 253"
     },
     {
       "id": "u_1b6b8b6ce11cefce",
@@ -786,7 +786,7 @@
       "source": "领域",
       "occurrence": 0,
       "target": "Domain",
-      "context": "th @ line 254 · surrounding text: 领域 问题 风险 状态"
+      "context": "th @ line 256 · surrounding text: 领域 问题 风险 状态"
     },
     {
       "id": "u_2548ceb4d6e0ca1c",
@@ -794,7 +794,7 @@
       "source": "问题",
       "occurrence": 2,
       "target": "Issue",
-      "context": "th @ line 254 · surrounding text: 领域 问题 风险 状态"
+      "context": "th @ line 256 · surrounding text: 领域 问题 风险 状态"
     },
     {
       "id": "u_a1857ceeb2c9ac96",
@@ -802,7 +802,7 @@
       "source": "风险",
       "occurrence": 0,
       "target": "Risk",
-      "context": "th @ line 254 · surrounding text: 领域 问题 风险 状态"
+      "context": "th @ line 256 · surrounding text: 领域 问题 风险 状态"
     },
     {
       "id": "u_09ffd5905df0beb4",
@@ -810,7 +810,7 @@
       "source": "状态",
       "occurrence": 2,
       "target": "Status",
-      "context": "th @ line 254 · surrounding text: 领域 问题 风险 状态"
+      "context": "th @ line 256 · surrounding text: 领域 问题 风险 状态"
     },
     {
       "id": "u_06df767ffcbda65d",
@@ -818,7 +818,7 @@
       "source": "安全",
       "occurrence": 0,
       "target": "Security",
-      "context": "td @ line 258"
+      "context": "td @ line 260"
     },
     {
       "id": "u_96dac72f7f1d463b",
@@ -826,7 +826,7 @@
       "source": "日志中有敏感配置数据。强制更新从未启用 — 1,417名旧版本用户近两周活跃，完全绕过限制。最老版本落后2-4个月。",
       "occurrence": 0,
       "target": "Sensitive configuration data in logs. Forced update never enabled — 1,417 old version users active for nearly two weeks, fully bypassing restrictions. Oldest version lagging by 2-4 months.",
-      "context": "td @ line 259"
+      "context": "td @ line 261"
     },
     {
       "id": "u_23358f1c1cc6406c",
@@ -834,7 +834,7 @@
       "source": "高",
       "occurrence": 0,
       "target": "High",
-      "context": "td @ line 260"
+      "context": "td @ line 262"
     },
     {
       "id": "u_87214838f483f2fd",
@@ -842,7 +842,7 @@
       "source": "开发中",
       "occurrence": 4,
       "target": "In Development",
-      "context": "span.status-badge.status-enhanced @ line 261"
+      "context": "span.status-badge.status-enhanced @ line 263"
     },
     {
       "id": "u_34a88d7314ab86c3",
@@ -850,7 +850,7 @@
       "source": "基础设施",
       "occurrence": 0,
       "target": "Infrastructure",
-      "context": "td @ line 264"
+      "context": "td @ line 266"
     },
     {
       "id": "u_b13ceb094622acc4",
@@ -858,7 +858,7 @@
       "source": "读取副本数据库从未使用（仅1次连接）。无故障转移。两个冗余代理服务器应合并。",
       "occurrence": 0,
       "target": "Replica database read never used (only 1 connection). No failover. Two redundant proxy servers should be consolidated.",
-      "context": "td @ line 265"
+      "context": "td @ line 267"
     },
     {
       "id": "u_0d2f1e1ae768d3c2",
@@ -866,7 +866,7 @@
       "source": "高",
       "occurrence": 1,
       "target": "High",
-      "context": "td @ line 266"
+      "context": "td @ line 268"
     },
     {
       "id": "u_4c29a7f1efb6e1a1",
@@ -874,7 +874,7 @@
       "source": "开发中",
       "occurrence": 5,
       "target": "In Development",
-      "context": "span.status-badge.status-enhanced @ line 267"
+      "context": "span.status-badge.status-enhanced @ line 269"
     },
     {
       "id": "u_ead22d7791944a11",
@@ -882,7 +882,7 @@
       "source": "数据库",
       "occurrence": 0,
       "target": "Database",
-      "context": "td @ line 270"
+      "context": "td @ line 272"
     },
     {
       "id": "u_d30aec93bd850d95",
@@ -890,7 +890,7 @@
       "source": "86%为日志数据（15 GB中13 GB）。4个关键索引缺失。管理后台框架已停止维护。",
       "occurrence": 0,
       "target": "86% of log data (13 GB out of 15 GB). 4 critical indexes are missing. Management Back Office framework has ceased maintenance.",
-      "context": "td @ line 271"
+      "context": "td @ line 273"
     },
     {
       "id": "u_486c385e949a7420",
@@ -898,7 +898,7 @@
       "source": "中",
       "occurrence": 0,
       "target": "Medium",
-      "context": "td @ line 272"
+      "context": "td @ line 274"
     },
     {
       "id": "u_cebc21f8ebab2a3a",
@@ -906,7 +906,7 @@
       "source": "部分解决",
       "occurrence": 0,
       "target": "Partially Resolved",
-      "context": "span.status-badge.status-resolved @ line 273"
+      "context": "span.status-badge.status-resolved @ line 275"
     },
     {
       "id": "u_b3bd5a106522ce92",
@@ -914,7 +914,7 @@
       "source": "依赖库",
       "occurrence": 0,
       "target": "Dependency Libraries",
-      "context": "td @ line 276"
+      "context": "td @ line 278"
     },
     {
       "id": "u_33ac7ac6cfaeffcf",
@@ -922,7 +922,7 @@
       "source": "后端4个已升级。安卓端7个主要库过时（第2阶段处理）。",
       "occurrence": 0,
       "target": "4 back office components have been upgraded. 7 major libraries on the Android end are out of date (to be addressed in Sprint 2).",
-      "context": "td @ line 277"
+      "context": "td @ line 279"
     },
     {
       "id": "u_fb18ffd8188371f8",
@@ -930,7 +930,7 @@
       "source": "中",
       "occurrence": 1,
       "target": "In progress",
-      "context": "td @ line 278"
+      "context": "td @ line 280"
     },
     {
       "id": "u_f2a0473bb575b280",
@@ -938,7 +938,7 @@
       "source": "部分解决",
       "occurrence": 1,
       "target": "Partially resolved",
-      "context": "span.status-badge.status-resolved @ line 279"
+      "context": "span.status-badge.status-resolved @ line 281"
     },
     {
       "id": "u_5ca9dc1424348b74",
@@ -946,7 +946,7 @@
       "source": "App代码质量",
       "occurrence": 0,
       "target": "App code quality",
-      "context": "td @ line 282"
+      "context": "td @ line 284"
     },
     {
       "id": "u_8efb6322c9ad7666",
@@ -954,7 +954,7 @@
       "source": "50+问题：崩溃、1,932行无用代码、每次打开应用12个重复请求、7个并发问题。",
       "occurrence": 0,
       "target": "Over 50 issues: crashes, 1,932 lines of dead code, 12 duplicate requests per app launch, 7 concurrent issues.",
-      "context": "td @ line 283"
+      "context": "td @ line 285"
     },
     {
       "id": "u_570a034ca447ace4",
@@ -962,7 +962,7 @@
       "source": "中",
       "occurrence": 2,
       "target": "In progress",
-      "context": "td @ line 284"
+      "context": "td @ line 286"
     },
     {
       "id": "u_1092f0e9b561209c",
@@ -970,7 +970,7 @@
       "source": "开发中",
       "occurrence": 6,
       "target": "In Development",
-      "context": "span.status-badge.status-enhanced @ line 285"
+      "context": "span.status-badge.status-enhanced @ line 287"
     },
     {
       "id": "u_315397d1745361a9",
@@ -978,7 +978,7 @@
       "source": "安全警示 — 前团队违反无日志政策",
       "occurrence": 0,
       "target": "Security alert — Previous team violated no-logging policy",
-      "context": "h2.section-heading @ line 293"
+      "context": "h2.section-heading @ line 295"
     },
     {
       "id": "u_bb3e76f76812f473",
@@ -986,7 +986,7 @@
       "source": "平台作为 VPN 服务，承诺",
       "occurrence": 0,
       "target": "Platform as a VPN service, committed to",
-      "context": "div.section-body @ line 294"
+      "context": "div.section-body @ line 296"
     },
     {
       "id": "u_16a5d4ff011fcf4d",
@@ -994,7 +994,7 @@
       "source": "不记录用户活动",
       "occurrence": 0,
       "target": "Not logging user activities",
-      "context": "strong @ line 295 · surrounding text: 平台作为 VPN 服务，承诺 不记录用户活动 。审计发现前团队在多处违反此政策，已列入第1阶段优先修复计划。"
+      "context": "strong @ line 297 · surrounding text: 平台作为 VPN 服务，承诺 不记录用户活动 。审计发现前团队在多处违反此政策，已列入第1阶段优先修复计划。"
     },
     {
       "id": "u_1af54abaa0e46ad2",
@@ -1002,7 +1002,7 @@
       "source": "。审计发现前团队在多处违反此政策，已列入第1阶段优先修复计划。",
       "occurrence": 0,
       "target": ". Audit found previous team violated this policy multiple times, listed for priority fix in Sprint 1.",
-      "context": "div.section-body @ line 295 · surrounding text: 平台作为 VPN 服务，承诺 不记录用户活动 。审计发现前团队在多处违反此政策，已列入第1阶段优先修复计划。"
+      "context": "div.section-body @ line 297 · surrounding text: 平台作为 VPN 服务，承诺 不记录用户活动 。审计发现前团队在多处违反此政策，已列入第1阶段优先修复计划。"
     },
     {
       "id": "u_e1ec3c2a1a0d1a45",
@@ -1010,7 +1010,7 @@
       "source": "违规位置",
       "occurrence": 0,
       "target": "Violation location",
-      "context": "th @ line 299 · surrounding text: 违规位置 违规内容 风险 状态"
+      "context": "th @ line 301 · surrounding text: 违规位置 违规内容 风险 状态"
     },
     {
       "id": "u_8d681ac30feae6f0",
@@ -1018,7 +1018,7 @@
       "source": "违规内容",
       "occurrence": 0,
       "target": "Violation content",
-      "context": "th @ line 299 · surrounding text: 违规位置 违规内容 风险 状态"
+      "context": "th @ line 301 · surrounding text: 违规位置 违规内容 风险 状态"
     },
     {
       "id": "u_1e52a45b0c85a03c",
@@ -1026,7 +1026,7 @@
       "source": "风险",
       "occurrence": 1,
       "target": "Risk",
-      "context": "th @ line 299 · surrounding text: 违规位置 违规内容 风险 状态"
+      "context": "th @ line 301 · surrounding text: 违规位置 违规内容 风险 状态"
     },
     {
       "id": "u_174eac7eb86462e4",
@@ -1034,7 +1034,7 @@
       "source": "状态",
       "occurrence": 3,
       "target": "Status",
-      "context": "th @ line 299 · surrounding text: 违规位置 违规内容 风险 状态"
+      "context": "th @ line 301 · surrounding text: 违规位置 违规内容 风险 状态"
     },
     {
       "id": "u_844b18d110947e00",
@@ -1042,7 +1042,7 @@
       "source": "安卓应用 MmkvManager.kt",
       "occurrence": 0,
       "target": "Android app MmkvManager.kt",
-      "context": "td @ line 303"
+      "context": "td @ line 305"
     },
     {
       "id": "u_3fad5ddb18bc74ac",
@@ -1050,7 +1050,7 @@
       "source": "调试日志中记录完整 VPN 服务器配置、连接密钥、订阅 URL（5处日志语句）",
       "occurrence": 0,
       "target": "Logging full VPN server configuration, connection keys, and subscription URLs in debug logs (5 log statements)",
-      "context": "td @ line 304"
+      "context": "td @ line 306"
     },
     {
       "id": "u_4b3304d0d2ba6cb1",
@@ -1058,7 +1058,7 @@
       "source": "高",
       "occurrence": 2,
       "target": "High",
-      "context": "td @ line 305"
+      "context": "td @ line 307"
     },
     {
       "id": "u_e2af8ec1d73763e0",
@@ -1066,7 +1066,7 @@
       "source": "第1阶段修复",
       "occurrence": 0,
       "target": "Fix in Sprint 1",
-      "context": "span.status-badge.status-enhanced @ line 306"
+      "context": "span.status-badge.status-enhanced @ line 308"
     },
     {
       "id": "u_b414b3e523861572",
@@ -1074,7 +1074,7 @@
       "source": "后端客户端 API 追踪中间件",
       "occurrence": 0,
       "target": "Back Office client API tracking middleware",
-      "context": "td @ line 309"
+      "context": "td @ line 311"
     },
     {
       "id": "u_0ec66978682e4238",
@@ -1082,7 +1082,7 @@
       "source": "启用时记录用户 IP 和完整请求体 — 不符合无日志政策",
       "occurrence": 0,
       "target": "Logging user IP and full request body when enabled — non-compliant with no-logging policy",
-      "context": "td @ line 310"
+      "context": "td @ line 312"
     },
     {
       "id": "u_dc697049ecb1317f",
@@ -1090,7 +1090,7 @@
       "source": "高",
       "occurrence": 3,
       "target": "High",
-      "context": "td @ line 311"
+      "context": "td @ line 313"
     },
     {
       "id": "u_83ae4e7baa903bc3",
@@ -1098,7 +1098,7 @@
       "source": "第1阶段修复",
       "occurrence": 1,
       "target": "Sprint 1 Fix",
-      "context": "span.status-badge.status-enhanced @ line 312"
+      "context": "span.status-badge.status-enhanced @ line 314"
     },
     {
       "id": "u_9e6ef34cd8d19f55",
@@ -1106,7 +1106,7 @@
       "source": "生产数据库 log_apis 表",
       "occurrence": 0,
       "target": "Production Database log_apis Table",
-      "context": "td @ line 315"
+      "context": "td @ line 317"
     },
     {
       "id": "u_9489b1fce66b988b",
@@ -1114,7 +1114,7 @@
       "source": "13.1 GB API 请求日志（占数据库总量 86%），每日新增 163 MB，清理脚本失效 114 天",
       "occurrence": 0,
       "target": "13.1 GB API Request Logs (accounting for 86% of the database), with daily additions of 163 MB, and a script failure lasting 114 days",
-      "context": "td @ line 316"
+      "context": "td @ line 318"
     },
     {
       "id": "u_82c989cba4711751",
@@ -1122,7 +1122,7 @@
       "source": "中",
       "occurrence": 3,
       "target": "Medium",
-      "context": "td @ line 317"
+      "context": "td @ line 319"
     },
     {
       "id": "u_3d194b1fd350de08",
@@ -1130,7 +1130,7 @@
       "source": "第1阶段清理",
       "occurrence": 0,
       "target": "Sprint 1 Cleanup",
-      "context": "span.status-badge.status-enhanced @ line 318"
+      "context": "span.status-badge.status-enhanced @ line 320"
     },
     {
       "id": "u_ad2ef025c1316fa9",
@@ -1138,7 +1138,7 @@
       "source": "后端 middleware.Logger()",
       "occurrence": 0,
       "target": "Back Office Middleware.Logger()",
-      "context": "td @ line 321"
+      "context": "td @ line 323"
     },
     {
       "id": "u_b50b3cd368005561",
@@ -1146,7 +1146,7 @@
       "source": "旧版本将所有请求记录到磁盘 — 生成 22 GB PM2 日志文件（~350 MB/天增长）",
       "occurrence": 0,
       "target": "Previous versions recorded all requests to disk — generating a 22 GB PM2 log file (approximately 350 MB/day growth)",
-      "context": "td @ line 322"
+      "context": "td @ line 324"
     },
     {
       "id": "u_6ea4d6305ca1e7be",
@@ -1154,7 +1154,7 @@
       "source": "中",
       "occurrence": 4,
       "target": "Medium",
-      "context": "td @ line 323"
+      "context": "td @ line 325"
     },
     {
       "id": "u_b4b806d22ab7e545",
@@ -1162,7 +1162,7 @@
       "source": "代码已修复，待部署",
       "occurrence": 0,
       "target": "Code fixed, pending deployment",
-      "context": "span.status-badge.status-enhanced @ line 324"
+      "context": "span.status-badge.status-enhanced @ line 326"
     },
     {
       "id": "u_b8e05869362f3b92",
@@ -1170,7 +1170,7 @@
       "source": "节点级别合规（禁用 rsyslog/journald）列为第1阶段运维任务。",
       "occurrence": 0,
       "target": "Compliance at the VPN node level (disabling rsyslog/journald) listed as Sprint 1 operational task.",
-      "context": "div.section-note @ line 328"
+      "context": "div.section-note @ line 330"
     },
     {
       "id": "u_f32dc7b985646dba",
@@ -1178,7 +1178,7 @@
       "source": "关键发现（2026年3月数据）",
       "occurrence": 0,
       "target": "Key Findings (March 2026)",
-      "context": "h2.section-heading @ line 335"
+      "context": "h2.section-heading @ line 337"
     },
     {
       "id": "u_8c26da2276a12916",
@@ -1186,7 +1186,7 @@
       "source": "1. 免费用户流量滥用 — 月耗13.9 TB，零收入",
       "occurrence": 0,
       "target": "1. Free User Traffic Abuse — Consumed 13.9 TB in a month, generating zero revenue",
-      "context": "div.finding-title @ line 338"
+      "context": "div.finding-title @ line 340"
     },
     {
       "id": "u_506e85f3c5b02a44",
@@ -1194,7 +1194,7 @@
       "source": "3月份11,537名免费用户消耗",
       "occurrence": 0,
       "target": "In March, 11,537 free users consumed",
-      "context": "div.finding-content @ line 339"
+      "context": "div.finding-content @ line 341"
     },
     {
       "id": "u_f371397994ef8399",
@@ -1202,7 +1202,7 @@
       "source": "带宽，占总带宽39%，收入为零。最高单用户月用1,217 GB。无服务端限制，客户端时间限制容易绕过。",
       "occurrence": 0,
       "target": "bandwidth, accounting for 39% of the total bandwidth and zero revenue. The highest single user used 1,217 GB in a month. There are no server-side restrictions; client-side time limits can be easily bypassed.",
-      "context": "div.finding-content @ line 340 · surrounding text: 3月份11,537名免费用户消耗 13.9 TB 带宽，占总带宽39%，收入为零。最高单用户月用1,217 GB。无服务端限制，客户端时间限制容易绕过。 1,417名旧版本用户近两周活跃 ，部分版本落后2-4个月，无任何限制。强制更新从未启用。"
+      "context": "div.finding-content @ line 342 · surrounding text: 3月份11,537名免费用户消耗 13.9 TB 带宽，占总带宽39%，收入为零。最高单用户月用1,217 GB。无服务端限制，客户端时间限制容易绕过。 1,417名旧版本用户近两周活跃 ，部分版本落后2-4个月，无任何限制。强制更新从未启用。"
     },
     {
       "id": "u_ebab791052f19b57",
@@ -1210,7 +1210,7 @@
       "source": "1,417名旧版本用户近两周活跃",
       "occurrence": 0,
       "target": "1,417 old version users were active over the past two weeks",
-      "context": "strong @ line 340 · surrounding text: 3月份11,537名免费用户消耗 13.9 TB 带宽，占总带宽39%，收入为零。最高单用户月用1,217 GB。无服务端限制，客户端时间限制容易绕过。 1,417名旧版本用户近两周活跃 ，部分版本落后2-4个月，无任何限制。强制更新从未启用。"
+      "context": "strong @ line 342 · surrounding text: 3月份11,537名免费用户消耗 13.9 TB 带宽，占总带宽39%，收入为零。最高单用户月用1,217 GB。无服务端限制，客户端时间限制容易绕过。 1,417名旧版本用户近两周活跃 ，部分版本落后2-4个月，无任何限制。强制更新从未启用。"
     },
     {
       "id": "u_34df232b03ba64dd",
@@ -1218,7 +1218,7 @@
       "source": "，部分版本落后2-4个月，无任何限制。强制更新从未启用。",
       "occurrence": 0,
       "target": ", with some versions lagging 2-4 months behind, and mandatory updates never enabled.",
-      "context": "div.finding-content @ line 340 · surrounding text: 3月份11,537名免费用户消耗 13.9 TB 带宽，占总带宽39%，收入为零。最高单用户月用1,217 GB。无服务端限制，客户端时间限制容易绕过。 1,417名旧版本用户近两周活跃 ，部分版本落后2-4个月，无任何限制。强制更新从未启用。"
+      "context": "div.finding-content @ line 342 · surrounding text: 3月份11,537名免费用户消耗 13.9 TB 带宽，占总带宽39%，收入为零。最高单用户月用1,217 GB。无服务端限制，客户端时间限制容易绕过。 1,417名旧版本用户近两周活跃 ，部分版本落后2-4个月，无任何限制。强制更新从未启用。"
     },
     {
       "id": "u_cfd4f4225aa7b685",
@@ -1226,7 +1226,7 @@
       "source": "2. 收入下降 — 5个月降34%",
       "occurrence": 0,
       "target": "2. Revenue Decline — Down 34% over 5 months",
-      "context": "div.finding-title @ line 344"
+      "context": "div.finding-title @ line 346"
     },
     {
       "id": "u_d2ebd992f2f8ef13",
@@ -1234,7 +1234,7 @@
       "source": "月收入从",
       "occurrence": 0,
       "target": "Monthly revenue dropped from",
-      "context": "div.finding-content @ line 345"
+      "context": "div.finding-content @ line 347"
     },
     {
       "id": "u_f110332b3bb4e3b4",
@@ -1242,7 +1242,7 @@
       "source": "¥51,073（10月）降至¥33,718（3月）",
       "occurrence": 0,
       "target": "¥51,073 (October) to ¥33,718 (March)",
-      "context": "strong @ line 346 · surrounding text: 月收入从 ¥51,073（10月）降至¥33,718（3月） 。付费用户从2,366降至1,259（-47%）。应用不稳定、转化体验差、13个崩溃问题是主因。1,417名用户仍在用旧版本。"
+      "context": "strong @ line 348 · surrounding text: 月收入从 ¥51,073（10月）降至¥33,718（3月） 。付费用户从2,366降至1,259（-47%）。应用不稳定、转化体验差、13个崩溃问题是主因。1,417名用户仍在用旧版本。"
     },
     {
       "id": "u_070df86b30fd1ba9",
@@ -1250,7 +1250,7 @@
       "source": "。付费用户从2,366降至1,259（-47%）。应用不稳定、转化体验差、13个崩溃问题是主因。1,417名用户仍在用旧版本。",
       "occurrence": 0,
       "target": ". Paid users dropped from 2,366 to 1,259 (-47%). Instability in the app, poor conversion experience, and 13 crash issues were the main reasons. 1,417 users are still on old versions.",
-      "context": "div.finding-content @ line 346 · surrounding text: 月收入从 ¥51,073（10月）降至¥33,718（3月） 。付费用户从2,366降至1,259（-47%）。应用不稳定、转化体验差、13个崩溃问题是主因。1,417名用户仍在用旧版本。"
+      "context": "div.finding-content @ line 348 · surrounding text: 月收入从 ¥51,073（10月）降至¥33,718（3月） 。付费用户从2,366降至1,259（-47%）。应用不稳定、转化体验差、13个崩溃问题是主因。1,417名用户仍在用旧版本。"
     },
     {
       "id": "u_42dca6503fd5dc08",
@@ -1258,7 +1258,7 @@
       "source": "3. 平台稳定性 — 13个崩溃模式",
       "occurrence": 0,
       "target": "3. Platform Stability - 13 Crash Modes",
-      "context": "div.finding-title @ line 350"
+      "context": "div.finding-title @ line 352"
     },
     {
       "id": "u_c7ae4617b3b68686",
@@ -1266,7 +1266,7 @@
       "source": "启动崩溃、连接卡住、误判离线、应用无响应，加上7个并发问题。用户遇到直接流失，影响留存和复费率。",
       "occurrence": 0,
       "target": "Crashes on startup, connection delays, false offline detection, and application unresponsiveness, along with seven concurrent issues. Users experience direct churn, impacting retention and repeat rates.",
-      "context": "div.finding-content @ line 351"
+      "context": "div.finding-content @ line 353"
     },
     {
       "id": "u_eec0cc705140061a",
@@ -1274,7 +1274,7 @@
       "source": "4. 基础设施浪费 — 月省~$735",
       "occurrence": 0,
       "target": "4. Infrastructure Waste - Monthly Savings ~$735",
-      "context": "div.finding-title @ line 356"
+      "context": "div.finding-title @ line 358"
     },
     {
       "id": "u_8c6b19d37395acdc",
@@ -1282,7 +1282,7 @@
       "source": "6个\"测试\"节点仍在运行（~$412/月）。两个冗余代理服务器（~$323/月），香港那台经常断线。读取副本数据库从未使用。正在合并。",
       "occurrence": 0,
       "target": "6 VPN nodes are still running (~$412/month). Two redundant proxy servers (~~~$323/month), with the one in Hong Kong frequently going offline. The read replica database has never been used and is being merged.",
-      "context": "div.finding-content @ line 357"
+      "context": "div.finding-content @ line 359"
     },
     {
       "id": "u_ab57e42f2b354f56",
@@ -1290,7 +1290,7 @@
       "source": "5. 安全漏洞 — 敏感数据泄露，版本控制禁用",
       "occurrence": 0,
       "target": "5. Security Vulnerability - Sensitive data exposure, version control disabled",
-      "context": "div.finding-title @ line 362"
+      "context": "div.finding-title @ line 364"
     },
     {
       "id": "u_4ee32c913c5ae5f6",
@@ -1298,7 +1298,7 @@
       "source": "日志中有敏感配置数据。强制更新从未启用 — 1,417名旧版本用户活跃，完全绕过限制，最老版本落后2-4个月。",
       "occurrence": 0,
       "target": "Sensitive configuration data in logs. Forced updates never enabled — 1,417 users on old versions are active, completely bypassing restrictions; oldest version is up to 2-4 months behind.",
-      "context": "div.finding-content @ line 363"
+      "context": "div.finding-content @ line 365"
     },
     {
       "id": "u_835a0305d9331270",
@@ -1306,7 +1306,7 @@
       "source": "6. 三星应用内购买无效",
       "occurrence": 0,
       "target": "6. Ineffective Samsung In-app Purchases",
-      "context": "div.finding-title @ line 368"
+      "context": "div.finding-title @ line 370"
     },
     {
       "id": "u_57dd3bab223d09a5",
@@ -1314,7 +1314,7 @@
       "source": "三星支付硬编码为测试模式，零订单。已修复。注：94%收入来自微信/支付宝。",
       "occurrence": 0,
       "target": "Samsung Pay is hard-coded in test mode with zero orders. Issue resolved. Note: 94% of revenue comes from WeChat/Alipay.",
-      "context": "div.finding-content @ line 369"
+      "context": "div.finding-content @ line 371"
     },
     {
       "id": "u_5d22285741efd4ec",
@@ -1322,7 +1322,7 @@
       "source": "中国网络连接",
       "occurrence": 0,
       "target": "China Network Connection",
-      "context": "h2.section-heading @ line 378"
+      "context": "h2.section-heading @ line 380"
     },
     {
       "id": "u_aebb1bc7c90e2310",
@@ -1330,7 +1330,7 @@
       "source": "台湾团队标记了延迟和GFW问题，已记录但未量化。部署后计划监控，5月分析。",
       "occurrence": 0,
       "target": "Taiwan team flagged delays and GFW issues, documented but not quantified. Monitoring planned post-deployment, May analysis.",
-      "context": "div.section-body @ line 379"
+      "context": "div.section-body @ line 381"
     },
     {
       "id": "u_3d814f09c12341cb",
@@ -1338,7 +1338,7 @@
       "source": "路线图 — 预测指标",
       "occurrence": 0,
       "target": "Roadmap - Predictive Metrics",
-      "context": "h2.section-heading @ line 386"
+      "context": "h2.section-heading @ line 388"
     },
     {
       "id": "u_42cad3ea64db1718",
@@ -1346,7 +1346,7 @@
       "source": "指标",
       "occurrence": 0,
       "target": "Metrics",
-      "context": "th @ line 389 · surrounding text: 指标 当前 第1阶段后预计"
+      "context": "th @ line 391 · surrounding text: 指标 当前 第1阶段后预计"
     },
     {
       "id": "u_9974d96a55fce658",
@@ -1354,7 +1354,7 @@
       "source": "当前",
       "occurrence": 0,
       "target": "Current",
-      "context": "th @ line 389 · surrounding text: 指标 当前 第1阶段后预计"
+      "context": "th @ line 391 · surrounding text: 指标 当前 第1阶段后预计"
     },
     {
       "id": "u_fb5b66a3b5a47b05",
@@ -1362,7 +1362,7 @@
       "source": "第1阶段后预计",
       "occurrence": 0,
       "target": "Expected after Sprint 1",
-      "context": "th @ line 389 · surrounding text: 指标 当前 第1阶段后预计"
+      "context": "th @ line 391 · surrounding text: 指标 当前 第1阶段后预计"
     },
     {
       "id": "u_25b0d448994ab001",
@@ -1370,7 +1370,7 @@
       "source": "节点月费",
       "occurrence": 0,
       "target": "VPN Node Monthly Fee",
-      "context": "td @ line 392 · surrounding text: 节点月费 $1,988 $1,551"
+      "context": "td @ line 394 · surrounding text: 节点月费 $1,988 $1,551"
     },
     {
       "id": "u_942e712e28d83e2e",
@@ -1378,7 +1378,7 @@
       "source": "防滥用节省",
       "occurrence": 0,
       "target": "Anti-abuse Savings",
-      "context": "td @ line 393 · surrounding text: 防滥用节省 $0 ~$112-150"
+      "context": "td @ line 395 · surrounding text: 防滥用节省 $0 ~$112-150"
     },
     {
       "id": "u_9a7a29565207aafb",
@@ -1386,7 +1386,7 @@
       "source": "基础设施节省",
       "occurrence": 0,
       "target": "Infrastructure Savings",
-      "context": "td @ line 394 · surrounding text: 基础设施节省 $0 ~$323（代理合并）"
+      "context": "td @ line 396 · surrounding text: 基础设施节省 $0 ~$323（代理合并）"
     },
     {
       "id": "u_bf133b517201300d",
@@ -1394,7 +1394,7 @@
       "source": "~$323（代理合并）",
       "occurrence": 0,
       "target": "~$323 (Proxy consolidation)",
-      "context": "td @ line 394 · surrounding text: 基础设施节省 $0 ~$323（代理合并）"
+      "context": "td @ line 396 · surrounding text: 基础设施节省 $0 ~$323（代理合并）"
     },
     {
       "id": "u_4671eb189e5f36c3",
@@ -1402,7 +1402,7 @@
       "source": "收入渠道",
       "occurrence": 0,
       "target": "Revenue Channels",
-      "context": "td @ line 395 · surrounding text: 收入渠道 开发中 部署后激活"
+      "context": "td @ line 397 · surrounding text: 收入渠道 开发中 部署后激活"
     },
     {
       "id": "u_8ce8f3748f9dea9a",
@@ -1410,7 +1410,7 @@
       "source": "开发中",
       "occurrence": 7,
       "target": "In Development",
-      "context": "td @ line 395 · surrounding text: 收入渠道 开发中 部署后激活"
+      "context": "td @ line 397 · surrounding text: 收入渠道 开发中 部署后激活"
     },
     {
       "id": "u_d737686e9c41bb78",
@@ -1418,7 +1418,7 @@
       "source": "部署后激活",
       "occurrence": 0,
       "target": "Post-deployment Activation",
-      "context": "td @ line 395 · surrounding text: 收入渠道 开发中 部署后激活"
+      "context": "td @ line 397 · surrounding text: 收入渠道 开发中 部署后激活"
     },
     {
       "id": "u_07f31d131edfed71",
@@ -1426,7 +1426,7 @@
       "source": "试用转化",
       "occurrence": 0,
       "target": "Trial Conversion",
-      "context": "td @ line 396 · surrounding text: 试用转化 基准 +0.3-0.5%"
+      "context": "td @ line 398 · surrounding text: 试用转化 基准 +0.3-0.5%"
     },
     {
       "id": "u_c7ed822def1c381e",
@@ -1434,7 +1434,7 @@
       "source": "基准",
       "occurrence": 0,
       "target": "Benchmark",
-      "context": "td @ line 396 · surrounding text: 试用转化 基准 +0.3-0.5%"
+      "context": "td @ line 398 · surrounding text: 试用转化 基准 +0.3-0.5%"
     },
     {
       "id": "u_93953181a9ec6937",
@@ -1442,7 +1442,7 @@
       "source": "路线图 — 里程碑",
       "occurrence": 0,
       "target": "Roadmap — Milestones",
-      "context": "h2.section-heading @ line 403"
+      "context": "h2.section-heading @ line 405"
     },
     {
       "id": "u_4b87119157056519",
@@ -1450,7 +1450,7 @@
       "source": "里程碑",
       "occurrence": 0,
       "target": "Milestone",
-      "context": "th @ line 406 · surrounding text: 里程碑 目标 说明"
+      "context": "th @ line 408 · surrounding text: 里程碑 目标 说明"
     },
     {
       "id": "u_a85bbf64e036c119",
@@ -1458,7 +1458,7 @@
       "source": "目标",
       "occurrence": 0,
       "target": "Goal",
-      "context": "th @ line 406 · surrounding text: 里程碑 目标 说明"
+      "context": "th @ line 408 · surrounding text: 里程碑 目标 说明"
     },
     {
       "id": "u_3d7d23c409df1a03",
@@ -1466,7 +1466,7 @@
       "source": "说明",
       "occurrence": 0,
       "target": "Description",
-      "context": "th @ line 406 · surrounding text: 里程碑 目标 说明"
+      "context": "th @ line 408 · surrounding text: 里程碑 目标 说明"
     },
     {
       "id": "u_9f66aa6869327f46",
@@ -1474,7 +1474,7 @@
       "source": "平台评估",
       "occurrence": 0,
       "target": "Platform Evaluation",
-      "context": "td @ line 409 · surrounding text: 平台评估 4月初 全面审计完成"
+      "context": "td @ line 411 · surrounding text: 平台评估 4月初 全面审计完成"
     },
     {
       "id": "u_1d604fc66d832052",
@@ -1482,7 +1482,7 @@
       "source": "4月初",
       "occurrence": 0,
       "target": "Early April",
-      "context": "td @ line 409 · surrounding text: 平台评估 4月初 全面审计完成"
+      "context": "td @ line 411 · surrounding text: 平台评估 4月初 全面审计完成"
     },
     {
       "id": "u_e8f0109c765b0606",
@@ -1490,7 +1490,7 @@
       "source": "全面审计完成",
       "occurrence": 0,
       "target": "Comprehensive Audit Completed",
-      "context": "td @ line 409 · surrounding text: 平台评估 4月初 全面审计完成"
+      "context": "td @ line 411 · surrounding text: 平台评估 4月初 全面审计完成"
     },
     {
       "id": "u_b3003be54b55219e",
@@ -1498,7 +1498,7 @@
       "source": "测试环境",
       "occurrence": 0,
       "target": "Test Environment",
-      "context": "td @ line 410 · surrounding text: 测试环境 4月下旬 生产前测试"
+      "context": "td @ line 412 · surrounding text: 测试环境 4月下旬 生产前测试"
     },
     {
       "id": "u_af58b62864a66bbf",
@@ -1506,7 +1506,7 @@
       "source": "4月下旬",
       "occurrence": 0,
       "target": "Mid April",
-      "context": "td @ line 410 · surrounding text: 测试环境 4月下旬 生产前测试"
+      "context": "td @ line 412 · surrounding text: 测试环境 4月下旬 生产前测试"
     },
     {
       "id": "u_185a46f56b4e9d74",
@@ -1514,7 +1514,7 @@
       "source": "生产前测试",
       "occurrence": 0,
       "target": "Pre-production Testing",
-      "context": "td @ line 410 · surrounding text: 测试环境 4月下旬 生产前测试"
+      "context": "td @ line 412 · surrounding text: 测试环境 4月下旬 生产前测试"
     },
     {
       "id": "u_69ec1daee2029d1c",
@@ -1522,7 +1522,7 @@
       "source": "内部测试版",
       "occurrence": 0,
       "target": "Internal Beta Version",
-      "context": "td @ line 411 · surrounding text: 内部测试版 4月下旬 内部体验测试"
+      "context": "td @ line 413 · surrounding text: 内部测试版 4月下旬 内部体验测试"
     },
     {
       "id": "u_090ef096d1b5b522",
@@ -1530,7 +1530,7 @@
       "source": "4月下旬",
       "occurrence": 1,
       "target": "Mid April",
-      "context": "td @ line 411 · surrounding text: 内部测试版 4月下旬 内部体验测试"
+      "context": "td @ line 413 · surrounding text: 内部测试版 4月下旬 内部体验测试"
     },
     {
       "id": "u_2b744a4fe3879a6d",
@@ -1538,7 +1538,7 @@
       "source": "内部体验测试",
       "occurrence": 0,
       "target": "Internal Preview Testing",
-      "context": "td @ line 411 · surrounding text: 内部测试版 4月下旬 内部体验测试"
+      "context": "td @ line 413 · surrounding text: 内部测试版 4月下旬 内部体验测试"
     },
     {
       "id": "u_59e95d119f03dd3e",
@@ -1546,7 +1546,7 @@
       "source": "生产部署",
       "occurrence": 0,
       "target": "Production Deployment",
-      "context": "td @ line 412 · surrounding text: 生产部署 5月中旬 全部修复上线"
+      "context": "td @ line 414 · surrounding text: 生产部署 5月中旬 全部修复上线"
     },
     {
       "id": "u_85f54ba5e3c5ecbb",
@@ -1554,7 +1554,7 @@
       "source": "5月中旬",
       "occurrence": 0,
       "target": "Mid May",
-      "context": "td @ line 412 · surrounding text: 生产部署 5月中旬 全部修复上线"
+      "context": "td @ line 414 · surrounding text: 生产部署 5月中旬 全部修复上线"
     },
     {
       "id": "u_8b8d59ab81d29e29",
@@ -1562,7 +1562,7 @@
       "source": "全部修复上线",
       "occurrence": 0,
       "target": "All Resolved and Released",
-      "context": "td @ line 412 · surrounding text: 生产部署 5月中旬 全部修复上线"
+      "context": "td @ line 414 · surrounding text: 生产部署 5月中旬 全部修复上线"
     },
     {
       "id": "u_00f69965b71d328f",
@@ -1570,7 +1570,7 @@
       "source": "基础设施整合",
       "occurrence": 0,
       "target": "Infrastructure Consolidation",
-      "context": "td @ line 413 · surrounding text: 基础设施整合 5-6月 节省~$735/月"
+      "context": "td @ line 415 · surrounding text: 基础设施整合 5-6月 节省~$735/月"
     },
     {
       "id": "u_412a5d3f117f59c9",
@@ -1578,7 +1578,7 @@
       "source": "5-6月",
       "occurrence": 0,
       "target": "May-June",
-      "context": "td @ line 413 · surrounding text: 基础设施整合 5-6月 节省~$735/月"
+      "context": "td @ line 415 · surrounding text: 基础设施整合 5-6月 节省~$735/月"
     },
     {
       "id": "u_93ef4a9af153b928",
@@ -1586,7 +1586,7 @@
       "source": "节省~$735/月",
       "occurrence": 0,
       "target": "Save Approximately $735/month",
-      "context": "td @ line 413 · surrounding text: 基础设施整合 5-6月 节省~$735/月"
+      "context": "td @ line 415 · surrounding text: 基础设施整合 5-6月 节省~$735/月"
     },
     {
       "id": "u_c5f76d831c54dbd7",
@@ -1594,7 +1594,7 @@
       "source": "多平台应用重建",
       "occurrence": 0,
       "target": "Multi-platform Application Rebuild",
-      "context": "td @ line 414 · surrounding text: 多平台应用重建 第2阶段（6月+） 安卓/苹果/电脑 — 旧代码太差需重写"
+      "context": "td @ line 416 · surrounding text: 多平台应用重建 第2阶段（6月+） 安卓/苹果/电脑 — 旧代码太差需重写"
     },
     {
       "id": "u_62ac73153af5730f",
@@ -1602,7 +1602,7 @@
       "source": "第2阶段（6月+）",
       "occurrence": 0,
       "target": "Sprint 2 (June+)",
-      "context": "td @ line 414 · surrounding text: 多平台应用重建 第2阶段（6月+） 安卓/苹果/电脑 — 旧代码太差需重写"
+      "context": "td @ line 416 · surrounding text: 多平台应用重建 第2阶段（6月+） 安卓/苹果/电脑 — 旧代码太差需重写"
     },
     {
       "id": "u_8a4b4798b9a76c80",
@@ -1610,7 +1610,7 @@
       "source": "安卓/苹果/电脑 — 旧代码太差需重写",
       "occurrence": 0,
       "target": "Android/iOS/PC — Old code too poor to be reused",
-      "context": "td @ line 414 · surrounding text: 多平台应用重建 第2阶段（6月+） 安卓/苹果/电脑 — 旧代码太差需重写"
+      "context": "td @ line 416 · surrounding text: 多平台应用重建 第2阶段（6月+） 安卓/苹果/电脑 — 旧代码太差需重写"
     },
     {
       "id": "u_d7c4f60056069aba",
@@ -1618,7 +1618,7 @@
       "source": "协议升级",
       "occurrence": 0,
       "target": "Protocol Upgrade",
-      "context": "td @ line 415 · surrounding text: 协议升级 7-8月 连接性能提升"
+      "context": "td @ line 417 · surrounding text: 协议升级 7-8月 连接性能提升"
     },
     {
       "id": "u_334c3132842b19ff",
@@ -1626,7 +1626,7 @@
       "source": "7-8月",
       "occurrence": 0,
       "target": "July - August",
-      "context": "td @ line 415 · surrounding text: 协议升级 7-8月 连接性能提升"
+      "context": "td @ line 417 · surrounding text: 协议升级 7-8月 连接性能提升"
     },
     {
       "id": "u_0719b7ba2aa855ab",
@@ -1634,7 +1634,7 @@
       "source": "连接性能提升",
       "occurrence": 0,
       "target": "Improved Connection Performance",
-      "context": "td @ line 415 · surrounding text: 协议升级 7-8月 连接性能提升"
+      "context": "td @ line 417 · surrounding text: 协议升级 7-8月 连接性能提升"
     },
     {
       "id": "u_eb4e3bf4385155ad",
@@ -1642,7 +1642,7 @@
       "source": "所需资源",
       "occurrence": 0,
       "target": "Required Resources",
-      "context": "h2.section-heading @ line 422"
+      "context": "h2.section-heading @ line 424"
     },
     {
       "id": "u_fbf0302862130fb4",
@@ -1650,7 +1650,7 @@
       "source": "资源",
       "occurrence": 0,
       "target": "Resources",
-      "context": "th @ line 425 · surrounding text: 资源 用途 时间"
+      "context": "th @ line 427 · surrounding text: 资源 用途 时间"
     },
     {
       "id": "u_f8126dcc2b63e11f",
@@ -1658,7 +1658,7 @@
       "source": "用途",
       "occurrence": 0,
       "target": "Purpose",
-      "context": "th @ line 425 · surrounding text: 资源 用途 时间"
+      "context": "th @ line 427 · surrounding text: 资源 用途 时间"
     },
     {
       "id": "u_4dae711b1a71232b",
@@ -1666,7 +1666,7 @@
       "source": "时间",
       "occurrence": 0,
       "target": "Time",
-      "context": "th @ line 425 · surrounding text: 资源 用途 时间"
+      "context": "th @ line 427 · surrounding text: 资源 用途 时间"
     },
     {
       "id": "u_4c02b413e2587242",
@@ -1674,7 +1674,7 @@
       "source": "安卓开发工具",
       "occurrence": 0,
       "target": "Android Development Tools",
-      "context": "td @ line 428 · surrounding text: 安卓开发工具 开发环境 立即"
+      "context": "td @ line 430 · surrounding text: 安卓开发工具 开发环境 立即"
     },
     {
       "id": "u_54bcb9bc010462e3",
@@ -1682,7 +1682,7 @@
       "source": "开发环境",
       "occurrence": 0,
       "target": "Development Environment",
-      "context": "td @ line 428 · surrounding text: 安卓开发工具 开发环境 立即"
+      "context": "td @ line 430 · surrounding text: 安卓开发工具 开发环境 立即"
     },
     {
       "id": "u_85cd471cfa111e91",
@@ -1690,7 +1690,7 @@
       "source": "立即",
       "occurrence": 0,
       "target": "Immediately",
-      "context": "td @ line 428 · surrounding text: 安卓开发工具 开发环境 立即"
+      "context": "td @ line 430 · surrounding text: 安卓开发工具 开发环境 立即"
     },
     {
       "id": "u_b9b8c10dbcda5a06",
@@ -1698,7 +1698,7 @@
       "source": "测试服务器",
       "occurrence": 0,
       "target": "Test Server",
-      "context": "td @ line 429 · surrounding text: 测试服务器 测试环境 4月12日前"
+      "context": "td @ line 431 · surrounding text: 测试服务器 测试环境 4月12日前"
     },
     {
       "id": "u_39bcf3423a358997",
@@ -1706,7 +1706,7 @@
       "source": "测试环境",
       "occurrence": 1,
       "target": "Testing Environment",
-      "context": "td @ line 429 · surrounding text: 测试服务器 测试环境 4月12日前"
+      "context": "td @ line 431 · surrounding text: 测试服务器 测试环境 4月12日前"
     },
     {
       "id": "u_5673826b846761e2",
@@ -1714,7 +1714,7 @@
       "source": "4月12日前",
       "occurrence": 0,
       "target": "Before April 12th",
-      "context": "td @ line 429 · surrounding text: 测试服务器 测试环境 4月12日前"
+      "context": "td @ line 431 · surrounding text: 测试服务器 测试环境 4月12日前"
     },
     {
       "id": "u_3ddb50ee70a037d1",
@@ -1722,7 +1722,7 @@
       "source": "测试人员",
       "occurrence": 0,
       "target": "Testers",
-      "context": "td @ line 430 · surrounding text: 测试人员 内部体验 + 回归测试 4月15日前"
+      "context": "td @ line 432 · surrounding text: 测试人员 内部体验 + 回归测试 4月15日前"
     },
     {
       "id": "u_33ddd1d86371247e",
@@ -1730,7 +1730,7 @@
       "source": "内部体验 + 回归测试",
       "occurrence": 0,
       "target": "Internal Testing + Regression Testing",
-      "context": "td @ line 430 · surrounding text: 测试人员 内部体验 + 回归测试 4月15日前"
+      "context": "td @ line 432 · surrounding text: 测试人员 内部体验 + 回归测试 4月15日前"
     },
     {
       "id": "u_cbdd2b88319879c6",
@@ -1738,7 +1738,7 @@
       "source": "4月15日前",
       "occurrence": 0,
       "target": "Before April 15th",
-      "context": "td @ line 430 · surrounding text: 测试人员 内部体验 + 回归测试 4月15日前"
+      "context": "td @ line 432 · surrounding text: 测试人员 内部体验 + 回归测试 4月15日前"
     },
     {
       "id": "u_ef45aa02b1ad47cf",
@@ -1746,7 +1746,7 @@
       "source": "支付通道文档",
       "occurrence": 0,
       "target": "Payment Channel Documentation",
-      "context": "td @ line 431 · surrounding text: 支付通道文档 哪些通道在用、为什么其他被关 4月7日（Lex会议）"
+      "context": "td @ line 433 · surrounding text: 支付通道文档 哪些通道在用、为什么其他被关 4月7日（Lex会议）"
     },
     {
       "id": "u_3c2b3f02692eb31b",
@@ -1754,7 +1754,7 @@
       "source": "哪些通道在用、为什么其他被关",
       "occurrence": 0,
       "target": "Which channels are in use and why others were disabled",
-      "context": "td @ line 431 · surrounding text: 支付通道文档 哪些通道在用、为什么其他被关 4月7日（Lex会议）"
+      "context": "td @ line 433 · surrounding text: 支付通道文档 哪些通道在用、为什么其他被关 4月7日（Lex会议）"
     },
     {
       "id": "u_c12b6ce89ab8c727",
@@ -1762,7 +1762,7 @@
       "source": "4月7日（Lex会议）",
       "occurrence": 0,
       "target": "April 7th (Lex Meeting)",
-      "context": "td @ line 431 · surrounding text: 支付通道文档 哪些通道在用、为什么其他被关 4月7日（Lex会议）"
+      "context": "td @ line 433 · surrounding text: 支付通道文档 哪些通道在用、为什么其他被关 4月7日（Lex会议）"
     },
     {
       "id": "u_5f655a108d35e2dd",
@@ -1770,7 +1770,7 @@
       "source": "Lisahost确认",
       "occurrence": 0,
       "target": "Lisahost Confirmation",
-      "context": "td @ line 432 · surrounding text: Lisahost确认 6个\"测试\"节点是否还需要 4月7日"
+      "context": "td @ line 434 · surrounding text: Lisahost确认 6个\"测试\"节点是否还需要 4月7日"
     },
     {
       "id": "u_89c9bd0a6d61a4b0",
@@ -1778,7 +1778,7 @@
       "source": "6个\"测试\"节点是否还需要",
       "occurrence": 0,
       "target": "Do the 6 'test' VPN nodes still need to be retained?",
-      "context": "td @ line 432 · surrounding text: Lisahost确认 6个\"测试\"节点是否还需要 4月7日"
+      "context": "td @ line 434 · surrounding text: Lisahost确认 6个\"测试\"节点是否还需要 4月7日"
     },
     {
       "id": "u_e369e10f0529ac3e",
@@ -1786,7 +1786,7 @@
       "source": "4月7日",
       "occurrence": 0,
       "target": "April 7th",
-      "context": "td @ line 432 · surrounding text: Lisahost确认 6个\"测试\"节点是否还需要 4月7日"
+      "context": "td @ line 434 · surrounding text: Lisahost确认 6个\"测试\"节点是否还需要 4月7日"
     },
     {
       "id": "u_2a823c9880d6eff7",
@@ -1794,7 +1794,7 @@
       "source": "财务总结",
       "occurrence": 0,
       "target": "Financial Summary",
-      "context": "h2.section-heading @ line 439"
+      "context": "h2.section-heading @ line 441"
     },
     {
       "id": "u_396664bd36d61311",
@@ -1802,7 +1802,7 @@
       "source": "已确认：",
       "occurrence": 0,
       "target": "Confirmed:",
-      "context": "strong @ line 441 · surrounding text: 已确认： ~$735/月基础设施浪费，Q2清除。每个被封滥用账户节省$100-150/月。"
+      "context": "strong @ line 443 · surrounding text: 已确认： ~$735/月基础设施浪费，Q2清除。每个被封滥用账户节省$100-150/月。"
     },
     {
       "id": "u_a789ca6eb2566f07",
@@ -1810,7 +1810,7 @@
       "source": "~$735/月基础设施浪费，Q2清除。每个被封滥用账户节省$100-150/月。",
       "occurrence": 0,
       "target": "~$735/month in infrastructure waste, to be cleared in Q2. Each sealed misused account saves $100-150/month.",
-      "context": "div.section-body @ line 441 · surrounding text: 已确认： ~$735/月基础设施浪费，Q2清除。每个被封滥用账户节省$100-150/月。"
+      "context": "div.section-body @ line 443 · surrounding text: 已确认： ~$735/月基础设施浪费，Q2清除。每个被封滥用账户节省$100-150/月。"
     },
     {
       "id": "u_1bfebfbe3e6b24b7",
@@ -1818,7 +1818,7 @@
       "source": "预计：",
       "occurrence": 0,
       "target": "Estimated:",
-      "context": "strong @ line 444 · surrounding text: 预计： 转化率+0.3-0.5% = $3,000-5,000/月。基础设施整合$500-700+/月。"
+      "context": "strong @ line 446 · surrounding text: 预计： 转化率+0.3-0.5% = $3,000-5,000/月。基础设施整合$500-700+/月。"
     },
     {
       "id": "u_7765aa5b93538ddd",
@@ -1826,7 +1826,7 @@
       "source": "转化率+0.3-0.5% = $3,000-5,000/月。基础设施整合$500-700+/月。",
       "occurrence": 0,
       "target": "Conversion rate +0.3-0.5% = $3,000-5,000/month. Infrastructure consolidation $500-700+/month.",
-      "context": "div.section-body @ line 444 · surrounding text: 预计： 转化率+0.3-0.5% = $3,000-5,000/月。基础设施整合$500-700+/月。"
+      "context": "div.section-body @ line 446 · surrounding text: 预计： 转化率+0.3-0.5% = $3,000-5,000/月。基础设施整合$500-700+/月。"
     },
     {
       "id": "u_ba0e1204a1ded567",
@@ -1834,7 +1834,7 @@
       "source": "总价值：",
       "occurrence": 0,
       "target": "Total Value:",
-      "context": "strong @ line 447 · surrounding text: 总价值： ~$735/月确认 + $3,500-5,700/月潜在。"
+      "context": "strong @ line 449 · surrounding text: 总价值： ~$735/月确认 + $3,500-5,700/月潜在。"
     },
     {
       "id": "u_ae49e0ffd88213f0",
@@ -1842,7 +1842,7 @@
       "source": "~$735/月确认 + $3,500-5,700/月潜在。",
       "occurrence": 0,
       "target": "$735/month confirmed + $3,500-$5,700/month potential.",
-      "context": "div.section-body @ line 447 · surrounding text: 总价值： ~$735/月确认 + $3,500-5,700/月潜在。"
+      "context": "div.section-body @ line 449 · surrounding text: 总价值： ~$735/月确认 + $3,500-5,700/月潜在。"
     },
     {
       "id": "u_d74ed28f0fb0fc4a",
@@ -1850,7 +1850,7 @@
       "source": "后续步骤",
       "occurrence": 0,
       "target": "Subsequent Steps",
-      "context": "h2.section-heading @ line 453"
+      "context": "h2.section-heading @ line 455"
     },
     {
       "id": "u_905adbcbf5daa6fb",
@@ -1858,7 +1858,7 @@
       "source": "4月6日前：确认Lisahost节点、提供支付文档、安排安卓开发工具",
       "occurrence": 0,
       "target": "Before April 6: Confirm Lisahost VPN node, provide payment documentation, schedule Android development tools",
-      "context": "li @ line 455"
+      "context": "li @ line 457"
     },
     {
       "id": "u_eb168cb4bfaafbca",
@@ -1866,7 +1866,7 @@
       "source": "4月6日：第1阶段启动",
       "occurrence": 0,
       "target": "April 6: Sprint 1 Launch",
-      "context": "li @ line 456"
+      "context": "li @ line 458"
     },
     {
       "id": "u_298883c0d3698fd3",
@@ -1874,7 +1874,7 @@
       "source": "4月7日：Lex会议 — 验证计划、GFW/延迟、知识转移",
       "occurrence": 0,
       "target": "April 7: Lex Meeting — Validate Plan, GFW/Delay, Knowledge Transfer",
-      "context": "li @ line 457"
+      "context": "li @ line 459"
     },
     {
       "id": "u_de15b4b76cc8e68a",
@@ -1882,7 +1882,7 @@
       "source": "4月10日起：周报告",
       "occurrence": 0,
       "target": "Starting April 10: Weekly Reports",
-      "context": "li @ line 458"
+      "context": "li @ line 460"
     },
     {
       "id": "u_caf66fb6d41c7b99",
@@ -1890,7 +1890,7 @@
       "source": "风险评估",
       "occurrence": 0,
       "target": "Risk Assessment",
-      "context": "h2.section-heading @ line 464"
+      "context": "h2.section-heading @ line 466"
     },
     {
       "id": "u_fdaad07f9d07b39f",
@@ -1898,7 +1898,7 @@
       "source": "风险",
       "occurrence": 2,
       "target": "Risk",
-      "context": "th @ line 467 · surrounding text: 风险 等级 缓解"
+      "context": "th @ line 469 · surrounding text: 风险 等级 缓解"
     },
     {
       "id": "u_001ce456a7b6c402",
@@ -1906,7 +1906,7 @@
       "source": "等级",
       "occurrence": 0,
       "target": "Level",
-      "context": "th @ line 467 · surrounding text: 风险 等级 缓解"
+      "context": "th @ line 469 · surrounding text: 风险 等级 缓解"
     },
     {
       "id": "u_d696a4c6a049b7c4",
@@ -1914,7 +1914,7 @@
       "source": "缓解",
       "occurrence": 0,
       "target": "Mitigation",
-      "context": "th @ line 467 · surrounding text: 风险 等级 缓解"
+      "context": "th @ line 469 · surrounding text: 风险 等级 缓解"
     },
     {
       "id": "u_45edf8a2f91c01c1",
@@ -1922,7 +1922,7 @@
       "source": "Lisahost节点正当性不足",
       "occurrence": 0,
       "target": "Insufficient justification for the Lisahost VPN node",
-      "context": "td @ line 470 · surrounding text: Lisahost节点正当性不足 中 4月7日会议确认"
+      "context": "td @ line 472 · surrounding text: Lisahost节点正当性不足 中 4月7日会议确认"
     },
     {
       "id": "u_94fc3e47d965c2fc",
@@ -1930,7 +1930,7 @@
       "source": "中",
       "occurrence": 5,
       "target": "Medium",
-      "context": "td @ line 470 · surrounding text: Lisahost节点正当性不足 中 4月7日会议确认"
+      "context": "td @ line 472 · surrounding text: Lisahost节点正当性不足 中 4月7日会议确认"
     },
     {
       "id": "u_7dd65a07d5f3a8a1",
@@ -1938,7 +1938,7 @@
       "source": "4月7日会议确认",
       "occurrence": 0,
       "target": "Confirmed at April 7 Meeting",
-      "context": "td @ line 470 · surrounding text: Lisahost节点正当性不足 中 4月7日会议确认"
+      "context": "td @ line 472 · surrounding text: Lisahost节点正当性不足 中 4月7日会议确认"
     },
     {
       "id": "u_842b0c8c9d2551c1",
@@ -1946,7 +1946,7 @@
       "source": "测试环境延迟",
       "occurrence": 0,
       "target": "Test Environment Delay",
-      "context": "td @ line 471 · surrounding text: 测试环境延迟 低 4月12日前完成"
+      "context": "td @ line 473 · surrounding text: 测试环境延迟 低 4月12日前完成"
     },
     {
       "id": "u_0a0a660c3c3423a4",
@@ -1954,7 +1954,7 @@
       "source": "低",
       "occurrence": 0,
       "target": "Low",
-      "context": "td @ line 471 · surrounding text: 测试环境延迟 低 4月12日前完成"
+      "context": "td @ line 473 · surrounding text: 测试环境延迟 低 4月12日前完成"
     },
     {
       "id": "u_fddf9825749234d0",
@@ -1962,7 +1962,7 @@
       "source": "4月12日前完成",
       "occurrence": 0,
       "target": "Complete by April 12",
-      "context": "td @ line 471 · surrounding text: 测试环境延迟 低 4月12日前完成"
+      "context": "td @ line 473 · surrounding text: 测试环境延迟 低 4月12日前完成"
     },
     {
       "id": "u_48e5176fa65303d0",
@@ -1970,7 +1970,7 @@
       "source": "支付网关不明",
       "occurrence": 0,
       "target": "Unclear Payment Gateway",
-      "context": "td @ line 472 · surrounding text: 支付网关不明 低 从DB调查 + Lex确认"
+      "context": "td @ line 474 · surrounding text: 支付网关不明 低 从DB调查 + Lex确认"
     },
     {
       "id": "u_c824618f64814d3a",
@@ -1978,7 +1978,7 @@
       "source": "低",
       "occurrence": 1,
       "target": "Low",
-      "context": "td @ line 472 · surrounding text: 支付网关不明 低 从DB调查 + Lex确认"
+      "context": "td @ line 474 · surrounding text: 支付网关不明 低 从DB调查 + Lex确认"
     },
     {
       "id": "u_7ee69a43b3771600",
@@ -1986,7 +1986,7 @@
       "source": "从DB调查 + Lex确认",
       "occurrence": 0,
       "target": "DB Investigation + Lex Confirmation",
-      "context": "td @ line 472 · surrounding text: 支付网关不明 低 从DB调查 + Lex确认"
+      "context": "td @ line 474 · surrounding text: 支付网关不明 低 从DB调查 + Lex确认"
     },
     {
       "id": "u_2a9cd3c824360ce6",
@@ -1994,7 +1994,7 @@
       "source": "中国连接问题",
       "occurrence": 0,
       "target": "China Connectivity Issues",
-      "context": "td @ line 473 · surrounding text: 中国连接问题 中 部署后数据驱动监控"
+      "context": "td @ line 475 · surrounding text: 中国连接问题 中 部署后数据驱动监控"
     },
     {
       "id": "u_efe5f84b59ea84ec",
@@ -2002,7 +2002,7 @@
       "source": "中",
       "occurrence": 6,
       "target": "In",
-      "context": "td @ line 473 · surrounding text: 中国连接问题 中 部署后数据驱动监控"
+      "context": "td @ line 475 · surrounding text: 中国连接问题 中 部署后数据驱动监控"
     },
     {
       "id": "u_01fd2e33d4f68d65",
@@ -2010,7 +2010,7 @@
       "source": "部署后数据驱动监控",
       "occurrence": 0,
       "target": "Data-driven monitoring post-deployment",
-      "context": "td @ line 473 · surrounding text: 中国连接问题 中 部署后数据驱动监控"
+      "context": "td @ line 475 · surrounding text: 中国连接问题 中 部署后数据驱动监控"
     },
     {
       "id": "u_f4cfd3e6728504ad",
@@ -2018,7 +2018,7 @@
       "source": "状态：评估完成，开发进行中。下次报告：2026年4月10日。",
       "occurrence": 0,
       "target": "Status: Evaluation complete, development in progress. Next report: April 10, 2026.",
-      "context": "p @ line 480"
+      "context": "p @ line 482"
     }
   ],
   "blocks": {

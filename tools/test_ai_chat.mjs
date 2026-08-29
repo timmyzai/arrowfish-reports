@@ -6,6 +6,8 @@ import { readFile } from 'node:fs/promises';
 
 const require = createRequire(import.meta.url);
 const Evidence = require('../assets/report-evidence.js');
+globalThis.ArrowfishEvidence = Evidence;
+const Brief = require('../assets/report-brief.js');
 const workerSource = await readFile(new URL('../worker/index.js', import.meta.url), 'utf8');
 const browserSource = await readFile(new URL('../assets/ai-chat.js', import.meta.url), 'utf8');
 const browserStyles = await readFile(new URL('../assets/ai-chat.css', import.meta.url), 'utf8');
@@ -56,10 +58,36 @@ assert.ok(cleaned.every((message) => message.role === 'user'), 'Historical assis
 
 const responseFormat = Worker.buildResponseFormat(canonical);
 const schema = responseFormat.json_schema.schema;
-assert.equal(schema.properties.answer.maxLength, 600, 'Answer schema enforces the short-answer limit');
 assert.match(schema.properties.answer.description, /指标主体和值/, 'Answer schema rejects ambiguous bare-number guidance');
-assert.equal(schema.properties.citations.maxItems, 5, 'Citation schema permits at most five sources');
+assert.match(schema.properties.answer.description, /最多 600 个字符/, 'Answer schema states the short-answer limit as guidance');
+assert.match(schema.properties.citations.description, /最多 5 条引用/, 'Citation schema states the citation limit as guidance');
 assert.match(schema.properties.citations.items.properties.quote.description, /事实主体/);
+const schemaKeywords = new Set();
+(function collectKeywords(node) {
+  if (!node || typeof node !== 'object') return;
+  Object.keys(node).forEach((key) => {
+    schemaKeywords.add(key);
+    collectKeywords(node[key]);
+  });
+})(schema);
+['maxLength', 'minLength', 'maxItems', 'minItems', 'pattern', 'format'].forEach((keyword) => {
+  assert.ok(!schemaKeywords.has(keyword), `Strict schema omits the unsupported keyword ${keyword}`);
+});
+
+const overlongAnswer = Worker.validateAnswer({
+  kind: 'grounded',
+  answer: '客户端支付接口调试尚未完成 [S1]。'.repeat(60),
+  citations: [{ source_id: 'S1', quote: '客户端支付接口调试尚未完成' }]
+}, '支付接口完成了吗？', report, canonical, env);
+assert.notEqual(overlongAnswer.meta.result, 'grounded', 'Worker still rejects answers beyond the character limit');
+
+const overCitedSources = canonical.slice(2, 8);
+const overCited = Worker.validateAnswer({
+  kind: 'grounded',
+  answer: overCitedSources.map((source) => `${source.text.replace(/。$/, '')} [${source.id}]。`).join(''),
+  citations: overCitedSources.map((source) => ({ source_id: source.id, quote: source.text }))
+}, '平台发布与验收安排是什么？', report, canonical, env);
+assert.ok(overCited.sources.length <= 5, 'Worker never returns more than five sources regardless of model output');
 
 const systemPrompt = Worker.buildMessages('支付接口完成了吗？', report, canonical, [], 'zh-CN')[0].content;
 assert.match(systemPrompt, /利益相关者报告分析助手/, 'Prompt defines the stakeholder-facing role');
@@ -68,7 +96,8 @@ assert.match(systemPrompt, /值、单位和范围/, 'Prompt constrains period an
 assert.match(systemPrompt, /指代只能从先前 user 消息解析/, 'Prompt limits conversation history to referent resolution');
 assert.match(systemPrompt, /完成状态仍必须来自 documents/, 'Prompt example keeps follow-up facts grounded');
 assert.match(systemPrompt, /不使用模型常识作答/, 'Prompt example refuses unsupported general-knowledge questions');
-assert.match(workerSource, /max_completion_tokens:\s*1024/);
+assert.match(workerSource, /max_completion_tokens:\s*4096/, 'Complex grounded answers retain enough budget after model reasoning');
+assert.match(workerSource, /upstream\.status === 400[\s\S]*fallbackOrRefusal/, 'Schema generation failures return grounded fallback evidence');
 assert.match(workerSource, /reasoning_effort:\s*'medium'/);
 assert.match(workerSource, /include_reasoning:\s*false/);
 
@@ -79,6 +108,11 @@ assert.equal(summary.sources.length, 5, 'Extractive summary exposes five verifie
 const negative = Worker.extractiveFallback('Android 发布完成了吗？', report, canonical, env, 'test');
 assert.equal(negative.answerable, true, 'Explicit negative completion status may use extractive fallback');
 assert.match(negative.answer, /尚未完成/);
+
+const progressFallback = Worker.extractiveFallback('G10 现在进展如何？', report, canonical, env, 'generation_failed');
+assert.equal(progressFallback.answerable, true, 'Grounded questions fall back to the strongest exact evidence');
+assert.equal(progressFallback.sources.length, 1, 'Generic extractive fallback stays concise');
+assert.ok(progressFallback.answer.length <= 230, 'Generic extractive fallback remains short');
 
 const grounded = Worker.validateAnswer({
   kind: 'grounded',
@@ -177,6 +211,15 @@ const retrievalReport = {
 };
 const selected = Evidence.selectEvidence(retrievalReport, '平台发布与验收安排是什么？', [], { maxSources: 8, maxChars: 7000 });
 assert.ok(selected.length <= 8, 'Browser retrieval observes the eight-block contract');
+const conciseBrief = Brief.reportBrief({
+  report: retrievalReport,
+  reports: [retrievalReport],
+  index: { blockers: [{ reportId: retrievalReport.id, blockId: retrievalReport.blocks[0].id }] },
+  t: () => 'summary results risks next steps'
+});
+assert.ok(conciseBrief.sources.length <= 3, 'Automatic report brief stays within three evidence excerpts');
+assert.ok(conciseBrief.content.split('\n').length <= 3, 'Automatic report brief stays within three short lines');
+assert.ok(conciseBrief.sources.every((source) => source.quote.length <= 150), 'Brief citations use concise verbatim excerpts');
 assert.equal(
   Evidence.locatorText('ARROWFISH · 第10阶段细节 01 缺口已确认 广告追踪与付费分析'),
   Evidence.locatorText('ARROWFISH · 第10阶段细节 01缺口已确认广告追踪与付费分析'),
@@ -207,10 +250,14 @@ assert.match(browserSource, /ancestor\.tagName === 'DETAILS'/);
 assert.match(browserSource, /scrollIntoView/);
 assert.match(browserSource, /Evidence\.citationParts/);
 assert.match(browserSource, /Evidence\.stripCitationMarkers/);
+assert.doesNotMatch(browserSource, /ai-quick-action|renderShortcut/, 'Hard-coded assistant shortcut buttons stay removed');
+assert.match(browserSource, /renderMessages\(answerReceived \? 'assistant-start' : 'preserve'\)/, 'Completed answers anchor at their beginning while errors preserve scroll');
+assert.match(browserSource, /function scrollToLatestAssistant[\s\S]*getBoundingClientRect/, 'Assistant scroll anchoring targets the latest response');
 assert.doesNotMatch(browserSource, /link\.textContent = match\[1\]\.slice/);
 assert.match(browserSource, /currentReport\.file !== reportKey \|\| reportLoadToken !== requestReportToken/);
 assert.match(browserStyles, /min-height:\s*44px/);
 assert.match(browserStyles, /prefers-reduced-motion:\s*reduce/);
+assert.doesNotMatch(browserStyles, /\.ai-quick-action/, 'Removed shortcut controls leave no dead CSS');
 assert.match(landingPage, /assets\/ai-chat\.css\?v=20260829-13/);
 assert.match(landingPage, /assets\/ai-chat\.js\?v=20260829-13/);
 assert.match(browserStyles, /\.ai-launcher,\s*\.ai-backdrop,\s*\.ai-drawer,\s*\.ai-brief-strip\s*\{\s*display:\s*none !important;/);

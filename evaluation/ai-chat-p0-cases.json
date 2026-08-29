@@ -18,6 +18,18 @@
     "expectedAll": ["自动分组仍待关闭", "blacklist／whitelist 尚未接入配置生成"]
   },
   {
+    "id": "fff-multihop-scope",
+    "reportId": "goal-2026-20260827",
+    "question": "FFF 多跳 VPN 目前支持吗？",
+    "expectedAll": ["多跳资格与跳数资料", "通用双节点链路", "客户端选择入口与出口"]
+  },
+  {
+    "id": "fff-full-smart-routing",
+    "reportId": "goal-2026-20260827",
+    "question": "FFF 完整智能路由包括什么？",
+    "expectedAll": ["blacklist／whitelist 尚未接入配置生成", "split DNS", "fail closed"]
+  },
+  {
     "id": "goal-numeric",
     "reportId": "goal-2026-20260827",
     "question": "缺少营销归因的新注册比例是多少？",

@@ -404,7 +404,7 @@
         {
           "label": "2026-05-18–08-28 · Real-time client status",
           "title": "Client foundation and smart-connection acceptance",
-          "result": "A new APK was handed to QA on August 28; auto grouping, traffic splitting, and test results remain open",
+          "result": "The new APK was handed to QA on August 28; automatic grouping, protocol regression testing, and test results remain open.",
           "stage": "current",
           "reportId": "goal-2026-20260827",
           "blockId": "b0118"
@@ -471,16 +471,42 @@
         },
         {
           "id": "G10",
-          "title": "Smart connection, automatic route selection, and traffic splitting",
+          "title": "Connection foundation, automatic route selection, and protocol regression",
           "status": "APK handed to QA; full-scope acceptance testing remains pending",
           "statusGroup": "progress",
-          "evidence": "The client core has migrated to SkyTunnel; config loading and manual Trojan, VLESS, and ShadowTLS connections have been confirmed. A new APK was handed to QA on August 28, but auto grouping remains open. Although the engine supports direct routing and domain rules, blacklist/whitelist data is not wired into config generation, and there is no complete split-tunneling UI or acceptance record.",
-          "nextAction": "Record traceable APK details and complete auto grouping and protocol retesting. Then integrate rules that route China/local traffic directly and other traffic through the VPN, and complete end-to-end staging acceptance.",
+          "evidence": "The client has the foundation for configuration loading and manual Trojan, VLESS, and ShadowTLS connections. The new APK was handed to QA on August 28, but auto grouping remains open, and protocol regression testing and test results are also not closed; this goal no longer substitutes for acceptance testing of multi-hop VPN or full smart routing.",
+          "nextAction": "Record traceable APK evidence and complete automatic grouping, protocol regression testing, and end-to-end staging acceptance to provide a stable connection baseline for G16 and G17.",
           "deadline": "October 2026",
           "timeline": "dated",
           "atRisk": false,
           "reportId": "goal-2026-20260827",
           "blockId": "b0139"
+        },
+        {
+          "id": "G16",
+          "title": "Multi-hop VPN (entry and exit VPN nodes)",
+          "status": "Scope confirmed; development pending",
+          "statusGroup": "planned",
+          "evidence": "Product and user records already contain multi-hop eligibility and hop-count data, but the client does not yet establish an entry VPN node, exit VPN node, and connection chain; the current tunnel core also lacks a general two-node chain ready for FFF acceptance testing. SkyNode can serve as a normal entry or exit, while server-assigned upstream chaining is not currently supported.",
+          "nextAction": "Use a client-selected entry and exit two-hop design; complete chained dialing in the tunnel core, backend topology and credential configuration, FFF VPN node selection and status/failure handling, then verify the exit IP, disconnect protection, performance, and Android end-to-end connectivity.",
+          "deadline": "To schedule Including it in the first release will affect the current timeline",
+          "timeline": "unscheduled",
+          "atRisk": false,
+          "reportId": "goal-2026-20260827",
+          "blockId": "b0140"
+        },
+        {
+          "id": "G17",
+          "title": "Full smart routing and traffic-splitting policies",
+          "status": "Foundation exists; full capability pending development",
+          "statusGroup": "planned",
+          "evidence": "The current engine has direct outbound, domain-rule, and routing foundations, but blacklist/whitelist data is not wired into config generation, and a release-ready complete capability is still missing: versioned rules, direct access to domestic and local resources, VPN routing for other public traffic, split DNS, protection against invalid rules, user modes, and cross-platform acceptance testing all remain open.",
+          "nextAction": "Establish versioned domain, IP, and application rules with split DNS; provide full-tunnel VPN, smart-routing, and necessary user-exception modes; fail closed when rules are missing or corrupt, then complete Android, Windows, Apple/Linux, and China-network QA in sequence.",
+          "deadline": "To schedule Implement after the G10 stable connection baseline",
+          "timeline": "unscheduled",
+          "atRisk": false,
+          "reportId": "goal-2026-20260827",
+          "blockId": "b0141"
         },
         {
           "id": "G12",
@@ -493,7 +519,7 @@
           "timeline": "gated",
           "atRisk": false,
           "reportId": "goal-2026-20260827",
-          "blockId": "b0140"
+          "blockId": "b0142"
         },
         {
           "id": "G13",
@@ -506,7 +532,7 @@
           "timeline": "gated",
           "atRisk": false,
           "reportId": "goal-2026-20260827",
-          "blockId": "b0142"
+          "blockId": "b0144"
         }
       ]
     },
@@ -530,7 +556,7 @@
           "timeline": "gated",
           "atRisk": false,
           "reportId": "goal-2026-20260827",
-          "blockId": "b0148"
+          "blockId": "b0150"
         }
       ]
     }
@@ -692,6 +718,13 @@
     },
     {
       "reportId": "goal-2026-20260827",
+      "blockId": "b0133",
+      "reportDate": "2026-08-29",
+      "section": "FFF Goals List",
+      "text": "FFF now has seven independent goals; multi-hop VPN and full smart routing are no longer hidden inside the basic connection scope. Backend isolation is the architecture gate before the first client release, while development completion, builds, staging acceptance, and formal release are recorded separately."
+    },
+    {
+      "reportId": "goal-2026-20260827",
       "blockId": "b0136",
       "reportDate": "2026-08-29",
       "section": "FFF Goals List",
@@ -709,193 +742,207 @@
       "blockId": "b0139",
       "reportDate": "2026-08-29",
       "section": "FFF Goals List",
-      "text": "FFF · G10 Smart connection, automatic route selection, and traffic splitting APK handed to QA; full-scope acceptance testing remains pending The client core has migrated to SkyTunnel; config loading and manual Trojan, VLESS, and ShadowTLS connections have been confirmed. A new APK was handed to QA on August 28, but auto grouping remains open. Although the engine supports direct routing and domain rules, blacklist/whitelist data is not wired into config generation, and there is no complete split-tunneling UI or acceptance record. Record traceable APK details and complete auto grouping and protocol retesting. Then integrate rules that route China/local traffic directly and other traffic through the VPN, and complete end-to-end staging acceptance. October 2026"
+      "text": "FFF · G10 Connection foundation, automatic route selection, and protocol regression APK handed to QA; full-scope acceptance testing remains pending The client has the foundation for configuration loading and manual Trojan, VLESS, and ShadowTLS connections. The new APK was handed to QA on August 28, but auto grouping remains open, and protocol regression testing and test results are also not closed; this goal no longer substitutes for acceptance testing of multi-hop VPN or full smart routing. Record traceable APK evidence and complete automatic grouping, protocol regression testing, and end-to-end staging acceptance to provide a stable connection baseline for G16 and G17. October 2026"
     },
     {
       "reportId": "goal-2026-20260827",
       "blockId": "b0140",
       "reportDate": "2026-08-29",
       "section": "FFF Goals List",
-      "text": "FFF · G12 Payment Interface and Payment Loop Closure Pending Debugging Basic pages for packages, confirm orders, coupons, and payment channels exist; no completion or end-to-end acceptance records for client-side payment interfaces. Roy responsible for payment gateway prerequisites. Complete client-side payment interface debugging, successful and failed path regression, order status verification, and use as Android launch threshold closure. Android launch prior to Enter release acceptance testing only after completion"
+      "text": "FFF · G16 Multi-hop VPN (entry and exit VPN nodes) Scope confirmed; development pending Product and user records already contain multi-hop eligibility and hop-count data, but the client does not yet establish an entry VPN node, exit VPN node, and connection chain; the current tunnel core also lacks a general two-node chain ready for FFF acceptance testing. SkyNode can serve as a normal entry or exit, while server-assigned upstream chaining is not currently supported. Use a client-selected entry and exit two-hop design; complete chained dialing in the tunnel core, backend topology and credential configuration, FFF VPN node selection and status/failure handling, then verify the exit IP, disconnect protection, performance, and Android end-to-end connectivity. To schedule Including it in the first release will affect the current timeline"
+    },
+    {
+      "reportId": "goal-2026-20260827",
+      "blockId": "b0141",
+      "reportDate": "2026-08-29",
+      "section": "FFF Goals List",
+      "text": "FFF · G17 Full smart routing and traffic-splitting policies Foundation exists; full capability pending development The current engine has direct outbound, domain-rule, and routing foundations, but blacklist/whitelist data is not wired into config generation, and a release-ready complete capability is still missing: versioned rules, direct access to domestic and local resources, VPN routing for other public traffic, split DNS, protection against invalid rules, user modes, and cross-platform acceptance testing all remain open. Establish versioned domain, IP, and application rules with split DNS; provide full-tunnel VPN, smart-routing, and necessary user-exception modes; fail closed when rules are missing or corrupt, then complete Android, Windows, Apple/Linux, and China-network QA in sequence. To schedule Implement after the G10 stable connection baseline"
     },
     {
       "reportId": "goal-2026-20260827",
       "blockId": "b0142",
       "reportDate": "2026-08-29",
       "section": "FFF Goals List",
+      "text": "FFF · G12 Payment Interface and Payment Loop Closure Pending Debugging Basic pages for packages, confirm orders, coupons, and payment channels exist; no completion or end-to-end acceptance records for client-side payment interfaces. Roy responsible for payment gateway prerequisites. Complete client-side payment interface debugging, successful and failed path regression, order status verification, and use as Android launch threshold closure. Android launch prior to Enter release acceptance testing only after completion"
+    },
+    {
+      "reportId": "goal-2026-20260827",
+      "blockId": "b0144",
+      "reportDate": "2026-08-29",
+      "section": "FFF Goals List",
       "text": "FFF · G13 Sequential Multi-platform Releases Pending release Application has cross-screen and desktop layout foundation but no Android, Windows, macOS, iOS or Linux release acceptance records for Sprint 10. Strictly follow Android → Windows → macOS+iOS → Linux for rollout; acceptance testing closes before the next phase is launched. Gate control Each platform is independently built and undergoes acceptance testing."
     },
     {
       "reportId": "goal-2026-20260827",
-      "blockId": "b0148",
+      "blockId": "b0150",
       "reportDate": "2026-08-29",
       "section": "Shared Management Capabilities",
       "text": "SHARED · G1 Evidence-based AI Reporting Assistant POC Ready for Production This capability does not belong to any product line. Current report isolation, local evidence retrieval, verifiable references, dialogue and summary boundaries have been implemented; all automated search evaluation and regression tests are 100%. Worker and reporting site releases completed with production environment summaries, digital Q&A, refusal responses, reference deep links, and mobile app acceptance. Worker and reporting site releases completed with production environment summaries, digital Q&A, refusal responses, reference deep links, and mobile app acceptance. POC Launch Closed after Production Acceptance"
     },
     {
       "reportId": "goal-2026-20260827",
-      "blockId": "b0153",
+      "blockId": "b0155",
       "reportDate": "2026-08-29",
       "section": "Arrowfish",
       "text": "Two protocol issues have source code fixes, but test environment, BO and client real connection records are still not fully closed."
     },
     {
       "reportId": "goal-2026-20260827",
-      "blockId": "b0154",
+      "blockId": "b0156",
       "reportDate": "2026-08-29",
       "section": "Arrowfish",
       "text": "G5 End-to-end acceptance is not closed Two protocol issues have source code fixes, but test environment, BO and client real connection records are still not fully closed."
     },
     {
       "reportId": "goal-2026-20260827",
-      "blockId": "b0155",
+      "blockId": "b0157",
       "reportDate": "2026-08-29",
       "section": "Arrowfish",
       "text": "Multiple active sessions per account/device are all zero; however, the extreme unpaid traffic has ended but availability dropped on May 25th. This cannot be interpreted as a single cause-effect relationship."
     },
     {
       "reportId": "goal-2026-20260827",
-      "blockId": "b0156",
+      "blockId": "b0158",
       "reportDate": "2026-08-29",
       "section": "Arrowfish",
       "text": "G14 Back Office (BO) quota effectiveness has been quantified Multiple active sessions per account/device are all zero; however, the extreme unpaid traffic has ended but availability dropped on May 25th. This cannot be interpreted as a single cause-effect relationship."
     },
     {
       "reportId": "goal-2026-20260827",
-      "blockId": "b0163",
+      "blockId": "b0165",
       "reportDate": "2026-08-29",
       "section": "Arrowfish",
       "text": "34 units of three-agreement listening are ready, and 64 units remain Trojan-only; full-scale rollout and acceptance testing with China have not been closed."
     },
     {
       "reportId": "goal-2026-20260827",
-      "blockId": "b0164",
+      "blockId": "b0166",
       "reportDate": "2026-08-29",
       "section": "Arrowfish",
       "text": "G7 Change the Three Agreements to Four Barriers 34 units of three-agreement listening are ready, and 64 units remain Trojan-only; full-scale rollout and acceptance testing with China have not been closed."
     },
     {
       "reportId": "goal-2026-20260827",
-      "blockId": "b0172",
+      "blockId": "b0174",
       "reportDate": "2026-08-29",
       "section": "Arrowfish",
       "text": "G18 Registered users no longer represent the user base. 400,347 accounts had active VPN usage of 4,938 in the last 30 days and a historical payment volume of 19,476. Subsequent reports will follow the quality funnel."
     },
     {
       "reportId": "goal-2026-20260827",
-      "blockId": "b0184",
+      "blockId": "b0190",
       "reportDate": "2026-08-29",
       "section": "User quality, quotas, devices, platforms, and key deployments",
       "text": "May 25 boundary Release tags pointed to Git objects starting at 06:14, with the first production session appearing at 06:52; device identity improved during the week, but D7 activation, revenue, users, and traffic all dropped sharply. G14 control capability evidence exists; G19 continues to align complete deployment scope with post-release availability, not a single cause-effect attribution can be made."
     },
     {
       "reportId": "goal-2026-20260827",
-      "blockId": "b0188",
+      "blockId": "b0194",
       "reportDate": "2026-08-29",
       "section": "User quality, quotas, devices, platforms, and key deployments",
       "text": "China Connection China-registered VPN-active users fell from 11,457 in May to 3,842 in June; MY/TW registered-country cohorts also declined around May 25. MY/TW QA was available while China was unavailable; these are separate operational test results. DB does not prove that GFW was the sole cause of overall decline; G7 still requires independent acceptance in the Chinese region."
     },
     {
       "reportId": "goal-2026-20260827",
-      "blockId": "b0189",
+      "blockId": "b0195",
       "reportDate": "2026-08-29",
       "section": "User quality, quotas, devices, platforms, and key deployments",
       "text": "Rollout of Three Agreements Ready for all Three Agreement listeners on 34 hosts; 64 remain Trojan-only; external state unverified. G7 changed from 'complete' to 'core complete, rollout not closed with China acceptance tests'."
     },
     {
       "reportId": "goal-2026-20260827",
-      "blockId": "b0190",
+      "blockId": "b0196",
       "reportDate": "2026-08-29",
       "section": "User quality, quotas, devices, platforms, and key deployments",
       "text": "Platform Priority Android + Windows account for 94.86% of recent identifiable VPN users, 94.15% of recent traffic, and 89.04% of orders. Prioritize Android and Windows; Apple platform retains a recovery path, not described as permanent abandonment."
     },
     {
       "reportId": "goal-2026-20260827",
-      "blockId": "b0197",
+      "blockId": "b0203",
       "reportDate": "2026-08-29",
       "section": "Clone the code baseline but isolate production data",
       "text": "3 · Isolate staging Deploy independent Back Office, DB, Redis, domain and configuration; do not copy production accounts or credentials."
     },
     {
       "reportId": "goal-2026-20260827",
-      "blockId": "b0206",
+      "blockId": "b0212",
       "reportDate": "2026-08-29",
       "section": "Facts and Gaps as of Sprint 10",
       "text": "Core Funnel Existing reports cannot establish stable connections between product pages, packages, checkout, payment callbacks, and channels. Add consistent events and association fields for five key stages."
     },
     {
       "reportId": "goal-2026-20260827",
-      "blockId": "b0214",
+      "blockId": "b0220",
       "reportDate": "2026-08-29",
       "section": "Goals for Sprint 10 After",
       "text": "Scope Boundaries The above is the target sequence confirmed for Sprint 10, not indicating that specific technical solutions have been locked or developed."
     },
     {
       "reportId": "goal-2026-20260827",
-      "blockId": "b0220",
+      "blockId": "b0226",
       "reportDate": "2026-08-29",
       "section": "Subscription Renewal Loop",
       "text": "Early Renewal Users cannot currently upgrade their plan in time before it expires. Clear rules for renewal must be established, ensuring that the package duration and benefits align with payments."
     },
     {
       "reportId": "goal-2026-20260827",
-      "blockId": "b0221",
+      "blockId": "b0227",
       "reportDate": "2026-08-29",
       "section": "Subscription Renewal Loop",
       "text": "Automatic Renewal The automatic renewal process has not yet formed a complete loop. All actions including payment, successful renewal, failure handling, and user notifications can be tracked."
     },
     {
       "reportId": "goal-2026-20260827",
-      "blockId": "b0222",
+      "blockId": "b0228",
       "reportDate": "2026-08-29",
       "section": "Subscription Renewal Loop",
       "text": "Stripe Subscription Management Subscription status and back office package status cannot be fully managed. Clear rules for creation, change, cancellation, recovery, and state synchronization exist to avoid duplication."
     },
     {
       "reportId": "goal-2026-20260827",
-      "blockId": "b0223",
+      "blockId": "b0229",
       "reportDate": "2026-08-29",
       "section": "Subscription Renewal Loop",
       "text": "Revenue Analysis Renewal and initial payment cannot be fully analyzed by source and cycle. Connected to the G1 attribution chain, distinguishing between initial payment, each renewal, amount, and actual order status."
     },
     {
       "reportId": "goal-2026-20260827",
-      "blockId": "b0226",
+      "blockId": "b0232",
       "reportDate": "2026-08-29",
       "section": "Automated Deployment and Management of VPN nodes",
       "text": "Sprint 10 Detail 03 Progress acceptance testing not closed Automated Deployment and Management of VPN nodes Sprint 10 Evidence, Supplier Procurement Gap and Future Goals"
     },
     {
       "reportId": "goal-2026-20260827",
-      "blockId": "b0227",
+      "blockId": "b0233",
       "reportDate": "2026-08-29",
       "section": "Automated Deployment and Management of VPN nodes",
       "text": "Data boundaries Page updates on August 28th only include read-only production status but do not describe the source code or BO operations for Sprint 10 delivery as part of Sprint 10. Separate records are kept for ready hosts, full rollout in China and regional acceptance."
     },
     {
       "reportId": "goal-2026-20260827",
-      "blockId": "b0230",
+      "blockId": "b0236",
       "reportDate": "2026-08-29",
       "section": "Automated Deployment and Management of VPN nodes",
       "text": "Supplier Overview Supplier VPN node count, cost and health overview in Sprint 3. At that time, it was explicitly not used for procurement decisions. Standardize production data and convert inventory, costs, and stability into reviewable procurement conditions. Historical Basis"
     },
     {
       "reportId": "goal-2026-20260827",
-      "blockId": "b0231",
+      "blockId": "b0237",
       "reportDate": "2026-08-29",
       "section": "Automated Deployment and Management of VPN nodes",
       "text": "Agreements and Back Office (BO) acceptance testing Sprint 10 identified 2 high-priority protocol issues, completed source fixes for 2, and achieved closure on 0 through end-to-end acceptance testing. Complete records of the test environment bootstrap, BO, Android, and FFF integration to close out. Acceptance testing not closed"
     },
     {
       "reportId": "goal-2026-20260827",
-      "blockId": "b0236",
+      "blockId": "b0242",
       "reportDate": "2026-08-29",
       "section": "Automated Deployment and Management of VPN nodes",
       "text": "Partial API API handles existing VM lifecycle; missing purchase/payment steps are handled by AI Browser Agent, which then returns to the same BO procurement task. Save state for each step; API and browser cannot execute the same order simultaneously."
     },
     {
       "reportId": "goal-2026-20260827",
-      "blockId": "b0237",
+      "blockId": "b0243",
       "reportDate": "2026-08-29",
       "section": "Automated Deployment and Management of VPN nodes",
       "text": "No API or Top Up Use OpenClaw-controlled browser agent to log into the supplier website, select approved packages and regions, establish a new order; cannot perform top-up when needed. Manual confirmation before the first payment; 2FA/verification codes transferred to manual processing; limit single transaction, daily, and monthly amounts; save evidence of the page, order number, and invoice."

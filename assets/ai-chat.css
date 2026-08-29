@@ -199,47 +199,6 @@
     color: var(--ai-text);
 }
 
-.ai-quick-actions {
-    display: flex;
-    gap: 8px;
-    overflow-x: auto;
-    padding: 12px 16px;
-    border-bottom: 1px solid var(--ai-border);
-    scrollbar-width: none;
-}
-
-.ai-quick-actions::-webkit-scrollbar {
-    display: none;
-}
-
-.ai-quick-action {
-    min-height: 44px;
-    flex: 0 0 auto;
-    padding: 8px 12px;
-    border: 1px solid var(--af-border);
-    border-radius: 999px;
-    background: var(--af-primary-soft);
-    color: var(--af-primary);
-    font: inherit;
-    font-size: 13px;
-    font-weight: 500;
-    cursor: pointer;
-    touch-action: manipulation;
-    transition: background-color 160ms ease, border-color 160ms ease;
-}
-
-.ai-quick-action > span {
-    margin-right: 5px;
-    color: var(--af-primary);
-    font-weight: 700;
-}
-
-.ai-quick-action:hover {
-    border-color: var(--af-primary);
-    background: var(--af-primary-soft);
-}
-
-.ai-quick-action:disabled,
 .ai-send:disabled,
 .ai-composer textarea:disabled {
     cursor: not-allowed;
@@ -544,7 +503,6 @@
 
 .ai-launcher:focus-visible,
 .ai-icon-button:focus-visible,
-.ai-quick-action:focus-visible,
 .ai-follow-up:focus-visible,
 .ai-handoff a:focus-visible,
 .ai-send:focus-visible,
@@ -602,7 +560,6 @@
     .ai-backdrop,
     .ai-drawer,
     .ai-icon-button,
-    .ai-quick-action,
     .ai-composer-row,
     .ai-send {
         transition: none;

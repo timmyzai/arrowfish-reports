@@ -564,7 +564,7 @@
         <p>21 项目标按五个不重叠模块管理：系统治理、安全与工程质量、VPN 核心、用户与收入、多平台增长。Android + Windows 占最近可识别 VPN 用户 94.86%；后续优先级以现有用户保护与可验证发布为先。</p>
       </article>
       <article class="executive-card fff">
-        <div class="executive-card-head"><span class="executive-card-label">FFF</span><span class="badge progress">1 进行中 · 4 待执行</span></div>
+        <div class="executive-card-head"><span class="executive-card-label">FFF</span><span class="badge progress">1 进行中 · 6 待执行</span></div>
         <h3>客户端持续开发，后端隔离是首发门槛</h3>
         <p>Lex 客户端口径更新至 8 月 28 日：新 APK 已交 QA，结果待回。同日锁定新 GitLab repo、独立 staging 与独立数据层；不复制 Arrowfish 的生产账号、数据库或 secrets。</p>
       </article>
@@ -809,8 +809,8 @@
         <div class="route-card">
           <span class="route-date">2026-05-18–08-28 · 客户端实时口径</span>
           <h3>客户端基础与智能连接验收</h3>
-          <p class="route-goals"><strong>G10</strong> SkyTunnel 核心迁移与自动选线<br>智能分流仍待接入和验收</p>
-          <span class="route-result">8月28日新 APK 已交 QA；自动分组、流量分流与测试结果仍未关闭</span>
+          <p class="route-goals"><strong>G10</strong> SkyTunnel 核心迁移、自动选线与协议回归</p>
+          <span class="route-result">8月28日新 APK 已交 QA；自动分组、协议补测与测试结果仍未关闭</span>
         </div>
       </li>
       <li class="route-stage current">
@@ -825,7 +825,7 @@
         <div class="route-card">
           <span class="route-date">G14 staging smoke test 后</span>
           <h3>Android 首发收口</h3>
-          <p class="route-goals"><strong>G10</strong> 自动分组、协议补测与流量分流<br><strong>G12</strong> 支付接口与支付闭环</p>
+          <p class="route-goals"><strong>G10</strong> 自动分组与协议补测<br><strong>G12</strong> 支付接口与支付闭环<br><strong>G16／G17</strong> 多跳 VPN 与完整智能路由独立开发、独立验收</p>
           <span class="route-result">构建、staging 与端到端验收后发布</span>
         </div>
       </li>
@@ -852,8 +852,8 @@
     <div class="section-head">
       <div>
         <p class="section-kicker">FFF · 目标清单 · 更新至 2026-08-28</p>
-        <div class="project-title-row"><h2 id="fff-goals-title">FFF 目标清单</h2><span class="project-label">5 项目标</span></div>
-        <p class="section-copy">FFF 当前有5项独立目标；后端隔离是客户端首发前的架构门槛，开发完成、构建、staging 验收与正式发布分别记录。</p>
+        <div class="project-title-row"><h2 id="fff-goals-title">FFF 目标清单</h2><span class="project-label">7 项目标</span></div>
+        <p class="section-copy">FFF 当前有7项独立目标；多跳 VPN 与完整智能路由不再隐藏在基础连接范围内。后端隔离是客户端首发前的架构门槛，开发完成、构建、staging 验收与正式发布分别记录。</p>
       </div>
       <div class="status-summary" data-status-summary aria-label="FFF 目标状态统计">
         <div class="status-count done"><b data-count="done">0</b><span>已完成</span></div>
@@ -863,7 +863,7 @@
     </div>
     <div class="goal-table-wrap">
       <table class="goal-table" aria-labelledby="fff-goals-title">
-        <caption class="sr-only">FFF 2026 年 5 项目标的状态、进展、下一里程碑与目标时间</caption>
+        <caption class="sr-only">FFF 2026 年 7 项目标的状态、进展、下一里程碑与目标时间</caption>
         <colgroup><col><col><col><col><col></colgroup>
         <thead><tr><th>目标</th><th>状态</th><th>最新进展</th><th>下一里程碑</th><th>目标时间</th></tr></thead>
         <tbody>
@@ -872,7 +872,9 @@
           <tr class="goal-row" data-status="planned"><td class="goal-name"><span class="goal-id">FFF · G15</span>FFF 专属 schema、API 与模块重构</td><td><span class="badge planned">隔离验收后开始</span></td><td>重构范围尚未在隔离环境启动；当前原则是先得到行为一致、可回滚的 staging baseline，再改变 schema 和契约。</td><td>建立独立 migration history，按 FFF 需求重构；共享能力仅通过版本化源码模块接入。</td><td class="goal-target">G14 验收后</td></tr>
 
           <tr class="group-row"><th colspan="5">02 · Android 首发闭环</th></tr>
-          <tr class="goal-row" data-status="progress"><td class="goal-name"><span class="goal-id">FFF · G10</span>智能连接、自动选线与流量分流</td><td><span class="badge progress">APK 已交 QA，范围未验收</span></td><td>客户端核心已迁移至 SkyTunnel；config 加载及 Trojan、VLESS、ShadowTLS 手动连线已确认。8月28日新 APK 已交 QA，但自动分组仍待关闭；引擎虽支持 direct 和域名规则，blacklist／whitelist 尚未接入配置生成，也没有完整分流 UI 与验收记录。</td><td>记录可追溯 APK 资料，完成自动分组与协议补测；再接入中国／本地流量直连、其他流量走 VPN 的规则，并完成测试环境端到端验收。</td><td class="goal-target">2026 年 10 月</td></tr>
+          <tr class="goal-row" data-status="progress"><td class="goal-name"><span class="goal-id">FFF · G10</span>连接基础、自动选线与协议回归</td><td><span class="badge progress">APK 已交 QA，范围未验收</span></td><td>客户端已具备配置加载及 Trojan、VLESS、ShadowTLS 手动连线基础。8月28日新 APK 已交 QA，但自动分组仍待关闭，协议补测与测试结果也未关闭；本目标不再代替多跳 VPN 或完整智能路由的验收。</td><td>记录可追溯 APK 资料，完成自动分组、协议补测与测试环境端到端验收，为 G16 与 G17 提供稳定连接基线。</td><td class="goal-target">2026 年 10 月</td></tr>
+          <tr class="goal-row" data-status="planned"><td class="goal-name"><span class="goal-id">FFF · G16</span>多跳 VPN（入口／出口双节点）</td><td><span class="badge planned">范围已确认，待开发</span></td><td>套餐和用户资料已有多跳资格与跳数资料，但客户端尚未建立入口节点、出口节点与连接链；当前隧道核心也没有可供 FFF 验收的通用双节点链路。SkyNode 可作为普通入口或出口，服务端指定上游节点的链式转发不在当前能力内。</td><td>采用客户端选择入口与出口的两跳方案；完成隧道核心链式拨号、后端拓扑与凭证配置、FFF 节点选择及状态／失败处理，并验证出口 IP、断线保护、性能与 Android 端到端连接。</td><td class="goal-target">待排期<small>若纳入首发，将影响当前时间线</small></td></tr>
+          <tr class="goal-row" data-status="planned"><td class="goal-name"><span class="goal-id">FFF · G17</span>完整智能路由与分流策略</td><td><span class="badge planned">基础存在，完整能力待开发</span></td><td>现有引擎具备 direct、域名规则和路由基础，但 blacklist／whitelist 尚未接入配置生成，也尚未形成可发布的完整能力：版本化规则、国内／本地资源直连、其他公网流量走 VPN、分流 DNS、规则失效保护、用户模式和跨平台验收均未关闭。</td><td>建立可版本化的域名／IP／应用规则与 split DNS；提供全局 VPN、智能路由和必要的用户例外模式；规则缺失或损坏时 fail closed，并依次完成 Android、Windows、Apple／Linux 与中国网络 QA。</td><td class="goal-target">待排期<small>G10 稳定连接基线后实施</small></td></tr>
           <tr class="goal-row" data-status="planned"><td class="goal-name"><span class="goal-id">FFF · G12</span>支付接口与支付闭环</td><td><span class="badge planned">待调试</span></td><td>套餐、确认订单、优惠券与支付通道基础页面已存在；客户端支付接口尚无完成与端到端验收记录。支付网关前置事项由 Roy 负责。</td><td>完成客户端支付接口调试、成功与失败路径回归、订单状态核对，并作为 Android 首发门槛关闭。</td><td class="goal-target">Android 首发前<small>完成后才进入发布验收</small></td></tr>
 
           <tr class="group-row"><th colspan="5">03 · 多平台发布</th></tr>
@@ -913,7 +915,7 @@
       <div>
         <p class="section-kicker">本次变化</p>
         <h2 id="latest-title">第10阶段收口与生产研究更新</h2>
-        <p class="section-copy">工程交付保持第10阶段口径；8月28日新增只读生产数据、平台影响、FFF 架构决策与 Arrowfish 智能分流目标，并清楚标记后续计划。</p>
+        <p class="section-copy">工程交付保持第10阶段口径；8月28日新增只读生产数据、平台影响、FFF 架构决策与 Arrowfish 智能分流目标；8月29日把 FFF 多跳 VPN 与完整智能路由拆为独立目标，并清楚标记后续计划。</p>
       </div>
     </div>
     <div class="updates-by-project">
@@ -935,7 +937,9 @@
       <div class="update-group project-fff" aria-labelledby="fff-updates-title">
         <h3 id="fff-updates-title">FFF · Lex 实时口径截至 2026-08-28</h3>
         <div class="updates-grid">
-          <article class="update-card"><span class="update-id">G10</span><strong>新 APK 已交 QA，智能分流仍待完成</strong><p>8月28日完成 QA handoff；构建来源、自动分组、协议补测、分流规则与测试结果仍需留证后关闭。</p></article>
+          <article class="update-card"><span class="update-id">G10</span><strong>新 APK 已交 QA，连接基线仍待关闭</strong><p>8月28日完成 QA handoff；构建来源、自动分组、协议补测与测试结果仍需留证后关闭。</p></article>
+          <article class="update-card"><span class="update-id">G16</span><strong>多跳 VPN 成为独立目标</strong><p>采用客户端选择入口／出口的两跳路线；隧道核心、后端配置、FFF 交互与端到端验收分别关闭。</p></article>
+          <article class="update-card"><span class="update-id">G17</span><strong>完整智能路由成为独立目标</strong><p>除中国／本地资源直连外，独立覆盖规则版本、split DNS、fail-closed、用户模式与跨平台验收。</p></article>
           <article class="update-card"><span class="update-id">G14</span><strong>后端分离路径已决定</strong><p>新 GitLab repo、独立 staging backend／DB／Redis；不复制 Arrowfish 生产账号或 secrets。</p></article>
           <article class="update-card"><span class="update-id">G15</span><strong>先验收 baseline 再重构</strong><p>核心 smoke test 通过后才建立 FFF 专属 migration、schema 和 API 变更。</p></article>
         </div>

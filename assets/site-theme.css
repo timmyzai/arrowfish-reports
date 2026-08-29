@@ -282,11 +282,9 @@ html[data-theme="dark"] .badge.risk { background: var(--af-danger-soft) !importa
 html[data-theme="dark"] .badge.planned { background: var(--af-surface-muted) !important; color: var(--af-text-muted) !important; }
 
 html[data-theme="dark"] .ai-drawer { background: linear-gradient(180deg, var(--af-surface), var(--af-bg)); color: var(--af-text); box-shadow: -12px 0 36px var(--af-shadow); }
-html[data-theme="dark"] .ai-quick-actions,
 html[data-theme="dark"] .ai-handoff,
 html[data-theme="dark"] .ai-composer { background: var(--af-surface); border-color: var(--af-border); }
 html[data-theme="dark"] .ai-icon-button,
-html[data-theme="dark"] .ai-quick-action,
 html[data-theme="dark"] .ai-follow-up,
 html[data-theme="dark"] .ai-message-action { background: var(--af-surface-muted); border-color: var(--af-border); color: var(--af-text); }
 html[data-theme="dark"] .ai-message.assistant,

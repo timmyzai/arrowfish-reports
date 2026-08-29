@@ -27,7 +27,6 @@
   var input;
   var sendButton;
   var statusEl;
-  var quickButtons;
   var handoffEl;
   var clearButton;
   var closeButton;
@@ -106,12 +105,6 @@
       '      </button>',
       '    </div>',
       '  </header>',
-      '  <div class="ai-quick-actions" aria-label="' + t('ai.suggestions') + '">',
-      '    <button class="ai-quick-action" type="button" data-action="roadmap"><span aria-hidden="true">⌁</span><span data-ai-label="roadmap">' + t('ai.roadmap') + '</span></button>',
-      '    <button class="ai-quick-action" type="button" data-action="results"><span aria-hidden="true">✦</span><span data-ai-label="results">' + t('ai.results') + '</span></button>',
-      '    <button class="ai-quick-action" type="button" data-action="blockers"><span aria-hidden="true">!</span><span data-ai-label="blockers">' + t('ai.blockers') + '</span></button>',
-      '    <button class="ai-quick-action" type="button" data-action="portfolio"><span aria-hidden="true">◇</span><span data-ai-label="portfolio">' + t('ai.portfolio') + '</span></button>',
-      '  </div>',
       '  <div class="ai-handoff" hidden></div>',
       '  <div class="ai-messages" role="log" aria-live="polite" aria-relevant="additions"></div>',
       '  <div class="ai-status" role="alert"></div>',
@@ -142,7 +135,6 @@
     input = app.querySelector('#ai-question');
     sendButton = app.querySelector('.ai-send');
     statusEl = app.querySelector('.ai-status');
-    quickButtons = Array.from(app.querySelectorAll('.ai-quick-action'));
     handoffEl = app.querySelector('.ai-handoff');
     clearButton = app.querySelector('.ai-clear');
     closeButton = app.querySelector('.ai-close');
@@ -164,9 +156,6 @@
     window.addEventListener('popstate', revealLinkedDetail);
     window.addEventListener('arrowfish:preferenceschange', handlePreferenceChange);
 
-    quickButtons.forEach(function (button) {
-      button.addEventListener('click', function () { renderShortcut(button.getAttribute('data-action')); });
-    });
     handoffEl.addEventListener('click', function (event) {
       var link = event.target.closest('[data-report-key]');
       if (!link) return;
@@ -205,11 +194,6 @@
     clearButton.setAttribute('aria-label', t('ai.clear'));
     clearButton.title = t('ai.clear');
     closeButton.setAttribute('aria-label', t('ai.close'));
-    drawer.querySelector('.ai-quick-actions').setAttribute('aria-label', t('ai.suggestions'));
-    ['roadmap', 'results', 'blockers', 'portfolio'].forEach(function (action) {
-      var label = drawer.querySelector('[data-ai-label="' + action + '"]');
-      if (label) label.textContent = t('ai.' + action);
-    });
     drawer.querySelector('label[for="ai-question"]').textContent = t('ai.questionLabel');
     input.placeholder = t('ai.placeholder');
     sendButton.setAttribute('aria-label', t('ai.send'));
@@ -475,7 +459,8 @@
     input.focus();
   }
 
-  function renderMessages() {
+  function renderMessages(scrollMode) {
+    var previousScrollTop = messagesEl.scrollTop;
     messagesEl.textContent = '';
     if (!messages.length) {
       var empty = document.createElement('div');
@@ -510,7 +495,9 @@
       }
       messagesEl.appendChild(item);
     });
-    scrollMessages();
+    if (scrollMode === 'assistant-start') scrollToLatestAssistant();
+    else if (scrollMode === 'preserve') restoreMessageScroll(previousScrollTop);
+    else scrollMessages();
   }
 
   function renderStarters() {
@@ -913,37 +900,7 @@
       followUps: followUpsForSources(brief.sources, true),
       meta: { result: 'local_brief', reportVersion: currentReport.version }
     });
-    renderMessages();
-    saveConversation();
-  }
-
-  function renderShortcut(action) {
-    if (!currentReport || !reportIndex || busy) return;
-    var labels = {
-      roadmap: t('ai.roadmap'),
-      results: t('ai.results'),
-      blockers: t('ai.blockers'),
-      portfolio: t('ai.portfolio')
-    };
-    var builders = {
-      roadmap: Brief.milestoneTimeline,
-      results: Brief.resultsSummary,
-      blockers: Brief.blockerSummary,
-      portfolio: Brief.portfolioBrief
-    };
-    if (!builders[action]) return;
-    var result = builders[action](briefOptions());
-    messages.push({ role: 'user', content: labels[action] });
-    messages.push({
-      role: 'assistant',
-      content: result.content || t('ai.noIndexedContent'),
-      answerable: Boolean(result.sources.length),
-      sources: result.sources,
-      followUps: followUpsForSources(result.sources, false),
-      meta: { result: 'local_' + action, reportVersion: currentReport.version }
-    });
-    messages = messages.slice(-MAX_HISTORY_MESSAGES);
-    renderMessages();
+    renderMessages('assistant-start');
     saveConversation();
   }
 
@@ -966,7 +923,6 @@
     input.disabled = disabled;
     sendButton.disabled = disabled;
     clearButton.disabled = busy;
-    quickButtons.forEach(function (button) { button.disabled = disabled; });
   }
 
   function showStatus(message) {
@@ -998,6 +954,20 @@
 
   function scrollMessages() {
     requestAnimationFrame(function () { messagesEl.scrollTop = messagesEl.scrollHeight; });
+  }
+
+  function scrollToLatestAssistant() {
+    requestAnimationFrame(function () {
+      var groups = messagesEl.querySelectorAll('.ai-message-group.assistant');
+      var target = groups[groups.length - 1];
+      if (!target) return;
+      var offset = target.getBoundingClientRect().top - messagesEl.getBoundingClientRect().top;
+      messagesEl.scrollTop = Math.max(0, messagesEl.scrollTop + offset - 18);
+    });
+  }
+
+  function restoreMessageScroll(scrollTop) {
+    requestAnimationFrame(function () { messagesEl.scrollTop = scrollTop; });
   }
 
   async function sendQuestion(value) {
@@ -1035,7 +1005,7 @@
         meta: { result: 'local_timeline', reportVersion: currentReport.version }
       });
       messages = messages.slice(-MAX_HISTORY_MESSAGES);
-      renderMessages();
+      renderMessages('assistant-start');
       saveConversation();
       input.focus();
       return;
@@ -1071,7 +1041,7 @@
         meta: { result: 'no_local_evidence', reportVersion: currentReport.version }
       });
       messages = messages.slice(-MAX_HISTORY_MESSAGES);
-      renderMessages();
+      renderMessages('assistant-start');
       saveConversation();
       setBusy(false);
       input.focus();
@@ -1086,6 +1056,7 @@
     }, REQUEST_TIMEOUT_MS);
     activeController = controller;
 
+    var answerReceived = false;
     try {
       var response = await fetch(API_URL, {
         method: 'POST',
@@ -1127,6 +1098,7 @@
         followUps: followUpsForSources(Array.isArray(payload.sources) ? payload.sources : [], false),
         meta: payload.meta || null
       });
+      answerReceived = true;
       messages = messages.slice(-MAX_HISTORY_MESSAGES);
       saveConversation();
     } catch (error) {
@@ -1139,7 +1111,7 @@
       clearTimeout(timeout);
       if (activeController === controller) {
         activeController = null;
-        renderMessages();
+        renderMessages(answerReceived ? 'assistant-start' : 'preserve');
         setBusy(false);
         input.focus();
       }
