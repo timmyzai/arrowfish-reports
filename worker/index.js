@@ -3,7 +3,7 @@ import REPORT_CONTEXT_EN from '../report-context.en.json';
 
 var DEFAULT_ORIGINS = ['https://timmyzai.github.io'];
 var DEFAULT_MODEL = 'openai/gpt-oss-20b';
-var PROMPT_VERSION = 'chat-v21-stakeholder-grounding';
+var PROMPT_VERSION = 'chat-v22-stakeholder-complete-answer';
 var MAX_BODY_BYTES = 60000;
 var MAX_QUESTION_CHARS = 1500;
 var MAX_SOURCES = 8;
@@ -244,7 +244,7 @@ function buildMessages(question, report, sources, conversation, responseLocale) 
         '<response_language>' + (responseLocale === 'en' ? 'Answer in English.' : '使用简体中文回答。') + '</response_language>',
         '<objective>帮助利益相关者快速理解进展、结果、数字、决定、风险和下一步，并让每个报告事实都能打开对应原文。</objective>',
         '<instructions>',
-        '1. 使用用户最新消息的语言直接回答。普通回答最多两句；摘要最多五个简短要点。不要标题、表格、开场套话或重复原文。',
+        '1. 使用用户最新消息的语言直接回答。普通回答最多两句；摘要最多五个简短要点。数字答案必须同时写明指标主体和值，不能只返回裸数字。不要标题、表格、开场套话或重复原文。',
         '2. 纯问候、致谢、能力说明，以及询问当前报告名称或日期时使用 kind=conversation；回答名称或日期时必须逐字使用 report_context 中的 title 或 date，citations 必须为空。',
         '3. 只要回答包含报告的进展、数字、日期、决定、风险、限制或计划，就使用 kind=grounded。混合了寒暄和报告问题时也使用 grounded。',
         '4. grounded 的每个事实句或要点末尾必须紧跟一个或多个 [S1] 引用。citations 最多五个，必须给出对应 source_id，以及该 document content 中连续、逐字一致的最短充分 quote。数字、日期或完成状态的 quote 必须在同一段连续原文中同时包含事实主体和对应的值或状态；只引用孤立数字、日期或状态词不充分。',
@@ -297,7 +297,11 @@ function buildResponseFormat(sources) {
         type: 'object',
         properties: {
           kind: { type: 'string', enum: ['grounded', 'conversation', 'unanswerable'] },
-          answer: { type: 'string', maxLength: MAX_ANSWER_CHARS },
+          answer: {
+            type: 'string',
+            maxLength: MAX_ANSWER_CHARS,
+            description: '面向非技术利益相关者的完整短答；数字答案必须包含指标主体和值，不得只返回裸数字。'
+          },
           citations: {
             type: 'array',
             maxItems: MAX_CITATIONS,

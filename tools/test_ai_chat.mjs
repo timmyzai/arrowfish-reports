@@ -57,11 +57,13 @@ assert.ok(cleaned.every((message) => message.role === 'user'), 'Historical assis
 const responseFormat = Worker.buildResponseFormat(canonical);
 const schema = responseFormat.json_schema.schema;
 assert.equal(schema.properties.answer.maxLength, 600, 'Answer schema enforces the short-answer limit');
+assert.match(schema.properties.answer.description, /指标主体和值/, 'Answer schema rejects ambiguous bare-number guidance');
 assert.equal(schema.properties.citations.maxItems, 5, 'Citation schema permits at most five sources');
 assert.match(schema.properties.citations.items.properties.quote.description, /事实主体/);
 
 const systemPrompt = Worker.buildMessages('支付接口完成了吗？', report, canonical, [], 'zh-CN')[0].content;
 assert.match(systemPrompt, /利益相关者报告分析助手/, 'Prompt defines the stakeholder-facing role');
+assert.match(systemPrompt, /不能只返回裸数字/, 'Prompt requires self-contained numeric answers');
 assert.match(systemPrompt, /值、单位和范围/, 'Prompt constrains period and project comparisons');
 assert.match(systemPrompt, /指代只能从先前 user 消息解析/, 'Prompt limits conversation history to referent resolution');
 assert.match(systemPrompt, /完成状态仍必须来自 documents/, 'Prompt example keeps follow-up facts grounded');
