@@ -211,7 +211,8 @@ assert.doesNotMatch(browserSource, /link\.textContent = match\[1\]\.slice/);
 assert.match(browserSource, /currentReport\.file !== reportKey \|\| reportLoadToken !== requestReportToken/);
 assert.match(browserStyles, /min-height:\s*44px/);
 assert.match(browserStyles, /prefers-reduced-motion:\s*reduce/);
-assert.match(landingPage, /assets\/ai-chat\.css\?v=20260828-11/);
+assert.match(landingPage, /assets\/ai-chat\.css\?v=20260829-12/);
 assert.match(landingPage, /assets\/ai-chat\.js\?v=20260828-11/);
+assert.match(browserStyles, /\.ai-launcher,\s*\.ai-backdrop,\s*\.ai-drawer\s*\{\s*display:\s*none !important;/);
 
 console.log('AI assistant regression tests: all assertions passed');

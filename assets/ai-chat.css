@@ -613,3 +613,10 @@
         opacity: 0.7;
     }
 }
+
+/* Temporarily hide the report assistant UI while keeping the feature available in code. */
+.ai-launcher,
+.ai-backdrop,
+.ai-drawer {
+    display: none !important;
+}
