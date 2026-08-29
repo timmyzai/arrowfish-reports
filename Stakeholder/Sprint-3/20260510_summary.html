@@ -1,28 +1,31 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh-CN" data-report-id="sprint-3">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <script src="../../assets/ui-i18n.js"></script>
+  <script src="../../assets/site-preferences.js"></script>
 <title>第3阶段 · 一页摘要 · 2026-05-10</title>
 <style>
   :root {
-    --bg: #FAFAFA;
-    --card: #FFFFFF;
-    --border: #E5E7EB;
-    --text: #1F2937;
-    --text-secondary: #6B7280;
-    --accent: #2563EB;
-    --accent-soft: #EFF6FF;
-    --green: #B7D7C9;
-    --green-text: #166534;
-    --green-soft: #F0FDF4;
-    --yellow: #E6DFAF;
-    --yellow-text: #854D0E;
-    --yellow-soft: #FFFBEB;
-    --red: #DCCACA;
-    --red-text: #991B1B;
-    --red-soft: #FEF2F2;
-    --grey: #F2F2F2;
+    --bg: var(--af-bg);
+    --card: var(--af-surface);
+    --border: var(--af-border);
+    --text: var(--af-text);
+    --text-secondary: var(--af-text-muted);
+    --accent: var(--af-primary);
+    --accent-soft: var(--af-primary-soft);
+    --green: var(--af-success-soft);
+    --green-text: var(--af-success);
+    --green-soft: var(--af-success-soft);
+    --yellow: var(--af-warning-soft);
+    --yellow-text: var(--af-warning);
+    --yellow-soft: var(--af-warning-soft);
+    --red: var(--af-danger-soft);
+    --red-text: var(--af-danger);
+    --red-soft: var(--af-danger-soft);
+    --grey: var(--af-surface-muted);
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body {
@@ -40,9 +43,9 @@
   .subtitle { color: var(--text-secondary); font-size: 0.85rem; margin-bottom: 1.2rem; }
   .card { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 0.9rem 1.1rem; margin: 0.6rem 0; }
   .card.highlight { border-left: 4px solid var(--accent); background: var(--accent-soft); }
-  .card.warning { border-left: 4px solid #F59E0B; background: var(--yellow-soft); }
-  .card.success { border-left: 4px solid #16A34A; background: var(--green-soft); }
-  .card.critical { border-left: 4px solid #EF4444; background: var(--red-soft); }
+  .card.warning { border-left: 4px solid var(--af-warning); background: var(--yellow-soft); }
+  .card.success { border-left: 4px solid var(--af-success); background: var(--green-soft); }
+  .card.critical { border-left: 4px solid var(--af-danger); background: var(--red-soft); }
   table { width: 100%; border-collapse: collapse; margin: 0.5rem 0; font-size: 0.86rem; }
   th { background: var(--grey); text-align: left; padding: 0.4rem 0.6rem; font-weight: 600; }
   td { padding: 0.4rem 0.6rem; border-bottom: 1px solid var(--border); vertical-align: top; }
@@ -51,7 +54,7 @@
   .status-done { background: var(--green); color: var(--green-text); padding: 1px 7px; border-radius: 4px; font-size: 0.74rem; font-weight: 600; }
   .status-progress { background: var(--yellow); color: var(--yellow-text); padding: 1px 7px; border-radius: 4px; font-size: 0.74rem; font-weight: 600; }
   .status-defer { background: var(--grey); color: var(--text-secondary); padding: 1px 7px; border-radius: 4px; font-size: 0.74rem; font-weight: 600; }
-  .tldr { background: linear-gradient(135deg, #EFF6FF 0%, #FFFFFF 100%); border-radius: 10px; padding: 1.1rem 1.3rem; border: 1px solid #BFDBFE; margin: 0.8rem 0 1.4rem; }
+  .tldr { background: linear-gradient(135deg, var(--af-primary-soft) 0%, var(--af-surface) 100%); border-radius: 10px; padding: 1.1rem 1.3rem; border: 1px solid var(--af-border); margin: 0.8rem 0 1.4rem; }
   .tldr-label { font-size: 0.72rem; font-weight: 700; color: var(--accent); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.4rem; }
   .tldr-text { font-size: 0.96rem; line-height: 1.65; color: var(--text); }
   .metric-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 0.6rem; margin: 0.7rem 0; }
@@ -64,11 +67,14 @@
   @media (max-width: 700px) { .col2 { grid-template-columns: 1fr; } }
 </style>
 <script src="../../assets/auth-gate.js"></script>
+  <link rel="stylesheet" href="../../assets/site-theme.css">
 </head>
 <body>
 
-<h1>Arrowfish VPN — 第3阶段一页摘要</h1>
-<div class="subtitle">2026年5月10日 · 第3阶段提前收官 · 关键决策点速览</div>
+<header class="standalone-report-header" data-report-header>
+  <h1>Arrowfish VPN — 第3阶段一页摘要</h1>
+  <div class="subtitle">2026年5月10日 · 第3阶段提前收官 · 关键决策点速览</div>
+</header>
 
 <div class="tldr">
   <div class="tldr-label">TL;DR · 三句话</div>

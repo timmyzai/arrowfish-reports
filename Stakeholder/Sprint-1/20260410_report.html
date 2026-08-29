@@ -1,47 +1,50 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh-CN" data-report-id="sprint-1">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>第1阶段 · 周报（第1周）· 2026-04-10</title>
+    
+  <script src="../../assets/ui-i18n.js"></script>
+  <script src="../../assets/site-preferences.js"></script>
+<title>第1阶段 · 周报（第1周）· 2026-04-10</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background-color: #fff; color: #333; line-height: 1.7; font-size: 15px; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--af-surface); color: var(--af-text); line-height: 1.7; font-size: 15px; }
         .container { max-width: 900px; margin: 0 auto; padding: 40px 24px; }
-        .report-header { margin-bottom: 48px; border-bottom: 1px solid #e8e8e8; padding-bottom: 32px; }
-        .report-title { font-size: 28px; font-weight: 600; color: #1a1a1a; margin-bottom: 16px; }
-        .report-meta { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; font-size: 13px; color: #666; }
+        .report-header { margin-bottom: 48px; border-bottom: 1px solid var(--af-border); padding-bottom: 32px; }
+        .report-title { font-size: 28px; font-weight: 600; color: var(--af-text); margin-bottom: 16px; }
+        .report-meta { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; font-size: 13px; color: var(--af-text-muted); }
         .meta-item { display: flex; flex-direction: column; gap: 4px; }
-        .meta-label { font-weight: 500; color: #999; text-transform: uppercase; letter-spacing: 0.5px; }
-        .meta-value { color: #333; font-weight: 500; }
+        .meta-label { font-weight: 500; color: var(--af-text-muted); text-transform: uppercase; letter-spacing: 0.5px; }
+        .meta-value { color: var(--af-text); font-weight: 500; }
         .section { margin-bottom: 48px; }
-        .section-heading { font-size: 20px; font-weight: 600; color: #1a1a1a; margin-bottom: 20px; padding-left: 16px; border-left: 4px solid #1a73e8; }
-        .section-body { margin-bottom: 24px; line-height: 1.8; color: #444; }
-        .section-note { font-size: 13px; color: #666; margin-top: 12px; padding: 12px; background-color: #f8f9fa; border-radius: 4px; border-left: 3px solid #1a73e8; }
+        .section-heading { font-size: 20px; font-weight: 600; color: var(--af-text); margin-bottom: 20px; padding-left: 16px; border-left: 4px solid var(--af-primary); }
+        .section-body { margin-bottom: 24px; line-height: 1.8; color: var(--af-text); }
+        .section-note { font-size: 13px; color: var(--af-text-muted); margin-top: 12px; padding: 12px; background-color: var(--af-surface-muted); border-radius: 4px; border-left: 3px solid var(--af-primary); }
         .milestone-container { display: grid; gap: 12px; margin-top: 16px; }
-        .milestone { display: flex; gap: 16px; align-items: flex-start; background-color: #f8f9fa; padding: 16px; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.08); }
-        .milestone-date { background-color: #1a73e8; color: white; padding: 8px 12px; border-radius: 4px; font-size: 12px; font-weight: 600; white-space: nowrap; min-width: 80px; text-align: center; }
-        .milestone-text { flex: 1; font-size: 14px; font-weight: 500; color: #333; }
+        .milestone { display: flex; gap: 16px; align-items: flex-start; background-color: var(--af-surface-muted); padding: 16px; border-radius: 8px; box-shadow: 0 1px 3px var(--af-shadow); }
+        .milestone-date { background-color: var(--af-primary); color: white; padding: 8px 12px; border-radius: 4px; font-size: 12px; font-weight: 600; white-space: nowrap; min-width: 80px; text-align: center; }
+        .milestone-text { flex: 1; font-size: 14px; font-weight: 500; color: var(--af-text); }
         table { width: 100%; border-collapse: collapse; margin: 20px 0; background-color: white; }
-        th { background-color: #f8f9fa; padding: 12px; text-align: left; font-size: 14px; font-weight: 600; color: #333; border-bottom: 1px solid #e8e8e8; }
-        td { padding: 12px; border-bottom: 1px solid #e8e8e8; font-size: 14px; color: #444; }
+        th { background-color: var(--af-surface-muted); padding: 12px; text-align: left; font-size: 14px; font-weight: 600; color: var(--af-text); border-bottom: 1px solid var(--af-border); }
+        td { padding: 12px; border-bottom: 1px solid var(--af-border); font-size: 14px; color: var(--af-text); }
         tr:last-child td { border-bottom: none; }
         .findings-container { display: grid; gap: 16px; margin-top: 20px; }
-        .finding-card { background-color: #f8f9fa; padding: 20px; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.08); border-left: 4px solid #1a73e8; }
-        .finding-title { font-size: 14px; font-weight: 600; color: #1a73e8; margin-bottom: 8px; letter-spacing: 0.5px; }
-        .finding-content { font-size: 14px; color: #555; line-height: 1.6; }
+        .finding-card { background-color: var(--af-surface-muted); padding: 20px; border-radius: 8px; box-shadow: 0 1px 3px var(--af-shadow); border-left: 4px solid var(--af-primary); }
+        .finding-title { font-size: 14px; font-weight: 600; color: var(--af-primary); margin-bottom: 8px; letter-spacing: 0.5px; }
+        .finding-content { font-size: 14px; color: var(--af-text-muted); line-height: 1.6; }
         .task-list { list-style: none; margin: 16px 0; }
-        .task-list li { padding: 8px 0 8px 24px; position: relative; color: #555; line-height: 1.6; }
-        .task-list li:before { content: ""; position: absolute; left: 0; top: 14px; width: 8px; height: 8px; background-color: #1a73e8; border-radius: 50%; }
+        .task-list li { padding: 8px 0 8px 24px; position: relative; color: var(--af-text-muted); line-height: 1.6; }
+        .task-list li:before { content: ""; position: absolute; left: 0; top: 14px; width: 8px; height: 8px; background-color: var(--af-primary); border-radius: 50%; }
         .status-badge { display: inline-block; padding: 4px 10px; border-radius: 12px; font-size: 12px; font-weight: 600; }
-        .status-resolved { background-color: #d4edda; color: #155724; }
-        .status-enhanced { background-color: #cfe2ff; color: #084298; }
-        .report-footer { margin-top: 48px; padding-top: 24px; border-top: 1px solid #e8e8e8; font-size: 12px; color: #999; text-align: right; }
-        .status-default { background-color: #F2F2F2; }
-        .status-green { background-color: #B7D7C9; }
-        .status-yellow { background-color: #E6DFAF; }
-        .status-red { background-color: #DCCACA; }
-        .status-legend { display: flex; gap: 16px; margin: 12px 0 24px; font-size: 12px; color: #666; flex-wrap: wrap; }
+        .status-resolved { background-color: var(--af-success-soft); color: var(--af-success); }
+        .status-enhanced { background-color: var(--af-primary-soft); color: var(--af-primary); }
+        .report-footer { margin-top: 48px; padding-top: 24px; border-top: 1px solid var(--af-border); font-size: 12px; color: var(--af-text-muted); text-align: right; }
+        .status-default { background-color: var(--af-surface-muted); }
+        .status-green { background-color: var(--af-success-soft); }
+        .status-yellow { background-color: var(--af-warning-soft); }
+        .status-red { background-color: var(--af-danger-soft); }
+        .status-legend { display: flex; gap: 16px; margin: 12px 0 24px; font-size: 12px; color: var(--af-text-muted); flex-wrap: wrap; }
         .status-legend-item { display: flex; align-items: center; gap: 6px; }
         .status-dot { width: 12px; height: 12px; border-radius: 2px; display: inline-block; }
         @media (max-width: 768px) {
@@ -59,11 +62,12 @@
         }
     </style>
     <script src="../../assets/auth-gate.js"></script>
+  <link rel="stylesheet" href="../../assets/site-theme.css">
 </head>
 <body>
     <div class="container">
         <!-- Header -->
-        <div class="report-header">
+        <header class="report-header" data-report-header>
             <h1 class="report-title">第1阶段周报（第1周）：测试部署与自动化</h1>
             <div class="report-meta">
                 <div class="meta-item">
@@ -79,7 +83,7 @@
                     <span class="meta-value">日总</span>
                 </div>
             </div>
-        </div>
+        </header>
 
         <!-- 执行总结 -->
         <div class="section">
@@ -154,15 +158,15 @@
                     <tr><th>如果未被发现</th><th>后果</th></tr>
                 </thead>
                 <tbody>
-                    <tr style="background-color: #DCCACA">
+                    <tr style="background-color: var(--af-danger-soft)">
                         <td>数据库磁盘约在7月中旬写满</td>
                         <td>数据库崩溃，全平台停摆 — 用户无法登录、无法连接VPN、无法购买</td>
                     </tr>
-                    <tr style="background-color: #DCCACA">
+                    <tr style="background-color: var(--af-danger-soft)">
                         <td>崩溃时无任何备份可用</td>
                         <td><strong>29.3万用户账号、全部支付记录、全部服务器配置永久丢失</strong> — 无法恢复</td>
                     </tr>
-                    <tr style="background-color: #DCCACA">
+                    <tr style="background-color: var(--af-danger-soft)">
                         <td>平台完全下线</td>
                         <td>停摆期间收入归零，恢复需数天至数周（如果能恢复的话）</td>
                     </tr>
@@ -176,15 +180,15 @@
                     <tr><th>措施</th><th>效果</th></tr>
                 </thead>
                 <tbody>
-                    <tr style="background-color: #B7D7C9">
+                    <tr style="background-color: var(--af-success-soft)">
                         <td>启用Azure每日自动备份（两台服务器）</td>
                         <td>每日06:00自动备份，保留30天，7天内可即时恢复 — <strong>平台首次拥有灾难恢复能力</strong></td>
                     </tr>
-                    <tr style="background-color: #B7D7C9">
+                    <tr style="background-color: var(--af-success-soft)">
                         <td>修复114天失败的维护脚本</td>
                         <td>125万条过期数据将被自动清理，磁盘压力解除</td>
                     </tr>
-                    <tr style="background-color: #B7D7C9">
+                    <tr style="background-color: var(--af-success-soft)">
                         <td>优化磁盘配置（两台服务器）</td>
                         <td>磁盘占用从66%降至49%，释放约22 GB空间</td>
                     </tr>
@@ -209,15 +213,15 @@
                     <tr><th>攻击路径</th><th>后果</th></tr>
                 </thead>
                 <tbody>
-                    <tr style="background-color: #DCCACA">
+                    <tr style="background-color: var(--af-danger-soft)">
                         <td>攻击者用任意域名发请求 → Nginx无拦截 → 直达后端</td>
                         <td><strong>此前木马注入攻击的入口 — 攻击者通过未注册域名绕过正常路由，注入恶意代码</strong></td>
                     </tr>
-                    <tr style="background-color: #DCCACA">
+                    <tr style="background-color: var(--af-danger-soft)">
                         <td>扫描器/爬虫探测服务器IP</td>
                         <td>服务器返回404页面和版本信息，暴露技术栈（Nginx版本、后端框架、API格式）</td>
                     </tr>
-                    <tr style="background-color: #DCCACA">
+                    <tr style="background-color: var(--af-danger-soft)">
                         <td>域名配置出错时无明确提示</td>
                         <td>服务器返回误导性错误（"用户未登录"），排查方向错误，延长故障修复时间</td>
                     </tr>
@@ -231,15 +235,15 @@
                     <tr><th>措施</th><th>效果</th></tr>
                 </thead>
                 <tbody>
-                    <tr style="background-color: #B7D7C9">
+                    <tr style="background-color: var(--af-success-soft)">
                         <td>配置Nginx默认拦截规则（返回444：静默断开连接）</td>
                         <td>未注册域名的请求被立即丢弃，<strong>零信息泄露</strong> — 攻击者看到的只是"连接被拒绝"</td>
                     </tr>
-                    <tr style="background-color: #B7D7C9">
+                    <tr style="background-color: var(--af-success-soft)">
                         <td>HTTP和HTTPS端口均已覆盖</td>
                         <td>所有未注册域名在Nginx层即被拦截，不再转发至后端应用</td>
                     </tr>
-                    <tr style="background-color: #B7D7C9">
+                    <tr style="background-color: var(--af-success-soft)">
                         <td>已验证：正常域名访问不受影响</td>
                         <td>所有已注册的业务域名（客户端、管理后台、节点API）均正常工作</td>
                     </tr>
@@ -261,25 +265,25 @@
                     <tr><th>违规位置</th><th>前团队遗留的问题</th><th>修复内容</th><th>状态</th></tr>
                 </thead>
                 <tbody>
-                    <tr style="background-color: #B7D7C9">
+                    <tr style="background-color: var(--af-success-soft)">
                         <td>安卓 MmkvManager.kt</td>
                         <td>调试日志记录完整 VPN 服务器配置、连接密钥、订阅 URL（5处日志语句）</td>
                         <td>全部替换为无敏感信息的等效日志（仅记录数量，不记录内容）</td>
                         <td><span class="status-badge status-resolved">已修复</span></td>
                     </tr>
-                    <tr style="background-color: #B7D7C9">
+                    <tr style="background-color: var(--af-success-soft)">
                         <td>后端客户端 API 追踪中间件</td>
                         <td>启用时记录用户 IP 和完整请求体，违反无日志政策</td>
                         <td>用合规请求日志（仅方法、路径、状态码、耗时，无用户数据）替换追踪中间件</td>
                         <td><span class="status-badge status-resolved">已修复</span></td>
                     </tr>
-                    <tr style="background-color: #B7D7C9">
+                    <tr style="background-color: var(--af-success-soft)">
                         <td>后端 middleware.Logger()</td>
                         <td>旧版本将所有请求写入磁盘 — 生成 22 GB PM2 日志文件</td>
                         <td>替换为空操作日志器；生产日志文件已手动清空（磁盘 50%→33%）</td>
                         <td><span class="status-badge status-resolved">已修复，待部署生效</span></td>
                     </tr>
-                    <tr style="background-color: #B7D7C9">
+                    <tr style="background-color: var(--af-success-soft)">
                         <td>数据库 log_apis 表（1,252,033 行）</td>
                         <td>API 请求日志占数据库总量 86%（13.1 GB），清理脚本失效 114 天无人察觉</td>
                         <td>修复清理脚本（补充数据库凭据）；约 1.25 万行将于 2026-04-10 自动清除</td>
@@ -303,17 +307,17 @@
                     <tr><th>指标</th><th>数量</th><th>说明</th></tr>
                 </thead>
                 <tbody>
-                    <tr style="background-color: #B7D7C9">
+                    <tr style="background-color: var(--af-success-soft)">
                         <td>已修复（含运维即时修复）</td>
                         <td><strong>31项</strong></td>
                         <td>包括：13个崩溃问题、收入漏洞（三星测试模式）、数据库无备份、Nginx安全漏洞、服务端限制缺失等</td>
                     </tr>
-                    <tr style="background-color: #E6DFAF">
+                    <tr style="background-color: var(--af-warning-soft)">
                         <td>开发中</td>
                         <td>12项</td>
                         <td>数据库优化、专线自动化、监控告警 — 随本次部署一并上线</td>
                     </tr>
-                    <tr style="background-color: #F2F2F2">
+                    <tr style="background-color: var(--af-surface-muted)">
                         <td>计划中</td>
                         <td>7项</td>
                         <td>服务器整合、旧服务清理、网络安全组分离 — 第1阶段后期处理</td>
@@ -352,40 +356,40 @@
                     <tr><th>能力</th><th>说明</th><th>状态</th></tr>
                 </thead>
                 <tbody>
-                    <tr style="background-color: #E6DFAF">
+                    <tr style="background-color: var(--af-warning-soft)">
                         <td>订单自动配发</td>
                         <td>专线/专用IP订单支付后，系统自动匹配区域并分配节点，无需人工操作</td>
                         <td><span class="status-badge status-enhanced">开发中</span></td>
                     </tr>
-                    <tr style="background-color: #E6DFAF">
+                    <tr style="background-color: var(--af-warning-soft)">
                         <td>到期自动回收</td>
                         <td>IP到期后自动归还IP池，节点释放给新订单</td>
                         <td><span class="status-badge status-enhanced">开发中</span></td>
                     </tr>
-                    <tr style="background-color: #E6DFAF">
+                    <tr style="background-color: var(--af-warning-soft)">
                         <td>库存自动监控</td>
                         <td>IP/节点库存不足时自动通知管理员补货</td>
                         <td><span class="status-badge status-enhanced">开发中</span></td>
                     </tr>
-                    <tr style="background-color: #E6DFAF">
+                    <tr style="background-color: var(--af-warning-soft)">
                         <td>供应商稳定性追踪</td>
                         <td>自动记录节点故障、计算供应商可用率、付款到期提醒</td>
                         <td><span class="status-badge status-enhanced">开发中</span></td>
                     </tr>
-                    <tr style="background-color: #F2F2F2">
+                    <tr style="background-color: var(--af-surface-muted)">
                         <td>智能节点管控</td>
                         <td>系统根据使用量和付费周期自动判断节点是否满载，自动下线/恢复，管理员只需处理异常</td>
-                        <td><span class="status-badge" style="background:#F2F2F2;color:#555">规划中</span></td>
+                        <td><span class="status-badge" style="background:var(--af-surface-muted);color:var(--af-text-muted)">规划中</span></td>
                     </tr>
-                    <tr style="background-color: #F2F2F2">
+                    <tr style="background-color: var(--af-surface-muted)">
                         <td>智能采购建议</td>
                         <td>系统分析各区域库存、订单趋势、利润率，自动推荐何时在哪个区域购买新节点</td>
-                        <td><span class="status-badge" style="background:#F2F2F2;color:#555">规划中</span></td>
+                        <td><span class="status-badge" style="background:var(--af-surface-muted);color:var(--af-text-muted)">规划中</span></td>
                     </tr>
-                    <tr style="background-color: #F2F2F2">
+                    <tr style="background-color: var(--af-surface-muted)">
                         <td>后台智能助手</td>
                         <td>内置AI助手引导管理员完成节点采购、DNS配置、快速部署等操作，大幅降低学习成本</td>
-                        <td><span class="status-badge" style="background:#F2F2F2;color:#555">规划中</span></td>
+                        <td><span class="status-badge" style="background:var(--af-surface-muted);color:var(--af-text-muted)">规划中</span></td>
                     </tr>
                 </tbody>
             </table>
@@ -405,22 +409,22 @@
                     <tr><th>发现问题</th><th>影响</th><th>处理进度</th></tr>
                 </thead>
                 <tbody>
-                    <tr style="background-color: #E6DFAF">
+                    <tr style="background-color: var(--af-warning-soft)">
                         <td>历史积累的慢查询158,000条（单次超过3秒）</td>
                         <td>数据库长期处于压力状态，影响响应速度</td>
                         <td><span class="status-badge status-enhanced">优化中</span></td>
                     </tr>
-                    <tr style="background-color: #E6DFAF">
+                    <tr style="background-color: var(--af-warning-soft)">
                         <td>数据库连接池配置300个，实际使用仅17个</td>
                         <td>资源浪费，服务器内存占用不必要偏高</td>
                         <td><span class="status-badge status-enhanced">优化中</span></td>
                     </tr>
-                    <tr style="background-color: #E6DFAF">
+                    <tr style="background-color: var(--af-warning-soft)">
                         <td>读取副本数据库几乎从未启用（163次主库 vs 27次副库）</td>
                         <td>所有查询压在主库，读写副本形同虚设</td>
                         <td><span class="status-badge status-enhanced">优化中</span></td>
                     </tr>
-                    <tr style="background-color: #E6DFAF">
+                    <tr style="background-color: var(--af-warning-soft)">
                         <td>缺少关键索引（含78万行的登录记录表）</td>
                         <td>特定查询需全表扫描，速度慢</td>
                         <td><span class="status-badge status-enhanced">优化中</span></td>
@@ -443,22 +447,22 @@
                     <tr><th>发现</th><th>影响</th><th>状态</th></tr>
                 </thead>
                 <tbody>
-                    <tr style="background-color: #DCCACA">
+                    <tr style="background-color: var(--af-danger-soft)">
                         <td>生产服务器运行着一个已停用的旧支付服务（台湾团队遗留，SSL证书2024年10月已过期，零流量）</td>
                         <td>占用584 MB内存，存在安全风险</td>
                         <td><span class="status-badge status-enhanced">清理计划制定中</span></td>
                     </tr>
-                    <tr style="background-color: #E6DFAF">
+                    <tr style="background-color: var(--af-warning-soft)">
                         <td>开发服务器规格超出实际需求（内存利用率仅23%）</td>
                         <td>每月多支出 $53，每年浪费约 $637</td>
                         <td><span class="status-badge status-enhanced">降配计划制定中</span></td>
                     </tr>
-                    <tr style="background-color: #B7D7C9">
+                    <tr style="background-color: var(--af-success-soft)">
                         <td>生产服务器22 GB的无效日志文件（前团队遗留代码导致）</td>
                         <td>占用36%磁盘空间</td>
                         <td><span class="status-badge status-resolved">已清理（磁盘占用50%→33%）</span></td>
                     </tr>
-                    <tr style="background-color: #E6DFAF">
+                    <tr style="background-color: var(--af-warning-soft)">
                         <td>生产服务器PHP进程14个空闲工作进程常驻内存</td>
                         <td>约2 GB内存长期空占</td>
                         <td><span class="status-badge status-enhanced">优化计划制定中</span></td>
@@ -475,50 +479,50 @@
             <h2 class="section-heading">进度追踪 — 上期报告遗留问题</h2>
             <div class="section-body">以下为上次报告中提及问题的最新进展：</div>
             <div class="status-legend">
-                <div class="status-legend-item"><span class="status-dot" style="background:#F2F2F2"></span>按计划</div>
-                <div class="status-legend-item"><span class="status-dot" style="background:#B7D7C9"></span>已完成</div>
-                <div class="status-legend-item"><span class="status-dot" style="background:#E6DFAF"></span>测试中</div>
-                <div class="status-legend-item"><span class="status-dot" style="background:#DCCACA"></span>风险中</div>
+                <div class="status-legend-item"><span class="status-dot" style="background:var(--af-surface-muted)"></span>按计划</div>
+                <div class="status-legend-item"><span class="status-dot" style="background:var(--af-success-soft)"></span>已完成</div>
+                <div class="status-legend-item"><span class="status-dot" style="background:var(--af-warning-soft)"></span>测试中</div>
+                <div class="status-legend-item"><span class="status-dot" style="background:var(--af-danger-soft)"></span>风险中</div>
             </div>
             <table>
                 <thead>
                     <tr><th>问题</th><th>上次状态</th><th>本周进展</th></tr>
                 </thead>
                 <tbody>
-                    <tr style="background-color: #E6DFAF">
+                    <tr style="background-color: var(--af-warning-soft)">
                         <td>13个应用崩溃/卡顿问题</td>
                         <td>开发中</td>
                         <td><span class="status-badge status-enhanced">开发中，准备进入测试</span></td>
                     </tr>
-                    <tr style="background-color: #E6DFAF">
+                    <tr style="background-color: var(--af-warning-soft)">
                         <td>免费用户服务端限制（时间/流量/设备数）</td>
                         <td>开发中</td>
                         <td><span class="status-badge status-enhanced">开发中，测试环境验证准备中</span></td>
                     </tr>
-                    <tr style="background-color: #E6DFAF">
+                    <tr style="background-color: var(--af-warning-soft)">
                         <td>试用期升级引导（用户看不到试用进度）</td>
                         <td>方案已设计</td>
                         <td><span class="status-badge status-enhanced">后端完成，界面开发中</span></td>
                     </tr>
-                    <tr style="background-color: #E6DFAF">
+                    <tr style="background-color: var(--af-warning-soft)">
                         <td>三星应用内购买测试模式</td>
                         <td>开发中</td>
                         <td><span class="status-badge status-enhanced">代码修复完成，等待部署验证</span></td>
                     </tr>
-                    <tr style="background-color: #E6DFAF">
+                    <tr style="background-color: var(--af-warning-soft)">
                         <td>强制版本更新（原来从未启用）</td>
                         <td>开发中</td>
                         <td><span class="status-badge status-enhanced">已启用，测试环境验证中</span></td>
                     </tr>
-                    <tr style="background-color: #E6DFAF">
+                    <tr style="background-color: var(--af-warning-soft)">
                         <td>读取副本数据库利用率不足</td>
                         <td>开发中</td>
                         <td><span class="status-badge status-enhanced">代码完成，随本次部署上线</span></td>
                     </tr>
-                    <tr style="background-color: #F2F2F2">
+                    <tr style="background-color: var(--af-surface-muted)">
                         <td>冗余代理服务器整合（节省~$323/月）</td>
                         <td>按计划</td>
-                        <td><span class="status-badge" style="background:#F2F2F2;color:#555">第1阶段部署后评估</span></td>
+                        <td><span class="status-badge" style="background:var(--af-surface-muted);color:var(--af-text-muted)">第1阶段部署后评估</span></td>
                     </tr>
                 </tbody>
             </table>
@@ -541,22 +545,22 @@
                     <tr><th>交付项</th><th>目标日期</th><th>进度</th></tr>
                 </thead>
                 <tbody>
-                    <tr style="background-color: #E6DFAF">
+                    <tr style="background-color: var(--af-warning-soft)">
                         <td>QA测试版APK构建</td>
                         <td>4月8日</td>
                         <td><span class="status-badge status-enhanced">进行中 — 测试环境配置完成，APK构建进行中</span></td>
                     </tr>
-                    <tr style="background-color: #E6DFAF">
+                    <tr style="background-color: var(--af-warning-soft)">
                         <td>测试环境后端部署</td>
                         <td>4月8日</td>
                         <td><span class="status-badge status-enhanced">进行中 — CI/CD流水线已就绪，部署验证中</span></td>
                     </tr>
-                    <tr style="background-color: #F2F2F2">
+                    <tr style="background-color: var(--af-surface-muted)">
                         <td>端到端功能验证</td>
                         <td>4月9–10日</td>
                         <td>待测试版构建完成后启动</td>
                     </tr>
-                    <tr style="background-color: #F2F2F2">
+                    <tr style="background-color: var(--af-surface-muted)">
                         <td>崩溃回归测试</td>
                         <td>4月10日</td>
                         <td>复现第0阶段修复的崩溃场景，确认无回归</td>
@@ -587,12 +591,12 @@
                     <tr><th>风险</th><th>等级</th><th>缓解措施</th></tr>
                 </thead>
                 <tbody>
-                    <tr style="background-color: #E6DFAF"><td>测试环境与生产环境存在差异</td><td>中</td><td>使用相同配置方式，Lex顾问提供环境差异说明</td></tr>
-                    <tr style="background-color: #E6DFAF"><td>专线自动化区域匹配逻辑</td><td>中</td><td>测试环境验证覆盖所有区域（香港、韩国、日本）</td></tr>
+                    <tr style="background-color: var(--af-warning-soft)"><td>测试环境与生产环境存在差异</td><td>中</td><td>使用相同配置方式，Lex顾问提供环境差异说明</td></tr>
+                    <tr style="background-color: var(--af-warning-soft)"><td>专线自动化区域匹配逻辑</td><td>中</td><td>测试环境验证覆盖所有区域（香港、韩国、日本）</td></tr>
                     <tr><td>QA测试发现重大崩溃问题</td><td>低</td><td>所有13个崩溃场景已针对性修复，回归测试覆盖</td></tr>
                     <tr><td>部署后生产日志重新增长</td><td>低</td><td>已知原因（旧版本残留代码），新版部署后自动解决</td></tr>
-                    <tr style="background-color: #B7D7C9"><td>生产数据库此前无任何备份</td><td>严重 → 已解决</td><td>4月9日已启用Azure每日自动备份（30天保留），维护脚本已修复，磁盘占用66%→49%</td></tr>
-                    <tr style="background-color: #B7D7C9"><td>Nginx未配置默认拦截 — 木马注入攻击入口</td><td>严重 → 已解决</td><td>4月9日两台服务器均已配置静默拦截，未注册域名请求不再到达后端</td></tr>
+                    <tr style="background-color: var(--af-success-soft)"><td>生产数据库此前无任何备份</td><td>严重 → 已解决</td><td>4月9日已启用Azure每日自动备份（30天保留），维护脚本已修复，磁盘占用66%→49%</td></tr>
+                    <tr style="background-color: var(--af-success-soft)"><td>Nginx未配置默认拦截 — 木马注入攻击入口</td><td>严重 → 已解决</td><td>4月9日两台服务器均已配置静默拦截，未注册域名请求不再到达后端</td></tr>
                 </tbody>
             </table>
         </div>
@@ -605,15 +609,15 @@
                     <tr><th>里程碑</th><th>目标</th><th>说明</th></tr>
                 </thead>
                 <tbody>
-                    <tr style="background-color: #B7D7C9"><td>平台评估 + 第0阶段开发</td><td>已完成</td><td>全面审计，50项遗留问题已识别，31项已修复</td></tr>
-                    <tr style="background-color: #E6DFAF"><td>① Arrowfish 稳定版</td><td>4月25日</td><td>QA全面测试（4/10-11）→ 修复 → 合规优化 → 生产部署 → Google Play 提交</td></tr>
-                    <tr style="background-color: #F2F2F2"><td>② 接入 Siqo 加密支付</td><td>5月初</td><td>对接 Siqo Crypto Payment Gateway API，新增加密货币充值方式</td></tr>
-                    <tr style="background-color: #F2F2F2"><td>③ 安全加固 + FFF基础</td><td>5月</td><td>节点安全加固（防绕过）+ Flutter项目搭建 + VPN引擎集成</td></tr>
-                    <tr style="background-color: #F2F2F2"><td>④ FFF 核心功能</td><td>5–6月</td><td>登录注册、VPN连接、设备指纹防刷、多协议支持</td></tr>
-                    <tr style="background-color: #F2F2F2"><td>⑤ FFF 发布</td><td>6月下旬</td><td>iOS + Android + Windows 全平台发布</td></tr>
-                    <tr style="background-color: #F2F2F2"><td>⑥ 用户迁移计划</td><td>FFF稳定后</td><td>Arrowfish 内弹窗引导用户升级至 FFF，后端逐步迁移，计划数月内下架 Arrowfish</td></tr>
-                    <tr style="background-color: #F2F2F2"><td>⑦ Apple Store + Mac</td><td>FFF迁移后</td><td>FFF 上架 Apple Store（iOS + macOS），需新 Apple 开发者账号</td></tr>
-                    <tr style="background-color: #F2F2F2"><td>⑧ AI 智能化</td><td>持续</td><td>后台运维AI助手、用户端智能客服、节点智能管控等</td></tr>
+                    <tr style="background-color: var(--af-success-soft)"><td>平台评估 + 第0阶段开发</td><td>已完成</td><td>全面审计，50项遗留问题已识别，31项已修复</td></tr>
+                    <tr style="background-color: var(--af-warning-soft)"><td>① Arrowfish 稳定版</td><td>4月25日</td><td>QA全面测试（4/10-11）→ 修复 → 合规优化 → 生产部署 → Google Play 提交</td></tr>
+                    <tr style="background-color: var(--af-surface-muted)"><td>② 接入 Siqo 加密支付</td><td>5月初</td><td>对接 Siqo Crypto Payment Gateway API，新增加密货币充值方式</td></tr>
+                    <tr style="background-color: var(--af-surface-muted)"><td>③ 安全加固 + FFF基础</td><td>5月</td><td>节点安全加固（防绕过）+ Flutter项目搭建 + VPN引擎集成</td></tr>
+                    <tr style="background-color: var(--af-surface-muted)"><td>④ FFF 核心功能</td><td>5–6月</td><td>登录注册、VPN连接、设备指纹防刷、多协议支持</td></tr>
+                    <tr style="background-color: var(--af-surface-muted)"><td>⑤ FFF 发布</td><td>6月下旬</td><td>iOS + Android + Windows 全平台发布</td></tr>
+                    <tr style="background-color: var(--af-surface-muted)"><td>⑥ 用户迁移计划</td><td>FFF稳定后</td><td>Arrowfish 内弹窗引导用户升级至 FFF，后端逐步迁移，计划数月内下架 Arrowfish</td></tr>
+                    <tr style="background-color: var(--af-surface-muted)"><td>⑦ Apple Store + Mac</td><td>FFF迁移后</td><td>FFF 上架 Apple Store（iOS + macOS），需新 Apple 开发者账号</td></tr>
+                    <tr style="background-color: var(--af-surface-muted)"><td>⑧ AI 智能化</td><td>持续</td><td>后台运维AI助手、用户端智能客服、节点智能管控等</td></tr>
                 </tbody>
             </table>
         </div>

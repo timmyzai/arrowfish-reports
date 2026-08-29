@@ -2,8 +2,8 @@
   'use strict';
 
   var API_URL = 'https://arrowfish-report-ai.yang-fan-node.workers.dev/api/chat';
-  var CONTEXT_URL = 'report-context.json';
-  var INDEX_URL = 'report-index.json';
+  var CONTEXT_URLS = { 'zh-CN': 'report-context.json', en: 'report-context.en.json' };
+  var INDEX_URLS = { 'zh-CN': 'report-index.json', en: 'report-index.en.json' };
   var STORAGE_KEY = 'arrowfish_ai_chat';
   var MAX_HISTORY_MESSAGES = 6;
   var MAX_QUESTION_CHARS = 1500;
@@ -30,7 +30,7 @@
   var currentReport = null;
   var allReports = [];
   var reportIndex = null;
-  var contextPromise = null;
+  var contextPromises = Object.create(null);
   var messages = [];
   var busy = false;
   var lastFocusedElement = null;
@@ -41,6 +41,25 @@
   var reportLoadToken = 0;
   var pendingChatNavigation = null;
   var preserveMessagesOnLoad = false;
+  var lastPreferenceLanguage = uiLocale();
+
+  function t(key, params) {
+    return window.ArrowfishI18n ? window.ArrowfishI18n.t(key, params) : key;
+  }
+
+  function tn(key, count, params) {
+    return window.ArrowfishI18n ? window.ArrowfishI18n.tn(key, count, params) : String(count);
+  }
+
+  function uiLocale() {
+    return window.ArrowfishI18n ? window.ArrowfishI18n.getLanguage() : 'zh-CN';
+  }
+
+  function responseLocale(question) {
+    return window.ArrowfishPreferences
+      ? window.ArrowfishPreferences.detectQuestionLanguage(question)
+      : (/[\u3400-\u9fff]/.test(String(question || '')) ? 'zh-CN' : 'en');
+  }
 
   function init() {
     var app = document.getElementById('app-content');
@@ -49,8 +68,7 @@
 
     buildInterface(app);
     bindEvents();
-    contextPromise = loadContext();
-    contextPromise.catch(function () {});
+    loadContext(uiLocale()).catch(function () {});
 
     new MutationObserver(function (mutations) {
       if (!mutations.some(function (mutation) { return mutation.attributeName === 'src'; })) return;
@@ -63,7 +81,7 @@
   function buildInterface(app) {
     var wrapper = document.createElement('div');
     wrapper.innerHTML = [
-      '<button class="ai-launcher" type="button" aria-label="打开 AI 报告助手" title="打开 AI 报告助手" aria-expanded="false" aria-controls="ai-drawer">',
+      '<button class="ai-launcher" type="button" aria-label="' + t('ai.open') + '" title="' + t('ai.open') + '" aria-expanded="false" aria-controls="ai-drawer">',
       '  <img class="ai-launcher-icon" src="assets/ai-chatbot-icon.svg" width="64" height="64" alt="" aria-hidden="true">',
       '</button>',
       '<div class="ai-backdrop" hidden></div>',
@@ -71,36 +89,36 @@
       '  <header class="ai-header">',
       '    <span class="ai-header-bot" aria-hidden="true"><img src="assets/ai-chatbot-icon.svg" width="40" height="40" alt=""></span>',
       '    <div class="ai-heading">',
-      '      <h2 id="ai-title">AI 报告助手</h2>',
-      '      <p class="ai-report-title">正在加载所选报告…</p>',
-      '      <div class="ai-report-meta"><span class="ai-connection"><span class="ai-connection-dot" aria-hidden="true"></span><span class="ai-connection-label">正在连接</span></span><time class="ai-report-date"></time></div>',
+      '      <h2 id="ai-title">' + t('ai.title') + '</h2>',
+      '      <p class="ai-report-title">' + t('ai.loadingReport') + '</p>',
+      '      <div class="ai-report-meta"><span class="ai-connection"><span class="ai-connection-dot" aria-hidden="true"></span><span class="ai-connection-label">' + t('ai.connecting') + '</span></span><time class="ai-report-date"></time></div>',
       '    </div>',
       '    <div class="ai-header-actions">',
-      '      <button class="ai-icon-button ai-clear" type="button" aria-label="清空对话" title="清空对话">',
+      '      <button class="ai-icon-button ai-clear" type="button" aria-label="' + t('ai.clear') + '" title="' + t('ai.clear') + '">',
       '        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 6h18M8 6V4h8v2M19 6l-1 14H6L5 6M10 11v5M14 11v5"/></svg>',
       '      </button>',
-      '      <button class="ai-icon-button ai-close" type="button" aria-label="关闭报告助手">',
+      '      <button class="ai-icon-button ai-close" type="button" aria-label="' + t('ai.close') + '">',
       '        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>',
       '      </button>',
       '    </div>',
       '  </header>',
-      '  <div class="ai-quick-actions" aria-label="建议问题">',
-      '    <button class="ai-quick-action" type="button" data-action="roadmap"><span aria-hidden="true">⌁</span>进展路线图</button>',
-      '    <button class="ai-quick-action" type="button" data-action="results"><span aria-hidden="true">✦</span>重要成果</button>',
-      '    <button class="ai-quick-action" type="button" data-action="blockers"><span aria-hidden="true">!</span>现在卡在哪</button>',
+      '  <div class="ai-quick-actions" aria-label="' + t('ai.suggestions') + '">',
+      '    <button class="ai-quick-action" type="button" data-action="roadmap"><span aria-hidden="true">⌁</span><span data-ai-label="roadmap">' + t('ai.roadmap') + '</span></button>',
+      '    <button class="ai-quick-action" type="button" data-action="results"><span aria-hidden="true">✦</span><span data-ai-label="results">' + t('ai.results') + '</span></button>',
+      '    <button class="ai-quick-action" type="button" data-action="blockers"><span aria-hidden="true">!</span><span data-ai-label="blockers">' + t('ai.blockers') + '</span></button>',
       '  </div>',
       '  <div class="ai-handoff" hidden></div>',
       '  <div class="ai-messages" role="log" aria-live="polite" aria-relevant="additions"></div>',
       '  <div class="ai-status" role="alert"></div>',
       '  <form class="ai-composer">',
-      '    <label class="ai-sr-only" for="ai-question">询问所选报告的内容</label>',
+      '    <label class="ai-sr-only" for="ai-question">' + t('ai.questionLabel') + '</label>',
       '    <div class="ai-composer-row">',
-      '      <textarea id="ai-question" rows="1" maxlength="1500" placeholder="请输入关于本报告的问题…"></textarea>',
-      '      <button class="ai-send" type="submit" aria-label="发送问题">',
+      '      <textarea id="ai-question" rows="1" maxlength="1500" placeholder="' + t('ai.placeholder') + '"></textarea>',
+      '      <button class="ai-send" type="submit" aria-label="' + t('ai.send') + '">',
       '        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg>',
       '      </button>',
       '    </div>',
-      '    <p class="ai-note">回答仅基于已验证报告依据。选中的相关报告片段将发送至 Groq。</p>',
+      '    <p class="ai-note">' + t('ai.note') + '</p>',
       '  </form>',
       '</aside>'
     ].join('');
@@ -137,6 +155,7 @@
     messagesEl.addEventListener('click', handleMessageClick);
     window.addEventListener('hashchange', revealLinkedDetail);
     window.addEventListener('popstate', revealLinkedDetail);
+    window.addEventListener('arrowfish:preferenceschange', handlePreferenceChange);
 
     quickButtons.forEach(function (button) {
       button.addEventListener('click', function () { renderShortcut(button.getAttribute('data-action')); });
@@ -169,16 +188,60 @@
     drawer.addEventListener('keydown', trapFocus);
   }
 
-  async function loadContext() {
+  function localizeInterface() {
+    launcher.setAttribute('aria-label', t('ai.open'));
+    launcher.title = t('ai.open');
+    drawer.querySelector('#ai-title').textContent = t('ai.title');
+    clearButton.setAttribute('aria-label', t('ai.clear'));
+    clearButton.title = t('ai.clear');
+    closeButton.setAttribute('aria-label', t('ai.close'));
+    drawer.querySelector('.ai-quick-actions').setAttribute('aria-label', t('ai.suggestions'));
+    ['roadmap', 'results', 'blockers'].forEach(function (action) {
+      var label = drawer.querySelector('[data-ai-label="' + action + '"]');
+      if (label) label.textContent = t('ai.' + action);
+    });
+    drawer.querySelector('label[for="ai-question"]').textContent = t('ai.questionLabel');
+    input.placeholder = t('ai.placeholder');
+    sendButton.setAttribute('aria-label', t('ai.send'));
+    drawer.querySelector('.ai-note').textContent = t('ai.note');
+  }
+
+  function handlePreferenceChange(event) {
+    var nextLanguage = event.detail && event.detail.language || uiLocale();
+    if (nextLanguage === lastPreferenceLanguage) return;
+    lastPreferenceLanguage = nextLanguage;
+    if (activeController) activeController.abort();
+    activeController = null;
+    busy = false;
+    messages = [];
+    removeSavedConversation();
+    allReports = [];
+    reportIndex = null;
+    currentReport = null;
+    localizeInterface();
+    resetForReportChange();
+    handleReportLoad();
+  }
+
+  async function loadContext(locale) {
+    locale = locale === 'en' ? 'en' : 'zh-CN';
+    if (contextPromises[locale]) return contextPromises[locale];
+    contextPromises[locale] = load();
+    return contextPromises[locale];
+
+    async function load() {
     var responses = await Promise.all([
-      fetch(CONTEXT_URL, { cache: 'no-cache' }),
-      fetch(INDEX_URL, { cache: 'no-cache' })
+      fetch(CONTEXT_URLS[locale], { cache: 'no-cache' }),
+      fetch(INDEX_URLS[locale], { cache: 'no-cache' })
     ]);
-    if (!responses[0].ok || !responses[1].ok) throw new Error('无法加载报告索引。');
+    if (!responses[0].ok || !responses[1].ok) throw new Error(t('ai.contextLoadFailed'));
     var payloads = await Promise.all(responses.map(function (response) { return response.json(); }));
-    if (!payloads[0] || !Array.isArray(payloads[0].reports)) throw new Error('报告上下文格式无效。');
-    if (!payloads[1] || !Array.isArray(payloads[1].order) || !payloads[1].workstreams) throw new Error('报告索引格式无效。');
+    if (!payloads[0] || !Array.isArray(payloads[0].reports)) throw new Error(t('ai.contextInvalid'));
+    if (payloads[0].locale && payloads[0].locale !== locale) throw new Error(t('ai.contextInvalid'));
+    if (!payloads[1] || !Array.isArray(payloads[1].order) || !payloads[1].workstreams) throw new Error(t('ai.indexInvalid'));
+    if (payloads[1].locale && payloads[1].locale !== locale) throw new Error(t('ai.indexInvalid'));
     return { reports: payloads[0].reports, index: payloads[1] };
+    }
   }
 
   function normalizeReportKey(value) {
@@ -205,11 +268,11 @@
       messages = [];
       removeSavedConversation();
     }
-    reportTitleEl.textContent = '正在加载所选报告…';
+    reportTitleEl.textContent = t('ai.loadingReport');
     reportDateEl.textContent = '';
     reportDateEl.removeAttribute('datetime');
     connectionEl.classList.remove('is-ready');
-    connectionLabelEl.textContent = '正在连接';
+    connectionLabelEl.textContent = t('ai.connecting');
     showStatus('');
     setReady(false);
     renderMessages();
@@ -220,10 +283,10 @@
     var reportKey = normalizeReportKey(frame.getAttribute('src'));
     if (!reportKey) return;
 
-    reportTitleEl.textContent = '正在索引所选报告…';
+    reportTitleEl.textContent = t('ai.indexingReport');
     setReady(false);
     try {
-      var data = await contextPromise;
+      var data = await loadContext(uiLocale());
       if (token !== reportLoadToken) return;
       var reports = data.reports;
       allReports = reports;
@@ -238,7 +301,7 @@
       }) || reports.find(function (report) {
         return normalizeReportKey(report.file) === reportKey;
       }) || null;
-      if (!nextReport) throw new Error('所选报告尚未建立索引。');
+      if (!nextReport) throw new Error(t('ai.reportNotIndexed'));
 
       var preserveConversation = preserveMessagesOnLoad && pendingChatNavigation &&
         normalizeReportKey(pendingChatNavigation.reportKey) === normalizeReportKey(nextReport.file);
@@ -251,12 +314,13 @@
         renderMessages();
       }
       currentReport = nextReport;
+      try { annotateReportBlocks(frame.contentDocument, currentReport); } catch (error) {}
 
       reportTitleEl.textContent = displayReportName(currentReport);
-      reportDateEl.textContent = currentReport.date;
+      reportDateEl.textContent = displayReportDate(currentReport.date);
       reportDateEl.setAttribute('datetime', currentReport.date);
       connectionEl.classList.add('is-ready');
-      connectionLabelEl.textContent = '报告已连接';
+      connectionLabelEl.textContent = t('ai.connected');
       if (preserveConversation) {
         pendingChatNavigation = null;
         preserveMessagesOnLoad = false;
@@ -274,17 +338,29 @@
     } catch (error) {
       if (token !== reportLoadToken) return;
       currentReport = null;
-      reportTitleEl.textContent = '所选报告不可用';
+      reportTitleEl.textContent = t('ai.reportUnavailable');
       reportDateEl.textContent = '';
       connectionEl.classList.remove('is-ready');
-      connectionLabelEl.textContent = '连接失败';
+      connectionLabelEl.textContent = t('ai.connectionFailed');
       setReady(false);
-      showStatus(error && error.message ? error.message : '无法为所选报告建立索引。');
+      showStatus(error && error.message ? error.message : t('ai.indexFailed'));
     }
   }
 
   function displayReportName(report) {
-    return String(report.name || '').replace(/\s*[·—|-]\s*\d{4}-\d{2}-\d{2}\s*$/, '').trim() || '所选报告';
+    return String(report.name || '').replace(/\s*[·—|-]\s*\d{4}-\d{2}-\d{2}\s*$/, '').trim() || t('ai.selectedReport');
+  }
+
+  function displayReportDate(value) {
+    if (!value) return '';
+    try {
+      return new Intl.DateTimeFormat(uiLocale() === 'en' ? 'en' : 'zh-CN', {
+        dateStyle: 'medium',
+        timeZone: 'UTC'
+      }).format(new Date(value + 'T00:00:00Z'));
+    } catch (error) {
+      return value;
+    }
   }
 
   function setOpen(open) {
@@ -348,7 +424,7 @@
     messages = [];
     try {
       var saved = JSON.parse(sessionStorage.getItem(STORAGE_KEY));
-      if (saved && saved.reportKey === reportKey && saved.reportVersion === currentReport.version && Array.isArray(saved.messages)) {
+      if (saved && saved.locale === uiLocale() && saved.reportKey === reportKey && saved.reportVersion === currentReport.version && Array.isArray(saved.messages)) {
         messages = saved.messages.slice(-MAX_HISTORY_MESSAGES).filter(isValidMessage);
       }
     } catch (error) {}
@@ -367,6 +443,7 @@
       sessionStorage.setItem(STORAGE_KEY, JSON.stringify({
         reportKey: currentReport.file,
         reportVersion: currentReport.version,
+        locale: uiLocale(),
         messages: messages
       }));
     } catch (error) {}
@@ -392,9 +469,11 @@
       var empty = document.createElement('div');
       empty.className = 'ai-empty';
       if (currentReport) {
-        empty.innerHTML = '<span class="ai-empty-icon" aria-hidden="true">✦</span><strong>从这份报告开始</strong><span>询问进展、数字、决定或风险。每个事实都会附上可点击的原文依据。</span>';
+        empty.innerHTML = '<span class="ai-empty-icon" aria-hidden="true">✦</span><strong></strong><span></span>';
+        empty.querySelector('strong').textContent = t('ai.emptyTitle');
+        empty.querySelector('span:last-child').textContent = t('ai.emptyBody');
       } else {
-        empty.textContent = '请先打开一份报告，然后开始提问。';
+        empty.textContent = t('ai.emptyNoReport');
       }
       messagesEl.appendChild(empty);
       return;
@@ -428,13 +507,13 @@
     copy.type = 'button';
     copy.className = 'ai-message-action';
     copy.dataset.copyMessage = String(messageIndex);
-    copy.setAttribute('aria-label', '复制这条回答');
-    copy.textContent = '复制回答';
+    copy.setAttribute('aria-label', t('ai.copyAnswerLabel'));
+    copy.textContent = t('ai.copyAnswer');
     actions.appendChild(copy);
 
     if (Array.isArray(message.sources) && message.sources.length) {
       var count = document.createElement('span');
-      count.textContent = message.sources.length + ' 条已验证依据';
+      count.textContent = tn('ai.sources', message.sources.length);
       actions.appendChild(count);
     }
     return actions;
@@ -453,11 +532,15 @@
         link.href = detailHref(source);
         link.dataset.messageIndex = String(messageIndex);
         link.dataset.sourceId = source.id;
-        link.setAttribute('aria-label', '查看依据 ' + source.id + '：' + (source.reportTitle || '报告') + '，' + (source.section || '报告概览'));
+        link.setAttribute('aria-label', t('ai.viewEvidence', {
+          id: source.id,
+          report: source.reportTitle || t('ai.report'),
+          section: source.section || t('ai.reportOverview')
+        }));
         link.title = [
-          source.reportTitle || '报告',
-          source.reportDate || '',
-          source.section || '报告概览',
+          source.reportTitle || t('ai.report'),
+          displayReportDate(source.reportDate) || '',
+          source.section || t('ai.reportOverview'),
           source.quote || source.text || ''
         ].filter(Boolean).join('\n');
         link.textContent = source.id;
@@ -519,10 +602,10 @@
     if (!message || !message.content) return;
     try {
       await navigator.clipboard.writeText(Evidence.stripCitationMarkers(message.content));
-      button.textContent = '已复制';
-      setTimeout(function () { button.textContent = '复制回答'; }, 1600);
+      button.textContent = t('ai.copied');
+      setTimeout(function () { button.textContent = t('ai.copyAnswer'); }, 1600);
     } catch (error) {
-      showStatus('无法复制回答，请手动选择文字。');
+      showStatus(t('ai.copyFailed'));
     }
   }
 
@@ -534,13 +617,13 @@
       return;
     }
     if (source.reportVersion !== currentReport.version) {
-      showStatus('这条依据不属于当前报告版本，无法打开。');
+      showStatus(t('ai.evidenceWrongVersion'));
       return;
     }
     var doc;
     try { doc = frame.contentDocument; } catch (error) { doc = null; }
     if (!doc) {
-      showStatus('无法打开报告依据。');
+      showStatus(t('ai.evidenceOpenFailed'));
       return;
     }
 
@@ -550,9 +633,10 @@
     var blockText = Evidence.locatorText(block && block.text);
     var quote = Evidence.locatorText(source.quote || (block && block.text));
     if (!quote) {
-      showStatus('这条依据没有可定位的报告内容。');
+      showStatus(t('ai.evidenceMissing'));
       return;
     }
+    var stableMatch = source.blockId && doc.querySelector('[data-report-block-id="' + source.blockId.replace(/"/g, '\\"') + '"]');
     var candidates = typedBlockCandidates(doc, block);
     var duplicateIndex = duplicateBlockIndex(currentReport.blocks || [], block);
     var exactMatches = candidates.filter(function (element) {
@@ -572,10 +656,10 @@
     }).sort(function (left, right) {
       return right.score - left.score || left.length - right.length;
     })[0];
-    match = exactMatch || (match && match.element);
+    match = stableMatch || exactMatch || (match && match.element);
 
     if (!match) {
-      showStatus('当前报告版本中已找不到这段引用内容。');
+      showStatus(t('ai.evidenceNotFound'));
       return;
     }
 
@@ -587,7 +671,6 @@
 
     setOpen(false);
     setTimeout(function () {
-      installHighlightStyle(doc);
       clearSourceHighlight();
       highlightedElement = match;
       match.classList.add('ai-report-highlight');
@@ -612,11 +695,25 @@
       dd: 'dd',
       blockquote: 'blockquote',
       pre: 'pre',
-      highlight: 'div, article'
+      highlight: 'div, article',
+      heading: 'h1, h2, h3, h4, h5, h6'
     };
     var selector = selectors[block && block.type] ||
       'p, li, tr, summary, dt, dd, blockquote, pre, div, article';
     return Array.from(doc.querySelectorAll(selector));
+  }
+
+  function annotateReportBlocks(doc, report) {
+    if (!doc || !report) return;
+    (report.blocks || []).forEach(function (block) {
+      var expected = Evidence.locatorText(block.text);
+      var occurrence = duplicateBlockIndex(report.blocks || [], block);
+      var matches = typedBlockCandidates(doc, block).filter(function (element) {
+        return Evidence.locatorText(element.textContent) === expected;
+      });
+      var element = matches[occurrence] || matches[0];
+      if (element) element.dataset.reportBlockId = block.id;
+    });
   }
 
   function duplicateBlockIndex(blocks, target) {
@@ -629,14 +726,6 @@
       if (block.type === target.type && Evidence.locatorText(block.text) === targetText) occurrence += 1;
     }
     return 0;
-  }
-
-  function installHighlightStyle(doc) {
-    if (doc.getElementById('ai-report-highlight-style')) return;
-    var style = doc.createElement('style');
-    style.id = 'ai-report-highlight-style';
-    style.textContent = '.ai-report-highlight{outline:3px solid #b45309!important;outline-offset:4px!important;background:#fff4ce!important;border-radius:4px;scroll-margin-block:24px}.ai-report-highlight:focus{outline:3px solid #b45309!important}';
-    (doc.head || doc.documentElement).appendChild(style);
   }
 
   function clearSourceHighlight() {
@@ -684,7 +773,7 @@
     var link = document.createElement('a');
     link.href = '#' + [target.id, target.date].map(encodeURIComponent).join('/');
     link.dataset.reportKey = target.file;
-    link.textContent = '查看' + displayReportName(target) + ' →';
+    link.textContent = t('ai.viewReport', { report: displayReportName(target) });
     handoffEl.appendChild(link);
     handoffEl.hidden = false;
   }
@@ -744,7 +833,7 @@
       var label = goal.id + ' ' + goal.title;
       if (items.length >= 3 || seen.has(label)) return items;
       seen.add(label);
-      items.push({ label: label, question: label + '现在进展如何？' });
+      items.push({ label: label, question: t('ai.goalProgressQuestion', { goal: label }) });
       return items;
     }, []);
   }
@@ -776,10 +865,10 @@
     var phases = workstreamsInOrder().reduce(function (items, workstream) {
       return items.concat((workstream && workstream.phases) || []);
     }, []).filter(function (phase) {
-      return !phase.future && /^结果[:：]/.test(phase.result);
+      return !phase.future && /^(?:结果|Result)[:：]/i.test(phase.result);
     }).reverse();
     phases.forEach(function (phase) {
-      addIndexedLine(lines, sources, phase.label + ' · ' + phase.result.replace(/^结果[:：]\s*/, '') + ' ↗', phase);
+      addIndexedLine(lines, sources, phase.label + ' · ' + phase.result.replace(/^(?:结果|Result)[:：]\s*/i, '') + ' ↗', phase);
     });
     return { content: lines.join('\n'), sources: sources };
   }
@@ -792,7 +881,7 @@
       addIndexedLine(
         lines,
         sources,
-        goal.id + ' ' + goal.title + ' · ' + goal.status + ' — ' + goal.evidence + ' 下一步：' + goal.nextAction,
+        goal.id + ' ' + goal.title + ' · ' + goal.status + ' — ' + goal.evidence + ' ' + t('ai.nextStep') + goal.nextAction,
         goal
       );
       used.add(goal.reportId + '\u0000' + goal.blockId);
@@ -801,21 +890,21 @@
       var key = blocker.reportId + '\u0000' + blocker.blockId;
       if (used.has(key)) return;
       used.add(key);
-      addIndexedLine(lines, sources, blocker.reportDate + ' · ' + blocker.section + ' — ' + blocker.text, blocker);
+      addIndexedLine(lines, sources, displayReportDate(blocker.reportDate) + ' · ' + blocker.section + ' — ' + blocker.text, blocker);
     });
     return { content: lines.join('\n'), sources: sources };
   }
 
   function renderShortcut(action) {
     if (!currentReport || !reportIndex || busy) return;
-    var labels = { roadmap: '进展路线图', results: '重要成果', blockers: '现在卡在哪' };
+    var labels = { roadmap: t('ai.roadmap'), results: t('ai.results'), blockers: t('ai.blockers') };
     var builders = { roadmap: roadmapShortcut, results: resultsShortcut, blockers: blockersShortcut };
     if (!builders[action]) return;
     var result = builders[action]();
     messages.push({ role: 'user', content: labels[action] });
     messages.push({
       role: 'assistant',
-      content: result.content || '当前没有可展示的索引内容。',
+      content: result.content || t('ai.noIndexedContent'),
       answerable: Boolean(result.sources.length),
       sources: result.sources,
       followUps: followUpsForSources(result.sources, false),
@@ -833,7 +922,7 @@
     if (busy) {
       var loading = document.createElement('div');
       loading.className = 'ai-loading';
-      loading.setAttribute('aria-label', '报告助手正在核对报告依据');
+      loading.setAttribute('aria-label', t('ai.checkingEvidence'));
       loading.innerHTML = '<span></span><span></span><span></span>';
       messagesEl.appendChild(loading);
       scrollMessages();
@@ -852,6 +941,29 @@
     statusEl.textContent = message || '';
   }
 
+  function apiErrorMessage(code) {
+    var messages = {
+      ORIGIN_FORBIDDEN: 'ai.api.originForbidden',
+      NOT_FOUND: 'ai.api.invalidRequest',
+      METHOD_NOT_ALLOWED: 'ai.api.invalidRequest',
+      INVALID_JSON: 'ai.api.invalidRequest',
+      PAYLOAD_TOO_LARGE: 'ai.api.payloadTooLarge',
+      QUESTION_REQUIRED: 'ai.api.questionRequired',
+      INVALID_REPORT: 'ai.api.invalidReport',
+      NOT_CONFIGURED: 'ai.api.notConfigured',
+      INVALID_CONFIGURATION: 'ai.api.notConfigured',
+      UPSTREAM_TIMEOUT: 'ai.timeout',
+      INVALID_UPSTREAM_RESPONSE: 'ai.invalidAnswer',
+      INVALID_MODEL_RESPONSE: 'ai.invalidAnswer',
+      RATE_LIMITED: 'ai.busy',
+      TOO_MANY_REQUESTS: 'ai.busy',
+      SERVICE_UNAVAILABLE: 'ai.unavailable',
+      GENERATION_FAILED: 'ai.unavailable',
+      UPSTREAM_FAILED: 'ai.unavailable'
+    };
+    return t(messages[code] || 'ai.unavailable');
+  }
+
   function scrollMessages() {
     requestAnimationFrame(function () { messagesEl.scrollTop = messagesEl.scrollHeight; });
   }
@@ -862,6 +974,7 @@
 
     var reportKey = currentReport.file;
     var requestReportToken = reportLoadToken;
+    var answerLanguage = responseLocale(question);
     var recentConversation = messages.slice(-MAX_HISTORY_MESSAGES).filter(function (message) {
       return isValidMessage(message) && message.role === 'user';
     }).map(function (message) {
@@ -870,13 +983,6 @@
     var conversation = messages.slice(-MAX_HISTORY_MESSAGES).filter(isValidMessage).map(function (message) {
       return { role: message.role, content: message.content };
     });
-    var sources = Evidence.selectEvidence(currentReport, question, recentConversation, {
-      maxSources: 8,
-      maxChars: 7000,
-      reports: allReports,
-      index: reportIndex
-    });
-
     messages.push({ role: 'user', content: question });
     messages = messages.slice(-MAX_HISTORY_MESSAGES);
     input.value = '';
@@ -885,11 +991,30 @@
 
     renderMessages();
     saveConversation();
+    setBusy(true);
+
+    var responseData;
+    try {
+      responseData = await loadContext(answerLanguage);
+    } catch (error) {
+      showStatus(error && error.message ? error.message : t('ai.contextLoadFailed'));
+      setBusy(false);
+      return;
+    }
+    var responseReport = responseData.reports.find(function (report) {
+      return report.id === currentReport.id && report.file === currentReport.file && report.version === currentReport.version;
+    }) || currentReport;
+    var sources = Evidence.selectEvidence(responseReport, question, recentConversation, {
+      maxSources: 8,
+      maxChars: 7000,
+      reports: responseData.reports,
+      index: responseData.index
+    });
 
     if (!sources.length && !Evidence.reportMetadataIntent(question).allowed) {
       messages.push({
         role: 'assistant',
-        content: '当前报告没有直接答案。',
+        content: t('ai.noDirectAnswer'),
         answerable: false,
         sources: [],
         followUps: followUpsForSources([], true),
@@ -898,11 +1023,10 @@
       messages = messages.slice(-MAX_HISTORY_MESSAGES);
       renderMessages();
       saveConversation();
+      setBusy(false);
       input.focus();
       return;
     }
-
-    setBusy(true);
 
     var controller = new AbortController();
     var timedOut = false;
@@ -915,19 +1039,21 @@
     try {
       var response = await fetch(API_URL, {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: { 'Content-Type': 'application/json', 'Accept-Language': uiLocale() },
         signal: controller.signal,
         body: JSON.stringify({
           question: question,
           report: {
-            id: currentReport.id,
-            key: currentReport.file,
-            title: currentReport.name,
-            date: currentReport.date,
-            version: currentReport.version
+            id: responseReport.id,
+            key: responseReport.file,
+            title: responseReport.name,
+            date: responseReport.date,
+            version: responseReport.version
           },
           sources: sources,
-          conversation: conversation
+          conversation: conversation,
+          uiLocale: uiLocale(),
+          responseLocale: answerLanguage
         })
       });
       var payload = await response.json().catch(function () { return {}; });
@@ -935,13 +1061,13 @@
         if (response.status === 429) {
           var retrySeconds = Number(response.headers.get('Retry-After') || 0);
           throw new Error(retrySeconds > 0
-            ? '报告助手当前繁忙，请约 ' + Math.ceil(retrySeconds) + ' 秒后再试。'
-            : '报告助手当前繁忙，请稍后再试。');
+            ? t('ai.busySeconds', { seconds: Math.ceil(retrySeconds) })
+            : t('ai.busy'));
         }
-        throw new Error(payload.error || '报告助手暂时无法回答，请稍后再试。');
+        throw new Error(apiErrorMessage(payload.code));
       }
       if (!currentReport || currentReport.file !== reportKey || reportLoadToken !== requestReportToken) return;
-      if (typeof payload.answer !== 'string') throw new Error('报告助手返回了无效回答。');
+      if (typeof payload.answer !== 'string') throw new Error(t('ai.invalidAnswer'));
 
       messages.push({
         role: 'assistant',
@@ -955,9 +1081,9 @@
       saveConversation();
     } catch (error) {
       if (timedOut) {
-        showStatus('报告助手响应超时，请重试。');
+        showStatus(t('ai.timeout'));
       } else if (!error || error.name !== 'AbortError') {
-        showStatus(error && error.message ? error.message : '报告助手暂时无法回答，请稍后再试。');
+        showStatus(error && error.message ? error.message : t('ai.unavailable'));
       }
     } finally {
       clearTimeout(timeout);

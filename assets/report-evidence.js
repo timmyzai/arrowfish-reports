@@ -95,7 +95,7 @@
     while ((match = markerPattern.exec(content))) {
       var precedingText = content.slice(cursor, match.index);
       if (sourceIds.has(match[1])) {
-        appendText(precedingText);
+        appendText(precedingText.replace(/\s+$/, ''));
         parts.push({ type: 'citation', text: match[1], sourceId: match[1] });
       }
       else appendText(precedingText + match[0]);
@@ -128,7 +128,14 @@
     var normalized = normalizeText(value);
     var tokens = baseTokens(value);
     SYNONYM_GROUPS.forEach(function (group) {
-      if (group.some(function (term) { return normalized.indexOf(term) !== -1; })) {
+      if (group.some(function (term) {
+        // Latin synonym terms must match whole tokens. Substring matching made
+        // words such as "remains" trigger the "main" summary synonym group,
+        // which displaced the relevant evidence for focused English queries.
+        return /[\u3400-\u9fff]/.test(term)
+          ? normalized.indexOf(term) !== -1
+          : tokens.indexOf(term) !== -1;
+      })) {
         tokens = tokens.concat(group);
       }
     });

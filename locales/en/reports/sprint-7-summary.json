@@ -1,0 +1,514 @@
+{
+  "schemaVersion": 1,
+  "reportId": "sprint-7-summary",
+  "sourceFile": "Stakeholder/Sprint-7/20260710_summary.html",
+  "sourceVersion": "dd284e58e8b8e91f",
+  "units": [
+    {
+      "id": "u_e77b41e6fd86643a",
+      "kind": "text",
+      "source": "第7阶段 · 一页摘要 · 2026-07-10",
+      "occurrence": 0,
+      "target": "Sprint 7 · Summary Page · July 10, 2026",
+      "context": "title @ line 10"
+    },
+    {
+      "id": "u_178b9372d57b51b1",
+      "kind": "text",
+      "source": "Arrowfish VPN · 第7阶段 · 一页摘要",
+      "occurrence": 0,
+      "target": "Arrowfish VPN · Sprint 7 · Summary Page",
+      "context": "p.eyebrow @ line 74"
+    },
+    {
+      "id": "u_743d08bb5fd52f1f",
+      "kind": "text",
+      "source": "2026-07-10 管理层摘要",
+      "occurrence": 0,
+      "target": "July 10, 2026 Management Summary",
+      "context": "h1 @ line 75"
+    },
+    {
+      "id": "u_88b8e26a1d922785",
+      "kind": "text",
+      "source": "覆盖范围：2026-06-27 至 2026-07-10。本页是完整报告的快速阅读版。",
+      "occurrence": 0,
+      "target": "Scope: June 27 to July 10, 2026. This page is a quick read version of the complete report.",
+      "context": "p.meta @ line 76"
+    },
+    {
+      "id": "u_1994d8b1501e303f",
+      "kind": "text",
+      "source": "TL;DR：Windows 安装包体积降低 82.4%，协议 bootstrap 三端统一；针对 sing-box GPL3.0 / App Store 合规风险，团队已选定自研引擎 SkyTunnel 方案，节点侧已验证可用；中国网络自测工具 4 天交付，七项协议全绿，已交台湾团队测试。",
+      "occurrence": 0,
+      "target": "TL;DR: Windows installation package size reduced by 82.4%, unified three-party bootstrapping protocol; for sing-box GPL3.0 / App Store compliance risks, the team has selected self-developed engine SkyTunnel solution, VPN node-side verification is available; China network self-test tool delivered in four days, seven protocols all green, handed over to Taiwan team for testing.",
+      "context": "section.tldr @ line 79"
+    },
+    {
+      "id": "u_85dcf44fd663aeb8",
+      "kind": "text",
+      "source": "一、需要管理层关注",
+      "occurrence": 0,
+      "target": "1. Matters requiring management attention",
+      "context": "h2 @ line 84"
+    },
+    {
+      "id": "u_ecbc1c0918b3b447",
+      "kind": "text",
+      "source": "事项",
+      "occurrence": 0,
+      "target": "Matter",
+      "context": "th @ line 86 · surrounding text: 事项 说明"
+    },
+    {
+      "id": "u_880a52ffa6d321c2",
+      "kind": "text",
+      "source": "说明",
+      "occurrence": 0,
+      "target": "Description",
+      "context": "th @ line 86 · surrounding text: 事项 说明"
+    },
+    {
+      "id": "u_bb5d8bacd74454b4",
+      "kind": "text",
+      "source": "设备额度识别缺陷",
+      "occurrence": 0,
+      "target": "Defect in device quota recognition",
+      "context": "span.risk @ line 88 · surrounding text: 设备额度识别缺陷 本阶段新发现，同一设备被不同账号使用时会互相顶号；方案已定，Sprint 8 排期修复。"
+    },
+    {
+      "id": "u_c82d081ba6556b5d",
+      "kind": "text",
+      "source": "本阶段新发现，同一设备被不同账号使用时会互相顶号；方案已定，Sprint 8 排期修复。",
+      "occurrence": 0,
+      "target": "Defect in device quota recognition has been newly discovered; when the same device is used by different accounts, they interfere with each other. The solution is already set and scheduled for Sprint 8 repair.",
+      "context": "td @ line 88 · surrounding text: 设备额度识别缺陷 本阶段新发现，同一设备被不同账号使用时会互相顶号；方案已定，Sprint 8 排期修复。"
+    },
+    {
+      "id": "u_ada8e47f5423553b",
+      "kind": "text",
+      "source": "Windows 签名",
+      "occurrence": 0,
+      "target": "Windows signature",
+      "context": "td @ line 89 · surrounding text: Windows 签名 已提交 SSL.com 审核，预计 3-5 个工作日；审核完成前先出未签名测试包给 QA（目标 7/17）。"
+    },
+    {
+      "id": "u_b92113fff33c416e",
+      "kind": "text",
+      "source": "已提交 SSL.com 审核，预计 3-5 个工作日；审核完成前先出未签名测试包给 QA（目标 7/17）。",
+      "occurrence": 0,
+      "target": "Submitted to SSL.com for review, expected in 3-5 business days; pending approval, provide QA with an unsigned test package first (target 7/17).",
+      "context": "td @ line 89 · surrounding text: Windows 签名 已提交 SSL.com 审核，预计 3-5 个工作日；审核完成前先出未签名测试包给 QA（目标 7/17）。"
+    },
+    {
+      "id": "u_0afca20d32fa311f",
+      "kind": "text",
+      "source": "sing-box 合规",
+      "occurrence": 0,
+      "target": "sing-box compliance",
+      "context": "td @ line 90 · surrounding text: sing-box 合规 团队已选定自研引擎 SkyTunnel + 自研节点程序，不依赖任何第三方 GPL 开源内核。"
+    },
+    {
+      "id": "u_fbfdf56e73181cbe",
+      "kind": "text",
+      "source": "团队已选定自研引擎 SkyTunnel + 自研节点程序，不依赖任何第三方 GPL 开源内核。",
+      "occurrence": 0,
+      "target": "The team has selected self-developed engine SkyTunnel + self-developed VPN node program, not relying on any third-party GPL open-source kernel.",
+      "context": "td @ line 90 · surrounding text: sing-box 合规 团队已选定自研引擎 SkyTunnel + 自研节点程序，不依赖任何第三方 GPL 开源内核。"
+    },
+    {
+      "id": "u_dd4dc197f8dbcdb1",
+      "kind": "text",
+      "source": "FFF 商务事项",
+      "occurrence": 0,
+      "target": "FFF Business Matters",
+      "context": "td @ line 91 · surrounding text: FFF 商务事项 欧盟电话号码改用虚拟号码、新支付通道账户待开设，均由 Roy 跟进；均不影响 Arrowfish 发布。"
+    },
+    {
+      "id": "u_137e888c6cd1d4ed",
+      "kind": "text",
+      "source": "欧盟电话号码改用虚拟号码、新支付通道账户待开设，均由 Roy 跟进；均不影响 Arrowfish 发布。",
+      "occurrence": 0,
+      "target": "For EU phone number change to virtual numbers and new payment channel accounts awaiting opening, Roy is in charge; all do not affect Arrowfish release.",
+      "context": "td @ line 91 · surrounding text: FFF 商务事项 欧盟电话号码改用虚拟号码、新支付通道账户待开设，均由 Roy 跟进；均不影响 Arrowfish 发布。"
+    },
+    {
+      "id": "u_bbd7b8cc48124612",
+      "kind": "text",
+      "source": "二、核心结论",
+      "occurrence": 0,
+      "target": "II. Key Findings",
+      "context": "h2 @ line 97"
+    },
+    {
+      "id": "u_b569058d8088d54a",
+      "kind": "text",
+      "source": "Windows 安装包体积",
+      "occurrence": 0,
+      "target": "Windows Installation Package Size",
+      "context": "span @ line 99 · surrounding text: -82.4% Windows 安装包体积"
+    },
+    {
+      "id": "u_a040f4a1fc43f25f",
+      "kind": "text",
+      "source": "4 天",
+      "occurrence": 0,
+      "target": "4 Days",
+      "context": "strong @ line 100 · surrounding text: 4 天 协议自测工具交付周期"
+    },
+    {
+      "id": "u_b528314c75f7bed5",
+      "kind": "text",
+      "source": "协议自测工具交付周期",
+      "occurrence": 0,
+      "target": "Agreement Testing Tool Delivery Cycle",
+      "context": "span @ line 100 · surrounding text: 4 天 协议自测工具交付周期"
+    },
+    {
+      "id": "u_7a36c9c13025a37e",
+      "kind": "text",
+      "source": "自测工具协议全绿",
+      "occurrence": 0,
+      "target": "Agreement Testing Tool Full Green",
+      "context": "span @ line 101 · surrounding text: 7 / 7 自测工具协议全绿"
+    },
+    {
+      "id": "u_9f7e1851a0c4c9a9",
+      "kind": "text",
+      "source": "3 个",
+      "occurrence": 0,
+      "target": "3",
+      "context": "strong @ line 102 · surrounding text: 3 个 共用 go-utilities 的后端仓库"
+    },
+    {
+      "id": "u_029d0bfb1313f208",
+      "kind": "text",
+      "source": "共用 go-utilities 的后端仓库",
+      "occurrence": 0,
+      "target": "Shared Backend Repository for go-utilities",
+      "context": "span @ line 102 · surrounding text: 3 个 共用 go-utilities 的后端仓库"
+    },
+    {
+      "id": "u_c812f5546a11078c",
+      "kind": "text",
+      "source": "主题",
+      "occurrence": 0,
+      "target": "Theme",
+      "context": "th @ line 105 · surrounding text: 主题 结论"
+    },
+    {
+      "id": "u_4ab8aaf668f40cab",
+      "kind": "text",
+      "source": "结论",
+      "occurrence": 0,
+      "target": "Conclusion",
+      "context": "th @ line 105 · surrounding text: 主题 结论"
+    },
+    {
+      "id": "u_e7d54e776b7d49fe",
+      "kind": "text",
+      "source": "PC 客户端从 Electron 全面重写为 Rust（Tauri），自建 CI/CD 流水线；打包体积测量完成（98.8MB→17.4MB）；代码签名与 QA 发布验证仍是门控。",
+      "occurrence": 0,
+      "target": "PC Client Rewritten from Electron to Rust (Tauri) with a self-built CI/CD pipeline; Packaging volume measurement completed (98.8MB→17.4MB); Code signing and QA release validation remains as a gate.",
+      "context": "td @ line 107 · surrounding text: Windows PC 客户端从 Electron 全面重写为 Rust（Tauri），自建 CI/CD 流水线；打包体积测量完成（98.8MB→17.4MB）；代码签名与 QA 发布验证仍是门控。"
+    },
+    {
+      "id": "u_ae333637d68742f6",
+      "kind": "text",
+      "source": "合规方向",
+      "occurrence": 0,
+      "target": "Compliance Direction",
+      "context": "td @ line 108 · surrounding text: 合规方向 sing-box 的 GPL3.0 与 App Store 冲突已确认无可行合规路径；团队自研 SkyTunnel 客户端引擎与节点程序，节点侧 7/10 验证可用。"
+    },
+    {
+      "id": "u_aa350383031f00ef",
+      "kind": "text",
+      "source": "sing-box 的 GPL3.0 与 App Store 冲突已确认无可行合规路径；团队自研 SkyTunnel 客户端引擎与节点程序，节点侧 7/10 验证可用。",
+      "occurrence": 0,
+      "target": "sing-box's GPL3.0 conflicts with the App Store have been confirmed as having no feasible compliance path; The team has developed SkyTunnel client engine and VPN node programs, with 7/10 verification available on the VPN node side.",
+      "context": "td @ line 108 · surrounding text: 合规方向 sing-box 的 GPL3.0 与 App Store 冲突已确认无可行合规路径；团队自研 SkyTunnel 客户端引擎与节点程序，节点侧 7/10 验证可用。"
+    },
+    {
+      "id": "u_33cc580a3c015c4f",
+      "kind": "text",
+      "source": "协议自测工具",
+      "occurrence": 0,
+      "target": "Agreement Testing Tool",
+      "context": "td @ line 109 · surrounding text: 协议自测工具 7/6 立项，7/8 建站，7/10 交付并移交台湾团队，七项协议全绿。"
+    },
+    {
+      "id": "u_94d00596b4c56a79",
+      "kind": "text",
+      "source": "7/6 立项，7/8 建站，7/10 交付并移交台湾团队，七项协议全绿。",
+      "occurrence": 0,
+      "target": "Project Initiated on 7/6, Built on 7/8, Delivered and Transferred to Taiwan Team on 7/10; Seven Agreements are Green.",
+      "context": "td @ line 109 · surrounding text: 协议自测工具 7/6 立项，7/8 建站，7/10 交付并移交台湾团队，七项协议全绿。"
+    },
+    {
+      "id": "u_0b8f86aca7e5776c",
+      "kind": "text",
+      "source": "后端复用",
+      "occurrence": 0,
+      "target": "Backend Reuse",
+      "context": "td @ line 110 · surrounding text: 后端复用 公共 Go 模块 go-utilities 被三个后端仓库正式引用，节点健康分类等能力一处修改多处生效。"
+    },
+    {
+      "id": "u_19d938f441e6359a",
+      "kind": "text",
+      "source": "公共 Go 模块 go-utilities 被三个后端仓库正式引用，节点健康分类等能力一处修改多处生效。",
+      "occurrence": 0,
+      "target": "Public Go Module go-utilities is officially referenced by three backend repositories; VPN node health classification and other capabilities are affected in multiple places after a single modification.",
+      "context": "td @ line 110 · surrounding text: 后端复用 公共 Go 模块 go-utilities 被三个后端仓库正式引用，节点健康分类等能力一处修改多处生效。"
+    },
+    {
+      "id": "u_b99391d150f3d521",
+      "kind": "text",
+      "source": "Arrowfish 客户端",
+      "occurrence": 0,
+      "target": "Arrowfish Client",
+      "context": "td @ line 111 · surrounding text: Arrowfish 客户端 Android 持续迭代（3.8.5→3.8.10）；Windows 新版尚未对外发布，等待签名与 QA。"
+    },
+    {
+      "id": "u_a92dc699bc8b5c1d",
+      "kind": "text",
+      "source": "Android 持续迭代（3.8.5→3.8.10）；Windows 新版尚未对外发布，等待签名与 QA。",
+      "occurrence": 0,
+      "target": "Android Continuous Iteration (3.8.5→3.8.10); Windows New Version Not Yet Released, Waiting for Signing and QA.",
+      "context": "td @ line 111 · surrounding text: Arrowfish 客户端 Android 持续迭代（3.8.5→3.8.10）；Windows 新版尚未对外发布，等待签名与 QA。"
+    },
+    {
+      "id": "u_11f5bd4974ebe672",
+      "kind": "text",
+      "source": "FFF（实时更新至 7/15）",
+      "occurrence": 0,
+      "target": "FFF (Real-time Update to 7/15)",
+      "context": "td @ line 112 · surrounding text: FFF（实时更新至 7/15） 自 Sprint 0（5/18）起，新客户端累计 357 次非合并提交。迁移前旧客户端有 280 次历史提交，作为迁移基础，未并入新客户端统计。已完成多端基础、注册/登录、VPN 配置与线路选择、商城/订单界面、个人中心、专属线路与测速，以及设备绑定、会话、账户安全、改密、线路页、API 拦截器、多语言和诊断。七个产品模块完成研究；续费功能列为最高优先，PRD 待产出。"
+    },
+    {
+      "id": "u_cb06979dd4dee753",
+      "kind": "text",
+      "source": "自 Sprint 0（5/18）起，新客户端累计 357 次非合并提交。迁移前旧客户端有 280 次历史提交，作为迁移基础，未并入新客户端统计。已完成多端基础、注册/登录、VPN 配置与线路选择、商城/订单界面、个人中心、专属线路与测速，以及设备绑定、会话、账户安全、改密、线路页、API 拦截器、多语言和诊断。七个产品模块完成研究；续费功能列为最高优先，PRD 待产出。",
+      "occurrence": 0,
+      "target": "Sprint 0 (5/18) Starting, Total of 357 Non-Merged Commits for New Client; Previous Old Client Had 280 Historical Commits as Migration Base, Not Included in New Client Statistics. Completed Multi-Platform Foundation, Registration/Login, VPN Configuration and Routing Selection, Shopping Mall/Order Interface, Personal Center, Exclusive Line and Speed Test, Device Binding, Session, Account Security, Password Change, Route Page, API Interceptor, Multilingual and Diagnostics. Seven Product Modules Completed Research; Renewal Function Ranked Highest Priority, PRD Pending Output.",
+      "context": "td @ line 112 · surrounding text: FFF（实时更新至 7/15） 自 Sprint 0（5/18）起，新客户端累计 357 次非合并提交。迁移前旧客户端有 280 次历史提交，作为迁移基础，未并入新客户端统计。已完成多端基础、注册/登录、VPN 配置与线路选择、商城/订单界面、个人中心、专属线路与测速，以及设备绑定、会话、账户安全、改密、线路页、API 拦截器、多语言和诊断。七个产品模块完成研究；续费功能列为最高优先，PRD 待产出。"
+    },
+    {
+      "id": "u_843afe8b9c2fc834",
+      "kind": "text",
+      "source": "三、下阶段计划（Sprint 8）",
+      "occurrence": 0,
+      "target": "III. Next Sprint Plan (Sprint 8)",
+      "context": "h2 @ line 118"
+    },
+    {
+      "id": "u_36c5c5caf825e887",
+      "kind": "text",
+      "source": "方向",
+      "occurrence": 0,
+      "target": "Direction",
+      "context": "th @ line 120 · surrounding text: 方向 计划内容"
+    },
+    {
+      "id": "u_3f066802483bd11e",
+      "kind": "text",
+      "source": "计划内容",
+      "occurrence": 0,
+      "target": "Plan Content",
+      "context": "th @ line 120 · surrounding text: 方向 计划内容"
+    },
+    {
+      "id": "u_5cf74dc5bf348a87",
+      "kind": "text",
+      "source": "SkyTunnel 验证",
+      "occurrence": 0,
+      "target": "SkyTunnel Validation",
+      "context": "td @ line 122 · surrounding text: SkyTunnel 验证 完成 Android / Windows 双端验证，规划扩展至更多客户端平台。"
+    },
+    {
+      "id": "u_f9ff30965903602f",
+      "kind": "text",
+      "source": "完成 Android / Windows 双端验证，规划扩展至更多客户端平台。",
+      "occurrence": 0,
+      "target": "Completed Android/Windows Dual-End Validation, Planning to Expand to More Client Platforms.",
+      "context": "td @ line 122 · surrounding text: SkyTunnel 验证 完成 Android / Windows 双端验证，规划扩展至更多客户端平台。"
+    },
+    {
+      "id": "u_2af4f70c1e3d3ac8",
+      "kind": "text",
+      "source": "Windows 发布",
+      "occurrence": 0,
+      "target": "Windows Release",
+      "context": "td @ line 123 · surrounding text: Windows 发布 跟进签名审核结果；7/17 前先出未签名测试包给 QA。"
+    },
+    {
+      "id": "u_631331da000d795c",
+      "kind": "text",
+      "source": "跟进签名审核结果；7/17 前先出未签名测试包给 QA。",
+      "occurrence": 0,
+      "target": "Follow up on the signing review; pending approval, provide QA with an unsigned test package by 7/17.",
+      "context": "td @ line 123 · surrounding text: Windows 发布 跟进签名审核结果；7/17 前先出未签名测试包给 QA。"
+    },
+    {
+      "id": "u_afe26ecb55af393e",
+      "kind": "text",
+      "source": "续费功能",
+      "occurrence": 0,
+      "target": "Renewal Function",
+      "context": "td @ line 124 · surrounding text: 续费功能 与台湾团队完成 FFF 需求梳理，续费功能（Arrowfish + FFF 通用）定为高优先级，先出 PRD。"
+    },
+    {
+      "id": "u_f8062f36151c086c",
+      "kind": "text",
+      "source": "与台湾团队完成 FFF 需求梳理，续费功能（Arrowfish + FFF 通用）定为高优先级，先出 PRD。",
+      "occurrence": 0,
+      "target": "Completed FFF Requirement Sifting with Taiwan Team; Renewal Function (Arrowfish + FFF Universal) Ranked Highest Priority, PRD Output Pending.",
+      "context": "td @ line 124 · surrounding text: 续费功能 与台湾团队完成 FFF 需求梳理，续费功能（Arrowfish + FFF 通用）定为高优先级，先出 PRD。"
+    },
+    {
+      "id": "u_db78bb398d453aac",
+      "kind": "text",
+      "source": "完整细节请看同目录的 20260710 Sprint 7 完整报告。",
+      "occurrence": 0,
+      "target": "For Detailed Information, Refer to the Complete Report of Sprint 7 in This Directory on 20260710.",
+      "context": "p.note @ line 127"
+    }
+  ],
+  "blocks": {
+    "b0001": {
+      "type": "p",
+      "source": "Arrowfish VPN · 第7阶段 · 一页摘要",
+      "occurrence": 0
+    },
+    "b0002": {
+      "type": "heading",
+      "source": "2026-07-10 管理层摘要",
+      "occurrence": 0
+    },
+    "b0003": {
+      "type": "p",
+      "source": "覆盖范围：2026-06-27 至 2026-07-10。本页是完整报告的快速阅读版。",
+      "occurrence": 0
+    },
+    "b0004": {
+      "type": "heading",
+      "source": "一、需要管理层关注",
+      "occurrence": 0
+    },
+    "b0005": {
+      "type": "table-row",
+      "source": "事项 说明",
+      "occurrence": 0
+    },
+    "b0006": {
+      "type": "table-row",
+      "source": "设备额度识别缺陷 本阶段新发现，同一设备被不同账号使用时会互相顶号；方案已定，Sprint 8 排期修复。",
+      "occurrence": 0
+    },
+    "b0007": {
+      "type": "table-row",
+      "source": "Windows 签名 已提交 SSL.com 审核，预计 3-5 个工作日；审核完成前先出未签名测试包给 QA（目标 7/17）。",
+      "occurrence": 0
+    },
+    "b0008": {
+      "type": "table-row",
+      "source": "sing-box 合规 团队已选定自研引擎 SkyTunnel + 自研节点程序，不依赖任何第三方 GPL 开源内核。",
+      "occurrence": 0
+    },
+    "b0009": {
+      "type": "table-row",
+      "source": "FFF 商务事项 欧盟电话号码改用虚拟号码、新支付通道账户待开设，均由 Roy 跟进；均不影响 Arrowfish 发布。",
+      "occurrence": 0
+    },
+    "b0010": {
+      "type": "heading",
+      "source": "二、核心结论",
+      "occurrence": 0
+    },
+    "b0011": {
+      "type": "highlight",
+      "source": "-82.4% Windows 安装包体积",
+      "occurrence": 0
+    },
+    "b0012": {
+      "type": "highlight",
+      "source": "4 天 协议自测工具交付周期",
+      "occurrence": 0
+    },
+    "b0013": {
+      "type": "highlight",
+      "source": "7 / 7 自测工具协议全绿",
+      "occurrence": 0
+    },
+    "b0014": {
+      "type": "highlight",
+      "source": "3 个 共用 go-utilities 的后端仓库",
+      "occurrence": 0
+    },
+    "b0015": {
+      "type": "table-row",
+      "source": "主题 结论",
+      "occurrence": 0
+    },
+    "b0016": {
+      "type": "table-row",
+      "source": "Windows PC 客户端从 Electron 全面重写为 Rust（Tauri），自建 CI/CD 流水线；打包体积测量完成（98.8MB→17.4MB）；代码签名与 QA 发布验证仍是门控。",
+      "occurrence": 0
+    },
+    "b0017": {
+      "type": "table-row",
+      "source": "合规方向 sing-box 的 GPL3.0 与 App Store 冲突已确认无可行合规路径；团队自研 SkyTunnel 客户端引擎与节点程序，节点侧 7/10 验证可用。",
+      "occurrence": 0
+    },
+    "b0018": {
+      "type": "table-row",
+      "source": "协议自测工具 7/6 立项，7/8 建站，7/10 交付并移交台湾团队，七项协议全绿。",
+      "occurrence": 0
+    },
+    "b0019": {
+      "type": "table-row",
+      "source": "后端复用 公共 Go 模块 go-utilities 被三个后端仓库正式引用，节点健康分类等能力一处修改多处生效。",
+      "occurrence": 0
+    },
+    "b0020": {
+      "type": "table-row",
+      "source": "Arrowfish 客户端 Android 持续迭代（3.8.5→3.8.10）；Windows 新版尚未对外发布，等待签名与 QA。",
+      "occurrence": 0
+    },
+    "b0021": {
+      "type": "table-row",
+      "source": "FFF（实时更新至 7/15） 自 Sprint 0（5/18）起，新客户端累计 357 次非合并提交。迁移前旧客户端有 280 次历史提交，作为迁移基础，未并入新客户端统计。已完成多端基础、注册/登录、VPN 配置与线路选择、商城/订单界面、个人中心、专属线路与测速，以及设备绑定、会话、账户安全、改密、线路页、API 拦截器、多语言和诊断。七个产品模块完成研究；续费功能列为最高优先，PRD 待产出。",
+      "occurrence": 0
+    },
+    "b0022": {
+      "type": "heading",
+      "source": "三、下阶段计划（Sprint 8）",
+      "occurrence": 0
+    },
+    "b0023": {
+      "type": "table-row",
+      "source": "方向 计划内容",
+      "occurrence": 0
+    },
+    "b0024": {
+      "type": "table-row",
+      "source": "SkyTunnel 验证 完成 Android / Windows 双端验证，规划扩展至更多客户端平台。",
+      "occurrence": 0
+    },
+    "b0025": {
+      "type": "table-row",
+      "source": "Windows 发布 跟进签名审核结果；7/17 前先出未签名测试包给 QA。",
+      "occurrence": 0
+    },
+    "b0026": {
+      "type": "table-row",
+      "source": "续费功能 与台湾团队完成 FFF 需求梳理，续费功能（Arrowfish + FFF 通用）定为高优先级，先出 PRD。",
+      "occurrence": 0
+    },
+    "b0027": {
+      "type": "p",
+      "source": "完整细节请看同目录的 20260710 Sprint 7 完整报告。",
+      "occurrence": 0
+    }
+  },
+  "reviewedTargetHash": "dfd4d0aa3c887554"
+}

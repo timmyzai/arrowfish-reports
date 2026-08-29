@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-report-id="sprint-10-production-study-20260828">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="../../assets/ui-i18n.js"></script>
+  <script src="../../assets/site-preferences.js"></script>
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="description" content="Arrowfish 第10阶段生产用户质量、关键部署边界、后端配额、设备绑定、中国连接与平台影响追加分析">
+  <title>第10阶段 · 生产用户、关键部署与平台追加分析 · 更新至 2026-08-29</title>
+  <style>
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--af-text);
+      background: var(--af-bg);
+      font-family: Inter, "Noto Sans SC", -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif;
+      font-size: 16px;
+      line-height: 1.65;
+      font-variant-numeric: tabular-nums;
+    }
+    main { width: min(1180px, calc(100% - 36px)); margin: 0 auto; padding: 24px 0 68px; }
+    h1, h2, h3 { margin: 0; line-height: 1.25; }
+    h1 { margin-top: 8px; font-size: clamp(30px, 5vw, 52px); letter-spacing: -.04em; }
+    h2 { margin-bottom: 18px; font-size: clamp(22px, 3vw, 30px); letter-spacing: -.025em; }
+    h3 { margin: 22px 0 10px; font-size: 17px; }
+    p { margin: 0 0 12px; }
+    a { color: var(--af-primary); }
+    .page-nav {
+      position: sticky;
+      top: 10px;
+      z-index: 10;
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      padding: 10px 14px;
+      border: 1px solid var(--af-border);
+      border-radius: 14px;
+      background: var(--af-surface);
+      box-shadow: 0 10px 30px var(--af-shadow);
+    }
+    .page-nav p { margin: 0; color: var(--af-text-muted); font-size: 13px; font-weight: 700; }
+    .page-nav div { display: flex; flex-wrap: wrap; gap: 10px; }
+    .page-nav a { font-size: 13px; font-weight: 800; text-decoration: none; }
+    .hero {
+      margin-top: 24px;
+      padding: 42px;
+      border-radius: 26px;
+      color: var(--af-on-accent);
+      background: linear-gradient(135deg, var(--af-hero-bg-start), var(--af-hero-bg-end));
+      box-shadow: 0 22px 55px var(--af-shadow);
+    }
+    .eyebrow { margin: 0; color: var(--af-on-hero-strong); font-size: 12px; font-weight: 900; letter-spacing: .12em; text-transform: uppercase; }
+    .hero-copy { max-width: 900px; margin-top: 18px; color: var(--af-on-hero); font-size: 17px; }
+    .hero-meta { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 22px; }
+    .hero-meta span { padding: 5px 10px; border: 1px solid var(--af-on-hero-border); border-radius: 999px; background: var(--af-on-hero-soft); font-size: 12px; font-weight: 750; }
+    section {
+      margin-top: 22px;
+      padding: 28px;
+      border: 1px solid var(--af-border);
+      border-radius: 20px;
+      background: var(--af-surface);
+      box-shadow: 0 5px 18px var(--af-shadow);
+    }
+    .tldr { border-left: 5px solid var(--af-primary); background: var(--af-primary-soft); }
+    .tldr strong { color: var(--af-primary); }
+    .metric-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; }
+    .metric { padding: 18px; border: 1px solid var(--af-border); border-radius: 14px; background: var(--af-surface-muted); }
+    .metric b { display: block; color: var(--af-primary); font-size: 26px; line-height: 1.1; }
+    .metric span { color: var(--af-text-muted); font-size: 12px; font-weight: 700; }
+    .table-wrap { overflow-x: auto; border: 1px solid var(--af-border); border-radius: 14px; }
+    table { width: 100%; border-collapse: collapse; min-width: 740px; font-size: 13.5px; }
+    th, td { padding: 13px 14px; border-bottom: 1px solid var(--af-border); text-align: left; vertical-align: top; }
+    th { color: var(--af-text-muted); background: var(--af-surface-muted); font-size: 11px; letter-spacing: .05em; text-transform: uppercase; }
+    tr:last-child td { border-bottom: 0; }
+    .callout { margin-top: 16px; padding: 16px 18px; border-radius: 14px; background: var(--af-warning-soft); color: var(--af-text); }
+    .callout strong { color: var(--af-warning); }
+    .success { background: var(--af-success-soft); }
+    .success strong { color: var(--af-success); }
+    .steps { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin-top: 14px; counter-reset: step; }
+    .step { counter-increment: step; padding: 18px; border: 1px solid var(--af-border); border-radius: 14px; background: var(--af-surface-muted); }
+    .step::before { content: counter(step); display: grid; place-items: center; width: 28px; height: 28px; margin-bottom: 10px; border-radius: 50%; color: var(--af-on-accent); background: var(--af-primary); font-size: 12px; font-weight: 900; }
+    .step b { display: block; margin-bottom: 5px; }
+    .footer { margin-top: 24px; color: var(--af-text-muted); font-size: 12px; text-align: center; }
+    @media (max-width: 850px) { .metric-grid, .steps { grid-template-columns: repeat(2, minmax(0, 1fr)); } .hero { padding: 30px; } }
+    @media (max-width: 560px) { main { width: min(100% - 24px, 1180px); } .page-nav { position: static; display: block; } .page-nav div { margin-top: 8px; } .hero, section { padding: 22px 18px; } .metric-grid, .steps { grid-template-columns: 1fr; } }
+    @media print { .page-nav { display: none; } body { background: white; } section, .hero { break-inside: avoid; box-shadow: none; } }
+  </style>
+  <script src="../../assets/auth-gate.js"></script>
+  <link rel="stylesheet" href="../../assets/site-theme.css">
+</head>
+<body>
+<main>
+  <nav class="page-nav" data-report-header aria-label="追加报告导航">
+    <p>只读生产数据 · 基线 2026-08-28 · 部署边界复核 2026-08-29</p>
+    <div><a href="#deployments">关键部署</a><a href="#users">用户</a><a href="#controls">配额与设备</a><a href="#china">中国与节点</a><a href="#platforms">平台</a><a href="#fff">FFF 决策</a><a href="../Goal-2026/20260827_goals.html">2026 目标</a></div>
+  </nav>
+
+  <header class="hero">
+    <p class="eyebrow">Arrowfish · 第10阶段追加</p>
+    <h1>生产用户质量、访问资格与平台影响</h1>
+    <p class="hero-copy">补齐从接手、后端配额与设备绑定，到中国连接事件、自研 SkyNode／SkyTunnel、平台恢复和 FFF 后端分离的完整决策链。</p>
+    <div class="hero-meta"><span>历史：2025-12 至 2026-08-29</span><span>生产查询：只读聚合</span><span>不含个人资料</span><span>边界复核：2026-08-29</span></div>
+  </header>
+
+  <section class="tldr">
+    <h2>管理层结论</h2>
+    <p><strong>400,347 个注册账号不等于 400,347 个真实可用用户。</strong>最近 30 日 VPN 活跃只有 4,938 个，历史付费账号 19,476 个。接手后最重要的两项目标——后端／节点权威配额，以及设备身份绑定——方向正确，并已有流量、session 和新 cohort 数据支持。</p>
+    <p><strong>两个大部署不能只写“成功”。</strong>5月25日证明生产 session accounting 开始且设备身份改善，但用户激活、付费激活和流量同时骤降；8月12日基础设施整合完成、业务指标改善，但共享设备身份出现明确回归。后续必须把部署、产品可用性和地区验收分开关闭。</p>
+    <p>中国事件不是普通 bug：同一批测试节点在马来西亚和台湾可用，但中国 QA 不可用，推动团队建立自研 SkyNode、SkyTunnel 与三条加固协议。生产数据库同时显示 MY/TW 注册地 cohort 也在5月25日前后下降，因此不能把整体下跌只归因于 GFW。当前应优先保护 Android 并恢复 Windows；iOS/macOS 等待 rebuilt client 的 Apple 批准。</p>
+  </section>
+
+  <section id="deployments">
+    <h2>1 · 两个关键生产部署边界</h2>
+    <h3>2026-05-25 · 生产计费／release 边界</h3>
+    <div class="table-wrap"><table>
+      <thead><tr><th>指标</th><th>5/18–5/24</th><th>5/25–5/31</th><th>6/1–6/7</th></tr></thead>
+      <tbody>
+        <tr><td>D7 VPN 激活</td><td>47.78%</td><td>2.43%</td><td>7.48%</td></tr>
+        <tr><td>D7 付费激活</td><td>1.56%</td><td>0.47%</td><td>0.54%</td></tr>
+        <tr><td>周内 VPN 用户</td><td>6,456</td><td>1,338</td><td>1,667</td></tr>
+        <tr><td>计费流量</td><td>7,558.7 GiB</td><td>1,508.9 GiB</td><td>1,774.5 GiB</td></tr>
+        <tr><td>生产 session</td><td>0</td><td>8,961</td><td>16,961</td></tr>
+        <tr><td>目前回看共享 device ID 率</td><td>21.73%</td><td>2.59%</td><td>1.07%</td></tr>
+      </tbody>
+    </table></div>
+    <p class="callout"><strong>证据结论：</strong>OreBackend release tags 指向当天 06:14 MYT 起的 Git objects，第一条生产 session 在 06:52 MYT；部分为 lightweight tags，所以 object 时间不能当作独立 tag 创建时间。数据库证明 session accounting 上线，设备身份质量也显著改善；但现有 Sprint 4 报告把当天写成 QA/preprod closeout，因此完整“大部署”范围仍需 release-operations 记录确认。激活与流量骤降可能同时包含资格校验、连通性、客户端兼容和获客变化，数据库不能分摊单一因果。</p>
+
+    <h3>2026-08-12 · 单主机生产整合</h3>
+    <div class="table-wrap"><table>
+      <thead><tr><th>指标</th><th>8/5–8/11</th><th>8/12–8/18</th><th>8/19–8/25</th></tr></thead>
+      <tbody>
+        <tr><td>D7 VPN 激活</td><td>44.36%</td><td>70.76%</td><td>69.88%</td></tr>
+        <tr><td>周内 VPN 用户</td><td>1,955</td><td>2,096</td><td>2,484</td></tr>
+        <tr><td>计费流量</td><td>4,409.3 GiB</td><td>5,294.9 GiB</td><td>5,417.2 GiB</td></tr>
+        <tr><td>已付订单金额</td><td>CNY 2,034.89</td><td>CNY 4,535.49</td><td>CNY 4,890.01</td></tr>
+        <tr><td>目前回看共享 device ID 率</td><td>7.32%</td><td>38.89%</td><td>21.30%</td></tr>
+      </tbody>
+    </table></div>
+    <p class="callout"><strong>证据结论：</strong>cutover report 记录 05:00 MYT 开始；MySQL restore 后两张关键表在 06:05–06:09 MYT 重建，基础设施部署事实成立。业务指标上升是正相关，不是已隔离的部署增量；8月12–15日共享设备率为52.11%、40.63%、36.96%、34.62%，所以产品 acceptance 仍需关闭 identity header、CORS、客户端版本与 legacy fallback。</p>
+  </section>
+
+  <section id="users">
+    <h2>2 · 注册规模必须换成质量漏斗</h2>
+    <div class="metric-grid">
+      <div class="metric"><b>400,347</b><span>注册账号</span></div>
+      <div class="metric"><b>4,938</b><span>最近 30 日 VPN 活跃</span></div>
+      <div class="metric"><b>19,476</b><span>历史付费账号</span></div>
+      <div class="metric"><b>995</b><span>当前 VIP</span></div>
+    </div>
+    <h3>关键 cohort 变化</h3>
+    <div class="table-wrap"><table>
+      <thead><tr><th>月份</th><th>注册</th><th>历史付费率</th><th>D7 VPN 激活</th><th>设备绑定率</th></tr></thead>
+      <tbody>
+        <tr><td>3 月</td><td>13,117</td><td>5.3%</td><td>65.78%</td><td>84.04%</td></tr>
+        <tr><td>5 月</td><td>27,794</td><td>1.8%</td><td>40.96%</td><td>87.01%</td></tr>
+        <tr><td>6 月</td><td>23,821</td><td>0.9%</td><td>12.27%</td><td>98.49%</td></tr>
+        <tr><td>7 月</td><td>3,163</td><td>4.4%</td><td>42.52%</td><td>92.85%</td></tr>
+        <tr><td>8 月截至 28 日</td><td>3,426</td><td>4.1%</td><td>58.66%（成熟用户）</td><td>92.79%</td></tr>
+      </tbody>
+    </table></div>
+    <div class="callout"><strong>解读边界：</strong>6 月有 20,499 个账号从未付费且没有 VPN 记录；5 月 25 日至 6 月 30 日，伊朗和阿塞拜疆合计 14,792 个注册、D7 激活 3.14%、历史付费 0。这是低质量或自动化注册的强信号，不是对单个账号的欺诈判定。</div>
+  </section>
+
+  <section id="controls">
+    <h2>3 · 后端配额已产生效果，设备资料仍需收口</h2>
+    <div class="table-wrap"><table>
+      <thead><tr><th>验证点</th><th>生产结果</th><th>结论</th></tr></thead>
+      <tbody>
+        <tr><td>ACTIVE session 唯一性</td><td>8月29日复核：同账号多 ACTIVE = 0；同设备多 ACTIVE = 0</td><td>当前会话替换／到期由后端执行；ACTIVE 数量是实时值，不作为趋势 KPI。</td></tr>
+        <tr><td>未付费最高月流量</td><td>3 月 1,216.7 GiB → 5 月 69.4 GiB → 6 月 39.0 GiB</td><td>3 月到 6 月下降 96.79%；4 月后无人超过 100 GiB。</td></tr>
+        <tr><td>设备 ID 历史关系</td><td>214,516 个 distinct ID；37,904 个关联两个或以上账号</td><td>历史资料不等于当前并发，需要按 cohort 与客户端版本治理。</td></tr>
+        <tr><td>8 月切换异常</td><td>共享设备比例 8/12–8/15 为 52.11%、40.63%、36.96%、34.62%</td><td>先查 identity header、CORS、客户端版本与 legacy fallback，不做批量删除。</td></tr>
+      </tbody>
+    </table></div>
+    <div class="callout success"><strong>已完成的核心目标：</strong>配额不再只是 UI 数字；生产 session 与流量结果证明 backend/node 已成为实际执行层。MySQL 不保存 Redis 当前余额，因此历史剩余秒数仍不能完整回算；5月25日用户可用性同步下降，不能把所有流量下降只归功于配额。</div>
+  </section>
+
+  <section id="china">
+    <h2>4 · 中国连接事件与自研节点路线</h2>
+    <div class="table-wrap"><table>
+      <thead><tr><th>指标</th><th>5 月</th><th>6 月</th><th>变化</th></tr></thead>
+      <tbody>
+        <tr><td>全部 VPN 活跃用户</td><td>15,832</td><td>5,645</td><td>-64.34%</td></tr>
+        <tr><td>中国 VPN 活跃用户</td><td>11,457</td><td>3,842</td><td>-66.47%</td></tr>
+        <tr><td>流量</td><td>28,323 GiB</td><td>15,595 GiB</td><td>-44.94%</td></tr>
+      </tbody>
+    </table></div>
+    <p class="callout"><strong>因果边界：</strong>数据库证明下降的时间与规模；5月25日前后，中国、马来西亚和台湾注册地 cohort 的生产使用都下降，所以 DB 不能证明 GFW 是整体下跌的唯一原因。GFW 判断来自另一组地域 QA 对照。节点供应商历史影响约 50 台属于运维记录，当前数据库无法单独重建完整 provider 事件。</p>
+    <h3>当前生产节点状态</h3>
+    <div class="metric-grid">
+      <div class="metric"><b>99</b><span>实体节点主机</span></div>
+      <div class="metric"><b>93</b><span>近期心跳正常</span></div>
+      <div class="metric"><b>97</b><span>运行自研 SkyNode Agent</span></div>
+      <div class="metric"><b>34</b><span>三协议监听全部就绪</span></div>
+    </div>
+    <p class="callout"><strong>不能过度宣称：</strong>64 台主机仍是 Trojan-only，协议 external state 仍为 unverified。正确状态是“核心已实现，34 台监听就绪，全量 rollout 与中国可达性验收进行中”。</p>
+  </section>
+
+  <section id="platforms">
+    <h2>5 · 平台取舍由活跃与营收支持</h2>
+    <div class="table-wrap"><table>
+      <thead><tr><th>平台</th><th>VPN 活跃 30d</th><th>VPN 活跃 7d</th><th>历史付费</th><th>当前 VIP</th><th>当前决策</th></tr></thead>
+      <tbody>
+        <tr><td>Android</td><td>3,059</td><td>1,763</td><td>1,430</td><td>403</td><td>主要 live 平台，优先稳定。</td></tr>
+        <tr><td>Windows</td><td>1,625</td><td>769</td><td>958</td><td>357</td><td>云签名已正确完成，进入官网发布验收。</td></tr>
+        <tr><td>iOS</td><td>95</td><td>21</td><td>36</td><td>6</td><td>干净工程重建，等待签名、TestFlight 与 App Store。</td></tr>
+        <tr><td>macOS</td><td>13</td><td>9</td><td>10</td><td>6</td><td>新核心接入后需 Apple 发布批准。</td></tr>
+      </tbody>
+    </table></div>
+    <div class="callout success"><strong>数据支持的优先级：</strong>Android + Windows 占最近可识别 VPN 用户 94.86%、近期流量 94.15%、近期订单金额 89.04%。这是暂时集中资源的依据，不代表永久放弃 iOS/macOS。</div>
+  </section>
+
+  <section id="fff">
+    <h2>6 · FFF 后端必须与 Arrowfish live data 分离</h2>
+    <p>Arrowfish 已承载 400,347 个账号以及持续中的订阅、设备、session 和流量资料。大范围原地 refactor 会放大数据迁移和旧客户端兼容风险。FFF 应复用受控代码基线，而不是复用生产 runtime 或数据库。</p>
+    <div class="steps">
+      <div class="step"><b>锁定代码基线</b>标记可克隆的 Arrowfish backend 版本与依赖。</div>
+      <div class="step"><b>新建 GitLab repo</b>独立 ownership、CI/CD、secrets 与发布历史。</div>
+      <div class="step"><b>部署 FFF staging</b>独立 backend、数据库、Redis、域名和配置。</div>
+      <div class="step"><b>合成数据验收</b>注册、登录、bootstrap、节点、session、设备与支付 stub。</div>
+      <div class="step"><b>开始独立 refactor</b>验收后再改变 FFF schema、模块与 API。</div>
+      <div class="step"><b>限制共享边界</b>只共享版本化源码模块，不共享生产账号或部署状态。</div>
+    </div>
+  </section>
+
+  <section>
+    <h2>7 · 第10阶段追加行动</h2>
+    <div class="table-wrap"><table>
+      <thead><tr><th>优先级</th><th>行动</th><th>关闭标准</th></tr></thead>
+      <tbody>
+        <tr><td>P0</td><td>完成 Windows signed website release。</td><td>干净机器安装、签名、连接、升级与下载链路验收。</td></tr>
+        <tr><td>P0</td><td>修复并验证 device identity header / CORS。</td><td>Android 与 Windows 新绑定来源可追踪，8 月共享设备异常不再重现。</td></tr>
+        <tr><td>P0</td><td>建立生产异地备份并恢复演练。</td><td>异地主机可恢复，记录 RTO 与数据完整性。</td></tr>
+        <tr><td>P0</td><td>对齐5月25日 release operations 并建立分层发布证据。</td><td>tag、runtime、DB migration、产品 smoke、地区 QA 与发布后 KPI 分开留证。</td></tr>
+        <tr><td>P1</td><td>完成三协议全量 rollout 与中国地区验收。</td><td>实现、监听、fleet rollout、regional acceptance 四项分别有证据。</td></tr>
+        <tr><td>P1</td><td>建立用户质量看板。</td><td>注册、绑定、VPN-active、ever-paid、VIP 与 cohort 转化分开呈现。</td></tr>
+        <tr><td>P1</td><td>建立 FFF 独立 staging backend。</td><td>新 repo 与隔离 runtime 通过合成数据 smoke test 后才 refactor。</td></tr>
+      </tbody>
+    </table></div>
+  </section>
+
+  <div class="footer">Arrowfish 第10阶段生产研究追加 · 部署边界复核 2026-08-29 · 只读聚合查询 · 不含个人资料</div>
+</main>
+</body>
+</html>

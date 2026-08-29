@@ -1,0 +1,3398 @@
+{
+  "schemaVersion": 1,
+  "reportId": "sprint-4-6-full",
+  "sourceFile": "Stakeholder/Sprint-4-6/20260626_report.html",
+  "sourceVersion": "baf243b691f7ba56",
+  "units": [
+    {
+      "id": "u_5d07806980f40f34",
+      "kind": "text",
+      "source": "第4-6阶段 · 完整报告 · 2026-06-26",
+      "occurrence": 0,
+      "target": "Sprints 4–6 Summary Report - June 26, 2026",
+      "context": "title @ line 10"
+    },
+    {
+      "id": "u_ae65d1f96f24bf57",
+      "kind": "text",
+      "source": "Arrowfish VPN · 第4-6阶段 · 完整报告",
+      "occurrence": 0,
+      "target": "Arrowfish VPN · Sprints 4–6 · Full Report",
+      "context": "p.eyebrow @ line 136"
+    },
+    {
+      "id": "u_225c7222c40c4ee6",
+      "kind": "text",
+      "source": "2026-06-26 Sprint 4-6 完整进展、成本与发布规划报告",
+      "occurrence": 0,
+      "target": "Sprint 4-6 Progress, Cost and Release Planning Report - June 26, 2026",
+      "context": "h1 @ line 137"
+    },
+    {
+      "id": "u_4b156f195bce7a2d",
+      "kind": "text",
+      "source": "覆盖范围：2026-05-10 至 2026-06-26。本报告合并原 2026-06-19 补报与 2026-06-26 更新，作为 Sprint 4-6 唯一完整版本。",
+      "occurrence": 0,
+      "target": "Scope: From May 10 to June 26, 2026. This report consolidates the original updates from June 19 and June 26 for Sprint 4-6 as the only complete version.",
+      "context": "p.meta @ line 138"
+    },
+    {
+      "id": "u_c2966595a85422f1",
+      "kind": "text",
+      "source": "TL;DR：Sprint 4-6 已完成基础设施、Android、网站和后端拆分的主要技术债收敛；Azure + LisaHost 直接节省约 USD 612.21/月，Arrowfish Android 与后端多协议进入发布收尾，Sprint 7 重点转向 Windows、后端重构和 FFF 需求拆解。",
+      "occurrence": 0,
+      "target": "TL;DR: Sprint 4-6 has completed the consolidation of infrastructure, Android, website, and backend technical debt. Azure + LisaHost saves approximately USD 612.21 per month directly, Arrowfish Android and backend multi-protocol are entering final release preparation, with Sprint 7 focusing on Windows, backend refactoring, and FFF requirement breakdown.",
+      "context": "section.tldr @ line 141"
+    },
+    {
+      "id": "u_91e457089adb6446",
+      "kind": "text",
+      "source": "一、需要配合 / 决策",
+      "occurrence": 0,
+      "target": "I. Coordination / Decisions Needed",
+      "context": "h2 @ line 146"
+    },
+    {
+      "id": "u_740a0e5b8d6354db",
+      "kind": "text",
+      "source": "事项",
+      "occurrence": 0,
+      "target": "Item",
+      "context": "th @ line 148 · surrounding text: 事项 需要配合 原因"
+    },
+    {
+      "id": "u_109a0edea4dcae59",
+      "kind": "text",
+      "source": "需要配合",
+      "occurrence": 0,
+      "target": "Coordination Required",
+      "context": "th @ line 148 · surrounding text: 事项 需要配合 原因"
+    },
+    {
+      "id": "u_eddf6f57d05e714b",
+      "kind": "text",
+      "source": "原因",
+      "occurrence": 0,
+      "target": "Reason",
+      "context": "th @ line 148 · surrounding text: 事项 需要配合 原因"
+    },
+    {
+      "id": "u_fa65265134310331",
+      "kind": "text",
+      "source": "Arrowfish Android 发布窗口",
+      "occurrence": 0,
+      "target": "Arrowfish Android Release Window",
+      "context": "td @ line 150 · surrounding text: Arrowfish Android 发布窗口 项目负责人 / QA 当前版本已推进到 3.8.4 ，目标 2026-06-29 发布；最终仍以 QA 回归结果为门控。"
+    },
+    {
+      "id": "u_503f8160c2c35eb6",
+      "kind": "text",
+      "source": "项目负责人 / QA",
+      "occurrence": 0,
+      "target": "Project Manager / QA",
+      "context": "td @ line 150 · surrounding text: Arrowfish Android 发布窗口 项目负责人 / QA 当前版本已推进到 3.8.4 ，目标 2026-06-29 发布；最终仍以 QA 回归结果为门控。"
+    },
+    {
+      "id": "u_ce8dd58b238dcfeb",
+      "kind": "text",
+      "source": "当前版本已推进到",
+      "occurrence": 0,
+      "target": "Current version has reached",
+      "context": "td @ line 150 · surrounding text: Arrowfish Android 发布窗口 项目负责人 / QA 当前版本已推进到 3.8.4 ，目标 2026-06-29 发布；最终仍以 QA 回归结果为门控。"
+    },
+    {
+      "id": "u_14bb6ef9741a622d",
+      "kind": "text",
+      "source": "，目标 2026-06-29 发布；最终仍以 QA 回归结果为门控。",
+      "occurrence": 0,
+      "target": "Targeted for June 29, 2026; final control remains the QA regression results.",
+      "context": "td @ line 150 · surrounding text: Arrowfish Android 发布窗口 项目负责人 / QA 当前版本已推进到 3.8.4 ，目标 2026-06-29 发布；最终仍以 QA 回归结果为门控。"
+    },
+    {
+      "id": "u_03c507abd85d9073",
+      "kind": "text",
+      "source": "Windows 签名方案",
+      "occurrence": 0,
+      "target": "Windows Signing Scheme",
+      "context": "td @ line 151 · surrounding text: Windows 签名方案 项目负责人 / 运维 台湾旧硬件签名路径已不可继续依赖，Windows 新版需要云签名或新的有效代码签名证书。"
+    },
+    {
+      "id": "u_414c121c558db108",
+      "kind": "text",
+      "source": "项目负责人 / 运维",
+      "occurrence": 0,
+      "target": "Project Manager / Operations",
+      "context": "td @ line 151 · surrounding text: Windows 签名方案 项目负责人 / 运维 台湾旧硬件签名路径已不可继续依赖，Windows 新版需要云签名或新的有效代码签名证书。"
+    },
+    {
+      "id": "u_b6c9afa0bea6e97f",
+      "kind": "text",
+      "source": "台湾旧硬件签名路径已不可继续依赖，Windows 新版需要云签名或新的有效代码签名证书。",
+      "occurrence": 0,
+      "target": "The old hardware signing path for Taiwan is no longer viable, and the new version of Windows requires cloud signing or a valid code signing certificate.",
+      "context": "td @ line 151 · surrounding text: Windows 签名方案 项目负责人 / 运维 台湾旧硬件签名路径已不可继续依赖，Windows 新版需要云签名或新的有效代码签名证书。"
+    },
+    {
+      "id": "u_0548907c5535ddd4",
+      "kind": "text",
+      "source": "FFF 需求拆解",
+      "occurrence": 0,
+      "target": "FFF Requirement Breakdown",
+      "context": "td @ line 152 · surrounding text: FFF 需求拆解 Roy / 产品侧 2026-06-23 才收到完整 AF-vs-FFF 需求差异，Sprint 7 需先评估范围，再给正式排期。"
+    },
+    {
+      "id": "u_faf0069ffe25c41b",
+      "kind": "text",
+      "source": "Roy / 产品侧",
+      "occurrence": 0,
+      "target": "Roy / Product Side",
+      "context": "td @ line 152 · surrounding text: FFF 需求拆解 Roy / 产品侧 2026-06-23 才收到完整 AF-vs-FFF 需求差异，Sprint 7 需先评估范围，再给正式排期。"
+    },
+    {
+      "id": "u_39959e86e14f3725",
+      "kind": "text",
+      "source": "2026-06-23 才收到完整 AF-vs-FFF 需求差异，Sprint 7 需先评估范围，再给正式排期。",
+      "occurrence": 0,
+      "target": "Received the complete AF-vs-FFF requirement differences on June 23, 2026. Sprint 7 needs to first assess the scope before giving a formal schedule.",
+      "context": "td @ line 152 · surrounding text: FFF 需求拆解 Roy / 产品侧 2026-06-23 才收到完整 AF-vs-FFF 需求差异，Sprint 7 需先评估范围，再给正式排期。"
+    },
+    {
+      "id": "u_ade752dbfbf3c1bf",
+      "kind": "text",
+      "source": "后端重构窗口",
+      "occurrence": 0,
+      "target": "Backend Refactoring Window",
+      "context": "td @ line 153 · surrounding text: 后端重构窗口 项目负责人 后端需要先清理成可复用基线，再复制为 FFF 后端；直接叠新需求会放大维护风险。"
+    },
+    {
+      "id": "u_4719c84b79a13c3f",
+      "kind": "text",
+      "source": "项目负责人",
+      "occurrence": 0,
+      "target": "Project Manager",
+      "context": "td @ line 153 · surrounding text: 后端重构窗口 项目负责人 后端需要先清理成可复用基线，再复制为 FFF 后端；直接叠新需求会放大维护风险。"
+    },
+    {
+      "id": "u_819a628922e54261",
+      "kind": "text",
+      "source": "后端需要先清理成可复用基线，再复制为 FFF 后端；直接叠新需求会放大维护风险。",
+      "occurrence": 0,
+      "target": "Backend needs to first clean up into a reusable baseline, then replicate as FFF backend; stacking new requirements directly will amplify the maintenance risk.",
+      "context": "td @ line 153 · surrounding text: 后端重构窗口 项目负责人 后端需要先清理成可复用基线，再复制为 FFF 后端；直接叠新需求会放大维护风险。"
+    },
+    {
+      "id": "u_6b906efa305059ad",
+      "kind": "text",
+      "source": "成本月结确认",
+      "occurrence": 0,
+      "target": "Monthly Cost Settlement Confirmation",
+      "context": "td @ line 154 · surrounding text: 成本月结确认 财务 / 运维 当前成本口径来自 2026-06-24 前完整日数据；7 月初需用完整 6 月账单做最终确认。"
+    },
+    {
+      "id": "u_73524338bd290255",
+      "kind": "text",
+      "source": "财务 / 运维",
+      "occurrence": 0,
+      "target": "Finance / Operations",
+      "context": "td @ line 154 · surrounding text: 成本月结确认 财务 / 运维 当前成本口径来自 2026-06-24 前完整日数据；7 月初需用完整 6 月账单做最终确认。"
+    },
+    {
+      "id": "u_57537c5e0372fb62",
+      "kind": "text",
+      "source": "当前成本口径来自 2026-06-24 前完整日数据；7 月初需用完整 6 月账单做最终确认。",
+      "occurrence": 0,
+      "target": "The current cost baseline uses complete daily data through 2026-06-24; final confirmation requires the complete June bill in early July.",
+      "context": "td @ line 154 · surrounding text: 成本月结确认 财务 / 运维 当前成本口径来自 2026-06-24 前完整日数据；7 月初需用完整 6 月账单做最终确认。"
+    },
+    {
+      "id": "u_5d7296dcf5d40a4e",
+      "kind": "text",
+      "source": "二、本阶段关键成果",
+      "occurrence": 0,
+      "target": "II. Key Achievements of This Phase",
+      "context": "h2 @ line 160"
+    },
+    {
+      "id": "u_3fc7d6aa3c9aa849",
+      "kind": "text",
+      "source": "USD 612.21/月",
+      "occurrence": 0,
+      "target": "$612.21/month",
+      "context": "strong @ line 162 · surrounding text: USD 612.21/月 Azure + LisaHost 直接节省"
+    },
+    {
+      "id": "u_693ba2c8848e1b77",
+      "kind": "text",
+      "source": "Azure + LisaHost 直接节省",
+      "occurrence": 0,
+      "target": "Azure + LisaHost Direct Savings",
+      "context": "span @ line 162 · surrounding text: USD 612.21/月 Azure + LisaHost 直接节省"
+    },
+    {
+      "id": "u_ea2c4db21fa52b1e",
+      "kind": "text",
+      "source": "Android 发布候选版本",
+      "occurrence": 0,
+      "target": "Android Release Candidate Version",
+      "context": "span @ line 163 · surrounding text: 3.8.4 Android 发布候选版本"
+    },
+    {
+      "id": "u_86ffd8e9a8f81462",
+      "kind": "text",
+      "source": "生产 MySQL 公网 IP",
+      "occurrence": 0,
+      "target": "Production MySQL Public IP",
+      "context": "span @ line 164 · surrounding text: 0 生产 MySQL 公网 IP"
+    },
+    {
+      "id": "u_4a7c8364f473d8db",
+      "kind": "text",
+      "source": "收到 FFF 需求差异",
+      "occurrence": 0,
+      "target": "Received the FFF requirements delta",
+      "context": "span @ line 165 · surrounding text: 06/23 收到 FFF 需求差异"
+    },
+    {
+      "id": "u_33ad861ab6d886ad",
+      "kind": "text",
+      "source": "方向",
+      "occurrence": 0,
+      "target": "Direction",
+      "context": "th @ line 168 · surrounding text: 方向 当前结果 管理层解读"
+    },
+    {
+      "id": "u_8f8de4f656dad6b6",
+      "kind": "text",
+      "source": "当前结果",
+      "occurrence": 0,
+      "target": "Current Outcome",
+      "context": "th @ line 168 · surrounding text: 方向 当前结果 管理层解读"
+    },
+    {
+      "id": "u_342bbff0bc7b0845",
+      "kind": "text",
+      "source": "管理层解读",
+      "occurrence": 0,
+      "target": "Management Interpretation",
+      "context": "th @ line 168 · surrounding text: 方向 当前结果 管理层解读"
+    },
+    {
+      "id": "u_ad1670df6ce693ea",
+      "kind": "text",
+      "source": "Android 稳定性",
+      "occurrence": 0,
+      "target": "Android Stability",
+      "context": "td @ line 170 · surrounding text: Android 稳定性 修复断网重连、免费额度、活动弹窗、延迟探测、连接状态和繁中文案等问题。 降低用户误判网络被封锁、连接卡住和切线失败的概率。"
+    },
+    {
+      "id": "u_40cb85be138f82e3",
+      "kind": "text",
+      "source": "修复断网重连、免费额度、活动弹窗、延迟探测、连接状态和繁中文案等问题。",
+      "occurrence": 0,
+      "target": "Fix network reconnection, free quota, pop-up ads, delay detection, connection status, and complex Chinese messages. Reduce the probability of users misjudging network blockage, connection lag, or disconnection failure.",
+      "context": "td @ line 170 · surrounding text: Android 稳定性 修复断网重连、免费额度、活动弹窗、延迟探测、连接状态和繁中文案等问题。 降低用户误判网络被封锁、连接卡住和切线失败的概率。"
+    },
+    {
+      "id": "u_71bac4aea5efb29e",
+      "kind": "text",
+      "source": "降低用户误判网络被封锁、连接卡住和切线失败的概率。",
+      "occurrence": 0,
+      "target": "Reduce the probability of users misjudging network blockage, connection lag, or disconnection failure.",
+      "context": "td @ line 170 · surrounding text: Android 稳定性 修复断网重连、免费额度、活动弹窗、延迟探测、连接状态和繁中文案等问题。 降低用户误判网络被封锁、连接卡住和切线失败的概率。"
+    },
+    {
+      "id": "u_855c0363bf7520de",
+      "kind": "text",
+      "source": "后端多协议",
+      "occurrence": 0,
+      "target": "Backend Multi-Protocol",
+      "context": "td @ line 171 · surrounding text: 后端多协议 多协议支持已放到测试环境给 QA 验证。 支撑 Arrowfish Android 新版，也为 FFF 后端复用打底。"
+    },
+    {
+      "id": "u_8af916b32dcdea75",
+      "kind": "text",
+      "source": "多协议支持已放到测试环境给 QA 验证。",
+      "occurrence": 0,
+      "target": "Multi-protocol support has been moved to the test environment for QA validation.",
+      "context": "td @ line 171 · surrounding text: 后端多协议 多协议支持已放到测试环境给 QA 验证。 支撑 Arrowfish Android 新版，也为 FFF 后端复用打底。"
+    },
+    {
+      "id": "u_b338a49044b2c23b",
+      "kind": "text",
+      "source": "支撑 Arrowfish Android 新版，也为 FFF 后端复用打底。",
+      "occurrence": 0,
+      "target": "Supports Arrowfish Android version, and also serves as a foundation for FFF backend reuse.",
+      "context": "td @ line 171 · surrounding text: 后端多协议 多协议支持已放到测试环境给 QA 验证。 支撑 Arrowfish Android 新版，也为 FFF 后端复用打底。"
+    },
+    {
+      "id": "u_aeb1387194f72d2b",
+      "kind": "text",
+      "source": "Go 公共工具",
+      "occurrence": 0,
+      "target": "Go Public Tools",
+      "context": "td @ line 172 · surrounding text: Go 公共工具 公共 CLI、迁移、日志、遮罩、Seq、HTTP 防护和限流工具已抽出，进入验证。 减少后端、BO、cron 的重复工具代码，为 FFF 后端复制基线打底。"
+    },
+    {
+      "id": "u_c7c75a16c5d8ec6a",
+      "kind": "text",
+      "source": "公共 CLI、迁移、日志、遮罩、Seq、HTTP 防护和限流工具已抽出，进入验证。",
+      "occurrence": 0,
+      "target": "Public CLI, migration, logging, masking, Seq, HTTP protection and throttling tools have been extracted for validation.",
+      "context": "td @ line 172 · surrounding text: Go 公共工具 公共 CLI、迁移、日志、遮罩、Seq、HTTP 防护和限流工具已抽出，进入验证。 减少后端、BO、cron 的重复工具代码，为 FFF 后端复制基线打底。"
+    },
+    {
+      "id": "u_00e20df7fc7fda26",
+      "kind": "text",
+      "source": "减少后端、BO、cron 的重复工具代码，为 FFF 后端复制基线打底。",
+      "occurrence": 0,
+      "target": "Reduces duplicate tool code in backend, BO, cron to serve as a baseline for FFF backend reuse.",
+      "context": "td @ line 172 · surrounding text: Go 公共工具 公共 CLI、迁移、日志、遮罩、Seq、HTTP 防护和限流工具已抽出，进入验证。 减少后端、BO、cron 的重复工具代码，为 FFF 后端复制基线打底。"
+    },
+    {
+      "id": "u_1c6920a9193d3ef7",
+      "kind": "text",
+      "source": "后端 / BO / Cron",
+      "occurrence": 0,
+      "target": "Backend / BO / Cron",
+      "context": "td @ line 173 · surrounding text: 后端 / BO / Cron 三套服务开始改用共享私有模块，并统一环境变量、数据库迁移和部署流程；本地开发工作区不进入 CI。 从“能跑”推进到“可维护、可复制”，但仍需测试环境和生产门控验证。"
+    },
+    {
+      "id": "u_fefa72e263009ee3",
+      "kind": "text",
+      "source": "三套服务开始改用共享私有模块，并统一环境变量、数据库迁移和部署流程；本地开发工作区不进入 CI。",
+      "occurrence": 0,
+      "target": "Three services have started using shared private modules and unified environment variables, database migration, and deployment processes. Local development workspaces do not enter CI.",
+      "context": "td @ line 173 · surrounding text: 后端 / BO / Cron 三套服务开始改用共享私有模块，并统一环境变量、数据库迁移和部署流程；本地开发工作区不进入 CI。 从“能跑”推进到“可维护、可复制”，但仍需测试环境和生产门控验证。"
+    },
+    {
+      "id": "u_e1f8df5c07ab3988",
+      "kind": "text",
+      "source": "从“能跑”推进到“可维护、可复制”，但仍需测试环境和生产门控验证。",
+      "occurrence": 0,
+      "target": "Move from 'can run' to 'maintainable and reproducible', but still requires validation in test environments and production gates.",
+      "context": "td @ line 173 · surrounding text: 后端 / BO / Cron 三套服务开始改用共享私有模块，并统一环境变量、数据库迁移和部署流程；本地开发工作区不进入 CI。 从“能跑”推进到“可维护、可复制”，但仍需测试环境和生产门控验证。"
+    },
+    {
+      "id": "u_a68514e9d7f544e7",
+      "kind": "text",
+      "source": "基础设施清理",
+      "occurrence": 0,
+      "target": "Infrastructure Cleanup",
+      "context": "td @ line 174 · surrounding text: 基础设施清理 Azure、AWS、Nginx、数据库、GitLab runner、旧 proxybackend 和旧文件 / 日志完成主要整理。 生产环境更安全，成本和维护噪音更低。"
+    },
+    {
+      "id": "u_414c8daf3436b0fb",
+      "kind": "text",
+      "source": "Azure、AWS、Nginx、数据库、GitLab runner、旧 proxybackend 和旧文件 / 日志完成主要整理。",
+      "occurrence": 0,
+      "target": "Azure, AWS, Nginx, databases, GitLab runners, old proxybackend and old files/logs have been mainly organized.",
+      "context": "td @ line 174 · surrounding text: 基础设施清理 Azure、AWS、Nginx、数据库、GitLab runner、旧 proxybackend 和旧文件 / 日志完成主要整理。 生产环境更安全，成本和维护噪音更低。"
+    },
+    {
+      "id": "u_ec3bbbcea30b5157",
+      "kind": "text",
+      "source": "生产环境更安全，成本和维护噪音更低。",
+      "occurrence": 0,
+      "target": "Production environment is safer with lower costs and maintenance noise.",
+      "context": "td @ line 174 · surrounding text: 基础设施清理 Azure、AWS、Nginx、数据库、GitLab runner、旧 proxybackend 和旧文件 / 日志完成主要整理。 生产环境更安全，成本和维护噪音更低。"
+    },
+    {
+      "id": "u_2501f9a40589d569",
+      "kind": "text",
+      "source": "网站 / Nginx 链路",
+      "occurrence": 0,
+      "target": "Website/Nginx links",
+      "context": "td @ line 175 · surrounding text: 网站 / Nginx 链路 已花时间梳理台湾团队遗留 Nginx 配置债，并标准化生产路由与静态网站 CI/CD。 arrowfishvpn.com -> /project/arrowfishvpn，/landing/ -> /project/arrowfishlandingpage，jianyu-ip-proxy.com -> /project/skytreelandingpagewebnet，减少错站、错路径和线上 routing 漂移。"
+    },
+    {
+      "id": "u_0d8f58a1373af86e",
+      "kind": "text",
+      "source": "已花时间梳理台湾团队遗留 Nginx 配置债，并标准化生产路由与静态网站 CI/CD。",
+      "occurrence": 0,
+      "target": "Time was invested in analyzing Nginx configuration debt inherited from the Taiwan team and standardizing production routing and static-website CI/CD.",
+      "context": "td @ line 175 · surrounding text: 网站 / Nginx 链路 已花时间梳理台湾团队遗留 Nginx 配置债，并标准化生产路由与静态网站 CI/CD。 arrowfishvpn.com -> /project/arrowfishvpn，/landing/ -> /project/arrowfishlandingpage，jianyu-ip-proxy.com -> /project/skytreelandingpagewebnet，减少错站、错路径和线上 routing 漂移。"
+    },
+    {
+      "id": "u_7b49c950819a565e",
+      "kind": "text",
+      "source": "arrowfishvpn.com -> /project/arrowfishvpn，/landing/ -> /project/arrowfishlandingpage，jianyu-ip-proxy.com -> /project/skytreelandingpagewebnet，减少错站、错路径和线上 routing 漂移。",
+      "occurrence": 0,
+      "target": "arrowfishvpn.com -> /project/arrowfishvpn, /landing/ -> /project/arrowfishlandingpage, and jianyu-ip-proxy.com -> /project/skytreelandingpagewebnet, reducing wrong-site deployments, incorrect paths, and production routing drift.",
+      "context": "td @ line 175 · surrounding text: 网站 / Nginx 链路 已花时间梳理台湾团队遗留 Nginx 配置债，并标准化生产路由与静态网站 CI/CD。 arrowfishvpn.com -> /project/arrowfishvpn，/landing/ -> /project/arrowfishlandingpage，jianyu-ip-proxy.com -> /project/skytreelandingpagewebnet，减少错站、错路径和线上 routing 漂移。"
+    },
+    {
+      "id": "u_e0dc28f73d276af8",
+      "kind": "text",
+      "source": "营销弹窗 / 倒计时",
+      "occurrence": 0,
+      "target": "Marketing pop-up/clock countdown",
+      "context": "td @ line 176 · surrounding text: 营销弹窗 / 倒计时 后端与 BO 支持限时活动、倒计时背景、购买按钮和排序配置。 原本硬编码倒计时的活动，转为从 BO 动态配置，运营可自行新增倒计时弹窗广告。"
+    },
+    {
+      "id": "u_62667c130aaec2dc",
+      "kind": "text",
+      "source": "后端与 BO 支持限时活动、倒计时背景、购买按钮和排序配置。",
+      "occurrence": 0,
+      "target": "The backend and Back Office (BO) support configuration for time-limited campaigns, countdown backgrounds, purchase buttons, and display order.",
+      "context": "td @ line 176 · surrounding text: 营销弹窗 / 倒计时 后端与 BO 支持限时活动、倒计时背景、购买按钮和排序配置。 原本硬编码倒计时的活动，转为从 BO 动态配置，运营可自行新增倒计时弹窗广告。"
+    },
+    {
+      "id": "u_e70f64ee5d90a22c",
+      "kind": "text",
+      "source": "原本硬编码倒计时的活动，转为从 BO 动态配置，运营可自行新增倒计时弹窗广告。",
+      "occurrence": 0,
+      "target": "Previously hardcoded countdowns have been moved to dynamic configuration from BO. Operators can now add their own pop-up ads with countdown timers.",
+      "context": "td @ line 176 · surrounding text: 营销弹窗 / 倒计时 后端与 BO 支持限时活动、倒计时背景、购买按钮和排序配置。 原本硬编码倒计时的活动，转为从 BO 动态配置，运营可自行新增倒计时弹窗广告。"
+    },
+    {
+      "id": "u_900a338a5840e30f",
+      "kind": "text",
+      "source": "节点控制链路",
+      "occurrence": 0,
+      "target": "VPN Node Control Path",
+      "context": "td @ line 177 · surrounding text: 节点控制链路 旧 XRayR / proxybackend 方向已从活跃架构退出，转向 orebackend + sing-box agent。 用户验证、userlist 下发、速度策略和节点更新从手工路径推进到后端驱动。"
+    },
+    {
+      "id": "u_1a300de0618c55d8",
+      "kind": "text",
+      "source": "旧 XRayR / proxybackend 方向已从活跃架构退出，转向 orebackend + sing-box agent。",
+      "occurrence": 0,
+      "target": "The legacy XRayR / proxybackend approach has retired from the active architecture, transitioning to orebackend + sing-box agent.",
+      "context": "td @ line 177 · surrounding text: 节点控制链路 旧 XRayR / proxybackend 方向已从活跃架构退出，转向 orebackend + sing-box agent。 用户验证、userlist 下发、速度策略和节点更新从手工路径推进到后端驱动。"
+    },
+    {
+      "id": "u_0ae989d7b69e1a6d",
+      "kind": "text",
+      "source": "用户验证、userlist 下发、速度策略和节点更新从手工路径推进到后端驱动。",
+      "occurrence": 0,
+      "target": "User validation, userlist distribution, speed policies, and VPN node updates moved from manual processes to backend-driven operation.",
+      "context": "td @ line 177 · surrounding text: 节点控制链路 旧 XRayR / proxybackend 方向已从活跃架构退出，转向 orebackend + sing-box agent。 用户验证、userlist 下发、速度策略和节点更新从手工路径推进到后端驱动。"
+    },
+    {
+      "id": "u_7b060361ab4d91b2",
+      "kind": "text",
+      "source": "Windows 客户端",
+      "occurrence": 0,
+      "target": "Windows client",
+      "context": "td @ line 178 · surrounding text: Windows 客户端 已开始接最新后端 API、Docker 可复现构建、运行日志和核心包按需生成路线。 目标先出测试版给 QA；签名方案未确认前不承诺正式发布时间。"
+    },
+    {
+      "id": "u_f818835e5eab1c65",
+      "kind": "text",
+      "source": "已开始接最新后端 API、Docker 可复现构建、运行日志和核心包按需生成路线。",
+      "occurrence": 0,
+      "target": "Starting integration with the latest backend API, Docker reproducible builds, run logs, and core packages generated on-demand.",
+      "context": "td @ line 178 · surrounding text: Windows 客户端 已开始接最新后端 API、Docker 可复现构建、运行日志和核心包按需生成路线。 目标先出测试版给 QA；签名方案未确认前不承诺正式发布时间。"
+    },
+    {
+      "id": "u_448013064b920eb0",
+      "kind": "text",
+      "source": "目标先出测试版给 QA；签名方案未确认前不承诺正式发布时间。",
+      "occurrence": 0,
+      "target": "Target is to release a beta version for QA testing; no commitment to an official release date until the signature scheme is confirmed.",
+      "context": "td @ line 178 · surrounding text: Windows 客户端 已开始接最新后端 API、Docker 可复现构建、运行日志和核心包按需生成路线。 目标先出测试版给 QA；签名方案未确认前不承诺正式发布时间。"
+    },
+    {
+      "id": "u_066df56361e450f2",
+      "kind": "text",
+      "source": "FFF staging website 已部署到 staging server；已收到完整需求差异，但尚未完成拆解。",
+      "occurrence": 0,
+      "target": "The FFF staging website is deployed on the staging server; the complete requirements delta has been received, but its breakdown is not yet complete.",
+      "context": "td @ line 179 · surrounding text: FFF FFF staging website 已部署到 staging server；已收到完整需求差异，但尚未完成拆解。 Staging 站点用于前期联调，Sprint 7 再拆完整 FFF 需求与后端排期。"
+    },
+    {
+      "id": "u_0446a95fc742bfe5",
+      "kind": "text",
+      "source": "Staging 站点用于前期联调，Sprint 7 再拆完整 FFF 需求与后端排期。",
+      "occurrence": 0,
+      "target": "Staging site is used for preliminary integration testing. Sprint 7 will break down the complete FFF requirements and backend schedules.",
+      "context": "td @ line 179 · surrounding text: FFF FFF staging website 已部署到 staging server；已收到完整需求差异，但尚未完成拆解。 Staging 站点用于前期联调，Sprint 7 再拆完整 FFF 需求与后端排期。"
+    },
+    {
+      "id": "u_bc501c687b385626",
+      "kind": "text",
+      "source": "三、改善与商业价值",
+      "occurrence": 0,
+      "target": "III. Improvements and Business Value",
+      "context": "h2 @ line 185"
+    },
+    {
+      "id": "u_0040cc5e07db401c",
+      "kind": "text",
+      "source": "改善",
+      "occurrence": 0,
+      "target": "Improvement",
+      "context": "th @ line 187 · surrounding text: 改善 当前结果 商业价值"
+    },
+    {
+      "id": "u_b676acd8a1079583",
+      "kind": "text",
+      "source": "当前结果",
+      "occurrence": 1,
+      "target": "Current Results",
+      "context": "th @ line 187 · surrounding text: 改善 当前结果 商业价值"
+    },
+    {
+      "id": "u_f0212c254fdac8f1",
+      "kind": "text",
+      "source": "商业价值",
+      "occurrence": 0,
+      "target": "Business Value",
+      "context": "th @ line 187 · surrounding text: 改善 当前结果 商业价值"
+    },
+    {
+      "id": "u_a66a11ab2443e60d",
+      "kind": "text",
+      "source": "成本节省",
+      "occurrence": 0,
+      "target": "Cost Savings",
+      "context": "td @ line 189 · surrounding text: 成本节省 Azure 与 LisaHost 直接节省约 USD 612.21/月，AWS 单独作为平台投入核算。 成本下降口径更清楚，避免把必要平台投入误算成亏损。"
+    },
+    {
+      "id": "u_5675f71ea8d54d5d",
+      "kind": "text",
+      "source": "Azure 与 LisaHost 直接节省约 USD 612.21/月，AWS 单独作为平台投入核算。",
+      "occurrence": 0,
+      "target": "Azure and LisaHost deliver direct savings of approximately USD 612.21/month; AWS is accounted for separately as a platform investment.",
+      "context": "td @ line 189 · surrounding text: 成本节省 Azure 与 LisaHost 直接节省约 USD 612.21/月，AWS 单独作为平台投入核算。 成本下降口径更清楚，避免把必要平台投入误算成亏损。"
+    },
+    {
+      "id": "u_cecf2aef9d37f08b",
+      "kind": "text",
+      "source": "成本下降口径更清楚，避免把必要平台投入误算成亏损。",
+      "occurrence": 0,
+      "target": "The cost-reduction basis is clearer, preventing necessary platform investment from being misclassified as a loss.",
+      "context": "td @ line 189 · surrounding text: 成本节省 Azure 与 LisaHost 直接节省约 USD 612.21/月，AWS 单独作为平台投入核算。 成本下降口径更清楚，避免把必要平台投入误算成亏损。"
+    },
+    {
+      "id": "u_586582fa8fd4e1df",
+      "kind": "text",
+      "source": "数据库安全",
+      "occurrence": 0,
+      "target": "Database Security",
+      "context": "td @ line 190 · surrounding text: 数据库安全 生产 MySQL 已无公网 IP，仅保留私网访问和受控通道。 降低数据库被扫描、攻击和误暴露的风险。"
+    },
+    {
+      "id": "u_617a62e0170813d6",
+      "kind": "text",
+      "source": "生产 MySQL 已无公网 IP，仅保留私网访问和受控通道。",
+      "occurrence": 0,
+      "target": "Production MySQL no longer has a public IP, only private network access and controlled channels are retained. Reduces the risk of database scanning, attack, and accidental exposure.",
+      "context": "td @ line 190 · surrounding text: 数据库安全 生产 MySQL 已无公网 IP，仅保留私网访问和受控通道。 降低数据库被扫描、攻击和误暴露的风险。"
+    },
+    {
+      "id": "u_4ca01b2cb7e26333",
+      "kind": "text",
+      "source": "降低数据库被扫描、攻击和误暴露的风险。",
+      "occurrence": 0,
+      "target": "Reduces risks such as wrong-site releases, incorrect paths, and online routing drifts.",
+      "context": "td @ line 190 · surrounding text: 数据库安全 生产 MySQL 已无公网 IP，仅保留私网访问和受控通道。 降低数据库被扫描、攻击和误暴露的风险。"
+    },
+    {
+      "id": "u_3d79729242cd54e3",
+      "kind": "text",
+      "source": "网站 / Nginx 治理",
+      "occurrence": 0,
+      "target": "Website / Nginx Governance",
+      "context": "td @ line 191 · surrounding text: 网站 / Nginx 治理 主站、landing、Jianyu 站点路由与部署路径已标准化。 减少错站发布、错误路径和线上 routing 漂移。"
+    },
+    {
+      "id": "u_5124a8037e5dd684",
+      "kind": "text",
+      "source": "主站、landing、Jianyu 站点路由与部署路径已标准化。",
+      "occurrence": 0,
+      "target": "Standardized routing and deployment paths for the main site, landing, Jianyu sites. Reduces wrong-site releases, incorrect paths, and online routing drifts.",
+      "context": "td @ line 191 · surrounding text: 网站 / Nginx 治理 主站、landing、Jianyu 站点路由与部署路径已标准化。 减少错站发布、错误路径和线上 routing 漂移。"
+    },
+    {
+      "id": "u_6beb144b508f1e8f",
+      "kind": "text",
+      "source": "减少错站发布、错误路径和线上 routing 漂移。",
+      "occurrence": 0,
+      "target": "Reduces risks such as wrong-site releases, incorrect paths, and online routing drifts.",
+      "context": "td @ line 191 · surrounding text: 网站 / Nginx 治理 主站、landing、Jianyu 站点路由与部署路径已标准化。 减少错站发布、错误路径和线上 routing 漂移。"
+    },
+    {
+      "id": "u_56eee0062ea89de0",
+      "kind": "text",
+      "source": "动态活动配置",
+      "occurrence": 0,
+      "target": "Dynamic Activity Configuration",
+      "context": "td @ line 192 · surrounding text: 动态活动配置 倒计时弹窗广告改为后端 / BO 配置，支持活动类型、排序、倒计时背景和购买按钮。 运营可以直接调整活动，不再依赖硬编码倒计时。"
+    },
+    {
+      "id": "u_fe3af59fac4da50d",
+      "kind": "text",
+      "source": "倒计时弹窗广告改为后端 / BO 配置，支持活动类型、排序、倒计时背景和购买按钮。",
+      "occurrence": 0,
+      "target": "Countdown pop-up ads are configured in the backend / BO, supporting activity types, sorting, countdown background, and purchase buttons. Operations can directly adjust activities without relying on hard-coded countdowns.",
+      "context": "td @ line 192 · surrounding text: 动态活动配置 倒计时弹窗广告改为后端 / BO 配置，支持活动类型、排序、倒计时背景和购买按钮。 运营可以直接调整活动，不再依赖硬编码倒计时。"
+    },
+    {
+      "id": "u_3ffc0bbc4871dc4d",
+      "kind": "text",
+      "source": "运营可以直接调整活动，不再依赖硬编码倒计时。",
+      "occurrence": 0,
+      "target": "Operations can directly adjust activities without relying on hard-coded countdowns.",
+      "context": "td @ line 192 · surrounding text: 动态活动配置 倒计时弹窗广告改为后端 / BO 配置，支持活动类型、排序、倒计时背景和购买按钮。 运营可以直接调整活动，不再依赖硬编码倒计时。"
+    },
+    {
+      "id": "u_d68c25fee03fdfaf",
+      "kind": "text",
+      "source": "节点架构收敛",
+      "occurrence": 0,
+      "target": "VPN node Architecture Convergence",
+      "context": "td @ line 193 · surrounding text: 节点架构收敛 旧 proxybackend 退出活跃架构，sing-box agent 继续承接 userlist、用户验证、流量归因和速度策略。 节点更新更可控，也为按线路类型控制免费线速度打基础。"
+    },
+    {
+      "id": "u_42ed742a2c58ba7c",
+      "kind": "text",
+      "source": "旧 proxybackend 退出活跃架构，sing-box agent 继续承接 userlist、用户验证、流量归因和速度策略。",
+      "occurrence": 0,
+      "target": "The legacy proxybackend has retired from the active architecture; sing-box agent continues to handle userlist distribution, user validation, traffic attribution, and speed policies.",
+      "context": "td @ line 193 · surrounding text: 节点架构收敛 旧 proxybackend 退出活跃架构，sing-box agent 继续承接 userlist、用户验证、流量归因和速度策略。 节点更新更可控，也为按线路类型控制免费线速度打基础。"
+    },
+    {
+      "id": "u_456c6369ab68affe",
+      "kind": "text",
+      "source": "节点更新更可控，也为按线路类型控制免费线速度打基础。",
+      "occurrence": 0,
+      "target": "VPN node updates are more controllable, laying the foundation for controlling free line speeds by type of route.",
+      "context": "td @ line 193 · surrounding text: 节点架构收敛 旧 proxybackend 退出活跃架构，sing-box agent 继续承接 userlist、用户验证、流量归因和速度策略。 节点更新更可控，也为按线路类型控制免费线速度打基础。"
+    },
+    {
+      "id": "u_8c6232fd5cf1b2b0",
+      "kind": "text",
+      "source": "后端通用化",
+      "occurrence": 0,
+      "target": "Backend standardization",
+      "context": "td @ line 194 · surrounding text: 后端通用化 公共工具抽出到共享模块，后端、BO、cron 开始统一迁移和部署流程。 减少重复代码，为 FFF 后端复制和后续扩展做准备。"
+    },
+    {
+      "id": "u_2d95d3f1e65ea57c",
+      "kind": "text",
+      "source": "公共工具抽出到共享模块，后端、BO、cron 开始统一迁移和部署流程。",
+      "occurrence": 0,
+      "target": "Backend standardization Public tools are extracted to shared modules, backend, BO and cron begin unified migration and deployment processes. Reducing repetitive code for FFF backend replication and future expansion preparation.",
+      "context": "td @ line 194 · surrounding text: 后端通用化 公共工具抽出到共享模块，后端、BO、cron 开始统一迁移和部署流程。 减少重复代码，为 FFF 后端复制和后续扩展做准备。"
+    },
+    {
+      "id": "u_24599b37ac39ff6a",
+      "kind": "text",
+      "source": "减少重复代码，为 FFF 后端复制和后续扩展做准备。",
+      "occurrence": 0,
+      "target": "Reducing repetitive code, preparing for FFF backend replication and future expansion.",
+      "context": "td @ line 194 · surrounding text: 后端通用化 公共工具抽出到共享模块，后端、BO、cron 开始统一迁移和部署流程。 减少重复代码，为 FFF 后端复制和后续扩展做准备。"
+    },
+    {
+      "id": "u_1a2d3ab2bd3144db",
+      "kind": "text",
+      "source": "Windows 构建",
+      "occurrence": 0,
+      "target": "Windows build",
+      "context": "td @ line 195 · surrounding text: Windows 构建 Windows 构建路径开始改为 Docker 可复现流程，核心包改为按需生成。 降低本地环境差异，方便生成测试版；正式发布仍依赖签名方案确认。"
+    },
+    {
+      "id": "u_738846c698063952",
+      "kind": "text",
+      "source": "Windows 构建路径开始改为 Docker 可复现流程，核心包改为按需生成。",
+      "occurrence": 0,
+      "target": "Windows build path is changed to Docker reproducible process, core packages are switched to on-demand generation. Reducing local environment differences for easier test builds; formal releases still rely on signature scheme confirmation.",
+      "context": "td @ line 195 · surrounding text: Windows 构建 Windows 构建路径开始改为 Docker 可复现流程，核心包改为按需生成。 降低本地环境差异，方便生成测试版；正式发布仍依赖签名方案确认。"
+    },
+    {
+      "id": "u_321e5296d56413ee",
+      "kind": "text",
+      "source": "降低本地环境差异，方便生成测试版；正式发布仍依赖签名方案确认。",
+      "occurrence": 0,
+      "target": "Reducing local environment differences, making test builds easier; formal releases still depend on the signature scheme confirmation.",
+      "context": "td @ line 195 · surrounding text: Windows 构建 Windows 构建路径开始改为 Docker 可复现流程，核心包改为按需生成。 降低本地环境差异，方便生成测试版；正式发布仍依赖签名方案确认。"
+    },
+    {
+      "id": "u_347af6775fb45dca",
+      "kind": "text",
+      "source": "四、成本节省与 AWS 投入口径",
+      "occurrence": 0,
+      "target": "Four, cost savings and AWS entry points",
+      "context": "h2 @ line 201"
+    },
+    {
+      "id": "u_6b8418a437f34506",
+      "kind": "text",
+      "source": "本节为管理层主口径：Azure 与 LisaHost 是直接成本下降；AWS 是替代已不可继续使用的本地 GitLab、runner 和生产网站，并新增 CI/CD 与日志观测能力的平台投入，不能简单合并成直接节省。",
+      "occurrence": 0,
+      "target": "This section uses the management reporting basis: Azure and LisaHost represent direct cost reductions; AWS is a platform investment that replaces the local GitLab, runner, and production website that could no longer be used, while adding CI/CD and log-observability capabilities. It cannot simply be combined with direct savings.",
+      "context": "p @ line 202"
+    },
+    {
+      "id": "u_8b237200c9e5c492",
+      "kind": "text",
+      "source": "成本项",
+      "occurrence": 0,
+      "target": "Cost items",
+      "context": "th @ line 204 · surrounding text: 成本项 口径 当前结果 月化影响"
+    },
+    {
+      "id": "u_537b7a1de53be142",
+      "kind": "text",
+      "source": "口径",
+      "occurrence": 0,
+      "target": "Basis",
+      "context": "th @ line 204 · surrounding text: 成本项 口径 当前结果 月化影响"
+    },
+    {
+      "id": "u_f6f813dfdc84dfa2",
+      "kind": "text",
+      "source": "当前结果",
+      "occurrence": 2,
+      "target": "Current results",
+      "context": "th @ line 204 · surrounding text: 成本项 口径 当前结果 月化影响"
+    },
+    {
+      "id": "u_c99da84c11463ba9",
+      "kind": "text",
+      "source": "月化影响",
+      "occurrence": 0,
+      "target": "Monthly impact",
+      "context": "th @ line 204 · surrounding text: 成本项 口径 当前结果 月化影响"
+    },
+    {
+      "id": "u_99713eee02a6a4de",
+      "kind": "text",
+      "source": "2026 年 1-5 月平均实际费用 vs 当前清理后 run-rate",
+      "occurrence": 0,
+      "target": "Average actual cost from January–May 2026 vs the current post-cleanup run rate",
+      "context": "td @ line 206 · surrounding text: Azure 2026 年 1-5 月平均实际费用 vs 当前清理后 run-rate 从 USD 599.33/月降至 USD 234.07/月 节省 USD 365.26/月"
+    },
+    {
+      "id": "u_981666d0359c09b7",
+      "kind": "text",
+      "source": "从 USD 599.33/月降至 USD 234.07/月",
+      "occurrence": 0,
+      "target": "From USD 599.33/month to USD 234.07/month",
+      "context": "td @ line 206 · surrounding text: Azure 2026 年 1-5 月平均实际费用 vs 当前清理后 run-rate 从 USD 599.33/月降至 USD 234.07/月 节省 USD 365.26/月"
+    },
+    {
+      "id": "u_3508bb0d42364a90",
+      "kind": "text",
+      "source": "节省 USD 365.26/月",
+      "occurrence": 0,
+      "target": "Savings of $365.26/month",
+      "context": "strong @ line 206 · surrounding text: Azure 2026 年 1-5 月平均实际费用 vs 当前清理后 run-rate 从 USD 599.33/月降至 USD 234.07/月 节省 USD 365.26/月"
+    },
+    {
+      "id": "u_34e697ee22d808ec",
+      "kind": "text",
+      "source": "LisaHost HK 机器",
+      "occurrence": 0,
+      "target": "LisaHost HK Machine",
+      "context": "td @ line 207 · surrounding text: LisaHost HK 机器 6 月已退订固定供应商费用 RMB 1,680/月已停止，按 2026-06-24 公开参考汇率 1 USD = 6.8029 CNY 换算 节省约 USD 246.95/月"
+    },
+    {
+      "id": "u_65d4f98c2989009f",
+      "kind": "text",
+      "source": "6 月已退订固定供应商费用",
+      "occurrence": 0,
+      "target": "Monthly fixed supplier fees for 6 months",
+      "context": "td @ line 207 · surrounding text: LisaHost HK 机器 6 月已退订固定供应商费用 RMB 1,680/月已停止，按 2026-06-24 公开参考汇率 1 USD = 6.8029 CNY 换算 节省约 USD 246.95/月"
+    },
+    {
+      "id": "u_6e8feceb157c8587",
+      "kind": "text",
+      "source": "RMB 1,680/月已停止，按 2026-06-24 公开参考汇率 1 USD = 6.8029 CNY 换算",
+      "occurrence": 0,
+      "target": "RMB 1,680/month was discontinued; conversion uses the public reference rate on 2026-06-24: 1 USD = 6.8029 CNY",
+      "context": "td @ line 207 · surrounding text: LisaHost HK 机器 6 月已退订固定供应商费用 RMB 1,680/月已停止，按 2026-06-24 公开参考汇率 1 USD = 6.8029 CNY 换算 节省约 USD 246.95/月"
+    },
+    {
+      "id": "u_052e9d36f0e87eb5",
+      "kind": "text",
+      "source": "节省约 USD 246.95/月",
+      "occurrence": 0,
+      "target": "Savings of $246.95/month",
+      "context": "strong @ line 207 · surrounding text: LisaHost HK 机器 6 月已退订固定供应商费用 RMB 1,680/月已停止，按 2026-06-24 公开参考汇率 1 USD = 6.8029 CNY 换算 节省约 USD 246.95/月"
+    },
+    {
+      "id": "u_183511bd979f15bd",
+      "kind": "text",
+      "source": "直接节省小计",
+      "occurrence": 0,
+      "target": "Total savings so far",
+      "context": "td @ line 208 · surrounding text: 直接节省小计 Azure + LisaHost 不含 AWS 平台投入 节省约 USD 612.21/月"
+    },
+    {
+      "id": "u_5f7652cd1294bcfd",
+      "kind": "text",
+      "source": "不含 AWS 平台投入",
+      "occurrence": 0,
+      "target": "No AWS platform investment included",
+      "context": "td @ line 208 · surrounding text: 直接节省小计 Azure + LisaHost 不含 AWS 平台投入 节省约 USD 612.21/月"
+    },
+    {
+      "id": "u_144f815f7ceda8b9",
+      "kind": "text",
+      "source": "节省约 USD 612.21/月",
+      "occurrence": 0,
+      "target": "Savings of $612.21/month",
+      "context": "strong @ line 208 · surrounding text: 直接节省小计 Azure + LisaHost 不含 AWS 平台投入 节省约 USD 612.21/月"
+    },
+    {
+      "id": "u_c609418b61f54a28",
+      "kind": "text",
+      "source": "AWS 平台",
+      "occurrence": 0,
+      "target": "AWS Platform Investment",
+      "context": "td @ line 209 · surrounding text: AWS 平台 替代本地 GitLab / runner / 生产网站，并新增 Seq logging 与 Android Kotlin CI/CD 清理后当前 run-rate 约 USD 151.21/月 必要平台投入，不计入直接节省"
+    },
+    {
+      "id": "u_fd22da4ada522e1e",
+      "kind": "text",
+      "source": "替代本地 GitLab / runner / 生产网站，并新增 Seq logging 与 Android Kotlin CI/CD",
+      "occurrence": 0,
+      "target": "Replacement of local GitLab / runner / production website, and addition of Seq logging and Android Kotlin CI/CD",
+      "context": "td @ line 209 · surrounding text: AWS 平台 替代本地 GitLab / runner / 生产网站，并新增 Seq logging 与 Android Kotlin CI/CD 清理后当前 run-rate 约 USD 151.21/月 必要平台投入，不计入直接节省"
+    },
+    {
+      "id": "u_4d6916bbd701a201",
+      "kind": "text",
+      "source": "清理后当前 run-rate 约 USD 151.21/月",
+      "occurrence": 0,
+      "target": "Current run-rate post-cleanup approximately $151.21/month",
+      "context": "td @ line 209 · surrounding text: AWS 平台 替代本地 GitLab / runner / 生产网站，并新增 Seq logging 与 Android Kotlin CI/CD 清理后当前 run-rate 约 USD 151.21/月 必要平台投入，不计入直接节省"
+    },
+    {
+      "id": "u_0ac5c421e845fc5e",
+      "kind": "text",
+      "source": "必要平台投入，不计入直接节省",
+      "occurrence": 0,
+      "target": "Necessary platform investment, not included in direct savings",
+      "context": "td @ line 209 · surrounding text: AWS 平台 替代本地 GitLab / runner / 生产网站，并新增 Seq logging 与 Android Kotlin CI/CD 清理后当前 run-rate 约 USD 151.21/月 必要平台投入，不计入直接节省"
+    },
+    {
+      "id": "u_e1cba88e0abb9332",
+      "kind": "text",
+      "source": "现金流改善估算",
+      "occurrence": 0,
+      "target": "Estimation of Cash Flow Improvement",
+      "context": "td @ line 210 · surrounding text: 现金流改善估算 直接节省扣除当前 AWS run-rate，未计旧本地机器维护成本 用于管理层粗估 改善约 USD 461.00/月"
+    },
+    {
+      "id": "u_0f9f6aadaeb12e4f",
+      "kind": "text",
+      "source": "直接节省扣除当前 AWS run-rate，未计旧本地机器维护成本",
+      "occurrence": 0,
+      "target": "Direct savings minus current AWS run-rate, without considering maintenance costs for old local machines",
+      "context": "td @ line 210 · surrounding text: 现金流改善估算 直接节省扣除当前 AWS run-rate，未计旧本地机器维护成本 用于管理层粗估 改善约 USD 461.00/月"
+    },
+    {
+      "id": "u_f192454d58d976f2",
+      "kind": "text",
+      "source": "用于管理层粗估",
+      "occurrence": 0,
+      "target": "For management's rough estimate",
+      "context": "td @ line 210 · surrounding text: 现金流改善估算 直接节省扣除当前 AWS run-rate，未计旧本地机器维护成本 用于管理层粗估 改善约 USD 461.00/月"
+    },
+    {
+      "id": "u_40758d3619d6b66e",
+      "kind": "text",
+      "source": "改善约 USD 461.00/月",
+      "occurrence": 0,
+      "target": "Improvement of $461.00/month",
+      "context": "strong @ line 210 · surrounding text: 现金流改善估算 直接节省扣除当前 AWS run-rate，未计旧本地机器维护成本 用于管理层粗估 改善约 USD 461.00/月"
+    },
+    {
+      "id": "u_851c544cd6031a78",
+      "kind": "text",
+      "source": "云成本指标",
+      "occurrence": 0,
+      "target": "Cloud Cost Metrics",
+      "context": "th @ line 214 · surrounding text: 云成本指标 数值"
+    },
+    {
+      "id": "u_4660db1e38e8afec",
+      "kind": "text",
+      "source": "数值",
+      "occurrence": 0,
+      "target": "Metrics",
+      "context": "th @ line 214 · surrounding text: 云成本指标 数值"
+    },
+    {
+      "id": "u_8f20c0278a406cbb",
+      "kind": "text",
+      "source": "AWS 2026-04 实际 / 估算账单",
+      "occurrence": 0,
+      "target": "AWS actual / estimated bill for 2026-04",
+      "context": "td @ line 216 · surrounding text: AWS 2026-04 实际 / 估算账单 USD 207.50"
+    },
+    {
+      "id": "u_fc60c56cf41ae02a",
+      "kind": "text",
+      "source": "AWS 2026-05 实际 / 估算账单",
+      "occurrence": 0,
+      "target": "AWS actual / estimated bill for 2026-05",
+      "context": "td @ line 217 · surrounding text: AWS 2026-05 实际 / 估算账单 USD 235.10"
+    },
+    {
+      "id": "u_df072da94dfab540",
+      "kind": "text",
+      "source": "AWS 清理后月化 run-rate",
+      "occurrence": 0,
+      "target": "AWS Post-Cleanup Monthly Run-rate",
+      "context": "td @ line 218 · surrounding text: AWS 清理后月化 run-rate USD 151.21/月"
+    },
+    {
+      "id": "u_8c9b27abc66f27d3",
+      "kind": "text",
+      "source": "USD 151.21/月",
+      "occurrence": 0,
+      "target": "USD 151.21/month",
+      "context": "td @ line 218 · surrounding text: AWS 清理后月化 run-rate USD 151.21/月"
+    },
+    {
+      "id": "u_be8ea62e7d6009f5",
+      "kind": "text",
+      "source": "Azure 2026-01 到 2026-05 平均实际费用",
+      "occurrence": 0,
+      "target": "Average actual Azure cost from 2026-01 to 2026-05",
+      "context": "td @ line 219 · surrounding text: Azure 2026-01 到 2026-05 平均实际费用 USD 599.33/月"
+    },
+    {
+      "id": "u_71b6371798d65be1",
+      "kind": "text",
+      "source": "USD 599.33/月",
+      "occurrence": 0,
+      "target": "USD 599.33/month",
+      "context": "td @ line 219 · surrounding text: Azure 2026-01 到 2026-05 平均实际费用 USD 599.33/月"
+    },
+    {
+      "id": "u_752da4224e8905c2",
+      "kind": "text",
+      "source": "Azure 清理后月化 run-rate",
+      "occurrence": 0,
+      "target": "Azure Post-Cleanup Monthly Run-rate",
+      "context": "td @ line 220 · surrounding text: Azure 清理后月化 run-rate USD 234.07/月"
+    },
+    {
+      "id": "u_9837dd8f1628cbd2",
+      "kind": "text",
+      "source": "USD 234.07/月",
+      "occurrence": 0,
+      "target": "USD 234.07/month",
+      "context": "td @ line 220 · surrounding text: Azure 清理后月化 run-rate USD 234.07/月"
+    },
+    {
+      "id": "u_33caaf6f4be7d7a2",
+      "kind": "text",
+      "source": "说明：AWS 1-2 月几乎没有费用，3 月也还不是成熟使用状态，因此 4 月以后更接近 AWS 平台成熟使用状态。AWS 主要用于说明必要平台投入与内部优化，不建议与 Azure/LisaHost 一起合并成“直接节省”。",
+      "occurrence": 0,
+      "target": "Note: AWS had almost no fees in Q1 and Q2, and was not mature enough to use in Q3. Therefore, from Q4 onwards, it is closer to the mature usage state of the AWS platform. The main purpose of AWS is to explain necessary platform investments and internal optimizations, and it is not recommended to merge with Azure/LisaHost into 'Direct Savings'.",
+      "context": "p.note @ line 223"
+    },
+    {
+      "id": "u_ab5671cc17b67e98",
+      "kind": "text",
+      "source": "五、业务健康度与 DB 指标",
+      "occurrence": 0,
+      "target": "5. Business Health and DB Metrics",
+      "context": "h2 @ line 227"
+    },
+    {
+      "id": "u_6c337323e893b01e",
+      "kind": "text",
+      "source": "5 月指标",
+      "occurrence": 0,
+      "target": "May Metrics",
+      "context": "th @ line 229 · surrounding text: 5 月指标 结果"
+    },
+    {
+      "id": "u_7a00a178326d96c2",
+      "kind": "text",
+      "source": "结果",
+      "occurrence": 0,
+      "target": "Result",
+      "context": "th @ line 229 · surrounding text: 5 月指标 结果"
+    },
+    {
+      "id": "u_ae07d3ea813e2798",
+      "kind": "text",
+      "source": "5 月不重复付费会员数",
+      "occurrence": 0,
+      "target": "Unique Paying Members in May",
+      "context": "td @ line 231 · surrounding text: 5 月不重复付费会员数 1,112"
+    },
+    {
+      "id": "u_b2d4a231fa98b887",
+      "kind": "text",
+      "source": "2026-04-30 23:59:59 仍有订阅的用户数",
+      "occurrence": 0,
+      "target": "Number of Users with Active Subscriptions as of 23:59:59 on 2026-04-30",
+      "context": "td @ line 232 · surrounding text: 2026-04-30 23:59:59 仍有订阅的用户数 1,300"
+    },
+    {
+      "id": "u_a4e7718334ff54a9",
+      "kind": "text",
+      "source": "4 月底有订阅但到 5 月底未续订用户数",
+      "occurrence": 0,
+      "target": "Number of users who subscribed in April but did not renew by May",
+      "context": "td @ line 233 · surrounding text: 4 月底有订阅但到 5 月底未续订用户数 461"
+    },
+    {
+      "id": "u_d0a0492cf13a49be",
+      "kind": "text",
+      "source": "5 月首次付费会员数，所有设备",
+      "occurrence": 0,
+      "target": "First-time paying members in May, all devices",
+      "context": "td @ line 234 · surrounding text: 5 月首次付费会员数，所有设备 573"
+    },
+    {
+      "id": "u_8b5a6c581d11f161",
+      "kind": "text",
+      "source": "5 月首次付费会员数，APP 设备",
+      "occurrence": 0,
+      "target": "First-time paying members in May, APP devices",
+      "context": "td @ line 235 · surrounding text: 5 月首次付费会员数，APP 设备 549"
+    },
+    {
+      "id": "u_4abfa31f73807000",
+      "kind": "text",
+      "source": "6 月清理前后指标",
+      "occurrence": 0,
+      "target": "Metrics before and after cleanup in June",
+      "context": "th @ line 239 · surrounding text: 6 月清理前后指标 清理前 06/08-06/14 清理后 06/15-06/21 变化"
+    },
+    {
+      "id": "u_d086d74e919676a0",
+      "kind": "text",
+      "source": "清理前 06/08-06/14",
+      "occurrence": 0,
+      "target": "Before Cleanup: 06/08–06/14",
+      "context": "th @ line 239 · surrounding text: 6 月清理前后指标 清理前 06/08-06/14 清理后 06/15-06/21 变化"
+    },
+    {
+      "id": "u_d2cffd7560d88fd4",
+      "kind": "text",
+      "source": "清理后 06/15-06/21",
+      "occurrence": 0,
+      "target": "After Cleanup: 06/15–06/21",
+      "context": "th @ line 239 · surrounding text: 6 月清理前后指标 清理前 06/08-06/14 清理后 06/15-06/21 变化"
+    },
+    {
+      "id": "u_969fec60388c75dd",
+      "kind": "text",
+      "source": "变化",
+      "occurrence": 0,
+      "target": "Change",
+      "context": "th @ line 239 · surrounding text: 6 月清理前后指标 清理前 06/08-06/14 清理后 06/15-06/21 变化"
+    },
+    {
+      "id": "u_ab0c33c8932ac32b",
+      "kind": "text",
+      "source": "新注册用户",
+      "occurrence": 0,
+      "target": "New registered users",
+      "context": "td @ line 241 · surrounding text: 新注册用户 6,161 5,310 -13.8%"
+    },
+    {
+      "id": "u_6855424efb9b0a01",
+      "kind": "text",
+      "source": "活跃 VPN 用户",
+      "occurrence": 0,
+      "target": "Active VPN Users",
+      "context": "td @ line 242 · surrounding text: 活跃 VPN 用户 2,659 2,720 +2.3%"
+    },
+    {
+      "id": "u_ed81b1b20f92ce2e",
+      "kind": "text",
+      "source": "流量",
+      "occurrence": 0,
+      "target": "Traffic",
+      "context": "td @ line 243 · surrounding text: 流量 4,186.04 GB 4,414.14 GB +5.4%"
+    },
+    {
+      "id": "u_32ec7a6bee449999",
+      "kind": "text",
+      "source": "已完成付费订单，状态 3/4",
+      "occurrence": 0,
+      "target": "Completed paid orders, status 3/4",
+      "context": "td @ line 244 · surrounding text: 已完成付费订单，状态 3/4 239 250 +4.6%"
+    },
+    {
+      "id": "u_a1b79b2c28de9fe4",
+      "kind": "text",
+      "source": "已完成付费用户",
+      "occurrence": 0,
+      "target": "Completed paid users",
+      "context": "td @ line 245 · surrounding text: 已完成付费用户 232 227 -2.2%"
+    },
+    {
+      "id": "u_3db6633a81ce540f",
+      "kind": "text",
+      "source": "已完成付费金额",
+      "occurrence": 0,
+      "target": "Completed paid amount",
+      "context": "td @ line 246 · surrounding text: 已完成付费金额 USD 5,594.86 USD 6,062.64 +8.4%"
+    },
+    {
+      "id": "u_b9d9f0f272a81b5c",
+      "kind": "text",
+      "source": "会员 / 独享订单金额",
+      "occurrence": 0,
+      "target": "Membership / Exclusive Order Amount",
+      "context": "td @ line 247 · surrounding text: 会员 / 独享订单金额 USD 5,138.86 USD 6,012.64 +17.0%"
+    },
+    {
+      "id": "u_bef92fe35fb0cf54",
+      "kind": "text",
+      "source": "口径：已完成付费订单使用 orders.status IN (3,4)，即已付款 / 已交付。清理后活跃、流量、订单量和金额没有下降；注册下降是下一阶段需要继续观察的业务信号。",
+      "occurrence": 0,
+      "target": "Scope: Completed paid orders used, status IN (3, 4), i.e., paid and delivered. After cleanup, active users, traffic, order volume, and amount did not decrease; the registration decline is a business signal that needs to be observed in the next phase.",
+      "context": "p.note @ line 250"
+    },
+    {
+      "id": "u_e94d52db886d9bea",
+      "kind": "text",
+      "source": "六、基础设施、安全与访问控制",
+      "occurrence": 0,
+      "target": "Six: Infrastructure, Security, and Access Control",
+      "context": "h2 @ line 254"
+    },
+    {
+      "id": "u_53d7d72a9e1764d4",
+      "kind": "text",
+      "source": "项目",
+      "occurrence": 0,
+      "target": "Project",
+      "context": "th @ line 256 · surrounding text: 项目 当前状态 价值 / 观察点"
+    },
+    {
+      "id": "u_7534316d0b68abf4",
+      "kind": "text",
+      "source": "当前状态",
+      "occurrence": 0,
+      "target": "Current Status",
+      "context": "th @ line 256 · surrounding text: 项目 当前状态 价值 / 观察点"
+    },
+    {
+      "id": "u_dacd537958d1ad18",
+      "kind": "text",
+      "source": "价值 / 观察点",
+      "occurrence": 0,
+      "target": "Value / Observation Point",
+      "context": "th @ line 256 · surrounding text: 项目 当前状态 价值 / 观察点"
+    },
+    {
+      "id": "u_790221a4ed1f00a6",
+      "kind": "text",
+      "source": "当前 5 台 running EC2；未发现 unattached EBS volume。",
+      "occurrence": 0,
+      "target": "5 running EC2 instances; no unattached EBS volumes found.",
+      "context": "td @ line 258 · surrounding text: AWS EC2 当前 5 台 running EC2；未发现 unattached EBS volume。 资源边界更清晰，继续复核 runner 规格。"
+    },
+    {
+      "id": "u_75a0b5c2033e9950",
+      "kind": "text",
+      "source": "资源边界更清晰，继续复核 runner 规格。",
+      "occurrence": 0,
+      "target": "Resource boundaries are clearer. Continue to review the runner specifications.",
+      "context": "td @ line 258 · surrounding text: AWS EC2 当前 5 台 running EC2；未发现 unattached EBS volume。 资源边界更清晰，继续复核 runner 规格。"
+    },
+    {
+      "id": "u_77d8c04f35fa2152",
+      "kind": "text",
+      "source": "GitLab server 与 GitLab runner 已从本地机器迁移到 AWS。",
+      "occurrence": 0,
+      "target": "GitLab server and GitLab runner have been moved from local machines to AWS.",
+      "context": "td @ line 259 · surrounding text: GitLab / Runner GitLab server 与 GitLab runner 已从本地机器迁移到 AWS。 避免本地机器放弃后的单点风险，并支撑集中 CI/CD。"
+    },
+    {
+      "id": "u_6dbb122fca21f10f",
+      "kind": "text",
+      "source": "避免本地机器放弃后的单点风险，并支撑集中 CI/CD。",
+      "occurrence": 0,
+      "target": "Avoid single point of failure risk after the local machine is abandoned, supporting centralized CI/CD.",
+      "context": "td @ line 259 · surrounding text: GitLab / Runner GitLab server 与 GitLab runner 已从本地机器迁移到 AWS。 避免本地机器放弃后的单点风险，并支撑集中 CI/CD。"
+    },
+    {
+      "id": "u_6871f37db8689175",
+      "kind": "text",
+      "source": "AWS runner 规格",
+      "occurrence": 0,
+      "target": "AWS runner specifications",
+      "context": "td @ line 260 · surrounding text: AWS runner 规格 gitlab-runner-kotlin-amd 当前查询显示 t3.large。 需确认是否为 Android Kotlin CI/CD 必要容量；若不是，再评估降配。"
+    },
+    {
+      "id": "u_f9f1970802947386",
+      "kind": "text",
+      "source": "gitlab-runner-kotlin-amd 当前查询显示 t3.large。",
+      "occurrence": 0,
+      "target": "Current query for gitlab-runner-kotlin-amd shows t3.large.",
+      "context": "td @ line 260 · surrounding text: AWS runner 规格 gitlab-runner-kotlin-amd 当前查询显示 t3.large。 需确认是否为 Android Kotlin CI/CD 必要容量；若不是，再评估降配。"
+    },
+    {
+      "id": "u_b3cb805eb03580f5",
+      "kind": "text",
+      "source": "需确认是否为 Android Kotlin CI/CD 必要容量；若不是，再评估降配。",
+      "occurrence": 0,
+      "target": "Confirm if it is the necessary capacity for Android Kotlin CI/CD; if not, reassess and consider downgrading.",
+      "context": "td @ line 260 · surrounding text: AWS runner 规格 gitlab-runner-kotlin-amd 当前查询显示 t3.large。 需确认是否为 Android Kotlin CI/CD 必要容量；若不是，再评估降配。"
+    },
+    {
+      "id": "u_a76fc5c9853d9ddc",
+      "kind": "text",
+      "source": "当前保留 3 台 VM：vpn-dev-02、vpn-prod-002、vpn-prod-mysql-01。",
+      "occurrence": 0,
+      "target": "Current retention of 3 VMs: vpn-dev-02, vpn-prod-002, vpn-prod-mysql-01.",
+      "context": "td @ line 261 · surrounding text: Azure VM 当前保留 3 台 VM：vpn-dev-02、vpn-prod-002、vpn-prod-mysql-01。 旧 proxy/backend 与冗余资产已清理。"
+    },
+    {
+      "id": "u_46dcfb9370b43061",
+      "kind": "text",
+      "source": "旧 proxy/backend 与冗余资产已清理。",
+      "occurrence": 0,
+      "target": "Old proxy/backend and redundant assets have been cleaned up.",
+      "context": "td @ line 261 · surrounding text: Azure VM 当前保留 3 台 VM：vpn-dev-02、vpn-prod-002、vpn-prod-mysql-01。 旧 proxy/backend 与冗余资产已清理。"
+    },
+    {
+      "id": "u_8df968cc39c5ad30",
+      "kind": "text",
+      "source": "Azure 公网 IP",
+      "occurrence": 0,
+      "target": "Azure Public IP",
+      "context": "td @ line 262 · surrounding text: Azure 公网 IP 当前只保留 2 个公网 IP：DEV app 与 PROD app。 公网暴露面降低。"
+    },
+    {
+      "id": "u_8e3f9f33109c6284",
+      "kind": "text",
+      "source": "当前只保留 2 个公网 IP：DEV app 与 PROD app。",
+      "occurrence": 0,
+      "target": "Only 2 public IPs are retained: DEV app and PROD app.",
+      "context": "td @ line 262 · surrounding text: Azure 公网 IP 当前只保留 2 个公网 IP：DEV app 与 PROD app。 公网暴露面降低。"
+    },
+    {
+      "id": "u_9ecfeea7b530d956",
+      "kind": "text",
+      "source": "公网暴露面降低。",
+      "occurrence": 0,
+      "target": "Public exposure surface reduced.",
+      "context": "td @ line 262 · surrounding text: Azure 公网 IP 当前只保留 2 个公网 IP：DEV app 与 PROD app。 公网暴露面降低。"
+    },
+    {
+      "id": "u_d822699dbcc5665a",
+      "kind": "text",
+      "source": "生产 MySQL",
+      "occurrence": 0,
+      "target": "Production MySQL",
+      "context": "td @ line 263 · surrounding text: 生产 MySQL 无公网 IP，仅保留私网 10.0.0.101。 数据库不再直接暴露互联网。"
+    },
+    {
+      "id": "u_7d7d2b5d7fc39448",
+      "kind": "text",
+      "source": "无公网 IP，仅保留私网 10.0.0.101。",
+      "occurrence": 0,
+      "target": "No public IP, only retain private 10.0.0.101.",
+      "context": "td @ line 263 · surrounding text: 生产 MySQL 无公网 IP，仅保留私网 10.0.0.101。 数据库不再直接暴露互联网。"
+    },
+    {
+      "id": "u_84fe108d70551083",
+      "kind": "text",
+      "source": "数据库不再直接暴露互联网。",
+      "occurrence": 0,
+      "target": "Database no longer directly exposed to the internet.",
+      "context": "td @ line 263 · surrounding text: 生产 MySQL 无公网 IP，仅保留私网 10.0.0.101。 数据库不再直接暴露互联网。"
+    },
+    {
+      "id": "u_781d2b2d780768dd",
+      "kind": "text",
+      "source": "生产 Nginx",
+      "occurrence": 0,
+      "target": "Production Nginx",
+      "context": "td @ line 264 · surrounding text: 生产 Nginx 已清理备份 / 旧配置残留，禁用无效 file host 路由。 降低错误路由、目录暴露和误部署风险。"
+    },
+    {
+      "id": "u_6a45d902bf0e673b",
+      "kind": "text",
+      "source": "已清理备份 / 旧配置残留，禁用无效 file host 路由。",
+      "occurrence": 0,
+      "target": "Cleaned up backups/old configuration remnants, disabled invalid file host routes.",
+      "context": "td @ line 264 · surrounding text: 生产 Nginx 已清理备份 / 旧配置残留，禁用无效 file host 路由。 降低错误路由、目录暴露和误部署风险。"
+    },
+    {
+      "id": "u_053bb935cb9304f7",
+      "kind": "text",
+      "source": "降低错误路由、目录暴露和误部署风险。",
+      "occurrence": 0,
+      "target": "Reduced risk of incorrect routing, directory exposure, and accidental deployment.",
+      "context": "td @ line 264 · surrounding text: 生产 Nginx 已清理备份 / 旧配置残留，禁用无效 file host 路由。 降低错误路由、目录暴露和误部署风险。"
+    },
+    {
+      "id": "u_2e5d988581b505f4",
+      "kind": "text",
+      "source": "生产网站路由",
+      "occurrence": 0,
+      "target": "Production Website Routing",
+      "context": "td @ line 265 · surrounding text: 生产网站路由 已标准化：arrowfishvpn.com -> /project/arrowfishvpn，/landing/ -> /project/arrowfishlandingpage，jianyu-ip-proxy.com -> /project/skytreelandingpagewebnet。 部署路径与 Nginx 路由配对，降低错站和错目录发布风险。"
+    },
+    {
+      "id": "u_7b4f74516d84ad90",
+      "kind": "text",
+      "source": "已标准化：arrowfishvpn.com -> /project/arrowfishvpn，/landing/ -> /project/arrowfishlandingpage，jianyu-ip-proxy.com -> /project/skytreelandingpagewebnet。",
+      "occurrence": 0,
+      "target": "Standardized: arrowfishvpn.com -> /project/arrowfishvpn, /landing/ -> /project/arrowfishlandingpage, jianyu-ip-proxy.com -> /project/skytreelandingpagewebnet. Deployment paths paired with Nginx routes to reduce risk of incorrect deployment.",
+      "context": "td @ line 265 · surrounding text: 生产网站路由 已标准化：arrowfishvpn.com -> /project/arrowfishvpn，/landing/ -> /project/arrowfishlandingpage，jianyu-ip-proxy.com -> /project/skytreelandingpagewebnet。 部署路径与 Nginx 路由配对，降低错站和错目录发布风险。"
+    },
+    {
+      "id": "u_41e05752051ec31b",
+      "kind": "text",
+      "source": "部署路径与 Nginx 路由配对，降低错站和错目录发布风险。",
+      "occurrence": 0,
+      "target": "Deployment paths paired with Nginx routes to reduce risk of incorrect deployment.",
+      "context": "td @ line 265 · surrounding text: 生产网站路由 已标准化：arrowfishvpn.com -> /project/arrowfishvpn，/landing/ -> /project/arrowfishlandingpage，jianyu-ip-proxy.com -> /project/skytreelandingpagewebnet。 部署路径与 Nginx 路由配对，降低错站和错目录发布风险。"
+    },
+    {
+      "id": "u_61a9c6994346308c",
+      "kind": "text",
+      "source": "旧 proxybackend",
+      "occurrence": 0,
+      "target": "Old proxybackend",
+      "context": "td @ line 266 · surrounding text: 旧 proxybackend HK proxybackend 与 Azure proxybackend 已退出活跃架构。 节点控制回到 orebackend + sing-box agent 主线，减少旧服务维护成本。"
+    },
+    {
+      "id": "u_f6f349673043de0b",
+      "kind": "text",
+      "source": "HK proxybackend 与 Azure proxybackend 已退出活跃架构。",
+      "occurrence": 0,
+      "target": "HK proxybackend and Azure proxybackend have exited active architecture.",
+      "context": "td @ line 266 · surrounding text: 旧 proxybackend HK proxybackend 与 Azure proxybackend 已退出活跃架构。 节点控制回到 orebackend + sing-box agent 主线，减少旧服务维护成本。"
+    },
+    {
+      "id": "u_34095dbd26f4b09e",
+      "kind": "text",
+      "source": "节点控制回到 orebackend + sing-box agent 主线，减少旧服务维护成本。",
+      "occurrence": 0,
+      "target": "VPN node control has returned to orebackend + sing-box agent mainline, reducing the cost of maintaining old services.",
+      "context": "td @ line 266 · surrounding text: 旧 proxybackend HK proxybackend 与 Azure proxybackend 已退出活跃架构。 节点控制回到 orebackend + sing-box agent 主线，减少旧服务维护成本。"
+    },
+    {
+      "id": "u_a7aefd8121ef2fb0",
+      "kind": "text",
+      "source": "访问项",
+      "occurrence": 0,
+      "target": "Access items",
+      "context": "th @ line 270 · surrounding text: 访问项 当前控制 状态"
+    },
+    {
+      "id": "u_c480ab7c13062bc0",
+      "kind": "text",
+      "source": "当前控制",
+      "occurrence": 0,
+      "target": "Current control",
+      "context": "th @ line 270 · surrounding text: 访问项 当前控制 状态"
+    },
+    {
+      "id": "u_3019c9f8da719f4c",
+      "kind": "text",
+      "source": "状态",
+      "occurrence": 0,
+      "target": "Status",
+      "context": "th @ line 270 · surrounding text: 访问项 当前控制 状态"
+    },
+    {
+      "id": "u_75d35b9498192e87",
+      "kind": "text",
+      "source": "源代码访问",
+      "occurrence": 0,
+      "target": "Source-Code Access",
+      "context": "td @ line 272 · surrounding text: 源代码访问 当前按最小权限控制，保留 Roy、Morgan、Lex、马来西亚开发侧访问。 台湾旧成员访问按前期交接要求撤回；如有新增人员，需要单独审批。"
+    },
+    {
+      "id": "u_dfbba6a7a492f2a7",
+      "kind": "text",
+      "source": "当前按最小权限控制，保留 Roy、Morgan、Lex、马来西亚开发侧访问。",
+      "occurrence": 0,
+      "target": "Access is controlled under least privilege and retained for Roy, Morgan, Lex, and Malaysia development personnel.",
+      "context": "td @ line 272 · surrounding text: 源代码访问 当前按最小权限控制，保留 Roy、Morgan、Lex、马来西亚开发侧访问。 台湾旧成员访问按前期交接要求撤回；如有新增人员，需要单独审批。"
+    },
+    {
+      "id": "u_297fc368dfccaffd",
+      "kind": "text",
+      "source": "台湾旧成员访问按前期交接要求撤回；如有新增人员，需要单独审批。",
+      "occurrence": 0,
+      "target": "Taiwan legacy members' access to the old database is withdrawn according to the handover requirements; additional personnel will require separate approval.",
+      "context": "td @ line 272 · surrounding text: 源代码访问 当前按最小权限控制，保留 Roy、Morgan、Lex、马来西亚开发侧访问。 台湾旧成员访问按前期交接要求撤回；如有新增人员，需要单独审批。"
+    },
+    {
+      "id": "u_0258d5f0b1bff21c",
+      "kind": "text",
+      "source": "生产数据库访问",
+      "occurrence": 0,
+      "target": "Production Database Access",
+      "context": "td @ line 273 · surrounding text: 生产数据库访问 MySQL 已无公网 IP，仅通过私网和受控通道访问。 本阶段已修复公网暴露风险。"
+    },
+    {
+      "id": "u_59992a4daeedfa06",
+      "kind": "text",
+      "source": "MySQL 已无公网 IP，仅通过私网和受控通道访问。",
+      "occurrence": 0,
+      "target": "MySQL no longer has a public IP; access is via the private network and controlled channels.",
+      "context": "td @ line 273 · surrounding text: 生产数据库访问 MySQL 已无公网 IP，仅通过私网和受控通道访问。 本阶段已修复公网暴露风险。"
+    },
+    {
+      "id": "u_f56aea01c207f796",
+      "kind": "text",
+      "source": "本阶段已修复公网暴露风险。",
+      "occurrence": 0,
+      "target": "Public exposure risks have been mitigated in this phase.",
+      "context": "td @ line 273 · surrounding text: 生产数据库访问 MySQL 已无公网 IP，仅通过私网和受控通道访问。 本阶段已修复公网暴露风险。"
+    },
+    {
+      "id": "u_fba93890d327867a",
+      "kind": "text",
+      "source": "Nginx 路由治理",
+      "occurrence": 0,
+      "target": "Nginx Routing Governance",
+      "context": "td @ line 274 · surrounding text: Nginx 路由治理 生产 Nginx 已完成配置梳理，清理旧备份、重复路由和无效 file host。 主站、landing 与 Jianyu 站点路径固定，降低错误发布和目录暴露风险。"
+    },
+    {
+      "id": "u_e8c0114fedf7ea5e",
+      "kind": "text",
+      "source": "生产 Nginx 已完成配置梳理，清理旧备份、重复路由和无效 file host。",
+      "occurrence": 0,
+      "target": "The production Nginx configuration was reviewed and standardized; old backups, duplicate routes, and invalid file hosts were removed.",
+      "context": "td @ line 274 · surrounding text: Nginx 路由治理 生产 Nginx 已完成配置梳理，清理旧备份、重复路由和无效 file host。 主站、landing 与 Jianyu 站点路径固定，降低错误发布和目录暴露风险。"
+    },
+    {
+      "id": "u_ee375af46b40a698",
+      "kind": "text",
+      "source": "主站、landing 与 Jianyu 站点路径固定，降低错误发布和目录暴露风险。",
+      "occurrence": 0,
+      "target": "Fixed paths for the main site, landing page, and Jianyu sites to reduce errors in publishing and directory exposure risks.",
+      "context": "td @ line 274 · surrounding text: Nginx 路由治理 生产 Nginx 已完成配置梳理，清理旧备份、重复路由和无效 file host。 主站、landing 与 Jianyu 站点路径固定，降低错误发布和目录暴露风险。"
+    },
+    {
+      "id": "u_0a1802fa6b12a3b6",
+      "kind": "text",
+      "source": "发布与 CI/CD 权限",
+      "occurrence": 0,
+      "target": "Release and CI/CD Permissions",
+      "context": "td @ line 275 · surrounding text: 发布与 CI/CD 权限 后端、BO、cron、Android、静态网站和 Windows 均在整理独立构建 / 部署路径。 减少手工发布和环境混用带来的风险。"
+    },
+    {
+      "id": "u_df1638ff0c58ce39",
+      "kind": "text",
+      "source": "后端、BO、cron、Android、静态网站和 Windows 均在整理独立构建 / 部署路径。",
+      "occurrence": 0,
+      "target": "Backend, BO, cron, Android, static websites, and Windows are all being organized for independent build/deployment paths.",
+      "context": "td @ line 275 · surrounding text: 发布与 CI/CD 权限 后端、BO、cron、Android、静态网站和 Windows 均在整理独立构建 / 部署路径。 减少手工发布和环境混用带来的风险。"
+    },
+    {
+      "id": "u_0a024af1ec5c6fc0",
+      "kind": "text",
+      "source": "减少手工发布和环境混用带来的风险。",
+      "occurrence": 0,
+      "target": "Reduce risks from manual releases and environment mixing.",
+      "context": "td @ line 275 · surrounding text: 发布与 CI/CD 权限 后端、BO、cron、Android、静态网站和 Windows 均在整理独立构建 / 部署路径。 减少手工发布和环境混用带来的风险。"
+    },
+    {
+      "id": "u_56f2d44cb5665d51",
+      "kind": "text",
+      "source": "Windows 签名",
+      "occurrence": 0,
+      "target": "Windows Signing",
+      "context": "td @ line 276 · surrounding text: Windows 签名 旧硬件签名路径不可继续依赖，已开始整理云签名或新证书方案。 签名方案仍是 Windows 正式版发布门控。"
+    },
+    {
+      "id": "u_92c2febfae10bfef",
+      "kind": "text",
+      "source": "旧硬件签名路径不可继续依赖，已开始整理云签名或新证书方案。",
+      "occurrence": 0,
+      "target": "Old hardware signing paths cannot be relied upon anymore; a cloud signing or new certificate scheme is being organized.",
+      "context": "td @ line 276 · surrounding text: Windows 签名 旧硬件签名路径不可继续依赖，已开始整理云签名或新证书方案。 签名方案仍是 Windows 正式版发布门控。"
+    },
+    {
+      "id": "u_691a239066348ec3",
+      "kind": "text",
+      "source": "签名方案仍是 Windows 正式版发布门控。",
+      "occurrence": 0,
+      "target": "The signing scheme remains the gatekeeper for Windows official releases.",
+      "context": "td @ line 276 · surrounding text: Windows 签名 旧硬件签名路径不可继续依赖，已开始整理云签名或新证书方案。 签名方案仍是 Windows 正式版发布门控。"
+    },
+    {
+      "id": "u_dbc1e7613f808e99",
+      "kind": "text",
+      "source": "台湾团队遗留安全缺口",
+      "occurrence": 0,
+      "target": "Legacy Security Gaps in Taiwan Team",
+      "context": "th @ line 280 · surrounding text: 台湾团队遗留安全缺口 风险 本阶段状态"
+    },
+    {
+      "id": "u_b2024da7f5b1c555",
+      "kind": "text",
+      "source": "风险",
+      "occurrence": 0,
+      "target": "Risk",
+      "context": "th @ line 280 · surrounding text: 台湾团队遗留安全缺口 风险 本阶段状态"
+    },
+    {
+      "id": "u_384bc5488ca6efa7",
+      "kind": "text",
+      "source": "本阶段状态",
+      "occurrence": 0,
+      "target": "Current Phase Status",
+      "context": "th @ line 280 · surrounding text: 台湾团队遗留安全缺口 风险 本阶段状态"
+    },
+    {
+      "id": "u_f94a65e2c3b31195",
+      "kind": "text",
+      "source": "生产数据库曾有公网入口",
+      "occurrence": 0,
+      "target": "The production database previously had a public endpoint",
+      "context": "td @ line 282 · surrounding text: 生产数据库曾有公网入口 数据库暴露在直接扫描和攻击风险中。 本阶段已修复：公网 IP 已移除，保留私网访问。"
+    },
+    {
+      "id": "u_28052b7ed897ae06",
+      "kind": "text",
+      "source": "数据库暴露在直接扫描和攻击风险中。",
+      "occurrence": 0,
+      "target": "The database was exposed to direct scanning and attacks.",
+      "context": "td @ line 282 · surrounding text: 生产数据库曾有公网入口 数据库暴露在直接扫描和攻击风险中。 本阶段已修复：公网 IP 已移除，保留私网访问。"
+    },
+    {
+      "id": "u_c4e0fd963d9c7458",
+      "kind": "text",
+      "source": "本阶段已修复：公网 IP 已移除，保留私网访问。",
+      "occurrence": 0,
+      "target": "This sprint has resolved: Public IP has been removed, private network access is retained.",
+      "context": "td @ line 282 · surrounding text: 生产数据库曾有公网入口 数据库暴露在直接扫描和攻击风险中。 本阶段已修复：公网 IP 已移除，保留私网访问。"
+    },
+    {
+      "id": "u_17ad2eb58598252e",
+      "kind": "text",
+      "source": "数据库网络规则过宽",
+      "occurrence": 0,
+      "target": "Database network rules are too broad",
+      "context": "td @ line 283 · surrounding text: 数据库网络规则过宽 后端以外来源可触达数据库服务。 本阶段已收紧：数据库只保留后端私网来源。"
+    },
+    {
+      "id": "u_6d07426e14bfd8a5",
+      "kind": "text",
+      "source": "后端以外来源可触达数据库服务。",
+      "occurrence": 0,
+      "target": "Backend sources can access the database service.",
+      "context": "td @ line 283 · surrounding text: 数据库网络规则过宽 后端以外来源可触达数据库服务。 本阶段已收紧：数据库只保留后端私网来源。"
+    },
+    {
+      "id": "u_1c9572626e1f50dd",
+      "kind": "text",
+      "source": "本阶段已收紧：数据库只保留后端私网来源。",
+      "occurrence": 0,
+      "target": "This sprint has tightened: The database only retains backend private network sources.",
+      "context": "td @ line 283 · surrounding text: 数据库网络规则过宽 后端以外来源可触达数据库服务。 本阶段已收紧：数据库只保留后端私网来源。"
+    },
+    {
+      "id": "u_20781502ac1d6d30",
+      "kind": "text",
+      "source": "数据库备份口径不清",
+      "occurrence": 0,
+      "target": "Database backup status was unclear",
+      "context": "td @ line 284 · surrounding text: 数据库备份口径不清 故障恢复依赖 VM 级备份，恢复成本高。 已改为数据库级备份路径，保留恢复验证门控。"
+    },
+    {
+      "id": "u_2826ea271e0f5f3f",
+      "kind": "text",
+      "source": "故障恢复依赖 VM 级备份，恢复成本高。",
+      "occurrence": 0,
+      "target": "Fault recovery depends on VM-level backups, which have high restoration costs.",
+      "context": "td @ line 284 · surrounding text: 数据库备份口径不清 故障恢复依赖 VM 级备份，恢复成本高。 已改为数据库级备份路径，保留恢复验证门控。"
+    },
+    {
+      "id": "u_daff2afe68305116",
+      "kind": "text",
+      "source": "已改为数据库级备份路径，保留恢复验证门控。",
+      "occurrence": 0,
+      "target": "This sprint has changed to database-level backup paths and retains the validation gate for restoration.",
+      "context": "td @ line 284 · surrounding text: 数据库备份口径不清 故障恢复依赖 VM 级备份，恢复成本高。 已改为数据库级备份路径，保留恢复验证门控。"
+    },
+    {
+      "id": "u_6f06cc498503a558",
+      "kind": "text",
+      "source": "部署密钥与发布路径不统一",
+      "occurrence": 0,
+      "target": "Deployment keys and release paths are inconsistent",
+      "context": "td @ line 285 · surrounding text: 部署密钥与发布路径不统一 密钥回收和发布追踪困难。 推进中：后端、BO、cron 继续统一 PEM / 部署流程。"
+    },
+    {
+      "id": "u_53e9d93fdac9e69c",
+      "kind": "text",
+      "source": "密钥回收和发布追踪困难。",
+      "occurrence": 0,
+      "target": "Key recovery and release tracking are difficult.",
+      "context": "td @ line 285 · surrounding text: 部署密钥与发布路径不统一 密钥回收和发布追踪困难。 推进中：后端、BO、cron 继续统一 PEM / 部署流程。"
+    },
+    {
+      "id": "u_39a6c03632d8f72e",
+      "kind": "text",
+      "source": "推进中：后端、BO、cron 继续统一 PEM / 部署流程。",
+      "occurrence": 0,
+      "target": "In progress: Backend, BO, cron continue to unify PEM / deployment process.",
+      "context": "td @ line 285 · surrounding text: 部署密钥与发布路径不统一 密钥回收和发布追踪困难。 推进中：后端、BO、cron 继续统一 PEM / 部署流程。"
+    },
+    {
+      "id": "u_2c1cc60643e50fa0",
+      "kind": "text",
+      "source": "旧 XRayR / proxybackend 节点链路",
+      "occurrence": 0,
+      "target": "Old XRayR / proxybackend VPN node links",
+      "context": "td @ line 286 · surrounding text: 旧 XRayR / proxybackend 节点链路 用户验证、速度限制和节点更新分散，免费线速度也难由 BO 统一控制。 已转向 orebackend + sing-box agent：后端控制 userlist、节点验证、流量归因和按线路类型的速度策略。"
+    },
+    {
+      "id": "u_f22e9aa0d0e8a028",
+      "kind": "text",
+      "source": "用户验证、速度限制和节点更新分散，免费线速度也难由 BO 统一控制。",
+      "occurrence": 0,
+      "target": "User verification, speed limits, and VPN node updates are scattered. Free-line speeds are also hard to control by BO.",
+      "context": "td @ line 286 · surrounding text: 旧 XRayR / proxybackend 节点链路 用户验证、速度限制和节点更新分散，免费线速度也难由 BO 统一控制。 已转向 orebackend + sing-box agent：后端控制 userlist、节点验证、流量归因和按线路类型的速度策略。"
+    },
+    {
+      "id": "u_91775be2e1899b08",
+      "kind": "text",
+      "source": "已转向 orebackend + sing-box agent：后端控制 userlist、节点验证、流量归因和按线路类型的速度策略。",
+      "occurrence": 0,
+      "target": "This sprint has switched to orebackend + sing-box agent: Backend controls userlist, VPN node verification, traffic attribution, and speed strategies based on line types.",
+      "context": "td @ line 286 · surrounding text: 旧 XRayR / proxybackend 节点链路 用户验证、速度限制和节点更新分散，免费线速度也难由 BO 统一控制。 已转向 orebackend + sing-box agent：后端控制 userlist、节点验证、流量归因和按线路类型的速度策略。"
+    },
+    {
+      "id": "u_450a58559e140573",
+      "kind": "text",
+      "source": "Windows 旧签名链路失效",
+      "occurrence": 0,
+      "target": "The legacy Windows signing chain is no longer valid",
+      "context": "td @ line 287 · surrounding text: Windows 旧签名链路失效 新版公开发布会出现未知发布者或不可签名风险。 待确认：需要云签名或新的有效证书。"
+    },
+    {
+      "id": "u_9014a22e90cf6731",
+      "kind": "text",
+      "source": "新版公开发布会出现未知发布者或不可签名风险。",
+      "occurrence": 0,
+      "target": "A new public release could show an ‘unknown publisher’ warning, or signing cannot be completed.",
+      "context": "td @ line 287 · surrounding text: Windows 旧签名链路失效 新版公开发布会出现未知发布者或不可签名风险。 待确认：需要云签名或新的有效证书。"
+    },
+    {
+      "id": "u_9c5c7d0186f0b18a",
+      "kind": "text",
+      "source": "待确认：需要云签名或新的有效证书。",
+      "occurrence": 0,
+      "target": "Pending confirmation: need cloud signing or new valid certificate.",
+      "context": "td @ line 287 · surrounding text: Windows 旧签名链路失效 新版公开发布会出现未知发布者或不可签名风险。 待确认：需要云签名或新的有效证书。"
+    },
+    {
+      "id": "u_884aadda617dc478",
+      "kind": "text",
+      "source": "七、之前遗留的技术债处理",
+      "occurrence": 0,
+      "target": "Seven, handling of previous legacy technical debt",
+      "context": "h2 @ line 293"
+    },
+    {
+      "id": "u_5176e814dc4615ea",
+      "kind": "text",
+      "source": "遗留问题",
+      "occurrence": 0,
+      "target": "Legacy issues",
+      "context": "th @ line 295 · surrounding text: 遗留问题 风险 本阶段处理"
+    },
+    {
+      "id": "u_13eb11c2a6025f0e",
+      "kind": "text",
+      "source": "风险",
+      "occurrence": 1,
+      "target": "Risk",
+      "context": "th @ line 295 · surrounding text: 遗留问题 风险 本阶段处理"
+    },
+    {
+      "id": "u_4f24b467d390ee2a",
+      "kind": "text",
+      "source": "本阶段处理",
+      "occurrence": 0,
+      "target": "Handling of this phase",
+      "context": "th @ line 295 · surrounding text: 遗留问题 风险 本阶段处理"
+    },
+    {
+      "id": "u_bbf183f41b3f5220",
+      "kind": "text",
+      "source": "Android 连接体验债",
+      "occurrence": 0,
+      "target": "Android connectivity debt",
+      "context": "td @ line 297 · surrounding text: Android 连接体验债 连接卡住、误报网络被阻挡、切线状态闪烁，会直接影响用户体验。 集中修复延迟探测、重连、免费额度、活动弹窗和连接状态显示。"
+    },
+    {
+      "id": "u_aaf58129a121ace9",
+      "kind": "text",
+      "source": "连接卡住、误报网络被阻挡、切线状态闪烁，会直接影响用户体验。",
+      "occurrence": 0,
+      "target": "Connectivity stuck, misreported network blocked, flashing disconnect status will directly affect user experience.",
+      "context": "td @ line 297 · surrounding text: Android 连接体验债 连接卡住、误报网络被阻挡、切线状态闪烁，会直接影响用户体验。 集中修复延迟探测、重连、免费额度、活动弹窗和连接状态显示。"
+    },
+    {
+      "id": "u_6928a12cb012d7c7",
+      "kind": "text",
+      "source": "集中修复延迟探测、重连、免费额度、活动弹窗和连接状态显示。",
+      "occurrence": 0,
+      "target": "Fixing delayed probe, reconnection, free quota, activity popup and connectivity status display.",
+      "context": "td @ line 297 · surrounding text: Android 连接体验债 连接卡住、误报网络被阻挡、切线状态闪烁，会直接影响用户体验。 集中修复延迟探测、重连、免费额度、活动弹窗和连接状态显示。"
+    },
+    {
+      "id": "u_3c116d401942a7cd",
+      "kind": "text",
+      "source": "网站部署和路由债",
+      "occurrence": 0,
+      "target": "Website deployment and routing debt",
+      "context": "td @ line 298 · surrounding text: 网站部署和路由债 静态站点部署路径不清，Nginx 配置过散，容易出现路由漂移。 完成生产 Nginx routing 清理，并标准化三个静态网站 CI/CD：Arrowfish 主站、Arrowfish landing、Jianyu IP Proxy。"
+    },
+    {
+      "id": "u_80075474efcd7d2d",
+      "kind": "text",
+      "source": "静态站点部署路径不清，Nginx 配置过散，容易出现路由漂移。",
+      "occurrence": 0,
+      "target": "Static-site deployment paths were unclear and Nginx configuration was too fragmented, making routing drift likely.",
+      "context": "td @ line 298 · surrounding text: 网站部署和路由债 静态站点部署路径不清，Nginx 配置过散，容易出现路由漂移。 完成生产 Nginx routing 清理，并标准化三个静态网站 CI/CD：Arrowfish 主站、Arrowfish landing、Jianyu IP Proxy。"
+    },
+    {
+      "id": "u_852c9a235e4f72d9",
+      "kind": "text",
+      "source": "完成生产 Nginx routing 清理，并标准化三个静态网站 CI/CD：Arrowfish 主站、Arrowfish landing、Jianyu IP Proxy。",
+      "occurrence": 0,
+      "target": "Complete production Nginx routing cleanup and standardize three static websites CI/CD: Arrowfish main site, Arrowfish landing, Jianyu IP Proxy.",
+      "context": "td @ line 298 · surrounding text: 网站部署和路由债 静态站点部署路径不清，Nginx 配置过散，容易出现路由漂移。 完成生产 Nginx routing 清理，并标准化三个静态网站 CI/CD：Arrowfish 主站、Arrowfish landing、Jianyu IP Proxy。"
+    },
+    {
+      "id": "u_a4160aa87515aed7",
+      "kind": "text",
+      "source": "基础设施安全债",
+      "occurrence": 0,
+      "target": "Infrastructure security debt",
+      "context": "td @ line 299 · surrounding text: 基础设施安全债 旧机器、旧日志、旧 artifacts 和数据库公网暴露会增加排错与安全风险。 生产 MySQL 已无公网 IP，旧文件和日志清理进入持续整理。"
+    },
+    {
+      "id": "u_c9e992337daea20a",
+      "kind": "text",
+      "source": "旧机器、旧日志、旧 artifacts 和数据库公网暴露会增加排错与安全风险。",
+      "occurrence": 0,
+      "target": "Old machines, old logs, old artifacts and database public exposure will increase troubleshooting and security risks. Production MySQL has no public IP; old files and logs are entering continuous cleanup.",
+      "context": "td @ line 299 · surrounding text: 基础设施安全债 旧机器、旧日志、旧 artifacts 和数据库公网暴露会增加排错与安全风险。 生产 MySQL 已无公网 IP，旧文件和日志清理进入持续整理。"
+    },
+    {
+      "id": "u_741e99885d4cf1c3",
+      "kind": "text",
+      "source": "生产 MySQL 已无公网 IP，旧文件和日志清理进入持续整理。",
+      "occurrence": 0,
+      "target": "Production MySQL has no public IP; old files and logs are entering continuous cleanup.",
+      "context": "td @ line 299 · surrounding text: 基础设施安全债 旧机器、旧日志、旧 artifacts 和数据库公网暴露会增加排错与安全风险。 生产 MySQL 已无公网 IP，旧文件和日志清理进入持续整理。"
+    },
+    {
+      "id": "u_ac856ee20ff90429",
+      "kind": "text",
+      "source": "后端 all-in-one 债",
+      "occurrence": 0,
+      "target": "Backend all-in-one debt",
+      "context": "td @ line 300 · surrounding text: 后端 all-in-one 债 主后端、BO、cron 长期混在一起，后续 FFF 复用会继承同一套包袱。 BO 与 cron 已拆出，公共工具、共享模块和迁移 / 部署流程正在收敛。"
+    },
+    {
+      "id": "u_a2c5cb1fece34ecc",
+      "kind": "text",
+      "source": "主后端、BO、cron 长期混在一起，后续 FFF 复用会继承同一套包袱。",
+      "occurrence": 0,
+      "target": "Sprint and Back Office (BO) are intertwined for a long time; subsequent FFF reuse will inherit the same baggage.",
+      "context": "td @ line 300 · surrounding text: 后端 all-in-one 债 主后端、BO、cron 长期混在一起，后续 FFF 复用会继承同一套包袱。 BO 与 cron 已拆出，公共工具、共享模块和迁移 / 部署流程正在收敛。"
+    },
+    {
+      "id": "u_c4ca242de134e2ef",
+      "kind": "text",
+      "source": "BO 与 cron 已拆出，公共工具、共享模块和迁移 / 部署流程正在收敛。",
+      "occurrence": 0,
+      "target": "Back Office (BO) and cron have been separated; common tools, shared modules, and migration/deployment processes are consolidating.",
+      "context": "td @ line 300 · surrounding text: 后端 all-in-one 债 主后端、BO、cron 长期混在一起，后续 FFF 复用会继承同一套包袱。 BO 与 cron 已拆出，公共工具、共享模块和迁移 / 部署流程正在收敛。"
+    },
+    {
+      "id": "u_d231cfb93a9c03b4",
+      "kind": "text",
+      "source": "旧 XRayR / proxybackend 节点债",
+      "occurrence": 0,
+      "target": "Legacy XRayR/proxybackend VPN nodes debt",
+      "context": "td @ line 301 · surrounding text: 旧 XRayR / proxybackend 节点债 旧链路依赖 proxybackend 与节点侧配置，用户验证、速度限制和节点更新都很难统一由 BO 控制。 HK / Azure proxybackend 已退出活跃架构；sing-box agent 改为后端控制 userlist、节点验证和按线路类型的速度策略。"
+    },
+    {
+      "id": "u_59a5497d3b9d68e0",
+      "kind": "text",
+      "source": "旧链路依赖 proxybackend 与节点侧配置，用户验证、速度限制和节点更新都很难统一由 BO 控制。",
+      "occurrence": 0,
+      "target": "The legacy link relies on proxybackend and VPN node-side configurations; user verification, speed limits, and VPN node updates are difficult to unify under BO control.",
+      "context": "td @ line 301 · surrounding text: 旧 XRayR / proxybackend 节点债 旧链路依赖 proxybackend 与节点侧配置，用户验证、速度限制和节点更新都很难统一由 BO 控制。 HK / Azure proxybackend 已退出活跃架构；sing-box agent 改为后端控制 userlist、节点验证和按线路类型的速度策略。"
+    },
+    {
+      "id": "u_00d5940ac634eb63",
+      "kind": "text",
+      "source": "HK / Azure proxybackend 已退出活跃架构；sing-box agent 改为后端控制 userlist、节点验证和按线路类型的速度策略。",
+      "occurrence": 0,
+      "target": "HK/Azure proxybackend has exited the active architecture; sing-box agent is now controlled by the backend for managing userlist, VPN node verification, and speed strategies based on line types.",
+      "context": "td @ line 301 · surrounding text: 旧 XRayR / proxybackend 节点债 旧链路依赖 proxybackend 与节点侧配置，用户验证、速度限制和节点更新都很难统一由 BO 控制。 HK / Azure proxybackend 已退出活跃架构；sing-box agent 改为后端控制 userlist、节点验证和按线路类型的速度策略。"
+    },
+    {
+      "id": "u_639a011d9c284e23",
+      "kind": "text",
+      "source": "Windows 旧客户端债",
+      "occurrence": 0,
+      "target": "Windows legacy client debt",
+      "context": "td @ line 302 · surrounding text: Windows 旧客户端债 旧客户端接旧后端接口，签名路径过期，无法稳定发新版。 已开始升级到最新后端 API，并整理 Docker 构建、核心包生成和云签名路线。"
+    },
+    {
+      "id": "u_40299c0c19b7e119",
+      "kind": "text",
+      "source": "旧客户端接旧后端接口，签名路径过期，无法稳定发新版。",
+      "occurrence": 0,
+      "target": "The legacy client uses a legacy backend API; the signing path has expired, so a new version cannot be released reliably.",
+      "context": "td @ line 302 · surrounding text: Windows 旧客户端债 旧客户端接旧后端接口，签名路径过期，无法稳定发新版。 已开始升级到最新后端 API，并整理 Docker 构建、核心包生成和云签名路线。"
+    },
+    {
+      "id": "u_bb8d7682d3d62632",
+      "kind": "text",
+      "source": "已开始升级到最新后端 API，并整理 Docker 构建、核心包生成和云签名路线。",
+      "occurrence": 0,
+      "target": "We have started upgrading to the latest backend API and organizing Docker builds, core package generation, and cloud signing routes.",
+      "context": "td @ line 302 · surrounding text: Windows 旧客户端债 旧客户端接旧后端接口，签名路径过期，无法稳定发新版。 已开始升级到最新后端 API，并整理 Docker 构建、核心包生成和云签名路线。"
+    },
+    {
+      "id": "u_e741fab9320383ff",
+      "kind": "text",
+      "source": "八、发布计划与多端兼容挑战",
+      "occurrence": 0,
+      "target": "Eight. Release Plan and Multi-Platform Compatibility Challenges",
+      "context": "h2 @ line 308"
+    },
+    {
+      "id": "u_ae89198fb283f21f",
+      "kind": "text",
+      "source": "项目",
+      "occurrence": 1,
+      "target": "Project",
+      "context": "th @ line 310 · surrounding text: 项目 当前状态 下一步"
+    },
+    {
+      "id": "u_d3ea5b84aae414f1",
+      "kind": "text",
+      "source": "当前状态",
+      "occurrence": 1,
+      "target": "Current Status",
+      "context": "th @ line 310 · surrounding text: 项目 当前状态 下一步"
+    },
+    {
+      "id": "u_79cfd8b1179bfe42",
+      "kind": "text",
+      "source": "下一步",
+      "occurrence": 0,
+      "target": "Next Step",
+      "context": "th @ line 310 · surrounding text: 项目 当前状态 下一步"
+    },
+    {
+      "id": "u_e179bd74bb1ce82f",
+      "kind": "text",
+      "source": "3.8.4 发布候选，连接、延迟、活动弹窗和繁中文案继续收尾。",
+      "occurrence": 0,
+      "target": "Candidate release for Arrowfish Android 3.8.4; connection, delay, activity pop-ups, and complex Chinese text are still being finalized.",
+      "context": "td @ line 312 · surrounding text: Arrowfish Android 3.8.4 发布候选，连接、延迟、活动弹窗和繁中文案继续收尾。 目标 2026-06-29 发布，仍以 QA 结果为准。"
+    },
+    {
+      "id": "u_df525e306ba0b9c8",
+      "kind": "text",
+      "source": "目标 2026-06-29 发布，仍以 QA 结果为准。",
+      "occurrence": 0,
+      "target": "Targeted release on June 29, 2026, based on QA results.",
+      "context": "td @ line 312 · surrounding text: Arrowfish Android 3.8.4 发布候选，连接、延迟、活动弹窗和繁中文案继续收尾。 目标 2026-06-29 发布，仍以 QA 结果为准。"
+    },
+    {
+      "id": "u_f36f1d3f72c083b0",
+      "kind": "text",
+      "source": "后端多协议",
+      "occurrence": 1,
+      "target": "Backend multi-protocol",
+      "context": "td @ line 313 · surrounding text: 后端多协议 测试环境已交给 QA 验证。 配合 Android 发布，并保持旧客户端兼容。"
+    },
+    {
+      "id": "u_c35223ac6b533f93",
+      "kind": "text",
+      "source": "测试环境已交给 QA 验证。",
+      "occurrence": 0,
+      "target": "The test environment was handed to QA for validation.",
+      "context": "td @ line 313 · surrounding text: 后端多协议 测试环境已交给 QA 验证。 配合 Android 发布，并保持旧客户端兼容。"
+    },
+    {
+      "id": "u_8a7e29642237e677",
+      "kind": "text",
+      "source": "配合 Android 发布，并保持旧客户端兼容。",
+      "occurrence": 0,
+      "target": "Sprint release and maintain compatibility with the old client for Android.",
+      "context": "td @ line 313 · surrounding text: 后端多协议 测试环境已交给 QA 验证。 配合 Android 发布，并保持旧客户端兼容。"
+    },
+    {
+      "id": "u_439792914762a297",
+      "kind": "text",
+      "source": "冻结客户端",
+      "occurrence": 0,
+      "target": "Freeze the client.",
+      "context": "td @ line 314 · surrounding text: 冻结客户端 后端仍需兼容冻结 iOS HiYou v1.3.0 与旧 Windows skytree_pc v2.2.71。 大改继续使用兼容响应和分阶段验证。"
+    },
+    {
+      "id": "u_f1446bd27564f1ed",
+      "kind": "text",
+      "source": "后端仍需兼容冻结 iOS HiYou v1.3.0 与旧 Windows skytree_pc v2.2.71。",
+      "occurrence": 0,
+      "target": "The backend still needs to be compatible with frozen iOS HiYou v1.3.0 and old Windows skytree_pc v2.2.71.",
+      "context": "td @ line 314 · surrounding text: 冻结客户端 后端仍需兼容冻结 iOS HiYou v1.3.0 与旧 Windows skytree_pc v2.2.71。 大改继续使用兼容响应和分阶段验证。"
+    },
+    {
+      "id": "u_fe6530758e360e1b",
+      "kind": "text",
+      "source": "大改继续使用兼容响应和分阶段验证。",
+      "occurrence": 0,
+      "target": "Sprint continues to use compatibility responses and phased validation.",
+      "context": "td @ line 314 · surrounding text: 冻结客户端 后端仍需兼容冻结 iOS HiYou v1.3.0 与旧 Windows skytree_pc v2.2.71。 大改继续使用兼容响应和分阶段验证。"
+    },
+    {
+      "id": "u_f3cc30f002cec8c8",
+      "kind": "text",
+      "source": "Windows 新版",
+      "occurrence": 0,
+      "target": "Windows New Version",
+      "context": "td @ line 315 · surrounding text: Windows 新版 已开始接最新后端 API、修连接问题、整理 Docker 构建、运行日志和核心包生成路线。 先出测试版给 QA；签名路线确认后再评估正式发布时间。"
+    },
+    {
+      "id": "u_2ca770e87ae97859",
+      "kind": "text",
+      "source": "已开始接最新后端 API、修连接问题、整理 Docker 构建、运行日志和核心包生成路线。",
+      "occurrence": 0,
+      "target": "Started integrating the latest backend API, fixing connection issues, organizing Docker builds, running logs and core package generation routes. First released a test version for QA; confirmed the signature route before evaluating the official release time.",
+      "context": "td @ line 315 · surrounding text: Windows 新版 已开始接最新后端 API、修连接问题、整理 Docker 构建、运行日志和核心包生成路线。 先出测试版给 QA；签名路线确认后再评估正式发布时间。"
+    },
+    {
+      "id": "u_bd24f6ab7a51d36b",
+      "kind": "text",
+      "source": "先出测试版给 QA；签名路线确认后再评估正式发布时间。",
+      "occurrence": 0,
+      "target": "First released a test version for QA; confirmed the signature route before evaluating the official release time.",
+      "context": "td @ line 315 · surrounding text: Windows 新版 已开始接最新后端 API、修连接问题、整理 Docker 构建、运行日志和核心包生成路线。 先出测试版给 QA；签名路线确认后再评估正式发布时间。"
+    },
+    {
+      "id": "u_ebf63e0be486ef4c",
+      "kind": "text",
+      "source": "九、FFF 当前状态与阻塞（实时口径）",
+      "occurrence": 0,
+      "target": "9. Current FFF Status and Blockers (Real-Time Basis)",
+      "context": "h2 @ line 321"
+    },
+    {
+      "id": "u_7f4996f5093c497b",
+      "kind": "text",
+      "source": "项目",
+      "occurrence": 2,
+      "target": "Project",
+      "context": "th @ line 323 · surrounding text: 项目 当前状态 下一步"
+    },
+    {
+      "id": "u_0153fd4c667e6fe6",
+      "kind": "text",
+      "source": "当前状态",
+      "occurrence": 2,
+      "target": "Current Status",
+      "context": "th @ line 323 · surrounding text: 项目 当前状态 下一步"
+    },
+    {
+      "id": "u_1a2758db72dfbc0a",
+      "kind": "text",
+      "source": "下一步",
+      "occurrence": 1,
+      "target": "Next Step",
+      "context": "th @ line 323 · surrounding text: 项目 当前状态 下一步"
+    },
+    {
+      "id": "u_136d2cfc3db1b1ed",
+      "kind": "text",
+      "source": "FFF staging 网站",
+      "occurrence": 0,
+      "target": "FFF staging website",
+      "context": "td @ line 325 · surrounding text: FFF staging 网站 2026-06-16 已部署到 staging server： https://stg-fffvpn.store/ 。 可先用于 FFF 页面联调；正式上线仍需等需求拆解和发布计划。"
+    },
+    {
+      "id": "u_e0c7d0c1f706495f",
+      "kind": "text",
+      "source": "2026-06-16 已部署到 staging server：",
+      "occurrence": 0,
+      "target": "Deployed to the staging server on June 16, 2026: https://stg-fffvpn.store/. It can be used for FFF page integration testing; it still needs to wait for requirement decomposition and release plan for official launch.",
+      "context": "td @ line 325 · surrounding text: FFF staging 网站 2026-06-16 已部署到 staging server： https://stg-fffvpn.store/ 。 可先用于 FFF 页面联调；正式上线仍需等需求拆解和发布计划。"
+    },
+    {
+      "id": "u_c7b9002752a59b08",
+      "kind": "text",
+      "source": "可先用于 FFF 页面联调；正式上线仍需等需求拆解和发布计划。",
+      "occurrence": 0,
+      "target": "It can be used for FFF page integration testing; it still needs to wait for requirement decomposition and release plan for official launch.",
+      "context": "td @ line 325 · surrounding text: FFF staging 网站 2026-06-16 已部署到 staging server： https://stg-fffvpn.store/ 。 可先用于 FFF 页面联调；正式上线仍需等需求拆解和发布计划。"
+    },
+    {
+      "id": "u_07274d8e93ac1c1e",
+      "kind": "text",
+      "source": "需求文件",
+      "occurrence": 0,
+      "target": "Requirement Document",
+      "context": "td @ line 326 · surrounding text: 需求文件 2026-06-23 已收到 Roy PRD / AF-vs-FFF 需求差异。 Sprint 7 先做需求研究、差异拆解和任务排期。"
+    },
+    {
+      "id": "u_9097ea2543539901",
+      "kind": "text",
+      "source": "2026-06-23 已收到 Roy PRD / AF-vs-FFF 需求差异。",
+      "occurrence": 0,
+      "target": "Roy's PRD and the AF-vs-FFF requirements differences were received on 2026-06-23.",
+      "context": "td @ line 326 · surrounding text: 需求文件 2026-06-23 已收到 Roy PRD / AF-vs-FFF 需求差异。 Sprint 7 先做需求研究、差异拆解和任务排期。"
+    },
+    {
+      "id": "u_3027b889707bcc6f",
+      "kind": "text",
+      "source": "Sprint 7 先做需求研究、差异拆解和任务排期。",
+      "occurrence": 0,
+      "target": "Sprint 7 begins with requirements analysis, delta breakdown, and task scheduling.",
+      "context": "td @ line 326 · surrounding text: 需求文件 2026-06-23 已收到 Roy PRD / AF-vs-FFF 需求差异。 Sprint 7 先做需求研究、差异拆解和任务排期。"
+    },
+    {
+      "id": "u_5737cffe483249f5",
+      "kind": "text",
+      "source": "FFF 后端",
+      "occurrence": 0,
+      "target": "FFF Back Office (BO)",
+      "context": "td @ line 327 · surrounding text: FFF 后端 暂不立即承诺完整上线时间。 先完成后端重构和可复用基线，再按 FFF 需求新增功能。"
+    },
+    {
+      "id": "u_16dfd6398351d812",
+      "kind": "text",
+      "source": "暂不立即承诺完整上线时间。",
+      "occurrence": 0,
+      "target": "Hold off on committing to a full go-live time.",
+      "context": "td @ line 327 · surrounding text: FFF 后端 暂不立即承诺完整上线时间。 先完成后端重构和可复用基线，再按 FFF 需求新增功能。"
+    },
+    {
+      "id": "u_cd70e0a085158885",
+      "kind": "text",
+      "source": "先完成后端重构和可复用基线，再按 FFF 需求新增功能。",
+      "occurrence": 0,
+      "target": "Complete backend refactoring and reusable baseline first, then add new features based on FFF needs.",
+      "context": "td @ line 327 · surrounding text: FFF 后端 暂不立即承诺完整上线时间。 先完成后端重构和可复用基线，再按 FFF 需求新增功能。"
+    },
+    {
+      "id": "u_59b837e7dce34a19",
+      "kind": "text",
+      "source": "预计周期",
+      "occurrence": 0,
+      "target": "Estimation period",
+      "context": "td @ line 328 · surrounding text: 预计周期 初步估算：后端重构约 1-2 周，FFF 新需求后端改动约 3 周。 Sprint 7 研究后给更准确时间线。"
+    },
+    {
+      "id": "u_d329f9e873ebe6e9",
+      "kind": "text",
+      "source": "初步估算：后端重构约 1-2 周，FFF 新需求后端改动约 3 周。",
+      "occurrence": 0,
+      "target": "Initial estimate: approximately 1–2 weeks for backend refactoring and approximately 3 weeks for backend changes required by new FFF requirements.",
+      "context": "td @ line 328 · surrounding text: 预计周期 初步估算：后端重构约 1-2 周，FFF 新需求后端改动约 3 周。 Sprint 7 研究后给更准确时间线。"
+    },
+    {
+      "id": "u_f3bde548b81d9448",
+      "kind": "text",
+      "source": "Sprint 7 研究后给更准确时间线。",
+      "occurrence": 0,
+      "target": "Provide a more accurate timeline after Sprint 7's research.",
+      "context": "td @ line 328 · surrounding text: 预计周期 初步估算：后端重构约 1-2 周，FFF 新需求后端改动约 3 周。 Sprint 7 研究后给更准确时间线。"
+    },
+    {
+      "id": "u_ab6a5a1951da1ac2",
+      "kind": "text",
+      "source": "范围风险",
+      "occurrence": 0,
+      "target": "Scope risk",
+      "context": "td @ line 329 · surrounding text: 范围风险 Arrowfish Android 发布和 Windows 升级占用主要窗口。 避免在未完整评估需求前承诺固定上线日。"
+    },
+    {
+      "id": "u_ad1ac903dea5b7af",
+      "kind": "text",
+      "source": "Arrowfish Android 发布和 Windows 升级占用主要窗口。",
+      "occurrence": 0,
+      "target": "Arrowfish Android release and Windows upgrade occupy the main window. Avoid committing to a fixed go-live date before fully evaluating the requirements.",
+      "context": "td @ line 329 · surrounding text: 范围风险 Arrowfish Android 发布和 Windows 升级占用主要窗口。 避免在未完整评估需求前承诺固定上线日。"
+    },
+    {
+      "id": "u_eaa28f5aa05f538c",
+      "kind": "text",
+      "source": "避免在未完整评估需求前承诺固定上线日。",
+      "occurrence": 0,
+      "target": "Do not commit to a fixed go-live date before the requirements have been fully assessed.",
+      "context": "td @ line 329 · surrounding text: 范围风险 Arrowfish Android 发布和 Windows 升级占用主要窗口。 避免在未完整评估需求前承诺固定上线日。"
+    },
+    {
+      "id": "u_56fcff53a321c521",
+      "kind": "text",
+      "source": "十、关键时间线",
+      "occurrence": 0,
+      "target": "Ten Key Timelines",
+      "context": "h2 @ line 335"
+    },
+    {
+      "id": "u_682668d175036c8c",
+      "kind": "text",
+      "source": "日期",
+      "occurrence": 0,
+      "target": "Date",
+      "context": "th @ line 337 · surrounding text: 日期 事件"
+    },
+    {
+      "id": "u_cc711b54834efd4b",
+      "kind": "text",
+      "source": "事件",
+      "occurrence": 0,
+      "target": "Event",
+      "context": "th @ line 337 · surrounding text: 日期 事件"
+    },
+    {
+      "id": "u_bbfdce7ab9ac94c9",
+      "kind": "text",
+      "source": "上一次对外报告截止点。",
+      "occurrence": 0,
+      "target": "Last report deadline to external stakeholders.",
+      "context": "td @ line 339 · surrounding text: 2026-05-10 上一次对外报告截止点。"
+    },
+    {
+      "id": "u_cfd0b7d47086d6bb",
+      "kind": "text",
+      "source": "2026-05-22 至 2026-05-25",
+      "occurrence": 0,
+      "target": "May 22, 2026 - May 25, 2026",
+      "context": "td @ line 340 · surrounding text: 2026-05-22 至 2026-05-25 Sprint 4 关键重构落地：后端控制面、计费、Android 重连、预发环境和 CI/CD 进入稳定推进。"
+    },
+    {
+      "id": "u_c5c9e79f6c400440",
+      "kind": "text",
+      "source": "Sprint 4 关键重构落地：后端控制面、计费、Android 重连、预发环境和 CI/CD 进入稳定推进。",
+      "occurrence": 0,
+      "target": "Sprint 4 Key Re-Engineering Achievements: Backend control plane, billing, Android reconnection, pre-release environment, and CI/CD enter stable progress.",
+      "context": "td @ line 340 · surrounding text: 2026-05-22 至 2026-05-25 Sprint 4 关键重构落地：后端控制面、计费、Android 重连、预发环境和 CI/CD 进入稳定推进。"
+    },
+    {
+      "id": "u_34106027edbd0d73",
+      "kind": "text",
+      "source": "2026-05-31 至 2026-06-08",
+      "occurrence": 0,
+      "target": "May 31, 2026 - Jun 8, 2026",
+      "context": "td @ line 341 · surrounding text: 2026-05-31 至 2026-06-08 完成跨 repo 审查、BO 拆分计划、流量归因、多协议与 Sprint 5 稳定化方向。"
+    },
+    {
+      "id": "u_47c2d5a7faf1dd25",
+      "kind": "text",
+      "source": "完成跨 repo 审查、BO 拆分计划、流量归因、多协议与 Sprint 5 稳定化方向。",
+      "occurrence": 0,
+      "target": "Complete cross-repo review, BO split plan, traffic attribution, and multi-protocol towards Sprint 5 stabilization direction.",
+      "context": "td @ line 341 · surrounding text: 2026-05-31 至 2026-06-08 完成跨 repo 审查、BO 拆分计划、流量归因、多协议与 Sprint 5 稳定化方向。"
+    },
+    {
+      "id": "u_009f695529269f50",
+      "kind": "text",
+      "source": "2026-06-12 至 2026-06-17",
+      "occurrence": 0,
+      "target": "Jun 12, 2026 - Jun 17, 2026",
+      "context": "td @ line 342 · surrounding text: 2026-06-12 至 2026-06-17 完成 GitLab/AWS/Azure 基础设施清理、成本估算、DB 公网 IP 移除与安全收敛。"
+    },
+    {
+      "id": "u_2a420c5e50ad2796",
+      "kind": "text",
+      "source": "完成 GitLab/AWS/Azure 基础设施清理、成本估算、DB 公网 IP 移除与安全收敛。",
+      "occurrence": 0,
+      "target": "Complete GitLab/AWS/Azure infrastructure cleanup, cost estimation, DB public IP removal and security convergence.",
+      "context": "td @ line 342 · surrounding text: 2026-06-12 至 2026-06-17 完成 GitLab/AWS/Azure 基础设施清理、成本估算、DB 公网 IP 移除与安全收敛。"
+    },
+    {
+      "id": "u_db49e93fc35642e1",
+      "kind": "text",
+      "source": "FFF staging website 部署到 staging server，并完成 FFF web CI / Nginx 路线整理。",
+      "occurrence": 0,
+      "target": "Deploy FFF staging website to staging server and complete FFF web CI / Nginx route organization.",
+      "context": "td @ line 343 · surrounding text: 2026-06-16 FFF staging website 部署到 staging server，并完成 FFF web CI / Nginx 路线整理。"
+    },
+    {
+      "id": "u_b03ee984f5c3a488",
+      "kind": "text",
+      "source": "2026-06-18 至 2026-06-25",
+      "occurrence": 0,
+      "target": "Jun 18, 2026 - Jun 25, 2026",
+      "context": "td @ line 344 · surrounding text: 2026-06-18 至 2026-06-25 后端、BO、Android 完成活动、诊断、免费额度、重连和延迟探测等稳定性闭环。"
+    },
+    {
+      "id": "u_fd19ca11fec7e29e",
+      "kind": "text",
+      "source": "后端、BO、Android 完成活动、诊断、免费额度、重连和延迟探测等稳定性闭环。",
+      "occurrence": 0,
+      "target": "The backend, Back Office (BO), and Android completed stabilization across campaigns, diagnostics, free quotas, reconnection, and latency detection.",
+      "context": "td @ line 344 · surrounding text: 2026-06-18 至 2026-06-25 后端、BO、Android 完成活动、诊断、免费额度、重连和延迟探测等稳定性闭环。"
+    },
+    {
+      "id": "u_c78061267ed1efef",
+      "kind": "text",
+      "source": "后端与 BO 完成限时活动 / 倒计时弹窗配置能力，替代硬编码倒计时活动。",
+      "occurrence": 0,
+      "target": "The backend and Back Office (BO) delivered configurable time-limited campaigns and countdown pop-ups, replacing hard-coded countdown campaigns.",
+      "context": "td @ line 345 · surrounding text: 2026-06-19 后端与 BO 完成限时活动 / 倒计时弹窗配置能力，替代硬编码倒计时活动。"
+    },
+    {
+      "id": "u_7c7783651a86fe7a",
+      "kind": "text",
+      "source": "2026-06-23 至 2026-06-24",
+      "occurrence": 0,
+      "target": "Jun 23, 2026 - Jun 24, 2026",
+      "context": "td @ line 346 · surrounding text: 2026-06-23 至 2026-06-24 生产 Nginx 遗留配置完成梳理，三个静态网站 CI/CD 和部署路径标准化。"
+    },
+    {
+      "id": "u_a12d225801f097f6",
+      "kind": "text",
+      "source": "生产 Nginx 遗留配置完成梳理，三个静态网站 CI/CD 和部署路径标准化。",
+      "occurrence": 0,
+      "target": "The inherited production Nginx configuration was reviewed, and CI/CD and deployment paths were standardized for three static websites.",
+      "context": "td @ line 346 · surrounding text: 2026-06-23 至 2026-06-24 生产 Nginx 遗留配置完成梳理，三个静态网站 CI/CD 和部署路径标准化。"
+    },
+    {
+      "id": "u_36debb693e426e56",
+      "kind": "text",
+      "source": "收到 Roy PRD / AF-vs-FFF 完整需求差异。",
+      "occurrence": 0,
+      "target": "Receive Roy PRD / AF-vs-FFF complete requirement differences.",
+      "context": "td @ line 347 · surrounding text: 2026-06-23 收到 Roy PRD / AF-vs-FFF 完整需求差异。"
+    },
+    {
+      "id": "u_810d95dd64933545",
+      "kind": "text",
+      "source": "公共 Go 工具抽出，后端 / BO / cron 改用共享模块与统一迁移流程，Windows 进入最新后端 API、Docker 构建和签名路线整理。",
+      "occurrence": 0,
+      "target": "Public Go tools extracted, backend/BO/cron switch to shared modules and unified migration process. Windows enter latest backend API, Docker build and sign route organization.",
+      "context": "td @ line 348 · surrounding text: 2026-06-26 公共 Go 工具抽出，后端 / BO / cron 改用共享模块与统一迁移流程，Windows 进入最新后端 API、Docker 构建和签名路线整理。"
+    },
+    {
+      "id": "u_b36fa1e9f7a19355",
+      "kind": "text",
+      "source": "目标发布 Arrowfish Android 与配套后端，多协议支持随 QA 结果推进。",
+      "occurrence": 0,
+      "target": "Target release Arrowfish Android with accompanying backend, multi-protocol support follows QA results.",
+      "context": "td @ line 349 · surrounding text: 2026-06-29 目标发布 Arrowfish Android 与配套后端，多协议支持随 QA 结果推进。"
+    },
+    {
+      "id": "u_e77e2fafba3c5ca6",
+      "kind": "text",
+      "source": "2026-06-29 至 2026-07-10",
+      "occurrence": 0,
+      "target": "Jun 29, 2026 - Jul 10, 2026",
+      "context": "td @ line 350 · surrounding text: 2026-06-29 至 2026-07-10 Sprint 7：Windows 重构、后端重构、FFF PRD 研究与排期。"
+    },
+    {
+      "id": "u_7348bc6c84f64047",
+      "kind": "text",
+      "source": "Sprint 7：Windows 重构、后端重构、FFF PRD 研究与排期。",
+      "occurrence": 0,
+      "target": "Sprint 7: Windows re-architecture, backend re-architecture, FFF PRD research and scheduling.",
+      "context": "td @ line 350 · surrounding text: 2026-06-29 至 2026-07-10 Sprint 7：Windows 重构、后端重构、FFF PRD 研究与排期。"
+    },
+    {
+      "id": "u_f38ddf7a0bb06546",
+      "kind": "text",
+      "source": "十一、风险与观察项",
+      "occurrence": 0,
+      "target": "Risk and Observation Items",
+      "context": "h2 @ line 356"
+    },
+    {
+      "id": "u_2e4d26be88596d19",
+      "kind": "text",
+      "source": "风险",
+      "occurrence": 2,
+      "target": "Risk",
+      "context": "th @ line 358 · surrounding text: 风险 当前状态 下一步"
+    },
+    {
+      "id": "u_5f05e2f8d611e9b0",
+      "kind": "text",
+      "source": "当前状态",
+      "occurrence": 3,
+      "target": "Current Status",
+      "context": "th @ line 358 · surrounding text: 风险 当前状态 下一步"
+    },
+    {
+      "id": "u_b5cbc29853b31d39",
+      "kind": "text",
+      "source": "下一步",
+      "occurrence": 2,
+      "target": "Next Step",
+      "context": "th @ line 358 · surrounding text: 风险 当前状态 下一步"
+    },
+    {
+      "id": "u_0952bbaf049e70f4",
+      "kind": "text",
+      "source": "测试中",
+      "occurrence": 0,
+      "target": "In Testing",
+      "context": "span.watch @ line 360 · surrounding text: Android QA 测试中 ：若出现 P0 / P1 bug，2026-06-29 发布时间需顺延。 以 QA 回归结果作为上线门控。"
+    },
+    {
+      "id": "u_cfb5ca3a6118d6aa",
+      "kind": "text",
+      "source": "：若出现 P0 / P1 bug，2026-06-29 发布时间需顺延。",
+      "occurrence": 0,
+      "target": ": Delay release to June 29, 2026 if P0/P1 bugs are found. Use QA regression results as the gate for go-live.",
+      "context": "td @ line 360 · surrounding text: Android QA 测试中 ：若出现 P0 / P1 bug，2026-06-29 发布时间需顺延。 以 QA 回归结果作为上线门控。"
+    },
+    {
+      "id": "u_ab1de015c1d179ff",
+      "kind": "text",
+      "source": "以 QA 回归结果作为上线门控。",
+      "occurrence": 0,
+      "target": ": Use QA regression results as the gate for go-live.",
+      "context": "td @ line 360 · surrounding text: Android QA 测试中 ：若出现 P0 / P1 bug，2026-06-29 发布时间需顺延。 以 QA 回归结果作为上线门控。"
+    },
+    {
+      "id": "u_0d3ec782eeab4f83",
+      "kind": "text",
+      "source": "注册下降",
+      "occurrence": 0,
+      "target": "Decrease in Registration",
+      "context": "td @ line 361 · surrounding text: 注册下降 需观察 ：清理后一周注册下降 13.8%。 结合渠道投放、版本发布、地区访问和广告流量继续核对。"
+    },
+    {
+      "id": "u_f5a83beb3bbcdbf2",
+      "kind": "text",
+      "source": "需观察",
+      "occurrence": 0,
+      "target": "Observe",
+      "context": "span.watch @ line 361 · surrounding text: 注册下降 需观察 ：清理后一周注册下降 13.8%。 结合渠道投放、版本发布、地区访问和广告流量继续核对。"
+    },
+    {
+      "id": "u_174ef1c2f821ad15",
+      "kind": "text",
+      "source": "：清理后一周注册下降 13.8%。",
+      "occurrence": 0,
+      "target": ": Registrations fell 13.8% in the week after cleanup.",
+      "context": "td @ line 361 · surrounding text: 注册下降 需观察 ：清理后一周注册下降 13.8%。 结合渠道投放、版本发布、地区访问和广告流量继续核对。"
+    },
+    {
+      "id": "u_bf52f7b38bbcd2e6",
+      "kind": "text",
+      "source": "结合渠道投放、版本发布、地区访问和广告流量继续核对。",
+      "occurrence": 0,
+      "target": "Continue cross-checking against channel campaigns, version releases, regional access, and advertising traffic.",
+      "context": "td @ line 361 · surrounding text: 注册下降 需观察 ：清理后一周注册下降 13.8%。 结合渠道投放、版本发布、地区访问和广告流量继续核对。"
+    },
+    {
+      "id": "u_11f1e5e589a0c004",
+      "kind": "text",
+      "source": "Windows 签名",
+      "occurrence": 1,
+      "target": "Windows Signing",
+      "context": "td @ line 362 · surrounding text: Windows 签名 待确认 ：旧签名路径不可继续依赖。 尽快确认云签名或新证书路线。"
+    },
+    {
+      "id": "u_a8b62d6c14ed9521",
+      "kind": "text",
+      "source": "待确认",
+      "occurrence": 0,
+      "target": "Under Review",
+      "context": "span.watch @ line 362 · surrounding text: Windows 签名 待确认 ：旧签名路径不可继续依赖。 尽快确认云签名或新证书路线。"
+    },
+    {
+      "id": "u_e9f7c2bb0097bc18",
+      "kind": "text",
+      "source": "：旧签名路径不可继续依赖。",
+      "occurrence": 0,
+      "target": ": The legacy signing path can no longer be relied upon.",
+      "context": "td @ line 362 · surrounding text: Windows 签名 待确认 ：旧签名路径不可继续依赖。 尽快确认云签名或新证书路线。"
+    },
+    {
+      "id": "u_94651dd8e723dcea",
+      "kind": "text",
+      "source": "尽快确认云签名或新证书路线。",
+      "occurrence": 0,
+      "target": ": Quickly confirm cloud signing or new certificate route.",
+      "context": "td @ line 362 · surrounding text: Windows 签名 待确认 ：旧签名路径不可继续依赖。 尽快确认云签名或新证书路线。"
+    },
+    {
+      "id": "u_661b22a8dca66f72",
+      "kind": "text",
+      "source": "FFF 需求",
+      "occurrence": 0,
+      "target": "FFF Requirements",
+      "context": "td @ line 363 · surrounding text: FFF 需求 待拆解 ：需求刚收到，不能直接承诺完整上线日。 Sprint 7 输出正式时间线与任务拆分。"
+    },
+    {
+      "id": "u_fd9a6687ba3f128a",
+      "kind": "text",
+      "source": "待拆解",
+      "occurrence": 0,
+      "target": "Under Review",
+      "context": "span.watch @ line 363 · surrounding text: FFF 需求 待拆解 ：需求刚收到，不能直接承诺完整上线日。 Sprint 7 输出正式时间线与任务拆分。"
+    },
+    {
+      "id": "u_584a0e72234bfcc5",
+      "kind": "text",
+      "source": "：需求刚收到，不能直接承诺完整上线日。",
+      "occurrence": 0,
+      "target": ": Demand received, cannot commit to full go-live date directly.",
+      "context": "td @ line 363 · surrounding text: FFF 需求 待拆解 ：需求刚收到，不能直接承诺完整上线日。 Sprint 7 输出正式时间线与任务拆分。"
+    },
+    {
+      "id": "u_6f44eae724eb660d",
+      "kind": "text",
+      "source": "Sprint 7 输出正式时间线与任务拆分。",
+      "occurrence": 0,
+      "target": "Sprint 7 Outputs Formal Timeline and Task Breakdown.",
+      "context": "td @ line 363 · surrounding text: FFF 需求 待拆解 ：需求刚收到，不能直接承诺完整上线日。 Sprint 7 输出正式时间线与任务拆分。"
+    },
+    {
+      "id": "u_ef89402026130346",
+      "kind": "text",
+      "source": "后端迁移 / 部署流程",
+      "occurrence": 0,
+      "target": "Backend Migration / Deployment Process",
+      "context": "td @ line 364 · surrounding text: 后端迁移 / 部署流程 验证中 ：共享工具和统一迁移流程影响后端、BO、cron 三套服务。 先在测试环境验证，再逐步进入生产。"
+    },
+    {
+      "id": "u_a1b8a875c35ec1ae",
+      "kind": "text",
+      "source": "验证中",
+      "occurrence": 0,
+      "target": "In Validation",
+      "context": "span.watch @ line 364 · surrounding text: 后端迁移 / 部署流程 验证中 ：共享工具和统一迁移流程影响后端、BO、cron 三套服务。 先在测试环境验证，再逐步进入生产。"
+    },
+    {
+      "id": "u_7ae5a3a3df9b55e8",
+      "kind": "text",
+      "source": "：共享工具和统一迁移流程影响后端、BO、cron 三套服务。",
+      "occurrence": 0,
+      "target": ": Backend, BO, cron three sets of services are affected by the shared tool and unified migration process. It is currently in progress in the test environment before being gradually entered into production.",
+      "context": "td @ line 364 · surrounding text: 后端迁移 / 部署流程 验证中 ：共享工具和统一迁移流程影响后端、BO、cron 三套服务。 先在测试环境验证，再逐步进入生产。"
+    },
+    {
+      "id": "u_1eaf935eaa2c026b",
+      "kind": "text",
+      "source": "先在测试环境验证，再逐步进入生产。",
+      "occurrence": 0,
+      "target": "Progressed in the test environment, then gradually entered production.",
+      "context": "td @ line 364 · surrounding text: 后端迁移 / 部署流程 验证中 ：共享工具和统一迁移流程影响后端、BO、cron 三套服务。 先在测试环境验证，再逐步进入生产。"
+    },
+    {
+      "id": "u_308053b3d7dd1dd6",
+      "kind": "text",
+      "source": "节点速度控制",
+      "occurrence": 0,
+      "target": "VPN node Speed Control",
+      "context": "td @ line 365 · surrounding text: 节点速度控制 验证中 ：按线路类型控制速度已进入 sing-box agent 主线方向，但免费线速度仍需确认 BO 配置和节点下发一致。 Sprint 7 继续验证 BO 配置、后端 userlist 和节点生效结果。"
+    },
+    {
+      "id": "u_a920c383fde84835",
+      "kind": "text",
+      "source": "验证中",
+      "occurrence": 1,
+      "target": "In Validation",
+      "context": "span.watch @ line 365 · surrounding text: 节点速度控制 验证中 ：按线路类型控制速度已进入 sing-box agent 主线方向，但免费线速度仍需确认 BO 配置和节点下发一致。 Sprint 7 继续验证 BO 配置、后端 userlist 和节点生效结果。"
+    },
+    {
+      "id": "u_6ff3c3c1b0dadccd",
+      "kind": "text",
+      "source": "：按线路类型控制速度已进入 sing-box agent 主线方向，但免费线速度仍需确认 BO 配置和节点下发一致。",
+      "occurrence": 0,
+      "target": ": Line type speed control has entered the main direction of sing-box agent. However, free line speed still needs to be confirmed with BO configuration and VPN node issuance being consistent.",
+      "context": "td @ line 365 · surrounding text: 节点速度控制 验证中 ：按线路类型控制速度已进入 sing-box agent 主线方向，但免费线速度仍需确认 BO 配置和节点下发一致。 Sprint 7 继续验证 BO 配置、后端 userlist 和节点生效结果。"
+    },
+    {
+      "id": "u_941b4db2bf688e7b",
+      "kind": "text",
+      "source": "Sprint 7 继续验证 BO 配置、后端 userlist 和节点生效结果。",
+      "occurrence": 0,
+      "target": "Sprint 7 Continues to Verify BO Configuration, Backend userlist, and VPN node Effectiveness Results.",
+      "context": "td @ line 365 · surrounding text: 节点速度控制 验证中 ：按线路类型控制速度已进入 sing-box agent 主线方向，但免费线速度仍需确认 BO 配置和节点下发一致。 Sprint 7 继续验证 BO 配置、后端 userlist 和节点生效结果。"
+    },
+    {
+      "id": "u_a777c0674c785af5",
+      "kind": "text",
+      "source": "AWS runner 规格",
+      "occurrence": 1,
+      "target": "AWS Runner Specifications",
+      "context": "td @ line 366 · surrounding text: AWS runner 规格 需复核 ：gitlab-runner-kotlin-amd 当前显示 t3.large。 确认是否为 Android Kotlin CI/CD 必要容量。"
+    },
+    {
+      "id": "u_390af6e63379e78e",
+      "kind": "text",
+      "source": "需复核",
+      "occurrence": 0,
+      "target": "To be Reviewed",
+      "context": "span.watch @ line 366 · surrounding text: AWS runner 规格 需复核 ：gitlab-runner-kotlin-amd 当前显示 t3.large。 确认是否为 Android Kotlin CI/CD 必要容量。"
+    },
+    {
+      "id": "u_cb5158f15503344b",
+      "kind": "text",
+      "source": "：gitlab-runner-kotlin-amd 当前显示 t3.large。",
+      "occurrence": 0,
+      "target": ": gitlab-runner-kotlin-amd is currently displayed as t3.large.",
+      "context": "td @ line 366 · surrounding text: AWS runner 规格 需复核 ：gitlab-runner-kotlin-amd 当前显示 t3.large。 确认是否为 Android Kotlin CI/CD 必要容量。"
+    },
+    {
+      "id": "u_a9e348f8bc690b2c",
+      "kind": "text",
+      "source": "确认是否为 Android Kotlin CI/CD 必要容量。",
+      "occurrence": 0,
+      "target": "To be confirmed whether it is the necessary capacity for Android Kotlin CI/CD.",
+      "context": "td @ line 366 · surrounding text: AWS runner 规格 需复核 ：gitlab-runner-kotlin-amd 当前显示 t3.large。 确认是否为 Android Kotlin CI/CD 必要容量。"
+    },
+    {
+      "id": "u_625ad8117c6f95cd",
+      "kind": "text",
+      "source": "账单确认",
+      "occurrence": 0,
+      "target": "Billing Confirmation",
+      "context": "td @ line 367 · surrounding text: 账单确认 待月结 ：当前使用 2026-06-24 前完整日数据。 2026-07-01 后用完整 6 月账单复核。"
+    },
+    {
+      "id": "u_575ecc726301d813",
+      "kind": "text",
+      "source": "待月结",
+      "occurrence": 0,
+      "target": "Pending Month-End Close",
+      "context": "span.watch @ line 367 · surrounding text: 账单确认 待月结 ：当前使用 2026-06-24 前完整日数据。 2026-07-01 后用完整 6 月账单复核。"
+    },
+    {
+      "id": "u_6d9aa42405d1b356",
+      "kind": "text",
+      "source": "：当前使用 2026-06-24 前完整日数据。",
+      "occurrence": 0,
+      "target": "Current use of complete daily data prior to June 24, 2026.",
+      "context": "td @ line 367 · surrounding text: 账单确认 待月结 ：当前使用 2026-06-24 前完整日数据。 2026-07-01 后用完整 6 月账单复核。"
+    },
+    {
+      "id": "u_aa316c2080bdc6c6",
+      "kind": "text",
+      "source": "2026-07-01 后用完整 6 月账单复核。",
+      "occurrence": 0,
+      "target": "Reconciliation for June 2026 will be based on the full bill from July 1, 2026 onwards.",
+      "context": "td @ line 367 · surrounding text: 账单确认 待月结 ：当前使用 2026-06-24 前完整日数据。 2026-07-01 后用完整 6 月账单复核。"
+    },
+    {
+      "id": "u_ebc013d88caf4a82",
+      "kind": "text",
+      "source": "十二、Sprint 7 计划",
+      "occurrence": 0,
+      "target": "Twelve - Sprint 7 Plan",
+      "context": "h2 @ line 373"
+    },
+    {
+      "id": "u_c913c43315c74442",
+      "kind": "text",
+      "source": "时间",
+      "occurrence": 0,
+      "target": "Time",
+      "context": "th @ line 375 · surrounding text: 时间 动作"
+    },
+    {
+      "id": "u_c942169a14225588",
+      "kind": "text",
+      "source": "动作",
+      "occurrence": 0,
+      "target": "Action",
+      "context": "th @ line 375 · surrounding text: 时间 动作"
+    },
+    {
+      "id": "u_9d9c41fdc2ca792a",
+      "kind": "text",
+      "source": "2026-06-29 至 2026-07-03",
+      "occurrence": 0,
+      "target": "From June 29, 2026 to July 3, 2026",
+      "context": "td @ line 377 · surrounding text: 2026-06-29 至 2026-07-03 完成 Arrowfish Android / 后端多协议发布门控；继续修 QA 缺陷；推进 Windows 重构主线；开始 FFF PRD 研究。"
+    },
+    {
+      "id": "u_dbebf9ac7806ba04",
+      "kind": "text",
+      "source": "完成 Arrowfish Android / 后端多协议发布门控；继续修 QA 缺陷；推进 Windows 重构主线；开始 FFF PRD 研究。",
+      "occurrence": 0,
+      "target": "Complete the Arrowfish Android / Backend Multi-Protocol Release Gate; Continue to fix QA defects; Advance Windows Rearchitecture Mainline; Start FFF PRD Research.",
+      "context": "td @ line 377 · surrounding text: 2026-06-29 至 2026-07-03 完成 Arrowfish Android / 后端多协议发布门控；继续修 QA 缺陷；推进 Windows 重构主线；开始 FFF PRD 研究。"
+    },
+    {
+      "id": "u_61a1d7f314e48ec0",
+      "kind": "text",
+      "source": "2026-07-06 至 2026-07-10",
+      "occurrence": 0,
+      "target": "From July 6, 2026 to July 10, 2026",
+      "context": "td @ line 378 · surrounding text: 2026-07-06 至 2026-07-10 准备 Windows 测试版、确认签名路径；继续后端安全 / 性能 / 可扩展性重构；输出 FFF 时间线与任务拆解。"
+    },
+    {
+      "id": "u_d3b2958f438b9890",
+      "kind": "text",
+      "source": "准备 Windows 测试版、确认签名路径；继续后端安全 / 性能 / 可扩展性重构；输出 FFF 时间线与任务拆解。",
+      "occurrence": 0,
+      "target": "Prepare Windows Beta Version and Confirm Signing Path; Continue Backend Security / Performance / Scalability Rearchitecture; Output FFF Timeline and Task Breakdown.",
+      "context": "td @ line 378 · surrounding text: 2026-07-06 至 2026-07-10 准备 Windows 测试版、确认签名路径；继续后端安全 / 性能 / 可扩展性重构；输出 FFF 时间线与任务拆解。"
+    },
+    {
+      "id": "u_357c9fa0ac6b26de",
+      "kind": "text",
+      "source": "Sprint 7 结束前",
+      "occurrence": 0,
+      "target": "Before Sprint 7 Ends",
+      "context": "td @ line 379 · surrounding text: Sprint 7 结束前 给出 FFF 更准确排期，并确认后端复制基线是否可以进入 FFF 专属改动。"
+    },
+    {
+      "id": "u_febcd7653502a708",
+      "kind": "text",
+      "source": "给出 FFF 更准确排期，并确认后端复制基线是否可以进入 FFF 专属改动。",
+      "occurrence": 0,
+      "target": "Provide More Accurate FFF Scheduling and Confirm if the Backend Copy Baseline Can Enter the FFF Exclusive Modifications.",
+      "context": "td @ line 379 · surrounding text: Sprint 7 结束前 给出 FFF 更准确排期，并确认后端复制基线是否可以进入 FFF 专属改动。"
+    },
+    {
+      "id": "u_48eab40a35623248",
+      "kind": "text",
+      "source": "十三、结论",
+      "occurrence": 0,
+      "target": "Thirteen - Conclusion",
+      "context": "h2 @ line 385"
+    },
+    {
+      "id": "u_6edb145f610bda45",
+      "kind": "text",
+      "source": "Sprint 4-6 的重点不是单一功能上线，而是把台湾团队遗留的基础设施、Android、网站、后端和发布链路技术债集中收敛。现在生产数据库更安全，云资源更清楚，网站发布更可控，Android 和后端多协议已进入发布收尾。",
+      "occurrence": 0,
+      "target": "The focus of Sprint 4-6 is not on the single-function launch, but to consolidate and converge the infrastructure left by Taiwan team, Android, website, backend, and release chain technology debt.",
+      "context": "p @ line 386"
+    },
+    {
+      "id": "u_ade06b16505cd173",
+      "kind": "text",
+      "source": "下一阶段的关键，是先把 Arrowfish Android 与后端多协议稳定发布，再完成 Windows 测试版和后端通用化；FFF 则在 Sprint 7 先完成需求拆解和排期，避免在范围未确认前承诺不准确时间。",
+      "occurrence": 0,
+      "target": "The key for the next phase is to stabilize the Arrowfish Android and Backend Multi-Protocol releases first; then complete the Windows Beta Version and Backend Generalization. FFF will start with demand decomposition and scheduling in Sprint 7, avoiding inaccurate time commitments before scope confirmation.",
+      "context": "p @ line 387"
+    }
+  ],
+  "blocks": {
+    "b0001": {
+      "type": "p",
+      "source": "Arrowfish VPN · 第4-6阶段 · 完整报告",
+      "occurrence": 0
+    },
+    "b0002": {
+      "type": "heading",
+      "source": "2026-06-26 Sprint 4-6 完整进展、成本与发布规划报告",
+      "occurrence": 0
+    },
+    "b0003": {
+      "type": "p",
+      "source": "覆盖范围：2026-05-10 至 2026-06-26。本报告合并原 2026-06-19 补报与 2026-06-26 更新，作为 Sprint 4-6 唯一完整版本。",
+      "occurrence": 0
+    },
+    "b0004": {
+      "type": "heading",
+      "source": "一、需要配合 / 决策",
+      "occurrence": 0
+    },
+    "b0005": {
+      "type": "table-row",
+      "source": "事项 需要配合 原因",
+      "occurrence": 0
+    },
+    "b0006": {
+      "type": "table-row",
+      "source": "Arrowfish Android 发布窗口 项目负责人 / QA 当前版本已推进到 3.8.4 ，目标 2026-06-29 发布；最终仍以 QA 回归结果为门控。",
+      "occurrence": 0
+    },
+    "b0007": {
+      "type": "table-row",
+      "source": "Windows 签名方案 项目负责人 / 运维 台湾旧硬件签名路径已不可继续依赖，Windows 新版需要云签名或新的有效代码签名证书。",
+      "occurrence": 0
+    },
+    "b0008": {
+      "type": "table-row",
+      "source": "FFF 需求拆解 Roy / 产品侧 2026-06-23 才收到完整 AF-vs-FFF 需求差异，Sprint 7 需先评估范围，再给正式排期。",
+      "occurrence": 0
+    },
+    "b0009": {
+      "type": "table-row",
+      "source": "后端重构窗口 项目负责人 后端需要先清理成可复用基线，再复制为 FFF 后端；直接叠新需求会放大维护风险。",
+      "occurrence": 0
+    },
+    "b0010": {
+      "type": "table-row",
+      "source": "成本月结确认 财务 / 运维 当前成本口径来自 2026-06-24 前完整日数据；7 月初需用完整 6 月账单做最终确认。",
+      "occurrence": 0
+    },
+    "b0011": {
+      "type": "heading",
+      "source": "二、本阶段关键成果",
+      "occurrence": 0
+    },
+    "b0012": {
+      "type": "highlight",
+      "source": "USD 612.21/月 Azure + LisaHost 直接节省",
+      "occurrence": 0
+    },
+    "b0013": {
+      "type": "highlight",
+      "source": "3.8.4 Android 发布候选版本",
+      "occurrence": 0
+    },
+    "b0014": {
+      "type": "highlight",
+      "source": "0 生产 MySQL 公网 IP",
+      "occurrence": 0
+    },
+    "b0015": {
+      "type": "highlight",
+      "source": "06/23 收到 FFF 需求差异",
+      "occurrence": 0
+    },
+    "b0016": {
+      "type": "table-row",
+      "source": "方向 当前结果 管理层解读",
+      "occurrence": 0
+    },
+    "b0017": {
+      "type": "table-row",
+      "source": "Android 稳定性 修复断网重连、免费额度、活动弹窗、延迟探测、连接状态和繁中文案等问题。 降低用户误判网络被封锁、连接卡住和切线失败的概率。",
+      "occurrence": 0
+    },
+    "b0018": {
+      "type": "table-row",
+      "source": "后端多协议 多协议支持已放到测试环境给 QA 验证。 支撑 Arrowfish Android 新版，也为 FFF 后端复用打底。",
+      "occurrence": 0
+    },
+    "b0019": {
+      "type": "table-row",
+      "source": "Go 公共工具 公共 CLI、迁移、日志、遮罩、Seq、HTTP 防护和限流工具已抽出，进入验证。 减少后端、BO、cron 的重复工具代码，为 FFF 后端复制基线打底。",
+      "occurrence": 0
+    },
+    "b0020": {
+      "type": "table-row",
+      "source": "后端 / BO / Cron 三套服务开始改用共享私有模块，并统一环境变量、数据库迁移和部署流程；本地开发工作区不进入 CI。 从“能跑”推进到“可维护、可复制”，但仍需测试环境和生产门控验证。",
+      "occurrence": 0
+    },
+    "b0021": {
+      "type": "table-row",
+      "source": "基础设施清理 Azure、AWS、Nginx、数据库、GitLab runner、旧 proxybackend 和旧文件 / 日志完成主要整理。 生产环境更安全，成本和维护噪音更低。",
+      "occurrence": 0
+    },
+    "b0022": {
+      "type": "table-row",
+      "source": "网站 / Nginx 链路 已花时间梳理台湾团队遗留 Nginx 配置债，并标准化生产路由与静态网站 CI/CD。 arrowfishvpn.com -> /project/arrowfishvpn，/landing/ -> /project/arrowfishlandingpage，jianyu-ip-proxy.com -> /project/skytreelandingpagewebnet，减少错站、错路径和线上 routing 漂移。",
+      "occurrence": 0
+    },
+    "b0023": {
+      "type": "table-row",
+      "source": "营销弹窗 / 倒计时 后端与 BO 支持限时活动、倒计时背景、购买按钮和排序配置。 原本硬编码倒计时的活动，转为从 BO 动态配置，运营可自行新增倒计时弹窗广告。",
+      "occurrence": 0
+    },
+    "b0024": {
+      "type": "table-row",
+      "source": "节点控制链路 旧 XRayR / proxybackend 方向已从活跃架构退出，转向 orebackend + sing-box agent。 用户验证、userlist 下发、速度策略和节点更新从手工路径推进到后端驱动。",
+      "occurrence": 0
+    },
+    "b0025": {
+      "type": "table-row",
+      "source": "Windows 客户端 已开始接最新后端 API、Docker 可复现构建、运行日志和核心包按需生成路线。 目标先出测试版给 QA；签名方案未确认前不承诺正式发布时间。",
+      "occurrence": 0
+    },
+    "b0026": {
+      "type": "table-row",
+      "source": "FFF FFF staging website 已部署到 staging server；已收到完整需求差异，但尚未完成拆解。 Staging 站点用于前期联调，Sprint 7 再拆完整 FFF 需求与后端排期。",
+      "occurrence": 0
+    },
+    "b0027": {
+      "type": "heading",
+      "source": "三、改善与商业价值",
+      "occurrence": 0
+    },
+    "b0028": {
+      "type": "table-row",
+      "source": "改善 当前结果 商业价值",
+      "occurrence": 0
+    },
+    "b0029": {
+      "type": "table-row",
+      "source": "成本节省 Azure 与 LisaHost 直接节省约 USD 612.21/月，AWS 单独作为平台投入核算。 成本下降口径更清楚，避免把必要平台投入误算成亏损。",
+      "occurrence": 0
+    },
+    "b0030": {
+      "type": "table-row",
+      "source": "数据库安全 生产 MySQL 已无公网 IP，仅保留私网访问和受控通道。 降低数据库被扫描、攻击和误暴露的风险。",
+      "occurrence": 0
+    },
+    "b0031": {
+      "type": "table-row",
+      "source": "网站 / Nginx 治理 主站、landing、Jianyu 站点路由与部署路径已标准化。 减少错站发布、错误路径和线上 routing 漂移。",
+      "occurrence": 0
+    },
+    "b0032": {
+      "type": "table-row",
+      "source": "动态活动配置 倒计时弹窗广告改为后端 / BO 配置，支持活动类型、排序、倒计时背景和购买按钮。 运营可以直接调整活动，不再依赖硬编码倒计时。",
+      "occurrence": 0
+    },
+    "b0033": {
+      "type": "table-row",
+      "source": "节点架构收敛 旧 proxybackend 退出活跃架构，sing-box agent 继续承接 userlist、用户验证、流量归因和速度策略。 节点更新更可控，也为按线路类型控制免费线速度打基础。",
+      "occurrence": 0
+    },
+    "b0034": {
+      "type": "table-row",
+      "source": "后端通用化 公共工具抽出到共享模块，后端、BO、cron 开始统一迁移和部署流程。 减少重复代码，为 FFF 后端复制和后续扩展做准备。",
+      "occurrence": 0
+    },
+    "b0035": {
+      "type": "table-row",
+      "source": "Windows 构建 Windows 构建路径开始改为 Docker 可复现流程，核心包改为按需生成。 降低本地环境差异，方便生成测试版；正式发布仍依赖签名方案确认。",
+      "occurrence": 0
+    },
+    "b0036": {
+      "type": "heading",
+      "source": "四、成本节省与 AWS 投入口径",
+      "occurrence": 0
+    },
+    "b0037": {
+      "type": "p",
+      "source": "本节为管理层主口径：Azure 与 LisaHost 是直接成本下降；AWS 是替代已不可继续使用的本地 GitLab、runner 和生产网站，并新增 CI/CD 与日志观测能力的平台投入，不能简单合并成直接节省。",
+      "occurrence": 0
+    },
+    "b0038": {
+      "type": "table-row",
+      "source": "成本项 口径 当前结果 月化影响",
+      "occurrence": 0
+    },
+    "b0039": {
+      "type": "table-row",
+      "source": "Azure 2026 年 1-5 月平均实际费用 vs 当前清理后 run-rate 从 USD 599.33/月降至 USD 234.07/月 节省 USD 365.26/月",
+      "occurrence": 0
+    },
+    "b0040": {
+      "type": "table-row",
+      "source": "LisaHost HK 机器 6 月已退订固定供应商费用 RMB 1,680/月已停止，按 2026-06-24 公开参考汇率 1 USD = 6.8029 CNY 换算 节省约 USD 246.95/月",
+      "occurrence": 0
+    },
+    "b0041": {
+      "type": "table-row",
+      "source": "直接节省小计 Azure + LisaHost 不含 AWS 平台投入 节省约 USD 612.21/月",
+      "occurrence": 0
+    },
+    "b0042": {
+      "type": "table-row",
+      "source": "AWS 平台 替代本地 GitLab / runner / 生产网站，并新增 Seq logging 与 Android Kotlin CI/CD 清理后当前 run-rate 约 USD 151.21/月 必要平台投入，不计入直接节省",
+      "occurrence": 0
+    },
+    "b0043": {
+      "type": "table-row",
+      "source": "现金流改善估算 直接节省扣除当前 AWS run-rate，未计旧本地机器维护成本 用于管理层粗估 改善约 USD 461.00/月",
+      "occurrence": 0
+    },
+    "b0044": {
+      "type": "table-row",
+      "source": "云成本指标 数值",
+      "occurrence": 0
+    },
+    "b0045": {
+      "type": "table-row",
+      "source": "AWS 2026-04 实际 / 估算账单 USD 207.50",
+      "occurrence": 0
+    },
+    "b0046": {
+      "type": "table-row",
+      "source": "AWS 2026-05 实际 / 估算账单 USD 235.10",
+      "occurrence": 0
+    },
+    "b0047": {
+      "type": "table-row",
+      "source": "AWS 清理后月化 run-rate USD 151.21/月",
+      "occurrence": 0
+    },
+    "b0048": {
+      "type": "table-row",
+      "source": "Azure 2026-01 到 2026-05 平均实际费用 USD 599.33/月",
+      "occurrence": 0
+    },
+    "b0049": {
+      "type": "table-row",
+      "source": "Azure 清理后月化 run-rate USD 234.07/月",
+      "occurrence": 0
+    },
+    "b0050": {
+      "type": "p",
+      "source": "说明：AWS 1-2 月几乎没有费用，3 月也还不是成熟使用状态，因此 4 月以后更接近 AWS 平台成熟使用状态。AWS 主要用于说明必要平台投入与内部优化，不建议与 Azure/LisaHost 一起合并成“直接节省”。",
+      "occurrence": 0
+    },
+    "b0051": {
+      "type": "heading",
+      "source": "五、业务健康度与 DB 指标",
+      "occurrence": 0
+    },
+    "b0052": {
+      "type": "table-row",
+      "source": "5 月指标 结果",
+      "occurrence": 0
+    },
+    "b0053": {
+      "type": "table-row",
+      "source": "5 月不重复付费会员数 1,112",
+      "occurrence": 0
+    },
+    "b0054": {
+      "type": "table-row",
+      "source": "2026-04-30 23:59:59 仍有订阅的用户数 1,300",
+      "occurrence": 0
+    },
+    "b0055": {
+      "type": "table-row",
+      "source": "4 月底有订阅但到 5 月底未续订用户数 461",
+      "occurrence": 0
+    },
+    "b0056": {
+      "type": "table-row",
+      "source": "5 月首次付费会员数，所有设备 573",
+      "occurrence": 0
+    },
+    "b0057": {
+      "type": "table-row",
+      "source": "5 月首次付费会员数，APP 设备 549",
+      "occurrence": 0
+    },
+    "b0058": {
+      "type": "table-row",
+      "source": "6 月清理前后指标 清理前 06/08-06/14 清理后 06/15-06/21 变化",
+      "occurrence": 0
+    },
+    "b0059": {
+      "type": "table-row",
+      "source": "新注册用户 6,161 5,310 -13.8%",
+      "occurrence": 0
+    },
+    "b0060": {
+      "type": "table-row",
+      "source": "活跃 VPN 用户 2,659 2,720 +2.3%",
+      "occurrence": 0
+    },
+    "b0061": {
+      "type": "table-row",
+      "source": "流量 4,186.04 GB 4,414.14 GB +5.4%",
+      "occurrence": 0
+    },
+    "b0062": {
+      "type": "table-row",
+      "source": "已完成付费订单，状态 3/4 239 250 +4.6%",
+      "occurrence": 0
+    },
+    "b0063": {
+      "type": "table-row",
+      "source": "已完成付费用户 232 227 -2.2%",
+      "occurrence": 0
+    },
+    "b0064": {
+      "type": "table-row",
+      "source": "已完成付费金额 USD 5,594.86 USD 6,062.64 +8.4%",
+      "occurrence": 0
+    },
+    "b0065": {
+      "type": "table-row",
+      "source": "会员 / 独享订单金额 USD 5,138.86 USD 6,012.64 +17.0%",
+      "occurrence": 0
+    },
+    "b0066": {
+      "type": "p",
+      "source": "口径：已完成付费订单使用 orders.status IN (3,4)，即已付款 / 已交付。清理后活跃、流量、订单量和金额没有下降；注册下降是下一阶段需要继续观察的业务信号。",
+      "occurrence": 0
+    },
+    "b0067": {
+      "type": "heading",
+      "source": "六、基础设施、安全与访问控制",
+      "occurrence": 0
+    },
+    "b0068": {
+      "type": "table-row",
+      "source": "项目 当前状态 价值 / 观察点",
+      "occurrence": 0
+    },
+    "b0069": {
+      "type": "table-row",
+      "source": "AWS EC2 当前 5 台 running EC2；未发现 unattached EBS volume。 资源边界更清晰，继续复核 runner 规格。",
+      "occurrence": 0
+    },
+    "b0070": {
+      "type": "table-row",
+      "source": "GitLab / Runner GitLab server 与 GitLab runner 已从本地机器迁移到 AWS。 避免本地机器放弃后的单点风险，并支撑集中 CI/CD。",
+      "occurrence": 0
+    },
+    "b0071": {
+      "type": "table-row",
+      "source": "AWS runner 规格 gitlab-runner-kotlin-amd 当前查询显示 t3.large。 需确认是否为 Android Kotlin CI/CD 必要容量；若不是，再评估降配。",
+      "occurrence": 0
+    },
+    "b0072": {
+      "type": "table-row",
+      "source": "Azure VM 当前保留 3 台 VM：vpn-dev-02、vpn-prod-002、vpn-prod-mysql-01。 旧 proxy/backend 与冗余资产已清理。",
+      "occurrence": 0
+    },
+    "b0073": {
+      "type": "table-row",
+      "source": "Azure 公网 IP 当前只保留 2 个公网 IP：DEV app 与 PROD app。 公网暴露面降低。",
+      "occurrence": 0
+    },
+    "b0074": {
+      "type": "table-row",
+      "source": "生产 MySQL 无公网 IP，仅保留私网 10.0.0.101。 数据库不再直接暴露互联网。",
+      "occurrence": 0
+    },
+    "b0075": {
+      "type": "table-row",
+      "source": "生产 Nginx 已清理备份 / 旧配置残留，禁用无效 file host 路由。 降低错误路由、目录暴露和误部署风险。",
+      "occurrence": 0
+    },
+    "b0076": {
+      "type": "table-row",
+      "source": "生产网站路由 已标准化：arrowfishvpn.com -> /project/arrowfishvpn，/landing/ -> /project/arrowfishlandingpage，jianyu-ip-proxy.com -> /project/skytreelandingpagewebnet。 部署路径与 Nginx 路由配对，降低错站和错目录发布风险。",
+      "occurrence": 0
+    },
+    "b0077": {
+      "type": "table-row",
+      "source": "旧 proxybackend HK proxybackend 与 Azure proxybackend 已退出活跃架构。 节点控制回到 orebackend + sing-box agent 主线，减少旧服务维护成本。",
+      "occurrence": 0
+    },
+    "b0078": {
+      "type": "table-row",
+      "source": "访问项 当前控制 状态",
+      "occurrence": 0
+    },
+    "b0079": {
+      "type": "table-row",
+      "source": "源代码访问 当前按最小权限控制，保留 Roy、Morgan、Lex、马来西亚开发侧访问。 台湾旧成员访问按前期交接要求撤回；如有新增人员，需要单独审批。",
+      "occurrence": 0
+    },
+    "b0080": {
+      "type": "table-row",
+      "source": "生产数据库访问 MySQL 已无公网 IP，仅通过私网和受控通道访问。 本阶段已修复公网暴露风险。",
+      "occurrence": 0
+    },
+    "b0081": {
+      "type": "table-row",
+      "source": "Nginx 路由治理 生产 Nginx 已完成配置梳理，清理旧备份、重复路由和无效 file host。 主站、landing 与 Jianyu 站点路径固定，降低错误发布和目录暴露风险。",
+      "occurrence": 0
+    },
+    "b0082": {
+      "type": "table-row",
+      "source": "发布与 CI/CD 权限 后端、BO、cron、Android、静态网站和 Windows 均在整理独立构建 / 部署路径。 减少手工发布和环境混用带来的风险。",
+      "occurrence": 0
+    },
+    "b0083": {
+      "type": "table-row",
+      "source": "Windows 签名 旧硬件签名路径不可继续依赖，已开始整理云签名或新证书方案。 签名方案仍是 Windows 正式版发布门控。",
+      "occurrence": 0
+    },
+    "b0084": {
+      "type": "table-row",
+      "source": "台湾团队遗留安全缺口 风险 本阶段状态",
+      "occurrence": 0
+    },
+    "b0085": {
+      "type": "table-row",
+      "source": "生产数据库曾有公网入口 数据库暴露在直接扫描和攻击风险中。 本阶段已修复：公网 IP 已移除，保留私网访问。",
+      "occurrence": 0
+    },
+    "b0086": {
+      "type": "table-row",
+      "source": "数据库网络规则过宽 后端以外来源可触达数据库服务。 本阶段已收紧：数据库只保留后端私网来源。",
+      "occurrence": 0
+    },
+    "b0087": {
+      "type": "table-row",
+      "source": "数据库备份口径不清 故障恢复依赖 VM 级备份，恢复成本高。 已改为数据库级备份路径，保留恢复验证门控。",
+      "occurrence": 0
+    },
+    "b0088": {
+      "type": "table-row",
+      "source": "部署密钥与发布路径不统一 密钥回收和发布追踪困难。 推进中：后端、BO、cron 继续统一 PEM / 部署流程。",
+      "occurrence": 0
+    },
+    "b0089": {
+      "type": "table-row",
+      "source": "旧 XRayR / proxybackend 节点链路 用户验证、速度限制和节点更新分散，免费线速度也难由 BO 统一控制。 已转向 orebackend + sing-box agent：后端控制 userlist、节点验证、流量归因和按线路类型的速度策略。",
+      "occurrence": 0
+    },
+    "b0090": {
+      "type": "table-row",
+      "source": "Windows 旧签名链路失效 新版公开发布会出现未知发布者或不可签名风险。 待确认：需要云签名或新的有效证书。",
+      "occurrence": 0
+    },
+    "b0091": {
+      "type": "heading",
+      "source": "七、之前遗留的技术债处理",
+      "occurrence": 0
+    },
+    "b0092": {
+      "type": "table-row",
+      "source": "遗留问题 风险 本阶段处理",
+      "occurrence": 0
+    },
+    "b0093": {
+      "type": "table-row",
+      "source": "Android 连接体验债 连接卡住、误报网络被阻挡、切线状态闪烁，会直接影响用户体验。 集中修复延迟探测、重连、免费额度、活动弹窗和连接状态显示。",
+      "occurrence": 0
+    },
+    "b0094": {
+      "type": "table-row",
+      "source": "网站部署和路由债 静态站点部署路径不清，Nginx 配置过散，容易出现路由漂移。 完成生产 Nginx routing 清理，并标准化三个静态网站 CI/CD：Arrowfish 主站、Arrowfish landing、Jianyu IP Proxy。",
+      "occurrence": 0
+    },
+    "b0095": {
+      "type": "table-row",
+      "source": "基础设施安全债 旧机器、旧日志、旧 artifacts 和数据库公网暴露会增加排错与安全风险。 生产 MySQL 已无公网 IP，旧文件和日志清理进入持续整理。",
+      "occurrence": 0
+    },
+    "b0096": {
+      "type": "table-row",
+      "source": "后端 all-in-one 债 主后端、BO、cron 长期混在一起，后续 FFF 复用会继承同一套包袱。 BO 与 cron 已拆出，公共工具、共享模块和迁移 / 部署流程正在收敛。",
+      "occurrence": 0
+    },
+    "b0097": {
+      "type": "table-row",
+      "source": "旧 XRayR / proxybackend 节点债 旧链路依赖 proxybackend 与节点侧配置，用户验证、速度限制和节点更新都很难统一由 BO 控制。 HK / Azure proxybackend 已退出活跃架构；sing-box agent 改为后端控制 userlist、节点验证和按线路类型的速度策略。",
+      "occurrence": 0
+    },
+    "b0098": {
+      "type": "table-row",
+      "source": "Windows 旧客户端债 旧客户端接旧后端接口，签名路径过期，无法稳定发新版。 已开始升级到最新后端 API，并整理 Docker 构建、核心包生成和云签名路线。",
+      "occurrence": 0
+    },
+    "b0099": {
+      "type": "heading",
+      "source": "八、发布计划与多端兼容挑战",
+      "occurrence": 0
+    },
+    "b0100": {
+      "type": "table-row",
+      "source": "项目 当前状态 下一步",
+      "occurrence": 0
+    },
+    "b0101": {
+      "type": "table-row",
+      "source": "Arrowfish Android 3.8.4 发布候选，连接、延迟、活动弹窗和繁中文案继续收尾。 目标 2026-06-29 发布，仍以 QA 结果为准。",
+      "occurrence": 0
+    },
+    "b0102": {
+      "type": "table-row",
+      "source": "后端多协议 测试环境已交给 QA 验证。 配合 Android 发布，并保持旧客户端兼容。",
+      "occurrence": 0
+    },
+    "b0103": {
+      "type": "table-row",
+      "source": "冻结客户端 后端仍需兼容冻结 iOS HiYou v1.3.0 与旧 Windows skytree_pc v2.2.71。 大改继续使用兼容响应和分阶段验证。",
+      "occurrence": 0
+    },
+    "b0104": {
+      "type": "table-row",
+      "source": "Windows 新版 已开始接最新后端 API、修连接问题、整理 Docker 构建、运行日志和核心包生成路线。 先出测试版给 QA；签名路线确认后再评估正式发布时间。",
+      "occurrence": 0
+    },
+    "b0105": {
+      "type": "heading",
+      "source": "九、FFF 当前状态与阻塞（实时口径）",
+      "occurrence": 0
+    },
+    "b0106": {
+      "type": "table-row",
+      "source": "项目 当前状态 下一步",
+      "occurrence": 1
+    },
+    "b0107": {
+      "type": "table-row",
+      "source": "FFF staging 网站 2026-06-16 已部署到 staging server： https://stg-fffvpn.store/ 。 可先用于 FFF 页面联调；正式上线仍需等需求拆解和发布计划。",
+      "occurrence": 0
+    },
+    "b0108": {
+      "type": "table-row",
+      "source": "需求文件 2026-06-23 已收到 Roy PRD / AF-vs-FFF 需求差异。 Sprint 7 先做需求研究、差异拆解和任务排期。",
+      "occurrence": 0
+    },
+    "b0109": {
+      "type": "table-row",
+      "source": "FFF 后端 暂不立即承诺完整上线时间。 先完成后端重构和可复用基线，再按 FFF 需求新增功能。",
+      "occurrence": 0
+    },
+    "b0110": {
+      "type": "table-row",
+      "source": "预计周期 初步估算：后端重构约 1-2 周，FFF 新需求后端改动约 3 周。 Sprint 7 研究后给更准确时间线。",
+      "occurrence": 0
+    },
+    "b0111": {
+      "type": "table-row",
+      "source": "范围风险 Arrowfish Android 发布和 Windows 升级占用主要窗口。 避免在未完整评估需求前承诺固定上线日。",
+      "occurrence": 0
+    },
+    "b0112": {
+      "type": "heading",
+      "source": "十、关键时间线",
+      "occurrence": 0
+    },
+    "b0113": {
+      "type": "table-row",
+      "source": "日期 事件",
+      "occurrence": 0
+    },
+    "b0114": {
+      "type": "table-row",
+      "source": "2026-05-10 上一次对外报告截止点。",
+      "occurrence": 0
+    },
+    "b0115": {
+      "type": "table-row",
+      "source": "2026-05-22 至 2026-05-25 Sprint 4 关键重构落地：后端控制面、计费、Android 重连、预发环境和 CI/CD 进入稳定推进。",
+      "occurrence": 0
+    },
+    "b0116": {
+      "type": "table-row",
+      "source": "2026-05-31 至 2026-06-08 完成跨 repo 审查、BO 拆分计划、流量归因、多协议与 Sprint 5 稳定化方向。",
+      "occurrence": 0
+    },
+    "b0117": {
+      "type": "table-row",
+      "source": "2026-06-12 至 2026-06-17 完成 GitLab/AWS/Azure 基础设施清理、成本估算、DB 公网 IP 移除与安全收敛。",
+      "occurrence": 0
+    },
+    "b0118": {
+      "type": "table-row",
+      "source": "2026-06-16 FFF staging website 部署到 staging server，并完成 FFF web CI / Nginx 路线整理。",
+      "occurrence": 0
+    },
+    "b0119": {
+      "type": "table-row",
+      "source": "2026-06-18 至 2026-06-25 后端、BO、Android 完成活动、诊断、免费额度、重连和延迟探测等稳定性闭环。",
+      "occurrence": 0
+    },
+    "b0120": {
+      "type": "table-row",
+      "source": "2026-06-19 后端与 BO 完成限时活动 / 倒计时弹窗配置能力，替代硬编码倒计时活动。",
+      "occurrence": 0
+    },
+    "b0121": {
+      "type": "table-row",
+      "source": "2026-06-23 至 2026-06-24 生产 Nginx 遗留配置完成梳理，三个静态网站 CI/CD 和部署路径标准化。",
+      "occurrence": 0
+    },
+    "b0122": {
+      "type": "table-row",
+      "source": "2026-06-23 收到 Roy PRD / AF-vs-FFF 完整需求差异。",
+      "occurrence": 0
+    },
+    "b0123": {
+      "type": "table-row",
+      "source": "2026-06-26 公共 Go 工具抽出，后端 / BO / cron 改用共享模块与统一迁移流程，Windows 进入最新后端 API、Docker 构建和签名路线整理。",
+      "occurrence": 0
+    },
+    "b0124": {
+      "type": "table-row",
+      "source": "2026-06-29 目标发布 Arrowfish Android 与配套后端，多协议支持随 QA 结果推进。",
+      "occurrence": 0
+    },
+    "b0125": {
+      "type": "table-row",
+      "source": "2026-06-29 至 2026-07-10 Sprint 7：Windows 重构、后端重构、FFF PRD 研究与排期。",
+      "occurrence": 0
+    },
+    "b0126": {
+      "type": "heading",
+      "source": "十一、风险与观察项",
+      "occurrence": 0
+    },
+    "b0127": {
+      "type": "table-row",
+      "source": "风险 当前状态 下一步",
+      "occurrence": 0
+    },
+    "b0128": {
+      "type": "table-row",
+      "source": "Android QA 测试中 ：若出现 P0 / P1 bug，2026-06-29 发布时间需顺延。 以 QA 回归结果作为上线门控。",
+      "occurrence": 0
+    },
+    "b0129": {
+      "type": "table-row",
+      "source": "注册下降 需观察 ：清理后一周注册下降 13.8%。 结合渠道投放、版本发布、地区访问和广告流量继续核对。",
+      "occurrence": 0
+    },
+    "b0130": {
+      "type": "table-row",
+      "source": "Windows 签名 待确认 ：旧签名路径不可继续依赖。 尽快确认云签名或新证书路线。",
+      "occurrence": 0
+    },
+    "b0131": {
+      "type": "table-row",
+      "source": "FFF 需求 待拆解 ：需求刚收到，不能直接承诺完整上线日。 Sprint 7 输出正式时间线与任务拆分。",
+      "occurrence": 0
+    },
+    "b0132": {
+      "type": "table-row",
+      "source": "后端迁移 / 部署流程 验证中 ：共享工具和统一迁移流程影响后端、BO、cron 三套服务。 先在测试环境验证，再逐步进入生产。",
+      "occurrence": 0
+    },
+    "b0133": {
+      "type": "table-row",
+      "source": "节点速度控制 验证中 ：按线路类型控制速度已进入 sing-box agent 主线方向，但免费线速度仍需确认 BO 配置和节点下发一致。 Sprint 7 继续验证 BO 配置、后端 userlist 和节点生效结果。",
+      "occurrence": 0
+    },
+    "b0134": {
+      "type": "table-row",
+      "source": "AWS runner 规格 需复核 ：gitlab-runner-kotlin-amd 当前显示 t3.large。 确认是否为 Android Kotlin CI/CD 必要容量。",
+      "occurrence": 0
+    },
+    "b0135": {
+      "type": "table-row",
+      "source": "账单确认 待月结 ：当前使用 2026-06-24 前完整日数据。 2026-07-01 后用完整 6 月账单复核。",
+      "occurrence": 0
+    },
+    "b0136": {
+      "type": "heading",
+      "source": "十二、Sprint 7 计划",
+      "occurrence": 0
+    },
+    "b0137": {
+      "type": "table-row",
+      "source": "时间 动作",
+      "occurrence": 0
+    },
+    "b0138": {
+      "type": "table-row",
+      "source": "2026-06-29 至 2026-07-03 完成 Arrowfish Android / 后端多协议发布门控；继续修 QA 缺陷；推进 Windows 重构主线；开始 FFF PRD 研究。",
+      "occurrence": 0
+    },
+    "b0139": {
+      "type": "table-row",
+      "source": "2026-07-06 至 2026-07-10 准备 Windows 测试版、确认签名路径；继续后端安全 / 性能 / 可扩展性重构；输出 FFF 时间线与任务拆解。",
+      "occurrence": 0
+    },
+    "b0140": {
+      "type": "table-row",
+      "source": "Sprint 7 结束前 给出 FFF 更准确排期，并确认后端复制基线是否可以进入 FFF 专属改动。",
+      "occurrence": 0
+    },
+    "b0141": {
+      "type": "heading",
+      "source": "十三、结论",
+      "occurrence": 0
+    },
+    "b0142": {
+      "type": "p",
+      "source": "Sprint 4-6 的重点不是单一功能上线，而是把台湾团队遗留的基础设施、Android、网站、后端和发布链路技术债集中收敛。现在生产数据库更安全，云资源更清楚，网站发布更可控，Android 和后端多协议已进入发布收尾。",
+      "occurrence": 0
+    },
+    "b0143": {
+      "type": "p",
+      "source": "下一阶段的关键，是先把 Arrowfish Android 与后端多协议稳定发布，再完成 Windows 测试版和后端通用化；FFF 则在 Sprint 7 先完成需求拆解和排期，避免在范围未确认前承诺不准确时间。",
+      "occurrence": 0
+    }
+  },
+  "reviewedTargetHash": "a7e3be02152a30c3"
+}

@@ -1,8 +1,9 @@
 import REPORT_CONTEXT from '../report-context.json';
+import REPORT_CONTEXT_EN from '../report-context.en.json';
 
 var DEFAULT_ORIGINS = ['https://timmyzai.github.io'];
 var DEFAULT_MODEL = 'openai/gpt-oss-20b';
-var PROMPT_VERSION = 'chat-v19-cross-report-recency';
+var PROMPT_VERSION = 'chat-v20-bilingual-cross-report';
 var MAX_BODY_BYTES = 60000;
 var MAX_QUESTION_CHARS = 1500;
 var MAX_SOURCES = 8;
@@ -15,52 +16,77 @@ var UPSTREAM_TIMEOUT_MS = 28000;
 var AUTH_FAILURE_COOLDOWN_MS = 30 * 60 * 1000;
 var keyCursor = Math.floor(Math.random() * 3);
 var keyCooldowns = new Map();
+var ERROR_MESSAGES = {
+  ORIGIN_FORBIDDEN: { 'zh-CN': '不允许从当前地址访问。', en: 'Access from this origin is not allowed.' },
+  NOT_FOUND: { 'zh-CN': '未找到请求的接口。', en: 'The requested endpoint was not found.' },
+  METHOD_NOT_ALLOWED: { 'zh-CN': '不支持当前请求方式。', en: 'This request method is not supported.' },
+  PAYLOAD_TOO_LARGE: { 'zh-CN': '请求内容过大。', en: 'The request is too large.' },
+  INVALID_JSON: { 'zh-CN': '请求内容不是有效的 JSON。', en: 'The request body is not valid JSON.' },
+  QUESTION_REQUIRED: { 'zh-CN': '请输入问题。', en: 'Please enter a question.' },
+  INVALID_REPORT: { 'zh-CN': '报告版本无效或已更新，请刷新页面后重试。', en: 'The report version is invalid or has changed. Refresh and try again.' },
+  NOT_CONFIGURED: { 'zh-CN': '报告助手尚未配置。', en: 'The report assistant has not been configured.' },
+  SERVICE_UNAVAILABLE: { 'zh-CN': 'AI 服务当前不可用。', en: 'The AI service is currently unavailable.' },
+  UPSTREAM_TIMEOUT: { 'zh-CN': 'AI 服务响应超时，请重试。', en: 'The AI service timed out. Please try again.' },
+  GENERATION_FAILED: { 'zh-CN': 'AI 服务暂时无法生成回答，请重试。', en: 'The AI service could not generate an answer. Please try again.' },
+  UPSTREAM_FAILED: { 'zh-CN': 'AI 服务暂时无法回答该问题。', en: 'The AI service could not answer this question.' },
+  INVALID_UPSTREAM_RESPONSE: { 'zh-CN': 'AI 服务返回了无效响应。', en: 'The AI service returned an invalid response.' },
+  INVALID_MODEL_RESPONSE: { 'zh-CN': 'AI 服务返回了无效回答，请重试。', en: 'The AI service returned an invalid answer. Please try again.' },
+  RATE_LIMITED: { 'zh-CN': '报告助手当前繁忙，请稍后再试。', en: 'The report assistant is busy. Please try again shortly.' },
+  TOO_MANY_REQUESTS: { 'zh-CN': '报告助手请求过于频繁，请稍后再试。', en: 'Too many report assistant requests. Please try again shortly.' },
+  INVALID_CONFIGURATION: { 'zh-CN': 'AI 服务配置无效。', en: 'The AI service configuration is invalid.' }
+};
 
 export default {
   async fetch(request, env) {
     var origin = request.headers.get('Origin') || '';
     var allowedOrigin = allowedRequestOrigin(origin, env);
+    var headerLocale = normalizeLocale(request.headers.get('Accept-Language'));
 
     if (request.method === 'OPTIONS') {
-      if (!allowedOrigin) return jsonResponse({ error: '不允许从当前地址访问。' }, 403, '');
+      if (!allowedOrigin) return errorResponse('ORIGIN_FORBIDDEN', 403, '', headerLocale);
       return new Response(null, { status: 204, headers: corsHeaders(allowedOrigin) });
     }
 
-    if (!allowedOrigin) return jsonResponse({ error: '不允许从当前地址访问。' }, 403, '');
+    if (!allowedOrigin) return errorResponse('ORIGIN_FORBIDDEN', 403, '', headerLocale);
 
     var url = new URL(request.url);
-    if (url.pathname !== '/api/chat') return jsonResponse({ error: '未找到请求的接口。' }, 404, allowedOrigin);
-    if (request.method !== 'POST') return jsonResponse({ error: '不支持当前请求方式。' }, 405, allowedOrigin);
+    if (url.pathname !== '/api/chat') return errorResponse('NOT_FOUND', 404, allowedOrigin, headerLocale);
+    if (request.method !== 'POST') return errorResponse('METHOD_NOT_ALLOWED', 405, allowedOrigin, headerLocale);
 
-    var limited = await rateLimitResponse(env, origin, allowedOrigin);
+    var limited = await rateLimitResponse(env, origin, allowedOrigin, headerLocale);
     if (limited) return limited;
 
     var contentLength = Number(request.headers.get('Content-Length') || 0);
-    if (contentLength > MAX_BODY_BYTES) return jsonResponse({ error: '请求内容过大。' }, 413, allowedOrigin);
+    if (contentLength > MAX_BODY_BYTES) return errorResponse('PAYLOAD_TOO_LARGE', 413, allowedOrigin, headerLocale);
 
     var rawBody;
     var body;
     try {
       rawBody = await request.text();
       if (new TextEncoder().encode(rawBody).length > MAX_BODY_BYTES) {
-        return jsonResponse({ error: '请求内容过大。' }, 413, allowedOrigin);
+        return errorResponse('PAYLOAD_TOO_LARGE', 413, allowedOrigin, headerLocale);
       }
       body = JSON.parse(rawBody);
     } catch (error) {
-      return jsonResponse({ error: '请求内容不是有效的 JSON。' }, 400, allowedOrigin);
+      return errorResponse('INVALID_JSON', 400, allowedOrigin, headerLocale);
+    }
+    if (!body || typeof body !== 'object' || Array.isArray(body)) {
+      return errorResponse('INVALID_JSON', 400, allowedOrigin, headerLocale);
     }
 
+    var uiLocale = normalizeLocale(body.uiLocale || headerLocale);
     var question = cleanText(body.question, MAX_QUESTION_CHARS);
-    var report = canonicalReport(body.report);
+    var responseLocale = questionLocale(question, normalizeLocale(body.responseLocale || uiLocale));
+    var report = canonicalReport(body.report, responseLocale);
     var conversation = cleanConversation(body.conversation);
 
-    if (!question) return jsonResponse({ error: '请输入问题。' }, 400, allowedOrigin);
-    if (!report) return jsonResponse({ error: '报告版本无效或已更新，请刷新页面后重试。' }, 409, allowedOrigin);
+    if (!question) return errorResponse('QUESTION_REQUIRED', 400, allowedOrigin, uiLocale);
+    if (!report) return errorResponse('INVALID_REPORT', 409, allowedOrigin, uiLocale);
     var sources = canonicalSources(body.sources, report);
     var keys = orderedKeys(env);
-    if (!keys.length) return jsonResponse({ error: '报告助手尚未配置。' }, 503, allowedOrigin);
+    if (!keys.length) return errorResponse('NOT_CONFIGURED', 503, allowedOrigin, uiLocale);
 
-    var messages = buildMessages(question, report, sources, conversation);
+    var messages = buildMessages(question, report, sources, conversation, responseLocale);
     var responseFormat = buildResponseFormat(sources);
 
     var rateLimited = false;
@@ -98,7 +124,8 @@ export default {
           signal: AbortSignal.timeout(UPSTREAM_TIMEOUT_MS)
         });
       } catch (error) {
-        return jsonResponse({ error: 'AI 服务当前不可用。' }, 502, allowedOrigin);
+        var timedOut = error && (error.name === 'TimeoutError' || error.name === 'AbortError');
+        return errorResponse(timedOut ? 'UPSTREAM_TIMEOUT' : 'SERVICE_UNAVAILABLE', 502, allowedOrigin, uiLocale);
       }
 
       if (upstream.status === 401 || upstream.status === 403) {
@@ -114,14 +141,14 @@ export default {
         continue;
       }
 
-      if (upstream.status === 400 || upstream.status === 422) return jsonResponse({ error: 'AI 服务暂时无法生成回答，请重试。' }, 502, allowedOrigin);
-      if (!upstream.ok) return jsonResponse({ error: 'AI 服务暂时无法回答该问题。' }, 502, allowedOrigin);
+      if (upstream.status === 400 || upstream.status === 422) return errorResponse('GENERATION_FAILED', 502, allowedOrigin, uiLocale);
+      if (!upstream.ok) return errorResponse('UPSTREAM_FAILED', 502, allowedOrigin, uiLocale);
 
       var result;
       try {
         result = await upstream.json();
       } catch (error) {
-        return jsonResponse({ error: 'AI 服务返回了无效响应。' }, 502, allowedOrigin);
+        return errorResponse('INVALID_UPSTREAM_RESPONSE', 502, allowedOrigin, uiLocale);
       }
 
       var content = result && result.choices && result.choices[0] &&
@@ -130,7 +157,7 @@ export default {
       try {
         modelOutput = JSON.parse(content);
       } catch (error) {
-        return jsonResponse({ error: 'AI 服务返回了无效回答，请重试。' }, 502, allowedOrigin);
+        return errorResponse('INVALID_MODEL_RESPONSE', 502, allowedOrigin, uiLocale);
       }
 
       return jsonResponse(validateAnswer(modelOutput, question, report, sources, env), 200, allowedOrigin);
@@ -138,13 +165,13 @@ export default {
 
     if (rateLimited) {
       return jsonResponse(
-        { error: '报告助手当前繁忙，请稍后再试。' },
+        errorPayload('RATE_LIMITED', uiLocale),
         429,
         allowedOrigin,
         { 'Retry-After': String(Math.max(1, Number.isFinite(shortestRetrySeconds) ? shortestRetrySeconds : 60)) }
       );
     }
-    return jsonResponse({ error: 'AI 服务配置无效。' }, 503, allowedOrigin);
+    return errorResponse('INVALID_CONFIGURATION', 503, allowedOrigin, uiLocale);
   }
 };
 
@@ -154,13 +181,13 @@ function allowedRequestOrigin(origin, env) {
   return allowed.indexOf(origin) === -1 ? '' : origin;
 }
 
-async function rateLimitResponse(env, origin, allowedOrigin) {
+async function rateLimitResponse(env, origin, allowedOrigin, locale) {
   if (!env.CHAT_RATE_LIMITER || typeof env.CHAT_RATE_LIMITER.limit !== 'function') return null;
   try {
     var result = await env.CHAT_RATE_LIMITER.limit({ key: origin + ':report-chat' });
     if (result.success) return null;
     return jsonResponse(
-      { error: '报告助手请求过于频繁，请稍后再试。' },
+      errorPayload('TOO_MANY_REQUESTS', locale),
       429,
       allowedOrigin,
       { 'Retry-After': '60' }
@@ -196,7 +223,7 @@ function parseRetrySeconds(value) {
   return 60;
 }
 
-function buildMessages(question, report, sources, conversation) {
+function buildMessages(question, report, sources, conversation, responseLocale) {
   var evidence = sources.map(function (source) {
     return [
       '<document id="' + source.id + '">',
@@ -213,6 +240,7 @@ function buildMessages(question, report, sources, conversation) {
       role: 'system',
       content: [
         '<identity>你是 Arrowfish 的报告对话助手。自然、直接、谨慎地回答当前报告相关问题。</identity>',
+        '<response_language>' + (responseLocale === 'en' ? 'Answer in English.' : '使用简体中文回答。') + '</response_language>',
         '<objective>让对话简洁好读，同时确保每个报告事实都能打开对应原文。</objective>',
         '<instructions>',
         '1. 使用用户最新消息的语言直接回答。普通回答最多两句；摘要最多五个简短要点。不要标题、表格、开场套话或重复原文。',
@@ -578,7 +606,9 @@ function compactQuote(value, maxLength) {
 function refusalPayload(question, report, env, reason) {
   return {
     answerable: false,
-    answer: '本报告没有可直接支持该问题的相关信息。',
+    answer: report.locale === 'en'
+      ? 'This report does not contain information that directly supports that question.'
+      : '本报告没有可直接支持该问题的相关信息。',
     sources: [],
     meta: responseMeta(report, env, reason || 'no_evidence')
   };
@@ -590,6 +620,7 @@ function responseMeta(report, env, result) {
     model: env.GROQ_MODEL || DEFAULT_MODEL,
     promptVersion: PROMPT_VERSION,
     reportVersion: report.version,
+    locale: report.locale,
     result: result
   };
 }
@@ -605,9 +636,10 @@ function cleanReport(value) {
   };
 }
 
-function canonicalReport(value) {
+function canonicalReport(value, locale) {
   var submitted = cleanReport(value);
-  var match = (REPORT_CONTEXT.reports || []).find(function (report) {
+  var context = contextForLocale(locale);
+  var match = (context.reports || []).find(function (report) {
     return report.id === submitted.id &&
       report.file === submitted.key &&
       report.date === submitted.date &&
@@ -620,6 +652,7 @@ function canonicalReport(value) {
     title: match.name,
     date: match.date,
     version: match.version,
+    locale: locale,
     blocks: match.blocks || []
   };
 }
@@ -640,7 +673,7 @@ function canonicalSources(value, report) {
       date: report.date,
       version: report.version,
       blocks: report.blocks
-    } : (REPORT_CONTEXT.reports || []).find(function (item) { return item.id === reportId; });
+    } : (contextForLocale(report.locale).reports || []).find(function (item) { return item.id === reportId; });
     var block = sourceReport && (sourceReport.blocks || []).find(function (item) { return item.id === blockId; });
     var sourceKey = reportId + '\u0000' + blockId;
     if (id !== 'S' + (index + 1) || !sourceReport || !block || block.type === 'heading' || seen[id] || seen[sourceKey]) return items;
@@ -658,7 +691,7 @@ function canonicalSources(value, report) {
       reportDate: sourceReport.date,
       reportVersion: sourceReport.version,
       blockId: block.id,
-      section: cleanText(block.section, 300) || '报告概览',
+      section: cleanText(block.section, 300) || (report.locale === 'en' ? 'Report overview' : '报告概览'),
       line: Number.isFinite(Number(block.line)) ? Number(block.line) : 0,
       text: text
     });
@@ -737,9 +770,34 @@ function canonicalSourceExcerpt(sourceText, answer) {
 function statusSignals(value) {
   var text = normalized(value);
   return {
-    negative: /(?:尚未|未|没有|不能|无法|不可)(?:.{0,6})?(?:完成|上线|发布|验收|关闭|实现|使用|可用)/.test(text),
-    positive: /(?:已经|已)(?:.{0,4})?(?:完成|上线|发布|验收|关闭|实现|可用)|(?:可以|可)(?:发布|上线|使用)/.test(text)
+    negative: /(?:尚未|未|没有|不能|无法|不可)(?:.{0,6})?(?:完成|上线|发布|验收|关闭|实现|使用|可用)|\b(?:not\s+yet|not|never|cannot|can't|unable|pending|blocked|incomplete|outstanding)\b/.test(text),
+    positive: /(?:已经|已)(?:.{0,4})?(?:完成|上线|发布|验收|关闭|实现|可用)|(?:可以|可)(?:发布|上线|使用)|\b(?:completed?|released?|launched?|accepted|available|ready|done)\b/.test(text)
   };
+}
+
+function normalizeLocale(value) {
+  return String(value || '').toLowerCase().startsWith('en') ? 'en' : 'zh-CN';
+}
+
+function questionLocale(question, fallback) {
+  var value = String(question || '');
+  if (/[\u3400-\u9fff]/.test(value)) return 'zh-CN';
+  if (/[a-z]/i.test(value)) return 'en';
+  return normalizeLocale(fallback);
+}
+
+function contextForLocale(locale) {
+  return normalizeLocale(locale) === 'en' ? REPORT_CONTEXT_EN : REPORT_CONTEXT;
+}
+
+function errorPayload(code, locale) {
+  var normalizedLocale = normalizeLocale(locale);
+  var messages = ERROR_MESSAGES[code] || ERROR_MESSAGES.UPSTREAM_FAILED;
+  return { code: code, error: messages[normalizedLocale] || messages['zh-CN'] };
+}
+
+function errorResponse(code, status, origin, locale, extraHeaders) {
+  return jsonResponse(errorPayload(code, locale), status, origin, extraHeaders);
 }
 
 function corsHeaders(origin, extra) {
@@ -767,8 +825,12 @@ export {
   buildMessages,
   buildResponseFormat,
   canonicalSources,
+  canonicalReport,
   cleanConversation,
+  contextForLocale,
+  errorPayload,
   extractiveFallback,
+  questionLocale,
   orderedKeys,
   parseRetrySeconds,
   validateAnswer

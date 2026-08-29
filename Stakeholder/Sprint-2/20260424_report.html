@@ -1,60 +1,63 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh-CN" data-report-id="sprint-2-w2">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>第2阶段 · 进展报告（第2周）· 2026-04-24</title>
+    
+  <script src="../../assets/ui-i18n.js"></script>
+  <script src="../../assets/site-preferences.js"></script>
+<title>第2阶段 · 进展报告（第2周）· 2026-04-24</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background-color: #fff; color: #333; line-height: 1.7; font-size: 15px; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--af-surface); color: var(--af-text); line-height: 1.7; font-size: 15px; }
         .container { max-width: 900px; margin: 0 auto; padding: 40px 24px; }
-        .report-header { margin-bottom: 40px; border-bottom: 1px solid #e8e8e8; padding-bottom: 32px; }
-        .report-title { font-size: 28px; font-weight: 600; color: #1a1a1a; margin-bottom: 16px; }
-        .report-meta { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; font-size: 13px; color: #666; }
+        .report-header { margin-bottom: 40px; border-bottom: 1px solid var(--af-border); padding-bottom: 32px; }
+        .report-title { font-size: 28px; font-weight: 600; color: var(--af-text); margin-bottom: 16px; }
+        .report-meta { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; font-size: 13px; color: var(--af-text-muted); }
         .meta-item { display: flex; flex-direction: column; gap: 4px; }
-        .meta-label { font-weight: 500; color: #999; text-transform: uppercase; letter-spacing: 0.5px; }
-        .meta-value { color: #333; font-weight: 500; }
+        .meta-label { font-weight: 500; color: var(--af-text-muted); text-transform: uppercase; letter-spacing: 0.5px; }
+        .meta-value { color: var(--af-text); font-weight: 500; }
         .section { margin-bottom: 44px; }
-        .section-heading { font-size: 20px; font-weight: 600; color: #1a1a1a; margin-bottom: 20px; padding-left: 16px; border-left: 4px solid #1a73e8; }
-        .section-body { margin-bottom: 20px; line-height: 1.8; color: #444; }
-        .section-note { font-size: 13px; color: #666; margin-top: 12px; padding: 12px; background-color: #f8f9fa; border-radius: 4px; border-left: 3px solid #1a73e8; }
+        .section-heading { font-size: 20px; font-weight: 600; color: var(--af-text); margin-bottom: 20px; padding-left: 16px; border-left: 4px solid var(--af-primary); }
+        .section-body { margin-bottom: 20px; line-height: 1.8; color: var(--af-text); }
+        .section-note { font-size: 13px; color: var(--af-text-muted); margin-top: 12px; padding: 12px; background-color: var(--af-surface-muted); border-radius: 4px; border-left: 3px solid var(--af-primary); }
         .milestone-container { display: grid; gap: 12px; margin-top: 16px; }
-        .milestone { display: flex; gap: 16px; align-items: flex-start; background-color: #f8f9fa; padding: 16px; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.08); }
-        .milestone-date { background-color: #1a73e8; color: white; padding: 8px 12px; border-radius: 4px; font-size: 12px; font-weight: 600; white-space: nowrap; min-width: 80px; text-align: center; }
-        .milestone-text { flex: 1; font-size: 14px; font-weight: 500; color: #333; }
+        .milestone { display: flex; gap: 16px; align-items: flex-start; background-color: var(--af-surface-muted); padding: 16px; border-radius: 8px; box-shadow: 0 1px 3px var(--af-shadow); }
+        .milestone-date { background-color: var(--af-primary); color: white; padding: 8px 12px; border-radius: 4px; font-size: 12px; font-weight: 600; white-space: nowrap; min-width: 80px; text-align: center; }
+        .milestone-text { flex: 1; font-size: 14px; font-weight: 500; color: var(--af-text); }
         table { width: 100%; border-collapse: collapse; margin: 20px 0; background-color: white; }
-        th { background-color: #f8f9fa; padding: 12px; text-align: left; font-size: 14px; font-weight: 600; color: #333; border-bottom: 1px solid #e8e8e8; }
-        td { padding: 12px; border-bottom: 1px solid #e8e8e8; font-size: 14px; color: #444; }
+        th { background-color: var(--af-surface-muted); padding: 12px; text-align: left; font-size: 14px; font-weight: 600; color: var(--af-text); border-bottom: 1px solid var(--af-border); }
+        td { padding: 12px; border-bottom: 1px solid var(--af-border); font-size: 14px; color: var(--af-text); }
         tr:last-child td { border-bottom: none; }
         .findings-container { display: grid; gap: 16px; margin-top: 20px; }
-        .finding-card { background-color: #f8f9fa; padding: 20px; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.08); border-left: 4px solid #1a73e8; }
-        .finding-card.risk { border-left-color: #c0392b; }
-        .finding-card.resolved { border-left-color: #27ae60; }
-        .finding-card.action { border-left-color: #f39c12; background-color: #fff8e7; }
-        .finding-title { font-size: 14px; font-weight: 600; color: #1a73e8; margin-bottom: 8px; letter-spacing: 0.5px; }
-        .finding-title.risk { color: #c0392b; }
-        .finding-title.resolved { color: #27ae60; }
-        .finding-title.action { color: #d68910; }
-        .finding-content { font-size: 14px; color: #555; line-height: 1.6; }
+        .finding-card { background-color: var(--af-surface-muted); padding: 20px; border-radius: 8px; box-shadow: 0 1px 3px var(--af-shadow); border-left: 4px solid var(--af-primary); }
+        .finding-card.risk { border-left-color: var(--af-danger); }
+        .finding-card.resolved { border-left-color: var(--af-success); }
+        .finding-card.action { border-left-color: var(--af-warning); background-color: var(--af-warning-soft); }
+        .finding-title { font-size: 14px; font-weight: 600; color: var(--af-primary); margin-bottom: 8px; letter-spacing: 0.5px; }
+        .finding-title.risk { color: var(--af-danger); }
+        .finding-title.resolved { color: var(--af-success); }
+        .finding-title.action { color: var(--af-warning); }
+        .finding-content { font-size: 14px; color: var(--af-text-muted); line-height: 1.6; }
         .task-list { list-style: none; margin: 16px 0; }
-        .task-list li { padding: 8px 0 8px 24px; position: relative; color: #555; line-height: 1.6; }
-        .task-list li:before { content: ""; position: absolute; left: 0; top: 14px; width: 8px; height: 8px; background-color: #1a73e8; border-radius: 50%; }
+        .task-list li { padding: 8px 0 8px 24px; position: relative; color: var(--af-text-muted); line-height: 1.6; }
+        .task-list li:before { content: ""; position: absolute; left: 0; top: 14px; width: 8px; height: 8px; background-color: var(--af-primary); border-radius: 50%; }
         .status-badge { display: inline-block; padding: 4px 10px; border-radius: 12px; font-size: 12px; font-weight: 600; }
-        .status-default { background-color: #F2F2F2; color: #444; }
-        .status-green { background-color: #B7D7C9; color: #1a5c3a; }
-        .status-yellow { background-color: #E6DFAF; color: #5c4a00; }
-        .status-red { background-color: #DCCACA; color: #5c1a1a; }
-        .status-legend { display: flex; gap: 16px; margin: 12px 0 24px; font-size: 12px; color: #666; flex-wrap: wrap; }
+        .status-default { background-color: var(--af-surface-muted); color: var(--af-text); }
+        .status-green { background-color: var(--af-success-soft); color: var(--af-success); }
+        .status-yellow { background-color: var(--af-warning-soft); color: var(--af-warning); }
+        .status-red { background-color: var(--af-danger-soft); color: var(--af-danger); }
+        .status-legend { display: flex; gap: 16px; margin: 12px 0 24px; font-size: 12px; color: var(--af-text-muted); flex-wrap: wrap; }
         .status-legend-item { display: flex; align-items: center; gap: 6px; }
         .status-dot { width: 12px; height: 12px; border-radius: 2px; display: inline-block; }
         .scorecard { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin: 20px 0; }
-        .score-item { background-color: #f8f9fa; padding: 16px; border-radius: 8px; text-align: center; }
-        .score-number { font-size: 32px; font-weight: 700; color: #1a73e8; }
-        .score-label { font-size: 12px; color: #888; margin-top: 4px; }
-        .tldr { background: linear-gradient(135deg, #f0f4ff 0%, #ffffff 100%); border-radius: 8px; padding: 20px 24px; border: 1px solid #d0deff; margin-bottom: 20px; }
-        .tldr-label { font-size: 12px; font-weight: 600; color: #1a73e8; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px; }
-        .tldr-text { font-size: 15px; color: #1a1a1a; line-height: 1.7; }
-        .report-footer { margin-top: 48px; padding-top: 24px; border-top: 1px solid #e8e8e8; font-size: 12px; color: #999; text-align: right; }
+        .score-item { background-color: var(--af-surface-muted); padding: 16px; border-radius: 8px; text-align: center; }
+        .score-number { font-size: 32px; font-weight: 700; color: var(--af-primary); }
+        .score-label { font-size: 12px; color: var(--af-text-muted); margin-top: 4px; }
+        .tldr { background: linear-gradient(135deg, var(--af-primary-soft) 0%, var(--af-surface) 100%); border-radius: 8px; padding: 20px 24px; border: 1px solid var(--af-border); margin-bottom: 20px; }
+        .tldr-label { font-size: 12px; font-weight: 600; color: var(--af-primary); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px; }
+        .tldr-text { font-size: 15px; color: var(--af-text); line-height: 1.7; }
+        .report-footer { margin-top: 48px; padding-top: 24px; border-top: 1px solid var(--af-border); font-size: 12px; color: var(--af-text-muted); text-align: right; }
         @media (max-width: 768px) {
             .report-meta { grid-template-columns: 1fr; gap: 12px; }
             .report-title { font-size: 24px; }
@@ -71,12 +74,13 @@
         }
     </style>
     <script src="../../assets/auth-gate.js"></script>
+  <link rel="stylesheet" href="../../assets/site-theme.css">
 </head>
 <body>
     <div class="container">
 
         <!-- Header -->
-        <div class="report-header">
+        <header class="report-header" data-report-header>
             <h1 class="report-title">第2阶段进展报告（第2周）：发布前收尾</h1>
             <div class="report-meta">
                 <div class="meta-item">
@@ -92,7 +96,7 @@
                     <span class="meta-value">日总</span>
                 </div>
             </div>
-        </div>
+        </header>
 
         <!-- 一句话总结（最高优先级） -->
         <div class="section">
@@ -148,7 +152,7 @@
                     <div class="finding-title resolved">【营收·已修复】余额支付卡顿 — 流程升级</div>
                     <div class="finding-content">
                         遗留代码中余额支付走外部网页跳转，用户偶发卡在「处理中」需手动返回。本周由后端新增专用移动端 JSON 接口，App 内直接调用，1 秒内显示结果。当前月余额支付约占总交易 15%，预期<strong>减少相关客服咨询与退款申请</strong>。<br>
-                        <span style="color: #666; font-size: 13px;">兼容性已验证：旧版本 PC（v2.2.71）与 iOS（v2.2.71）客户端无需更新。</span>
+                        <span style="color: var(--af-text-muted); font-size: 13px;">兼容性已验证：旧版本 PC（v2.2.71）与 iOS（v2.2.71）客户端无需更新。</span>
                     </div>
                 </div>
 
@@ -283,9 +287,9 @@
         <div class="section">
             <h2 class="section-heading">阶段进度总览</h2>
             <div class="status-legend">
-                <div class="status-legend-item"><span class="status-dot" style="background:#B7D7C9;"></span>已完成</div>
-                <div class="status-legend-item"><span class="status-dot" style="background:#E6DFAF;"></span>下周</div>
-                <div class="status-legend-item"><span class="status-dot" style="background:#F2F2F2;"></span>进行中</div>
+                <div class="status-legend-item"><span class="status-dot" style="background:var(--af-success-soft);"></span>已完成</div>
+                <div class="status-legend-item"><span class="status-dot" style="background:var(--af-warning-soft);"></span>下周</div>
+                <div class="status-legend-item"><span class="status-dot" style="background:var(--af-surface-muted);"></span>进行中</div>
             </div>
             <table>
                 <thead>

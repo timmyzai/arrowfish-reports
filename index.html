@@ -3,343 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="assets/ui-i18n.js"></script>
+    <script src="assets/site-preferences.js"></script>
     <meta name="robots" content="noindex, nofollow">
     <title>Arrowfish VPN — 阶段报告</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/ai-chat.css?v=20260828-10">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/ai-chat.css?v=20260828-11">
     <link rel="stylesheet" href="assets/copy-markdown.css">
-    <script src="assets/report-evidence.js?v=20260828-10" defer></script>
-    <script src="assets/ai-chat.js?v=20260828-10" defer></script>
+    <script src="assets/report-evidence.js?v=20260828-11" defer></script>
+    <script src="assets/ai-chat.js?v=20260828-11" defer></script>
     <script src="assets/copy-markdown.js" defer></script>
     <style>
-        /* ── Auth Gate ── */
-        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-
-        :root {
-            --gate-bg: #0F172A;
-            --gate-glass: rgba(255, 255, 255, 0.04);
-            --gate-glass-border: rgba(255, 255, 255, 0.08);
-            --gate-text: #E2E8F0;
-            --gate-muted: #64748B;
-            --gate-accent: #22C55E;
-            --gate-primary: #1E3A5F;
-            --gate-error: #EF4444;
-            --gate-ring: rgba(30, 58, 95, 0.5);
-        }
-
-        #auth-gate {
-            position: fixed;
-            inset: 0;
-            z-index: 10000;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: var(--gate-bg);
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-            overflow: hidden;
-            transition: opacity 0.5s ease, visibility 0.5s ease;
-        }
-
-        #auth-gate.hidden {
-            opacity: 0;
-            visibility: hidden;
-            pointer-events: none;
-        }
-
-        /* Animated grid background */
-        .gate-grid {
-            position: absolute;
-            inset: 0;
-            background-image:
-                linear-gradient(rgba(30, 58, 95, 0.15) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(30, 58, 95, 0.15) 1px, transparent 1px);
-            background-size: 60px 60px;
-            mask-image: radial-gradient(ellipse 70% 70% at 50% 50%, black 20%, transparent 70%);
-            -webkit-mask-image: radial-gradient(ellipse 70% 70% at 50% 50%, black 20%, transparent 70%);
-            animation: gridPulse 8s ease-in-out infinite;
-        }
-
-        @keyframes gridPulse {
-            0%, 100% { opacity: 0.4; }
-            50% { opacity: 0.7; }
-        }
-
-        /* Ambient glow orbs */
-        .gate-orb {
-            position: absolute;
-            border-radius: 50%;
-            filter: blur(80px);
-            opacity: 0.3;
-            animation: orbFloat 12s ease-in-out infinite;
-        }
-        .gate-orb-1 {
-            width: 400px; height: 400px;
-            background: var(--gate-primary);
-            top: -100px; right: -100px;
-            animation-delay: -2s;
-        }
-        .gate-orb-2 {
-            width: 300px; height: 300px;
-            background: var(--gate-accent);
-            bottom: -80px; left: -80px;
-            opacity: 0.15;
-            animation-delay: -6s;
-        }
-
-        @keyframes orbFloat {
-            0%, 100% { transform: translate(0, 0) scale(1); }
-            33% { transform: translate(30px, -20px) scale(1.05); }
-            66% { transform: translate(-20px, 15px) scale(0.95); }
-        }
-
-        /* Glass card */
-        .gate-card {
-            position: relative;
-            width: 100%;
-            max-width: 420px;
-            padding: 48px 40px;
-            background: var(--gate-glass);
-            border: 1px solid var(--gate-glass-border);
-            border-radius: 24px;
-            backdrop-filter: blur(40px) saturate(1.2);
-            -webkit-backdrop-filter: blur(40px) saturate(1.2);
-            box-shadow:
-                0 0 0 1px rgba(255,255,255,0.03),
-                0 25px 50px -12px rgba(0,0,0,0.5),
-                inset 0 1px 0 rgba(255,255,255,0.05);
-            animation: cardEnter 0.6s cubic-bezier(0.16, 1, 0.3, 1) both;
-        }
-
-        @keyframes cardEnter {
-            from { opacity: 0; transform: translateY(20px) scale(0.96); }
-            to { opacity: 1; transform: translateY(0) scale(1); }
-        }
-
-        /* Shield icon */
-        .gate-icon {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 64px;
-            height: 64px;
-            margin: 0 auto 24px;
-            background: linear-gradient(135deg, var(--gate-primary), rgba(30, 58, 95, 0.6));
-            border-radius: 16px;
-            box-shadow: 0 8px 24px rgba(30, 58, 95, 0.3);
-        }
-
-        .gate-icon svg {
-            width: 32px;
-            height: 32px;
-            color: var(--gate-accent);
-        }
-
-        .gate-title {
-            font-size: 22px;
-            font-weight: 700;
-            color: #FFFFFF;
-            text-align: center;
-            margin-bottom: 6px;
-            letter-spacing: -0.02em;
-        }
-
-        .gate-subtitle {
-            font-size: 14px;
-            color: var(--gate-muted);
-            text-align: center;
-            margin-bottom: 32px;
-            line-height: 1.5;
-        }
-
-        /* Input group */
-        .gate-input-group {
-            position: relative;
-            margin-bottom: 8px;
-        }
-
-        .gate-input {
-            width: 100%;
-            height: 52px;
-            padding: 0 48px 0 16px;
-            background: rgba(15, 23, 42, 0.6);
-            border: 1.5px solid rgba(255, 255, 255, 0.08);
-            border-radius: 12px;
-            color: var(--gate-text);
-            font-family: inherit;
-            font-size: 15px;
-            font-weight: 400;
-            letter-spacing: 0.02em;
-            outline: none;
-            transition: border-color 0.2s ease, box-shadow 0.2s ease;
-        }
-
-        .gate-input::placeholder {
-            color: var(--gate-muted);
-            font-weight: 400;
-        }
-
-        .gate-input:focus {
-            border-color: var(--gate-primary);
-            box-shadow: 0 0 0 3px var(--gate-ring);
-        }
-
-        .gate-input.error {
-            border-color: var(--gate-error);
-            box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.15);
-            animation: shake 0.4s cubic-bezier(0.36, 0.07, 0.19, 0.97);
-        }
-
-        @keyframes shake {
-            10%, 90% { transform: translateX(-2px); }
-            20%, 80% { transform: translateX(3px); }
-            30%, 50%, 70% { transform: translateX(-4px); }
-            40%, 60% { transform: translateX(4px); }
-        }
-
-        /* Toggle visibility button */
-        .gate-toggle {
-            position: absolute;
-            right: 4px;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 40px;
-            height: 40px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: none;
-            border: none;
-            color: var(--gate-muted);
-            cursor: pointer;
-            border-radius: 8px;
-            transition: color 0.15s ease;
-        }
-
-        .gate-toggle:hover { color: var(--gate-text); }
-        .gate-toggle:focus-visible { outline: 2px solid var(--gate-primary); outline-offset: 2px; }
-        .gate-toggle svg { width: 18px; height: 18px; }
-
-        /* Error message */
-        .gate-error {
-            font-size: 13px;
-            color: var(--gate-error);
-            min-height: 20px;
-            padding: 4px 0 0;
-            margin-bottom: 16px;
-            transition: opacity 0.2s ease;
-        }
-
-        .gate-error:empty { opacity: 0; }
-
-        /* Submit button */
-        .gate-submit {
-            width: 100%;
-            height: 52px;
-            background: linear-gradient(135deg, var(--gate-accent), #16A34A);
-            border: none;
-            border-radius: 12px;
-            color: #FFFFFF;
-            font-family: inherit;
-            font-size: 15px;
-            font-weight: 600;
-            cursor: pointer;
-            position: relative;
-            overflow: hidden;
-            transition: transform 0.15s ease, box-shadow 0.2s ease;
-        }
-
-        .gate-submit:hover {
-            transform: translateY(-1px);
-            box-shadow: 0 8px 24px rgba(34, 197, 94, 0.25);
-        }
-
-        .gate-submit:active { transform: translateY(0); }
-
-        .gate-submit:focus-visible {
-            outline: 2px solid var(--gate-accent);
-            outline-offset: 3px;
-        }
-
-        .gate-submit:disabled {
-            opacity: 0.6;
-            cursor: not-allowed;
-            transform: none;
-        }
-
-        .gate-submit .spinner {
-            display: none;
-            width: 20px;
-            height: 20px;
-            border: 2.5px solid rgba(255,255,255,0.3);
-            border-top-color: #fff;
-            border-radius: 50%;
-            animation: spin 0.6s linear infinite;
-        }
-
-        .gate-submit.loading .btn-text { display: none; }
-        .gate-submit.loading .spinner { display: inline-block; }
-
-        @keyframes spin { to { transform: rotate(360deg); } }
-
-        /* Success state */
-        .gate-card.success .gate-icon {
-            background: linear-gradient(135deg, var(--gate-accent), #16A34A);
-            animation: successPop 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-
-        @keyframes successPop {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.15); }
-            100% { transform: scale(1); }
-        }
-
-        /* Footer */
-        .gate-footer {
-            text-align: center;
-            margin-top: 32px;
-            font-size: 12px;
-            color: var(--gate-muted);
-            opacity: 0.6;
-        }
-
-        /* Reduced motion */
-        @media (prefers-reduced-motion: reduce) {
-            .gate-grid, .gate-orb, .gate-card, .gate-submit,
-            .gate-input.error { animation: none !important; }
-            #auth-gate { transition: none; }
-        }
-
-        @media (max-width: 480px) {
-            .gate-card { margin: 16px; padding: 36px 24px; }
-        }
-
         /* ── Main App ── */
         body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; height: 100vh; display: flex; flex-direction: column; }
         .toolbar {
             display: flex; align-items: center; gap: 16px; padding: 12px 24px;
-            background: #fff; border-bottom: 1px solid #e0e0e0;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.06); flex-shrink: 0;
+            background: var(--af-surface); border-bottom: 1px solid var(--af-border);
+            color: var(--af-text); box-shadow: 0 1px 3px var(--af-shadow); flex-shrink: 0;
         }
-        .toolbar h1 { font-size: 16px; font-weight: 600; color: #1a73e8; white-space: nowrap; }
-        .view-tabs { display: flex; align-items: center; gap: 4px; padding: 3px; background: #f1f3f4; border-radius: 8px; }
+        .toolbar h1 { font-size: 16px; font-weight: 600; color: var(--af-primary); white-space: nowrap; }
+        .view-tabs { display: flex; align-items: center; gap: 4px; padding: 3px; background: var(--af-surface-muted); border-radius: 8px; }
         .view-tab {
             min-height: 36px; padding: 7px 12px; border: 0; border-radius: 6px;
-            color: #5f6368; background: transparent; font: inherit; font-size: 14px;
+            color: var(--af-text-muted); background: transparent; font: inherit; font-size: 14px;
             font-weight: 600; cursor: pointer;
         }
-        .view-tab:hover { color: #174ea6; background: rgba(255,255,255,.65); }
-        .view-tab:focus-visible { outline: 2px solid #1a73e8; outline-offset: 2px; }
-        .view-tab[aria-selected="true"] { color: #174ea6; background: #fff; box-shadow: 0 1px 2px rgba(60,64,67,.18); }
+        .view-tab:hover { color: var(--af-primary); background: var(--af-surface); }
+        .view-tab:focus-visible { outline: 2px solid var(--af-focus); outline-offset: 2px; }
+        .view-tab[aria-selected="true"] { color: var(--af-primary); background: var(--af-surface); box-shadow: 0 1px 2px var(--af-shadow); }
         .toolbar select {
-            padding: 6px 12px; border: 1px solid #ddd; border-radius: 6px;
-            min-height: 36px; font-size: 14px; background: #f8f9fa; cursor: pointer; min-width: 240px;
+            padding: 6px 12px; border: 1px solid var(--af-border); border-radius: 6px; color: var(--af-text);
+            min-height: 36px; font-size: 14px; background: var(--af-surface-muted); cursor: pointer; min-width: 240px;
         }
-        .toolbar select:focus-visible { outline: 2px solid #1a73e8; outline-offset: 2px; border-color: #1a73e8; }
-        .toolbar .date { font-size: 13px; color: #888; }
+        .toolbar select:focus-visible { outline: 2px solid var(--af-focus); outline-offset: 2px; border-color: var(--af-focus); }
+        .toolbar .date { font-size: 13px; color: var(--af-text-muted); }
         iframe { flex: 1; width: 100%; border: none; }
-        .loading { flex: 1; display: flex; align-items: center; justify-content: center; color: #888; font-size: 15px; }
+        .loading { flex: 1; display: flex; align-items: center; justify-content: center; color: var(--af-text-muted); font-size: 15px; background: var(--af-bg); }
         @media (max-width: 720px) {
             .toolbar { flex-wrap: wrap; gap: 8px; padding: 10px 12px; }
             .toolbar h1 { width: 100%; margin: 0; }
@@ -347,56 +48,17 @@
             .toolbar .date { display: none; }
         }
     </style>
+    <link rel="stylesheet" href="assets/site-theme.css">
+    <script src="assets/auth-gate.js" data-content="#app-content"></script>
 </head>
 <body>
-    <!-- ── Auth Gate Overlay ── -->
-    <div id="auth-gate">
-        <div class="gate-grid"></div>
-        <div class="gate-orb gate-orb-1"></div>
-        <div class="gate-orb gate-orb-2"></div>
-        <div class="gate-card" id="gate-card">
-            <div class="gate-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-                </svg>
-            </div>
-            <h2 class="gate-title">Arrowfish VPN</h2>
-            <p class="gate-subtitle">请输入访问密码以查看阶段报告</p>
-            <form id="gate-form" autocomplete="off">
-                <div class="gate-input-group">
-                    <input
-                        type="password"
-                        id="gate-password"
-                        class="gate-input"
-                        placeholder="访问密码"
-                        autocomplete="off"
-                        spellcheck="false"
-                        aria-label="访问密码"
-                    />
-                    <button type="button" class="gate-toggle" id="gate-toggle" aria-label="显示或隐藏密码">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
-                            <circle cx="12" cy="12" r="3"/>
-                        </svg>
-                    </button>
-                </div>
-                <div class="gate-error" id="gate-error" role="alert"></div>
-                <button type="submit" class="gate-submit" id="gate-submit">
-                    <span class="btn-text">解锁</span>
-                    <span class="spinner"></span>
-                </button>
-            </form>
-            <div class="gate-footer">受保护的访问 &middot; Arrowfish VPN</div>
-        </div>
-    </div>
-
     <!-- ── Main Content ── -->
     <div id="app-content" style="display:none; flex-direction:column; height:100vh;">
-        <div class="toolbar">
+        <header class="toolbar" data-site-header>
             <h1>Arrowfish VPN</h1>
             <div class="view-tabs" role="tablist" aria-label="报告视图">
-                <button class="view-tab" id="goals-tab" type="button" role="tab" aria-controls="report-frame" aria-selected="false">项目目标</button>
-                <button class="view-tab" id="reports-tab" type="button" role="tab" aria-controls="report-frame" aria-selected="true">阶段报告</button>
+                <button class="view-tab" id="goals-tab" type="button" role="tab" aria-controls="report-frame" aria-selected="true">项目目标</button>
+                <button class="view-tab" id="reports-tab" type="button" role="tab" aria-controls="report-frame" aria-selected="false">阶段报告</button>
             </div>
             <select id="sprint-select" aria-label="选择阶段报告"></select>
             <span class="date" id="sprint-date"></span>
@@ -413,105 +75,60 @@
                 </button>
                 <span class="copy-markdown-status" id="copy-markdown-status" role="status" aria-live="polite"></span>
             </div>
-        </div>
+        </header>
         <div class="loading" id="loading">正在加载报告…</div>
-        <iframe id="report-frame" role="tabpanel" aria-labelledby="reports-tab" title="阶段报告内容" style="display:none"></iframe>
+        <iframe id="report-frame" role="tabpanel" aria-labelledby="goals-tab" title="项目目标内容" style="display:none"></iframe>
     </div>
 
     <script>
-        /* ── App init flag (hoisted above IIFE so initApp() can read it during cache-valid auto-unlock) ── */
+        const tr = (key, params) => window.ArrowfishI18n.t(key, params);
+        const language = () => window.ArrowfishI18n.getLanguage();
         let appInitialized = false;
+        let reportsData = [];
 
-        /* ── Auth Gate Logic ── */
-        (function() {
-            // SHA-256 hash of the access password — change by running in browser console:
-            //   crypto.subtle.digest('SHA-256', new TextEncoder().encode('YOUR_PASSWORD'))
-            //     .then(b => console.log(Array.from(new Uint8Array(b)).map(x => x.toString(16).padStart(2,'0')).join('')))
-            const PASS_HASH = '32175efd700d4c53192a163db93422d939d5523c9d6e90c7dfd52558075ec2b4';
-            const CACHE_KEY = 'project_auth';
-            const CACHE_TTL = 30 * 60 * 1000; // 30 minutes
+        function localizedName(report) {
+            if (!report) return '';
+            return typeof report.name === 'object'
+                ? (report.name[language()] || report.name['zh-CN'] || '')
+                : report.name;
+        }
 
-            const gate = document.getElementById('auth-gate');
-            const app = document.getElementById('app-content');
-            const form = document.getElementById('gate-form');
-            const input = document.getElementById('gate-password');
-            const toggle = document.getElementById('gate-toggle');
-            const errorEl = document.getElementById('gate-error');
-            const card = document.getElementById('gate-card');
-            const submitBtn = document.getElementById('gate-submit');
+        function localizedDate(value) {
+            if (!value) return '';
+            return new Intl.DateTimeFormat(language() === 'en' ? 'en' : 'zh-CN', {
+                dateStyle: 'medium',
+                timeZone: 'UTC'
+            }).format(new Date(value + 'T00:00:00Z'));
+        }
 
-            async function sha256(text) {
-                const encoded = new TextEncoder().encode(text);
-                const buffer = await crypto.subtle.digest('SHA-256', encoded);
-                return Array.from(new Uint8Array(buffer)).map(b => b.toString(16).padStart(2, '0')).join('');
-            }
-
-            function isCacheValid() {
-                try { var ts = parseInt(localStorage.getItem(CACHE_KEY), 10); return ts && (Date.now() - ts) < CACHE_TTL; }
-                catch(e) { return false; }
-            }
-
-            function setCache() {
-                try { localStorage.setItem(CACHE_KEY, Date.now().toString()); } catch(e) {}
-            }
-
-            function unlock() {
-                gate.classList.add('hidden');
-                app.style.display = 'flex';
-                initApp();
-            }
-
-            // Check 30-min cache
-            if (isCacheValid()) {
-                gate.style.display = 'none';
-                app.style.display = 'flex';
-                initApp();
-            } else {
-                input.focus();
-            }
-
-            // Toggle visibility
-            let visible = false;
-            toggle.addEventListener('click', () => {
-                visible = !visible;
-                input.type = visible ? 'text' : 'password';
-                toggle.innerHTML = visible
-                    ? '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"/><line x1="1" y1="1" x2="23" y2="23"/></svg>'
-                    : '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>';
-                input.focus();
+        function applyShellLanguage() {
+            document.title = tr('document.siteTitle');
+            document.querySelector('.view-tabs').setAttribute('aria-label', tr('nav.views'));
+            document.getElementById('goals-tab').textContent = tr('nav.goals');
+            document.getElementById('reports-tab').textContent = tr('nav.reports');
+            document.getElementById('sprint-select').setAttribute('aria-label', tr('nav.selectReport'));
+            document.querySelector('.copy-markdown-label').textContent = tr('copy.action');
+            const loading = document.getElementById('loading');
+            if (loading.style.display !== 'none') loading.textContent = tr('nav.loading');
+            document.getElementById('report-frame').title = document.getElementById('goals-tab').getAttribute('aria-selected') === 'true'
+                ? tr('nav.goalContent') : tr('nav.reportContent');
+            const select = document.getElementById('sprint-select');
+            Array.from(select.options).forEach((option, index) => {
+                if (reportsData[index]) option.textContent = localizedName(reportsData[index]);
             });
+            const date = document.getElementById('sprint-date');
+            if (date.dataset.date) date.textContent = localizedDate(date.dataset.date);
+        }
 
-            // Submit
-            form.addEventListener('submit', async (e) => {
-                e.preventDefault();
-                const value = input.value.trim();
-                if (!value) { input.focus(); return; }
-
-                errorEl.textContent = '';
-                input.classList.remove('error');
-                submitBtn.classList.add('loading');
-                submitBtn.disabled = true;
-
-                await new Promise(r => setTimeout(r, 400));
-
-                const hash = await sha256(value);
-                if (hash === PASS_HASH) {
-                    setCache();
-                    card.classList.add('success');
-                    await new Promise(r => setTimeout(r, 500));
-                    unlock();
-                } else {
-                    submitBtn.classList.remove('loading');
-                    submitBtn.disabled = false;
-                    input.classList.add('error');
-                    errorEl.textContent = '访问密码错误，请重试。';
-                    input.select();
-                    setTimeout(() => input.classList.remove('error'), 600);
-                }
-            });
-
-        })();
-
+        window.addEventListener('arrowfish:auth-unlocked', initApp);
+        window.addEventListener('arrowfish:preferenceschange', event => {
+            applyShellLanguage();
+            const frame = document.getElementById('report-frame');
+            if (frame && frame.contentWindow) {
+                frame.contentWindow.postMessage({ type: 'arrowfish:preferences', state: event.detail }, location.origin);
+            }
+        });
+        applyShellLanguage();
         /* ── App Logic ── */
         function initApp() {
             if (appInitialized) return;
@@ -534,16 +151,17 @@
                         .filter(report => !isGoal(report))
                         .map((report, sourceIndex) => ({ ...report, sourceIndex }))
                         .sort((a, b) => a.date.localeCompare(b.date) || a.sourceIndex - b.sourceIndex);
+                    reportsData = sprints;
                     sprints.forEach((s, i) => {
                         const opt = document.createElement('option');
                         opt.value = i;
-                        opt.textContent = s.name;
+                        opt.textContent = localizedName(s);
                         select.appendChild(opt);
                     });
                     goalsTab.hidden = !goal;
                     loadFromHash();
                 })
-                .catch(() => { loading.textContent = '报告加载失败。'; });
+                .catch(() => { loading.textContent = tr('nav.loadFailed'); });
 
             select.addEventListener('change', () => {
                 const index = parseInt(select.value);
@@ -560,6 +178,9 @@
             });
 
             window.addEventListener('hashchange', loadFromHash);
+            frame.addEventListener('load', () => {
+                if (frame.contentWindow) frame.contentWindow.postMessage({ type: 'arrowfish:preferences', state: window.ArrowfishPreferences.get() }, location.origin);
+            });
 
             function isGoal(report) {
                 return report.id.startsWith('goal-') || report.file.includes('/Goal-');
@@ -570,11 +191,11 @@
                 try {
                     hash = decodeURIComponent(location.hash.slice(1));
                 } catch (error) {
-                    loadSprint(sprints.length - 1, false);
+                    loadDefault(false);
                     return;
                 }
                 if (!hash) {
-                    loadSprint(sprints.length - 1);
+                    loadDefault();
                     return;
                 }
                 const [id, date] = hash.split('/');
@@ -597,7 +218,15 @@
                         return;
                     }
                 }
-                loadSprint(sprints.length - 1, false);
+                loadDefault(false);
+            }
+
+            function loadDefault(updateLocation = true) {
+                if (goal) {
+                    loadEntry(goal, 'goals', updateLocation);
+                    return;
+                }
+                loadSprint(sprints.length - 1, updateLocation);
             }
 
             function updateHash(entry) {
@@ -618,8 +247,9 @@
                 reportsTab.setAttribute('aria-selected', !showingGoals);
                 select.disabled = showingGoals;
                 frame.setAttribute('aria-labelledby', showingGoals ? 'goals-tab' : 'reports-tab');
-                frame.title = showingGoals ? '项目目标内容' : '阶段报告内容';
-                dateEl.textContent = entry.date;
+                frame.title = showingGoals ? tr('nav.goalContent') : tr('nav.reportContent');
+                dateEl.dataset.date = entry.date;
+                dateEl.textContent = localizedDate(entry.date);
                 loading.style.display = 'none';
                 frame.style.display = 'block';
                 const frameSrc = entry.version

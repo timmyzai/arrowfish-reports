@@ -1,28 +1,31 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh-CN" data-report-id="sprint-3-full">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <script src="../../assets/ui-i18n.js"></script>
+  <script src="../../assets/site-preferences.js"></script>
 <title>第3阶段 · 完整报告 · 2026-05-10</title>
 <style>
   :root {
-    --bg: #FAFAFA;
-    --card: #FFFFFF;
-    --border: #E5E7EB;
-    --text: #1F2937;
-    --text-secondary: #6B7280;
-    --accent: #2563EB;
-    --accent-soft: #EFF6FF;
-    --green: #B7D7C9;
-    --green-text: #166534;
-    --green-soft: #F0FDF4;
-    --yellow: #E6DFAF;
-    --yellow-text: #854D0E;
-    --yellow-soft: #FFFBEB;
-    --red: #DCCACA;
-    --red-text: #991B1B;
-    --red-soft: #FEF2F2;
-    --grey: #F2F2F2;
+    --bg: var(--af-bg);
+    --card: var(--af-surface);
+    --border: var(--af-border);
+    --text: var(--af-text);
+    --text-secondary: var(--af-text-muted);
+    --accent: var(--af-primary);
+    --accent-soft: var(--af-primary-soft);
+    --green: var(--af-success-soft);
+    --green-text: var(--af-success);
+    --green-soft: var(--af-success-soft);
+    --yellow: var(--af-warning-soft);
+    --yellow-text: var(--af-warning);
+    --yellow-soft: var(--af-warning-soft);
+    --red: var(--af-danger-soft);
+    --red-text: var(--af-danger);
+    --red-soft: var(--af-danger-soft);
+    --grey: var(--af-surface-muted);
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body {
@@ -41,9 +44,9 @@
   .subtitle { color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 1.5rem; }
   .card { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 1.1rem 1.25rem; margin: 0.75rem 0; }
   .card.highlight { border-left: 4px solid var(--accent); background: var(--accent-soft); }
-  .card.warning { border-left: 4px solid #F59E0B; background: var(--yellow-soft); }
-  .card.critical { border-left: 4px solid #EF4444; background: var(--red-soft); }
-  .card.success { border-left: 4px solid #16A34A; background: var(--green-soft); }
+  .card.warning { border-left: 4px solid var(--af-warning); background: var(--yellow-soft); }
+  .card.critical { border-left: 4px solid var(--af-danger); background: var(--red-soft); }
+  .card.success { border-left: 4px solid var(--af-success); background: var(--green-soft); }
   table { width: 100%; border-collapse: collapse; margin: 0.6rem 0; font-size: 0.9rem; }
   th { background: var(--grey); text-align: left; padding: 0.5rem 0.75rem; font-weight: 600; }
   td { padding: 0.5rem 0.75rem; border-bottom: 1px solid var(--border); vertical-align: top; }
@@ -53,7 +56,7 @@
   .status-progress { background: var(--yellow); color: var(--yellow-text); padding: 2px 8px; border-radius: 4px; font-size: 0.78rem; font-weight: 600; }
   .status-defer { background: var(--grey); color: var(--text-secondary); padding: 2px 8px; border-radius: 4px; font-size: 0.78rem; font-weight: 600; }
   .status-critical { background: var(--red); color: var(--red-text); padding: 2px 8px; border-radius: 4px; font-size: 0.78rem; font-weight: 600; }
-  .tldr { background: linear-gradient(135deg, #EFF6FF 0%, #FFFFFF 100%); border-radius: 10px; padding: 1.25rem 1.5rem; border: 1px solid #BFDBFE; margin: 1rem 0 2rem; }
+  .tldr { background: linear-gradient(135deg, var(--af-primary-soft) 0%, var(--af-surface) 100%); border-radius: 10px; padding: 1.25rem 1.5rem; border: 1px solid var(--af-border); margin: 1rem 0 2rem; }
   .tldr-label { font-size: 0.75rem; font-weight: 700; color: var(--accent); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.5rem; }
   .tldr-text { font-size: 1rem; line-height: 1.7; color: var(--text); }
   .tabs { display: flex; flex-wrap: wrap; gap: 0; border-bottom: 2px solid var(--border); margin: 1.5rem 0 1rem; position: sticky; top: 0; background: var(--bg); z-index: 5; padding-top: 0.5rem; }
@@ -94,11 +97,14 @@
   .action-num { background: var(--accent); color: white; width: 22px; height: 22px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.72rem; font-weight: 700; flex-shrink: 0; margin-top: 2px; }
 </style>
 <script src="../../assets/auth-gate.js"></script>
+  <link rel="stylesheet" href="../../assets/site-theme.css">
 </head>
 <body>
 
-<h1>Arrowfish VPN — 第3阶段完整汇报</h1>
-<div class="subtitle">2026年5月10日 · 第3阶段提前收官（4/27–5/10）· 稳定测试版 v3.7.0 进入最终 QA · 含 USDT 支付重写 / 数据库备份开启 / 读副本接入 / 旧代理下线</div>
+<header class="standalone-report-header" data-report-header>
+  <h1>Arrowfish VPN — 第3阶段完整汇报</h1>
+  <div class="subtitle">2026年5月10日 · 第3阶段提前收官（4/27–5/10）· 稳定测试版 v3.7.0 进入最终 QA · 含 USDT 支付重写 / 数据库备份开启 / 读副本接入 / 旧代理下线</div>
+</header>
 
 <!-- ============================================ -->
 <!-- TL;DR — 一句话 -->
@@ -1090,7 +1096,7 @@
   <tr><td>38.54.37.243</td><td>🇵🇭 Manila</td><td>36 ms</td><td>1 vCPU / 1.8 GB</td><td>22 s</td><td>✅</td></tr>
   <tr><td>149.126.95.39</td><td>🇭🇰 Hong Kong</td><td><strong>31 ms（最近）</strong></td><td>1 vCPU / 1 GB</td><td>24 s</td><td>✅</td></tr>
   <tr><td>8.138.29.36</td><td>🇨🇳 Guangzhou</td><td>45 ms</td><td>2 vCPU / 1.7 GB</td><td><strong>44 s</strong></td><td>✅（ACME 走 GFW）</td></tr>
-  <tr style="background:#F9FAFB;"><td colspan="4"><strong>整批 7 台并行端到端</strong></td><td><strong>44 s</strong></td><td><strong>7 / 7 done · 0 失败</strong></td></tr>
+  <tr style="background:var(--af-surface-muted);"><td colspan="4"><strong>整批 7 台并行端到端</strong></td><td><strong>44 s</strong></td><td><strong>7 / 7 done · 0 失败</strong></td></tr>
 </table>
 <p style="margin:0.4rem 0;"><strong>地理 / RTT 不是瓶颈</strong>：RTT 最远的 Vancouver（175 ms）反而最快（15 秒），最近的 Hong Kong（31 ms）24 秒。真正决定速度的是节点本机 CPU + 是否走 ACME。中国大陆节点慢是因为 ACME 走国际出口经过 GFW（第4阶段可用 DNS-01 优化）。<strong>0.4 GB 极小内存的法国节点也跑通了</strong>，证明后台自动化对内存要求不高。</p>
 <p style="margin:0.4rem 0;"><strong>但「快」其实不是最大的赢面。最大的赢面是「学习曲线归零」</strong> — 接手时同一动作要先翻文档 / 判断节点是 Rocky 还是 CentOS / 选 PM2 还是 systemd / SSH 跑命令 / 看日志验证，<strong>老员工也要开手册</strong>；现在勾「全擦重装」→ 选主机 → 点确认就完成，<strong>第一天报到的新人 / 客服 / 运营都能做</strong>。节点池一致性也提升 — 接手时 ~150 台节点上有 7 种不同的进程管理装法（不同人手装的差异），现在统一为一种。</p>

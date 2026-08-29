@@ -1,0 +1,3162 @@
+{
+  "schemaVersion": 1,
+  "reportId": "sprint-9-full",
+  "sourceFile": "Stakeholder/Sprint-9/20260807_report.html",
+  "sourceVersion": "ec9997673006d0de",
+  "units": [
+    {
+      "id": "u_0a26b62b0df99666",
+      "kind": "text",
+      "source": "第9阶段 · 完整报告 · 2026-08-07",
+      "occurrence": 0,
+      "target": "Sprint 9 · Complete Report · 8/7/2026",
+      "context": "title @ line 10"
+    },
+    {
+      "id": "u_9f1468d4afccfdb8",
+      "kind": "text",
+      "source": "Arrowfish VPN · 第9阶段 · 完整报告",
+      "occurrence": 0,
+      "target": "Arrowfish VPN · Sprint 9 · Complete Report",
+      "context": "p.eyebrow @ line 101"
+    },
+    {
+      "id": "u_1d2dd4a9bd51b73d",
+      "kind": "text",
+      "source": "2026-08-07 Sprint 9 投放归因、API 面收敛与 iOS 合规审计报告",
+      "occurrence": 0,
+      "target": "Release Attribution, API Surface Convergence, and iOS Compliance Audit for Sprint 9 on 8/7/2026",
+      "context": "h1 @ line 102"
+    },
+    {
+      "id": "u_4765612f52f6265a",
+      "kind": "text",
+      "source": "覆盖范围：2026-07-25 至 2026-08-07。本阶段重点为后端主导的安装归因链路、后端 API 面收敛、Windows 构建效率优化，以及针对新 Apple 开发者账号的 iOS 客户端合规审计。",
+      "occurrence": 0,
+      "target": "Scope: From 7/25/2026 to 8/7/2026. This phase focuses on backend-driven installation attribution, API surface convergence, Windows build efficiency optimization, and iOS client compliance audit for new Apple developer accounts.",
+      "context": "p.meta @ line 103"
+    },
+    {
+      "id": "u_db235382b1ae9051",
+      "kind": "text",
+      "source": "Android 已于 8/4 通过 Google 审核，上线日排定 8/12 早上 5 点",
+      "occurrence": 0,
+      "target": "Android passed Google review on 8/4; scheduled release at 5 AM on 8/12",
+      "context": "strong @ line 107 · surrounding text: TL;DR： Android 已于 8/4 通过 Google 审核，上线日排定 8/12 早上 5 点 ，与同日凌晨的生产环境单机整合合并为同一个上线窗口；Windows 新版本已于 8/3 交付 QA 测试，安装包约 8 MB；后端接口精简 32% ，Android 端同步清理历史遗留代码与文件；Siqo 支付已上测试环境，支持币种较原有通道更广。iOS 方面 8/6 收到 Apple 正式回覆确认账号终止原因，8/7 启动以自有代码与自研 SkyTunnel 引擎重建的大规模重构。"
+    },
+    {
+      "id": "u_244e2a5932eabbaa",
+      "kind": "text",
+      "source": "，与同日凌晨的生产环境单机整合合并为同一个上线窗口；Windows 新版本已于 8/3 交付 QA 测试，安装包约 8 MB；后端接口精简",
+      "occurrence": 0,
+      "target": ", integrated with production environment single machine for the same release window; new Windows version delivered to QA testing on 8/3, approximately 8 MB in size; backend interface streamlined",
+      "context": "section.tldr @ line 107 · surrounding text: TL;DR： Android 已于 8/4 通过 Google 审核，上线日排定 8/12 早上 5 点 ，与同日凌晨的生产环境单机整合合并为同一个上线窗口；Windows 新版本已于 8/3 交付 QA 测试，安装包约 8 MB；后端接口精简 32% ，Android 端同步清理历史遗留代码与文件；Siqo 支付已上测试环境，支持币种较原有通道更广。iOS 方面 8/6 收到 Apple 正式回覆确认账号终止原因，8/7 启动以自有代码与自研 SkyTunnel 引擎重建的大规模重构。"
+    },
+    {
+      "id": "u_e41ef82ac8cceef7",
+      "kind": "text",
+      "source": "，Android 端同步清理历史遗留代码与文件；Siqo 支付已上测试环境，支持币种较原有通道更广。iOS 方面 8/6 收到 Apple 正式回覆确认账号终止原因，8/7 启动以自有代码与自研 SkyTunnel 引擎重建的大规模重构。",
+      "occurrence": 0,
+      "target": "Android end cleaned up historical code and files; Siqo payment went live on test environment with broader supported currencies. iOS received official confirmation from Apple on 8/6 regarding account termination reasons, initiating a large-scale restructure using proprietary code and SkyTunnel engine on 8/7.",
+      "context": "section.tldr @ line 107 · surrounding text: TL;DR： Android 已于 8/4 通过 Google 审核，上线日排定 8/12 早上 5 点 ，与同日凌晨的生产环境单机整合合并为同一个上线窗口；Windows 新版本已于 8/3 交付 QA 测试，安装包约 8 MB；后端接口精简 32% ，Android 端同步清理历史遗留代码与文件；Siqo 支付已上测试环境，支持币种较原有通道更广。iOS 方面 8/6 收到 Apple 正式回覆确认账号终止原因，8/7 启动以自有代码与自研 SkyTunnel 引擎重建的大规模重构。"
+    },
+    {
+      "id": "u_812b4183e5fe4b26",
+      "kind": "text",
+      "source": "第一部分",
+      "occurrence": 0,
+      "target": "Part One",
+      "context": "div.pnum @ line 111"
+    },
+    {
+      "id": "u_1dd12719e3293c24",
+      "kind": "text",
+      "source": "Arrowfish VPN 本阶段的交付、风险、上线计划与安全管控（阶段口径，覆盖 7/25–8/7）",
+      "occurrence": 0,
+      "target": "Arrowfish VPN Sprint 25's delivery, risks, release plan, and security management (covering July 25 to August 7)",
+      "context": "div.psub @ line 113"
+    },
+    {
+      "id": "u_916ae3b63b43ad34",
+      "kind": "text",
+      "source": "一、本阶段关键决策与状态",
+      "occurrence": 0,
+      "target": "I. Key Decisions and Status of This Phase",
+      "context": "h2 @ line 117"
+    },
+    {
+      "id": "u_898ee3f07042307a",
+      "kind": "text",
+      "source": "事项",
+      "occurrence": 0,
+      "target": "Item",
+      "context": "th @ line 119 · surrounding text: 事项 说明 决策 / 现况"
+    },
+    {
+      "id": "u_39ba1f23d74e8e4d",
+      "kind": "text",
+      "source": "说明",
+      "occurrence": 0,
+      "target": "Description",
+      "context": "th @ line 119 · surrounding text: 事项 说明 决策 / 现况"
+    },
+    {
+      "id": "u_9be74ff0fab5411b",
+      "kind": "text",
+      "source": "决策 / 现况",
+      "occurrence": 0,
+      "target": "Decision / Current Situation",
+      "context": "th @ line 119 · surrounding text: 事项 说明 决策 / 现况"
+    },
+    {
+      "id": "u_ba7cbcd0b97bfed2",
+      "kind": "text",
+      "source": "最高优先",
+      "occurrence": 0,
+      "target": "Top Priority",
+      "context": "span.badge.progress @ line 122 · surrounding text: 最高优先 8/12 合并上线窗口"
+    },
+    {
+      "id": "u_62711be5c3d03b3b",
+      "kind": "text",
+      "source": "8/12 合并上线窗口",
+      "occurrence": 0,
+      "target": "Release window consolidation on 8/12",
+      "context": "strong @ line 122 · surrounding text: 最高优先 8/12 合并上线窗口"
+    },
+    {
+      "id": "u_2945f0c6a42ae5b2",
+      "kind": "text",
+      "source": "同一天完成两件事：",
+      "occurrence": 0,
+      "target": "Two tasks completed on the same day:",
+      "context": "td @ line 123 · surrounding text: 同一天完成两件事： 凌晨 04:55 生产环境单机整合切换， 早上 5 点 Android 新版本上线（已于 8/4 通过 Google 审核）。准备工作 8/6–8/11 进行，不触碰线上请求路径、不影响现有用户。维护公告已于 8/4 同步上线至官网与手机 App。"
+    },
+    {
+      "id": "u_9b21aca3e2a8d91e",
+      "kind": "text",
+      "source": "凌晨 04:55",
+      "occurrence": 0,
+      "target": "04:55 AM",
+      "context": "strong @ line 123 · surrounding text: 同一天完成两件事： 凌晨 04:55 生产环境单机整合切换， 早上 5 点 Android 新版本上线（已于 8/4 通过 Google 审核）。准备工作 8/6–8/11 进行，不触碰线上请求路径、不影响现有用户。维护公告已于 8/4 同步上线至官网与手机 App。"
+    },
+    {
+      "id": "u_854ee43faa66cb46",
+      "kind": "text",
+      "source": "生产环境单机整合切换，",
+      "occurrence": 0,
+      "target": "Single machine integration switch to production environment,",
+      "context": "td @ line 123 · surrounding text: 同一天完成两件事： 凌晨 04:55 生产环境单机整合切换， 早上 5 点 Android 新版本上线（已于 8/4 通过 Google 审核）。准备工作 8/6–8/11 进行，不触碰线上请求路径、不影响现有用户。维护公告已于 8/4 同步上线至官网与手机 App。"
+    },
+    {
+      "id": "u_db0b4808c3f02e77",
+      "kind": "text",
+      "source": "早上 5 点",
+      "occurrence": 0,
+      "target": "5 AM",
+      "context": "strong @ line 123 · surrounding text: 同一天完成两件事： 凌晨 04:55 生产环境单机整合切换， 早上 5 点 Android 新版本上线（已于 8/4 通过 Google 审核）。准备工作 8/6–8/11 进行，不触碰线上请求路径、不影响现有用户。维护公告已于 8/4 同步上线至官网与手机 App。"
+    },
+    {
+      "id": "u_c7537479d59abf2e",
+      "kind": "text",
+      "source": "Android 新版本上线（已于 8/4 通过 Google 审核）。准备工作 8/6–8/11 进行，不触碰线上请求路径、不影响现有用户。维护公告已于 8/4 同步上线至官网与手机 App。",
+      "occurrence": 0,
+      "target": "New Android version released (passed Google review on 8/4). Preparation from 8/6 to 8/11, no impact on live request paths or existing users. Maintenance notice went live on the official website and mobile app on 8/4.",
+      "context": "td @ line 123 · surrounding text: 同一天完成两件事： 凌晨 04:55 生产环境单机整合切换， 早上 5 点 Android 新版本上线（已于 8/4 通过 Google 审核）。准备工作 8/6–8/11 进行，不触碰线上请求路径、不影响现有用户。维护公告已于 8/4 同步上线至官网与手机 App。"
+    },
+    {
+      "id": "u_433c83aecd8bd23d",
+      "kind": "text",
+      "source": "窗口已定。切换前须完成备份还原演练与时间量测，任一准备阶段未完成即构成不切换条件。",
+      "occurrence": 0,
+      "target": "The window is set. Backup and recovery drills with time measurement must be completed before the switch; failure to complete any preparation phase will prevent the switch.",
+      "context": "td @ line 124"
+    },
+    {
+      "id": "u_aedbe7d88b755fd6",
+      "kind": "text",
+      "source": "方案已定",
+      "occurrence": 0,
+      "target": "The plan has been decided",
+      "context": "span.badge.done @ line 127 · surrounding text: 方案已定 私有 VM 存取方式"
+    },
+    {
+      "id": "u_42bc75ac38760c18",
+      "kind": "text",
+      "source": "私有 VM 存取方式",
+      "occurrence": 0,
+      "target": "Private VM Access Method",
+      "context": "strong @ line 127 · surrounding text: 方案已定 私有 VM 存取方式"
+    },
+    {
+      "id": "u_8872678b380c4757",
+      "kind": "text",
+      "source": "原跳板机只允许单一固定 IP 连入，运维人员换 IP 即无法作业，且每次调整都是一次生产安全边界变更。",
+      "occurrence": 0,
+      "target": "The original jump server only allowed a single fixed IP connection. Operations and maintenance personnel could not work if they changed IPs, and each adjustment was a production security boundary change.",
+      "context": "td @ line 128"
+    },
+    {
+      "id": "u_b34478d6a7f4dc1a",
+      "kind": "text",
+      "source": "决定",
+      "occurrence": 0,
+      "target": "Decision",
+      "context": "td @ line 129 · surrounding text: 决定 移除跳板机 ，改用 Azure Bastion 存取私有 VM。白名单维护问题一并消除，存取路径也更符合最小权限原则。"
+    },
+    {
+      "id": "u_9f004bd7f2fb3887",
+      "kind": "text",
+      "source": "移除跳板机",
+      "occurrence": 0,
+      "target": "Remove the jump server",
+      "context": "strong @ line 129 · surrounding text: 决定 移除跳板机 ，改用 Azure Bastion 存取私有 VM。白名单维护问题一并消除，存取路径也更符合最小权限原则。"
+    },
+    {
+      "id": "u_630fb317c78b3439",
+      "kind": "text",
+      "source": "，改用",
+      "occurrence": 0,
+      "target": ", switch to using",
+      "context": "td @ line 129 · surrounding text: 决定 移除跳板机 ，改用 Azure Bastion 存取私有 VM。白名单维护问题一并消除，存取路径也更符合最小权限原则。"
+    },
+    {
+      "id": "u_982b88a55e7ace9c",
+      "kind": "text",
+      "source": "存取私有 VM。白名单维护问题一并消除，存取路径也更符合最小权限原则。",
+      "occurrence": 0,
+      "target": "Access private VM. The whitelist maintenance issue is resolved, and the access path better aligns with the principle of least privilege.",
+      "context": "td @ line 129 · surrounding text: 决定 移除跳板机 ，改用 Azure Bastion 存取私有 VM。白名单维护问题一并消除，存取路径也更符合最小权限原则。"
+    },
+    {
+      "id": "u_05dbfaf5a0463c81",
+      "kind": "text",
+      "source": "本阶段新发现",
+      "occurrence": 0,
+      "target": "New findings in this sprint",
+      "context": "span.badge.progress @ line 132 · surrounding text: 本阶段新发现 iOS 重新上架路径"
+    },
+    {
+      "id": "u_841e0cadccf3f0d7",
+      "kind": "text",
+      "source": "iOS 重新上架路径",
+      "occurrence": 0,
+      "target": "iOS Resubmission Path",
+      "context": "strong @ line 132 · surrounding text: 本阶段新发现 iOS 重新上架路径"
+    },
+    {
+      "id": "u_b455ad139b298df5",
+      "kind": "text",
+      "source": "8/6 收到 Apple 正式回覆，确认原账号被终止的依据。新 Apple",
+      "occurrence": 0,
+      "target": "On 8/6, we received Apple's formal response confirming the basis for terminating the original account. The new Apple",
+      "context": "td @ line 133 · surrounding text: 8/6 收到 Apple 正式回覆，确认原账号被终止的依据。新 Apple 企业（Organization） 开发者账号已就绪，账号形态符合 Apple 对 VPN 类应用的强制要求。审计发现现有 iOS 代码存在结构性障碍，不可直接重新上架（详见第六节）。"
+    },
+    {
+      "id": "u_1bb80065a6c7d318",
+      "kind": "text",
+      "source": "企业（Organization）",
+      "occurrence": 0,
+      "target": "Organization (Org)",
+      "context": "strong @ line 133 · surrounding text: 8/6 收到 Apple 正式回覆，确认原账号被终止的依据。新 Apple 企业（Organization） 开发者账号已就绪，账号形态符合 Apple 对 VPN 类应用的强制要求。审计发现现有 iOS 代码存在结构性障碍，不可直接重新上架（详见第六节）。"
+    },
+    {
+      "id": "u_626dc3ca32b397ab",
+      "kind": "text",
+      "source": "开发者账号已就绪，账号形态符合 Apple 对 VPN 类应用的强制要求。审计发现现有 iOS 代码存在结构性障碍，不可直接重新上架（详见第六节）。",
+      "occurrence": 0,
+      "target": "Developer accounts are ready and comply with Apple's mandatory requirements for VPN-type applications. Audit findings reveal structural barriers in the existing iOS code that prevent direct resubmission (refer to Section 6).",
+      "context": "td @ line 133 · surrounding text: 8/6 收到 Apple 正式回覆，确认原账号被终止的依据。新 Apple 企业（Organization） 开发者账号已就绪，账号形态符合 Apple 对 VPN 类应用的强制要求。审计发现现有 iOS 代码存在结构性障碍，不可直接重新上架（详见第六节）。"
+    },
+    {
+      "id": "u_da2527c005c77483",
+      "kind": "text",
+      "source": "8/7 已启动大规模重构，技术方案已明确。剩余待厘清项为新账号主体资格，团队跟进中。",
+      "occurrence": 0,
+      "target": "A major refactor began on August 7, and the technical approach is clear. The remaining open point is the legal eligibility of the new account entity, which the team is following up.",
+      "context": "td @ line 134"
+    },
+    {
+      "id": "u_840c5cb343b2e10b",
+      "kind": "text",
+      "source": "续费功能业务规则",
+      "occurrence": 0,
+      "target": "Subscription Fee Business Rules",
+      "context": "strong @ line 137"
+    },
+    {
+      "id": "u_ebad34310151065e",
+      "kind": "text",
+      "source": "需求已完成代码现况核实。核实过程中发现一项既有缺陷（见第三节）。",
+      "occurrence": 0,
+      "target": "The completed code has been verified against the requirements. During verification, an existing defect was identified (see Section Three).",
+      "context": "td @ line 138"
+    },
+    {
+      "id": "u_3ed9fb0a2d476949",
+      "kind": "text",
+      "source": "规则已锁定：",
+      "occurrence": 0,
+      "target": "Rules are locked:",
+      "context": "td @ line 139 · surrounding text: 规则已锁定： 升级即时生效、降级次周期生效、专属 IP／专属节点可续期不断号 。整个模块将一次性上到测试环境供 QA 整体验收。"
+    },
+    {
+      "id": "u_e33e206dd54e5906",
+      "kind": "text",
+      "source": "升级即时生效、降级次周期生效、专属 IP／专属节点可续期不断号",
+      "occurrence": 0,
+      "target": "Upgrades take immediate effect, downgrades take effect in the next cycle, and dedicated IP/VPN node can be renewed without interruption.",
+      "context": "strong @ line 139 · surrounding text: 规则已锁定： 升级即时生效、降级次周期生效、专属 IP／专属节点可续期不断号 。整个模块将一次性上到测试环境供 QA 整体验收。"
+    },
+    {
+      "id": "u_bc046dc6d6787645",
+      "kind": "text",
+      "source": "。整个模块将一次性上到测试环境供 QA 整体验收。",
+      "occurrence": 0,
+      "target": ". The entire module will be deployed to the test environment for QA comprehensive acceptance testing.",
+      "context": "td @ line 139 · surrounding text: 规则已锁定： 升级即时生效、降级次周期生效、专属 IP／专属节点可续期不断号 。整个模块将一次性上到测试环境供 QA 整体验收。"
+    },
+    {
+      "id": "u_b976c69c411dd69e",
+      "kind": "text",
+      "source": "FFF 商务侧事项",
+      "occurrence": 0,
+      "target": "FFF Business Side Matters",
+      "context": "strong @ line 142"
+    },
+    {
+      "id": "u_bbee07f53d130b8d",
+      "kind": "text",
+      "source": "FFF 欧盟虚拟电话号码已于",
+      "occurrence": 0,
+      "target": "FFF European virtual phone numbers were activated on",
+      "context": "td @ line 143 · surrounding text: FFF 欧盟虚拟电话号码已于 7/15 开通完成 ；新支付通道账户仍在开设中。"
+    },
+    {
+      "id": "u_ba49a1ab8e99e237",
+      "kind": "text",
+      "source": "7/15 开通完成",
+      "occurrence": 0,
+      "target": "July 15",
+      "context": "strong @ line 143 · surrounding text: FFF 欧盟虚拟电话号码已于 7/15 开通完成 ；新支付通道账户仍在开设中。"
+    },
+    {
+      "id": "u_26091b24981cfcae",
+      "kind": "text",
+      "source": "；新支付通道账户仍在开设中。",
+      "occurrence": 0,
+      "target": "; the new payment channel account is still under development.",
+      "context": "td @ line 143 · surrounding text: FFF 欧盟虚拟电话号码已于 7/15 开通完成 ；新支付通道账户仍在开设中。"
+    },
+    {
+      "id": "u_b00f9972e9473c0c",
+      "kind": "text",
+      "source": "支付通道账户由",
+      "occurrence": 0,
+      "target": "The payment channel account is being",
+      "context": "td @ line 144 · surrounding text: 支付通道账户由 Roy 推进，不影响 Arrowfish 发布节奏。"
+    },
+    {
+      "id": "u_6f7db23f85c7bdbc",
+      "kind": "text",
+      "source": "推进，不影响 Arrowfish 发布节奏。",
+      "occurrence": 0,
+      "target": "Advance without impacting Arrowfish release schedule.",
+      "context": "td @ line 144 · surrounding text: 支付通道账户由 Roy 推进，不影响 Arrowfish 发布节奏。"
+    },
+    {
+      "id": "u_4c73b143bdb04b68",
+      "kind": "text",
+      "source": "二、本阶段关键成果（7/25–8/7）",
+      "occurrence": 0,
+      "target": "II. Key Achievements for This Sprint (July 25 – August 7)",
+      "context": "h2 @ line 151"
+    },
+    {
+      "id": "u_4323b92b2d901d25",
+      "kind": "text",
+      "source": "后端接口数量（207 → 141）",
+      "occurrence": 0,
+      "target": "Backend API Count (207 → 141)",
+      "context": "span @ line 153 · surrounding text: -32% 后端接口数量（207 → 141）"
+    },
+    {
+      "id": "u_6924641c845f6d1d",
+      "kind": "text",
+      "source": "约 8 MB",
+      "occurrence": 0,
+      "target": "Approximately 8 MB",
+      "context": "strong @ line 154 · surrounding text: 约 8 MB Windows 安装包（安装后 19.6 MB）"
+    },
+    {
+      "id": "u_ee4353bd1171e165",
+      "kind": "text",
+      "source": "Windows 安装包（安装后 19.6 MB）",
+      "occurrence": 0,
+      "target": "Windows Installer Package (Post-Installation Size: 19.6 MB)",
+      "context": "span @ line 154 · surrounding text: 约 8 MB Windows 安装包（安装后 19.6 MB）"
+    },
+    {
+      "id": "u_2adf3dfd82aa83cd",
+      "kind": "text",
+      "source": "7 类",
+      "occurrence": 0,
+      "target": "7 Categories",
+      "context": "strong @ line 155 · surrounding text: 7 类 USDTPay 错误根因（原 233 笔散乱报错）"
+    },
+    {
+      "id": "u_5d04c5472e5b555c",
+      "kind": "text",
+      "source": "USDTPay 错误根因（原 233 笔散乱报错）",
+      "occurrence": 0,
+      "target": "USDTPay Root Cause (Originally 233 Disparate Errors)",
+      "context": "span @ line 155 · surrounding text: 7 类 USDTPay 错误根因（原 233 笔散乱报错）"
+    },
+    {
+      "id": "u_42d93f5acc245bac",
+      "kind": "text",
+      "source": "Android 上线日（8/4 已过审）",
+      "occurrence": 0,
+      "target": "Android Release Date (Reviewed and Approved on August 4)",
+      "context": "span @ line 156 · surrounding text: 8/12 Android 上线日（8/4 已过审）"
+    },
+    {
+      "id": "u_d6faa2a2eed18639",
+      "kind": "text",
+      "source": "方向",
+      "occurrence": 0,
+      "target": "Direction",
+      "context": "th @ line 159 · surrounding text: 方向 本阶段结果 管理层解读"
+    },
+    {
+      "id": "u_4375d778056d226f",
+      "kind": "text",
+      "source": "本阶段结果",
+      "occurrence": 0,
+      "target": "Results of This Sprint",
+      "context": "th @ line 159 · surrounding text: 方向 本阶段结果 管理层解读"
+    },
+    {
+      "id": "u_c518fdd0f84e9630",
+      "kind": "text",
+      "source": "管理层解读",
+      "occurrence": 0,
+      "target": "Management Insights",
+      "context": "th @ line 159 · surrounding text: 方向 本阶段结果 管理层解读"
+    },
+    {
+      "id": "u_7f39aae03e0d346a",
+      "kind": "text",
+      "source": "后端主导的安装归因",
+      "occurrence": 0,
+      "target": "Backend-Driven Attribution",
+      "context": "td @ line 161 · surrounding text: 后端主导的安装归因 投放真实性从「仅靠客户端记录」改为后端持有安装记录：投放链接 → 后端点击／下载记录 → 安装标识 → 账号绑定 → 注册／激活／首购／付费／续费指标 → 后台归因漏斗与营收字段。 投放花费可以对应到真实营收，而不是只能看到下载量。这是广告投放能否放大的前提。"
+    },
+    {
+      "id": "u_4a9dc40d7909ba32",
+      "kind": "text",
+      "source": "投放真实性从「仅靠客户端记录」改为后端持有安装记录：投放链接 → 后端点击／下载记录 → 安装标识 → 账号绑定 → 注册／激活／首购／付费／续费指标 → 后台归因漏斗与营收字段。",
+      "occurrence": 0,
+      "target": "Truthfulness of the campaign is now based on backend-held installation records: Campaign link → Backend click/download record → Installation marker → Account binding → Registration/Activation/First Purchase/Payment/Renewal metrics → Back Office attribution funnel and revenue fields.",
+      "context": "td @ line 161 · surrounding text: 后端主导的安装归因 投放真实性从「仅靠客户端记录」改为后端持有安装记录：投放链接 → 后端点击／下载记录 → 安装标识 → 账号绑定 → 注册／激活／首购／付费／续费指标 → 后台归因漏斗与营收字段。 投放花费可以对应到真实营收，而不是只能看到下载量。这是广告投放能否放大的前提。"
+    },
+    {
+      "id": "u_91c65f3c3f7e5f6f",
+      "kind": "text",
+      "source": "投放花费可以对应到真实营收，而不是只能看到下载量。这是广告投放能否放大的前提。",
+      "occurrence": 0,
+      "target": "Campaign spend can now be correlated with actual revenue, rather than just download volume. This is a prerequisite for scaling ad campaigns.",
+      "context": "td @ line 161 · surrounding text: 后端主导的安装归因 投放真实性从「仅靠客户端记录」改为后端持有安装记录：投放链接 → 后端点击／下载记录 → 安装标识 → 账号绑定 → 注册／激活／首购／付费／续费指标 → 后台归因漏斗与营收字段。 投放花费可以对应到真实营收，而不是只能看到下载量。这是广告投放能否放大的前提。"
+    },
+    {
+      "id": "u_c05a492b121ebfaf",
+      "kind": "text",
+      "source": "后端 API 面收敛",
+      "occurrence": 0,
+      "target": "Backend API Convergence",
+      "context": "td @ line 162 · surrounding text: 后端 API 面收敛 后端注册接口从 207 个降至 141 个，移除 66 条冗余路由。未新增替代接口、未变更数据结构。 维护面缩小三成，后端每次改动需要回归验证的范围同步下降，也降低了向后兼容的负担。"
+    },
+    {
+      "id": "u_e0960a67eb71f72e",
+      "kind": "text",
+      "source": "后端注册接口从 207 个降至 141 个，移除 66 条冗余路由。未新增替代接口、未变更数据结构。",
+      "occurrence": 0,
+      "target": "The backend registration interface was reduced from 207 to 141, with 66 redundant routes removed. No new replacement interfaces were added and no data structure changes were made.",
+      "context": "td @ line 162 · surrounding text: 后端 API 面收敛 后端注册接口从 207 个降至 141 个，移除 66 条冗余路由。未新增替代接口、未变更数据结构。 维护面缩小三成，后端每次改动需要回归验证的范围同步下降，也降低了向后兼容的负担。"
+    },
+    {
+      "id": "u_b68d16943e7beb64",
+      "kind": "text",
+      "source": "维护面缩小三成，后端每次改动需要回归验证的范围同步下降，也降低了向后兼容的负担。",
+      "occurrence": 0,
+      "target": "The maintenance surface was reduced by 30%. The regression scope for each backend change also decreased, reducing the backward-compatibility burden.",
+      "context": "td @ line 162 · surrounding text: 后端 API 面收敛 后端注册接口从 207 个降至 141 个，移除 66 条冗余路由。未新增替代接口、未变更数据结构。 维护面缩小三成，后端每次改动需要回归验证的范围同步下降，也降低了向后兼容的负担。"
+    },
+    {
+      "id": "u_2ee021ffcd96f16b",
+      "kind": "text",
+      "source": "Android 端历史遗留代码清理",
+      "occurrence": 0,
+      "target": "Cleanup of Historical Code on Android",
+      "context": "td @ line 163 · surrounding text: Android 端历史遗留代码清理 配合后端收敛，Android 客户端同步清理不再使用的接口声明（从 120 条降至 108 条）与历史遗留的无用代码、无用文件。 前后端一起清，避免只清一边导致客户端仍保留已废弃的调用路径。代码库越小，新人接手与后续排查越快。"
+    },
+    {
+      "id": "u_02132eb0e3828d49",
+      "kind": "text",
+      "source": "配合后端收敛，Android 客户端同步清理不再使用的接口声明（从 120 条降至 108 条）与历史遗留的无用代码、无用文件。",
+      "occurrence": 0,
+      "target": "In line with backend consolidation, the Android client also cleaned up unused interface declarations (reduced from 120 to 108) and historical legacy code and files.",
+      "context": "td @ line 163 · surrounding text: Android 端历史遗留代码清理 配合后端收敛，Android 客户端同步清理不再使用的接口声明（从 120 条降至 108 条）与历史遗留的无用代码、无用文件。 前后端一起清，避免只清一边导致客户端仍保留已废弃的调用路径。代码库越小，新人接手与后续排查越快。"
+    },
+    {
+      "id": "u_fa59d8537b9dafbc",
+      "kind": "text",
+      "source": "前后端一起清，避免只清一边导致客户端仍保留已废弃的调用路径。代码库越小，新人接手与后续排查越快。",
+      "occurrence": 0,
+      "target": "Android Approved by Google",
+      "context": "td @ line 163 · surrounding text: Android 端历史遗留代码清理 配合后端收敛，Android 客户端同步清理不再使用的接口声明（从 120 条降至 108 条）与历史遗留的无用代码、无用文件。 前后端一起清，避免只清一边导致客户端仍保留已废弃的调用路径。代码库越小，新人接手与后续排查越快。"
+    },
+    {
+      "id": "u_af29a84cff54c94b",
+      "kind": "text",
+      "source": "Android 通过 Google 审核",
+      "occurrence": 0,
+      "target": "Android passed Google's review",
+      "context": "td @ line 164 · surrounding text: Android 通过 Google 审核 8/4 通过 Google Play 审核，上线日排定 8/12 早上 5 点；同日即完成维护公告内容更新并上传至后台，官网与手机 App 同步显示。 上线日期确定，且提前 8 天就向用户预告维护窗口，降低当日客诉。"
+    },
+    {
+      "id": "u_4c40270eabe4acfa",
+      "kind": "text",
+      "source": "8/4 通过 Google Play 审核，上线日排定 8/12 早上 5 点；同日即完成维护公告内容更新并上传至后台，官网与手机 App 同步显示。",
+      "occurrence": 0,
+      "target": "It passed Google Play review on August 4, with release scheduled for 5 a.m. on August 12. The maintenance notice was updated and uploaded to the Back Office (BO) that day, appearing simultaneously on the website and mobile app.",
+      "context": "td @ line 164 · surrounding text: Android 通过 Google 审核 8/4 通过 Google Play 审核，上线日排定 8/12 早上 5 点；同日即完成维护公告内容更新并上传至后台，官网与手机 App 同步显示。 上线日期确定，且提前 8 天就向用户预告维护窗口，降低当日客诉。"
+    },
+    {
+      "id": "u_c146356a9c004042",
+      "kind": "text",
+      "source": "上线日期确定，且提前 8 天就向用户预告维护窗口，降低当日客诉。",
+      "occurrence": 0,
+      "target": "Release Date Confirmed; Announced Maintenance Window 8 Days in Advance to Minimize User Complaints.",
+      "context": "td @ line 164 · surrounding text: Android 通过 Google 审核 8/4 通过 Google Play 审核，上线日排定 8/12 早上 5 点；同日即完成维护公告内容更新并上传至后台，官网与手机 App 同步显示。 上线日期确定，且提前 8 天就向用户预告维护窗口，降低当日客诉。"
+    },
+    {
+      "id": "u_ad1c6986e85104e8",
+      "kind": "text",
+      "source": "Windows 交付 QA 测试",
+      "occurrence": 0,
+      "target": "Windows QA Testing",
+      "context": "td @ line 165 · surrounding text: Windows 交付 QA 测试 8/3 将新测试版本交付 QA：x64 安装包 7.9 MB、ARM64 7.1 MB，安装后占用约 19.6 MB。 Windows 从「构建可用」推进到「QA 实测中」，是对外发布前的最后一道关卡。"
+    },
+    {
+      "id": "u_b064baae9928a368",
+      "kind": "text",
+      "source": "8/3 将新测试版本交付 QA：x64 安装包 7.9 MB、ARM64 7.1 MB，安装后占用约 19.6 MB。",
+      "occurrence": 0,
+      "target": "8/3 Delivered New Test Version: x64 Installer 7.9 MB, ARM64 7.1 MB; Installed Size Approximately 19.6 MB.",
+      "context": "td @ line 165 · surrounding text: Windows 交付 QA 测试 8/3 将新测试版本交付 QA：x64 安装包 7.9 MB、ARM64 7.1 MB，安装后占用约 19.6 MB。 Windows 从「构建可用」推进到「QA 实测中」，是对外发布前的最后一道关卡。"
+    },
+    {
+      "id": "u_5054adaba806a597",
+      "kind": "text",
+      "source": "Windows 从「构建可用」推进到「QA 实测中」，是对外发布前的最后一道关卡。",
+      "occurrence": 0,
+      "target": "Windows Progressed from 'Build Available' to 'QA Testing', the Final Pre-Release Stage.",
+      "context": "td @ line 165 · surrounding text: Windows 交付 QA 测试 8/3 将新测试版本交付 QA：x64 安装包 7.9 MB、ARM64 7.1 MB，安装后占用约 19.6 MB。 Windows 从「构建可用」推进到「QA 实测中」，是对外发布前的最后一道关卡。"
+    },
+    {
+      "id": "u_38e456d5e0d5a8c3",
+      "kind": "text",
+      "source": "Siqo 支付通道接入完成",
+      "occurrence": 0,
+      "target": "Siqo Payment Channel Integration Complete",
+      "context": "td @ line 166 · surrounding text: Siqo 支付通道接入完成 Siqo 支付已完成接入并上到测试环境，8/7 通知 QA 开始测试。相较原有的 USDTPay 单一通道，Siqo 支持 BTC、ETH、Polygon、Tron、BNB 等多条链。 支付币种选择变多，直接影响充值成功率与用户覆盖面。Windows 端待 Amy 完成缺陷验证后接入。"
+    },
+    {
+      "id": "u_efae03dc83a0b7bf",
+      "kind": "text",
+      "source": "Siqo 支付已完成接入并上到测试环境，8/7 通知 QA 开始测试。相较原有的 USDTPay 单一通道，Siqo 支持",
+      "occurrence": 0,
+      "target": "Siqo Payment Successfully Integrated and Deployed to Test Environment; QA Testing Initiated on 8/7. Compared to the single USDTPay channel, Siqo supports",
+      "context": "td @ line 166 · surrounding text: Siqo 支付通道接入完成 Siqo 支付已完成接入并上到测试环境，8/7 通知 QA 开始测试。相较原有的 USDTPay 单一通道，Siqo 支持 BTC、ETH、Polygon、Tron、BNB 等多条链。 支付币种选择变多，直接影响充值成功率与用户覆盖面。Windows 端待 Amy 完成缺陷验证后接入。"
+    },
+    {
+      "id": "u_77e9fdf340570e7a",
+      "kind": "text",
+      "source": "等多条链。",
+      "occurrence": 0,
+      "target": "multiple chains.",
+      "context": "td @ line 166 · surrounding text: Siqo 支付通道接入完成 Siqo 支付已完成接入并上到测试环境，8/7 通知 QA 开始测试。相较原有的 USDTPay 单一通道，Siqo 支持 BTC、ETH、Polygon、Tron、BNB 等多条链。 支付币种选择变多，直接影响充值成功率与用户覆盖面。Windows 端待 Amy 完成缺陷验证后接入。"
+    },
+    {
+      "id": "u_d3698f885cbf8756",
+      "kind": "text",
+      "source": "支付币种选择变多，直接影响充值成功率与用户覆盖面。Windows 端待 Amy 完成缺陷验证后接入。",
+      "occurrence": 0,
+      "target": "More Payment Currencies Offered; Directly Affects Recharge Success Rate and User Base. Windows Integration to Follow Amy's Defect Verification.",
+      "context": "td @ line 166 · surrounding text: Siqo 支付通道接入完成 Siqo 支付已完成接入并上到测试环境，8/7 通知 QA 开始测试。相较原有的 USDTPay 单一通道，Siqo 支持 BTC、ETH、Polygon、Tron、BNB 等多条链。 支付币种选择变多，直接影响充值成功率与用户覆盖面。Windows 端待 Amy 完成缺陷验证后接入。"
+    },
+    {
+      "id": "u_8d9a0d8a7f966aee",
+      "kind": "text",
+      "source": "USDTPay 错误收敛",
+      "occurrence": 0,
+      "target": "USDTPay Bug Convergence",
+      "context": "td @ line 167 · surrounding text: USDTPay 错误收敛 将 233 笔留存错误归并为 7 类唯一根因 ，确认绝大多数为第三方区块链查询接口的连线逾时与回传非预期格式（回传网页而非数据）。 把一堆看似杂乱的报错收敛成 7 个明确问题，才能判断哪些该重试、哪些该换通道 —— 这也支持了引入 Siqo 作为多链替代方案的决策。"
+    },
+    {
+      "id": "u_d90841da15e2c74e",
+      "kind": "text",
+      "source": "将 233 笔留存错误归并为",
+      "occurrence": 0,
+      "target": "Merged 233 Retained Errors into",
+      "context": "td @ line 167 · surrounding text: USDTPay 错误收敛 将 233 笔留存错误归并为 7 类唯一根因 ，确认绝大多数为第三方区块链查询接口的连线逾时与回传非预期格式（回传网页而非数据）。 把一堆看似杂乱的报错收敛成 7 个明确问题，才能判断哪些该重试、哪些该换通道 —— 这也支持了引入 Siqo 作为多链替代方案的决策。"
+    },
+    {
+      "id": "u_46099f69955f29cc",
+      "kind": "text",
+      "source": "7 类唯一根因",
+      "occurrence": 0,
+      "target": "7 Unique Root Causes.",
+      "context": "strong @ line 167 · surrounding text: USDTPay 错误收敛 将 233 笔留存错误归并为 7 类唯一根因 ，确认绝大多数为第三方区块链查询接口的连线逾时与回传非预期格式（回传网页而非数据）。 把一堆看似杂乱的报错收敛成 7 个明确问题，才能判断哪些该重试、哪些该换通道 —— 这也支持了引入 Siqo 作为多链替代方案的决策。"
+    },
+    {
+      "id": "u_908bd196d6c547d7",
+      "kind": "text",
+      "source": "，确认绝大多数为第三方区块链查询接口的连线逾时与回传非预期格式（回传网页而非数据）。",
+      "occurrence": 0,
+      "target": ", Confirming That the Majority Were Timeout Issues and Unexpected Format Responses from Third-Party Blockchain Query APIs (Returning Web Pages Instead of Data).",
+      "context": "td @ line 167 · surrounding text: USDTPay 错误收敛 将 233 笔留存错误归并为 7 类唯一根因 ，确认绝大多数为第三方区块链查询接口的连线逾时与回传非预期格式（回传网页而非数据）。 把一堆看似杂乱的报错收敛成 7 个明确问题，才能判断哪些该重试、哪些该换通道 —— 这也支持了引入 Siqo 作为多链替代方案的决策。"
+    },
+    {
+      "id": "u_00e1eaff0a9dc1a3",
+      "kind": "text",
+      "source": "把一堆看似杂乱的报错收敛成 7 个明确问题，才能判断哪些该重试、哪些该换通道 —— 这也支持了引入 Siqo 作为多链替代方案的决策。",
+      "occurrence": 0,
+      "target": "Converged a Large Number of Errors into 7 Clear Issues to Determine Which Should Be Retried and Which Channels Should Be Switched — This Supported the Decision to Introduce Siqo as a Multi-Chain Alternative.",
+      "context": "td @ line 167 · surrounding text: USDTPay 错误收敛 将 233 笔留存错误归并为 7 类唯一根因 ，确认绝大多数为第三方区块链查询接口的连线逾时与回传非预期格式（回传网页而非数据）。 把一堆看似杂乱的报错收敛成 7 个明确问题，才能判断哪些该重试、哪些该换通道 —— 这也支持了引入 Siqo 作为多链替代方案的决策。"
+    },
+    {
+      "id": "u_2ccf1cdfbac111a3",
+      "kind": "text",
+      "source": "Windows 构建效率优化",
+      "occurrence": 0,
+      "target": "Windows Build Efficiency Optimization",
+      "context": "td @ line 168 · surrounding text: Windows 构建效率优化 持久化构建缓存使成功构建从 15分37秒 降至 7分01秒；重复版本构建在 12.8–20.3 秒内即中止，不再浪费完整构建。x64 与 ARM64 双架构均通过测试环境签名。 发版等待时间减半，重复构建浪费被消除。"
+    },
+    {
+      "id": "u_e180acef0685db3f",
+      "kind": "text",
+      "source": "持久化构建缓存使成功构建从 15分37秒 降至 7分01秒；重复版本构建在 12.8–20.3 秒内即中止，不再浪费完整构建。x64 与 ARM64 双架构均通过测试环境签名。",
+      "occurrence": 0,
+      "target": "Persistent caching of build artifacts reduced successful builds from 15 minutes and 37 seconds to 7 minutes and 1 second; duplicate version builds are terminated within 12.8 to 20.3 seconds, avoiding full rebuilds. Both x64 and ARM64 architectures have passed the test environment signing.",
+      "context": "td @ line 168 · surrounding text: Windows 构建效率优化 持久化构建缓存使成功构建从 15分37秒 降至 7分01秒；重复版本构建在 12.8–20.3 秒内即中止，不再浪费完整构建。x64 与 ARM64 双架构均通过测试环境签名。 发版等待时间减半，重复构建浪费被消除。"
+    },
+    {
+      "id": "u_7ecf13f827d6c850",
+      "kind": "text",
+      "source": "发版等待时间减半，重复构建浪费被消除。",
+      "occurrence": 0,
+      "target": "Release wait time halved, eliminating redundant build waste.",
+      "context": "td @ line 168 · surrounding text: Windows 构建效率优化 持久化构建缓存使成功构建从 15分37秒 降至 7分01秒；重复版本构建在 12.8–20.3 秒内即中止，不再浪费完整构建。x64 与 ARM64 双架构均通过测试环境签名。 发版等待时间减半，重复构建浪费被消除。"
+    },
+    {
+      "id": "u_e24b0299f1e661c9",
+      "kind": "text",
+      "source": "IPv6 出口兼容性完成",
+      "occurrence": 0,
+      "target": "IPv6 outbound compatibility completed",
+      "context": "td @ line 169 · surrounding text: IPv6 出口兼容性完成 承接 Sprint 8 的 IPv6 根因修复，本阶段在后端、Android、桌面端与自研引擎间完成纯 IPv6／双栈出口的一致性适配。 Sprint 8 的修复从「单点修复」推进到「全链路一致」。"
+    },
+    {
+      "id": "u_2267b4e521246401",
+      "kind": "text",
+      "source": "承接 Sprint 8 的 IPv6 根因修复，本阶段在后端、Android、桌面端与自研引擎间完成纯 IPv6／双栈出口的一致性适配。",
+      "occurrence": 0,
+      "target": "Continuing Sprint 8 IPv6 root cause fixes, this phase achieved consistency in pure IPv6/dual-stack outbound for the Back Office, Android, desktop, and proprietary engine.",
+      "context": "td @ line 169 · surrounding text: IPv6 出口兼容性完成 承接 Sprint 8 的 IPv6 根因修复，本阶段在后端、Android、桌面端与自研引擎间完成纯 IPv6／双栈出口的一致性适配。 Sprint 8 的修复从「单点修复」推进到「全链路一致」。"
+    },
+    {
+      "id": "u_6ae842c7f22c0094",
+      "kind": "text",
+      "source": "Sprint 8 的修复从「单点修复」推进到「全链路一致」。",
+      "occurrence": 0,
+      "target": "Sprint 8 fixes progressed from 'point fix' to 'end-to-end consistency'.",
+      "context": "td @ line 169 · surrounding text: IPv6 出口兼容性完成 承接 Sprint 8 的 IPv6 根因修复，本阶段在后端、Android、桌面端与自研引擎间完成纯 IPv6／双栈出口的一致性适配。 Sprint 8 的修复从「单点修复」推进到「全链路一致」。"
+    },
+    {
+      "id": "u_a6919831d4d6098d",
+      "kind": "text",
+      "source": "桌面端引擎对齐",
+      "occurrence": 0,
+      "target": "Desktop engine alignment",
+      "context": "td @ line 170 · surrounding text: 桌面端引擎对齐 Windows 客户端完成与 Android 相同的自研引擎能力对齐。 两端功能一致，QA 与后续维护不再需要区分平台差异。"
+    },
+    {
+      "id": "u_f4634b20baa6fdda",
+      "kind": "text",
+      "source": "Windows 客户端完成与 Android 相同的自研引擎能力对齐。",
+      "occurrence": 0,
+      "target": "Windows client completed alignment with the self-developed engine capabilities of Android.",
+      "context": "td @ line 170 · surrounding text: 桌面端引擎对齐 Windows 客户端完成与 Android 相同的自研引擎能力对齐。 两端功能一致，QA 与后续维护不再需要区分平台差异。"
+    },
+    {
+      "id": "u_d99e1acd5f93a1bf",
+      "kind": "text",
+      "source": "两端功能一致，QA 与后续维护不再需要区分平台差异。",
+      "occurrence": 0,
+      "target": "The functionalities at both ends are consistent, eliminating the need for QA and subsequent maintenance to differentiate between platform variations.",
+      "context": "td @ line 170 · surrounding text: 桌面端引擎对齐 Windows 客户端完成与 Android 相同的自研引擎能力对齐。 两端功能一致，QA 与后续维护不再需要区分平台差异。"
+    },
+    {
+      "id": "u_3a5e1f9fc5b4b15a",
+      "kind": "text",
+      "source": "iOS 客户端合规审计",
+      "occurrence": 0,
+      "target": "iOS client compliance audit",
+      "context": "td @ line 171 · surrounding text: iOS 客户端合规审计 新 Apple 企业开发者账号就绪；针对现有 iOS 代码完成全面合规审计，定位 三项 结构性障碍并排除四类高风险猜测，同时精确测量出重建范围 —— 自有代码 162 个文件可完整分离。 把「iOS 何时能回来」从不确定问题变成有明确范围的工程任务。详见第六节。"
+    },
+    {
+      "id": "u_06665448dfdc065a",
+      "kind": "text",
+      "source": "新 Apple 企业开发者账号就绪；针对现有 iOS 代码完成全面合规审计，定位",
+      "occurrence": 0,
+      "target": "New Apple enterprise developer account ready; comprehensive compliance audit completed for existing iOS code, identifying three issues.",
+      "context": "td @ line 171 · surrounding text: iOS 客户端合规审计 新 Apple 企业开发者账号就绪；针对现有 iOS 代码完成全面合规审计，定位 三项 结构性障碍并排除四类高风险猜测，同时精确测量出重建范围 —— 自有代码 162 个文件可完整分离。 把「iOS 何时能回来」从不确定问题变成有明确范围的工程任务。详见第六节。"
+    },
+    {
+      "id": "u_6460fd89a85056e7",
+      "kind": "text",
+      "source": "三项",
+      "occurrence": 0,
+      "target": "Three",
+      "context": "strong @ line 171 · surrounding text: iOS 客户端合规审计 新 Apple 企业开发者账号就绪；针对现有 iOS 代码完成全面合规审计，定位 三项 结构性障碍并排除四类高风险猜测，同时精确测量出重建范围 —— 自有代码 162 个文件可完整分离。 把「iOS 何时能回来」从不确定问题变成有明确范围的工程任务。详见第六节。"
+    },
+    {
+      "id": "u_e8799d2e3fccbcd7",
+      "kind": "text",
+      "source": "结构性障碍并排除四类高风险猜测，同时精确测量出重建范围 —— 自有代码 162 个文件可完整分离。",
+      "occurrence": 0,
+      "target": "structural barriers and four high-risk assumptions were eliminated, with precise measurement of the rebuild scope — 162 files of proprietary code can be fully separated.",
+      "context": "td @ line 171 · surrounding text: iOS 客户端合规审计 新 Apple 企业开发者账号就绪；针对现有 iOS 代码完成全面合规审计，定位 三项 结构性障碍并排除四类高风险猜测，同时精确测量出重建范围 —— 自有代码 162 个文件可完整分离。 把「iOS 何时能回来」从不确定问题变成有明确范围的工程任务。详见第六节。"
+    },
+    {
+      "id": "u_d24629ba25090a0a",
+      "kind": "text",
+      "source": "把「iOS 何时能回来」从不确定问题变成有明确范围的工程任务。详见第六节。",
+      "occurrence": 0,
+      "target": "Turning 'when will iOS return' from an uncertain question into a well-defined engineering task. See Section Six.",
+      "context": "td @ line 171 · surrounding text: iOS 客户端合规审计 新 Apple 企业开发者账号就绪；针对现有 iOS 代码完成全面合规审计，定位 三项 结构性障碍并排除四类高风险猜测，同时精确测量出重建范围 —— 自有代码 162 个文件可完整分离。 把「iOS 何时能回来」从不确定问题变成有明确范围的工程任务。详见第六节。"
+    },
+    {
+      "id": "u_24322d6b5d2e7e2e",
+      "kind": "text",
+      "source": "内部研发流程标准化",
+      "occurrence": 0,
+      "target": "Standardization of internal R&D processes",
+      "context": "td @ line 172 · surrounding text: 内部研发流程标准化 建立计划与执行报告的标准化管理机制，并完成跨仓库知识库整合。 交付过程可追溯，减少同一问题重复研究的成本。"
+    },
+    {
+      "id": "u_aa83680b29370531",
+      "kind": "text",
+      "source": "建立计划与执行报告的标准化管理机制，并完成跨仓库知识库整合。",
+      "occurrence": 0,
+      "target": "Established standardized mechanisms for planning and execution reports, and completed cross-repository knowledge base integration.",
+      "context": "td @ line 172 · surrounding text: 内部研发流程标准化 建立计划与执行报告的标准化管理机制，并完成跨仓库知识库整合。 交付过程可追溯，减少同一问题重复研究的成本。"
+    },
+    {
+      "id": "u_4a7040528ce608d7",
+      "kind": "text",
+      "source": "交付过程可追溯，减少同一问题重复研究的成本。",
+      "occurrence": 0,
+      "target": "Traceable delivery process reducing the cost of repeated research on the same issues.",
+      "context": "td @ line 172 · surrounding text: 内部研发流程标准化 建立计划与执行报告的标准化管理机制，并完成跨仓库知识库整合。 交付过程可追溯，减少同一问题重复研究的成本。"
+    },
+    {
+      "id": "u_409b4d067f50075c",
+      "kind": "text",
+      "source": "三、改善与商业价值",
+      "occurrence": 0,
+      "target": "III. Improvements and Business Value",
+      "context": "h2 @ line 178"
+    },
+    {
+      "id": "u_f2d51bb3b39d71d0",
+      "kind": "text",
+      "source": "技术改善",
+      "occurrence": 0,
+      "target": "Technical improvements",
+      "context": "th @ line 180 · surrounding text: 技术改善 之前 之后 商业价值"
+    },
+    {
+      "id": "u_60db65167af37529",
+      "kind": "text",
+      "source": "之前",
+      "occurrence": 0,
+      "target": "Before",
+      "context": "th @ line 180 · surrounding text: 技术改善 之前 之后 商业价值"
+    },
+    {
+      "id": "u_5f5d00a4367f2263",
+      "kind": "text",
+      "source": "之后",
+      "occurrence": 0,
+      "target": "After",
+      "context": "th @ line 180 · surrounding text: 技术改善 之前 之后 商业价值"
+    },
+    {
+      "id": "u_f73a4681f950d15d",
+      "kind": "text",
+      "source": "商业价值",
+      "occurrence": 0,
+      "target": "Business Value",
+      "context": "th @ line 180 · surrounding text: 技术改善 之前 之后 商业价值"
+    },
+    {
+      "id": "u_3140a7bd3fcde159",
+      "kind": "text",
+      "source": "投放归因",
+      "occurrence": 0,
+      "target": "Attribution of Campaigns",
+      "context": "td @ line 182 · surrounding text: 投放归因 投放数据仅存于客户端，无法对应真实营收 后端持有完整链路，可追踪至首购与续费 广告投放 ROI 可量化，是加大投放前的必要条件"
+    },
+    {
+      "id": "u_1d0dec7b73961928",
+      "kind": "text",
+      "source": "投放数据仅存于客户端，无法对应真实营收",
+      "occurrence": 0,
+      "target": "Campaign Data Only on Client, No Correspondence to Actual Revenue",
+      "context": "td @ line 182 · surrounding text: 投放归因 投放数据仅存于客户端，无法对应真实营收 后端持有完整链路，可追踪至首购与续费 广告投放 ROI 可量化，是加大投放前的必要条件"
+    },
+    {
+      "id": "u_213c50ebda1f1892",
+      "kind": "text",
+      "source": "后端持有完整链路，可追踪至首购与续费",
+      "occurrence": 0,
+      "target": "Back Office Holds Full Path, Traceable from First Purchase to Renewal",
+      "context": "td @ line 182 · surrounding text: 投放归因 投放数据仅存于客户端，无法对应真实营收 后端持有完整链路，可追踪至首购与续费 广告投放 ROI 可量化，是加大投放前的必要条件"
+    },
+    {
+      "id": "u_fcf018921d9bf92a",
+      "kind": "text",
+      "source": "广告投放 ROI 可量化，是加大投放前的必要条件",
+      "occurrence": 0,
+      "target": "Quantifiable Return on Investment (ROI) for Campaigns, a Prerequisite for Increased Spending",
+      "context": "td @ line 182 · surrounding text: 投放归因 投放数据仅存于客户端，无法对应真实营收 后端持有完整链路，可追踪至首购与续费 广告投放 ROI 可量化，是加大投放前的必要条件"
+    },
+    {
+      "id": "u_cb08268859db117f",
+      "kind": "text",
+      "source": "后端接口数量",
+      "occurrence": 0,
+      "target": "Number of Back Office Interfaces",
+      "context": "td @ line 183 · surrounding text: 后端接口数量 207 个注册接口 141 个（-32%） 维护与回归测试范围缩小三成，向后兼容负担下降"
+    },
+    {
+      "id": "u_98b4e21cf1721624",
+      "kind": "text",
+      "source": "207 个注册接口",
+      "occurrence": 0,
+      "target": "207 Registration Interfaces",
+      "context": "td @ line 183 · surrounding text: 后端接口数量 207 个注册接口 141 个（-32%） 维护与回归测试范围缩小三成，向后兼容负担下降"
+    },
+    {
+      "id": "u_e17e2c95d57707cf",
+      "kind": "text",
+      "source": "141 个（-32%）",
+      "occurrence": 0,
+      "target": "141 (32% Decrease)",
+      "context": "td @ line 183 · surrounding text: 后端接口数量 207 个注册接口 141 个（-32%） 维护与回归测试范围缩小三成，向后兼容负担下降"
+    },
+    {
+      "id": "u_5b11ca3feb4c7d98",
+      "kind": "text",
+      "source": "维护与回归测试范围缩小三成，向后兼容负担下降",
+      "occurrence": 0,
+      "target": "The maintenance and regression-testing scope was reduced by 30%, lowering the backward-compatibility burden",
+      "context": "td @ line 183 · surrounding text: 后端接口数量 207 个注册接口 141 个（-32%） 维护与回归测试范围缩小三成，向后兼容负担下降"
+    },
+    {
+      "id": "u_710cfd442d9fc7f9",
+      "kind": "text",
+      "source": "Windows 构建时间",
+      "occurrence": 0,
+      "target": "Windows Build Time",
+      "context": "td @ line 184 · surrounding text: Windows 构建时间 15 分 37 秒 7 分 01 秒（-55%） 发版周期缩短，紧急修复可更快送达用户"
+    },
+    {
+      "id": "u_2ea81014a9df8b9e",
+      "kind": "text",
+      "source": "15 分 37 秒",
+      "occurrence": 0,
+      "target": "15 Minutes 37 Seconds",
+      "context": "td @ line 184 · surrounding text: Windows 构建时间 15 分 37 秒 7 分 01 秒（-55%） 发版周期缩短，紧急修复可更快送达用户"
+    },
+    {
+      "id": "u_6fab28304211385f",
+      "kind": "text",
+      "source": "7 分 01 秒（-55%）",
+      "occurrence": 0,
+      "target": "7 Minutes 1 Second (55% Decrease)",
+      "context": "td @ line 184 · surrounding text: Windows 构建时间 15 分 37 秒 7 分 01 秒（-55%） 发版周期缩短，紧急修复可更快送达用户"
+    },
+    {
+      "id": "u_3f44895fa668c0a3",
+      "kind": "text",
+      "source": "发版周期缩短，紧急修复可更快送达用户",
+      "occurrence": 0,
+      "target": "Shortened Release Cycle, Emergency Fixes Delivered Faster to Users",
+      "context": "td @ line 184 · surrounding text: Windows 构建时间 15 分 37 秒 7 分 01 秒（-55%） 发版周期缩短，紧急修复可更快送达用户"
+    },
+    {
+      "id": "u_6d59194d400ad32f",
+      "kind": "text",
+      "source": "重复构建浪费",
+      "occurrence": 0,
+      "target": "Redundant Builds Waste",
+      "context": "td @ line 185 · surrounding text: 重复构建浪费 相同版本会重跑完整构建流程 12.8–20.3 秒内中止 构建资源成本降低"
+    },
+    {
+      "id": "u_f274dbc360455c33",
+      "kind": "text",
+      "source": "相同版本会重跑完整构建流程",
+      "occurrence": 0,
+      "target": "Same Version Re-runs Full Build Process",
+      "context": "td @ line 185 · surrounding text: 重复构建浪费 相同版本会重跑完整构建流程 12.8–20.3 秒内中止 构建资源成本降低"
+    },
+    {
+      "id": "u_845020c117a35b41",
+      "kind": "text",
+      "source": "12.8–20.3 秒内中止",
+      "occurrence": 0,
+      "target": "12.8 to 20.3 Seconds to Terminate",
+      "context": "td @ line 185 · surrounding text: 重复构建浪费 相同版本会重跑完整构建流程 12.8–20.3 秒内中止 构建资源成本降低"
+    },
+    {
+      "id": "u_3d0af1fe32feaaff",
+      "kind": "text",
+      "source": "构建资源成本降低",
+      "occurrence": 0,
+      "target": "Reduced Cost of Build Resources",
+      "context": "td @ line 185 · surrounding text: 重复构建浪费 相同版本会重跑完整构建流程 12.8–20.3 秒内中止 构建资源成本降低"
+    },
+    {
+      "id": "u_70a6f7b27c001069",
+      "kind": "text",
+      "source": "iOS 重建范围",
+      "occurrence": 0,
+      "target": "iOS Rebuild Scope",
+      "context": "td @ line 186 · surrounding text: iOS 重建范围 「需要重做」但范围不明 自有代码 162 个文件确认可完整分离，连线引擎复用自研 SkyTunnel 把不确定风险转为可排期的工程量，且不需外部依赖"
+    },
+    {
+      "id": "u_93af40ad89a71560",
+      "kind": "text",
+      "source": "「需要重做」但范围不明",
+      "occurrence": 0,
+      "target": "Needs Redo but Scope Unclear",
+      "context": "td @ line 186 · surrounding text: iOS 重建范围 「需要重做」但范围不明 自有代码 162 个文件确认可完整分离，连线引擎复用自研 SkyTunnel 把不确定风险转为可排期的工程量，且不需外部依赖"
+    },
+    {
+      "id": "u_5a57edff6eec2e23",
+      "kind": "text",
+      "source": "自有代码 162 个文件确认可完整分离，连线引擎复用自研 SkyTunnel",
+      "occurrence": 0,
+      "target": "162 Files of Own Code Confirmed Fully Separable, Interconnect Engine Reuses Self-developed SkyTunnel",
+      "context": "td @ line 186 · surrounding text: iOS 重建范围 「需要重做」但范围不明 自有代码 162 个文件确认可完整分离，连线引擎复用自研 SkyTunnel 把不确定风险转为可排期的工程量，且不需外部依赖"
+    },
+    {
+      "id": "u_8fb5b51fcbbae824",
+      "kind": "text",
+      "source": "把不确定风险转为可排期的工程量，且不需外部依赖",
+      "occurrence": 0,
+      "target": "Transform uncertain risks into schedulable engineering tasks without external dependencies",
+      "context": "td @ line 186 · surrounding text: iOS 重建范围 「需要重做」但范围不明 自有代码 162 个文件确认可完整分离，连线引擎复用自研 SkyTunnel 把不确定风险转为可排期的工程量，且不需外部依赖"
+    },
+    {
+      "id": "u_6b588fbda76e5d9e",
+      "kind": "text",
+      "source": "加密货币支付币种",
+      "occurrence": 0,
+      "target": "Cryptocurrency payment tokens",
+      "context": "td @ line 187 · surrounding text: 加密货币支付币种 仅 USDT 单一通道 新增 Siqo，支持 BTC、ETH、Polygon、Tron、BNB 用户可用的充值方式增加，降低因不持有特定币种而放弃付款的流失"
+    },
+    {
+      "id": "u_69be9a39095219d2",
+      "kind": "text",
+      "source": "仅 USDT 单一通道",
+      "occurrence": 0,
+      "target": "Single USDT channel only",
+      "context": "td @ line 187 · surrounding text: 加密货币支付币种 仅 USDT 单一通道 新增 Siqo，支持 BTC、ETH、Polygon、Tron、BNB 用户可用的充值方式增加，降低因不持有特定币种而放弃付款的流失"
+    },
+    {
+      "id": "u_b4fda58af8d3cccc",
+      "kind": "text",
+      "source": "新增 Siqo，支持 BTC、ETH、Polygon、Tron、BNB",
+      "occurrence": 0,
+      "target": "Add Siqo, support for BTC, ETH, Polygon, Tron, BNB",
+      "context": "td @ line 187 · surrounding text: 加密货币支付币种 仅 USDT 单一通道 新增 Siqo，支持 BTC、ETH、Polygon、Tron、BNB 用户可用的充值方式增加，降低因不持有特定币种而放弃付款的流失"
+    },
+    {
+      "id": "u_8e965803055583c8",
+      "kind": "text",
+      "source": "用户可用的充值方式增加，降低因不持有特定币种而放弃付款的流失",
+      "occurrence": 0,
+      "target": "Increase in available recharge methods to reduce churn due to lack of specific tokens",
+      "context": "td @ line 187 · surrounding text: 加密货币支付币种 仅 USDT 单一通道 新增 Siqo，支持 BTC、ETH、Polygon、Tron、BNB 用户可用的充值方式增加，降低因不持有特定币种而放弃付款的流失"
+    },
+    {
+      "id": "u_9ac8bece86f7296e",
+      "kind": "text",
+      "source": "支付错误可诊断性",
+      "occurrence": 0,
+      "target": "Payment error diagnosability",
+      "context": "td @ line 188 · surrounding text: 支付错误可诊断性 233 笔错误散落无规律，难以判断问题所在 收敛为 7 类唯一根因 能明确区分「该重试」与「该换通道」，支付成功率有了可优化的抓手"
+    },
+    {
+      "id": "u_1ff2107c73921c2b",
+      "kind": "text",
+      "source": "233 笔错误散落无规律，难以判断问题所在",
+      "occurrence": 0,
+      "target": "233 errors scattered without pattern, difficult to determine root cause",
+      "context": "td @ line 188 · surrounding text: 支付错误可诊断性 233 笔错误散落无规律，难以判断问题所在 收敛为 7 类唯一根因 能明确区分「该重试」与「该换通道」，支付成功率有了可优化的抓手"
+    },
+    {
+      "id": "u_138393004d4ef574",
+      "kind": "text",
+      "source": "收敛为 7 类唯一根因",
+      "occurrence": 0,
+      "target": "Converged into 7 unique root causes",
+      "context": "td @ line 188 · surrounding text: 支付错误可诊断性 233 笔错误散落无规律，难以判断问题所在 收敛为 7 类唯一根因 能明确区分「该重试」与「该换通道」，支付成功率有了可优化的抓手"
+    },
+    {
+      "id": "u_db6213ab5953b53b",
+      "kind": "text",
+      "source": "能明确区分「该重试」与「该换通道」，支付成功率有了可优化的抓手",
+      "occurrence": 0,
+      "target": "Clear distinction between 'retry' and 'switch channel', providing a foothold for optimization of payment success rate",
+      "context": "td @ line 188 · surrounding text: 支付错误可诊断性 233 笔错误散落无规律，难以判断问题所在 收敛为 7 类唯一根因 能明确区分「该重试」与「该换通道」，支付成功率有了可优化的抓手"
+    },
+    {
+      "id": "u_7bb0a825d62646dd",
+      "kind": "text",
+      "source": "Windows 安装包",
+      "occurrence": 0,
+      "target": "Windows installer package",
+      "context": "td @ line 189 · surrounding text: Windows 安装包 100 MB 下载 / 273 MB 占用（最初 Electron 版） 约 8 MB 下载 / 19.6 MB 占用 下载与安装门槛大幅降低，已进入 QA 实测"
+    },
+    {
+      "id": "u_8bb9b1748a916c1c",
+      "kind": "text",
+      "source": "100 MB 下载 / 273 MB 占用（最初 Electron 版）",
+      "occurrence": 0,
+      "target": "100 MB download / 273 MB space used (initial Electron version)",
+      "context": "td @ line 189 · surrounding text: Windows 安装包 100 MB 下载 / 273 MB 占用（最初 Electron 版） 约 8 MB 下载 / 19.6 MB 占用 下载与安装门槛大幅降低，已进入 QA 实测"
+    },
+    {
+      "id": "u_8a67b388faf4b0cf",
+      "kind": "text",
+      "source": "约 8 MB 下载 / 19.6 MB 占用",
+      "occurrence": 0,
+      "target": "Approx. 8 MB download / 19.6 MB space used",
+      "context": "td @ line 189 · surrounding text: Windows 安装包 100 MB 下载 / 273 MB 占用（最初 Electron 版） 约 8 MB 下载 / 19.6 MB 占用 下载与安装门槛大幅降低，已进入 QA 实测"
+    },
+    {
+      "id": "u_781f4b6263b24a5e",
+      "kind": "text",
+      "source": "下载与安装门槛大幅降低，已进入 QA 实测",
+      "occurrence": 0,
+      "target": "Significantly reduced download and installation barriers, now in QA testing",
+      "context": "td @ line 189 · surrounding text: Windows 安装包 100 MB 下载 / 273 MB 占用（最初 Electron 版） 约 8 MB 下载 / 19.6 MB 占用 下载与安装门槛大幅降低，已进入 QA 实测"
+    },
+    {
+      "id": "u_54614cba0ff71f6f",
+      "kind": "text",
+      "source": "核实需求时发现的既有缺陷",
+      "occurrence": 0,
+      "target": "Existing defects identified during requirement verification",
+      "context": "h3 @ line 192"
+    },
+    {
+      "id": "u_9d97d38be2a88e45",
+      "kind": "text",
+      "source": "降级排程重复执行风险。",
+      "occurrence": 0,
+      "target": "Reduce risk of repeated downgrade scheduling execution.",
+      "context": "strong @ line 194 · surrounding text: 降级排程重复执行风险。 在核实续费需求的过程中，团队发现「降级次周期生效」的排程任务同时被两处程序执行，其中一处没有并发锁 —— 存在同一笔降级被重复套用的风险。此为交接时既存的实作，非本阶段引入。处理方案已确定：统一由具备分布式锁的排程服务执行，移除无锁的那一处。"
+    },
+    {
+      "id": "u_20e47c3d2669ee44",
+      "kind": "text",
+      "source": "在核实续费需求的过程中，团队发现「降级次周期生效」的排程任务同时被两处程序执行，其中一处没有并发锁 —— 存在同一笔降级被重复套用的风险。此为交接时既存的实作，非本阶段引入。处理方案已确定：统一由具备分布式锁的排程服务执行，移除无锁的那一处。",
+      "occurrence": 0,
+      "target": "During the verification of renewal requirements, the team discovered that a downgrade task scheduled for the next cycle was being executed in two places simultaneously, with one place lacking concurrent locking —— posing a risk of duplicate downgrades. This is an existing implementation from handover and not introduced during this sprint. The solution has been determined: unified execution by a scheduling service with distributed locks, removing the lockless version.",
+      "context": "div.callout.watch @ line 194 · surrounding text: 降级排程重复执行风险。 在核实续费需求的过程中，团队发现「降级次周期生效」的排程任务同时被两处程序执行，其中一处没有并发锁 —— 存在同一笔降级被重复套用的风险。此为交接时既存的实作，非本阶段引入。处理方案已确定：统一由具备分布式锁的排程服务执行，移除无锁的那一处。"
+    },
+    {
+      "id": "u_b487fa897e1784e7",
+      "kind": "text",
+      "source": "四、关键时间节点",
+      "occurrence": 0,
+      "target": "Four. Key Milestones",
+      "context": "h2 @ line 199"
+    },
+    {
+      "id": "u_9982ece3f73bbcd9",
+      "kind": "text",
+      "source": "桌面端完成与 Android 的自研引擎能力对齐；建立内部计划与执行报告标准化机制",
+      "occurrence": 0,
+      "target": "Desktop completion of self-developed engine capability alignment with Android; established internal planning and execution reporting standardization mechanism",
+      "context": "div.ttext @ line 201 · surrounding text: 7/25–7/28 桌面端完成与 Android 的自研引擎能力对齐；建立内部计划与执行报告标准化机制"
+    },
+    {
+      "id": "u_542268c1f66a57e0",
+      "kind": "text",
+      "source": "Windows 构建缓存优化完成",
+      "occurrence": 0,
+      "target": "Windows build cache optimization completed",
+      "context": "strong @ line 202 · surrounding text: 7/31 Windows 构建缓存优化完成 ，构建时间从 15分37秒 降至 7分01秒；纯 IPv6 出口能力在后端与 Android 端完成"
+    },
+    {
+      "id": "u_548cfbb945e1d8ce",
+      "kind": "text",
+      "source": "，构建时间从 15分37秒 降至 7分01秒；纯 IPv6 出口能力在后端与 Android 端完成",
+      "occurrence": 0,
+      "target": ", build time reduced from 15 minutes and 37 seconds to 7 minutes and 1 second; pure IPv6 outbound capability implemented in both backend and Android",
+      "context": "div.ttext @ line 202 · surrounding text: 7/31 Windows 构建缓存优化完成 ，构建时间从 15分37秒 降至 7分01秒；纯 IPv6 出口能力在后端与 Android 端完成"
+    },
+    {
+      "id": "u_164aabdf332a5fbc",
+      "kind": "text",
+      "source": "投放归因链路在后端、后台与 Android 三端完成；本阶段前半段共 46 次非合并提交，覆盖 5 个仓库",
+      "occurrence": 0,
+      "target": "Attribution tracking for the campaign has been completed in the Back Office and on Android across three endpoints. In the first half of this sprint, there were 46 non-merged commits spanning 5 repositories.",
+      "context": "div.ttext @ line 203 · surrounding text: 8/1 投放归因链路在后端、后台与 Android 三端完成；本阶段前半段共 46 次非合并提交，覆盖 5 个仓库"
+    },
+    {
+      "id": "u_b87ee01195e4d849",
+      "kind": "text",
+      "source": "Windows 新测试版本交付 QA",
+      "occurrence": 0,
+      "target": "The new QA version for Windows is delivered.",
+      "context": "strong @ line 204 · surrounding text: 8/3 Windows 新测试版本交付 QA （x64 7.9 MB／ARM64 7.1 MB）；续费／升级／降级需求完成代码现况核实，发现降级排程重复执行缺陷"
+    },
+    {
+      "id": "u_09dd3d6f4ee72773",
+      "kind": "text",
+      "source": "（x64 7.9 MB／ARM64 7.1 MB）；续费／升级／降级需求完成代码现况核实，发现降级排程重复执行缺陷",
+      "occurrence": 0,
+      "target": "(x64 7.9 MB / ARM64 7.1 MB); completed code verification for renewal, upgrade, and downgrade requirements, discovering a recurring downgrade scheduling defect.",
+      "context": "div.ttext @ line 204 · surrounding text: 8/3 Windows 新测试版本交付 QA （x64 7.9 MB／ARM64 7.1 MB）；续费／升级／降级需求完成代码现况核实，发现降级排程重复执行缺陷"
+    },
+    {
+      "id": "u_ebd1d3dd78d78867",
+      "kind": "text",
+      "source": "Android 通过 Google 审核，上线日排定 8/12 早上 5 点",
+      "occurrence": 0,
+      "target": "Android has passed Google’s review; the release is scheduled for August 12 at 5 AM.",
+      "context": "strong @ line 205 · surrounding text: 8/4 Android 通过 Google 审核，上线日排定 8/12 早上 5 点 ；同日完成维护公告内容更新并上传后台，官网与手机 App 同步显示"
+    },
+    {
+      "id": "u_fbaa3f3056c4a594",
+      "kind": "text",
+      "source": "；同日完成维护公告内容更新并上传后台，官网与手机 App 同步显示",
+      "occurrence": 0,
+      "target": "; completed maintenance announcement content updates and uploads to the Back Office, with synchronization on the website and mobile app.",
+      "context": "div.ttext @ line 205 · surrounding text: 8/4 Android 通过 Google 审核，上线日排定 8/12 早上 5 点 ；同日完成维护公告内容更新并上传后台，官网与手机 App 同步显示"
+    },
+    {
+      "id": "u_f2bcdfd434b0715e",
+      "kind": "text",
+      "source": "后端 API 面收敛完成",
+      "occurrence": 0,
+      "target": "Back-end API surface has been refined.",
+      "context": "strong @ line 206 · surrounding text: 8/5 后端 API 面收敛完成 ，接口从 207 个降至 141 个，Android 端同步清理遗留代码与文件；启动 8/12 生产上线规划；Android 持续迭代新测试版本"
+    },
+    {
+      "id": "u_fa453b3c689a8696",
+      "kind": "text",
+      "source": "，接口从 207 个降至 141 个，Android 端同步清理遗留代码与文件；启动 8/12 生产上线规划；Android 持续迭代新测试版本",
+      "occurrence": 0,
+      "target": "; reduced interfaces from 207 to 141, cleaned up legacy code and files on the Android end; initiated production release planning for August 12; continued iteration of new test versions for Android.",
+      "context": "div.ttext @ line 206 · surrounding text: 8/5 后端 API 面收敛完成 ，接口从 207 个降至 141 个，Android 端同步清理遗留代码与文件；启动 8/12 生产上线规划；Android 持续迭代新测试版本"
+    },
+    {
+      "id": "u_453189b885a439ae",
+      "kind": "text",
+      "source": "收到 Apple 正式回覆",
+      "occurrence": 0,
+      "target": "Received formal response from Apple.",
+      "context": "strong @ line 207 · surrounding text: 8/6 收到 Apple 正式回覆 ，确认 iOS 账号被终止的依据；生产环境单机整合准备工作启动（8/6–8/11），不触碰线上请求路径"
+    },
+    {
+      "id": "u_1ff591bda7ea447c",
+      "kind": "text",
+      "source": "，确认 iOS 账号被终止的依据；生产环境单机整合准备工作启动（8/6–8/11），不触碰线上请求路径",
+      "occurrence": 0,
+      "target": ", to confirm the basis for terminating the iOS account; preliminary work for standalone integration in production environment initiated (Aug. 6–Aug. 11), without touching live request paths",
+      "context": "div.ttext @ line 207 · surrounding text: 8/6 收到 Apple 正式回覆 ，确认 iOS 账号被终止的依据；生产环境单机整合准备工作启动（8/6–8/11），不触碰线上请求路径"
+    },
+    {
+      "id": "u_a3f7bb8bbbd42205",
+      "kind": "text",
+      "source": "iOS 合规审计完成并启动大规模重构规划",
+      "occurrence": 0,
+      "target": "iOS compliance audit completed and large-scale refactoring planning started.",
+      "context": "strong @ line 208 · surrounding text: 8/7 iOS 合规审计完成并启动大规模重构规划 ；通知 QA 开始测试 Siqo 支付通道"
+    },
+    {
+      "id": "u_ea4ebb5052c3a043",
+      "kind": "text",
+      "source": "；通知 QA 开始测试 Siqo 支付通道",
+      "occurrence": 0,
+      "target": "; notified QA to begin testing the Siqo payment channel.",
+      "context": "div.ttext @ line 208 · surrounding text: 8/7 iOS 合规审计完成并启动大规模重构规划 ；通知 QA 开始测试 Siqo 支付通道"
+    },
+    {
+      "id": "u_88b0c14c30118192",
+      "kind": "text",
+      "source": "8/12（计划）",
+      "occurrence": 0,
+      "target": "August 12 (planned)",
+      "context": "div.tdate @ line 209 · surrounding text: 8/12（计划） 合并上线窗口：凌晨 04:55 生产环境单机整合切换，早上 5 点 Android 新版本上线"
+    },
+    {
+      "id": "u_a210038368cbf2b2",
+      "kind": "text",
+      "source": "合并上线窗口：凌晨 04:55 生产环境单机整合切换，早上 5 点 Android 新版本上线",
+      "occurrence": 0,
+      "target": "Combined release window: Production environment single-machine integration switch at 4:55 AM, new Android version released at 5 AM",
+      "context": "strong @ line 209 · surrounding text: 8/12（计划） 合并上线窗口：凌晨 04:55 生产环境单机整合切换，早上 5 点 Android 新版本上线"
+    },
+    {
+      "id": "u_77a7d4aad255f58c",
+      "kind": "text",
+      "source": "五、上线计划与后端改动特殊挑战",
+      "occurrence": 0,
+      "target": "Five. Release Plan and Back-end Challenges",
+      "context": "h2 @ line 214"
+    },
+    {
+      "id": "u_99c2c3bb5305b812",
+      "kind": "text",
+      "source": "客户端",
+      "occurrence": 0,
+      "target": "Client",
+      "context": "th @ line 216 · surrounding text: 客户端 本阶段状态 说明"
+    },
+    {
+      "id": "u_8d4e910163fd5cf0",
+      "kind": "text",
+      "source": "本阶段状态",
+      "occurrence": 0,
+      "target": "Status during this sprint",
+      "context": "th @ line 216 · surrounding text: 客户端 本阶段状态 说明"
+    },
+    {
+      "id": "u_8d4c43dabc33e866",
+      "kind": "text",
+      "source": "说明",
+      "occurrence": 1,
+      "target": "Description",
+      "context": "th @ line 216 · surrounding text: 客户端 本阶段状态 说明"
+    },
+    {
+      "id": "u_5d202504c62775d5",
+      "kind": "text",
+      "source": "已过审，8/12 上线",
+      "occurrence": 0,
+      "target": "Approved, scheduled for August 12 release.",
+      "context": "span.badge.done @ line 218 · surrounding text: Android 已过审，8/12 上线 8/4 通过 Google 审核，上线日排定 8/12 早上 5 点。本阶段完成安装归因接入、IPv6 出口适配、接口精简与遗留代码清理，并持续迭代测试版本。"
+    },
+    {
+      "id": "u_3f9c4ea3d06b642b",
+      "kind": "text",
+      "source": "8/4 通过 Google 审核，上线日排定 8/12 早上 5 点。本阶段完成安装归因接入、IPv6 出口适配、接口精简与遗留代码清理，并持续迭代测试版本。",
+      "occurrence": 0,
+      "target": "Passed Google’s review on August 4; the release is scheduled for August 12 at 5 AM. During this sprint, installation attribution integration, IPv6 export adaptation, interface simplification, and legacy code cleanup were completed, with ongoing iteration of test versions.",
+      "context": "td @ line 218 · surrounding text: Android 已过审，8/12 上线 8/4 通过 Google 审核，上线日排定 8/12 早上 5 点。本阶段完成安装归因接入、IPv6 出口适配、接口精简与遗留代码清理，并持续迭代测试版本。"
+    },
+    {
+      "id": "u_4d0bd6f057108e71",
+      "kind": "text",
+      "source": "Windows（自研 Rust 版）",
+      "occurrence": 0,
+      "target": "Windows (self-developed Rust version)",
+      "context": "td @ line 219 · surrounding text: Windows（自研 Rust 版） QA 测试中 8/3 交付 QA 测试（x64 7.9 MB／ARM64 7.1 MB，安装后约 19.6 MB）。测试环境构建、签名、上传全链路通过，但 正式环境标签构建尚未演练 ，正式环境的变量、路径与发布链接均未验证，仍不具备对外发布条件。"
+    },
+    {
+      "id": "u_0a87f6fc0d24f474",
+      "kind": "text",
+      "source": "QA 测试中",
+      "occurrence": 0,
+      "target": "QA testing in progress",
+      "context": "span.badge.progress @ line 219 · surrounding text: Windows（自研 Rust 版） QA 测试中 8/3 交付 QA 测试（x64 7.9 MB／ARM64 7.1 MB，安装后约 19.6 MB）。测试环境构建、签名、上传全链路通过，但 正式环境标签构建尚未演练 ，正式环境的变量、路径与发布链接均未验证，仍不具备对外发布条件。"
+    },
+    {
+      "id": "u_6f46cde6b15c40be",
+      "kind": "text",
+      "source": "8/3 交付 QA 测试（x64 7.9 MB／ARM64 7.1 MB，安装后约 19.6 MB）。测试环境构建、签名、上传全链路通过，但",
+      "occurrence": 0,
+      "target": "Delivered for QA testing on 3/8 (x64: 7.9 MB, ARM64: 7.1 MB; installed size approximately 19.6 MB). The full chain of test environment build, signing, and upload passed, but",
+      "context": "td @ line 219 · surrounding text: Windows（自研 Rust 版） QA 测试中 8/3 交付 QA 测试（x64 7.9 MB／ARM64 7.1 MB，安装后约 19.6 MB）。测试环境构建、签名、上传全链路通过，但 正式环境标签构建尚未演练 ，正式环境的变量、路径与发布链接均未验证，仍不具备对外发布条件。"
+    },
+    {
+      "id": "u_252b2c5ac8382ac7",
+      "kind": "text",
+      "source": "正式环境标签构建尚未演练",
+      "occurrence": 0,
+      "target": "Formal environment label build not yet practiced",
+      "context": "strong @ line 219 · surrounding text: Windows（自研 Rust 版） QA 测试中 8/3 交付 QA 测试（x64 7.9 MB／ARM64 7.1 MB，安装后约 19.6 MB）。测试环境构建、签名、上传全链路通过，但 正式环境标签构建尚未演练 ，正式环境的变量、路径与发布链接均未验证，仍不具备对外发布条件。"
+    },
+    {
+      "id": "u_3f46e53bfbcc9600",
+      "kind": "text",
+      "source": "，正式环境的变量、路径与发布链接均未验证，仍不具备对外发布条件。",
+      "occurrence": 0,
+      "target": ", variables, paths, and release links for the formal environment have not been verified; thus, it is not ready for external release.",
+      "context": "td @ line 219 · surrounding text: Windows（自研 Rust 版） QA 测试中 8/3 交付 QA 测试（x64 7.9 MB／ARM64 7.1 MB，安装后约 19.6 MB）。测试环境构建、签名、上传全链路通过，但 正式环境标签构建尚未演练 ，正式环境的变量、路径与发布链接均未验证，仍不具备对外发布条件。"
+    },
+    {
+      "id": "u_0f1a32482de3cb33",
+      "kind": "text",
+      "source": "重构已启动",
+      "occurrence": 0,
+      "target": "Refactoring initiated",
+      "context": "span.badge.progress @ line 220 · surrounding text: iOS（HiYou） 重构已启动 8/7 启动大规模重构：移除第三方开源代码、改用自研 SkyTunnel 引擎、重做界面设计、功能对齐 Android 最新版本，并以 TestFlight 与自动化流水线验证。详见第六节。"
+    },
+    {
+      "id": "u_4cff9c63408a6b69",
+      "kind": "text",
+      "source": "8/7 启动大规模重构：移除第三方开源代码、改用自研 SkyTunnel 引擎、重做界面设计、功能对齐 Android 最新版本，并以 TestFlight 与自动化流水线验证。详见第六节。",
+      "occurrence": 0,
+      "target": "Large-scale refactoring started on 7/8: removal of third-party open-source code, replacement with in-house SkyTunnel engine, redesign of user interface, alignment with the latest Android version, and validation through TestFlight and automated pipeline. See Section Six for details.",
+      "context": "td @ line 220 · surrounding text: iOS（HiYou） 重构已启动 8/7 启动大规模重构：移除第三方开源代码、改用自研 SkyTunnel 引擎、重做界面设计、功能对齐 Android 最新版本，并以 TestFlight 与自动化流水线验证。详见第六节。"
+    },
+    {
+      "id": "u_62dc69443160cc45",
+      "kind": "text",
+      "source": "本阶段后端改动的特殊挑战",
+      "occurrence": 0,
+      "target": "Special challenges of backend changes in this sprint",
+      "context": "h3 @ line 223"
+    },
+    {
+      "id": "u_001a2c7d198ab5b8",
+      "kind": "text",
+      "source": "后端同时服务 3 类生产客户端，其中 2 类目前无法升级，每次后端改动都需额外保证向后兼容。",
+      "occurrence": 0,
+      "target": "The backend simultaneously serves three production clients, two of which cannot be upgraded. Each backend change must ensure backward compatibility.",
+      "context": "strong @ line 225"
+    },
+    {
+      "id": "u_033168e3db2c791e",
+      "kind": "text",
+      "source": "客户端",
+      "occurrence": 1,
+      "target": "Client",
+      "context": "th @ line 227 · surrounding text: 客户端 当前生产版本 能否升级"
+    },
+    {
+      "id": "u_46ac338c15e9c7f5",
+      "kind": "text",
+      "source": "当前生产版本",
+      "occurrence": 0,
+      "target": "Current production version",
+      "context": "th @ line 227 · surrounding text: 客户端 当前生产版本 能否升级"
+    },
+    {
+      "id": "u_2555964bf11febdf",
+      "kind": "text",
+      "source": "能否升级",
+      "occurrence": 0,
+      "target": "Upgradable?",
+      "context": "th @ line 227 · surrounding text: 客户端 当前生产版本 能否升级"
+    },
+    {
+      "id": "u_faeeba2074b4e1fc",
+      "kind": "text",
+      "source": "3.9.x 系列",
+      "occurrence": 0,
+      "target": "3.9.x series",
+      "context": "td @ line 228 · surrounding text: Android （Arrowfish） 3.9.x 系列 ✅ 可升级"
+    },
+    {
+      "id": "u_5bcf54946fb142c0",
+      "kind": "text",
+      "source": "✅ 可升级",
+      "occurrence": 0,
+      "target": "✅ Upgradable",
+      "context": "td @ line 228 · surrounding text: Android （Arrowfish） 3.9.x 系列 ✅ 可升级"
+    },
+    {
+      "id": "u_3e259a342ccd10cd",
+      "kind": "text",
+      "source": "v1.3.0（已冻结）",
+      "occurrence": 0,
+      "target": "v1.3.0 (frozen)",
+      "context": "td @ line 229 · surrounding text: iOS （HiYou） v1.3.0（已冻结） ❌ 不能升级 — 原开发者账号被终止；新账号已就绪，代码待合规重建"
+    },
+    {
+      "id": "u_2ee90bbf4dfa4b2c",
+      "kind": "text",
+      "source": "❌ 不能升级 — 原开发者账号被终止；新账号已就绪，代码待合规重建",
+      "occurrence": 0,
+      "target": "❌ Not upgradable — original developer account terminated; new account ready, code pending compliance rebuild",
+      "context": "td @ line 229 · surrounding text: iOS （HiYou） v1.3.0（已冻结） ❌ 不能升级 — 原开发者账号被终止；新账号已就绪，代码待合规重建"
+    },
+    {
+      "id": "u_eab2d560b3b7ee23",
+      "kind": "text",
+      "source": "（旧版）",
+      "occurrence": 0,
+      "target": "(legacy)",
+      "context": "td @ line 230 · surrounding text: Windows PC （旧版） v2.2.71（已冻结） ⚠️ 新签名方案测试环境已验收，待正式环境验证"
+    },
+    {
+      "id": "u_678602708df30833",
+      "kind": "text",
+      "source": "v2.2.71（已冻结）",
+      "occurrence": 0,
+      "target": "v2.2.71 (frozen)",
+      "context": "td @ line 230 · surrounding text: Windows PC （旧版） v2.2.71（已冻结） ⚠️ 新签名方案测试环境已验收，待正式环境验证"
+    },
+    {
+      "id": "u_e5be5367b53aca01",
+      "kind": "text",
+      "source": "⚠️ 新签名方案测试环境已验收，待正式环境验证",
+      "occurrence": 0,
+      "target": "⚠️ New signing scheme passed acceptance testing in the test environment, awaiting validation in the formal environment",
+      "context": "td @ line 230 · surrounding text: Windows PC （旧版） v2.2.71（已冻结） ⚠️ 新签名方案测试环境已验收，待正式环境验证"
+    },
+    {
+      "id": "u_7ded9e9b24e378e6",
+      "kind": "text",
+      "source": "本阶段的 API 面收敛特别注意了这项约束：移除 66 条冗余路由时未新增替代接口、未变更数据结构，确保冻结中的 iOS 与 Windows 旧客户端不受影响。此项约束使后端每次改动额外增加约 30% 的设计与测试成本；两项解除条件本阶段均有进展 —— Windows 待正式环境验证，iOS 重建范围已明确。",
+      "occurrence": 0,
+      "target": "This sprint's API surface convergence particularly addressed this constraint: when removing 66 redundant routes, no new interfaces were added and data structures were not changed to ensure that frozen iOS and Windows clients are unaffected. This constraint adds approximately 30% more design and testing costs for each backend change; progress has been made on both release conditions — Windows validation pending in the formal environment, and the scope of iOS rebuild is clear.",
+      "context": "div.note @ line 232"
+    },
+    {
+      "id": "u_0252defe52700f1c",
+      "kind": "text",
+      "source": "六、关键风险与技术债务 — iOS 客户端合规审计",
+      "occurrence": 0,
+      "target": "Six. Key Risks and Technical Debt - iOS Client Compliance Audit",
+      "context": "h2 @ line 237"
+    },
+    {
+      "id": "u_56bf8fa940d92348",
+      "kind": "text",
+      "source": "好消息先说：",
+      "occurrence": 0,
+      "target": "Good news first:",
+      "context": "strong @ line 239 · surrounding text: 好消息先说： 新 Apple 开发者账号为 企业（Organization）形态 。Apple 明文要求 VPN 类应用只能由企业账号发布，个人账号一律不受理 —— 这项前提已满足。账号内尚无任何应用记录，等同全新起点；应用标识与所需权限均已预先注册完成。"
+    },
+    {
+      "id": "u_c292973c5ff7e9ba",
+      "kind": "text",
+      "source": "新 Apple 开发者账号为",
+      "occurrence": 0,
+      "target": "The new Apple developer account is for",
+      "context": "div.callout.ok @ line 239 · surrounding text: 好消息先说： 新 Apple 开发者账号为 企业（Organization）形态 。Apple 明文要求 VPN 类应用只能由企业账号发布，个人账号一律不受理 —— 这项前提已满足。账号内尚无任何应用记录，等同全新起点；应用标识与所需权限均已预先注册完成。"
+    },
+    {
+      "id": "u_f6d0283ce1d51686",
+      "kind": "text",
+      "source": "企业（Organization）形态",
+      "occurrence": 0,
+      "target": "Corporate (Organization) Form",
+      "context": "strong @ line 239 · surrounding text: 好消息先说： 新 Apple 开发者账号为 企业（Organization）形态 。Apple 明文要求 VPN 类应用只能由企业账号发布，个人账号一律不受理 —— 这项前提已满足。账号内尚无任何应用记录，等同全新起点；应用标识与所需权限均已预先注册完成。"
+    },
+    {
+      "id": "u_d17c4550c76b650f",
+      "kind": "text",
+      "source": "。Apple 明文要求 VPN 类应用只能由企业账号发布，个人账号一律不受理 —— 这项前提已满足。账号内尚无任何应用记录，等同全新起点；应用标识与所需权限均已预先注册完成。",
+      "occurrence": 0,
+      "target": ". Apple explicitly requires that VPN applications can only be published through corporate accounts, and individual accounts are not accepted — this prerequisite has been met. There is no application record in the account, making it a fresh start; all necessary app identifiers and permissions have already been pre-registered.",
+      "context": "div.callout.ok @ line 239 · surrounding text: 好消息先说： 新 Apple 开发者账号为 企业（Organization）形态 。Apple 明文要求 VPN 类应用只能由企业账号发布，个人账号一律不受理 —— 这项前提已满足。账号内尚无任何应用记录，等同全新起点；应用标识与所需权限均已预先注册完成。"
+    },
+    {
+      "id": "u_2cb1fd67e4016e1a",
+      "kind": "text",
+      "source": "在此基础上，团队对现有 iOS 代码做了完整合规审计，结论是：",
+      "occurrence": 0,
+      "target": "Based on this, the team conducted a comprehensive compliance audit of the existing iOS code, with the conclusion being:",
+      "context": "p @ line 241 · surrounding text: 在此基础上，团队对现有 iOS 代码做了完整合规审计，结论是： 现有代码不可直接以新账号重新上架 。三项结构性障碍如下，均为台湾团队交接时既存的问题，非本阶段新增："
+    },
+    {
+      "id": "u_228b9c760312cea6",
+      "kind": "text",
+      "source": "现有代码不可直接以新账号重新上架",
+      "occurrence": 0,
+      "target": "The current code cannot be directly resubmitted under the new account",
+      "context": "strong @ line 241 · surrounding text: 在此基础上，团队对现有 iOS 代码做了完整合规审计，结论是： 现有代码不可直接以新账号重新上架 。三项结构性障碍如下，均为台湾团队交接时既存的问题，非本阶段新增："
+    },
+    {
+      "id": "u_470a013a2e2f70ae",
+      "kind": "text",
+      "source": "。三项结构性障碍如下，均为台湾团队交接时既存的问题，非本阶段新增：",
+      "occurrence": 0,
+      "target": ". Three structural barriers exist, all of which were issues inherited from the handover with the Taiwan team and not newly added in this sprint:",
+      "context": "p @ line 241 · surrounding text: 在此基础上，团队对现有 iOS 代码做了完整合规审计，结论是： 现有代码不可直接以新账号重新上架 。三项结构性障碍如下，均为台湾团队交接时既存的问题，非本阶段新增："
+    },
+    {
+      "id": "u_ba61ee5fa77f7d99",
+      "kind": "text",
+      "source": "发现",
+      "occurrence": 0,
+      "target": "Discovery",
+      "context": "th @ line 243 · surrounding text: 发现 业务影响 处理方案"
+    },
+    {
+      "id": "u_f093d62081d202b0",
+      "kind": "text",
+      "source": "业务影响",
+      "occurrence": 0,
+      "target": "Business Impact",
+      "context": "th @ line 243 · surrounding text: 发现 业务影响 处理方案"
+    },
+    {
+      "id": "u_b74a6369566f2a92",
+      "kind": "text",
+      "source": "处理方案",
+      "occurrence": 0,
+      "target": "Solution",
+      "context": "th @ line 243 · surrounding text: 发现 业务影响 处理方案"
+    },
+    {
+      "id": "u_d0aabe32113a976b",
+      "kind": "text",
+      "source": "1. 授权合规 — 与 sing-box 同类问题",
+      "occurrence": 0,
+      "target": "1. Authorization Compliance — Similar to the sing-box issue",
+      "context": "strong @ line 246 · surrounding text: 1. 授权合规 — 与 sing-box 同类问题 现有 iOS 客户端是在一个第三方 GPL-3.0 开源终端软件的基础上改建的，代码库中 233 个文件带有该开源授权声明，且未附带任何授权文件。"
+    },
+    {
+      "id": "u_32c5214d4445cba0",
+      "kind": "text",
+      "source": "现有 iOS 客户端是在一个第三方 GPL-3.0 开源终端软件的基础上改建的，代码库中 233 个文件带有该开源授权声明，且未附带任何授权文件。",
+      "occurrence": 0,
+      "target": "The existing iOS client is based on a third-party GPL-3.0 open-source terminal software, with 233 files containing the open-source license statement and no accompanying authorization documents.",
+      "context": "br @ line 246 · surrounding text: 1. 授权合规 — 与 sing-box 同类问题 现有 iOS 客户端是在一个第三方 GPL-3.0 开源终端软件的基础上改建的，代码库中 233 个文件带有该开源授权声明，且未附带任何授权文件。"
+    },
+    {
+      "id": "u_f6eeba70eac78453",
+      "kind": "text",
+      "source": "这正是日总 6/27 就 sing-box 提出的同一类问题 —— GPL-3.0 与 App Store 闭源商业分发存在结构性冲突。差别在于：sing-box 的问题在 Sprint 7 已提前避开，而 iOS 客户端的这项债务是随交接一并继承的。",
+      "occurrence": 0,
+      "target": "This is precisely the same issue that General Manager Ri on June 27 raised regarding sing-box —— there is a structural conflict between GPL-3.0 and App Store's closed-source commercial distribution. The difference lies in that while the problem with sing-box was preemptively avoided during Sprint 7, this debt from the iOS client was inherited alongside the handover.",
+      "context": "td @ line 247"
+    },
+    {
+      "id": "u_aeb5a673db93bc18",
+      "kind": "text",
+      "source": "移除全部第三方开源代码，仅保留自有代码重建。",
+      "occurrence": 0,
+      "target": "Remove all third-party open-source code and rebuild with proprietary code only.",
+      "context": "td @ line 248 · surrounding text: 移除全部第三方开源代码，仅保留自有代码重建。 审计已确认可行 ：自有的账号、连线、内购等 162 个文件完全不依赖该开源代码，可完整分离。"
+    },
+    {
+      "id": "u_5b129413c00790af",
+      "kind": "text",
+      "source": "审计已确认可行",
+      "occurrence": 0,
+      "target": "The audit confirms this is feasible",
+      "context": "strong @ line 248 · surrounding text: 移除全部第三方开源代码，仅保留自有代码重建。 审计已确认可行 ：自有的账号、连线、内购等 162 个文件完全不依赖该开源代码，可完整分离。"
+    },
+    {
+      "id": "u_6bc87a4e6a31fea0",
+      "kind": "text",
+      "source": "：自有的账号、连线、内购等 162 个文件完全不依赖该开源代码，可完整分离。",
+      "occurrence": 0,
+      "target": ": 162 files related to account, connection, in-app purchases, etc., are completely independent of the open-source code and can be fully separated.",
+      "context": "td @ line 248 · surrounding text: 移除全部第三方开源代码，仅保留自有代码重建。 审计已确认可行 ：自有的账号、连线、内购等 162 个文件完全不依赖该开源代码，可完整分离。"
+    },
+    {
+      "id": "u_419864fef47548cd",
+      "kind": "text",
+      "source": "2. 产品定位与实际功能不一致",
+      "occurrence": 0,
+      "target": "2. Mismatch between Product Positioning and Actual Functionality",
+      "context": "strong @ line 251 · surrounding text: 2. 产品定位与实际功能不一致 该应用以「SSH 终端工具」的名义提交审核，商店分类亦登记为开发者工具，但实际主要功能是 VPN 连线。"
+    },
+    {
+      "id": "u_ce41d57c51c62373",
+      "kind": "text",
+      "source": "该应用以「SSH 终端工具」的名义提交审核，商店分类亦登记为开发者工具，但实际主要功能是 VPN 连线。",
+      "occurrence": 0,
+      "target": "The application was submitted for review under the name of 'SSH terminal tool,' with the store category also registered as a developer tool, but its primary function is actually a VPN connection.",
+      "context": "br @ line 251 · surrounding text: 2. 产品定位与实际功能不一致 该应用以「SSH 终端工具」的名义提交审核，商店分类亦登记为开发者工具，但实际主要功能是 VPN 连线。"
+    },
+    {
+      "id": "u_c81ed8856511bf46",
+      "kind": "text",
+      "source": "Apple 明确禁止应用的实际功能与商店描述不符。这项不一致本身即构成上架障碍，且与原账号被终止的时间点相关。",
+      "occurrence": 0,
+      "target": "Apple explicitly prohibits applications from having actual functionalities that do not match their store descriptions. This mismatch itself constitutes an obstacle to resubmission and is related to the time when the original account was terminated.",
+      "context": "td @ line 252"
+    },
+    {
+      "id": "u_2ea5b30803ef9ade",
+      "kind": "text",
+      "source": "以真实身份重新提交：更正商店分类、名称与描述，如实说明 VPN 功能与所用协议。新账号预先注册的应用标识已使用 VPN 命名，方向一致。",
+      "occurrence": 0,
+      "target": "Resubmit under a real identity: Correct the store category, name, and description to accurately reflect the VPN functionality and used protocol. The application identifier for the new account has already been pre-registered with the name 'VPN,' aligning with this direction.",
+      "context": "td @ line 253"
+    },
+    {
+      "id": "u_3c3765705a02da17",
+      "kind": "text",
+      "source": "3. 核心网络组件无源码",
+      "occurrence": 0,
+      "target": "3. Core network components have no source code.",
+      "context": "strong @ line 256 · surrounding text: 3. 核心网络组件无源码 负责承载全部用户流量的核心网络组件是一个 42 MB 的预编译二进制文件，由外部人员在其个人电脑上编译提供，代码库内无源码、无构建脚本，其内部静态链接的 76 个第三方组件亦无任何授权声明。"
+    },
+    {
+      "id": "u_7cdf2a78fa408e07",
+      "kind": "text",
+      "source": "负责承载全部用户流量的核心网络组件是一个 42 MB 的预编译二进制文件，由外部人员在其个人电脑上编译提供，代码库内无源码、无构建脚本，其内部静态链接的 76 个第三方组件亦无任何授权声明。",
+      "occurrence": 0,
+      "target": "The core network component responsible for carrying all user traffic is a 42 MB pre-compiled binary file provided by external personnel on their personal computers, with no source code or build scripts in the repository. None of its internally statically linked 76 third-party components have any licensing statements.",
+      "context": "br @ line 256 · surrounding text: 3. 核心网络组件无源码 负责承载全部用户流量的核心网络组件是一个 42 MB 的预编译二进制文件，由外部人员在其个人电脑上编译提供，代码库内无源码、无构建脚本，其内部静态链接的 76 个第三方组件亦无任何授权声明。"
+    },
+    {
+      "id": "u_47e5e555a2ee9389",
+      "kind": "text",
+      "source": "团队无法说明自家应用内究竟包含什么，无法修补其中任何一个组件的安全漏洞，也无法重新构建。这是供应链风险，不只是授权问题。",
+      "occurrence": 0,
+      "target": "The team cannot explain what is included in their application, cannot patch any of its components' security vulnerabilities, and cannot rebuild it. This is a supply chain risk, not just an authorization issue.",
+      "context": "td @ line 257"
+    },
+    {
+      "id": "u_33dbda19335fb5ad",
+      "kind": "text",
+      "source": "方案已定",
+      "occurrence": 1,
+      "target": "Approach confirmed",
+      "context": "span.badge.done @ line 258 · surrounding text: 方案已定 直接改用团队自研的 SkyTunnel 引擎 —— 即 Sprint 7 立项、Sprint 8 已在 Android 验证可完全取代第三方内核、并已接入 Windows 的同一套引擎。 不需要向外部索取源码 ，这项风险随组件替换一并消除。"
+    },
+    {
+      "id": "u_11c2a6fb71d422bd",
+      "kind": "text",
+      "source": "直接改用团队自研的",
+      "occurrence": 0,
+      "target": "Switch directly to the team's in-house",
+      "context": "td @ line 258 · surrounding text: 方案已定 直接改用团队自研的 SkyTunnel 引擎 —— 即 Sprint 7 立项、Sprint 8 已在 Android 验证可完全取代第三方内核、并已接入 Windows 的同一套引擎。 不需要向外部索取源码 ，这项风险随组件替换一并消除。"
+    },
+    {
+      "id": "u_0fa82c79000f91de",
+      "kind": "text",
+      "source": "引擎 —— 即 Sprint 7 立项、Sprint 8 已在 Android 验证可完全取代第三方内核、并已接入 Windows 的同一套引擎。",
+      "occurrence": 0,
+      "target": "Engine —— Sprint 7 planning, Sprint 8 has validated complete replacement of third-party kernels on Android and integrated the same engine into Windows.",
+      "context": "td @ line 258 · surrounding text: 方案已定 直接改用团队自研的 SkyTunnel 引擎 —— 即 Sprint 7 立项、Sprint 8 已在 Android 验证可完全取代第三方内核、并已接入 Windows 的同一套引擎。 不需要向外部索取源码 ，这项风险随组件替换一并消除。"
+    },
+    {
+      "id": "u_fc656b2cca056bbb",
+      "kind": "text",
+      "source": "不需要向外部索取源码",
+      "occurrence": 0,
+      "target": "No external source code is required.",
+      "context": "strong @ line 258 · surrounding text: 方案已定 直接改用团队自研的 SkyTunnel 引擎 —— 即 Sprint 7 立项、Sprint 8 已在 Android 验证可完全取代第三方内核、并已接入 Windows 的同一套引擎。 不需要向外部索取源码 ，这项风险随组件替换一并消除。"
+    },
+    {
+      "id": "u_a29d2da9cd018d11",
+      "kind": "text",
+      "source": "，这项风险随组件替换一并消除。",
+      "occurrence": 0,
+      "target": ", this risk is eliminated with the component replacement.",
+      "context": "td @ line 258 · surrounding text: 方案已定 直接改用团队自研的 SkyTunnel 引擎 —— 即 Sprint 7 立项、Sprint 8 已在 Android 验证可完全取代第三方内核、并已接入 Windows 的同一套引擎。 不需要向外部索取源码 ，这项风险随组件替换一并消除。"
+    },
+    {
+      "id": "u_e837d322bbef643f",
+      "kind": "text",
+      "source": "审计的正面结论",
+      "occurrence": 0,
+      "target": "Positive audit conclusions",
+      "context": "h3 @ line 262"
+    },
+    {
+      "id": "u_4bc476f0d12024ad",
+      "kind": "text",
+      "source": "审计同时确认了几项",
+      "occurrence": 0,
+      "target": "The audit confirmed several",
+      "context": "div.callout.ok @ line 263"
+    },
+    {
+      "id": "u_e728fba4e3be1e6d",
+      "kind": "text",
+      "source": "没有问题",
+      "occurrence": 0,
+      "target": "without issues,",
+      "context": "strong @ line 264 · surrounding text: 审计同时确认了几项 没有问题 的部分，这些原本是风险较高的猜测方向，经逐项排查后排除：应用 不存在 针对审核人员改变行为的机制； 不含 任何广告、追踪或数据分析套件； 不存在 绕过 Apple 内购的支付通道； 不存在 刷评价或刷安装的机制。这意味着重建工作聚焦在上述三项，范围可控。"
+    },
+    {
+      "id": "u_113fb35e674d65c3",
+      "kind": "text",
+      "source": "的部分，这些原本是风险较高的猜测方向，经逐项排查后排除：应用",
+      "occurrence": 0,
+      "target": "which were originally high-risk assumptions, after thorough investigation: the application",
+      "context": "div.callout.ok @ line 264 · surrounding text: 审计同时确认了几项 没有问题 的部分，这些原本是风险较高的猜测方向，经逐项排查后排除：应用 不存在 针对审核人员改变行为的机制； 不含 任何广告、追踪或数据分析套件； 不存在 绕过 Apple 内购的支付通道； 不存在 刷评价或刷安装的机制。这意味着重建工作聚焦在上述三项，范围可控。"
+    },
+    {
+      "id": "u_3070caacd59583f6",
+      "kind": "text",
+      "source": "不存在",
+      "occurrence": 0,
+      "target": "does not contain",
+      "context": "strong @ line 264 · surrounding text: 审计同时确认了几项 没有问题 的部分，这些原本是风险较高的猜测方向，经逐项排查后排除：应用 不存在 针对审核人员改变行为的机制； 不含 任何广告、追踪或数据分析套件； 不存在 绕过 Apple 内购的支付通道； 不存在 刷评价或刷安装的机制。这意味着重建工作聚焦在上述三项，范围可控。"
+    },
+    {
+      "id": "u_8f8726cb5f10915e",
+      "kind": "text",
+      "source": "针对审核人员改变行为的机制；",
+      "occurrence": 0,
+      "target": "any mechanism for altering behavior by auditors;",
+      "context": "div.callout.ok @ line 264 · surrounding text: 审计同时确认了几项 没有问题 的部分，这些原本是风险较高的猜测方向，经逐项排查后排除：应用 不存在 针对审核人员改变行为的机制； 不含 任何广告、追踪或数据分析套件； 不存在 绕过 Apple 内购的支付通道； 不存在 刷评价或刷安装的机制。这意味着重建工作聚焦在上述三项，范围可控。"
+    },
+    {
+      "id": "u_784f708c8abe4c71",
+      "kind": "text",
+      "source": "不含",
+      "occurrence": 0,
+      "target": "contains no",
+      "context": "strong @ line 264 · surrounding text: 审计同时确认了几项 没有问题 的部分，这些原本是风险较高的猜测方向，经逐项排查后排除：应用 不存在 针对审核人员改变行为的机制； 不含 任何广告、追踪或数据分析套件； 不存在 绕过 Apple 内购的支付通道； 不存在 刷评价或刷安装的机制。这意味着重建工作聚焦在上述三项，范围可控。"
+    },
+    {
+      "id": "u_8d8ddf8d30521f18",
+      "kind": "text",
+      "source": "任何广告、追踪或数据分析套件；",
+      "occurrence": 0,
+      "target": "advertising, tracking or data analysis suites;",
+      "context": "div.callout.ok @ line 264 · surrounding text: 审计同时确认了几项 没有问题 的部分，这些原本是风险较高的猜测方向，经逐项排查后排除：应用 不存在 针对审核人员改变行为的机制； 不含 任何广告、追踪或数据分析套件； 不存在 绕过 Apple 内购的支付通道； 不存在 刷评价或刷安装的机制。这意味着重建工作聚焦在上述三项，范围可控。"
+    },
+    {
+      "id": "u_32f2466c660e625f",
+      "kind": "text",
+      "source": "不存在",
+      "occurrence": 1,
+      "target": "does not have",
+      "context": "strong @ line 264 · surrounding text: 审计同时确认了几项 没有问题 的部分，这些原本是风险较高的猜测方向，经逐项排查后排除：应用 不存在 针对审核人员改变行为的机制； 不含 任何广告、追踪或数据分析套件； 不存在 绕过 Apple 内购的支付通道； 不存在 刷评价或刷安装的机制。这意味着重建工作聚焦在上述三项，范围可控。"
+    },
+    {
+      "id": "u_5e75b25a2d6a5d76",
+      "kind": "text",
+      "source": "绕过 Apple 内购的支付通道；",
+      "occurrence": 0,
+      "target": "Bypass the payment channel of Apple In-App Purchase;",
+      "context": "div.callout.ok @ line 264 · surrounding text: 审计同时确认了几项 没有问题 的部分，这些原本是风险较高的猜测方向，经逐项排查后排除：应用 不存在 针对审核人员改变行为的机制； 不含 任何广告、追踪或数据分析套件； 不存在 绕过 Apple 内购的支付通道； 不存在 刷评价或刷安装的机制。这意味着重建工作聚焦在上述三项，范围可控。"
+    },
+    {
+      "id": "u_8381c54e728bdf75",
+      "kind": "text",
+      "source": "不存在",
+      "occurrence": 2,
+      "target": "does not contain any",
+      "context": "strong @ line 264 · surrounding text: 审计同时确认了几项 没有问题 的部分，这些原本是风险较高的猜测方向，经逐项排查后排除：应用 不存在 针对审核人员改变行为的机制； 不含 任何广告、追踪或数据分析套件； 不存在 绕过 Apple 内购的支付通道； 不存在 刷评价或刷安装的机制。这意味着重建工作聚焦在上述三项，范围可控。"
+    },
+    {
+      "id": "u_b63918d8e664ce1c",
+      "kind": "text",
+      "source": "刷评价或刷安装的机制。这意味着重建工作聚焦在上述三项，范围可控。",
+      "occurrence": 0,
+      "target": "meaning that the reconstruction effort is focused on these three areas, with a defined scope.",
+      "context": "div.callout.ok @ line 264 · surrounding text: 审计同时确认了几项 没有问题 的部分，这些原本是风险较高的猜测方向，经逐项排查后排除：应用 不存在 针对审核人员改变行为的机制； 不含 任何广告、追踪或数据分析套件； 不存在 绕过 Apple 内购的支付通道； 不存在 刷评价或刷安装的机制。这意味着重建工作聚焦在上述三项，范围可控。"
+    },
+    {
+      "id": "u_07a2cfc48d35ada7",
+      "kind": "text",
+      "source": "重构范围（8/7 启动）",
+      "occurrence": 0,
+      "target": "Sprint 8/7",
+      "context": "h3 @ line 266"
+    },
+    {
+      "id": "u_908b572336e43310",
+      "kind": "text",
+      "source": "工作项",
+      "occurrence": 0,
+      "target": "Task Item",
+      "context": "th @ line 268 · surrounding text: # 工作项 目的"
+    },
+    {
+      "id": "u_162f9095c47b6c87",
+      "kind": "text",
+      "source": "目的",
+      "occurrence": 0,
+      "target": "Objective",
+      "context": "th @ line 268 · surrounding text: # 工作项 目的"
+    },
+    {
+      "id": "u_c170a3467a41825d",
+      "kind": "text",
+      "source": "移除全部第三方开源终端代码，仅保留自有的 162 个文件重建",
+      "occurrence": 0,
+      "target": "Remove all third-party open-source terminal code and retain only our own 162 files for reconstruction",
+      "context": "td @ line 270 · surrounding text: 1 移除全部第三方开源终端代码，仅保留自有的 162 个文件重建 解除授权风险，同时清掉大量历史遗留的无用代码与文件"
+    },
+    {
+      "id": "u_bf3cafcefc993287",
+      "kind": "text",
+      "source": "解除授权风险，同时清掉大量历史遗留的无用代码与文件",
+      "occurrence": 0,
+      "target": "Mitigate authorization risks and remove a large amount of obsolete code and files",
+      "context": "td @ line 270 · surrounding text: 1 移除全部第三方开源终端代码，仅保留自有的 162 个文件重建 解除授权风险，同时清掉大量历史遗留的无用代码与文件"
+    },
+    {
+      "id": "u_3ed50ddca5d2c079",
+      "kind": "text",
+      "source": "连线引擎改用自研",
+      "occurrence": 0,
+      "target": "Replace the connection engine with the in-house engine",
+      "context": "td @ line 271 · surrounding text: 2 连线引擎改用自研 SkyTunnel ，连接自有节点 与 Android、Windows 使用完全相同的引擎，消除外部预编译组件的供应链风险"
+    },
+    {
+      "id": "u_132690c784fd9a46",
+      "kind": "text",
+      "source": "，连接自有节点",
+      "occurrence": 0,
+      "target": ", connecting with our own VPN nodes.",
+      "context": "td @ line 271 · surrounding text: 2 连线引擎改用自研 SkyTunnel ，连接自有节点 与 Android、Windows 使用完全相同的引擎，消除外部预编译组件的供应链风险"
+    },
+    {
+      "id": "u_e620d6b8690557e6",
+      "kind": "text",
+      "source": "与 Android、Windows 使用完全相同的引擎，消除外部预编译组件的供应链风险",
+      "occurrence": 0,
+      "target": "Use the same engine for Android and Windows to eliminate supply chain risks from external pre-compiled components.",
+      "context": "td @ line 271 · surrounding text: 2 连线引擎改用自研 SkyTunnel ，连接自有节点 与 Android、Windows 使用完全相同的引擎，消除外部预编译组件的供应链风险"
+    },
+    {
+      "id": "u_315bf2733babd652",
+      "kind": "text",
+      "source": "界面与操作流程重新设计，功能对齐 Android 最新版本",
+      "occurrence": 0,
+      "target": "Redesign the interface and operational flow, aligning features with the latest Android version.",
+      "context": "td @ line 272 · surrounding text: 3 界面与操作流程重新设计，功能对齐 Android 最新版本 三端体验一致；也让商店定位与实际功能真正相符"
+    },
+    {
+      "id": "u_84b4cd43ec38f6a7",
+      "kind": "text",
+      "source": "三端体验一致；也让商店定位与实际功能真正相符",
+      "occurrence": 0,
+      "target": "Ensure a consistent user experience across all three platforms; also ensure that store positioning matches actual functionality.",
+      "context": "td @ line 272 · surrounding text: 3 界面与操作流程重新设计，功能对齐 Android 最新版本 三端体验一致；也让商店定位与实际功能真正相符"
+    },
+    {
+      "id": "u_9b88c95812d1ffd2",
+      "kind": "text",
+      "source": "以 TestFlight 与自动化流水线验证发布链路",
+      "occurrence": 0,
+      "target": "Validate the release pipeline using TestFlight and automated build pipelines.",
+      "context": "td @ line 273 · surrounding text: 4 以 TestFlight 与自动化流水线验证发布链路 发布过程可重复、可追溯，不依赖个人电脑环境"
+    },
+    {
+      "id": "u_47ef85f0702baf79",
+      "kind": "text",
+      "source": "发布过程可重复、可追溯，不依赖个人电脑环境",
+      "occurrence": 0,
+      "target": "The release process is repeatable and traceable, independent of personal computer environments.",
+      "context": "td @ line 273 · surrounding text: 4 以 TestFlight 与自动化流水线验证发布链路 发布过程可重复、可追溯，不依赖个人电脑环境"
+    },
+    {
+      "id": "u_6fb8993c17b55f04",
+      "kind": "text",
+      "source": "战略意义：",
+      "occurrence": 0,
+      "target": "Strategic Significance:",
+      "context": "strong @ line 277 · surrounding text: 战略意义： 重构完成后，Android、Windows、iOS 三端将统一运行在同一套自研引擎上 ；FFF 与未来客户端可直接复用，不必再重新面对同一轮授权与供应链问题。"
+    },
+    {
+      "id": "u_8d4fe48cc98da9ba",
+      "kind": "text",
+      "source": "重构完成后，Android、Windows、iOS",
+      "occurrence": 0,
+      "target": "After the restructure, Android, Windows, and iOS",
+      "context": "div.callout.ok @ line 277 · surrounding text: 战略意义： 重构完成后，Android、Windows、iOS 三端将统一运行在同一套自研引擎上 ；FFF 与未来客户端可直接复用，不必再重新面对同一轮授权与供应链问题。"
+    },
+    {
+      "id": "u_21772442b8bf6fa9",
+      "kind": "text",
+      "source": "三端将统一运行在同一套自研引擎上",
+      "occurrence": 0,
+      "target": "will run on a single in-house developed engine.",
+      "context": "strong @ line 277 · surrounding text: 战略意义： 重构完成后，Android、Windows、iOS 三端将统一运行在同一套自研引擎上 ；FFF 与未来客户端可直接复用，不必再重新面对同一轮授权与供应链问题。"
+    },
+    {
+      "id": "u_df24a03cd6de802e",
+      "kind": "text",
+      "source": "；FFF 与未来客户端可直接复用，不必再重新面对同一轮授权与供应链问题。",
+      "occurrence": 0,
+      "target": "; FFF and future clients can directly reuse the code, avoiding the need to face the same authorization and supply chain issues again.",
+      "context": "div.callout.ok @ line 277 · surrounding text: 战略意义： 重构完成后，Android、Windows、iOS 三端将统一运行在同一套自研引擎上 ；FFF 与未来客户端可直接复用，不必再重新面对同一轮授权与供应链问题。"
+    },
+    {
+      "id": "u_62033696b7962292",
+      "kind": "text",
+      "source": "审计的完整技术细节与逐项处理清单已归档于内部工程记录，不在本报告展开。",
+      "occurrence": 0,
+      "target": "The complete technical details and item-by-item handling list for the audit have been archived in internal engineering records and are not expanded upon in this report.",
+      "context": "div.note @ line 279"
+    },
+    {
+      "id": "u_d1bbf2123860289d",
+      "kind": "text",
+      "source": "七、安全与权限管控",
+      "occurrence": 0,
+      "target": "Seven, Security and Permission Control",
+      "context": "h2 @ line 283"
+    },
+    {
+      "id": "u_2590c74143988e91",
+      "kind": "text",
+      "source": "源代码访问（最小权限原则）",
+      "occurrence": 0,
+      "target": "Source Code Access (Principle of Minimum Privilege)",
+      "context": "h3 @ line 284"
+    },
+    {
+      "id": "u_a4aa3d1c8309db4b",
+      "kind": "text",
+      "source": "项目",
+      "occurrence": 0,
+      "target": "Project",
+      "context": "th @ line 286 · surrounding text: 项目 当前状态"
+    },
+    {
+      "id": "u_0ce4a5c9264665de",
+      "kind": "text",
+      "source": "当前状态",
+      "occurrence": 0,
+      "target": "Current Status",
+      "context": "th @ line 286 · surrounding text: 项目 当前状态"
+    },
+    {
+      "id": "u_2314ea8f35a2db4b",
+      "kind": "text",
+      "source": "GitLab 源代码访问白名单",
+      "occurrence": 0,
+      "target": "GitLab Source Code Access Whitelist",
+      "context": "td @ line 288 · surrounding text: GitLab 源代码访问白名单 Roy、Morgan、Lex 及马来西亚开发人员；其余台湾团队成员访问权限已回收"
+    },
+    {
+      "id": "u_4a62217bc94b0ecb",
+      "kind": "text",
+      "source": "Roy、Morgan、Lex 及马来西亚开发人员；其余台湾团队成员访问权限已回收",
+      "occurrence": 0,
+      "target": "Roy, Morgan, Lex and Malaysian developers; access permissions for other Taiwan team members have been revoked",
+      "context": "td @ line 288 · surrounding text: GitLab 源代码访问白名单 Roy、Morgan、Lex 及马来西亚开发人员；其余台湾团队成员访问权限已回收"
+    },
+    {
+      "id": "u_20b2a2a68f4ba5d7",
+      "kind": "text",
+      "source": "Apple 开发者账号凭证",
+      "occurrence": 0,
+      "target": "Apple Developer Account Credentials",
+      "context": "td @ line 289 · surrounding text: Apple 开发者账号凭证 新账号的发布凭证以受保护变量形式存放于 CI，不落地于代码库；已核实代码库内无任何凭证、私钥或描述文件"
+    },
+    {
+      "id": "u_18e962b7ffc99e1c",
+      "kind": "text",
+      "source": "新账号的发布凭证以受保护变量形式存放于 CI，不落地于代码库；已核实代码库内无任何凭证、私钥或描述文件",
+      "occurrence": 0,
+      "target": "Release credentials for new accounts are stored as protected variables in CI and not committed to the code repository; verified that no credentials, private keys, or provisioning profiles exist in the code repository",
+      "context": "td @ line 289 · surrounding text: Apple 开发者账号凭证 新账号的发布凭证以受保护变量形式存放于 CI，不落地于代码库；已核实代码库内无任何凭证、私钥或描述文件"
+    },
+    {
+      "id": "u_493d9fe9db75a56a",
+      "kind": "text",
+      "source": "旧 Apple 账号凭证清理",
+      "occurrence": 0,
+      "target": "Cleanup of Old Apple Account Credentials",
+      "context": "td @ line 290 · surrounding text: 旧 Apple 账号凭证清理 本阶段提出，待执行 — 被终止账号的发布金钥仍存在于构建机，已列入凭证清理工作项"
+    },
+    {
+      "id": "u_0774fee36a62eb43",
+      "kind": "text",
+      "source": "本阶段提出，待执行",
+      "occurrence": 0,
+      "target": "Proposed for this sprint, pending execution",
+      "context": "span.badge.progress @ line 290 · surrounding text: 旧 Apple 账号凭证清理 本阶段提出，待执行 — 被终止账号的发布金钥仍存在于构建机，已列入凭证清理工作项"
+    },
+    {
+      "id": "u_d676c25e5af9242e",
+      "kind": "text",
+      "source": "— 被终止账号的发布金钥仍存在于构建机，已列入凭证清理工作项",
+      "occurrence": 0,
+      "target": "— Release keys for terminated accounts still exist on the build machine and are included in the credential cleanup task",
+      "context": "td @ line 290 · surrounding text: 旧 Apple 账号凭证清理 本阶段提出，待执行 — 被终止账号的发布金钥仍存在于构建机，已列入凭证清理工作项"
+    },
+    {
+      "id": "u_6ec76c474538742c",
+      "kind": "text",
+      "source": "台湾团队交接遗留的基础设施安全缺口",
+      "occurrence": 0,
+      "target": "Security Gaps Left by Taiwan Team Handover",
+      "context": "h3 @ line 293"
+    },
+    {
+      "id": "u_c16ec20849802e82",
+      "kind": "text",
+      "source": "问题",
+      "occurrence": 0,
+      "target": "Issue",
+      "context": "th @ line 295 · surrounding text: 问题 风险 状态"
+    },
+    {
+      "id": "u_8d49c07a6dc1109c",
+      "kind": "text",
+      "source": "风险",
+      "occurrence": 0,
+      "target": "Risk",
+      "context": "th @ line 295 · surrounding text: 问题 风险 状态"
+    },
+    {
+      "id": "u_dd2444a48f8a9e38",
+      "kind": "text",
+      "source": "状态",
+      "occurrence": 0,
+      "target": "Status",
+      "context": "th @ line 295 · surrounding text: 问题 风险 状态"
+    },
+    {
+      "id": "u_6a4f962b251ff74f",
+      "kind": "text",
+      "source": "私有 VM 存取路径",
+      "occurrence": 0,
+      "target": "Private VM Access Path",
+      "context": "td @ line 297 · surrounding text: 私有 VM 存取路径 跳板机采单一 IP 白名单，运维换 IP 即受阻，且每次调整都是一次生产安全边界变更 ✅ 方案已定 移除跳板机，改用 Azure Bastion，随 8/12 整合一并落地"
+    },
+    {
+      "id": "u_e665fda623c5502a",
+      "kind": "text",
+      "source": "跳板机采单一 IP 白名单，运维换 IP 即受阻，且每次调整都是一次生产安全边界变更",
+      "occurrence": 0,
+      "target": "Jump host uses a single IP whitelist; any change in operations will block access, and each adjustment is a production security boundary change",
+      "context": "td @ line 297 · surrounding text: 私有 VM 存取路径 跳板机采单一 IP 白名单，运维换 IP 即受阻，且每次调整都是一次生产安全边界变更 ✅ 方案已定 移除跳板机，改用 Azure Bastion，随 8/12 整合一并落地"
+    },
+    {
+      "id": "u_1ae7481e3d25a65b",
+      "kind": "text",
+      "source": "✅ 方案已定",
+      "occurrence": 0,
+      "target": "✅ Solution Defined",
+      "context": "span.badge.done @ line 297 · surrounding text: 私有 VM 存取路径 跳板机采单一 IP 白名单，运维换 IP 即受阻，且每次调整都是一次生产安全边界变更 ✅ 方案已定 移除跳板机，改用 Azure Bastion，随 8/12 整合一并落地"
+    },
+    {
+      "id": "u_15aa55a9881db1c2",
+      "kind": "text",
+      "source": "移除跳板机，改用 Azure Bastion，随 8/12 整合一并落地",
+      "occurrence": 0,
+      "target": "Remove jump host, use Azure Bastion instead; scheduled for integration on 8/12",
+      "context": "td @ line 297 · surrounding text: 私有 VM 存取路径 跳板机采单一 IP 白名单，运维换 IP 即受阻，且每次调整都是一次生产安全边界变更 ✅ 方案已定 移除跳板机，改用 Azure Bastion，随 8/12 整合一并落地"
+    },
+    {
+      "id": "u_1501e747feb0ac1a",
+      "kind": "text",
+      "source": "数据库备份与还原",
+      "occurrence": 0,
+      "target": "Database Backup and Restore",
+      "context": "td @ line 298 · surrounding text: 数据库备份与还原 交接时无可验证的还原流程 备份容器已建立，还原演练排定于 8/6–8/11 整合准备期内完成并量测耗时"
+    },
+    {
+      "id": "u_6e8bf1af9e16c676",
+      "kind": "text",
+      "source": "交接时无可验证的还原流程",
+      "occurrence": 0,
+      "target": "No verifiable restore process at handover",
+      "context": "td @ line 298 · surrounding text: 数据库备份与还原 交接时无可验证的还原流程 备份容器已建立，还原演练排定于 8/6–8/11 整合准备期内完成并量测耗时"
+    },
+    {
+      "id": "u_92b56384a5b973d7",
+      "kind": "text",
+      "source": "备份容器已建立，还原演练排定于 8/6–8/11 整合准备期内完成并量测耗时",
+      "occurrence": 0,
+      "target": "Backup container established; scheduled for restore drills from 8/6 to 8/11 during integration preparation period, with time measurement included",
+      "context": "span.badge.progress @ line 298 · surrounding text: 数据库备份与还原 交接时无可验证的还原流程 备份容器已建立，还原演练排定于 8/6–8/11 整合准备期内完成并量测耗时"
+    },
+    {
+      "id": "u_4ee404088cc858c7",
+      "kind": "text",
+      "source": "Staging／Prod 网络隔离",
+      "occurrence": 0,
+      "target": "Staging/Prod Network Isolation",
+      "context": "td @ line 299 · surrounding text: Staging／Prod 网络隔离 测试与生产环境边界不清晰 单机整合将一并收敛"
+    },
+    {
+      "id": "u_558ec0cdb2f99c86",
+      "kind": "text",
+      "source": "测试与生产环境边界不清晰",
+      "occurrence": 0,
+      "target": "The boundary between test and production environments is unclear.",
+      "context": "td @ line 299 · surrounding text: Staging／Prod 网络隔离 测试与生产环境边界不清晰 单机整合将一并收敛"
+    },
+    {
+      "id": "u_3cecab88c8fcd904",
+      "kind": "text",
+      "source": "单机整合将一并收敛",
+      "occurrence": 0,
+      "target": "Single-machine integration will be converged together.",
+      "context": "span.badge.progress @ line 299 · surrounding text: Staging／Prod 网络隔离 测试与生产环境边界不清晰 单机整合将一并收敛"
+    },
+    {
+      "id": "u_7e2be4532e29a6ca",
+      "kind": "text",
+      "source": "SSH 密钥登入",
+      "occurrence": 0,
+      "target": "SSH key login",
+      "context": "td @ line 300 · surrounding text: SSH 密钥登入 交接时依赖密码登入，权限回收困难 PEM 密钥方案推进中"
+    },
+    {
+      "id": "u_6ca04b9342d89f38",
+      "kind": "text",
+      "source": "交接时依赖密码登入，权限回收困难",
+      "occurrence": 0,
+      "target": "Password login is relied upon during handover, making it difficult to reclaim permissions.",
+      "context": "td @ line 300 · surrounding text: SSH 密钥登入 交接时依赖密码登入，权限回收困难 PEM 密钥方案推进中"
+    },
+    {
+      "id": "u_0c731afc02dbbe64",
+      "kind": "text",
+      "source": "PEM 密钥方案推进中",
+      "occurrence": 0,
+      "target": "PEM key scheme is being advanced",
+      "context": "span.badge.progress @ line 300 · surrounding text: SSH 密钥登入 交接时依赖密码登入，权限回收困难 PEM 密钥方案推进中"
+    },
+    {
+      "id": "u_162db05d055365cc",
+      "kind": "text",
+      "source": "读写分离（读库利用）",
+      "occurrence": 0,
+      "target": "Read-write separation (utilizing read databases)",
+      "context": "td @ line 301 · surrounding text: 读写分离（读库利用） 读写压力集中在主库 ✅ 已完成（Sprint 2）"
+    },
+    {
+      "id": "u_da996a972bc4cb9b",
+      "kind": "text",
+      "source": "读写压力集中在主库",
+      "occurrence": 0,
+      "target": "Read and write pressure concentrated on the primary database",
+      "context": "td @ line 301 · surrounding text: 读写分离（读库利用） 读写压力集中在主库 ✅ 已完成（Sprint 2）"
+    },
+    {
+      "id": "u_731aed072bae8fb4",
+      "kind": "text",
+      "source": "✅ 已完成（Sprint 2）",
+      "occurrence": 0,
+      "target": "✅ Completed (Sprint 2)",
+      "context": "span.badge.done @ line 301 · surrounding text: 读写分离（读库利用） 读写压力集中在主库 ✅ 已完成（Sprint 2）"
+    },
+    {
+      "id": "u_5f7bc0920b902b04",
+      "kind": "text",
+      "source": "以上均为台湾团队交接时既存的项目，非本阶段新增风险。8/12 的单机整合会一并处理其中数项。",
+      "occurrence": 0,
+      "target": "All of the above are existing projects for the Taiwan team at handover, not new risks in this phase. Several items will be addressed during single-machine integration on August 12.",
+      "context": "div.note @ line 304"
+    },
+    {
+      "id": "u_0b305aadbeb3d709",
+      "kind": "text",
+      "source": "八、下阶段计划（Sprint 10，8/8 起）",
+      "occurrence": 0,
+      "target": "Phase Eight: Plan for Next Sprint (Sprint 10, starting from August 8)",
+      "context": "h2 @ line 309"
+    },
+    {
+      "id": "u_b389be74a0d951c7",
+      "kind": "text",
+      "source": "主轴：",
+      "occurrence": 0,
+      "target": "Focus:",
+      "context": "strong @ line 311 · surrounding text: 主轴： 8/12 合并上线 → iOS 大规模重构 → 支付稳定性（USDTPay 收敛 + Siqo 扩展） → Android 延迟探测优化。"
+    },
+    {
+      "id": "u_9239c0b2f79d36a5",
+      "kind": "text",
+      "source": "8/12 合并上线 → iOS 大规模重构 → 支付稳定性（USDTPay 收敛 + Siqo 扩展） → Android 延迟探测优化。",
+      "occurrence": 0,
+      "target": "August 12 combined release → major iOS refactor → payment stability (USDTPay stabilization + Siqo expansion) → Android latency-detection optimization.",
+      "context": "div.callout @ line 311 · surrounding text: 主轴： 8/12 合并上线 → iOS 大规模重构 → 支付稳定性（USDTPay 收敛 + Siqo 扩展） → Android 延迟探测优化。"
+    },
+    {
+      "id": "u_dacdaec6ba7888fb",
+      "kind": "text",
+      "source": "优先级",
+      "occurrence": 0,
+      "target": "Priority",
+      "context": "th @ line 314 · surrounding text: 优先级 方向 计划内容与目标时间"
+    },
+    {
+      "id": "u_7bd9bf6028cffc3c",
+      "kind": "text",
+      "source": "方向",
+      "occurrence": 1,
+      "target": "Direction",
+      "context": "th @ line 314 · surrounding text: 优先级 方向 计划内容与目标时间"
+    },
+    {
+      "id": "u_b235d88d0ba94d41",
+      "kind": "text",
+      "source": "计划内容与目标时间",
+      "occurrence": 0,
+      "target": "Planned Content and Target Time",
+      "context": "th @ line 314 · surrounding text: 优先级 方向 计划内容与目标时间"
+    },
+    {
+      "id": "u_bb7ee65495d45f26",
+      "kind": "text",
+      "source": "8/12 合并上线",
+      "occurrence": 0,
+      "target": "Merge and go live on August 12",
+      "context": "td @ line 316 · surrounding text: 1 8/12 合并上线 8/11 完成全部准备与还原演练， 8/12 凌晨 04:55 单机整合切换、早上 5 点 Android 上线 。同步移除跳板机、改用 Azure Bastion 存取私有 VM。"
+    },
+    {
+      "id": "u_75eb9299c59e1e4f",
+      "kind": "text",
+      "source": "8/11 完成全部准备与还原演练，",
+      "occurrence": 0,
+      "target": "Complete all preparations and recovery drills by August 11,",
+      "context": "td @ line 316 · surrounding text: 1 8/12 合并上线 8/11 完成全部准备与还原演练， 8/12 凌晨 04:55 单机整合切换、早上 5 点 Android 上线 。同步移除跳板机、改用 Azure Bastion 存取私有 VM。"
+    },
+    {
+      "id": "u_c0c5c039bd2031b6",
+      "kind": "text",
+      "source": "8/12 凌晨 04:55 单机整合切换、早上 5 点 Android 上线",
+      "occurrence": 0,
+      "target": "Switch to single-machine integration at 04:55 AM on August 12, release Android version at 5 AM",
+      "context": "strong @ line 316 · surrounding text: 1 8/12 合并上线 8/11 完成全部准备与还原演练， 8/12 凌晨 04:55 单机整合切换、早上 5 点 Android 上线 。同步移除跳板机、改用 Azure Bastion 存取私有 VM。"
+    },
+    {
+      "id": "u_7e5c314316b4f1e6",
+      "kind": "text",
+      "source": "。同步移除跳板机、改用 Azure Bastion 存取私有 VM。",
+      "occurrence": 0,
+      "target": ". Simultaneously remove jump hosts and use Azure Bastion for accessing private VMs.",
+      "context": "td @ line 316 · surrounding text: 1 8/12 合并上线 8/11 完成全部准备与还原演练， 8/12 凌晨 04:55 单机整合切换、早上 5 点 Android 上线 。同步移除跳板机、改用 Azure Bastion 存取私有 VM。"
+    },
+    {
+      "id": "u_7bf9de891f094214",
+      "kind": "text",
+      "source": "iOS 大规模重构",
+      "occurrence": 0,
+      "target": "Massive iOS refactoring",
+      "context": "td @ line 317 · surrounding text: 2 iOS 大规模重构 移除第三方开源代码、改用自研 SkyTunnel 引擎、界面重新设计、功能对齐 Android，并以 TestFlight 与自动化流水线验证。需先确认账号资格前提。"
+    },
+    {
+      "id": "u_2f2f0ae1587fd01e",
+      "kind": "text",
+      "source": "移除第三方开源代码、改用自研 SkyTunnel 引擎、界面重新设计、功能对齐 Android，并以 TestFlight 与自动化流水线验证。需先确认账号资格前提。",
+      "occurrence": 0,
+      "target": "Remove third-party open-source code, switch to in-house SkyTunnel engine, redesign interface, align features with Android, and validate through TestFlight and automated pipeline. Account eligibility must be confirmed first.",
+      "context": "td @ line 317 · surrounding text: 2 iOS 大规模重构 移除第三方开源代码、改用自研 SkyTunnel 引擎、界面重新设计、功能对齐 Android，并以 TestFlight 与自动化流水线验证。需先确认账号资格前提。"
+    },
+    {
+      "id": "u_24fab8ec430674c9",
+      "kind": "text",
+      "source": "USDTPay 错误收敛处理",
+      "occurrence": 0,
+      "target": "USDTPay error convergence handling",
+      "context": "td @ line 318 · surrounding text: 3 USDTPay 错误收敛处理 针对已归并出的 7 类根因逐项处理 —— 主要为第三方查询接口逾时与回传非预期格式，方向为重试策略调整与通道分流。"
+    },
+    {
+      "id": "u_e77a713164be034e",
+      "kind": "text",
+      "source": "针对已归并出的 7 类根因逐项处理 —— 主要为第三方查询接口逾时与回传非预期格式，方向为重试策略调整与通道分流。",
+      "occurrence": 0,
+      "target": "Handle seven root causes one by one — mainly third-party query interface timeouts and unexpected format responses, focusing on retry strategy adjustments and channel diversion.",
+      "context": "td @ line 318 · surrounding text: 3 USDTPay 错误收敛处理 针对已归并出的 7 类根因逐项处理 —— 主要为第三方查询接口逾时与回传非预期格式，方向为重试策略调整与通道分流。"
+    },
+    {
+      "id": "u_a8ec9237a3bbc3ff",
+      "kind": "text",
+      "source": "Android 延迟探测优化",
+      "occurrence": 0,
+      "target": "Android delay detection optimization",
+      "context": "td @ line 319 · surrounding text: 4 Android 延迟探测优化 优化线路延迟探测的生命周期管理，减少无效探测与资源占用。"
+    },
+    {
+      "id": "u_b2fc3f5d39a07d8d",
+      "kind": "text",
+      "source": "优化线路延迟探测的生命周期管理，减少无效探测与资源占用。",
+      "occurrence": 0,
+      "target": "Optimize lifecycle management of line delay detection to reduce unnecessary detections and resource consumption.",
+      "context": "td @ line 319 · surrounding text: 4 Android 延迟探测优化 优化线路延迟探测的生命周期管理，减少无效探测与资源占用。"
+    },
+    {
+      "id": "u_966db91cef5821e6",
+      "kind": "text",
+      "source": "Siqo 支付扩展至 Windows",
+      "occurrence": 0,
+      "target": "Extend Siqo payment to Windows",
+      "context": "td @ line 320 · surrounding text: 5 Siqo 支付扩展至 Windows QA 完成测试环境验证、Amy 完成缺陷确认后，接入 Windows 端。"
+    },
+    {
+      "id": "u_07e901a85cef00eb",
+      "kind": "text",
+      "source": "QA 完成测试环境验证、Amy 完成缺陷确认后，接入 Windows 端。",
+      "occurrence": 0,
+      "target": "After QA validation and Amy's defect confirmation, integrate into the Windows version.",
+      "context": "td @ line 320 · surrounding text: 5 Siqo 支付扩展至 Windows QA 完成测试环境验证、Amy 完成缺陷确认后，接入 Windows 端。"
+    },
+    {
+      "id": "u_739da9cf680c5de2",
+      "kind": "text",
+      "source": "续费功能实作",
+      "occurrence": 0,
+      "target": "Subscription feature implementation",
+      "context": "td @ line 321 · surrounding text: 6 续费功能实作 升级即时生效、降级次周期生效、专属 IP／专属节点可续期不断号；同步修复降级排程重复执行缺陷。整个模块一次性上测试环境供 QA 整体验收。"
+    },
+    {
+      "id": "u_30c62638087ae253",
+      "kind": "text",
+      "source": "升级即时生效、降级次周期生效、专属 IP／专属节点可续期不断号；同步修复降级排程重复执行缺陷。整个模块一次性上测试环境供 QA 整体验收。",
+      "occurrence": 0,
+      "target": "Upgrade takes effect immediately; downgrade effective in the next cycle; dedicated IP/VPN node can be renewed without interruption. Fix downgrade scheduling execution defect. The entire module is deployed to QA environment for full acceptance testing.",
+      "context": "td @ line 321 · surrounding text: 6 续费功能实作 升级即时生效、降级次周期生效、专属 IP／专属节点可续期不断号；同步修复降级排程重复执行缺陷。整个模块一次性上测试环境供 QA 整体验收。"
+    },
+    {
+      "id": "u_dd834cfce9ab142f",
+      "kind": "text",
+      "source": "Windows 正式环境发布",
+      "occurrence": 0,
+      "target": "Release to production environment for Windows",
+      "context": "td @ line 322 · surrounding text: 7 Windows 正式环境发布 QA 测试通过后，演练正式环境标签构建与签名，完成安装／连接／更新／卸载验证后对外发布。"
+    },
+    {
+      "id": "u_edb476f1e058493f",
+      "kind": "text",
+      "source": "QA 测试通过后，演练正式环境标签构建与签名，完成安装／连接／更新／卸载验证后对外发布。",
+      "occurrence": 0,
+      "target": "After QA pass, simulate formal environment tag build and signing. Complete installation/connection/update/uninstallation verification before release.",
+      "context": "td @ line 322 · surrounding text: 7 Windows 正式环境发布 QA 测试通过后，演练正式环境标签构建与签名，完成安装／连接／更新／卸载验证后对外发布。"
+    },
+    {
+      "id": "u_ffa5377145fa8181",
+      "kind": "text",
+      "source": "设备额度识别",
+      "occurrence": 0,
+      "target": "Device quota recognition",
+      "context": "td @ line 323 · surrounding text: 8 设备额度识别 连续两阶段顺延 「账号+设备」组合身份判断。本阶段容量优先投入投放归因、API 收敛与单机整合准备，该项未进入实作。"
+    },
+    {
+      "id": "u_6c6df5a709c975c2",
+      "kind": "text",
+      "source": "连续两阶段顺延",
+      "occurrence": 0,
+      "target": "Two consecutive sprints delayed",
+      "context": "span.badge.pending @ line 323 · surrounding text: 8 设备额度识别 连续两阶段顺延 「账号+设备」组合身份判断。本阶段容量优先投入投放归因、API 收敛与单机整合准备，该项未进入实作。"
+    },
+    {
+      "id": "u_fe423b923efceb30",
+      "kind": "text",
+      "source": "「账号+设备」组合身份判断。本阶段容量优先投入投放归因、API 收敛与单机整合准备，该项未进入实作。",
+      "occurrence": 0,
+      "target": "Account and device combination identity verification. In this sprint, capacity was prioritized for attribution deployment, API convergence, and single-machine integration preparation. This item did not enter implementation.",
+      "context": "td @ line 323 · surrounding text: 8 设备额度识别 连续两阶段顺延 「账号+设备」组合身份判断。本阶段容量优先投入投放归因、API 收敛与单机整合准备，该项未进入实作。"
+    },
+    {
+      "id": "u_0420abe1fab11467",
+      "kind": "text",
+      "source": "按固定容量原则，本阶段新增的 iOS 合规审计工作，对应顺延了设备额度识别一项。容量固定、范围可变是团队一贯的排期方式。",
+      "occurrence": 0,
+      "target": "According to the fixed capacity principle, the iOS compliance audit work added in this phase has extended the device quota recognition. Fixed capacity and variable scope are the team's consistent scheduling approach.",
+      "context": "div.note @ line 326"
+    },
+    {
+      "id": "u_c2a2a342e849ac28",
+      "kind": "text",
+      "source": "第二部分",
+      "occurrence": 0,
+      "target": "Part Two",
+      "context": "div.pnum @ line 331"
+    },
+    {
+      "id": "u_97fa054c421ae070",
+      "kind": "text",
+      "source": "FFF 新产品",
+      "occurrence": 0,
+      "target": "FFF New Product",
+      "context": "div.ptitle @ line 332"
+    },
+    {
+      "id": "u_6a72577c438b1c2c",
+      "kind": "text",
+      "source": "由 Lex 负责的独立产品线，采实时口径，与 Arrowfish 发布节奏互不影响",
+      "occurrence": 0,
+      "target": "Managed by Lex, this independent product line operates on real-time metrics and does not affect the Arrowfish release schedule.",
+      "context": "div.psub @ line 333"
+    },
+    {
+      "id": "u_85a2ebabc2e054d0",
+      "kind": "text",
+      "source": "九、FFF 新产品并行进展（Lex，实时口径）",
+      "occurrence": 0,
+      "target": "9. Parallel Progress on the New FFF Product (Lex, real-time status)",
+      "context": "h2 @ line 337"
+    },
+    {
+      "id": "u_6c293452cef8e575",
+      "kind": "text",
+      "source": "本阶段（7/25–8/7）",
+      "occurrence": 0,
+      "target": "This sprint (July 25 – August 7)",
+      "context": "strong @ line 339 · surrounding text: 本阶段（7/25–8/7） Lex 在 fff_vpn 完成 82 次非合并提交。交付方向以 书签分类功能 为主（本阶段占比最高），另包含分享与推荐奖励页面、意见反馈提交、营销渠道归因与事件上报接口对接（7/28），以及「我的」页面状态管理重构与设置页。客户端版本为 1.0.4 。"
+    },
+    {
+      "id": "u_ccb51bbed8f03e0b",
+      "kind": "text",
+      "source": "在",
+      "occurrence": 0,
+      "target": "In",
+      "context": "div.callout @ line 339 · surrounding text: 本阶段（7/25–8/7） Lex 在 fff_vpn 完成 82 次非合并提交。交付方向以 书签分类功能 为主（本阶段占比最高），另包含分享与推荐奖励页面、意见反馈提交、营销渠道归因与事件上报接口对接（7/28），以及「我的」页面状态管理重构与设置页。客户端版本为 1.0.4 。"
+    },
+    {
+      "id": "u_b45d7a51d3e2aede",
+      "kind": "text",
+      "source": "完成",
+      "occurrence": 0,
+      "target": "Completed",
+      "context": "div.callout @ line 339 · surrounding text: 本阶段（7/25–8/7） Lex 在 fff_vpn 完成 82 次非合并提交。交付方向以 书签分类功能 为主（本阶段占比最高），另包含分享与推荐奖励页面、意见反馈提交、营销渠道归因与事件上报接口对接（7/28），以及「我的」页面状态管理重构与设置页。客户端版本为 1.0.4 。"
+    },
+    {
+      "id": "u_700f43b5b9914197",
+      "kind": "text",
+      "source": "次非合并提交。交付方向以",
+      "occurrence": 0,
+      "target": "non-merge commits. The delivery direction is mainly",
+      "context": "div.callout @ line 339 · surrounding text: 本阶段（7/25–8/7） Lex 在 fff_vpn 完成 82 次非合并提交。交付方向以 书签分类功能 为主（本阶段占比最高），另包含分享与推荐奖励页面、意见反馈提交、营销渠道归因与事件上报接口对接（7/28），以及「我的」页面状态管理重构与设置页。客户端版本为 1.0.4 。"
+    },
+    {
+      "id": "u_e18457e216f792c0",
+      "kind": "text",
+      "source": "书签分类功能",
+      "occurrence": 0,
+      "target": "bookmark categorization feature",
+      "context": "strong @ line 339 · surrounding text: 本阶段（7/25–8/7） Lex 在 fff_vpn 完成 82 次非合并提交。交付方向以 书签分类功能 为主（本阶段占比最高），另包含分享与推荐奖励页面、意见反馈提交、营销渠道归因与事件上报接口对接（7/28），以及「我的」页面状态管理重构与设置页。客户端版本为 1.0.4 。"
+    },
+    {
+      "id": "u_63be64ed2edbafc3",
+      "kind": "text",
+      "source": "为主（本阶段占比最高），另包含分享与推荐奖励页面、意见反馈提交、营销渠道归因与事件上报接口对接（7/28），以及「我的」页面状态管理重构与设置页。客户端版本为",
+      "occurrence": 0,
+      "target": "as the primary focus (accounting for the highest proportion of this sprint), with additional features including sharing and reward pages, feedback submission, marketing channel attribution and event reporting interface integration on 7/28, as well as restructuring of the 'My' page state management and settings page. The client version is",
+      "context": "div.callout @ line 339 · surrounding text: 本阶段（7/25–8/7） Lex 在 fff_vpn 完成 82 次非合并提交。交付方向以 书签分类功能 为主（本阶段占比最高），另包含分享与推荐奖励页面、意见反馈提交、营销渠道归因与事件上报接口对接（7/28），以及「我的」页面状态管理重构与设置页。客户端版本为 1.0.4 。"
+    },
+    {
+      "id": "u_167ba22dbc5a5bf3",
+      "kind": "text",
+      "source": "以上为客户端实作进度。该仓库目前尚无构建流水线记录，本阶段未执行测试、打包、商店上传或部署，因此不代表已上线或已验收。FFF 采用实时口径，与 Arrowfish 的阶段口径不同。",
+      "occurrence": 0,
+      "target": "The progress of the client implementation is as follows. There are currently no build pipeline records in this repository, and no testing, packaging, store upload or deployment was executed during this sprint, so it does not represent an actual release or acceptance. FFF uses real-time metrics, which differ from Arrowfish's sprint metrics.",
+      "context": "div.note @ line 340"
+    },
+    {
+      "id": "u_35f5adaa72d3e1f1",
+      "kind": "text",
+      "source": "FFF 商务侧事项（不影响 Arrowfish 发布节奏）",
+      "occurrence": 0,
+      "target": "FFF business matters (not impacting Arrowfish release timeline)",
+      "context": "strong @ line 343"
+    },
+    {
+      "id": "u_d1fa68af70d42131",
+      "kind": "text",
+      "source": "已完成",
+      "occurrence": 0,
+      "target": "Completed",
+      "context": "span.badge.done @ line 345 · surrounding text: 已完成 FFF 公司欧盟虚拟电话号码已于 7/15 开通 ，SMS 验证能力就位"
+    },
+    {
+      "id": "u_b55519357ff45294",
+      "kind": "text",
+      "source": "FFF 公司欧盟虚拟电话号码已于",
+      "occurrence": 0,
+      "target": "FFF's EU virtual phone number was activated on",
+      "context": "li @ line 345 · surrounding text: 已完成 FFF 公司欧盟虚拟电话号码已于 7/15 开通 ，SMS 验证能力就位"
+    },
+    {
+      "id": "u_2f638caa0c958594",
+      "kind": "text",
+      "source": "7/15 开通",
+      "occurrence": 0,
+      "target": "7/15",
+      "context": "strong @ line 345 · surrounding text: 已完成 FFF 公司欧盟虚拟电话号码已于 7/15 开通 ，SMS 验证能力就位"
+    },
+    {
+      "id": "u_1eb271a929c57553",
+      "kind": "text",
+      "source": "，SMS 验证能力就位",
+      "occurrence": 0,
+      "target": ", with SMS verification capability in place",
+      "context": "li @ line 345 · surrounding text: 已完成 FFF 公司欧盟虚拟电话号码已于 7/15 开通 ，SMS 验证能力就位"
+    },
+    {
+      "id": "u_2d133bbee3ca0fa9",
+      "kind": "text",
+      "source": "FFF 公司名下新支付通道账户仍需开设（",
+      "occurrence": 0,
+      "target": "A new payment channel account under FFF's name still needs to be set up (in progress)",
+      "context": "li @ line 346 · surrounding text: FFF 公司名下新支付通道账户仍需开设（ Roy 推进中）"
+    },
+    {
+      "id": "u_81af3db7ba925353",
+      "kind": "text",
+      "source": "推进中）",
+      "occurrence": 0,
+      "target": "In progress",
+      "context": "li @ line 346 · surrounding text: FFF 公司名下新支付通道账户仍需开设（ Roy 推进中）"
+    },
+    {
+      "id": "u_c5aa2f24f609f27b",
+      "kind": "text",
+      "source": "十、结论",
+      "occurrence": 0,
+      "target": "Ten, Conclusion",
+      "context": "h2 @ line 352"
+    },
+    {
+      "id": "u_1e1eeec6e41291c3",
+      "kind": "text",
+      "source": "Sprint 9 同时推进了「交付」与「打基础」两条线。交付端：Android 于 8/4 通过 Google 审核并排定 8/12 上线，Windows 交付 QA 实测，Siqo 支付上到测试环境。基础端：投放归因链路让广告花费第一次可以对应到真实营收；后端接口精简三成、Android 端同步清理遗留代码；Windows 构建时间减半；USDTPay 的散乱报错收敛为 7 类可处理的根因。",
+      "occurrence": 0,
+      "target": "Sprint 9 advanced both the 'delivery' and 'foundation building' tracks. Delivery end: Android passed Google's review on August 4th and is scheduled for release on August 12th; Windows delivery QA testing was conducted, and Siqo payment went live in the test environment. Foundation end: Attribution tracking for ads enabled linking ad spend to actual revenue for the first time; backend interfaces were streamlined by 30%, Android code cleanup was performed, build times for Windows were halved, and USDTPay error messages were consolidated into seven root causes.",
+      "context": "p @ line 353"
+    },
+    {
+      "id": "u_c5635200d9677703",
+      "kind": "text",
+      "source": "iOS 合规审计是本阶段最重要的一项发现。结论虽然是「现有代码不能直接上架」，但它把一个长期不确定的问题变成了范围明确的工程任务。更关键的是，其中最棘手的一项 —— 核心连线组件来自外部、无源码、无法重建 ——",
+      "occurrence": 0,
+      "target": "The iOS compliance audit is the most critical finding in this sprint. Although the conclusion is that 'existing code cannot be directly released,' it has transformed an uncertain long-term issue into a well-defined engineering task. More critically, one of the most challenging issues — the core connectivity component comes from outside with no source code and cannot be rebuilt —",
+      "context": "p @ line 354 · surrounding text: iOS 合规审计是本阶段最重要的一项发现。结论虽然是「现有代码不能直接上架」，但它把一个长期不确定的问题变成了范围明确的工程任务。更关键的是，其中最棘手的一项 —— 核心连线组件来自外部、无源码、无法重建 —— 因为团队早在 Sprint 7 就决定自研引擎，现在直接换用 SkyTunnel 即可解决，不需要向任何外部方索取 。重构完成后三端将统一运行在同一套自研引擎上。目前需要决策的，只剩新账号主体资格这一项。"
+    },
+    {
+      "id": "u_bfe2444c1896acea",
+      "kind": "text",
+      "source": "因为团队早在 Sprint 7 就决定自研引擎，现在直接换用 SkyTunnel 即可解决，不需要向任何外部方索取",
+      "occurrence": 0,
+      "target": "Since the team decided to develop the engine in Sprint 7, switching directly to SkyTunnel now will suffice and no external support is required.",
+      "context": "strong @ line 354 · surrounding text: iOS 合规审计是本阶段最重要的一项发现。结论虽然是「现有代码不能直接上架」，但它把一个长期不确定的问题变成了范围明确的工程任务。更关键的是，其中最棘手的一项 —— 核心连线组件来自外部、无源码、无法重建 —— 因为团队早在 Sprint 7 就决定自研引擎，现在直接换用 SkyTunnel 即可解决，不需要向任何外部方索取 。重构完成后三端将统一运行在同一套自研引擎上。目前需要决策的，只剩新账号主体资格这一项。"
+    },
+    {
+      "id": "u_5a755191d18727f9",
+      "kind": "text",
+      "source": "。重构完成后三端将统一运行在同一套自研引擎上。目前需要决策的，只剩新账号主体资格这一项。",
+      "occurrence": 0,
+      "target": ". After the refactor, all three clients will run on the same in-house engine. The only remaining decision is the legal eligibility of the new account entity.",
+      "context": "p @ line 354 · surrounding text: iOS 合规审计是本阶段最重要的一项发现。结论虽然是「现有代码不能直接上架」，但它把一个长期不确定的问题变成了范围明确的工程任务。更关键的是，其中最棘手的一项 —— 核心连线组件来自外部、无源码、无法重建 —— 因为团队早在 Sprint 7 就决定自研引擎，现在直接换用 SkyTunnel 即可解决，不需要向任何外部方索取 。重构完成后三端将统一运行在同一套自研引擎上。目前需要决策的，只剩新账号主体资格这一项。"
+    },
+    {
+      "id": "u_9a39627004f5f774",
+      "kind": "text",
+      "source": "下阶段的关键节点是",
+      "occurrence": 0,
+      "target": "The key node for the next phase is",
+      "context": "p @ line 355 · surrounding text: 下阶段的关键节点是 8/12 的合并上线窗口 （凌晨 04:55 单机整合切换、早上 5 点 Android 上线）。维护公告已于 8/4 提前上线，用户端预告已就位；同一窗口内也会移除跳板机、改用 Azure Bastion 存取私有 VM，顺带解决长期的白名单维护问题。"
+    },
+    {
+      "id": "u_86e31ad901c68e74",
+      "kind": "text",
+      "source": "8/12 的合并上线窗口",
+      "occurrence": 0,
+      "target": "the merge release window on 8/12",
+      "context": "strong @ line 355 · surrounding text: 下阶段的关键节点是 8/12 的合并上线窗口 （凌晨 04:55 单机整合切换、早上 5 点 Android 上线）。维护公告已于 8/4 提前上线，用户端预告已就位；同一窗口内也会移除跳板机、改用 Azure Bastion 存取私有 VM，顺带解决长期的白名单维护问题。"
+    },
+    {
+      "id": "u_9b1d65b01bff0049",
+      "kind": "text",
+      "source": "（凌晨 04:55 单机整合切换、早上 5 点 Android 上线）。维护公告已于 8/4 提前上线，用户端预告已就位；同一窗口内也会移除跳板机、改用 Azure Bastion 存取私有 VM，顺带解决长期的白名单维护问题。",
+      "occurrence": 0,
+      "target": "(switch to single machine integration at 4:55 AM, release Android version at 5 AM). The maintenance announcement was released ahead of schedule on August 4th. User-facing notifications are in place; jump hosts will be removed from the same window and replaced with Azure Bastion for accessing private VMs, addressing long-standing whitelist maintenance issues.",
+      "context": "p @ line 355 · surrounding text: 下阶段的关键节点是 8/12 的合并上线窗口 （凌晨 04:55 单机整合切换、早上 5 点 Android 上线）。维护公告已于 8/4 提前上线，用户端预告已就位；同一窗口内也会移除跳板机、改用 Azure Bastion 存取私有 VM，顺带解决长期的白名单维护问题。"
+    },
+    {
+      "id": "u_63b2c2a812d3120e",
+      "kind": "text",
+      "source": "报告日期：2026年8月7日 · Sprint 9 完整报告 · 下次更新：Sprint 10 收尾",
+      "occurrence": 0,
+      "target": "Report Date: August 7, 2026 · Sprint 9 Complete Report · Next Update: Sprint 10 Closure",
+      "context": "div.footer @ line 358"
+    }
+  ],
+  "blocks": {
+    "b0001": {
+      "type": "p",
+      "source": "Arrowfish VPN · 第9阶段 · 完整报告",
+      "occurrence": 0
+    },
+    "b0002": {
+      "type": "heading",
+      "source": "2026-08-07 Sprint 9 投放归因、API 面收敛与 iOS 合规审计报告",
+      "occurrence": 0
+    },
+    "b0003": {
+      "type": "p",
+      "source": "覆盖范围：2026-07-25 至 2026-08-07。本阶段重点为后端主导的安装归因链路、后端 API 面收敛、Windows 构建效率优化，以及针对新 Apple 开发者账号的 iOS 客户端合规审计。",
+      "occurrence": 0
+    },
+    "b0004": {
+      "type": "heading",
+      "source": "一、本阶段关键决策与状态",
+      "occurrence": 0
+    },
+    "b0005": {
+      "type": "table-row",
+      "source": "事项 说明 决策 / 现况",
+      "occurrence": 0
+    },
+    "b0006": {
+      "type": "table-row",
+      "source": "最高优先 8/12 合并上线窗口 同一天完成两件事： 凌晨 04:55 生产环境单机整合切换， 早上 5 点 Android 新版本上线（已于 8/4 通过 Google 审核）。准备工作 8/6–8/11 进行，不触碰线上请求路径、不影响现有用户。维护公告已于 8/4 同步上线至官网与手机 App。 窗口已定。切换前须完成备份还原演练与时间量测，任一准备阶段未完成即构成不切换条件。",
+      "occurrence": 0
+    },
+    "b0007": {
+      "type": "table-row",
+      "source": "方案已定 私有 VM 存取方式 原跳板机只允许单一固定 IP 连入，运维人员换 IP 即无法作业，且每次调整都是一次生产安全边界变更。 决定 移除跳板机 ，改用 Azure Bastion 存取私有 VM。白名单维护问题一并消除，存取路径也更符合最小权限原则。",
+      "occurrence": 0
+    },
+    "b0008": {
+      "type": "table-row",
+      "source": "本阶段新发现 iOS 重新上架路径 8/6 收到 Apple 正式回覆，确认原账号被终止的依据。新 Apple 企业（Organization） 开发者账号已就绪，账号形态符合 Apple 对 VPN 类应用的强制要求。审计发现现有 iOS 代码存在结构性障碍，不可直接重新上架（详见第六节）。 8/7 已启动大规模重构，技术方案已明确。剩余待厘清项为新账号主体资格，团队跟进中。",
+      "occurrence": 0
+    },
+    "b0009": {
+      "type": "table-row",
+      "source": "续费功能业务规则 需求已完成代码现况核实。核实过程中发现一项既有缺陷（见第三节）。 规则已锁定： 升级即时生效、降级次周期生效、专属 IP／专属节点可续期不断号 。整个模块将一次性上到测试环境供 QA 整体验收。",
+      "occurrence": 0
+    },
+    "b0010": {
+      "type": "table-row",
+      "source": "FFF 商务侧事项 FFF 欧盟虚拟电话号码已于 7/15 开通完成 ；新支付通道账户仍在开设中。 支付通道账户由 Roy 推进，不影响 Arrowfish 发布节奏。",
+      "occurrence": 0
+    },
+    "b0011": {
+      "type": "heading",
+      "source": "二、本阶段关键成果（7/25–8/7）",
+      "occurrence": 0
+    },
+    "b0012": {
+      "type": "highlight",
+      "source": "-32% 后端接口数量（207 → 141）",
+      "occurrence": 0
+    },
+    "b0013": {
+      "type": "highlight",
+      "source": "约 8 MB Windows 安装包（安装后 19.6 MB）",
+      "occurrence": 0
+    },
+    "b0014": {
+      "type": "highlight",
+      "source": "7 类 USDTPay 错误根因（原 233 笔散乱报错）",
+      "occurrence": 0
+    },
+    "b0015": {
+      "type": "highlight",
+      "source": "8/12 Android 上线日（8/4 已过审）",
+      "occurrence": 0
+    },
+    "b0016": {
+      "type": "table-row",
+      "source": "方向 本阶段结果 管理层解读",
+      "occurrence": 0
+    },
+    "b0017": {
+      "type": "table-row",
+      "source": "后端主导的安装归因 投放真实性从「仅靠客户端记录」改为后端持有安装记录：投放链接 → 后端点击／下载记录 → 安装标识 → 账号绑定 → 注册／激活／首购／付费／续费指标 → 后台归因漏斗与营收字段。 投放花费可以对应到真实营收，而不是只能看到下载量。这是广告投放能否放大的前提。",
+      "occurrence": 0
+    },
+    "b0018": {
+      "type": "table-row",
+      "source": "后端 API 面收敛 后端注册接口从 207 个降至 141 个，移除 66 条冗余路由。未新增替代接口、未变更数据结构。 维护面缩小三成，后端每次改动需要回归验证的范围同步下降，也降低了向后兼容的负担。",
+      "occurrence": 0
+    },
+    "b0019": {
+      "type": "table-row",
+      "source": "Android 端历史遗留代码清理 配合后端收敛，Android 客户端同步清理不再使用的接口声明（从 120 条降至 108 条）与历史遗留的无用代码、无用文件。 前后端一起清，避免只清一边导致客户端仍保留已废弃的调用路径。代码库越小，新人接手与后续排查越快。",
+      "occurrence": 0
+    },
+    "b0020": {
+      "type": "table-row",
+      "source": "Android 通过 Google 审核 8/4 通过 Google Play 审核，上线日排定 8/12 早上 5 点；同日即完成维护公告内容更新并上传至后台，官网与手机 App 同步显示。 上线日期确定，且提前 8 天就向用户预告维护窗口，降低当日客诉。",
+      "occurrence": 0
+    },
+    "b0021": {
+      "type": "table-row",
+      "source": "Windows 交付 QA 测试 8/3 将新测试版本交付 QA：x64 安装包 7.9 MB、ARM64 7.1 MB，安装后占用约 19.6 MB。 Windows 从「构建可用」推进到「QA 实测中」，是对外发布前的最后一道关卡。",
+      "occurrence": 0
+    },
+    "b0022": {
+      "type": "table-row",
+      "source": "Siqo 支付通道接入完成 Siqo 支付已完成接入并上到测试环境，8/7 通知 QA 开始测试。相较原有的 USDTPay 单一通道，Siqo 支持 BTC、ETH、Polygon、Tron、BNB 等多条链。 支付币种选择变多，直接影响充值成功率与用户覆盖面。Windows 端待 Amy 完成缺陷验证后接入。",
+      "occurrence": 0
+    },
+    "b0023": {
+      "type": "table-row",
+      "source": "USDTPay 错误收敛 将 233 笔留存错误归并为 7 类唯一根因 ，确认绝大多数为第三方区块链查询接口的连线逾时与回传非预期格式（回传网页而非数据）。 把一堆看似杂乱的报错收敛成 7 个明确问题，才能判断哪些该重试、哪些该换通道 —— 这也支持了引入 Siqo 作为多链替代方案的决策。",
+      "occurrence": 0
+    },
+    "b0024": {
+      "type": "table-row",
+      "source": "Windows 构建效率优化 持久化构建缓存使成功构建从 15分37秒 降至 7分01秒；重复版本构建在 12.8–20.3 秒内即中止，不再浪费完整构建。x64 与 ARM64 双架构均通过测试环境签名。 发版等待时间减半，重复构建浪费被消除。",
+      "occurrence": 0
+    },
+    "b0025": {
+      "type": "table-row",
+      "source": "IPv6 出口兼容性完成 承接 Sprint 8 的 IPv6 根因修复，本阶段在后端、Android、桌面端与自研引擎间完成纯 IPv6／双栈出口的一致性适配。 Sprint 8 的修复从「单点修复」推进到「全链路一致」。",
+      "occurrence": 0
+    },
+    "b0026": {
+      "type": "table-row",
+      "source": "桌面端引擎对齐 Windows 客户端完成与 Android 相同的自研引擎能力对齐。 两端功能一致，QA 与后续维护不再需要区分平台差异。",
+      "occurrence": 0
+    },
+    "b0027": {
+      "type": "table-row",
+      "source": "iOS 客户端合规审计 新 Apple 企业开发者账号就绪；针对现有 iOS 代码完成全面合规审计，定位 三项 结构性障碍并排除四类高风险猜测，同时精确测量出重建范围 —— 自有代码 162 个文件可完整分离。 把「iOS 何时能回来」从不确定问题变成有明确范围的工程任务。详见第六节。",
+      "occurrence": 0
+    },
+    "b0028": {
+      "type": "table-row",
+      "source": "内部研发流程标准化 建立计划与执行报告的标准化管理机制，并完成跨仓库知识库整合。 交付过程可追溯，减少同一问题重复研究的成本。",
+      "occurrence": 0
+    },
+    "b0029": {
+      "type": "heading",
+      "source": "三、改善与商业价值",
+      "occurrence": 0
+    },
+    "b0030": {
+      "type": "table-row",
+      "source": "技术改善 之前 之后 商业价值",
+      "occurrence": 0
+    },
+    "b0031": {
+      "type": "table-row",
+      "source": "投放归因 投放数据仅存于客户端，无法对应真实营收 后端持有完整链路，可追踪至首购与续费 广告投放 ROI 可量化，是加大投放前的必要条件",
+      "occurrence": 0
+    },
+    "b0032": {
+      "type": "table-row",
+      "source": "后端接口数量 207 个注册接口 141 个（-32%） 维护与回归测试范围缩小三成，向后兼容负担下降",
+      "occurrence": 0
+    },
+    "b0033": {
+      "type": "table-row",
+      "source": "Windows 构建时间 15 分 37 秒 7 分 01 秒（-55%） 发版周期缩短，紧急修复可更快送达用户",
+      "occurrence": 0
+    },
+    "b0034": {
+      "type": "table-row",
+      "source": "重复构建浪费 相同版本会重跑完整构建流程 12.8–20.3 秒内中止 构建资源成本降低",
+      "occurrence": 0
+    },
+    "b0035": {
+      "type": "table-row",
+      "source": "iOS 重建范围 「需要重做」但范围不明 自有代码 162 个文件确认可完整分离，连线引擎复用自研 SkyTunnel 把不确定风险转为可排期的工程量，且不需外部依赖",
+      "occurrence": 0
+    },
+    "b0036": {
+      "type": "table-row",
+      "source": "加密货币支付币种 仅 USDT 单一通道 新增 Siqo，支持 BTC、ETH、Polygon、Tron、BNB 用户可用的充值方式增加，降低因不持有特定币种而放弃付款的流失",
+      "occurrence": 0
+    },
+    "b0037": {
+      "type": "table-row",
+      "source": "支付错误可诊断性 233 笔错误散落无规律，难以判断问题所在 收敛为 7 类唯一根因 能明确区分「该重试」与「该换通道」，支付成功率有了可优化的抓手",
+      "occurrence": 0
+    },
+    "b0038": {
+      "type": "table-row",
+      "source": "Windows 安装包 100 MB 下载 / 273 MB 占用（最初 Electron 版） 约 8 MB 下载 / 19.6 MB 占用 下载与安装门槛大幅降低，已进入 QA 实测",
+      "occurrence": 0
+    },
+    "b0039": {
+      "type": "heading",
+      "source": "核实需求时发现的既有缺陷",
+      "occurrence": 0
+    },
+    "b0040": {
+      "type": "heading",
+      "source": "四、关键时间节点",
+      "occurrence": 0
+    },
+    "b0041": {
+      "type": "highlight",
+      "source": "桌面端完成与 Android 的自研引擎能力对齐；建立内部计划与执行报告标准化机制",
+      "occurrence": 0
+    },
+    "b0042": {
+      "type": "highlight",
+      "source": "7/25–7/28 桌面端完成与 Android 的自研引擎能力对齐；建立内部计划与执行报告标准化机制",
+      "occurrence": 0
+    },
+    "b0043": {
+      "type": "highlight",
+      "source": "Windows 构建缓存优化完成 ，构建时间从 15分37秒 降至 7分01秒；纯 IPv6 出口能力在后端与 Android 端完成",
+      "occurrence": 0
+    },
+    "b0044": {
+      "type": "highlight",
+      "source": "7/31 Windows 构建缓存优化完成 ，构建时间从 15分37秒 降至 7分01秒；纯 IPv6 出口能力在后端与 Android 端完成",
+      "occurrence": 0
+    },
+    "b0045": {
+      "type": "highlight",
+      "source": "投放归因链路在后端、后台与 Android 三端完成；本阶段前半段共 46 次非合并提交，覆盖 5 个仓库",
+      "occurrence": 0
+    },
+    "b0046": {
+      "type": "highlight",
+      "source": "8/1 投放归因链路在后端、后台与 Android 三端完成；本阶段前半段共 46 次非合并提交，覆盖 5 个仓库",
+      "occurrence": 0
+    },
+    "b0047": {
+      "type": "highlight",
+      "source": "Windows 新测试版本交付 QA （x64 7.9 MB／ARM64 7.1 MB）；续费／升级／降级需求完成代码现况核实，发现降级排程重复执行缺陷",
+      "occurrence": 0
+    },
+    "b0048": {
+      "type": "highlight",
+      "source": "8/3 Windows 新测试版本交付 QA （x64 7.9 MB／ARM64 7.1 MB）；续费／升级／降级需求完成代码现况核实，发现降级排程重复执行缺陷",
+      "occurrence": 0
+    },
+    "b0049": {
+      "type": "highlight",
+      "source": "Android 通过 Google 审核，上线日排定 8/12 早上 5 点 ；同日完成维护公告内容更新并上传后台，官网与手机 App 同步显示",
+      "occurrence": 0
+    },
+    "b0050": {
+      "type": "highlight",
+      "source": "后端 API 面收敛完成 ，接口从 207 个降至 141 个，Android 端同步清理遗留代码与文件；启动 8/12 生产上线规划；Android 持续迭代新测试版本",
+      "occurrence": 0
+    },
+    "b0051": {
+      "type": "highlight",
+      "source": "8/5 后端 API 面收敛完成 ，接口从 207 个降至 141 个，Android 端同步清理遗留代码与文件；启动 8/12 生产上线规划；Android 持续迭代新测试版本",
+      "occurrence": 0
+    },
+    "b0052": {
+      "type": "highlight",
+      "source": "收到 Apple 正式回覆 ，确认 iOS 账号被终止的依据；生产环境单机整合准备工作启动（8/6–8/11），不触碰线上请求路径",
+      "occurrence": 0
+    },
+    "b0053": {
+      "type": "highlight",
+      "source": "8/6 收到 Apple 正式回覆 ，确认 iOS 账号被终止的依据；生产环境单机整合准备工作启动（8/6–8/11），不触碰线上请求路径",
+      "occurrence": 0
+    },
+    "b0054": {
+      "type": "highlight",
+      "source": "iOS 合规审计完成并启动大规模重构规划 ；通知 QA 开始测试 Siqo 支付通道",
+      "occurrence": 0
+    },
+    "b0055": {
+      "type": "highlight",
+      "source": "合并上线窗口：凌晨 04:55 生产环境单机整合切换，早上 5 点 Android 新版本上线",
+      "occurrence": 0
+    },
+    "b0056": {
+      "type": "heading",
+      "source": "五、上线计划与后端改动特殊挑战",
+      "occurrence": 0
+    },
+    "b0057": {
+      "type": "table-row",
+      "source": "客户端 本阶段状态 说明",
+      "occurrence": 0
+    },
+    "b0058": {
+      "type": "table-row",
+      "source": "Android 已过审，8/12 上线 8/4 通过 Google 审核，上线日排定 8/12 早上 5 点。本阶段完成安装归因接入、IPv6 出口适配、接口精简与遗留代码清理，并持续迭代测试版本。",
+      "occurrence": 0
+    },
+    "b0059": {
+      "type": "table-row",
+      "source": "Windows（自研 Rust 版） QA 测试中 8/3 交付 QA 测试（x64 7.9 MB／ARM64 7.1 MB，安装后约 19.6 MB）。测试环境构建、签名、上传全链路通过，但 正式环境标签构建尚未演练 ，正式环境的变量、路径与发布链接均未验证，仍不具备对外发布条件。",
+      "occurrence": 0
+    },
+    "b0060": {
+      "type": "table-row",
+      "source": "iOS（HiYou） 重构已启动 8/7 启动大规模重构：移除第三方开源代码、改用自研 SkyTunnel 引擎、重做界面设计、功能对齐 Android 最新版本，并以 TestFlight 与自动化流水线验证。详见第六节。",
+      "occurrence": 0
+    },
+    "b0061": {
+      "type": "heading",
+      "source": "本阶段后端改动的特殊挑战",
+      "occurrence": 0
+    },
+    "b0062": {
+      "type": "table-row",
+      "source": "客户端 当前生产版本 能否升级",
+      "occurrence": 0
+    },
+    "b0063": {
+      "type": "table-row",
+      "source": "Android （Arrowfish） 3.9.x 系列 ✅ 可升级",
+      "occurrence": 0
+    },
+    "b0064": {
+      "type": "table-row",
+      "source": "iOS （HiYou） v1.3.0（已冻结） ❌ 不能升级 — 原开发者账号被终止；新账号已就绪，代码待合规重建",
+      "occurrence": 0
+    },
+    "b0065": {
+      "type": "table-row",
+      "source": "Windows PC （旧版） v2.2.71（已冻结） ⚠️ 新签名方案测试环境已验收，待正式环境验证",
+      "occurrence": 0
+    },
+    "b0066": {
+      "type": "highlight",
+      "source": "本阶段的 API 面收敛特别注意了这项约束：移除 66 条冗余路由时未新增替代接口、未变更数据结构，确保冻结中的 iOS 与 Windows 旧客户端不受影响。此项约束使后端每次改动额外增加约 30% 的设计与测试成本；两项解除条件本阶段均有进展 —— Windows 待正式环境验证，iOS 重建范围已明确。",
+      "occurrence": 0
+    },
+    "b0067": {
+      "type": "heading",
+      "source": "六、关键风险与技术债务 — iOS 客户端合规审计",
+      "occurrence": 0
+    },
+    "b0068": {
+      "type": "p",
+      "source": "在此基础上，团队对现有 iOS 代码做了完整合规审计，结论是： 现有代码不可直接以新账号重新上架 。三项结构性障碍如下，均为台湾团队交接时既存的问题，非本阶段新增：",
+      "occurrence": 0
+    },
+    "b0069": {
+      "type": "table-row",
+      "source": "发现 业务影响 处理方案",
+      "occurrence": 0
+    },
+    "b0070": {
+      "type": "table-row",
+      "source": "1. 授权合规 — 与 sing-box 同类问题 现有 iOS 客户端是在一个第三方 GPL-3.0 开源终端软件的基础上改建的，代码库中 233 个文件带有该开源授权声明，且未附带任何授权文件。 这正是日总 6/27 就 sing-box 提出的同一类问题 —— GPL-3.0 与 App Store 闭源商业分发存在结构性冲突。差别在于：sing-box 的问题在 Sprint 7 已提前避开，而 iOS 客户端的这项债务是随交接一并继承的。 移除全部第三方开源代码，仅保留自有代码重建。 审计已确认可行 ：自有的账号、连线、内购等 162 个文件完全不依赖该开源代码，可完整分离。",
+      "occurrence": 0
+    },
+    "b0071": {
+      "type": "table-row",
+      "source": "2. 产品定位与实际功能不一致 该应用以「SSH 终端工具」的名义提交审核，商店分类亦登记为开发者工具，但实际主要功能是 VPN 连线。 Apple 明确禁止应用的实际功能与商店描述不符。这项不一致本身即构成上架障碍，且与原账号被终止的时间点相关。 以真实身份重新提交：更正商店分类、名称与描述，如实说明 VPN 功能与所用协议。新账号预先注册的应用标识已使用 VPN 命名，方向一致。",
+      "occurrence": 0
+    },
+    "b0072": {
+      "type": "table-row",
+      "source": "3. 核心网络组件无源码 负责承载全部用户流量的核心网络组件是一个 42 MB 的预编译二进制文件，由外部人员在其个人电脑上编译提供，代码库内无源码、无构建脚本，其内部静态链接的 76 个第三方组件亦无任何授权声明。 团队无法说明自家应用内究竟包含什么，无法修补其中任何一个组件的安全漏洞，也无法重新构建。这是供应链风险，不只是授权问题。 方案已定 直接改用团队自研的 SkyTunnel 引擎 —— 即 Sprint 7 立项、Sprint 8 已在 Android 验证可完全取代第三方内核、并已接入 Windows 的同一套引擎。 不需要向外部索取源码 ，这项风险随组件替换一并消除。",
+      "occurrence": 0
+    },
+    "b0073": {
+      "type": "heading",
+      "source": "审计的正面结论",
+      "occurrence": 0
+    },
+    "b0074": {
+      "type": "heading",
+      "source": "重构范围（8/7 启动）",
+      "occurrence": 0
+    },
+    "b0075": {
+      "type": "table-row",
+      "source": "# 工作项 目的",
+      "occurrence": 0
+    },
+    "b0076": {
+      "type": "table-row",
+      "source": "1 移除全部第三方开源终端代码，仅保留自有的 162 个文件重建 解除授权风险，同时清掉大量历史遗留的无用代码与文件",
+      "occurrence": 0
+    },
+    "b0077": {
+      "type": "table-row",
+      "source": "2 连线引擎改用自研 SkyTunnel ，连接自有节点 与 Android、Windows 使用完全相同的引擎，消除外部预编译组件的供应链风险",
+      "occurrence": 0
+    },
+    "b0078": {
+      "type": "table-row",
+      "source": "3 界面与操作流程重新设计，功能对齐 Android 最新版本 三端体验一致；也让商店定位与实际功能真正相符",
+      "occurrence": 0
+    },
+    "b0079": {
+      "type": "table-row",
+      "source": "4 以 TestFlight 与自动化流水线验证发布链路 发布过程可重复、可追溯，不依赖个人电脑环境",
+      "occurrence": 0
+    },
+    "b0080": {
+      "type": "highlight",
+      "source": "审计的完整技术细节与逐项处理清单已归档于内部工程记录，不在本报告展开。",
+      "occurrence": 0
+    },
+    "b0081": {
+      "type": "heading",
+      "source": "七、安全与权限管控",
+      "occurrence": 0
+    },
+    "b0082": {
+      "type": "heading",
+      "source": "源代码访问（最小权限原则）",
+      "occurrence": 0
+    },
+    "b0083": {
+      "type": "table-row",
+      "source": "项目 当前状态",
+      "occurrence": 0
+    },
+    "b0084": {
+      "type": "table-row",
+      "source": "GitLab 源代码访问白名单 Roy、Morgan、Lex 及马来西亚开发人员；其余台湾团队成员访问权限已回收",
+      "occurrence": 0
+    },
+    "b0085": {
+      "type": "table-row",
+      "source": "Apple 开发者账号凭证 新账号的发布凭证以受保护变量形式存放于 CI，不落地于代码库；已核实代码库内无任何凭证、私钥或描述文件",
+      "occurrence": 0
+    },
+    "b0086": {
+      "type": "table-row",
+      "source": "旧 Apple 账号凭证清理 本阶段提出，待执行 — 被终止账号的发布金钥仍存在于构建机，已列入凭证清理工作项",
+      "occurrence": 0
+    },
+    "b0087": {
+      "type": "heading",
+      "source": "台湾团队交接遗留的基础设施安全缺口",
+      "occurrence": 0
+    },
+    "b0088": {
+      "type": "table-row",
+      "source": "问题 风险 状态",
+      "occurrence": 0
+    },
+    "b0089": {
+      "type": "table-row",
+      "source": "私有 VM 存取路径 跳板机采单一 IP 白名单，运维换 IP 即受阻，且每次调整都是一次生产安全边界变更 ✅ 方案已定 移除跳板机，改用 Azure Bastion，随 8/12 整合一并落地",
+      "occurrence": 0
+    },
+    "b0090": {
+      "type": "table-row",
+      "source": "数据库备份与还原 交接时无可验证的还原流程 备份容器已建立，还原演练排定于 8/6–8/11 整合准备期内完成并量测耗时",
+      "occurrence": 0
+    },
+    "b0091": {
+      "type": "table-row",
+      "source": "Staging／Prod 网络隔离 测试与生产环境边界不清晰 单机整合将一并收敛",
+      "occurrence": 0
+    },
+    "b0092": {
+      "type": "table-row",
+      "source": "SSH 密钥登入 交接时依赖密码登入，权限回收困难 PEM 密钥方案推进中",
+      "occurrence": 0
+    },
+    "b0093": {
+      "type": "table-row",
+      "source": "读写分离（读库利用） 读写压力集中在主库 ✅ 已完成（Sprint 2）",
+      "occurrence": 0
+    },
+    "b0094": {
+      "type": "highlight",
+      "source": "以上均为台湾团队交接时既存的项目，非本阶段新增风险。8/12 的单机整合会一并处理其中数项。",
+      "occurrence": 0
+    },
+    "b0095": {
+      "type": "heading",
+      "source": "八、下阶段计划（Sprint 10，8/8 起）",
+      "occurrence": 0
+    },
+    "b0096": {
+      "type": "highlight",
+      "source": "主轴： 8/12 合并上线 → iOS 大规模重构 → 支付稳定性（USDTPay 收敛 + Siqo 扩展） → Android 延迟探测优化。",
+      "occurrence": 0
+    },
+    "b0097": {
+      "type": "table-row",
+      "source": "优先级 方向 计划内容与目标时间",
+      "occurrence": 0
+    },
+    "b0098": {
+      "type": "table-row",
+      "source": "1 8/12 合并上线 8/11 完成全部准备与还原演练， 8/12 凌晨 04:55 单机整合切换、早上 5 点 Android 上线 。同步移除跳板机、改用 Azure Bastion 存取私有 VM。",
+      "occurrence": 0
+    },
+    "b0099": {
+      "type": "table-row",
+      "source": "2 iOS 大规模重构 移除第三方开源代码、改用自研 SkyTunnel 引擎、界面重新设计、功能对齐 Android，并以 TestFlight 与自动化流水线验证。需先确认账号资格前提。",
+      "occurrence": 0
+    },
+    "b0100": {
+      "type": "table-row",
+      "source": "3 USDTPay 错误收敛处理 针对已归并出的 7 类根因逐项处理 —— 主要为第三方查询接口逾时与回传非预期格式，方向为重试策略调整与通道分流。",
+      "occurrence": 0
+    },
+    "b0101": {
+      "type": "table-row",
+      "source": "4 Android 延迟探测优化 优化线路延迟探测的生命周期管理，减少无效探测与资源占用。",
+      "occurrence": 0
+    },
+    "b0102": {
+      "type": "table-row",
+      "source": "5 Siqo 支付扩展至 Windows QA 完成测试环境验证、Amy 完成缺陷确认后，接入 Windows 端。",
+      "occurrence": 0
+    },
+    "b0103": {
+      "type": "table-row",
+      "source": "6 续费功能实作 升级即时生效、降级次周期生效、专属 IP／专属节点可续期不断号；同步修复降级排程重复执行缺陷。整个模块一次性上测试环境供 QA 整体验收。",
+      "occurrence": 0
+    },
+    "b0104": {
+      "type": "table-row",
+      "source": "7 Windows 正式环境发布 QA 测试通过后，演练正式环境标签构建与签名，完成安装／连接／更新／卸载验证后对外发布。",
+      "occurrence": 0
+    },
+    "b0105": {
+      "type": "table-row",
+      "source": "8 设备额度识别 连续两阶段顺延 「账号+设备」组合身份判断。本阶段容量优先投入投放归因、API 收敛与单机整合准备，该项未进入实作。",
+      "occurrence": 0
+    },
+    "b0106": {
+      "type": "highlight",
+      "source": "按固定容量原则，本阶段新增的 iOS 合规审计工作，对应顺延了设备额度识别一项。容量固定、范围可变是团队一贯的排期方式。",
+      "occurrence": 0
+    },
+    "b0107": {
+      "type": "heading",
+      "source": "九、FFF 新产品并行进展（Lex，实时口径）",
+      "occurrence": 0
+    },
+    "b0108": {
+      "type": "highlight",
+      "source": "以上为客户端实作进度。该仓库目前尚无构建流水线记录，本阶段未执行测试、打包、商店上传或部署，因此不代表已上线或已验收。FFF 采用实时口径，与 Arrowfish 的阶段口径不同。",
+      "occurrence": 0
+    },
+    "b0109": {
+      "type": "highlight",
+      "source": "本阶段（7/25–8/7） Lex 在 fff_vpn 完成 82 次非合并提交。交付方向以 书签分类功能 为主（本阶段占比最高），另包含分享与推荐奖励页面、意见反馈提交、营销渠道归因与事件上报接口对接（7/28），以及「我的」页面状态管理重构与设置页。客户端版本为 1.0.4 。 以上为客户端实作进度。该仓库目前尚无构建流水线记录，本阶段未执行测试、打包、商店上传或部署，因此不代表已上线或已验收。FFF 采用实时口径，与 Arrowfish 的阶段口径不同。",
+      "occurrence": 0
+    },
+    "b0110": {
+      "type": "li",
+      "source": "已完成 FFF 公司欧盟虚拟电话号码已于 7/15 开通 ，SMS 验证能力就位",
+      "occurrence": 0
+    },
+    "b0111": {
+      "type": "li",
+      "source": "FFF 公司名下新支付通道账户仍需开设（ Roy 推进中）",
+      "occurrence": 0
+    },
+    "b0112": {
+      "type": "heading",
+      "source": "十、结论",
+      "occurrence": 0
+    },
+    "b0113": {
+      "type": "p",
+      "source": "Sprint 9 同时推进了「交付」与「打基础」两条线。交付端：Android 于 8/4 通过 Google 审核并排定 8/12 上线，Windows 交付 QA 实测，Siqo 支付上到测试环境。基础端：投放归因链路让广告花费第一次可以对应到真实营收；后端接口精简三成、Android 端同步清理遗留代码；Windows 构建时间减半；USDTPay 的散乱报错收敛为 7 类可处理的根因。",
+      "occurrence": 0
+    },
+    "b0114": {
+      "type": "p",
+      "source": "iOS 合规审计是本阶段最重要的一项发现。结论虽然是「现有代码不能直接上架」，但它把一个长期不确定的问题变成了范围明确的工程任务。更关键的是，其中最棘手的一项 —— 核心连线组件来自外部、无源码、无法重建 —— 因为团队早在 Sprint 7 就决定自研引擎，现在直接换用 SkyTunnel 即可解决，不需要向任何外部方索取 。重构完成后三端将统一运行在同一套自研引擎上。目前需要决策的，只剩新账号主体资格这一项。",
+      "occurrence": 0
+    },
+    "b0115": {
+      "type": "p",
+      "source": "下阶段的关键节点是 8/12 的合并上线窗口 （凌晨 04:55 单机整合切换、早上 5 点 Android 上线）。维护公告已于 8/4 提前上线，用户端预告已就位；同一窗口内也会移除跳板机、改用 Azure Bastion 存取私有 VM，顺带解决长期的白名单维护问题。",
+      "occurrence": 0
+    }
+  },
+  "reviewedTargetHash": "64ca4b8a9a5a1b00"
+}

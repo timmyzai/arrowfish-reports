@@ -1,12 +1,12 @@
 :root {
-    --ai-primary: #1a73e8;
-    --ai-primary-dark: #1557b0;
-    --ai-surface: #ffffff;
-    --ai-muted-surface: #f8f9fa;
-    --ai-border: #dadce0;
-    --ai-text: #202124;
-    --ai-muted-text: #5f6368;
-    --ai-danger: #b3261e;
+    --ai-primary: var(--af-primary, #1769d2);
+    --ai-primary-dark: var(--af-primary-hover, #1557b0);
+    --ai-surface: var(--af-surface, #ffffff);
+    --ai-muted-surface: var(--af-surface-muted, #f8f9fa);
+    --ai-border: var(--af-border, #dadce0);
+    --ai-text: var(--af-text, #202124);
+    --ai-muted-text: var(--af-text-muted, #5f6368);
+    --ai-danger: var(--af-danger, #b3261e);
 }
 
 .ai-launcher {
@@ -23,8 +23,8 @@
     border: 0;
     border-radius: 20px;
     background: transparent;
-    color: #fff;
-    box-shadow: 0 12px 32px rgba(22, 35, 88, 0.36);
+    color: var(--af-on-accent);
+    box-shadow: 0 12px 32px var(--af-shadow-strong);
     cursor: pointer;
     isolation: isolate;
     touch-action: manipulation;
@@ -41,7 +41,7 @@
 @media (hover: hover) {
     .ai-launcher:hover {
         transform: translateY(-2px) scale(1.04);
-        box-shadow: 0 15px 36px rgba(39, 64, 159, 0.44), 0 0 20px rgba(89, 243, 255, 0.2);
+        box-shadow: 0 15px 36px var(--af-shadow-strong), 0 0 20px color-mix(in srgb, var(--af-primary) 24%, transparent);
     }
 }
 
@@ -59,7 +59,7 @@
     position: fixed;
     inset: 0;
     z-index: 9090;
-    background: rgba(15, 23, 42, 0.4);
+    background: var(--af-overlay);
     opacity: 0;
     visibility: hidden;
     transition: opacity 180ms ease, visibility 180ms ease;
@@ -79,9 +79,9 @@
     height: 100dvh;
     flex-direction: column;
     overflow: hidden;
-    background: linear-gradient(180deg, #ffffff 0, #fbfdff 112px, #f8f9fa 220px);
+    background: linear-gradient(180deg, var(--af-surface) 0, var(--af-surface) 112px, var(--af-surface-muted) 220px);
     color: var(--ai-text);
-    box-shadow: -12px 0 36px rgba(15, 23, 42, 0.18);
+    box-shadow: -12px 0 36px var(--af-shadow);
     transform: translateX(102%);
     transition: transform 220ms ease;
 }
@@ -107,7 +107,7 @@
     align-items: center;
     justify-content: center;
     border-radius: 13px;
-    box-shadow: 0 5px 14px rgba(22, 35, 88, 0.2);
+    box-shadow: 0 5px 14px var(--af-shadow);
 }
 
 .ai-header-bot img {
@@ -161,12 +161,12 @@
     width: 7px;
     height: 7px;
     border-radius: 50%;
-    background: #9aa0a6;
+    background: var(--af-text-muted);
 }
 
 .ai-connection.is-ready .ai-connection-dot {
-    background: #16a34a;
-    box-shadow: 0 0 0 3px rgba(22, 163, 74, 0.12);
+    background: var(--af-success);
+    box-shadow: 0 0 0 3px var(--af-success-ring);
 }
 
 .ai-report-date {
@@ -195,7 +195,7 @@
 }
 
 .ai-icon-button:hover {
-    background: #eef3f8;
+    background: var(--af-surface-muted);
     color: var(--ai-text);
 }
 
@@ -216,10 +216,10 @@
     min-height: 44px;
     flex: 0 0 auto;
     padding: 8px 12px;
-    border: 1px solid #c7d7ed;
+    border: 1px solid var(--af-border);
     border-radius: 999px;
-    background: #f6f9fe;
-    color: #174ea6;
+    background: var(--af-primary-soft);
+    color: var(--af-primary);
     font: inherit;
     font-size: 13px;
     font-weight: 500;
@@ -230,13 +230,13 @@
 
 .ai-quick-action > span {
     margin-right: 5px;
-    color: #1a73e8;
+    color: var(--af-primary);
     font-weight: 700;
 }
 
 .ai-quick-action:hover {
-    border-color: #8ab4f8;
-    background: #e8f0fe;
+    border-color: var(--af-primary);
+    background: var(--af-primary-soft);
 }
 
 .ai-quick-action:disabled,
@@ -249,7 +249,7 @@
 .ai-handoff {
     padding: 0 16px 10px;
     border-bottom: 1px solid var(--ai-border);
-    background: #fff;
+    background: var(--af-surface);
 }
 
 .ai-handoff a {
@@ -258,8 +258,8 @@
     align-items: center;
     padding: 0 12px;
     border-radius: 10px;
-    background: #eef4ff;
-    color: #174ea6;
+    background: var(--af-primary-soft);
+    color: var(--af-primary);
     font-size: 13px;
     font-weight: 600;
     text-decoration: none;
@@ -308,10 +308,10 @@
     align-items: center;
     justify-content: center;
     margin-bottom: 4px;
-    border: 1px solid #c7d7ed;
+    border: 1px solid var(--af-border);
     border-radius: 14px;
-    background: linear-gradient(135deg, #eef4ff, #e8f8ff);
-    color: #1a73e8;
+    background: linear-gradient(135deg, var(--af-primary-soft), var(--af-primary-soft));
+    color: var(--af-primary);
     font-size: 20px;
 }
 
@@ -343,7 +343,7 @@
     align-self: flex-start;
     border: 1px solid var(--ai-border);
     border-bottom-left-radius: 4px;
-    background: #fff;
+    background: var(--af-surface);
     color: var(--ai-text);
 }
 
@@ -351,12 +351,12 @@
     align-self: flex-end;
     border-bottom-right-radius: 4px;
     background: var(--ai-primary);
-    color: #fff;
+    color: var(--af-on-accent);
 }
 
 .ai-message.refusal {
-    border-color: #e0c36b;
-    background: #fff8e1;
+    border-color: var(--af-warning);
+    background: var(--af-warning-soft);
 }
 
 .ai-citation-chip {
@@ -372,10 +372,10 @@
     align-items: center;
     justify-content: center;
     padding: 2px 5px;
-    border: 1px solid #b6caf0;
+    border: 1px solid var(--af-border);
     border-radius: 999px;
-    background: #eef4ff;
-    color: #174ea6;
+    background: var(--af-primary-soft);
+    color: var(--af-primary);
     font-size: 9px;
     font-weight: 700;
     line-height: 1;
@@ -384,13 +384,13 @@
 }
 
 .ai-citation:visited {
-    color: #174ea6;
+    color: var(--af-primary);
 }
 
 .ai-citation:hover {
-    border-color: #8ab4f8;
-    background: #dfeaff;
-    color: #0b57d0;
+    border-color: var(--af-primary);
+    background: var(--af-primary-soft);
+    color: var(--af-primary);
 }
 
 .ai-follow-ups {
@@ -403,10 +403,10 @@
 .ai-follow-up {
     min-height: 44px;
     padding: 7px 10px;
-    border: 1px solid #c7d7ed;
+    border: 1px solid var(--af-border);
     border-radius: 999px;
-    background: #f6f9fe;
-    color: #174ea6;
+    background: var(--af-primary-soft);
+    color: var(--af-primary);
     font: inherit;
     font-size: 11px;
     cursor: pointer;
@@ -428,7 +428,7 @@
     border: 0;
     border-radius: 8px;
     background: transparent;
-    color: #174ea6;
+    color: var(--af-primary);
     font: inherit;
     font-size: 12px;
     font-weight: 600;
@@ -436,7 +436,7 @@
 }
 
 .ai-message-action:hover {
-    background: #e8f0fe;
+    background: var(--af-primary-soft);
 }
 
 .ai-loading {
@@ -446,14 +446,14 @@
     padding: 12px 14px;
     border: 1px solid var(--ai-border);
     border-radius: 14px 14px 14px 4px;
-    background: #fff;
+    background: var(--af-surface);
 }
 
 .ai-loading span {
     width: 6px;
     height: 6px;
     border-radius: 50%;
-    background: #80868b;
+    background: var(--af-text-muted);
     animation: ai-pulse 1.1s ease-in-out infinite;
 }
 
@@ -475,7 +475,7 @@
 
 .ai-composer {
     padding: 8px 12px max(12px, env(safe-area-inset-bottom));
-    background: #fff;
+    background: var(--af-surface);
 }
 
 .ai-composer-row {
@@ -483,15 +483,15 @@
     align-items: flex-end;
     gap: 8px;
     padding: 6px 6px 6px 12px;
-    border: 1px solid #bdc1c6;
+    border: 1px solid var(--af-border);
     border-radius: 16px;
-    background: #fff;
+    background: var(--af-surface);
     transition: border-color 160ms ease, box-shadow 160ms ease;
 }
 
 .ai-composer-row:focus-within {
     border-color: var(--ai-primary);
-    box-shadow: 0 0 0 2px rgba(26, 115, 232, 0.15);
+    box-shadow: 0 0 0 2px color-mix(in srgb, var(--af-focus) 15%, transparent);
 }
 
 .ai-composer textarea {
@@ -511,7 +511,7 @@
 }
 
 .ai-composer textarea::placeholder {
-    color: #80868b;
+    color: var(--af-text-muted);
 }
 
 .ai-send {
@@ -524,7 +524,7 @@
     border: 0;
     border-radius: 50%;
     background: var(--ai-primary);
-    color: #fff;
+    color: var(--af-on-accent);
     cursor: pointer;
     touch-action: manipulation;
     transition: background-color 160ms ease;
@@ -549,12 +549,12 @@
 .ai-handoff a:focus-visible,
 .ai-send:focus-visible,
 .ai-citation:focus-visible {
-    outline: 3px solid rgba(26, 115, 232, 0.52);
+    outline: 3px solid color-mix(in srgb, var(--af-focus) 52%, transparent);
     outline-offset: 3px;
 }
 
 .ai-message-action:focus-visible {
-    outline: 3px solid rgba(26, 115, 232, 0.52);
+    outline: 3px solid color-mix(in srgb, var(--af-focus) 52%, transparent);
     outline-offset: 2px;
 }
 

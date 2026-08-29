@@ -1,0 +1,1933 @@
+{
+  "schemaVersion": 1,
+  "reportId": "sprint-8-full",
+  "sourceFile": "Stakeholder/Sprint-8/20260724_report.html",
+  "sourceVersion": "4c8df076aa529443",
+  "units": [
+    {
+      "id": "u_980c739e1d4499a0",
+      "kind": "text",
+      "source": "第8阶段 · 完整报告 · 2026-07-24",
+      "occurrence": 0,
+      "target": "Sprint 8 · Comprehensive Report · July 24, 2026",
+      "context": "title @ line 10"
+    },
+    {
+      "id": "u_eb1034efa3e4ef41",
+      "kind": "text",
+      "source": "Arrowfish VPN · 第8阶段 · 完整报告",
+      "occurrence": 0,
+      "target": "Arrowfish VPN · Sprint 8 · Comprehensive Report",
+      "context": "p.eyebrow @ line 101"
+    },
+    {
+      "id": "u_02f369017599a6d6",
+      "kind": "text",
+      "source": "2026-07-24 Sprint 8 自研引擎落地、Windows 签名打通与连接稳定性修复报告",
+      "occurrence": 0,
+      "target": "July 24, 2026 Sprint 8 Self-Developed Engine Landing, Windows Signature Integration and Connection Stability Improvement Report",
+      "context": "h1 @ line 102"
+    },
+    {
+      "id": "u_51c4470c9f4d27ec",
+      "kind": "text",
+      "source": "覆盖范围：2026-07-11 至 2026-07-24。承接 Sprint 7（截至 2026-07-10）确定的自研方向，本阶段重点为 SkyTunnel 在真实客户端的验证落地、Windows 签名与体积收敛，以及一批影响用户连接成功率的根因修复。",
+      "occurrence": 0,
+      "target": "Scope: July 11 to July 24, 2026. Building upon the self-developed direction confirmed in Sprint 7 (ending on July 10), this sprint focuses on validating SkyTunnel's deployment on real clients, integrating Windows signature and volume reduction, as well as addressing root causes affecting user connection success rates.",
+      "context": "p.meta @ line 103"
+    },
+    {
+      "id": "u_f9b35724a8d8a926",
+      "kind": "text",
+      "source": "TL;DR：Sprint 7 确定的自研路线在本阶段完成验证 ——",
+      "occurrence": 0,
+      "target": "TL;DR: The self-developed route confirmed in Sprint 7 is validated in this sprint —",
+      "context": "section.tldr @ line 106"
+    },
+    {
+      "id": "u_17608a908e827bf0",
+      "kind": "text",
+      "source": "SkyTunnel 已在 Android 上证明可完全取代 sing-box/libbox",
+      "occurrence": 0,
+      "target": "SkyTunnel has proven to fully replace sing-box/libbox on Android.",
+      "context": "strong @ line 107 · surrounding text: TL;DR：Sprint 7 确定的自研路线在本阶段完成验证 —— SkyTunnel 已在 Android 上证明可完全取代 sing-box/libbox ，Windows 端同步接入同一套自研协议核心；Windows 安装包相较最初的 Electron 版本已缩减 92% ，代码签名方案打通并在测试环境签发成功；同时定位并修复了一项影响用户「连上但没有流量」的 IPv6 网络兼容根因。下阶段进入线上收敛与续费功能开发。"
+    },
+    {
+      "id": "u_6dd64dce403d5bd2",
+      "kind": "text",
+      "source": "，Windows 端同步接入同一套自研协议核心；Windows 安装包相较最初的 Electron 版本已缩减",
+      "occurrence": 0,
+      "target": ", while Windows also integrates the same in-house protocol core; the Windows installer has been reduced from the original Electron version",
+      "context": "section.tldr @ line 107 · surrounding text: TL;DR：Sprint 7 确定的自研路线在本阶段完成验证 —— SkyTunnel 已在 Android 上证明可完全取代 sing-box/libbox ，Windows 端同步接入同一套自研协议核心；Windows 安装包相较最初的 Electron 版本已缩减 92% ，代码签名方案打通并在测试环境签发成功；同时定位并修复了一项影响用户「连上但没有流量」的 IPv6 网络兼容根因。下阶段进入线上收敛与续费功能开发。"
+    },
+    {
+      "id": "u_341f08bca39598a1",
+      "kind": "text",
+      "source": "，代码签名方案打通并在测试环境签发成功；同时定位并修复了一项影响用户「连上但没有流量」的 IPv6 网络兼容根因。下阶段进入线上收敛与续费功能开发。",
+      "occurrence": 0,
+      "target": ", code signing scheme implemented and successfully issued in test environment; identified and fixed an IPv6 network compatibility root cause affecting user 'connected but no traffic' experience.",
+      "context": "section.tldr @ line 107 · surrounding text: TL;DR：Sprint 7 确定的自研路线在本阶段完成验证 —— SkyTunnel 已在 Android 上证明可完全取代 sing-box/libbox ，Windows 端同步接入同一套自研协议核心；Windows 安装包相较最初的 Electron 版本已缩减 92% ，代码签名方案打通并在测试环境签发成功；同时定位并修复了一项影响用户「连上但没有流量」的 IPv6 网络兼容根因。下阶段进入线上收敛与续费功能开发。"
+    },
+    {
+      "id": "u_9822f445973a3e25",
+      "kind": "text",
+      "source": "第一部分",
+      "occurrence": 0,
+      "target": "Part One",
+      "context": "div.pnum @ line 111"
+    },
+    {
+      "id": "u_240e79b7b0dbef5a",
+      "kind": "text",
+      "source": "Arrowfish VPN 本阶段的交付、风险、上线计划与安全管控（阶段口径，覆盖 7/11–7/24）",
+      "occurrence": 0,
+      "target": "Arrowfish VPN delivery, risk management, go-live plan, and security controls for this sprint (covering 7/11–7/24)",
+      "context": "div.psub @ line 113"
+    },
+    {
+      "id": "u_ae209961f8ba6bb0",
+      "kind": "text",
+      "source": "一、本阶段关键决策与状态",
+      "occurrence": 0,
+      "target": "I. Key Decisions and Status of This Sprint",
+      "context": "h2 @ line 117"
+    },
+    {
+      "id": "u_26e51af9e43adc08",
+      "kind": "text",
+      "source": "事项",
+      "occurrence": 0,
+      "target": "Item",
+      "context": "th @ line 119 · surrounding text: 事项 说明 决策 / 现况"
+    },
+    {
+      "id": "u_138acf8cb2ab2247",
+      "kind": "text",
+      "source": "说明",
+      "occurrence": 0,
+      "target": "Description",
+      "context": "th @ line 119 · surrounding text: 事项 说明 决策 / 现况"
+    },
+    {
+      "id": "u_294ce52b800e5521",
+      "kind": "text",
+      "source": "决策 / 现况",
+      "occurrence": 0,
+      "target": "Decision / Current Situation",
+      "context": "th @ line 119 · surrounding text: 事项 说明 决策 / 现况"
+    },
+    {
+      "id": "u_e312467a37f1c86d",
+      "kind": "text",
+      "source": "已完成",
+      "occurrence": 0,
+      "target": "Completed",
+      "context": "span.badge.done @ line 122 · surrounding text: 已完成 Windows 代码签名"
+    },
+    {
+      "id": "u_ae26a67609274d4a",
+      "kind": "text",
+      "source": "Windows 代码签名",
+      "occurrence": 0,
+      "target": "Windows Code Signing",
+      "context": "strong @ line 122 · surrounding text: 已完成 Windows 代码签名"
+    },
+    {
+      "id": "u_323884f3507e5cc3",
+      "kind": "text",
+      "source": "Sprint 7 报告中「等待厂商审核」的外部阻塞项已解除。SSL.com eSigner 签名方案于 7/22 完成落地，测试环境 x64 与 ARM64 两个架构均已成功签发。",
+      "occurrence": 0,
+      "target": "Sprint 7 report has resolved the external blockage item marked as 'Awaiting Vendor Review'. The SSL.com eSigner signature solution was successfully implemented on July 22nd, with both x64 and ARM64 architectures having been successfully signed in the test environment.",
+      "context": "td @ line 123"
+    },
+    {
+      "id": "u_3cc94dc5a4fe5df5",
+      "kind": "text",
+      "source": "签名工作已完成，交由",
+      "occurrence": 0,
+      "target": "Signature work has been completed and handed over to",
+      "context": "td @ line 124 · surrounding text: 签名工作已完成，交由 Amy 进行测试。正式环境签名演练列入下阶段。"
+    },
+    {
+      "id": "u_8d7215c9a9ee75ce",
+      "kind": "text",
+      "source": "进行测试。正式环境签名演练列入下阶段。",
+      "occurrence": 0,
+      "target": "for testing. The signature exercise in the production environment is scheduled for the next sprint.",
+      "context": "td @ line 124 · surrounding text: 签名工作已完成，交由 Amy 进行测试。正式环境签名演练列入下阶段。"
+    },
+    {
+      "id": "u_dcd486e9b30fe4bc",
+      "kind": "text",
+      "source": "已取得",
+      "occurrence": 0,
+      "target": "Obtained",
+      "context": "span.badge.done @ line 127 · surrounding text: 已取得 续费功能 PRD"
+    },
+    {
+      "id": "u_af889461babedc9a",
+      "kind": "text",
+      "source": "续费功能 PRD",
+      "occurrence": 0,
+      "target": "Renewal Function PRD",
+      "context": "strong @ line 127 · surrounding text: 已取得 续费功能 PRD"
+    },
+    {
+      "id": "u_b1bb9670a61d3e97",
+      "kind": "text",
+      "source": "7/14 与台湾团队完成 FFF 全量文档梳理，确认「续费功能」为 Arrowfish 与 FFF 共用的最高优先需求。",
+      "occurrence": 0,
+      "target": "On 7/14, completed a full document review with the Taiwan team and confirmed that renewal is the highest-priority requirement shared by Arrowfish and FFF.",
+      "context": "td @ line 128"
+    },
+    {
+      "id": "u_8e43aeda70578281",
+      "kind": "text",
+      "source": "PRD 已于 7/15 由 Roy 提供",
+      "occurrence": 0,
+      "target": "PRD provided on 7/15 by Roy",
+      "context": "strong @ line 129 · surrounding text: PRD 已于 7/15 由 Roy 提供 。业务规则：升级即时生效、降级次周期生效、专属 IP／专属节点可续期不断号。团队据此排期开发。"
+    },
+    {
+      "id": "u_a24654833e1603a0",
+      "kind": "text",
+      "source": "。业务规则：升级即时生效、降级次周期生效、专属 IP／专属节点可续期不断号。团队据此排期开发。",
+      "occurrence": 0,
+      "target": "Business rules: immediate upgrade, delayed downgrade to next cycle, dedicated IP or VPN node can be renewed without interruption. The team has scheduled the development based on this information.",
+      "context": "td @ line 129 · surrounding text: PRD 已于 7/15 由 Roy 提供 。业务规则：升级即时生效、降级次周期生效、专属 IP／专属节点可续期不断号。团队据此排期开发。"
+    },
+    {
+      "id": "u_9d0f7c404c948beb",
+      "kind": "text",
+      "source": "Sprint 7 遗留",
+      "occurrence": 0,
+      "target": "Sprint 7 outstanding issues",
+      "context": "span.badge.progress @ line 132 · surrounding text: Sprint 7 遗留 设备额度识别缺陷"
+    },
+    {
+      "id": "u_eb3f4532bc5dc712",
+      "kind": "text",
+      "source": "设备额度识别缺陷",
+      "occurrence": 0,
+      "target": "Device quota recognition defect",
+      "context": "strong @ line 132 · surrounding text: Sprint 7 遗留 设备额度识别缺陷"
+    },
+    {
+      "id": "u_2959b09bb7cced2e",
+      "kind": "text",
+      "source": "Sprint 7 报告提出的「同一部设备被不同账号使用会互相顶号」问题，根因已确认，本阶段未进入实作排期 —— 容量优先投入自研引擎验证与连接稳定性根因修复。",
+      "occurrence": 0,
+      "target": "The issue in Sprint 7 report regarding the same device being used by different accounts leading to overlapping usage has been identified as a root cause. This is not included in the current sprint development schedule —— focus will be on validating and fixing the self-developed engine for capacity validation and improving connection stability.",
+      "context": "td @ line 133"
+    },
+    {
+      "id": "u_d1178091a97a6f80",
+      "kind": "text",
+      "source": "按固定容量原则顺延至下阶段。方案不变：连接状态改用「账号+设备」组合身份判断。",
+      "occurrence": 0,
+      "target": "The issue has been deferred to the next sprint according to fixed capacity principles. The solution remains unchanged: account plus device combination will be used to determine the connection status.",
+      "context": "td @ line 134"
+    },
+    {
+      "id": "u_6d5d4808fb0f1a6f",
+      "kind": "text",
+      "source": "本阶段完成",
+      "occurrence": 0,
+      "target": "Completed in this phase",
+      "context": "span.badge.done @ line 137 · surrounding text: 本阶段完成 FFF 欧盟虚拟号码"
+    },
+    {
+      "id": "u_4a8e0d4a67f0c5e9",
+      "kind": "text",
+      "source": "FFF 欧盟虚拟号码",
+      "occurrence": 0,
+      "target": "FFF EU virtual number",
+      "context": "strong @ line 137 · surrounding text: 本阶段完成 FFF 欧盟虚拟号码"
+    },
+    {
+      "id": "u_f66e9bdf29ac4288",
+      "kind": "text",
+      "source": "Sprint 7 报告中的 FFF 商务侧阻塞项之一。",
+      "occurrence": 0,
+      "target": "One of the FFF business-side blockers in the Sprint 7 report.",
+      "context": "td @ line 138"
+    },
+    {
+      "id": "u_1be415d329cb5d05",
+      "kind": "text",
+      "source": "7/15 已开通完成",
+      "occurrence": 0,
+      "target": "Completed on 7/15.",
+      "context": "strong @ line 139 · surrounding text: 7/15 已开通完成 ，SMS 验证能力就位。新支付通道账户仍由 Roy 推进，不影响 Arrowfish 发布节奏。"
+    },
+    {
+      "id": "u_27d997f624f199ea",
+      "kind": "text",
+      "source": "，SMS 验证能力就位。新支付通道账户仍由",
+      "occurrence": 0,
+      "target": ", SMS verification capability ready. New payment channel accounts to be advanced by",
+      "context": "td @ line 139 · surrounding text: 7/15 已开通完成 ，SMS 验证能力就位。新支付通道账户仍由 Roy 推进，不影响 Arrowfish 发布节奏。"
+    },
+    {
+      "id": "u_331d12c9b370f149",
+      "kind": "text",
+      "source": "推进，不影响 Arrowfish 发布节奏。",
+      "occurrence": 0,
+      "target": "not affecting the Arrowfish release schedule.",
+      "context": "td @ line 139 · surrounding text: 7/15 已开通完成 ，SMS 验证能力就位。新支付通道账户仍由 Roy 推进，不影响 Arrowfish 发布节奏。"
+    },
+    {
+      "id": "u_1ead4ee0f5942377",
+      "kind": "text",
+      "source": "二、本阶段关键成果（7/11–7/24）",
+      "occurrence": 0,
+      "target": "II. Key Achievements of This Sprint (July 11 - July 24)",
+      "context": "h2 @ line 146"
+    },
+    {
+      "id": "u_ec711d19394f13b8",
+      "kind": "text",
+      "source": "Windows 安装包体积（对比最初 Electron 版）",
+      "occurrence": 0,
+      "target": "Windows installation package size (compared to the initial Electron version)",
+      "context": "span @ line 148 · surrounding text: -92% Windows 安装包体积（对比最初 Electron 版）"
+    },
+    {
+      "id": "u_5a6a598b34ac38df",
+      "kind": "text",
+      "source": "1 项",
+      "occurrence": 0,
+      "target": "1 item",
+      "context": "strong @ line 149 · surrounding text: 1 项 「连上无流量」根因定位并修复"
+    },
+    {
+      "id": "u_ee187d53ded6ab1b",
+      "kind": "text",
+      "source": "「连上无流量」根因定位并修复",
+      "occurrence": 0,
+      "target": "Root cause identification and resolution for the 'No Traffic' issue.",
+      "context": "span @ line 149 · surrounding text: 1 项 「连上无流量」根因定位并修复"
+    },
+    {
+      "id": "u_13d3c63ebbec4dbf",
+      "kind": "text",
+      "source": "2 端",
+      "occurrence": 0,
+      "target": "2 ends",
+      "context": "strong @ line 150 · surrounding text: 2 端 接入自研引擎（Android 已验证／Windows 测试中）"
+    },
+    {
+      "id": "u_10c8acc979662000",
+      "kind": "text",
+      "source": "接入自研引擎（Android 已验证／Windows 测试中）",
+      "occurrence": 0,
+      "target": "Incorporation of self-developed engine for Android (already validated) / Testing in progress on Windows.",
+      "context": "span @ line 150 · surrounding text: 2 端 接入自研引擎（Android 已验证／Windows 测试中）"
+    },
+    {
+      "id": "u_3c84dd38a7b928f3",
+      "kind": "text",
+      "source": "9 个",
+      "occurrence": 0,
+      "target": "9 items",
+      "context": "strong @ line 151 · surrounding text: 9 个 本阶段并行推进的代码仓库"
+    },
+    {
+      "id": "u_7075959f8023356e",
+      "kind": "text",
+      "source": "本阶段并行推进的代码仓库",
+      "occurrence": 0,
+      "target": "Parallel development code repositories for this sprint.",
+      "context": "span @ line 151 · surrounding text: 9 个 本阶段并行推进的代码仓库"
+    },
+    {
+      "id": "u_d9b6c541ad651a18",
+      "kind": "text",
+      "source": "方向",
+      "occurrence": 0,
+      "target": "Direction",
+      "context": "th @ line 154 · surrounding text: 方向 本阶段结果 管理层解读"
+    },
+    {
+      "id": "u_05a65ee5c21823dd",
+      "kind": "text",
+      "source": "本阶段结果",
+      "occurrence": 0,
+      "target": "Achievements of This Sprint",
+      "context": "th @ line 154 · surrounding text: 方向 本阶段结果 管理层解读"
+    },
+    {
+      "id": "u_c09ac1f886c7e2db",
+      "kind": "text",
+      "source": "管理层解读",
+      "occurrence": 0,
+      "target": "Management Interpretation",
+      "context": "th @ line 154 · surrounding text: 方向 本阶段结果 管理层解读"
+    },
+    {
+      "id": "u_fa990676c58f42c0",
+      "kind": "text",
+      "source": "SkyTunnel Android 验证通过",
+      "occurrence": 0,
+      "target": "SkyTunnel Android verification passed.",
+      "context": "td @ line 156 · surrounding text: SkyTunnel Android 验证通过 7/13 证明 Android 可完全以 SkyTunnel 取代 sing-box/libbox 运行；7/14 消费端改为引用正式版本号的共享模块，不再依赖开发者本机路径。 Sprint 7 提出的自研方案从「方向」变成「已验证」，iOS 上架合规与 GPL 授权风险的技术前提已落地。"
+    },
+    {
+      "id": "u_a512ef79597f54c7",
+      "kind": "text",
+      "source": "7/13 证明 Android 可完全以 SkyTunnel 取代 sing-box/libbox 运行；7/14 消费端改为引用正式版本号的共享模块，不再依赖开发者本机路径。",
+      "occurrence": 0,
+      "target": "On July 13, it was proven that Android can fully use SkyTunnel to run instead of sing-box/libbox. On July 14, the consumer end switched to using a shared module with a formal version number, no longer relying on the developer's local path.",
+      "context": "td @ line 156 · surrounding text: SkyTunnel Android 验证通过 7/13 证明 Android 可完全以 SkyTunnel 取代 sing-box/libbox 运行；7/14 消费端改为引用正式版本号的共享模块，不再依赖开发者本机路径。 Sprint 7 提出的自研方案从「方向」变成「已验证」，iOS 上架合规与 GPL 授权风险的技术前提已落地。"
+    },
+    {
+      "id": "u_0a09e1e37878fa6d",
+      "kind": "text",
+      "source": "Sprint 7 提出的自研方案从「方向」变成「已验证」，iOS 上架合规与 GPL 授权风险的技术前提已落地。",
+      "occurrence": 0,
+      "target": "The self-developed solution proposed in Sprint 7 has moved from 'direction' to 'validated'. The technical prerequisites for iOS compliance and GPL licensing risks have been established.",
+      "context": "td @ line 156 · surrounding text: SkyTunnel Android 验证通过 7/13 证明 Android 可完全以 SkyTunnel 取代 sing-box/libbox 运行；7/14 消费端改为引用正式版本号的共享模块，不再依赖开发者本机路径。 Sprint 7 提出的自研方案从「方向」变成「已验证」，iOS 上架合规与 GPL 授权风险的技术前提已落地。"
+    },
+    {
+      "id": "u_3151af585269497f",
+      "kind": "text",
+      "source": "Windows 接入同一套自研核心",
+      "occurrence": 0,
+      "target": "Windows access same in-house core",
+      "context": "td @ line 157 · surrounding text: Windows 接入同一套自研核心 7/11 起 Windows 客户端接入相同的七协议自研核心，7/13 与 Android 统一为同一共享模块的相同依赖形态。 两端共用一套引擎，同一个修复一次生效；也是 FFF 与未来客户端复用的基础。"
+    },
+    {
+      "id": "u_e7de69b0ae82af65",
+      "kind": "text",
+      "source": "7/11 起 Windows 客户端接入相同的七协议自研核心，7/13 与 Android 统一为同一共享模块的相同依赖形态。",
+      "occurrence": 0,
+      "target": "On 7/11, Windows client accessed the same seven-protocol in-house core; on 7/13, unified with Android to use the same shared module and dependency form. Both ends share one engine, fixes apply once for all; forms the basis for FFF and future clients reuse.",
+      "context": "td @ line 157 · surrounding text: Windows 接入同一套自研核心 7/11 起 Windows 客户端接入相同的七协议自研核心，7/13 与 Android 统一为同一共享模块的相同依赖形态。 两端共用一套引擎，同一个修复一次生效；也是 FFF 与未来客户端复用的基础。"
+    },
+    {
+      "id": "u_1e203cbb7167e667",
+      "kind": "text",
+      "source": "两端共用一套引擎，同一个修复一次生效；也是 FFF 与未来客户端复用的基础。",
+      "occurrence": 0,
+      "target": "Both ends share one engine, fixes apply once for all; forms the basis for FFF and future clients reuse.",
+      "context": "td @ line 157 · surrounding text: Windows 接入同一套自研核心 7/11 起 Windows 客户端接入相同的七协议自研核心，7/13 与 Android 统一为同一共享模块的相同依赖形态。 两端共用一套引擎，同一个修复一次生效；也是 FFF 与未来客户端复用的基础。"
+    },
+    {
+      "id": "u_bb82ddf73bbbdd7f",
+      "kind": "text",
+      "source": "Windows 安装包持续瘦身",
+      "occurrence": 0,
+      "target": "Windows installer package continues to slim down",
+      "context": "td @ line 158 · surrounding text: Windows 安装包持续瘦身 安装包 7.7 MB、安装后占用 18.7 MB。对比最初 Electron 版本的 100 MB／273 MB，下载体积减少约 92%、安装占用减少约 93%。 在 Sprint 7 已大幅缩减的基础上再进一步，下载与安装门槛持续降低。"
+    },
+    {
+      "id": "u_80e1f25a4d551dd8",
+      "kind": "text",
+      "source": "安装包 7.7 MB、安装后占用 18.7 MB。对比最初 Electron 版本的 100 MB／273 MB，下载体积减少约 92%、安装占用减少约 93%。",
+      "occurrence": 0,
+      "target": "The installer is 7.7 MB and uses 18.7 MB after installation. Compared with the original Electron version at 100 MB/273 MB, download size fell by about 92% and installed size by about 93%.",
+      "context": "td @ line 158 · surrounding text: Windows 安装包持续瘦身 安装包 7.7 MB、安装后占用 18.7 MB。对比最初 Electron 版本的 100 MB／273 MB，下载体积减少约 92%、安装占用减少约 93%。 在 Sprint 7 已大幅缩减的基础上再进一步，下载与安装门槛持续降低。"
+    },
+    {
+      "id": "u_96c42e4bf7b0fc0e",
+      "kind": "text",
+      "source": "在 Sprint 7 已大幅缩减的基础上再进一步，下载与安装门槛持续降低。",
+      "occurrence": 0,
+      "target": "Further reduction in download and installation barriers after significant reduction in Sprint 7.",
+      "context": "td @ line 158 · surrounding text: Windows 安装包持续瘦身 安装包 7.7 MB、安装后占用 18.7 MB。对比最初 Electron 版本的 100 MB／273 MB，下载体积减少约 92%、安装占用减少约 93%。 在 Sprint 7 已大幅缩减的基础上再进一步，下载与安装门槛持续降低。"
+    },
+    {
+      "id": "u_5fbd9ff987dac944",
+      "kind": "text",
+      "source": "Windows 代码签名打通",
+      "occurrence": 0,
+      "target": "Windows code signing enabled",
+      "context": "td @ line 159 · surrounding text: Windows 代码签名打通 7/22 完成 SSL.com eSigner 签名方案落地，测试环境 x64 与 ARM64 双架构签发成功。 Sprint 7 的外部阻塞项解除，Windows 正式发布不再卡在签名环节。"
+    },
+    {
+      "id": "u_42b1c7429e125fa3",
+      "kind": "text",
+      "source": "7/22 完成 SSL.com eSigner 签名方案落地，测试环境 x64 与 ARM64 双架构签发成功。",
+      "occurrence": 0,
+      "target": "On 7/22, completed SSL.com eSigner signing scheme implementation; successfully issued in x64 and ARM64 test environments. External blocking item removed for Sprint 7, Windows formal release no longer stuck at the signing phase.",
+      "context": "td @ line 159 · surrounding text: Windows 代码签名打通 7/22 完成 SSL.com eSigner 签名方案落地，测试环境 x64 与 ARM64 双架构签发成功。 Sprint 7 的外部阻塞项解除，Windows 正式发布不再卡在签名环节。"
+    },
+    {
+      "id": "u_15ff584e12ae590d",
+      "kind": "text",
+      "source": "Sprint 7 的外部阻塞项解除，Windows 正式发布不再卡在签名环节。",
+      "occurrence": 0,
+      "target": "External blocking item resolved for Sprint 7; Windows formal release no longer stuck at the signing phase.",
+      "context": "td @ line 159 · surrounding text: Windows 代码签名打通 7/22 完成 SSL.com eSigner 签名方案落地，测试环境 x64 与 ARM64 双架构签发成功。 Sprint 7 的外部阻塞项解除，Windows 正式发布不再卡在签名环节。"
+    },
+    {
+      "id": "u_23f93784f81c35cd",
+      "kind": "text",
+      "source": "「连上无流量」根因修复",
+      "occurrence": 0,
+      "target": "Root cause of 'connected but no traffic' fixed",
+      "context": "td @ line 160 · surrounding text: 「连上无流量」根因修复 7/23 定位到 IPv6 网络环境下的地址族不匹配问题 —— 用户显示已连接但实际无流量；同日完成动态出口方案实作，7/24 通过真机验收。 直接影响用户「连上却不能用」的体感，属于客服工单高发类型。"
+    },
+    {
+      "id": "u_93dc91418465cee7",
+      "kind": "text",
+      "source": "7/23 定位到 IPv6 网络环境下的地址族不匹配问题 —— 用户显示已连接但实际无流量；同日完成动态出口方案实作，7/24 通过真机验收。",
+      "occurrence": 0,
+      "target": "On 7/23, identified IPv6 network environment address family mismatch issue —— user shows connected but has no actual traffic; same day implemented dynamic exit solution and passed true device acceptance on 7/24. Directly impacts user 'connected but unusable' experience, a high-occurrence type in customer support tickets.",
+      "context": "td @ line 160 · surrounding text: 「连上无流量」根因修复 7/23 定位到 IPv6 网络环境下的地址族不匹配问题 —— 用户显示已连接但实际无流量；同日完成动态出口方案实作，7/24 通过真机验收。 直接影响用户「连上却不能用」的体感，属于客服工单高发类型。"
+    },
+    {
+      "id": "u_c1333580dfc604df",
+      "kind": "text",
+      "source": "直接影响用户「连上却不能用」的体感，属于客服工单高发类型。",
+      "occurrence": 0,
+      "target": "Directly impacting the user experience of being connected but unable to use, this issue falls into a high-incidence category in customer service work orders.",
+      "context": "td @ line 160 · surrounding text: 「连上无流量」根因修复 7/23 定位到 IPv6 网络环境下的地址族不匹配问题 —— 用户显示已连接但实际无流量；同日完成动态出口方案实作，7/24 通过真机验收。 直接影响用户「连上却不能用」的体感，属于客服工单高发类型。"
+    },
+    {
+      "id": "u_c486477a1416ef94",
+      "kind": "text",
+      "source": "协议能力扩充",
+      "occurrence": 0,
+      "target": "Protocol capability expansion",
+      "context": "td @ line 161 · surrounding text: 协议能力扩充 7/22 完成 ShadowTLS v3 内层 Shadowsocks 2022 的实作与编解码测试。 抗封锁协议组合再增一项，中国网络环境下可用线路选择更多。"
+    },
+    {
+      "id": "u_0ae7e078f834fc2f",
+      "kind": "text",
+      "source": "7/22 完成 ShadowTLS v3 内层 Shadowsocks 2022 的实作与编解码测试。",
+      "occurrence": 0,
+      "target": "On 7/22, completed implementation and codec testing for ShadowTLS v3 with inner-layer Shadowsocks 2022.",
+      "context": "td @ line 161 · surrounding text: 协议能力扩充 7/22 完成 ShadowTLS v3 内层 Shadowsocks 2022 的实作与编解码测试。 抗封锁协议组合再增一项，中国网络环境下可用线路选择更多。"
+    },
+    {
+      "id": "u_b91fb57570154179",
+      "kind": "text",
+      "source": "抗封锁协议组合再增一项，中国网络环境下可用线路选择更多。",
+      "occurrence": 0,
+      "target": "Added another anti-blocking protocol combination, providing more available route options in China's network environment.",
+      "context": "td @ line 161 · surrounding text: 协议能力扩充 7/22 完成 ShadowTLS v3 内层 Shadowsocks 2022 的实作与编解码测试。 抗封锁协议组合再增一项，中国网络环境下可用线路选择更多。"
+    },
+    {
+      "id": "u_7fa05ffdcdc0dbfe",
+      "kind": "text",
+      "source": "Android 连接体验修复",
+      "occurrence": 0,
+      "target": "Android connection experience fixes",
+      "context": "td @ line 162 · surrounding text: Android 连接体验修复 7/23–7/24 集中修复断网保护开关、通知栏状态、连接状态显示等 QA 提出的缺陷，并完成启动页与一批界面问题的整体修复。 启动与连接是用户每次使用的必经路径，这类修复直接影响留存。"
+    },
+    {
+      "id": "u_dfe8e0e9b84ddd67",
+      "kind": "text",
+      "source": "7/23–7/24 集中修复断网保护开关、通知栏状态、连接状态显示等 QA 提出的缺陷，并完成启动页与一批界面问题的整体修复。",
+      "occurrence": 0,
+      "target": "From 7/23–7/24, fixed QA-reported issues with the network lock toggle, notification status, and connection status, and completed broader fixes to the launch screen and several UI issues.",
+      "context": "td @ line 162 · surrounding text: Android 连接体验修复 7/23–7/24 集中修复断网保护开关、通知栏状态、连接状态显示等 QA 提出的缺陷，并完成启动页与一批界面问题的整体修复。 启动与连接是用户每次使用的必经路径，这类修复直接影响留存。"
+    },
+    {
+      "id": "u_573dcbea0506f99a",
+      "kind": "text",
+      "source": "启动与连接是用户每次使用的必经路径，这类修复直接影响留存。",
+      "occurrence": 0,
+      "target": "Ensuring a critical path for user engagement and retention by addressing quality assurance issues related to disconnection protection switches, notification bar status, and connection status display.",
+      "context": "td @ line 162 · surrounding text: Android 连接体验修复 7/23–7/24 集中修复断网保护开关、通知栏状态、连接状态显示等 QA 提出的缺陷，并完成启动页与一批界面问题的整体修复。 启动与连接是用户每次使用的必经路径，这类修复直接影响留存。"
+    },
+    {
+      "id": "u_1cfe50041dfcdf8a",
+      "kind": "text",
+      "source": "节点运维缺陷修复",
+      "occurrence": 0,
+      "target": "VPN node operations defect fixes",
+      "context": "td @ line 163 · surrounding text: 节点运维缺陷修复 7/20 修复节点程序重启时因主机名告警被误判为「重启失败」的问题。 减少运维误报，节点状态判断更可信。"
+    },
+    {
+      "id": "u_f5e7cf56e911d2e3",
+      "kind": "text",
+      "source": "7/20 修复节点程序重启时因主机名告警被误判为「重启失败」的问题。",
+      "occurrence": 0,
+      "target": "Fixed an issue where VPN node program restarts were incorrectly flagged as 'failed' due to hostname alerts on July 20. Reduced operational misreporting and improved VPN node state assessment accuracy.",
+      "context": "td @ line 163 · surrounding text: 节点运维缺陷修复 7/20 修复节点程序重启时因主机名告警被误判为「重启失败」的问题。 减少运维误报，节点状态判断更可信。"
+    },
+    {
+      "id": "u_df5c04d31670a24d",
+      "kind": "text",
+      "source": "减少运维误报，节点状态判断更可信。",
+      "occurrence": 0,
+      "target": "Reduced operational misreporting and improved VPN node state assessment accuracy.",
+      "context": "td @ line 163 · surrounding text: 节点运维缺陷修复 7/20 修复节点程序重启时因主机名告警被误判为「重启失败」的问题。 减少运维误报，节点状态判断更可信。"
+    },
+    {
+      "id": "u_b4887eec587372cc",
+      "kind": "text",
+      "source": "中国网络自测工具增强",
+      "occurrence": 0,
+      "target": "Enhanced the China network self-test tool",
+      "context": "td @ line 164 · surrounding text: 中国网络自测工具增强 7/13 从写死的协议／节点配置改为动态查询节点，减少人工维护测试配置的成本。 兑现 Sprint 7 承诺的迭代方向，QA 使用成本下降。"
+    },
+    {
+      "id": "u_be83c3f1a5fdb2e4",
+      "kind": "text",
+      "source": "7/13 从写死的协议／节点配置改为动态查询节点，减少人工维护测试配置的成本。",
+      "occurrence": 0,
+      "target": "Completed the implementation of dynamic query VPN nodes instead of fixed protocol/VPN node configurations on July 13. Reduced maintenance costs for QA.",
+      "context": "td @ line 164 · surrounding text: 中国网络自测工具增强 7/13 从写死的协议／节点配置改为动态查询节点，减少人工维护测试配置的成本。 兑现 Sprint 7 承诺的迭代方向，QA 使用成本下降。"
+    },
+    {
+      "id": "u_e6a0cb0960864d9e",
+      "kind": "text",
+      "source": "兑现 Sprint 7 承诺的迭代方向，QA 使用成本下降。",
+      "occurrence": 0,
+      "target": "Reduced QA maintenance costs by implementing the Sprint 7 iteration direction.",
+      "context": "td @ line 164 · surrounding text: 中国网络自测工具增强 7/13 从写死的协议／节点配置改为动态查询节点，减少人工维护测试配置的成本。 兑现 Sprint 7 承诺的迭代方向，QA 使用成本下降。"
+    },
+    {
+      "id": "u_f069f9a5974cc4d0",
+      "kind": "text",
+      "source": "三、改善与商业价值",
+      "occurrence": 0,
+      "target": "III. Improvements and Business Value",
+      "context": "h2 @ line 170"
+    },
+    {
+      "id": "u_067d6485211e60fa",
+      "kind": "text",
+      "source": "技术改善",
+      "occurrence": 0,
+      "target": "Technical Improvement",
+      "context": "th @ line 172 · surrounding text: 技术改善 之前 之后 商业价值"
+    },
+    {
+      "id": "u_d32702a23b2bdca9",
+      "kind": "text",
+      "source": "之前",
+      "occurrence": 0,
+      "target": "Before",
+      "context": "th @ line 172 · surrounding text: 技术改善 之前 之后 商业价值"
+    },
+    {
+      "id": "u_093181cfcf2448ae",
+      "kind": "text",
+      "source": "之后",
+      "occurrence": 0,
+      "target": "After",
+      "context": "th @ line 172 · surrounding text: 技术改善 之前 之后 商业价值"
+    },
+    {
+      "id": "u_331beca638ab7c74",
+      "kind": "text",
+      "source": "商业价值",
+      "occurrence": 0,
+      "target": "Business Value",
+      "context": "th @ line 172 · surrounding text: 技术改善 之前 之后 商业价值"
+    },
+    {
+      "id": "u_53cecd29b19866ee",
+      "kind": "text",
+      "source": "Windows 安装包下载体积",
+      "occurrence": 0,
+      "target": "Windows installer download size",
+      "context": "td @ line 174 · surrounding text: Windows 安装包下载体积 100 MB（Electron 版） 7.7 MB（-92%） 下载失败率与流量成本进一步降低，安装转化率预期提升"
+    },
+    {
+      "id": "u_8f1a806853492fbe",
+      "kind": "text",
+      "source": "100 MB（Electron 版）",
+      "occurrence": 0,
+      "target": "100 MB (Electron version)",
+      "context": "td @ line 174 · surrounding text: Windows 安装包下载体积 100 MB（Electron 版） 7.7 MB（-92%） 下载失败率与流量成本进一步降低，安装转化率预期提升"
+    },
+    {
+      "id": "u_14414720971bf7fe",
+      "kind": "text",
+      "source": "下载失败率与流量成本进一步降低，安装转化率预期提升",
+      "occurrence": 0,
+      "target": "Further reducing download failure rates and traffic costs, with expected increases in installation conversion rates.",
+      "context": "td @ line 174 · surrounding text: Windows 安装包下载体积 100 MB（Electron 版） 7.7 MB（-92%） 下载失败率与流量成本进一步降低，安装转化率预期提升"
+    },
+    {
+      "id": "u_a6b61dbdcfb7e66a",
+      "kind": "text",
+      "source": "Windows 安装后占用",
+      "occurrence": 0,
+      "target": "Windows Installation Post-Installation Usage",
+      "context": "td @ line 175 · surrounding text: Windows 安装后占用 273 MB 18.7 MB（-93%） 低配置机器可用性提升，卸载顾虑降低"
+    },
+    {
+      "id": "u_024ee791f9a8b1d9",
+      "kind": "text",
+      "source": "低配置机器可用性提升，卸载顾虑降低",
+      "occurrence": 0,
+      "target": "Enhanced availability for low-end machines, reduced concerns about uninstallation",
+      "context": "td @ line 175 · surrounding text: Windows 安装后占用 273 MB 18.7 MB（-93%） 低配置机器可用性提升，卸载顾虑降低"
+    },
+    {
+      "id": "u_91c71ff7be297f3f",
+      "kind": "text",
+      "source": "IPv6 网络下的连接可用性",
+      "occurrence": 0,
+      "target": "Availability of IPv6 network connections",
+      "context": "td @ line 176 · surrounding text: IPv6 网络下的连接可用性 部分 IPv6 环境用户显示已连接但无实际流量 根因修复并通过真机验收 减少「连上却不能用」类客服工单与退款争议"
+    },
+    {
+      "id": "u_d85f0380b71dce90",
+      "kind": "text",
+      "source": "部分 IPv6 环境用户显示已连接但无实际流量",
+      "occurrence": 0,
+      "target": "IPv6 environment users show connection but no actual traffic",
+      "context": "td @ line 176 · surrounding text: IPv6 网络下的连接可用性 部分 IPv6 环境用户显示已连接但无实际流量 根因修复并通过真机验收 减少「连上却不能用」类客服工单与退款争议"
+    },
+    {
+      "id": "u_01f53d9974899505",
+      "kind": "text",
+      "source": "根因修复并通过真机验收",
+      "occurrence": 0,
+      "target": "Root cause fixed and true machine acceptance testing completed",
+      "context": "td @ line 176 · surrounding text: IPv6 网络下的连接可用性 部分 IPv6 环境用户显示已连接但无实际流量 根因修复并通过真机验收 减少「连上却不能用」类客服工单与退款争议"
+    },
+    {
+      "id": "u_f1b1eb735d59e932",
+      "kind": "text",
+      "source": "减少「连上却不能用」类客服工单与退款争议",
+      "occurrence": 0,
+      "target": "Reduced customer service tickets and refund disputes related to 'connected but not usable'",
+      "context": "td @ line 176 · surrounding text: IPv6 网络下的连接可用性 部分 IPv6 环境用户显示已连接但无实际流量 根因修复并通过真机验收 减少「连上却不能用」类客服工单与退款争议"
+    },
+    {
+      "id": "u_19675418f7ab356a",
+      "kind": "text",
+      "source": "VPN 核心引擎授权风险",
+      "occurrence": 0,
+      "target": "Risk of core engine licensing for VPN",
+      "context": "td @ line 177 · surrounding text: VPN 核心引擎授权风险 依赖 GPL 授权的第三方开源内核 Android 已验证可完全以自研引擎取代 解除 iOS 重新上架的结构性障碍，并消除版权投诉风险"
+    },
+    {
+      "id": "u_53ce665e0a77808e",
+      "kind": "text",
+      "source": "依赖 GPL 授权的第三方开源内核",
+      "occurrence": 0,
+      "target": "Third-party open-source kernel under GPL license",
+      "context": "td @ line 177 · surrounding text: VPN 核心引擎授权风险 依赖 GPL 授权的第三方开源内核 Android 已验证可完全以自研引擎取代 解除 iOS 重新上架的结构性障碍，并消除版权投诉风险"
+    },
+    {
+      "id": "u_9d797b195c5154fb",
+      "kind": "text",
+      "source": "Android 已验证可完全以自研引擎取代",
+      "occurrence": 0,
+      "target": "Android has been validated to fully replace the self-developed engine",
+      "context": "td @ line 177 · surrounding text: VPN 核心引擎授权风险 依赖 GPL 授权的第三方开源内核 Android 已验证可完全以自研引擎取代 解除 iOS 重新上架的结构性障碍，并消除版权投诉风险"
+    },
+    {
+      "id": "u_9da72af96f7aa49e",
+      "kind": "text",
+      "source": "解除 iOS 重新上架的结构性障碍，并消除版权投诉风险",
+      "occurrence": 0,
+      "target": "Structural barrier for iOS re-launching and risk of copyright complaints eliminated",
+      "context": "td @ line 177 · surrounding text: VPN 核心引擎授权风险 依赖 GPL 授权的第三方开源内核 Android 已验证可完全以自研引擎取代 解除 iOS 重新上架的结构性障碍，并消除版权投诉风险"
+    },
+    {
+      "id": "u_dd7392f036982a77",
+      "kind": "text",
+      "source": "双端引擎维护成本",
+      "occurrence": 0,
+      "target": "Costs associated with dual-engine maintenance",
+      "context": "td @ line 178 · surrounding text: 双端引擎维护成本 Android 与 Windows 各自维护协议实现 统一共享模块，按版本号分发 同一修复改一次、两端生效，降低行为漂移"
+    },
+    {
+      "id": "u_a29b68453866767d",
+      "kind": "text",
+      "source": "Android 与 Windows 各自维护协议实现",
+      "occurrence": 0,
+      "target": "Maintenance of core engine protocols for Android and Windows separately implemented",
+      "context": "td @ line 178 · surrounding text: 双端引擎维护成本 Android 与 Windows 各自维护协议实现 统一共享模块，按版本号分发 同一修复改一次、两端生效，降低行为漂移"
+    },
+    {
+      "id": "u_bce3e1efc31a2310",
+      "kind": "text",
+      "source": "统一共享模块，按版本号分发",
+      "occurrence": 0,
+      "target": "Unified shared module, distributed by version number",
+      "context": "td @ line 178 · surrounding text: 双端引擎维护成本 Android 与 Windows 各自维护协议实现 统一共享模块，按版本号分发 同一修复改一次、两端生效，降低行为漂移"
+    },
+    {
+      "id": "u_8a3a6376bac3e5c1",
+      "kind": "text",
+      "source": "同一修复改一次、两端生效，降低行为漂移",
+      "occurrence": 0,
+      "target": "Same fix applied to both ends once made, reducing behavioral drift",
+      "context": "td @ line 178 · surrounding text: 双端引擎维护成本 Android 与 Windows 各自维护协议实现 统一共享模块，按版本号分发 同一修复改一次、两端生效，降低行为漂移"
+    },
+    {
+      "id": "u_d71c2f71942ad848",
+      "kind": "text",
+      "source": "四、关键时间节点",
+      "occurrence": 0,
+      "target": "IV. Key Milestones",
+      "context": "h2 @ line 184"
+    },
+    {
+      "id": "u_8edf8fc98cd7be57",
+      "kind": "text",
+      "source": "Windows 客户端接入第一个自研协议核心；共享日志模块升级并被后端采用",
+      "occurrence": 0,
+      "target": "Windows client integrated the first self-developed protocol core; upgraded and adopted a shared log module.",
+      "context": "div.ttext @ line 186 · surrounding text: 7/11 Windows 客户端接入第一个自研协议核心；共享日志模块升级并被后端采用"
+    },
+    {
+      "id": "u_95fcfcd8e212adf5",
+      "kind": "text",
+      "source": "SkyTunnel 在 Android 上验证可完全取代 sing-box/libbox",
+      "occurrence": 0,
+      "target": "SkyTunnel Replaces sing-box/libbox on Android with SkyTunnel",
+      "context": "strong @ line 187 · surrounding text: 7/13 SkyTunnel 在 Android 上验证可完全取代 sing-box/libbox ；Android 与 Windows 同步改用共享版本化模块；中国网络自测工具改为动态节点查询"
+    },
+    {
+      "id": "u_fdbadf64a8bc2869",
+      "kind": "text",
+      "source": "；Android 与 Windows 同步改用共享版本化模块；中国网络自测工具改为动态节点查询",
+      "occurrence": 0,
+      "target": "Android and Windows Sync to Shared Versioned Modules; China Network Self-Testing Tool Changed to Dynamic VPN node Query",
+      "context": "div.ttext @ line 187 · surrounding text: 7/13 SkyTunnel 在 Android 上验证可完全取代 sing-box/libbox ；Android 与 Windows 同步改用共享版本化模块；中国网络自测工具改为动态节点查询"
+    },
+    {
+      "id": "u_97a29607446f7f0c",
+      "kind": "text",
+      "source": "Android 完成 SkyTunnel 迁移；Windows 付费节点与 ShadowTLS 路由修复；与台湾团队完成 FFF 需求梳理，确认续费功能为双产品最高优先",
+      "occurrence": 0,
+      "target": "Android completed SkyTunnel migration; fixed Windows paid VPN nodes and ShadowTLS routing issues; collaborated with Taiwan team to clarify FFF requirements, confirming subscription renewal as the highest priority for both products.",
+      "context": "div.ttext @ line 188 · surrounding text: 7/14 Android 完成 SkyTunnel 迁移；Windows 付费节点与 ShadowTLS 路由修复；与台湾团队完成 FFF 需求梳理，确认续费功能为双产品最高优先"
+    },
+    {
+      "id": "u_9b6d1d50075b85cf",
+      "kind": "text",
+      "source": "修复节点程序重启被误判为失败的运维缺陷",
+      "occurrence": 0,
+      "target": "Fixed Defect Where VPN node Program Restart Was Misjudged as Failure in Maintenance Operations",
+      "context": "div.ttext @ line 189 · surrounding text: 7/20 修复节点程序重启被误判为失败的运维缺陷"
+    },
+    {
+      "id": "u_0e74acb2f5b07dd6",
+      "kind": "text",
+      "source": "Windows 代码签名方案打通",
+      "occurrence": 0,
+      "target": "Windows Code Signing Solution Established",
+      "context": "strong @ line 190 · surrounding text: 7/22 Windows 代码签名方案打通 ，测试环境 x64／ARM64 双架构签发成功；ShadowTLS v3 内层 Shadowsocks 2022 实作与测试完成"
+    },
+    {
+      "id": "u_770d9c2779b259b0",
+      "kind": "text",
+      "source": "，测试环境 x64／ARM64 双架构签发成功；ShadowTLS v3 内层 Shadowsocks 2022 实作与测试完成",
+      "occurrence": 0,
+      "target": "Successfully signed for test environments on x64/ARM64 architectures; completed implementation and testing of ShadowTLS v3 inner layer Shadowsocks 2022.",
+      "context": "div.ttext @ line 190 · surrounding text: 7/22 Windows 代码签名方案打通 ，测试环境 x64／ARM64 双架构签发成功；ShadowTLS v3 内层 Shadowsocks 2022 实作与测试完成"
+    },
+    {
+      "id": "u_0bee913a981d3664",
+      "kind": "text",
+      "source": "定位「连上无流量」根因为 IPv6 地址族不匹配",
+      "occurrence": 0,
+      "target": "Identified Root Cause of 'No Traffic Upon Connection' as Incompatible IPv6 Address Family; Dynamic Export Solution Implemented on Same Day",
+      "context": "strong @ line 191 · surrounding text: 7/23 定位「连上无流量」根因为 IPv6 地址族不匹配 ，同日完成动态出口方案实作；Android 断网保护与连接状态缺陷修复"
+    },
+    {
+      "id": "u_76a9e2936805b29f",
+      "kind": "text",
+      "source": "，同日完成动态出口方案实作；Android 断网保护与连接状态缺陷修复",
+      "occurrence": 0,
+      "target": "Implemented Dynamic Export Solution and Fixed Android Network Protection and Connection State Defects on the Same Day",
+      "context": "div.ttext @ line 191 · surrounding text: 7/23 定位「连上无流量」根因为 IPv6 地址族不匹配 ，同日完成动态出口方案实作；Android 断网保护与连接状态缺陷修复"
+    },
+    {
+      "id": "u_0a51642109bee936",
+      "kind": "text",
+      "source": "IPv6 动态出口方案通过真机验收；Android 启动页与界面批次修复完成",
+      "occurrence": 0,
+      "target": "IPv6 dynamic exit strategy passed true machine acceptance testing; Android launch page and interface batch fixes completed.",
+      "context": "div.ttext @ line 192 · surrounding text: 7/24 IPv6 动态出口方案通过真机验收；Android 启动页与界面批次修复完成"
+    },
+    {
+      "id": "u_6b50d9dee1f68884",
+      "kind": "text",
+      "source": "五、上线计划与后端改动特殊挑战",
+      "occurrence": 0,
+      "target": "Five: Rollout Plan and Backend Modifications with Special Challenges",
+      "context": "h2 @ line 197"
+    },
+    {
+      "id": "u_ac57949c2b3c88e9",
+      "kind": "text",
+      "source": "客户端",
+      "occurrence": 0,
+      "target": "Client",
+      "context": "th @ line 199 · surrounding text: 客户端 本阶段状态 说明"
+    },
+    {
+      "id": "u_52a6fbdb89e0c6cb",
+      "kind": "text",
+      "source": "本阶段状态",
+      "occurrence": 0,
+      "target": "Status",
+      "context": "th @ line 199 · surrounding text: 客户端 本阶段状态 说明"
+    },
+    {
+      "id": "u_5a9b031adf93522b",
+      "kind": "text",
+      "source": "说明",
+      "occurrence": 1,
+      "target": "Description",
+      "context": "th @ line 199 · surrounding text: 客户端 本阶段状态 说明"
+    },
+    {
+      "id": "u_126fd0ac14b0af14",
+      "kind": "text",
+      "source": "持续迭代",
+      "occurrence": 0,
+      "target": "Continuous Iteration",
+      "context": "span.badge.progress @ line 201 · surrounding text: Android 持续迭代 本阶段完成 SkyTunnel 迁移、连接状态与启动流程修复，对外发布节奏以官方结果为准。"
+    },
+    {
+      "id": "u_a7c28bbee1714c2e",
+      "kind": "text",
+      "source": "本阶段完成 SkyTunnel 迁移、连接状态与启动流程修复，对外发布节奏以官方结果为准。",
+      "occurrence": 0,
+      "target": "Completed SkyTunnel Migration, Connection State and Launch Flow Fixes; Release Schedule Follows Official Results",
+      "context": "td @ line 201 · surrounding text: Android 持续迭代 本阶段完成 SkyTunnel 迁移、连接状态与启动流程修复，对外发布节奏以官方结果为准。"
+    },
+    {
+      "id": "u_155b3862b4834544",
+      "kind": "text",
+      "source": "Windows（自研 Rust 版）",
+      "occurrence": 0,
+      "target": "Windows (Self-Developed Rust Version)",
+      "context": "td @ line 202 · surrounding text: Windows（自研 Rust 版） 签名已打通，待发布门控 体积与签名两项前置条件均已具备；正式环境签名与 QA 安装／连接／更新／卸载验证尚未完成，仍不具备对外发布条件。"
+    },
+    {
+      "id": "u_ff79ce46f94475d4",
+      "kind": "text",
+      "source": "签名已打通，待发布门控",
+      "occurrence": 0,
+      "target": "Signature is established, pending release gating",
+      "context": "span.badge.progress @ line 202 · surrounding text: Windows（自研 Rust 版） 签名已打通，待发布门控 体积与签名两项前置条件均已具备；正式环境签名与 QA 安装／连接／更新／卸载验证尚未完成，仍不具备对外发布条件。"
+    },
+    {
+      "id": "u_9f325b88c9b676ae",
+      "kind": "text",
+      "source": "体积与签名两项前置条件均已具备；正式环境签名与 QA 安装／连接／更新／卸载验证尚未完成，仍不具备对外发布条件。",
+      "occurrence": 0,
+      "target": "Both volume and signature prerequisites are met; however, formal environment signatures and QA installation/connection/update/uninstallation verification have not been completed, thus the product is not yet ready for external release.",
+      "context": "td @ line 202 · surrounding text: Windows（自研 Rust 版） 签名已打通，待发布门控 体积与签名两项前置条件均已具备；正式环境签名与 QA 安装／连接／更新／卸载验证尚未完成，仍不具备对外发布条件。"
+    },
+    {
+      "id": "u_15c47541d9f6bbdc",
+      "kind": "text",
+      "source": "本阶段后端改动的特殊挑战",
+      "occurrence": 0,
+      "target": "Special challenges of this sprint's backend modifications",
+      "context": "h3 @ line 205"
+    },
+    {
+      "id": "u_fe7c9fb565570146",
+      "kind": "text",
+      "source": "后端同时服务 3 类生产客户端，其中 2 类目前无法升级，每次后端改动都需额外保证向后兼容。",
+      "occurrence": 0,
+      "target": "The backend simultaneously serves three production clients, two of which cannot be upgraded. Each backend modification requires additional backward compatibility assurance.",
+      "context": "strong @ line 207"
+    },
+    {
+      "id": "u_f3564d57af235003",
+      "kind": "text",
+      "source": "客户端",
+      "occurrence": 1,
+      "target": "Client",
+      "context": "th @ line 209 · surrounding text: 客户端 当前生产版本 能否升级"
+    },
+    {
+      "id": "u_c977ca4c3e9d1bb3",
+      "kind": "text",
+      "source": "当前生产版本",
+      "occurrence": 0,
+      "target": "Current Production Version",
+      "context": "th @ line 209 · surrounding text: 客户端 当前生产版本 能否升级"
+    },
+    {
+      "id": "u_c5e4e0037830c675",
+      "kind": "text",
+      "source": "能否升级",
+      "occurrence": 0,
+      "target": "Can Upgrade?",
+      "context": "th @ line 209 · surrounding text: 客户端 当前生产版本 能否升级"
+    },
+    {
+      "id": "u_5a8284bdb54d43dc",
+      "kind": "text",
+      "source": "3.8.x 系列",
+      "occurrence": 0,
+      "target": "3.8.x series",
+      "context": "td @ line 210 · surrounding text: Android （Arrowfish） 3.8.x 系列 ✅ 可升级"
+    },
+    {
+      "id": "u_f7272a48b168d614",
+      "kind": "text",
+      "source": "✅ 可升级",
+      "occurrence": 0,
+      "target": "✅ Can Upgrade",
+      "context": "td @ line 210 · surrounding text: Android （Arrowfish） 3.8.x 系列 ✅ 可升级"
+    },
+    {
+      "id": "u_d1b1ac42519011d8",
+      "kind": "text",
+      "source": "v1.3.0（已冻结）",
+      "occurrence": 0,
+      "target": "v1.3.0 (frozen)",
+      "context": "td @ line 211 · surrounding text: iOS （HiYou） v1.3.0（已冻结） ❌ 不能升级 — Apple 开发者账号被终止，无法提交 App Store 更新"
+    },
+    {
+      "id": "u_4a95a30f8412f45a",
+      "kind": "text",
+      "source": "❌ 不能升级 — Apple 开发者账号被终止，无法提交 App Store 更新",
+      "occurrence": 0,
+      "target": "❌ Unable to upgrade — Apple developer account terminated, unable to submit App Store update",
+      "context": "td @ line 211 · surrounding text: iOS （HiYou） v1.3.0（已冻结） ❌ 不能升级 — Apple 开发者账号被终止，无法提交 App Store 更新"
+    },
+    {
+      "id": "u_33cf4696c50eeafe",
+      "kind": "text",
+      "source": "（旧版）",
+      "occurrence": 0,
+      "target": "(Old Version)",
+      "context": "td @ line 212 · surrounding text: Windows PC （旧版） v2.2.71（已冻结） ⚠️ 签名方案本阶段已打通，待正式环境验证后可恢复升级能力"
+    },
+    {
+      "id": "u_83fba7b0d46fee87",
+      "kind": "text",
+      "source": "v2.2.71（已冻结）",
+      "occurrence": 0,
+      "target": "v2.2.71 (Frozen)",
+      "context": "td @ line 212 · surrounding text: Windows PC （旧版） v2.2.71（已冻结） ⚠️ 签名方案本阶段已打通，待正式环境验证后可恢复升级能力"
+    },
+    {
+      "id": "u_70afebb47005691f",
+      "kind": "text",
+      "source": "⚠️ 签名方案本阶段已打通，待正式环境验证后可恢复升级能力",
+      "occurrence": 0,
+      "target": "⚠️ Signature solution is established for this sprint; pending formal environment validation to restore upgrade capability",
+      "context": "td @ line 212 · surrounding text: Windows PC （旧版） v2.2.71（已冻结） ⚠️ 签名方案本阶段已打通，待正式环境验证后可恢复升级能力"
+    },
+    {
+      "id": "u_e8f5830a34af293b",
+      "kind": "text",
+      "source": "本阶段的 IPv6 出口、协议扩充等后端改动均以新增字段／新增路径方式实现，未改变冻结客户端所依赖的既有响应格式。此项约束使后端每次改动额外增加约 30% 的设计与测试成本；要彻底解除，需要 (a) iOS 账号恢复与客户端合规重建、(b) Windows 新签名方案完成正式环境验证 —— 其中 (b) 本阶段已取得实质进展。",
+      "occurrence": 0,
+      "target": "All backend modifications in this sprint, including IPv6 exit and protocol expansion, were implemented through new fields or paths without altering the existing response format relied upon by frozen clients. This constraint adds approximately 30% to design and testing costs for each backend modification; it can only be fully resolved with (a) recovery of iOS account and client compliance reconstruction, and (b) completion of formal environment validation for the new Windows signature scheme — both are making progress in this sprint.",
+      "context": "div.note @ line 214"
+    },
+    {
+      "id": "u_ac61fe67f1202f2e",
+      "kind": "text",
+      "source": "六、安全与权限管控",
+      "occurrence": 0,
+      "target": "Six: Security and Permission Control",
+      "context": "h2 @ line 219"
+    },
+    {
+      "id": "u_a2d48beeae368b21",
+      "kind": "text",
+      "source": "源代码访问（最小权限原则）",
+      "occurrence": 0,
+      "target": "Source Code Access (Minimum Privilege Principle)",
+      "context": "h3 @ line 220"
+    },
+    {
+      "id": "u_ee776413952f1e43",
+      "kind": "text",
+      "source": "项目",
+      "occurrence": 0,
+      "target": "Project",
+      "context": "th @ line 222 · surrounding text: 项目 当前状态"
+    },
+    {
+      "id": "u_4bb9797a0bdee329",
+      "kind": "text",
+      "source": "当前状态",
+      "occurrence": 0,
+      "target": "Current Status",
+      "context": "th @ line 222 · surrounding text: 项目 当前状态"
+    },
+    {
+      "id": "u_d98c3075b81dae8e",
+      "kind": "text",
+      "source": "GitLab 源代码访问白名单",
+      "occurrence": 0,
+      "target": "GitLab Source Code Access Whitelist",
+      "context": "td @ line 224 · surrounding text: GitLab 源代码访问白名单 Roy、Morgan、Lex 及马来西亚开发人员；其余台湾团队成员访问权限已回收"
+    },
+    {
+      "id": "u_0512d8cd46c745a0",
+      "kind": "text",
+      "source": "Roy、Morgan、Lex 及马来西亚开发人员；其余台湾团队成员访问权限已回收",
+      "occurrence": 0,
+      "target": "GitLab Source Code Access Whitelist Roy, Morgan, Lex & Malaysian Developers; Remaining Taiwan Team Members' access has been revoked",
+      "context": "td @ line 224 · surrounding text: GitLab 源代码访问白名单 Roy、Morgan、Lex 及马来西亚开发人员；其余台湾团队成员访问权限已回收"
+    },
+    {
+      "id": "u_05c492ec41517512",
+      "kind": "text",
+      "source": "FFF 客户端仓库",
+      "occurrence": 0,
+      "target": "FFF Client Repository",
+      "context": "td @ line 225 · surrounding text: FFF 客户端仓库 私有项目，独立于 Arrowfish 仓库权限"
+    },
+    {
+      "id": "u_49f0dad79ee01089",
+      "kind": "text",
+      "source": "私有项目，独立于 Arrowfish 仓库权限",
+      "occurrence": 0,
+      "target": "Private Project, Independent of Arrowfish Repository Permissions",
+      "context": "td @ line 225 · surrounding text: FFF 客户端仓库 私有项目，独立于 Arrowfish 仓库权限"
+    },
+    {
+      "id": "u_ba6e05b64fc0db30",
+      "kind": "text",
+      "source": "台湾团队交接遗留的基础设施安全缺口",
+      "occurrence": 0,
+      "target": "Remaining Infrastructure Security Gaps in Taiwan Team Handover",
+      "context": "h3 @ line 228"
+    },
+    {
+      "id": "u_eb2dfe79700a86ce",
+      "kind": "text",
+      "source": "问题",
+      "occurrence": 0,
+      "target": "Issue",
+      "context": "th @ line 230 · surrounding text: 问题 风险 状态"
+    },
+    {
+      "id": "u_98b86c196fd686eb",
+      "kind": "text",
+      "source": "风险",
+      "occurrence": 0,
+      "target": "Risk",
+      "context": "th @ line 230 · surrounding text: 问题 风险 状态"
+    },
+    {
+      "id": "u_f061dccb2db24ead",
+      "kind": "text",
+      "source": "状态",
+      "occurrence": 0,
+      "target": "Status",
+      "context": "th @ line 230 · surrounding text: 问题 风险 状态"
+    },
+    {
+      "id": "u_fa3d78b97af68dc3",
+      "kind": "text",
+      "source": "Staging／Prod 网络隔离",
+      "occurrence": 0,
+      "target": "Staging/Prod Network Isolation",
+      "context": "td @ line 232 · surrounding text: Staging／Prod 网络隔离 测试环境与生产环境网络边界不清晰 持续收敛中"
+    },
+    {
+      "id": "u_f61329fd65eae372",
+      "kind": "text",
+      "source": "测试环境与生产环境网络边界不清晰",
+      "occurrence": 0,
+      "target": "Ambiguous Network Boundary Between Test and Production Environments",
+      "context": "td @ line 232 · surrounding text: Staging／Prod 网络隔离 测试环境与生产环境网络边界不清晰 持续收敛中"
+    },
+    {
+      "id": "u_23a593a37ce0d0c9",
+      "kind": "text",
+      "source": "持续收敛中",
+      "occurrence": 0,
+      "target": "Continuously Converging",
+      "context": "span.badge.progress @ line 232 · surrounding text: Staging／Prod 网络隔离 测试环境与生产环境网络边界不清晰 持续收敛中"
+    },
+    {
+      "id": "u_024a6fc2a8d3c4b5",
+      "kind": "text",
+      "source": "数据库备份",
+      "occurrence": 0,
+      "target": "Database Backup",
+      "context": "td @ line 233 · surrounding text: 数据库备份 交接时无可验证的备份与还原流程 备份容器已建立，还原演练列入下阶段"
+    },
+    {
+      "id": "u_db7541ec36c7b388",
+      "kind": "text",
+      "source": "交接时无可验证的备份与还原流程",
+      "occurrence": 0,
+      "target": "No Validated Backup or Restore Process Available at the Time of Handover",
+      "context": "td @ line 233 · surrounding text: 数据库备份 交接时无可验证的备份与还原流程 备份容器已建立，还原演练列入下阶段"
+    },
+    {
+      "id": "u_599c806d80eb388b",
+      "kind": "text",
+      "source": "备份容器已建立，还原演练列入下阶段",
+      "occurrence": 0,
+      "target": "Backup container established; restoration drills scheduled for next sprint",
+      "context": "span.badge.progress @ line 233 · surrounding text: 数据库备份 交接时无可验证的备份与还原流程 备份容器已建立，还原演练列入下阶段"
+    },
+    {
+      "id": "u_2e0a45204c304be1",
+      "kind": "text",
+      "source": "SSH 密钥登入",
+      "occurrence": 0,
+      "target": "SSH Key Login",
+      "context": "td @ line 234 · surrounding text: SSH 密钥登入 交接时依赖密码登入，权限回收困难 PEM 密钥方案推进中"
+    },
+    {
+      "id": "u_bb5910c8b39ac830",
+      "kind": "text",
+      "source": "交接时依赖密码登入，权限回收困难",
+      "occurrence": 0,
+      "target": "Password login is relied upon during handover, making it difficult to reclaim permissions.",
+      "context": "td @ line 234 · surrounding text: SSH 密钥登入 交接时依赖密码登入，权限回收困难 PEM 密钥方案推进中"
+    },
+    {
+      "id": "u_e9c08e880e942445",
+      "kind": "text",
+      "source": "PEM 密钥方案推进中",
+      "occurrence": 0,
+      "target": "PEM Key Solution in progress",
+      "context": "span.badge.progress @ line 234 · surrounding text: SSH 密钥登入 交接时依赖密码登入，权限回收困难 PEM 密钥方案推进中"
+    },
+    {
+      "id": "u_19df677637358bea",
+      "kind": "text",
+      "source": "读写分离（读库利用）",
+      "occurrence": 0,
+      "target": "Read/Write Separation (Utilizing Read-only Database)",
+      "context": "td @ line 235 · surrounding text: 读写分离（读库利用） 读写压力集中在主库 ✅ 已完成（Sprint 2）"
+    },
+    {
+      "id": "u_5455faeb5ed402a6",
+      "kind": "text",
+      "source": "读写压力集中在主库",
+      "occurrence": 0,
+      "target": "Read/write pressure concentrated on the main database",
+      "context": "td @ line 235 · surrounding text: 读写分离（读库利用） 读写压力集中在主库 ✅ 已完成（Sprint 2）"
+    },
+    {
+      "id": "u_b63f80970c00bd68",
+      "kind": "text",
+      "source": "✅ 已完成（Sprint 2）",
+      "occurrence": 0,
+      "target": "✅ Completed (Sprint 2)",
+      "context": "span.badge.done @ line 235 · surrounding text: 读写分离（读库利用） 读写压力集中在主库 ✅ 已完成（Sprint 2）"
+    },
+    {
+      "id": "u_12a22cb0698dba80",
+      "kind": "text",
+      "source": "以上均为台湾团队交接时既存的项目，非本阶段新增风险。按优先级与生产影响面逐阶段收敛。",
+      "occurrence": 0,
+      "target": "All of the above are existing projects from the Taiwan team handover, not new risks added in this sprint. They will be addressed based on priority and production impact.",
+      "context": "div.note @ line 238"
+    },
+    {
+      "id": "u_903e35cb6ba736f8",
+      "kind": "text",
+      "source": "七、下阶段计划（Sprint 9，7/25 起）",
+      "occurrence": 0,
+      "target": "Phase 9 (July 25th)",
+      "context": "h2 @ line 243"
+    },
+    {
+      "id": "u_a0053ceeaaf1e057",
+      "kind": "text",
+      "source": "主轴：",
+      "occurrence": 0,
+      "target": "Axis:",
+      "context": "strong @ line 245 · surrounding text: 主轴： Windows 正式环境发布验证 → 后端 API 面收敛 → 续费功能实作 → 生产环境架构整合准备。"
+    },
+    {
+      "id": "u_27a5dbe24f42a74c",
+      "kind": "text",
+      "source": "Windows 正式环境发布验证 → 后端 API 面收敛 → 续费功能实作 → 生产环境架构整合准备。",
+      "occurrence": 0,
+      "target": "Windows Official Environment Release Validation → Backend API Consolidation → Renewal Function Implementation → Production Environment Architecture Integration Preparation",
+      "context": "div.callout @ line 245 · surrounding text: 主轴： Windows 正式环境发布验证 → 后端 API 面收敛 → 续费功能实作 → 生产环境架构整合准备。"
+    },
+    {
+      "id": "u_ea59936b04e57c48",
+      "kind": "text",
+      "source": "方向",
+      "occurrence": 1,
+      "target": "Direction:",
+      "context": "th @ line 248 · surrounding text: 方向 计划内容"
+    },
+    {
+      "id": "u_d4b96b66e31a25dd",
+      "kind": "text",
+      "source": "计划内容",
+      "occurrence": 0,
+      "target": "Content:",
+      "context": "th @ line 248 · surrounding text: 方向 计划内容"
+    },
+    {
+      "id": "u_45e49a98e30328d1",
+      "kind": "text",
+      "source": "Windows 正式发布",
+      "occurrence": 0,
+      "target": "Windows Official Release",
+      "context": "td @ line 250 · surrounding text: Windows 正式发布 完成正式环境签名演练与构建缓存优化，推进 QA 发布门控。"
+    },
+    {
+      "id": "u_637e1f3f611d4ead",
+      "kind": "text",
+      "source": "完成正式环境签名演练与构建缓存优化，推进 QA 发布门控。",
+      "occurrence": 0,
+      "target": "Completed Formal Environment Signature Validation and Cache Optimization, advancing QA release gateways.",
+      "context": "td @ line 250 · surrounding text: Windows 正式发布 完成正式环境签名演练与构建缓存优化，推进 QA 发布门控。"
+    },
+    {
+      "id": "u_dfd567eaf7a571e9",
+      "kind": "text",
+      "source": "续费功能",
+      "occurrence": 0,
+      "target": "Renewal Function",
+      "context": "td @ line 251 · surrounding text: 续费功能 依 7/15 取得的 PRD 进入实作：升级即时生效、降级次周期生效、专属 IP／专属节点可续期不断号。"
+    },
+    {
+      "id": "u_06c007815067acce",
+      "kind": "text",
+      "source": "依 7/15 取得的 PRD 进入实作：升级即时生效、降级次周期生效、专属 IP／专属节点可续期不断号。",
+      "occurrence": 0,
+      "target": "Implemented according to PRD obtained on 7/15: upgrades take effect immediately; downgrades take effect during the next cycle; dedicated IP/dedicated VPN node can be renewed without changing sequence numbers.",
+      "context": "td @ line 251 · surrounding text: 续费功能 依 7/15 取得的 PRD 进入实作：升级即时生效、降级次周期生效、专属 IP／专属节点可续期不断号。"
+    },
+    {
+      "id": "u_0ea601e21c1fcfa0",
+      "kind": "text",
+      "source": "后端 API 面收敛",
+      "occurrence": 0,
+      "target": "Backend API Convergence",
+      "context": "td @ line 252 · surrounding text: 后端 API 面收敛 清理历史遗留的冗余接口，降低后端与客户端的维护面。"
+    },
+    {
+      "id": "u_79a35ac71512f216",
+      "kind": "text",
+      "source": "清理历史遗留的冗余接口，降低后端与客户端的维护面。",
+      "occurrence": 0,
+      "target": "Clean up redundant interfaces to reduce maintenance scope for both backend and client.",
+      "context": "td @ line 252 · surrounding text: 后端 API 面收敛 清理历史遗留的冗余接口，降低后端与客户端的维护面。"
+    },
+    {
+      "id": "u_a48be369bcc8ac44",
+      "kind": "text",
+      "source": "设备额度识别",
+      "occurrence": 0,
+      "target": "Device quota recognition",
+      "context": "td @ line 253 · surrounding text: 设备额度识别 实作「账号+设备」组合身份判断，向下兼容冻结中的 iOS／Windows 旧客户端。"
+    },
+    {
+      "id": "u_e58a174a632b9ee5",
+      "kind": "text",
+      "source": "实作「账号+设备」组合身份判断，向下兼容冻结中的 iOS／Windows 旧客户端。",
+      "occurrence": 0,
+      "target": "Implemented account-device combination identity verification, ensuring backward compatibility with frozen iOS/Windows clients.",
+      "context": "td @ line 253 · surrounding text: 设备额度识别 实作「账号+设备」组合身份判断，向下兼容冻结中的 iOS／Windows 旧客户端。"
+    },
+    {
+      "id": "u_a38eca52b15bd8d7",
+      "kind": "text",
+      "source": "生产环境架构整合",
+      "occurrence": 0,
+      "target": "Production environment architecture integration",
+      "context": "td @ line 254 · surrounding text: 生产环境架构整合 启动生产环境单机整合的前置准备工作。"
+    },
+    {
+      "id": "u_97dde4f70b78bbf6",
+      "kind": "text",
+      "source": "启动生产环境单机整合的前置准备工作。",
+      "occurrence": 0,
+      "target": "Initiate preparatory work for single-machine integration in the production environment.",
+      "context": "td @ line 254 · surrounding text: 生产环境架构整合 启动生产环境单机整合的前置准备工作。"
+    },
+    {
+      "id": "u_d8181e8d277ea59b",
+      "kind": "text",
+      "source": "第二部分",
+      "occurrence": 0,
+      "target": "Second Part",
+      "context": "div.pnum @ line 261"
+    },
+    {
+      "id": "u_5e6bf5d0c8221ca5",
+      "kind": "text",
+      "source": "FFF 新产品",
+      "occurrence": 0,
+      "target": "FFF New Product",
+      "context": "div.ptitle @ line 262"
+    },
+    {
+      "id": "u_d3281f1c8540d52a",
+      "kind": "text",
+      "source": "由 Lex 负责的独立产品线，采实时口径，与 Arrowfish 发布节奏互不影响",
+      "occurrence": 0,
+      "target": "Managed by Lex, this independent product line operates on real-time metrics and does not affect the Arrowfish release schedule.",
+      "context": "div.psub @ line 263"
+    },
+    {
+      "id": "u_b5f5ce65c0785085",
+      "kind": "text",
+      "source": "八、FFF 新产品并行进展（Lex，实时口径）",
+      "occurrence": 0,
+      "target": "Eight, FFF New Product Progress (Lex, Real-time Metrics)",
+      "context": "h2 @ line 267"
+    },
+    {
+      "id": "u_e51a04a6596c38fe",
+      "kind": "text",
+      "source": "本阶段（7/11–7/24）",
+      "occurrence": 0,
+      "target": "This Sprint (7/11–7/24)",
+      "context": "strong @ line 269 · surrounding text: 本阶段（7/11–7/24） Lex 在 fff_vpn 完成 77 次非合并提交，延续 Sprint 7 的 Flutter 客户端重建工作。交付方向以 签到与抽奖流程 为主（本阶段占比最高，含每日签到、抽奖结果弹窗与防重复弹出逻辑），另包含调试与 VPN 错误日志、客户端 API 拦截器层（请求 ID／语言／缓存三层）、英文与繁体中文（台湾）多语言，以及关于与常见问题内容页。"
+    },
+    {
+      "id": "u_9aa0a336427b9685",
+      "kind": "text",
+      "source": "在",
+      "occurrence": 0,
+      "target": "In",
+      "context": "div.callout @ line 269 · surrounding text: 本阶段（7/11–7/24） Lex 在 fff_vpn 完成 77 次非合并提交，延续 Sprint 7 的 Flutter 客户端重建工作。交付方向以 签到与抽奖流程 为主（本阶段占比最高，含每日签到、抽奖结果弹窗与防重复弹出逻辑），另包含调试与 VPN 错误日志、客户端 API 拦截器层（请求 ID／语言／缓存三层）、英文与繁体中文（台湾）多语言，以及关于与常见问题内容页。"
+    },
+    {
+      "id": "u_1acac2144ae802e5",
+      "kind": "text",
+      "source": "完成",
+      "occurrence": 0,
+      "target": "Completed",
+      "context": "div.callout @ line 269 · surrounding text: 本阶段（7/11–7/24） Lex 在 fff_vpn 完成 77 次非合并提交，延续 Sprint 7 的 Flutter 客户端重建工作。交付方向以 签到与抽奖流程 为主（本阶段占比最高，含每日签到、抽奖结果弹窗与防重复弹出逻辑），另包含调试与 VPN 错误日志、客户端 API 拦截器层（请求 ID／语言／缓存三层）、英文与繁体中文（台湾）多语言，以及关于与常见问题内容页。"
+    },
+    {
+      "id": "u_a02c0856a5ce6d23",
+      "kind": "text",
+      "source": "次非合并提交，延续 Sprint 7 的 Flutter 客户端重建工作。交付方向以",
+      "occurrence": 0,
+      "target": "non-merge commits, continuing the Flutter client rebuild from Sprint 7. Delivery focused on",
+      "context": "div.callout @ line 269 · surrounding text: 本阶段（7/11–7/24） Lex 在 fff_vpn 完成 77 次非合并提交，延续 Sprint 7 的 Flutter 客户端重建工作。交付方向以 签到与抽奖流程 为主（本阶段占比最高，含每日签到、抽奖结果弹窗与防重复弹出逻辑），另包含调试与 VPN 错误日志、客户端 API 拦截器层（请求 ID／语言／缓存三层）、英文与繁体中文（台湾）多语言，以及关于与常见问题内容页。"
+    },
+    {
+      "id": "u_89a90abeea065bca",
+      "kind": "text",
+      "source": "签到与抽奖流程",
+      "occurrence": 0,
+      "target": "check-in and lottery processes",
+      "context": "strong @ line 269 · surrounding text: 本阶段（7/11–7/24） Lex 在 fff_vpn 完成 77 次非合并提交，延续 Sprint 7 的 Flutter 客户端重建工作。交付方向以 签到与抽奖流程 为主（本阶段占比最高，含每日签到、抽奖结果弹窗与防重复弹出逻辑），另包含调试与 VPN 错误日志、客户端 API 拦截器层（请求 ID／语言／缓存三层）、英文与繁体中文（台湾）多语言，以及关于与常见问题内容页。"
+    },
+    {
+      "id": "u_73d365eb0f62fcbd",
+      "kind": "text",
+      "source": "为主（本阶段占比最高，含每日签到、抽奖结果弹窗与防重复弹出逻辑），另包含调试与 VPN 错误日志、客户端 API 拦截器层（请求 ID／语言／缓存三层）、英文与繁体中文（台湾）多语言，以及关于与常见问题内容页。",
+      "occurrence": 0,
+      "target": "The focus is on check-in and lottery process implementation (the most significant contribution of this sprint, including daily check-ins, lottery result pop-ups, and anti-repetition logic), along with debugging, VPN error logs, client API interceptors (request ID/language/cache layers), English and Traditional Chinese (Taiwan) multi-language support, and content pages for FAQs.",
+      "context": "div.callout @ line 269 · surrounding text: 本阶段（7/11–7/24） Lex 在 fff_vpn 完成 77 次非合并提交，延续 Sprint 7 的 Flutter 客户端重建工作。交付方向以 签到与抽奖流程 为主（本阶段占比最高，含每日签到、抽奖结果弹窗与防重复弹出逻辑），另包含调试与 VPN 错误日志、客户端 API 拦截器层（请求 ID／语言／缓存三层）、英文与繁体中文（台湾）多语言，以及关于与常见问题内容页。"
+    },
+    {
+      "id": "u_378453107f816eea",
+      "kind": "text",
+      "source": "以上为客户端实作进度，不代表已上线或已验收。FFF 与 Arrowfish 发布并行推进、互不影响。FFF 采用实时口径，与 Arrowfish 的阶段口径不同。",
+      "occurrence": 0,
+      "target": "The above progress reflects the client implementation status but does not indicate an actual release or acceptance. FFF and Arrowfish are being released in parallel without affecting each other. FFF uses real-time metrics, which differ from Arrowfish's sprint metrics.",
+      "context": "div.note @ line 270"
+    },
+    {
+      "id": "u_874a5b9a32c51da9",
+      "kind": "text",
+      "source": "FFF 商务侧事项（不影响 Arrowfish 发布节奏）",
+      "occurrence": 0,
+      "target": "FFF business matters (not impacting Arrowfish release timeline)",
+      "context": "strong @ line 273"
+    },
+    {
+      "id": "u_2f966b1ece2dc317",
+      "kind": "text",
+      "source": "本阶段已完成",
+      "occurrence": 0,
+      "target": "Completed this sprint.",
+      "context": "span.badge.done @ line 275 · surrounding text: 本阶段已完成 FFF 公司欧盟虚拟电话号码于 7/15 开通完成 —— Sprint 7 报告中的阻塞项已解除，SMS 验证能力就位"
+    },
+    {
+      "id": "u_b9a1898d6c32049f",
+      "kind": "text",
+      "source": "FFF 公司欧盟虚拟电话号码于",
+      "occurrence": 0,
+      "target": "FFF's EU virtual phone number was",
+      "context": "li @ line 275 · surrounding text: 本阶段已完成 FFF 公司欧盟虚拟电话号码于 7/15 开通完成 —— Sprint 7 报告中的阻塞项已解除，SMS 验证能力就位"
+    },
+    {
+      "id": "u_998cce7f525ef583",
+      "kind": "text",
+      "source": "7/15 开通完成",
+      "occurrence": 0,
+      "target": "July 15",
+      "context": "strong @ line 275 · surrounding text: 本阶段已完成 FFF 公司欧盟虚拟电话号码于 7/15 开通完成 —— Sprint 7 报告中的阻塞项已解除，SMS 验证能力就位"
+    },
+    {
+      "id": "u_7bd3d415c2b04a2f",
+      "kind": "text",
+      "source": "—— Sprint 7 报告中的阻塞项已解除，SMS 验证能力就位",
+      "occurrence": 0,
+      "target": "The blocking item from Sprint 7 report has been resolved, and SMS verification capability is now available",
+      "context": "li @ line 275 · surrounding text: 本阶段已完成 FFF 公司欧盟虚拟电话号码于 7/15 开通完成 —— Sprint 7 报告中的阻塞项已解除，SMS 验证能力就位"
+    },
+    {
+      "id": "u_4e68a54da9700c9d",
+      "kind": "text",
+      "source": "FFF 公司名下新支付通道账户仍需开设（",
+      "occurrence": 0,
+      "target": "A new payment channel account under FFF's name still needs to be set up (in progress)",
+      "context": "li @ line 276 · surrounding text: FFF 公司名下新支付通道账户仍需开设（ Roy 推进中）"
+    },
+    {
+      "id": "u_cb21f0fa9ad7ec0d",
+      "kind": "text",
+      "source": "推进中）",
+      "occurrence": 0,
+      "target": "In progress",
+      "context": "li @ line 276 · surrounding text: FFF 公司名下新支付通道账户仍需开设（ Roy 推进中）"
+    },
+    {
+      "id": "u_29b310295e42cab2",
+      "kind": "text",
+      "source": "九、结论",
+      "occurrence": 0,
+      "target": "IX. Conclusion",
+      "context": "h2 @ line 282"
+    },
+    {
+      "id": "u_7ca5a7518ccaac1e",
+      "kind": "text",
+      "source": "Sprint 8 是 Sprint 7 自研方向的验证阶段。三条主线均取得实质进展：SkyTunnel 在 Android 上完成替代验证并与 Windows 统一为共享模块；Windows 签名这项外部阻塞项解除，安装包体积相较最初版本已缩减 92%；以及一项影响用户实际可用性的 IPv6 连接根因被定位并修复。",
+      "occurrence": 0,
+      "target": "Sprint 8 was the verification phase for the in-house direction established in Sprint 7. All three workstreams made substantive progress: SkyTunnel passed replacement verification on Android and was unified with Windows as a shared module; the external Windows signing blocker was cleared and the installer became 92% smaller than the original version; and the root cause of an IPv6 connection issue affecting real usability was identified and fixed.",
+      "context": "p @ line 283"
+    },
+    {
+      "id": "u_57e6ab2c35b86143",
+      "kind": "text",
+      "source": "下阶段的关键，是把 Windows 从「测试环境可签名」推进到「正式环境可发布」，并启动续费功能与生产环境架构整合两项与营收和稳定性直接相关的工作。",
+      "occurrence": 0,
+      "target": "Key for next phase is to push Windows from \"test environment signable\" to \"publishable in production environment\" and start work on renewal feature and integration with production architecture, both of which are directly related to revenue and stability.",
+      "context": "p @ line 284"
+    },
+    {
+      "id": "u_46da345ec0c11740",
+      "kind": "text",
+      "source": "报告日期：2026年7月24日 · Sprint 8 完整报告 · 下次更新：Sprint 9 收尾",
+      "occurrence": 0,
+      "target": "Report Date: July 24, 2026 · Full Sprint 8 Report · Next Update: Closeout of Sprint 9",
+      "context": "div.footer @ line 287"
+    }
+  ],
+  "blocks": {
+    "b0001": {
+      "type": "p",
+      "source": "Arrowfish VPN · 第8阶段 · 完整报告",
+      "occurrence": 0
+    },
+    "b0002": {
+      "type": "heading",
+      "source": "2026-07-24 Sprint 8 自研引擎落地、Windows 签名打通与连接稳定性修复报告",
+      "occurrence": 0
+    },
+    "b0003": {
+      "type": "p",
+      "source": "覆盖范围：2026-07-11 至 2026-07-24。承接 Sprint 7（截至 2026-07-10）确定的自研方向，本阶段重点为 SkyTunnel 在真实客户端的验证落地、Windows 签名与体积收敛，以及一批影响用户连接成功率的根因修复。",
+      "occurrence": 0
+    },
+    "b0004": {
+      "type": "heading",
+      "source": "一、本阶段关键决策与状态",
+      "occurrence": 0
+    },
+    "b0005": {
+      "type": "table-row",
+      "source": "事项 说明 决策 / 现况",
+      "occurrence": 0
+    },
+    "b0006": {
+      "type": "table-row",
+      "source": "已完成 Windows 代码签名 Sprint 7 报告中「等待厂商审核」的外部阻塞项已解除。SSL.com eSigner 签名方案于 7/22 完成落地，测试环境 x64 与 ARM64 两个架构均已成功签发。 签名工作已完成，交由 Amy 进行测试。正式环境签名演练列入下阶段。",
+      "occurrence": 0
+    },
+    "b0007": {
+      "type": "table-row",
+      "source": "已取得 续费功能 PRD 7/14 与台湾团队完成 FFF 全量文档梳理，确认「续费功能」为 Arrowfish 与 FFF 共用的最高优先需求。 PRD 已于 7/15 由 Roy 提供 。业务规则：升级即时生效、降级次周期生效、专属 IP／专属节点可续期不断号。团队据此排期开发。",
+      "occurrence": 0
+    },
+    "b0008": {
+      "type": "table-row",
+      "source": "Sprint 7 遗留 设备额度识别缺陷 Sprint 7 报告提出的「同一部设备被不同账号使用会互相顶号」问题，根因已确认，本阶段未进入实作排期 —— 容量优先投入自研引擎验证与连接稳定性根因修复。 按固定容量原则顺延至下阶段。方案不变：连接状态改用「账号+设备」组合身份判断。",
+      "occurrence": 0
+    },
+    "b0009": {
+      "type": "table-row",
+      "source": "本阶段完成 FFF 欧盟虚拟号码 Sprint 7 报告中的 FFF 商务侧阻塞项之一。 7/15 已开通完成 ，SMS 验证能力就位。新支付通道账户仍由 Roy 推进，不影响 Arrowfish 发布节奏。",
+      "occurrence": 0
+    },
+    "b0010": {
+      "type": "heading",
+      "source": "二、本阶段关键成果（7/11–7/24）",
+      "occurrence": 0
+    },
+    "b0011": {
+      "type": "highlight",
+      "source": "-92% Windows 安装包体积（对比最初 Electron 版）",
+      "occurrence": 0
+    },
+    "b0012": {
+      "type": "highlight",
+      "source": "1 项 「连上无流量」根因定位并修复",
+      "occurrence": 0
+    },
+    "b0013": {
+      "type": "highlight",
+      "source": "2 端 接入自研引擎（Android 已验证／Windows 测试中）",
+      "occurrence": 0
+    },
+    "b0014": {
+      "type": "highlight",
+      "source": "9 个 本阶段并行推进的代码仓库",
+      "occurrence": 0
+    },
+    "b0015": {
+      "type": "table-row",
+      "source": "方向 本阶段结果 管理层解读",
+      "occurrence": 0
+    },
+    "b0016": {
+      "type": "table-row",
+      "source": "SkyTunnel Android 验证通过 7/13 证明 Android 可完全以 SkyTunnel 取代 sing-box/libbox 运行；7/14 消费端改为引用正式版本号的共享模块，不再依赖开发者本机路径。 Sprint 7 提出的自研方案从「方向」变成「已验证」，iOS 上架合规与 GPL 授权风险的技术前提已落地。",
+      "occurrence": 0
+    },
+    "b0017": {
+      "type": "table-row",
+      "source": "Windows 接入同一套自研核心 7/11 起 Windows 客户端接入相同的七协议自研核心，7/13 与 Android 统一为同一共享模块的相同依赖形态。 两端共用一套引擎，同一个修复一次生效；也是 FFF 与未来客户端复用的基础。",
+      "occurrence": 0
+    },
+    "b0018": {
+      "type": "table-row",
+      "source": "Windows 安装包持续瘦身 安装包 7.7 MB、安装后占用 18.7 MB。对比最初 Electron 版本的 100 MB／273 MB，下载体积减少约 92%、安装占用减少约 93%。 在 Sprint 7 已大幅缩减的基础上再进一步，下载与安装门槛持续降低。",
+      "occurrence": 0
+    },
+    "b0019": {
+      "type": "table-row",
+      "source": "Windows 代码签名打通 7/22 完成 SSL.com eSigner 签名方案落地，测试环境 x64 与 ARM64 双架构签发成功。 Sprint 7 的外部阻塞项解除，Windows 正式发布不再卡在签名环节。",
+      "occurrence": 0
+    },
+    "b0020": {
+      "type": "table-row",
+      "source": "「连上无流量」根因修复 7/23 定位到 IPv6 网络环境下的地址族不匹配问题 —— 用户显示已连接但实际无流量；同日完成动态出口方案实作，7/24 通过真机验收。 直接影响用户「连上却不能用」的体感，属于客服工单高发类型。",
+      "occurrence": 0
+    },
+    "b0021": {
+      "type": "table-row",
+      "source": "协议能力扩充 7/22 完成 ShadowTLS v3 内层 Shadowsocks 2022 的实作与编解码测试。 抗封锁协议组合再增一项，中国网络环境下可用线路选择更多。",
+      "occurrence": 0
+    },
+    "b0022": {
+      "type": "table-row",
+      "source": "Android 连接体验修复 7/23–7/24 集中修复断网保护开关、通知栏状态、连接状态显示等 QA 提出的缺陷，并完成启动页与一批界面问题的整体修复。 启动与连接是用户每次使用的必经路径，这类修复直接影响留存。",
+      "occurrence": 0
+    },
+    "b0023": {
+      "type": "table-row",
+      "source": "节点运维缺陷修复 7/20 修复节点程序重启时因主机名告警被误判为「重启失败」的问题。 减少运维误报，节点状态判断更可信。",
+      "occurrence": 0
+    },
+    "b0024": {
+      "type": "table-row",
+      "source": "中国网络自测工具增强 7/13 从写死的协议／节点配置改为动态查询节点，减少人工维护测试配置的成本。 兑现 Sprint 7 承诺的迭代方向，QA 使用成本下降。",
+      "occurrence": 0
+    },
+    "b0025": {
+      "type": "heading",
+      "source": "三、改善与商业价值",
+      "occurrence": 0
+    },
+    "b0026": {
+      "type": "table-row",
+      "source": "技术改善 之前 之后 商业价值",
+      "occurrence": 0
+    },
+    "b0027": {
+      "type": "table-row",
+      "source": "Windows 安装包下载体积 100 MB（Electron 版） 7.7 MB（-92%） 下载失败率与流量成本进一步降低，安装转化率预期提升",
+      "occurrence": 0
+    },
+    "b0028": {
+      "type": "table-row",
+      "source": "Windows 安装后占用 273 MB 18.7 MB（-93%） 低配置机器可用性提升，卸载顾虑降低",
+      "occurrence": 0
+    },
+    "b0029": {
+      "type": "table-row",
+      "source": "IPv6 网络下的连接可用性 部分 IPv6 环境用户显示已连接但无实际流量 根因修复并通过真机验收 减少「连上却不能用」类客服工单与退款争议",
+      "occurrence": 0
+    },
+    "b0030": {
+      "type": "table-row",
+      "source": "VPN 核心引擎授权风险 依赖 GPL 授权的第三方开源内核 Android 已验证可完全以自研引擎取代 解除 iOS 重新上架的结构性障碍，并消除版权投诉风险",
+      "occurrence": 0
+    },
+    "b0031": {
+      "type": "table-row",
+      "source": "双端引擎维护成本 Android 与 Windows 各自维护协议实现 统一共享模块，按版本号分发 同一修复改一次、两端生效，降低行为漂移",
+      "occurrence": 0
+    },
+    "b0032": {
+      "type": "heading",
+      "source": "四、关键时间节点",
+      "occurrence": 0
+    },
+    "b0033": {
+      "type": "highlight",
+      "source": "Windows 客户端接入第一个自研协议核心；共享日志模块升级并被后端采用",
+      "occurrence": 0
+    },
+    "b0034": {
+      "type": "highlight",
+      "source": "7/11 Windows 客户端接入第一个自研协议核心；共享日志模块升级并被后端采用",
+      "occurrence": 0
+    },
+    "b0035": {
+      "type": "highlight",
+      "source": "SkyTunnel 在 Android 上验证可完全取代 sing-box/libbox ；Android 与 Windows 同步改用共享版本化模块；中国网络自测工具改为动态节点查询",
+      "occurrence": 0
+    },
+    "b0036": {
+      "type": "highlight",
+      "source": "Android 完成 SkyTunnel 迁移；Windows 付费节点与 ShadowTLS 路由修复；与台湾团队完成 FFF 需求梳理，确认续费功能为双产品最高优先",
+      "occurrence": 0
+    },
+    "b0037": {
+      "type": "highlight",
+      "source": "7/14 Android 完成 SkyTunnel 迁移；Windows 付费节点与 ShadowTLS 路由修复；与台湾团队完成 FFF 需求梳理，确认续费功能为双产品最高优先",
+      "occurrence": 0
+    },
+    "b0038": {
+      "type": "highlight",
+      "source": "修复节点程序重启被误判为失败的运维缺陷",
+      "occurrence": 0
+    },
+    "b0039": {
+      "type": "highlight",
+      "source": "7/20 修复节点程序重启被误判为失败的运维缺陷",
+      "occurrence": 0
+    },
+    "b0040": {
+      "type": "highlight",
+      "source": "Windows 代码签名方案打通 ，测试环境 x64／ARM64 双架构签发成功；ShadowTLS v3 内层 Shadowsocks 2022 实作与测试完成",
+      "occurrence": 0
+    },
+    "b0041": {
+      "type": "highlight",
+      "source": "7/22 Windows 代码签名方案打通 ，测试环境 x64／ARM64 双架构签发成功；ShadowTLS v3 内层 Shadowsocks 2022 实作与测试完成",
+      "occurrence": 0
+    },
+    "b0042": {
+      "type": "highlight",
+      "source": "定位「连上无流量」根因为 IPv6 地址族不匹配 ，同日完成动态出口方案实作；Android 断网保护与连接状态缺陷修复",
+      "occurrence": 0
+    },
+    "b0043": {
+      "type": "highlight",
+      "source": "IPv6 动态出口方案通过真机验收；Android 启动页与界面批次修复完成",
+      "occurrence": 0
+    },
+    "b0044": {
+      "type": "highlight",
+      "source": "7/24 IPv6 动态出口方案通过真机验收；Android 启动页与界面批次修复完成",
+      "occurrence": 0
+    },
+    "b0045": {
+      "type": "heading",
+      "source": "五、上线计划与后端改动特殊挑战",
+      "occurrence": 0
+    },
+    "b0046": {
+      "type": "table-row",
+      "source": "客户端 本阶段状态 说明",
+      "occurrence": 0
+    },
+    "b0047": {
+      "type": "table-row",
+      "source": "Android 持续迭代 本阶段完成 SkyTunnel 迁移、连接状态与启动流程修复，对外发布节奏以官方结果为准。",
+      "occurrence": 0
+    },
+    "b0048": {
+      "type": "table-row",
+      "source": "Windows（自研 Rust 版） 签名已打通，待发布门控 体积与签名两项前置条件均已具备；正式环境签名与 QA 安装／连接／更新／卸载验证尚未完成，仍不具备对外发布条件。",
+      "occurrence": 0
+    },
+    "b0049": {
+      "type": "heading",
+      "source": "本阶段后端改动的特殊挑战",
+      "occurrence": 0
+    },
+    "b0050": {
+      "type": "table-row",
+      "source": "客户端 当前生产版本 能否升级",
+      "occurrence": 0
+    },
+    "b0051": {
+      "type": "table-row",
+      "source": "Android （Arrowfish） 3.8.x 系列 ✅ 可升级",
+      "occurrence": 0
+    },
+    "b0052": {
+      "type": "table-row",
+      "source": "iOS （HiYou） v1.3.0（已冻结） ❌ 不能升级 — Apple 开发者账号被终止，无法提交 App Store 更新",
+      "occurrence": 0
+    },
+    "b0053": {
+      "type": "table-row",
+      "source": "Windows PC （旧版） v2.2.71（已冻结） ⚠️ 签名方案本阶段已打通，待正式环境验证后可恢复升级能力",
+      "occurrence": 0
+    },
+    "b0054": {
+      "type": "highlight",
+      "source": "本阶段的 IPv6 出口、协议扩充等后端改动均以新增字段／新增路径方式实现，未改变冻结客户端所依赖的既有响应格式。此项约束使后端每次改动额外增加约 30% 的设计与测试成本；要彻底解除，需要 (a) iOS 账号恢复与客户端合规重建、(b) Windows 新签名方案完成正式环境验证 —— 其中 (b) 本阶段已取得实质进展。",
+      "occurrence": 0
+    },
+    "b0055": {
+      "type": "heading",
+      "source": "六、安全与权限管控",
+      "occurrence": 0
+    },
+    "b0056": {
+      "type": "heading",
+      "source": "源代码访问（最小权限原则）",
+      "occurrence": 0
+    },
+    "b0057": {
+      "type": "table-row",
+      "source": "项目 当前状态",
+      "occurrence": 0
+    },
+    "b0058": {
+      "type": "table-row",
+      "source": "GitLab 源代码访问白名单 Roy、Morgan、Lex 及马来西亚开发人员；其余台湾团队成员访问权限已回收",
+      "occurrence": 0
+    },
+    "b0059": {
+      "type": "table-row",
+      "source": "FFF 客户端仓库 私有项目，独立于 Arrowfish 仓库权限",
+      "occurrence": 0
+    },
+    "b0060": {
+      "type": "heading",
+      "source": "台湾团队交接遗留的基础设施安全缺口",
+      "occurrence": 0
+    },
+    "b0061": {
+      "type": "table-row",
+      "source": "问题 风险 状态",
+      "occurrence": 0
+    },
+    "b0062": {
+      "type": "table-row",
+      "source": "Staging／Prod 网络隔离 测试环境与生产环境网络边界不清晰 持续收敛中",
+      "occurrence": 0
+    },
+    "b0063": {
+      "type": "table-row",
+      "source": "数据库备份 交接时无可验证的备份与还原流程 备份容器已建立，还原演练列入下阶段",
+      "occurrence": 0
+    },
+    "b0064": {
+      "type": "table-row",
+      "source": "SSH 密钥登入 交接时依赖密码登入，权限回收困难 PEM 密钥方案推进中",
+      "occurrence": 0
+    },
+    "b0065": {
+      "type": "table-row",
+      "source": "读写分离（读库利用） 读写压力集中在主库 ✅ 已完成（Sprint 2）",
+      "occurrence": 0
+    },
+    "b0066": {
+      "type": "highlight",
+      "source": "以上均为台湾团队交接时既存的项目，非本阶段新增风险。按优先级与生产影响面逐阶段收敛。",
+      "occurrence": 0
+    },
+    "b0067": {
+      "type": "heading",
+      "source": "七、下阶段计划（Sprint 9，7/25 起）",
+      "occurrence": 0
+    },
+    "b0068": {
+      "type": "highlight",
+      "source": "主轴： Windows 正式环境发布验证 → 后端 API 面收敛 → 续费功能实作 → 生产环境架构整合准备。",
+      "occurrence": 0
+    },
+    "b0069": {
+      "type": "table-row",
+      "source": "方向 计划内容",
+      "occurrence": 0
+    },
+    "b0070": {
+      "type": "table-row",
+      "source": "Windows 正式发布 完成正式环境签名演练与构建缓存优化，推进 QA 发布门控。",
+      "occurrence": 0
+    },
+    "b0071": {
+      "type": "table-row",
+      "source": "续费功能 依 7/15 取得的 PRD 进入实作：升级即时生效、降级次周期生效、专属 IP／专属节点可续期不断号。",
+      "occurrence": 0
+    },
+    "b0072": {
+      "type": "table-row",
+      "source": "后端 API 面收敛 清理历史遗留的冗余接口，降低后端与客户端的维护面。",
+      "occurrence": 0
+    },
+    "b0073": {
+      "type": "table-row",
+      "source": "设备额度识别 实作「账号+设备」组合身份判断，向下兼容冻结中的 iOS／Windows 旧客户端。",
+      "occurrence": 0
+    },
+    "b0074": {
+      "type": "table-row",
+      "source": "生产环境架构整合 启动生产环境单机整合的前置准备工作。",
+      "occurrence": 0
+    },
+    "b0075": {
+      "type": "heading",
+      "source": "八、FFF 新产品并行进展（Lex，实时口径）",
+      "occurrence": 0
+    },
+    "b0076": {
+      "type": "highlight",
+      "source": "以上为客户端实作进度，不代表已上线或已验收。FFF 与 Arrowfish 发布并行推进、互不影响。FFF 采用实时口径，与 Arrowfish 的阶段口径不同。",
+      "occurrence": 0
+    },
+    "b0077": {
+      "type": "highlight",
+      "source": "本阶段（7/11–7/24） Lex 在 fff_vpn 完成 77 次非合并提交，延续 Sprint 7 的 Flutter 客户端重建工作。交付方向以 签到与抽奖流程 为主（本阶段占比最高，含每日签到、抽奖结果弹窗与防重复弹出逻辑），另包含调试与 VPN 错误日志、客户端 API 拦截器层（请求 ID／语言／缓存三层）、英文与繁体中文（台湾）多语言，以及关于与常见问题内容页。 以上为客户端实作进度，不代表已上线或已验收。FFF 与 Arrowfish 发布并行推进、互不影响。FFF 采用实时口径，与 Arrowfish 的阶段口径不同。",
+      "occurrence": 0
+    },
+    "b0078": {
+      "type": "li",
+      "source": "本阶段已完成 FFF 公司欧盟虚拟电话号码于 7/15 开通完成 —— Sprint 7 报告中的阻塞项已解除，SMS 验证能力就位",
+      "occurrence": 0
+    },
+    "b0079": {
+      "type": "li",
+      "source": "FFF 公司名下新支付通道账户仍需开设（ Roy 推进中）",
+      "occurrence": 0
+    },
+    "b0080": {
+      "type": "heading",
+      "source": "九、结论",
+      "occurrence": 0
+    },
+    "b0081": {
+      "type": "p",
+      "source": "Sprint 8 是 Sprint 7 自研方向的验证阶段。三条主线均取得实质进展：SkyTunnel 在 Android 上完成替代验证并与 Windows 统一为共享模块；Windows 签名这项外部阻塞项解除，安装包体积相较最初版本已缩减 92%；以及一项影响用户实际可用性的 IPv6 连接根因被定位并修复。",
+      "occurrence": 0
+    },
+    "b0082": {
+      "type": "p",
+      "source": "下阶段的关键，是把 Windows 从「测试环境可签名」推进到「正式环境可发布」，并启动续费功能与生产环境架构整合两项与营收和稳定性直接相关的工作。",
+      "occurrence": 0
+    }
+  },
+  "reviewedTargetHash": "5f79831a7c078178"
+}

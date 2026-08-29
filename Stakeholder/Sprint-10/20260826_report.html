@@ -1,25 +1,28 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh-CN" data-report-id="sprint-10-full">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="robots" content="noindex, nofollow">
+  
+  <script src="../../assets/ui-i18n.js"></script>
+  <script src="../../assets/site-preferences.js"></script>
+<meta name="robots" content="noindex, nofollow">
   <meta name="description" content="Arrowfish 与 FFF 第10阶段进展报告；两条产品线独立呈现">
   <title>第10阶段 · 进展报告 · 2026-08-26</title>
   <style>
     :root {
-      --bg: #f7f8fa;
-      --paper: #ffffff;
-      --text: #202124;
-      --muted: #5f6368;
-      --line: #e5e7eb;
-      --blue: #1a73e8;
-      --green: #16a34a;
-      --green-bg: #f0fdf4;
-      --yellow: #f59e0b;
-      --yellow-bg: #fffbeb;
-      --red: #dc2626;
-      --red-bg: #fef2f2;
+      --bg: var(--af-bg);
+      --paper: var(--af-surface);
+      --text: var(--af-text);
+      --muted: var(--af-text-muted);
+      --line: var(--af-border);
+      --blue: var(--af-primary);
+      --green: var(--af-success);
+      --green-bg: var(--af-success-soft);
+      --yellow: var(--af-warning);
+      --yellow-bg: var(--af-warning-soft);
+      --red: var(--af-danger);
+      --red-bg: var(--af-danger-soft);
     }
     * { box-sizing: border-box; }
     body {
@@ -40,38 +43,38 @@
     h3 { font-size: 16px; margin: 18px 0 8px; color: var(--text); }
     p { margin: 0 0 12px; }
     p:last-child { margin-bottom: 0; }
-    .tldr { border-left: 5px solid var(--blue); background: #f0f6ff; font-size: 18px; font-weight: 650; }
+    .tldr { border-left: 5px solid var(--blue); background: var(--af-primary-soft); font-size: 18px; font-weight: 650; }
     table { width: 100%; border-collapse: collapse; margin-top: 8px; font-size: 14.5px; }
     th, td { border: 1px solid var(--line); padding: 10px 12px; text-align: left; vertical-align: top; }
-    th { background: #f3f4f6; font-weight: 700; }
+    th { background: var(--af-surface-muted); font-weight: 700; }
     .score { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; margin: 12px 0; }
-    .metric { border: 1px solid var(--line); border-radius: 8px; padding: 14px; background: #fbfcfe; }
+    .metric { border: 1px solid var(--line); border-radius: 8px; padding: 14px; background: var(--af-surface-muted); }
     .metric b, .metric strong { display: block; font-size: 21px; margin-bottom: 4px; }
     .metric span { color: var(--muted); font-size: 12.5px; }
     .note { color: var(--muted); font-size: 13.5px; margin-top: 10px; }
     .ok { color: var(--green); font-weight: 700; }
     .watch { color: var(--yellow); font-weight: 700; }
     .risk { color: var(--red); font-weight: 700; }
-    .callout { border-radius: 8px; padding: 14px 16px; margin: 10px 0; border-left: 4px solid var(--blue); background: #f0f6ff; font-size: 14.5px; }
+    .callout { border-radius: 8px; padding: 14px 16px; margin: 10px 0; border-left: 4px solid var(--blue); background: var(--af-primary-soft); font-size: 14.5px; }
     .callout.risk, .callout.critical { border-left-color: var(--red); background: var(--red-bg); color: var(--text); }
     .callout.watch { border-left-color: var(--yellow); background: var(--yellow-bg); color: var(--text); }
     .callout.ok { border-left-color: var(--green); background: var(--green-bg); color: var(--text); }
     .badge { display: inline-block; padding: 2px 9px; border-radius: 4px; font-size: 12.5px; font-weight: 700; white-space: nowrap; }
-    .badge.done { background: #dcfce7; color: #166534; }
-    .badge.progress { background: #fef3c7; color: #92400e; }
-    .badge.pending { background: #f1f5f9; color: #475569; }
-    .badge.risk { background: #fee2e2; color: #991b1b; }
+    .badge.done { background: var(--af-success-soft); color: var(--af-success); }
+    .badge.progress { background: var(--af-warning-soft); color: var(--af-warning); }
+    .badge.pending { background: var(--af-surface-muted); color: var(--af-text-muted); }
+    .badge.risk { background: var(--af-danger-soft); color: var(--af-danger); }
     .part {
       margin: 30px 0 4px;
       padding: 16px 20px;
       border-radius: 8px;
-      background: linear-gradient(90deg, #1a73e8 0%, #4f93ec 100%);
-      color: #fff;
+      background: linear-gradient(90deg, var(--af-primary) 0%, var(--af-primary) 100%);
+      color: var(--af-on-accent);
     }
     .part .pnum { font-size: 12.5px; font-weight: 700; opacity: .85; letter-spacing: .08em; }
     .part .ptitle { font-size: 22px; font-weight: 700; margin-top: 2px; }
     .part .psub { font-size: 13.5px; opacity: .9; margin-top: 4px; }
-    .part.fff { background: linear-gradient(90deg, #7c3aed 0%, #a78bfa 100%); }
+    .part.fff { background: linear-gradient(90deg, var(--fff) 0%, var(--fff) 100%); }
     ol, ul { padding-left: 22px; }
     li { margin: 6px 0; }
     .footer { margin-top: 24px; padding-top: 14px; border-top: 1px solid var(--line); font-size: 12.5px; color: var(--muted); text-align: center; }
@@ -84,13 +87,14 @@
       th, td { padding: 7px 8px; }
     }
     @media (max-width: 480px) { .score { grid-template-columns: 1fr; } }
-    @media print { body { background: #fff; } main { max-width: none; padding: 0; } section { break-inside: avoid; } }
+    @media print { body { background: var(--af-surface); } main { max-width: none; padding: 0; } section { break-inside: avoid; } }
   </style>
   <script src="../../assets/auth-gate.js"></script>
+  <link rel="stylesheet" href="../../assets/site-theme.css">
 </head>
 <body>
 <main>
-  <header>
+  <header data-report-header>
     <p class="eyebrow">第10阶段 · 产品进展报告</p>
     <h1>2026-08-26 Sprint 10 进展报告</h1>
     <p class="meta">报告分为上下两个独立产品区块。阶段数据覆盖 2026-08-08 至 2026-08-21，完整周数据截至 8/25，月度快照截至 8/26 18:40:41 MYT（26 日未结束）。</p>

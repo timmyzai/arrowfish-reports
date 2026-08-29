@@ -1,55 +1,58 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh-CN" data-report-id="sprint-2-w1">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>第2阶段 · 进展报告（第1周）· 2026-04-17</title>
+    
+  <script src="../../assets/ui-i18n.js"></script>
+  <script src="../../assets/site-preferences.js"></script>
+<title>第2阶段 · 进展报告（第1周）· 2026-04-17</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background-color: #fff; color: #333; line-height: 1.7; font-size: 15px; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--af-surface); color: var(--af-text); line-height: 1.7; font-size: 15px; }
         .container { max-width: 900px; margin: 0 auto; padding: 40px 24px; }
-        .report-header { margin-bottom: 48px; border-bottom: 1px solid #e8e8e8; padding-bottom: 32px; }
-        .report-title { font-size: 28px; font-weight: 600; color: #1a1a1a; margin-bottom: 16px; }
-        .report-meta { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; font-size: 13px; color: #666; }
+        .report-header { margin-bottom: 48px; border-bottom: 1px solid var(--af-border); padding-bottom: 32px; }
+        .report-title { font-size: 28px; font-weight: 600; color: var(--af-text); margin-bottom: 16px; }
+        .report-meta { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; font-size: 13px; color: var(--af-text-muted); }
         .meta-item { display: flex; flex-direction: column; gap: 4px; }
-        .meta-label { font-weight: 500; color: #999; text-transform: uppercase; letter-spacing: 0.5px; }
-        .meta-value { color: #333; font-weight: 500; }
+        .meta-label { font-weight: 500; color: var(--af-text-muted); text-transform: uppercase; letter-spacing: 0.5px; }
+        .meta-value { color: var(--af-text); font-weight: 500; }
         .section { margin-bottom: 48px; }
-        .section-heading { font-size: 20px; font-weight: 600; color: #1a1a1a; margin-bottom: 20px; padding-left: 16px; border-left: 4px solid #1a73e8; }
-        .section-body { margin-bottom: 24px; line-height: 1.8; color: #444; }
-        .section-note { font-size: 13px; color: #666; margin-top: 12px; padding: 12px; background-color: #f8f9fa; border-radius: 4px; border-left: 3px solid #1a73e8; }
+        .section-heading { font-size: 20px; font-weight: 600; color: var(--af-text); margin-bottom: 20px; padding-left: 16px; border-left: 4px solid var(--af-primary); }
+        .section-body { margin-bottom: 24px; line-height: 1.8; color: var(--af-text); }
+        .section-note { font-size: 13px; color: var(--af-text-muted); margin-top: 12px; padding: 12px; background-color: var(--af-surface-muted); border-radius: 4px; border-left: 3px solid var(--af-primary); }
         .milestone-container { display: grid; gap: 12px; margin-top: 16px; }
-        .milestone { display: flex; gap: 16px; align-items: flex-start; background-color: #f8f9fa; padding: 16px; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.08); }
-        .milestone-date { background-color: #1a73e8; color: white; padding: 8px 12px; border-radius: 4px; font-size: 12px; font-weight: 600; white-space: nowrap; min-width: 80px; text-align: center; }
-        .milestone-text { flex: 1; font-size: 14px; font-weight: 500; color: #333; }
+        .milestone { display: flex; gap: 16px; align-items: flex-start; background-color: var(--af-surface-muted); padding: 16px; border-radius: 8px; box-shadow: 0 1px 3px var(--af-shadow); }
+        .milestone-date { background-color: var(--af-primary); color: white; padding: 8px 12px; border-radius: 4px; font-size: 12px; font-weight: 600; white-space: nowrap; min-width: 80px; text-align: center; }
+        .milestone-text { flex: 1; font-size: 14px; font-weight: 500; color: var(--af-text); }
         table { width: 100%; border-collapse: collapse; margin: 20px 0; background-color: white; }
-        th { background-color: #f8f9fa; padding: 12px; text-align: left; font-size: 14px; font-weight: 600; color: #333; border-bottom: 1px solid #e8e8e8; }
-        td { padding: 12px; border-bottom: 1px solid #e8e8e8; font-size: 14px; color: #444; }
+        th { background-color: var(--af-surface-muted); padding: 12px; text-align: left; font-size: 14px; font-weight: 600; color: var(--af-text); border-bottom: 1px solid var(--af-border); }
+        td { padding: 12px; border-bottom: 1px solid var(--af-border); font-size: 14px; color: var(--af-text); }
         tr:last-child td { border-bottom: none; }
         .findings-container { display: grid; gap: 16px; margin-top: 20px; }
-        .finding-card { background-color: #f8f9fa; padding: 20px; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.08); border-left: 4px solid #1a73e8; }
-        .finding-card.risk { border-left-color: #c0392b; }
-        .finding-card.resolved { border-left-color: #27ae60; }
-        .finding-title { font-size: 14px; font-weight: 600; color: #1a73e8; margin-bottom: 8px; letter-spacing: 0.5px; }
-        .finding-title.risk { color: #c0392b; }
-        .finding-title.resolved { color: #27ae60; }
-        .finding-content { font-size: 14px; color: #555; line-height: 1.6; }
+        .finding-card { background-color: var(--af-surface-muted); padding: 20px; border-radius: 8px; box-shadow: 0 1px 3px var(--af-shadow); border-left: 4px solid var(--af-primary); }
+        .finding-card.risk { border-left-color: var(--af-danger); }
+        .finding-card.resolved { border-left-color: var(--af-success); }
+        .finding-title { font-size: 14px; font-weight: 600; color: var(--af-primary); margin-bottom: 8px; letter-spacing: 0.5px; }
+        .finding-title.risk { color: var(--af-danger); }
+        .finding-title.resolved { color: var(--af-success); }
+        .finding-content { font-size: 14px; color: var(--af-text-muted); line-height: 1.6; }
         .task-list { list-style: none; margin: 16px 0; }
-        .task-list li { padding: 8px 0 8px 24px; position: relative; color: #555; line-height: 1.6; }
-        .task-list li:before { content: ""; position: absolute; left: 0; top: 14px; width: 8px; height: 8px; background-color: #1a73e8; border-radius: 50%; }
+        .task-list li { padding: 8px 0 8px 24px; position: relative; color: var(--af-text-muted); line-height: 1.6; }
+        .task-list li:before { content: ""; position: absolute; left: 0; top: 14px; width: 8px; height: 8px; background-color: var(--af-primary); border-radius: 50%; }
         .status-badge { display: inline-block; padding: 4px 10px; border-radius: 12px; font-size: 12px; font-weight: 600; }
-        .status-default { background-color: #F2F2F2; color: #444; }
-        .status-green { background-color: #B7D7C9; color: #1a5c3a; }
-        .status-yellow { background-color: #E6DFAF; color: #5c4a00; }
-        .status-red { background-color: #DCCACA; color: #5c1a1a; }
-        .status-legend { display: flex; gap: 16px; margin: 12px 0 24px; font-size: 12px; color: #666; flex-wrap: wrap; }
+        .status-default { background-color: var(--af-surface-muted); color: var(--af-text); }
+        .status-green { background-color: var(--af-success-soft); color: var(--af-success); }
+        .status-yellow { background-color: var(--af-warning-soft); color: var(--af-warning); }
+        .status-red { background-color: var(--af-danger-soft); color: var(--af-danger); }
+        .status-legend { display: flex; gap: 16px; margin: 12px 0 24px; font-size: 12px; color: var(--af-text-muted); flex-wrap: wrap; }
         .status-legend-item { display: flex; align-items: center; gap: 6px; }
         .status-dot { width: 12px; height: 12px; border-radius: 2px; display: inline-block; }
         .scorecard { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin: 20px 0; }
-        .score-item { background-color: #f8f9fa; padding: 16px; border-radius: 8px; text-align: center; }
-        .score-number { font-size: 32px; font-weight: 700; color: #1a73e8; }
-        .score-label { font-size: 12px; color: #888; margin-top: 4px; }
-        .report-footer { margin-top: 48px; padding-top: 24px; border-top: 1px solid #e8e8e8; font-size: 12px; color: #999; text-align: right; }
+        .score-item { background-color: var(--af-surface-muted); padding: 16px; border-radius: 8px; text-align: center; }
+        .score-number { font-size: 32px; font-weight: 700; color: var(--af-primary); }
+        .score-label { font-size: 12px; color: var(--af-text-muted); margin-top: 4px; }
+        .report-footer { margin-top: 48px; padding-top: 24px; border-top: 1px solid var(--af-border); font-size: 12px; color: var(--af-text-muted); text-align: right; }
         @media (max-width: 768px) {
             .report-meta { grid-template-columns: 1fr; gap: 12px; }
             .report-title { font-size: 24px; }
@@ -66,12 +69,13 @@
         }
     </style>
     <script src="../../assets/auth-gate.js"></script>
+  <link rel="stylesheet" href="../../assets/site-theme.css">
 </head>
 <body>
     <div class="container">
 
         <!-- Header -->
-        <div class="report-header">
+        <header class="report-header" data-report-header>
             <h1 class="report-title">第2阶段进展报告（第1周）：Arrowfish 发布冲刺</h1>
             <div class="report-meta">
                 <div class="meta-item">
@@ -87,10 +91,10 @@
                     <span class="meta-value">日总</span>
                 </div>
             </div>
-            <div style="margin-top: 20px; padding: 14px 16px; background-color: #f0f4ff; border-radius: 6px; border-left: 4px solid #1a73e8; font-size: 14px; color: #333; line-height: 1.7;">
+            <div style="margin-top: 20px; padding: 14px 16px; background-color: var(--af-primary-soft); border-radius: 6px; border-left: 4px solid var(--af-primary); font-size: 14px; color: var(--af-text); line-height: 1.7;">
                 <strong>本阶段目标：</strong>完成Arrowfish稳定版全面验收，通过QA测试后提交Google Play，4月底正式上线。第3阶段已相应顺延，待本阶段交付完成后启动。
             </div>
-        </div>
+        </header>
 
         <!-- 关键风险与技术债务 -->
         <div class="section">
@@ -119,7 +123,7 @@
                     <div class="finding-title resolved">【安全风险·已处理】免费节点流量被大规模滥用——多层防护体系已建立</div>
                     <div class="finding-content">
                         <p style="margin-bottom: 12px;">台湾遗留系统允许同一设备通过多次注册无限重置每日免费额度，并可被模拟器自动批量注册。若不处理，随规模增长，带宽成本将持续被无转化价值的滥用流量侵蚀，付费用户连接质量也随之下降。</p>
-                        <p style="margin-bottom: 12px; font-weight: 500;">本阶段建立了五层防护机制（验证中），<span style="color: #27ae60;">正常免费用户不受任何影响，完整享有每日30分钟权益：</span></p>
+                        <p style="margin-bottom: 12px; font-weight: 500;">本阶段建立了五层防护机制（验证中），<span style="color: var(--af-success);">正常免费用户不受任何影响，完整享有每日30分钟权益：</span></p>
                         <table style="margin: 0; font-size: 13px;">
                             <thead>
                                 <tr>
@@ -185,22 +189,22 @@
             </div>
 
             <!-- 版本进展 -->
-            <div style="margin: 20px 0; padding: 20px; background: linear-gradient(135deg, #f0f4ff 0%, #f8f9fa 100%); border-radius: 8px; border: 1px solid #e0e8ff;">
-                <div style="font-size: 13px; font-weight: 600; color: #666; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 12px;">版本迭代进展</div>
+            <div style="margin: 20px 0; padding: 20px; background: linear-gradient(135deg, var(--af-primary-soft) 0%, var(--af-surface-muted) 100%); border-radius: 8px; border: 1px solid var(--af-primary-soft);">
+                <div style="font-size: 13px; font-weight: 600; color: var(--af-text-muted); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 12px;">版本迭代进展</div>
                 <div style="display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">
-                    <span style="background:#e8eaf6; color:#3949ab; padding:6px 14px; border-radius:20px; font-size:13px; font-weight:600;">v2.0.0</span>
-                    <span style="color:#bbb; font-size:18px;">→</span>
-                    <span style="background:#e8eaf6; color:#3949ab; padding:6px 14px; border-radius:20px; font-size:13px; font-weight:600;">v2.0.2</span>
-                    <span style="color:#bbb; font-size:18px;">→</span>
-                    <span style="background:#e8eaf6; color:#3949ab; padding:6px 14px; border-radius:20px; font-size:13px; font-weight:600;">v2.0.3</span>
-                    <span style="color:#bbb; font-size:18px;">→</span>
-                    <span style="background:#e8eaf6; color:#3949ab; padding:6px 14px; border-radius:20px; font-size:13px; font-weight:600;">v2.0.4</span>
-                    <span style="color:#bbb; font-size:18px;">→</span>
-                    <span style="background:#e8eaf6; color:#3949ab; padding:6px 14px; border-radius:20px; font-size:13px; font-weight:600;">v2.0.5</span>
-                    <span style="color:#bbb; font-size:18px;">→</span>
-                    <span style="background:#1a73e8; color:white; padding:6px 14px; border-radius:20px; font-size:13px; font-weight:600;">v2.0.6 ✦ 本周</span>
+                    <span style="background:var(--af-primary-soft); color:var(--af-primary); padding:6px 14px; border-radius:20px; font-size:13px; font-weight:600;">v2.0.0</span>
+                    <span style="color:var(--af-text-muted); font-size:18px;">→</span>
+                    <span style="background:var(--af-primary-soft); color:var(--af-primary); padding:6px 14px; border-radius:20px; font-size:13px; font-weight:600;">v2.0.2</span>
+                    <span style="color:var(--af-text-muted); font-size:18px;">→</span>
+                    <span style="background:var(--af-primary-soft); color:var(--af-primary); padding:6px 14px; border-radius:20px; font-size:13px; font-weight:600;">v2.0.3</span>
+                    <span style="color:var(--af-text-muted); font-size:18px;">→</span>
+                    <span style="background:var(--af-primary-soft); color:var(--af-primary); padding:6px 14px; border-radius:20px; font-size:13px; font-weight:600;">v2.0.4</span>
+                    <span style="color:var(--af-text-muted); font-size:18px;">→</span>
+                    <span style="background:var(--af-primary-soft); color:var(--af-primary); padding:6px 14px; border-radius:20px; font-size:13px; font-weight:600;">v2.0.5</span>
+                    <span style="color:var(--af-text-muted); font-size:18px;">→</span>
+                    <span style="background:var(--af-primary); color:white; padding:6px 14px; border-radius:20px; font-size:13px; font-weight:600;">v2.0.6 ✦ 本周</span>
                 </div>
-                <div style="margin-top: 12px; font-size: 13px; color: #555; line-height: 1.7;">
+                <div style="margin-top: 12px; font-size: 13px; color: var(--af-text-muted); line-height: 1.7;">
                     应用此前版本为v1.7.38。第1阶段完成了一次全面架构重写，直接跳升至v2.0.0——这不是常规小版本升级，而是底层代码的系统性重建，因此QA需要覆盖的测试范围远大于普通版本，本阶段发现问题较多属正常预期。v2.0.6相比v2.0.0：崩溃率显著下降、启动速度加快、连接更稳定流畅。每一版均经QA确认改善后方才推进。
                 </div>
             </div>
@@ -228,10 +232,10 @@
             <div style="margin-top: 32px;">
                 <div class="section-body" style="font-weight: 500; margin-bottom: 12px;">本阶段进度总览</div>
                 <div class="status-legend">
-                    <div class="status-legend-item"><span class="status-dot" style="background:#B7D7C9;"></span>已上线</div>
-                    <div class="status-legend-item"><span class="status-dot" style="background:#E6DFAF;"></span>延迟</div>
-                    <div class="status-legend-item"><span class="status-dot" style="background:#DCCACA;"></span>风险</div>
-                    <div class="status-legend-item"><span class="status-dot" style="background:#F2F2F2;"></span>进行中</div>
+                    <div class="status-legend-item"><span class="status-dot" style="background:var(--af-success-soft);"></span>已上线</div>
+                    <div class="status-legend-item"><span class="status-dot" style="background:var(--af-warning-soft);"></span>延迟</div>
+                    <div class="status-legend-item"><span class="status-dot" style="background:var(--af-danger-soft);"></span>风险</div>
+                    <div class="status-legend-item"><span class="status-dot" style="background:var(--af-surface-muted);"></span>进行中</div>
                 </div>
                 <table>
                     <thead>
@@ -320,9 +324,9 @@
                     <div class="score-label">正式版目标上线</div>
                 </div>
             </div>
-            <div style="margin-top: 20px; padding: 20px; background-color: #f0f9f4; border-radius: 8px; border-left: 4px solid #27ae60;">
-                <div style="font-size: 13px; font-weight: 600; color: #27ae60; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 0.5px;">开发与QA紧密协作</div>
-                <div style="font-size: 14px; color: #444; line-height: 1.8;">
+            <div style="margin-top: 20px; padding: 20px; background-color: var(--af-success-soft); border-radius: 8px; border-left: 4px solid var(--af-success);">
+                <div style="font-size: 13px; font-weight: 600; color: var(--af-success); margin-bottom: 10px; text-transform: uppercase; letter-spacing: 0.5px;">开发与QA紧密协作</div>
+                <div style="font-size: 14px; color: var(--af-text); line-height: 1.8;">
                     本阶段开发团队与台湾、马来西亚两地QA保持高频协作——QA发现问题、开发当天定位修复、发布新版本、QA立即复测，形成快速闭环。
                     45项问题（30缺陷 + 15优化）反映的是测试覆盖全面，而非产品不稳定；从v2.0.0到v2.0.6的6次迭代，每一版都是QA确认改善后才继续推进。
                     用户在正式版上线后将感受到的提升：<strong>启动更快、连接更稳定、付款流程顺畅、试用体验一致可靠。</strong>
@@ -384,7 +388,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr style="background-color: #f0f4ff;">
+                    <tr style="background-color: var(--af-primary-soft);">
                         <td><strong>1</strong></td>
                         <td><strong>Arrowfish 正式版上线</strong> — Google Play提交 + 生产环境部署</td>
                         <td><strong>2026年4月底</strong></td>

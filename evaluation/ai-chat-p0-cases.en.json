@@ -1,0 +1,51 @@
+[
+  {
+    "id": "fff-platform-order",
+    "reportId": "goal-2026-20260827",
+    "question": "What is the FFF multi-platform release order?",
+    "expectedAll": ["Android", "Windows", "macOS+iOS", "Linux"]
+  },
+  {
+    "id": "fff-payment-gate",
+    "reportId": "goal-2026-20260827",
+    "question": "Why is payment closure a gate for the Android launch?",
+    "expectedAll": ["payment", "Android"]
+  },
+  {
+    "id": "fff-routing-gaps",
+    "reportId": "goal-2026-20260827",
+    "question": "What remains for smart routing?",
+    "expectedAll": ["Shadowsocks"]
+  },
+  {
+    "id": "goal-numeric",
+    "reportId": "goal-2026-20260827",
+    "question": "What percentage of new registrations lack marketing attribution?",
+    "expectedAll": ["97.6%"]
+  },
+  {
+    "id": "follow-up-pronoun",
+    "reportId": "goal-2026-20260827",
+    "question": "Has that item been completed?",
+    "conversation": ["What is the current progress of the payment API and payment closure?"],
+    "expectedAll": ["payment"]
+  },
+  {
+    "id": "exact-five-point-summary",
+    "reportId": "goal-2026-20260827",
+    "question": "Summarize this report in no more than five points.",
+    "minimumSources": 5
+  },
+  {
+    "id": "shared-capability-category",
+    "reportId": "goal-2026-20260827",
+    "question": "Does the AI report assistant belong to Arrowfish or FFF?",
+    "expectedAll": ["AI", "FFF"]
+  },
+  {
+    "id": "unrelated-weather",
+    "reportId": "goal-2026-20260827",
+    "question": "What is the weather today?",
+    "answerable": false
+  }
+]

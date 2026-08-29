@@ -1,21 +1,24 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh-CN" data-report-id="sprint-4-6-full">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="robots" content="noindex, nofollow">
+  
+  <script src="../../assets/ui-i18n.js"></script>
+  <script src="../../assets/site-preferences.js"></script>
+<meta name="robots" content="noindex, nofollow">
   <title>第4-6阶段 · 完整报告 · 2026-06-26</title>
   <style>
     :root {
-      --bg: #f7f8fa;
-      --paper: #ffffff;
-      --text: #202124;
-      --muted: #5f6368;
-      --line: #e5e7eb;
-      --blue: #1a73e8;
-      --green: #16a34a;
-      --yellow: #f59e0b;
-      --red: #dc2626;
+      --bg: var(--af-bg);
+      --paper: var(--af-surface);
+      --text: var(--af-text);
+      --muted: var(--af-text-muted);
+      --line: var(--af-border);
+      --blue: var(--af-primary);
+      --green: var(--af-success);
+      --yellow: var(--af-warning);
+      --red: var(--af-danger);
     }
     * { box-sizing: border-box; }
     body {
@@ -67,7 +70,7 @@
     p { margin: 0 0 12px; }
     .tldr {
       border-left: 5px solid var(--blue);
-      background: #f0f6ff;
+      background: var(--af-primary-soft);
       font-size: 18px;
       font-weight: 650;
     }
@@ -84,7 +87,7 @@
       vertical-align: top;
     }
     th {
-      background: #f3f4f6;
+      background: var(--af-surface-muted);
       font-weight: 700;
     }
     .score {
@@ -97,7 +100,7 @@
       border: 1px solid var(--line);
       border-radius: 8px;
       padding: 14px;
-      background: #fbfcfe;
+      background: var(--af-surface-muted);
     }
     .metric strong {
       display: block;
@@ -125,10 +128,11 @@
       th, td { padding: 8px; }
     }
   </style>
+  <link rel="stylesheet" href="../../assets/site-theme.css">
 </head>
 <body>
   <main>
-    <header>
+    <header data-report-header>
       <p class="eyebrow">Arrowfish VPN · 第4-6阶段 · 完整报告</p>
       <h1>2026-06-26 Sprint 4-6 完整进展、成本与发布规划报告</h1>
       <p class="meta">覆盖范围：2026-05-10 至 2026-06-26。本报告合并原 2026-06-19 补报与 2026-06-26 更新，作为 Sprint 4-6 唯一完整版本。</p>

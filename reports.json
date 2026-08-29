@@ -1,105 +1,129 @@
 [
   {
     "id": "sprint-0",
-    "name": "第0阶段 · 交接报告 · 2026-04-03",
+    "name": { "zh-CN": "第0阶段 · 交接报告 · 2026-04-03", "en": "Sprint 0 · Handover Report · 2026-04-03" },
     "date": "2026-04-03",
-    "file": "Stakeholder/Sprint-0/20260403_report.html"
+    "file": "Stakeholder/Sprint-0/20260403_report.html",
+    "translations": { "en": "locales/en/reports/sprint-0.json" }
   },
   {
     "id": "sprint-1",
-    "name": "第1阶段 · 周报（第1周）· 2026-04-10",
+    "name": { "zh-CN": "第1阶段 · 周报（第1周）· 2026-04-10", "en": "Sprint 1 · Weekly Report (Week 1) · 2026-04-10" },
     "date": "2026-04-10",
-    "file": "Stakeholder/Sprint-1/20260410_report.html"
+    "file": "Stakeholder/Sprint-1/20260410_report.html",
+    "translations": { "en": "locales/en/reports/sprint-1.json" }
   },
   {
     "id": "sprint-0-1-summary",
-    "name": "第0-1阶段 · 进度汇报 · 2026-04-10",
+    "name": { "zh-CN": "第0-1阶段 · 进度汇报 · 2026-04-10", "en": "Sprints 0–1 · Progress Summary · 2026-04-10" },
     "date": "2026-04-10",
-    "file": "Stakeholder/Sprint-1/20260410_sprint_report.html"
+    "file": "Stakeholder/Sprint-1/20260410_sprint_report.html",
+    "translations": { "en": "locales/en/reports/sprint-0-1-summary.json" }
   },
   {
     "id": "sprint-2-w1",
-    "name": "第2阶段 · 进展报告（第1周）· 2026-04-17",
+    "name": { "zh-CN": "第2阶段 · 进展报告（第1周）· 2026-04-17", "en": "Sprint 2 · Progress Report (Week 1) · 2026-04-17" },
     "date": "2026-04-17",
-    "file": "Stakeholder/Sprint-2/20260417_report.html"
+    "file": "Stakeholder/Sprint-2/20260417_report.html",
+    "translations": { "en": "locales/en/reports/sprint-2-w1.json" }
   },
   {
     "id": "sprint-2-w2",
-    "name": "第2阶段 · 进展报告（第2周）· 2026-04-24",
+    "name": { "zh-CN": "第2阶段 · 进展报告（第2周）· 2026-04-24", "en": "Sprint 2 · Progress Report (Week 2) · 2026-04-24" },
     "date": "2026-04-24",
-    "file": "Stakeholder/Sprint-2/20260424_report.html"
+    "file": "Stakeholder/Sprint-2/20260424_report.html",
+    "translations": { "en": "locales/en/reports/sprint-2-w2.json" }
   },
   {
     "id": "sprint-2-summary",
-    "name": "第2阶段 · 进度汇报 · 2026-04-24",
+    "name": { "zh-CN": "第2阶段 · 进度汇报 · 2026-04-24", "en": "Sprint 2 · Progress Summary · 2026-04-24" },
     "date": "2026-04-24",
-    "file": "Stakeholder/Sprint-2/20260424_sprint_report.html"
+    "file": "Stakeholder/Sprint-2/20260424_sprint_report.html",
+    "translations": { "en": "locales/en/reports/sprint-2-summary.json" }
   },
   {
     "id": "sprint-3-full",
-    "name": "第3阶段 · 完整报告 · 2026-05-10",
+    "name": { "zh-CN": "第3阶段 · 完整报告 · 2026-05-10", "en": "Sprint 3 · Full Report · 2026-05-10" },
     "date": "2026-05-10",
-    "file": "Stakeholder/Sprint-3/20260510_full_report.html"
+    "file": "Stakeholder/Sprint-3/20260510_full_report.html",
+    "translations": { "en": "locales/en/reports/sprint-3-full.json" }
   },
   {
     "id": "sprint-3-node-format-benchmark",
-    "name": "第3阶段 · 节点回收实测（后台一键全擦重装）· 2026-05-10",
+    "name": { "zh-CN": "第3阶段 · 节点回收实测（后台一键全擦重装）· 2026-05-10", "en": "Sprint 3 · VPN Node Reprovisioning Benchmark · 2026-05-10" },
     "date": "2026-05-10",
-    "file": "Stakeholder/Sprint-3/20260510_node_format_benchmark.html"
+    "file": "Stakeholder/Sprint-3/20260510_node_format_benchmark.html",
+    "translations": { "en": "locales/en/reports/sprint-3-node-format-benchmark.json" }
   },
   {
     "id": "sprint-3",
-    "name": "第3阶段 · 一页摘要 · 2026-05-10",
+    "name": { "zh-CN": "第3阶段 · 一页摘要 · 2026-05-10", "en": "Sprint 3 · One-Page Summary · 2026-05-10" },
     "date": "2026-05-10",
-    "file": "Stakeholder/Sprint-3/20260510_summary.html"
+    "file": "Stakeholder/Sprint-3/20260510_summary.html",
+    "translations": { "en": "locales/en/reports/sprint-3.json" }
   },
   {
     "id": "sprint-4-6-full",
-    "name": "第4-6阶段 · 完整报告 · 2026-06-26",
+    "name": { "zh-CN": "第4-6阶段 · 完整报告 · 2026-06-26", "en": "Sprints 4–6 · Full Report · 2026-06-26" },
     "date": "2026-06-26",
-    "file": "Stakeholder/Sprint-4-6/20260626_report.html"
+    "file": "Stakeholder/Sprint-4-6/20260626_report.html",
+    "translations": { "en": "locales/en/reports/sprint-4-6-full.json" }
   },
   {
     "id": "sprint-4-6-summary",
-    "name": "第4-6阶段 · 一页摘要 · 2026-06-26",
+    "name": { "zh-CN": "第4-6阶段 · 一页摘要 · 2026-06-26", "en": "Sprints 4–6 · One-Page Summary · 2026-06-26" },
     "date": "2026-06-26",
-    "file": "Stakeholder/Sprint-4-6/20260626_summary.html"
+    "file": "Stakeholder/Sprint-4-6/20260626_summary.html",
+    "translations": { "en": "locales/en/reports/sprint-4-6-summary.json" }
   },
   {
     "id": "sprint-7-full",
-    "name": "第7阶段 · 完整报告 · 2026-07-10",
+    "name": { "zh-CN": "第7阶段 · 完整报告 · 2026-07-10", "en": "Sprint 7 · Full Report · 2026-07-10" },
     "date": "2026-07-10",
-    "file": "Stakeholder/Sprint-7/20260710_report.html"
+    "file": "Stakeholder/Sprint-7/20260710_report.html",
+    "translations": { "en": "locales/en/reports/sprint-7-full.json" }
   },
   {
     "id": "sprint-7-summary",
-    "name": "第7阶段 · 一页摘要 · 2026-07-10",
+    "name": { "zh-CN": "第7阶段 · 一页摘要 · 2026-07-10", "en": "Sprint 7 · One-Page Summary · 2026-07-10" },
     "date": "2026-07-10",
-    "file": "Stakeholder/Sprint-7/20260710_summary.html"
+    "file": "Stakeholder/Sprint-7/20260710_summary.html",
+    "translations": { "en": "locales/en/reports/sprint-7-summary.json" }
   },
   {
     "id": "sprint-8-full",
-    "name": "第8阶段 · 完整报告 · 2026-07-24",
+    "name": { "zh-CN": "第8阶段 · 完整报告 · 2026-07-24", "en": "Sprint 8 · Full Report · 2026-07-24" },
     "date": "2026-07-24",
-    "file": "Stakeholder/Sprint-8/20260724_report.html"
+    "file": "Stakeholder/Sprint-8/20260724_report.html",
+    "translations": { "en": "locales/en/reports/sprint-8-full.json" }
   },
   {
     "id": "sprint-9-full",
-    "name": "第9阶段 · 完整报告 · 2026-08-07",
+    "name": { "zh-CN": "第9阶段 · 完整报告 · 2026-08-07", "en": "Sprint 9 · Full Report · 2026-08-07" },
     "date": "2026-08-07",
-    "file": "Stakeholder/Sprint-9/20260807_report.html"
+    "file": "Stakeholder/Sprint-9/20260807_report.html",
+    "translations": { "en": "locales/en/reports/sprint-9-full.json" }
   },
   {
     "id": "sprint-10-full",
-    "name": "第10阶段 · 进展报告 · 2026-08-26",
+    "name": { "zh-CN": "第10阶段 · 进展报告 · 2026-08-26", "en": "Sprint 10 · Progress Report · 2026-08-26" },
     "date": "2026-08-26",
-    "file": "Stakeholder/Sprint-10/20260826_report.html"
+    "file": "Stakeholder/Sprint-10/20260826_report.html",
+    "translations": { "en": "locales/en/reports/sprint-10-full.json" }
+  },
+  {
+    "id": "sprint-10-production-study-20260828",
+    "name": { "zh-CN": "第10阶段 · 生产用户与平台追加分析 · 2026-08-28", "en": "Sprint 10 · Production User and Platform Addendum · 2026-08-28" },
+    "date": "2026-08-28",
+    "file": "Stakeholder/Sprint-10/20260828_production-study-addendum.html",
+    "translations": { "en": "locales/en/reports/sprint-10-production-study-20260828.json" }
   },
   {
     "id": "goal-2026-20260827",
-    "name": "Arrowfish、FFF 与共享管理能力 · 截至第10阶段的独立目标与路线 · 2026-08-27",
-    "date": "2026-08-27",
+    "name": { "zh-CN": "Arrowfish、FFF 与共享管理能力 · 第10阶段与生产研究后的独立目标 · 更新至 2026-08-29", "en": "Arrowfish, FFF and Shared Capabilities · Independent Goals After Sprint 10 and Production Study · Updated 2026-08-29" },
+    "date": "2026-08-29",
     "file": "Stakeholder/Goal-2026/20260827_goals.html",
-    "version": "20260828-5"
+    "translations": { "en": "locales/en/reports/goal-2026-20260827.json" },
+    "version": "20260829-7"
   }
 ]

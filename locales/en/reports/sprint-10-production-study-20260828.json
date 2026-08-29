@@ -1,0 +1,1545 @@
+{
+  "schemaVersion": 1,
+  "reportId": "sprint-10-production-study-20260828",
+  "sourceFile": "Stakeholder/Sprint-10/20260828_production-study-addendum.html",
+  "sourceVersion": "24c64b30817d6dab",
+  "units": [
+    {
+      "id": "u_44cc6ac0d4eb59c8",
+      "kind": "attribute",
+      "source": "Arrowfish 第10阶段生产用户质量、关键部署边界、后端配额、设备绑定、中国连接与平台影响追加分析",
+      "occurrence": 0,
+      "target": "Arrowfish Sprint 10 production user quality, critical deployment boundaries, backend quotas, device binding, China connection and platform impact additional analysis",
+      "context": "meta @ line 9",
+      "attribute": "content"
+    },
+    {
+      "id": "u_e7f5b5198824e5ba",
+      "kind": "text",
+      "source": "第10阶段 · 生产用户、关键部署与平台追加分析 · 更新至 2026-08-29",
+      "occurrence": 0,
+      "target": "Sprint 10 · Production users, critical deployments and platform additional analysis · Updated to 2026-08-29",
+      "context": "title @ line 10"
+    },
+    {
+      "id": "u_336b910d3eae7800",
+      "kind": "attribute",
+      "source": "追加报告导航",
+      "occurrence": 0,
+      "target": "Additional report navigation",
+      "context": "nav.page-nav @ line 95",
+      "attribute": "aria-label"
+    },
+    {
+      "id": "u_99744f6552034deb",
+      "kind": "text",
+      "source": "只读生产数据 · 基线 2026-08-28 · 部署边界复核 2026-08-29",
+      "occurrence": 0,
+      "target": "Read-only production data · Baseline: 2026-08-28 · Deployment boundary review: 2026-08-29",
+      "context": "p @ line 96"
+    },
+    {
+      "id": "u_319df5ce766cb061",
+      "kind": "text",
+      "source": "关键部署",
+      "occurrence": 0,
+      "target": "Critical deployment",
+      "context": "a @ line 97 · surrounding text: 关键部署 用户 配额与设备 中国与节点 平台 FFF 决策 2026 目标"
+    },
+    {
+      "id": "u_d71676ce6f233f83",
+      "kind": "text",
+      "source": "用户",
+      "occurrence": 0,
+      "target": "Users",
+      "context": "a @ line 97 · surrounding text: 关键部署 用户 配额与设备 中国与节点 平台 FFF 决策 2026 目标"
+    },
+    {
+      "id": "u_d4f26880543859ca",
+      "kind": "text",
+      "source": "配额与设备",
+      "occurrence": 0,
+      "target": "Quotas and devices",
+      "context": "a @ line 97 · surrounding text: 关键部署 用户 配额与设备 中国与节点 平台 FFF 决策 2026 目标"
+    },
+    {
+      "id": "u_25eaf0d7dfcf25f0",
+      "kind": "text",
+      "source": "中国与节点",
+      "occurrence": 0,
+      "target": "China and VPN nodes",
+      "context": "a @ line 97 · surrounding text: 关键部署 用户 配额与设备 中国与节点 平台 FFF 决策 2026 目标"
+    },
+    {
+      "id": "u_48c5cf9150e0f60f",
+      "kind": "text",
+      "source": "平台",
+      "occurrence": 0,
+      "target": "Platform",
+      "context": "a @ line 97 · surrounding text: 关键部署 用户 配额与设备 中国与节点 平台 FFF 决策 2026 目标"
+    },
+    {
+      "id": "u_1cfc687a3ff6ccbf",
+      "kind": "text",
+      "source": "FFF 决策",
+      "occurrence": 0,
+      "target": "FFF Decision",
+      "context": "a @ line 97 · surrounding text: 关键部署 用户 配额与设备 中国与节点 平台 FFF 决策 2026 目标"
+    },
+    {
+      "id": "u_e9d4d07b363a418e",
+      "kind": "text",
+      "source": "2026 目标",
+      "occurrence": 0,
+      "target": "2026 Goals",
+      "context": "a @ line 97 · surrounding text: 关键部署 用户 配额与设备 中国与节点 平台 FFF 决策 2026 目标"
+    },
+    {
+      "id": "u_703ac9414b5bd19b",
+      "kind": "text",
+      "source": "Arrowfish · 第10阶段追加",
+      "occurrence": 0,
+      "target": "Arrowfish · Sprint 10 additional",
+      "context": "p.eyebrow @ line 101"
+    },
+    {
+      "id": "u_3436586e519edf3c",
+      "kind": "text",
+      "source": "生产用户质量、访问资格与平台影响",
+      "occurrence": 0,
+      "target": "Production user quality, access eligibility and platform impact",
+      "context": "h1 @ line 102"
+    },
+    {
+      "id": "u_d0c2a11265ad44c1",
+      "kind": "text",
+      "source": "补齐从接手、后端配额与设备绑定，到中国连接事件、自研 SkyNode／SkyTunnel、平台恢复和 FFF 后端分离的完整决策链。",
+      "occurrence": 0,
+      "target": "Completing the full decision chain from takeover, backend quotas and device binding to China connection events, self-developed SkyNode/SkyTunnel, platform recovery, and FFF backend separation.",
+      "context": "p.hero-copy @ line 103"
+    },
+    {
+      "id": "u_ef6e33073aec5ed8",
+      "kind": "text",
+      "source": "历史：2025-12 至 2026-08-29",
+      "occurrence": 0,
+      "target": "History: December 2025 to August 29, 2026",
+      "context": "span @ line 104 · surrounding text: 历史：2025-12 至 2026-08-29 生产查询：只读聚合 不含个人资料 边界复核：2026-08-29"
+    },
+    {
+      "id": "u_95ce22240a1e1905",
+      "kind": "text",
+      "source": "生产查询：只读聚合",
+      "occurrence": 0,
+      "target": "Production query: Read-only aggregation",
+      "context": "span @ line 104 · surrounding text: 历史：2025-12 至 2026-08-29 生产查询：只读聚合 不含个人资料 边界复核：2026-08-29"
+    },
+    {
+      "id": "u_57e19a7151df92dc",
+      "kind": "text",
+      "source": "不含个人资料",
+      "occurrence": 0,
+      "target": "No personal data included",
+      "context": "span @ line 104 · surrounding text: 历史：2025-12 至 2026-08-29 生产查询：只读聚合 不含个人资料 边界复核：2026-08-29"
+    },
+    {
+      "id": "u_044835db67580637",
+      "kind": "text",
+      "source": "边界复核：2026-08-29",
+      "occurrence": 0,
+      "target": "Boundary Review: 2026-08-29",
+      "context": "span @ line 104 · surrounding text: 历史：2025-12 至 2026-08-29 生产查询：只读聚合 不含个人资料 边界复核：2026-08-29"
+    },
+    {
+      "id": "u_dab5e22c3536a9ad",
+      "kind": "text",
+      "source": "管理层结论",
+      "occurrence": 0,
+      "target": "Management conclusion",
+      "context": "h2 @ line 108"
+    },
+    {
+      "id": "u_e820d77a374bcde9",
+      "kind": "text",
+      "source": "400,347 个注册账号不等于 400,347 个真实可用用户。",
+      "occurrence": 0,
+      "target": "400,347 registered accounts do not equal 400,347 real active users.",
+      "context": "strong @ line 109 · surrounding text: 400,347 个注册账号不等于 400,347 个真实可用用户。 最近 30 日 VPN 活跃只有 4,938 个，历史付费账号 19,476 个。接手后最重要的两项目标——后端／节点权威配额，以及设备身份绑定——方向正确，并已有流量、session 和新 cohort 数据支持。"
+    },
+    {
+      "id": "u_b70163af148fd78a",
+      "kind": "text",
+      "source": "最近 30 日 VPN 活跃只有 4,938 个，历史付费账号 19,476 个。接手后最重要的两项目标——后端／节点权威配额，以及设备身份绑定——方向正确，并已有流量、session 和新 cohort 数据支持。",
+      "occurrence": 0,
+      "target": "The last 30-day VPN activity was only 4,938, with historical paying accounts at 19,476. The two most critical objectives post-acquisition – backend/VPN node authoritative quotas and device identity binding – are on the right track and have supporting traffic, sessions, and new cohort data.",
+      "context": "p @ line 109 · surrounding text: 400,347 个注册账号不等于 400,347 个真实可用用户。 最近 30 日 VPN 活跃只有 4,938 个，历史付费账号 19,476 个。接手后最重要的两项目标——后端／节点权威配额，以及设备身份绑定——方向正确，并已有流量、session 和新 cohort 数据支持。"
+    },
+    {
+      "id": "u_89e2b4e2aa81b73a",
+      "kind": "text",
+      "source": "两个大部署不能只写“成功”。",
+      "occurrence": 0,
+      "target": "Two major deployments cannot simply be described as successful.",
+      "context": "strong @ line 110 · surrounding text: 两个大部署不能只写“成功”。 5月25日证明生产 session accounting 开始且设备身份改善，但用户激活、付费激活和流量同时骤降；8月12日基础设施整合完成、业务指标改善，但共享设备身份出现明确回归。后续必须把部署、产品可用性和地区验收分开关闭。"
+    },
+    {
+      "id": "u_de85ac6d22c1ff47",
+      "kind": "text",
+      "source": "5月25日证明生产 session accounting 开始且设备身份改善，但用户激活、付费激活和流量同时骤降；8月12日基础设施整合完成、业务指标改善，但共享设备身份出现明确回归。后续必须把部署、产品可用性和地区验收分开关闭。",
+      "occurrence": 0,
+      "target": "On May 25, production session accounting began and device identity improved, but user activation, paid activation, and traffic simultaneously declined; on August 12, infrastructure integration was completed and business metrics improved, but shared device identity showed clear regression. Subsequent deployments must be closed separately for product availability and regional acceptance.",
+      "context": "p @ line 110 · surrounding text: 两个大部署不能只写“成功”。 5月25日证明生产 session accounting 开始且设备身份改善，但用户激活、付费激活和流量同时骤降；8月12日基础设施整合完成、业务指标改善，但共享设备身份出现明确回归。后续必须把部署、产品可用性和地区验收分开关闭。"
+    },
+    {
+      "id": "u_6e7e44416339f264",
+      "kind": "text",
+      "source": "中国事件不是普通 bug：同一批测试节点在马来西亚和台湾可用，但中国 QA 不可用，推动团队建立自研 SkyNode、SkyTunnel 与三条加固协议。生产数据库同时显示 MY/TW 注册地 cohort 也在5月25日前后下降，因此不能把整体下跌只归因于 GFW。当前应优先保护 Android 并恢复 Windows；iOS/macOS 等待 rebuilt client 的 Apple 批准。",
+      "occurrence": 0,
+      "target": "Chinese events are not ordinary bugs: the same batch of test VPN nodes were available in Malaysia and Taiwan, but QA was unavailable in China. This prompted the team to develop self-researched SkyNode, SkyTunnel, and three reinforced protocols. Production database also showed a decline in MY/TW cohort registrations around May 25, so overall declines cannot be attributed solely to GFW. Priority should currently be on protecting Android and restoring Windows; iOS/macOS await Apple’s approval for rebuilt client.",
+      "context": "p @ line 111"
+    },
+    {
+      "id": "u_afe6b254659fc061",
+      "kind": "text",
+      "source": "1 · 两个关键生产部署边界",
+      "occurrence": 0,
+      "target": "1 · Two critical production deployment boundaries",
+      "context": "h2 @ line 115"
+    },
+    {
+      "id": "u_d2e96e8062428767",
+      "kind": "text",
+      "source": "2026-05-25 · 生产计费／release 边界",
+      "occurrence": 0,
+      "target": "May 25, 2026 · Production billing/release boundary",
+      "context": "h3 @ line 116"
+    },
+    {
+      "id": "u_cdddcf28c2d1bcbc",
+      "kind": "text",
+      "source": "指标",
+      "occurrence": 0,
+      "target": "Metrics",
+      "context": "th @ line 118 · surrounding text: 指标 5/18–5/24 5/25–5/31 6/1–6/7"
+    },
+    {
+      "id": "u_b691edd0cf871002",
+      "kind": "text",
+      "source": "D7 VPN 激活",
+      "occurrence": 0,
+      "target": "D7 VPN activation",
+      "context": "td @ line 120 · surrounding text: D7 VPN 激活 47.78% 2.43% 7.48%"
+    },
+    {
+      "id": "u_8a688d52cd92c01e",
+      "kind": "text",
+      "source": "D7 付费激活",
+      "occurrence": 0,
+      "target": "D7 paid activation",
+      "context": "td @ line 121 · surrounding text: D7 付费激活 1.56% 0.47% 0.54%"
+    },
+    {
+      "id": "u_0f671fded326953f",
+      "kind": "text",
+      "source": "周内 VPN 用户",
+      "occurrence": 0,
+      "target": "Weekly VPN users",
+      "context": "td @ line 122 · surrounding text: 周内 VPN 用户 6,456 1,338 1,667"
+    },
+    {
+      "id": "u_14a4b5a6232fefff",
+      "kind": "text",
+      "source": "计费流量",
+      "occurrence": 0,
+      "target": "Billing traffic",
+      "context": "td @ line 123 · surrounding text: 计费流量 7,558.7 GiB 1,508.9 GiB 1,774.5 GiB"
+    },
+    {
+      "id": "u_7afae7cf33fc0448",
+      "kind": "text",
+      "source": "生产 session",
+      "occurrence": 0,
+      "target": "Production sessions",
+      "context": "td @ line 124 · surrounding text: 生产 session 0 8,961 16,961"
+    },
+    {
+      "id": "u_82765b7f1375b931",
+      "kind": "text",
+      "source": "目前回看共享 device ID 率",
+      "occurrence": 0,
+      "target": "Current review of shared device ID rate",
+      "context": "td @ line 125 · surrounding text: 目前回看共享 device ID 率 21.73% 2.59% 1.07%"
+    },
+    {
+      "id": "u_087b3d8350d88e15",
+      "kind": "text",
+      "source": "证据结论：",
+      "occurrence": 0,
+      "target": "Evidence conclusion:",
+      "context": "strong @ line 128 · surrounding text: 证据结论： OreBackend release tags 指向当天 06:14 MYT 起的 Git objects，第一条生产 session 在 06:52 MYT；部分为 lightweight tags，所以 object 时间不能当作独立 tag 创建时间。数据库证明 session accounting 上线，设备身份质量也显著改善；但现有 Sprint 4 报告把当天写成 QA/preprod closeout，因此完整“大部署”范围仍需 release-operations 记录确认。激活与流量骤降可能同时包含资格校验、连通性、客户端兼容和获客变化，数据库不能分摊单一因果。"
+    },
+    {
+      "id": "u_417af66e6df87979",
+      "kind": "text",
+      "source": "OreBackend release tags 指向当天 06:14 MYT 起的 Git objects，第一条生产 session 在 06:52 MYT；部分为 lightweight tags，所以 object 时间不能当作独立 tag 创建时间。数据库证明 session accounting 上线，设备身份质量也显著改善；但现有 Sprint 4 报告把当天写成 QA/preprod closeout，因此完整“大部署”范围仍需 release-operations 记录确认。激活与流量骤降可能同时包含资格校验、连通性、客户端兼容和获客变化，数据库不能分摊单一因果。",
+      "occurrence": 0,
+      "target": "OreBackend release tags point to Git objects from 06:14 MYT that day, with the first production session at 06:52 MYT; some are lightweight tags, so object time cannot be treated as an independent tag creation time. The database confirms that session accounting went live and device identity quality improved significantly. However, the current Sprint 4 report describes that day as QA/preprod closeout, so release-operations records are still needed to confirm the full scope of the major deployment. The simultaneous activation and traffic decline can involve eligibility checks, connectivity, client compatibility, and customer-acquisition changes; the database cannot attribute it to a single cause.",
+      "context": "p.callout @ line 128 · surrounding text: 证据结论： OreBackend release tags 指向当天 06:14 MYT 起的 Git objects，第一条生产 session 在 06:52 MYT；部分为 lightweight tags，所以 object 时间不能当作独立 tag 创建时间。数据库证明 session accounting 上线，设备身份质量也显著改善；但现有 Sprint 4 报告把当天写成 QA/preprod closeout，因此完整“大部署”范围仍需 release-operations 记录确认。激活与流量骤降可能同时包含资格校验、连通性、客户端兼容和获客变化，数据库不能分摊单一因果。"
+    },
+    {
+      "id": "u_c001a7b95965c6da",
+      "kind": "text",
+      "source": "2026-08-12 · 单主机生产整合",
+      "occurrence": 0,
+      "target": "August 12, 2026 · Single-host production integration",
+      "context": "h3 @ line 130"
+    },
+    {
+      "id": "u_fbf434fd5e3913fb",
+      "kind": "text",
+      "source": "指标",
+      "occurrence": 1,
+      "target": "Metrics",
+      "context": "th @ line 132 · surrounding text: 指标 8/5–8/11 8/12–8/18 8/19–8/25"
+    },
+    {
+      "id": "u_bd15ed88da79e50c",
+      "kind": "text",
+      "source": "D7 VPN 激活",
+      "occurrence": 1,
+      "target": "D7 VPN activation",
+      "context": "td @ line 134 · surrounding text: D7 VPN 激活 44.36% 70.76% 69.88%"
+    },
+    {
+      "id": "u_65c5b00859dfda56",
+      "kind": "text",
+      "source": "周内 VPN 用户",
+      "occurrence": 1,
+      "target": "Weekly VPN users",
+      "context": "td @ line 135 · surrounding text: 周内 VPN 用户 1,955 2,096 2,484"
+    },
+    {
+      "id": "u_58b4c3ad414e6e8d",
+      "kind": "text",
+      "source": "计费流量",
+      "occurrence": 1,
+      "target": "Billing traffic",
+      "context": "td @ line 136 · surrounding text: 计费流量 4,409.3 GiB 5,294.9 GiB 5,417.2 GiB"
+    },
+    {
+      "id": "u_52f45d968d6d105c",
+      "kind": "text",
+      "source": "已付订单金额",
+      "occurrence": 0,
+      "target": "Paid order amount",
+      "context": "td @ line 137 · surrounding text: 已付订单金额 CNY 2,034.89 CNY 4,535.49 CNY 4,890.01"
+    },
+    {
+      "id": "u_40c49fdce1bfa9f2",
+      "kind": "text",
+      "source": "目前回看共享 device ID 率",
+      "occurrence": 1,
+      "target": "Current review of shared device ID rate",
+      "context": "td @ line 138 · surrounding text: 目前回看共享 device ID 率 7.32% 38.89% 21.30%"
+    },
+    {
+      "id": "u_7f83e2dba06f3d0e",
+      "kind": "text",
+      "source": "证据结论：",
+      "occurrence": 1,
+      "target": "Evidence conclusion:",
+      "context": "strong @ line 141 · surrounding text: 证据结论： cutover report 记录 05:00 MYT 开始；MySQL restore 后两张关键表在 06:05–06:09 MYT 重建，基础设施部署事实成立。业务指标上升是正相关，不是已隔离的部署增量；8月12–15日共享设备率为52.11%、40.63%、36.96%、34.62%，所以产品 acceptance 仍需关闭 identity header、CORS、客户端版本与 legacy fallback。"
+    },
+    {
+      "id": "u_682f9be0d521010d",
+      "kind": "text",
+      "source": "cutover report 记录 05:00 MYT 开始；MySQL restore 后两张关键表在 06:05–06:09 MYT 重建，基础设施部署事实成立。业务指标上升是正相关，不是已隔离的部署增量；8月12–15日共享设备率为52.11%、40.63%、36.96%、34.62%，所以产品 acceptance 仍需关闭 identity header、CORS、客户端版本与 legacy fallback。",
+      "occurrence": 0,
+      "target": "The cutover report records the start at 05:00 MYT; two critical tables were rebuilt between 06:05–06:09 MYT after MySQL restore, confirming the infrastructure deployment. Business metrics improvement is positively correlated and not an isolated deployment increment; shared device rates on August 12-15 were 52.11%, 40.63%, 36.96%, and 34.62% respectively, so product acceptance still requires closing identity headers, CORS, client versions, and legacy fallbacks.",
+      "context": "p.callout @ line 141 · surrounding text: 证据结论： cutover report 记录 05:00 MYT 开始；MySQL restore 后两张关键表在 06:05–06:09 MYT 重建，基础设施部署事实成立。业务指标上升是正相关，不是已隔离的部署增量；8月12–15日共享设备率为52.11%、40.63%、36.96%、34.62%，所以产品 acceptance 仍需关闭 identity header、CORS、客户端版本与 legacy fallback。"
+    },
+    {
+      "id": "u_fbb903199fb72ee4",
+      "kind": "text",
+      "source": "2 · 注册规模必须换成质量漏斗",
+      "occurrence": 0,
+      "target": "2 · Registration scale must be replaced with a quality funnel",
+      "context": "h2 @ line 145"
+    },
+    {
+      "id": "u_88165a37d54dad95",
+      "kind": "text",
+      "source": "注册账号",
+      "occurrence": 0,
+      "target": "Register account",
+      "context": "span @ line 147 · surrounding text: 400,347 注册账号"
+    },
+    {
+      "id": "u_270a2b7e25e94aa7",
+      "kind": "text",
+      "source": "最近 30 日 VPN 活跃",
+      "occurrence": 0,
+      "target": "Last 30-day VPN activity",
+      "context": "span @ line 148 · surrounding text: 4,938 最近 30 日 VPN 活跃"
+    },
+    {
+      "id": "u_311ce74944de0968",
+      "kind": "text",
+      "source": "历史付费账号",
+      "occurrence": 0,
+      "target": "Historical paying accounts",
+      "context": "span @ line 149 · surrounding text: 19,476 历史付费账号"
+    },
+    {
+      "id": "u_0f1b7d1e7fc7853a",
+      "kind": "text",
+      "source": "当前 VIP",
+      "occurrence": 0,
+      "target": "Current VIPs",
+      "context": "span @ line 150 · surrounding text: 995 当前 VIP"
+    },
+    {
+      "id": "u_662bbf0f7e696420",
+      "kind": "text",
+      "source": "关键 cohort 变化",
+      "occurrence": 0,
+      "target": "Key cohort changes",
+      "context": "h3 @ line 152"
+    },
+    {
+      "id": "u_7e1ebb6841e2e50a",
+      "kind": "text",
+      "source": "月份",
+      "occurrence": 0,
+      "target": "Month",
+      "context": "th @ line 154 · surrounding text: 月份 注册 历史付费率 D7 VPN 激活 设备绑定率"
+    },
+    {
+      "id": "u_384f90bda991f1e3",
+      "kind": "text",
+      "source": "注册",
+      "occurrence": 0,
+      "target": "Registration",
+      "context": "th @ line 154 · surrounding text: 月份 注册 历史付费率 D7 VPN 激活 设备绑定率"
+    },
+    {
+      "id": "u_65b12e19d0c79693",
+      "kind": "text",
+      "source": "历史付费率",
+      "occurrence": 0,
+      "target": "Historical paying rate",
+      "context": "th @ line 154 · surrounding text: 月份 注册 历史付费率 D7 VPN 激活 设备绑定率"
+    },
+    {
+      "id": "u_7bb082f6a5700523",
+      "kind": "text",
+      "source": "D7 VPN 激活",
+      "occurrence": 2,
+      "target": "D7 VPN activation",
+      "context": "th @ line 154 · surrounding text: 月份 注册 历史付费率 D7 VPN 激活 设备绑定率"
+    },
+    {
+      "id": "u_279efd3ae09b2beb",
+      "kind": "text",
+      "source": "设备绑定率",
+      "occurrence": 0,
+      "target": "Device binding rate",
+      "context": "th @ line 154 · surrounding text: 月份 注册 历史付费率 D7 VPN 激活 设备绑定率"
+    },
+    {
+      "id": "u_1fac55f9665f7073",
+      "kind": "text",
+      "source": "3 月",
+      "occurrence": 0,
+      "target": "March",
+      "context": "td @ line 156 · surrounding text: 3 月 13,117 5.3% 65.78% 84.04%"
+    },
+    {
+      "id": "u_abe6936d74e841a8",
+      "kind": "text",
+      "source": "5 月",
+      "occurrence": 0,
+      "target": "May",
+      "context": "td @ line 157 · surrounding text: 5 月 27,794 1.8% 40.96% 87.01%"
+    },
+    {
+      "id": "u_82b879bed9f20a31",
+      "kind": "text",
+      "source": "6 月",
+      "occurrence": 0,
+      "target": "June",
+      "context": "td @ line 158 · surrounding text: 6 月 23,821 0.9% 12.27% 98.49%"
+    },
+    {
+      "id": "u_a3da160e53c2c60f",
+      "kind": "text",
+      "source": "7 月",
+      "occurrence": 0,
+      "target": "July",
+      "context": "td @ line 159 · surrounding text: 7 月 3,163 4.4% 42.52% 92.85%"
+    },
+    {
+      "id": "u_81e7fc2e6fce41af",
+      "kind": "text",
+      "source": "8 月截至 28 日",
+      "occurrence": 0,
+      "target": "August up to 28th",
+      "context": "td @ line 160 · surrounding text: 8 月截至 28 日 3,426 4.1% 58.66%（成熟用户） 92.79%"
+    },
+    {
+      "id": "u_1cbf29d7a9499e0c",
+      "kind": "text",
+      "source": "58.66%（成熟用户）",
+      "occurrence": 0,
+      "target": "58.66% (mature users)",
+      "context": "td @ line 160 · surrounding text: 8 月截至 28 日 3,426 4.1% 58.66%（成熟用户） 92.79%"
+    },
+    {
+      "id": "u_19246f3059984067",
+      "kind": "text",
+      "source": "解读边界：",
+      "occurrence": 0,
+      "target": "Interpretation boundary:",
+      "context": "strong @ line 163 · surrounding text: 解读边界： 6 月有 20,499 个账号从未付费且没有 VPN 记录；5 月 25 日至 6 月 30 日，伊朗和阿塞拜疆合计 14,792 个注册、D7 激活 3.14%、历史付费 0。这是低质量或自动化注册的强信号，不是对单个账号的欺诈判定。"
+    },
+    {
+      "id": "u_e31613d9e761b108",
+      "kind": "text",
+      "source": "6 月有 20,499 个账号从未付费且没有 VPN 记录；5 月 25 日至 6 月 30 日，伊朗和阿塞拜疆合计 14,792 个注册、D7 激活 3.14%、历史付费 0。这是低质量或自动化注册的强信号，不是对单个账号的欺诈判定。",
+      "occurrence": 0,
+      "target": "In June, there were 20,499 accounts that had never paid and no VPN records; from May 25 to June 30, Iran and Azerbaijan together registered 14,792 accounts with a D7 activation rate of 3.14% and historical paying rate of zero. This is a strong signal for low-quality or automated registrations, not individual account fraud.",
+      "context": "div.callout @ line 163 · surrounding text: 解读边界： 6 月有 20,499 个账号从未付费且没有 VPN 记录；5 月 25 日至 6 月 30 日，伊朗和阿塞拜疆合计 14,792 个注册、D7 激活 3.14%、历史付费 0。这是低质量或自动化注册的强信号，不是对单个账号的欺诈判定。"
+    },
+    {
+      "id": "u_7907dd7e2aa9d95c",
+      "kind": "text",
+      "source": "3 · 后端配额已产生效果，设备资料仍需收口",
+      "occurrence": 0,
+      "target": "3 · Backend quotas have taken effect, but device data still needs closure",
+      "context": "h2 @ line 167"
+    },
+    {
+      "id": "u_adde1b83e91cbd60",
+      "kind": "text",
+      "source": "验证点",
+      "occurrence": 0,
+      "target": "Validation Point",
+      "context": "th @ line 169 · surrounding text: 验证点 生产结果 结论"
+    },
+    {
+      "id": "u_0304554d1507f2ed",
+      "kind": "text",
+      "source": "生产结果",
+      "occurrence": 0,
+      "target": "Production Result",
+      "context": "th @ line 169 · surrounding text: 验证点 生产结果 结论"
+    },
+    {
+      "id": "u_d5dcf5a4df4af5a4",
+      "kind": "text",
+      "source": "结论",
+      "occurrence": 0,
+      "target": "Conclusion",
+      "context": "th @ line 169 · surrounding text: 验证点 生产结果 结论"
+    },
+    {
+      "id": "u_1752e39bf04e2129",
+      "kind": "text",
+      "source": "ACTIVE session 唯一性",
+      "occurrence": 0,
+      "target": "ACTIVE session Uniqueness",
+      "context": "td @ line 171 · surrounding text: ACTIVE session 唯一性 8月29日复核：同账号多 ACTIVE = 0；同设备多 ACTIVE = 0 当前会话替换／到期由后端执行；ACTIVE 数量是实时值，不作为趋势 KPI。"
+    },
+    {
+      "id": "u_d18f1badc5c9bca9",
+      "kind": "text",
+      "source": "8月29日复核：同账号多 ACTIVE = 0；同设备多 ACTIVE = 0",
+      "occurrence": 0,
+      "target": "Reviewed on August 29: Multiple accounts with the same active status = 0; multiple devices with the same active status = 0",
+      "context": "td @ line 171 · surrounding text: ACTIVE session 唯一性 8月29日复核：同账号多 ACTIVE = 0；同设备多 ACTIVE = 0 当前会话替换／到期由后端执行；ACTIVE 数量是实时值，不作为趋势 KPI。"
+    },
+    {
+      "id": "u_9a2814ba8da570ce",
+      "kind": "text",
+      "source": "当前会话替换／到期由后端执行；ACTIVE 数量是实时值，不作为趋势 KPI。",
+      "occurrence": 0,
+      "target": "Current sessions are replaced or expire by the backend. The number of ACTIVE sessions is a real-time value and not used as a trend KPI.",
+      "context": "td @ line 171 · surrounding text: ACTIVE session 唯一性 8月29日复核：同账号多 ACTIVE = 0；同设备多 ACTIVE = 0 当前会话替换／到期由后端执行；ACTIVE 数量是实时值，不作为趋势 KPI。"
+    },
+    {
+      "id": "u_34f8f226f5dc787d",
+      "kind": "text",
+      "source": "未付费最高月流量",
+      "occurrence": 0,
+      "target": "Unpaid Maximum Monthly Traffic",
+      "context": "td @ line 172 · surrounding text: 未付费最高月流量 3 月 1,216.7 GiB → 5 月 69.4 GiB → 6 月 39.0 GiB 3 月到 6 月下降 96.79%；4 月后无人超过 100 GiB。"
+    },
+    {
+      "id": "u_086d910dc69e6c8e",
+      "kind": "text",
+      "source": "3 月 1,216.7 GiB → 5 月 69.4 GiB → 6 月 39.0 GiB",
+      "occurrence": 0,
+      "target": "March 1,216.7 GiB → May 69.4 GiB → June 39.0 GiB",
+      "context": "td @ line 172 · surrounding text: 未付费最高月流量 3 月 1,216.7 GiB → 5 月 69.4 GiB → 6 月 39.0 GiB 3 月到 6 月下降 96.79%；4 月后无人超过 100 GiB。"
+    },
+    {
+      "id": "u_83022f52c99520ee",
+      "kind": "text",
+      "source": "3 月到 6 月下降 96.79%；4 月后无人超过 100 GiB。",
+      "occurrence": 0,
+      "target": "A 96.79% decrease from March to June; no one exceeded 100 GiB after April.",
+      "context": "td @ line 172 · surrounding text: 未付费最高月流量 3 月 1,216.7 GiB → 5 月 69.4 GiB → 6 月 39.0 GiB 3 月到 6 月下降 96.79%；4 月后无人超过 100 GiB。"
+    },
+    {
+      "id": "u_d8e881e66bc87550",
+      "kind": "text",
+      "source": "设备 ID 历史关系",
+      "occurrence": 0,
+      "target": "Device ID Historical Relationships",
+      "context": "td @ line 173 · surrounding text: 设备 ID 历史关系 214,516 个 distinct ID；37,904 个关联两个或以上账号 历史资料不等于当前并发，需要按 cohort 与客户端版本治理。"
+    },
+    {
+      "id": "u_e8aa7fe1152b1bb0",
+      "kind": "text",
+      "source": "214,516 个 distinct ID；37,904 个关联两个或以上账号",
+      "occurrence": 0,
+      "target": "214,516 distinct IDs; 37,904 associated with two or more accounts",
+      "context": "td @ line 173 · surrounding text: 设备 ID 历史关系 214,516 个 distinct ID；37,904 个关联两个或以上账号 历史资料不等于当前并发，需要按 cohort 与客户端版本治理。"
+    },
+    {
+      "id": "u_5656083272b057f2",
+      "kind": "text",
+      "source": "历史资料不等于当前并发，需要按 cohort 与客户端版本治理。",
+      "occurrence": 0,
+      "target": "Historical data does not equate to current concurrency; cohort and client version governance are required.",
+      "context": "td @ line 173 · surrounding text: 设备 ID 历史关系 214,516 个 distinct ID；37,904 个关联两个或以上账号 历史资料不等于当前并发，需要按 cohort 与客户端版本治理。"
+    },
+    {
+      "id": "u_1f35d2602ebb8741",
+      "kind": "text",
+      "source": "8 月切换异常",
+      "occurrence": 0,
+      "target": "August Anomalies",
+      "context": "td @ line 174 · surrounding text: 8 月切换异常 共享设备比例 8/12–8/15 为 52.11%、40.63%、36.96%、34.62% 先查 identity header、CORS、客户端版本与 legacy fallback，不做批量删除。"
+    },
+    {
+      "id": "u_98f8de910a5880a9",
+      "kind": "text",
+      "source": "共享设备比例 8/12–8/15 为 52.11%、40.63%、36.96%、34.62%",
+      "occurrence": 0,
+      "target": "Shared device ratio from August 12 to August 15 was 52.11%, 40.63%, 36.96%, and 34.62%. First, check the identity header, CORS, client version, and legacy fallback; do not perform bulk deletions.",
+      "context": "td @ line 174 · surrounding text: 8 月切换异常 共享设备比例 8/12–8/15 为 52.11%、40.63%、36.96%、34.62% 先查 identity header、CORS、客户端版本与 legacy fallback，不做批量删除。"
+    },
+    {
+      "id": "u_2d2c9384fd5c2908",
+      "kind": "text",
+      "source": "先查 identity header、CORS、客户端版本与 legacy fallback，不做批量删除。",
+      "occurrence": 0,
+      "target": "Check identity headers, CORS, client versions, and legacy fallbacks; do not perform bulk deletions.",
+      "context": "td @ line 174 · surrounding text: 8 月切换异常 共享设备比例 8/12–8/15 为 52.11%、40.63%、36.96%、34.62% 先查 identity header、CORS、客户端版本与 legacy fallback，不做批量删除。"
+    },
+    {
+      "id": "u_546504d4ace3d09d",
+      "kind": "text",
+      "source": "已完成的核心目标：",
+      "occurrence": 0,
+      "target": "Completed Core Objectives:",
+      "context": "strong @ line 177 · surrounding text: 已完成的核心目标： 配额不再只是 UI 数字；生产 session 与流量结果证明 backend/node 已成为实际执行层。MySQL 不保存 Redis 当前余额，因此历史剩余秒数仍不能完整回算；5月25日用户可用性同步下降，不能把所有流量下降只归功于配额。"
+    },
+    {
+      "id": "u_9f2dfd1e8d50a56b",
+      "kind": "text",
+      "source": "配额不再只是 UI 数字；生产 session 与流量结果证明 backend/node 已成为实际执行层。MySQL 不保存 Redis 当前余额，因此历史剩余秒数仍不能完整回算；5月25日用户可用性同步下降，不能把所有流量下降只归功于配额。",
+      "occurrence": 0,
+      "target": "Quotas are no longer just UI numbers; production sessions and traffic results have proven that the backend/node has become the actual execution layer. MySQL does not save Redis current balances, so historical remaining seconds cannot be fully recalculated; user availability declined on May 25, and all traffic declines should not be attributed solely to quotas.",
+      "context": "div.callout.success @ line 177 · surrounding text: 已完成的核心目标： 配额不再只是 UI 数字；生产 session 与流量结果证明 backend/node 已成为实际执行层。MySQL 不保存 Redis 当前余额，因此历史剩余秒数仍不能完整回算；5月25日用户可用性同步下降，不能把所有流量下降只归功于配额。"
+    },
+    {
+      "id": "u_3b49b3b203cfae18",
+      "kind": "text",
+      "source": "4 · 中国连接事件与自研节点路线",
+      "occurrence": 0,
+      "target": "4. China Connection Events and Custom VPN node Roadmap",
+      "context": "h2 @ line 181"
+    },
+    {
+      "id": "u_bb8c1dc1cd62939c",
+      "kind": "text",
+      "source": "指标",
+      "occurrence": 2,
+      "target": "Metrics",
+      "context": "th @ line 183 · surrounding text: 指标 5 月 6 月 变化"
+    },
+    {
+      "id": "u_b4bdd67b4ce8d94c",
+      "kind": "text",
+      "source": "5 月",
+      "occurrence": 1,
+      "target": "May",
+      "context": "th @ line 183 · surrounding text: 指标 5 月 6 月 变化"
+    },
+    {
+      "id": "u_21a0b3413438799e",
+      "kind": "text",
+      "source": "6 月",
+      "occurrence": 1,
+      "target": "June",
+      "context": "th @ line 183 · surrounding text: 指标 5 月 6 月 变化"
+    },
+    {
+      "id": "u_388a4c9e3837806f",
+      "kind": "text",
+      "source": "变化",
+      "occurrence": 0,
+      "target": "Changes",
+      "context": "th @ line 183 · surrounding text: 指标 5 月 6 月 变化"
+    },
+    {
+      "id": "u_363cd5f763b104ef",
+      "kind": "text",
+      "source": "全部 VPN 活跃用户",
+      "occurrence": 0,
+      "target": "Total Active Users of All VPNs",
+      "context": "td @ line 185 · surrounding text: 全部 VPN 活跃用户 15,832 5,645 -64.34%"
+    },
+    {
+      "id": "u_b7773ed10091ad0b",
+      "kind": "text",
+      "source": "中国 VPN 活跃用户",
+      "occurrence": 0,
+      "target": "Active Users of Chinese VPNs",
+      "context": "td @ line 186 · surrounding text: 中国 VPN 活跃用户 11,457 3,842 -66.47%"
+    },
+    {
+      "id": "u_cf6eecbb4f0d8674",
+      "kind": "text",
+      "source": "流量",
+      "occurrence": 0,
+      "target": "Traffic",
+      "context": "td @ line 187 · surrounding text: 流量 28,323 GiB 15,595 GiB -44.94%"
+    },
+    {
+      "id": "u_b759ae847eef262c",
+      "kind": "text",
+      "source": "因果边界：",
+      "occurrence": 0,
+      "target": "Causal Boundary:",
+      "context": "strong @ line 190 · surrounding text: 因果边界： 数据库证明下降的时间与规模；5月25日前后，中国、马来西亚和台湾注册地 cohort 的生产使用都下降，所以 DB 不能证明 GFW 是整体下跌的唯一原因。GFW 判断来自另一组地域 QA 对照。节点供应商历史影响约 50 台属于运维记录，当前数据库无法单独重建完整 provider 事件。"
+    },
+    {
+      "id": "u_5b8c55509de6e29e",
+      "kind": "text",
+      "source": "数据库证明下降的时间与规模；5月25日前后，中国、马来西亚和台湾注册地 cohort 的生产使用都下降，所以 DB 不能证明 GFW 是整体下跌的唯一原因。GFW 判断来自另一组地域 QA 对照。节点供应商历史影响约 50 台属于运维记录，当前数据库无法单独重建完整 provider 事件。",
+      "occurrence": 0,
+      "target": "The database establishes the timing and scale of the decline. Production usage fell around May 25 for cohorts registered in China, Malaysia, and Taiwan, so the database cannot prove that the GFW was the sole cause of the overall decline. The GFW assessment comes from a separate regional QA comparison. The historical impact on approximately 50 VPN nodes is recorded in operations records; the current database cannot independently reconstruct the complete provider incident.",
+      "context": "p.callout @ line 190 · surrounding text: 因果边界： 数据库证明下降的时间与规模；5月25日前后，中国、马来西亚和台湾注册地 cohort 的生产使用都下降，所以 DB 不能证明 GFW 是整体下跌的唯一原因。GFW 判断来自另一组地域 QA 对照。节点供应商历史影响约 50 台属于运维记录，当前数据库无法单独重建完整 provider 事件。"
+    },
+    {
+      "id": "u_5b87cc12f12b8530",
+      "kind": "text",
+      "source": "当前生产节点状态",
+      "occurrence": 0,
+      "target": "Current Production VPN node Status",
+      "context": "h3 @ line 191"
+    },
+    {
+      "id": "u_d216e2659e442e3b",
+      "kind": "text",
+      "source": "实体节点主机",
+      "occurrence": 0,
+      "target": "Physical VPN node Hosts",
+      "context": "span @ line 193 · surrounding text: 99 实体节点主机"
+    },
+    {
+      "id": "u_c5022d29ab9cab3f",
+      "kind": "text",
+      "source": "近期心跳正常",
+      "occurrence": 0,
+      "target": "Recent Heartbeats Normal",
+      "context": "span @ line 194 · surrounding text: 93 近期心跳正常"
+    },
+    {
+      "id": "u_9d7ecb4e2f2eaf71",
+      "kind": "text",
+      "source": "运行自研 SkyNode Agent",
+      "occurrence": 0,
+      "target": "Running Custom SkyNode Agent",
+      "context": "span @ line 195 · surrounding text: 97 运行自研 SkyNode Agent"
+    },
+    {
+      "id": "u_9b98cf64f06e3192",
+      "kind": "text",
+      "source": "三协议监听全部就绪",
+      "occurrence": 0,
+      "target": "Three Protocols Listening Fully Ready",
+      "context": "span @ line 196 · surrounding text: 34 三协议监听全部就绪"
+    },
+    {
+      "id": "u_80ace16c08281ffd",
+      "kind": "text",
+      "source": "不能过度宣称：",
+      "occurrence": 0,
+      "target": "Do Not Overstate:",
+      "context": "strong @ line 198 · surrounding text: 不能过度宣称： 64 台主机仍是 Trojan-only，协议 external state 仍为 unverified。正确状态是“核心已实现，34 台监听就绪，全量 rollout 与中国可达性验收进行中”。"
+    },
+    {
+      "id": "u_40aca60ead974586",
+      "kind": "text",
+      "source": "64 台主机仍是 Trojan-only，协议 external state 仍为 unverified。正确状态是“核心已实现，34 台监听就绪，全量 rollout 与中国可达性验收进行中”。",
+      "occurrence": 0,
+      "target": "64 hosts remain Trojan-only, with the external state still unverified. The correct status should be 'core functionality achieved, 34 listening and ready for full rollout and acceptance testing of China accessibility'.",
+      "context": "p.callout @ line 198 · surrounding text: 不能过度宣称： 64 台主机仍是 Trojan-only，协议 external state 仍为 unverified。正确状态是“核心已实现，34 台监听就绪，全量 rollout 与中国可达性验收进行中”。"
+    },
+    {
+      "id": "u_059b8197ed8516a0",
+      "kind": "text",
+      "source": "5 · 平台取舍由活跃与营收支持",
+      "occurrence": 0,
+      "target": "5. Platform selection supported by active user numbers and revenue",
+      "context": "h2 @ line 202"
+    },
+    {
+      "id": "u_b7c42a3fceaf720a",
+      "kind": "text",
+      "source": "平台",
+      "occurrence": 1,
+      "target": "Platform",
+      "context": "th @ line 204 · surrounding text: 平台 VPN 活跃 30d VPN 活跃 7d 历史付费 当前 VIP 当前决策"
+    },
+    {
+      "id": "u_be79d9e179fb4d1c",
+      "kind": "text",
+      "source": "VPN 活跃 30d",
+      "occurrence": 0,
+      "target": "30-Day Active VPN Users",
+      "context": "th @ line 204 · surrounding text: 平台 VPN 活跃 30d VPN 活跃 7d 历史付费 当前 VIP 当前决策"
+    },
+    {
+      "id": "u_985b6bba56530d5f",
+      "kind": "text",
+      "source": "VPN 活跃 7d",
+      "occurrence": 0,
+      "target": "7-Day Active VPN Users",
+      "context": "th @ line 204 · surrounding text: 平台 VPN 活跃 30d VPN 活跃 7d 历史付费 当前 VIP 当前决策"
+    },
+    {
+      "id": "u_c99c4a4462b75f90",
+      "kind": "text",
+      "source": "历史付费",
+      "occurrence": 0,
+      "target": "Historical Revenue",
+      "context": "th @ line 204 · surrounding text: 平台 VPN 活跃 30d VPN 活跃 7d 历史付费 当前 VIP 当前决策"
+    },
+    {
+      "id": "u_ee87c7332cd47e09",
+      "kind": "text",
+      "source": "当前 VIP",
+      "occurrence": 1,
+      "target": "Current VIP",
+      "context": "th @ line 204 · surrounding text: 平台 VPN 活跃 30d VPN 活跃 7d 历史付费 当前 VIP 当前决策"
+    },
+    {
+      "id": "u_62062b4b23052694",
+      "kind": "text",
+      "source": "当前决策",
+      "occurrence": 0,
+      "target": "Current Decision",
+      "context": "th @ line 204 · surrounding text: 平台 VPN 活跃 30d VPN 活跃 7d 历史付费 当前 VIP 当前决策"
+    },
+    {
+      "id": "u_7f221798b2c279eb",
+      "kind": "text",
+      "source": "主要 live 平台，优先稳定。",
+      "occurrence": 0,
+      "target": "Primary live platform, prioritize stabilization.",
+      "context": "td @ line 206 · surrounding text: Android 3,059 1,763 1,430 403 主要 live 平台，优先稳定。"
+    },
+    {
+      "id": "u_564ddb6bcdd6e2f2",
+      "kind": "text",
+      "source": "云签名已正确完成，进入官网发布验收。",
+      "occurrence": 0,
+      "target": "Cloud signing completed successfully; proceed to official website release acceptance testing.",
+      "context": "td @ line 207 · surrounding text: Windows 1,625 769 958 357 云签名已正确完成，进入官网发布验收。"
+    },
+    {
+      "id": "u_74140a915dfc9337",
+      "kind": "text",
+      "source": "干净工程重建，等待签名、TestFlight 与 App Store。",
+      "occurrence": 0,
+      "target": "Clean engineering rebuild, awaiting signing, TestFlight, and App Store.",
+      "context": "td @ line 208 · surrounding text: iOS 95 21 36 6 干净工程重建，等待签名、TestFlight 与 App Store。"
+    },
+    {
+      "id": "u_f666972deaf82182",
+      "kind": "text",
+      "source": "新核心接入后需 Apple 发布批准。",
+      "occurrence": 0,
+      "target": "Apple release approval required after new core integration.",
+      "context": "td @ line 209 · surrounding text: macOS 13 9 10 6 新核心接入后需 Apple 发布批准。"
+    },
+    {
+      "id": "u_afd24e85cf680335",
+      "kind": "text",
+      "source": "数据支持的优先级：",
+      "occurrence": 0,
+      "target": "Data priority:",
+      "context": "strong @ line 212 · surrounding text: 数据支持的优先级： Android + Windows 占最近可识别 VPN 用户 94.86%、近期流量 94.15%、近期订单金额 89.04%。这是暂时集中资源的依据，不代表永久放弃 iOS/macOS。"
+    },
+    {
+      "id": "u_be1812595d03d741",
+      "kind": "text",
+      "source": "Android + Windows 占最近可识别 VPN 用户 94.86%、近期流量 94.15%、近期订单金额 89.04%。这是暂时集中资源的依据，不代表永久放弃 iOS/macOS。",
+      "occurrence": 0,
+      "target": "Android + Windows account for 94.86% of recent identifiable VPN users, 94.15% of recent traffic, and 89.04% of recent order value. This is the basis for resource concentration but does not indicate permanent abandonment of iOS/macOS.",
+      "context": "div.callout.success @ line 212 · surrounding text: 数据支持的优先级： Android + Windows 占最近可识别 VPN 用户 94.86%、近期流量 94.15%、近期订单金额 89.04%。这是暂时集中资源的依据，不代表永久放弃 iOS/macOS。"
+    },
+    {
+      "id": "u_aaf38509def229d3",
+      "kind": "text",
+      "source": "6 · FFF 后端必须与 Arrowfish live data 分离",
+      "occurrence": 0,
+      "target": "6. The FFF Back Office must be separated from Arrowfish live data.",
+      "context": "h2 @ line 216"
+    },
+    {
+      "id": "u_040226cf59bb5e39",
+      "kind": "text",
+      "source": "Arrowfish 已承载 400,347 个账号以及持续中的订阅、设备、session 和流量资料。大范围原地 refactor 会放大数据迁移和旧客户端兼容风险。FFF 应复用受控代码基线，而不是复用生产 runtime 或数据库。",
+      "occurrence": 0,
+      "target": "Arrowfish supports 400,347 accounts and ongoing subscriptions, devices, sessions, and traffic records. A large-scale in-place refactor would increase the risk of data migration and old client compatibility issues. FFF should reuse controlled code baselines rather than production runtime or database.",
+      "context": "p @ line 217"
+    },
+    {
+      "id": "u_1ba850d2cdf58f04",
+      "kind": "text",
+      "source": "锁定代码基线",
+      "occurrence": 0,
+      "target": "Lock down code baseline",
+      "context": "b @ line 219 · surrounding text: 锁定代码基线 标记可克隆的 Arrowfish backend 版本与依赖。"
+    },
+    {
+      "id": "u_393fa282650a1968",
+      "kind": "text",
+      "source": "标记可克隆的 Arrowfish backend 版本与依赖。",
+      "occurrence": 0,
+      "target": "Tag cloneable Arrowfish backend version and dependencies.",
+      "context": "div.step @ line 219 · surrounding text: 锁定代码基线 标记可克隆的 Arrowfish backend 版本与依赖。"
+    },
+    {
+      "id": "u_a8b1fe9cf1fe07fa",
+      "kind": "text",
+      "source": "新建 GitLab repo",
+      "occurrence": 0,
+      "target": "Create new GitLab repository",
+      "context": "b @ line 220 · surrounding text: 新建 GitLab repo 独立 ownership、CI/CD、secrets 与发布历史。"
+    },
+    {
+      "id": "u_451fe5061ad347e0",
+      "kind": "text",
+      "source": "独立 ownership、CI/CD、secrets 与发布历史。",
+      "occurrence": 0,
+      "target": "Independent ownership, CI/CD, secrets, and release history.",
+      "context": "div.step @ line 220 · surrounding text: 新建 GitLab repo 独立 ownership、CI/CD、secrets 与发布历史。"
+    },
+    {
+      "id": "u_480f0582d5913788",
+      "kind": "text",
+      "source": "部署 FFF staging",
+      "occurrence": 0,
+      "target": "Deploy FFF staging",
+      "context": "b @ line 221 · surrounding text: 部署 FFF staging 独立 backend、数据库、Redis、域名和配置。"
+    },
+    {
+      "id": "u_1484fc89f95bf93c",
+      "kind": "text",
+      "source": "独立 backend、数据库、Redis、域名和配置。",
+      "occurrence": 0,
+      "target": "Independent Back Office, database, Redis, domain name, and configuration.",
+      "context": "div.step @ line 221 · surrounding text: 部署 FFF staging 独立 backend、数据库、Redis、域名和配置。"
+    },
+    {
+      "id": "u_49e8fc6fab0ca4ad",
+      "kind": "text",
+      "source": "合成数据验收",
+      "occurrence": 0,
+      "target": "Synthesize data acceptance testing",
+      "context": "b @ line 222 · surrounding text: 合成数据验收 注册、登录、bootstrap、节点、session、设备与支付 stub。"
+    },
+    {
+      "id": "u_78e91f77e2bbebf2",
+      "kind": "text",
+      "source": "注册、登录、bootstrap、节点、session、设备与支付 stub。",
+      "occurrence": 0,
+      "target": "Registration, login, bootstrap, VPN node, session, device, and payment stubs.",
+      "context": "div.step @ line 222 · surrounding text: 合成数据验收 注册、登录、bootstrap、节点、session、设备与支付 stub。"
+    },
+    {
+      "id": "u_591e473be808cf93",
+      "kind": "text",
+      "source": "开始独立 refactor",
+      "occurrence": 0,
+      "target": "Begin independent refactor",
+      "context": "b @ line 223 · surrounding text: 开始独立 refactor 验收后再改变 FFF schema、模块与 API。"
+    },
+    {
+      "id": "u_41c30c92436fc2d6",
+      "kind": "text",
+      "source": "验收后再改变 FFF schema、模块与 API。",
+      "occurrence": 0,
+      "target": "Make changes to FFF schema, modules, and APIs after acceptance testing.",
+      "context": "div.step @ line 223 · surrounding text: 开始独立 refactor 验收后再改变 FFF schema、模块与 API。"
+    },
+    {
+      "id": "u_d8a8ad704c21cbdd",
+      "kind": "text",
+      "source": "限制共享边界",
+      "occurrence": 0,
+      "target": "Limit shared boundary",
+      "context": "b @ line 224 · surrounding text: 限制共享边界 只共享版本化源码模块，不共享生产账号或部署状态。"
+    },
+    {
+      "id": "u_c32e8ebbc503ba3e",
+      "kind": "text",
+      "source": "只共享版本化源码模块，不共享生产账号或部署状态。",
+      "occurrence": 0,
+      "target": "Share versioned source code modules only, not production accounts or deployment status.",
+      "context": "div.step @ line 224 · surrounding text: 限制共享边界 只共享版本化源码模块，不共享生产账号或部署状态。"
+    },
+    {
+      "id": "u_9561cca530409415",
+      "kind": "text",
+      "source": "7 · 第10阶段追加行动",
+      "occurrence": 0,
+      "target": "7. Sprint 10 Additional Actions",
+      "context": "h2 @ line 229"
+    },
+    {
+      "id": "u_18b35847b4914781",
+      "kind": "text",
+      "source": "优先级",
+      "occurrence": 0,
+      "target": "Priority",
+      "context": "th @ line 231 · surrounding text: 优先级 行动 关闭标准"
+    },
+    {
+      "id": "u_65ecb86fbe660047",
+      "kind": "text",
+      "source": "行动",
+      "occurrence": 0,
+      "target": "Action",
+      "context": "th @ line 231 · surrounding text: 优先级 行动 关闭标准"
+    },
+    {
+      "id": "u_da0fc8ebffc464ec",
+      "kind": "text",
+      "source": "关闭标准",
+      "occurrence": 0,
+      "target": "Closure Criteria",
+      "context": "th @ line 231 · surrounding text: 优先级 行动 关闭标准"
+    },
+    {
+      "id": "u_aaf77a4226341ea5",
+      "kind": "text",
+      "source": "完成 Windows signed website release。",
+      "occurrence": 0,
+      "target": "Complete Windows signed website release.",
+      "context": "td @ line 233 · surrounding text: P0 完成 Windows signed website release。 干净机器安装、签名、连接、升级与下载链路验收。"
+    },
+    {
+      "id": "u_ba5f7032655ab2dc",
+      "kind": "text",
+      "source": "干净机器安装、签名、连接、升级与下载链路验收。",
+      "occurrence": 0,
+      "target": "Clean machine installation, signing, connection, upgrade, and download link acceptance testing.",
+      "context": "td @ line 233 · surrounding text: P0 完成 Windows signed website release。 干净机器安装、签名、连接、升级与下载链路验收。"
+    },
+    {
+      "id": "u_da4e5ed32cd88960",
+      "kind": "text",
+      "source": "修复并验证 device identity header / CORS。",
+      "occurrence": 0,
+      "target": "Fix and verify device identity header / CORS.",
+      "context": "td @ line 234 · surrounding text: P0 修复并验证 device identity header / CORS。 Android 与 Windows 新绑定来源可追踪，8 月共享设备异常不再重现。"
+    },
+    {
+      "id": "u_89622e97c74b1bfd",
+      "kind": "text",
+      "source": "Android 与 Windows 新绑定来源可追踪，8 月共享设备异常不再重现。",
+      "occurrence": 0,
+      "target": "New Android and Windows binding sources are traceable, and the August shared-device anomaly no longer recurs.",
+      "context": "td @ line 234 · surrounding text: P0 修复并验证 device identity header / CORS。 Android 与 Windows 新绑定来源可追踪，8 月共享设备异常不再重现。"
+    },
+    {
+      "id": "u_ec76e3d45f9536d9",
+      "kind": "text",
+      "source": "建立生产异地备份并恢复演练。",
+      "occurrence": 0,
+      "target": "Establish off-host production backups and run a recovery drill.",
+      "context": "td @ line 235 · surrounding text: P0 建立生产异地备份并恢复演练。 异地主机可恢复，记录 RTO 与数据完整性。"
+    },
+    {
+      "id": "u_b74af0a03f11a3b7",
+      "kind": "text",
+      "source": "异地主机可恢复，记录 RTO 与数据完整性。",
+      "occurrence": 0,
+      "target": "Remote host recoverable, record RTO and data integrity.",
+      "context": "td @ line 235 · surrounding text: P0 建立生产异地备份并恢复演练。 异地主机可恢复，记录 RTO 与数据完整性。"
+    },
+    {
+      "id": "u_316469aee9d7a8ef",
+      "kind": "text",
+      "source": "对齐5月25日 release operations 并建立分层发布证据。",
+      "occurrence": 0,
+      "target": "Align with May 25 release operations and establish layered deployment evidence.",
+      "context": "td @ line 236 · surrounding text: P0 对齐5月25日 release operations 并建立分层发布证据。 tag、runtime、DB migration、产品 smoke、地区 QA 与发布后 KPI 分开留证。"
+    },
+    {
+      "id": "u_34d195f3a4f67b10",
+      "kind": "text",
+      "source": "tag、runtime、DB migration、产品 smoke、地区 QA 与发布后 KPI 分开留证。",
+      "occurrence": 0,
+      "target": "Tags, runtime, database migration, product smoke tests, regional QA, and post-release KPIs should be documented separately.",
+      "context": "td @ line 236 · surrounding text: P0 对齐5月25日 release operations 并建立分层发布证据。 tag、runtime、DB migration、产品 smoke、地区 QA 与发布后 KPI 分开留证。"
+    },
+    {
+      "id": "u_202b2c85cfe4857d",
+      "kind": "text",
+      "source": "完成三协议全量 rollout 与中国地区验收。",
+      "occurrence": 0,
+      "target": "Complete full rollout and regional acceptance for all three protocols in China region.",
+      "context": "td @ line 237 · surrounding text: P1 完成三协议全量 rollout 与中国地区验收。 实现、监听、fleet rollout、regional acceptance 四项分别有证据。"
+    },
+    {
+      "id": "u_8e7f2b7cc520429b",
+      "kind": "text",
+      "source": "实现、监听、fleet rollout、regional acceptance 四项分别有证据。",
+      "occurrence": 0,
+      "target": "Evidence exists for implementation, monitoring, fleet rollout, and regional acceptance.",
+      "context": "td @ line 237 · surrounding text: P1 完成三协议全量 rollout 与中国地区验收。 实现、监听、fleet rollout、regional acceptance 四项分别有证据。"
+    },
+    {
+      "id": "u_5ba4d56068e719a3",
+      "kind": "text",
+      "source": "建立用户质量看板。",
+      "occurrence": 0,
+      "target": "Establish independent staging backend for FFF.",
+      "context": "td @ line 238 · surrounding text: P1 建立用户质量看板。 注册、绑定、VPN-active、ever-paid、VIP 与 cohort 转化分开呈现。"
+    },
+    {
+      "id": "u_a30bc46107561c86",
+      "kind": "text",
+      "source": "注册、绑定、VPN-active、ever-paid、VIP 与 cohort 转化分开呈现。",
+      "occurrence": 0,
+      "target": "Separate registration, binding, VPN-active, ever-paid, VIP, and cohort conversions.",
+      "context": "td @ line 238 · surrounding text: P1 建立用户质量看板。 注册、绑定、VPN-active、ever-paid、VIP 与 cohort 转化分开呈现。"
+    },
+    {
+      "id": "u_43afbcc66db183ab",
+      "kind": "text",
+      "source": "建立 FFF 独立 staging backend。",
+      "occurrence": 0,
+      "target": "Establish an independent FFF staging Back Office.",
+      "context": "td @ line 239 · surrounding text: P1 建立 FFF 独立 staging backend。 新 repo 与隔离 runtime 通过合成数据 smoke test 后才 refactor。"
+    },
+    {
+      "id": "u_d10f032125d5417b",
+      "kind": "text",
+      "source": "新 repo 与隔离 runtime 通过合成数据 smoke test 后才 refactor。",
+      "occurrence": 0,
+      "target": "The new repository and isolated runtime will be refactored only after passing the synthetic data smoke test.",
+      "context": "td @ line 239 · surrounding text: P1 建立 FFF 独立 staging backend。 新 repo 与隔离 runtime 通过合成数据 smoke test 后才 refactor。"
+    },
+    {
+      "id": "u_876afa43dbde5dbb",
+      "kind": "text",
+      "source": "Arrowfish 第10阶段生产研究追加 · 部署边界复核 2026-08-29 · 只读聚合查询 · 不含个人资料",
+      "occurrence": 0,
+      "target": "Arrowfish Sprint 10 Production Research Addition · Boundary Deployment Review on 29-Aug-2026 · Read-only Aggregation Query · No Personal Data",
+      "context": "div.footer @ line 244"
+    }
+  ],
+  "blocks": {
+    "b0001": {
+      "type": "p",
+      "source": "只读生产数据 · 基线 2026-08-28 · 部署边界复核 2026-08-29",
+      "occurrence": 0
+    },
+    "b0002": {
+      "type": "p",
+      "source": "Arrowfish · 第10阶段追加",
+      "occurrence": 0
+    },
+    "b0003": {
+      "type": "heading",
+      "source": "生产用户质量、访问资格与平台影响",
+      "occurrence": 0
+    },
+    "b0004": {
+      "type": "p",
+      "source": "补齐从接手、后端配额与设备绑定，到中国连接事件、自研 SkyNode／SkyTunnel、平台恢复和 FFF 后端分离的完整决策链。",
+      "occurrence": 0
+    },
+    "b0005": {
+      "type": "heading",
+      "source": "管理层结论",
+      "occurrence": 0
+    },
+    "b0006": {
+      "type": "p",
+      "source": "400,347 个注册账号不等于 400,347 个真实可用用户。 最近 30 日 VPN 活跃只有 4,938 个，历史付费账号 19,476 个。接手后最重要的两项目标——后端／节点权威配额，以及设备身份绑定——方向正确，并已有流量、session 和新 cohort 数据支持。",
+      "occurrence": 0
+    },
+    "b0007": {
+      "type": "p",
+      "source": "两个大部署不能只写“成功”。 5月25日证明生产 session accounting 开始且设备身份改善，但用户激活、付费激活和流量同时骤降；8月12日基础设施整合完成、业务指标改善，但共享设备身份出现明确回归。后续必须把部署、产品可用性和地区验收分开关闭。",
+      "occurrence": 0
+    },
+    "b0008": {
+      "type": "p",
+      "source": "中国事件不是普通 bug：同一批测试节点在马来西亚和台湾可用，但中国 QA 不可用，推动团队建立自研 SkyNode、SkyTunnel 与三条加固协议。生产数据库同时显示 MY/TW 注册地 cohort 也在5月25日前后下降，因此不能把整体下跌只归因于 GFW。当前应优先保护 Android 并恢复 Windows；iOS/macOS 等待 rebuilt client 的 Apple 批准。",
+      "occurrence": 0
+    },
+    "b0009": {
+      "type": "heading",
+      "source": "1 · 两个关键生产部署边界",
+      "occurrence": 0
+    },
+    "b0010": {
+      "type": "heading",
+      "source": "2026-05-25 · 生产计费／release 边界",
+      "occurrence": 0
+    },
+    "b0011": {
+      "type": "table-row",
+      "source": "指标 5/18–5/24 5/25–5/31 6/1–6/7",
+      "occurrence": 0
+    },
+    "b0012": {
+      "type": "table-row",
+      "source": "D7 VPN 激活 47.78% 2.43% 7.48%",
+      "occurrence": 0
+    },
+    "b0013": {
+      "type": "table-row",
+      "source": "D7 付费激活 1.56% 0.47% 0.54%",
+      "occurrence": 0
+    },
+    "b0014": {
+      "type": "table-row",
+      "source": "周内 VPN 用户 6,456 1,338 1,667",
+      "occurrence": 0
+    },
+    "b0015": {
+      "type": "table-row",
+      "source": "计费流量 7,558.7 GiB 1,508.9 GiB 1,774.5 GiB",
+      "occurrence": 0
+    },
+    "b0016": {
+      "type": "table-row",
+      "source": "生产 session 0 8,961 16,961",
+      "occurrence": 0
+    },
+    "b0017": {
+      "type": "table-row",
+      "source": "目前回看共享 device ID 率 21.73% 2.59% 1.07%",
+      "occurrence": 0
+    },
+    "b0018": {
+      "type": "p",
+      "source": "证据结论： OreBackend release tags 指向当天 06:14 MYT 起的 Git objects，第一条生产 session 在 06:52 MYT；部分为 lightweight tags，所以 object 时间不能当作独立 tag 创建时间。数据库证明 session accounting 上线，设备身份质量也显著改善；但现有 Sprint 4 报告把当天写成 QA/preprod closeout，因此完整“大部署”范围仍需 release-operations 记录确认。激活与流量骤降可能同时包含资格校验、连通性、客户端兼容和获客变化，数据库不能分摊单一因果。",
+      "occurrence": 0
+    },
+    "b0019": {
+      "type": "heading",
+      "source": "2026-08-12 · 单主机生产整合",
+      "occurrence": 0
+    },
+    "b0020": {
+      "type": "table-row",
+      "source": "指标 8/5–8/11 8/12–8/18 8/19–8/25",
+      "occurrence": 0
+    },
+    "b0021": {
+      "type": "table-row",
+      "source": "D7 VPN 激活 44.36% 70.76% 69.88%",
+      "occurrence": 0
+    },
+    "b0022": {
+      "type": "table-row",
+      "source": "周内 VPN 用户 1,955 2,096 2,484",
+      "occurrence": 0
+    },
+    "b0023": {
+      "type": "table-row",
+      "source": "计费流量 4,409.3 GiB 5,294.9 GiB 5,417.2 GiB",
+      "occurrence": 0
+    },
+    "b0024": {
+      "type": "table-row",
+      "source": "已付订单金额 CNY 2,034.89 CNY 4,535.49 CNY 4,890.01",
+      "occurrence": 0
+    },
+    "b0025": {
+      "type": "table-row",
+      "source": "目前回看共享 device ID 率 7.32% 38.89% 21.30%",
+      "occurrence": 0
+    },
+    "b0026": {
+      "type": "p",
+      "source": "证据结论： cutover report 记录 05:00 MYT 开始；MySQL restore 后两张关键表在 06:05–06:09 MYT 重建，基础设施部署事实成立。业务指标上升是正相关，不是已隔离的部署增量；8月12–15日共享设备率为52.11%、40.63%、36.96%、34.62%，所以产品 acceptance 仍需关闭 identity header、CORS、客户端版本与 legacy fallback。",
+      "occurrence": 0
+    },
+    "b0027": {
+      "type": "heading",
+      "source": "2 · 注册规模必须换成质量漏斗",
+      "occurrence": 0
+    },
+    "b0028": {
+      "type": "highlight",
+      "source": "400,347 注册账号",
+      "occurrence": 0
+    },
+    "b0029": {
+      "type": "highlight",
+      "source": "4,938 最近 30 日 VPN 活跃",
+      "occurrence": 0
+    },
+    "b0030": {
+      "type": "highlight",
+      "source": "19,476 历史付费账号",
+      "occurrence": 0
+    },
+    "b0031": {
+      "type": "highlight",
+      "source": "995 当前 VIP",
+      "occurrence": 0
+    },
+    "b0032": {
+      "type": "highlight",
+      "source": "400,347 注册账号 4,938 最近 30 日 VPN 活跃 19,476 历史付费账号 995 当前 VIP",
+      "occurrence": 0
+    },
+    "b0033": {
+      "type": "heading",
+      "source": "关键 cohort 变化",
+      "occurrence": 0
+    },
+    "b0034": {
+      "type": "table-row",
+      "source": "月份 注册 历史付费率 D7 VPN 激活 设备绑定率",
+      "occurrence": 0
+    },
+    "b0035": {
+      "type": "table-row",
+      "source": "3 月 13,117 5.3% 65.78% 84.04%",
+      "occurrence": 0
+    },
+    "b0036": {
+      "type": "table-row",
+      "source": "5 月 27,794 1.8% 40.96% 87.01%",
+      "occurrence": 0
+    },
+    "b0037": {
+      "type": "table-row",
+      "source": "6 月 23,821 0.9% 12.27% 98.49%",
+      "occurrence": 0
+    },
+    "b0038": {
+      "type": "table-row",
+      "source": "7 月 3,163 4.4% 42.52% 92.85%",
+      "occurrence": 0
+    },
+    "b0039": {
+      "type": "table-row",
+      "source": "8 月截至 28 日 3,426 4.1% 58.66%（成熟用户） 92.79%",
+      "occurrence": 0
+    },
+    "b0040": {
+      "type": "highlight",
+      "source": "解读边界： 6 月有 20,499 个账号从未付费且没有 VPN 记录；5 月 25 日至 6 月 30 日，伊朗和阿塞拜疆合计 14,792 个注册、D7 激活 3.14%、历史付费 0。这是低质量或自动化注册的强信号，不是对单个账号的欺诈判定。",
+      "occurrence": 0
+    },
+    "b0041": {
+      "type": "heading",
+      "source": "3 · 后端配额已产生效果，设备资料仍需收口",
+      "occurrence": 0
+    },
+    "b0042": {
+      "type": "table-row",
+      "source": "验证点 生产结果 结论",
+      "occurrence": 0
+    },
+    "b0043": {
+      "type": "table-row",
+      "source": "ACTIVE session 唯一性 8月29日复核：同账号多 ACTIVE = 0；同设备多 ACTIVE = 0 当前会话替换／到期由后端执行；ACTIVE 数量是实时值，不作为趋势 KPI。",
+      "occurrence": 0
+    },
+    "b0044": {
+      "type": "table-row",
+      "source": "未付费最高月流量 3 月 1,216.7 GiB → 5 月 69.4 GiB → 6 月 39.0 GiB 3 月到 6 月下降 96.79%；4 月后无人超过 100 GiB。",
+      "occurrence": 0
+    },
+    "b0045": {
+      "type": "table-row",
+      "source": "设备 ID 历史关系 214,516 个 distinct ID；37,904 个关联两个或以上账号 历史资料不等于当前并发，需要按 cohort 与客户端版本治理。",
+      "occurrence": 0
+    },
+    "b0046": {
+      "type": "table-row",
+      "source": "8 月切换异常 共享设备比例 8/12–8/15 为 52.11%、40.63%、36.96%、34.62% 先查 identity header、CORS、客户端版本与 legacy fallback，不做批量删除。",
+      "occurrence": 0
+    },
+    "b0047": {
+      "type": "heading",
+      "source": "4 · 中国连接事件与自研节点路线",
+      "occurrence": 0
+    },
+    "b0048": {
+      "type": "table-row",
+      "source": "指标 5 月 6 月 变化",
+      "occurrence": 0
+    },
+    "b0049": {
+      "type": "table-row",
+      "source": "全部 VPN 活跃用户 15,832 5,645 -64.34%",
+      "occurrence": 0
+    },
+    "b0050": {
+      "type": "table-row",
+      "source": "中国 VPN 活跃用户 11,457 3,842 -66.47%",
+      "occurrence": 0
+    },
+    "b0051": {
+      "type": "table-row",
+      "source": "流量 28,323 GiB 15,595 GiB -44.94%",
+      "occurrence": 0
+    },
+    "b0052": {
+      "type": "p",
+      "source": "因果边界： 数据库证明下降的时间与规模；5月25日前后，中国、马来西亚和台湾注册地 cohort 的生产使用都下降，所以 DB 不能证明 GFW 是整体下跌的唯一原因。GFW 判断来自另一组地域 QA 对照。节点供应商历史影响约 50 台属于运维记录，当前数据库无法单独重建完整 provider 事件。",
+      "occurrence": 0
+    },
+    "b0053": {
+      "type": "heading",
+      "source": "当前生产节点状态",
+      "occurrence": 0
+    },
+    "b0054": {
+      "type": "highlight",
+      "source": "99 实体节点主机",
+      "occurrence": 0
+    },
+    "b0055": {
+      "type": "highlight",
+      "source": "93 近期心跳正常",
+      "occurrence": 0
+    },
+    "b0056": {
+      "type": "highlight",
+      "source": "97 运行自研 SkyNode Agent",
+      "occurrence": 0
+    },
+    "b0057": {
+      "type": "highlight",
+      "source": "34 三协议监听全部就绪",
+      "occurrence": 0
+    },
+    "b0058": {
+      "type": "highlight",
+      "source": "99 实体节点主机 93 近期心跳正常 97 运行自研 SkyNode Agent 34 三协议监听全部就绪",
+      "occurrence": 0
+    },
+    "b0059": {
+      "type": "p",
+      "source": "不能过度宣称： 64 台主机仍是 Trojan-only，协议 external state 仍为 unverified。正确状态是“核心已实现，34 台监听就绪，全量 rollout 与中国可达性验收进行中”。",
+      "occurrence": 0
+    },
+    "b0060": {
+      "type": "heading",
+      "source": "5 · 平台取舍由活跃与营收支持",
+      "occurrence": 0
+    },
+    "b0061": {
+      "type": "table-row",
+      "source": "平台 VPN 活跃 30d VPN 活跃 7d 历史付费 当前 VIP 当前决策",
+      "occurrence": 0
+    },
+    "b0062": {
+      "type": "table-row",
+      "source": "Android 3,059 1,763 1,430 403 主要 live 平台，优先稳定。",
+      "occurrence": 0
+    },
+    "b0063": {
+      "type": "table-row",
+      "source": "Windows 1,625 769 958 357 云签名已正确完成，进入官网发布验收。",
+      "occurrence": 0
+    },
+    "b0064": {
+      "type": "table-row",
+      "source": "iOS 95 21 36 6 干净工程重建，等待签名、TestFlight 与 App Store。",
+      "occurrence": 0
+    },
+    "b0065": {
+      "type": "table-row",
+      "source": "macOS 13 9 10 6 新核心接入后需 Apple 发布批准。",
+      "occurrence": 0
+    },
+    "b0066": {
+      "type": "heading",
+      "source": "6 · FFF 后端必须与 Arrowfish live data 分离",
+      "occurrence": 0
+    },
+    "b0067": {
+      "type": "p",
+      "source": "Arrowfish 已承载 400,347 个账号以及持续中的订阅、设备、session 和流量资料。大范围原地 refactor 会放大数据迁移和旧客户端兼容风险。FFF 应复用受控代码基线，而不是复用生产 runtime 或数据库。",
+      "occurrence": 0
+    },
+    "b0068": {
+      "type": "heading",
+      "source": "7 · 第10阶段追加行动",
+      "occurrence": 0
+    },
+    "b0069": {
+      "type": "table-row",
+      "source": "优先级 行动 关闭标准",
+      "occurrence": 0
+    },
+    "b0070": {
+      "type": "table-row",
+      "source": "P0 完成 Windows signed website release。 干净机器安装、签名、连接、升级与下载链路验收。",
+      "occurrence": 0
+    },
+    "b0071": {
+      "type": "table-row",
+      "source": "P0 修复并验证 device identity header / CORS。 Android 与 Windows 新绑定来源可追踪，8 月共享设备异常不再重现。",
+      "occurrence": 0
+    },
+    "b0072": {
+      "type": "table-row",
+      "source": "P0 建立生产异地备份并恢复演练。 异地主机可恢复，记录 RTO 与数据完整性。",
+      "occurrence": 0
+    },
+    "b0073": {
+      "type": "table-row",
+      "source": "P0 对齐5月25日 release operations 并建立分层发布证据。 tag、runtime、DB migration、产品 smoke、地区 QA 与发布后 KPI 分开留证。",
+      "occurrence": 0
+    },
+    "b0074": {
+      "type": "table-row",
+      "source": "P1 完成三协议全量 rollout 与中国地区验收。 实现、监听、fleet rollout、regional acceptance 四项分别有证据。",
+      "occurrence": 0
+    },
+    "b0075": {
+      "type": "table-row",
+      "source": "P1 建立用户质量看板。 注册、绑定、VPN-active、ever-paid、VIP 与 cohort 转化分开呈现。",
+      "occurrence": 0
+    },
+    "b0076": {
+      "type": "table-row",
+      "source": "P1 建立 FFF 独立 staging backend。 新 repo 与隔离 runtime 通过合成数据 smoke test 后才 refactor。",
+      "occurrence": 0
+    }
+  },
+  "reviewedTargetHash": "ca88e83c2491881f"
+}

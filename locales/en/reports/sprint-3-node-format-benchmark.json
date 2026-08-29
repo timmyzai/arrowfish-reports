@@ -1,0 +1,3539 @@
+{
+  "schemaVersion": 1,
+  "reportId": "sprint-3-node-format-benchmark",
+  "sourceFile": "Stakeholder/Sprint-3/20260510_node_format_benchmark.html",
+  "sourceVersion": "95ecb15e8b18b2e1",
+  "units": [
+    {
+      "id": "u_cdc7a321a01645ee",
+      "kind": "text",
+      "source": "第3阶段 · 节点回收实测（后台一键全擦重装）· 2026-05-10",
+      "occurrence": 0,
+      "target": "Sprint 3 · VPN node Recovery Real Test (Full Erase and Reinstall via Back Office) · May 10, 2026",
+      "context": "title @ line 9"
+    },
+    {
+      "id": "u_e81dca900496ce96",
+      "kind": "text",
+      "source": "节点回收实测 — 后台一键 全擦重装",
+      "occurrence": 0,
+      "target": "VPN node Recovery Real Test - Full Erase and Reinstall via Back Office",
+      "context": "h1 @ line 82"
+    },
+    {
+      "id": "u_3bb5744b554528f8",
+      "kind": "text",
+      "source": "2026年5月10日 03:52:17 UTC · 测试环境",
+      "occurrence": 0,
+      "target": "May 10, 2026, 03:52:17 UTC · Testing Environment",
+      "context": "div.subtitle @ line 83 · surrounding text: 2026年5月10日 03:52:17 UTC · 测试环境 全量 7 台节点 · 横跨 6 国 3 大洲 · 后台（新加坡 Azure）单一 API 调用并行触发 补充材料 · 配套 第3阶段一页摘要（5/10） 与 完整汇报（5/10） · 实测在第3阶段最后一日完成，作为既有承诺数字的可复现验证"
+    },
+    {
+      "id": "u_fe560d15b037f38a",
+      "kind": "text",
+      "source": "全量 7 台节点",
+      "occurrence": 0,
+      "target": "Full Load of 7 VPN nodes",
+      "context": "strong @ line 83 · surrounding text: 2026年5月10日 03:52:17 UTC · 测试环境 全量 7 台节点 · 横跨 6 国 3 大洲 · 后台（新加坡 Azure）单一 API 调用并行触发 补充材料 · 配套 第3阶段一页摘要（5/10） 与 完整汇报（5/10） · 实测在第3阶段最后一日完成，作为既有承诺数字的可复现验证"
+    },
+    {
+      "id": "u_3dc364c6f3b95b98",
+      "kind": "text",
+      "source": "· 横跨 6 国 3 大洲 · 后台（新加坡 Azure）单一 API 调用并行触发",
+      "occurrence": 0,
+      "target": "Cross-6 Countries and 3 Continents · Back Office (Singapore Azure) Single API Call in Parallel Triggered",
+      "context": "div.subtitle @ line 83 · surrounding text: 2026年5月10日 03:52:17 UTC · 测试环境 全量 7 台节点 · 横跨 6 国 3 大洲 · 后台（新加坡 Azure）单一 API 调用并行触发 补充材料 · 配套 第3阶段一页摘要（5/10） 与 完整汇报（5/10） · 实测在第3阶段最后一日完成，作为既有承诺数字的可复现验证"
+    },
+    {
+      "id": "u_13ae0ad28b851f3e",
+      "kind": "text",
+      "source": "补充材料 · 配套",
+      "occurrence": 0,
+      "target": "Supplement Materials · Accompanying Documents",
+      "context": "span @ line 83 · surrounding text: 2026年5月10日 03:52:17 UTC · 测试环境 全量 7 台节点 · 横跨 6 国 3 大洲 · 后台（新加坡 Azure）单一 API 调用并行触发 补充材料 · 配套 第3阶段一页摘要（5/10） 与 完整汇报（5/10） · 实测在第3阶段最后一日完成，作为既有承诺数字的可复现验证"
+    },
+    {
+      "id": "u_eb006ad91518fa89",
+      "kind": "text",
+      "source": "第3阶段一页摘要（5/10）",
+      "occurrence": 0,
+      "target": "Page Summary of Sprint 3 (May 10)",
+      "context": "a @ line 83 · surrounding text: 2026年5月10日 03:52:17 UTC · 测试环境 全量 7 台节点 · 横跨 6 国 3 大洲 · 后台（新加坡 Azure）单一 API 调用并行触发 补充材料 · 配套 第3阶段一页摘要（5/10） 与 完整汇报（5/10） · 实测在第3阶段最后一日完成，作为既有承诺数字的可复现验证"
+    },
+    {
+      "id": "u_c8990ab099c76cc2",
+      "kind": "text",
+      "source": "与",
+      "occurrence": 0,
+      "target": "And",
+      "context": "span @ line 83 · surrounding text: 2026年5月10日 03:52:17 UTC · 测试环境 全量 7 台节点 · 横跨 6 国 3 大洲 · 后台（新加坡 Azure）单一 API 调用并行触发 补充材料 · 配套 第3阶段一页摘要（5/10） 与 完整汇报（5/10） · 实测在第3阶段最后一日完成，作为既有承诺数字的可复现验证"
+    },
+    {
+      "id": "u_5d955f6a26b49113",
+      "kind": "text",
+      "source": "完整汇报（5/10）",
+      "occurrence": 0,
+      "target": "Full Report (May 10)",
+      "context": "a @ line 83 · surrounding text: 2026年5月10日 03:52:17 UTC · 测试环境 全量 7 台节点 · 横跨 6 国 3 大洲 · 后台（新加坡 Azure）单一 API 调用并行触发 补充材料 · 配套 第3阶段一页摘要（5/10） 与 完整汇报（5/10） · 实测在第3阶段最后一日完成，作为既有承诺数字的可复现验证"
+    },
+    {
+      "id": "u_fbd4cb8717ea6161",
+      "kind": "text",
+      "source": "· 实测在第3阶段最后一日完成，作为既有承诺数字的可复现验证",
+      "occurrence": 0,
+      "target": "Real Test Completed on the Last Day of Sprint 3 as a Reproducible Verification of Existing Commitments",
+      "context": "span @ line 83 · surrounding text: 2026年5月10日 03:52:17 UTC · 测试环境 全量 7 台节点 · 横跨 6 国 3 大洲 · 后台（新加坡 Azure）单一 API 调用并行触发 补充材料 · 配套 第3阶段一页摘要（5/10） 与 完整汇报（5/10） · 实测在第3阶段最后一日完成，作为既有承诺数字的可复现验证"
+    },
+    {
+      "id": "u_a033e991495d2169",
+      "kind": "text",
+      "source": "TL;DR · 一句话",
+      "occurrence": 0,
+      "target": "TL;DR · Summary in One Sentence",
+      "context": "div.tldr-label @ line 87"
+    },
+    {
+      "id": "u_d044b18559dd8b3e",
+      "kind": "text",
+      "source": "测试环境全部 7 台节点（覆盖中国 / 香港 / 越南 / 菲律宾 / 丹麦 / 加拿大 / 法国 ， 横跨 3 大洲，规格从 0.4 GB RAM 到 2 vCPU + 1.7 GB）通过",
+      "occurrence": 0,
+      "target": "All 7 VPN nodes of the Testing Environment (Covering China / Hong Kong / Vietnam / Philippines / Denmark / Canada / France, Spanning 3 Continents, RAM Specifications from 0.4 GB to 2 vCPU + 1.7 GB) Passed",
+      "context": "strong @ line 89 · surrounding text: 测试环境全部 7 台节点（覆盖中国 / 香港 / 越南 / 菲律宾 / 丹麦 / 加拿大 / 法国 ， 横跨 3 大洲，规格从 0.4 GB RAM 到 2 vCPU + 1.7 GB）通过 单次后台 API 调用 同时触发全擦重装：6 / 7 节点在 24 秒内完成，第 7 台（中国大陆）因 ACME 证书走国际出口慢用了 44 秒，整批端到端 44 秒， 7 / 7 全部恢复到生产可用状态 ， 0 失败 。"
+    },
+    {
+      "id": "u_26b236b491f27150",
+      "kind": "text",
+      "source": "单次后台 API 调用",
+      "occurrence": 0,
+      "target": "Single Back Office API Call",
+      "context": "u @ line 89 · surrounding text: 测试环境全部 7 台节点（覆盖中国 / 香港 / 越南 / 菲律宾 / 丹麦 / 加拿大 / 法国 ， 横跨 3 大洲，规格从 0.4 GB RAM 到 2 vCPU + 1.7 GB）通过 单次后台 API 调用 同时触发全擦重装：6 / 7 节点在 24 秒内完成，第 7 台（中国大陆）因 ACME 证书走国际出口慢用了 44 秒，整批端到端 44 秒， 7 / 7 全部恢复到生产可用状态 ， 0 失败 。"
+    },
+    {
+      "id": "u_4292155130948e66",
+      "kind": "text",
+      "source": "同时触发全擦重装：6 / 7 节点在 24 秒内完成，第 7 台（中国大陆）因 ACME 证书走国际出口慢用了 44 秒，整批端到端 44 秒，",
+      "occurrence": 0,
+      "target": "Simultaneously Triggering Full Erase and Reinstallation: 6/7 VPN nodes Completed in 24 Seconds, the 7th VPN node (China Mainland) Took 44 Seconds Due to Slow International Exit for ACME Certificate, Total Time of End-to-End Process Was 44 Seconds, All 7 VPN nodes Fully Recovered to Production Availability with Zero Failures",
+      "context": "strong @ line 89 · surrounding text: 测试环境全部 7 台节点（覆盖中国 / 香港 / 越南 / 菲律宾 / 丹麦 / 加拿大 / 法国 ， 横跨 3 大洲，规格从 0.4 GB RAM 到 2 vCPU + 1.7 GB）通过 单次后台 API 调用 同时触发全擦重装：6 / 7 节点在 24 秒内完成，第 7 台（中国大陆）因 ACME 证书走国际出口慢用了 44 秒，整批端到端 44 秒， 7 / 7 全部恢复到生产可用状态 ， 0 失败 。"
+    },
+    {
+      "id": "u_0e6eaa4f9e1d1c61",
+      "kind": "text",
+      "source": "7 / 7 全部恢复到生产可用状态",
+      "occurrence": 0,
+      "target": "All 7 Nodes Fully Recovered to Production Availability",
+      "context": "u @ line 89 · surrounding text: 测试环境全部 7 台节点（覆盖中国 / 香港 / 越南 / 菲律宾 / 丹麦 / 加拿大 / 法国 ， 横跨 3 大洲，规格从 0.4 GB RAM 到 2 vCPU + 1.7 GB）通过 单次后台 API 调用 同时触发全擦重装：6 / 7 节点在 24 秒内完成，第 7 台（中国大陆）因 ACME 证书走国际出口慢用了 44 秒，整批端到端 44 秒， 7 / 7 全部恢复到生产可用状态 ， 0 失败 。"
+    },
+    {
+      "id": "u_0c8d6d7e4cd42c6e",
+      "kind": "text",
+      "source": "0 失败",
+      "occurrence": 0,
+      "target": "Zero Failures",
+      "context": "u @ line 89 · surrounding text: 测试环境全部 7 台节点（覆盖中国 / 香港 / 越南 / 菲律宾 / 丹麦 / 加拿大 / 法国 ， 横跨 3 大洲，规格从 0.4 GB RAM 到 2 vCPU + 1.7 GB）通过 单次后台 API 调用 同时触发全擦重装：6 / 7 节点在 24 秒内完成，第 7 台（中国大陆）因 ACME 证书走国际出口慢用了 44 秒，整批端到端 44 秒， 7 / 7 全部恢复到生产可用状态 ， 0 失败 。"
+    },
+    {
+      "id": "u_b0a6bdc6ee4f10cc",
+      "kind": "text",
+      "source": "这条流程对应了第3阶段汇报里「节点开通 ~30 秒、回收全擦 ~2 分钟」的承诺数字。本次给出可复现的全量实测；Vancouver 节点（RTT 175 ms 最远）反而是",
+      "occurrence": 0,
+      "target": "This workflow corresponds to the commitment in the Sprint 3 report: VPN node provisioning in ~30 seconds and reclamation with a full wipe in ~2 minutes. This report provides complete, reproducible measurements; the Vancouver VPN node, the most distant at 175 ms RTT, was instead",
+      "context": "p @ line 90 · surrounding text: 这条流程对应了第3阶段汇报里「节点开通 ~30 秒、回收全擦 ~2 分钟」的承诺数字。本次给出可复现的全量实测；Vancouver 节点（RTT 175 ms 最远）反而是 最快 （15 秒），证明 地理距离不是后台自动化的瓶颈 。"
+    },
+    {
+      "id": "u_370a67627be0b572",
+      "kind": "text",
+      "source": "最快",
+      "occurrence": 0,
+      "target": "fastest",
+      "context": "strong @ line 90 · surrounding text: 这条流程对应了第3阶段汇报里「节点开通 ~30 秒、回收全擦 ~2 分钟」的承诺数字。本次给出可复现的全量实测；Vancouver 节点（RTT 175 ms 最远）反而是 最快 （15 秒），证明 地理距离不是后台自动化的瓶颈 。"
+    },
+    {
+      "id": "u_8c20fec273e16c52",
+      "kind": "text",
+      "source": "（15 秒），证明",
+      "occurrence": 0,
+      "target": "fastest (15 seconds), proving",
+      "context": "p @ line 90 · surrounding text: 这条流程对应了第3阶段汇报里「节点开通 ~30 秒、回收全擦 ~2 分钟」的承诺数字。本次给出可复现的全量实测；Vancouver 节点（RTT 175 ms 最远）反而是 最快 （15 秒），证明 地理距离不是后台自动化的瓶颈 。"
+    },
+    {
+      "id": "u_7e6a6c1812fcd233",
+      "kind": "text",
+      "source": "地理距离不是后台自动化的瓶颈",
+      "occurrence": 0,
+      "target": "Geographic distance is not a bottleneck for Back Office (BO) automation.",
+      "context": "strong @ line 90 · surrounding text: 这条流程对应了第3阶段汇报里「节点开通 ~30 秒、回收全擦 ~2 分钟」的承诺数字。本次给出可复现的全量实测；Vancouver 节点（RTT 175 ms 最远）反而是 最快 （15 秒），证明 地理距离不是后台自动化的瓶颈 。"
+    },
+    {
+      "id": "u_585b93bca2a5ec34",
+      "kind": "text",
+      "source": "但「44 秒」其实不是最大的赢面。最大的赢面是「学习曲线归零 — 谁都能上」 — 任何同事（包括第一天报到的新人）只需要在管理后台勾两个选项点确认即可，不再依赖看文档 / 背命令 / 判断节点系统类型。详见下面",
+      "occurrence": 0,
+      "target": "However, 44 seconds is not the greatest benefit. The greatest benefit is a zero learning curve: anyone can perform the task. Any colleague, including a new hire on their first day, only needs to select two options in the Back Office (BO) and confirm; there is no longer any need to read documentation, memorize commands, or identify the VPN node's operating system. See below.",
+      "context": "strong @ line 91 · surrounding text: 但「44 秒」其实不是最大的赢面。最大的赢面是「学习曲线归零 — 谁都能上」 — 任何同事（包括第一天报到的新人）只需要在管理后台勾两个选项点确认即可，不再依赖看文档 / 背命令 / 判断节点系统类型。详见下面 「学习曲线归零」 一节。"
+    },
+    {
+      "id": "u_7082bab154e5c063",
+      "kind": "text",
+      "source": "「学习曲线归零」",
+      "occurrence": 0,
+      "target": "learning curve reset",
+      "context": "a @ line 91 · surrounding text: 但「44 秒」其实不是最大的赢面。最大的赢面是「学习曲线归零 — 谁都能上」 — 任何同事（包括第一天报到的新人）只需要在管理后台勾两个选项点确认即可，不再依赖看文档 / 背命令 / 判断节点系统类型。详见下面 「学习曲线归零」 一节。"
+    },
+    {
+      "id": "u_4ae75bedade0a9dd",
+      "kind": "text",
+      "source": "一节。",
+      "occurrence": 0,
+      "target": "section.",
+      "context": "strong @ line 91 · surrounding text: 但「44 秒」其实不是最大的赢面。最大的赢面是「学习曲线归零 — 谁都能上」 — 任何同事（包括第一天报到的新人）只需要在管理后台勾两个选项点确认即可，不再依赖看文档 / 背命令 / 判断节点系统类型。详见下面 「学习曲线归零」 一节。"
+    },
+    {
+      "id": "u_c424b2146972cc83",
+      "kind": "text",
+      "source": "一、关键指标",
+      "occurrence": 0,
+      "target": "1. Key Metrics",
+      "context": "h2 @ line 95"
+    },
+    {
+      "id": "u_379346c40466f138",
+      "kind": "text",
+      "source": "节点总数",
+      "occurrence": 0,
+      "target": "Number of VPN nodes",
+      "context": "div.metric-label @ line 98"
+    },
+    {
+      "id": "u_8237d3a50ba71b1e",
+      "kind": "text",
+      "source": "测试环境全量 · 0 失败",
+      "occurrence": 0,
+      "target": "Full-scale testing in test environment · 0 failures",
+      "context": "div.metric-sub @ line 100"
+    },
+    {
+      "id": "u_5e10d8b74f5a4406",
+      "kind": "text",
+      "source": "国家覆盖",
+      "occurrence": 0,
+      "target": "Country Coverage",
+      "context": "div.metric-label @ line 103"
+    },
+    {
+      "id": "u_885158ee25f5d6b8",
+      "kind": "text",
+      "source": "大洲",
+      "occurrence": 0,
+      "target": "Continent",
+      "context": "div.metric-label @ line 108"
+    },
+    {
+      "id": "u_1707dddf4594b5c5",
+      "kind": "text",
+      "source": "亚洲 / 欧洲 / 北美",
+      "occurrence": 0,
+      "target": "Asia/Europe/North America",
+      "context": "div.metric-sub @ line 110"
+    },
+    {
+      "id": "u_7e1bc195cb4f1893",
+      "kind": "text",
+      "source": "RTT 范围",
+      "occurrence": 0,
+      "target": "RTT Range",
+      "context": "div.metric-label @ line 113"
+    },
+    {
+      "id": "u_3d532df48cb469aa",
+      "kind": "text",
+      "source": "5 倍跨度",
+      "occurrence": 0,
+      "target": "5x Span",
+      "context": "div.metric-sub @ line 115"
+    },
+    {
+      "id": "u_1305c3084dc71f2a",
+      "kind": "text",
+      "source": "最快单台",
+      "occurrence": 0,
+      "target": "Fastest Single Unit",
+      "context": "div.metric-label @ line 118"
+    },
+    {
+      "id": "u_687aad8449117138",
+      "kind": "text",
+      "source": "15 秒",
+      "occurrence": 0,
+      "target": "15 seconds",
+      "context": "div.metric-value @ line 119"
+    },
+    {
+      "id": "u_983c3bca3496192c",
+      "kind": "text",
+      "source": "Vancouver（RTT 最远！）",
+      "occurrence": 0,
+      "target": "Vancouver (RTT farthest!)",
+      "context": "div.metric-sub @ line 120"
+    },
+    {
+      "id": "u_e2f7bfe7b18d2136",
+      "kind": "text",
+      "source": "最慢单台",
+      "occurrence": 0,
+      "target": "Single Best Bid",
+      "context": "div.metric-label @ line 123"
+    },
+    {
+      "id": "u_9baac5b9bbf2d64c",
+      "kind": "text",
+      "source": "44 秒",
+      "occurrence": 0,
+      "target": "44 seconds",
+      "context": "div.metric-value @ line 124"
+    },
+    {
+      "id": "u_4a8e752c2dee0ba5",
+      "kind": "text",
+      "source": "Guangzhou（中国 ACME 走 GFW）",
+      "occurrence": 0,
+      "target": "Guangzhou (China ACME through GFW)",
+      "context": "div.metric-sub @ line 125"
+    },
+    {
+      "id": "u_cf4b79792b41f090",
+      "kind": "text",
+      "source": "整批端到端",
+      "occurrence": 0,
+      "target": "End-to-End Batch",
+      "context": "div.metric-label @ line 128"
+    },
+    {
+      "id": "u_b73838c2486575a8",
+      "kind": "text",
+      "source": "44 秒",
+      "occurrence": 1,
+      "target": "44 seconds",
+      "context": "div.metric-value @ line 129"
+    },
+    {
+      "id": "u_809051df8e41ce4b",
+      "kind": "text",
+      "source": "并行 7 台",
+      "occurrence": 0,
+      "target": "Parallel 7 units",
+      "context": "div.metric-sub @ line 130"
+    },
+    {
+      "id": "u_cc736ffba8f983a6",
+      "kind": "text",
+      "source": "人工介入",
+      "occurrence": 0,
+      "target": "Manual Intervention",
+      "context": "div.metric-label @ line 133"
+    },
+    {
+      "id": "u_ca067487f9e33421",
+      "kind": "text",
+      "source": "点完即走，全程自动",
+      "occurrence": 0,
+      "target": "Point and go, fully automated end-to-end",
+      "context": "div.metric-sub @ line 135"
+    },
+    {
+      "id": "u_78a859e725cf48a1",
+      "kind": "text",
+      "source": "★ 最大的赢面 — 学习曲线归零，谁都能上（不只是「快」）",
+      "occurrence": 0,
+      "target": "★ Biggest upside — Zero learning curve, anyone can do it (not just 'fast'!)",
+      "context": "h2 @ line 139"
+    },
+    {
+      "id": "u_00c3277caa910a01",
+      "kind": "text",
+      "source": "纯看时间数字（44 秒 vs 接手时 30 分钟）只是表面收益。实际",
+      "occurrence": 0,
+      "target": "Just looking at the time numbers (44 seconds vs. takeover time of 30 minutes) is just surface-level gains. The real",
+      "context": "p @ line 141 · surrounding text: 纯看时间数字（44 秒 vs 接手时 30 分钟）只是表面收益。实际 对运营更关键的是把「需要专家在场」的工作变成「任何人都能做」的工作 。下面是同一个动作在两种工作模式下的对比："
+    },
+    {
+      "id": "u_6a0fa1dbb98b3422",
+      "kind": "text",
+      "source": "对运营更关键的是把「需要专家在场」的工作变成「任何人都能做」的工作",
+      "occurrence": 0,
+      "target": "The real key is to transform work that requires experts on-site into work anyone can do.",
+      "context": "strong @ line 141 · surrounding text: 纯看时间数字（44 秒 vs 接手时 30 分钟）只是表面收益。实际 对运营更关键的是把「需要专家在场」的工作变成「任何人都能做」的工作 。下面是同一个动作在两种工作模式下的对比："
+    },
+    {
+      "id": "u_061afa72b6cf22cb",
+      "kind": "text",
+      "source": "。下面是同一个动作在两种工作模式下的对比：",
+      "occurrence": 0,
+      "target": "The following shows a comparison between the same action in two different work modes:",
+      "context": "p @ line 141 · surrounding text: 纯看时间数字（44 秒 vs 接手时 30 分钟）只是表面收益。实际 对运营更关键的是把「需要专家在场」的工作变成「任何人都能做」的工作 。下面是同一个动作在两种工作模式下的对比："
+    },
+    {
+      "id": "u_d5785258c3404cfd",
+      "kind": "text",
+      "source": "步骤",
+      "occurrence": 0,
+      "target": "Steps",
+      "context": "th @ line 144 · surrounding text: 步骤 接手时的人工 SSH 流程 本阶段的后台流程"
+    },
+    {
+      "id": "u_f50bffcd238cd978",
+      "kind": "text",
+      "source": "接手时的人工 SSH 流程",
+      "occurrence": 0,
+      "target": "Handover SSH Process",
+      "context": "th @ line 144 · surrounding text: 步骤 接手时的人工 SSH 流程 本阶段的后台流程"
+    },
+    {
+      "id": "u_9cfd76d83af472aa",
+      "kind": "text",
+      "source": "本阶段的后台流程",
+      "occurrence": 0,
+      "target": "Back Office (BO) workflow in this Sprint",
+      "context": "th @ line 144 · surrounding text: 步骤 接手时的人工 SSH 流程 本阶段的后台流程"
+    },
+    {
+      "id": "u_d88c81151a04fa7d",
+      "kind": "text",
+      "source": "谁能做",
+      "occurrence": 0,
+      "target": "Who can do it?",
+      "context": "td @ line 146"
+    },
+    {
+      "id": "u_29971273154bb6e9",
+      "kind": "text",
+      "source": "需要懂 Linux + 网络 + 服务管理的工程师",
+      "occurrence": 0,
+      "target": "A Linux, network and service management engineer is needed.",
+      "context": "strong @ line 147 · surrounding text: 需要懂 Linux + 网络 + 服务管理的工程师 。新人到岗第一周做不了，要培训。"
+    },
+    {
+      "id": "u_bf4b0c02e6d89796",
+      "kind": "text",
+      "source": "。新人到岗第一周做不了，要培训。",
+      "occurrence": 0,
+      "target": "New hires cannot do it in the first week; training is required.",
+      "context": "td @ line 147 · surrounding text: 需要懂 Linux + 网络 + 服务管理的工程师 。新人到岗第一周做不了，要培训。"
+    },
+    {
+      "id": "u_ff5f19ac923904ae",
+      "kind": "text",
+      "source": "任何同事 — 包括第一天报到的新人 / 客服 / 运营",
+      "occurrence": 0,
+      "target": "Anyone — including new hires, customer service, and operations staff — has no technical barriers.",
+      "context": "strong @ line 148 · surrounding text: 任何同事 — 包括第一天报到的新人 / 客服 / 运营 。无技术门槛。"
+    },
+    {
+      "id": "u_f7040c19687d9a3a",
+      "kind": "text",
+      "source": "。无技术门槛。",
+      "occurrence": 0,
+      "target": "No technical barriers.",
+      "context": "td @ line 148 · surrounding text: 任何同事 — 包括第一天报到的新人 / 客服 / 运营 。无技术门槛。"
+    },
+    {
+      "id": "u_f2c8623b408117b0",
+      "kind": "text",
+      "source": "开始前要先查的东西",
+      "occurrence": 0,
+      "target": "Things to check before starting",
+      "context": "td @ line 151"
+    },
+    {
+      "id": "u_e1792ca7c9521910",
+      "kind": "text",
+      "source": "① 翻文档找正确命令 ② 节点是 Rocky 还是 CentOS（命令不一样）③ 上次部署留了什么残留 ④ 进程管理器是 PM2 / systemd / Docker 哪种 ⑤ SSH 端口与凭据",
+      "occurrence": 0,
+      "target": "① Find the correct command in the documentation ② Determine whether the VPN node runs Rocky or CentOS (the commands differ) ③ Identify remnants from the previous deployment ④ Determine whether the process manager is PM2, systemd, or Docker ⑤ Find the SSH port and credentials",
+      "context": "td @ line 152"
+    },
+    {
+      "id": "u_77ce327f41e95d90",
+      "kind": "text",
+      "source": "无",
+      "occurrence": 0,
+      "target": "None.",
+      "context": "strong @ line 153 · surrounding text: 无 。后台界面已知道一切。"
+    },
+    {
+      "id": "u_b313f7594e73e443",
+      "kind": "text",
+      "source": "。后台界面已知道一切。",
+      "occurrence": 0,
+      "target": ". The Back Office (BO) interface already knows all of this.",
+      "context": "td @ line 153 · surrounding text: 无 。后台界面已知道一切。"
+    },
+    {
+      "id": "u_630d219170745800",
+      "kind": "text",
+      "source": "实际操作步骤",
+      "occurrence": 0,
+      "target": "Actual operation steps",
+      "context": "td @ line 156"
+    },
+    {
+      "id": "u_7a39bbd9b7c3298b",
+      "kind": "text",
+      "source": "SSH → 装依赖 → 申请证书 → 编辑 YAML → 选进程管理器 → 验证心跳 → 应用 iptables → 出问题就翻 history 排查",
+      "occurrence": 0,
+      "target": "SSH → Install dependencies → Apply for certificate → Edit YAML → Select process manager → Validate heartbeat → Apply iptables → Check history if issues arise.",
+      "context": "td @ line 157"
+    },
+    {
+      "id": "u_8b56928b38599aed",
+      "kind": "text",
+      "source": "勾「全擦重装」→ 选要重装的主机 → 点「确认」",
+      "occurrence": 0,
+      "target": "Select the host to be reinstalled and confirm",
+      "context": "td @ line 158"
+    },
+    {
+      "id": "u_907f8e375123a808",
+      "kind": "text",
+      "source": "判断「成功了没」的方法",
+      "occurrence": 0,
+      "target": "Methods to determine success",
+      "context": "td @ line 161"
+    },
+    {
+      "id": "u_a0c29207a4c3bbb9",
+      "kind": "text",
+      "source": "SSH 进去看",
+      "occurrence": 0,
+      "target": "Connect over SSH to inspect",
+      "context": "td @ line 162 · surrounding text: SSH 进去看 systemctl status ， tail -f 日志，从后台看心跳，挑几个客户端连一下试试"
+    },
+    {
+      "id": "u_3c455535f19c2e8a",
+      "kind": "text",
+      "source": "日志，从后台看心跳，挑几个客户端连一下试试",
+      "occurrence": 0,
+      "target": "the logs, view the heartbeat in the Back Office (BO), and test connections with several clients",
+      "context": "td @ line 162 · surrounding text: SSH 进去看 systemctl status ， tail -f 日志，从后台看心跳，挑几个客户端连一下试试"
+    },
+    {
+      "id": "u_fdb354924af3dbea",
+      "kind": "text",
+      "source": "后台",
+      "occurrence": 0,
+      "target": "Back Office (BO)",
+      "context": "td @ line 163 · surrounding text: 后台 每台一个进度条 实时显示阶段；done 之后心跳自动恢复， 颜色变绿 就是成功"
+    },
+    {
+      "id": "u_577cada110239306",
+      "kind": "text",
+      "source": "每台一个进度条",
+      "occurrence": 0,
+      "target": "One Progress Bar per Host",
+      "context": "strong @ line 163 · surrounding text: 后台 每台一个进度条 实时显示阶段；done 之后心跳自动恢复， 颜色变绿 就是成功"
+    },
+    {
+      "id": "u_409f48ff5f911c5d",
+      "kind": "text",
+      "source": "实时显示阶段；done 之后心跳自动恢复，",
+      "occurrence": 0,
+      "target": "shows each stage in real time; after ‘done,’ the heartbeat resumes automatically,",
+      "context": "td @ line 163 · surrounding text: 后台 每台一个进度条 实时显示阶段；done 之后心跳自动恢复， 颜色变绿 就是成功"
+    },
+    {
+      "id": "u_e99e278098a1c06d",
+      "kind": "text",
+      "source": "颜色变绿",
+      "occurrence": 0,
+      "target": "the indicator turns green",
+      "context": "strong @ line 163 · surrounding text: 后台 每台一个进度条 实时显示阶段；done 之后心跳自动恢复， 颜色变绿 就是成功"
+    },
+    {
+      "id": "u_e3cf348a143aaa07",
+      "kind": "text",
+      "source": "就是成功",
+      "occurrence": 0,
+      "target": "to indicate success",
+      "context": "td @ line 163 · surrounding text: 后台 每台一个进度条 实时显示阶段；done 之后心跳自动恢复， 颜色变绿 就是成功"
+    },
+    {
+      "id": "u_4e195e6a244c193c",
+      "kind": "text",
+      "source": "失败时怎么办",
+      "occurrence": 0,
+      "target": "What do we do when it fails",
+      "context": "td @ line 166"
+    },
+    {
+      "id": "u_d8df65b1a63f3cd0",
+      "kind": "text",
+      "source": "看一长段 SSH 输出找哪一步报错；老手凭经验，新人卡住要叫支援",
+      "occurrence": 0,
+      "target": "Look at a long SSH output to find which step is failing; experienced people rely on their experience, while newcomers need support",
+      "context": "td @ line 167"
+    },
+    {
+      "id": "u_84a907c2257dad43",
+      "kind": "text",
+      "source": "后台显示",
+      "occurrence": 0,
+      "target": "Back Office (BO) display",
+      "context": "td @ line 168 · surrounding text: 后台显示 具体的错误阶段标签 （如 error_install_failed 、 error_format_failed ），点「查看日志」直接看到 systemd 输出尾巴； 「重试」按钮 一键再来"
+    },
+    {
+      "id": "u_7bc483bfdce2759d",
+      "kind": "text",
+      "source": "具体的错误阶段标签",
+      "occurrence": 0,
+      "target": "the specific error stage tags",
+      "context": "strong @ line 168 · surrounding text: 后台显示 具体的错误阶段标签 （如 error_install_failed 、 error_format_failed ），点「查看日志」直接看到 systemd 输出尾巴； 「重试」按钮 一键再来"
+    },
+    {
+      "id": "u_73ce0151f5ab6b76",
+      "kind": "text",
+      "source": "（如",
+      "occurrence": 0,
+      "target": "(such",
+      "context": "td @ line 168 · surrounding text: 后台显示 具体的错误阶段标签 （如 error_install_failed 、 error_format_failed ），点「查看日志」直接看到 systemd 输出尾巴； 「重试」按钮 一键再来"
+    },
+    {
+      "id": "u_32a4b501b759c03e",
+      "kind": "text",
+      "source": "），点「查看日志」直接看到 systemd 输出尾巴；",
+      "occurrence": 0,
+      "target": "), click on 'View Logs' to see the output of systemd directly;",
+      "context": "td @ line 168 · surrounding text: 后台显示 具体的错误阶段标签 （如 error_install_failed 、 error_format_failed ），点「查看日志」直接看到 systemd 输出尾巴； 「重试」按钮 一键再来"
+    },
+    {
+      "id": "u_8c9d74abde535fc5",
+      "kind": "text",
+      "source": "「重试」按钮",
+      "occurrence": 0,
+      "target": "'Retry' button",
+      "context": "strong @ line 168 · surrounding text: 后台显示 具体的错误阶段标签 （如 error_install_failed 、 error_format_failed ），点「查看日志」直接看到 systemd 输出尾巴； 「重试」按钮 一键再来"
+    },
+    {
+      "id": "u_ddde53fb306b7d9b",
+      "kind": "text",
+      "source": "一键再来",
+      "occurrence": 0,
+      "target": "one-click retry",
+      "context": "td @ line 168 · surrounding text: 后台显示 具体的错误阶段标签 （如 error_install_failed 、 error_format_failed ），点「查看日志」直接看到 systemd 输出尾巴； 「重试」按钮 一键再来"
+    },
+    {
+      "id": "u_3524edd6465eb1f7",
+      "kind": "text",
+      "source": "不同人做的结果一致性",
+      "occurrence": 0,
+      "target": "Consistency in results among different people",
+      "context": "td @ line 171"
+    },
+    {
+      "id": "u_99e700c583b982bc",
+      "kind": "text",
+      "source": "每个人的命令组合 / 顺序 / 参数都可能略有不同 → 节点池上 ~150 台节点出现",
+      "occurrence": 0,
+      "target": "Command combinations, sequences, and parameters can vary slightly between operators, resulting in inconsistencies across approximately 150 VPN nodes in the pool",
+      "context": "td @ line 172 · surrounding text: 每个人的命令组合 / 顺序 / 参数都可能略有不同 → 节点池上 ~150 台节点出现 7 种不同的进程管理装法 （接手时实际状况），文档与现实持续漂移"
+    },
+    {
+      "id": "u_706add117259eaf6",
+      "kind": "text",
+      "source": "7 种不同的进程管理装法",
+      "occurrence": 0,
+      "target": "seven different ways of process management",
+      "context": "strong @ line 172 · surrounding text: 每个人的命令组合 / 顺序 / 参数都可能略有不同 → 节点池上 ~150 台节点出现 7 种不同的进程管理装法 （接手时实际状况），文档与现实持续漂移"
+    },
+    {
+      "id": "u_c3cd7ccec44033b1",
+      "kind": "text",
+      "source": "（接手时实际状况），文档与现实持续漂移",
+      "occurrence": 0,
+      "target": "Sprint status, documents diverge from reality",
+      "context": "td @ line 172 · surrounding text: 每个人的命令组合 / 顺序 / 参数都可能略有不同 → 节点池上 ~150 台节点出现 7 种不同的进程管理装法 （接手时实际状况），文档与现实持续漂移"
+    },
+    {
+      "id": "u_f8c1d86ef2ad05ab",
+      "kind": "text",
+      "source": "所有节点走",
+      "occurrence": 0,
+      "target": "All VPN nodes go",
+      "context": "td @ line 173 · surrounding text: 所有节点走 同一份 bootstrap 脚本 ，配置统一存在后端这一唯一可信来源；不存在「这个节点是张工装的所以特殊」的情况"
+    },
+    {
+      "id": "u_4718fd7780af2f80",
+      "kind": "text",
+      "source": "同一份 bootstrap 脚本",
+      "occurrence": 0,
+      "target": "Same bootstrap script",
+      "context": "strong @ line 173 · surrounding text: 所有节点走 同一份 bootstrap 脚本 ，配置统一存在后端这一唯一可信来源；不存在「这个节点是张工装的所以特殊」的情况"
+    },
+    {
+      "id": "u_d232a6f886eea0db",
+      "kind": "text",
+      "source": "，配置统一存在后端这一唯一可信来源；不存在「这个节点是张工装的所以特殊」的情况",
+      "occurrence": 0,
+      "target": "Same bootstrap script, configuration unified in backend as the only trusted source; no special cases like 'this VPN node is Zhang's so it’s different'",
+      "context": "td @ line 173 · surrounding text: 所有节点走 同一份 bootstrap 脚本 ，配置统一存在后端这一唯一可信来源；不存在「这个节点是张工装的所以特殊」的情况"
+    },
+    {
+      "id": "u_28c3eb81d4dcc5a2",
+      "kind": "text",
+      "source": "跨时区 / 半夜出问题",
+      "occurrence": 0,
+      "target": "Cross-timezone / midnight issues",
+      "context": "td @ line 176"
+    },
+    {
+      "id": "u_8df4159da93f22c8",
+      "kind": "text",
+      "source": "得叫醒一个能 SSH 的人，登服务器排查",
+      "occurrence": 0,
+      "target": "Wake up someone who can SSH and log in to check the server",
+      "context": "td @ line 177"
+    },
+    {
+      "id": "u_11ad694e95fc18fc",
+      "kind": "text",
+      "source": "值班同事看到红色徽章 → 后台点「重试」或「Reheal」 → 解决",
+      "occurrence": 0,
+      "target": "On-call staff see a red badge, click ‘Retry’ or ‘Reheal’ in the Back Office (BO), and resolve the issue",
+      "context": "td @ line 178"
+    },
+    {
+      "id": "u_bb9ec7a645aa1df8",
+      "kind": "text",
+      "source": "培训成本",
+      "occurrence": 0,
+      "target": "Training costs",
+      "context": "td @ line 181"
+    },
+    {
+      "id": "u_353d96874585d102",
+      "kind": "text",
+      "source": "新人要 1 ~ 2 周熟悉手册 + 跟老人做几次才能独立操作；老人离职 = 知识漏出",
+      "occurrence": 0,
+      "target": "New hires need 1-2 weeks to familiarize with the manual and follow experienced colleagues before they can operate independently; when an experienced colleague leaves, knowledge leaks",
+      "context": "td @ line 182"
+    },
+    {
+      "id": "u_0715c4bc95183a58",
+      "kind": "text",
+      "source": "后台界面",
+      "occurrence": 0,
+      "target": "Back Office (BO) interface",
+      "context": "td @ line 183 · surrounding text: 后台界面 自解释 ，培训 5 分钟即可；老人离职不影响"
+    },
+    {
+      "id": "u_f2665d553276bf96",
+      "kind": "text",
+      "source": "自解释",
+      "occurrence": 0,
+      "target": "Self-explanatory",
+      "context": "strong @ line 183 · surrounding text: 后台界面 自解释 ，培训 5 分钟即可；老人离职不影响"
+    },
+    {
+      "id": "u_0f590e38e414c361",
+      "kind": "text",
+      "source": "，培训 5 分钟即可；老人离职不影响",
+      "occurrence": 0,
+      "target": "Self-explanatory, training takes 5 minutes; leaving an experienced colleague doesn’t affect it",
+      "context": "td @ line 183 · surrounding text: 后台界面 自解释 ，培训 5 分钟即可；老人离职不影响"
+    },
+    {
+      "id": "u_61d741fdcae484a7",
+      "kind": "text",
+      "source": "结论 — 「快」只是副产品，「降低对人的依赖」才是关键",
+      "occurrence": 0,
+      "target": "Conclusion — 'Fast' is a byproduct, 'reduce dependency on people' is the key",
+      "context": "h3 @ line 187"
+    },
+    {
+      "id": "u_f62cb7032588e471",
+      "kind": "text",
+      "source": "消除「关键人物风险」",
+      "occurrence": 0,
+      "target": "Eliminate 'key person risk'",
+      "context": "strong @ line 189 · surrounding text: 消除「关键人物风险」 — 不再有「只有张工 / 李工会做这个」的瓶颈，节点维护工作可以横向分发给任何同事"
+    },
+    {
+      "id": "u_297d4de0a5810dc4",
+      "kind": "text",
+      "source": "— 不再有「只有张工 / 李工会做这个」的瓶颈，节点维护工作可以横向分发给任何同事",
+      "occurrence": 0,
+      "target": "Eliminate 'key person risk' — no longer a bottleneck of 'only Zhang / Li can do this', VPN node maintenance work can be distributed horizontally to any colleague",
+      "context": "li @ line 189 · surrounding text: 消除「关键人物风险」 — 不再有「只有张工 / 李工会做这个」的瓶颈，节点维护工作可以横向分发给任何同事"
+    },
+    {
+      "id": "u_7e17479d41331d98",
+      "kind": "text",
+      "source": "节点池行为一致性提升",
+      "occurrence": 0,
+      "target": "Enhance consistency in the VPN node pool behavior",
+      "context": "strong @ line 190 · surrounding text: 节点池行为一致性提升 — 接手时 节点池上累积了 7 种进程管理装法（不同时间不同人手装的差异），现在新装节点全部走同一脚本，过去靠人脑去记的差异自然消失"
+    },
+    {
+      "id": "u_c738f320c4f89b3d",
+      "kind": "text",
+      "source": "— 接手时 节点池上累积了 7 种进程管理装法（不同时间不同人手装的差异），现在新装节点全部走同一脚本，过去靠人脑去记的差异自然消失",
+      "occurrence": 0,
+      "target": "— At handover, the VPN node pool had accumulated 7 different process-manager configurations due to manual installations by different people at different times. Newly installed VPN nodes now use one script, eliminating differences that previously relied on human memory.",
+      "context": "li @ line 190 · surrounding text: 节点池行为一致性提升 — 接手时 节点池上累积了 7 种进程管理装法（不同时间不同人手装的差异），现在新装节点全部走同一脚本，过去靠人脑去记的差异自然消失"
+    },
+    {
+      "id": "u_0c78cb83d4968927",
+      "kind": "text",
+      "source": "支持 节点池规模扩张",
+      "occurrence": 0,
+      "target": "Supports expansion of VPN node pool size",
+      "context": "strong @ line 191 · surrounding text: 支持 节点池规模扩张 — 节点从 150 台扩到 250 台 / 500 台时，运维工作量不再线性增长（接手时这个比例下需要加人）"
+    },
+    {
+      "id": "u_a38aab5401aff38a",
+      "kind": "text",
+      "source": "— 节点从 150 台扩到 250 台 / 500 台时，运维工作量不再线性增长（接手时这个比例下需要加人）",
+      "occurrence": 0,
+      "target": "Supports expansion of VPN node pool size — When the number of VPN nodes expands from 150 to 250/500, the workload does not grow linearly (additional staff were needed when this ratio was in place)",
+      "context": "li @ line 191 · surrounding text: 支持 节点池规模扩张 — 节点从 150 台扩到 250 台 / 500 台时，运维工作量不再线性增长（接手时这个比例下需要加人）"
+    },
+    {
+      "id": "u_04088c81a6818317",
+      "kind": "text",
+      "source": "知识不再随人流失",
+      "occurrence": 0,
+      "target": "Knowledge no longer flows with people",
+      "context": "strong @ line 192 · surrounding text: 知识不再随人流失 — 经验沉淀在后台流程而非个人脑袋里，老员工离职、新员工入职都不影响节点运维节奏"
+    },
+    {
+      "id": "u_57d46aff31f0a2b9",
+      "kind": "text",
+      "source": "— 经验沉淀在后台流程而非个人脑袋里，老员工离职、新员工入职都不影响节点运维节奏",
+      "occurrence": 0,
+      "target": "— Operational knowledge is embedded in the Back Office (BO) workflow rather than individual memory, so staff departures and new-hire onboarding do not disrupt VPN node operations",
+      "context": "li @ line 192 · surrounding text: 知识不再随人流失 — 经验沉淀在后台流程而非个人脑袋里，老员工离职、新员工入职都不影响节点运维节奏"
+    },
+    {
+      "id": "u_67791c966e3d1ef9",
+      "kind": "text",
+      "source": "为后续自动化决策打基础",
+      "occurrence": 0,
+      "target": "Lays the groundwork for future automated decision-making",
+      "context": "strong @ line 193 · surrounding text: 为后续自动化决策打基础 — 既然「点一下就能全擦」是稳态操作，C1 节点置信度评分（第4阶段）才能放心接入「评分跌破阈值时自动全擦」的闭环"
+    },
+    {
+      "id": "u_f260ce9f991c50ca",
+      "kind": "text",
+      "source": "— 既然「点一下就能全擦」是稳态操作，C1 节点置信度评分（第4阶段）才能放心接入「评分跌破阈值时自动全擦」的闭环",
+      "occurrence": 0,
+      "target": "Lays the groundwork for future automated decision-making — Since 'click and wipe' is a steady-state operation, C1 VPN node confidence scoring (Sprint 4) can be safely integrated into the loop where scores below a threshold trigger automatic wiping",
+      "context": "li @ line 193 · surrounding text: 为后续自动化决策打基础 — 既然「点一下就能全擦」是稳态操作，C1 节点置信度评分（第4阶段）才能放心接入「评分跌破阈值时自动全擦」的闭环"
+    },
+    {
+      "id": "u_de64dc047662f59b",
+      "kind": "text",
+      "source": "二、对比基线 — 接手时的同一动作",
+      "occurrence": 0,
+      "target": "II. Comparison with Baseline — The same action at handover",
+      "context": "h2 @ line 197"
+    },
+    {
+      "id": "u_fee2e5bba4f302e6",
+      "kind": "text",
+      "source": "动作",
+      "occurrence": 0,
+      "target": "Action",
+      "context": "th @ line 200 · surrounding text: 动作 接手时（人工 SSH） 本次实测（后台）"
+    },
+    {
+      "id": "u_02cab0bebd08a2fc",
+      "kind": "text",
+      "source": "接手时（人工 SSH）",
+      "occurrence": 0,
+      "target": "Handover (SSH)",
+      "context": "th @ line 200 · surrounding text: 动作 接手时（人工 SSH） 本次实测（后台）"
+    },
+    {
+      "id": "u_3b62deb106a13214",
+      "kind": "text",
+      "source": "本次实测（后台）",
+      "occurrence": 0,
+      "target": "This benchmark (Back Office (BO))",
+      "context": "th @ line 200 · surrounding text: 动作 接手时（人工 SSH） 本次实测（后台）"
+    },
+    {
+      "id": "u_b5bfaaf90596b79c",
+      "kind": "text",
+      "source": "开通新节点",
+      "occurrence": 0,
+      "target": "Open New VPN node",
+      "context": "td @ line 202"
+    },
+    {
+      "id": "u_264efbc80e7d55a2",
+      "kind": "text",
+      "source": "~20 分钟 / 台",
+      "occurrence": 0,
+      "target": "~20 minutes per node",
+      "context": "td @ line 203 · surrounding text: ~20 分钟 / 台 SSH → 装依赖 → 申请证书 → 编辑 YAML → 选进程管理器 → 验证心跳 → 应用 iptables"
+    },
+    {
+      "id": "u_b8d4e13752c63ba3",
+      "kind": "text",
+      "source": "SSH → 装依赖 → 申请证书 → 编辑 YAML → 选进程管理器 → 验证心跳 → 应用 iptables",
+      "occurrence": 0,
+      "target": "SSH → Install Dependencies → Apply Certificate → Edit YAML → Select Process Manager → Verify Heartbeat → Apply iptables",
+      "context": "span @ line 203 · surrounding text: ~20 分钟 / 台 SSH → 装依赖 → 申请证书 → 编辑 YAML → 选进程管理器 → 验证心跳 → 应用 iptables"
+    },
+    {
+      "id": "u_b250d0b9b04bd5a4",
+      "kind": "text",
+      "source": "~30 秒 / 台",
+      "occurrence": 0,
+      "target": "~30 seconds per node",
+      "context": "strong @ line 204 · surrounding text: ~30 秒 / 台 后台填 IP + 域名 + 名称 → 点确认"
+    },
+    {
+      "id": "u_80f839e1e785a467",
+      "kind": "text",
+      "source": "后台填 IP + 域名 + 名称 → 点确认",
+      "occurrence": 0,
+      "target": "Enter the IP address, domain, and name in the Back Office (BO), then confirm",
+      "context": "span @ line 204 · surrounding text: ~30 秒 / 台 后台填 IP + 域名 + 名称 → 点确认"
+    },
+    {
+      "id": "u_799000fb4db17fda",
+      "kind": "text",
+      "source": "回收被封节点（含全擦旧版）",
+      "occurrence": 0,
+      "target": "Recycle Sealed VPN nodes (Inclusive of Full Erase Old Versions)",
+      "context": "td @ line 207"
+    },
+    {
+      "id": "u_4e51bc7b20a3e035",
+      "kind": "text",
+      "source": "~30+ 分钟 / 台",
+      "occurrence": 0,
+      "target": "~30+ mins per unit",
+      "context": "td @ line 208 · surrounding text: ~30+ 分钟 / 台 手工卸载 XRayR / 残留进程 → 重装一遍 → 失败靠经验排查"
+    },
+    {
+      "id": "u_23e19de25df0890d",
+      "kind": "text",
+      "source": "手工卸载 XRayR / 残留进程 → 重装一遍 → 失败靠经验排查",
+      "occurrence": 0,
+      "target": "Manual Uninstall XRayR / Remaining Processes → Re-install Once → Failures via Experience Diagnosis",
+      "context": "span @ line 208 · surrounding text: ~30+ 分钟 / 台 手工卸载 XRayR / 残留进程 → 重装一遍 → 失败靠经验排查"
+    },
+    {
+      "id": "u_0c20235b4d22c447",
+      "kind": "text",
+      "source": "~15 ~ 44 秒 / 台",
+      "occurrence": 0,
+      "target": "~15 ~ 44 secs per unit",
+      "context": "strong @ line 209 · surrounding text: ~15 ~ 44 秒 / 台 勾选全擦 → 一键并行；含证书签发也只多 20-25 秒"
+    },
+    {
+      "id": "u_47c03ee1f76106ce",
+      "kind": "text",
+      "source": "勾选全擦 → 一键并行；含证书签发也只多 20-25 秒",
+      "occurrence": 0,
+      "target": "Select All Erase → One-Click Parallel; Certificate Issuance Only Adds 20-25 secs",
+      "context": "span @ line 209 · surrounding text: ~15 ~ 44 秒 / 台 勾选全擦 → 一键并行；含证书签发也只多 20-25 秒"
+    },
+    {
+      "id": "u_89a95756fb5fcd0a",
+      "kind": "text",
+      "source": "批量回收 N 台（跨地理）",
+      "occurrence": 0,
+      "target": "Batch Recycle N units (Cross Geographic)",
+      "context": "td @ line 212"
+    },
+    {
+      "id": "u_a5bbd665f8f1426e",
+      "kind": "text",
+      "source": "逐台 SSH 串行 + 跨时区维护窗口安排",
+      "occurrence": 0,
+      "target": "Serial SSH per unit + Cross-Timezone Maintenance Window Arrangement",
+      "context": "td @ line 213 · surrounding text: 逐台 SSH 串行 + 跨时区维护窗口安排 ~150 台需 1-2 个工作日"
+    },
+    {
+      "id": "u_fe86b2ee2c1da38e",
+      "kind": "text",
+      "source": "~150 台需 1-2 个工作日",
+      "occurrence": 0,
+      "target": "~150 units in 1-2 working days",
+      "context": "br @ line 213 · surrounding text: 逐台 SSH 串行 + 跨时区维护窗口安排 ~150 台需 1-2 个工作日"
+    },
+    {
+      "id": "u_0216f9037c08ed1d",
+      "kind": "text",
+      "source": "本次 7 台跨 3 大洲并行 44 秒",
+      "occurrence": 0,
+      "target": "All 7 VPN nodes across 3 continents completed in parallel in 44 seconds",
+      "context": "strong @ line 214 · surrounding text: 本次 7 台跨 3 大洲并行 44 秒 批量上限 12 台 / 单批；理论 API 上限 100"
+    },
+    {
+      "id": "u_610a00ed255b938e",
+      "kind": "text",
+      "source": "批量上限 12 台 / 单批；理论 API 上限 100",
+      "occurrence": 0,
+      "target": "Batch Limit: 12 units per batch; Theoretical API Limit: 100",
+      "context": "br @ line 214 · surrounding text: 本次 7 台跨 3 大洲并行 44 秒 批量上限 12 台 / 单批；理论 API 上限 100"
+    },
+    {
+      "id": "u_313e623653f3181c",
+      "kind": "text",
+      "source": "「接手时」一栏来自第3阶段执行报告里 ops 给出的实际经历时长（CI/CD 速度与节点自动化执行报告 §「Risk profile before」）。",
+      "occurrence": 0,
+      "target": "The ‘At Handover’ column uses the actual time reported by operations in the Sprint 3 execution report (CI/CD Speed and VPN Node Automation Execution Report, ‘Risk Profile Before’ section).",
+      "context": "p @ line 217"
+    },
+    {
+      "id": "u_8dbce35b184f2ee2",
+      "kind": "text",
+      "source": "三、被测的 7 台节点 — 规格 + 地理位置 + RTT",
+      "occurrence": 0,
+      "target": "III. The 7 Tested VPN nodes — Specifications + Geographic Locations + RTT",
+      "context": "h2 @ line 220"
+    },
+    {
+      "id": "u_b1dcf1ac05a16789",
+      "kind": "text",
+      "source": "主机 IP",
+      "occurrence": 0,
+      "target": "Host IP",
+      "context": "th @ line 223 · surrounding text: # 主机 IP 地理位置 承运 ASN RTT 至后台 vCPU / 内存 磁盘 系统 / SSH 原 uptime"
+    },
+    {
+      "id": "u_4d1dfe21a8e7b944",
+      "kind": "text",
+      "source": "地理位置",
+      "occurrence": 0,
+      "target": "Geographic Location",
+      "context": "th @ line 223 · surrounding text: # 主机 IP 地理位置 承运 ASN RTT 至后台 vCPU / 内存 磁盘 系统 / SSH 原 uptime"
+    },
+    {
+      "id": "u_9fdd539fcb2eb0c1",
+      "kind": "text",
+      "source": "承运 ASN",
+      "occurrence": 0,
+      "target": "Carrier ASN",
+      "context": "th @ line 223 · surrounding text: # 主机 IP 地理位置 承运 ASN RTT 至后台 vCPU / 内存 磁盘 系统 / SSH 原 uptime"
+    },
+    {
+      "id": "u_c8929a1b90310c2b",
+      "kind": "text",
+      "source": "RTT 至后台",
+      "occurrence": 0,
+      "target": "RTT to Back Office",
+      "context": "th @ line 223 · surrounding text: # 主机 IP 地理位置 承运 ASN RTT 至后台 vCPU / 内存 磁盘 系统 / SSH 原 uptime"
+    },
+    {
+      "id": "u_c5fec0b21e77106c",
+      "kind": "text",
+      "source": "vCPU / 内存",
+      "occurrence": 0,
+      "target": "vCPU / RAM",
+      "context": "th @ line 223 · surrounding text: # 主机 IP 地理位置 承运 ASN RTT 至后台 vCPU / 内存 磁盘 系统 / SSH 原 uptime"
+    },
+    {
+      "id": "u_903ff31a1320d560",
+      "kind": "text",
+      "source": "磁盘",
+      "occurrence": 0,
+      "target": "Disk",
+      "context": "th @ line 223 · surrounding text: # 主机 IP 地理位置 承运 ASN RTT 至后台 vCPU / 内存 磁盘 系统 / SSH 原 uptime"
+    },
+    {
+      "id": "u_36d3baa9af35baac",
+      "kind": "text",
+      "source": "系统 / SSH",
+      "occurrence": 0,
+      "target": "System / SSH",
+      "context": "th @ line 223 · surrounding text: # 主机 IP 地理位置 承运 ASN RTT 至后台 vCPU / 内存 磁盘 系统 / SSH 原 uptime"
+    },
+    {
+      "id": "u_f09ca376b12dc861",
+      "kind": "text",
+      "source": "原 uptime",
+      "occurrence": 0,
+      "target": "Original uptime",
+      "context": "th @ line 223 · surrounding text: # 主机 IP 地理位置 承运 ASN RTT 至后台 vCPU / 内存 磁盘 系统 / SSH 原 uptime"
+    },
+    {
+      "id": "u_4fa94086e39c0103",
+      "kind": "text",
+      "source": "🇻🇳 越南 河内",
+      "occurrence": 0,
+      "target": "🇻🇳 Hanoi, Vietnam",
+      "context": "td @ line 227"
+    },
+    {
+      "id": "u_5cefd4f74683abe0",
+      "kind": "text",
+      "source": "5 天",
+      "occurrence": 0,
+      "target": "5 days",
+      "context": "td @ line 233"
+    },
+    {
+      "id": "u_7f6604e44d73e0e7",
+      "kind": "text",
+      "source": "🇩🇰 丹麦 哥本哈根",
+      "occurrence": 0,
+      "target": "🇩🇰 Copenhagen, Denmark",
+      "context": "td @ line 238"
+    },
+    {
+      "id": "u_2ba1764091066b6e",
+      "kind": "text",
+      "source": "2 天",
+      "occurrence": 0,
+      "target": "2 days",
+      "context": "td @ line 244"
+    },
+    {
+      "id": "u_6600cace7f6470e3",
+      "kind": "text",
+      "source": "🇨🇦 加拿大 温哥华",
+      "occurrence": 0,
+      "target": "🇨🇦 Vancouver, Canada",
+      "context": "td @ line 249"
+    },
+    {
+      "id": "u_74592f9b71b0cd39",
+      "kind": "text",
+      "source": "175 ms（最远）",
+      "occurrence": 0,
+      "target": "175 ms (farthest)",
+      "context": "strong @ line 251"
+    },
+    {
+      "id": "u_93d13d21ae4a4747",
+      "kind": "text",
+      "source": "2 天",
+      "occurrence": 1,
+      "target": "2 days",
+      "context": "td @ line 255"
+    },
+    {
+      "id": "u_f3a303b4fbd41396",
+      "kind": "text",
+      "source": "🇵🇭 菲律宾 马尼拉",
+      "occurrence": 0,
+      "target": "🇵🇭 Manila, Philippines",
+      "context": "td @ line 260"
+    },
+    {
+      "id": "u_14e8c9e5f136b1fa",
+      "kind": "text",
+      "source": "2 天",
+      "occurrence": 2,
+      "target": "2 days",
+      "context": "td @ line 266"
+    },
+    {
+      "id": "u_e36a39db62bf596b",
+      "kind": "text",
+      "source": "🇫🇷 法国 巴黎",
+      "occurrence": 0,
+      "target": "🇫🇷 Paris, France",
+      "context": "td @ line 271"
+    },
+    {
+      "id": "u_7d49745979cb1a85",
+      "kind": "text",
+      "source": "（节点池中唯一现代发行版）/ vpnnode",
+      "occurrence": 0,
+      "target": "(Modern release in the VPN node pool) / vpnnode",
+      "context": "td @ line 276 · surrounding text: AlmaLinux 8 （节点池中唯一现代发行版）/ vpnnode"
+    },
+    {
+      "id": "u_8d5ecf1624c84f99",
+      "kind": "text",
+      "source": "5 天",
+      "occurrence": 1,
+      "target": "5 days",
+      "context": "td @ line 277"
+    },
+    {
+      "id": "u_a311f842b767dacb",
+      "kind": "text",
+      "source": "🇨🇳 中国 广州",
+      "occurrence": 0,
+      "target": "🇨🇳 Guangzhou, China",
+      "context": "td @ line 282"
+    },
+    {
+      "id": "u_32900849b99dc092",
+      "kind": "text",
+      "source": "Aliyun（阿里云）",
+      "occurrence": 0,
+      "target": "Aliyun (Alibaba Cloud)",
+      "context": "td @ line 283"
+    },
+    {
+      "id": "u_e9996fb8177df061",
+      "kind": "text",
+      "source": "5 天",
+      "occurrence": 2,
+      "target": "5 days",
+      "context": "td @ line 288"
+    },
+    {
+      "id": "u_ff18d3f85dcc148d",
+      "kind": "text",
+      "source": "🇭🇰 香港",
+      "occurrence": 0,
+      "target": "🇭🇰 Hong Kong",
+      "context": "td @ line 293"
+    },
+    {
+      "id": "u_ac33b03dbf916d77",
+      "kind": "text",
+      "source": "31 ms（最近）",
+      "occurrence": 0,
+      "target": "31 ms (most recent)",
+      "context": "strong @ line 295"
+    },
+    {
+      "id": "u_f6cee25de1ddb1a1",
+      "kind": "text",
+      "source": "31 天",
+      "occurrence": 0,
+      "target": "31 days",
+      "context": "strong @ line 299 · surrounding text: 31 天 （积累 1 个月状态）"
+    },
+    {
+      "id": "u_988262ffbab8528b",
+      "kind": "text",
+      "source": "（积累 1 个月状态）",
+      "occurrence": 0,
+      "target": "(accumulated 1 month status)",
+      "context": "td @ line 299 · surrounding text: 31 天 （积累 1 个月状态）"
+    },
+    {
+      "id": "u_78189ac1c470f7df",
+      "kind": "text",
+      "source": "后台部署在",
+      "occurrence": 0,
+      "target": "The Back Office (BO) is deployed in",
+      "context": "p @ line 302 · surrounding text: 后台部署在 新加坡 Microsoft Azure （IP 52.230.7.201）。RTT 为 后台实地 ping 5 包平均值。这 7 台是 测试环境节点池 全量 ，没有挑选。"
+    },
+    {
+      "id": "u_1df257fa484ad3f8",
+      "kind": "text",
+      "source": "新加坡 Microsoft Azure",
+      "occurrence": 0,
+      "target": "Singapore Microsoft Azure",
+      "context": "strong @ line 302 · surrounding text: 后台部署在 新加坡 Microsoft Azure （IP 52.230.7.201）。RTT 为 后台实地 ping 5 包平均值。这 7 台是 测试环境节点池 全量 ，没有挑选。"
+    },
+    {
+      "id": "u_6ace3f98d662b7f3",
+      "kind": "text",
+      "source": "（IP 52.230.7.201）。RTT 为 后台实地 ping 5 包平均值。这 7 台是 测试环境节点池",
+      "occurrence": 0,
+      "target": "(IP 52.230.7.201). RTT is the average of 5 ping packets measured from the Back Office (BO). These 7 servers constitute the entire test-environment VPN node pool",
+      "context": "p @ line 302 · surrounding text: 后台部署在 新加坡 Microsoft Azure （IP 52.230.7.201）。RTT 为 后台实地 ping 5 包平均值。这 7 台是 测试环境节点池 全量 ，没有挑选。"
+    },
+    {
+      "id": "u_b2a95ec30bd1d65d",
+      "kind": "text",
+      "source": "全量",
+      "occurrence": 0,
+      "target": "full scale",
+      "context": "strong @ line 302 · surrounding text: 后台部署在 新加坡 Microsoft Azure （IP 52.230.7.201）。RTT 为 后台实地 ping 5 包平均值。这 7 台是 测试环境节点池 全量 ，没有挑选。"
+    },
+    {
+      "id": "u_011c5dd463c7aa9e",
+      "kind": "text",
+      "source": "，没有挑选。",
+      "occurrence": 0,
+      "target": ". No selection.",
+      "context": "p @ line 302 · surrounding text: 后台部署在 新加坡 Microsoft Azure （IP 52.230.7.201）。RTT 为 后台实地 ping 5 包平均值。这 7 台是 测试环境节点池 全量 ，没有挑选。"
+    },
+    {
+      "id": "u_9511d495109cf64c",
+      "kind": "text",
+      "source": "四、实测每台耗时",
+      "occurrence": 0,
+      "target": "IV. Real-time measurement of each host's time",
+      "context": "h2 @ line 305"
+    },
+    {
+      "id": "u_1e0f32625bb6b9e8",
+      "kind": "text",
+      "source": "主机",
+      "occurrence": 0,
+      "target": "Host",
+      "context": "th @ line 308 · surrounding text: 主机 地理 RTT 规格 用时 含 ACME? 结果"
+    },
+    {
+      "id": "u_2be8e5dc5f9f7865",
+      "kind": "text",
+      "source": "地理",
+      "occurrence": 0,
+      "target": "Geography",
+      "context": "th @ line 308 · surrounding text: 主机 地理 RTT 规格 用时 含 ACME? 结果"
+    },
+    {
+      "id": "u_e4b4866329cd6d92",
+      "kind": "text",
+      "source": "规格",
+      "occurrence": 0,
+      "target": "Specification",
+      "context": "th @ line 308 · surrounding text: 主机 地理 RTT 规格 用时 含 ACME? 结果"
+    },
+    {
+      "id": "u_3cee50315f311e7a",
+      "kind": "text",
+      "source": "用时",
+      "occurrence": 0,
+      "target": "Time Taken",
+      "context": "th @ line 308 · surrounding text: 主机 地理 RTT 规格 用时 含 ACME? 结果"
+    },
+    {
+      "id": "u_cd26cb6adb3e1a68",
+      "kind": "text",
+      "source": "含 ACME?",
+      "occurrence": 0,
+      "target": "ACME Included?",
+      "context": "th @ line 308 · surrounding text: 主机 地理 RTT 规格 用时 含 ACME? 结果"
+    },
+    {
+      "id": "u_7b2d2cb38c705303",
+      "kind": "text",
+      "source": "结果",
+      "occurrence": 0,
+      "target": "Result",
+      "context": "th @ line 308 · surrounding text: 主机 地理 RTT 规格 用时 含 ACME? 结果"
+    },
+    {
+      "id": "u_fb18f157225faee8",
+      "kind": "text",
+      "source": "175 ms（最远）",
+      "occurrence": 1,
+      "target": "175 ms (farthest)",
+      "context": "td @ line 312"
+    },
+    {
+      "id": "u_f1001c649a06db84",
+      "kind": "text",
+      "source": "否",
+      "occurrence": 0,
+      "target": "No",
+      "context": "td @ line 315"
+    },
+    {
+      "id": "u_267f3ad8547aaff0",
+      "kind": "text",
+      "source": "否",
+      "occurrence": 1,
+      "target": "No",
+      "context": "td @ line 324"
+    },
+    {
+      "id": "u_dbe8b8820f919e11",
+      "kind": "text",
+      "source": "— RAM 紧张未崩",
+      "occurrence": 0,
+      "target": "— RAM pressure did not cause a failure",
+      "context": "td @ line 325 · surrounding text: done — RAM 紧张未崩"
+    },
+    {
+      "id": "u_3add89e9fd2f2380",
+      "kind": "text",
+      "source": "否",
+      "occurrence": 2,
+      "target": "No",
+      "context": "td @ line 333"
+    },
+    {
+      "id": "u_004d85a12801da35",
+      "kind": "text",
+      "source": "否",
+      "occurrence": 3,
+      "target": "No",
+      "context": "td @ line 342"
+    },
+    {
+      "id": "u_53fda45f0cbab50a",
+      "kind": "text",
+      "source": "否",
+      "occurrence": 4,
+      "target": "No",
+      "context": "td @ line 351"
+    },
+    {
+      "id": "u_fee62be54996a0fa",
+      "kind": "text",
+      "source": "31 ms（最近）",
+      "occurrence": 1,
+      "target": "31 ms (nearest)",
+      "context": "td @ line 357"
+    },
+    {
+      "id": "u_820e05a655444d53",
+      "kind": "text",
+      "source": "否",
+      "occurrence": 5,
+      "target": "No",
+      "context": "td @ line 360"
+    },
+    {
+      "id": "u_6d77aec361b90965",
+      "kind": "text",
+      "source": "是 + GFW 影响",
+      "occurrence": 0,
+      "target": "+ GFW Impact",
+      "context": "strong @ line 369"
+    },
+    {
+      "id": "u_6e74585f07884159",
+      "kind": "text",
+      "source": "整批 7 台并行端到端",
+      "occurrence": 0,
+      "target": "Full Batch of 7 Nodes in Parallel",
+      "context": "strong @ line 373"
+    },
+    {
+      "id": "u_eddf577ec96173df",
+      "kind": "text",
+      "source": "五、实测时间线",
+      "occurrence": 0,
+      "target": "5. Measured Timeline",
+      "context": "h2 @ line 382"
+    },
+    {
+      "id": "u_df1d88809fc4c02d",
+      "kind": "text",
+      "source": "后台",
+      "occurrence": 1,
+      "target": "Back Office",
+      "context": "div.timeline-text @ line 387 · surrounding text: 后台 单次 API 调用 ： POST /api/v1/node-host/bulk-upgrade ， format: true 、 host_ids: [16, 18, 19, 20, 21, 22, 23] 、 parallel: 7 。后端立即返回 job_id: 20260510T035217.704 。Build phase = cached （同 SHA 已构建过）， 构建用时 0 秒 。"
+    },
+    {
+      "id": "u_11738a9a729984bc",
+      "kind": "text",
+      "source": "单次 API 调用",
+      "occurrence": 0,
+      "target": "Single API Call",
+      "context": "strong @ line 387 · surrounding text: 后台 单次 API 调用 ： POST /api/v1/node-host/bulk-upgrade ， format: true 、 host_ids: [16, 18, 19, 20, 21, 22, 23] 、 parallel: 7 。后端立即返回 job_id: 20260510T035217.704 。Build phase = cached （同 SHA 已构建过）， 构建用时 0 秒 。"
+    },
+    {
+      "id": "u_44e04544ec91bce0",
+      "kind": "text",
+      "source": "。后端立即返回",
+      "occurrence": 0,
+      "target": "Backend returns immediately",
+      "context": "div.timeline-text @ line 387 · surrounding text: 后台 单次 API 调用 ： POST /api/v1/node-host/bulk-upgrade ， format: true 、 host_ids: [16, 18, 19, 20, 21, 22, 23] 、 parallel: 7 。后端立即返回 job_id: 20260510T035217.704 。Build phase = cached （同 SHA 已构建过）， 构建用时 0 秒 。"
+    },
+    {
+      "id": "u_00a312befd9948e8",
+      "kind": "text",
+      "source": "（同 SHA 已构建过），",
+      "occurrence": 0,
+      "target": "(Same SHA has been built before),",
+      "context": "div.timeline-text @ line 387 · surrounding text: 后台 单次 API 调用 ： POST /api/v1/node-host/bulk-upgrade ， format: true 、 host_ids: [16, 18, 19, 20, 21, 22, 23] 、 parallel: 7 。后端立即返回 job_id: 20260510T035217.704 。Build phase = cached （同 SHA 已构建过）， 构建用时 0 秒 。"
+    },
+    {
+      "id": "u_ceefb2fc622f36cd",
+      "kind": "text",
+      "source": "构建用时 0 秒",
+      "occurrence": 0,
+      "target": "Build time: 0 seconds",
+      "context": "strong @ line 387 · surrounding text: 后台 单次 API 调用 ： POST /api/v1/node-host/bulk-upgrade ， format: true 、 host_ids: [16, 18, 19, 20, 21, 22, 23] 、 parallel: 7 。后端立即返回 job_id: 20260510T035217.704 。Build phase = cached （同 SHA 已构建过）， 构建用时 0 秒 。"
+    },
+    {
+      "id": "u_1f0da63bab8cb8a2",
+      "kind": "text",
+      "source": "完成。第一个 done。",
+      "occurrence": 0,
+      "target": "Completed. First done.",
+      "context": "div.timeline-text @ line 391 · surrounding text: ✅ 172.93.32.133（Vancouver, RTT 175 ms） 完成。第一个 done。 RTT 最远的反而最先到达 — 这台 2 vCPU 的 CPU 充裕，本机 wipe + 装包跑得比单核机器快，证书也命中本地缓存没走 ACME。"
+    },
+    {
+      "id": "u_f18d6d3bf969a3d7",
+      "kind": "text",
+      "source": "RTT 最远的反而最先到达",
+      "occurrence": 0,
+      "target": "The farthest RTT arrives first",
+      "context": "strong @ line 391 · surrounding text: ✅ 172.93.32.133（Vancouver, RTT 175 ms） 完成。第一个 done。 RTT 最远的反而最先到达 — 这台 2 vCPU 的 CPU 充裕，本机 wipe + 装包跑得比单核机器快，证书也命中本地缓存没走 ACME。"
+    },
+    {
+      "id": "u_6a7575aeb30c7cb7",
+      "kind": "text",
+      "source": "— 这台 2 vCPU 的 CPU 充裕，本机 wipe + 装包跑得比单核机器快，证书也命中本地缓存没走 ACME。",
+      "occurrence": 0,
+      "target": "— This server's 2 vCPUs provided sufficient capacity: the local wipe and package installation ran faster than on a single-core server, and the certificate used the local cache rather than ACME.",
+      "context": "div.timeline-text @ line 391 · surrounding text: ✅ 172.93.32.133（Vancouver, RTT 175 ms） 完成。第一个 done。 RTT 最远的反而最先到达 — 这台 2 vCPU 的 CPU 充裕，本机 wipe + 装包跑得比单核机器快，证书也命中本地缓存没走 ACME。"
+    },
+    {
+      "id": "u_f54e61e2611e13e7",
+      "kind": "text",
+      "source": "5 台陆续完成：",
+      "occurrence": 0,
+      "target": "Five machines completed sequentially:",
+      "context": "div.timeline-text @ line 395 · surrounding text: 5 台陆续完成： ✅ Paris（0.4 GB 极小内存，未崩） 20 s · ✅ Copenhagen 21 s · ✅ Hanoi 22 s · ✅ Manila 22 s · ✅ Hong Kong 24 s。所有这 5 台的 sing-box 都跑完 wipe + install + start。"
+    },
+    {
+      "id": "u_1687ef7478944237",
+      "kind": "text",
+      "source": "✅ Paris（0.4 GB 极小内存，未崩）",
+      "occurrence": 0,
+      "target": "✅ Paris (0.4 GB min memory, not crashed)",
+      "context": "span.text-pos @ line 395 · surrounding text: 5 台陆续完成： ✅ Paris（0.4 GB 极小内存，未崩） 20 s · ✅ Copenhagen 21 s · ✅ Hanoi 22 s · ✅ Manila 22 s · ✅ Hong Kong 24 s。所有这 5 台的 sing-box 都跑完 wipe + install + start。"
+    },
+    {
+      "id": "u_4e5d14ca814ceaf9",
+      "kind": "text",
+      "source": "20 s · ✅ Copenhagen 21 s · ✅ Hanoi 22 s · ✅ Manila 22 s · ✅ Hong Kong 24 s。所有这 5 台的 sing-box 都跑完 wipe + install + start。",
+      "occurrence": 0,
+      "target": "20 s · ✅ Copenhagen 21 s · ✅ Hanoi 22 s · ✅ Manila 22 s · ✅ Hong Kong 24 s. All sing-boxes have completed wipe + install + start for these five machines.",
+      "context": "div.timeline-text @ line 395 · surrounding text: 5 台陆续完成： ✅ Paris（0.4 GB 极小内存，未崩） 20 s · ✅ Copenhagen 21 s · ✅ Hanoi 22 s · ✅ Manila 22 s · ✅ Hong Kong 24 s。所有这 5 台的 sing-box 都跑完 wipe + install + start。"
+    },
+    {
+      "id": "u_277ef7dfdf30bd30",
+      "kind": "text",
+      "source": "T+33s（中段）",
+      "occurrence": 0,
+      "target": "T+33s (Middle)",
+      "context": "div.timeline-time @ line 398"
+    },
+    {
+      "id": "u_ea57b0bcfd2b352f",
+      "kind": "text",
+      "source": "仅剩 1 台未完成 — Guangzhou（中国大陆）。stage =",
+      "occurrence": 0,
+      "target": "Only 1 VPN node remained incomplete—Guangzhou, mainland China. stage =",
+      "context": "div.timeline-text @ line 399 · surrounding text: 仅剩 1 台未完成 — Guangzhou（中国大陆）。stage = issuing-cert ，正在为 can02.winuslea.com 跑 ACME 域名所有权验证。Let's Encrypt 走国际出口， 遇上中国 GFW 路径不稳定 ，这一步重试若干次。"
+    },
+    {
+      "id": "u_fdf15e61839de70d",
+      "kind": "text",
+      "source": "，正在为",
+      "occurrence": 0,
+      "target": ", currently running",
+      "context": "div.timeline-text @ line 399 · surrounding text: 仅剩 1 台未完成 — Guangzhou（中国大陆）。stage = issuing-cert ，正在为 can02.winuslea.com 跑 ACME 域名所有权验证。Let's Encrypt 走国际出口， 遇上中国 GFW 路径不稳定 ，这一步重试若干次。"
+    },
+    {
+      "id": "u_e139c7a33b1f6898",
+      "kind": "text",
+      "source": "跑 ACME 域名所有权验证。Let's Encrypt 走国际出口，",
+      "occurrence": 0,
+      "target": "running ACME domain-ownership validation. Let's Encrypt uses the international egress route,",
+      "context": "div.timeline-text @ line 399 · surrounding text: 仅剩 1 台未完成 — Guangzhou（中国大陆）。stage = issuing-cert ，正在为 can02.winuslea.com 跑 ACME 域名所有权验证。Let's Encrypt 走国际出口， 遇上中国 GFW 路径不稳定 ，这一步重试若干次。"
+    },
+    {
+      "id": "u_b443e903f9102974",
+      "kind": "text",
+      "source": "遇上中国 GFW 路径不稳定",
+      "occurrence": 0,
+      "target": "due to unstable paths due to China GFW.",
+      "context": "strong @ line 399 · surrounding text: 仅剩 1 台未完成 — Guangzhou（中国大陆）。stage = issuing-cert ，正在为 can02.winuslea.com 跑 ACME 域名所有权验证。Let's Encrypt 走国际出口， 遇上中国 GFW 路径不稳定 ，这一步重试若干次。"
+    },
+    {
+      "id": "u_9bf2321530c84bcc",
+      "kind": "text",
+      "source": "，这一步重试若干次。",
+      "occurrence": 0,
+      "target": ", so this step was retried several times.",
+      "context": "div.timeline-text @ line 399 · surrounding text: 仅剩 1 台未完成 — Guangzhou（中国大陆）。stage = issuing-cert ，正在为 can02.winuslea.com 跑 ACME 域名所有权验证。Let's Encrypt 走国际出口， 遇上中国 GFW 路径不稳定 ，这一步重试若干次。"
+    },
+    {
+      "id": "u_ae4a7ac29475907b",
+      "kind": "text",
+      "source": "✅ 8.138.29.36（Guangzhou, ACME 走 GFW）",
+      "occurrence": 0,
+      "target": "✅ Sprint 8.138.29.36 (Guangzhou, ACME Breaks GFW)",
+      "context": "span.text-pos @ line 403 · surrounding text: ✅ 8.138.29.36（Guangzhou, ACME 走 GFW） 完成。 整批 7 / 7 done。"
+    },
+    {
+      "id": "u_58d4f23fd3d740f4",
+      "kind": "text",
+      "source": "完成。",
+      "occurrence": 0,
+      "target": "Completed.",
+      "context": "div.timeline-text @ line 403 · surrounding text: ✅ 8.138.29.36（Guangzhou, ACME 走 GFW） 完成。 整批 7 / 7 done。"
+    },
+    {
+      "id": "u_0f86e5d4bfb6fc56",
+      "kind": "text",
+      "source": "整批 7 / 7 done。",
+      "occurrence": 0,
+      "target": "All 7 completed.",
+      "context": "strong @ line 403 · surrounding text: ✅ 8.138.29.36（Guangzhou, ACME 走 GFW） 完成。 整批 7 / 7 done。"
+    },
+    {
+      "id": "u_498dedde744b4db6",
+      "kind": "text",
+      "source": "T+~70s（验证窗口）",
+      "occurrence": 0,
+      "target": "T+~70s (Validation Window)",
+      "context": "div.timeline-time @ line 406"
+    },
+    {
+      "id": "u_0607819d086cc0ca",
+      "kind": "text",
+      "source": "7 台节点的",
+      "occurrence": 0,
+      "target": "For the 7 VPN nodes, the",
+      "context": "div.timeline-text @ line 407 · surrounding text: 7 台节点的 心跳全部恢复 ：DB node_hosts.last_heartbeat 推进至当前时间附近；SSH 实地验证 singbox-agent + sing-box systemd 服务都为 active ； agent_version 全部回到目标 v1.1.1 。"
+    },
+    {
+      "id": "u_bb97f5da4f25d32f",
+      "kind": "text",
+      "source": "心跳全部恢复",
+      "occurrence": 0,
+      "target": "Heartbeat recovery",
+      "context": "strong @ line 407 · surrounding text: 7 台节点的 心跳全部恢复 ：DB node_hosts.last_heartbeat 推进至当前时间附近；SSH 实地验证 singbox-agent + sing-box systemd 服务都为 active ； agent_version 全部回到目标 v1.1.1 。"
+    },
+    {
+      "id": "u_737a25bc41346fef",
+      "kind": "text",
+      "source": "推进至当前时间附近；SSH 实地验证",
+      "occurrence": 0,
+      "target": "Pushed to near current time; SSH on-site verification shows singbox-agent + sing-box systemd services are active;",
+      "context": "div.timeline-text @ line 407 · surrounding text: 7 台节点的 心跳全部恢复 ：DB node_hosts.last_heartbeat 推进至当前时间附近；SSH 实地验证 singbox-agent + sing-box systemd 服务都为 active ； agent_version 全部回到目标 v1.1.1 。"
+    },
+    {
+      "id": "u_fa927b33021d8d95",
+      "kind": "text",
+      "source": "systemd 服务都为",
+      "occurrence": 0,
+      "target": "systemd services are active;",
+      "context": "div.timeline-text @ line 407 · surrounding text: 7 台节点的 心跳全部恢复 ：DB node_hosts.last_heartbeat 推进至当前时间附近；SSH 实地验证 singbox-agent + sing-box systemd 服务都为 active ； agent_version 全部回到目标 v1.1.1 。"
+    },
+    {
+      "id": "u_c6c82bbaa9da196d",
+      "kind": "text",
+      "source": "全部回到目标",
+      "occurrence": 0,
+      "target": "all returned to the target",
+      "context": "div.timeline-text @ line 407 · surrounding text: 7 台节点的 心跳全部恢复 ：DB node_hosts.last_heartbeat 推进至当前时间附近；SSH 实地验证 singbox-agent + sing-box systemd 服务都为 active ； agent_version 全部回到目标 v1.1.1 。"
+    },
+    {
+      "id": "u_889f01ae0e64ee4e",
+      "kind": "text",
+      "source": "六、地理位置 / RTT 是否影响速度？— 数据回答",
+      "occurrence": 0,
+      "target": "Six: Does geographical location and RTT affect speed? - Data response",
+      "context": "h2 @ line 412"
+    },
+    {
+      "id": "u_35e11ec56dcb7d47",
+      "kind": "text",
+      "source": "把地理 + RTT + 用时三列对在一起看（按用时升序）：",
+      "occurrence": 0,
+      "target": "Combine the three columns of geography + RTT + latency (sorted by latency):",
+      "context": "p @ line 414"
+    },
+    {
+      "id": "u_ca5370a6e56e7048",
+      "kind": "text",
+      "source": "用时",
+      "occurrence": 1,
+      "target": "Latency",
+      "context": "th @ line 416 · surrounding text: 用时 主机 地理 RTT 含 ACME?"
+    },
+    {
+      "id": "u_3a7e4e2363de33cf",
+      "kind": "text",
+      "source": "主机",
+      "occurrence": 1,
+      "target": "Host",
+      "context": "th @ line 416 · surrounding text: 用时 主机 地理 RTT 含 ACME?"
+    },
+    {
+      "id": "u_004fd4fff8bb7f86",
+      "kind": "text",
+      "source": "地理",
+      "occurrence": 1,
+      "target": "Geography",
+      "context": "th @ line 416 · surrounding text: 用时 主机 地理 RTT 含 ACME?"
+    },
+    {
+      "id": "u_c283d0db56d10d12",
+      "kind": "text",
+      "source": "含 ACME?",
+      "occurrence": 1,
+      "target": "ACME?",
+      "context": "th @ line 416 · surrounding text: 用时 主机 地理 RTT 含 ACME?"
+    },
+    {
+      "id": "u_33f12a13c6df6065",
+      "kind": "text",
+      "source": "175 ms（最远）",
+      "occurrence": 2,
+      "target": "175 ms (farthest)",
+      "context": "strong @ line 417 · surrounding text: 15 s 172.93.32.133 🇨🇦 Vancouver 175 ms（最远） 否"
+    },
+    {
+      "id": "u_de43e4d304c2cdd8",
+      "kind": "text",
+      "source": "否",
+      "occurrence": 6,
+      "target": "No",
+      "context": "td @ line 417 · surrounding text: 15 s 172.93.32.133 🇨🇦 Vancouver 175 ms（最远） 否"
+    },
+    {
+      "id": "u_bb5d3f2556316ade",
+      "kind": "text",
+      "source": "否",
+      "occurrence": 7,
+      "target": "No",
+      "context": "td @ line 418 · surrounding text: 20 s 45.80.215.175 🇫🇷 Paris 148 ms 否"
+    },
+    {
+      "id": "u_836bc8522638d796",
+      "kind": "text",
+      "source": "否",
+      "occurrence": 8,
+      "target": "No",
+      "context": "td @ line 419 · surrounding text: 21 s 194.102.175.212 🇩🇰 Copenhagen 165 ms 否"
+    },
+    {
+      "id": "u_aa186439f1fbcbe9",
+      "kind": "text",
+      "source": "否",
+      "occurrence": 9,
+      "target": "No",
+      "context": "td @ line 420 · surrounding text: 22 s 103.12.77.249 🇻🇳 Hanoi 43 ms 否"
+    },
+    {
+      "id": "u_c83ca0dafb017254",
+      "kind": "text",
+      "source": "否",
+      "occurrence": 10,
+      "target": "No",
+      "context": "td @ line 421 · surrounding text: 22 s 38.54.37.243 🇵🇭 Manila 36 ms 否"
+    },
+    {
+      "id": "u_35f725eb40d19239",
+      "kind": "text",
+      "source": "31 ms（最近）",
+      "occurrence": 2,
+      "target": "31 ms (closest)",
+      "context": "strong @ line 422 · surrounding text: 24 s 149.126.95.39 🇭🇰 Hong Kong 31 ms（最近） 否"
+    },
+    {
+      "id": "u_b9cb01e97c4cd9d4",
+      "kind": "text",
+      "source": "否",
+      "occurrence": 11,
+      "target": "No",
+      "context": "td @ line 422 · surrounding text: 24 s 149.126.95.39 🇭🇰 Hong Kong 31 ms（最近） 否"
+    },
+    {
+      "id": "u_d7156bceabd4b6c0",
+      "kind": "text",
+      "source": "是 + GFW",
+      "occurrence": 0,
+      "target": "+ GFW",
+      "context": "strong @ line 423 · surrounding text: 44 s 8.138.29.36 🇨🇳 Guangzhou 45 ms 是 + GFW"
+    },
+    {
+      "id": "u_e5c1f421fda7225e",
+      "kind": "text",
+      "source": "关键观察",
+      "occurrence": 0,
+      "target": "Key Observation",
+      "context": "h3 @ line 426"
+    },
+    {
+      "id": "u_46f65d1e1958bfb6",
+      "kind": "text",
+      "source": "RTT 最远的反而最快",
+      "occurrence": 0,
+      "target": "The farthest is the fastest",
+      "context": "strong @ line 428 · surrounding text: RTT 最远的反而最快 — Vancouver（175 ms）15 s vs Hong Kong（31 ms）24 s。结论： 地理距离不是后台自动化的瓶颈 。SSH 控制流大概 50 ~ 100 个往返，14 ms × 100 ≈ 1.4 秒额外开销，相对总耗时 0.05% 量级，被节点本机 CPU 速度的差异完全淹没。"
+    },
+    {
+      "id": "u_25c4587eb1e1ddb4",
+      "kind": "text",
+      "source": "— Vancouver（175 ms）15 s vs Hong Kong（31 ms）24 s。结论：",
+      "occurrence": 0,
+      "target": "- Vancouver (175 ms) 15 s vs Hong Kong (31 ms) 24 s. Conclusion:",
+      "context": "li @ line 428 · surrounding text: RTT 最远的反而最快 — Vancouver（175 ms）15 s vs Hong Kong（31 ms）24 s。结论： 地理距离不是后台自动化的瓶颈 。SSH 控制流大概 50 ~ 100 个往返，14 ms × 100 ≈ 1.4 秒额外开销，相对总耗时 0.05% 量级，被节点本机 CPU 速度的差异完全淹没。"
+    },
+    {
+      "id": "u_13d4e558fb76b64e",
+      "kind": "text",
+      "source": "地理距离不是后台自动化的瓶颈",
+      "occurrence": 1,
+      "target": "Geographic distance is not a bottleneck for Back Office (BO) automation",
+      "context": "strong @ line 428 · surrounding text: RTT 最远的反而最快 — Vancouver（175 ms）15 s vs Hong Kong（31 ms）24 s。结论： 地理距离不是后台自动化的瓶颈 。SSH 控制流大概 50 ~ 100 个往返，14 ms × 100 ≈ 1.4 秒额外开销，相对总耗时 0.05% 量级，被节点本机 CPU 速度的差异完全淹没。"
+    },
+    {
+      "id": "u_f98b76c19bbf7780",
+      "kind": "text",
+      "source": "。SSH 控制流大概 50 ~ 100 个往返，14 ms × 100 ≈ 1.4 秒额外开销，相对总耗时 0.05% 量级，被节点本机 CPU 速度的差异完全淹没。",
+      "occurrence": 0,
+      "target": "SSH control flow is roughly 50-100 round trips, adding about 1.4 seconds of extra cost at 14 ms × 100 ≈ 1.4 seconds; this is a 0.05% relative to the total time and is completely overwhelmed by the difference in VPN node's local CPU speed.",
+      "context": "li @ line 428 · surrounding text: RTT 最远的反而最快 — Vancouver（175 ms）15 s vs Hong Kong（31 ms）24 s。结论： 地理距离不是后台自动化的瓶颈 。SSH 控制流大概 50 ~ 100 个往返，14 ms × 100 ≈ 1.4 秒额外开销，相对总耗时 0.05% 量级，被节点本机 CPU 速度的差异完全淹没。"
+    },
+    {
+      "id": "u_ab344fe6abee4243",
+      "kind": "text",
+      "source": "真正决定速度的是节点本机 CPU + 是否走 ACME",
+      "occurrence": 0,
+      "target": "The true factor determining speed is the VPN node's local CPU + whether it goes through ACME",
+      "context": "strong @ line 429 · surrounding text: 真正决定速度的是节点本机 CPU + 是否走 ACME 。Vancouver 用 2 vCPU 跑 wipe + install 比单核机器快得多；Guangzhou 也是 2 vCPU 但被 ACME 拖到 44 s。"
+    },
+    {
+      "id": "u_587987634b7b9b67",
+      "kind": "text",
+      "source": "。Vancouver 用 2 vCPU 跑 wipe + install 比单核机器快得多；Guangzhou 也是 2 vCPU 但被 ACME 拖到 44 s。",
+      "occurrence": 0,
+      "target": "- Vancouver uses 2 vCPUs to run wipe + install faster than a single-core machine; Guangzhou also has 2 vCPUs but is slowed down to 44 s by ACME.",
+      "context": "li @ line 429 · surrounding text: 真正决定速度的是节点本机 CPU + 是否走 ACME 。Vancouver 用 2 vCPU 跑 wipe + install 比单核机器快得多；Guangzhou 也是 2 vCPU 但被 ACME 拖到 44 s。"
+    },
+    {
+      "id": "u_f630d1599cc8f591",
+      "kind": "text",
+      "source": "0.4 GB RAM 的法国节点没有崩",
+      "occurrence": 0,
+      "target": "The French VPN node with 0.4 GB RAM did not fail",
+      "context": "strong @ line 430 · surrounding text: 0.4 GB RAM 的法国节点没有崩 （20 s 完成）— 证明后台自动化的 wipe + install 步骤不是 RAM-heavy；下限其实比想象的低。"
+    },
+    {
+      "id": "u_d0e396936ce2ce55",
+      "kind": "text",
+      "source": "（20 s 完成）— 证明后台自动化的 wipe + install 步骤不是 RAM-heavy；下限其实比想象的低。",
+      "occurrence": 0,
+      "target": "(completed in 20 s) — demonstrating that the Back Office (BO) automated wipe-and-install process is not RAM-intensive and that the lower limit is below expectations.",
+      "context": "li @ line 430 · surrounding text: 0.4 GB RAM 的法国节点没有崩 （20 s 完成）— 证明后台自动化的 wipe + install 步骤不是 RAM-heavy；下限其实比想象的低。"
+    },
+    {
+      "id": "u_f8d699607fab8bbf",
+      "kind": "text",
+      "source": "中国大陆节点是唯一被「地理」明显拖累的",
+      "occurrence": 0,
+      "target": "Mainland China VPN node is the only one noticeably impacted by geography;",
+      "context": "strong @ line 431 · surrounding text: 中国大陆节点是唯一被「地理」明显拖累的 — 但拖累的是 ACME 走 Let's Encrypt 经过 GFW，不是 SSH 本身。后台已经为 sing-box 二进制配置了本地镜像（ apk.arrowfishadv.com ）避开 GitHub 封锁；ACME 仍走 Let's Encrypt，是接下来可优化的点（参见第十节）。"
+    },
+    {
+      "id": "u_5a39e44e525d7fe9",
+      "kind": "text",
+      "source": "— 但拖累的是 ACME 走 Let's Encrypt 经过 GFW，不是 SSH 本身。后台已经为 sing-box 二进制配置了本地镜像（",
+      "occurrence": 0,
+      "target": "— The bottleneck was ACME communication with Let's Encrypt through the GFW, not SSH itself. The Back Office (BO) already provides a local mirror for the sing-box binary (",
+      "context": "li @ line 431 · surrounding text: 中国大陆节点是唯一被「地理」明显拖累的 — 但拖累的是 ACME 走 Let's Encrypt 经过 GFW，不是 SSH 本身。后台已经为 sing-box 二进制配置了本地镜像（ apk.arrowfishadv.com ）避开 GitHub 封锁；ACME 仍走 Let's Encrypt，是接下来可优化的点（参见第十节）。"
+    },
+    {
+      "id": "u_408d13e5c4f39aac",
+      "kind": "text",
+      "source": "）避开 GitHub 封锁；ACME 仍走 Let's Encrypt，是接下来可优化的点（参见第十节）。",
+      "occurrence": 0,
+      "target": "— The backend has already configured a local mirror (apk.arrowfishadv.com) for sing-box binary to bypass GitHub lockout; ACME will still go through Let's Encrypt, which is an area that can be optimized next (see Section 10).",
+      "context": "li @ line 431 · surrounding text: 中国大陆节点是唯一被「地理」明显拖累的 — 但拖累的是 ACME 走 Let's Encrypt 经过 GFW，不是 SSH 本身。后台已经为 sing-box 二进制配置了本地镜像（ apk.arrowfishadv.com ）避开 GitHub 封锁；ACME 仍走 Let's Encrypt，是接下来可优化的点（参见第十节）。"
+    },
+    {
+      "id": "u_c470a7f4f6ebad62",
+      "kind": "text",
+      "source": "本团队的节点池跨多大洲是可接受的",
+      "occurrence": 0,
+      "target": "The distribution of our VPN node pool across multiple continents is acceptable",
+      "context": "strong @ line 432 · surrounding text: 本团队的节点池跨多大洲是可接受的 — 不需要在 后台旁边架接近的「区域后台」节点，单一新加坡 后台已能并行驱动跨洲全量回收。"
+    },
+    {
+      "id": "u_c18deed9b8cec8d2",
+      "kind": "text",
+      "source": "— 不需要在 后台旁边架接近的「区域后台」节点，单一新加坡 后台已能并行驱动跨洲全量回收。",
+      "occurrence": 0,
+      "target": "— Nearby regional Back Office (BO) VPN nodes are not required; a single Back Office (BO) deployment in Singapore can drive full reclamation across continents in parallel.",
+      "context": "li @ line 432 · surrounding text: 本团队的节点池跨多大洲是可接受的 — 不需要在 后台旁边架接近的「区域后台」节点，单一新加坡 后台已能并行驱动跨洲全量回收。"
+    },
+    {
+      "id": "u_03a81956bd6e478e",
+      "kind": "text",
+      "source": "地理位置可能成为瓶颈的边界场景（非本次）",
+      "occurrence": 0,
+      "target": "Boundary cases where geography could become a bottleneck (not observed in this test)",
+      "context": "h3 @ line 436"
+    },
+    {
+      "id": "u_ffddb7168f17d169",
+      "kind": "text",
+      "source": "冷构建（新版本首次推）",
+      "occurrence": 0,
+      "target": "Cold build (first time for new version)",
+      "context": "strong @ line 439 · surrounding text: 冷构建（新版本首次推） — 节点要从后台镜像拉 ~10 MB 二进制。RTT 远的节点会多花 5-15 秒。本次 build phase = cached，跳过。"
+    },
+    {
+      "id": "u_aa4e2854af2b498e",
+      "kind": "text",
+      "source": "— 节点要从后台镜像拉 ~10 MB 二进制。RTT 远的节点会多花 5-15 秒。本次 build phase = cached，跳过。",
+      "occurrence": 0,
+      "target": "— VPN nodes download a ~10 MB binary from the Back Office (BO) mirror. Higher-RTT VPN nodes take an additional 5–15 seconds. In this test, build phase = cached, so the phase was skipped.",
+      "context": "li @ line 439 · surrounding text: 冷构建（新版本首次推） — 节点要从后台镜像拉 ~10 MB 二进制。RTT 远的节点会多花 5-15 秒。本次 build phase = cached，跳过。"
+    },
+    {
+      "id": "u_7ec0d1c6811fca55",
+      "kind": "text",
+      "source": "中国大陆节点 + Let's Encrypt 通信",
+      "occurrence": 0,
+      "target": "Communication between mainland China VPN nodes and Let's Encrypt",
+      "context": "strong @ line 440 · surrounding text: 中国大陆节点 + Let's Encrypt 通信 — Great Firewall 让 ACME 验证有时延 / 偶发失败 — 本次实测看到 Guangzhou 多用 ~20 秒。 下一步可以引入 Cloudflare DNS-01 验证或本地 DNS 网关 ，把 ACME 步骤稳定到 ~5 秒。"
+    },
+    {
+      "id": "u_3dda250abeb5da79",
+      "kind": "text",
+      "source": "— Great Firewall 让 ACME 验证有时延 / 偶发失败 — 本次实测看到 Guangzhou 多用 ~20 秒。",
+      "occurrence": 0,
+      "target": "— The Great Firewall can delay ACME validation or cause intermittent failures; Guangzhou required approximately 20 additional seconds in this test.",
+      "context": "li @ line 440 · surrounding text: 中国大陆节点 + Let's Encrypt 通信 — Great Firewall 让 ACME 验证有时延 / 偶发失败 — 本次实测看到 Guangzhou 多用 ~20 秒。 下一步可以引入 Cloudflare DNS-01 验证或本地 DNS 网关 ，把 ACME 步骤稳定到 ~5 秒。"
+    },
+    {
+      "id": "u_a6b8e230fec470e2",
+      "kind": "text",
+      "source": "下一步可以引入 Cloudflare DNS-01 验证或本地 DNS 网关",
+      "occurrence": 0,
+      "target": "Next steps can introduce Cloudflare DNS-01 validation or local DNS gateway",
+      "context": "strong @ line 440 · surrounding text: 中国大陆节点 + Let's Encrypt 通信 — Great Firewall 让 ACME 验证有时延 / 偶发失败 — 本次实测看到 Guangzhou 多用 ~20 秒。 下一步可以引入 Cloudflare DNS-01 验证或本地 DNS 网关 ，把 ACME 步骤稳定到 ~5 秒。"
+    },
+    {
+      "id": "u_17b66b6adadfcac9",
+      "kind": "text",
+      "source": "，把 ACME 步骤稳定到 ~5 秒。",
+      "occurrence": 0,
+      "target": ", stabilizing the ACME step at approximately 5 seconds.",
+      "context": "li @ line 440 · surrounding text: 中国大陆节点 + Let's Encrypt 通信 — Great Firewall 让 ACME 验证有时延 / 偶发失败 — 本次实测看到 Guangzhou 多用 ~20 秒。 下一步可以引入 Cloudflare DNS-01 验证或本地 DNS 网关 ，把 ACME 步骤稳定到 ~5 秒。"
+    },
+    {
+      "id": "u_a86b056c5575149f",
+      "kind": "text",
+      "source": "跨洲 + 0.4 GB 极小内存 + 冷启动",
+      "occurrence": 0,
+      "target": "Cross-continent + 0.4 GB extremely small memory + cold start",
+      "context": "strong @ line 441 · surrounding text: 跨洲 + 0.4 GB 极小内存 + 冷启动 — 这次 Paris 通过了，但如果叠加冷构建（要拉 10 MB）+ 高峰时段网络抖动，可能触发超时。可以加观察。"
+    },
+    {
+      "id": "u_efb726904b29bdd8",
+      "kind": "text",
+      "source": "— 这次 Paris 通过了，但如果叠加冷构建（要拉 10 MB）+ 高峰时段网络抖动，可能触发超时。可以加观察。",
+      "occurrence": 0,
+      "target": "— This time Paris passed, but if combined with a cold build (pulling ~10 MB) and network jitter during peak hours, it might trigger timeout. Observation can be added.",
+      "context": "li @ line 441 · surrounding text: 跨洲 + 0.4 GB 极小内存 + 冷启动 — 这次 Paris 通过了，但如果叠加冷构建（要拉 10 MB）+ 高峰时段网络抖动，可能触发超时。可以加观察。"
+    },
+    {
+      "id": "u_996054e024b1ba91",
+      "kind": "text",
+      "source": "后台↔节点 SSH 链路被 ISP 抖动 / 短时间封锁",
+      "occurrence": 0,
+      "target": "ISP jitter or a short-term block affects the Back Office (BO) ↔ VPN node SSH link",
+      "context": "strong @ line 442 · surrounding text: 后台↔节点 SSH 链路被 ISP 抖动 / 短时间封锁 — 本次未观测到。"
+    },
+    {
+      "id": "u_b3fb4f68e74073c0",
+      "kind": "text",
+      "source": "— 本次未观测到。",
+      "occurrence": 0,
+      "target": "— No observed.",
+      "context": "li @ line 442 · surrounding text: 后台↔节点 SSH 链路被 ISP 抖动 / 短时间封锁 — 本次未观测到。"
+    },
+    {
+      "id": "u_0f06fd5ae8279b45",
+      "kind": "text",
+      "source": "七、节点回收后的健康验证",
+      "occurrence": 0,
+      "target": "7. Health Verification After VPN Node Reclamation",
+      "context": "h2 @ line 446"
+    },
+    {
+      "id": "u_90e4ec2a230d78d5",
+      "kind": "text",
+      "source": "主机",
+      "occurrence": 2,
+      "target": "Host",
+      "context": "th @ line 449 · surrounding text: 主机 node_hosts.last_upgrade_stage agent_version last_heartbeat 距当前 singbox-agent sing-box"
+    },
+    {
+      "id": "u_ae18e6786bd6c199",
+      "kind": "text",
+      "source": "last_heartbeat 距当前",
+      "occurrence": 0,
+      "target": "last_heartbeat since current",
+      "context": "th @ line 449 · surrounding text: 主机 node_hosts.last_upgrade_stage agent_version last_heartbeat 距当前 singbox-agent sing-box"
+    },
+    {
+      "id": "u_63b48624e5c1a6ab",
+      "kind": "text",
+      "source": "7 / 7 全部回到「上线前一致」的健康状态，没有任何「节点回收完但服务半瘫」的中间态。回收前后没有用户感知的中断（这 7 台属 测试环境节点池）。",
+      "occurrence": 0,
+      "target": "All seven returned to the 'pre-deploy consistent' health state, with no intermediate state of 'VPN node recycle complete but service half-down'. There were no user-perceived interruptions during the recycling process (these seven are test environment VPN nodes).",
+      "context": "p @ line 458"
+    },
+    {
+      "id": "u_2625217b1e87b0cc",
+      "kind": "text",
+      "source": "八、统计意义 — 为什么 7 台样本是有意义的",
+      "occurrence": 0,
+      "target": "Eight. Statistical Significance — Why Seven Samples Were Meaningful",
+      "context": "h2 @ line 461"
+    },
+    {
+      "id": "u_9ba1c7d2a41c5382",
+      "kind": "text",
+      "source": "维度",
+      "occurrence": 0,
+      "target": "Dimension",
+      "context": "th @ line 464 · surrounding text: 维度 覆盖范围 用途"
+    },
+    {
+      "id": "u_b61cf93fdcd1acfb",
+      "kind": "text",
+      "source": "覆盖范围",
+      "occurrence": 0,
+      "target": "Coverage",
+      "context": "th @ line 464 · surrounding text: 维度 覆盖范围 用途"
+    },
+    {
+      "id": "u_14c5661505fb3cbc",
+      "kind": "text",
+      "source": "用途",
+      "occurrence": 0,
+      "target": "Purpose",
+      "context": "th @ line 464 · surrounding text: 维度 覆盖范围 用途"
+    },
+    {
+      "id": "u_c49ff1a1bacbea61",
+      "kind": "text",
+      "source": "地理",
+      "occurrence": 2,
+      "target": "Geographic",
+      "context": "strong @ line 465 · surrounding text: 地理 6 国（CN, HK, VN, PH, DK, CA, FR）× 3 大洲（亚 / 欧 / 北美） 验证 后台自动化对不同 ISP / 国际链路的通用性"
+    },
+    {
+      "id": "u_b674a2bacdb04bff",
+      "kind": "text",
+      "source": "6 国（CN, HK, VN, PH, DK, CA, FR）× 3 大洲（亚 / 欧 / 北美）",
+      "occurrence": 0,
+      "target": "6 countries (CN, HK, VN, PH, DK, CA, FR) × 3 continents (Asia / Europe / North America)",
+      "context": "td @ line 465 · surrounding text: 地理 6 国（CN, HK, VN, PH, DK, CA, FR）× 3 大洲（亚 / 欧 / 北美） 验证 后台自动化对不同 ISP / 国际链路的通用性"
+    },
+    {
+      "id": "u_0229ee5cf27e82c2",
+      "kind": "text",
+      "source": "验证 后台自动化对不同 ISP / 国际链路的通用性",
+      "occurrence": 0,
+      "target": "Validate that Back Office (BO) automation works across different ISPs and international routes",
+      "context": "td @ line 465 · surrounding text: 地理 6 国（CN, HK, VN, PH, DK, CA, FR）× 3 大洲（亚 / 欧 / 北美） 验证 后台自动化对不同 ISP / 国际链路的通用性"
+    },
+    {
+      "id": "u_f21db36817ff157a",
+      "kind": "text",
+      "source": "RTT 跨度",
+      "occurrence": 0,
+      "target": "RTT Variance",
+      "context": "strong @ line 466 · surrounding text: RTT 跨度 31 ms ~ 175 ms（5 倍） 验证 SSH 控制流不是瓶颈（数据已证明）"
+    },
+    {
+      "id": "u_043773591b54d0b2",
+      "kind": "text",
+      "source": "31 ms ~ 175 ms（5 倍）",
+      "occurrence": 0,
+      "target": "31 ms ~ 175 ms (5x)",
+      "context": "td @ line 466 · surrounding text: RTT 跨度 31 ms ~ 175 ms（5 倍） 验证 SSH 控制流不是瓶颈（数据已证明）"
+    },
+    {
+      "id": "u_9916b4e1566f2ef1",
+      "kind": "text",
+      "source": "验证 SSH 控制流不是瓶颈（数据已证明）",
+      "occurrence": 0,
+      "target": "Validation of SSH Control Flow Not Being a Bottleneck (Data Proven)",
+      "context": "td @ line 466 · surrounding text: RTT 跨度 31 ms ~ 175 ms（5 倍） 验证 SSH 控制流不是瓶颈（数据已证明）"
+    },
+    {
+      "id": "u_8f3ab6a13d59af70",
+      "kind": "text",
+      "source": "CPU 规格",
+      "occurrence": 0,
+      "target": "CPU Specifications",
+      "context": "strong @ line 467 · surrounding text: CPU 规格 1 vCPU（5 台）+ 2 vCPU（2 台），跨 4 种 CPU 微架构（Intel Xeon E5 / Xeon Platinum / Cascadelake；AMD EPYC Genoa / EPYC 7C13） 验证 wipe + install 在不同 CPU 上的相对耗时"
+    },
+    {
+      "id": "u_1eb6ad8fa896a0ae",
+      "kind": "text",
+      "source": "1 vCPU（5 台）+ 2 vCPU（2 台），跨 4 种 CPU 微架构（Intel Xeon E5 / Xeon Platinum / Cascadelake；AMD EPYC Genoa / EPYC 7C13）",
+      "occurrence": 0,
+      "target": "1 vCPU (5 units) + 2 vCPU (2 units), across 4 CPU microarchitectures (Intel Xeon E5 / Xeon Platinum / Cascade Lake; AMD EPYC Genoa / EPYC 7C13)",
+      "context": "td @ line 467 · surrounding text: CPU 规格 1 vCPU（5 台）+ 2 vCPU（2 台），跨 4 种 CPU 微架构（Intel Xeon E5 / Xeon Platinum / Cascadelake；AMD EPYC Genoa / EPYC 7C13） 验证 wipe + install 在不同 CPU 上的相对耗时"
+    },
+    {
+      "id": "u_e010c91658bab309",
+      "kind": "text",
+      "source": "验证 wipe + install 在不同 CPU 上的相对耗时",
+      "occurrence": 0,
+      "target": "Verification of wipe and install times on different CPUs",
+      "context": "td @ line 467 · surrounding text: CPU 规格 1 vCPU（5 台）+ 2 vCPU（2 台），跨 4 种 CPU 微架构（Intel Xeon E5 / Xeon Platinum / Cascadelake；AMD EPYC Genoa / EPYC 7C13） 验证 wipe + install 在不同 CPU 上的相对耗时"
+    },
+    {
+      "id": "u_1745931bd236120f",
+      "kind": "text",
+      "source": "内存",
+      "occurrence": 0,
+      "target": "Memory",
+      "context": "strong @ line 468 · surrounding text: 内存 0.4 GB ~ 1.8 GB（4.5 倍） 验证流程在极小内存（0.4 GB）也能跑通 — 这是 节点池中的下限"
+    },
+    {
+      "id": "u_cb7e8d11b9312bfd",
+      "kind": "text",
+      "source": "0.4 GB ~ 1.8 GB（4.5 倍）",
+      "occurrence": 0,
+      "target": "0.4 GB ~ 1.8 GB (4.5x)",
+      "context": "td @ line 468 · surrounding text: 内存 0.4 GB ~ 1.8 GB（4.5 倍） 验证流程在极小内存（0.4 GB）也能跑通 — 这是 节点池中的下限"
+    },
+    {
+      "id": "u_76efef0fd687ab50",
+      "kind": "text",
+      "source": "验证流程在极小内存（0.4 GB）也能跑通 — 这是 节点池中的下限",
+      "occurrence": 0,
+      "target": "Verification of the workflow running on extremely low memory (0.4 GB) also works — this is the lower limit for the VPN node pool",
+      "context": "td @ line 468 · surrounding text: 内存 0.4 GB ~ 1.8 GB（4.5 倍） 验证流程在极小内存（0.4 GB）也能跑通 — 这是 节点池中的下限"
+    },
+    {
+      "id": "u_b40b0be7fe48d486",
+      "kind": "text",
+      "source": "磁盘",
+      "occurrence": 1,
+      "target": "Disk",
+      "context": "strong @ line 469 · surrounding text: 磁盘 20 GB ~ 50 GB 包含小磁盘的常见档"
+    },
+    {
+      "id": "u_38d49944b6b1f351",
+      "kind": "text",
+      "source": "包含小磁盘的常见档",
+      "occurrence": 0,
+      "target": "Common range with small disks",
+      "context": "td @ line 469 · surrounding text: 磁盘 20 GB ~ 50 GB 包含小磁盘的常见档"
+    },
+    {
+      "id": "u_f2beeecffead0fe2",
+      "kind": "text",
+      "source": "发行版",
+      "occurrence": 0,
+      "target": "Distribution",
+      "context": "strong @ line 470 · surrounding text: 发行版 CentOS 7（6 台）+ AlmaLinux 8（1 台） 验证后台引导脚本对不同发行版的通用性"
+    },
+    {
+      "id": "u_c60287746752ee0f",
+      "kind": "text",
+      "source": "CentOS 7（6 台）+ AlmaLinux 8（1 台）",
+      "occurrence": 0,
+      "target": "CentOS 7 (6 units) + AlmaLinux 8 (1 unit)",
+      "context": "td @ line 470 · surrounding text: 发行版 CentOS 7（6 台）+ AlmaLinux 8（1 台） 验证后台引导脚本对不同发行版的通用性"
+    },
+    {
+      "id": "u_0d27c8d0c4f0ee86",
+      "kind": "text",
+      "source": "验证后台引导脚本对不同发行版的通用性",
+      "occurrence": 0,
+      "target": "Validate that the Back Office (BO) bootstrap script works across different Linux distributions",
+      "context": "td @ line 470 · surrounding text: 发行版 CentOS 7（6 台）+ AlmaLinux 8（1 台） 验证后台引导脚本对不同发行版的通用性"
+    },
+    {
+      "id": "u_a1cf0d09a7a3a9a6",
+      "kind": "text",
+      "source": "内核",
+      "occurrence": 0,
+      "target": "Kernel",
+      "context": "strong @ line 471 · surrounding text: 内核 3.10.0-1160（5 台标准 EL7）+ 4.10.4 elrepo（172.93.32.133）+ 4.18 EL8（45.80.215.175） 覆盖了一个非标准 elrepo 内核，证明对内核版本不敏感"
+    },
+    {
+      "id": "u_a8d3fb7202bdefb3",
+      "kind": "text",
+      "source": "3.10.0-1160（5 台标准 EL7）+ 4.10.4 elrepo（172.93.32.133）+ 4.18 EL8（45.80.215.175）",
+      "occurrence": 0,
+      "target": "3.10.0-1160 (5 units standard EL7) + 4.10.4 elrepo (172.93.32.133) + 4.18 EL8 (45.80.215.175)",
+      "context": "td @ line 471 · surrounding text: 内核 3.10.0-1160（5 台标准 EL7）+ 4.10.4 elrepo（172.93.32.133）+ 4.18 EL8（45.80.215.175） 覆盖了一个非标准 elrepo 内核，证明对内核版本不敏感"
+    },
+    {
+      "id": "u_ea0921800fecb8fd",
+      "kind": "text",
+      "source": "覆盖了一个非标准 elrepo 内核，证明对内核版本不敏感",
+      "occurrence": 0,
+      "target": "Covers a non-standard elrepo kernel, proving it is not sensitive to kernel versions",
+      "context": "td @ line 471 · surrounding text: 内核 3.10.0-1160（5 台标准 EL7）+ 4.10.4 elrepo（172.93.32.133）+ 4.18 EL8（45.80.215.175） 覆盖了一个非标准 elrepo 内核，证明对内核版本不敏感"
+    },
+    {
+      "id": "u_3da4cac162d04bbc",
+      "kind": "text",
+      "source": "SSH 用户",
+      "occurrence": 0,
+      "target": "SSH Users",
+      "context": "strong @ line 472 · surrounding text: SSH 用户 vpnnode（5 台）+ root（2 台） 后台凭据回退路径（设置中候选）也被用到"
+    },
+    {
+      "id": "u_7f6aca7f991d0fe3",
+      "kind": "text",
+      "source": "vpnnode（5 台）+ root（2 台）",
+      "occurrence": 0,
+      "target": "vpnnode (5 units) + root (2 units)",
+      "context": "td @ line 472 · surrounding text: SSH 用户 vpnnode（5 台）+ root（2 台） 后台凭据回退路径（设置中候选）也被用到"
+    },
+    {
+      "id": "u_eb5f5eb1c8eea82e",
+      "kind": "text",
+      "source": "后台凭据回退路径（设置中候选）也被用到",
+      "occurrence": 0,
+      "target": "The Back Office (BO) credential fallback path, configured as a candidate in settings, was also exercised",
+      "context": "td @ line 472 · surrounding text: SSH 用户 vpnnode（5 台）+ root（2 台） 后台凭据回退路径（设置中候选）也被用到"
+    },
+    {
+      "id": "u_43a6140691e50952",
+      "kind": "text",
+      "source": "节点状态",
+      "occurrence": 0,
+      "target": "VPN node status",
+      "context": "strong @ line 473 · surrounding text: 节点状态 2 ~ 31 天 uptime；含一台积累 31 天本地状态的「长老」 验证 wipe 能正确清掉历史本地状态"
+    },
+    {
+      "id": "u_f7f620b4efd6f6e7",
+      "kind": "text",
+      "source": "2 ~ 31 天 uptime；含一台积累 31 天本地状态的「长老」",
+      "occurrence": 0,
+      "target": "2 ~ 31 days uptime; includes one local state accumulation of 31 days called \"Grandfather\" that wipes out historical local states correctly.",
+      "context": "td @ line 473 · surrounding text: 节点状态 2 ~ 31 天 uptime；含一台积累 31 天本地状态的「长老」 验证 wipe 能正确清掉历史本地状态"
+    },
+    {
+      "id": "u_e7103f0ba0f2ceb6",
+      "kind": "text",
+      "source": "验证 wipe 能正确清掉历史本地状态",
+      "occurrence": 0,
+      "target": "Wipes out historical local states correctly",
+      "context": "td @ line 473 · surrounding text: 节点状态 2 ~ 31 天 uptime；含一台积累 31 天本地状态的「长老」 验证 wipe 能正确清掉历史本地状态"
+    },
+    {
+      "id": "u_0658c8f8b185e217",
+      "kind": "text",
+      "source": "这不是「3 台 测试环境节点的样本」— 是 测试环境节点池的",
+      "occurrence": 0,
+      "target": "This is not a sample of 3 test environment VPN nodes — it's the full set of test environment VPN node pool, covering the real diversity of the VPN node pool.",
+      "context": "p @ line 475 · surrounding text: 这不是「3 台 测试环境节点的样本」— 是 测试环境节点池的 全量 ，覆盖 节点池的真实多样性。0 / 7 失败 + 6 / 7 在 24 秒内完成，是对 后台自动化系统能力的有效证明。"
+    },
+    {
+      "id": "u_437af7602a3010ed",
+      "kind": "text",
+      "source": "全量",
+      "occurrence": 1,
+      "target": "Full Set",
+      "context": "strong @ line 475 · surrounding text: 这不是「3 台 测试环境节点的样本」— 是 测试环境节点池的 全量 ，覆盖 节点池的真实多样性。0 / 7 失败 + 6 / 7 在 24 秒内完成，是对 后台自动化系统能力的有效证明。"
+    },
+    {
+      "id": "u_118f10e687ac4f79",
+      "kind": "text",
+      "source": "，覆盖 节点池的真实多样性。0 / 7 失败 + 6 / 7 在 24 秒内完成，是对 后台自动化系统能力的有效证明。",
+      "occurrence": 0,
+      "target": ", covering the actual diversity of the VPN node pool. With 0 / 7 failures and 6 / 7 completing within 24 seconds, the test provides strong evidence of the Back Office (BO) automation system's capability.",
+      "context": "p @ line 475 · surrounding text: 这不是「3 台 测试环境节点的样本」— 是 测试环境节点池的 全量 ，覆盖 节点池的真实多样性。0 / 7 失败 + 6 / 7 在 24 秒内完成，是对 后台自动化系统能力的有效证明。"
+    },
+    {
+      "id": "u_7ca51cb185461c05",
+      "kind": "text",
+      "source": "九、本次实测做了什么 / 没做什么",
+      "occurrence": 0,
+      "target": "9. What was done and what wasn't done during this test",
+      "context": "h2 @ line 478"
+    },
+    {
+      "id": "u_0efdc8aa56c4416b",
+      "kind": "text",
+      "source": "本次有做",
+      "occurrence": 0,
+      "target": "What was done",
+      "context": "th @ line 481 · surrounding text: 本次有做 本次没做"
+    },
+    {
+      "id": "u_e991371f382058bb",
+      "kind": "text",
+      "source": "本次没做",
+      "occurrence": 0,
+      "target": "What wasn't done",
+      "context": "th @ line 481 · surrounding text: 本次有做 本次没做"
+    },
+    {
+      "id": "u_f418cf87ad420c00",
+      "kind": "text",
+      "source": "测试环境全量 7 台",
+      "occurrence": 0,
+      "target": "All 7 VPN nodes in the test environment",
+      "context": "strong @ line 485 · surrounding text: 测试环境全量 7 台 跨 3 大洲并行 全擦重装"
+    },
+    {
+      "id": "u_31aeb1d06f5a871c",
+      "kind": "text",
+      "source": "跨 3 大洲并行 全擦重装",
+      "occurrence": 0,
+      "target": "Fully reinstalled across 3 continents",
+      "context": "li @ line 485 · surrounding text: 测试环境全量 7 台 跨 3 大洲并行 全擦重装"
+    },
+    {
+      "id": "u_4cb84e90d805f22c",
+      "kind": "text",
+      "source": "构建产物缓存命中（无重新编译耗时）",
+      "occurrence": 0,
+      "target": "Cache hit for build artifacts (no rebuild time)",
+      "context": "li @ line 486"
+    },
+    {
+      "id": "u_fc76d5205e1bec58",
+      "kind": "text",
+      "source": "重新签发 TLS 证书（部分节点）",
+      "occurrence": 0,
+      "target": "Renewal of TLS certificates (for some VPN nodes)",
+      "context": "li @ line 487"
+    },
+    {
+      "id": "u_a8f68ce57ac22d0a",
+      "kind": "text",
+      "source": "singbox-agent 自注册回后台（",
+      "occurrence": 0,
+      "target": "singbox-agent self-registers with the Back Office (BO) (",
+      "context": "li @ line 488 · surrounding text: singbox-agent 自注册回后台（ /agent/register-or-heal ）"
+    },
+    {
+      "id": "u_31096d0f54893b7a",
+      "kind": "text",
+      "source": "SSH 实地验证 + DB 实地验证",
+      "occurrence": 0,
+      "target": "SSH on-site verification + DB on-site verification",
+      "context": "li @ line 489"
+    },
+    {
+      "id": "u_cacd2a0def22026c",
+      "kind": "text",
+      "source": "覆盖 0.4 GB 极小内存边界（成功）",
+      "occurrence": 0,
+      "target": "Covering a 0.4 GB memory boundary (successful)",
+      "context": "li @ line 490"
+    },
+    {
+      "id": "u_a0241daabe004331",
+      "kind": "text",
+      "source": "不涉及生产用户流量（测试环境节点池）",
+      "occurrence": 0,
+      "target": "No production user traffic (testing environment VPN node pool)",
+      "context": "li @ line 495"
+    },
+    {
+      "id": "u_31e02a6069a78c4e",
+      "kind": "text",
+      "source": "不涉及 Settings 中的版本号变更（同版本 v1.1.1 → v1.1.1）",
+      "occurrence": 0,
+      "target": "No version changes in Settings (v1.1.1 → v1.1.1)",
+      "context": "li @ line 496"
+    },
+    {
+      "id": "u_b31c2e4df7e2cfd2",
+      "kind": "text",
+      "source": "不测大批量（> 12 台）— 后台理论上限 100 / 单批，并发上限可调",
+      "occurrence": 0,
+      "target": "Not testing large batches (> 12 units) - Back Office theoretical limit is 100 per batch, and concurrency can be adjusted",
+      "context": "li @ line 497"
+    },
+    {
+      "id": "u_4352ac3aa73441c2",
+      "kind": "text",
+      "source": "未做断网 / SSH 超时容灾路径的破坏测试（在执行报告里独立验证）",
+      "occurrence": 0,
+      "target": "No disaster recovery path for network disconnection / SSH timeout tests (independent validation in execution report)",
+      "context": "li @ line 498"
+    },
+    {
+      "id": "u_86c55bc853a1d9d7",
+      "kind": "text",
+      "source": "未测「冷构建」场景（首次新版本推送），下次可以加",
+      "occurrence": 0,
+      "target": "Not testing the 'cold build' scenario (first new version push), can be added next time",
+      "context": "li @ line 499"
+    },
+    {
+      "id": "u_eb14ed87542542d5",
+      "kind": "text",
+      "source": "十、本次实测发现的优化机会（第4阶段候选）",
+      "occurrence": 0,
+      "target": "Ten. Optimization opportunities discovered in this test (Sprint 4 candidates)",
+      "context": "h2 @ line 506"
+    },
+    {
+      "id": "u_1d2f24c9d420204b",
+      "kind": "text",
+      "source": "中国大陆节点的 ACME 走 Let's Encrypt 经过 GFW 是真实瓶颈",
+      "occurrence": 0,
+      "target": "The ACME process through Let's Encrypt over GFW is a real bottleneck for the China VPN node",
+      "context": "strong @ line 509 · surrounding text: 中国大陆节点的 ACME 走 Let's Encrypt 经过 GFW 是真实瓶颈 。下一步：研究 ACME DNS-01 验证（用 Cloudflare DNS API 完成所有权证明，不走 HTTP）— 预计能把中国节点的 ACME 步骤从 ~20 秒压到 ~5 秒，与其他地区拉齐。"
+    },
+    {
+      "id": "u_a2863f3569aeb521",
+      "kind": "text",
+      "source": "。下一步：研究 ACME DNS-01 验证（用 Cloudflare DNS API 完成所有权证明，不走 HTTP）— 预计能把中国节点的 ACME 步骤从 ~20 秒压到 ~5 秒，与其他地区拉齐。",
+      "occurrence": 0,
+      "target": "Next step: Research ACME DNS-01 verification (using Cloudflare DNS API to complete ownership proof, not HTTP) - Expected to reduce the ACME process from ~20 seconds to ~5 seconds for China VPN nodes and align with other regions",
+      "context": "li @ line 509 · surrounding text: 中国大陆节点的 ACME 走 Let's Encrypt 经过 GFW 是真实瓶颈 。下一步：研究 ACME DNS-01 验证（用 Cloudflare DNS API 完成所有权证明，不走 HTTP）— 预计能把中国节点的 ACME 步骤从 ~20 秒压到 ~5 秒，与其他地区拉齐。"
+    },
+    {
+      "id": "u_d66ae9c9755ffa9f",
+      "kind": "text",
+      "source": "RTT 175 ms 的加拿大节点跑得最快",
+      "occurrence": 0,
+      "target": "The fastest Canada VPN node has a RTT of 175 ms",
+      "context": "strong @ line 510 · surrounding text: RTT 175 ms 的加拿大节点跑得最快 说明后台自动化的「跨洋触发」是健康的；这意味着 节点池可以更激进地在 节点池列表里混入 NA / 欧洲节点，不会拖慢运维节奏。"
+    },
+    {
+      "id": "u_374da43d049c4821",
+      "kind": "text",
+      "source": "说明后台自动化的「跨洋触发」是健康的；这意味着 节点池可以更激进地在 节点池列表里混入 NA / 欧洲节点，不会拖慢运维节奏。",
+      "occurrence": 0,
+      "target": "This indicates that the automated 'cross-ocean trigger' in Back Office is healthy; This means that the VPN node pool can be more aggressively mixed with NA/EU VPN nodes without slowing down the maintenance pace.",
+      "context": "li @ line 510 · surrounding text: RTT 175 ms 的加拿大节点跑得最快 说明后台自动化的「跨洋触发」是健康的；这意味着 节点池可以更激进地在 节点池列表里混入 NA / 欧洲节点，不会拖慢运维节奏。"
+    },
+    {
+      "id": "u_462c1561f938b69c",
+      "kind": "text",
+      "source": "0.4 GB 内存节点能跑通 全擦流程",
+      "occurrence": 0,
+      "target": "A 0.4 GB memory VPN node can run through full wipe process",
+      "context": "strong @ line 511 · surrounding text: 0.4 GB 内存节点能跑通 全擦流程 ，说明后台自动化的内存压力不大；节点池可以接受更小型号的供应商套餐降低成本。"
+    },
+    {
+      "id": "u_61b5f04db7e7009e",
+      "kind": "text",
+      "source": "，说明后台自动化的内存压力不大；节点池可以接受更小型号的供应商套餐降低成本。",
+      "occurrence": 0,
+      "target": "This indicates that the memory pressure in Back Office is not significant; The VPN node pool can accept smaller package sizes from suppliers to reduce costs.",
+      "context": "li @ line 511 · surrounding text: 0.4 GB 内存节点能跑通 全擦流程 ，说明后台自动化的内存压力不大；节点池可以接受更小型号的供应商套餐降低成本。"
+    },
+    {
+      "id": "u_d130dad437e5a7d5",
+      "kind": "text",
+      "source": "缓存命中是关键",
+      "occurrence": 0,
+      "target": "Cache hit is key",
+      "context": "strong @ line 512 · surrounding text: 缓存命中是关键 ：本次 build phase 都是 cached（同 SHA 已构建过），所以「7 台 44 秒」是稳态情况下的耗时。冷构建场景（首次新版本）需要单独测一次给出对比基线。"
+    },
+    {
+      "id": "u_edfc073d2ad522ae",
+      "kind": "text",
+      "source": "：本次 build phase 都是 cached（同 SHA 已构建过），所以「7 台 44 秒」是稳态情况下的耗时。冷构建场景（首次新版本）需要单独测一次给出对比基线。",
+      "occurrence": 0,
+      "target": "This indicates that the build phase was cached (same SHA has been built before), so '7 units 44 seconds' represents steady-state time. A cold build scenario (first new version) needs to be tested separately to provide a baseline.",
+      "context": "li @ line 512 · surrounding text: 缓存命中是关键 ：本次 build phase 都是 cached（同 SHA 已构建过），所以「7 台 44 秒」是稳态情况下的耗时。冷构建场景（首次新版本）需要单独测一次给出对比基线。"
+    },
+    {
+      "id": "u_35b18039df2b30c0",
+      "kind": "text",
+      "source": "十一、可复现性 — 怎么再跑一次",
+      "occurrence": 0,
+      "target": "Eleven. Reproducibility - How to run it again",
+      "context": "h2 @ line 516"
+    },
+    {
+      "id": "u_08eca2aef86c4417",
+      "kind": "text",
+      "source": "登录后台管理员账号 → 拿 JWT",
+      "occurrence": 0,
+      "target": "Log in as a Back Office admin → Get JWT",
+      "context": "li @ line 519"
+    },
+    {
+      "id": "u_4edff08ab57deb07",
+      "kind": "text",
+      "source": "调用",
+      "occurrence": 0,
+      "target": "Calls",
+      "context": "li @ line 520 · surrounding text: 调用 POST /api/v1/node-host/bulk-upgrade （请求体如下），同等于 后台页面上「全擦重装」勾选 + 选定主机点确认"
+    },
+    {
+      "id": "u_73e6e1bb523c8eb3",
+      "kind": "text",
+      "source": "（请求体如下），同等于 后台页面上「全擦重装」勾选 + 选定主机点确认",
+      "occurrence": 0,
+      "target": "(request body below), equivalent to selecting ‘Full Wipe and Reinstall’ on the Back Office (BO) page, choosing the host, and confirming",
+      "context": "li @ line 520 · surrounding text: 调用 POST /api/v1/node-host/bulk-upgrade （请求体如下），同等于 后台页面上「全擦重装」勾选 + 选定主机点确认"
+    },
+    {
+      "id": "u_276792578a4a8ddc",
+      "kind": "text",
+      "source": "立即拿到",
+      "occurrence": 0,
+      "target": "Immediately receives",
+      "context": "li @ line 529 · surrounding text: 立即拿到 job_id ，用 GET /api/v1/node-host/upgrade-job/<job_id> 轮询每台进度（ connecting → connected → transferring → installing-singbox → issuing-cert → installed → started → done ）"
+    },
+    {
+      "id": "u_88d1fba9e5b66941",
+      "kind": "text",
+      "source": "，用",
+      "occurrence": 0,
+      "target": "and poll",
+      "context": "li @ line 529 · surrounding text: 立即拿到 job_id ，用 GET /api/v1/node-host/upgrade-job/<job_id> 轮询每台进度（ connecting → connected → transferring → installing-singbox → issuing-cert → installed → started → done ）"
+    },
+    {
+      "id": "u_8345df3cc26b207e",
+      "kind": "text",
+      "source": "轮询每台进度（",
+      "occurrence": 0,
+      "target": "Poll each VPN node's progress (",
+      "context": "li @ line 529 · surrounding text: 立即拿到 job_id ，用 GET /api/v1/node-host/upgrade-job/<job_id> 轮询每台进度（ connecting → connected → transferring → installing-singbox → issuing-cert → installed → started → done ）"
+    },
+    {
+      "id": "u_19f39619a8ad4f68",
+      "kind": "text",
+      "source": "事后核对 DB",
+      "occurrence": 0,
+      "target": "Verify DB post-upgrade",
+      "context": "li @ line 530 · surrounding text: 事后核对 DB node_hosts.last_heartbeat / agent_version / last_upgrade_stage + SSH systemctl is-active singbox-agent sing-box"
+    },
+    {
+      "id": "u_91be0ad56c38e5fc",
+      "kind": "text",
+      "source": "这是",
+      "occurrence": 0,
+      "target": "This is",
+      "context": "p @ line 532 · surrounding text: 这是 真正在管理后台上每天会调用的同一条路径 ，不是为汇报临时做的特殊脚本。后台网页上点「全擦重装」按钮 + 选定主机后点确认，背后就是这同一个 API。"
+    },
+    {
+      "id": "u_b7fa83eb5d561316",
+      "kind": "text",
+      "source": "真正在管理后台上每天会调用的同一条路径",
+      "occurrence": 0,
+      "target": "the same path used daily in the Back Office (BO)",
+      "context": "strong @ line 532 · surrounding text: 这是 真正在管理后台上每天会调用的同一条路径 ，不是为汇报临时做的特殊脚本。后台网页上点「全擦重装」按钮 + 选定主机后点确认，背后就是这同一个 API。"
+    },
+    {
+      "id": "u_303d3c9b7ab4f13f",
+      "kind": "text",
+      "source": "，不是为汇报临时做的特殊脚本。后台网页上点「全擦重装」按钮 + 选定主机后点确认，背后就是这同一个 API。",
+      "occurrence": 0,
+      "target": ", not a special script created for this report. The same API is called when an operator selects ‘Full Wipe and Reinstall’ in the Back Office (BO), chooses the host, and confirms.",
+      "context": "p @ line 532 · surrounding text: 这是 真正在管理后台上每天会调用的同一条路径 ，不是为汇报临时做的特殊脚本。后台网页上点「全擦重装」按钮 + 选定主机后点确认，背后就是这同一个 API。"
+    },
+    {
+      "id": "u_51a31ccefc4e9166",
+      "kind": "text",
+      "source": "十二、对运营的意义",
+      "occurrence": 0,
+      "target": "Twelve. Business Impact",
+      "context": "h2 @ line 535"
+    },
+    {
+      "id": "u_51249a2120aee453",
+      "kind": "text",
+      "source": "中国封锁加剧时的换网窗口缩到分钟级",
+      "occurrence": 0,
+      "target": "Window shrinks to minutes during China lockdowns for switch operations",
+      "context": "strong @ line 538 · surrounding text: 中国封锁加剧时的换网窗口缩到分钟级 — 一次后台操作 5 分钟内可推完整批，跨洲并行不影响速度。"
+    },
+    {
+      "id": "u_1ae1ce3558eb7bd8",
+      "kind": "text",
+      "source": "— 一次后台操作 5 分钟内可推完整批，跨洲并行不影响速度。",
+      "occurrence": 0,
+      "target": "— One Back Office (BO) operation can complete the full batch within 5 minutes; cross-continent parallelism does not reduce speed.",
+      "context": "li @ line 538 · surrounding text: 中国封锁加剧时的换网窗口缩到分钟级 — 一次后台操作 5 分钟内可推完整批，跨洲并行不影响速度。"
+    },
+    {
+      "id": "u_45692585dbf68e8c",
+      "kind": "text",
+      "source": "被封节点能复用而不是弃用",
+      "occurrence": 0,
+      "target": "Reused VPN nodes instead of being discarded when blocked",
+      "context": "strong @ line 539 · surrounding text: 被封节点能复用而不是弃用 — 一台被封 VM 原本只能注销，现在 全擦一键重生即可重新接入流量。供应商成本相应下降。"
+    },
+    {
+      "id": "u_137bd319dd3ebe57",
+      "kind": "text",
+      "source": "— 一台被封 VM 原本只能注销，现在 全擦一键重生即可重新接入流量。供应商成本相应下降。",
+      "occurrence": 0,
+      "target": "Reused nodes instead of being discarded when blocked",
+      "context": "li @ line 539 · surrounding text: 被封节点能复用而不是弃用 — 一台被封 VM 原本只能注销，现在 全擦一键重生即可重新接入流量。供应商成本相应下降。"
+    },
+    {
+      "id": "u_1cd4b093f704025a",
+      "kind": "text",
+      "source": "操作员失误风险归零",
+      "occurrence": 0,
+      "target": "Operator error risk is zeroed out",
+      "context": "strong @ line 540 · surrounding text: 操作员失误风险归零 — 唯一动作是「填 IP / 选主机 / 点确认」，没有可以输错的地方。"
+    },
+    {
+      "id": "u_317db63a4c44e46e",
+      "kind": "text",
+      "source": "— 唯一动作是「填 IP / 选主机 / 点确认」，没有可以输错的地方。",
+      "occurrence": 0,
+      "target": "— The only actions are entering the IP address, selecting the host, and confirming; there is no opportunity to enter an incorrect command.",
+      "context": "li @ line 540 · surrounding text: 操作员失误风险归零 — 唯一动作是「填 IP / 选主机 / 点确认」，没有可以输错的地方。"
+    },
+    {
+      "id": "u_35bf7b8e1b9fb949",
+      "kind": "text",
+      "source": "夜间专用维护窗口可以取消",
+      "occurrence": 0,
+      "target": "Sprint maintenance windows can be canceled.",
+      "context": "strong @ line 541 · surrounding text: 夜间专用维护窗口可以取消 — 既然单台 15 ~ 30 秒、跨洲并行 7 台 44 秒，没有理由再排夜班。常规节点维护可以放在白天工作时段顺手做。"
+    },
+    {
+      "id": "u_2fcd8a682856d66c",
+      "kind": "text",
+      "source": "— 既然单台 15 ~ 30 秒、跨洲并行 7 台 44 秒，没有理由再排夜班。常规节点维护可以放在白天工作时段顺手做。",
+      "occurrence": 0,
+      "target": "Since single-unit operations take 15-30 seconds and cross-continent parallel runs of 7 units take 44 seconds, there's no reason to schedule night shifts. Routine VPN node maintenance can be done during regular working hours.",
+      "context": "li @ line 541 · surrounding text: 夜间专用维护窗口可以取消 — 既然单台 15 ~ 30 秒、跨洲并行 7 台 44 秒，没有理由再排夜班。常规节点维护可以放在白天工作时段顺手做。"
+    },
+    {
+      "id": "u_58a8e500e608145e",
+      "kind": "text",
+      "source": "节点池可以更激进地全球分布",
+      "occurrence": 0,
+      "target": "VPN node pools can be more aggressively globally distributed.",
+      "context": "strong @ line 542 · surrounding text: 节点池可以更激进地全球分布 — 实测证明后台单一新加坡部署能并行驱动跨洲节点，不需要在每个区域架「区域后台」。"
+    },
+    {
+      "id": "u_264f1a80614598e4",
+      "kind": "text",
+      "source": "— 实测证明后台单一新加坡部署能并行驱动跨洲节点，不需要在每个区域架「区域后台」。",
+      "occurrence": 0,
+      "target": "— The benchmark proves that one Back Office (BO) deployment in Singapore can drive cross-continent VPN nodes in parallel; separate regional Back Office (BO) instances are not required.",
+      "context": "li @ line 542 · surrounding text: 节点池可以更激进地全球分布 — 实测证明后台单一新加坡部署能并行驱动跨洲节点，不需要在每个区域架「区域后台」。"
+    },
+    {
+      "id": "u_e9e607fa5441cc47",
+      "kind": "text",
+      "source": "十三、与第3阶段汇报承诺的对照",
+      "occurrence": 0,
+      "target": "Thirteen. Comparison with Sprint 3 reporting commitments.",
+      "context": "h2 @ line 546"
+    },
+    {
+      "id": "u_7188c26f175f2dad",
+      "kind": "text",
+      "source": "第3阶段汇报承诺",
+      "occurrence": 0,
+      "target": "Sprint 3 Reporting Commitments",
+      "context": "th @ line 549 · surrounding text: 第3阶段汇报承诺 本次实测 结论"
+    },
+    {
+      "id": "u_2cc70d97e19fd46b",
+      "kind": "text",
+      "source": "本次实测",
+      "occurrence": 0,
+      "target": "Current Testing",
+      "context": "th @ line 549 · surrounding text: 第3阶段汇报承诺 本次实测 结论"
+    },
+    {
+      "id": "u_69729a22b98505dd",
+      "kind": "text",
+      "source": "结论",
+      "occurrence": 0,
+      "target": "Conclusion",
+      "context": "th @ line 549 · surrounding text: 第3阶段汇报承诺 本次实测 结论"
+    },
+    {
+      "id": "u_a59595108ccd7392",
+      "kind": "text",
+      "source": "「节点开通由 SSH 手工 20 分钟降至后台一键 ~30 秒」",
+      "occurrence": 0,
+      "target": "‘VPN node provisioning fell from 20 minutes of manual SSH work to ~30 seconds with one click in the Back Office (BO)’",
+      "context": "td @ line 551"
+    },
+    {
+      "id": "u_09cc7e7962b65697",
+      "kind": "text",
+      "source": "不含 ACME 节点 15 ~ 24 秒；含 ACME 节点 44 秒",
+      "occurrence": 0,
+      "target": "Without ACME VPN nodes, it takes 15-24 seconds; with ACME VPN nodes, it takes 44 seconds.",
+      "context": "td @ line 552"
+    },
+    {
+      "id": "u_9d3663ac4d821efb",
+      "kind": "text",
+      "source": "✅ 兑现 + 实际更快",
+      "occurrence": 0,
+      "target": "✅ Achieved and faster in reality.",
+      "context": "span.text-pos @ line 553"
+    },
+    {
+      "id": "u_404dd1f5ec035c27",
+      "kind": "text",
+      "source": "「回收被封节点由人工拆装降至一键全擦 ~2 分钟」",
+      "occurrence": 0,
+      "target": "‘Reclaiming a blocked VPN node fell from manual removal and reinstallation to a one-click full wipe in ~2 minutes’",
+      "context": "td @ line 556"
+    },
+    {
+      "id": "u_74350caf57914894",
+      "kind": "text",
+      "source": "整批 7 台并行端到端 44 秒",
+      "occurrence": 0,
+      "target": "Parallel operation of 7 units takes 44 seconds for end-to-end.",
+      "context": "td @ line 557"
+    },
+    {
+      "id": "u_400d5d456694a59e",
+      "kind": "text",
+      "source": "✅ 兑现 + 实际更快",
+      "occurrence": 1,
+      "target": "✅ Achieved and faster in reality.",
+      "context": "span.text-pos @ line 558"
+    },
+    {
+      "id": "u_5537c981bd0f5b15",
+      "kind": "text",
+      "source": "「批量升级并行最多 12 台 + 失败可单独重试」",
+      "occurrence": 0,
+      "target": "Batch upgrades can be parallelized up to 12 units + failures can be individually retried.",
+      "context": "td @ line 561"
+    },
+    {
+      "id": "u_0271666d37ee3064",
+      "kind": "text",
+      "source": "本次并行 7 台验证 0 失败；上限来自前端配置（已支持到 12，理论 API 上限 100）",
+      "occurrence": 0,
+      "target": "The parallel test of 7 VPN nodes recorded 0 failures; the limit comes from the frontend configuration, which supports 12, while the theoretical API limit is 100",
+      "context": "td @ line 562"
+    },
+    {
+      "id": "u_0367b03f9daca9ff",
+      "kind": "text",
+      "source": "✅ 兑现",
+      "occurrence": 0,
+      "target": "✅ Realization",
+      "context": "span.text-pos @ line 563"
+    },
+    {
+      "id": "u_1f7b19288b40702d",
+      "kind": "text",
+      "source": "「节点 systemd 单一供应商 + 一次性引导令牌」",
+      "occurrence": 0,
+      "target": "「VPN node systemd Single Supplier + One-Time Gateway Token」",
+      "context": "td @ line 566"
+    },
+    {
+      "id": "u_084f14ea33c8945e",
+      "kind": "text",
+      "source": "7 台节点 wipe 后全部以 systemd 启动 singbox-agent + sing-box；一次性引导令牌走 Redis 1 h TTL",
+      "occurrence": 0,
+      "target": "After the wipe, all 7 VPN nodes started singbox-agent and sing-box under systemd; the one-time bootstrap token uses a Redis 1 h TTL",
+      "context": "td @ line 567"
+    },
+    {
+      "id": "u_47f80e0f7990d858",
+      "kind": "text",
+      "source": "✅ 兑现",
+      "occurrence": 1,
+      "target": "✅ Realization",
+      "context": "span.text-pos @ line 568"
+    },
+    {
+      "id": "u_84f024022ea28ec6",
+      "kind": "text",
+      "source": "「sing-box 二进制 SHA256 校验 / 本地镜像（中国封锁应对）」",
+      "occurrence": 0,
+      "target": "「sing-box Binary SHA256 Verification / Local Image (China Blockade Response)」",
+      "context": "td @ line 571"
+    },
+    {
+      "id": "u_4106fd32a9776b25",
+      "kind": "text",
+      "source": "本次构建缓存命中未拉新二进制；上一次冷构建用过镜像",
+      "occurrence": 0,
+      "target": "This Build Cache Hit, No New Binaries Added; Last Cold Build Used the Image",
+      "context": "td @ line 572"
+    },
+    {
+      "id": "u_a8a715d22b090cfb",
+      "kind": "text",
+      "source": "✅ 路径已在",
+      "occurrence": 0,
+      "target": "✅ Path is Ready",
+      "context": "span.text-pos @ line 573"
+    },
+    {
+      "id": "u_4b77df895988c67c",
+      "kind": "text",
+      "source": "返回主汇报：",
+      "occurrence": 0,
+      "target": "Main Report:",
+      "context": "div.footer @ line 578"
+    },
+    {
+      "id": "u_f73c988e86cfa124",
+      "kind": "text",
+      "source": "第3阶段一页摘要",
+      "occurrence": 0,
+      "target": "Summary of Sprint 3",
+      "context": "a @ line 579 · surrounding text: 返回主汇报： 第3阶段一页摘要 · 第3阶段完整汇报"
+    },
+    {
+      "id": "u_5099210fa650db08",
+      "kind": "text",
+      "source": "第3阶段完整汇报",
+      "occurrence": 0,
+      "target": "Full Report of Sprint 3",
+      "context": "a @ line 579 · surrounding text: 返回主汇报： 第3阶段一页摘要 · 第3阶段完整汇报"
+    }
+  ],
+  "blocks": {
+    "b0001": {
+      "type": "heading",
+      "source": "节点回收实测 — 后台一键 全擦重装",
+      "occurrence": 0
+    },
+    "b0002": {
+      "type": "highlight",
+      "source": "TL;DR · 一句话",
+      "occurrence": 0
+    },
+    "b0003": {
+      "type": "p",
+      "source": "这条流程对应了第3阶段汇报里「节点开通 ~30 秒、回收全擦 ~2 分钟」的承诺数字。本次给出可复现的全量实测；Vancouver 节点（RTT 175 ms 最远）反而是 最快 （15 秒），证明 地理距离不是后台自动化的瓶颈 。",
+      "occurrence": 0
+    },
+    "b0004": {
+      "type": "p",
+      "source": "但「44 秒」其实不是最大的赢面。最大的赢面是「学习曲线归零 — 谁都能上」 — 任何同事（包括第一天报到的新人）只需要在管理后台勾两个选项点确认即可，不再依赖看文档 / 背命令 / 判断节点系统类型。详见下面 「学习曲线归零」 一节。",
+      "occurrence": 0
+    },
+    "b0005": {
+      "type": "highlight",
+      "source": "测试环境全部 7 台节点（覆盖中国 / 香港 / 越南 / 菲律宾 / 丹麦 / 加拿大 / 法国 ， 横跨 3 大洲，规格从 0.4 GB RAM 到 2 vCPU + 1.7 GB）通过 单次后台 API 调用 同时触发全擦重装：6 / 7 节点在 24 秒内完成，第 7 台（中国大陆）因 ACME 证书走国际出口慢用了 44 秒，整批端到端 44 秒， 7 / 7 全部恢复到生产可用状态 ， 0 失败 。 这条流程对应了第3阶段汇报里「节点开通 ~30 秒、回收全擦 ~2 分钟」的承诺数字。本次给出可复现的全量实测；Vancouver 节点（RTT 175 ms 最远）反而是 最快 （15 秒），证明 地理距离不是后台自动化的瓶颈 。 但「44 秒」其实不是最大的赢面。最大的赢面是「学习曲线归零 — 谁都能上」 — 任何同事（包括第一天报到的新人）只需要在管理后台勾两个选项点确认即可，不再依赖看文档 / 背命令 / 判断节点系统类型。详见下面 「学习曲线归零」 一节。",
+      "occurrence": 0
+    },
+    "b0006": {
+      "type": "highlight",
+      "source": "TL;DR · 一句话 测试环境全部 7 台节点（覆盖中国 / 香港 / 越南 / 菲律宾 / 丹麦 / 加拿大 / 法国 ， 横跨 3 大洲，规格从 0.4 GB RAM 到 2 vCPU + 1.7 GB）通过 单次后台 API 调用 同时触发全擦重装：6 / 7 节点在 24 秒内完成，第 7 台（中国大陆）因 ACME 证书走国际出口慢用了 44 秒，整批端到端 44 秒， 7 / 7 全部恢复到生产可用状态 ， 0 失败 。 这条流程对应了第3阶段汇报里「节点开通 ~30 秒、回收全擦 ~2 分钟」的承诺数字。本次给出可复现的全量实测；Vancouver 节点（RTT 175 ms 最远）反而是 最快 （15 秒），证明 地理距离不是后台自动化的瓶颈 。 但「44 秒」其实不是最大的赢面。最大的赢面是「学习曲线归零 — 谁都能上」 — 任何同事（包括第一天报到的新人）只需要在管理后台勾两个选项点确认即可，不再依赖看文档 / 背命令 / 判断节点系统类型。详见下面 「学习曲线归零」 一节。",
+      "occurrence": 0
+    },
+    "b0007": {
+      "type": "heading",
+      "source": "一、关键指标",
+      "occurrence": 0
+    },
+    "b0008": {
+      "type": "highlight",
+      "source": "节点总数",
+      "occurrence": 0
+    },
+    "b0009": {
+      "type": "highlight",
+      "source": "7 / 7",
+      "occurrence": 0
+    },
+    "b0010": {
+      "type": "highlight",
+      "source": "测试环境全量 · 0 失败",
+      "occurrence": 0
+    },
+    "b0011": {
+      "type": "highlight",
+      "source": "节点总数 7 / 7 测试环境全量 · 0 失败",
+      "occurrence": 0
+    },
+    "b0012": {
+      "type": "highlight",
+      "source": "国家覆盖",
+      "occurrence": 0
+    },
+    "b0013": {
+      "type": "highlight",
+      "source": "CN · HK · VN · PH · DK · CA · FR",
+      "occurrence": 0
+    },
+    "b0014": {
+      "type": "highlight",
+      "source": "国家覆盖 6 CN · HK · VN · PH · DK · CA · FR",
+      "occurrence": 0
+    },
+    "b0015": {
+      "type": "highlight",
+      "source": "大洲",
+      "occurrence": 0
+    },
+    "b0016": {
+      "type": "highlight",
+      "source": "亚洲 / 欧洲 / 北美",
+      "occurrence": 0
+    },
+    "b0017": {
+      "type": "highlight",
+      "source": "大洲 3 亚洲 / 欧洲 / 北美",
+      "occurrence": 0
+    },
+    "b0018": {
+      "type": "highlight",
+      "source": "RTT 范围",
+      "occurrence": 0
+    },
+    "b0019": {
+      "type": "highlight",
+      "source": "31–175 ms",
+      "occurrence": 0
+    },
+    "b0020": {
+      "type": "highlight",
+      "source": "5 倍跨度",
+      "occurrence": 0
+    },
+    "b0021": {
+      "type": "highlight",
+      "source": "RTT 范围 31–175 ms 5 倍跨度",
+      "occurrence": 0
+    },
+    "b0022": {
+      "type": "highlight",
+      "source": "最快单台",
+      "occurrence": 0
+    },
+    "b0023": {
+      "type": "highlight",
+      "source": "15 秒",
+      "occurrence": 0
+    },
+    "b0024": {
+      "type": "highlight",
+      "source": "Vancouver（RTT 最远！）",
+      "occurrence": 0
+    },
+    "b0025": {
+      "type": "highlight",
+      "source": "最快单台 15 秒 Vancouver（RTT 最远！）",
+      "occurrence": 0
+    },
+    "b0026": {
+      "type": "highlight",
+      "source": "最慢单台",
+      "occurrence": 0
+    },
+    "b0027": {
+      "type": "highlight",
+      "source": "44 秒",
+      "occurrence": 0
+    },
+    "b0028": {
+      "type": "highlight",
+      "source": "Guangzhou（中国 ACME 走 GFW）",
+      "occurrence": 0
+    },
+    "b0029": {
+      "type": "highlight",
+      "source": "最慢单台 44 秒 Guangzhou（中国 ACME 走 GFW）",
+      "occurrence": 0
+    },
+    "b0030": {
+      "type": "highlight",
+      "source": "整批端到端",
+      "occurrence": 0
+    },
+    "b0031": {
+      "type": "highlight",
+      "source": "44 秒",
+      "occurrence": 1
+    },
+    "b0032": {
+      "type": "highlight",
+      "source": "并行 7 台",
+      "occurrence": 0
+    },
+    "b0033": {
+      "type": "highlight",
+      "source": "整批端到端 44 秒 并行 7 台",
+      "occurrence": 0
+    },
+    "b0034": {
+      "type": "highlight",
+      "source": "人工介入",
+      "occurrence": 0
+    },
+    "b0035": {
+      "type": "highlight",
+      "source": "点完即走，全程自动",
+      "occurrence": 0
+    },
+    "b0036": {
+      "type": "highlight",
+      "source": "人工介入 0 点完即走，全程自动",
+      "occurrence": 0
+    },
+    "b0037": {
+      "type": "highlight",
+      "source": "节点总数 7 / 7 测试环境全量 · 0 失败 国家覆盖 6 CN · HK · VN · PH · DK · CA · FR 大洲 3 亚洲 / 欧洲 / 北美 RTT 范围 31–175 ms 5 倍跨度 最快单台 15 秒 Vancouver（RTT 最远！） 最慢单台 44 秒 Guangzhou（中国 ACME 走 GFW） 整批端到端 44 秒 并行 7 台 人工介入 0 点完即走，全程自动",
+      "occurrence": 0
+    },
+    "b0038": {
+      "type": "heading",
+      "source": "★ 最大的赢面 — 学习曲线归零，谁都能上（不只是「快」）",
+      "occurrence": 0
+    },
+    "b0039": {
+      "type": "p",
+      "source": "纯看时间数字（44 秒 vs 接手时 30 分钟）只是表面收益。实际 对运营更关键的是把「需要专家在场」的工作变成「任何人都能做」的工作 。下面是同一个动作在两种工作模式下的对比：",
+      "occurrence": 0
+    },
+    "b0040": {
+      "type": "table-row",
+      "source": "步骤 接手时的人工 SSH 流程 本阶段的后台流程",
+      "occurrence": 0
+    },
+    "b0041": {
+      "type": "table-row",
+      "source": "谁能做 需要懂 Linux + 网络 + 服务管理的工程师 。新人到岗第一周做不了，要培训。 任何同事 — 包括第一天报到的新人 / 客服 / 运营 。无技术门槛。",
+      "occurrence": 0
+    },
+    "b0042": {
+      "type": "table-row",
+      "source": "开始前要先查的东西 ① 翻文档找正确命令 ② 节点是 Rocky 还是 CentOS（命令不一样）③ 上次部署留了什么残留 ④ 进程管理器是 PM2 / systemd / Docker 哪种 ⑤ SSH 端口与凭据 无 。后台界面已知道一切。",
+      "occurrence": 0
+    },
+    "b0043": {
+      "type": "table-row",
+      "source": "实际操作步骤 SSH → 装依赖 → 申请证书 → 编辑 YAML → 选进程管理器 → 验证心跳 → 应用 iptables → 出问题就翻 history 排查 勾「全擦重装」→ 选要重装的主机 → 点「确认」",
+      "occurrence": 0
+    },
+    "b0044": {
+      "type": "table-row",
+      "source": "判断「成功了没」的方法 SSH 进去看 systemctl status ， tail -f 日志，从后台看心跳，挑几个客户端连一下试试 后台 每台一个进度条 实时显示阶段；done 之后心跳自动恢复， 颜色变绿 就是成功",
+      "occurrence": 0
+    },
+    "b0045": {
+      "type": "table-row",
+      "source": "失败时怎么办 看一长段 SSH 输出找哪一步报错；老手凭经验，新人卡住要叫支援 后台显示 具体的错误阶段标签 （如 error_install_failed 、 error_format_failed ），点「查看日志」直接看到 systemd 输出尾巴； 「重试」按钮 一键再来",
+      "occurrence": 0
+    },
+    "b0046": {
+      "type": "table-row",
+      "source": "不同人做的结果一致性 每个人的命令组合 / 顺序 / 参数都可能略有不同 → 节点池上 ~150 台节点出现 7 种不同的进程管理装法 （接手时实际状况），文档与现实持续漂移 所有节点走 同一份 bootstrap 脚本 ，配置统一存在后端这一唯一可信来源；不存在「这个节点是张工装的所以特殊」的情况",
+      "occurrence": 0
+    },
+    "b0047": {
+      "type": "table-row",
+      "source": "跨时区 / 半夜出问题 得叫醒一个能 SSH 的人，登服务器排查 值班同事看到红色徽章 → 后台点「重试」或「Reheal」 → 解决",
+      "occurrence": 0
+    },
+    "b0048": {
+      "type": "table-row",
+      "source": "培训成本 新人要 1 ~ 2 周熟悉手册 + 跟老人做几次才能独立操作；老人离职 = 知识漏出 后台界面 自解释 ，培训 5 分钟即可；老人离职不影响",
+      "occurrence": 0
+    },
+    "b0049": {
+      "type": "heading",
+      "source": "结论 — 「快」只是副产品，「降低对人的依赖」才是关键",
+      "occurrence": 0
+    },
+    "b0050": {
+      "type": "li",
+      "source": "消除「关键人物风险」 — 不再有「只有张工 / 李工会做这个」的瓶颈，节点维护工作可以横向分发给任何同事",
+      "occurrence": 0
+    },
+    "b0051": {
+      "type": "li",
+      "source": "节点池行为一致性提升 — 接手时 节点池上累积了 7 种进程管理装法（不同时间不同人手装的差异），现在新装节点全部走同一脚本，过去靠人脑去记的差异自然消失",
+      "occurrence": 0
+    },
+    "b0052": {
+      "type": "li",
+      "source": "支持 节点池规模扩张 — 节点从 150 台扩到 250 台 / 500 台时，运维工作量不再线性增长（接手时这个比例下需要加人）",
+      "occurrence": 0
+    },
+    "b0053": {
+      "type": "li",
+      "source": "知识不再随人流失 — 经验沉淀在后台流程而非个人脑袋里，老员工离职、新员工入职都不影响节点运维节奏",
+      "occurrence": 0
+    },
+    "b0054": {
+      "type": "li",
+      "source": "为后续自动化决策打基础 — 既然「点一下就能全擦」是稳态操作，C1 节点置信度评分（第4阶段）才能放心接入「评分跌破阈值时自动全擦」的闭环",
+      "occurrence": 0
+    },
+    "b0055": {
+      "type": "heading",
+      "source": "二、对比基线 — 接手时的同一动作",
+      "occurrence": 0
+    },
+    "b0056": {
+      "type": "table-row",
+      "source": "动作 接手时（人工 SSH） 本次实测（后台）",
+      "occurrence": 0
+    },
+    "b0057": {
+      "type": "table-row",
+      "source": "开通新节点 ~20 分钟 / 台 SSH → 装依赖 → 申请证书 → 编辑 YAML → 选进程管理器 → 验证心跳 → 应用 iptables ~30 秒 / 台 后台填 IP + 域名 + 名称 → 点确认",
+      "occurrence": 0
+    },
+    "b0058": {
+      "type": "table-row",
+      "source": "回收被封节点（含全擦旧版） ~30+ 分钟 / 台 手工卸载 XRayR / 残留进程 → 重装一遍 → 失败靠经验排查 ~15 ~ 44 秒 / 台 勾选全擦 → 一键并行；含证书签发也只多 20-25 秒",
+      "occurrence": 0
+    },
+    "b0059": {
+      "type": "table-row",
+      "source": "批量回收 N 台（跨地理） 逐台 SSH 串行 + 跨时区维护窗口安排 ~150 台需 1-2 个工作日 本次 7 台跨 3 大洲并行 44 秒 批量上限 12 台 / 单批；理论 API 上限 100",
+      "occurrence": 0
+    },
+    "b0060": {
+      "type": "p",
+      "source": "「接手时」一栏来自第3阶段执行报告里 ops 给出的实际经历时长（CI/CD 速度与节点自动化执行报告 §「Risk profile before」）。",
+      "occurrence": 0
+    },
+    "b0061": {
+      "type": "heading",
+      "source": "三、被测的 7 台节点 — 规格 + 地理位置 + RTT",
+      "occurrence": 0
+    },
+    "b0062": {
+      "type": "table-row",
+      "source": "# 主机 IP 地理位置 承运 ASN RTT 至后台 vCPU / 内存 磁盘 系统 / SSH 原 uptime",
+      "occurrence": 0
+    },
+    "b0063": {
+      "type": "table-row",
+      "source": "1 103.12.77.249 🇻🇳 越南 河内 Thien Quang Digital 43 ms 1 / 1.0 GB 20 GB CentOS 7 / vpnnode 5 天",
+      "occurrence": 0
+    },
+    "b0064": {
+      "type": "table-row",
+      "source": "2 194.102.175.212 🇩🇰 丹麦 哥本哈根 M247 Europe SRL 165 ms 1 / 1.0 GB 30 GB CentOS 7 / vpnnode 2 天",
+      "occurrence": 0
+    },
+    "b0065": {
+      "type": "table-row",
+      "source": "3 172.93.32.133 🇨🇦 加拿大 温哥华 IT7 Networks 175 ms（最远） 2 / 1.0 GB 20 GB CentOS 7 / kernel 4.10 / vpnnode 2 天",
+      "occurrence": 0
+    },
+    "b0066": {
+      "type": "table-row",
+      "source": "4 38.54.37.243 🇵🇭 菲律宾 马尼拉 Kaopu Cloud HK 36 ms 1 / 1.8 GB 50 GB CentOS 7 / root 2 天",
+      "occurrence": 0
+    },
+    "b0067": {
+      "type": "table-row",
+      "source": "5 45.80.215.175 🇫🇷 法国 巴黎 G-Core Labs 148 ms 1 / 0.4 GB 20 GB AlmaLinux 8 （节点池中唯一现代发行版）/ vpnnode 5 天",
+      "occurrence": 0
+    },
+    "b0068": {
+      "type": "table-row",
+      "source": "6 8.138.29.36 🇨🇳 中国 广州 Aliyun（阿里云） 45 ms 2 / 1.7 GB 40 GB CentOS 7 / vpnnode 5 天",
+      "occurrence": 0
+    },
+    "b0069": {
+      "type": "table-row",
+      "source": "7 149.126.95.39 🇭🇰 香港 Global Communication Network 31 ms（最近） 1 / 1.0 GB 20 GB CentOS 7 / root 31 天 （积累 1 个月状态）",
+      "occurrence": 0
+    },
+    "b0070": {
+      "type": "p",
+      "source": "后台部署在 新加坡 Microsoft Azure （IP 52.230.7.201）。RTT 为 后台实地 ping 5 包平均值。这 7 台是 测试环境节点池 全量 ，没有挑选。",
+      "occurrence": 0
+    },
+    "b0071": {
+      "type": "heading",
+      "source": "四、实测每台耗时",
+      "occurrence": 0
+    },
+    "b0072": {
+      "type": "table-row",
+      "source": "主机 地理 RTT 规格 用时 含 ACME? 结果",
+      "occurrence": 0
+    },
+    "b0073": {
+      "type": "table-row",
+      "source": "172.93.32.133 🇨🇦 Vancouver 175 ms（最远） 2 vCPU / 1 GB 15 s ⚡ 否 done",
+      "occurrence": 0
+    },
+    "b0074": {
+      "type": "table-row",
+      "source": "45.80.215.175 🇫🇷 Paris 148 ms 1 vCPU / 0.4 GB 20 s 否 done — RAM 紧张未崩",
+      "occurrence": 0
+    },
+    "b0075": {
+      "type": "table-row",
+      "source": "194.102.175.212 🇩🇰 Copenhagen 165 ms 1 vCPU / 1 GB 21 s 否 done",
+      "occurrence": 0
+    },
+    "b0076": {
+      "type": "table-row",
+      "source": "103.12.77.249 🇻🇳 Hanoi 43 ms 1 vCPU / 1 GB 22 s 否 done",
+      "occurrence": 0
+    },
+    "b0077": {
+      "type": "table-row",
+      "source": "38.54.37.243 🇵🇭 Manila 36 ms 1 vCPU / 1.8 GB 22 s 否 done",
+      "occurrence": 0
+    },
+    "b0078": {
+      "type": "table-row",
+      "source": "149.126.95.39 🇭🇰 Hong Kong 31 ms（最近） 1 vCPU / 1 GB 24 s 否 done",
+      "occurrence": 0
+    },
+    "b0079": {
+      "type": "table-row",
+      "source": "8.138.29.36 🇨🇳 Guangzhou 45 ms 2 vCPU / 1.7 GB 44 s 是 + GFW 影响 done",
+      "occurrence": 0
+    },
+    "b0080": {
+      "type": "table-row",
+      "source": "整批 7 台并行端到端 — 44 s — 7 / 7 done",
+      "occurrence": 0
+    },
+    "b0081": {
+      "type": "heading",
+      "source": "五、实测时间线",
+      "occurrence": 0
+    },
+    "b0082": {
+      "type": "heading",
+      "source": "六、地理位置 / RTT 是否影响速度？— 数据回答",
+      "occurrence": 0
+    },
+    "b0083": {
+      "type": "p",
+      "source": "把地理 + RTT + 用时三列对在一起看（按用时升序）：",
+      "occurrence": 0
+    },
+    "b0084": {
+      "type": "table-row",
+      "source": "用时 主机 地理 RTT 含 ACME?",
+      "occurrence": 0
+    },
+    "b0085": {
+      "type": "table-row",
+      "source": "15 s 172.93.32.133 🇨🇦 Vancouver 175 ms（最远） 否",
+      "occurrence": 0
+    },
+    "b0086": {
+      "type": "table-row",
+      "source": "20 s 45.80.215.175 🇫🇷 Paris 148 ms 否",
+      "occurrence": 0
+    },
+    "b0087": {
+      "type": "table-row",
+      "source": "21 s 194.102.175.212 🇩🇰 Copenhagen 165 ms 否",
+      "occurrence": 0
+    },
+    "b0088": {
+      "type": "table-row",
+      "source": "22 s 103.12.77.249 🇻🇳 Hanoi 43 ms 否",
+      "occurrence": 0
+    },
+    "b0089": {
+      "type": "table-row",
+      "source": "22 s 38.54.37.243 🇵🇭 Manila 36 ms 否",
+      "occurrence": 0
+    },
+    "b0090": {
+      "type": "table-row",
+      "source": "24 s 149.126.95.39 🇭🇰 Hong Kong 31 ms（最近） 否",
+      "occurrence": 0
+    },
+    "b0091": {
+      "type": "table-row",
+      "source": "44 s 8.138.29.36 🇨🇳 Guangzhou 45 ms 是 + GFW",
+      "occurrence": 0
+    },
+    "b0092": {
+      "type": "heading",
+      "source": "关键观察",
+      "occurrence": 0
+    },
+    "b0093": {
+      "type": "li",
+      "source": "RTT 最远的反而最快 — Vancouver（175 ms）15 s vs Hong Kong（31 ms）24 s。结论： 地理距离不是后台自动化的瓶颈 。SSH 控制流大概 50 ~ 100 个往返，14 ms × 100 ≈ 1.4 秒额外开销，相对总耗时 0.05% 量级，被节点本机 CPU 速度的差异完全淹没。",
+      "occurrence": 0
+    },
+    "b0094": {
+      "type": "li",
+      "source": "真正决定速度的是节点本机 CPU + 是否走 ACME 。Vancouver 用 2 vCPU 跑 wipe + install 比单核机器快得多；Guangzhou 也是 2 vCPU 但被 ACME 拖到 44 s。",
+      "occurrence": 0
+    },
+    "b0095": {
+      "type": "li",
+      "source": "0.4 GB RAM 的法国节点没有崩 （20 s 完成）— 证明后台自动化的 wipe + install 步骤不是 RAM-heavy；下限其实比想象的低。",
+      "occurrence": 0
+    },
+    "b0096": {
+      "type": "li",
+      "source": "中国大陆节点是唯一被「地理」明显拖累的 — 但拖累的是 ACME 走 Let's Encrypt 经过 GFW，不是 SSH 本身。后台已经为 sing-box 二进制配置了本地镜像（ apk.arrowfishadv.com ）避开 GitHub 封锁；ACME 仍走 Let's Encrypt，是接下来可优化的点（参见第十节）。",
+      "occurrence": 0
+    },
+    "b0097": {
+      "type": "li",
+      "source": "本团队的节点池跨多大洲是可接受的 — 不需要在 后台旁边架接近的「区域后台」节点，单一新加坡 后台已能并行驱动跨洲全量回收。",
+      "occurrence": 0
+    },
+    "b0098": {
+      "type": "heading",
+      "source": "地理位置可能成为瓶颈的边界场景（非本次）",
+      "occurrence": 0
+    },
+    "b0099": {
+      "type": "li",
+      "source": "冷构建（新版本首次推） — 节点要从后台镜像拉 ~10 MB 二进制。RTT 远的节点会多花 5-15 秒。本次 build phase = cached，跳过。",
+      "occurrence": 0
+    },
+    "b0100": {
+      "type": "li",
+      "source": "中国大陆节点 + Let's Encrypt 通信 — Great Firewall 让 ACME 验证有时延 / 偶发失败 — 本次实测看到 Guangzhou 多用 ~20 秒。 下一步可以引入 Cloudflare DNS-01 验证或本地 DNS 网关 ，把 ACME 步骤稳定到 ~5 秒。",
+      "occurrence": 0
+    },
+    "b0101": {
+      "type": "li",
+      "source": "跨洲 + 0.4 GB 极小内存 + 冷启动 — 这次 Paris 通过了，但如果叠加冷构建（要拉 10 MB）+ 高峰时段网络抖动，可能触发超时。可以加观察。",
+      "occurrence": 0
+    },
+    "b0102": {
+      "type": "li",
+      "source": "后台↔节点 SSH 链路被 ISP 抖动 / 短时间封锁 — 本次未观测到。",
+      "occurrence": 0
+    },
+    "b0103": {
+      "type": "heading",
+      "source": "七、节点回收后的健康验证",
+      "occurrence": 0
+    },
+    "b0104": {
+      "type": "table-row",
+      "source": "主机 node_hosts.last_upgrade_stage agent_version last_heartbeat 距当前 singbox-agent sing-box",
+      "occurrence": 0
+    },
+    "b0105": {
+      "type": "table-row",
+      "source": "103.12.77.249 done v1.1.1 +2s active active",
+      "occurrence": 0
+    },
+    "b0106": {
+      "type": "table-row",
+      "source": "194.102.175.212 done v1.1.1 +2s active active",
+      "occurrence": 0
+    },
+    "b0107": {
+      "type": "table-row",
+      "source": "172.93.32.133 done v1.1.1 +58s active active",
+      "occurrence": 0
+    },
+    "b0108": {
+      "type": "table-row",
+      "source": "38.54.37.243 done v1.1.1 +2s active active",
+      "occurrence": 0
+    },
+    "b0109": {
+      "type": "table-row",
+      "source": "45.80.215.175 done v1.1.1 +59s active active",
+      "occurrence": 0
+    },
+    "b0110": {
+      "type": "table-row",
+      "source": "8.138.29.36 done v1.1.1 +22s active active",
+      "occurrence": 0
+    },
+    "b0111": {
+      "type": "table-row",
+      "source": "149.126.95.39 done v1.1.1 +2s active active",
+      "occurrence": 0
+    },
+    "b0112": {
+      "type": "p",
+      "source": "7 / 7 全部回到「上线前一致」的健康状态，没有任何「节点回收完但服务半瘫」的中间态。回收前后没有用户感知的中断（这 7 台属 测试环境节点池）。",
+      "occurrence": 0
+    },
+    "b0113": {
+      "type": "heading",
+      "source": "八、统计意义 — 为什么 7 台样本是有意义的",
+      "occurrence": 0
+    },
+    "b0114": {
+      "type": "table-row",
+      "source": "维度 覆盖范围 用途",
+      "occurrence": 0
+    },
+    "b0115": {
+      "type": "table-row",
+      "source": "地理 6 国（CN, HK, VN, PH, DK, CA, FR）× 3 大洲（亚 / 欧 / 北美） 验证 后台自动化对不同 ISP / 国际链路的通用性",
+      "occurrence": 0
+    },
+    "b0116": {
+      "type": "table-row",
+      "source": "RTT 跨度 31 ms ~ 175 ms（5 倍） 验证 SSH 控制流不是瓶颈（数据已证明）",
+      "occurrence": 0
+    },
+    "b0117": {
+      "type": "table-row",
+      "source": "CPU 规格 1 vCPU（5 台）+ 2 vCPU（2 台），跨 4 种 CPU 微架构（Intel Xeon E5 / Xeon Platinum / Cascadelake；AMD EPYC Genoa / EPYC 7C13） 验证 wipe + install 在不同 CPU 上的相对耗时",
+      "occurrence": 0
+    },
+    "b0118": {
+      "type": "table-row",
+      "source": "内存 0.4 GB ~ 1.8 GB（4.5 倍） 验证流程在极小内存（0.4 GB）也能跑通 — 这是 节点池中的下限",
+      "occurrence": 0
+    },
+    "b0119": {
+      "type": "table-row",
+      "source": "磁盘 20 GB ~ 50 GB 包含小磁盘的常见档",
+      "occurrence": 0
+    },
+    "b0120": {
+      "type": "table-row",
+      "source": "发行版 CentOS 7（6 台）+ AlmaLinux 8（1 台） 验证后台引导脚本对不同发行版的通用性",
+      "occurrence": 0
+    },
+    "b0121": {
+      "type": "table-row",
+      "source": "内核 3.10.0-1160（5 台标准 EL7）+ 4.10.4 elrepo（172.93.32.133）+ 4.18 EL8（45.80.215.175） 覆盖了一个非标准 elrepo 内核，证明对内核版本不敏感",
+      "occurrence": 0
+    },
+    "b0122": {
+      "type": "table-row",
+      "source": "SSH 用户 vpnnode（5 台）+ root（2 台） 后台凭据回退路径（设置中候选）也被用到",
+      "occurrence": 0
+    },
+    "b0123": {
+      "type": "table-row",
+      "source": "节点状态 2 ~ 31 天 uptime；含一台积累 31 天本地状态的「长老」 验证 wipe 能正确清掉历史本地状态",
+      "occurrence": 0
+    },
+    "b0124": {
+      "type": "p",
+      "source": "这不是「3 台 测试环境节点的样本」— 是 测试环境节点池的 全量 ，覆盖 节点池的真实多样性。0 / 7 失败 + 6 / 7 在 24 秒内完成，是对 后台自动化系统能力的有效证明。",
+      "occurrence": 0
+    },
+    "b0125": {
+      "type": "heading",
+      "source": "九、本次实测做了什么 / 没做什么",
+      "occurrence": 0
+    },
+    "b0126": {
+      "type": "table-row",
+      "source": "本次有做 本次没做",
+      "occurrence": 0
+    },
+    "b0127": {
+      "type": "table-row",
+      "source": "测试环境全量 7 台 跨 3 大洲并行 全擦重装 构建产物缓存命中（无重新编译耗时） 重新签发 TLS 证书（部分节点） singbox-agent 自注册回后台（ /agent/register-or-heal ） SSH 实地验证 + DB 实地验证 覆盖 0.4 GB 极小内存边界（成功） 不涉及生产用户流量（测试环境节点池） 不涉及 Settings 中的版本号变更（同版本 v1.1.1 → v1.1.1） 不测大批量（> 12 台）— 后台理论上限 100 / 单批，并发上限可调 未做断网 / SSH 超时容灾路径的破坏测试（在执行报告里独立验证） 未测「冷构建」场景（首次新版本推送），下次可以加",
+      "occurrence": 0
+    },
+    "b0128": {
+      "type": "heading",
+      "source": "十、本次实测发现的优化机会（第4阶段候选）",
+      "occurrence": 0
+    },
+    "b0129": {
+      "type": "li",
+      "source": "中国大陆节点的 ACME 走 Let's Encrypt 经过 GFW 是真实瓶颈 。下一步：研究 ACME DNS-01 验证（用 Cloudflare DNS API 完成所有权证明，不走 HTTP）— 预计能把中国节点的 ACME 步骤从 ~20 秒压到 ~5 秒，与其他地区拉齐。",
+      "occurrence": 0
+    },
+    "b0130": {
+      "type": "li",
+      "source": "RTT 175 ms 的加拿大节点跑得最快 说明后台自动化的「跨洋触发」是健康的；这意味着 节点池可以更激进地在 节点池列表里混入 NA / 欧洲节点，不会拖慢运维节奏。",
+      "occurrence": 0
+    },
+    "b0131": {
+      "type": "li",
+      "source": "0.4 GB 内存节点能跑通 全擦流程 ，说明后台自动化的内存压力不大；节点池可以接受更小型号的供应商套餐降低成本。",
+      "occurrence": 0
+    },
+    "b0132": {
+      "type": "li",
+      "source": "缓存命中是关键 ：本次 build phase 都是 cached（同 SHA 已构建过），所以「7 台 44 秒」是稳态情况下的耗时。冷构建场景（首次新版本）需要单独测一次给出对比基线。",
+      "occurrence": 0
+    },
+    "b0133": {
+      "type": "heading",
+      "source": "十一、可复现性 — 怎么再跑一次",
+      "occurrence": 0
+    },
+    "b0134": {
+      "type": "li",
+      "source": "登录后台管理员账号 → 拿 JWT",
+      "occurrence": 0
+    },
+    "b0135": {
+      "type": "li",
+      "source": "调用 POST /api/v1/node-host/bulk-upgrade （请求体如下），同等于 后台页面上「全擦重装」勾选 + 选定主机点确认",
+      "occurrence": 0
+    },
+    "b0136": {
+      "type": "pre",
+      "source": "{ \"target_version\": \"v1.1.1\", \"host_ids\": [16, 18, 19, 20, 21, 22, 23], \"parallel\": 7, \"format\": true }",
+      "occurrence": 0
+    },
+    "b0137": {
+      "type": "li",
+      "source": "立即拿到 job_id ，用 GET /api/v1/node-host/upgrade-job/<job_id> 轮询每台进度（ connecting → connected → transferring → installing-singbox → issuing-cert → installed → started → done ）",
+      "occurrence": 0
+    },
+    "b0138": {
+      "type": "li",
+      "source": "事后核对 DB node_hosts.last_heartbeat / agent_version / last_upgrade_stage + SSH systemctl is-active singbox-agent sing-box",
+      "occurrence": 0
+    },
+    "b0139": {
+      "type": "p",
+      "source": "这是 真正在管理后台上每天会调用的同一条路径 ，不是为汇报临时做的特殊脚本。后台网页上点「全擦重装」按钮 + 选定主机后点确认，背后就是这同一个 API。",
+      "occurrence": 0
+    },
+    "b0140": {
+      "type": "heading",
+      "source": "十二、对运营的意义",
+      "occurrence": 0
+    },
+    "b0141": {
+      "type": "li",
+      "source": "中国封锁加剧时的换网窗口缩到分钟级 — 一次后台操作 5 分钟内可推完整批，跨洲并行不影响速度。",
+      "occurrence": 0
+    },
+    "b0142": {
+      "type": "li",
+      "source": "被封节点能复用而不是弃用 — 一台被封 VM 原本只能注销，现在 全擦一键重生即可重新接入流量。供应商成本相应下降。",
+      "occurrence": 0
+    },
+    "b0143": {
+      "type": "li",
+      "source": "操作员失误风险归零 — 唯一动作是「填 IP / 选主机 / 点确认」，没有可以输错的地方。",
+      "occurrence": 0
+    },
+    "b0144": {
+      "type": "li",
+      "source": "夜间专用维护窗口可以取消 — 既然单台 15 ~ 30 秒、跨洲并行 7 台 44 秒，没有理由再排夜班。常规节点维护可以放在白天工作时段顺手做。",
+      "occurrence": 0
+    },
+    "b0145": {
+      "type": "li",
+      "source": "节点池可以更激进地全球分布 — 实测证明后台单一新加坡部署能并行驱动跨洲节点，不需要在每个区域架「区域后台」。",
+      "occurrence": 0
+    },
+    "b0146": {
+      "type": "heading",
+      "source": "十三、与第3阶段汇报承诺的对照",
+      "occurrence": 0
+    },
+    "b0147": {
+      "type": "table-row",
+      "source": "第3阶段汇报承诺 本次实测 结论",
+      "occurrence": 0
+    },
+    "b0148": {
+      "type": "table-row",
+      "source": "「节点开通由 SSH 手工 20 分钟降至后台一键 ~30 秒」 不含 ACME 节点 15 ~ 24 秒；含 ACME 节点 44 秒 ✅ 兑现 + 实际更快",
+      "occurrence": 0
+    },
+    "b0149": {
+      "type": "table-row",
+      "source": "「回收被封节点由人工拆装降至一键全擦 ~2 分钟」 整批 7 台并行端到端 44 秒 ✅ 兑现 + 实际更快",
+      "occurrence": 0
+    },
+    "b0150": {
+      "type": "table-row",
+      "source": "「批量升级并行最多 12 台 + 失败可单独重试」 本次并行 7 台验证 0 失败；上限来自前端配置（已支持到 12，理论 API 上限 100） ✅ 兑现",
+      "occurrence": 0
+    },
+    "b0151": {
+      "type": "table-row",
+      "source": "「节点 systemd 单一供应商 + 一次性引导令牌」 7 台节点 wipe 后全部以 systemd 启动 singbox-agent + sing-box；一次性引导令牌走 Redis 1 h TTL ✅ 兑现",
+      "occurrence": 0
+    },
+    "b0152": {
+      "type": "table-row",
+      "source": "「sing-box 二进制 SHA256 校验 / 本地镜像（中国封锁应对）」 本次构建缓存命中未拉新二进制；上一次冷构建用过镜像 ✅ 路径已在",
+      "occurrence": 0
+    }
+  },
+  "reviewedTargetHash": "5c8024319b5842aa"
+}

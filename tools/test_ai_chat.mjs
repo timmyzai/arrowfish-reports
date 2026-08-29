@@ -14,6 +14,9 @@ const syntheticContext = { schemaVersion: 1, reports: [] };
 const moduleSource = workerSource.replace(
   "import REPORT_CONTEXT from '../report-context.json';",
   `var REPORT_CONTEXT = ${JSON.stringify(syntheticContext)};`
+).replace(
+  "import REPORT_CONTEXT_EN from '../report-context.en.json';",
+  `var REPORT_CONTEXT_EN = ${JSON.stringify(syntheticContext)};`
 );
 const Worker = await import(`data:text/javascript;base64,${Buffer.from(moduleSource).toString('base64')}`);
 const env = { GROQ_MODEL: 'openai/gpt-oss-20b' };
@@ -23,6 +26,7 @@ const report = {
   title: 'FFF Goal',
   date: '2026-08-28',
   version: 'v1',
+  locale: 'zh-CN',
   blocks: Array.from({ length: 10 }, (_, index) => ({
     id: `b${String(index + 1).padStart(4, '0')}`,
     section: index < 5 ? 'FFF 路线图' : '发布状态',
@@ -95,6 +99,56 @@ assert.match(normalizedMarker.answer, /\[S1\]。$/);
 const unrelated = Worker.validateAnswer({ kind: 'broken', answer: '', citations: [] }, '今天天气怎么样？', report, canonical, env);
 assert.equal(unrelated.answerable, false, 'Invalid unrelated model output is refused');
 assert.equal(unrelated.sources.length, 0, 'Refusal never exposes irrelevant sources');
+assert.equal(unrelated.meta.locale, 'zh-CN', 'Response metadata declares its locale');
+
+const englishReport = {
+  ...report,
+  title: 'FFF Goals',
+  locale: 'en',
+  blocks: report.blocks.map((block, index) => ({
+    ...block,
+    section: index < 5 ? 'FFF Roadmap' : 'Release status',
+    text: index === 0
+      ? 'Client payment API debugging is not yet complete and must pass success, failure, and order-status regression before the Android launch.'
+      : index === 1
+        ? 'Android release acceptance is not yet complete.'
+        : `Evidence item ${index + 1} describes platform release and acceptance plans.`
+  }))
+};
+const englishSources = englishReport.blocks.slice(0, 8).map((block, index) => ({
+  id: `S${index + 1}`,
+  reportId: englishReport.id,
+  reportKey: englishReport.key,
+  reportTitle: englishReport.title,
+  reportDate: englishReport.date,
+  reportVersion: englishReport.version,
+  blockId: block.id,
+  section: block.section,
+  line: block.line,
+  text: block.text
+}));
+const englishNegative = Worker.extractiveFallback('Is the Android release complete?', englishReport, englishSources, env, 'test');
+assert.equal(englishNegative.answerable, true, 'English negative completion status has an extractive fallback');
+assert.match(englishNegative.answer, /not yet complete/i);
+const englishRefusal = Worker.validateAnswer({ kind: 'broken', answer: '', citations: [] }, 'What is the weather?', englishReport, englishSources, env);
+assert.match(englishRefusal.answer, /does not contain information/i, 'English fallback is localized');
+assert.equal(englishRefusal.meta.locale, 'en', 'English response metadata declares its locale');
+assert.match(Worker.buildMessages('What changed?', englishReport, englishSources, [], 'en')[0].content, /Answer in English/);
+assert.equal(Worker.questionLocale('What changed?', 'zh-CN'), 'en');
+assert.equal(Worker.questionLocale('有什么变化？', 'en'), 'zh-CN');
+assert.equal(Worker.errorPayload('RATE_LIMITED', 'en').code, 'RATE_LIMITED', 'API errors expose stable codes');
+assert.match(Worker.errorPayload('RATE_LIMITED', 'en').error, /busy/i, 'API error text follows the UI locale');
+[
+  'ORIGIN_FORBIDDEN', 'NOT_FOUND', 'METHOD_NOT_ALLOWED', 'PAYLOAD_TOO_LARGE',
+  'INVALID_JSON', 'QUESTION_REQUIRED', 'INVALID_REPORT', 'NOT_CONFIGURED',
+  'SERVICE_UNAVAILABLE', 'UPSTREAM_TIMEOUT', 'GENERATION_FAILED', 'UPSTREAM_FAILED',
+  'INVALID_UPSTREAM_RESPONSE', 'INVALID_MODEL_RESPONSE', 'RATE_LIMITED',
+  'TOO_MANY_REQUESTS', 'INVALID_CONFIGURATION'
+].forEach((code) => {
+  assert.equal(Worker.errorPayload(code, 'zh-CN').code, code);
+  assert.equal(Worker.errorPayload(code, 'en').code, code);
+  assert.ok(Worker.errorPayload(code, 'zh-CN').error.length > 0 && Worker.errorPayload(code, 'en').error.length > 0);
+});
 
 assert.equal(Worker.parseRetrySeconds('12.2'), 13, 'Retry-After seconds are rounded up');
 const keys = { GROQ_API_KEY_1: 'a', GROQ_API_KEY_2: 'b', GROQ_API_KEY_3: 'c' };
@@ -119,17 +173,21 @@ assert.equal(
 const inlineCitations = Evidence.citationParts('第一项已完成 [S1]。第二项仍待验收。[S2]', ['S1', 'S2']);
 assert.deepEqual(
   inlineCitations.filter((part) => part.type === 'citation').map((part) => part.text),
-  ['第一项已完成', '第二项仍待验收。'],
-  'Citation markers before or after punctuation become links on the supported sentence text'
+  ['S1', 'S2'],
+  'Citation markers become compact source chips'
 );
 assert.equal(
-  inlineCitations.map((part) => part.text).join(''),
+  inlineCitations.filter((part) => part.type === 'text').map((part) => part.text).join(''),
   '第一项已完成。第二项仍待验收。',
   'Visible answer text contains no numbered citation markers'
 );
 assert.equal(Evidence.stripCitationMarkers('事实 [S1]。'), '事实。', 'Copied answers omit citation markers');
 
 assert.match(browserSource, /sessionStorage\.setItem/);
+assert.match(browserSource, /responseLocale/);
+assert.match(browserSource, /function apiErrorMessage[\s\S]*UPSTREAM_TIMEOUT:[\s\S]*ai\.timeout/, 'Browser localizes stable API error codes');
+assert.match(browserSource, /data-report-block-id/);
+assert.match(browserSource, /function handlePreferenceChange[\s\S]*nextLanguage === lastPreferenceLanguage[\s\S]*activeController\.abort\(\)[\s\S]*messages = \[\][\s\S]*removeSavedConversation\(\)/, 'Language changes abort requests and clear the active session');
 assert.match(browserSource, /reportKey: currentReport\.file/);
 assert.match(browserSource, /reportVersion: currentReport\.version/);
 assert.match(browserSource, /event\.key === 'Escape'/);
@@ -141,7 +199,7 @@ assert.doesNotMatch(browserSource, /link\.textContent = match\[1\]\.slice/);
 assert.match(browserSource, /currentReport\.file !== reportKey \|\| reportLoadToken !== requestReportToken/);
 assert.match(browserStyles, /min-height:\s*44px/);
 assert.match(browserStyles, /prefers-reduced-motion:\s*reduce/);
-assert.match(landingPage, /assets\/ai-chat\.css\?v=20260828-9/);
-assert.match(landingPage, /assets\/ai-chat\.js\?v=20260828-9/);
+assert.match(landingPage, /assets\/ai-chat\.css\?v=20260828-11/);
+assert.match(landingPage, /assets\/ai-chat\.js\?v=20260828-11/);
 
 console.log('AI assistant regression tests: all assertions passed');

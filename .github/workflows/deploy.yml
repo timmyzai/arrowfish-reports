@@ -33,16 +33,30 @@ jobs:
           python3 -m json.tool reports.json >/dev/null
           python3 -m json.tool report-context.json >/dev/null
           python3 -m json.tool report-index.json >/dev/null
+          python3 -m json.tool report-context.en.json >/dev/null
+          python3 -m json.tool report-index.en.json >/dev/null
+          python3 tools/i18n_catalog.py validate
+          python3 tools/i18n_catalog.py audit
           python3 tools/generate_report_context.py
-          git diff --exit-code -- report-context.json report-index.json
+          git diff --exit-code -- report-context.json report-index.json report-context.en.json report-index.en.json
+          python3 tools/build_localized_site.py
 
       - name: Check browser and Worker JavaScript
         run: |
+          node --check assets/ui-i18n.js
+          node --check assets/site-preferences.js
           node --check assets/auth-gate.js
           node --check assets/report-evidence.js
           node --check assets/ai-chat.js
           node --check assets/copy-markdown.js
           node --check worker/index.js
+
+      - name: Run bilingual preferences and AI regression tests
+        run: |
+          node tools/test_preferences.mjs
+          node tools/test_ai_chat.mjs
+          node tools/evaluate_ai_chat.mjs
+          python3 tools/test_localized_site.py
 
       - name: Dry-run Worker bundle
         run: npx --yes wrangler@4.127.0 deploy --dry-run --config worker/wrangler.toml --outdir /tmp/arrowfish-worker-dry-run
@@ -56,6 +70,6 @@ jobs:
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: .
+          path: _site
       - id: deployment
         uses: actions/deploy-pages@v4

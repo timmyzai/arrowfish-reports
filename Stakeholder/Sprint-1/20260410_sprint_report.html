@@ -1,24 +1,27 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh-CN" data-report-id="sprint-0-1-summary">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <script src="../../assets/ui-i18n.js"></script>
+  <script src="../../assets/site-preferences.js"></script>
 <title>第0-1阶段 · 进度汇报 · 2026-04-10</title>
 <style>
   :root {
-    --bg: #FAFAFA;
-    --card: #FFFFFF;
-    --border: #E5E7EB;
-    --text: #1F2937;
-    --text-secondary: #6B7280;
-    --accent: #2563EB;
-    --green: #B7D7C9;
-    --green-text: #166534;
-    --yellow: #E6DFAF;
-    --yellow-text: #854D0E;
-    --red: #DCCACA;
-    --red-text: #991B1B;
-    --grey: #F2F2F2;
+    --bg: var(--af-bg);
+    --card: var(--af-surface);
+    --border: var(--af-border);
+    --text: var(--af-text);
+    --text-secondary: var(--af-text-muted);
+    --accent: var(--af-primary);
+    --green: var(--af-success-soft);
+    --green-text: var(--af-success);
+    --yellow: var(--af-warning-soft);
+    --yellow-text: var(--af-warning);
+    --red: var(--af-danger-soft);
+    --red-text: var(--af-danger);
+    --grey: var(--af-surface-muted);
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body {
@@ -36,8 +39,8 @@
   .subtitle { color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 1.5rem; }
   .card { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 1.25rem; margin: 0.75rem 0; }
   .card.highlight { border-left: 4px solid var(--accent); }
-  .card.warning { border-left: 4px solid #F59E0B; background: #FFFBEB; }
-  .card.critical { border-left: 4px solid #EF4444; background: #FEF2F2; }
+  .card.warning { border-left: 4px solid var(--af-warning); background: var(--af-warning-soft); }
+  .card.critical { border-left: 4px solid var(--af-danger); background: var(--af-danger-soft); }
   table { width: 100%; border-collapse: collapse; margin: 0.75rem 0; font-size: 0.9rem; }
   th { background: var(--grey); text-align: left; padding: 0.5rem 0.75rem; font-weight: 600; }
   td { padding: 0.5rem 0.75rem; border-bottom: 1px solid var(--border); }
@@ -49,7 +52,7 @@
   .timeline::before { content: ''; position: absolute; left: 0.35rem; top: 0.5rem; bottom: 0.5rem; width: 2px; background: var(--border); }
   .timeline-item { position: relative; margin-bottom: 0.75rem; }
   .timeline-item::before { content: ''; position: absolute; left: -1.15rem; top: 0.5rem; width: 10px; height: 10px; border-radius: 50%; background: var(--accent); border: 2px solid white; }
-  .timeline-item.milestone::before { background: #EF4444; width: 12px; height: 12px; left: -1.2rem; }
+  .timeline-item.milestone::before { background: var(--af-danger); width: 12px; height: 12px; left: -1.2rem; }
   .timeline-date { font-weight: 600; font-size: 0.85rem; color: var(--accent); }
   .timeline-text { font-size: 0.9rem; }
   .action-list { list-style: none; padding: 0; }
@@ -60,11 +63,14 @@
 
 </style>
 <script src="../../assets/auth-gate.js"></script>
+  <link rel="stylesheet" href="../../assets/site-theme.css">
 </head>
 <body>
 
-<h1>Arrowfish VPN — 项目进度汇报</h1>
-<div class="subtitle">2026年4月10日 · Sprint 0 + Sprint 1 完成摘要 · 下阶段计划</div>
+<header class="standalone-report-header" data-report-header>
+  <h1>Arrowfish VPN — 项目进度汇报</h1>
+  <div class="subtitle">2026年4月10日 · Sprint 0 + Sprint 1 完成摘要 · 下阶段计划</div>
+</header>
 
 <!-- Section 1: Sprint 0 -->
 <h2>一、Sprint 0 完成摘要（3/26–4/3）— 接手与稳定</h2>
@@ -94,16 +100,16 @@
 <h2>一-B、Sprint 1 成果分类</h2>
 
 <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:1.5rem;">
-  <div class="card" style="border-left:4px solid #166534;background:#f0fdf4;">
-    <strong style="color:#166534;">成本节省</strong>
+  <div class="card" style="border-left:4px solid var(--af-success);background:var(--af-success-soft);">
+    <strong style="color:var(--af-success);">成本节省</strong>
     <ul style="margin-top:0.5rem;padding-left:1.2rem;font-size:0.9rem;">
       <li>DEV 服务器降配节省 <strong>$53/月（$637/年）</strong></li>
       <li>节点运营自动化节省 <strong>~$2,000–3,000/月运营人力</strong></li>
       <li>订单处理时间：25–60 分钟 → 不超过 2 分钟</li>
     </ul>
   </div>
-  <div class="card" style="border-left:4px solid #991B1B;background:#fef2f2;">
-    <strong style="color:#991B1B;">安全改进（已修复）</strong>
+  <div class="card" style="border-left:4px solid var(--af-danger);background:var(--af-danger-soft);">
+    <strong style="color:var(--af-danger);">安全改进（已修复）</strong>
     <ul style="margin-top:0.5rem;padding-left:1.2rem;font-size:0.9rem;">
       <li>无日志政策违规 4 处 — 全部修复（VPN 配置/密钥/IP 泄露）</li>
       <li>数据库首次建立备份（Azure 每日备份，30天保留）</li>
@@ -112,8 +118,8 @@
       <li>OTP 验证逻辑反向 Bug 修复</li>
     </ul>
   </div>
-  <div class="card" style="border-left:4px solid #1d4ed8;background:#eff6ff;">
-    <strong style="color:#1d4ed8;">性能提升</strong>
+  <div class="card" style="border-left:4px solid var(--af-primary);background:var(--af-primary-soft);">
+    <strong style="color:var(--af-primary);">性能提升</strong>
     <ul style="margin-top:0.5rem;padding-left:1.2rem;font-size:0.9rem;">
       <li>数据库磁盘：66% → 49%（释放 ~22 GB）</li>
       <li>读取副本从未使用 → GET 请求全量分流至副本</li>
@@ -121,8 +127,8 @@
       <li>N+1 查询 4 处 → 批量查询</li>
     </ul>
   </div>
-  <div class="card" style="border-left:4px solid #92400e;background:#fffbeb;">
-    <strong style="color:#92400e;">关键 Bug 修复（QA 第3周）</strong>
+  <div class="card" style="border-left:4px solid var(--af-warning);background:var(--af-warning-soft);">
+    <strong style="color:var(--af-warning);">关键 Bug 修复（QA 第3周）</strong>
     <ul style="margin-top:0.5rem;padding-left:1.2rem;font-size:0.9rem;">
       <li>支出明细页空白（PAY_CHANNEL + IAP 过滤缺失）</li>
       <li>最新版本弹出更新提示（版本字符串比较错误）</li>
@@ -302,7 +308,7 @@
     <div class="timeline-text">瑞士号码到位 → 开设FFF相关账号</div>
   </div>
   <div class="timeline-item milestone">
-    <div class="timeline-date" style="color: #EF4444;">5月初</div>
+    <div class="timeline-date" style="color: var(--af-danger);">5月初</div>
     <div class="timeline-text"><strong>开始对接FFF支付网关 ← 关键路径</strong></div>
   </div>
   <div class="timeline-item">
@@ -310,7 +316,7 @@
     <div class="timeline-text">FFF MVP（能连VPN、能看线路）</div>
   </div>
   <div class="timeline-item milestone">
-    <div class="timeline-date" style="color: #EF4444;">6月下旬</div>
+    <div class="timeline-date" style="color: var(--af-danger);">6月下旬</div>
     <div class="timeline-text"><strong>FFF 全平台发布（iOS + Android + Windows）</strong></div>
   </div>
   <div class="timeline-item">

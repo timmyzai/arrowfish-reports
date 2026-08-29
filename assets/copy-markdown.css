@@ -12,10 +12,10 @@
     justify-content: center;
     gap: 8px;
     padding: 9px 14px;
-    border: 1px solid #c7d7ed;
+    border: 1px solid var(--af-border);
     border-radius: 9px;
-    background: #f6f9fe;
-    color: #174ea6;
+    background: var(--af-surface-muted);
+    color: var(--af-primary);
     font: inherit;
     font-size: 13px;
     font-weight: 650;
@@ -27,12 +27,12 @@
 }
 
 .copy-markdown-button:hover:not(:disabled) {
-    border-color: #8ab4f8;
-    background: #e8f0fe;
+    border-color: var(--af-primary);
+    background: var(--af-primary-soft);
 }
 
 .copy-markdown-button:focus-visible {
-    outline: 3px solid rgba(26, 115, 232, 0.3);
+    outline: 3px solid color-mix(in srgb, var(--af-focus) 30%, transparent);
     outline-offset: 2px;
 }
 
@@ -42,15 +42,15 @@
 }
 
 .copy-markdown-button[data-state="success"] {
-    border-color: #86c995;
-    background: #e6f4ea;
-    color: #137333;
+    border-color: var(--af-success);
+    background: var(--af-success-soft);
+    color: var(--af-success);
 }
 
 .copy-markdown-button[data-state="error"] {
-    border-color: #f0a6a0;
-    background: #fce8e6;
-    color: #b3261e;
+    border-color: var(--af-danger);
+    background: var(--af-danger-soft);
+    color: var(--af-danger);
 }
 
 .copy-markdown-icon {

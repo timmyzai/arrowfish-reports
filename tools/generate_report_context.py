@@ -6,14 +6,17 @@ from __future__ import annotations
 import hashlib
 import json
 import re
+from collections import defaultdict
 from html.parser import HTMLParser
 from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
 REPORTS_FILE = ROOT / "reports.json"
-OUTPUT_FILE = ROOT / "report-context.json"
-INDEX_OUTPUT_FILE = ROOT / "report-index.json"
+OUTPUTS = {
+    "zh-CN": (ROOT / "report-context.json", ROOT / "report-index.json"),
+    "en": (ROOT / "report-context.en.json", ROOT / "report-index.en.json"),
+}
 
 BLOCK_TAGS = {"p", "li", "summary", "dt", "dd", "blockquote", "pre"}
 HEADING_TAGS = {"h1", "h2", "h3", "h4", "h5", "h6"}
@@ -28,6 +31,12 @@ NEGATIVE_STATUS_RE = re.compile(
     r"(?:完成|上线|发布|验收|关闭|实现|使用|可用)",
     re.IGNORECASE,
 )
+NEGATIVE_STATUS_RE_EN = re.compile(
+    r"\b(?:not\s+yet|not|never|no\s+longer|cannot|can't|unable|pending|blocked|incomplete|outstanding)\b",
+    re.IGNORECASE,
+)
+
+
 def normalize_text(value: str) -> str:
     value = value.replace("\xa0", " ")
     value = re.sub(r"[ \t\r\f\v]+", " ", value)
@@ -35,13 +44,39 @@ def normalize_text(value: str) -> str:
     return re.sub(r"\s{2,}", " ", value).strip()
 
 
+class TranslationLookup:
+    """Apply sidecar translations in the same visible-text order as extraction."""
+
+    def __init__(self, units: list[dict] | None = None) -> None:
+        self.targets = {
+            (unit["source"], int(unit.get("occurrence", 0))): unit.get("target", "")
+            for unit in (units or [])
+            if unit.get("kind") == "text"
+        }
+        self.counts: defaultdict[str, int] = defaultdict(int)
+
+    def translate(self, value: str) -> str:
+        source = value.strip()
+        if not source:
+            return value
+        occurrence = self.counts[source]
+        self.counts[source] += 1
+        target = self.targets.get((source, occurrence), "").strip()
+        if not target:
+            return value
+        leading = value[: len(value) - len(value.lstrip())]
+        trailing = value[len(value.rstrip()) :]
+        return f"{leading}{target}{trailing}"
+
+
 class ReportParser(HTMLParser):
-    def __init__(self) -> None:
+    def __init__(self, translations: list[dict] | None = None) -> None:
         super().__init__(convert_charrefs=True)
         self.stack: list[dict] = []
         self.blocks: list[dict] = []
         self.section = "Report overview"
         self.skip_depth = 0
+        self.translations = TranslationLookup(translations)
 
     def handle_starttag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
         tag = tag.lower()
@@ -52,6 +87,7 @@ class ReportParser(HTMLParser):
                 "tag": tag,
                 "attrs": dict(attrs),
                 "parts": [],
+                "source_parts": [],
                 "line": self.getpos()[0],
             }
         )
@@ -63,7 +99,10 @@ class ReportParser(HTMLParser):
     def handle_data(self, data: str) -> None:
         if self.skip_depth or not data.strip():
             return
+        source_data = data
+        data = self.translations.translate(source_data)
         for node in self.stack:
+            node["source_parts"].append(source_data)
             node["parts"].append(data)
 
     def handle_endtag(self, tag: str) -> None:
@@ -88,6 +127,7 @@ class ReportParser(HTMLParser):
             return
 
         text = normalize_text(" ".join(node["parts"]))
+        source_text = normalize_text(" ".join(node["source_parts"]))
         if len(text) < 2:
             return
 
@@ -109,7 +149,11 @@ class ReportParser(HTMLParser):
         if not kind:
             return
 
-        if self.blocks and self.blocks[-1]["text"] == text:
+        # Block identity is canonical to the Chinese source. Two distinct source
+        # blocks may legitimately share the same English translation, so using
+        # translated text for de-duplication can drop blocks and shift every
+        # following block ID in the English context.
+        if self.blocks and self.blocks[-1]["_source_text"] == source_text:
             return
 
         self.blocks.append(
@@ -119,6 +163,7 @@ class ReportParser(HTMLParser):
                 "type": kind,
                 "line": node["line"],
                 "text": text[:2000],
+                "_source_text": source_text,
             }
         )
 
@@ -130,18 +175,23 @@ def class_names(node: dict) -> set[str]:
 class ReportIndexParser(HTMLParser):
     """Extract the roadmap and goal registry without introducing a DOM dependency."""
 
-    def __init__(self) -> None:
+    def __init__(self, translations: list[dict] | None = None) -> None:
         super().__init__(convert_charrefs=True)
         self.stack: list[dict] = []
         self.phases: list[dict] = []
         self.goals: list[dict] = []
         self.workstream_labels: dict[str, str] = {}
         self.status_labels: dict[str, dict[str, str]] = {}
+        self.skip_depth = 0
+        self.translations = TranslationLookup(translations)
 
     def handle_starttag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
+        tag = tag.lower()
+        if tag in SKIP_TAGS:
+            self.skip_depth += 1
         self.stack.append(
             {
-                "tag": tag.lower(),
+                "tag": tag,
                 "attrs": dict(attrs),
                 "parts": [],
                 "fields": {},
@@ -153,8 +203,9 @@ class ReportIndexParser(HTMLParser):
         self.handle_endtag(tag)
 
     def handle_data(self, data: str) -> None:
-        if not data.strip():
+        if self.skip_depth or not data.strip():
             return
+        data = self.translations.translate(data)
         for node in self.stack:
             node["parts"].append(data)
 
@@ -187,13 +238,23 @@ class ReportIndexParser(HTMLParser):
         closing = self.stack[index:]
         self.stack = self.stack[:index]
         node = closing[0]
+        if tag in SKIP_TAGS:
+            self.skip_depth = max(0, self.skip_depth - 1)
+            return
+        if self.skip_depth:
+            return
         text = normalize_text(" ".join(node["parts"]))
         classes = class_names(node)
 
         if tag == "h2":
             workstream = self.workstream()
             if workstream:
-                label = re.sub(r"\s+(?:2026\s+路线图|目标清单)$", "", text).strip()
+                label = re.sub(
+                    r"\s+(?:2026\s+(?:路线图|Roadmap)|(?:目标清单|Goal Registry))$",
+                    "",
+                    text,
+                    flags=re.IGNORECASE,
+                ).strip()
                 self.workstream_labels.setdefault(workstream, label or workstream)
 
         status_count = self.nearest("status-count")
@@ -256,15 +317,19 @@ class ReportIndexParser(HTMLParser):
                 self.goals.append({"unparsed": text})
 
 
-def parse_report(path: Path) -> list[dict]:
-    parser = ReportParser()
+def parse_report(path: Path, translations: list[dict] | None = None) -> list[dict]:
+    parser = ReportParser(translations)
     parser.feed(path.read_text(encoding="utf-8"))
     parser.close()
+    for block in parser.blocks:
+        block.pop("_source_text", None)
     return parser.blocks
 
 
-def parse_report_index(path: Path) -> tuple[list[dict], list[dict], dict[str, str], dict[str, dict[str, str]]]:
-    parser = ReportIndexParser()
+def parse_report_index(
+    path: Path, translations: list[dict] | None = None
+) -> tuple[list[dict], list[dict], dict[str, str], dict[str, dict[str, str]]]:
+    parser = ReportIndexParser(translations)
     parser.feed(path.read_text(encoding="utf-8"))
     parser.close()
     return parser.phases, parser.goals, parser.workstream_labels, parser.status_labels
@@ -289,13 +354,19 @@ def matching_block(blocks: list[dict], text: str, preferred_type: str) -> dict |
     )
 
 
-def build_report_index(output_reports: list[dict]) -> dict:
+def build_report_index(
+    output_reports: list[dict],
+    translations_by_file: dict[str, list[dict]] | None = None,
+    negative_status_re: re.Pattern = NEGATIVE_STATUS_RE,
+) -> dict:
     workstreams: dict[str, dict] = {}
     unparsed_rows: list[str] = []
 
     for report in output_reports:
         path = ROOT / report["file"]
-        phases, goals, labels, status_labels = parse_report_index(path)
+        phases, goals, labels, status_labels = parse_report_index(
+            path, (translations_by_file or {}).get(report["file"])
+        )
         for key, label in labels.items():
             workstreams.setdefault(
                 key,
@@ -357,7 +428,7 @@ def build_report_index(output_reports: list[dict]) -> dict:
             if (
                 block["type"] == "heading"
                 or is_low_information_block(block)
-                or not NEGATIVE_STATUS_RE.search(normalized)
+                or not negative_status_re.search(normalized)
                 or normalized in seen_blockers
             ):
                 continue
@@ -390,6 +461,30 @@ def is_low_information_block(block: dict) -> bool:
     return block["type"] == "table-row" and len(block["text"]) < 32 and not re.search(r"\d", block["text"])
 
 
+def localized_name(report: dict, locale: str) -> str:
+    name = report["name"]
+    if isinstance(name, dict):
+        return name.get(locale) or name.get("zh-CN") or report["id"]
+    return str(name)
+
+
+def load_translations(report: dict) -> list[dict]:
+    relative = (report.get("translations") or {}).get("en")
+    if not relative:
+        raise ValueError(f"Report {report['id']} has no English sidecar")
+    path = ROOT / relative
+    if not path.is_file():
+        raise FileNotFoundError(f"Missing English sidecar: {relative}")
+    payload = json.loads(path.read_text(encoding="utf-8"))
+    units = payload.get("units")
+    if not isinstance(units, list):
+        raise ValueError(f"English sidecar has invalid units: {relative}")
+    blank = [unit.get("id", "unknown") for unit in units if not str(unit.get("target", "")).strip()]
+    if blank:
+        raise ValueError(f"English sidecar has {len(blank)} blank translations: {relative}")
+    return units
+
+
 def main() -> None:
     reports = json.loads(REPORTS_FILE.read_text(encoding="utf-8"))
     if not isinstance(reports, list) or not reports:
@@ -420,8 +515,7 @@ def main() -> None:
     if unknown:
         raise FileNotFoundError(f"Registered reports are missing: {unknown}")
 
-    output_reports = []
-
+    source_versions: dict[str, str] = {}
     for report in reports:
         path = ROOT / report["file"]
         if not path.is_file():
@@ -435,30 +529,65 @@ def main() -> None:
             f"{block['section']}\t{block['type']}\t{block['text']}" for block in blocks
         )
         version = hashlib.sha256(canonical.encode("utf-8")).hexdigest()[:16]
-        output_reports.append(
-            {
-                "id": report["id"],
-                "name": report["name"],
-                "date": report["date"],
-                "file": report["file"],
-                "version": version,
-                "blocks": blocks,
-            }
+        source_versions[report["id"]] = version
+
+    generated_reports: dict[str, list[dict]] = {}
+    for locale, (context_file, index_file) in OUTPUTS.items():
+        translations_by_file = {
+            report["file"]: load_translations(report) for report in reports
+        } if locale == "en" else {}
+        output_reports = []
+        for report in reports:
+            blocks = parse_report(
+                ROOT / report["file"], translations_by_file.get(report["file"])
+            )
+            if not blocks:
+                raise ValueError(f"No {locale} report context extracted from {report['file']}")
+            output_reports.append(
+                {
+                    "id": report["id"],
+                    "name": localized_name(report, locale),
+                    "date": report["date"],
+                    "file": report["file"],
+                    "version": source_versions[report["id"]],
+                    "blocks": blocks,
+                }
+            )
+
+        payload = {"schemaVersion": 1, "locale": locale, "reports": output_reports}
+        generated_reports[locale] = output_reports
+        context_file.write_text(
+            json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
+        )
+        index_payload = build_report_index(
+            output_reports,
+            translations_by_file,
+            NEGATIVE_STATUS_RE_EN if locale == "en" else NEGATIVE_STATUS_RE,
+        )
+        index_payload["locale"] = locale
+        index_file.write_text(
+            json.dumps(index_payload, ensure_ascii=False, indent=2) + "\n",
+            encoding="utf-8",
+        )
+        total_blocks = sum(len(report["blocks"]) for report in output_reports)
+        print(
+            f"Generated {context_file.name} and {index_file.name}: "
+            f"{len(output_reports)} reports, {total_blocks} {locale} evidence blocks"
         )
 
-    payload = {"schemaVersion": 1, "reports": output_reports}
-    OUTPUT_FILE.write_text(
-        json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
-    )
-    INDEX_OUTPUT_FILE.write_text(
-        json.dumps(build_report_index(output_reports), ensure_ascii=False, indent=2) + "\n",
-        encoding="utf-8",
-    )
-    total_blocks = sum(len(report["blocks"]) for report in output_reports)
-    print(
-        f"Generated {OUTPUT_FILE.name} and {INDEX_OUTPUT_FILE.name}: "
-        f"{len(output_reports)} reports, {total_blocks} evidence blocks"
-    )
+    chinese = generated_reports["zh-CN"]
+    english = generated_reports["en"]
+    chinese_contract = [
+        (report["id"], report["file"], report["date"], report["version"], [block["id"] for block in report["blocks"]])
+        for report in chinese
+    ]
+    english_contract = [
+        (report["id"], report["file"], report["date"], report["version"], [block["id"] for block in report["blocks"]])
+        for report in english
+    ]
+    if chinese_contract != english_contract:
+        raise ValueError("Chinese and English report contexts do not share the same canonical IDs and versions")
+    print("Verified bilingual context contract: report IDs, block IDs, files, dates, and versions match")
 
 
 if __name__ == "__main__":

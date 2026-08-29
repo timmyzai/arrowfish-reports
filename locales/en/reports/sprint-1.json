@@ -1,0 +1,3312 @@
+{
+  "schemaVersion": 1,
+  "reportId": "sprint-1",
+  "sourceFile": "Stakeholder/Sprint-1/20260410_report.html",
+  "sourceVersion": "9f796f5ec6a30928",
+  "units": [
+    {
+      "id": "u_156c8cdde381f19a",
+      "kind": "text",
+      "source": "第1阶段 · 周报（第1周）· 2026-04-10",
+      "occurrence": 0,
+      "target": "Sprint 1 · Weekly Report (Week 1) · 2026-04-10",
+      "context": "title @ line 9"
+    },
+    {
+      "id": "u_1b91617b2b4d446a",
+      "kind": "text",
+      "source": "第1阶段周报（第1周）：测试部署与自动化",
+      "occurrence": 0,
+      "target": "Sprint 1 Weekly Report (Week 1): Testing Deployment and Automation",
+      "context": "h1.report-title @ line 71"
+    },
+    {
+      "id": "u_4e90e0d1c0fad613",
+      "kind": "text",
+      "source": "周期",
+      "occurrence": 0,
+      "target": "Cycle",
+      "context": "span.meta-label @ line 74"
+    },
+    {
+      "id": "u_6a66b8ce74774602",
+      "kind": "text",
+      "source": "2026年4月6日 – 4月10日",
+      "occurrence": 0,
+      "target": "April 6, 2026 – April 10, 2026",
+      "context": "span.meta-value @ line 75"
+    },
+    {
+      "id": "u_aa5ef8b3468ed7c4",
+      "kind": "text",
+      "source": "团队",
+      "occurrence": 0,
+      "target": "Team",
+      "context": "span.meta-label @ line 78"
+    },
+    {
+      "id": "u_088ab5ab2c22e576",
+      "kind": "text",
+      "source": "马来西亚",
+      "occurrence": 0,
+      "target": "Malaysia",
+      "context": "span.meta-value @ line 79"
+    },
+    {
+      "id": "u_82729ca6585abf4c",
+      "kind": "text",
+      "source": "报告对象",
+      "occurrence": 0,
+      "target": "Report Recipient",
+      "context": "span.meta-label @ line 82"
+    },
+    {
+      "id": "u_9df0145e317a5c47",
+      "kind": "text",
+      "source": "日总",
+      "occurrence": 0,
+      "target": "General Manager Ri",
+      "context": "span.meta-value @ line 83"
+    },
+    {
+      "id": "u_947b0511f45ed990",
+      "kind": "text",
+      "source": "执行总结",
+      "occurrence": 0,
+      "target": "Execution Summary",
+      "context": "h2.section-heading @ line 90"
+    },
+    {
+      "id": "u_f4ed58242f93be65",
+      "kind": "text",
+      "source": "第1阶段于4月6日正式启动，团队分三条并行线推进：后端服务、安卓应用、服务器基础设施。上阶段（第0阶段）的全部开发工作已完成，本周重点是搭建测试环境、构建QA测试版应用，并完成与台湾顾问Lex的技术对接会议。",
+      "occurrence": 0,
+      "target": "Sprint 1 officially began on April 6, with three workstreams progressing in parallel: backend services, the Android app, and server infrastructure. All development work from the previous Sprint (Sprint 0) was completed. This week focused on setting up the test environment, building the QA test app, and completing the technical handover meeting with Taiwan consultant Lex.",
+      "context": "div.section-body @ line 91"
+    },
+    {
+      "id": "u_2caa27a44fd9fa06",
+      "kind": "text",
+      "source": "数据库安全：发现生产数据库从未设置备份（台湾团队遗留），如不处理约3个月后将崩溃 — 发现当天已全部修复并启用备份",
+      "occurrence": 0,
+      "target": "Database Security: Production database has never been set up with backups (leftover from the Taiwan team), and will crash in about 3 months if not addressed — Fully resolved and backups enabled on the day of discovery",
+      "context": "li @ line 95"
+    },
+    {
+      "id": "u_0527430e6798cebb",
+      "kind": "text",
+      "source": "服务器安全：发现Nginx未配置默认拦截，任何未注册域名的请求均可直达后端应用 — 与此前木马注入攻击为同一攻击路径 — 发现当天已修复",
+      "occurrence": 0,
+      "target": "Server Security: Nginx was not configured to default block, allowing any unregistered domain requests direct access to backend applications — same attack vector as a previous malware injection attack — fixed on the day of discovery",
+      "context": "li @ line 96"
+    },
+    {
+      "id": "u_2fb63e0516f2368a",
+      "kind": "text",
+      "source": "专线运营自动化：发现每周5.7–12小时的人工分配工作可全部自动化 — 开发中",
+      "occurrence": 0,
+      "target": "Automated Dedicated Line Operations: Weekly 5.7 to 12 hours of manual allocation work can be fully automated — in development",
+      "context": "li @ line 97"
+    },
+    {
+      "id": "u_1bddbaae40fadf73",
+      "kind": "text",
+      "source": "数据库性能：发现历史遗留的158,000条慢查询记录，优化方案开发中",
+      "occurrence": 0,
+      "target": "Database Performance: 158,000 slow query records from historical legacy issues identified; optimization solution under development",
+      "context": "li @ line 98"
+    },
+    {
+      "id": "u_f45bddb410736221",
+      "kind": "text",
+      "source": "服务器审计：发现开发服务器资源浪费，已节省22 GB磁盘空间，进一步节省计划制定中",
+      "occurrence": 0,
+      "target": "Server Auditing: Development server resource wastage identified — saved 22 GB of disk space, further savings plan in progress",
+      "context": "li @ line 99"
+    },
+    {
+      "id": "u_3b4bca4046f68849",
+      "kind": "text",
+      "source": "测试版应用：目标本周完成构建，计划下周生产上线",
+      "occurrence": 0,
+      "target": "QA Test Application: Target is to complete build this week; planned for production release next week",
+      "context": "li @ line 100"
+    },
+    {
+      "id": "u_731a987647b4dd46",
+      "kind": "text",
+      "source": "状态：第0阶段开发完成，第1阶段测试与部署进行中。两项严重安全风险（数据库无备份、Nginx安全漏洞）已当天修复。目标下周生产上线。",
+      "occurrence": 0,
+      "target": "Status: Sprint 0 development completed, Sprint 1 testing and deployment in progress. Two critical security risks (lack of database backup, Nginx vulnerability) were fixed on the same day. Target is release next week.",
+      "context": "div.section-body @ line 102"
+    },
+    {
+      "id": "u_1005b4069e83c78c",
+      "kind": "text",
+      "source": "里程碑进度",
+      "occurrence": 0,
+      "target": "Milestone Progress",
+      "context": "h2.section-heading @ line 109"
+    },
+    {
+      "id": "u_4136453e06f2de09",
+      "kind": "text",
+      "source": "3月底",
+      "occurrence": 0,
+      "target": "End of March",
+      "context": "div.milestone-date @ line 112"
+    },
+    {
+      "id": "u_860ea64f999b153a",
+      "kind": "text",
+      "source": "平台全面审计完成 — 发现所有遗留问题，开发立即启动",
+      "occurrence": 0,
+      "target": "Full platform audit completed — all legacy issues identified, development immediately initiated",
+      "context": "div.milestone-text @ line 113"
+    },
+    {
+      "id": "u_e74bb8d417b1e070",
+      "kind": "text",
+      "source": "4月3日",
+      "occurrence": 0,
+      "target": "April 3",
+      "context": "div.milestone-date @ line 116"
+    },
+    {
+      "id": "u_7122e4fac613ed0a",
+      "kind": "text",
+      "source": "第0阶段全部开发完成，代码提交主分支",
+      "occurrence": 0,
+      "target": "All development of Sprint 0 is completed, code committed to the main branch",
+      "context": "div.milestone-text @ line 117"
+    },
+    {
+      "id": "u_ad93c2436116c2eb",
+      "kind": "text",
+      "source": "4月6日",
+      "occurrence": 0,
+      "target": "April 6",
+      "context": "div.milestone-date @ line 120"
+    },
+    {
+      "id": "u_12b51659660ebc69",
+      "kind": "text",
+      "source": "第1阶段正式启动，团队分工明确，进入并行开发",
+      "occurrence": 0,
+      "target": "Sprint 1 officially starts, team roles are clearly defined and parallel development begins",
+      "context": "div.milestone-text @ line 121"
+    },
+    {
+      "id": "u_faaa4b5fbd733a4e",
+      "kind": "text",
+      "source": "4月7日",
+      "occurrence": 0,
+      "target": "April 7",
+      "context": "div.milestone-date @ line 124"
+    },
+    {
+      "id": "u_56bb9b43935c26c3",
+      "kind": "text",
+      "source": "与台湾顾问Lex完成技术对接会议，确认计划方向",
+      "occurrence": 0,
+      "target": "Conducted technical alignment meeting with Taiwanese consultant Lex to confirm the planned direction",
+      "context": "div.milestone-text @ line 125"
+    },
+    {
+      "id": "u_8177ee9365eb4fcb",
+      "kind": "text",
+      "source": "4月9日",
+      "occurrence": 0,
+      "target": "April 9",
+      "context": "div.milestone-date @ line 128"
+    },
+    {
+      "id": "u_0b446e1795da6b24",
+      "kind": "text",
+      "source": "紧急修复两项严重安全风险：数据库无备份 + Nginx安全漏洞（木马攻击入口），当天发现当天解决",
+      "occurrence": 0,
+      "target": "Emergency fix for two critical security risks: no database backup + Nginx security vulnerability (Trojan attack entry), resolved on the same day it was discovered",
+      "context": "div.milestone-text @ line 129"
+    },
+    {
+      "id": "u_8016dc00f5718fd9",
+      "kind": "text",
+      "source": "4月8–10日",
+      "occurrence": 0,
+      "target": "April 8–10",
+      "context": "div.milestone-date @ line 132"
+    },
+    {
+      "id": "u_a369938bde2f39b2",
+      "kind": "text",
+      "source": "QA测试版APK构建 + 测试环境部署（进行中）",
+      "occurrence": 0,
+      "target": "QA test APK build + testing environment deployment (in progress)",
+      "context": "div.milestone-text @ line 133"
+    },
+    {
+      "id": "u_6921d9e426330a5f",
+      "kind": "text",
+      "source": "4月10–11日",
+      "occurrence": 0,
+      "target": "April 10–11",
+      "context": "div.milestone-date @ line 136"
+    },
+    {
+      "id": "u_68cc69b860b4ac4a",
+      "kind": "text",
+      "source": "QA全面测试：Amy按测试清单执行完整测试（周末加班）",
+      "occurrence": 0,
+      "target": "Comprehensive QA testing: Amy executes full test plan (weekend overtime)",
+      "context": "div.milestone-text @ line 137"
+    },
+    {
+      "id": "u_9a034c61d650096f",
+      "kind": "text",
+      "source": "4月中旬",
+      "occurrence": 0,
+      "target": "Mid-April",
+      "context": "div.milestone-date @ line 140"
+    },
+    {
+      "id": "u_29b582ba229c600d",
+      "kind": "text",
+      "source": "根据QA结果修复 + 应用商店合规优化 + 生产环境部署",
+      "occurrence": 0,
+      "target": "Fixes based on QA results + app store compliance optimization + production environment deployment",
+      "context": "div.milestone-text @ line 141"
+    },
+    {
+      "id": "u_1cf71eb74e885acc",
+      "kind": "text",
+      "source": "4月25日",
+      "occurrence": 0,
+      "target": "April 25",
+      "context": "div.milestone-date @ line 144"
+    },
+    {
+      "id": "u_7b7790fe5eeba766",
+      "kind": "text",
+      "source": "Arrowfish Google Play 上线（目标）",
+      "occurrence": 0,
+      "target": "Release of Arrowfish on Google Play (target)",
+      "context": "div.milestone-text @ line 145"
+    },
+    {
+      "id": "u_b7d08b1434aa6496",
+      "kind": "text",
+      "source": "业务影响 — 数据库安全（严重遗留风险）",
+      "occurrence": 0,
+      "target": "Business impact - Database security (severe legacy risk)",
+      "context": "h2.section-heading @ line 152"
+    },
+    {
+      "id": "u_535664773059d80a",
+      "kind": "text",
+      "source": "审计发现：",
+      "occurrence": 0,
+      "target": "Audit findings:",
+      "context": "div.section-body @ line 153"
+    },
+    {
+      "id": "u_8b07073d1e96deab",
+      "kind": "text",
+      "source": "生产数据库从未设置任何备份",
+      "occurrence": 0,
+      "target": "No database backup has ever been set up in production",
+      "context": "strong @ line 154 · surrounding text: 审计发现： 生产数据库从未设置任何备份 。台湾团队编写的一个每日维护脚本因缺少数据库密码，从2025年12月17日起连续114天每天运行失败，无人察觉。125万条过期数据持续堆积，两台数据库服务器磁盘占用达66%，且无任何灾难恢复手段。"
+    },
+    {
+      "id": "u_c99c47c3a8b44f3c",
+      "kind": "text",
+      "source": "。台湾团队编写的一个每日维护脚本因缺少数据库密码，从2025年12月17日起连续114天每天运行失败，无人察觉。125万条过期数据持续堆积，两台数据库服务器磁盘占用达66%，且无任何灾难恢复手段。",
+      "occurrence": 0,
+      "target": "A daily maintenance script developed by the Taiwan team failed for 114 consecutive days starting from December 17, 2025, due to missing database passwords, going unnoticed. Over 1.25 million expired records accumulated, with both database servers' disk usage reaching 66%, and no disaster recovery measures in place.",
+      "context": "div.section-body @ line 154 · surrounding text: 审计发现： 生产数据库从未设置任何备份 。台湾团队编写的一个每日维护脚本因缺少数据库密码，从2025年12月17日起连续114天每天运行失败，无人察觉。125万条过期数据持续堆积，两台数据库服务器磁盘占用达66%，且无任何灾难恢复手段。"
+    },
+    {
+      "id": "u_734bbc0dc68af06d",
+      "kind": "text",
+      "source": "如果未被发现",
+      "occurrence": 0,
+      "target": "If not detected",
+      "context": "th @ line 158 · surrounding text: 如果未被发现 后果"
+    },
+    {
+      "id": "u_8f0a1c7d8ac1bbce",
+      "kind": "text",
+      "source": "后果",
+      "occurrence": 0,
+      "target": "Consequences",
+      "context": "th @ line 158 · surrounding text: 如果未被发现 后果"
+    },
+    {
+      "id": "u_83789dd6fc69f65e",
+      "kind": "text",
+      "source": "数据库磁盘约在7月中旬写满",
+      "occurrence": 0,
+      "target": "Database disks are expected to be full around mid-July",
+      "context": "td @ line 162"
+    },
+    {
+      "id": "u_7c810ebd4c2506c4",
+      "kind": "text",
+      "source": "数据库崩溃，全平台停摆 — 用户无法登录、无法连接VPN、无法购买",
+      "occurrence": 0,
+      "target": "Database crash, platform-wide outage — users unable to log in, connect to the VPN, or make purchases",
+      "context": "td @ line 163"
+    },
+    {
+      "id": "u_f2cbea85861b47f9",
+      "kind": "text",
+      "source": "崩溃时无任何备份可用",
+      "occurrence": 0,
+      "target": "No backups available at the time of failure",
+      "context": "td @ line 166"
+    },
+    {
+      "id": "u_1627b1f2c0e02d42",
+      "kind": "text",
+      "source": "29.3万用户账号、全部支付记录、全部服务器配置永久丢失",
+      "occurrence": 0,
+      "target": "293,000 user accounts, all payment records, and server configurations were permanently lost",
+      "context": "strong @ line 167 · surrounding text: 29.3万用户账号、全部支付记录、全部服务器配置永久丢失 — 无法恢复"
+    },
+    {
+      "id": "u_a8fa17014e3b257c",
+      "kind": "text",
+      "source": "— 无法恢复",
+      "occurrence": 0,
+      "target": "-- Unable to recover",
+      "context": "td @ line 167 · surrounding text: 29.3万用户账号、全部支付记录、全部服务器配置永久丢失 — 无法恢复"
+    },
+    {
+      "id": "u_0c710cdc9a930726",
+      "kind": "text",
+      "source": "平台完全下线",
+      "occurrence": 0,
+      "target": "Platform fully offline",
+      "context": "td @ line 170"
+    },
+    {
+      "id": "u_35849b8eccf51917",
+      "kind": "text",
+      "source": "停摆期间收入归零，恢复需数天至数周（如果能恢复的话）",
+      "occurrence": 0,
+      "target": "Revenue drops to zero during the outage, recovery takes days to weeks (if possible)",
+      "context": "td @ line 171"
+    },
+    {
+      "id": "u_646a465ec55fc108",
+      "kind": "text",
+      "source": "发现当天已全部修复：",
+      "occurrence": 0,
+      "target": "All issues resolved on discovery day:",
+      "context": "strong @ line 176"
+    },
+    {
+      "id": "u_ec82bd3a5e13ab0f",
+      "kind": "text",
+      "source": "措施",
+      "occurrence": 0,
+      "target": "Actions",
+      "context": "th @ line 180 · surrounding text: 措施 效果"
+    },
+    {
+      "id": "u_02f4897feb210e17",
+      "kind": "text",
+      "source": "效果",
+      "occurrence": 0,
+      "target": "Results",
+      "context": "th @ line 180 · surrounding text: 措施 效果"
+    },
+    {
+      "id": "u_c61703fd6c56337e",
+      "kind": "text",
+      "source": "启用Azure每日自动备份（两台服务器）",
+      "occurrence": 0,
+      "target": "Enable Azure daily automatic backups (two servers)",
+      "context": "td @ line 184"
+    },
+    {
+      "id": "u_d9d21948fc4ea451",
+      "kind": "text",
+      "source": "每日06:00自动备份，保留30天，7天内可即时恢复 —",
+      "occurrence": 0,
+      "target": "Automatic backup at 06:00 every day, retention for 30 days, instant recovery within 7 days —",
+      "context": "td @ line 185 · surrounding text: 每日06:00自动备份，保留30天，7天内可即时恢复 — 平台首次拥有灾难恢复能力"
+    },
+    {
+      "id": "u_3a85d9ee7453202b",
+      "kind": "text",
+      "source": "平台首次拥有灾难恢复能力",
+      "occurrence": 0,
+      "target": "Platform gains disaster recovery capability for the first time",
+      "context": "strong @ line 185 · surrounding text: 每日06:00自动备份，保留30天，7天内可即时恢复 — 平台首次拥有灾难恢复能力"
+    },
+    {
+      "id": "u_fc89f24265fea085",
+      "kind": "text",
+      "source": "修复114天失败的维护脚本",
+      "occurrence": 0,
+      "target": "Fix maintenance script that failed for 114 days",
+      "context": "td @ line 188"
+    },
+    {
+      "id": "u_8efd97fbeec46cd8",
+      "kind": "text",
+      "source": "125万条过期数据将被自动清理，磁盘压力解除",
+      "occurrence": 0,
+      "target": "1.25 million expired records will be automatically purged, relieving disk pressure",
+      "context": "td @ line 189"
+    },
+    {
+      "id": "u_fc968f894fae259a",
+      "kind": "text",
+      "source": "优化磁盘配置（两台服务器）",
+      "occurrence": 0,
+      "target": "Optimize disk configuration (two servers)",
+      "context": "td @ line 192"
+    },
+    {
+      "id": "u_6721c9d753e7d036",
+      "kind": "text",
+      "source": "磁盘占用从66%降至49%，释放约22 GB空间",
+      "occurrence": 0,
+      "target": "Disk usage dropped from 66% to 49%, freeing up approximately 22 GB of space",
+      "context": "td @ line 193"
+    },
+    {
+      "id": "u_ff8a93a942a1e837",
+      "kind": "text",
+      "source": "这是接手以来发现的最严重遗留风险。新增成本仅$25/月（两台服务器备份费用），但避免了约3个月后的全平台崩溃和全部用户数据永久丢失。",
+      "occurrence": 0,
+      "target": "This is the most severe legacy risk identified since taking over. The additional cost is only $25/month (for two server backups), but it prevented a full platform crash and total user data loss three months later.",
+      "context": "div.section-note @ line 197"
+    },
+    {
+      "id": "u_19ba2423d5668fcf",
+      "kind": "text",
+      "source": "业务影响 — 服务器安全漏洞（严重遗留风险）",
+      "occurrence": 0,
+      "target": "Business Impact - Server Security Vulnerability (Severe Legacy Risk)",
+      "context": "h2.section-heading @ line 204"
+    },
+    {
+      "id": "u_b635547a58158561",
+      "kind": "text",
+      "source": "审计发现：测试服务器和生产服务器的Nginx均",
+      "occurrence": 0,
+      "target": "Audit findings: Nginx on both test and production servers is not configured with default deny rules",
+      "context": "div.section-body @ line 205"
+    },
+    {
+      "id": "u_097f4c226df27015",
+      "kind": "text",
+      "source": "未配置默认拦截规则",
+      "occurrence": 0,
+      "target": "Default blocking rules are not configured",
+      "context": "strong @ line 206 · surrounding text: 审计发现：测试服务器和生产服务器的Nginx均 未配置默认拦截规则 。当请求使用未注册的域名访问服务器时，Nginx不会拒绝请求，而是将其转发至后端应用程序。这与 此前遭受木马注入攻击所利用的攻击路径完全一致 。"
+    },
+    {
+      "id": "u_de4f063966e3ae98",
+      "kind": "text",
+      "source": "。当请求使用未注册的域名访问服务器时，Nginx不会拒绝请求，而是将其转发至后端应用程序。这与",
+      "occurrence": 0,
+      "target": "When requests are made to an unregistered domain, Nginx does not reject the request but forwards it to the back office application. This aligns with",
+      "context": "div.section-body @ line 206 · surrounding text: 审计发现：测试服务器和生产服务器的Nginx均 未配置默认拦截规则 。当请求使用未注册的域名访问服务器时，Nginx不会拒绝请求，而是将其转发至后端应用程序。这与 此前遭受木马注入攻击所利用的攻击路径完全一致 。"
+    },
+    {
+      "id": "u_fc98b47d0bcd0e71",
+      "kind": "text",
+      "source": "此前遭受木马注入攻击所利用的攻击路径完全一致",
+      "occurrence": 0,
+      "target": "the same attack path exploited by a previous Trojan injection attack",
+      "context": "strong @ line 206 · surrounding text: 审计发现：测试服务器和生产服务器的Nginx均 未配置默认拦截规则 。当请求使用未注册的域名访问服务器时，Nginx不会拒绝请求，而是将其转发至后端应用程序。这与 此前遭受木马注入攻击所利用的攻击路径完全一致 。"
+    },
+    {
+      "id": "u_4669e9f7a3923c0c",
+      "kind": "text",
+      "source": "此外，测试服务器和生产服务器",
+      "occurrence": 0,
+      "target": "Both the test and production servers",
+      "context": "div.section-body @ line 208"
+    },
+    {
+      "id": "u_2051c6123bfca354",
+      "kind": "text",
+      "source": "共用同一个Azure网络安全组",
+      "occurrence": 0,
+      "target": "share the same Azure network security group",
+      "context": "strong @ line 209 · surrounding text: 此外，测试服务器和生产服务器 共用同一个Azure网络安全组 ，且HTTP（80端口）和HTTPS（443端口）均对全球公网开放。攻击者可使用任意域名发送请求，直接穿透Nginx到达后端。"
+    },
+    {
+      "id": "u_cb8894513cfda601",
+      "kind": "text",
+      "source": "，且HTTP（80端口）和HTTPS（443端口）均对全球公网开放。攻击者可使用任意域名发送请求，直接穿透Nginx到达后端。",
+      "occurrence": 0,
+      "target": ", and both HTTP (port 80) and HTTPS (port 443) are publicly accessible. Attackers can send requests using any domain name, directly penetrating Nginx to reach the back office.",
+      "context": "div.section-body @ line 209 · surrounding text: 此外，测试服务器和生产服务器 共用同一个Azure网络安全组 ，且HTTP（80端口）和HTTPS（443端口）均对全球公网开放。攻击者可使用任意域名发送请求，直接穿透Nginx到达后端。"
+    },
+    {
+      "id": "u_0973b6c7ef7538ab",
+      "kind": "text",
+      "source": "攻击路径",
+      "occurrence": 0,
+      "target": "Attack Path",
+      "context": "th @ line 213 · surrounding text: 攻击路径 后果"
+    },
+    {
+      "id": "u_52ee07374c0e92d2",
+      "kind": "text",
+      "source": "后果",
+      "occurrence": 1,
+      "target": "Consequence",
+      "context": "th @ line 213 · surrounding text: 攻击路径 后果"
+    },
+    {
+      "id": "u_a31435d06e1ee44d",
+      "kind": "text",
+      "source": "攻击者用任意域名发请求 → Nginx无拦截 → 直达后端",
+      "occurrence": 0,
+      "target": "Attacker sends requests using any domain name → Nginx has no deny rules → Directly reaches the back office",
+      "context": "td @ line 217"
+    },
+    {
+      "id": "u_e80fc7a54c3ed519",
+      "kind": "text",
+      "source": "此前木马注入攻击的入口 — 攻击者通过未注册域名绕过正常路由，注入恶意代码",
+      "occurrence": 0,
+      "target": "The same entry point as a previous Trojan injection attack - attackers bypass normal routing by using unregistered domains to inject malicious code",
+      "context": "strong @ line 218"
+    },
+    {
+      "id": "u_7e2a13cc3b79fb9e",
+      "kind": "text",
+      "source": "扫描器/爬虫探测服务器IP",
+      "occurrence": 0,
+      "target": "Scanner/spider probes the server IP",
+      "context": "td @ line 221"
+    },
+    {
+      "id": "u_c1bc8ea4a0047c87",
+      "kind": "text",
+      "source": "服务器返回404页面和版本信息，暴露技术栈（Nginx版本、后端框架、API格式）",
+      "occurrence": 0,
+      "target": "Server returns a 404 page and version information, exposing the tech stack (Nginx version, backend framework, API format)",
+      "context": "td @ line 222"
+    },
+    {
+      "id": "u_4ab9249e159424c1",
+      "kind": "text",
+      "source": "域名配置出错时无明确提示",
+      "occurrence": 0,
+      "target": "No clear warning when domain configuration is incorrect",
+      "context": "td @ line 225"
+    },
+    {
+      "id": "u_0682ef00b10a8147",
+      "kind": "text",
+      "source": "服务器返回误导性错误（\"用户未登录\"），排查方向错误，延长故障修复时间",
+      "occurrence": 0,
+      "target": "Server returns misleading error ('User not logged in'), leading to wrong troubleshooting direction and extended fault resolution time",
+      "context": "td @ line 226"
+    },
+    {
+      "id": "u_13ef2e9bd46d3084",
+      "kind": "text",
+      "source": "发现当天已全部修复（两台服务器）：",
+      "occurrence": 0,
+      "target": "Both servers were fully remediated on the day of discovery:",
+      "context": "strong @ line 231"
+    },
+    {
+      "id": "u_268e7ab3763531fc",
+      "kind": "text",
+      "source": "措施",
+      "occurrence": 1,
+      "target": "Mitigation",
+      "context": "th @ line 235 · surrounding text: 措施 效果"
+    },
+    {
+      "id": "u_81b932212619a9f8",
+      "kind": "text",
+      "source": "效果",
+      "occurrence": 1,
+      "target": "Effect",
+      "context": "th @ line 235 · surrounding text: 措施 效果"
+    },
+    {
+      "id": "u_9ae8b61bcc657696",
+      "kind": "text",
+      "source": "配置Nginx默认拦截规则（返回444：静默断开连接）",
+      "occurrence": 0,
+      "target": "Configure Nginx default blocking rules (returning 444: silent drop)",
+      "context": "td @ line 239"
+    },
+    {
+      "id": "u_93921678a9f849a8",
+      "kind": "text",
+      "source": "未注册域名的请求被立即丢弃，",
+      "occurrence": 0,
+      "target": "Unregistered domain requests are immediately discarded",
+      "context": "td @ line 240 · surrounding text: 未注册域名的请求被立即丢弃， 零信息泄露 — 攻击者看到的只是\"连接被拒绝\""
+    },
+    {
+      "id": "u_2a80d2b8036ae5c9",
+      "kind": "text",
+      "source": "零信息泄露",
+      "occurrence": 0,
+      "target": "Zero information leakage",
+      "context": "strong @ line 240 · surrounding text: 未注册域名的请求被立即丢弃， 零信息泄露 — 攻击者看到的只是\"连接被拒绝\""
+    },
+    {
+      "id": "u_acdcbd19e3b64a4d",
+      "kind": "text",
+      "source": "— 攻击者看到的只是\"连接被拒绝\"",
+      "occurrence": 0,
+      "target": "— Attackers see only 'Connection refused'",
+      "context": "td @ line 240 · surrounding text: 未注册域名的请求被立即丢弃， 零信息泄露 — 攻击者看到的只是\"连接被拒绝\""
+    },
+    {
+      "id": "u_aa6183fc0384bc79",
+      "kind": "text",
+      "source": "HTTP和HTTPS端口均已覆盖",
+      "occurrence": 0,
+      "target": "HTTP and HTTPS ports are fully covered",
+      "context": "td @ line 243"
+    },
+    {
+      "id": "u_b14f22cf4e80d88a",
+      "kind": "text",
+      "source": "所有未注册域名在Nginx层即被拦截，不再转发至后端应用",
+      "occurrence": 0,
+      "target": "Unregistered domains are blocked at the Nginx layer and not forwarded to backend applications",
+      "context": "td @ line 244"
+    },
+    {
+      "id": "u_e43bed754a6b7183",
+      "kind": "text",
+      "source": "已验证：正常域名访问不受影响",
+      "occurrence": 0,
+      "target": "Verified: Normal domain access is unaffected",
+      "context": "td @ line 247"
+    },
+    {
+      "id": "u_42c436e399292b13",
+      "kind": "text",
+      "source": "所有已注册的业务域名（客户端、管理后台、节点API）均正常工作",
+      "occurrence": 0,
+      "target": "All registered business domains (client, management Back Office (BO), and VPN node API) are functioning normally",
+      "context": "td @ line 248"
+    },
+    {
+      "id": "u_465dc99849371abb",
+      "kind": "text",
+      "source": "此修复关闭了木马注入攻击的入口。修改为运维级别操作，无需代码部署，零成本，零停机时间。建议后续将测试服务器和生产服务器的网络安全组分离，进一步收紧测试服务器的公网访问权限。",
+      "occurrence": 0,
+      "target": "This fix closes the entry point for Trojan injection attacks. It is a maintenance-level operation with no code deployment required, zero cost, and zero downtime. We recommend separating test server and production server security groups in the future to further tighten public access on test servers.",
+      "context": "div.section-note @ line 252"
+    },
+    {
+      "id": "u_7f0f1e076a05ff21",
+      "kind": "text",
+      "source": "安全改进 — 无日志政策违规（已发现并修复）",
+      "occurrence": 0,
+      "target": "Security improvement — No log policy violation (discovered and fixed)",
+      "context": "h2.section-heading @ line 259"
+    },
+    {
+      "id": "u_fbda2977ae4c214e",
+      "kind": "text",
+      "source": "平台承诺\"不记录用户活动\"。本周审计发现",
+      "occurrence": 0,
+      "target": "The platform promises 'no logging of user activity.' This week's audit revealed",
+      "context": "div.section-body @ line 260"
+    },
+    {
+      "id": "u_991787125f02d88a",
+      "kind": "text",
+      "source": "前团队在多处违反了无日志政策",
+      "occurrence": 0,
+      "target": "the previous team violated the no log policy in multiple locations",
+      "context": "strong @ line 261 · surrounding text: 平台承诺\"不记录用户活动\"。本周审计发现 前团队在多处违反了无日志政策 ，已当周全部修复。"
+    },
+    {
+      "id": "u_04fa73b854e44363",
+      "kind": "text",
+      "source": "，已当周全部修复。",
+      "occurrence": 0,
+      "target": "and all issues were fixed that week.",
+      "context": "div.section-body @ line 261 · surrounding text: 平台承诺\"不记录用户活动\"。本周审计发现 前团队在多处违反了无日志政策 ，已当周全部修复。"
+    },
+    {
+      "id": "u_72f7d273f4ee29d7",
+      "kind": "text",
+      "source": "违规位置",
+      "occurrence": 0,
+      "target": "Violation locations",
+      "context": "th @ line 265 · surrounding text: 违规位置 前团队遗留的问题 修复内容 状态"
+    },
+    {
+      "id": "u_c6cec7d5934daaf8",
+      "kind": "text",
+      "source": "前团队遗留的问题",
+      "occurrence": 0,
+      "target": "Issues left by the previous team",
+      "context": "th @ line 265 · surrounding text: 违规位置 前团队遗留的问题 修复内容 状态"
+    },
+    {
+      "id": "u_cbce509d8434c028",
+      "kind": "text",
+      "source": "修复内容",
+      "occurrence": 0,
+      "target": "Fix content",
+      "context": "th @ line 265 · surrounding text: 违规位置 前团队遗留的问题 修复内容 状态"
+    },
+    {
+      "id": "u_b86e218aaeb4d1bd",
+      "kind": "text",
+      "source": "状态",
+      "occurrence": 0,
+      "target": "Status",
+      "context": "th @ line 265 · surrounding text: 违规位置 前团队遗留的问题 修复内容 状态"
+    },
+    {
+      "id": "u_23f8722c4e892529",
+      "kind": "text",
+      "source": "安卓 MmkvManager.kt",
+      "occurrence": 0,
+      "target": "Android MmkvManager.kt",
+      "context": "td @ line 269"
+    },
+    {
+      "id": "u_a5b79e46a36259e8",
+      "kind": "text",
+      "source": "调试日志记录完整 VPN 服务器配置、连接密钥、订阅 URL（5处日志语句）",
+      "occurrence": 0,
+      "target": "Debug logs fully record VPN server configuration, connection keys, and subscription URLs (5 log statements)",
+      "context": "td @ line 270"
+    },
+    {
+      "id": "u_367320db7aec0c9f",
+      "kind": "text",
+      "source": "全部替换为无敏感信息的等效日志（仅记录数量，不记录内容）",
+      "occurrence": 0,
+      "target": "All replaced with equivalent logs without sensitive information (only recording quantities, not content)",
+      "context": "td @ line 271"
+    },
+    {
+      "id": "u_032bb43a78477963",
+      "kind": "text",
+      "source": "已修复",
+      "occurrence": 0,
+      "target": "Resolved",
+      "context": "span.status-badge.status-resolved @ line 272"
+    },
+    {
+      "id": "u_af89b04b67ea7bb7",
+      "kind": "text",
+      "source": "后端客户端 API 追踪中间件",
+      "occurrence": 0,
+      "target": "Back Office client API tracking middleware",
+      "context": "td @ line 275"
+    },
+    {
+      "id": "u_73c0bfaad9000e1a",
+      "kind": "text",
+      "source": "启用时记录用户 IP 和完整请求体，违反无日志政策",
+      "occurrence": 0,
+      "target": "Records user IP and full request bodies when enabled, violating the no-logging policy",
+      "context": "td @ line 276"
+    },
+    {
+      "id": "u_1fe20c8c963f8b08",
+      "kind": "text",
+      "source": "用合规请求日志（仅方法、路径、状态码、耗时，无用户数据）替换追踪中间件",
+      "occurrence": 0,
+      "target": "Replace with compliant request logs (only method, path, status code, duration, no user data)",
+      "context": "td @ line 277"
+    },
+    {
+      "id": "u_3cd22f57ca083390",
+      "kind": "text",
+      "source": "已修复",
+      "occurrence": 1,
+      "target": "Resolved, pending deployment",
+      "context": "span.status-badge.status-resolved @ line 278"
+    },
+    {
+      "id": "u_f4dd7daa1bff876a",
+      "kind": "text",
+      "source": "后端 middleware.Logger()",
+      "occurrence": 0,
+      "target": "Back Office middleware.Logger()",
+      "context": "td @ line 281"
+    },
+    {
+      "id": "u_9e2d767cb81738a1",
+      "kind": "text",
+      "source": "旧版本将所有请求写入磁盘 — 生成 22 GB PM2 日志文件",
+      "occurrence": 0,
+      "target": "Previous versions wrote all requests to disk — generated a 22 GB PM2 log file",
+      "context": "td @ line 282"
+    },
+    {
+      "id": "u_f4cdabcf21b5c65b",
+      "kind": "text",
+      "source": "替换为空操作日志器；生产日志文件已手动清空（磁盘 50%→33%）",
+      "occurrence": 0,
+      "target": "Replaced with no-op logger; production log files manually cleared (disk usage from 50% to 33%)",
+      "context": "td @ line 283"
+    },
+    {
+      "id": "u_0540ce36e908c450",
+      "kind": "text",
+      "source": "已修复，待部署生效",
+      "occurrence": 0,
+      "target": "Resolved, pending deployment",
+      "context": "span.status-badge.status-resolved @ line 284"
+    },
+    {
+      "id": "u_49a18ad9edd4d07d",
+      "kind": "text",
+      "source": "数据库 log_apis 表（1,252,033 行）",
+      "occurrence": 0,
+      "target": "log_apis table (1,252,033 rows)",
+      "context": "td @ line 287"
+    },
+    {
+      "id": "u_7cb7bfeba5715d90",
+      "kind": "text",
+      "source": "API 请求日志占数据库总量 86%（13.1 GB），清理脚本失效 114 天无人察觉",
+      "occurrence": 0,
+      "target": "API request logs account for 86% of the database volume (13.1 GB), with the cleanup script failing to run for 114 days unnoticed",
+      "context": "td @ line 288"
+    },
+    {
+      "id": "u_bf905db8d54b7450",
+      "kind": "text",
+      "source": "修复清理脚本（补充数据库凭据）；约 1.25 万行将于 2026-04-10 自动清除",
+      "occurrence": 0,
+      "target": "Fix and clean-up script (add database credentials); approximately 12,500 lines will be automatically cleared on April 10, 2026",
+      "context": "td @ line 289"
+    },
+    {
+      "id": "u_5e5e1a645fd4f18c",
+      "kind": "text",
+      "source": "已修复",
+      "occurrence": 2,
+      "target": "Resolved",
+      "context": "span.status-badge.status-resolved @ line 290"
+    },
+    {
+      "id": "u_e43877e6b41d8b36",
+      "kind": "text",
+      "source": "节点级别（待办）：",
+      "occurrence": 0,
+      "target": "VPN node Level (To Do):",
+      "context": "strong @ line 295 · surrounding text: 节点级别（待办）： 全部 156 个 VPN 节点需禁用 rsyslog 和 journald 操作系统日志，计划在第2阶段运维任务中完成。"
+    },
+    {
+      "id": "u_983f5725034b514c",
+      "kind": "text",
+      "source": "全部 156 个 VPN 节点需禁用 rsyslog 和 journald 操作系统日志，计划在第2阶段运维任务中完成。",
+      "occurrence": 0,
+      "target": "All 156 VPN nodes need to disable rsyslog and journald system logs. Planned for completion in Sprint 2 Operations Tasks.",
+      "context": "div.section-note @ line 295 · surrounding text: 节点级别（待办）： 全部 156 个 VPN 节点需禁用 rsyslog 和 journald 操作系统日志，计划在第2阶段运维任务中完成。"
+    },
+    {
+      "id": "u_552f622a993a42b9",
+      "kind": "text",
+      "source": "整体进度概览",
+      "occurrence": 0,
+      "target": "Overall Progress Overview",
+      "context": "h2.section-heading @ line 301"
+    },
+    {
+      "id": "u_39a92a4d02f03462",
+      "kind": "text",
+      "source": "接手至今，团队通过系统性审计累计发现",
+      "occurrence": 0,
+      "target": "Since taking over, the team has cumulatively identified through systematic audits",
+      "context": "div.section-body @ line 302"
+    },
+    {
+      "id": "u_59e0bc4d16c27f3f",
+      "kind": "text",
+      "source": "50项遗留问题",
+      "occurrence": 0,
+      "target": "50 Outstanding Issues",
+      "context": "strong @ line 303 · surrounding text: 接手至今，团队通过系统性审计累计发现 50项遗留问题 （含12项严重、10项高优先级），涵盖安全漏洞、性能瓶颈、收入损失、基础设施风险等。"
+    },
+    {
+      "id": "u_149e219e2c0dfe13",
+      "kind": "text",
+      "source": "（含12项严重、10项高优先级），涵盖安全漏洞、性能瓶颈、收入损失、基础设施风险等。",
+      "occurrence": 0,
+      "target": "(including 12 severe and 10 high-priority issues, covering security vulnerabilities, performance bottlenecks, revenue loss, infrastructure risks, etc.)",
+      "context": "div.section-body @ line 303 · surrounding text: 接手至今，团队通过系统性审计累计发现 50项遗留问题 （含12项严重、10项高优先级），涵盖安全漏洞、性能瓶颈、收入损失、基础设施风险等。"
+    },
+    {
+      "id": "u_e3b5f7d555d4c069",
+      "kind": "text",
+      "source": "指标",
+      "occurrence": 0,
+      "target": "Metrics",
+      "context": "th @ line 307 · surrounding text: 指标 数量 说明"
+    },
+    {
+      "id": "u_c956ee561e3aca98",
+      "kind": "text",
+      "source": "数量",
+      "occurrence": 0,
+      "target": "Quantity",
+      "context": "th @ line 307 · surrounding text: 指标 数量 说明"
+    },
+    {
+      "id": "u_49684280ac27ccde",
+      "kind": "text",
+      "source": "说明",
+      "occurrence": 0,
+      "target": "Description",
+      "context": "th @ line 307 · surrounding text: 指标 数量 说明"
+    },
+    {
+      "id": "u_c44a04c6a8ac88e7",
+      "kind": "text",
+      "source": "已修复（含运维即时修复）",
+      "occurrence": 0,
+      "target": "Fixed (including immediate fixes by operations)",
+      "context": "td @ line 311"
+    },
+    {
+      "id": "u_3be07a0f4ed0f3ff",
+      "kind": "text",
+      "source": "31项",
+      "occurrence": 0,
+      "target": "31 items",
+      "context": "strong @ line 312"
+    },
+    {
+      "id": "u_c742989a4079a461",
+      "kind": "text",
+      "source": "包括：13个崩溃问题、收入漏洞（三星测试模式）、数据库无备份、Nginx安全漏洞、服务端限制缺失等",
+      "occurrence": 0,
+      "target": "Including: 13 crashes, revenue loophole (Samsung test mode), no database backup, Nginx security vulnerability, missing server-side limitations, etc.",
+      "context": "td @ line 313"
+    },
+    {
+      "id": "u_f41618c8d675927b",
+      "kind": "text",
+      "source": "开发中",
+      "occurrence": 0,
+      "target": "In Development",
+      "context": "td @ line 316"
+    },
+    {
+      "id": "u_b4ebd120a17f8794",
+      "kind": "text",
+      "source": "12项",
+      "occurrence": 0,
+      "target": "12 items",
+      "context": "td @ line 317"
+    },
+    {
+      "id": "u_0334e1ea2721bddf",
+      "kind": "text",
+      "source": "数据库优化、专线自动化、监控告警 — 随本次部署一并上线",
+      "occurrence": 0,
+      "target": "Database optimization, line-of-sight automation, monitoring alerts — to be released with this deployment",
+      "context": "td @ line 318"
+    },
+    {
+      "id": "u_427761dec21e3ed4",
+      "kind": "text",
+      "source": "计划中",
+      "occurrence": 0,
+      "target": "Scheduled",
+      "context": "td @ line 321"
+    },
+    {
+      "id": "u_ab09a93fc8655458",
+      "kind": "text",
+      "source": "7项",
+      "occurrence": 0,
+      "target": "7 items",
+      "context": "td @ line 322"
+    },
+    {
+      "id": "u_91ea794210d918b2",
+      "kind": "text",
+      "source": "服务器整合、旧服务清理、网络安全组分离 — 第1阶段后期处理",
+      "occurrence": 0,
+      "target": "Server consolidation, old service cleanup, network security group separation — to be handled in the latter part of Sprint 1",
+      "context": "td @ line 323"
+    },
+    {
+      "id": "u_9621f9a282c2e54e",
+      "kind": "text",
+      "source": "业务影响 — 专线运营自动化",
+      "occurrence": 0,
+      "target": "Business Impact — Line-of-Sight Operations Automation",
+      "context": "h2.section-heading @ line 331"
+    },
+    {
+      "id": "u_d429219227877219",
+      "kind": "text",
+      "source": "审计发现台湾团队对每笔专线/专用IP订单均需人工处理：管理员需手动在后台查找订单、选择节点、配置服务，整个流程耗时25–60分钟。下班和周末期间无人处理，客户等待数小时至数天。",
+      "occurrence": 0,
+      "target": "Audit findings indicate that the Taiwan team manually processes every dedicated line/IP order: administrators must manually search for orders, select VPN nodes, and configure services in the back office. The entire process takes 25–60 minutes. Orders are not processed outside of regular working hours, causing customers to wait several hours to days.",
+      "context": "div.section-body @ line 332"
+    },
+    {
+      "id": "u_1208582c8237e3de",
+      "kind": "text",
+      "source": "指标",
+      "occurrence": 1,
+      "target": "Metrics",
+      "context": "th @ line 337 · surrounding text: 指标 现状 自动化后"
+    },
+    {
+      "id": "u_c736bdf7dc0b7355",
+      "kind": "text",
+      "source": "现状",
+      "occurrence": 0,
+      "target": "Current Status",
+      "context": "th @ line 337 · surrounding text: 指标 现状 自动化后"
+    },
+    {
+      "id": "u_68a6cb9a6bc4bee8",
+      "kind": "text",
+      "source": "自动化后",
+      "occurrence": 0,
+      "target": "Post-Automation",
+      "context": "th @ line 337 · surrounding text: 指标 现状 自动化后"
+    },
+    {
+      "id": "u_a4dbcbe692a1a824",
+      "kind": "text",
+      "source": "每笔订单处理时间",
+      "occurrence": 0,
+      "target": "Order Processing Time",
+      "context": "td @ line 340 · surrounding text: 每笔订单处理时间 25–60 分钟（人工） 不超过 2 分钟（自动）"
+    },
+    {
+      "id": "u_b884453ea61adba8",
+      "kind": "text",
+      "source": "25–60 分钟（人工）",
+      "occurrence": 0,
+      "target": "25–60 minutes (manual)",
+      "context": "td @ line 340 · surrounding text: 每笔订单处理时间 25–60 分钟（人工） 不超过 2 分钟（自动）"
+    },
+    {
+      "id": "u_c944e74c52856e93",
+      "kind": "text",
+      "source": "不超过 2 分钟（自动）",
+      "occurrence": 0,
+      "target": "No more than 2 minutes (automated)",
+      "context": "td @ line 340 · surrounding text: 每笔订单处理时间 25–60 分钟（人工） 不超过 2 分钟（自动）"
+    },
+    {
+      "id": "u_2a777aebe89fe625",
+      "kind": "text",
+      "source": "每周人工操作时间",
+      "occurrence": 0,
+      "target": "Weekly Manual Operation Time",
+      "context": "td @ line 341 · surrounding text: 每周人工操作时间 5.7–12 小时 释放用于客户服务和业务拓展"
+    },
+    {
+      "id": "u_b0d796b59d980782",
+      "kind": "text",
+      "source": "5.7–12 小时",
+      "occurrence": 0,
+      "target": "5.7–12 hours",
+      "context": "td @ line 341 · surrounding text: 每周人工操作时间 5.7–12 小时 释放用于客户服务和业务拓展"
+    },
+    {
+      "id": "u_f922a208e14538a6",
+      "kind": "text",
+      "source": "释放用于客户服务和业务拓展",
+      "occurrence": 0,
+      "target": "Release for customer service and business expansion",
+      "context": "td @ line 341 · surrounding text: 每周人工操作时间 5.7–12 小时 释放用于客户服务和业务拓展"
+    },
+    {
+      "id": "u_efa11b7d5ec035ef",
+      "kind": "text",
+      "source": "订单处理覆盖时间",
+      "occurrence": 0,
+      "target": "Order Processing Coverage Time",
+      "context": "td @ line 342 · surrounding text: 订单处理覆盖时间 仅工作时间 全天候 24/7"
+    },
+    {
+      "id": "u_61d80814999119a6",
+      "kind": "text",
+      "source": "仅工作时间",
+      "occurrence": 0,
+      "target": "Only during working hours",
+      "context": "td @ line 342 · surrounding text: 订单处理覆盖时间 仅工作时间 全天候 24/7"
+    },
+    {
+      "id": "u_270a6f29d47d9f9a",
+      "kind": "text",
+      "source": "全天候 24/7",
+      "occurrence": 0,
+      "target": "24/7",
+      "context": "td @ line 342 · surrounding text: 订单处理覆盖时间 仅工作时间 全天候 24/7"
+    },
+    {
+      "id": "u_ad5e10ac44c5b39a",
+      "kind": "text",
+      "source": "本周验证通过：节点快速部署",
+      "occurrence": 0,
+      "target": "This week's validation: rapid VPN node deployment",
+      "context": "strong @ line 346"
+    },
+    {
+      "id": "u_b2ac29db6cce0c41",
+      "kind": "text",
+      "source": "后台管理系统的「快速创建节点」功能已测试通过 — 可在新服务器上一键部署 VPN 节点软件（Singbox Agent），并通过手机端实测 VPN 连接正常。这意味着新增节点从原来的人工 SSH 配置（15-30分钟/台）变为后台一键操作。",
+      "occurrence": 0,
+      "target": "The 'quick create node' feature in the back office management system has been validated — it allows for one-click deployment of VPN node software (Singbox Agent) on new servers and real-time testing of the VPN connection via a mobile device. This means that deploying new nodes now involves a single backend operation, reducing manual SSH configuration from 15–30 minutes per node to an automated process.",
+      "context": "div.section-body @ line 348"
+    },
+    {
+      "id": "u_bcc5e6b52856df89",
+      "kind": "text",
+      "source": "下一步目标：全自动节点生命周期管理",
+      "occurrence": 0,
+      "target": "Next Goal: Fully Automated VPN node Lifecycle Management",
+      "context": "strong @ line 352"
+    },
+    {
+      "id": "u_3424a688780927cd",
+      "kind": "text",
+      "source": "能力",
+      "occurrence": 0,
+      "target": "Capability",
+      "context": "th @ line 356 · surrounding text: 能力 说明 状态"
+    },
+    {
+      "id": "u_f18e1678f8f50467",
+      "kind": "text",
+      "source": "说明",
+      "occurrence": 1,
+      "target": "Description",
+      "context": "th @ line 356 · surrounding text: 能力 说明 状态"
+    },
+    {
+      "id": "u_ba082f9023f9c6c7",
+      "kind": "text",
+      "source": "状态",
+      "occurrence": 1,
+      "target": "Status",
+      "context": "th @ line 356 · surrounding text: 能力 说明 状态"
+    },
+    {
+      "id": "u_35e7ce9cb97c1218",
+      "kind": "text",
+      "source": "订单自动配发",
+      "occurrence": 0,
+      "target": "Automatic order distribution",
+      "context": "td @ line 360"
+    },
+    {
+      "id": "u_8560cba88dee0bcb",
+      "kind": "text",
+      "source": "专线/专用IP订单支付后，系统自动匹配区域并分配节点，无需人工操作",
+      "occurrence": 0,
+      "target": "After payment for a dedicated IP order, the system automatically matches the region and assigns a VPN node without manual intervention.",
+      "context": "td @ line 361"
+    },
+    {
+      "id": "u_3d18d4e195ff9b77",
+      "kind": "text",
+      "source": "开发中",
+      "occurrence": 1,
+      "target": "In Development",
+      "context": "span.status-badge.status-enhanced @ line 362"
+    },
+    {
+      "id": "u_cdba18965cd1f972",
+      "kind": "text",
+      "source": "到期自动回收",
+      "occurrence": 0,
+      "target": "Expires for automatic recovery",
+      "context": "td @ line 365"
+    },
+    {
+      "id": "u_95bab6b66a2b5a37",
+      "kind": "text",
+      "source": "IP到期后自动归还IP池，节点释放给新订单",
+      "occurrence": 0,
+      "target": "IP address(es) automatically returned to the pool upon expiration, VPN nodes released for new orders",
+      "context": "td @ line 366"
+    },
+    {
+      "id": "u_ba94fde596535165",
+      "kind": "text",
+      "source": "开发中",
+      "occurrence": 2,
+      "target": "In Development",
+      "context": "span.status-badge.status-enhanced @ line 367"
+    },
+    {
+      "id": "u_bcf0083d8d18bd88",
+      "kind": "text",
+      "source": "库存自动监控",
+      "occurrence": 0,
+      "target": "Automated inventory monitoring",
+      "context": "td @ line 370"
+    },
+    {
+      "id": "u_b01fc1c8f3985971",
+      "kind": "text",
+      "source": "IP/节点库存不足时自动通知管理员补货",
+      "occurrence": 0,
+      "target": "Noted when IP/VPN node inventory is insufficient, automatically notifies administrators to replenish stock",
+      "context": "td @ line 371"
+    },
+    {
+      "id": "u_8db68b38ff8a3b81",
+      "kind": "text",
+      "source": "开发中",
+      "occurrence": 3,
+      "target": "In Development",
+      "context": "span.status-badge.status-enhanced @ line 372"
+    },
+    {
+      "id": "u_c1bae5b572e7c858",
+      "kind": "text",
+      "source": "供应商稳定性追踪",
+      "occurrence": 0,
+      "target": "Supplier stability tracking",
+      "context": "td @ line 375"
+    },
+    {
+      "id": "u_945a5554ebb58e8c",
+      "kind": "text",
+      "source": "自动记录节点故障、计算供应商可用率、付款到期提醒",
+      "occurrence": 0,
+      "target": "Automatically logs VPN node failures, calculates supplier availability rate, and reminds of payment due dates",
+      "context": "td @ line 376"
+    },
+    {
+      "id": "u_53ee38ae4897dfba",
+      "kind": "text",
+      "source": "开发中",
+      "occurrence": 4,
+      "target": "In Development",
+      "context": "span.status-badge.status-enhanced @ line 377"
+    },
+    {
+      "id": "u_8e38aa796cad3a22",
+      "kind": "text",
+      "source": "智能节点管控",
+      "occurrence": 0,
+      "target": "Intelligent VPN node management",
+      "context": "td @ line 380"
+    },
+    {
+      "id": "u_36095fc169d4c490",
+      "kind": "text",
+      "source": "系统根据使用量和付费周期自动判断节点是否满载，自动下线/恢复，管理员只需处理异常",
+      "occurrence": 0,
+      "target": "System automatically determines if a VPN node is fully utilized based on usage and payment cycle, automatically deactivates/reactivates VPN nodes; administrators handle exceptions only",
+      "context": "td @ line 381"
+    },
+    {
+      "id": "u_b1c700edebba8325",
+      "kind": "text",
+      "source": "规划中",
+      "occurrence": 0,
+      "target": "In planning",
+      "context": "span.status-badge @ line 382"
+    },
+    {
+      "id": "u_cbbd6f92aafb2a0d",
+      "kind": "text",
+      "source": "智能采购建议",
+      "occurrence": 0,
+      "target": "Intelligent procurement recommendations",
+      "context": "td @ line 385"
+    },
+    {
+      "id": "u_dfcfbd2e3698145e",
+      "kind": "text",
+      "source": "系统分析各区域库存、订单趋势、利润率，自动推荐何时在哪个区域购买新节点",
+      "occurrence": 0,
+      "target": "System analyzes regional inventory, order trends, and profit margins to automatically recommend when and where to purchase new VPN nodes",
+      "context": "td @ line 386"
+    },
+    {
+      "id": "u_3b9c2b333daa382a",
+      "kind": "text",
+      "source": "规划中",
+      "occurrence": 1,
+      "target": "In planning",
+      "context": "span.status-badge @ line 387"
+    },
+    {
+      "id": "u_903ac9e7115e6ef2",
+      "kind": "text",
+      "source": "后台智能助手",
+      "occurrence": 0,
+      "target": "Back Office intelligent assistant",
+      "context": "td @ line 390"
+    },
+    {
+      "id": "u_80852141f70c811d",
+      "kind": "text",
+      "source": "内置AI助手引导管理员完成节点采购、DNS配置、快速部署等操作，大幅降低学习成本",
+      "occurrence": 0,
+      "target": "Built-in AI assistant guides administrators through VPN node procurement, DNS configuration, and quick deployment, significantly reducing learning costs",
+      "context": "td @ line 391"
+    },
+    {
+      "id": "u_fa4f88e6d4525a3a",
+      "kind": "text",
+      "source": "规划中",
+      "occurrence": 2,
+      "target": "In planning",
+      "context": "span.status-badge @ line 392"
+    },
+    {
+      "id": "u_a451305072da68aa",
+      "kind": "text",
+      "source": "最终目标：节点从采购到部署到退役全流程自动化。目前4项核心能力开发中，完成后将大幅减少人工操作。智能采购建议和自动负载管理随监控体系建设推进，AI助手作为后期智能化阶段实现。",
+      "occurrence": 0,
+      "target": "Final goal: Full automation of procurement to deployment to retirement lifecycle for VPN nodes. Four core capabilities are currently under development, which will significantly reduce manual operations when completed. Smart procurement recommendations and automatic load management follow the rollout of monitoring systems; AI assistants will be implemented as part of the later intelligent phase.",
+      "context": "div.section-note @ line 396"
+    },
+    {
+      "id": "u_ea7027aa8606e6e9",
+      "kind": "text",
+      "source": "业务影响 — 数据库性能",
+      "occurrence": 0,
+      "target": "Business Impact – Database Performance",
+      "context": "h2.section-heading @ line 403"
+    },
+    {
+      "id": "u_08704e5fe6f0601f",
+      "kind": "text",
+      "source": "本周对数据库进行了系统性审计，发现多项历史遗留问题正在影响平台稳定性和响应速度。",
+      "occurrence": 0,
+      "target": "A systematic audit of the database was conducted this week, revealing multiple historical issues impacting platform stability and response time.",
+      "context": "div.section-body @ line 404"
+    },
+    {
+      "id": "u_6441ac38777eaf93",
+      "kind": "text",
+      "source": "发现问题",
+      "occurrence": 0,
+      "target": "Issues Identified",
+      "context": "th @ line 409 · surrounding text: 发现问题 影响 处理进度"
+    },
+    {
+      "id": "u_4e89148280c07df7",
+      "kind": "text",
+      "source": "影响",
+      "occurrence": 0,
+      "target": "Impact",
+      "context": "th @ line 409 · surrounding text: 发现问题 影响 处理进度"
+    },
+    {
+      "id": "u_2f00e110a09b8dc3",
+      "kind": "text",
+      "source": "处理进度",
+      "occurrence": 0,
+      "target": "Resolution Progress",
+      "context": "th @ line 409 · surrounding text: 发现问题 影响 处理进度"
+    },
+    {
+      "id": "u_3cbca0f49bbea4bb",
+      "kind": "text",
+      "source": "历史积累的慢查询158,000条（单次超过3秒）",
+      "occurrence": 0,
+      "target": "Historical Accumulated Slow Queries: 158,000 (each exceeding 3 seconds)",
+      "context": "td @ line 413"
+    },
+    {
+      "id": "u_4307fa2abd54205e",
+      "kind": "text",
+      "source": "数据库长期处于压力状态，影响响应速度",
+      "occurrence": 0,
+      "target": "Database under long-term stress, impacting response time",
+      "context": "td @ line 414"
+    },
+    {
+      "id": "u_86f98c67e7bb9082",
+      "kind": "text",
+      "source": "优化中",
+      "occurrence": 0,
+      "target": "Optimization in Progress",
+      "context": "span.status-badge.status-enhanced @ line 415"
+    },
+    {
+      "id": "u_7042d0a4123125b5",
+      "kind": "text",
+      "source": "数据库连接池配置300个，实际使用仅17个",
+      "occurrence": 0,
+      "target": "Database connection pool configured for 300 connections, but only 17 are actually used",
+      "context": "td @ line 418"
+    },
+    {
+      "id": "u_d265b0092c3f4521",
+      "kind": "text",
+      "source": "资源浪费，服务器内存占用不必要偏高",
+      "occurrence": 0,
+      "target": "Resource waste; unnecessary high server memory usage",
+      "context": "td @ line 419"
+    },
+    {
+      "id": "u_bf9b96d04466966d",
+      "kind": "text",
+      "source": "优化中",
+      "occurrence": 1,
+      "target": "Optimization in Progress",
+      "context": "span.status-badge.status-enhanced @ line 420"
+    },
+    {
+      "id": "u_22b1ccbe91f78f7f",
+      "kind": "text",
+      "source": "读取副本数据库几乎从未启用（163次主库 vs 27次副库）",
+      "occurrence": 0,
+      "target": "The read replica has almost never been used (163 reads from the primary database vs 27 from the replica).",
+      "context": "td @ line 423"
+    },
+    {
+      "id": "u_f1faca2c0062b96a",
+      "kind": "text",
+      "source": "所有查询压在主库，读写副本形同虚设",
+      "occurrence": 0,
+      "target": "All queries are directed to the primary, making read and write replicas essentially redundant",
+      "context": "td @ line 424"
+    },
+    {
+      "id": "u_c2f8492fa7edfdaa",
+      "kind": "text",
+      "source": "优化中",
+      "occurrence": 2,
+      "target": "Optimization in Progress",
+      "context": "span.status-badge.status-enhanced @ line 425"
+    },
+    {
+      "id": "u_15ac547d8817b014",
+      "kind": "text",
+      "source": "缺少关键索引（含78万行的登录记录表）",
+      "occurrence": 0,
+      "target": "Lack of critical indexes (including login records totaling 780,000 rows)",
+      "context": "td @ line 428"
+    },
+    {
+      "id": "u_502021cab98e3c16",
+      "kind": "text",
+      "source": "特定查询需全表扫描，速度慢",
+      "occurrence": 0,
+      "target": "Specific queries require full table scans, which are slow.",
+      "context": "td @ line 429"
+    },
+    {
+      "id": "u_15d326f1f95e2822",
+      "kind": "text",
+      "source": "优化中",
+      "occurrence": 3,
+      "target": "Optimization in Progress",
+      "context": "span.status-badge.status-enhanced @ line 430"
+    },
+    {
+      "id": "u_14c0fd1764c3cb1b",
+      "kind": "text",
+      "source": "所有优化已完成代码，测试环境部署后将一并上线。上线后数据库读取压力预计显著下降，平台整体响应速度和稳定性将得到改善。",
+      "occurrence": 0,
+      "target": "All optimizations have been completed. Code will be deployed to the test environment and released after that. Database read pressure is expected to significantly decrease, improving platform overall response speed and stability.",
+      "context": "div.section-note @ line 434"
+    },
+    {
+      "id": "u_d29bd1d963dad2e2",
+      "kind": "text",
+      "source": "业务影响 — 服务器基础设施审计",
+      "occurrence": 0,
+      "target": "Business Impact - Server Infrastructure Audit",
+      "context": "h2.section-heading @ line 441"
+    },
+    {
+      "id": "u_decd01140133f333",
+      "kind": "text",
+      "source": "本周对开发和生产服务器进行了全面盘查，发现多项资源浪费和隐性风险。",
+      "occurrence": 0,
+      "target": "A comprehensive review of development and production servers was conducted this week, identifying multiple instances of resource waste and hidden risks.",
+      "context": "div.section-body @ line 442"
+    },
+    {
+      "id": "u_06b36663cfa6fdc9",
+      "kind": "text",
+      "source": "发现",
+      "occurrence": 0,
+      "target": "Discovery",
+      "context": "th @ line 447 · surrounding text: 发现 影响 状态"
+    },
+    {
+      "id": "u_1491d29185ae980a",
+      "kind": "text",
+      "source": "影响",
+      "occurrence": 1,
+      "target": "Impact",
+      "context": "th @ line 447 · surrounding text: 发现 影响 状态"
+    },
+    {
+      "id": "u_78086afacf058f4d",
+      "kind": "text",
+      "source": "状态",
+      "occurrence": 2,
+      "target": "Status",
+      "context": "th @ line 447 · surrounding text: 发现 影响 状态"
+    },
+    {
+      "id": "u_12a393f5a3d8f9ce",
+      "kind": "text",
+      "source": "生产服务器运行着一个已停用的旧支付服务（台湾团队遗留，SSL证书2024年10月已过期，零流量）",
+      "occurrence": 0,
+      "target": "A deprecated old payment service is running on the production server (leftover from the Taiwan team, SSL certificate expires in October 2024, zero traffic)",
+      "context": "td @ line 451"
+    },
+    {
+      "id": "u_7a771447afc3b4d1",
+      "kind": "text",
+      "source": "占用584 MB内存，存在安全风险",
+      "occurrence": 0,
+      "target": "Occupies 584 MB of memory and poses a security risk",
+      "context": "td @ line 452"
+    },
+    {
+      "id": "u_e1ca157cb95543e8",
+      "kind": "text",
+      "source": "清理计划制定中",
+      "occurrence": 0,
+      "target": "Cleanup plan being developed",
+      "context": "span.status-badge.status-enhanced @ line 453"
+    },
+    {
+      "id": "u_3e66b8914ee8be6b",
+      "kind": "text",
+      "source": "开发服务器规格超出实际需求（内存利用率仅23%）",
+      "occurrence": 0,
+      "target": "Server specifications exceed actual needs (memory utilization is only 23%)",
+      "context": "td @ line 456"
+    },
+    {
+      "id": "u_80900ae9745c7222",
+      "kind": "text",
+      "source": "每月多支出 $53，每年浪费约 $637",
+      "occurrence": 0,
+      "target": "Extraneous $53 per month, approximately $637 wasted annually",
+      "context": "td @ line 457"
+    },
+    {
+      "id": "u_dfdbf917c529f69e",
+      "kind": "text",
+      "source": "降配计划制定中",
+      "occurrence": 0,
+      "target": "Downgrade plan being developed",
+      "context": "span.status-badge.status-enhanced @ line 458"
+    },
+    {
+      "id": "u_ec7bf6d00a8b9a68",
+      "kind": "text",
+      "source": "生产服务器22 GB的无效日志文件（前团队遗留代码导致）",
+      "occurrence": 0,
+      "target": "22 GB of invalid log files on the production server (leftover from previous team's code)",
+      "context": "td @ line 461"
+    },
+    {
+      "id": "u_967b35ad1fd5718b",
+      "kind": "text",
+      "source": "占用36%磁盘空间",
+      "occurrence": 0,
+      "target": "Occupies 36% of disk space",
+      "context": "td @ line 462"
+    },
+    {
+      "id": "u_6946a85583bfbbfb",
+      "kind": "text",
+      "source": "已清理（磁盘占用50%→33%）",
+      "occurrence": 0,
+      "target": "Resolved (disk usage from 50% to 33%)",
+      "context": "span.status-badge.status-resolved @ line 463"
+    },
+    {
+      "id": "u_5ee8ccb80b49b774",
+      "kind": "text",
+      "source": "生产服务器PHP进程14个空闲工作进程常驻内存",
+      "occurrence": 0,
+      "target": "14 idle worker processes of the PHP process on the production server are permanently resident in memory",
+      "context": "td @ line 466"
+    },
+    {
+      "id": "u_948cb384bfa8259b",
+      "kind": "text",
+      "source": "约2 GB内存长期空占",
+      "occurrence": 0,
+      "target": "Approximately 2 GB of memory is long-term occupied",
+      "context": "td @ line 467"
+    },
+    {
+      "id": "u_32505d62d3f46db9",
+      "kind": "text",
+      "source": "优化计划制定中",
+      "occurrence": 0,
+      "target": "Optimization plan being developed",
+      "context": "span.status-badge.status-enhanced @ line 468"
+    },
+    {
+      "id": "u_51c0b528fe5ee044",
+      "kind": "text",
+      "source": "服务器日志清理已立即完成，释放22 GB磁盘空间。其余优化项目将在下次部署时一并处理，无需额外停机时间。",
+      "occurrence": 0,
+      "target": "Server log cleaning has been completed immediately, freeing up 22 GB of disk space. Remaining optimization projects will be handled during the next deployment without additional downtime.",
+      "context": "div.section-note @ line 472"
+    },
+    {
+      "id": "u_c85416158518b8b4",
+      "kind": "text",
+      "source": "进度追踪 — 上期报告遗留问题",
+      "occurrence": 0,
+      "target": "Progress Tracking — Issues from Last Report",
+      "context": "h2.section-heading @ line 479"
+    },
+    {
+      "id": "u_d8444af905c32725",
+      "kind": "text",
+      "source": "以下为上次报告中提及问题的最新进展：",
+      "occurrence": 0,
+      "target": "The latest progress on the issues mentioned in last report is as follows:",
+      "context": "div.section-body @ line 480"
+    },
+    {
+      "id": "u_8ef028ff2b452ff7",
+      "kind": "text",
+      "source": "按计划",
+      "occurrence": 0,
+      "target": "On Schedule",
+      "context": "div.status-legend-item @ line 482"
+    },
+    {
+      "id": "u_fd1cdce1af42468b",
+      "kind": "text",
+      "source": "已完成",
+      "occurrence": 0,
+      "target": "Completed",
+      "context": "div.status-legend-item @ line 483"
+    },
+    {
+      "id": "u_0ce29ab7f7b98a84",
+      "kind": "text",
+      "source": "测试中",
+      "occurrence": 0,
+      "target": "In Testing",
+      "context": "div.status-legend-item @ line 484"
+    },
+    {
+      "id": "u_35221a0c373641bc",
+      "kind": "text",
+      "source": "风险中",
+      "occurrence": 0,
+      "target": "At Risk",
+      "context": "div.status-legend-item @ line 485"
+    },
+    {
+      "id": "u_3dcc4ec092289148",
+      "kind": "text",
+      "source": "问题",
+      "occurrence": 0,
+      "target": "Issue",
+      "context": "th @ line 489 · surrounding text: 问题 上次状态 本周进展"
+    },
+    {
+      "id": "u_c7ead651dd5e69be",
+      "kind": "text",
+      "source": "上次状态",
+      "occurrence": 0,
+      "target": "Last Status",
+      "context": "th @ line 489 · surrounding text: 问题 上次状态 本周进展"
+    },
+    {
+      "id": "u_ae12b2f1fab574e7",
+      "kind": "text",
+      "source": "本周进展",
+      "occurrence": 0,
+      "target": "This Week's Progress",
+      "context": "th @ line 489 · surrounding text: 问题 上次状态 本周进展"
+    },
+    {
+      "id": "u_2367a1b0aeb6b07a",
+      "kind": "text",
+      "source": "13个应用崩溃/卡顿问题",
+      "occurrence": 0,
+      "target": "13 Application Crashes/Freezes",
+      "context": "td @ line 493"
+    },
+    {
+      "id": "u_e7eb60668e5f895a",
+      "kind": "text",
+      "source": "开发中",
+      "occurrence": 5,
+      "target": "In Development",
+      "context": "td @ line 494"
+    },
+    {
+      "id": "u_8fd7b2b73fe3614c",
+      "kind": "text",
+      "source": "开发中，准备进入测试",
+      "occurrence": 0,
+      "target": "In Development, Ready for Testing",
+      "context": "span.status-badge.status-enhanced @ line 495"
+    },
+    {
+      "id": "u_bf88c9bb2c99805f",
+      "kind": "text",
+      "source": "免费用户服务端限制（时间/流量/设备数）",
+      "occurrence": 0,
+      "target": "Free User Server Limitations (Time/Traffic/Device Count)",
+      "context": "td @ line 498"
+    },
+    {
+      "id": "u_9f8f862fb9e77063",
+      "kind": "text",
+      "source": "开发中",
+      "occurrence": 6,
+      "target": "In Development",
+      "context": "td @ line 499"
+    },
+    {
+      "id": "u_4ab75ad6ac3b6df6",
+      "kind": "text",
+      "source": "开发中，测试环境验证准备中",
+      "occurrence": 0,
+      "target": "In Development, Preparing for Testing Environment Validation",
+      "context": "span.status-badge.status-enhanced @ line 500"
+    },
+    {
+      "id": "u_6e61e85eb7fdb5c8",
+      "kind": "text",
+      "source": "试用期升级引导（用户看不到试用进度）",
+      "occurrence": 0,
+      "target": "Trial Period Upgrade Guidance (Users Cannot See Trial Progress)",
+      "context": "td @ line 503"
+    },
+    {
+      "id": "u_942c5381c9c38dd9",
+      "kind": "text",
+      "source": "方案已设计",
+      "occurrence": 0,
+      "target": "Design Complete",
+      "context": "td @ line 504"
+    },
+    {
+      "id": "u_2c04e6354efe65ba",
+      "kind": "text",
+      "source": "后端完成，界面开发中",
+      "occurrence": 0,
+      "target": "Back Office Completed, Front-End Development In Progress",
+      "context": "span.status-badge.status-enhanced @ line 505"
+    },
+    {
+      "id": "u_7a497264012c1cc5",
+      "kind": "text",
+      "source": "三星应用内购买测试模式",
+      "occurrence": 0,
+      "target": "Samsung In-App Purchase Test Mode",
+      "context": "td @ line 508"
+    },
+    {
+      "id": "u_89e36aa55a951211",
+      "kind": "text",
+      "source": "开发中",
+      "occurrence": 7,
+      "target": "In Development",
+      "context": "td @ line 509"
+    },
+    {
+      "id": "u_00579cc5094be9ba",
+      "kind": "text",
+      "source": "代码修复完成，等待部署验证",
+      "occurrence": 0,
+      "target": "Code fix completed, awaiting deployment verification",
+      "context": "span.status-badge.status-enhanced @ line 510"
+    },
+    {
+      "id": "u_af60020c9f6d271b",
+      "kind": "text",
+      "source": "强制版本更新（原来从未启用）",
+      "occurrence": 0,
+      "target": "Mandatory version update (previously not enabled)",
+      "context": "td @ line 513"
+    },
+    {
+      "id": "u_7c02376284e6f15b",
+      "kind": "text",
+      "source": "开发中",
+      "occurrence": 8,
+      "target": "In Development",
+      "context": "td @ line 514"
+    },
+    {
+      "id": "u_165473e77ec5ec72",
+      "kind": "text",
+      "source": "已启用，测试环境验证中",
+      "occurrence": 0,
+      "target": "Enabled, undergoing testing in the test environment",
+      "context": "span.status-badge.status-enhanced @ line 515"
+    },
+    {
+      "id": "u_fd4475af4efaf925",
+      "kind": "text",
+      "source": "读取副本数据库利用率不足",
+      "occurrence": 0,
+      "target": "Insufficient utilization of replica database read capacity",
+      "context": "td @ line 518"
+    },
+    {
+      "id": "u_7f98f6e1534945f7",
+      "kind": "text",
+      "source": "开发中",
+      "occurrence": 9,
+      "target": "In Development",
+      "context": "td @ line 519"
+    },
+    {
+      "id": "u_f80468a765f25329",
+      "kind": "text",
+      "source": "代码完成，随本次部署上线",
+      "occurrence": 0,
+      "target": "Code complete, to be released with this deployment",
+      "context": "span.status-badge.status-enhanced @ line 520"
+    },
+    {
+      "id": "u_388cd1c06be0d8e1",
+      "kind": "text",
+      "source": "冗余代理服务器整合（节省~$323/月）",
+      "occurrence": 0,
+      "target": "Redundant proxy server consolidation (saves approximately $323/month)",
+      "context": "td @ line 523"
+    },
+    {
+      "id": "u_9c0670c4275bc321",
+      "kind": "text",
+      "source": "按计划",
+      "occurrence": 1,
+      "target": "On schedule",
+      "context": "td @ line 524"
+    },
+    {
+      "id": "u_b6517280db9751e7",
+      "kind": "text",
+      "source": "第1阶段部署后评估",
+      "occurrence": 0,
+      "target": "Sprint 1 post-deployment evaluation",
+      "context": "span.status-badge @ line 525"
+    },
+    {
+      "id": "u_d5dd350b9e821c1b",
+      "kind": "text",
+      "source": "阻塞与延迟",
+      "occurrence": 0,
+      "target": "Blockages and Delays",
+      "context": "h2.section-heading @ line 533"
+    },
+    {
+      "id": "u_9ae783ebd6ac2f1c",
+      "kind": "text",
+      "source": "本期无重大阻塞。所有工作按计划推进中。",
+      "occurrence": 0,
+      "target": "No significant blockages this period. All work is proceeding as planned.",
+      "context": "div.section-body @ line 534"
+    },
+    {
+      "id": "u_b2b2a3f18751e371",
+      "kind": "text",
+      "source": "本周重点工作",
+      "occurrence": 0,
+      "target": "Key Work for the Week",
+      "context": "h2.section-heading @ line 541"
+    },
+    {
+      "id": "u_1f128abdcfcb274e",
+      "kind": "text",
+      "source": "以下为本周（4月7日–10日）的核心交付目标：",
+      "occurrence": 0,
+      "target": "The following are the core delivery objectives for this week (April 7-10):",
+      "context": "div.section-body @ line 542"
+    },
+    {
+      "id": "u_0923cbc1be43e599",
+      "kind": "text",
+      "source": "交付项",
+      "occurrence": 0,
+      "target": "Deliverables",
+      "context": "th @ line 545 · surrounding text: 交付项 目标日期 进度"
+    },
+    {
+      "id": "u_312e38f1555233e5",
+      "kind": "text",
+      "source": "目标日期",
+      "occurrence": 0,
+      "target": "Target Date",
+      "context": "th @ line 545 · surrounding text: 交付项 目标日期 进度"
+    },
+    {
+      "id": "u_d5efccd948e3ef95",
+      "kind": "text",
+      "source": "进度",
+      "occurrence": 0,
+      "target": "Progress",
+      "context": "th @ line 545 · surrounding text: 交付项 目标日期 进度"
+    },
+    {
+      "id": "u_860f0260d3ed981b",
+      "kind": "text",
+      "source": "QA测试版APK构建",
+      "occurrence": 0,
+      "target": "QA test version APK build",
+      "context": "td @ line 549"
+    },
+    {
+      "id": "u_4b699ca06c96bd15",
+      "kind": "text",
+      "source": "4月8日",
+      "occurrence": 0,
+      "target": "April 8",
+      "context": "td @ line 550"
+    },
+    {
+      "id": "u_c6095063e79a786a",
+      "kind": "text",
+      "source": "进行中 — 测试环境配置完成，APK构建进行中",
+      "occurrence": 0,
+      "target": "In Progress — Test environment configuration completed, APK build in progress",
+      "context": "span.status-badge.status-enhanced @ line 551"
+    },
+    {
+      "id": "u_32349a010fbfa25a",
+      "kind": "text",
+      "source": "测试环境后端部署",
+      "occurrence": 0,
+      "target": "Back Office deployment for test environment",
+      "context": "td @ line 554"
+    },
+    {
+      "id": "u_c8fa8034e3405bd3",
+      "kind": "text",
+      "source": "4月8日",
+      "occurrence": 1,
+      "target": "April 8th",
+      "context": "td @ line 555"
+    },
+    {
+      "id": "u_87987504f234743b",
+      "kind": "text",
+      "source": "进行中 — CI/CD流水线已就绪，部署验证中",
+      "occurrence": 0,
+      "target": "In Progress — CI/CD pipeline ready, deployment validation in progress",
+      "context": "span.status-badge.status-enhanced @ line 556"
+    },
+    {
+      "id": "u_916f182590e7a3ac",
+      "kind": "text",
+      "source": "端到端功能验证",
+      "occurrence": 0,
+      "target": "End-to-end feature verification",
+      "context": "td @ line 559"
+    },
+    {
+      "id": "u_1d0d1fea7a15866a",
+      "kind": "text",
+      "source": "4月9–10日",
+      "occurrence": 0,
+      "target": "April 9th-10th",
+      "context": "td @ line 560"
+    },
+    {
+      "id": "u_0103c57f74674b82",
+      "kind": "text",
+      "source": "待测试版构建完成后启动",
+      "occurrence": 0,
+      "target": "Start after test version build completion",
+      "context": "td @ line 561"
+    },
+    {
+      "id": "u_0eb8593f2ab507fa",
+      "kind": "text",
+      "source": "崩溃回归测试",
+      "occurrence": 0,
+      "target": "Crash regression testing",
+      "context": "td @ line 564"
+    },
+    {
+      "id": "u_ea2d14901249a3ed",
+      "kind": "text",
+      "source": "4月10日",
+      "occurrence": 0,
+      "target": "April 10th",
+      "context": "td @ line 565"
+    },
+    {
+      "id": "u_0e8bea28c1f9b491",
+      "kind": "text",
+      "source": "复现第0阶段修复的崩溃场景，确认无回归",
+      "occurrence": 0,
+      "target": "Reproduce crash scenarios from Sprint 0 fixes, confirm no regressions",
+      "context": "td @ line 566"
+    },
+    {
+      "id": "u_63f072369911c860",
+      "kind": "text",
+      "source": "财务总结",
+      "occurrence": 0,
+      "target": "Financial summary",
+      "context": "h2.section-heading @ line 574"
+    },
+    {
+      "id": "u_5f463c1160d67287",
+      "kind": "text",
+      "source": "本周新增确认：",
+      "occurrence": 0,
+      "target": "This week's confirmed additions:",
+      "context": "strong @ line 576 · surrounding text: 本周新增确认： 开发服务器降配可节省$53/月（$637/年）；清理无效日志释放22 GB磁盘空间。数据库备份新增成本仅$25/月，但避免了数据库在约3个月内崩溃导致29.3万用户数据永久丢失的风险。Nginx安全漏洞修复为零成本运维操作，关闭了此前木马注入攻击的入口。"
+    },
+    {
+      "id": "u_6241bdb2f749088c",
+      "kind": "text",
+      "source": "开发服务器降配可节省$53/月（$637/年）；清理无效日志释放22 GB磁盘空间。数据库备份新增成本仅$25/月，但避免了数据库在约3个月内崩溃导致29.3万用户数据永久丢失的风险。Nginx安全漏洞修复为零成本运维操作，关闭了此前木马注入攻击的入口。",
+      "occurrence": 0,
+      "target": "Downgrading the development server can save $53 per month ($637 annually); cleaning up invalid logs frees up 22 GB of disk space. The additional cost for database backups is only $25 per month, but it prevents potential data loss of approximately 293,000 users over about three months due to a database crash. Fixing the Nginx security vulnerability was a zero-cost operational task that closed an entry point for previous malware injection attacks.",
+      "context": "div.section-body @ line 576 · surrounding text: 本周新增确认： 开发服务器降配可节省$53/月（$637/年）；清理无效日志释放22 GB磁盘空间。数据库备份新增成本仅$25/月，但避免了数据库在约3个月内崩溃导致29.3万用户数据永久丢失的风险。Nginx安全漏洞修复为零成本运维操作，关闭了此前木马注入攻击的入口。"
+    },
+    {
+      "id": "u_4824058c35800e30",
+      "kind": "text",
+      "source": "专线自动化（待部署）：",
+      "occurrence": 0,
+      "target": "Dedicated Line Automation (Pending Deployment):",
+      "context": "strong @ line 579 · surrounding text: 专线自动化（待部署）： 每周5.7–12小时的重复人工操作将由系统自动完成，管理员精力可转向客户服务和业务拓展。订单量增长时无需额外增加人手。"
+    },
+    {
+      "id": "u_bd911352b798f6f4",
+      "kind": "text",
+      "source": "每周5.7–12小时的重复人工操作将由系统自动完成，管理员精力可转向客户服务和业务拓展。订单量增长时无需额外增加人手。",
+      "occurrence": 0,
+      "target": "Weekly 5.7-12 hours of repetitive manual operations will be automated by the system, freeing up administrator time for customer service and business expansion. No additional staff required when order volume increases.",
+      "context": "div.section-body @ line 579 · surrounding text: 专线自动化（待部署）： 每周5.7–12小时的重复人工操作将由系统自动完成，管理员精力可转向客户服务和业务拓展。订单量增长时无需额外增加人手。"
+    },
+    {
+      "id": "u_cde5c933ba61afe7",
+      "kind": "text",
+      "source": "上阶段确认（仍有效）：",
+      "occurrence": 0,
+      "target": "Confirmations from previous phase (still valid):",
+      "context": "strong @ line 582 · surrounding text: 上阶段确认（仍有效）： ~$735/月基础设施浪费，Q2清除。转化率改善方案（试用进度展示、升级引导）开发中，实际效果待部署后观察。"
+    },
+    {
+      "id": "u_db93946ce23a1b1d",
+      "kind": "text",
+      "source": "~$735/月基础设施浪费，Q2清除。转化率改善方案（试用进度展示、升级引导）开发中，实际效果待部署后观察。",
+      "occurrence": 0,
+      "target": "~$735/month infrastructure waste, to be cleared in Q2. Conversion rate improvement solution (trial progress display, upgrade guidance) under development; actual effect to be observed after deployment.",
+      "context": "div.section-body @ line 582 · surrounding text: 上阶段确认（仍有效）： ~$735/月基础设施浪费，Q2清除。转化率改善方案（试用进度展示、升级引导）开发中，实际效果待部署后观察。"
+    },
+    {
+      "id": "u_f8479b05e96ac08f",
+      "kind": "text",
+      "source": "风险评估",
+      "occurrence": 0,
+      "target": "Risk assessment",
+      "context": "h2.section-heading @ line 588"
+    },
+    {
+      "id": "u_a2bc7d869449930d",
+      "kind": "text",
+      "source": "风险",
+      "occurrence": 0,
+      "target": "Risk",
+      "context": "th @ line 591 · surrounding text: 风险 等级 缓解措施"
+    },
+    {
+      "id": "u_747d913e0e195275",
+      "kind": "text",
+      "source": "等级",
+      "occurrence": 0,
+      "target": "Level",
+      "context": "th @ line 591 · surrounding text: 风险 等级 缓解措施"
+    },
+    {
+      "id": "u_d7920b0fe7e53321",
+      "kind": "text",
+      "source": "缓解措施",
+      "occurrence": 0,
+      "target": "Mitigation Measures",
+      "context": "th @ line 591 · surrounding text: 风险 等级 缓解措施"
+    },
+    {
+      "id": "u_53aa928615ee40c3",
+      "kind": "text",
+      "source": "测试环境与生产环境存在差异",
+      "occurrence": 0,
+      "target": "Test environment differs from production environment",
+      "context": "td @ line 594 · surrounding text: 测试环境与生产环境存在差异 中 使用相同配置方式，Lex顾问提供环境差异说明"
+    },
+    {
+      "id": "u_92680cff69a43e16",
+      "kind": "text",
+      "source": "中",
+      "occurrence": 0,
+      "target": "N/A",
+      "context": "td @ line 594 · surrounding text: 测试环境与生产环境存在差异 中 使用相同配置方式，Lex顾问提供环境差异说明"
+    },
+    {
+      "id": "u_8b6d6b87199f1f39",
+      "kind": "text",
+      "source": "使用相同配置方式，Lex顾问提供环境差异说明",
+      "occurrence": 0,
+      "target": "Lex consultants provided an explanation of the environmental differences using the same configuration approach",
+      "context": "td @ line 594 · surrounding text: 测试环境与生产环境存在差异 中 使用相同配置方式，Lex顾问提供环境差异说明"
+    },
+    {
+      "id": "u_3ac883399d367ed6",
+      "kind": "text",
+      "source": "专线自动化区域匹配逻辑",
+      "occurrence": 0,
+      "target": "Sprint matching logic for dedicated line automation area",
+      "context": "td @ line 595 · surrounding text: 专线自动化区域匹配逻辑 中 测试环境验证覆盖所有区域（香港、韩国、日本）"
+    },
+    {
+      "id": "u_b3cb21fc09f7d77f",
+      "kind": "text",
+      "source": "中",
+      "occurrence": 1,
+      "target": "in",
+      "context": "td @ line 595 · surrounding text: 专线自动化区域匹配逻辑 中 测试环境验证覆盖所有区域（香港、韩国、日本）"
+    },
+    {
+      "id": "u_a9e513615ac572cf",
+      "kind": "text",
+      "source": "测试环境验证覆盖所有区域（香港、韩国、日本）",
+      "occurrence": 0,
+      "target": "Acceptance testing of the test environment covered all regions (Hong Kong, South Korea, Japan)",
+      "context": "td @ line 595 · surrounding text: 专线自动化区域匹配逻辑 中 测试环境验证覆盖所有区域（香港、韩国、日本）"
+    },
+    {
+      "id": "u_2a8b04f5596f9028",
+      "kind": "text",
+      "source": "QA测试发现重大崩溃问题",
+      "occurrence": 0,
+      "target": "QA testing identified a major crash issue",
+      "context": "td @ line 596 · surrounding text: QA测试发现重大崩溃问题 低 所有13个崩溃场景已针对性修复，回归测试覆盖"
+    },
+    {
+      "id": "u_64d2f65fd9c3d056",
+      "kind": "text",
+      "source": "低",
+      "occurrence": 0,
+      "target": "Low",
+      "context": "td @ line 596 · surrounding text: QA测试发现重大崩溃问题 低 所有13个崩溃场景已针对性修复，回归测试覆盖"
+    },
+    {
+      "id": "u_23585a53deff1111",
+      "kind": "text",
+      "source": "所有13个崩溃场景已针对性修复，回归测试覆盖",
+      "occurrence": 0,
+      "target": "All 13 crash scenarios have been targeted for repair, with regression testing coverage",
+      "context": "td @ line 596 · surrounding text: QA测试发现重大崩溃问题 低 所有13个崩溃场景已针对性修复，回归测试覆盖"
+    },
+    {
+      "id": "u_5775a21171683878",
+      "kind": "text",
+      "source": "部署后生产日志重新增长",
+      "occurrence": 0,
+      "target": "Production logs resumed growth after deployment",
+      "context": "td @ line 597 · surrounding text: 部署后生产日志重新增长 低 已知原因（旧版本残留代码），新版部署后自动解决"
+    },
+    {
+      "id": "u_374d0dff35a909e6",
+      "kind": "text",
+      "source": "低",
+      "occurrence": 1,
+      "target": "Low",
+      "context": "td @ line 597 · surrounding text: 部署后生产日志重新增长 低 已知原因（旧版本残留代码），新版部署后自动解决"
+    },
+    {
+      "id": "u_95d61f52132d8e05",
+      "kind": "text",
+      "source": "已知原因（旧版本残留代码），新版部署后自动解决",
+      "occurrence": 0,
+      "target": "Known cause (legacy code from old version), resolved with new deployment",
+      "context": "td @ line 597 · surrounding text: 部署后生产日志重新增长 低 已知原因（旧版本残留代码），新版部署后自动解决"
+    },
+    {
+      "id": "u_fd67f8d8025603f9",
+      "kind": "text",
+      "source": "生产数据库此前无任何备份",
+      "occurrence": 0,
+      "target": "There were no previous backups of the production database.",
+      "context": "td @ line 598 · surrounding text: 生产数据库此前无任何备份 严重 → 已解决 4月9日已启用Azure每日自动备份（30天保留），维护脚本已修复，磁盘占用66%→49%"
+    },
+    {
+      "id": "u_3f8377fe9cd066d6",
+      "kind": "text",
+      "source": "严重 → 已解决",
+      "occurrence": 0,
+      "target": "Severe → Resolved",
+      "context": "td @ line 598 · surrounding text: 生产数据库此前无任何备份 严重 → 已解决 4月9日已启用Azure每日自动备份（30天保留），维护脚本已修复，磁盘占用66%→49%"
+    },
+    {
+      "id": "u_b9065ec10fb09e0a",
+      "kind": "text",
+      "source": "4月9日已启用Azure每日自动备份（30天保留），维护脚本已修复，磁盘占用66%→49%",
+      "occurrence": 0,
+      "target": "April 9th: Azure daily automatic backup enabled (retention period of 30 days), maintenance scripts fixed, disk usage reduced from 66% to 49%",
+      "context": "td @ line 598 · surrounding text: 生产数据库此前无任何备份 严重 → 已解决 4月9日已启用Azure每日自动备份（30天保留），维护脚本已修复，磁盘占用66%→49%"
+    },
+    {
+      "id": "u_d0b1810b2deeefa9",
+      "kind": "text",
+      "source": "Nginx未配置默认拦截 — 木马注入攻击入口",
+      "occurrence": 0,
+      "target": "Nginx not configured with default blocking — potential entry point for Trojan injection attacks",
+      "context": "td @ line 599 · surrounding text: Nginx未配置默认拦截 — 木马注入攻击入口 严重 → 已解决 4月9日两台服务器均已配置静默拦截，未注册域名请求不再到达后端"
+    },
+    {
+      "id": "u_97456b0c6262ff86",
+      "kind": "text",
+      "source": "严重 → 已解决",
+      "occurrence": 1,
+      "target": "Severe → Resolved",
+      "context": "td @ line 599 · surrounding text: Nginx未配置默认拦截 — 木马注入攻击入口 严重 → 已解决 4月9日两台服务器均已配置静默拦截，未注册域名请求不再到达后端"
+    },
+    {
+      "id": "u_c8ad7123997fc24e",
+      "kind": "text",
+      "source": "4月9日两台服务器均已配置静默拦截，未注册域名请求不再到达后端",
+      "occurrence": 0,
+      "target": "April 9th: Both servers configured with silent blocking, unregistered domain requests no longer reach the back office (BO)",
+      "context": "td @ line 599 · surrounding text: Nginx未配置默认拦截 — 木马注入攻击入口 严重 → 已解决 4月9日两台服务器均已配置静默拦截，未注册域名请求不再到达后端"
+    },
+    {
+      "id": "u_7910cbf3aba70748",
+      "kind": "text",
+      "source": "路线图 — 更新后里程碑",
+      "occurrence": 0,
+      "target": "Roadmap — Updated Milestones",
+      "context": "h2.section-heading @ line 606"
+    },
+    {
+      "id": "u_19291dd52f1e66d7",
+      "kind": "text",
+      "source": "里程碑",
+      "occurrence": 0,
+      "target": "Milestone",
+      "context": "th @ line 609 · surrounding text: 里程碑 目标 说明"
+    },
+    {
+      "id": "u_f6642308e59d6448",
+      "kind": "text",
+      "source": "目标",
+      "occurrence": 0,
+      "target": "Goal",
+      "context": "th @ line 609 · surrounding text: 里程碑 目标 说明"
+    },
+    {
+      "id": "u_fb7833aa2cea8562",
+      "kind": "text",
+      "source": "说明",
+      "occurrence": 2,
+      "target": "Description",
+      "context": "th @ line 609 · surrounding text: 里程碑 目标 说明"
+    },
+    {
+      "id": "u_d767ab1c2d1910f1",
+      "kind": "text",
+      "source": "平台评估 + 第0阶段开发",
+      "occurrence": 0,
+      "target": "Platform Evaluation + Sprint 0 Development",
+      "context": "td @ line 612 · surrounding text: 平台评估 + 第0阶段开发 已完成 全面审计，50项遗留问题已识别，31项已修复"
+    },
+    {
+      "id": "u_5b5ba8d4235679d9",
+      "kind": "text",
+      "source": "已完成",
+      "occurrence": 1,
+      "target": "Completed",
+      "context": "td @ line 612 · surrounding text: 平台评估 + 第0阶段开发 已完成 全面审计，50项遗留问题已识别，31项已修复"
+    },
+    {
+      "id": "u_865f8acd63704aee",
+      "kind": "text",
+      "source": "全面审计，50项遗留问题已识别，31项已修复",
+      "occurrence": 0,
+      "target": "Comprehensive Audit, 50 Issues Identified, 31 Resolved",
+      "context": "td @ line 612 · surrounding text: 平台评估 + 第0阶段开发 已完成 全面审计，50项遗留问题已识别，31项已修复"
+    },
+    {
+      "id": "u_3a6fb3f0b0652f54",
+      "kind": "text",
+      "source": "① Arrowfish 稳定版",
+      "occurrence": 0,
+      "target": "① Arrowfish Stable Version",
+      "context": "td @ line 613 · surrounding text: ① Arrowfish 稳定版 4月25日 QA全面测试（4/10-11）→ 修复 → 合规优化 → 生产部署 → Google Play 提交"
+    },
+    {
+      "id": "u_cb936b8220da9057",
+      "kind": "text",
+      "source": "4月25日",
+      "occurrence": 1,
+      "target": "April 25",
+      "context": "td @ line 613 · surrounding text: ① Arrowfish 稳定版 4月25日 QA全面测试（4/10-11）→ 修复 → 合规优化 → 生产部署 → Google Play 提交"
+    },
+    {
+      "id": "u_5f44d4c18e97a578",
+      "kind": "text",
+      "source": "QA全面测试（4/10-11）→ 修复 → 合规优化 → 生产部署 → Google Play 提交",
+      "occurrence": 0,
+      "target": "QA Comprehensive Testing (Apr 10-11) → Fixing Issues → Compliance Optimization → Production Deployment → Google Play Submission",
+      "context": "td @ line 613 · surrounding text: ① Arrowfish 稳定版 4月25日 QA全面测试（4/10-11）→ 修复 → 合规优化 → 生产部署 → Google Play 提交"
+    },
+    {
+      "id": "u_8b9b5d746d99f7ec",
+      "kind": "text",
+      "source": "② 接入 Siqo 加密支付",
+      "occurrence": 0,
+      "target": "② Integration of Siqo Encrypted Payment",
+      "context": "td @ line 614 · surrounding text: ② 接入 Siqo 加密支付 5月初 对接 Siqo Crypto Payment Gateway API，新增加密货币充值方式"
+    },
+    {
+      "id": "u_eef593501c944290",
+      "kind": "text",
+      "source": "5月初",
+      "occurrence": 0,
+      "target": "Early May",
+      "context": "td @ line 614 · surrounding text: ② 接入 Siqo 加密支付 5月初 对接 Siqo Crypto Payment Gateway API，新增加密货币充值方式"
+    },
+    {
+      "id": "u_fc19b5987bf18907",
+      "kind": "text",
+      "source": "对接 Siqo Crypto Payment Gateway API，新增加密货币充值方式",
+      "occurrence": 0,
+      "target": "Integration with Siqo Crypto Payment Gateway API, Adding New Cryptocurrency Top-Up Method",
+      "context": "td @ line 614 · surrounding text: ② 接入 Siqo 加密支付 5月初 对接 Siqo Crypto Payment Gateway API，新增加密货币充值方式"
+    },
+    {
+      "id": "u_b00929f1969a6661",
+      "kind": "text",
+      "source": "③ 安全加固 + FFF基础",
+      "occurrence": 0,
+      "target": "③ Security Enhancement + FFF Foundation",
+      "context": "td @ line 615 · surrounding text: ③ 安全加固 + FFF基础 5月 节点安全加固（防绕过）+ Flutter项目搭建 + VPN引擎集成"
+    },
+    {
+      "id": "u_bfd56c134792a264",
+      "kind": "text",
+      "source": "5月",
+      "occurrence": 0,
+      "target": "May",
+      "context": "td @ line 615 · surrounding text: ③ 安全加固 + FFF基础 5月 节点安全加固（防绕过）+ Flutter项目搭建 + VPN引擎集成"
+    },
+    {
+      "id": "u_9b6075f2eeb742df",
+      "kind": "text",
+      "source": "节点安全加固（防绕过）+ Flutter项目搭建 + VPN引擎集成",
+      "occurrence": 0,
+      "target": "Security VPN node Hardening (Anti-Bypass) + Flutter Project Setup + VPN Engine Integration",
+      "context": "td @ line 615 · surrounding text: ③ 安全加固 + FFF基础 5月 节点安全加固（防绕过）+ Flutter项目搭建 + VPN引擎集成"
+    },
+    {
+      "id": "u_e413c359cac73596",
+      "kind": "text",
+      "source": "④ FFF 核心功能",
+      "occurrence": 0,
+      "target": "④ FFF Core Functionality",
+      "context": "td @ line 616 · surrounding text: ④ FFF 核心功能 5–6月 登录注册、VPN连接、设备指纹防刷、多协议支持"
+    },
+    {
+      "id": "u_06cd0e8bb8652c7c",
+      "kind": "text",
+      "source": "5–6月",
+      "occurrence": 0,
+      "target": "May-June",
+      "context": "td @ line 616 · surrounding text: ④ FFF 核心功能 5–6月 登录注册、VPN连接、设备指纹防刷、多协议支持"
+    },
+    {
+      "id": "u_3b2e8c141d2ee675",
+      "kind": "text",
+      "source": "登录注册、VPN连接、设备指纹防刷、多协议支持",
+      "occurrence": 0,
+      "target": "Login and Registration, VPN Connection, Device Fingerprint Anti-Fraud, Multi-Protocol Support",
+      "context": "td @ line 616 · surrounding text: ④ FFF 核心功能 5–6月 登录注册、VPN连接、设备指纹防刷、多协议支持"
+    },
+    {
+      "id": "u_73943868d53d567d",
+      "kind": "text",
+      "source": "⑤ FFF 发布",
+      "occurrence": 0,
+      "target": "⑤ FFF Release",
+      "context": "td @ line 617 · surrounding text: ⑤ FFF 发布 6月下旬 iOS + Android + Windows 全平台发布"
+    },
+    {
+      "id": "u_596bc9bc6d3c7993",
+      "kind": "text",
+      "source": "6月下旬",
+      "occurrence": 0,
+      "target": "Late June",
+      "context": "td @ line 617 · surrounding text: ⑤ FFF 发布 6月下旬 iOS + Android + Windows 全平台发布"
+    },
+    {
+      "id": "u_9e891b2e81be1d30",
+      "kind": "text",
+      "source": "iOS + Android + Windows 全平台发布",
+      "occurrence": 0,
+      "target": "Release on iOS, Android, and Windows platforms",
+      "context": "td @ line 617 · surrounding text: ⑤ FFF 发布 6月下旬 iOS + Android + Windows 全平台发布"
+    },
+    {
+      "id": "u_b1b86b9aeba13e36",
+      "kind": "text",
+      "source": "⑥ 用户迁移计划",
+      "occurrence": 0,
+      "target": "⑥ User migration plan",
+      "context": "td @ line 618 · surrounding text: ⑥ 用户迁移计划 FFF稳定后 Arrowfish 内弹窗引导用户升级至 FFF，后端逐步迁移，计划数月内下架 Arrowfish"
+    },
+    {
+      "id": "u_90eb349b1d1bc97b",
+      "kind": "text",
+      "source": "FFF稳定后",
+      "occurrence": 0,
+      "target": "After FFF stabilization",
+      "context": "td @ line 618 · surrounding text: ⑥ 用户迁移计划 FFF稳定后 Arrowfish 内弹窗引导用户升级至 FFF，后端逐步迁移，计划数月内下架 Arrowfish"
+    },
+    {
+      "id": "u_49622d3c80983dac",
+      "kind": "text",
+      "source": "Arrowfish 内弹窗引导用户升级至 FFF，后端逐步迁移，计划数月内下架 Arrowfish",
+      "occurrence": 0,
+      "target": "Arrowfish prompts users to upgrade to FFF with an in-app popup; BO migration will follow, planned for several months until Arrowfish is removed",
+      "context": "td @ line 618 · surrounding text: ⑥ 用户迁移计划 FFF稳定后 Arrowfish 内弹窗引导用户升级至 FFF，后端逐步迁移，计划数月内下架 Arrowfish"
+    },
+    {
+      "id": "u_c3d545aff18fa307",
+      "kind": "text",
+      "source": "FFF迁移后",
+      "occurrence": 0,
+      "target": "After FFF migration",
+      "context": "td @ line 619 · surrounding text: ⑦ Apple Store + Mac FFF迁移后 FFF 上架 Apple Store（iOS + macOS），需新 Apple 开发者账号"
+    },
+    {
+      "id": "u_ec12328018db1db6",
+      "kind": "text",
+      "source": "FFF 上架 Apple Store（iOS + macOS），需新 Apple 开发者账号",
+      "occurrence": 0,
+      "target": "FFF released on Apple Store (iOS + macOS), requires a new Apple Developer account",
+      "context": "td @ line 619 · surrounding text: ⑦ Apple Store + Mac FFF迁移后 FFF 上架 Apple Store（iOS + macOS），需新 Apple 开发者账号"
+    },
+    {
+      "id": "u_fb7ad00c9f3d452d",
+      "kind": "text",
+      "source": "⑧ AI 智能化",
+      "occurrence": 0,
+      "target": "⑧ AI Intelligence",
+      "context": "td @ line 620 · surrounding text: ⑧ AI 智能化 持续 后台运维AI助手、用户端智能客服、节点智能管控等"
+    },
+    {
+      "id": "u_f9f9b028f56691c6",
+      "kind": "text",
+      "source": "持续",
+      "occurrence": 0,
+      "target": "Ongoing",
+      "context": "td @ line 620 · surrounding text: ⑧ AI 智能化 持续 后台运维AI助手、用户端智能客服、节点智能管控等"
+    },
+    {
+      "id": "u_23f041a06e6b2a02",
+      "kind": "text",
+      "source": "后台运维AI助手、用户端智能客服、节点智能管控等",
+      "occurrence": 0,
+      "target": "Back Office (BO) AI operations assistant, user-end intelligent customer service, intelligent VPN node management",
+      "context": "td @ line 620 · surrounding text: ⑧ AI 智能化 持续 后台运维AI助手、用户端智能客服、节点智能管控等"
+    },
+    {
+      "id": "u_c2dde212a2640a89",
+      "kind": "text",
+      "source": "后续步骤",
+      "occurrence": 0,
+      "target": "Subsequent steps",
+      "context": "h2.section-heading @ line 627"
+    },
+    {
+      "id": "u_c323d555f24a48f3",
+      "kind": "text",
+      "source": "① 当前：Arrowfish 稳定版 → Google Play 上线（目标4月25日）",
+      "occurrence": 0,
+      "target": "① Current: Arrowfish stable version → Google Play release (targeted for April 25)",
+      "context": "strong @ line 628"
+    },
+    {
+      "id": "u_5a8d974864ca4a66",
+      "kind": "text",
+      "source": "QA Amy 正在执行全面测试（4/10-11，周末加班），结果预计本周末出",
+      "occurrence": 0,
+      "target": "QA Amy is executing comprehensive testing (April 10-11, weekend overtime), results expected this weekend",
+      "context": "li @ line 630"
+    },
+    {
+      "id": "u_2edb5749e13eca6c",
+      "kind": "text",
+      "source": "根据QA结果修复关键问题，应用商店合规优化（权限清理、前台服务类型调整）",
+      "occurrence": 0,
+      "target": "Fix critical issues based on QA results; optimize app store compliance (permission cleanup, front-end service type adjustment)",
+      "context": "li @ line 631"
+    },
+    {
+      "id": "u_f434e4ec34de0b66",
+      "kind": "text",
+      "source": "部署生产环境（Redis加固、MySQL优化、后端全量部署），Amy回归测试",
+      "occurrence": 0,
+      "target": "Deploy production environment (Redis reinforcement, MySQL optimization, full BO deployment); Amy will perform regression testing",
+      "context": "li @ line 632"
+    },
+    {
+      "id": "u_a2b86b0a47f3a292",
+      "kind": "text",
+      "source": "确认所有基础设施变更在生产环境安全可靠",
+      "occurrence": 0,
+      "target": "Confirm all infrastructure changes are safe and reliable in the production environment",
+      "context": "li @ line 633"
+    },
+    {
+      "id": "u_3ae3ce4ab0034c20",
+      "kind": "text",
+      "source": "Google Play 提交，目标4月25日上线",
+      "occurrence": 0,
+      "target": "Submit to Google Play; target release on April 25",
+      "context": "li @ line 634"
+    },
+    {
+      "id": "u_c9d217738e5d08f5",
+      "kind": "text",
+      "source": "② 接入 Siqo 加密货币支付",
+      "occurrence": 0,
+      "target": "② Integrate Siqo cryptocurrency payment",
+      "context": "strong @ line 636"
+    },
+    {
+      "id": "u_d1cfdc7481a48f78",
+      "kind": "text",
+      "source": "对接 Siqo Crypto Payment Gateway API，新增加密货币充值渠道",
+      "occurrence": 0,
+      "target": "Integrate with Siqo Crypto Payment Gateway API; add new cryptocurrency recharge channel",
+      "context": "li @ line 638"
+    },
+    {
+      "id": "u_800c89c1ad5ab924",
+      "kind": "text",
+      "source": "与 Arrowfish 稳定版一同发布，扩大支付方式覆盖面",
+      "occurrence": 0,
+      "target": "Released alongside Arrowfish stable version to expand payment method coverage",
+      "context": "li @ line 639"
+    },
+    {
+      "id": "u_4a7a517c06e14934",
+      "kind": "text",
+      "source": "③ 监控体系 + 节点迁移（与上述并行）",
+      "occurrence": 0,
+      "target": "③ Monitoring framework + migration of VPN nodes (conducted in parallel with the above)",
+      "context": "strong @ line 641"
+    },
+    {
+      "id": "u_d5db34b0905a0a04",
+      "kind": "text",
+      "source": "搭建基础设施、后端服务、应用端全链路监控",
+      "occurrence": 0,
+      "target": "Build out infrastructure, backend services, and full-chain application monitoring.",
+      "context": "li @ line 643"
+    },
+    {
+      "id": "u_27d7f4cc678b30af",
+      "kind": "text",
+      "source": "156台节点逐步迁移至 Singbox Agent 新架构（快速部署已验证可行）",
+      "occurrence": 0,
+      "target": "156 VPN nodes are being gradually migrated to the new Singbox Agent architecture (quick deployment has been validated as feasible).",
+      "context": "li @ line 644"
+    },
+    {
+      "id": "u_9bcbaea75cb42146",
+      "kind": "text",
+      "source": "④ FFF 新应用开发（团队已启动准备）",
+      "occurrence": 0,
+      "target": "④ FFF New Application Development (Team is already preparing)",
+      "context": "strong @ line 646"
+    },
+    {
+      "id": "u_858ce2ae10c955b8",
+      "kind": "text",
+      "source": "Flutter 全新重构，功能优于 Arrowfish，先上 Android + Windows",
+      "occurrence": 0,
+      "target": "Flutter has been fully re-architected, with features superior to Arrowfish. It will first be deployed on Android and Windows.",
+      "context": "li @ line 648"
+    },
+    {
+      "id": "u_e0a6dd5b21e4fb9f",
+      "kind": "text",
+      "source": "Flutter 全新重构，先上 Android + Windows，功能优于 Arrowfish",
+      "occurrence": 0,
+      "target": "Flutter has been fully re-architected, with features superior to Arrowfish. It will first be deployed on Android and Windows.",
+      "context": "li @ line 649"
+    },
+    {
+      "id": "u_c13f1f3624581a61",
+      "kind": "text",
+      "source": "⑤ 用户迁移 → Apple Store → AI 智能化",
+      "occurrence": 0,
+      "target": "⑤ User migration → Apple Store → AI automation",
+      "context": "strong @ line 651"
+    },
+    {
+      "id": "u_ae03dc665675eca1",
+      "kind": "text",
+      "source": "FFF 稳定后，Arrowfish 内弹窗引导用户升级至 FFF，后端逐步迁移用户数据，计划数月内下架 Arrowfish",
+      "occurrence": 0,
+      "target": "Once FFF is stable, Arrowfish will internally prompt users to upgrade to FFF. The backend will gradually migrate user data; the plan is for Arrowfish to be removed from the market within a few months.",
+      "context": "li @ line 653"
+    },
+    {
+      "id": "u_c4b4f06bb48527ab",
+      "kind": "text",
+      "source": "FFF 上架 Apple Store（iOS + macOS）",
+      "occurrence": 0,
+      "target": "FFF has been released on Apple Store (iOS + macOS).",
+      "context": "li @ line 654"
+    },
+    {
+      "id": "u_7b627d7182689b3d",
+      "kind": "text",
+      "source": "后台运维 AI 助手、用户端智能客服、节点智能管控等持续建设",
+      "occurrence": 0,
+      "target": "Back Office operations, user-end intelligent customer service, and VPN node intelligent management continue to be developed",
+      "context": "li @ line 655"
+    },
+    {
+      "id": "u_be4b2800d54606ad",
+      "kind": "text",
+      "source": "状态：第1阶段测试部署进行中。下次报告：2026年4月17日。",
+      "occurrence": 0,
+      "target": "Status: Sprint 1 testing deployment is ongoing. Next report due on April 17th, 2026.",
+      "context": "p @ line 661"
+    }
+  ],
+  "blocks": {
+    "b0001": {
+      "type": "heading",
+      "source": "第1阶段周报（第1周）：测试部署与自动化",
+      "occurrence": 0
+    },
+    "b0002": {
+      "type": "heading",
+      "source": "执行总结",
+      "occurrence": 0
+    },
+    "b0003": {
+      "type": "li",
+      "source": "数据库安全：发现生产数据库从未设置备份（台湾团队遗留），如不处理约3个月后将崩溃 — 发现当天已全部修复并启用备份",
+      "occurrence": 0
+    },
+    "b0004": {
+      "type": "li",
+      "source": "服务器安全：发现Nginx未配置默认拦截，任何未注册域名的请求均可直达后端应用 — 与此前木马注入攻击为同一攻击路径 — 发现当天已修复",
+      "occurrence": 0
+    },
+    "b0005": {
+      "type": "li",
+      "source": "专线运营自动化：发现每周5.7–12小时的人工分配工作可全部自动化 — 开发中",
+      "occurrence": 0
+    },
+    "b0006": {
+      "type": "li",
+      "source": "数据库性能：发现历史遗留的158,000条慢查询记录，优化方案开发中",
+      "occurrence": 0
+    },
+    "b0007": {
+      "type": "li",
+      "source": "服务器审计：发现开发服务器资源浪费，已节省22 GB磁盘空间，进一步节省计划制定中",
+      "occurrence": 0
+    },
+    "b0008": {
+      "type": "li",
+      "source": "测试版应用：目标本周完成构建，计划下周生产上线",
+      "occurrence": 0
+    },
+    "b0009": {
+      "type": "heading",
+      "source": "里程碑进度",
+      "occurrence": 0
+    },
+    "b0010": {
+      "type": "heading",
+      "source": "业务影响 — 数据库安全（严重遗留风险）",
+      "occurrence": 0
+    },
+    "b0011": {
+      "type": "table-row",
+      "source": "如果未被发现 后果",
+      "occurrence": 0
+    },
+    "b0012": {
+      "type": "table-row",
+      "source": "数据库磁盘约在7月中旬写满 数据库崩溃，全平台停摆 — 用户无法登录、无法连接VPN、无法购买",
+      "occurrence": 0
+    },
+    "b0013": {
+      "type": "table-row",
+      "source": "崩溃时无任何备份可用 29.3万用户账号、全部支付记录、全部服务器配置永久丢失 — 无法恢复",
+      "occurrence": 0
+    },
+    "b0014": {
+      "type": "table-row",
+      "source": "平台完全下线 停摆期间收入归零，恢复需数天至数周（如果能恢复的话）",
+      "occurrence": 0
+    },
+    "b0015": {
+      "type": "table-row",
+      "source": "措施 效果",
+      "occurrence": 0
+    },
+    "b0016": {
+      "type": "table-row",
+      "source": "启用Azure每日自动备份（两台服务器） 每日06:00自动备份，保留30天，7天内可即时恢复 — 平台首次拥有灾难恢复能力",
+      "occurrence": 0
+    },
+    "b0017": {
+      "type": "table-row",
+      "source": "修复114天失败的维护脚本 125万条过期数据将被自动清理，磁盘压力解除",
+      "occurrence": 0
+    },
+    "b0018": {
+      "type": "table-row",
+      "source": "优化磁盘配置（两台服务器） 磁盘占用从66%降至49%，释放约22 GB空间",
+      "occurrence": 0
+    },
+    "b0019": {
+      "type": "highlight",
+      "source": "这是接手以来发现的最严重遗留风险。新增成本仅$25/月（两台服务器备份费用），但避免了约3个月后的全平台崩溃和全部用户数据永久丢失。",
+      "occurrence": 0
+    },
+    "b0020": {
+      "type": "heading",
+      "source": "业务影响 — 服务器安全漏洞（严重遗留风险）",
+      "occurrence": 0
+    },
+    "b0021": {
+      "type": "table-row",
+      "source": "攻击路径 后果",
+      "occurrence": 0
+    },
+    "b0022": {
+      "type": "table-row",
+      "source": "攻击者用任意域名发请求 → Nginx无拦截 → 直达后端 此前木马注入攻击的入口 — 攻击者通过未注册域名绕过正常路由，注入恶意代码",
+      "occurrence": 0
+    },
+    "b0023": {
+      "type": "table-row",
+      "source": "扫描器/爬虫探测服务器IP 服务器返回404页面和版本信息，暴露技术栈（Nginx版本、后端框架、API格式）",
+      "occurrence": 0
+    },
+    "b0024": {
+      "type": "table-row",
+      "source": "域名配置出错时无明确提示 服务器返回误导性错误（\"用户未登录\"），排查方向错误，延长故障修复时间",
+      "occurrence": 0
+    },
+    "b0025": {
+      "type": "table-row",
+      "source": "措施 效果",
+      "occurrence": 1
+    },
+    "b0026": {
+      "type": "table-row",
+      "source": "配置Nginx默认拦截规则（返回444：静默断开连接） 未注册域名的请求被立即丢弃， 零信息泄露 — 攻击者看到的只是\"连接被拒绝\"",
+      "occurrence": 0
+    },
+    "b0027": {
+      "type": "table-row",
+      "source": "HTTP和HTTPS端口均已覆盖 所有未注册域名在Nginx层即被拦截，不再转发至后端应用",
+      "occurrence": 0
+    },
+    "b0028": {
+      "type": "table-row",
+      "source": "已验证：正常域名访问不受影响 所有已注册的业务域名（客户端、管理后台、节点API）均正常工作",
+      "occurrence": 0
+    },
+    "b0029": {
+      "type": "highlight",
+      "source": "此修复关闭了木马注入攻击的入口。修改为运维级别操作，无需代码部署，零成本，零停机时间。建议后续将测试服务器和生产服务器的网络安全组分离，进一步收紧测试服务器的公网访问权限。",
+      "occurrence": 0
+    },
+    "b0030": {
+      "type": "heading",
+      "source": "安全改进 — 无日志政策违规（已发现并修复）",
+      "occurrence": 0
+    },
+    "b0031": {
+      "type": "table-row",
+      "source": "违规位置 前团队遗留的问题 修复内容 状态",
+      "occurrence": 0
+    },
+    "b0032": {
+      "type": "table-row",
+      "source": "安卓 MmkvManager.kt 调试日志记录完整 VPN 服务器配置、连接密钥、订阅 URL（5处日志语句） 全部替换为无敏感信息的等效日志（仅记录数量，不记录内容） 已修复",
+      "occurrence": 0
+    },
+    "b0033": {
+      "type": "table-row",
+      "source": "后端客户端 API 追踪中间件 启用时记录用户 IP 和完整请求体，违反无日志政策 用合规请求日志（仅方法、路径、状态码、耗时，无用户数据）替换追踪中间件 已修复",
+      "occurrence": 0
+    },
+    "b0034": {
+      "type": "table-row",
+      "source": "后端 middleware.Logger() 旧版本将所有请求写入磁盘 — 生成 22 GB PM2 日志文件 替换为空操作日志器；生产日志文件已手动清空（磁盘 50%→33%） 已修复，待部署生效",
+      "occurrence": 0
+    },
+    "b0035": {
+      "type": "table-row",
+      "source": "数据库 log_apis 表（1,252,033 行） API 请求日志占数据库总量 86%（13.1 GB），清理脚本失效 114 天无人察觉 修复清理脚本（补充数据库凭据）；约 1.25 万行将于 2026-04-10 自动清除 已修复",
+      "occurrence": 0
+    },
+    "b0036": {
+      "type": "highlight",
+      "source": "节点级别（待办）： 全部 156 个 VPN 节点需禁用 rsyslog 和 journald 操作系统日志，计划在第2阶段运维任务中完成。",
+      "occurrence": 0
+    },
+    "b0037": {
+      "type": "heading",
+      "source": "整体进度概览",
+      "occurrence": 0
+    },
+    "b0038": {
+      "type": "table-row",
+      "source": "指标 数量 说明",
+      "occurrence": 0
+    },
+    "b0039": {
+      "type": "table-row",
+      "source": "已修复（含运维即时修复） 31项 包括：13个崩溃问题、收入漏洞（三星测试模式）、数据库无备份、Nginx安全漏洞、服务端限制缺失等",
+      "occurrence": 0
+    },
+    "b0040": {
+      "type": "table-row",
+      "source": "开发中 12项 数据库优化、专线自动化、监控告警 — 随本次部署一并上线",
+      "occurrence": 0
+    },
+    "b0041": {
+      "type": "table-row",
+      "source": "计划中 7项 服务器整合、旧服务清理、网络安全组分离 — 第1阶段后期处理",
+      "occurrence": 0
+    },
+    "b0042": {
+      "type": "heading",
+      "source": "业务影响 — 专线运营自动化",
+      "occurrence": 0
+    },
+    "b0043": {
+      "type": "table-row",
+      "source": "指标 现状 自动化后",
+      "occurrence": 0
+    },
+    "b0044": {
+      "type": "table-row",
+      "source": "每笔订单处理时间 25–60 分钟（人工） 不超过 2 分钟（自动）",
+      "occurrence": 0
+    },
+    "b0045": {
+      "type": "table-row",
+      "source": "每周人工操作时间 5.7–12 小时 释放用于客户服务和业务拓展",
+      "occurrence": 0
+    },
+    "b0046": {
+      "type": "table-row",
+      "source": "订单处理覆盖时间 仅工作时间 全天候 24/7",
+      "occurrence": 0
+    },
+    "b0047": {
+      "type": "table-row",
+      "source": "能力 说明 状态",
+      "occurrence": 0
+    },
+    "b0048": {
+      "type": "table-row",
+      "source": "订单自动配发 专线/专用IP订单支付后，系统自动匹配区域并分配节点，无需人工操作 开发中",
+      "occurrence": 0
+    },
+    "b0049": {
+      "type": "table-row",
+      "source": "到期自动回收 IP到期后自动归还IP池，节点释放给新订单 开发中",
+      "occurrence": 0
+    },
+    "b0050": {
+      "type": "table-row",
+      "source": "库存自动监控 IP/节点库存不足时自动通知管理员补货 开发中",
+      "occurrence": 0
+    },
+    "b0051": {
+      "type": "table-row",
+      "source": "供应商稳定性追踪 自动记录节点故障、计算供应商可用率、付款到期提醒 开发中",
+      "occurrence": 0
+    },
+    "b0052": {
+      "type": "table-row",
+      "source": "智能节点管控 系统根据使用量和付费周期自动判断节点是否满载，自动下线/恢复，管理员只需处理异常 规划中",
+      "occurrence": 0
+    },
+    "b0053": {
+      "type": "table-row",
+      "source": "智能采购建议 系统分析各区域库存、订单趋势、利润率，自动推荐何时在哪个区域购买新节点 规划中",
+      "occurrence": 0
+    },
+    "b0054": {
+      "type": "table-row",
+      "source": "后台智能助手 内置AI助手引导管理员完成节点采购、DNS配置、快速部署等操作，大幅降低学习成本 规划中",
+      "occurrence": 0
+    },
+    "b0055": {
+      "type": "highlight",
+      "source": "最终目标：节点从采购到部署到退役全流程自动化。目前4项核心能力开发中，完成后将大幅减少人工操作。智能采购建议和自动负载管理随监控体系建设推进，AI助手作为后期智能化阶段实现。",
+      "occurrence": 0
+    },
+    "b0056": {
+      "type": "heading",
+      "source": "业务影响 — 数据库性能",
+      "occurrence": 0
+    },
+    "b0057": {
+      "type": "table-row",
+      "source": "发现问题 影响 处理进度",
+      "occurrence": 0
+    },
+    "b0058": {
+      "type": "table-row",
+      "source": "历史积累的慢查询158,000条（单次超过3秒） 数据库长期处于压力状态，影响响应速度 优化中",
+      "occurrence": 0
+    },
+    "b0059": {
+      "type": "table-row",
+      "source": "数据库连接池配置300个，实际使用仅17个 资源浪费，服务器内存占用不必要偏高 优化中",
+      "occurrence": 0
+    },
+    "b0060": {
+      "type": "table-row",
+      "source": "读取副本数据库几乎从未启用（163次主库 vs 27次副库） 所有查询压在主库，读写副本形同虚设 优化中",
+      "occurrence": 0
+    },
+    "b0061": {
+      "type": "table-row",
+      "source": "缺少关键索引（含78万行的登录记录表） 特定查询需全表扫描，速度慢 优化中",
+      "occurrence": 0
+    },
+    "b0062": {
+      "type": "highlight",
+      "source": "所有优化已完成代码，测试环境部署后将一并上线。上线后数据库读取压力预计显著下降，平台整体响应速度和稳定性将得到改善。",
+      "occurrence": 0
+    },
+    "b0063": {
+      "type": "heading",
+      "source": "业务影响 — 服务器基础设施审计",
+      "occurrence": 0
+    },
+    "b0064": {
+      "type": "table-row",
+      "source": "发现 影响 状态",
+      "occurrence": 0
+    },
+    "b0065": {
+      "type": "table-row",
+      "source": "生产服务器运行着一个已停用的旧支付服务（台湾团队遗留，SSL证书2024年10月已过期，零流量） 占用584 MB内存，存在安全风险 清理计划制定中",
+      "occurrence": 0
+    },
+    "b0066": {
+      "type": "table-row",
+      "source": "开发服务器规格超出实际需求（内存利用率仅23%） 每月多支出 $53，每年浪费约 $637 降配计划制定中",
+      "occurrence": 0
+    },
+    "b0067": {
+      "type": "table-row",
+      "source": "生产服务器22 GB的无效日志文件（前团队遗留代码导致） 占用36%磁盘空间 已清理（磁盘占用50%→33%）",
+      "occurrence": 0
+    },
+    "b0068": {
+      "type": "table-row",
+      "source": "生产服务器PHP进程14个空闲工作进程常驻内存 约2 GB内存长期空占 优化计划制定中",
+      "occurrence": 0
+    },
+    "b0069": {
+      "type": "highlight",
+      "source": "服务器日志清理已立即完成，释放22 GB磁盘空间。其余优化项目将在下次部署时一并处理，无需额外停机时间。",
+      "occurrence": 0
+    },
+    "b0070": {
+      "type": "heading",
+      "source": "进度追踪 — 上期报告遗留问题",
+      "occurrence": 0
+    },
+    "b0071": {
+      "type": "table-row",
+      "source": "问题 上次状态 本周进展",
+      "occurrence": 0
+    },
+    "b0072": {
+      "type": "table-row",
+      "source": "13个应用崩溃/卡顿问题 开发中 开发中，准备进入测试",
+      "occurrence": 0
+    },
+    "b0073": {
+      "type": "table-row",
+      "source": "免费用户服务端限制（时间/流量/设备数） 开发中 开发中，测试环境验证准备中",
+      "occurrence": 0
+    },
+    "b0074": {
+      "type": "table-row",
+      "source": "试用期升级引导（用户看不到试用进度） 方案已设计 后端完成，界面开发中",
+      "occurrence": 0
+    },
+    "b0075": {
+      "type": "table-row",
+      "source": "三星应用内购买测试模式 开发中 代码修复完成，等待部署验证",
+      "occurrence": 0
+    },
+    "b0076": {
+      "type": "table-row",
+      "source": "强制版本更新（原来从未启用） 开发中 已启用，测试环境验证中",
+      "occurrence": 0
+    },
+    "b0077": {
+      "type": "table-row",
+      "source": "读取副本数据库利用率不足 开发中 代码完成，随本次部署上线",
+      "occurrence": 0
+    },
+    "b0078": {
+      "type": "table-row",
+      "source": "冗余代理服务器整合（节省~$323/月） 按计划 第1阶段部署后评估",
+      "occurrence": 0
+    },
+    "b0079": {
+      "type": "heading",
+      "source": "阻塞与延迟",
+      "occurrence": 0
+    },
+    "b0080": {
+      "type": "heading",
+      "source": "本周重点工作",
+      "occurrence": 0
+    },
+    "b0081": {
+      "type": "table-row",
+      "source": "交付项 目标日期 进度",
+      "occurrence": 0
+    },
+    "b0082": {
+      "type": "table-row",
+      "source": "QA测试版APK构建 4月8日 进行中 — 测试环境配置完成，APK构建进行中",
+      "occurrence": 0
+    },
+    "b0083": {
+      "type": "table-row",
+      "source": "测试环境后端部署 4月8日 进行中 — CI/CD流水线已就绪，部署验证中",
+      "occurrence": 0
+    },
+    "b0084": {
+      "type": "table-row",
+      "source": "端到端功能验证 4月9–10日 待测试版构建完成后启动",
+      "occurrence": 0
+    },
+    "b0085": {
+      "type": "table-row",
+      "source": "崩溃回归测试 4月10日 复现第0阶段修复的崩溃场景，确认无回归",
+      "occurrence": 0
+    },
+    "b0086": {
+      "type": "heading",
+      "source": "财务总结",
+      "occurrence": 0
+    },
+    "b0087": {
+      "type": "heading",
+      "source": "风险评估",
+      "occurrence": 0
+    },
+    "b0088": {
+      "type": "table-row",
+      "source": "风险 等级 缓解措施",
+      "occurrence": 0
+    },
+    "b0089": {
+      "type": "table-row",
+      "source": "测试环境与生产环境存在差异 中 使用相同配置方式，Lex顾问提供环境差异说明",
+      "occurrence": 0
+    },
+    "b0090": {
+      "type": "table-row",
+      "source": "专线自动化区域匹配逻辑 中 测试环境验证覆盖所有区域（香港、韩国、日本）",
+      "occurrence": 0
+    },
+    "b0091": {
+      "type": "table-row",
+      "source": "QA测试发现重大崩溃问题 低 所有13个崩溃场景已针对性修复，回归测试覆盖",
+      "occurrence": 0
+    },
+    "b0092": {
+      "type": "table-row",
+      "source": "部署后生产日志重新增长 低 已知原因（旧版本残留代码），新版部署后自动解决",
+      "occurrence": 0
+    },
+    "b0093": {
+      "type": "table-row",
+      "source": "生产数据库此前无任何备份 严重 → 已解决 4月9日已启用Azure每日自动备份（30天保留），维护脚本已修复，磁盘占用66%→49%",
+      "occurrence": 0
+    },
+    "b0094": {
+      "type": "table-row",
+      "source": "Nginx未配置默认拦截 — 木马注入攻击入口 严重 → 已解决 4月9日两台服务器均已配置静默拦截，未注册域名请求不再到达后端",
+      "occurrence": 0
+    },
+    "b0095": {
+      "type": "heading",
+      "source": "路线图 — 更新后里程碑",
+      "occurrence": 0
+    },
+    "b0096": {
+      "type": "table-row",
+      "source": "里程碑 目标 说明",
+      "occurrence": 0
+    },
+    "b0097": {
+      "type": "table-row",
+      "source": "平台评估 + 第0阶段开发 已完成 全面审计，50项遗留问题已识别，31项已修复",
+      "occurrence": 0
+    },
+    "b0098": {
+      "type": "table-row",
+      "source": "① Arrowfish 稳定版 4月25日 QA全面测试（4/10-11）→ 修复 → 合规优化 → 生产部署 → Google Play 提交",
+      "occurrence": 0
+    },
+    "b0099": {
+      "type": "table-row",
+      "source": "② 接入 Siqo 加密支付 5月初 对接 Siqo Crypto Payment Gateway API，新增加密货币充值方式",
+      "occurrence": 0
+    },
+    "b0100": {
+      "type": "table-row",
+      "source": "③ 安全加固 + FFF基础 5月 节点安全加固（防绕过）+ Flutter项目搭建 + VPN引擎集成",
+      "occurrence": 0
+    },
+    "b0101": {
+      "type": "table-row",
+      "source": "④ FFF 核心功能 5–6月 登录注册、VPN连接、设备指纹防刷、多协议支持",
+      "occurrence": 0
+    },
+    "b0102": {
+      "type": "table-row",
+      "source": "⑤ FFF 发布 6月下旬 iOS + Android + Windows 全平台发布",
+      "occurrence": 0
+    },
+    "b0103": {
+      "type": "table-row",
+      "source": "⑥ 用户迁移计划 FFF稳定后 Arrowfish 内弹窗引导用户升级至 FFF，后端逐步迁移，计划数月内下架 Arrowfish",
+      "occurrence": 0
+    },
+    "b0104": {
+      "type": "table-row",
+      "source": "⑦ Apple Store + Mac FFF迁移后 FFF 上架 Apple Store（iOS + macOS），需新 Apple 开发者账号",
+      "occurrence": 0
+    },
+    "b0105": {
+      "type": "table-row",
+      "source": "⑧ AI 智能化 持续 后台运维AI助手、用户端智能客服、节点智能管控等",
+      "occurrence": 0
+    },
+    "b0106": {
+      "type": "heading",
+      "source": "后续步骤",
+      "occurrence": 0
+    },
+    "b0107": {
+      "type": "li",
+      "source": "QA Amy 正在执行全面测试（4/10-11，周末加班），结果预计本周末出",
+      "occurrence": 0
+    },
+    "b0108": {
+      "type": "li",
+      "source": "根据QA结果修复关键问题，应用商店合规优化（权限清理、前台服务类型调整）",
+      "occurrence": 0
+    },
+    "b0109": {
+      "type": "li",
+      "source": "部署生产环境（Redis加固、MySQL优化、后端全量部署），Amy回归测试",
+      "occurrence": 0
+    },
+    "b0110": {
+      "type": "li",
+      "source": "确认所有基础设施变更在生产环境安全可靠",
+      "occurrence": 0
+    },
+    "b0111": {
+      "type": "li",
+      "source": "Google Play 提交，目标4月25日上线",
+      "occurrence": 0
+    },
+    "b0112": {
+      "type": "li",
+      "source": "对接 Siqo Crypto Payment Gateway API，新增加密货币充值渠道",
+      "occurrence": 0
+    },
+    "b0113": {
+      "type": "li",
+      "source": "与 Arrowfish 稳定版一同发布，扩大支付方式覆盖面",
+      "occurrence": 0
+    },
+    "b0114": {
+      "type": "li",
+      "source": "搭建基础设施、后端服务、应用端全链路监控",
+      "occurrence": 0
+    },
+    "b0115": {
+      "type": "li",
+      "source": "156台节点逐步迁移至 Singbox Agent 新架构（快速部署已验证可行）",
+      "occurrence": 0
+    },
+    "b0116": {
+      "type": "li",
+      "source": "Flutter 全新重构，功能优于 Arrowfish，先上 Android + Windows",
+      "occurrence": 0
+    },
+    "b0117": {
+      "type": "li",
+      "source": "Flutter 全新重构，先上 Android + Windows，功能优于 Arrowfish",
+      "occurrence": 0
+    },
+    "b0118": {
+      "type": "li",
+      "source": "FFF 稳定后，Arrowfish 内弹窗引导用户升级至 FFF，后端逐步迁移用户数据，计划数月内下架 Arrowfish",
+      "occurrence": 0
+    },
+    "b0119": {
+      "type": "li",
+      "source": "FFF 上架 Apple Store（iOS + macOS）",
+      "occurrence": 0
+    },
+    "b0120": {
+      "type": "li",
+      "source": "后台运维 AI 助手、用户端智能客服、节点智能管控等持续建设",
+      "occurrence": 0
+    },
+    "b0121": {
+      "type": "p",
+      "source": "状态：第1阶段测试部署进行中。下次报告：2026年4月17日。",
+      "occurrence": 0
+    }
+  },
+  "reviewedTargetHash": "fe2289d64a560cef"
+}

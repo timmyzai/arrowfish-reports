@@ -1,47 +1,50 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh-CN" data-report-id="sprint-0">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>第0阶段 · 交接报告 · 2026-04-03</title>
+    
+  <script src="../../assets/ui-i18n.js"></script>
+  <script src="../../assets/site-preferences.js"></script>
+<title>第0阶段 · 交接报告 · 2026-04-03</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background-color: #fff; color: #333; line-height: 1.7; font-size: 15px; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--af-surface); color: var(--af-text); line-height: 1.7; font-size: 15px; }
         .container { max-width: 900px; margin: 0 auto; padding: 40px 24px; }
-        .report-header { margin-bottom: 48px; border-bottom: 1px solid #e8e8e8; padding-bottom: 32px; }
-        .report-title { font-size: 28px; font-weight: 600; color: #1a1a1a; margin-bottom: 16px; }
-        .report-meta { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; font-size: 13px; color: #666; }
+        .report-header { margin-bottom: 48px; border-bottom: 1px solid var(--af-border); padding-bottom: 32px; }
+        .report-title { font-size: 28px; font-weight: 600; color: var(--af-text); margin-bottom: 16px; }
+        .report-meta { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; font-size: 13px; color: var(--af-text-muted); }
         .meta-item { display: flex; flex-direction: column; gap: 4px; }
-        .meta-label { font-weight: 500; color: #999; text-transform: uppercase; letter-spacing: 0.5px; }
-        .meta-value { color: #333; font-weight: 500; }
+        .meta-label { font-weight: 500; color: var(--af-text-muted); text-transform: uppercase; letter-spacing: 0.5px; }
+        .meta-value { color: var(--af-text); font-weight: 500; }
         .section { margin-bottom: 48px; }
-        .section-heading { font-size: 20px; font-weight: 600; color: #1a1a1a; margin-bottom: 20px; padding-left: 16px; border-left: 4px solid #1a73e8; }
-        .section-body { margin-bottom: 24px; line-height: 1.8; color: #444; }
-        .section-note { font-size: 13px; color: #666; margin-top: 12px; padding: 12px; background-color: #f8f9fa; border-radius: 4px; border-left: 3px solid #1a73e8; }
+        .section-heading { font-size: 20px; font-weight: 600; color: var(--af-text); margin-bottom: 20px; padding-left: 16px; border-left: 4px solid var(--af-primary); }
+        .section-body { margin-bottom: 24px; line-height: 1.8; color: var(--af-text); }
+        .section-note { font-size: 13px; color: var(--af-text-muted); margin-top: 12px; padding: 12px; background-color: var(--af-surface-muted); border-radius: 4px; border-left: 3px solid var(--af-primary); }
         .milestone-container { display: grid; gap: 12px; margin-top: 16px; }
-        .milestone { display: flex; gap: 16px; align-items: flex-start; background-color: #f8f9fa; padding: 16px; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.08); }
-        .milestone-date { background-color: #1a73e8; color: white; padding: 8px 12px; border-radius: 4px; font-size: 12px; font-weight: 600; white-space: nowrap; min-width: 80px; text-align: center; }
-        .milestone-text { flex: 1; font-size: 14px; font-weight: 500; color: #333; }
+        .milestone { display: flex; gap: 16px; align-items: flex-start; background-color: var(--af-surface-muted); padding: 16px; border-radius: 8px; box-shadow: 0 1px 3px var(--af-shadow); }
+        .milestone-date { background-color: var(--af-primary); color: white; padding: 8px 12px; border-radius: 4px; font-size: 12px; font-weight: 600; white-space: nowrap; min-width: 80px; text-align: center; }
+        .milestone-text { flex: 1; font-size: 14px; font-weight: 500; color: var(--af-text); }
         table { width: 100%; border-collapse: collapse; margin: 20px 0; background-color: white; }
-        th { background-color: #f8f9fa; padding: 12px; text-align: left; font-size: 14px; font-weight: 600; color: #333; border-bottom: 1px solid #e8e8e8; }
-        td { padding: 12px; border-bottom: 1px solid #e8e8e8; font-size: 14px; color: #444; }
+        th { background-color: var(--af-surface-muted); padding: 12px; text-align: left; font-size: 14px; font-weight: 600; color: var(--af-text); border-bottom: 1px solid var(--af-border); }
+        td { padding: 12px; border-bottom: 1px solid var(--af-border); font-size: 14px; color: var(--af-text); }
         tr:last-child td { border-bottom: none; }
         .findings-container { display: grid; gap: 16px; margin-top: 20px; }
-        .finding-card { background-color: #f8f9fa; padding: 20px; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.08); border-left: 4px solid #1a73e8; }
-        .finding-title { font-size: 14px; font-weight: 600; color: #1a73e8; margin-bottom: 8px; letter-spacing: 0.5px; }
-        .finding-content { font-size: 14px; color: #555; line-height: 1.6; }
+        .finding-card { background-color: var(--af-surface-muted); padding: 20px; border-radius: 8px; box-shadow: 0 1px 3px var(--af-shadow); border-left: 4px solid var(--af-primary); }
+        .finding-title { font-size: 14px; font-weight: 600; color: var(--af-primary); margin-bottom: 8px; letter-spacing: 0.5px; }
+        .finding-content { font-size: 14px; color: var(--af-text-muted); line-height: 1.6; }
         .task-list { list-style: none; margin: 16px 0; }
-        .task-list li { padding: 8px 0 8px 24px; position: relative; color: #555; line-height: 1.6; }
-        .task-list li:before { content: ""; position: absolute; left: 0; top: 14px; width: 8px; height: 8px; background-color: #1a73e8; border-radius: 50%; }
+        .task-list li { padding: 8px 0 8px 24px; position: relative; color: var(--af-text-muted); line-height: 1.6; }
+        .task-list li:before { content: ""; position: absolute; left: 0; top: 14px; width: 8px; height: 8px; background-color: var(--af-primary); border-radius: 50%; }
         .status-badge { display: inline-block; padding: 4px 10px; border-radius: 12px; font-size: 12px; font-weight: 600; }
-        .status-resolved { background-color: #d4edda; color: #155724; }
-        .status-enhanced { background-color: #cfe2ff; color: #084298; }
-        .report-footer { margin-top: 48px; padding-top: 24px; border-top: 1px solid #e8e8e8; font-size: 12px; color: #999; text-align: right; }
-        .status-default { background-color: #F2F2F2; }
-        .status-green { background-color: #B7D7C9; }
-        .status-yellow { background-color: #E6DFAF; }
-        .status-red { background-color: #DCCACA; }
-        .status-legend { display: flex; gap: 16px; margin: 12px 0 24px; font-size: 12px; color: #666; flex-wrap: wrap; }
+        .status-resolved { background-color: var(--af-success-soft); color: var(--af-success); }
+        .status-enhanced { background-color: var(--af-primary-soft); color: var(--af-primary); }
+        .report-footer { margin-top: 48px; padding-top: 24px; border-top: 1px solid var(--af-border); font-size: 12px; color: var(--af-text-muted); text-align: right; }
+        .status-default { background-color: var(--af-surface-muted); }
+        .status-green { background-color: var(--af-success-soft); }
+        .status-yellow { background-color: var(--af-warning-soft); }
+        .status-red { background-color: var(--af-danger-soft); }
+        .status-legend { display: flex; gap: 16px; margin: 12px 0 24px; font-size: 12px; color: var(--af-text-muted); flex-wrap: wrap; }
         .status-legend-item { display: flex; align-items: center; gap: 6px; }
         .status-dot { width: 12px; height: 12px; border-radius: 2px; display: inline-block; }
         @media (max-width: 768px) {
@@ -59,11 +62,12 @@
         }
     </style>
     <script src="../../assets/auth-gate.js"></script>
+  <link rel="stylesheet" href="../../assets/site-theme.css">
 </head>
 <body>
     <div class="container">
         <!-- Header -->
-        <div class="report-header">
+        <header class="report-header" data-report-header>
             <h1 class="report-title">交接报告（第0阶段）：稳定与准备阶段</h1>
             <div class="report-meta">
                 <div class="meta-item">
@@ -79,7 +83,7 @@
                     <span class="meta-value">日总</span>
                 </div>
             </div>
-        </div>
+        </header>
 
         <!-- 执行总结 -->
         <div class="section">
@@ -133,35 +137,35 @@
         <div class="section">
             <h2 class="section-heading">成果分类一览</h2>
             <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:16px;">
-                <div style="background:#f0faf4;border-left:4px solid #2d8a5e;border-radius:6px;padding:16px;">
-                    <div style="font-weight:700;color:#2d8a5e;margin-bottom:10px;font-size:13px;text-transform:uppercase;letter-spacing:0.5px;">成本节省</div>
-                    <div style="font-size:14px;color:#444;">识别 ~$735/月基础设施浪费（测试节点 $412 + 冗余服务器 $323）</div>
-                    <div style="font-size:12px;color:#888;margin-top:6px;">防滥用部署后每封号节省 $100–150/月</div>
+                <div style="background:var(--af-success-soft);border-left:4px solid var(--af-success);border-radius:6px;padding:16px;">
+                    <div style="font-weight:700;color:var(--af-success);margin-bottom:10px;font-size:13px;text-transform:uppercase;letter-spacing:0.5px;">成本节省</div>
+                    <div style="font-size:14px;color:var(--af-text);">识别 ~$735/月基础设施浪费（测试节点 $412 + 冗余服务器 $323）</div>
+                    <div style="font-size:12px;color:var(--af-text-muted);margin-top:6px;">防滥用部署后每封号节省 $100–150/月</div>
                 </div>
-                <div style="background:#fef9f0;border-left:4px solid #c0711a;border-radius:6px;padding:16px;">
-                    <div style="font-weight:700;color:#c0711a;margin-bottom:10px;font-size:13px;text-transform:uppercase;letter-spacing:0.5px;">收入保护</div>
-                    <div style="font-size:14px;color:#444;">三星应用内购买恢复（此前为测试模式 = $0）</div>
-                    <div style="font-size:12px;color:#888;margin-top:6px;">Google AdMob 生产 ID 已确认（服务端）</div>
+                <div style="background:var(--af-warning-soft);border-left:4px solid var(--af-warning);border-radius:6px;padding:16px;">
+                    <div style="font-weight:700;color:var(--af-warning);margin-bottom:10px;font-size:13px;text-transform:uppercase;letter-spacing:0.5px;">收入保护</div>
+                    <div style="font-size:14px;color:var(--af-text);">三星应用内购买恢复（此前为测试模式 = $0）</div>
+                    <div style="font-size:12px;color:var(--af-text-muted);margin-top:6px;">Google AdMob 生产 ID 已确认（服务端）</div>
                 </div>
-                <div style="background:#fef2f2;border-left:4px solid #c0392b;border-radius:6px;padding:16px;">
-                    <div style="font-weight:700;color:#c0392b;margin-bottom:10px;font-size:13px;text-transform:uppercase;letter-spacing:0.5px;">安全改进</div>
-                    <div style="font-size:14px;color:#444;">发现前团队违反无日志政策：VPN 配置写入调试日志、客户端 API 追踪日志记录用户 IP</div>
-                    <div style="font-size:12px;color:#888;margin-top:6px;">Redis 无密码、无内存限制、无持久化 — 第1阶段修复</div>
+                <div style="background:var(--af-danger-soft);border-left:4px solid var(--af-danger);border-radius:6px;padding:16px;">
+                    <div style="font-weight:700;color:var(--af-danger);margin-bottom:10px;font-size:13px;text-transform:uppercase;letter-spacing:0.5px;">安全改进</div>
+                    <div style="font-size:14px;color:var(--af-text);">发现前团队违反无日志政策：VPN 配置写入调试日志、客户端 API 追踪日志记录用户 IP</div>
+                    <div style="font-size:12px;color:var(--af-text-muted);margin-top:6px;">Redis 无密码、无内存限制、无持久化 — 第1阶段修复</div>
                 </div>
-                <div style="background:#f0f4ff;border-left:4px solid #1a73e8;border-radius:6px;padding:16px;">
-                    <div style="font-weight:700;color:#1a73e8;margin-bottom:10px;font-size:13px;text-transform:uppercase;letter-spacing:0.5px;">性能提升</div>
-                    <div style="font-size:14px;color:#444;">数据库查询量下降 94%（产品页），写入量下降 98%（用户流），API 调用下降 92%</div>
-                    <div style="font-size:12px;color:#888;margin-top:6px;">代理轮询由 600 次/分钟降至 0（Redis 缓存）</div>
+                <div style="background:var(--af-primary-soft);border-left:4px solid var(--af-primary);border-radius:6px;padding:16px;">
+                    <div style="font-weight:700;color:var(--af-primary);margin-bottom:10px;font-size:13px;text-transform:uppercase;letter-spacing:0.5px;">性能提升</div>
+                    <div style="font-size:14px;color:var(--af-text);">数据库查询量下降 94%（产品页），写入量下降 98%（用户流），API 调用下降 92%</div>
+                    <div style="font-size:12px;color:var(--af-text-muted);margin-top:6px;">代理轮询由 600 次/分钟降至 0（Redis 缓存）</div>
                 </div>
-                <div style="background:#f8f9fa;border-left:4px solid #555;border-radius:6px;padding:16px;">
-                    <div style="font-weight:700;color:#333;margin-bottom:10px;font-size:13px;text-transform:uppercase;letter-spacing:0.5px;">关键 Bug 修复</div>
-                    <div style="font-size:14px;color:#444;">13 个崩溃/卡顿问题修复（启动、连接、误报离线）</div>
-                    <div style="font-size:12px;color:#888;margin-top:6px;">6 个稳定性强化修复；ANR、WebSocket 泄漏、计时器竞态</div>
+                <div style="background:var(--af-surface-muted);border-left:4px solid var(--af-text-muted);border-radius:6px;padding:16px;">
+                    <div style="font-weight:700;color:var(--af-text);margin-bottom:10px;font-size:13px;text-transform:uppercase;letter-spacing:0.5px;">关键 Bug 修复</div>
+                    <div style="font-size:14px;color:var(--af-text);">13 个崩溃/卡顿问题修复（启动、连接、误报离线）</div>
+                    <div style="font-size:12px;color:var(--af-text-muted);margin-top:6px;">6 个稳定性强化修复；ANR、WebSocket 泄漏、计时器竞态</div>
                 </div>
-                <div style="background:#fff8f0;border-left:4px solid #e67e22;border-radius:6px;padding:16px;">
-                    <div style="font-weight:700;color:#e67e22;margin-bottom:10px;font-size:13px;text-transform:uppercase;letter-spacing:0.5px;">防滥用</div>
-                    <div style="font-size:14px;color:#444;">免费用户时间限制从客户端迁至服务端，修复绕过漏洞（最高滥用者月用 1,216 GB）</div>
-                    <div style="font-size:12px;color:#888;margin-top:6px;">设备数量限制、强制版本更新 — 均为代码完成待部署</div>
+                <div style="background:var(--af-warning-soft);border-left:4px solid var(--af-warning);border-radius:6px;padding:16px;">
+                    <div style="font-weight:700;color:var(--af-warning);margin-bottom:10px;font-size:13px;text-transform:uppercase;letter-spacing:0.5px;">防滥用</div>
+                    <div style="font-size:14px;color:var(--af-text);">免费用户时间限制从客户端迁至服务端，修复绕过漏洞（最高滥用者月用 1,216 GB）</div>
+                    <div style="font-size:12px;color:var(--af-text-muted);margin-top:6px;">设备数量限制、强制版本更新 — 均为代码完成待部署</div>
                 </div>
             </div>
         </div>
@@ -218,10 +222,10 @@
                 </tbody>
             </table>
             <div class="status-legend">
-                <div class="status-legend-item"><span class="status-dot" style="background:#F2F2F2"></span>按计划</div>
-                <div class="status-legend-item"><span class="status-dot" style="background:#B7D7C9"></span>已发布</div>
-                <div class="status-legend-item"><span class="status-dot" style="background:#E6DFAF"></span>延迟</div>
-                <div class="status-legend-item"><span class="status-dot" style="background:#DCCACA"></span>风险中</div>
+                <div class="status-legend-item"><span class="status-dot" style="background:var(--af-surface-muted)"></span>按计划</div>
+                <div class="status-legend-item"><span class="status-dot" style="background:var(--af-success-soft)"></span>已发布</div>
+                <div class="status-legend-item"><span class="status-dot" style="background:var(--af-warning-soft)"></span>延迟</div>
+                <div class="status-legend-item"><span class="status-dot" style="background:var(--af-danger-soft)"></span>风险中</div>
             </div>
         </div>
 
@@ -250,31 +254,31 @@
                     <tr><th>领域</th><th>问题</th><th>风险</th><th>状态</th></tr>
                 </thead>
                 <tbody>
-                    <tr style="background-color: #DCCACA">
+                    <tr style="background-color: var(--af-danger-soft)">
                         <td>安全</td>
                         <td>日志中有敏感配置数据。强制更新从未启用 — 1,417名旧版本用户近两周活跃，完全绕过限制。最老版本落后2-4个月。</td>
                         <td>高</td>
                         <td><span class="status-badge status-enhanced">开发中</span></td>
                     </tr>
-                    <tr style="background-color: #DCCACA">
+                    <tr style="background-color: var(--af-danger-soft)">
                         <td>基础设施</td>
                         <td>读取副本数据库从未使用（仅1次连接）。无故障转移。两个冗余代理服务器应合并。</td>
                         <td>高</td>
                         <td><span class="status-badge status-enhanced">开发中</span></td>
                     </tr>
-                    <tr style="background-color: #E6DFAF">
+                    <tr style="background-color: var(--af-warning-soft)">
                         <td>数据库</td>
                         <td>86%为日志数据（15 GB中13 GB）。4个关键索引缺失。管理后台框架已停止维护。</td>
                         <td>中</td>
                         <td><span class="status-badge status-resolved">部分解决</span></td>
                     </tr>
-                    <tr style="background-color: #E6DFAF">
+                    <tr style="background-color: var(--af-warning-soft)">
                         <td>依赖库</td>
                         <td>后端4个已升级。安卓端7个主要库过时（第2阶段处理）。</td>
                         <td>中</td>
                         <td><span class="status-badge status-resolved">部分解决</span></td>
                     </tr>
-                    <tr style="background-color: #E6DFAF">
+                    <tr style="background-color: var(--af-warning-soft)">
                         <td>App代码质量</td>
                         <td>50+问题：崩溃、1,932行无用代码、每次打开应用12个重复请求、7个并发问题。</td>
                         <td>中</td>
@@ -295,25 +299,25 @@
                     <tr><th>违规位置</th><th>违规内容</th><th>风险</th><th>状态</th></tr>
                 </thead>
                 <tbody>
-                    <tr style="background-color: #DCCACA">
+                    <tr style="background-color: var(--af-danger-soft)">
                         <td>安卓应用 MmkvManager.kt</td>
                         <td>调试日志中记录完整 VPN 服务器配置、连接密钥、订阅 URL（5处日志语句）</td>
                         <td>高</td>
                         <td><span class="status-badge status-enhanced">第1阶段修复</span></td>
                     </tr>
-                    <tr style="background-color: #DCCACA">
+                    <tr style="background-color: var(--af-danger-soft)">
                         <td>后端客户端 API 追踪中间件</td>
                         <td>启用时记录用户 IP 和完整请求体 — 不符合无日志政策</td>
                         <td>高</td>
                         <td><span class="status-badge status-enhanced">第1阶段修复</span></td>
                     </tr>
-                    <tr style="background-color: #E6DFAF">
+                    <tr style="background-color: var(--af-warning-soft)">
                         <td>生产数据库 log_apis 表</td>
                         <td>13.1 GB API 请求日志（占数据库总量 86%），每日新增 163 MB，清理脚本失效 114 天</td>
                         <td>中</td>
                         <td><span class="status-badge status-enhanced">第1阶段清理</span></td>
                     </tr>
-                    <tr style="background-color: #E6DFAF">
+                    <tr style="background-color: var(--af-warning-soft)">
                         <td>后端 middleware.Logger()</td>
                         <td>旧版本将所有请求记录到磁盘 — 生成 22 GB PM2 日志文件（~350 MB/天增长）</td>
                         <td>中</td>
@@ -330,25 +334,25 @@
         <div class="section">
             <h2 class="section-heading">关键发现（2026年3月数据）</h2>
             <div class="findings-container">
-                <div class="finding-card" style="border-left: 4px solid #c0392b">
+                <div class="finding-card" style="border-left: 4px solid var(--af-danger)">
                     <div class="finding-title">1. 免费用户流量滥用 — 月耗13.9 TB，零收入</div>
                     <div class="finding-content">
                         3月份11,537名免费用户消耗<strong>13.9 TB</strong>带宽，占总带宽39%，收入为零。最高单用户月用1,217 GB。无服务端限制，客户端时间限制容易绕过。<strong>1,417名旧版本用户近两周活跃</strong>，部分版本落后2-4个月，无任何限制。强制更新从未启用。
                     </div>
                 </div>
-                <div class="finding-card" style="border-left: 4px solid #c0392b">
+                <div class="finding-card" style="border-left: 4px solid var(--af-danger)">
                     <div class="finding-title">2. 收入下降 — 5个月降34%</div>
                     <div class="finding-content">
                         月收入从<strong>&#165;51,073（10月）降至&#165;33,718（3月）</strong>。付费用户从2,366降至1,259（-47%）。应用不稳定、转化体验差、13个崩溃问题是主因。1,417名用户仍在用旧版本。
                     </div>
                 </div>
-                <div class="finding-card" style="border-left: 4px solid #e67e22">
+                <div class="finding-card" style="border-left: 4px solid var(--af-warning)">
                     <div class="finding-title">3. 平台稳定性 — 13个崩溃模式</div>
                     <div class="finding-content">
                         启动崩溃、连接卡住、误判离线、应用无响应，加上7个并发问题。用户遇到直接流失，影响留存和复费率。
                     </div>
                 </div>
-                <div class="finding-card" style="border-left: 4px solid #e67e22">
+                <div class="finding-card" style="border-left: 4px solid var(--af-warning)">
                     <div class="finding-title">4. 基础设施浪费 — 月省~$735</div>
                     <div class="finding-content">
                         6个"测试"节点仍在运行（~$412/月）。两个冗余代理服务器（~$323/月），香港那台经常断线。读取副本数据库从未使用。正在合并。

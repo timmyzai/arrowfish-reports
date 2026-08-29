@@ -1,24 +1,27 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh-CN" data-report-id="sprint-2-summary">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <script src="../../assets/ui-i18n.js"></script>
+  <script src="../../assets/site-preferences.js"></script>
 <title>第2阶段 · 进度汇报 · 2026-04-24</title>
 <style>
   :root {
-    --bg: #FAFAFA;
-    --card: #FFFFFF;
-    --border: #E5E7EB;
-    --text: #1F2937;
-    --text-secondary: #6B7280;
-    --accent: #2563EB;
-    --green: #B7D7C9;
-    --green-text: #166534;
-    --yellow: #E6DFAF;
-    --yellow-text: #854D0E;
-    --red: #DCCACA;
-    --red-text: #991B1B;
-    --grey: #F2F2F2;
+    --bg: var(--af-bg);
+    --card: var(--af-surface);
+    --border: var(--af-border);
+    --text: var(--af-text);
+    --text-secondary: var(--af-text-muted);
+    --accent: var(--af-primary);
+    --green: var(--af-success-soft);
+    --green-text: var(--af-success);
+    --yellow: var(--af-warning-soft);
+    --yellow-text: var(--af-warning);
+    --red: var(--af-danger-soft);
+    --red-text: var(--af-danger);
+    --grey: var(--af-surface-muted);
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body {
@@ -36,9 +39,9 @@
   .subtitle { color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 1.5rem; }
   .card { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 1.25rem; margin: 0.75rem 0; }
   .card.highlight { border-left: 4px solid var(--accent); }
-  .card.warning { border-left: 4px solid #F59E0B; background: #FFFBEB; }
-  .card.critical { border-left: 4px solid #EF4444; background: #FEF2F2; }
-  .card.success { border-left: 4px solid #16A34A; background: #F0FDF4; }
+  .card.warning { border-left: 4px solid var(--af-warning); background: var(--af-warning-soft); }
+  .card.critical { border-left: 4px solid var(--af-danger); background: var(--af-danger-soft); }
+  .card.success { border-left: 4px solid var(--af-success); background: var(--af-success-soft); }
   table { width: 100%; border-collapse: collapse; margin: 0.75rem 0; font-size: 0.9rem; }
   th { background: var(--grey); text-align: left; padding: 0.5rem 0.75rem; font-weight: 600; }
   td { padding: 0.5rem 0.75rem; border-bottom: 1px solid var(--border); vertical-align: top; }
@@ -49,24 +52,27 @@
   .timeline::before { content: ''; position: absolute; left: 0.35rem; top: 0.5rem; bottom: 0.5rem; width: 2px; background: var(--border); }
   .timeline-item { position: relative; margin-bottom: 0.75rem; }
   .timeline-item::before { content: ''; position: absolute; left: -1.15rem; top: 0.5rem; width: 10px; height: 10px; border-radius: 50%; background: var(--accent); border: 2px solid white; }
-  .timeline-item.milestone::before { background: #EF4444; width: 12px; height: 12px; left: -1.2rem; }
+  .timeline-item.milestone::before { background: var(--af-danger); width: 12px; height: 12px; left: -1.2rem; }
   .timeline-date { font-weight: 600; font-size: 0.85rem; color: var(--accent); }
   .timeline-text { font-size: 0.9rem; }
   .action-list { list-style: none; padding: 0; }
   .action-list li { padding: 0.5rem 0; border-bottom: 1px solid var(--border); display: flex; align-items: flex-start; gap: 0.5rem; }
   .action-list li:last-child { border-bottom: none; }
   .action-num { background: var(--accent); color: white; width: 20px; height: 20px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.7rem; font-weight: 700; flex-shrink: 0; margin-top: 2px; }
-  .tldr { background: linear-gradient(135deg, #EFF6FF 0%, #FFFFFF 100%); border-radius: 8px; padding: 1.25rem 1.5rem; border: 1px solid #BFDBFE; margin: 1rem 0 2rem; }
+  .tldr { background: linear-gradient(135deg, var(--af-primary-soft) 0%, var(--af-surface) 100%); border-radius: 8px; padding: 1.25rem 1.5rem; border: 1px solid var(--af-border); margin: 1rem 0 2rem; }
   .tldr-label { font-size: 0.75rem; font-weight: 700; color: var(--accent); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.5rem; }
   .tldr-text { font-size: 1rem; line-height: 1.7; color: var(--text); }
   .footer { margin-top: 2rem; padding-top: 1rem; border-top: 1px solid var(--border); font-size: 0.8rem; color: var(--text-secondary); text-align: center; }
 </style>
 <script src="../../assets/auth-gate.js"></script>
+  <link rel="stylesheet" href="../../assets/site-theme.css">
 </head>
 <body>
 
-<h1>Arrowfish VPN — 项目进度汇报</h1>
-<div class="subtitle">2026年4月24日 · 第2阶段完成摘要（4/13–4/24）· 第3阶段计划</div>
+<header class="standalone-report-header" data-report-header>
+  <h1>Arrowfish VPN — 项目进度汇报</h1>
+  <div class="subtitle">2026年4月24日 · 第2阶段完成摘要（4/13–4/24）· 第3阶段计划</div>
+</header>
 
 <!-- 一句话总结 -->
 <div class="tldr">

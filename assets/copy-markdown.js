@@ -19,6 +19,10 @@
   var status;
   var resetTimer;
 
+  function t(key) {
+    return window.ArrowfishI18n ? window.ArrowfishI18n.t(key) : key;
+  }
+
   function init() {
     frame = document.getElementById('report-frame');
     button = document.getElementById('copy-markdown-button');
@@ -32,10 +36,14 @@
     new MutationObserver(function (mutations) {
       if (!mutations.some(function (mutation) { return mutation.attributeName === 'src'; })) return;
       clearResetTimer();
-      setState('loading', '复制为 Markdown', '正在加载所选报告。');
+      setState('loading', t('copy.action'), t('copy.loading'));
     }).observe(frame, { attributes: true, attributeFilter: ['src'] });
 
     updateAvailability();
+    window.addEventListener('arrowfish:preferenceschange', function () {
+      setState('loading', t('copy.action'), t('copy.loading'));
+      window.setTimeout(updateAvailability, 0);
+    });
   }
 
   function getReportRoot(reportDocument) {
@@ -46,15 +54,26 @@
     );
   }
 
-  function updateAvailability() {
+  async function updateAvailability() {
     clearResetTimer();
     try {
       var reportDocument = frame.contentDocument;
+      if (reportDocument && reportDocument.documentElement.classList.contains('i18n-pending')) {
+        await new Promise(function (resolve) {
+          var observer = new MutationObserver(function () {
+            if (reportDocument.documentElement.classList.contains('i18n-pending')) return;
+            observer.disconnect();
+            resolve();
+          });
+          observer.observe(reportDocument.documentElement, { attributes: true, attributeFilter: ['class'] });
+          window.setTimeout(function () { observer.disconnect(); resolve(); }, 10000);
+        });
+      }
       var root = getReportRoot(reportDocument);
-      if (!root || !root.textContent.trim()) throw new Error('报告内容不可用。');
-      setState('idle', '复制为 Markdown', '所选报告已可复制。');
+      if (!root || !root.textContent.trim()) throw new Error(t('copy.reportUnavailable'));
+      setState('idle', t('copy.action'), t('copy.ready'));
     } catch (error) {
-      setState('loading', '复制为 Markdown', '所选报告不可用。');
+      setState('loading', t('copy.action'), t('copy.unavailable'));
     }
   }
 
@@ -64,20 +83,20 @@
 
     try {
       if (!window.isSecureContext || !navigator.clipboard || !navigator.clipboard.writeText) {
-        throw new Error('剪贴板功能需要 HTTPS 或 localhost。');
+        throw new Error(t('copy.secureContext'));
       }
 
       var reportDocument = frame.contentDocument;
       var root = getReportRoot(reportDocument);
-      if (!root) throw new Error('报告内容不可用。');
+      if (!root) throw new Error(t('copy.reportUnavailable'));
 
       var markdown = convertRoot(root, reportDocument);
-      if (!markdown) throw new Error('所选报告没有可复制的内容。');
+      if (!markdown) throw new Error(t('copy.noContent'));
 
       await navigator.clipboard.writeText(markdown);
-      setState('success', '已复制', '报告已复制为 Markdown。');
+      setState('success', t('copy.done'), t('copy.doneStatus'));
     } catch (error) {
-      setState('error', '复制失败', error && error.message ? error.message : '无法复制此报告。');
+      setState('error', t('copy.failed'), error && error.message ? error.message : t('copy.failedStatus'));
     }
 
     resetTimer = window.setTimeout(updateAvailability, RESET_DELAY_MS);

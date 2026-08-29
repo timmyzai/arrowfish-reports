@@ -1,0 +1,2144 @@
+{
+  "schemaVersion": 1,
+  "reportId": "sprint-10-full",
+  "sourceFile": "Stakeholder/Sprint-10/20260826_report.html",
+  "sourceVersion": "1c9491fa4f81bb13",
+  "units": [
+    {
+      "id": "u_9b3c80c445677e8d",
+      "kind": "attribute",
+      "source": "Arrowfish 与 FFF 第10阶段进展报告；两条产品线独立呈现",
+      "occurrence": 0,
+      "target": "Arrowfish and FFF Sprint 10 Progress Report; Independent Presentation of Two Product Lines",
+      "context": "meta @ line 10",
+      "attribute": "content"
+    },
+    {
+      "id": "u_43d3bf69e2b8b305",
+      "kind": "text",
+      "source": "第10阶段 · 进展报告 · 2026-08-26",
+      "occurrence": 0,
+      "target": "Sprint 10 · Progress Report · August 26, 2026",
+      "context": "title @ line 11"
+    },
+    {
+      "id": "u_3027800203d320dc",
+      "kind": "text",
+      "source": "第10阶段 · 产品进展报告",
+      "occurrence": 0,
+      "target": "Sprint 10 · Product Progress Report",
+      "context": "p.eyebrow @ line 98"
+    },
+    {
+      "id": "u_99756b86a777e30a",
+      "kind": "text",
+      "source": "2026-08-26 Sprint 10 进展报告",
+      "occurrence": 0,
+      "target": "August 26, 2026 Sprint 10 Progress Report",
+      "context": "h1 @ line 99"
+    },
+    {
+      "id": "u_0763450d8c91b7f7",
+      "kind": "text",
+      "source": "报告分为上下两个独立产品区块。阶段数据覆盖 2026-08-08 至 2026-08-21，完整周数据截至 8/25，月度快照截至 8/26 18:40:41 MYT（26 日未结束）。",
+      "occurrence": 0,
+      "target": "The report covers two independent product segments. Sprint data spans from August 8, 2026 to August 21, 2026, with complete weekly data up to August 25 and a monthly snapshot as of 18:40:41 MYT on August 26 (August 26 is not yet closed).",
+      "context": "p.meta @ line 100"
+    },
+    {
+      "id": "u_55df34cc76d09851",
+      "kind": "text",
+      "source": "8 月 12 日生产环境整合已完成，8 月截至 26 日 18:40 的收入已达到 7 月整月的 83.1%",
+      "occurrence": 0,
+      "target": "Production environment integration was completed on August 12. Revenue from August 7 to 26 at 18:40 has reached 83.1% of the total for July.",
+      "context": "strong @ line 104 · surrounding text: TL;DR： 8 月 12 日生产环境整合已完成，8 月截至 26 日 18:40 的收入已达到 7 月整月的 83.1% ；下一阶段重点是补齐异地备份、完成 iOS 真机验收，并关闭两项协议兼容问题的端到端验证。"
+    },
+    {
+      "id": "u_88ab19e64ef4656c",
+      "kind": "text",
+      "source": "；下一阶段重点是补齐异地备份、完成 iOS 真机验收，并关闭两项协议兼容问题的端到端验证。",
+      "occurrence": 0,
+      "target": "The next phase will focus on completing remote backup, finalizing iOS device acceptance testing, and stabilizing two end-to-end validations for protocol compatibility issues.",
+      "context": "section.tldr @ line 104 · surrounding text: TL;DR： 8 月 12 日生产环境整合已完成，8 月截至 26 日 18:40 的收入已达到 7 月整月的 83.1% ；下一阶段重点是补齐异地备份、完成 iOS 真机验收，并关闭两项协议兼容问题的端到端验证。"
+    },
+    {
+      "id": "u_6e028c538e821ad4",
+      "kind": "text",
+      "source": "第一部分",
+      "occurrence": 0,
+      "target": "Part One",
+      "context": "div.pnum @ line 108"
+    },
+    {
+      "id": "u_a95474ad66aa9434",
+      "kind": "text",
+      "source": "本阶段的交付、风险、上线计划与安全管控（阶段口径，覆盖 8/8–8/21）",
+      "occurrence": 0,
+      "target": "Key Decisions and Status of This Phase, Risk Management, Release Plan, and Security Control (Phase Scope, August 8 to August 21)",
+      "context": "div.psub @ line 110"
+    },
+    {
+      "id": "u_482f61f2e2dc6687",
+      "kind": "text",
+      "source": "一、本阶段关键决策与状态",
+      "occurrence": 0,
+      "target": "1. Key Decisions and Current Status",
+      "context": "h2 @ line 114"
+    },
+    {
+      "id": "u_2d9af0c5dfde1526",
+      "kind": "text",
+      "source": "决策 / 现况",
+      "occurrence": 0,
+      "target": "Decision / Current Situation",
+      "context": "th @ line 116 · surrounding text: 决策 / 现况 状态 说明"
+    },
+    {
+      "id": "u_b6e64e2a33d0109f",
+      "kind": "text",
+      "source": "状态",
+      "occurrence": 0,
+      "target": "Status",
+      "context": "th @ line 116 · surrounding text: 决策 / 现况 状态 说明"
+    },
+    {
+      "id": "u_be975e4e8df04600",
+      "kind": "text",
+      "source": "说明",
+      "occurrence": 0,
+      "target": "Description",
+      "context": "th @ line 116 · surrounding text: 决策 / 现况 状态 说明"
+    },
+    {
+      "id": "u_3b729172027670f0",
+      "kind": "text",
+      "source": "生产环境整合至单一主机",
+      "occurrence": 0,
+      "target": "Integrated production environment onto a single host",
+      "context": "td @ line 118 · surrounding text: 生产环境整合至单一主机 已执行 应用、MySQL 与 Redis 已于 8 月 12 日完成切换，旧数据主机及专属资源已退役。"
+    },
+    {
+      "id": "u_e356c9b8f8991474",
+      "kind": "text",
+      "source": "已执行",
+      "occurrence": 0,
+      "target": "Implemented",
+      "context": "span.badge.done @ line 118 · surrounding text: 生产环境整合至单一主机 已执行 应用、MySQL 与 Redis 已于 8 月 12 日完成切换，旧数据主机及专属资源已退役。"
+    },
+    {
+      "id": "u_be6f06d99c1a1f73",
+      "kind": "text",
+      "source": "应用、MySQL 与 Redis 已于 8 月 12 日完成切换，旧数据主机及专属资源已退役。",
+      "occurrence": 0,
+      "target": "The application, MySQL, and Redis have been switched over on August 12. The old data hosts and dedicated resources have been retired.",
+      "context": "td @ line 118 · surrounding text: 生产环境整合至单一主机 已执行 应用、MySQL 与 Redis 已于 8 月 12 日完成切换，旧数据主机及专属资源已退役。"
+    },
+    {
+      "id": "u_d983d3d7fa3d0391",
+      "kind": "text",
+      "source": "VPN 对外能力收敛为三条核心路线",
+      "occurrence": 0,
+      "target": "The external capabilities of the VPN have converged to three core paths.",
+      "context": "td @ line 119 · surrounding text: VPN 对外能力收敛为三条核心路线 方案已锁定 VLESS Reality、ShadowTLS、Trojan 为用户可选路线；Shadowsocks 仅作为 ShadowTLS 内层，不单独对外。"
+    },
+    {
+      "id": "u_eb6655f92a6e1fef",
+      "kind": "text",
+      "source": "方案已锁定",
+      "occurrence": 0,
+      "target": "Approach confirmed",
+      "context": "span.badge.done @ line 119 · surrounding text: VPN 对外能力收敛为三条核心路线 方案已锁定 VLESS Reality、ShadowTLS、Trojan 为用户可选路线；Shadowsocks 仅作为 ShadowTLS 内层，不单独对外。"
+    },
+    {
+      "id": "u_2ec5838f9c7817fb",
+      "kind": "text",
+      "source": "VLESS Reality、ShadowTLS、Trojan 为用户可选路线；Shadowsocks 仅作为 ShadowTLS 内层，不单独对外。",
+      "occurrence": 0,
+      "target": "VLESS Reality, ShadowTLS, and Trojan are optional paths for users; Shadowsocks is only used as an inner layer within ShadowTLS and is not exposed separately.",
+      "context": "td @ line 119 · surrounding text: VPN 对外能力收敛为三条核心路线 方案已锁定 VLESS Reality、ShadowTLS、Trojan 为用户可选路线；Shadowsocks 仅作为 ShadowTLS 内层，不单独对外。"
+    },
+    {
+      "id": "u_6a909bb998ef7b82",
+      "kind": "text",
+      "source": "iOS 采用干净源码与自研 SkyTunnel 重建",
+      "occurrence": 0,
+      "target": "iOS uses clean source code and custom-built SkyTunnel",
+      "context": "td @ line 120 · surrounding text: iOS 采用干净源码与自研 SkyTunnel 重建 测试中 已移除继承的 GPL 代码与不透明二进制依赖；尚未完成 TestFlight 与真机验收。"
+    },
+    {
+      "id": "u_fd3e72d626b7ab3c",
+      "kind": "text",
+      "source": "测试中",
+      "occurrence": 0,
+      "target": "In Testing",
+      "context": "span.badge.progress @ line 120 · surrounding text: iOS 采用干净源码与自研 SkyTunnel 重建 测试中 已移除继承的 GPL 代码与不透明二进制依赖；尚未完成 TestFlight 与真机验收。"
+    },
+    {
+      "id": "u_eab7f3748e57e2ee",
+      "kind": "text",
+      "source": "已移除继承的 GPL 代码与不透明二进制依赖；尚未完成 TestFlight 与真机验收。",
+      "occurrence": 0,
+      "target": "Removed inherited GPL code and opaque binary dependencies; TestFlight and device acceptance testing not yet completed.",
+      "context": "td @ line 120 · surrounding text: iOS 采用干净源码与自研 SkyTunnel 重建 测试中 已移除继承的 GPL 代码与不透明二进制依赖；尚未完成 TestFlight 与真机验收。"
+    },
+    {
+      "id": "u_d3c70c2de6ef935b",
+      "kind": "text",
+      "source": "生产异地恢复能力",
+      "occurrence": 0,
+      "target": "production remote recovery capability",
+      "context": "td @ line 121 · surrounding text: 生产异地恢复能力 高风险待完成 现有最终数据库备份仍在生产主机本机，尚未形成异地主机恢复副本。"
+    },
+    {
+      "id": "u_e8223e2ee78fc875",
+      "kind": "text",
+      "source": "高风险待完成",
+      "occurrence": 0,
+      "target": "High-risk items pending completion",
+      "context": "span.badge.risk @ line 121 · surrounding text: 生产异地恢复能力 高风险待完成 现有最终数据库备份仍在生产主机本机，尚未形成异地主机恢复副本。"
+    },
+    {
+      "id": "u_2c331839ab3bf3d9",
+      "kind": "text",
+      "source": "现有最终数据库备份仍在生产主机本机，尚未形成异地主机恢复副本。",
+      "occurrence": 0,
+      "target": "The current final database backup is still on the local production host and no off-site host recovery copy has been formed.",
+      "context": "td @ line 121 · surrounding text: 生产异地恢复能力 高风险待完成 现有最终数据库备份仍在生产主机本机，尚未形成异地主机恢复副本。"
+    },
+    {
+      "id": "u_806527c7dc0c334d",
+      "kind": "text",
+      "source": "二、本阶段关键成果",
+      "occurrence": 0,
+      "target": "II. Key Achievements of This Sprint",
+      "context": "h2 @ line 127"
+    },
+    {
+      "id": "u_d5af3848b1393abb",
+      "kind": "text",
+      "source": "7 月完整月收入",
+      "occurrence": 0,
+      "target": "Monthly revenue for July",
+      "context": "span @ line 129 · surrounding text: CNY 16,472.04 7 月完整月收入"
+    },
+    {
+      "id": "u_7547a1b9a543523f",
+      "kind": "text",
+      "source": "8 月累计收入，截至 8/26 18:40",
+      "occurrence": 0,
+      "target": "Cumulative revenue for August, as of 8/26 18:40",
+      "context": "span @ line 130 · surrounding text: CNY 13,684.23 8 月累计收入，截至 8/26 18:40"
+    },
+    {
+      "id": "u_d3f27c313fceb91b",
+      "kind": "text",
+      "source": "8 月累计注册",
+      "occurrence": 0,
+      "target": "Cumulative registrations by the end of August",
+      "context": "span @ line 131 · surrounding text: 3,113 8 月累计注册"
+    },
+    {
+      "id": "u_b550c0195a59a899",
+      "kind": "text",
+      "source": "8/19–8/25 完整周收入",
+      "occurrence": 0,
+      "target": "Revenue for the week of August 19 – August 25",
+      "context": "span @ line 132 · surrounding text: CNY 4,890.01 8/19–8/25 完整周收入"
+    },
+    {
+      "id": "u_68892b513deb3fca",
+      "kind": "text",
+      "source": "高风险问题：发现 / 源码修复 / 验收关闭",
+      "occurrence": 0,
+      "target": "High-risk issues: identified / source code fix / acceptance testing closure",
+      "context": "span @ line 133 · surrounding text: 2 / 2 / 0 高风险问题：发现 / 源码修复 / 验收关闭"
+    },
+    {
+      "id": "u_1516583ec366e1a3",
+      "kind": "text",
+      "source": "月度增长与收入",
+      "occurrence": 0,
+      "target": "Monthly Growth and Revenue",
+      "context": "h3 @ line 135"
+    },
+    {
+      "id": "u_0adc013968ec7672",
+      "kind": "text",
+      "source": "马来西亚时间",
+      "occurrence": 0,
+      "target": "Malaysia time",
+      "context": "th @ line 137 · surrounding text: 马来西亚时间 注册 付费用户 付费订单 付费订单总额 数据完整性"
+    },
+    {
+      "id": "u_1f3eab0502233f36",
+      "kind": "text",
+      "source": "注册",
+      "occurrence": 0,
+      "target": "Registrations",
+      "context": "th @ line 137 · surrounding text: 马来西亚时间 注册 付费用户 付费订单 付费订单总额 数据完整性"
+    },
+    {
+      "id": "u_1508c74f5cb84a3d",
+      "kind": "text",
+      "source": "付费用户",
+      "occurrence": 0,
+      "target": "Paid users",
+      "context": "th @ line 137 · surrounding text: 马来西亚时间 注册 付费用户 付费订单 付费订单总额 数据完整性"
+    },
+    {
+      "id": "u_8f76868971bd50a6",
+      "kind": "text",
+      "source": "付费订单",
+      "occurrence": 0,
+      "target": "Paid orders",
+      "context": "th @ line 137 · surrounding text: 马来西亚时间 注册 付费用户 付费订单 付费订单总额 数据完整性"
+    },
+    {
+      "id": "u_f082a3bddbe82d43",
+      "kind": "text",
+      "source": "付费订单总额",
+      "occurrence": 0,
+      "target": "Total paid order value",
+      "context": "th @ line 137 · surrounding text: 马来西亚时间 注册 付费用户 付费订单 付费订单总额 数据完整性"
+    },
+    {
+      "id": "u_879c6c2df7c90524",
+      "kind": "text",
+      "source": "数据完整性",
+      "occurrence": 0,
+      "target": "Data integrity",
+      "context": "th @ line 137 · surrounding text: 马来西亚时间 注册 付费用户 付费订单 付费订单总额 数据完整性"
+    },
+    {
+      "id": "u_9d53fd660d83f491",
+      "kind": "text",
+      "source": "完整月份",
+      "occurrence": 0,
+      "target": "Full months",
+      "context": "td @ line 139 · surrounding text: 7/1–7/31 3,163 626 775 CNY 16,472.04 完整月份"
+    },
+    {
+      "id": "u_3683461ae8e593e2",
+      "kind": "text",
+      "source": "截至 8/26 18:40:41，当日未结束",
+      "occurrence": 0,
+      "target": "Not completed as of 8/26 18:40:41",
+      "context": "td @ line 140 · surrounding text: 8/1–8/26 3,113 511 616 CNY 13,684.23 截至 8/26 18:40:41，当日未结束"
+    },
+    {
+      "id": "u_48a9c8995a7a8bc6",
+      "kind": "text",
+      "source": "截至 8 月 26 日 18:40，8 月累计注册已达到 7 月整月的 98.4%，收入达到 83.1%。这只是未完整月份与完整月份的进度对照，不是同比增长率，也不作月底预测。",
+      "occurrence": 0,
+      "target": "As of August 26, 18:40, cumulative registrations for the month of August reached 98.4% of July’s total, and revenue was at 83.1%. This is a progress comparison between an incomplete month and a complete one; it does not represent year-over-year growth nor serve as a forecast for end-of-month performance.",
+      "context": "p @ line 143"
+    },
+    {
+      "id": "u_e198d78dfce1165f",
+      "kind": "text",
+      "source": "8 月 12 日整合后的首周注册为 1,026、付费金额为 CNY 4,535.49；次周注册回落至 953，但付费金额进一步升至 CNY 4,890.01。该时间相关性值得持续观察，但不能证明增长由上线单独造成，因为 97.6% 的新注册仍缺少营销归因。",
+      "occurrence": 0,
+      "target": "From August 12, first-week registrations after integration reached 1,026, with payments of CNY 4,535.49. Registrations fell to 953 in the second week, while payments rose further to CNY 4,890.01. This correlation warrants continued observation, but it does not prove that the release alone caused the growth because 97.6% of new registrations still lack marketing attribution.",
+      "context": "p @ line 144"
+    },
+    {
+      "id": "u_7a79c80adfcd4ace",
+      "kind": "text",
+      "source": "类别",
+      "occurrence": 0,
+      "target": "Category",
+      "context": "th @ line 146 · surrounding text: 类别 本阶段结果 当前边界"
+    },
+    {
+      "id": "u_f95bb01d14e792ba",
+      "kind": "text",
+      "source": "本阶段结果",
+      "occurrence": 0,
+      "target": "Sprint Result",
+      "context": "th @ line 146 · surrounding text: 类别 本阶段结果 当前边界"
+    },
+    {
+      "id": "u_2cdd6dab8e179bac",
+      "kind": "text",
+      "source": "当前边界",
+      "occurrence": 0,
+      "target": "Current Boundary",
+      "context": "th @ line 146 · surrounding text: 类别 本阶段结果 当前边界"
+    },
+    {
+      "id": "u_7213eadbf88f56c6",
+      "kind": "text",
+      "source": "生产稳定性",
+      "occurrence": 0,
+      "target": "Production Stability",
+      "context": "td @ line 148 · surrounding text: 生产稳定性 应用、数据库与缓存完成同机整合；公开 API 与核心服务检查通过。 完整人工业务验收未全部留档；异地恢复缺口仍在。"
+    },
+    {
+      "id": "u_bcd1c27c0e8f9060",
+      "kind": "text",
+      "source": "应用、数据库与缓存完成同机整合；公开 API 与核心服务检查通过。",
+      "occurrence": 0,
+      "target": "Application, database and cache consolidation on the same machine; public API and core service checks passed.",
+      "context": "td @ line 148 · surrounding text: 生产稳定性 应用、数据库与缓存完成同机整合；公开 API 与核心服务检查通过。 完整人工业务验收未全部留档；异地恢复缺口仍在。"
+    },
+    {
+      "id": "u_8795ee331490ebe1",
+      "kind": "text",
+      "source": "完整人工业务验收未全部留档；异地恢复缺口仍在。",
+      "occurrence": 0,
+      "target": "Full human business acceptance not fully documented; remote recovery gaps still exist.",
+      "context": "td @ line 148 · surrounding text: 生产稳定性 应用、数据库与缓存完成同机整合；公开 API 与核心服务检查通过。 完整人工业务验收未全部留档；异地恢复缺口仍在。"
+    },
+    {
+      "id": "u_a452f78fb2000087",
+      "kind": "text",
+      "source": "支付保护",
+      "occurrence": 0,
+      "target": "Payment Protection",
+      "context": "td @ line 149 · surrounding text: 支付保护 Apple 退款与撤销通知接入签名验证及既有退款流程。 生产生效仍取决于 App Store Connect 通知地址配置。"
+    },
+    {
+      "id": "u_c7cae4a2ce24d711",
+      "kind": "text",
+      "source": "Apple 退款与撤销通知接入签名验证及既有退款流程。",
+      "occurrence": 0,
+      "target": "Apple refund and cancellation notifications signature validation, existing refund process integration.",
+      "context": "td @ line 149 · surrounding text: 支付保护 Apple 退款与撤销通知接入签名验证及既有退款流程。 生产生效仍取决于 App Store Connect 通知地址配置。"
+    },
+    {
+      "id": "u_029a6e7a01f57739",
+      "kind": "text",
+      "source": "生产生效仍取决于 App Store Connect 通知地址配置。",
+      "occurrence": 0,
+      "target": "Production activation still depends on App Store Connect notification address configuration.",
+      "context": "td @ line 149 · surrounding text: 支付保护 Apple 退款与撤销通知接入签名验证及既有退款流程。 生产生效仍取决于 App Store Connect 通知地址配置。"
+    },
+    {
+      "id": "u_0294ff3bb5ccfd9e",
+      "kind": "text",
+      "source": "iOS 合规",
+      "occurrence": 0,
+      "target": "iOS Compliance",
+      "context": "td @ line 150 · surrounding text: iOS 合规 建立无继承 Git 历史、无 GPL 源码的干净工程，继续收敛依赖与 VPN 主路径。 仍处于构建与验证口径，不能描述为可发布。"
+    },
+    {
+      "id": "u_dad9d6837505bec9",
+      "kind": "text",
+      "source": "建立无继承 Git 历史、无 GPL 源码的干净工程，继续收敛依赖与 VPN 主路径。",
+      "occurrence": 0,
+      "target": "Established clean, non-inheriting Git history and non-GPL source code project; continued dependency convergence with the main VPN path.",
+      "context": "td @ line 150 · surrounding text: iOS 合规 建立无继承 Git 历史、无 GPL 源码的干净工程，继续收敛依赖与 VPN 主路径。 仍处于构建与验证口径，不能描述为可发布。"
+    },
+    {
+      "id": "u_1f4b3c62d13eddc0",
+      "kind": "text",
+      "source": "仍处于构建与验证口径，不能描述为可发布。",
+      "occurrence": 0,
+      "target": "Still in build and validation phase; cannot be described as releasable.",
+      "context": "td @ line 150 · surrounding text: iOS 合规 建立无继承 Git 历史、无 GPL 源码的干净工程，继续收敛依赖与 VPN 主路径。 仍处于构建与验证口径，不能描述为可发布。"
+    },
+    {
+      "id": "u_7451ff96fa2688cd",
+      "kind": "text",
+      "source": "数据库安全",
+      "occurrence": 0,
+      "target": "Database Security",
+      "context": "td @ line 151 · surrounding text: 数据库安全 Go 模型生成可审查 SQL，并在测试环境完成迁移回放与服务验收。 生产变更继续按独立发布窗口执行。"
+    },
+    {
+      "id": "u_a6ba04ad707c70e0",
+      "kind": "text",
+      "source": "Go 模型生成可审查 SQL，并在测试环境完成迁移回放与服务验收。",
+      "occurrence": 0,
+      "target": "Go model generation of reviewable SQL, completed migration replay and service acceptance in test environment.",
+      "context": "td @ line 151 · surrounding text: 数据库安全 Go 模型生成可审查 SQL，并在测试环境完成迁移回放与服务验收。 生产变更继续按独立发布窗口执行。"
+    },
+    {
+      "id": "u_20c0a1547608faea",
+      "kind": "text",
+      "source": "生产变更继续按独立发布窗口执行。",
+      "occurrence": 0,
+      "target": "Production changes continue to be executed on independent release windows.",
+      "context": "td @ line 151 · surrounding text: 数据库安全 Go 模型生成可审查 SQL，并在测试环境完成迁移回放与服务验收。 生产变更继续按独立发布窗口执行。"
+    },
+    {
+      "id": "u_d013f7897c31771f",
+      "kind": "text",
+      "source": "三、改善与商业价值",
+      "occurrence": 0,
+      "target": "III. Improvements and Business Value",
+      "context": "h2 @ line 157"
+    },
+    {
+      "id": "u_9fae7ecdf0f0b976",
+      "kind": "text",
+      "source": "改善",
+      "occurrence": 0,
+      "target": "Improvement",
+      "context": "th @ line 159 · surrounding text: 改善 之前 当前 商业价值"
+    },
+    {
+      "id": "u_73e7d1fb443af262",
+      "kind": "text",
+      "source": "之前",
+      "occurrence": 0,
+      "target": "Prior",
+      "context": "th @ line 159 · surrounding text: 改善 之前 当前 商业价值"
+    },
+    {
+      "id": "u_1f63304d7c93f727",
+      "kind": "text",
+      "source": "当前",
+      "occurrence": 0,
+      "target": "Current status",
+      "context": "th @ line 159 · surrounding text: 改善 之前 当前 商业价值"
+    },
+    {
+      "id": "u_6f2abdcfd4b7c33f",
+      "kind": "text",
+      "source": "商业价值",
+      "occurrence": 0,
+      "target": "Business value",
+      "context": "th @ line 159 · surrounding text: 改善 之前 当前 商业价值"
+    },
+    {
+      "id": "u_58406bb88f9b792a",
+      "kind": "text",
+      "source": "生产拓扑",
+      "occurrence": 0,
+      "target": "Production topology",
+      "context": "td @ line 161 · surrounding text: 生产拓扑 应用与数据跨主机依赖 应用、MySQL、Redis 集中至主机内网回环 减少网络依赖、旧主机与维护面；未取得可归属账单，不宣称具体节省金额。"
+    },
+    {
+      "id": "u_612773f78de04777",
+      "kind": "text",
+      "source": "应用与数据跨主机依赖",
+      "occurrence": 0,
+      "target": "Application and data cross-host dependencies",
+      "context": "td @ line 161 · surrounding text: 生产拓扑 应用与数据跨主机依赖 应用、MySQL、Redis 集中至主机内网回环 减少网络依赖、旧主机与维护面；未取得可归属账单，不宣称具体节省金额。"
+    },
+    {
+      "id": "u_30513816886aec4d",
+      "kind": "text",
+      "source": "应用、MySQL、Redis 集中至主机内网回环",
+      "occurrence": 0,
+      "target": "Applications, MySQL, Redis centralized within host internal network loopback",
+      "context": "td @ line 161 · surrounding text: 生产拓扑 应用与数据跨主机依赖 应用、MySQL、Redis 集中至主机内网回环 减少网络依赖、旧主机与维护面；未取得可归属账单，不宣称具体节省金额。"
+    },
+    {
+      "id": "u_ec43e20706abbfee",
+      "kind": "text",
+      "source": "减少网络依赖、旧主机与维护面；未取得可归属账单，不宣称具体节省金额。",
+      "occurrence": 0,
+      "target": "Reduce network dependency, old hosts, and maintenance exposure; no specific savings claimed until billable.",
+      "context": "td @ line 161 · surrounding text: 生产拓扑 应用与数据跨主机依赖 应用、MySQL、Redis 集中至主机内网回环 减少网络依赖、旧主机与维护面；未取得可归属账单，不宣称具体节省金额。"
+    },
+    {
+      "id": "u_2d5d282840ba8d10",
+      "kind": "text",
+      "source": "数据库变更",
+      "occurrence": 0,
+      "target": "Database changes",
+      "context": "td @ line 162 · surrounding text: 数据库变更 历史 SQL 与运行时建表逻辑并存 统一生成、审查、前向执行 降低结构漂移和不可回放变更风险。"
+    },
+    {
+      "id": "u_94cf68492e04589d",
+      "kind": "text",
+      "source": "历史 SQL 与运行时建表逻辑并存",
+      "occurrence": 0,
+      "target": "Historical SQL and runtime table creation logic coexist",
+      "context": "td @ line 162 · surrounding text: 数据库变更 历史 SQL 与运行时建表逻辑并存 统一生成、审查、前向执行 降低结构漂移和不可回放变更风险。"
+    },
+    {
+      "id": "u_3230e9b841b995ad",
+      "kind": "text",
+      "source": "统一生成、审查、前向执行",
+      "occurrence": 0,
+      "target": "Unified generation, review, forward execution",
+      "context": "td @ line 162 · surrounding text: 数据库变更 历史 SQL 与运行时建表逻辑并存 统一生成、审查、前向执行 降低结构漂移和不可回放变更风险。"
+    },
+    {
+      "id": "u_2c1f7493d47d53c7",
+      "kind": "text",
+      "source": "降低结构漂移和不可回放变更风险。",
+      "occurrence": 0,
+      "target": "Reduce structural drift and unreplayable change risks.",
+      "context": "td @ line 162 · surrounding text: 数据库变更 历史 SQL 与运行时建表逻辑并存 统一生成、审查、前向执行 降低结构漂移和不可回放变更风险。"
+    },
+    {
+      "id": "u_b262801fbdf33077",
+      "kind": "text",
+      "source": "凭证管理",
+      "occurrence": 0,
+      "target": "Credential management",
+      "context": "td @ line 163 · surrounding text: 凭证管理 测试环境仍有多处变量与数据库明文入口 三个后端服务已改用 Azure Key Vault 缩小凭证暴露与手工轮换范围；生产尚未切换。"
+    },
+    {
+      "id": "u_ebe6098f787c2590",
+      "kind": "text",
+      "source": "测试环境仍有多处变量与数据库明文入口",
+      "occurrence": 0,
+      "target": "Test environments still have multiple variable database plaintext entries",
+      "context": "td @ line 163 · surrounding text: 凭证管理 测试环境仍有多处变量与数据库明文入口 三个后端服务已改用 Azure Key Vault 缩小凭证暴露与手工轮换范围；生产尚未切换。"
+    },
+    {
+      "id": "u_e1b48643d8b508e7",
+      "kind": "text",
+      "source": "三个后端服务已改用 Azure Key Vault",
+      "occurrence": 0,
+      "target": "Three back office services migrated to Azure Key Vault",
+      "context": "td @ line 163 · surrounding text: 凭证管理 测试环境仍有多处变量与数据库明文入口 三个后端服务已改用 Azure Key Vault 缩小凭证暴露与手工轮换范围；生产尚未切换。"
+    },
+    {
+      "id": "u_7e0b28a9f3fcb213",
+      "kind": "text",
+      "source": "缩小凭证暴露与手工轮换范围；生产尚未切换。",
+      "occurrence": 0,
+      "target": "Reduce credential exposure and manual rotation scope; production not yet switched.",
+      "context": "td @ line 163 · surrounding text: 凭证管理 测试环境仍有多处变量与数据库明文入口 三个后端服务已改用 Azure Key Vault 缩小凭证暴露与手工轮换范围；生产尚未切换。"
+    },
+    {
+      "id": "u_9bd1d8c7f3eea7c2",
+      "kind": "text",
+      "source": "隐私合规",
+      "occurrence": 0,
+      "target": "Privacy compliance",
+      "context": "td @ line 164 · surrounding text: 隐私合规 官网曾声称记录 IP 与浏览历史 源码已改为与无日志政策一致 降低商店声明与实际行为冲突；网页变更仍待发布。"
+    },
+    {
+      "id": "u_a413032464235e90",
+      "kind": "text",
+      "source": "官网曾声称记录 IP 与浏览历史",
+      "occurrence": 0,
+      "target": "Website once claimed to log IP and browsing history",
+      "context": "td @ line 164 · surrounding text: 隐私合规 官网曾声称记录 IP 与浏览历史 源码已改为与无日志政策一致 降低商店声明与实际行为冲突；网页变更仍待发布。"
+    },
+    {
+      "id": "u_8ba06de9c399f084",
+      "kind": "text",
+      "source": "源码已改为与无日志政策一致",
+      "occurrence": 0,
+      "target": "Source code modified to align with no-logging policy",
+      "context": "td @ line 164 · surrounding text: 隐私合规 官网曾声称记录 IP 与浏览历史 源码已改为与无日志政策一致 降低商店声明与实际行为冲突；网页变更仍待发布。"
+    },
+    {
+      "id": "u_b53c44b685dc848a",
+      "kind": "text",
+      "source": "降低商店声明与实际行为冲突；网页变更仍待发布。",
+      "occurrence": 0,
+      "target": "Reduce discrepancy between store claims and actual behavior; web changes pending release.",
+      "context": "td @ line 164 · surrounding text: 隐私合规 官网曾声称记录 IP 与浏览历史 源码已改为与无日志政策一致 降低商店声明与实际行为冲突；网页变更仍待发布。"
+    },
+    {
+      "id": "u_bf7b95fedd3eb36d",
+      "kind": "text",
+      "source": "iOS 供应链",
+      "occurrence": 0,
+      "target": "iOS supply chain",
+      "context": "td @ line 165 · surrounding text: iOS 供应链 继承 GPL 代码、外部预编译核心与 13 个 Swift 包 干净工程；移除 5 个包并迁移敏感凭证至 Keychain 降低授权、供应链与凭证泄漏风险；仍需真机与升级回归。"
+    },
+    {
+      "id": "u_2ea171046b0e7110",
+      "kind": "text",
+      "source": "继承 GPL 代码、外部预编译核心与 13 个 Swift 包",
+      "occurrence": 0,
+      "target": "Inherit GPL code, external precompiled core, and 13 Swift packages",
+      "context": "td @ line 165 · surrounding text: iOS 供应链 继承 GPL 代码、外部预编译核心与 13 个 Swift 包 干净工程；移除 5 个包并迁移敏感凭证至 Keychain 降低授权、供应链与凭证泄漏风险；仍需真机与升级回归。"
+    },
+    {
+      "id": "u_7176d549cc637c77",
+      "kind": "text",
+      "source": "干净工程；移除 5 个包并迁移敏感凭证至 Keychain",
+      "occurrence": 0,
+      "target": "Clean engineering; remove 5 packages and migrate sensitive credentials to Keychain",
+      "context": "td @ line 165 · surrounding text: iOS 供应链 继承 GPL 代码、外部预编译核心与 13 个 Swift 包 干净工程；移除 5 个包并迁移敏感凭证至 Keychain 降低授权、供应链与凭证泄漏风险；仍需真机与升级回归。"
+    },
+    {
+      "id": "u_314a087410fe3701",
+      "kind": "text",
+      "source": "降低授权、供应链与凭证泄漏风险；仍需真机与升级回归。",
+      "occurrence": 0,
+      "target": "Reduce authorization, supply chain, and credential leakage risks; still require real device and upgrade regression.",
+      "context": "td @ line 165 · surrounding text: iOS 供应链 继承 GPL 代码、外部预编译核心与 13 个 Swift 包 干净工程；移除 5 个包并迁移敏感凭证至 Keychain 降低授权、供应链与凭证泄漏风险；仍需真机与升级回归。"
+    },
+    {
+      "id": "u_1c2e9f566a1ff31f",
+      "kind": "text",
+      "source": "Windows 构建资源",
+      "occurrence": 0,
+      "target": "Windows build resources",
+      "context": "td @ line 166 · surrounding text: Windows 构建资源 签名 Runner 持续运行 符合条件的流水线自动启停 避免闲置计算资源持续运行；下一次实际流水线仍是验收点。"
+    },
+    {
+      "id": "u_332e6e16fa0772f5",
+      "kind": "text",
+      "source": "签名 Runner 持续运行",
+      "occurrence": 0,
+      "target": "Continuous operation of signing Runner",
+      "context": "td @ line 166 · surrounding text: Windows 构建资源 签名 Runner 持续运行 符合条件的流水线自动启停 避免闲置计算资源持续运行；下一次实际流水线仍是验收点。"
+    },
+    {
+      "id": "u_2ef7b01d5f2c9332",
+      "kind": "text",
+      "source": "符合条件的流水线自动启停",
+      "occurrence": 0,
+      "target": "Automatic start and stop of qualified pipelines",
+      "context": "td @ line 166 · surrounding text: Windows 构建资源 签名 Runner 持续运行 符合条件的流水线自动启停 避免闲置计算资源持续运行；下一次实际流水线仍是验收点。"
+    },
+    {
+      "id": "u_08a9277fc22a213d",
+      "kind": "text",
+      "source": "避免闲置计算资源持续运行；下一次实际流水线仍是验收点。",
+      "occurrence": 0,
+      "target": "Avoid continuous operation of idle computing resources; next actual pipeline remains an acceptance point.",
+      "context": "td @ line 166 · surrounding text: Windows 构建资源 签名 Runner 持续运行 符合条件的流水线自动启停 避免闲置计算资源持续运行；下一次实际流水线仍是验收点。"
+    },
+    {
+      "id": "u_8009f679a7c16c91",
+      "kind": "text",
+      "source": "四、关键时间节点",
+      "occurrence": 0,
+      "target": "IV. Key Milestones",
+      "context": "h2 @ line 172"
+    },
+    {
+      "id": "u_e153be02afbd5ede",
+      "kind": "text",
+      "source": "日期",
+      "occurrence": 0,
+      "target": "Date",
+      "context": "th @ line 174 · surrounding text: 日期 里程碑"
+    },
+    {
+      "id": "u_ca7f864bd32429b1",
+      "kind": "text",
+      "source": "里程碑",
+      "occurrence": 0,
+      "target": "Milestone",
+      "context": "th @ line 174 · surrounding text: 日期 里程碑"
+    },
+    {
+      "id": "u_c21549fb5ac684c5",
+      "kind": "text",
+      "source": "iOS 干净源码工程建立；核心合规重建路径确认。",
+      "occurrence": 0,
+      "target": "iOS clean source code engineering established; core compliance reconstruction path confirmed.",
+      "context": "td @ line 176 · surrounding text: 8/10 iOS 干净源码工程建立；核心合规重建路径确认。"
+    },
+    {
+      "id": "u_844d22c27f60cb2e",
+      "kind": "text",
+      "source": "生产环境整合完成",
+      "occurrence": 0,
+      "target": "Production environment integration completed",
+      "context": "strong @ line 177 · surrounding text: 8/12 生产环境整合完成 ，旧数据主机和专属 Azure 资源退役。"
+    },
+    {
+      "id": "u_ce44ec99ad074ba4",
+      "kind": "text",
+      "source": "，旧数据主机和专属 Azure 资源退役。",
+      "occurrence": 0,
+      "target": ", decommission old data hosts and dedicated Azure resources.",
+      "context": "td @ line 177 · surrounding text: 8/12 生产环境整合完成 ，旧数据主机和专属 Azure 资源退役。"
+    },
+    {
+      "id": "u_35767e05420b2605",
+      "kind": "text",
+      "source": "Apple 退款通知、CI/CD 权责分离与流水线卫生改进进入测试环境。",
+      "occurrence": 0,
+      "target": "Apple refund notifications, CI/CD responsibilities separation, and pipeline hygiene improvements enter test environment.",
+      "context": "td @ line 178 · surrounding text: 8/14 Apple 退款通知、CI/CD 权责分离与流水线卫生改进进入测试环境。"
+    },
+    {
+      "id": "u_a1cc6536eca64649",
+      "kind": "text",
+      "source": "数据库迁移工具完成测试环境验收；Key Vault 测试环境切换完成。",
+      "occurrence": 0,
+      "target": "Database migration tool completes test environment acceptance; Key Vault test environment switch completed.",
+      "context": "td @ line 179 · surrounding text: 8/15 数据库迁移工具完成测试环境验收；Key Vault 测试环境切换完成。"
+    },
+    {
+      "id": "u_31bde3a55e8fa8b4",
+      "kind": "text",
+      "source": "删除 3 个过期 S3 存储桶；Windows 签名 Runner 改为按需启停。",
+      "occurrence": 0,
+      "target": "Delete 3 expired S3 buckets; Windows signing Runner changes to on-demand start and stop.",
+      "context": "td @ line 180 · surrounding text: 8/17 删除 3 个过期 S3 存储桶；Windows 签名 Runner 改为按需启停。"
+    },
+    {
+      "id": "u_b78e53e3ae017e66",
+      "kind": "text",
+      "source": "iOS 依赖、隐私政策、VPN 配置与 API 错误处理继续收敛并进入构建验证。",
+      "occurrence": 0,
+      "target": "iOS dependencies, privacy policies, VPN configurations, and API error handling continue convergence and enter build validation.",
+      "context": "td @ line 181 · surrounding text: 8/19–8/21 iOS 依赖、隐私政策、VPN 配置与 API 错误处理继续收敛并进入构建验证。"
+    },
+    {
+      "id": "u_d851ee1a8e6b028e",
+      "kind": "text",
+      "source": "两项协议问题均已有源码修复；测试环境与客户端端到端验收仍未关闭。",
+      "occurrence": 0,
+      "target": "Two protocol issues have source code fixes; end-to-end acceptance in test environment and client still not closed.",
+      "context": "td @ line 182 · surrounding text: 8/24–8/26 两项协议问题均已有源码修复；测试环境与客户端端到端验收仍未关闭。"
+    },
+    {
+      "id": "u_ff22e11118e7e464",
+      "kind": "text",
+      "source": "五、上线计划与后端改动特殊挑战",
+      "occurrence": 0,
+      "target": "Five, Release Plan and Back Office Challenges",
+      "context": "h2 @ line 188"
+    },
+    {
+      "id": "u_d7d219f00ae6d7bc",
+      "kind": "text",
+      "source": "客户端 / 服务",
+      "occurrence": 0,
+      "target": "Client / Service",
+      "context": "th @ line 190 · surrounding text: 客户端 / 服务 当前口径 下一道门槛"
+    },
+    {
+      "id": "u_36967e74a0d51ed5",
+      "kind": "text",
+      "source": "当前口径",
+      "occurrence": 0,
+      "target": "Current measurement basis",
+      "context": "th @ line 190 · surrounding text: 客户端 / 服务 当前口径 下一道门槛"
+    },
+    {
+      "id": "u_532b3eeb2937a23e",
+      "kind": "text",
+      "source": "下一道门槛",
+      "occurrence": 0,
+      "target": "Next hurdle",
+      "context": "th @ line 190 · surrounding text: 客户端 / 服务 当前口径 下一道门槛"
+    },
+    {
+      "id": "u_368216a56ed10d45",
+      "kind": "text",
+      "source": "测试中",
+      "occurrence": 1,
+      "target": "In Testing",
+      "context": "span.badge.progress @ line 192 · surrounding text: Android 测试中 生产版本可升级；新 bootstrap 会话安全改动尚未发布。 多进程、进程死亡、失败注入与三协议真机矩阵。"
+    },
+    {
+      "id": "u_538423cfbc9f232a",
+      "kind": "text",
+      "source": "生产版本可升级；新 bootstrap 会话安全改动尚未发布。",
+      "occurrence": 0,
+      "target": "Production version upgradeable; new bootstrap session security changes not yet released.",
+      "context": "td @ line 192 · surrounding text: Android 测试中 生产版本可升级；新 bootstrap 会话安全改动尚未发布。 多进程、进程死亡、失败注入与三协议真机矩阵。"
+    },
+    {
+      "id": "u_2cc3dc65a5bbd5b8",
+      "kind": "text",
+      "source": "多进程、进程死亡、失败注入与三协议真机矩阵。",
+      "occurrence": 0,
+      "target": "Multi-process, process death, failure injection and tri-protocol true device matrix.",
+      "context": "td @ line 192 · surrounding text: Android 测试中 生产版本可升级；新 bootstrap 会话安全改动尚未发布。 多进程、进程死亡、失败注入与三协议真机矩阵。"
+    },
+    {
+      "id": "u_fc20c4eadf2299dc",
+      "kind": "text",
+      "source": "构建验证中",
+      "occurrence": 0,
+      "target": "Build validation in progress",
+      "context": "span.badge.progress @ line 193 · surrounding text: iOS 构建验证中 干净工程与 VPN 主路径已实现。 完整 Xcode、签名描述文件、TestFlight 与真机连接验收。"
+    },
+    {
+      "id": "u_e9a60400530a7333",
+      "kind": "text",
+      "source": "干净工程与 VPN 主路径已实现。",
+      "occurrence": 0,
+      "target": "Clean engineering and main path of the VPN achieved.",
+      "context": "td @ line 193 · surrounding text: iOS 构建验证中 干净工程与 VPN 主路径已实现。 完整 Xcode、签名描述文件、TestFlight 与真机连接验收。"
+    },
+    {
+      "id": "u_7749952605addf61",
+      "kind": "text",
+      "source": "完整 Xcode、签名描述文件、TestFlight 与真机连接验收。",
+      "occurrence": 0,
+      "target": "Full Xcode, signing profile, TestFlight, and device connection acceptance.",
+      "context": "td @ line 193 · surrounding text: iOS 构建验证中 干净工程与 VPN 主路径已实现。 完整 Xcode、签名描述文件、TestFlight 与真机连接验收。"
+    },
+    {
+      "id": "u_dd9d721899218bec",
+      "kind": "text",
+      "source": "旧版冻结",
+      "occurrence": 0,
+      "target": "Old version frozen",
+      "context": "span.badge.risk @ line 194 · surrounding text: Windows 旧版冻结 v2.2.71 仍在生产。 新签名方案与正式环境发布链路验收。"
+    },
+    {
+      "id": "u_92bd3891c13f1b80",
+      "kind": "text",
+      "source": "v2.2.71 仍在生产。",
+      "occurrence": 0,
+      "target": "v2.2.71 still in production.",
+      "context": "td @ line 194 · surrounding text: Windows 旧版冻结 v2.2.71 仍在生产。 新签名方案与正式环境发布链路验收。"
+    },
+    {
+      "id": "u_d275ec88d3c5198e",
+      "kind": "text",
+      "source": "新签名方案与正式环境发布链路验收。",
+      "occurrence": 0,
+      "target": "New signing scheme and release chain for formal environment acceptance.",
+      "context": "td @ line 194 · surrounding text: Windows 旧版冻结 v2.2.71 仍在生产。 新签名方案与正式环境发布链路验收。"
+    },
+    {
+      "id": "u_953b992755467b98",
+      "kind": "text",
+      "source": "后端",
+      "occurrence": 0,
+      "target": "Back Office",
+      "context": "td @ line 195 · surrounding text: 后端 生产整合完成 后续安全与协议变更分阶段验证。 持续保证旧 iOS 与 Windows 客户端向后兼容。"
+    },
+    {
+      "id": "u_a9a0544a70426c56",
+      "kind": "text",
+      "source": "生产整合完成",
+      "occurrence": 0,
+      "target": "Production integration complete",
+      "context": "span.badge.done @ line 195 · surrounding text: 后端 生产整合完成 后续安全与协议变更分阶段验证。 持续保证旧 iOS 与 Windows 客户端向后兼容。"
+    },
+    {
+      "id": "u_bf7bb20bc0b76a84",
+      "kind": "text",
+      "source": "后续安全与协议变更分阶段验证。",
+      "occurrence": 0,
+      "target": "Subsequent security and protocol changes to be validated in sprints.",
+      "context": "td @ line 195 · surrounding text: 后端 生产整合完成 后续安全与协议变更分阶段验证。 持续保证旧 iOS 与 Windows 客户端向后兼容。"
+    },
+    {
+      "id": "u_749e5a367a302b3e",
+      "kind": "text",
+      "source": "持续保证旧 iOS 与 Windows 客户端向后兼容。",
+      "occurrence": 0,
+      "target": "Ongoing assurance of backward compatibility for old iOS and Windows clients.",
+      "context": "td @ line 195 · surrounding text: 后端 生产整合完成 后续安全与协议变更分阶段验证。 持续保证旧 iOS 与 Windows 客户端向后兼容。"
+    },
+    {
+      "id": "u_6526be69a49634d8",
+      "kind": "text",
+      "source": "特殊挑战：",
+      "occurrence": 0,
+      "target": "Special challenges:",
+      "context": "strong @ line 198 · surrounding text: 特殊挑战： 后端同时服务可升级的 Android、冻结的 iOS HiYou v1.3.0 与冻结的 Windows v2.2.71。两类旧客户端无法同步升级，因此协议、bootstrap 与数据库调整都必须保留旧契约。"
+    },
+    {
+      "id": "u_df4dcccd58fe0e0a",
+      "kind": "text",
+      "source": "后端同时服务可升级的 Android、冻结的 iOS HiYou v1.3.0 与冻结的 Windows v2.2.71。两类旧客户端无法同步升级，因此协议、bootstrap 与数据库调整都必须保留旧契约。",
+      "occurrence": 0,
+      "target": "Back Office simultaneously serving upgradable Android, frozen iOS HiYou v1.3.0, and frozen Windows v2.2.71. Two types of old clients cannot be synchronized for upgrades; thus, protocol, bootstrap, and database adjustments must preserve the old contract.",
+      "context": "div.callout @ line 198 · surrounding text: 特殊挑战： 后端同时服务可升级的 Android、冻结的 iOS HiYou v1.3.0 与冻结的 Windows v2.2.71。两类旧客户端无法同步升级，因此协议、bootstrap 与数据库调整都必须保留旧契约。"
+    },
+    {
+      "id": "u_e18913a46d02cd64",
+      "kind": "text",
+      "source": "六、安全与权限管控",
+      "occurrence": 0,
+      "target": "Six: Security and Permission Control",
+      "context": "h2 @ line 202"
+    },
+    {
+      "id": "u_d37d3f4d889fdde3",
+      "kind": "text",
+      "source": "源代码与凭证",
+      "occurrence": 0,
+      "target": "Source Code and Credentials",
+      "context": "h3 @ line 203"
+    },
+    {
+      "id": "u_0a0d5eb62a0bc63a",
+      "kind": "text",
+      "source": "项目",
+      "occurrence": 0,
+      "target": "Project",
+      "context": "th @ line 205 · surrounding text: 项目 当前状态"
+    },
+    {
+      "id": "u_ef0844c1f19957c8",
+      "kind": "text",
+      "source": "当前状态",
+      "occurrence": 0,
+      "target": "Current Status",
+      "context": "th @ line 205 · surrounding text: 项目 当前状态"
+    },
+    {
+      "id": "u_e156c6f3498004c5",
+      "kind": "text",
+      "source": "GitLab 源代码白名单",
+      "occurrence": 0,
+      "target": "GitLab Source Code Whitelist",
+      "context": "td @ line 207 · surrounding text: GitLab 源代码白名单 Roy、Morgan、Lex 及马来西亚开发人员；其他台湾团队成员权限已回收。"
+    },
+    {
+      "id": "u_139ac849cf6771af",
+      "kind": "text",
+      "source": "Roy、Morgan、Lex 及马来西亚开发人员；其他台湾团队成员权限已回收。",
+      "occurrence": 0,
+      "target": "Roy, Morgan, Lex, and Malaysian developers; permissions of other Taiwan team members have been revoked.",
+      "context": "td @ line 207 · surrounding text: GitLab 源代码白名单 Roy、Morgan、Lex 及马来西亚开发人员；其他台湾团队成员权限已回收。"
+    },
+    {
+      "id": "u_be4076159839ce70",
+      "kind": "text",
+      "source": "后端运行时凭证",
+      "occurrence": 0,
+      "target": "Back Office Runtime Credentials",
+      "context": "td @ line 208 · surrounding text: 后端运行时凭证 测试环境已通过托管身份从 Azure Key Vault 读取；生产尚未执行该切换。"
+    },
+    {
+      "id": "u_6b623a5635d3e8ef",
+      "kind": "text",
+      "source": "测试环境已通过托管身份从 Azure Key Vault 读取；生产尚未执行该切换。",
+      "occurrence": 0,
+      "target": "Test environment has read from Azure Key Vault; production switch not yet executed.",
+      "context": "td @ line 208 · surrounding text: 后端运行时凭证 测试环境已通过托管身份从 Azure Key Vault 读取；生产尚未执行该切换。"
+    },
+    {
+      "id": "u_c75792dc608a9940",
+      "kind": "text",
+      "source": "iOS 本地敏感资料",
+      "occurrence": 0,
+      "target": "iOS Local Sensitive Data",
+      "context": "td @ line 209 · surrounding text: iOS 本地敏感资料 token、密码与 VPN 凭证已由普通偏好存储迁移至 Keychain；升级回归待验证。"
+    },
+    {
+      "id": "u_b5767e254905bbed",
+      "kind": "text",
+      "source": "token、密码与 VPN 凭证已由普通偏好存储迁移至 Keychain；升级回归待验证。",
+      "occurrence": 0,
+      "target": "Tokens, passwords, and VPN credentials have been migrated from ordinary preference storage to Keychain; upgrade regressions pending validation.",
+      "context": "td @ line 209 · surrounding text: iOS 本地敏感资料 token、密码与 VPN 凭证已由普通偏好存储迁移至 Keychain；升级回归待验证。"
+    },
+    {
+      "id": "u_1461aac282b66ad9",
+      "kind": "text",
+      "source": "台湾团队交接遗留的基础设施缺口",
+      "occurrence": 0,
+      "target": "Handover of Infrastructure Gaps by the Taiwan Team",
+      "context": "h3 @ line 212"
+    },
+    {
+      "id": "u_a51044b1016210f8",
+      "kind": "text",
+      "source": "最高风险：生产异地备份仍未关闭。",
+      "occurrence": 0,
+      "target": "Highest risk: off-site production backup remains unresolved.",
+      "context": "strong @ line 213 · surrounding text: 最高风险：生产异地备份仍未关闭。 现有最终备份与运行服务位于同一生产主机，无法证明主机级故障后的恢复能力。下一阶段必须建立异地副本并实际演练恢复。"
+    },
+    {
+      "id": "u_0eb16ae559b81072",
+      "kind": "text",
+      "source": "现有最终备份与运行服务位于同一生产主机，无法证明主机级故障后的恢复能力。下一阶段必须建立异地副本并实际演练恢复。",
+      "occurrence": 0,
+      "target": "The current final backup and running services are on the same production host, unable to prove recovery capability after a host-level failure. Stabilization must be established in the next sprint and actual recovery drills conducted.",
+      "context": "div.callout.critical @ line 213 · surrounding text: 最高风险：生产异地备份仍未关闭。 现有最终备份与运行服务位于同一生产主机，无法证明主机级故障后的恢复能力。下一阶段必须建立异地副本并实际演练恢复。"
+    },
+    {
+      "id": "u_b3515464894f5634",
+      "kind": "text",
+      "source": "问题",
+      "occurrence": 0,
+      "target": "Issue",
+      "context": "th @ line 215 · surrounding text: 问题 风险 状态"
+    },
+    {
+      "id": "u_3135478b1abce084",
+      "kind": "text",
+      "source": "风险",
+      "occurrence": 0,
+      "target": "Risk",
+      "context": "th @ line 215 · surrounding text: 问题 风险 状态"
+    },
+    {
+      "id": "u_a9c13a14ca61cbda",
+      "kind": "text",
+      "source": "状态",
+      "occurrence": 1,
+      "target": "Status",
+      "context": "th @ line 215 · surrounding text: 问题 风险 状态"
+    },
+    {
+      "id": "u_42462aa75f1b4aba",
+      "kind": "text",
+      "source": "生产 SSH 边界",
+      "occurrence": 0,
+      "target": "Production SSH Boundary",
+      "context": "td @ line 217 · surrounding text: 生产 SSH 边界 公开 SSH 增加攻击面 本阶段已修复 只允许私网跳转路径，其余来源明确拒绝。"
+    },
+    {
+      "id": "u_fad5350194cbfc94",
+      "kind": "text",
+      "source": "公开 SSH 增加攻击面",
+      "occurrence": 0,
+      "target": "Public SSH Increases Attack Surface",
+      "context": "td @ line 217 · surrounding text: 生产 SSH 边界 公开 SSH 增加攻击面 本阶段已修复 只允许私网跳转路径，其余来源明确拒绝。"
+    },
+    {
+      "id": "u_cbde0f297fac449e",
+      "kind": "text",
+      "source": "本阶段已修复",
+      "occurrence": 0,
+      "target": "Resolved in this Sprint",
+      "context": "span.badge.done @ line 217 · surrounding text: 生产 SSH 边界 公开 SSH 增加攻击面 本阶段已修复 只允许私网跳转路径，其余来源明确拒绝。"
+    },
+    {
+      "id": "u_c7731297415954d1",
+      "kind": "text",
+      "source": "只允许私网跳转路径，其余来源明确拒绝。",
+      "occurrence": 0,
+      "target": "Only allow private network hop paths, explicitly deny other sources.",
+      "context": "td @ line 217 · surrounding text: 生产 SSH 边界 公开 SSH 增加攻击面 本阶段已修复 只允许私网跳转路径，其余来源明确拒绝。"
+    },
+    {
+      "id": "u_ee8274cef9e70a17",
+      "kind": "text",
+      "source": "日志管理入口",
+      "occurrence": 0,
+      "target": "Log Management Entry Point",
+      "context": "td @ line 218 · surrounding text: 日志管理入口 公开管理端暴露运维面 本阶段已修复 Seq 管理置于 WireGuard 后，写入走私网。"
+    },
+    {
+      "id": "u_5b968a82a52ae5d8",
+      "kind": "text",
+      "source": "公开管理端暴露运维面",
+      "occurrence": 0,
+      "target": "Public Management End Exposes Operational Interface",
+      "context": "td @ line 218 · surrounding text: 日志管理入口 公开管理端暴露运维面 本阶段已修复 Seq 管理置于 WireGuard 后，写入走私网。"
+    },
+    {
+      "id": "u_8cc2314fc4097dac",
+      "kind": "text",
+      "source": "本阶段已修复",
+      "occurrence": 1,
+      "target": "Resolved in this Sprint",
+      "context": "span.badge.done @ line 218 · surrounding text: 日志管理入口 公开管理端暴露运维面 本阶段已修复 Seq 管理置于 WireGuard 后，写入走私网。"
+    },
+    {
+      "id": "u_289ef226cf3adde8",
+      "kind": "text",
+      "source": "Seq 管理置于 WireGuard 后，写入走私网。",
+      "occurrence": 0,
+      "target": "Seq management placed behind WireGuard, writes to the shadow network.",
+      "context": "td @ line 218 · surrounding text: 日志管理入口 公开管理端暴露运维面 本阶段已修复 Seq 管理置于 WireGuard 后，写入走私网。"
+    },
+    {
+      "id": "u_b382b9cabfd1dab3",
+      "kind": "text",
+      "source": "测试环境凭证散布",
+      "occurrence": 0,
+      "target": "Credential distribution in test environment",
+      "context": "td @ line 219 · surrounding text: 测试环境凭证散布 多处变量与别名扩大泄漏面 本阶段已修复 三个服务切入 Key Vault，并清理冗余别名。"
+    },
+    {
+      "id": "u_c3f84a9fad4dc009",
+      "kind": "text",
+      "source": "多处变量与别名扩大泄漏面",
+      "occurrence": 0,
+      "target": "Multiple variables and aliases expanding the attack surface",
+      "context": "td @ line 219 · surrounding text: 测试环境凭证散布 多处变量与别名扩大泄漏面 本阶段已修复 三个服务切入 Key Vault，并清理冗余别名。"
+    },
+    {
+      "id": "u_bab0657b7ca8704a",
+      "kind": "text",
+      "source": "本阶段已修复",
+      "occurrence": 2,
+      "target": "Issues resolved in this sprint",
+      "context": "span.badge.done @ line 219 · surrounding text: 测试环境凭证散布 多处变量与别名扩大泄漏面 本阶段已修复 三个服务切入 Key Vault，并清理冗余别名。"
+    },
+    {
+      "id": "u_ef6d53f732e85866",
+      "kind": "text",
+      "source": "三个服务切入 Key Vault，并清理冗余别名。",
+      "occurrence": 0,
+      "target": "Three services accessed Key Vault, and redundant aliases cleaned up.",
+      "context": "td @ line 219 · surrounding text: 测试环境凭证散布 多处变量与别名扩大泄漏面 本阶段已修复 三个服务切入 Key Vault，并清理冗余别名。"
+    },
+    {
+      "id": "u_fabe90b46441a4d5",
+      "kind": "text",
+      "source": "用户网络资料留存",
+      "occurrence": 0,
+      "target": "User network data retention",
+      "context": "td @ line 220 · surrounding text: 用户网络资料留存 外部地理查询和持久化真实 IP 与无日志承诺冲突 源码已修复 改为本地查询且不持久化，部署验收待完成。"
+    },
+    {
+      "id": "u_7a4ec896b6936992",
+      "kind": "text",
+      "source": "外部地理查询和持久化真实 IP 与无日志承诺冲突",
+      "occurrence": 0,
+      "target": "Conflict between external geographic queries and persistent real IP logging with no log promise",
+      "context": "td @ line 220 · surrounding text: 用户网络资料留存 外部地理查询和持久化真实 IP 与无日志承诺冲突 源码已修复 改为本地查询且不持久化，部署验收待完成。"
+    },
+    {
+      "id": "u_55384a9c096ca929",
+      "kind": "text",
+      "source": "源码已修复",
+      "occurrence": 0,
+      "target": "Source code fixed",
+      "context": "span.badge.progress @ line 220 · surrounding text: 用户网络资料留存 外部地理查询和持久化真实 IP 与无日志承诺冲突 源码已修复 改为本地查询且不持久化，部署验收待完成。"
+    },
+    {
+      "id": "u_e4a6c8ed29d09f35",
+      "kind": "text",
+      "source": "改为本地查询且不持久化，部署验收待完成。",
+      "occurrence": 0,
+      "target": "Changed to local queries and non-persistent, deployment acceptance pending.",
+      "context": "td @ line 220 · surrounding text: 用户网络资料留存 外部地理查询和持久化真实 IP 与无日志承诺冲突 源码已修复 改为本地查询且不持久化，部署验收待完成。"
+    },
+    {
+      "id": "u_272c9ae655011846",
+      "kind": "text",
+      "source": "七、阻塞与延迟",
+      "occurrence": 0,
+      "target": "7. Blockers and Delays",
+      "context": "h2 @ line 226"
+    },
+    {
+      "id": "u_225f65b4debc495a",
+      "kind": "text",
+      "source": "阻塞",
+      "occurrence": 0,
+      "target": "Blocker",
+      "context": "th @ line 228 · surrounding text: 阻塞 影响 当前处理"
+    },
+    {
+      "id": "u_0a74162f96453e6f",
+      "kind": "text",
+      "source": "影响",
+      "occurrence": 0,
+      "target": "Impact",
+      "context": "th @ line 228 · surrounding text: 阻塞 影响 当前处理"
+    },
+    {
+      "id": "u_45e5bfa358d599aa",
+      "kind": "text",
+      "source": "当前处理",
+      "occurrence": 0,
+      "target": "Current handling",
+      "context": "th @ line 228 · surrounding text: 阻塞 影响 当前处理"
+    },
+    {
+      "id": "u_657991341eb99020",
+      "kind": "text",
+      "source": "生产异地备份缺失",
+      "occurrence": 0,
+      "target": "Production remote backup missing",
+      "context": "td @ line 230 · surrounding text: 生产异地备份缺失 无法证明主机级故障后的恢复能力 下一阶段建立异地备份并记录恢复时长。"
+    },
+    {
+      "id": "u_8f1ec1fa544f7e43",
+      "kind": "text",
+      "source": "无法证明主机级故障后的恢复能力",
+      "occurrence": 0,
+      "target": "Unable to prove recovery capability after host-level failures",
+      "context": "td @ line 230 · surrounding text: 生产异地备份缺失 无法证明主机级故障后的恢复能力 下一阶段建立异地备份并记录恢复时长。"
+    },
+    {
+      "id": "u_4b565bfca7b61f59",
+      "kind": "text",
+      "source": "下一阶段建立异地备份并记录恢复时长。",
+      "occurrence": 0,
+      "target": "Next Sprint, establish remote backups and record recovery times.",
+      "context": "td @ line 230 · surrounding text: 生产异地备份缺失 无法证明主机级故障后的恢复能力 下一阶段建立异地备份并记录恢复时长。"
+    },
+    {
+      "id": "u_fab8924df9f04a2e",
+      "kind": "text",
+      "source": "iOS 缺少完整 Xcode / 真机验收",
+      "occurrence": 0,
+      "target": "iOS lacks complete Xcode / device acceptance",
+      "context": "td @ line 231 · surrounding text: iOS 缺少完整 Xcode / 真机验收 不能描述为可发布 在 macOS Runner 完成构建、签名、TestFlight 与真机连接矩阵。"
+    },
+    {
+      "id": "u_c7a697b0a989d485",
+      "kind": "text",
+      "source": "不能描述为可发布",
+      "occurrence": 0,
+      "target": "Cannot be described as releasable",
+      "context": "td @ line 231 · surrounding text: iOS 缺少完整 Xcode / 真机验收 不能描述为可发布 在 macOS Runner 完成构建、签名、TestFlight 与真机连接矩阵。"
+    },
+    {
+      "id": "u_52b5bf4ee767b8b6",
+      "kind": "text",
+      "source": "在 macOS Runner 完成构建、签名、TestFlight 与真机连接矩阵。",
+      "occurrence": 0,
+      "target": "Complete build, signing, TestFlight, and device connection matrix on macOS Runner.",
+      "context": "td @ line 231 · surrounding text: iOS 缺少完整 Xcode / 真机验收 不能描述为可发布 在 macOS Runner 完成构建、签名、TestFlight 与真机连接矩阵。"
+    },
+    {
+      "id": "u_c336a50ccc66b3c3",
+      "kind": "text",
+      "source": "两项高优先级协议问题未关闭",
+      "occurrence": 0,
+      "target": "Two high-priority protocol issues remain unaddressed",
+      "context": "td @ line 232 · surrounding text: 两项高优先级协议问题未关闭 Android 路线显示与 BO 节点管理仍缺完整验收 源码修复已完成，补齐测试环境 bootstrap、BO 与 Android 实连记录后关闭。"
+    },
+    {
+      "id": "u_dfe33713bd42ed13",
+      "kind": "text",
+      "source": "Android 路线显示与 BO 节点管理仍缺完整验收",
+      "occurrence": 0,
+      "target": "Android path shows incomplete acceptance for BO VPN node management",
+      "context": "td @ line 232 · surrounding text: 两项高优先级协议问题未关闭 Android 路线显示与 BO 节点管理仍缺完整验收 源码修复已完成，补齐测试环境 bootstrap、BO 与 Android 实连记录后关闭。"
+    },
+    {
+      "id": "u_3613471a9eb31635",
+      "kind": "text",
+      "source": "源码修复已完成，补齐测试环境 bootstrap、BO 与 Android 实连记录后关闭。",
+      "occurrence": 0,
+      "target": "The source-code fixes are complete. Close the item after adding the test-environment bootstrap and live connection records for the Back Office (BO) and Android.",
+      "context": "td @ line 232 · surrounding text: 两项高优先级协议问题未关闭 Android 路线显示与 BO 节点管理仍缺完整验收 源码修复已完成，补齐测试环境 bootstrap、BO 与 Android 实连记录后关闭。"
+    },
+    {
+      "id": "u_3852dd99f6117f61",
+      "kind": "text",
+      "source": "97.6% 注册缺少营销归因",
+      "occurrence": 0,
+      "target": "97.6% of registrations lack marketing attribution",
+      "context": "td @ line 233 · surrounding text: 97.6% 注册缺少营销归因 无法判断整合后增长来自产品、渠道或外部需求 补齐产品页、套餐、结账、支付回调与渠道埋点。"
+    },
+    {
+      "id": "u_9fc0b65fd811cc83",
+      "kind": "text",
+      "source": "无法判断整合后增长来自产品、渠道或外部需求",
+      "occurrence": 0,
+      "target": "Unable to determine the growth post-integration is driven by the product, channel, or external demand",
+      "context": "td @ line 233 · surrounding text: 97.6% 注册缺少营销归因 无法判断整合后增长来自产品、渠道或外部需求 补齐产品页、套餐、结账、支付回调与渠道埋点。"
+    },
+    {
+      "id": "u_7a1c31b0bbf15438",
+      "kind": "text",
+      "source": "补齐产品页、套餐、结账、支付回调与渠道埋点。",
+      "occurrence": 0,
+      "target": "Complete the addition of funnel points for user registration through checkout and payment callbacks as well as channel tracking.",
+      "context": "td @ line 233 · surrounding text: 97.6% 注册缺少营销归因 无法判断整合后增长来自产品、渠道或外部需求 补齐产品页、套餐、结账、支付回调与渠道埋点。"
+    },
+    {
+      "id": "u_8b74d089d3dfaf35",
+      "kind": "text",
+      "source": "八、Arrowfish 下阶段计划",
+      "occurrence": 0,
+      "target": "Eight, Arrowfish Next Sprint Plan",
+      "context": "h2 @ line 239"
+    },
+    {
+      "id": "u_c1f3027425772689",
+      "kind": "text",
+      "source": "建立生产数据库异地备份，执行一次恢复演练并记录恢复时间。",
+      "occurrence": 0,
+      "target": "Establish off-site production database backups, run one recovery drill, and record the recovery time.",
+      "context": "li @ line 241"
+    },
+    {
+      "id": "u_d32356931231491b",
+      "kind": "text",
+      "source": "完成 iOS 干净工程的提交整理、完整构建、签名检查、TestFlight 与真机验收。",
+      "occurrence": 0,
+      "target": "Complete the submission, full build, signature verification, TestFlight, and acceptance testing for iOS clean engineering.",
+      "context": "li @ line 242"
+    },
+    {
+      "id": "u_4dee92b4c6b51dd1",
+      "kind": "text",
+      "source": "对两项协议问题完成测试环境、BO 与 Android 的端到端验证并正式关闭。",
+      "occurrence": 0,
+      "target": "End-to-end validation in test environment, Back Office (BO), and Android has been completed for the two protocol issues, and closure is formalized.",
+      "context": "li @ line 243"
+    },
+    {
+      "id": "u_6b84b14cd8fa8956",
+      "kind": "text",
+      "source": "为新用户注册到下单之间的漏斗补齐埋点；当前 69.05% 新用户使用过 VPN，但只有 4.72% 发起订单。",
+      "occurrence": 0,
+      "target": "Complete funnel point additions from new user registration to order placement; currently, 69.05% of new users have used a VPN, but only 4.72% initiated an order.",
+      "context": "li @ line 244"
+    },
+    {
+      "id": "u_3850c0cef7affe1d",
+      "kind": "text",
+      "source": "完成 Apple 生产通知地址配置前的真实签名通知验收，不在此之前宣称退款自动化已在生产生效。",
+      "occurrence": 0,
+      "target": "Complete the acceptance testing for real signature notifications before Apple production notification address configuration and do not claim that refund automation is in effect until then.",
+      "context": "li @ line 245"
+    },
+    {
+      "id": "u_633e3a0b63daa6ef",
+      "kind": "text",
+      "source": "九、Arrowfish 中长期规划",
+      "occurrence": 0,
+      "target": "Nine, Arrowfish Long-term Strategy",
+      "context": "h2 @ line 250"
+    },
+    {
+      "id": "u_9fbdac53d3c960c5",
+      "kind": "text",
+      "source": "解除多客户端兼容负担：完成新 iOS 与 Windows 发布链路后，再逐步退出冻结客户端契约。",
+      "occurrence": 0,
+      "target": "Remove multi-client compatibility burden: After completing the new iOS and Windows release chains, gradually exit frozen client contracts.",
+      "context": "li @ line 252"
+    },
+    {
+      "id": "u_ce30dede79d596f6",
+      "kind": "text",
+      "source": "建立协议发布闭环：共享模块、服务端 Agent、三端客户端使用可追溯的不可变版本，并纳入区域化合成测试。",
+      "occurrence": 0,
+      "target": "Establish a protocol release loop: Shared modules, server Agent, and three-end clients use traceable immutable versions and are included in regional composite testing.",
+      "context": "li @ line 253"
+    },
+    {
+      "id": "u_c0b49769b5416674",
+      "kind": "text",
+      "source": "建立收入质量看板：分别追踪续费成功、支付失败恢复、D1/D7/D30 转化、退款与实际结算净额。",
+      "occurrence": 0,
+      "target": "Establish a revenue quality dashboard that separately tracks successful renewals, payment-failure recovery, D1/D7/D30 conversion, refunds, and actual net settlement.",
+      "context": "li @ line 254"
+    },
+    {
+      "id": "u_8ca3931a5d8f901f",
+      "kind": "text",
+      "source": "统一官网法律文件来源，补齐适用法律与运营主体两项仍未决定的法律信息。",
+      "occurrence": 0,
+      "target": "Standardize the legal documents on the unified official website, and complete the two undecided legal pieces of information: applicable laws and operating entity.",
+      "context": "li @ line 255"
+    },
+    {
+      "id": "u_e92de648fa5c82c6",
+      "kind": "text",
+      "source": "十、Arrowfish 财务进展",
+      "occurrence": 0,
+      "target": "Ten, Arrowfish Financial Progress",
+      "context": "h2 @ line 260"
+    },
+    {
+      "id": "u_4d3ba6e49583ea11",
+      "kind": "text",
+      "source": "7/1–7/31 完整月份付费订单总额为",
+      "occurrence": 0,
+      "target": "For July 1–July 31, the total paid orders for the full month are",
+      "context": "li @ line 262 · surrounding text: 7/1–7/31 完整月份付费订单总额为 CNY 16,472.04 ；8/1–8/26 18:40:41 的月累计为 CNY 13,684.23 ，已达到 7 月整月的 83.1%。8 月 26 日尚未结束，不把该数值描述为完整月收入。"
+    },
+    {
+      "id": "u_30f36d1318d483ef",
+      "kind": "text",
+      "source": "；8/1–8/26 18:40:41 的月累计为",
+      "occurrence": 0,
+      "target": "; from August 1 to August 26 at 18:40:41, the cumulative total is",
+      "context": "li @ line 262 · surrounding text: 7/1–7/31 完整月份付费订单总额为 CNY 16,472.04 ；8/1–8/26 18:40:41 的月累计为 CNY 13,684.23 ，已达到 7 月整月的 83.1%。8 月 26 日尚未结束，不把该数值描述为完整月收入。"
+    },
+    {
+      "id": "u_abc70ae5abae2aa9",
+      "kind": "text",
+      "source": "，已达到 7 月整月的 83.1%。8 月 26 日尚未结束，不把该数值描述为完整月收入。",
+      "occurrence": 0,
+      "target": "，which has reached 83.1% of July's full month amount. August 26 is not yet complete, and this value should not be described as the full month revenue.",
+      "context": "li @ line 262 · surrounding text: 7/1–7/31 完整月份付费订单总额为 CNY 16,472.04 ；8/1–8/26 18:40:41 的月累计为 CNY 13,684.23 ，已达到 7 月整月的 83.1%。8 月 26 日尚未结束，不把该数值描述为完整月收入。"
+    },
+    {
+      "id": "u_84f6aff22ff4d3ed",
+      "kind": "text",
+      "source": "8/19–8/25 付费订单总额为",
+      "occurrence": 0,
+      "target": "For August 19–August 25, the total paid orders are",
+      "context": "li @ line 263 · surrounding text: 8/19–8/25 付费订单总额为 CNY 4,890.01 ，较前一周增长 7.8%，较整合前 8/5–8/11 增长 140.3%。"
+    },
+    {
+      "id": "u_76fd4e9726038e4c",
+      "kind": "text",
+      "source": "，较前一周增长 7.8%，较整合前 8/5–8/11 增长 140.3%。",
+      "occurrence": 0,
+      "target": ", up 7.8% from the previous week and up 140.3% compared to August 5–August 11 before integration.",
+      "context": "li @ line 263 · surrounding text: 8/19–8/25 付费订单总额为 CNY 4,890.01 ，较前一周增长 7.8%，较整合前 8/5–8/11 增长 140.3%。"
+    },
+    {
+      "id": "u_42c599b8242accac",
+      "kind": "text",
+      "source": "续费 / 重复付费用户贡献",
+      "occurrence": 0,
+      "target": "Renewal / Repeat Paying Users Contribution",
+      "context": "li @ line 264 · surrounding text: 续费 / 重复付费用户贡献 CNY 4,064.31 ，占 83.1%；续费可靠性是当前最直接的收入保护点。"
+    },
+    {
+      "id": "u_8bf04f92e8cbf865",
+      "kind": "text",
+      "source": "，占 83.1%；续费可靠性是当前最直接的收入保护点。",
+      "occurrence": 0,
+      "target": ", accounting for 83.1%; renewal reliability is the most direct revenue protection point currently.",
+      "context": "li @ line 264 · surrounding text: 续费 / 重复付费用户贡献 CNY 4,064.31 ，占 83.1%；续费可靠性是当前最直接的收入保护点。"
+    },
+    {
+      "id": "u_17942ae8b7757562",
+      "kind": "text",
+      "source": "单笔 CNY 995 的两年高级套餐占周收入 20.35%，因此平均客单价上升不能直接解读为整体价格带改善。",
+      "occurrence": 0,
+      "target": "A two-year advanced package at CNY 995 per transaction contributed 20.35% of weekly revenue, so an increase in average order value cannot be directly interpreted as overall price improvement.",
+      "context": "li @ line 265"
+    },
+    {
+      "id": "u_6decea168fcc7fc6",
+      "kind": "text",
+      "source": "生产主机与 AWS 资源清理确实缩小维护面，但账单证据不足，本报告不宣称具体云成本节省。",
+      "occurrence": 0,
+      "target": "Production host and AWS resource cleanup did reduce the maintenance scope, but billing evidence is insufficient; this report does not claim specific cloud cost savings.",
+      "context": "li @ line 266"
+    },
+    {
+      "id": "u_2975fcb1e4556277",
+      "kind": "text",
+      "source": "第二部分",
+      "occurrence": 0,
+      "target": "Part Two",
+      "context": "div.pnum @ line 271"
+    },
+    {
+      "id": "u_5b885080c8109f4c",
+      "kind": "text",
+      "source": "FFF 新产品",
+      "occurrence": 0,
+      "target": "FFF New Product",
+      "context": "div.ptitle @ line 272"
+    },
+    {
+      "id": "u_c809cbccbb8e774e",
+      "kind": "text",
+      "source": "由 Lex 负责的独立产品线，采用实时口径，与 Arrowfish 发布节奏互不影响",
+      "occurrence": 0,
+      "target": "Led by Lex, an independent product line using real-time metrics with no impact on Arrowfish release schedule.",
+      "context": "div.psub @ line 273"
+    },
+    {
+      "id": "u_425f8303e87e6f7a",
+      "kind": "text",
+      "source": "十一、FFF 产品进展（Lex 实时口径，截至 8/26）",
+      "occurrence": 0,
+      "target": "Eleven, FFF Product Progress (Lex Real-Time Metrics, as of August 26)",
+      "context": "h2 @ line 277"
+    },
+    {
+      "id": "u_551278af707b8570",
+      "kind": "text",
+      "source": "进展项",
+      "occurrence": 0,
+      "target": "Progress Item",
+      "context": "th @ line 279 · surrounding text: 进展项 当前状态 下一步"
+    },
+    {
+      "id": "u_856b260aa2c93334",
+      "kind": "text",
+      "source": "当前状态",
+      "occurrence": 1,
+      "target": "Current Status",
+      "context": "th @ line 279 · surrounding text: 进展项 当前状态 下一步"
+    },
+    {
+      "id": "u_55460425bfba2846",
+      "kind": "text",
+      "source": "下一步",
+      "occurrence": 0,
+      "target": "Next Step",
+      "context": "th @ line 279 · surrounding text: 进展项 当前状态 下一步"
+    },
+    {
+      "id": "u_ee9e06a52a47ac75",
+      "kind": "text",
+      "source": "产品交互",
+      "occurrence": 0,
+      "target": "Product Interaction",
+      "context": "td @ line 281 · surrounding text: 产品交互 已完成 分享赚钱、VPN 设置、网址导航、连接 / 断开和节点切换交互。 纳入完整产品验收。"
+    },
+    {
+      "id": "u_96af116718fae465",
+      "kind": "text",
+      "source": "已完成",
+      "occurrence": 0,
+      "target": "Completed",
+      "context": "span.badge.done @ line 281 · surrounding text: 产品交互 已完成 分享赚钱、VPN 设置、网址导航、连接 / 断开和节点切换交互。 纳入完整产品验收。"
+    },
+    {
+      "id": "u_c7fec7a9a10608d1",
+      "kind": "text",
+      "source": "分享赚钱、VPN 设置、网址导航、连接 / 断开和节点切换交互。",
+      "occurrence": 0,
+      "target": "Share earnings, set up a VPN, navigate URLs, connect/disconnect and switch VPN nodes.",
+      "context": "td @ line 281 · surrounding text: 产品交互 已完成 分享赚钱、VPN 设置、网址导航、连接 / 断开和节点切换交互。 纳入完整产品验收。"
+    },
+    {
+      "id": "u_95b3cb08cfab7aac",
+      "kind": "text",
+      "source": "纳入完整产品验收。",
+      "occurrence": 0,
+      "target": "Included in full product acceptance testing.",
+      "context": "td @ line 281 · surrounding text: 产品交互 已完成 分享赚钱、VPN 设置、网址导航、连接 / 断开和节点切换交互。 纳入完整产品验收。"
+    },
+    {
+      "id": "u_7527a092c891dd59",
+      "kind": "text",
+      "source": "Android 核心",
+      "occurrence": 0,
+      "target": "Android Core",
+      "context": "td @ line 282 · surrounding text: Android 核心 迁移完成 已由 libbox 迁移至内部 SkyTunnel。 补齐可追溯 APK 与测试记录。"
+    },
+    {
+      "id": "u_2922d5b2cb2b3fac",
+      "kind": "text",
+      "source": "迁移完成",
+      "occurrence": 0,
+      "target": "Migration Completed",
+      "context": "span.badge.done @ line 282 · surrounding text: Android 核心 迁移完成 已由 libbox 迁移至内部 SkyTunnel。 补齐可追溯 APK 与测试记录。"
+    },
+    {
+      "id": "u_01b8b21f2ea58258",
+      "kind": "text",
+      "source": "已由 libbox 迁移至内部 SkyTunnel。",
+      "occurrence": 0,
+      "target": "Migrated from libbox to internal SkyTunnel.",
+      "context": "td @ line 282 · surrounding text: Android 核心 迁移完成 已由 libbox 迁移至内部 SkyTunnel。 补齐可追溯 APK 与测试记录。"
+    },
+    {
+      "id": "u_25348570fef91b49",
+      "kind": "text",
+      "source": "补齐可追溯 APK 与测试记录。",
+      "occurrence": 0,
+      "target": "Complete traceable APK and test records.",
+      "context": "td @ line 282 · surrounding text: Android 核心 迁移完成 已由 libbox 迁移至内部 SkyTunnel。 补齐可追溯 APK 与测试记录。"
+    },
+    {
+      "id": "u_defe82a8df341945",
+      "kind": "text",
+      "source": "协议连线",
+      "occurrence": 0,
+      "target": "Protocol connection",
+      "context": "td @ line 283 · surrounding text: 协议连线 验证中 config 加载及 Trojan、VLESS、ShadowTLS 手动连线已确认。 补测 Shadowsocks，并完成测试环境验收。"
+    },
+    {
+      "id": "u_fd4a31ecb1b391bf",
+      "kind": "text",
+      "source": "验证中",
+      "occurrence": 0,
+      "target": "In Validation",
+      "context": "span.badge.progress @ line 283 · surrounding text: 协议连线 验证中 config 加载及 Trojan、VLESS、ShadowTLS 手动连线已确认。 补测 Shadowsocks，并完成测试环境验收。"
+    },
+    {
+      "id": "u_0c03a3f900226f9c",
+      "kind": "text",
+      "source": "config 加载及 Trojan、VLESS、ShadowTLS 手动连线已确认。",
+      "occurrence": 0,
+      "target": "Configuration loading and manual connections for Trojan, VLESS, and ShadowTLS have been confirmed.",
+      "context": "td @ line 283 · surrounding text: 协议连线 验证中 config 加载及 Trojan、VLESS、ShadowTLS 手动连线已确认。 补测 Shadowsocks，并完成测试环境验收。"
+    },
+    {
+      "id": "u_887db7983bde351c",
+      "kind": "text",
+      "source": "补测 Shadowsocks，并完成测试环境验收。",
+      "occurrence": 0,
+      "target": "Test Shadowsocks and complete acceptance testing in the test environment.",
+      "context": "td @ line 283 · surrounding text: 协议连线 验证中 config 加载及 Trojan、VLESS、ShadowTLS 手动连线已确认。 补测 Shadowsocks，并完成测试环境验收。"
+    },
+    {
+      "id": "u_545e598158ce2940",
+      "kind": "text",
+      "source": "自动分组",
+      "occurrence": 0,
+      "target": "Automatic grouping",
+      "context": "td @ line 284 · surrounding text: 自动分组 开发中 完成开发后执行协议回退与节点切换验证。"
+    },
+    {
+      "id": "u_350a5f2e794af0a3",
+      "kind": "text",
+      "source": "开发中",
+      "occurrence": 0,
+      "target": "In Development",
+      "context": "span.badge.progress @ line 284 · surrounding text: 自动分组 开发中 完成开发后执行协议回退与节点切换验证。"
+    },
+    {
+      "id": "u_ab50208f2e24a32e",
+      "kind": "text",
+      "source": "完成开发后执行协议回退与节点切换验证。",
+      "occurrence": 0,
+      "target": "Execute protocol rollback and VPN node switch verification after development completion.",
+      "context": "td @ line 284 · surrounding text: 自动分组 开发中 完成开发后执行协议回退与节点切换验证。"
+    },
+    {
+      "id": "u_31ffa14429fa7bf3",
+      "kind": "text",
+      "source": "FFF 公司注册、欧盟电话号码与支付网关前置事项属于 Roy 的商务范围，不计入工程交付；本期没有可核验的新状态写入报告。",
+      "occurrence": 0,
+      "target": "FFF Company registration, EU phone numbers, and payment gateway pre-requisites are within Roy's business scope and do not count towards engineering delivery; no new verifiable states were recorded this period.",
+      "context": "p.note @ line 287"
+    },
+    {
+      "id": "u_d0c90cec82eb647c",
+      "kind": "text",
+      "source": "报告日期：2026年8月26日 · Sprint 10 进展报告 · 下次更新：Sprint 11 收尾",
+      "occurrence": 0,
+      "target": "Report date: August 26, 2026 · Sprint 10 progress report · Next update: Closure of Sprint 11",
+      "context": "div.footer @ line 290"
+    }
+  ],
+  "blocks": {
+    "b0001": {
+      "type": "p",
+      "source": "第10阶段 · 产品进展报告",
+      "occurrence": 0
+    },
+    "b0002": {
+      "type": "heading",
+      "source": "2026-08-26 Sprint 10 进展报告",
+      "occurrence": 0
+    },
+    "b0003": {
+      "type": "p",
+      "source": "报告分为上下两个独立产品区块。阶段数据覆盖 2026-08-08 至 2026-08-21，完整周数据截至 8/25，月度快照截至 8/26 18:40:41 MYT（26 日未结束）。",
+      "occurrence": 0
+    },
+    "b0004": {
+      "type": "heading",
+      "source": "一、本阶段关键决策与状态",
+      "occurrence": 0
+    },
+    "b0005": {
+      "type": "table-row",
+      "source": "决策 / 现况 状态 说明",
+      "occurrence": 0
+    },
+    "b0006": {
+      "type": "table-row",
+      "source": "生产环境整合至单一主机 已执行 应用、MySQL 与 Redis 已于 8 月 12 日完成切换，旧数据主机及专属资源已退役。",
+      "occurrence": 0
+    },
+    "b0007": {
+      "type": "table-row",
+      "source": "VPN 对外能力收敛为三条核心路线 方案已锁定 VLESS Reality、ShadowTLS、Trojan 为用户可选路线；Shadowsocks 仅作为 ShadowTLS 内层，不单独对外。",
+      "occurrence": 0
+    },
+    "b0008": {
+      "type": "table-row",
+      "source": "iOS 采用干净源码与自研 SkyTunnel 重建 测试中 已移除继承的 GPL 代码与不透明二进制依赖；尚未完成 TestFlight 与真机验收。",
+      "occurrence": 0
+    },
+    "b0009": {
+      "type": "table-row",
+      "source": "生产异地恢复能力 高风险待完成 现有最终数据库备份仍在生产主机本机，尚未形成异地主机恢复副本。",
+      "occurrence": 0
+    },
+    "b0010": {
+      "type": "heading",
+      "source": "二、本阶段关键成果",
+      "occurrence": 0
+    },
+    "b0011": {
+      "type": "highlight",
+      "source": "CNY 16,472.04 7 月完整月收入",
+      "occurrence": 0
+    },
+    "b0012": {
+      "type": "highlight",
+      "source": "CNY 13,684.23 8 月累计收入，截至 8/26 18:40",
+      "occurrence": 0
+    },
+    "b0013": {
+      "type": "highlight",
+      "source": "3,113 8 月累计注册",
+      "occurrence": 0
+    },
+    "b0014": {
+      "type": "highlight",
+      "source": "CNY 4,890.01 8/19–8/25 完整周收入",
+      "occurrence": 0
+    },
+    "b0015": {
+      "type": "highlight",
+      "source": "2 / 2 / 0 高风险问题：发现 / 源码修复 / 验收关闭",
+      "occurrence": 0
+    },
+    "b0016": {
+      "type": "heading",
+      "source": "月度增长与收入",
+      "occurrence": 0
+    },
+    "b0017": {
+      "type": "table-row",
+      "source": "马来西亚时间 注册 付费用户 付费订单 付费订单总额 数据完整性",
+      "occurrence": 0
+    },
+    "b0018": {
+      "type": "table-row",
+      "source": "7/1–7/31 3,163 626 775 CNY 16,472.04 完整月份",
+      "occurrence": 0
+    },
+    "b0019": {
+      "type": "table-row",
+      "source": "8/1–8/26 3,113 511 616 CNY 13,684.23 截至 8/26 18:40:41，当日未结束",
+      "occurrence": 0
+    },
+    "b0020": {
+      "type": "p",
+      "source": "截至 8 月 26 日 18:40，8 月累计注册已达到 7 月整月的 98.4%，收入达到 83.1%。这只是未完整月份与完整月份的进度对照，不是同比增长率，也不作月底预测。",
+      "occurrence": 0
+    },
+    "b0021": {
+      "type": "p",
+      "source": "8 月 12 日整合后的首周注册为 1,026、付费金额为 CNY 4,535.49；次周注册回落至 953，但付费金额进一步升至 CNY 4,890.01。该时间相关性值得持续观察，但不能证明增长由上线单独造成，因为 97.6% 的新注册仍缺少营销归因。",
+      "occurrence": 0
+    },
+    "b0022": {
+      "type": "table-row",
+      "source": "类别 本阶段结果 当前边界",
+      "occurrence": 0
+    },
+    "b0023": {
+      "type": "table-row",
+      "source": "生产稳定性 应用、数据库与缓存完成同机整合；公开 API 与核心服务检查通过。 完整人工业务验收未全部留档；异地恢复缺口仍在。",
+      "occurrence": 0
+    },
+    "b0024": {
+      "type": "table-row",
+      "source": "支付保护 Apple 退款与撤销通知接入签名验证及既有退款流程。 生产生效仍取决于 App Store Connect 通知地址配置。",
+      "occurrence": 0
+    },
+    "b0025": {
+      "type": "table-row",
+      "source": "iOS 合规 建立无继承 Git 历史、无 GPL 源码的干净工程，继续收敛依赖与 VPN 主路径。 仍处于构建与验证口径，不能描述为可发布。",
+      "occurrence": 0
+    },
+    "b0026": {
+      "type": "table-row",
+      "source": "数据库安全 Go 模型生成可审查 SQL，并在测试环境完成迁移回放与服务验收。 生产变更继续按独立发布窗口执行。",
+      "occurrence": 0
+    },
+    "b0027": {
+      "type": "heading",
+      "source": "三、改善与商业价值",
+      "occurrence": 0
+    },
+    "b0028": {
+      "type": "table-row",
+      "source": "改善 之前 当前 商业价值",
+      "occurrence": 0
+    },
+    "b0029": {
+      "type": "table-row",
+      "source": "生产拓扑 应用与数据跨主机依赖 应用、MySQL、Redis 集中至主机内网回环 减少网络依赖、旧主机与维护面；未取得可归属账单，不宣称具体节省金额。",
+      "occurrence": 0
+    },
+    "b0030": {
+      "type": "table-row",
+      "source": "数据库变更 历史 SQL 与运行时建表逻辑并存 统一生成、审查、前向执行 降低结构漂移和不可回放变更风险。",
+      "occurrence": 0
+    },
+    "b0031": {
+      "type": "table-row",
+      "source": "凭证管理 测试环境仍有多处变量与数据库明文入口 三个后端服务已改用 Azure Key Vault 缩小凭证暴露与手工轮换范围；生产尚未切换。",
+      "occurrence": 0
+    },
+    "b0032": {
+      "type": "table-row",
+      "source": "隐私合规 官网曾声称记录 IP 与浏览历史 源码已改为与无日志政策一致 降低商店声明与实际行为冲突；网页变更仍待发布。",
+      "occurrence": 0
+    },
+    "b0033": {
+      "type": "table-row",
+      "source": "iOS 供应链 继承 GPL 代码、外部预编译核心与 13 个 Swift 包 干净工程；移除 5 个包并迁移敏感凭证至 Keychain 降低授权、供应链与凭证泄漏风险；仍需真机与升级回归。",
+      "occurrence": 0
+    },
+    "b0034": {
+      "type": "table-row",
+      "source": "Windows 构建资源 签名 Runner 持续运行 符合条件的流水线自动启停 避免闲置计算资源持续运行；下一次实际流水线仍是验收点。",
+      "occurrence": 0
+    },
+    "b0035": {
+      "type": "heading",
+      "source": "四、关键时间节点",
+      "occurrence": 0
+    },
+    "b0036": {
+      "type": "table-row",
+      "source": "日期 里程碑",
+      "occurrence": 0
+    },
+    "b0037": {
+      "type": "table-row",
+      "source": "8/10 iOS 干净源码工程建立；核心合规重建路径确认。",
+      "occurrence": 0
+    },
+    "b0038": {
+      "type": "table-row",
+      "source": "8/12 生产环境整合完成 ，旧数据主机和专属 Azure 资源退役。",
+      "occurrence": 0
+    },
+    "b0039": {
+      "type": "table-row",
+      "source": "8/14 Apple 退款通知、CI/CD 权责分离与流水线卫生改进进入测试环境。",
+      "occurrence": 0
+    },
+    "b0040": {
+      "type": "table-row",
+      "source": "8/15 数据库迁移工具完成测试环境验收；Key Vault 测试环境切换完成。",
+      "occurrence": 0
+    },
+    "b0041": {
+      "type": "table-row",
+      "source": "8/17 删除 3 个过期 S3 存储桶；Windows 签名 Runner 改为按需启停。",
+      "occurrence": 0
+    },
+    "b0042": {
+      "type": "table-row",
+      "source": "8/19–8/21 iOS 依赖、隐私政策、VPN 配置与 API 错误处理继续收敛并进入构建验证。",
+      "occurrence": 0
+    },
+    "b0043": {
+      "type": "table-row",
+      "source": "8/24–8/26 两项协议问题均已有源码修复；测试环境与客户端端到端验收仍未关闭。",
+      "occurrence": 0
+    },
+    "b0044": {
+      "type": "heading",
+      "source": "五、上线计划与后端改动特殊挑战",
+      "occurrence": 0
+    },
+    "b0045": {
+      "type": "table-row",
+      "source": "客户端 / 服务 当前口径 下一道门槛",
+      "occurrence": 0
+    },
+    "b0046": {
+      "type": "table-row",
+      "source": "Android 测试中 生产版本可升级；新 bootstrap 会话安全改动尚未发布。 多进程、进程死亡、失败注入与三协议真机矩阵。",
+      "occurrence": 0
+    },
+    "b0047": {
+      "type": "table-row",
+      "source": "iOS 构建验证中 干净工程与 VPN 主路径已实现。 完整 Xcode、签名描述文件、TestFlight 与真机连接验收。",
+      "occurrence": 0
+    },
+    "b0048": {
+      "type": "table-row",
+      "source": "Windows 旧版冻结 v2.2.71 仍在生产。 新签名方案与正式环境发布链路验收。",
+      "occurrence": 0
+    },
+    "b0049": {
+      "type": "table-row",
+      "source": "后端 生产整合完成 后续安全与协议变更分阶段验证。 持续保证旧 iOS 与 Windows 客户端向后兼容。",
+      "occurrence": 0
+    },
+    "b0050": {
+      "type": "highlight",
+      "source": "特殊挑战： 后端同时服务可升级的 Android、冻结的 iOS HiYou v1.3.0 与冻结的 Windows v2.2.71。两类旧客户端无法同步升级，因此协议、bootstrap 与数据库调整都必须保留旧契约。",
+      "occurrence": 0
+    },
+    "b0051": {
+      "type": "heading",
+      "source": "六、安全与权限管控",
+      "occurrence": 0
+    },
+    "b0052": {
+      "type": "heading",
+      "source": "源代码与凭证",
+      "occurrence": 0
+    },
+    "b0053": {
+      "type": "table-row",
+      "source": "项目 当前状态",
+      "occurrence": 0
+    },
+    "b0054": {
+      "type": "table-row",
+      "source": "GitLab 源代码白名单 Roy、Morgan、Lex 及马来西亚开发人员；其他台湾团队成员权限已回收。",
+      "occurrence": 0
+    },
+    "b0055": {
+      "type": "table-row",
+      "source": "后端运行时凭证 测试环境已通过托管身份从 Azure Key Vault 读取；生产尚未执行该切换。",
+      "occurrence": 0
+    },
+    "b0056": {
+      "type": "table-row",
+      "source": "iOS 本地敏感资料 token、密码与 VPN 凭证已由普通偏好存储迁移至 Keychain；升级回归待验证。",
+      "occurrence": 0
+    },
+    "b0057": {
+      "type": "heading",
+      "source": "台湾团队交接遗留的基础设施缺口",
+      "occurrence": 0
+    },
+    "b0058": {
+      "type": "table-row",
+      "source": "问题 风险 状态",
+      "occurrence": 0
+    },
+    "b0059": {
+      "type": "table-row",
+      "source": "生产 SSH 边界 公开 SSH 增加攻击面 本阶段已修复 只允许私网跳转路径，其余来源明确拒绝。",
+      "occurrence": 0
+    },
+    "b0060": {
+      "type": "table-row",
+      "source": "日志管理入口 公开管理端暴露运维面 本阶段已修复 Seq 管理置于 WireGuard 后，写入走私网。",
+      "occurrence": 0
+    },
+    "b0061": {
+      "type": "table-row",
+      "source": "测试环境凭证散布 多处变量与别名扩大泄漏面 本阶段已修复 三个服务切入 Key Vault，并清理冗余别名。",
+      "occurrence": 0
+    },
+    "b0062": {
+      "type": "table-row",
+      "source": "用户网络资料留存 外部地理查询和持久化真实 IP 与无日志承诺冲突 源码已修复 改为本地查询且不持久化，部署验收待完成。",
+      "occurrence": 0
+    },
+    "b0063": {
+      "type": "heading",
+      "source": "七、阻塞与延迟",
+      "occurrence": 0
+    },
+    "b0064": {
+      "type": "table-row",
+      "source": "阻塞 影响 当前处理",
+      "occurrence": 0
+    },
+    "b0065": {
+      "type": "table-row",
+      "source": "生产异地备份缺失 无法证明主机级故障后的恢复能力 下一阶段建立异地备份并记录恢复时长。",
+      "occurrence": 0
+    },
+    "b0066": {
+      "type": "table-row",
+      "source": "iOS 缺少完整 Xcode / 真机验收 不能描述为可发布 在 macOS Runner 完成构建、签名、TestFlight 与真机连接矩阵。",
+      "occurrence": 0
+    },
+    "b0067": {
+      "type": "table-row",
+      "source": "两项高优先级协议问题未关闭 Android 路线显示与 BO 节点管理仍缺完整验收 源码修复已完成，补齐测试环境 bootstrap、BO 与 Android 实连记录后关闭。",
+      "occurrence": 0
+    },
+    "b0068": {
+      "type": "table-row",
+      "source": "97.6% 注册缺少营销归因 无法判断整合后增长来自产品、渠道或外部需求 补齐产品页、套餐、结账、支付回调与渠道埋点。",
+      "occurrence": 0
+    },
+    "b0069": {
+      "type": "heading",
+      "source": "八、Arrowfish 下阶段计划",
+      "occurrence": 0
+    },
+    "b0070": {
+      "type": "li",
+      "source": "建立生产数据库异地备份，执行一次恢复演练并记录恢复时间。",
+      "occurrence": 0
+    },
+    "b0071": {
+      "type": "li",
+      "source": "完成 iOS 干净工程的提交整理、完整构建、签名检查、TestFlight 与真机验收。",
+      "occurrence": 0
+    },
+    "b0072": {
+      "type": "li",
+      "source": "对两项协议问题完成测试环境、BO 与 Android 的端到端验证并正式关闭。",
+      "occurrence": 0
+    },
+    "b0073": {
+      "type": "li",
+      "source": "为新用户注册到下单之间的漏斗补齐埋点；当前 69.05% 新用户使用过 VPN，但只有 4.72% 发起订单。",
+      "occurrence": 0
+    },
+    "b0074": {
+      "type": "li",
+      "source": "完成 Apple 生产通知地址配置前的真实签名通知验收，不在此之前宣称退款自动化已在生产生效。",
+      "occurrence": 0
+    },
+    "b0075": {
+      "type": "heading",
+      "source": "九、Arrowfish 中长期规划",
+      "occurrence": 0
+    },
+    "b0076": {
+      "type": "li",
+      "source": "解除多客户端兼容负担：完成新 iOS 与 Windows 发布链路后，再逐步退出冻结客户端契约。",
+      "occurrence": 0
+    },
+    "b0077": {
+      "type": "li",
+      "source": "建立协议发布闭环：共享模块、服务端 Agent、三端客户端使用可追溯的不可变版本，并纳入区域化合成测试。",
+      "occurrence": 0
+    },
+    "b0078": {
+      "type": "li",
+      "source": "建立收入质量看板：分别追踪续费成功、支付失败恢复、D1/D7/D30 转化、退款与实际结算净额。",
+      "occurrence": 0
+    },
+    "b0079": {
+      "type": "li",
+      "source": "统一官网法律文件来源，补齐适用法律与运营主体两项仍未决定的法律信息。",
+      "occurrence": 0
+    },
+    "b0080": {
+      "type": "heading",
+      "source": "十、Arrowfish 财务进展",
+      "occurrence": 0
+    },
+    "b0081": {
+      "type": "li",
+      "source": "7/1–7/31 完整月份付费订单总额为 CNY 16,472.04 ；8/1–8/26 18:40:41 的月累计为 CNY 13,684.23 ，已达到 7 月整月的 83.1%。8 月 26 日尚未结束，不把该数值描述为完整月收入。",
+      "occurrence": 0
+    },
+    "b0082": {
+      "type": "li",
+      "source": "8/19–8/25 付费订单总额为 CNY 4,890.01 ，较前一周增长 7.8%，较整合前 8/5–8/11 增长 140.3%。",
+      "occurrence": 0
+    },
+    "b0083": {
+      "type": "li",
+      "source": "续费 / 重复付费用户贡献 CNY 4,064.31 ，占 83.1%；续费可靠性是当前最直接的收入保护点。",
+      "occurrence": 0
+    },
+    "b0084": {
+      "type": "li",
+      "source": "单笔 CNY 995 的两年高级套餐占周收入 20.35%，因此平均客单价上升不能直接解读为整体价格带改善。",
+      "occurrence": 0
+    },
+    "b0085": {
+      "type": "li",
+      "source": "生产主机与 AWS 资源清理确实缩小维护面，但账单证据不足，本报告不宣称具体云成本节省。",
+      "occurrence": 0
+    },
+    "b0086": {
+      "type": "heading",
+      "source": "十一、FFF 产品进展（Lex 实时口径，截至 8/26）",
+      "occurrence": 0
+    },
+    "b0087": {
+      "type": "table-row",
+      "source": "进展项 当前状态 下一步",
+      "occurrence": 0
+    },
+    "b0088": {
+      "type": "table-row",
+      "source": "产品交互 已完成 分享赚钱、VPN 设置、网址导航、连接 / 断开和节点切换交互。 纳入完整产品验收。",
+      "occurrence": 0
+    },
+    "b0089": {
+      "type": "table-row",
+      "source": "Android 核心 迁移完成 已由 libbox 迁移至内部 SkyTunnel。 补齐可追溯 APK 与测试记录。",
+      "occurrence": 0
+    },
+    "b0090": {
+      "type": "table-row",
+      "source": "协议连线 验证中 config 加载及 Trojan、VLESS、ShadowTLS 手动连线已确认。 补测 Shadowsocks，并完成测试环境验收。",
+      "occurrence": 0
+    },
+    "b0091": {
+      "type": "table-row",
+      "source": "自动分组 开发中 完成开发后执行协议回退与节点切换验证。",
+      "occurrence": 0
+    },
+    "b0092": {
+      "type": "p",
+      "source": "FFF 公司注册、欧盟电话号码与支付网关前置事项属于 Roy 的商务范围，不计入工程交付；本期没有可核验的新状态写入报告。",
+      "occurrence": 0
+    }
+  },
+  "reviewedTargetHash": "7b4acaad3ee256cc"
+}
