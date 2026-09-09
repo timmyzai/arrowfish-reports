@@ -144,7 +144,7 @@ assert.match(indexSource, /function loadDefault\([\s\S]*?loadEntry\(goal, 'goals
 assert.match(indexSource, /select\.value = defaultSprintIndex\(\);/, 'the report selector is initialized independently from the Goal view');
 const selectableReports = reports.filter(report => !report.id.startsWith('goal-') && !report.file.includes('/Goal-'));
 const defaultReport = [...selectableReports].reverse().find(report => report.defaultForSprintPage !== false);
-assert.equal(defaultReport?.id, 'sprint-10-full', 'the Sprint page defaults to the 2026-08-26 Sprint 10 progress report');
-assert.equal(defaultReport?.date, '2026-08-26', 'the default Sprint report has the requested publication date');
+assert.equal(defaultReport?.id, 'sprint-11-summary', 'the Sprint page defaults to the latest Sprint 11 closeout, not the retrospective Sprint 10 update');
+assert.equal(defaultReport?.date, '2026-09-04', 'the default Sprint report retains its reporting-period end date');
 
 console.log('Preference and UI i18n tests: all assertions passed');

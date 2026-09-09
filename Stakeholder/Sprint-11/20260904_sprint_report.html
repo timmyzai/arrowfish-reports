@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-report-id="sprint-11-summary">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex, nofollow">
+<title>第11阶段 · 收尾报告 · 2026-08-22 至 2026-09-04</title><meta name="description" content="阶段证据复核，区分源码进展、发布与验收。">
+<script src="../../assets/ui-i18n.js"></script><script src="../../assets/site-preferences.js"></script><script src="../../assets/auth-gate.js"></script><link rel="stylesheet" href="../../assets/site-theme.css">
+<style>
+    :root {
+      --bg: var(--af-bg);
+      --paper: var(--af-surface);
+      --text: var(--af-text);
+      --muted: var(--af-text-muted);
+      --line: var(--af-border);
+      --blue: var(--af-primary);
+      --green: var(--af-success);
+      --green-bg: var(--af-success-soft);
+      --yellow: var(--af-warning);
+      --yellow-bg: var(--af-warning-soft);
+      --red: var(--af-danger);
+      --red-bg: var(--af-danger-soft);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", "Segoe UI", sans-serif;
+      line-height: 1.68;
+      -webkit-font-smoothing: antialiased;
+    }
+    main { max-width: 1120px; margin: 0 auto; padding: 32px 20px 56px; }
+    header { padding: 28px 0 18px; border-bottom: 1px solid var(--line); margin-bottom: 24px; }
+    .eyebrow { color: var(--blue); font-size: 14px; font-weight: 700; margin: 0 0 8px; }
+    h1 { font-size: 32px; line-height: 1.25; margin: 0 0 10px; letter-spacing: 0; }
+    .meta { color: var(--muted); margin: 0; font-size: 15px; }
+    section { background: var(--paper); border: 1px solid var(--line); border-radius: 8px; padding: 22px; margin: 18px 0; }
+    h2 { font-size: 21px; margin: 0 0 14px; letter-spacing: 0; display: flex; align-items: center; gap: 8px; }
+    h3 { font-size: 16px; margin: 18px 0 8px; color: var(--text); }
+    p { margin: 0 0 12px; }
+    p:last-child { margin-bottom: 0; }
+    .tldr { border-left: 5px solid var(--blue); background: var(--af-primary-soft); font-size: 18px; font-weight: 650; }
+    table { width: 100%; border-collapse: collapse; margin-top: 8px; font-size: 14.5px; }
+    th, td { border: 1px solid var(--line); padding: 10px 12px; text-align: left; vertical-align: top; }
+    th { background: var(--af-surface-muted); font-weight: 700; }
+    .score { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; margin: 12px 0; }
+    .metric { border: 1px solid var(--line); border-radius: 8px; padding: 14px; background: var(--af-surface-muted); }
+    .metric b, .metric strong { display: block; font-size: 21px; margin-bottom: 4px; }
+    .metric span { color: var(--muted); font-size: 12.5px; }
+    .note { color: var(--muted); font-size: 13.5px; margin-top: 10px; }
+    .ok { color: var(--green); font-weight: 700; }
+    .watch { color: var(--yellow); font-weight: 700; }
+    .risk { color: var(--red); font-weight: 700; }
+    .callout { border-radius: 8px; padding: 14px 16px; margin: 10px 0; border-left: 4px solid var(--blue); background: var(--af-primary-soft); font-size: 14.5px; }
+    .callout.risk, .callout.critical { border-left-color: var(--red); background: var(--red-bg); color: var(--text); }
+    .callout.watch { border-left-color: var(--yellow); background: var(--yellow-bg); color: var(--text); }
+    .callout.ok { border-left-color: var(--green); background: var(--green-bg); color: var(--text); }
+    .badge { display: inline-block; padding: 2px 9px; border-radius: 4px; font-size: 12.5px; font-weight: 700; white-space: nowrap; }
+    .badge.done { background: var(--af-success-soft); color: var(--af-success); }
+    .badge.progress { background: var(--af-warning-soft); color: var(--af-warning); }
+    .badge.pending { background: var(--af-surface-muted); color: var(--af-text-muted); }
+    .badge.risk { background: var(--af-danger-soft); color: var(--af-danger); }
+    .part {
+      margin: 30px 0 4px;
+      padding: 16px 20px;
+      border-radius: 8px;
+      background: linear-gradient(90deg, var(--af-primary) 0%, var(--af-primary) 100%);
+      color: var(--af-on-accent);
+    }
+    .part .pnum { font-size: 12.5px; font-weight: 700; opacity: .85; letter-spacing: .08em; }
+    .part .ptitle { font-size: 22px; font-weight: 700; margin-top: 2px; }
+    .part .psub { font-size: 13.5px; opacity: .9; margin-top: 4px; }
+    .part.fff { background: linear-gradient(90deg, var(--fff) 0%, var(--fff) 100%); }
+    ol, ul { padding-left: 22px; }
+    li { margin: 6px 0; }
+    .footer { margin-top: 24px; padding-top: 14px; border-top: 1px solid var(--line); font-size: 12.5px; color: var(--muted); text-align: center; }
+    @media (max-width: 760px) {
+      main { padding: 20px 12px 40px; }
+      h1 { font-size: 24px; }
+      section { padding: 16px; }
+      .score { grid-template-columns: 1fr 1fr; }
+      table { display: block; overflow-x: auto; font-size: 13px; }
+      th, td { padding: 7px 8px; }
+    }
+    @media (max-width: 480px) { .score { grid-template-columns: 1fr; } }
+    @media print { body { background: var(--af-surface); } main { max-width: none; padding: 0; } section { break-inside: avoid; } }
+
+nav a {display:inline-flex;align-items:center;min-height:44px} p {overflow-wrap:anywhere} a:focus-visible {outline:3px solid var(--af-primary);outline-offset:3px}
+</style></head><body><main>
+<nav><a href="../../index.html">返回报告目录</a></nav>
+<header data-report-header><h1>第11阶段 · 收尾报告 · 2026-08-22 至 2026-09-04</h1></header><section class="tldr"><p>支付、身份、连接安全与节点管理持续进入验证；下一阶段先补齐迁移、环境配置与真实场景验收，再关闭发布。</p></section>
+<section id="section-1"><h2>一、关键决策与状态</h2>
+<p>报告周期：2026-08-22 至 2026-09-04，共14天；编制复核：2026-09-08。按阶段证据呈现，未验证的部署不标记为上线。9月7日至8日的会员时间线重构和后续提交属于 Sprint 12。</p>
+<p>本阶段重点是支付一致性、设备身份、连接安全及节点操作可靠性。源码完成、构建通过、环境发布和业务验收分别记录，避免把工程进展写成用户已获得的能力。</p>
+</section>
+<section id="section-2"><h2>二、关键成果与验收边界</h2>
+<p>本报告归并 6 个工程主题；这不是 Jira 问题数量或完成率。以下主题均保留未关闭的运行或发布门槛。</p>
+<p>支付与订阅：共享规则、支付状态、供应商回调、定时重试和后台展示已有源码实现并进入验证。数据迁移、重复事件、并发及真实支付场景尚无完整验收；9月2日记录仍指出重叠迁移需核对。</p>
+<p>设备身份与下单会话：身份解析和跨域请求支持已进入验证。8月27日环境检查明确发现跨域配置不允许新的设备标识请求头，前端发布必须等待后端环境配套。</p>
+<p>连接与 DNS：节点递归解析、隧道内解析及解析异常时阻断流量已有实现。既有节点重新配置、真实设备无泄漏检查与地区连接验收仍待完成。</p>
+<p>节点管理：管理与运行职责分离、自动地域命名、安装锁处理和防火墙异步任务已有进展。不能把本地构建和界面编译通过描述为生产节点验收完成。</p>
+<p>套餐与专属线路：完整目录和专属层级展示进入验证。8月30日记录明确区分人工授予线路与购买线路；购买路径的授权缺口不能被展示修复掩盖。</p>
+<p>限速与证书：按用户限速、旧核心清理和证书域名一致性进入验证。证书修复已有本地及流水线记录；吞吐实测、节点发布与真实连接仍需独立验收。</p>
+</section>
+<section id="section-3"><h2>三、改善与商业价值</h2>
+<p>支付规则统一旨在减少重复处理和续费中断；身份标准化旨在提高账号与设备绑定可信度；可追踪节点任务旨在减少操作失败后的人工排查。以上为改动目的，不是已量化的营收增长或成本节省。</p>
+</section>
+<section id="section-4"><h2>四、关键时间节点</h2>
+<p>8月24日至27日：Apple 测试分发、协议映射、节点管理分离、DNS、身份及支付模块记录。8月28日至30日：节点命名、完整目录、专属层级与 FFF 安装包交付记录。9月1日至4日：安装锁、限速、防火墙任务及证书修复记录。</p>
+</section>
+<section id="section-5"><h2>五、上线计划与兼容挑战</h2>
+<p>先核对数据迁移与后端配置，再发布依赖这些能力的网站和客户端。旧版 iOS HiYou 与 Windows 仍要求后端保留兼容；Android 可升级也不能替代多客户端回归。</p>
+<p>本期没有证据支持将订阅闭环、专属购买路径或全量三协议地区验收标记为完成。</p>
+</section>
+<section id="section-6"><h2>六、安全与权限管控</h2>
+<p>新增变化集中在节点管理凭证隔离、任务输出脱敏和 DNS 异常阻断。属于既有管理与连接链路的安全收口，环境应用和现场验证仍需分别记录。</p>
+<p>本次没有新的源码白名单核验、生产异地恢复演练或基础设施权限变更证据，沿用上一份报告的历史说明，不宣称这些风险已关闭。</p>
+</section>
+<section id="section-7"><h2>七、FFF 并行进展</h2>
+<p>Lex 实时口径，证据截至8月29日：Android 安装包已于8月28日交 QA。安装、升级、协议连接和自动分组的验收结果尚未留档；不将交包写成正式上线。</p>
+<p>Roy 负责公司注册、欧盟电话号码与支付网关商务事项，本期没有可核验的新状态。FFF 继续使用独立运行环境与数据，只复用版本化源码能力。</p>
+</section>
+<section id="section-8"><h2>八、阻塞、下一步与中长期顺序</h2>
+<p>Sprint 12（2026-09-05 至 2026-09-18）的验证顺序：先处理迁移重叠和后端跨域配置，再完成支付与专属购买场景，随后补齐节点、三端连接、DNS 与限速的运行验收。以上是建议的验证顺序，不是新增上线承诺。</p>
+<p>异地恢复、旧客户端退出与 FFF 隔离环境继续按独立里程碑推进。未关闭事项不因进入新 Sprint 自动完成；阶段目标与生产验收分别跟踪。</p>
+</section>
+<section id="section-9"><h2>九、财务影响</h2>
+<p>本次未新增生产收入查询、成本账单或支付成功率核验，因此不提供新的金额、增长率或节省估算。历史财务数字仍见第10阶段报告及追加分析，保留原统计截止时间。</p>
+</section>
+<section><h2>历史报告与后续记录</h2><p><a href="../Sprint-10/20260826_report.html">第10阶段原报告</a></p><p><a href="../Sprint-10/20260828_production-study-addendum.html">生产研究追加分析</a></p><p><a href="../Sprint-11/20260904_sprint_report.html">第11阶段收尾</a></p></section></main></body></html>

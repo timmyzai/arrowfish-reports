@@ -1,5 +1,7 @@
 {
   "order": [
+    "sprint-10-status-20260908",
+    "sprint-11-summary",
     "goal-2026-20260827",
     "sprint-10-production-study-20260828",
     "sprint-10-full",
@@ -562,6 +564,27 @@
     }
   },
   "blockers": [
+    {
+      "reportId": "sprint-10-status-20260908",
+      "blockId": "b0007",
+      "reportDate": "2026-09-08",
+      "section": "二、核对结果",
+      "text": "本次核对 3 项发布边界：Windows 签名、Apple 测试分发、生产整合。没有新增生产验收关闭结论。"
+    },
+    {
+      "reportId": "sprint-11-summary",
+      "blockId": "b0007",
+      "reportDate": "2026-09-04",
+      "section": "二、关键成果与验收边界",
+      "text": "本报告归并 6 个工程主题；这不是 Jira 问题数量或完成率。以下主题均保留未关闭的运行或发布门槛。"
+    },
+    {
+      "reportId": "sprint-11-summary",
+      "blockId": "b0029",
+      "reportDate": "2026-09-04",
+      "section": "八、阻塞、下一步与中长期顺序",
+      "text": "异地恢复、旧客户端退出与 FFF 隔离环境继续按独立里程碑推进。未关闭事项不因进入新 Sprint 自动完成；阶段目标与生产验收分别跟踪。"
+    },
     {
       "reportId": "goal-2026-20260827",
       "blockId": "b0059",

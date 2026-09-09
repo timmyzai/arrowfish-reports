@@ -46,6 +46,10 @@ workspace root). Dated sprint facts and working evidence remain in
 - Do not place internal plans, issues, credentials, or live infrastructure
   inventory in published reports.
 - Keep catalogue titles and dates consistent with each report's HTML metadata.
+- Use the shared two-week calendar in
+  `../vpn-internal-reports/.claude/JIRA.md` for new stakeholder reports, matching
+  Jira board 616 and internal reporting. See `Stakeholder/README.md` for the
+  calendar anchor and historical-report handling.
 - Treat weekly and sprint stakeholder reports as immutable after publication.
 - Treat `Stakeholder/Goal-2026/20260827_goals.html` as the sole living annual
   dashboard exception. Preserve its filename and stable goal IDs.

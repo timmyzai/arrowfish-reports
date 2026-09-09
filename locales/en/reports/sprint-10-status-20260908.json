@@ -1,0 +1,374 @@
+{
+  "schemaVersion": 1,
+  "reportId": "sprint-10-status-20260908",
+  "sourceFile": "Stakeholder/Sprint-10/20260908_status-update.html",
+  "sourceVersion": "7094ced6e9e8d8ba",
+  "units": [
+    {
+      "id": "u_13069cf1965b7a90",
+      "kind": "text",
+      "source": "第10阶段 · 发布边界后续核对 · 2026-09-08",
+      "occurrence": 0,
+      "target": "Sprint 10 · Release Boundary Follow-up · 2026-09-08",
+      "context": "title @ line 5"
+    },
+    {
+      "id": "u_6493f43eceecf719",
+      "kind": "attribute",
+      "source": "阶段证据复核，区分源码进展、发布与验收。",
+      "occurrence": 0,
+      "target": "Period evidence review distinguishing source progress, release and acceptance.",
+      "context": "meta @ line 5 · surrounding text: 第10阶段 · 发布边界后续核对 · 2026-09-08",
+      "attribute": "content"
+    },
+    {
+      "id": "u_a3266fb56306b89d",
+      "kind": "text",
+      "source": "返回报告目录",
+      "occurrence": 0,
+      "target": "Back to report catalogue",
+      "context": "a @ line 89"
+    },
+    {
+      "id": "u_8d9d15cc8f49740c",
+      "kind": "text",
+      "source": "第10阶段 · 发布边界后续核对 · 2026-09-08",
+      "occurrence": 1,
+      "target": "Sprint 10 · Release Boundary Follow-up · 2026-09-08",
+      "context": "h1 @ line 90 · surrounding text: 第10阶段 · 发布边界后续核对 · 2026-09-08 生产整合事实保留；Windows 签名与 Apple 测试分发已有后续证据，正式交付和恢复能力仍按独立门槛关闭。"
+    },
+    {
+      "id": "u_67ca64f0cde15242",
+      "kind": "text",
+      "source": "生产整合事实保留；Windows 签名与 Apple 测试分发已有后续证据，正式交付和恢复能力仍按独立门槛关闭。",
+      "occurrence": 0,
+      "target": "Production consolidation remains established; subsequent evidence exists for Windows signing and Apple test distribution, while formal delivery and recovery capability retain separate acceptance gates.",
+      "context": "p @ line 90 · surrounding text: 第10阶段 · 发布边界后续核对 · 2026-09-08 生产整合事实保留；Windows 签名与 Apple 测试分发已有后续证据，正式交付和恢复能力仍按独立门槛关闭。"
+    },
+    {
+      "id": "u_46f54c867bc0f5f6",
+      "kind": "text",
+      "source": "一、关键决策与状态",
+      "occurrence": 0,
+      "target": "1. Key decisions and status",
+      "context": "h2 @ line 91"
+    },
+    {
+      "id": "u_121585fc52030464",
+      "kind": "text",
+      "source": "本页是第10阶段的后续核对，复核日期为 2026-09-08。原阶段为 2026-08-08 至 2026-08-21；8月26日主报告及8月28日追加分析保留原貌。后续证据单独注明，不回写为阶段内交付。",
+      "occurrence": 0,
+      "target": "This is a follow-up review of Sprint 10, reviewed on 2026-09-08. The original period is 2026-08-08 to 2026-08-21. The August 26 report and August 28 addendum remain unchanged. Later evidence is identified separately, not backdated as delivery within the sprint.",
+      "context": "p @ line 92"
+    },
+    {
+      "id": "u_05aeadaa09fc8a43",
+      "kind": "text",
+      "source": "原生产整合结论保留。基础设施切换完成，不等于设备身份、跨端兼容及地区可用性全部验收完成。",
+      "occurrence": 0,
+      "target": "The production consolidation finding stands. Completed infrastructure cutover does not establish acceptance of device identity, cross-client compatibility or regional availability.",
+      "context": "p @ line 93"
+    },
+    {
+      "id": "u_5de3d00945be95a1",
+      "kind": "text",
+      "source": "二、核对结果",
+      "occurrence": 0,
+      "target": "2. Review results",
+      "context": "h2 @ line 95"
+    },
+    {
+      "id": "u_9e63146010dd8143",
+      "kind": "text",
+      "source": "本次核对 3 项发布边界：Windows 签名、Apple 测试分发、生产整合。没有新增生产验收关闭结论。",
+      "occurrence": 0,
+      "target": "This review checks 3 release boundaries: Windows signing, Apple test distribution and production consolidation. It adds no new production acceptance closure.",
+      "context": "p @ line 96"
+    },
+    {
+      "id": "u_61b4d8496ea92be0",
+      "kind": "text",
+      "source": "Windows：8月29日追加分析已记录云签名完成。原报告的“旧版冻结”应与“新签名链路已有进展”同时阅读；干净机器安装、升级、连接和官网交付仍需验收。",
+      "occurrence": 0,
+      "target": "Windows: the August 29 addendum records completed cloud signing. Read the earlier frozen-client status alongside progress on the new signing path. Clean-machine installation, upgrade, connection and website delivery still require acceptance.",
+      "context": "p @ line 97"
+    },
+    {
+      "id": "u_43eca6ae6568ff0c",
+      "kind": "text",
+      "source": "Apple：8月24日内部记录确认测试归档已上传并获 TestFlight 有效构建状态。不能继续概括为“尚无测试分发”，也不能因此写成 App Store 上线或真机验收完成。",
+      "occurrence": 0,
+      "target": "Apple: the August 24 internal record confirms an uploaded staging archive accepted as a valid TestFlight build. It should no longer be summarized as no test distribution, but this does not establish an App Store release or completed device acceptance.",
+      "context": "p @ line 98"
+    },
+    {
+      "id": "u_ccfbc03dcfe8039c",
+      "kind": "text",
+      "source": "三、商业价值与财务边界",
+      "occurrence": 0,
+      "target": "3. Business value and financial boundaries",
+      "context": "h2 @ line 100"
+    },
+    {
+      "id": "u_8a49ccc80ad8e04c",
+      "kind": "text",
+      "source": "原报告的收入、注册与生产研究数字均为当时快照。本次未查询生产数据库，不更新累计收入、不计算新增节省，也不将部署后的指标变化归因于单一改动。",
+      "occurrence": 0,
+      "target": "Revenue, registration and production-study figures in the original reports are historical snapshots. This review did not query production data, update cumulative revenue, calculate new savings or attribute post-deployment metric changes to a single change.",
+      "context": "p @ line 101"
+    },
+    {
+      "id": "u_d8300d3e7940ae3c",
+      "kind": "text",
+      "source": "四、关键时间节点",
+      "occurrence": 0,
+      "target": "4. Key dates",
+      "context": "h2 @ line 103"
+    },
+    {
+      "id": "u_d40c66946921bf5a",
+      "kind": "text",
+      "source": "8月12日：生产基础设施整合。8月24日：Apple 测试分发证据。8月29日：追加分析复核 Windows 签名与部署边界。9月8日：本次文档复核。",
+      "occurrence": 0,
+      "target": "August 12: production infrastructure consolidation. August 24: Apple test-distribution evidence. August 29: addendum review of Windows signing and deployment boundaries. September 8: this document review.",
+      "context": "p @ line 104"
+    },
+    {
+      "id": "u_ab6887591091e2bc",
+      "kind": "text",
+      "source": "五、上线与兼容门槛",
+      "occurrence": 0,
+      "target": "5. Release and compatibility gates",
+      "context": "h2 @ line 106"
+    },
+    {
+      "id": "u_17472baceb733285",
+      "kind": "text",
+      "source": "后端继续同时承接可升级 Android 与旧版 iOS HiYou、Windows 客户端。新签名或测试构建不代表旧契约可以退出；登录、购买、配置获取和连接需要分别验收。",
+      "occurrence": 0,
+      "target": "The backend continues to serve upgradable Android and legacy iOS HiYou and Windows clients. New signing or test builds do not justify retiring legacy contracts. Login, purchasing, configuration retrieval and connection require separate acceptance.",
+      "context": "p @ line 107"
+    },
+    {
+      "id": "u_59113029c29bf4dc",
+      "kind": "text",
+      "source": "六、安全与权限管控",
+      "occurrence": 0,
+      "target": "6. Security and access control",
+      "context": "h2 @ line 109"
+    },
+    {
+      "id": "u_6129c75a7acff80b",
+      "kind": "text",
+      "source": "8月26日报告已记录源码白名单、测试环境凭证收口及运维入口限制。本次未复查权限或生产设施，不宣称名单变化；异地备份和恢复演练仍缺新的关闭证据。",
+      "occurrence": 0,
+      "target": "The August 26 report records the source-access allowlist, staging credential consolidation and restricted operations entry points. This review did not recheck permissions or production infrastructure and makes no access-change claim. New closure evidence for off-site backup and restore exercises remains absent.",
+      "context": "p @ line 110"
+    },
+    {
+      "id": "u_f5e7c743297bbbf4",
+      "kind": "text",
+      "source": "七、FFF 后续证据",
+      "occurrence": 0,
+      "target": "7. FFF follow-up evidence",
+      "context": "h2 @ line 112"
+    },
+    {
+      "id": "u_2ec2f29bcc00b285",
+      "kind": "text",
+      "source": "Lex 的 FFF 采用实时口径，但本页只引用截至8月29日的已记录事实：8月28日 Android 安装包已交 QA；交付不等于测试通过。公司注册、欧盟电话号码和支付网关属于 Roy 的商务事项，本次没有新增确认。",
+      "occurrence": 0,
+      "target": "Lex’s FFF work uses real-time reporting, but this page cites only facts recorded through August 29: the Android package was handed to QA on August 28. Handoff does not mean tests passed. Company registration, the EU phone number and payment gateway remain Roy’s business responsibilities; no new confirmation is added.",
+      "context": "p @ line 113"
+    },
+    {
+      "id": "u_11bc5ce2e420a0e2",
+      "kind": "text",
+      "source": "八、阻塞与下一步",
+      "occurrence": 0,
+      "target": "8. Blockers and next steps",
+      "context": "h2 @ line 115"
+    },
+    {
+      "id": "u_6063008c6b7f07aa",
+      "kind": "text",
+      "source": "Sprint 12（2026-09-05 至 2026-09-18）继续收集异地恢复、Windows 官网交付、Apple 真机连接及设备身份的验收证据。此处是验证目标，不是承诺这些事项已完成或将在指定日期上线。",
+      "occurrence": 0,
+      "target": "Sprint 12 (2026-09-05 to 2026-09-18) continues collection of acceptance evidence for off-site recovery, Windows website delivery, Apple device connections and device identity. These are verification targets, not claims of completion or promised release dates.",
+      "context": "p @ line 116"
+    },
+    {
+      "id": "u_03263b05c7463c9b",
+      "kind": "text",
+      "source": "后续按“环境发布、跨端回归、地区验收、业务指标”顺序关闭。历史技术债背景不重复展开；后续变化见第11阶段收尾报告。",
+      "occurrence": 0,
+      "target": "Close remaining work in the order of environment release, cross-client regression, regional acceptance and business metrics. The historical technical-debt narrative is not repeated; see the Sprint 11 closeout for subsequent changes.",
+      "context": "p @ line 117"
+    },
+    {
+      "id": "u_161c0154126a07e0",
+      "kind": "text",
+      "source": "历史报告与后续记录",
+      "occurrence": 0,
+      "target": "Historical reports and subsequent records",
+      "context": "h2 @ line 119 · surrounding text: 历史报告与后续记录 第10阶段原报告 生产研究追加分析 第11阶段收尾"
+    },
+    {
+      "id": "u_d564cbc66bf57a0c",
+      "kind": "text",
+      "source": "第10阶段原报告",
+      "occurrence": 0,
+      "target": "Original Sprint 10 report",
+      "context": "a @ line 119 · surrounding text: 历史报告与后续记录 第10阶段原报告 生产研究追加分析 第11阶段收尾"
+    },
+    {
+      "id": "u_fb7435c0e3859d88",
+      "kind": "text",
+      "source": "生产研究追加分析",
+      "occurrence": 0,
+      "target": "Production-study addendum",
+      "context": "a @ line 119 · surrounding text: 历史报告与后续记录 第10阶段原报告 生产研究追加分析 第11阶段收尾"
+    },
+    {
+      "id": "u_b212f760e474eabf",
+      "kind": "text",
+      "source": "第11阶段收尾",
+      "occurrence": 0,
+      "target": "Sprint 11 closeout",
+      "context": "a @ line 119 · surrounding text: 历史报告与后续记录 第10阶段原报告 生产研究追加分析 第11阶段收尾"
+    }
+  ],
+  "blocks": {
+    "b0001": {
+      "type": "heading",
+      "source": "第10阶段 · 发布边界后续核对 · 2026-09-08",
+      "occurrence": 0
+    },
+    "b0002": {
+      "type": "p",
+      "source": "生产整合事实保留；Windows 签名与 Apple 测试分发已有后续证据，正式交付和恢复能力仍按独立门槛关闭。",
+      "occurrence": 0
+    },
+    "b0003": {
+      "type": "heading",
+      "source": "一、关键决策与状态",
+      "occurrence": 0
+    },
+    "b0004": {
+      "type": "p",
+      "source": "本页是第10阶段的后续核对，复核日期为 2026-09-08。原阶段为 2026-08-08 至 2026-08-21；8月26日主报告及8月28日追加分析保留原貌。后续证据单独注明，不回写为阶段内交付。",
+      "occurrence": 0
+    },
+    "b0005": {
+      "type": "p",
+      "source": "原生产整合结论保留。基础设施切换完成，不等于设备身份、跨端兼容及地区可用性全部验收完成。",
+      "occurrence": 0
+    },
+    "b0006": {
+      "type": "heading",
+      "source": "二、核对结果",
+      "occurrence": 0
+    },
+    "b0007": {
+      "type": "p",
+      "source": "本次核对 3 项发布边界：Windows 签名、Apple 测试分发、生产整合。没有新增生产验收关闭结论。",
+      "occurrence": 0
+    },
+    "b0008": {
+      "type": "p",
+      "source": "Windows：8月29日追加分析已记录云签名完成。原报告的“旧版冻结”应与“新签名链路已有进展”同时阅读；干净机器安装、升级、连接和官网交付仍需验收。",
+      "occurrence": 0
+    },
+    "b0009": {
+      "type": "p",
+      "source": "Apple：8月24日内部记录确认测试归档已上传并获 TestFlight 有效构建状态。不能继续概括为“尚无测试分发”，也不能因此写成 App Store 上线或真机验收完成。",
+      "occurrence": 0
+    },
+    "b0010": {
+      "type": "heading",
+      "source": "三、商业价值与财务边界",
+      "occurrence": 0
+    },
+    "b0011": {
+      "type": "p",
+      "source": "原报告的收入、注册与生产研究数字均为当时快照。本次未查询生产数据库，不更新累计收入、不计算新增节省，也不将部署后的指标变化归因于单一改动。",
+      "occurrence": 0
+    },
+    "b0012": {
+      "type": "heading",
+      "source": "四、关键时间节点",
+      "occurrence": 0
+    },
+    "b0013": {
+      "type": "p",
+      "source": "8月12日：生产基础设施整合。8月24日：Apple 测试分发证据。8月29日：追加分析复核 Windows 签名与部署边界。9月8日：本次文档复核。",
+      "occurrence": 0
+    },
+    "b0014": {
+      "type": "heading",
+      "source": "五、上线与兼容门槛",
+      "occurrence": 0
+    },
+    "b0015": {
+      "type": "p",
+      "source": "后端继续同时承接可升级 Android 与旧版 iOS HiYou、Windows 客户端。新签名或测试构建不代表旧契约可以退出；登录、购买、配置获取和连接需要分别验收。",
+      "occurrence": 0
+    },
+    "b0016": {
+      "type": "heading",
+      "source": "六、安全与权限管控",
+      "occurrence": 0
+    },
+    "b0017": {
+      "type": "p",
+      "source": "8月26日报告已记录源码白名单、测试环境凭证收口及运维入口限制。本次未复查权限或生产设施，不宣称名单变化；异地备份和恢复演练仍缺新的关闭证据。",
+      "occurrence": 0
+    },
+    "b0018": {
+      "type": "heading",
+      "source": "七、FFF 后续证据",
+      "occurrence": 0
+    },
+    "b0019": {
+      "type": "p",
+      "source": "Lex 的 FFF 采用实时口径，但本页只引用截至8月29日的已记录事实：8月28日 Android 安装包已交 QA；交付不等于测试通过。公司注册、欧盟电话号码和支付网关属于 Roy 的商务事项，本次没有新增确认。",
+      "occurrence": 0
+    },
+    "b0020": {
+      "type": "heading",
+      "source": "八、阻塞与下一步",
+      "occurrence": 0
+    },
+    "b0021": {
+      "type": "p",
+      "source": "Sprint 12（2026-09-05 至 2026-09-18）继续收集异地恢复、Windows 官网交付、Apple 真机连接及设备身份的验收证据。此处是验证目标，不是承诺这些事项已完成或将在指定日期上线。",
+      "occurrence": 0
+    },
+    "b0022": {
+      "type": "p",
+      "source": "后续按“环境发布、跨端回归、地区验收、业务指标”顺序关闭。历史技术债背景不重复展开；后续变化见第11阶段收尾报告。",
+      "occurrence": 0
+    },
+    "b0023": {
+      "type": "heading",
+      "source": "历史报告与后续记录",
+      "occurrence": 0
+    },
+    "b0024": {
+      "type": "p",
+      "source": "第10阶段原报告",
+      "occurrence": 0
+    },
+    "b0025": {
+      "type": "p",
+      "source": "生产研究追加分析",
+      "occurrence": 0
+    },
+    "b0026": {
+      "type": "p",
+      "source": "第11阶段收尾",
+      "occurrence": 0
+    }
+  },
+  "reviewedTargetHash": "a74049b1f1402508"
+}

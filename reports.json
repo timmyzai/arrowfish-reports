@@ -126,5 +126,30 @@
     "file": "Stakeholder/Goal-2026/20260827_goals.html",
     "translations": { "en": "locales/en/reports/goal-2026-20260827.json" },
     "version": "20260829-8"
+  },
+  {
+    "id": "sprint-10-status-20260908",
+    "name": {
+      "zh-CN": "第10阶段 · 发布边界后续核对 · 2026-09-08",
+      "en": "Sprint 10 · Release Boundary Follow-up · 2026-09-08"
+    },
+    "date": "2026-09-08",
+    "file": "Stakeholder/Sprint-10/20260908_status-update.html",
+    "translations": {
+      "en": "locales/en/reports/sprint-10-status-20260908.json"
+    },
+    "defaultForSprintPage": false
+  },
+  {
+    "id": "sprint-11-summary",
+    "name": {
+      "zh-CN": "第11阶段 · 收尾报告 · 2026-08-22 至 2026-09-04",
+      "en": "Sprint 11 · Closeout Report · 2026-08-22 to 2026-09-04"
+    },
+    "date": "2026-09-04",
+    "file": "Stakeholder/Sprint-11/20260904_sprint_report.html",
+    "translations": {
+      "en": "locales/en/reports/sprint-11-summary.json"
+    }
   }
 ]

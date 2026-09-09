@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-report-id="sprint-10-status-20260908">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex, nofollow">
+<title>第10阶段 · 发布边界后续核对 · 2026-09-08</title><meta name="description" content="阶段证据复核，区分源码进展、发布与验收。">
+<script src="../../assets/ui-i18n.js"></script><script src="../../assets/site-preferences.js"></script><script src="../../assets/auth-gate.js"></script><link rel="stylesheet" href="../../assets/site-theme.css">
+<style>
+    :root {
+      --bg: var(--af-bg);
+      --paper: var(--af-surface);
+      --text: var(--af-text);
+      --muted: var(--af-text-muted);
+      --line: var(--af-border);
+      --blue: var(--af-primary);
+      --green: var(--af-success);
+      --green-bg: var(--af-success-soft);
+      --yellow: var(--af-warning);
+      --yellow-bg: var(--af-warning-soft);
+      --red: var(--af-danger);
+      --red-bg: var(--af-danger-soft);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", "Segoe UI", sans-serif;
+      line-height: 1.68;
+      -webkit-font-smoothing: antialiased;
+    }
+    main { max-width: 1120px; margin: 0 auto; padding: 32px 20px 56px; }
+    header { padding: 28px 0 18px; border-bottom: 1px solid var(--line); margin-bottom: 24px; }
+    .eyebrow { color: var(--blue); font-size: 14px; font-weight: 700; margin: 0 0 8px; }
+    h1 { font-size: 32px; line-height: 1.25; margin: 0 0 10px; letter-spacing: 0; }
+    .meta { color: var(--muted); margin: 0; font-size: 15px; }
+    section { background: var(--paper); border: 1px solid var(--line); border-radius: 8px; padding: 22px; margin: 18px 0; }
+    h2 { font-size: 21px; margin: 0 0 14px; letter-spacing: 0; display: flex; align-items: center; gap: 8px; }
+    h3 { font-size: 16px; margin: 18px 0 8px; color: var(--text); }
+    p { margin: 0 0 12px; }
+    p:last-child { margin-bottom: 0; }
+    .tldr { border-left: 5px solid var(--blue); background: var(--af-primary-soft); font-size: 18px; font-weight: 650; }
+    table { width: 100%; border-collapse: collapse; margin-top: 8px; font-size: 14.5px; }
+    th, td { border: 1px solid var(--line); padding: 10px 12px; text-align: left; vertical-align: top; }
+    th { background: var(--af-surface-muted); font-weight: 700; }
+    .score { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; margin: 12px 0; }
+    .metric { border: 1px solid var(--line); border-radius: 8px; padding: 14px; background: var(--af-surface-muted); }
+    .metric b, .metric strong { display: block; font-size: 21px; margin-bottom: 4px; }
+    .metric span { color: var(--muted); font-size: 12.5px; }
+    .note { color: var(--muted); font-size: 13.5px; margin-top: 10px; }
+    .ok { color: var(--green); font-weight: 700; }
+    .watch { color: var(--yellow); font-weight: 700; }
+    .risk { color: var(--red); font-weight: 700; }
+    .callout { border-radius: 8px; padding: 14px 16px; margin: 10px 0; border-left: 4px solid var(--blue); background: var(--af-primary-soft); font-size: 14.5px; }
+    .callout.risk, .callout.critical { border-left-color: var(--red); background: var(--red-bg); color: var(--text); }
+    .callout.watch { border-left-color: var(--yellow); background: var(--yellow-bg); color: var(--text); }
+    .callout.ok { border-left-color: var(--green); background: var(--green-bg); color: var(--text); }
+    .badge { display: inline-block; padding: 2px 9px; border-radius: 4px; font-size: 12.5px; font-weight: 700; white-space: nowrap; }
+    .badge.done { background: var(--af-success-soft); color: var(--af-success); }
+    .badge.progress { background: var(--af-warning-soft); color: var(--af-warning); }
+    .badge.pending { background: var(--af-surface-muted); color: var(--af-text-muted); }
+    .badge.risk { background: var(--af-danger-soft); color: var(--af-danger); }
+    .part {
+      margin: 30px 0 4px;
+      padding: 16px 20px;
+      border-radius: 8px;
+      background: linear-gradient(90deg, var(--af-primary) 0%, var(--af-primary) 100%);
+      color: var(--af-on-accent);
+    }
+    .part .pnum { font-size: 12.5px; font-weight: 700; opacity: .85; letter-spacing: .08em; }
+    .part .ptitle { font-size: 22px; font-weight: 700; margin-top: 2px; }
+    .part .psub { font-size: 13.5px; opacity: .9; margin-top: 4px; }
+    .part.fff { background: linear-gradient(90deg, var(--fff) 0%, var(--fff) 100%); }
+    ol, ul { padding-left: 22px; }
+    li { margin: 6px 0; }
+    .footer { margin-top: 24px; padding-top: 14px; border-top: 1px solid var(--line); font-size: 12.5px; color: var(--muted); text-align: center; }
+    @media (max-width: 760px) {
+      main { padding: 20px 12px 40px; }
+      h1 { font-size: 24px; }
+      section { padding: 16px; }
+      .score { grid-template-columns: 1fr 1fr; }
+      table { display: block; overflow-x: auto; font-size: 13px; }
+      th, td { padding: 7px 8px; }
+    }
+    @media (max-width: 480px) { .score { grid-template-columns: 1fr; } }
+    @media print { body { background: var(--af-surface); } main { max-width: none; padding: 0; } section { break-inside: avoid; } }
+
+nav a {display:inline-flex;align-items:center;min-height:44px} p {overflow-wrap:anywhere} a:focus-visible {outline:3px solid var(--af-primary);outline-offset:3px}
+</style></head><body><main>
+<nav><a href="../../index.html">返回报告目录</a></nav>
+<header data-report-header><h1>第10阶段 · 发布边界后续核对 · 2026-09-08</h1></header><section class="tldr"><p>生产整合事实保留；Windows 签名与 Apple 测试分发已有后续证据，正式交付和恢复能力仍按独立门槛关闭。</p></section>
+<section id="section-1"><h2>一、关键决策与状态</h2>
+<p>本页是第10阶段的后续核对，复核日期为 2026-09-08。原阶段为 2026-08-08 至 2026-08-21；8月26日主报告及8月28日追加分析保留原貌。后续证据单独注明，不回写为阶段内交付。</p>
+<p>原生产整合结论保留。基础设施切换完成，不等于设备身份、跨端兼容及地区可用性全部验收完成。</p>
+</section>
+<section id="section-2"><h2>二、核对结果</h2>
+<p>本次核对 3 项发布边界：Windows 签名、Apple 测试分发、生产整合。没有新增生产验收关闭结论。</p>
+<p>Windows：8月29日追加分析已记录云签名完成。原报告的“旧版冻结”应与“新签名链路已有进展”同时阅读；干净机器安装、升级、连接和官网交付仍需验收。</p>
+<p>Apple：8月24日内部记录确认测试归档已上传并获 TestFlight 有效构建状态。不能继续概括为“尚无测试分发”，也不能因此写成 App Store 上线或真机验收完成。</p>
+</section>
+<section id="section-3"><h2>三、商业价值与财务边界</h2>
+<p>原报告的收入、注册与生产研究数字均为当时快照。本次未查询生产数据库，不更新累计收入、不计算新增节省，也不将部署后的指标变化归因于单一改动。</p>
+</section>
+<section id="section-4"><h2>四、关键时间节点</h2>
+<p>8月12日：生产基础设施整合。8月24日：Apple 测试分发证据。8月29日：追加分析复核 Windows 签名与部署边界。9月8日：本次文档复核。</p>
+</section>
+<section id="section-5"><h2>五、上线与兼容门槛</h2>
+<p>后端继续同时承接可升级 Android 与旧版 iOS HiYou、Windows 客户端。新签名或测试构建不代表旧契约可以退出；登录、购买、配置获取和连接需要分别验收。</p>
+</section>
+<section id="section-6"><h2>六、安全与权限管控</h2>
+<p>8月26日报告已记录源码白名单、测试环境凭证收口及运维入口限制。本次未复查权限或生产设施，不宣称名单变化；异地备份和恢复演练仍缺新的关闭证据。</p>
+</section>
+<section id="section-7"><h2>七、FFF 后续证据</h2>
+<p>Lex 的 FFF 采用实时口径，但本页只引用截至8月29日的已记录事实：8月28日 Android 安装包已交 QA；交付不等于测试通过。公司注册、欧盟电话号码和支付网关属于 Roy 的商务事项，本次没有新增确认。</p>
+</section>
+<section id="section-8"><h2>八、阻塞与下一步</h2>
+<p>Sprint 12（2026-09-05 至 2026-09-18）继续收集异地恢复、Windows 官网交付、Apple 真机连接及设备身份的验收证据。此处是验证目标，不是承诺这些事项已完成或将在指定日期上线。</p>
+<p>后续按“环境发布、跨端回归、地区验收、业务指标”顺序关闭。历史技术债背景不重复展开；后续变化见第11阶段收尾报告。</p>
+</section>
+<section><h2>历史报告与后续记录</h2><p><a href="../Sprint-10/20260826_report.html">第10阶段原报告</a></p><p><a href="../Sprint-10/20260828_production-study-addendum.html">生产研究追加分析</a></p><p><a href="../Sprint-11/20260904_sprint_report.html">第11阶段收尾</a></p></section></main></body></html>

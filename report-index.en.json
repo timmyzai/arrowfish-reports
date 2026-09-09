@@ -1,5 +1,7 @@
 {
   "order": [
+    "sprint-10-status-20260908",
+    "sprint-11-summary",
     "goal-2026-20260827",
     "sprint-10-production-study-20260828",
     "sprint-10-full",
@@ -562,6 +564,160 @@
     }
   },
   "blockers": [
+    {
+      "reportId": "sprint-10-status-20260908",
+      "blockId": "b0004",
+      "reportDate": "2026-09-08",
+      "section": "1. Key decisions and status",
+      "text": "This is a follow-up review of Sprint 10, reviewed on 2026-09-08. The original period is 2026-08-08 to 2026-08-21. The August 26 report and August 28 addendum remain unchanged. Later evidence is identified separately, not backdated as delivery within the sprint."
+    },
+    {
+      "reportId": "sprint-10-status-20260908",
+      "blockId": "b0005",
+      "reportDate": "2026-09-08",
+      "section": "1. Key decisions and status",
+      "text": "The production consolidation finding stands. Completed infrastructure cutover does not establish acceptance of device identity, cross-client compatibility or regional availability."
+    },
+    {
+      "reportId": "sprint-10-status-20260908",
+      "blockId": "b0009",
+      "reportDate": "2026-09-08",
+      "section": "2. Review results",
+      "text": "Apple: the August 24 internal record confirms an uploaded staging archive accepted as a valid TestFlight build. It should no longer be summarized as no test distribution, but this does not establish an App Store release or completed device acceptance."
+    },
+    {
+      "reportId": "sprint-10-status-20260908",
+      "blockId": "b0011",
+      "reportDate": "2026-09-08",
+      "section": "3. Business value and financial boundaries",
+      "text": "Revenue, registration and production-study figures in the original reports are historical snapshots. This review did not query production data, update cumulative revenue, calculate new savings or attribute post-deployment metric changes to a single change."
+    },
+    {
+      "reportId": "sprint-10-status-20260908",
+      "blockId": "b0015",
+      "reportDate": "2026-09-08",
+      "section": "5. Release and compatibility gates",
+      "text": "The backend continues to serve upgradable Android and legacy iOS HiYou and Windows clients. New signing or test builds do not justify retiring legacy contracts. Login, purchasing, configuration retrieval and connection require separate acceptance."
+    },
+    {
+      "reportId": "sprint-10-status-20260908",
+      "blockId": "b0017",
+      "reportDate": "2026-09-08",
+      "section": "6. Security and access control",
+      "text": "The August 26 report records the source-access allowlist, staging credential consolidation and restricted operations entry points. This review did not recheck permissions or production infrastructure and makes no access-change claim. New closure evidence for off-site backup and restore exercises remains absent."
+    },
+    {
+      "reportId": "sprint-10-status-20260908",
+      "blockId": "b0019",
+      "reportDate": "2026-09-08",
+      "section": "7. FFF follow-up evidence",
+      "text": "Lex’s FFF work uses real-time reporting, but this page cites only facts recorded through August 29: the Android package was handed to QA on August 28. Handoff does not mean tests passed. Company registration, the EU phone number and payment gateway remain Roy’s business responsibilities; no new confirmation is added."
+    },
+    {
+      "reportId": "sprint-10-status-20260908",
+      "blockId": "b0021",
+      "reportDate": "2026-09-08",
+      "section": "8. Blockers and next steps",
+      "text": "Sprint 12 (2026-09-05 to 2026-09-18) continues collection of acceptance evidence for off-site recovery, Windows website delivery, Apple device connections and device identity. These are verification targets, not claims of completion or promised release dates."
+    },
+    {
+      "reportId": "sprint-10-status-20260908",
+      "blockId": "b0022",
+      "reportDate": "2026-09-08",
+      "section": "8. Blockers and next steps",
+      "text": "Close remaining work in the order of environment release, cross-client regression, regional acceptance and business metrics. The historical technical-debt narrative is not repeated; see the Sprint 11 closeout for subsequent changes."
+    },
+    {
+      "reportId": "sprint-11-summary",
+      "blockId": "b0004",
+      "reportDate": "2026-09-04",
+      "section": "1. Key decisions and status",
+      "text": "Reporting period: 2026-08-22 to 2026-09-04, 14 days; prepared and reviewed on 2026-09-08. Findings follow period evidence, and unverified deployments are not marked released. The September 7–8 membership timeline refactor and subsequent commits belong to Sprint 12."
+    },
+    {
+      "reportId": "sprint-11-summary",
+      "blockId": "b0007",
+      "reportDate": "2026-09-04",
+      "section": "2. Key outcomes and acceptance boundaries",
+      "text": "This report groups 6 engineering themes; this is not a Jira issue count or completion rate. Each retains open runtime or release gates."
+    },
+    {
+      "reportId": "sprint-11-summary",
+      "blockId": "b0008",
+      "reportDate": "2026-09-04",
+      "section": "2. Key outcomes and acceptance boundaries",
+      "text": "Payments and subscriptions: shared rules, payment state, provider callbacks, scheduled retries and Back Office (BO) views have source implementations under validation. Complete acceptance of migrations, duplicate events, concurrency and real payments is not recorded; the September 2 record still requires review of overlapping migrations."
+    },
+    {
+      "reportId": "sprint-11-summary",
+      "blockId": "b0009",
+      "reportDate": "2026-09-04",
+      "section": "2. Key outcomes and acceptance boundaries",
+      "text": "Device identity and order sessions: identity resolution and cross-origin support are under validation. The August 27 environment check explicitly found that CORS did not allow the new device-identity header; frontend release must wait for backend environment support."
+    },
+    {
+      "reportId": "sprint-11-summary",
+      "blockId": "b0011",
+      "reportDate": "2026-09-04",
+      "section": "2. Key outcomes and acceptance boundaries",
+      "text": "VPN node management: management/runtime separation, automatic geographic naming, package-lock handling and asynchronous firewall jobs progressed. Local builds and frontend compilation do not establish production-VPN node acceptance."
+    },
+    {
+      "reportId": "sprint-11-summary",
+      "blockId": "b0012",
+      "reportDate": "2026-09-04",
+      "section": "2. Key outcomes and acceptance boundaries",
+      "text": "Plans and dedicated routes: full-catalogue and dedicated-tier visibility are under validation. The August 30 record distinguishes manually granted routes from purchased routes; a display fix does not close the purchased-route entitlement gap."
+    },
+    {
+      "reportId": "sprint-11-summary",
+      "blockId": "b0015",
+      "reportDate": "2026-09-04",
+      "section": "3. Improvements and business value",
+      "text": "Unified payment rules aim to reduce duplicate processing and renewal interruption; identity standardization aims to improve account/device binding reliability; traceable VPN node jobs aim to reduce manual investigation after failed operations. These are intended benefits, not measured revenue growth or cost savings."
+    },
+    {
+      "reportId": "sprint-11-summary",
+      "blockId": "b0019",
+      "reportDate": "2026-09-04",
+      "section": "5. Release plan and compatibility challenges",
+      "text": "Verify database migrations and backend configuration before releasing websites and clients that depend on them. Legacy iOS HiYou and Windows still require backend compatibility; upgradable Android does not replace multi-client regression."
+    },
+    {
+      "reportId": "sprint-11-summary",
+      "blockId": "b0020",
+      "reportDate": "2026-09-04",
+      "section": "5. Release plan and compatibility challenges",
+      "text": "Period evidence does not support marking the subscription loop, dedicated-resource purchase path or fleet-wide three-protocol regional acceptance complete."
+    },
+    {
+      "reportId": "sprint-11-summary",
+      "blockId": "b0023",
+      "reportDate": "2026-09-04",
+      "section": "6. Security and access control",
+      "text": "This review has no new source-allowlist verification, production off-site restore exercise or infrastructure permission-change evidence. The previous report remains the historical reference; these risks are not claimed closed."
+    },
+    {
+      "reportId": "sprint-11-summary",
+      "blockId": "b0025",
+      "reportDate": "2026-09-04",
+      "section": "7. Parallel FFF progress",
+      "text": "Lex’s real-time reporting, with evidence through August 29: the Android package was handed to QA on August 28. Acceptance results for installation, upgrade, protocol connections and automatic grouping are not recorded; package handoff is not a production release."
+    },
+    {
+      "reportId": "sprint-11-summary",
+      "blockId": "b0028",
+      "reportDate": "2026-09-04",
+      "section": "8. Blockers, next steps and longer-term sequence",
+      "text": "Suggested verification order for Sprint 12 (2026-09-05 to 2026-09-18): resolve overlapping migrations and backend CORS configuration first, complete payment and dedicated-purchase scenarios next, then capture runtime acceptance for VPN nodes, three client platforms, DNS and speed limits. This is a suggested verification sequence, not a new release commitment."
+    },
+    {
+      "reportId": "sprint-11-summary",
+      "blockId": "b0029",
+      "reportDate": "2026-09-04",
+      "section": "8. Blockers, next steps and longer-term sequence",
+      "text": "Off-site recovery, legacy-client retirement and the isolated FFF environment continue as separate milestones. Moving into a new sprint does not complete open work; stage objectives and production acceptance are tracked separately."
+    },
     {
       "reportId": "goal-2026-20260827",
       "blockId": "b0009",
