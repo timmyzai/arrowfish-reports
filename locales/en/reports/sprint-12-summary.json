@@ -1,0 +1,893 @@
+{
+  "schemaVersion": 1,
+  "reportId": "sprint-12-summary",
+  "sourceFile": "Stakeholder/Sprint-12/20260918_sprint_report.html",
+  "sourceVersion": "3403ecc7c4fde1b9",
+  "units": [
+    {
+      "id": "u_3bc3f5b4f6c33a57",
+      "kind": "text",
+      "source": "第12阶段 · 续费与多平台进展",
+      "occurrence": 0,
+      "target": "Sprint 12 · Renewals and Cross-Platform Progress",
+      "context": "title @ line 4"
+    },
+    {
+      "id": "u_2fe9518c29aae707",
+      "kind": "attribute",
+      "source": "续费功能完成实现，Android 持续交付六次测试版本，连接与主页体验继续改善，FFF 向 Windows 和 Apple 平台推进。",
+      "occurrence": 0,
+      "target": "Renewal implementation completed, Android delivered six staging releases, connection and home-page experience progressed, and FFF advanced on Windows and Apple platforms.",
+      "context": "meta @ line 4 · surrounding text: 第12阶段 · 续费与多平台进展",
+      "attribute": "content"
+    },
+    {
+      "id": "u_75722f722e8c2fdf",
+      "kind": "text",
+      "source": "返回报告目录",
+      "occurrence": 0,
+      "target": "Back to report index",
+      "context": "a @ line 89"
+    },
+    {
+      "id": "u_c4cdadc592d0ab46",
+      "kind": "text",
+      "source": "第12阶段 · 续费与多平台进展",
+      "occurrence": 1,
+      "target": "Sprint 12 · Renewals and Cross-Platform Progress",
+      "context": "h1 @ line 90 · surrounding text: 第12阶段 · 续费与多平台进展 报告周期 2026-09-05 至 2026-09-18 · 复核 2026-09-23"
+    },
+    {
+      "id": "u_f5be94d9b3ba5a13",
+      "kind": "text",
+      "source": "报告周期 2026-09-05 至 2026-09-18 · 复核 2026-09-23",
+      "occurrence": 0,
+      "target": "Reporting period 2026-09-05 to 2026-09-18 · Reviewed 2026-09-23",
+      "context": "p.meta @ line 90 · surrounding text: 第12阶段 · 续费与多平台进展 报告周期 2026-09-05 至 2026-09-18 · 复核 2026-09-23"
+    },
+    {
+      "id": "u_dfd37169e4b558d9",
+      "kind": "text",
+      "source": "续费功能完成实现，Android 持续交付六次测试版本，连接与主页体验继续改善，FFF 向 Windows 和 Apple 平台推进。",
+      "occurrence": 0,
+      "target": "Renewal implementation completed, Android delivered six staging releases, connection and home-page experience progressed, and FFF advanced on Windows and Apple platforms.",
+      "context": "p @ line 91"
+    },
+    {
+      "id": "u_abdd261a39ae9c77",
+      "kind": "text",
+      "source": "一、本阶段关键决策与状态",
+      "occurrence": 0,
+      "target": "1. Key decisions and status",
+      "context": "h2 @ line 92 · surrounding text: 一、本阶段关键决策与状态 续费功能于9月18日完成实现并进入测试交付；主页向单 IP 展示简化。Windows、iOS 与 FFF 多平台继续开发和验证，正式发布按各平台验收结果推进。 二、本阶段关键成果 6 次 Android 测试发布 9月18日 续费功能实现完成 9月7日 中国、台湾 Android 测试连接确认 FFF Apple macOS、iPhone 未签名构建通过 进展 交付结果 下一步 续费与购买 会员天数按等级与购买顺序使用的基础逻辑、购买接口及 Android 对接进入测试；暂停的天数保留。 覆盖重复购买、到期切换、支付回调和退款；商店自动续费单独验证。 连接与线路体验 先探测再选线、部分测速结果、缓存延迟、重连与剩余时间展示持续改进。 补齐协议、地区与设备回归；零配额仅测速仍属计划。 主页简化 9月18日与 SkyKing 讨论原设计；Timmy 明确采用最新简化 "
+    },
+    {
+      "id": "u_09b7bd17dba227b1",
+      "kind": "text",
+      "source": "续费功能于9月18日完成实现并进入测试交付；主页向单 IP 展示简化。Windows、iOS 与 FFF 多平台继续开发和验证，正式发布按各平台验收结果推进。",
+      "occurrence": 0,
+      "target": "Renewal functionality was implemented by 18 Sep and entered test delivery; the home page is moving toward a single IP display. Windows, iOS and FFF platforms continue through development and validation, with production release tied to platform-specific acceptance testing.",
+      "context": "p @ line 92 · surrounding text: 一、本阶段关键决策与状态 续费功能于9月18日完成实现并进入测试交付；主页向单 IP 展示简化。Windows、iOS 与 FFF 多平台继续开发和验证，正式发布按各平台验收结果推进。 二、本阶段关键成果 6 次 Android 测试发布 9月18日 续费功能实现完成 9月7日 中国、台湾 Android 测试连接确认 FFF Apple macOS、iPhone 未签名构建通过 进展 交付结果 下一步 续费与购买 会员天数按等级与购买顺序使用的基础逻辑、购买接口及 Android 对接进入测试；暂停的天数保留。 覆盖重复购买、到期切换、支付回调和退款；商店自动续费单独验证。 连接与线路体验 先探测再选线、部分测速结果、缓存延迟、重连与剩余时间展示持续改进。 补齐协议、地区与设备回归；零配额仅测速仍属计划。 主页简化 9月18日与 SkyKing 讨论原设计；Timmy 明确采用最新简化 "
+    },
+    {
+      "id": "u_65aa2e7f461224a1",
+      "kind": "text",
+      "source": "二、本阶段关键成果",
+      "occurrence": 0,
+      "target": "2. Key outcomes",
+      "context": "h2 @ line 92 · surrounding text: 一、本阶段关键决策与状态 续费功能于9月18日完成实现并进入测试交付；主页向单 IP 展示简化。Windows、iOS 与 FFF 多平台继续开发和验证，正式发布按各平台验收结果推进。 二、本阶段关键成果 6 次 Android 测试发布 9月18日 续费功能实现完成 9月7日 中国、台湾 Android 测试连接确认 FFF Apple macOS、iPhone 未签名构建通过 进展 交付结果 下一步 续费与购买 会员天数按等级与购买顺序使用的基础逻辑、购买接口及 Android 对接进入测试；暂停的天数保留。 覆盖重复购买、到期切换、支付回调和退款；商店自动续费单独验证。 连接与线路体验 先探测再选线、部分测速结果、缓存延迟、重连与剩余时间展示持续改进。 补齐协议、地区与设备回归；零配额仅测速仍属计划。 主页简化 9月18日与 SkyKing 讨论原设计；Timmy 明确采用最新简化 "
+    },
+    {
+      "id": "u_718e029fe0fbb5ac",
+      "kind": "text",
+      "source": "6 次",
+      "occurrence": 0,
+      "target": "6",
+      "context": "b @ line 92 · surrounding text: 一、本阶段关键决策与状态 续费功能于9月18日完成实现并进入测试交付；主页向单 IP 展示简化。Windows、iOS 与 FFF 多平台继续开发和验证，正式发布按各平台验收结果推进。 二、本阶段关键成果 6 次 Android 测试发布 9月18日 续费功能实现完成 9月7日 中国、台湾 Android 测试连接确认 FFF Apple macOS、iPhone 未签名构建通过 进展 交付结果 下一步 续费与购买 会员天数按等级与购买顺序使用的基础逻辑、购买接口及 Android 对接进入测试；暂停的天数保留。 覆盖重复购买、到期切换、支付回调和退款；商店自动续费单独验证。 连接与线路体验 先探测再选线、部分测速结果、缓存延迟、重连与剩余时间展示持续改进。 补齐协议、地区与设备回归；零配额仅测速仍属计划。 主页简化 9月18日与 SkyKing 讨论原设计；Timmy 明确采用最新简化 "
+    },
+    {
+      "id": "u_a160e64c21ec4902",
+      "kind": "text",
+      "source": "Android 测试发布",
+      "occurrence": 0,
+      "target": "Android staging releases",
+      "context": "span @ line 92 · surrounding text: 一、本阶段关键决策与状态 续费功能于9月18日完成实现并进入测试交付；主页向单 IP 展示简化。Windows、iOS 与 FFF 多平台继续开发和验证，正式发布按各平台验收结果推进。 二、本阶段关键成果 6 次 Android 测试发布 9月18日 续费功能实现完成 9月7日 中国、台湾 Android 测试连接确认 FFF Apple macOS、iPhone 未签名构建通过 进展 交付结果 下一步 续费与购买 会员天数按等级与购买顺序使用的基础逻辑、购买接口及 Android 对接进入测试；暂停的天数保留。 覆盖重复购买、到期切换、支付回调和退款；商店自动续费单独验证。 连接与线路体验 先探测再选线、部分测速结果、缓存延迟、重连与剩余时间展示持续改进。 补齐协议、地区与设备回归；零配额仅测速仍属计划。 主页简化 9月18日与 SkyKing 讨论原设计；Timmy 明确采用最新简化 "
+    },
+    {
+      "id": "u_6578b63a5300e98c",
+      "kind": "text",
+      "source": "9月18日",
+      "occurrence": 0,
+      "target": "18 Sep",
+      "context": "b @ line 92 · surrounding text: 一、本阶段关键决策与状态 续费功能于9月18日完成实现并进入测试交付；主页向单 IP 展示简化。Windows、iOS 与 FFF 多平台继续开发和验证，正式发布按各平台验收结果推进。 二、本阶段关键成果 6 次 Android 测试发布 9月18日 续费功能实现完成 9月7日 中国、台湾 Android 测试连接确认 FFF Apple macOS、iPhone 未签名构建通过 进展 交付结果 下一步 续费与购买 会员天数按等级与购买顺序使用的基础逻辑、购买接口及 Android 对接进入测试；暂停的天数保留。 覆盖重复购买、到期切换、支付回调和退款；商店自动续费单独验证。 连接与线路体验 先探测再选线、部分测速结果、缓存延迟、重连与剩余时间展示持续改进。 补齐协议、地区与设备回归；零配额仅测速仍属计划。 主页简化 9月18日与 SkyKing 讨论原设计；Timmy 明确采用最新简化 "
+    },
+    {
+      "id": "u_0f141915e3f058de",
+      "kind": "text",
+      "source": "续费功能实现完成",
+      "occurrence": 0,
+      "target": "Renewal implementation completed",
+      "context": "span @ line 92 · surrounding text: 一、本阶段关键决策与状态 续费功能于9月18日完成实现并进入测试交付；主页向单 IP 展示简化。Windows、iOS 与 FFF 多平台继续开发和验证，正式发布按各平台验收结果推进。 二、本阶段关键成果 6 次 Android 测试发布 9月18日 续费功能实现完成 9月7日 中国、台湾 Android 测试连接确认 FFF Apple macOS、iPhone 未签名构建通过 进展 交付结果 下一步 续费与购买 会员天数按等级与购买顺序使用的基础逻辑、购买接口及 Android 对接进入测试；暂停的天数保留。 覆盖重复购买、到期切换、支付回调和退款；商店自动续费单独验证。 连接与线路体验 先探测再选线、部分测速结果、缓存延迟、重连与剩余时间展示持续改进。 补齐协议、地区与设备回归；零配额仅测速仍属计划。 主页简化 9月18日与 SkyKing 讨论原设计；Timmy 明确采用最新简化 "
+    },
+    {
+      "id": "u_5738e1c7265ba34a",
+      "kind": "text",
+      "source": "9月7日",
+      "occurrence": 0,
+      "target": "7 Sep",
+      "context": "b @ line 92 · surrounding text: 一、本阶段关键决策与状态 续费功能于9月18日完成实现并进入测试交付；主页向单 IP 展示简化。Windows、iOS 与 FFF 多平台继续开发和验证，正式发布按各平台验收结果推进。 二、本阶段关键成果 6 次 Android 测试发布 9月18日 续费功能实现完成 9月7日 中国、台湾 Android 测试连接确认 FFF Apple macOS、iPhone 未签名构建通过 进展 交付结果 下一步 续费与购买 会员天数按等级与购买顺序使用的基础逻辑、购买接口及 Android 对接进入测试；暂停的天数保留。 覆盖重复购买、到期切换、支付回调和退款；商店自动续费单独验证。 连接与线路体验 先探测再选线、部分测速结果、缓存延迟、重连与剩余时间展示持续改进。 补齐协议、地区与设备回归；零配额仅测速仍属计划。 主页简化 9月18日与 SkyKing 讨论原设计；Timmy 明确采用最新简化 "
+    },
+    {
+      "id": "u_5ebb3edbb9280992",
+      "kind": "text",
+      "source": "中国、台湾 Android 测试连接确认",
+      "occurrence": 0,
+      "target": "Android staging connectivity confirmed in China and Taiwan",
+      "context": "span @ line 92 · surrounding text: 一、本阶段关键决策与状态 续费功能于9月18日完成实现并进入测试交付；主页向单 IP 展示简化。Windows、iOS 与 FFF 多平台继续开发和验证，正式发布按各平台验收结果推进。 二、本阶段关键成果 6 次 Android 测试发布 9月18日 续费功能实现完成 9月7日 中国、台湾 Android 测试连接确认 FFF Apple macOS、iPhone 未签名构建通过 进展 交付结果 下一步 续费与购买 会员天数按等级与购买顺序使用的基础逻辑、购买接口及 Android 对接进入测试；暂停的天数保留。 覆盖重复购买、到期切换、支付回调和退款；商店自动续费单独验证。 连接与线路体验 先探测再选线、部分测速结果、缓存延迟、重连与剩余时间展示持续改进。 补齐协议、地区与设备回归；零配额仅测速仍属计划。 主页简化 9月18日与 SkyKing 讨论原设计；Timmy 明确采用最新简化 "
+    },
+    {
+      "id": "u_c34f7efdbebb0c6e",
+      "kind": "text",
+      "source": "macOS、iPhone 未签名构建通过",
+      "occurrence": 0,
+      "target": "macOS and iPhone builds passed without signing",
+      "context": "span @ line 92 · surrounding text: 一、本阶段关键决策与状态 续费功能于9月18日完成实现并进入测试交付；主页向单 IP 展示简化。Windows、iOS 与 FFF 多平台继续开发和验证，正式发布按各平台验收结果推进。 二、本阶段关键成果 6 次 Android 测试发布 9月18日 续费功能实现完成 9月7日 中国、台湾 Android 测试连接确认 FFF Apple macOS、iPhone 未签名构建通过 进展 交付结果 下一步 续费与购买 会员天数按等级与购买顺序使用的基础逻辑、购买接口及 Android 对接进入测试；暂停的天数保留。 覆盖重复购买、到期切换、支付回调和退款；商店自动续费单独验证。 连接与线路体验 先探测再选线、部分测速结果、缓存延迟、重连与剩余时间展示持续改进。 补齐协议、地区与设备回归；零配额仅测速仍属计划。 主页简化 9月18日与 SkyKing 讨论原设计；Timmy 明确采用最新简化 "
+    },
+    {
+      "id": "u_2bffe1de9a33f57b",
+      "kind": "text",
+      "source": "进展",
+      "occurrence": 0,
+      "target": "Progress",
+      "context": "th @ line 92 · surrounding text: 一、本阶段关键决策与状态 续费功能于9月18日完成实现并进入测试交付；主页向单 IP 展示简化。Windows、iOS 与 FFF 多平台继续开发和验证，正式发布按各平台验收结果推进。 二、本阶段关键成果 6 次 Android 测试发布 9月18日 续费功能实现完成 9月7日 中国、台湾 Android 测试连接确认 FFF Apple macOS、iPhone 未签名构建通过 进展 交付结果 下一步 续费与购买 会员天数按等级与购买顺序使用的基础逻辑、购买接口及 Android 对接进入测试；暂停的天数保留。 覆盖重复购买、到期切换、支付回调和退款；商店自动续费单独验证。 连接与线路体验 先探测再选线、部分测速结果、缓存延迟、重连与剩余时间展示持续改进。 补齐协议、地区与设备回归；零配额仅测速仍属计划。 主页简化 9月18日与 SkyKing 讨论原设计；Timmy 明确采用最新简化 "
+    },
+    {
+      "id": "u_aadbd1f32d589e1c",
+      "kind": "text",
+      "source": "交付结果",
+      "occurrence": 0,
+      "target": "Delivery result",
+      "context": "th @ line 92 · surrounding text: 一、本阶段关键决策与状态 续费功能于9月18日完成实现并进入测试交付；主页向单 IP 展示简化。Windows、iOS 与 FFF 多平台继续开发和验证，正式发布按各平台验收结果推进。 二、本阶段关键成果 6 次 Android 测试发布 9月18日 续费功能实现完成 9月7日 中国、台湾 Android 测试连接确认 FFF Apple macOS、iPhone 未签名构建通过 进展 交付结果 下一步 续费与购买 会员天数按等级与购买顺序使用的基础逻辑、购买接口及 Android 对接进入测试；暂停的天数保留。 覆盖重复购买、到期切换、支付回调和退款；商店自动续费单独验证。 连接与线路体验 先探测再选线、部分测速结果、缓存延迟、重连与剩余时间展示持续改进。 补齐协议、地区与设备回归；零配额仅测速仍属计划。 主页简化 9月18日与 SkyKing 讨论原设计；Timmy 明确采用最新简化 "
+    },
+    {
+      "id": "u_576848e2c3f402a0",
+      "kind": "text",
+      "source": "下一步",
+      "occurrence": 0,
+      "target": "Next Step",
+      "context": "th @ line 92 · surrounding text: 一、本阶段关键决策与状态 续费功能于9月18日完成实现并进入测试交付；主页向单 IP 展示简化。Windows、iOS 与 FFF 多平台继续开发和验证，正式发布按各平台验收结果推进。 二、本阶段关键成果 6 次 Android 测试发布 9月18日 续费功能实现完成 9月7日 中国、台湾 Android 测试连接确认 FFF Apple macOS、iPhone 未签名构建通过 进展 交付结果 下一步 续费与购买 会员天数按等级与购买顺序使用的基础逻辑、购买接口及 Android 对接进入测试；暂停的天数保留。 覆盖重复购买、到期切换、支付回调和退款；商店自动续费单独验证。 连接与线路体验 先探测再选线、部分测速结果、缓存延迟、重连与剩余时间展示持续改进。 补齐协议、地区与设备回归；零配额仅测速仍属计划。 主页简化 9月18日与 SkyKing 讨论原设计；Timmy 明确采用最新简化 "
+    },
+    {
+      "id": "u_48ee492aecc96179",
+      "kind": "text",
+      "source": "续费与购买",
+      "occurrence": 0,
+      "target": "Renewals and purchases",
+      "context": "td @ line 92 · surrounding text: 一、本阶段关键决策与状态 续费功能于9月18日完成实现并进入测试交付；主页向单 IP 展示简化。Windows、iOS 与 FFF 多平台继续开发和验证，正式发布按各平台验收结果推进。 二、本阶段关键成果 6 次 Android 测试发布 9月18日 续费功能实现完成 9月7日 中国、台湾 Android 测试连接确认 FFF Apple macOS、iPhone 未签名构建通过 进展 交付结果 下一步 续费与购买 会员天数按等级与购买顺序使用的基础逻辑、购买接口及 Android 对接进入测试；暂停的天数保留。 覆盖重复购买、到期切换、支付回调和退款；商店自动续费单独验证。 连接与线路体验 先探测再选线、部分测速结果、缓存延迟、重连与剩余时间展示持续改进。 补齐协议、地区与设备回归；零配额仅测速仍属计划。 主页简化 9月18日与 SkyKing 讨论原设计；Timmy 明确采用最新简化 "
+    },
+    {
+      "id": "u_99fe9f4d417720c7",
+      "kind": "text",
+      "source": "会员天数按等级与购买顺序使用的基础逻辑、购买接口及 Android 对接进入测试；暂停的天数保留。",
+      "occurrence": 0,
+      "target": "The membership-duration model, ordered by tier and purchase time, purchase APIs and Android integration entered testing; paused days are preserved.",
+      "context": "td @ line 92 · surrounding text: 一、本阶段关键决策与状态 续费功能于9月18日完成实现并进入测试交付；主页向单 IP 展示简化。Windows、iOS 与 FFF 多平台继续开发和验证，正式发布按各平台验收结果推进。 二、本阶段关键成果 6 次 Android 测试发布 9月18日 续费功能实现完成 9月7日 中国、台湾 Android 测试连接确认 FFF Apple macOS、iPhone 未签名构建通过 进展 交付结果 下一步 续费与购买 会员天数按等级与购买顺序使用的基础逻辑、购买接口及 Android 对接进入测试；暂停的天数保留。 覆盖重复购买、到期切换、支付回调和退款；商店自动续费单独验证。 连接与线路体验 先探测再选线、部分测速结果、缓存延迟、重连与剩余时间展示持续改进。 补齐协议、地区与设备回归；零配额仅测速仍属计划。 主页简化 9月18日与 SkyKing 讨论原设计；Timmy 明确采用最新简化 "
+    },
+    {
+      "id": "u_89d5ab0cd34d2c3b",
+      "kind": "text",
+      "source": "覆盖重复购买、到期切换、支付回调和退款；商店自动续费单独验证。",
+      "occurrence": 0,
+      "target": "Cover repeat purchases, expiry transitions, payment callbacks and refunds; validate store auto-renewal separately.",
+      "context": "td @ line 92 · surrounding text: 一、本阶段关键决策与状态 续费功能于9月18日完成实现并进入测试交付；主页向单 IP 展示简化。Windows、iOS 与 FFF 多平台继续开发和验证，正式发布按各平台验收结果推进。 二、本阶段关键成果 6 次 Android 测试发布 9月18日 续费功能实现完成 9月7日 中国、台湾 Android 测试连接确认 FFF Apple macOS、iPhone 未签名构建通过 进展 交付结果 下一步 续费与购买 会员天数按等级与购买顺序使用的基础逻辑、购买接口及 Android 对接进入测试；暂停的天数保留。 覆盖重复购买、到期切换、支付回调和退款；商店自动续费单独验证。 连接与线路体验 先探测再选线、部分测速结果、缓存延迟、重连与剩余时间展示持续改进。 补齐协议、地区与设备回归；零配额仅测速仍属计划。 主页简化 9月18日与 SkyKing 讨论原设计；Timmy 明确采用最新简化 "
+    },
+    {
+      "id": "u_67dbbe7bab16bcbc",
+      "kind": "text",
+      "source": "连接与线路体验",
+      "occurrence": 0,
+      "target": "Connection and route experience",
+      "context": "td @ line 92 · surrounding text: 一、本阶段关键决策与状态 续费功能于9月18日完成实现并进入测试交付；主页向单 IP 展示简化。Windows、iOS 与 FFF 多平台继续开发和验证，正式发布按各平台验收结果推进。 二、本阶段关键成果 6 次 Android 测试发布 9月18日 续费功能实现完成 9月7日 中国、台湾 Android 测试连接确认 FFF Apple macOS、iPhone 未签名构建通过 进展 交付结果 下一步 续费与购买 会员天数按等级与购买顺序使用的基础逻辑、购买接口及 Android 对接进入测试；暂停的天数保留。 覆盖重复购买、到期切换、支付回调和退款；商店自动续费单独验证。 连接与线路体验 先探测再选线、部分测速结果、缓存延迟、重连与剩余时间展示持续改进。 补齐协议、地区与设备回归；零配额仅测速仍属计划。 主页简化 9月18日与 SkyKing 讨论原设计；Timmy 明确采用最新简化 "
+    },
+    {
+      "id": "u_b601fc33239e0843",
+      "kind": "text",
+      "source": "先探测再选线、部分测速结果、缓存延迟、重连与剩余时间展示持续改进。",
+      "occurrence": 0,
+      "target": "Probe-before-selection, partial latency results, cached latency, reconnection and remaining-time display progressed.",
+      "context": "td @ line 92 · surrounding text: 一、本阶段关键决策与状态 续费功能于9月18日完成实现并进入测试交付；主页向单 IP 展示简化。Windows、iOS 与 FFF 多平台继续开发和验证，正式发布按各平台验收结果推进。 二、本阶段关键成果 6 次 Android 测试发布 9月18日 续费功能实现完成 9月7日 中国、台湾 Android 测试连接确认 FFF Apple macOS、iPhone 未签名构建通过 进展 交付结果 下一步 续费与购买 会员天数按等级与购买顺序使用的基础逻辑、购买接口及 Android 对接进入测试；暂停的天数保留。 覆盖重复购买、到期切换、支付回调和退款；商店自动续费单独验证。 连接与线路体验 先探测再选线、部分测速结果、缓存延迟、重连与剩余时间展示持续改进。 补齐协议、地区与设备回归；零配额仅测速仍属计划。 主页简化 9月18日与 SkyKing 讨论原设计；Timmy 明确采用最新简化 "
+    },
+    {
+      "id": "u_505a701a183a1cbf",
+      "kind": "text",
+      "source": "补齐协议、地区与设备回归；零配额仅测速仍属计划。",
+      "occurrence": 0,
+      "target": "Complete protocol, regional and device regression; probe-only access at zero quota remains planned.",
+      "context": "td @ line 92 · surrounding text: 一、本阶段关键决策与状态 续费功能于9月18日完成实现并进入测试交付；主页向单 IP 展示简化。Windows、iOS 与 FFF 多平台继续开发和验证，正式发布按各平台验收结果推进。 二、本阶段关键成果 6 次 Android 测试发布 9月18日 续费功能实现完成 9月7日 中国、台湾 Android 测试连接确认 FFF Apple macOS、iPhone 未签名构建通过 进展 交付结果 下一步 续费与购买 会员天数按等级与购买顺序使用的基础逻辑、购买接口及 Android 对接进入测试；暂停的天数保留。 覆盖重复购买、到期切换、支付回调和退款；商店自动续费单独验证。 连接与线路体验 先探测再选线、部分测速结果、缓存延迟、重连与剩余时间展示持续改进。 补齐协议、地区与设备回归；零配额仅测速仍属计划。 主页简化 9月18日与 SkyKing 讨论原设计；Timmy 明确采用最新简化 "
+    },
+    {
+      "id": "u_3fe3c8812d095bab",
+      "kind": "text",
+      "source": "主页简化",
+      "occurrence": 0,
+      "target": "Home-page simplification",
+      "context": "td @ line 92 · surrounding text: 一、本阶段关键决策与状态 续费功能于9月18日完成实现并进入测试交付；主页向单 IP 展示简化。Windows、iOS 与 FFF 多平台继续开发和验证，正式发布按各平台验收结果推进。 二、本阶段关键成果 6 次 Android 测试发布 9月18日 续费功能实现完成 9月7日 中国、台湾 Android 测试连接确认 FFF Apple macOS、iPhone 未签名构建通过 进展 交付结果 下一步 续费与购买 会员天数按等级与购买顺序使用的基础逻辑、购买接口及 Android 对接进入测试；暂停的天数保留。 覆盖重复购买、到期切换、支付回调和退款；商店自动续费单独验证。 连接与线路体验 先探测再选线、部分测速结果、缓存延迟、重连与剩余时间展示持续改进。 补齐协议、地区与设备回归；零配额仅测速仍属计划。 主页简化 9月18日与 SkyKing 讨论原设计；Timmy 明确采用最新简化 "
+    },
+    {
+      "id": "u_011dd6abed5cc9e3",
+      "kind": "text",
+      "source": "9月18日与 SkyKing 讨论原设计；Timmy 明确采用最新简化 UI、单 IP 展示方向，Android 布局已调整。",
+      "occurrence": 0,
+      "target": "On 18 Sep, the original design was discussed with SkyKing; Timmy set the direction toward the latest simplified UI and a single IP display, with Android layout changes implemented.",
+      "context": "td @ line 92 · surrounding text: 一、本阶段关键决策与状态 续费功能于9月18日完成实现并进入测试交付；主页向单 IP 展示简化。Windows、iOS 与 FFF 多平台继续开发和验证，正式发布按各平台验收结果推进。 二、本阶段关键成果 6 次 Android 测试发布 9月18日 续费功能实现完成 9月7日 中国、台湾 Android 测试连接确认 FFF Apple macOS、iPhone 未签名构建通过 进展 交付结果 下一步 续费与购买 会员天数按等级与购买顺序使用的基础逻辑、购买接口及 Android 对接进入测试；暂停的天数保留。 覆盖重复购买、到期切换、支付回调和退款；商店自动续费单独验证。 连接与线路体验 先探测再选线、部分测速结果、缓存延迟、重连与剩余时间展示持续改进。 补齐协议、地区与设备回归；零配额仅测速仍属计划。 主页简化 9月18日与 SkyKing 讨论原设计；Timmy 明确采用最新简化 "
+    },
+    {
+      "id": "u_503522d3d109e446",
+      "kind": "text",
+      "source": "继续核对视觉、连接状态和跨端一致性。",
+      "occurrence": 0,
+      "target": "Continue checking visuals, connection states and cross-client consistency.",
+      "context": "td @ line 92 · surrounding text: 一、本阶段关键决策与状态 续费功能于9月18日完成实现并进入测试交付；主页向单 IP 展示简化。Windows、iOS 与 FFF 多平台继续开发和验证，正式发布按各平台验收结果推进。 二、本阶段关键成果 6 次 Android 测试发布 9月18日 续费功能实现完成 9月7日 中国、台湾 Android 测试连接确认 FFF Apple macOS、iPhone 未签名构建通过 进展 交付结果 下一步 续费与购买 会员天数按等级与购买顺序使用的基础逻辑、购买接口及 Android 对接进入测试；暂停的天数保留。 覆盖重复购买、到期切换、支付回调和退款；商店自动续费单独验证。 连接与线路体验 先探测再选线、部分测速结果、缓存延迟、重连与剩余时间展示持续改进。 补齐协议、地区与设备回归；零配额仅测速仍属计划。 主页简化 9月18日与 SkyKing 讨论原设计；Timmy 明确采用最新简化 "
+    },
+    {
+      "id": "u_77bbdfd7c4174988",
+      "kind": "text",
+      "source": "节点运维",
+      "occurrence": 0,
+      "target": "VPN node operations",
+      "context": "td @ line 92 · surrounding text: 一、本阶段关键决策与状态 续费功能于9月18日完成实现并进入测试交付；主页向单 IP 展示简化。Windows、iOS 与 FFF 多平台继续开发和验证，正式发布按各平台验收结果推进。 二、本阶段关键成果 6 次 Android 测试发布 9月18日 续费功能实现完成 9月7日 中国、台湾 Android 测试连接确认 FFF Apple macOS、iPhone 未签名构建通过 进展 交付结果 下一步 续费与购买 会员天数按等级与购买顺序使用的基础逻辑、购买接口及 Android 对接进入测试；暂停的天数保留。 覆盖重复购买、到期切换、支付回调和退款；商店自动续费单独验证。 连接与线路体验 先探测再选线、部分测速结果、缓存延迟、重连与剩余时间展示持续改进。 补齐协议、地区与设备回归；零配额仅测速仍属计划。 主页简化 9月18日与 SkyKing 讨论原设计；Timmy 明确采用最新简化 "
+    },
+    {
+      "id": "u_001332d6b7a60bfa",
+      "kind": "text",
+      "source": "解析器职责、防火墙冲突、节点分配与退役保护已有修复；协议应用继续优化。",
+      "occurrence": 0,
+      "target": "Resolver ownership, firewall conflicts, VPN node allocation and retirement guards were addressed; protocol application was improved.",
+      "context": "td @ line 92 · surrounding text: 一、本阶段关键决策与状态 续费功能于9月18日完成实现并进入测试交付；主页向单 IP 展示简化。Windows、iOS 与 FFF 多平台继续开发和验证，正式发布按各平台验收结果推进。 二、本阶段关键成果 6 次 Android 测试发布 9月18日 续费功能实现完成 9月7日 中国、台湾 Android 测试连接确认 FFF Apple macOS、iPhone 未签名构建通过 进展 交付结果 下一步 续费与购买 会员天数按等级与购买顺序使用的基础逻辑、购买接口及 Android 对接进入测试；暂停的天数保留。 覆盖重复购买、到期切换、支付回调和退款；商店自动续费单独验证。 连接与线路体验 先探测再选线、部分测速结果、缓存延迟、重连与剩余时间展示持续改进。 补齐协议、地区与设备回归；零配额仅测速仍属计划。 主页简化 9月18日与 SkyKing 讨论原设计；Timmy 明确采用最新简化 "
+    },
+    {
+      "id": "u_c752f2882838b695",
+      "kind": "text",
+      "source": "补齐真实节点与重启后验收。",
+      "occurrence": 0,
+      "target": "Complete live VPN node and post-reboot acceptance testing.",
+      "context": "td @ line 92 · surrounding text: 一、本阶段关键决策与状态 续费功能于9月18日完成实现并进入测试交付；主页向单 IP 展示简化。Windows、iOS 与 FFF 多平台继续开发和验证，正式发布按各平台验收结果推进。 二、本阶段关键成果 6 次 Android 测试发布 9月18日 续费功能实现完成 9月7日 中国、台湾 Android 测试连接确认 FFF Apple macOS、iPhone 未签名构建通过 进展 交付结果 下一步 续费与购买 会员天数按等级与购买顺序使用的基础逻辑、购买接口及 Android 对接进入测试；暂停的天数保留。 覆盖重复购买、到期切换、支付回调和退款；商店自动续费单独验证。 连接与线路体验 先探测再选线、部分测速结果、缓存延迟、重连与剩余时间展示持续改进。 补齐协议、地区与设备回归；零配额仅测速仍属计划。 主页简化 9月18日与 SkyKing 讨论原设计；Timmy 明确采用最新简化 "
+    },
+    {
+      "id": "u_dca905b2573451b0",
+      "kind": "text",
+      "source": "归因与统计",
+      "occurrence": 0,
+      "target": "Attribution and statistics",
+      "context": "td @ line 92 · surrounding text: 一、本阶段关键决策与状态 续费功能于9月18日完成实现并进入测试交付；主页向单 IP 展示简化。Windows、iOS 与 FFF 多平台继续开发和验证，正式发布按各平台验收结果推进。 二、本阶段关键成果 6 次 Android 测试发布 9月18日 续费功能实现完成 9月7日 中国、台湾 Android 测试连接确认 FFF Apple macOS、iPhone 未签名构建通过 进展 交付结果 下一步 续费与购买 会员天数按等级与购买顺序使用的基础逻辑、购买接口及 Android 对接进入测试；暂停的天数保留。 覆盖重复购买、到期切换、支付回调和退款；商店自动续费单独验证。 连接与线路体验 先探测再选线、部分测速结果、缓存延迟、重连与剩余时间展示持续改进。 补齐协议、地区与设备回归；零配额仅测速仍属计划。 主页简化 9月18日与 SkyKing 讨论原设计；Timmy 明确采用最新简化 "
+    },
+    {
+      "id": "u_765f0646a2e8900c",
+      "kind": "text",
+      "source": "签名归因凭证、访问计数及后台展示继续修复。",
+      "occurrence": 0,
+      "target": "Signed attribution tickets, visit counts and Back Office (BO) presentation were improved.",
+      "context": "td @ line 92 · surrounding text: 一、本阶段关键决策与状态 续费功能于9月18日完成实现并进入测试交付；主页向单 IP 展示简化。Windows、iOS 与 FFF 多平台继续开发和验证，正式发布按各平台验收结果推进。 二、本阶段关键成果 6 次 Android 测试发布 9月18日 续费功能实现完成 9月7日 中国、台湾 Android 测试连接确认 FFF Apple macOS、iPhone 未签名构建通过 进展 交付结果 下一步 续费与购买 会员天数按等级与购买顺序使用的基础逻辑、购买接口及 Android 对接进入测试；暂停的天数保留。 覆盖重复购买、到期切换、支付回调和退款；商店自动续费单独验证。 连接与线路体验 先探测再选线、部分测速结果、缓存延迟、重连与剩余时间展示持续改进。 补齐协议、地区与设备回归；零配额仅测速仍属计划。 主页简化 9月18日与 SkyKing 讨论原设计；Timmy 明确采用最新简化 "
+    },
+    {
+      "id": "u_9d4c81dde476de7a",
+      "kind": "text",
+      "source": "验证重试与并发、安装归因及已知记录对账。",
+      "occurrence": 0,
+      "target": "Validate retries, concurrency, install attribution and reconciliation against known records.",
+      "context": "td @ line 92 · surrounding text: 一、本阶段关键决策与状态 续费功能于9月18日完成实现并进入测试交付；主页向单 IP 展示简化。Windows、iOS 与 FFF 多平台继续开发和验证，正式发布按各平台验收结果推进。 二、本阶段关键成果 6 次 Android 测试发布 9月18日 续费功能实现完成 9月7日 中国、台湾 Android 测试连接确认 FFF Apple macOS、iPhone 未签名构建通过 进展 交付结果 下一步 续费与购买 会员天数按等级与购买顺序使用的基础逻辑、购买接口及 Android 对接进入测试；暂停的天数保留。 覆盖重复购买、到期切换、支付回调和退款；商店自动续费单独验证。 连接与线路体验 先探测再选线、部分测速结果、缓存延迟、重连与剩余时间展示持续改进。 补齐协议、地区与设备回归；零配额仅测速仍属计划。 主页简化 9月18日与 SkyKing 讨论原设计；Timmy 明确采用最新简化 "
+    },
+    {
+      "id": "u_269f161afd2be174",
+      "kind": "text",
+      "source": "Windows 与 iOS",
+      "occurrence": 0,
+      "target": "Windows and iOS",
+      "context": "td @ line 92 · surrounding text: 一、本阶段关键决策与状态 续费功能于9月18日完成实现并进入测试交付；主页向单 IP 展示简化。Windows、iOS 与 FFF 多平台继续开发和验证，正式发布按各平台验收结果推进。 二、本阶段关键成果 6 次 Android 测试发布 9月18日 续费功能实现完成 9月7日 中国、台湾 Android 测试连接确认 FFF Apple macOS、iPhone 未签名构建通过 进展 交付结果 下一步 续费与购买 会员天数按等级与购买顺序使用的基础逻辑、购买接口及 Android 对接进入测试；暂停的天数保留。 覆盖重复购买、到期切换、支付回调和退款；商店自动续费单独验证。 连接与线路体验 先探测再选线、部分测速结果、缓存延迟、重连与剩余时间展示持续改进。 补齐协议、地区与设备回归；零配额仅测速仍属计划。 主页简化 9月18日与 SkyKing 讨论原设计；Timmy 明确采用最新简化 "
+    },
+    {
+      "id": "u_840fdd50cfa97d0c",
+      "kind": "text",
+      "source": "Windows 推进订阅接口、断线保护与配额对齐；iOS 更新完整套餐目录、核心版本和本地化。",
+      "occurrence": 0,
+      "target": "Windows advanced subscription APIs, kill-switch protection and quota alignment; iOS updated the full plan catalog, core version and localization.",
+      "context": "td @ line 92 · surrounding text: 一、本阶段关键决策与状态 续费功能于9月18日完成实现并进入测试交付；主页向单 IP 展示简化。Windows、iOS 与 FFF 多平台继续开发和验证，正式发布按各平台验收结果推进。 二、本阶段关键成果 6 次 Android 测试发布 9月18日 续费功能实现完成 9月7日 中国、台湾 Android 测试连接确认 FFF Apple macOS、iPhone 未签名构建通过 进展 交付结果 下一步 续费与购买 会员天数按等级与购买顺序使用的基础逻辑、购买接口及 Android 对接进入测试；暂停的天数保留。 覆盖重复购买、到期切换、支付回调和退款；商店自动续费单独验证。 连接与线路体验 先探测再选线、部分测速结果、缓存延迟、重连与剩余时间展示持续改进。 补齐协议、地区与设备回归；零配额仅测速仍属计划。 主页简化 9月18日与 SkyKing 讨论原设计；Timmy 明确采用最新简化 "
+    },
+    {
+      "id": "u_be6cd97a88a828d4",
+      "kind": "text",
+      "source": "各端分别完成安装、连接、购买与签名发布验收。",
+      "occurrence": 0,
+      "target": "Complete installation, connectivity, purchase and signed-release acceptance testing per client.",
+      "context": "td @ line 92 · surrounding text: 一、本阶段关键决策与状态 续费功能于9月18日完成实现并进入测试交付；主页向单 IP 展示简化。Windows、iOS 与 FFF 多平台继续开发和验证，正式发布按各平台验收结果推进。 二、本阶段关键成果 6 次 Android 测试发布 9月18日 续费功能实现完成 9月7日 中国、台湾 Android 测试连接确认 FFF Apple macOS、iPhone 未签名构建通过 进展 交付结果 下一步 续费与购买 会员天数按等级与购买顺序使用的基础逻辑、购买接口及 Android 对接进入测试；暂停的天数保留。 覆盖重复购买、到期切换、支付回调和退款；商店自动续费单独验证。 连接与线路体验 先探测再选线、部分测速结果、缓存延迟、重连与剩余时间展示持续改进。 补齐协议、地区与设备回归；零配额仅测速仍属计划。 主页简化 9月18日与 SkyKing 讨论原设计；Timmy 明确采用最新简化 "
+    },
+    {
+      "id": "u_902149917e759412",
+      "kind": "text",
+      "source": "三、改善与商业价值",
+      "occurrence": 0,
+      "target": "3. Improvements and business value",
+      "context": "h2 @ line 92 · surrounding text: 一、本阶段关键决策与状态 续费功能于9月18日完成实现并进入测试交付；主页向单 IP 展示简化。Windows、iOS 与 FFF 多平台继续开发和验证，正式发布按各平台验收结果推进。 二、本阶段关键成果 6 次 Android 测试发布 9月18日 续费功能实现完成 9月7日 中国、台湾 Android 测试连接确认 FFF Apple macOS、iPhone 未签名构建通过 进展 交付结果 下一步 续费与购买 会员天数按等级与购买顺序使用的基础逻辑、购买接口及 Android 对接进入测试；暂停的天数保留。 覆盖重复购买、到期切换、支付回调和退款；商店自动续费单独验证。 连接与线路体验 先探测再选线、部分测速结果、缓存延迟、重连与剩余时间展示持续改进。 补齐协议、地区与设备回归；零配额仅测速仍属计划。 主页简化 9月18日与 SkyKing 讨论原设计；Timmy 明确采用最新简化 "
+    },
+    {
+      "id": "u_270f207fd04d9cb8",
+      "kind": "text",
+      "source": "改善",
+      "occurrence": 0,
+      "target": "Improvement",
+      "context": "th @ line 92 · surrounding text: 一、本阶段关键决策与状态 续费功能于9月18日完成实现并进入测试交付；主页向单 IP 展示简化。Windows、iOS 与 FFF 多平台继续开发和验证，正式发布按各平台验收结果推进。 二、本阶段关键成果 6 次 Android 测试发布 9月18日 续费功能实现完成 9月7日 中国、台湾 Android 测试连接确认 FFF Apple macOS、iPhone 未签名构建通过 进展 交付结果 下一步 续费与购买 会员天数按等级与购买顺序使用的基础逻辑、购买接口及 Android 对接进入测试；暂停的天数保留。 覆盖重复购买、到期切换、支付回调和退款；商店自动续费单独验证。 连接与线路体验 先探测再选线、部分测速结果、缓存延迟、重连与剩余时间展示持续改进。 补齐协议、地区与设备回归；零配额仅测速仍属计划。 主页简化 9月18日与 SkyKing 讨论原设计；Timmy 明确采用最新简化 "
+    },
+    {
+      "id": "u_43eb34749c528aaf",
+      "kind": "text",
+      "source": "业务价值",
+      "occurrence": 0,
+      "target": "Business value",
+      "context": "th @ line 92 · surrounding text: 一、本阶段关键决策与状态 续费功能于9月18日完成实现并进入测试交付；主页向单 IP 展示简化。Windows、iOS 与 FFF 多平台继续开发和验证，正式发布按各平台验收结果推进。 二、本阶段关键成果 6 次 Android 测试发布 9月18日 续费功能实现完成 9月7日 中国、台湾 Android 测试连接确认 FFF Apple macOS、iPhone 未签名构建通过 进展 交付结果 下一步 续费与购买 会员天数按等级与购买顺序使用的基础逻辑、购买接口及 Android 对接进入测试；暂停的天数保留。 覆盖重复购买、到期切换、支付回调和退款；商店自动续费单独验证。 连接与线路体验 先探测再选线、部分测速结果、缓存延迟、重连与剩余时间展示持续改进。 补齐协议、地区与设备回归；零配额仅测速仍属计划。 主页简化 9月18日与 SkyKing 讨论原设计；Timmy 明确采用最新简化 "
+    },
+    {
+      "id": "u_14799b3d8136512b",
+      "kind": "text",
+      "source": "续费天数统一处理",
+      "occurrence": 0,
+      "target": "Unified renewal-duration handling",
+      "context": "td @ line 92 · surrounding text: 一、本阶段关键决策与状态 续费功能于9月18日完成实现并进入测试交付；主页向单 IP 展示简化。Windows、iOS 与 FFF 多平台继续开发和验证，正式发布按各平台验收结果推进。 二、本阶段关键成果 6 次 Android 测试发布 9月18日 续费功能实现完成 9月7日 中国、台湾 Android 测试连接确认 FFF Apple macOS、iPhone 未签名构建通过 进展 交付结果 下一步 续费与购买 会员天数按等级与购买顺序使用的基础逻辑、购买接口及 Android 对接进入测试；暂停的天数保留。 覆盖重复购买、到期切换、支付回调和退款；商店自动续费单独验证。 连接与线路体验 先探测再选线、部分测速结果、缓存延迟、重连与剩余时间展示持续改进。 补齐协议、地区与设备回归；零配额仅测速仍属计划。 主页简化 9月18日与 SkyKing 讨论原设计；Timmy 明确采用最新简化 "
+    },
+    {
+      "id": "u_46111ee953f296d4",
+      "kind": "text",
+      "source": "支持同等级续购和高等级优先使用，减少会员天数重复消耗与丢失的风险。",
+      "occurrence": 0,
+      "target": "Supports same-tier renewal and higher-tier priority, reducing the risk of double consumption or lost membership days.",
+      "context": "td @ line 92 · surrounding text: 一、本阶段关键决策与状态 续费功能于9月18日完成实现并进入测试交付；主页向单 IP 展示简化。Windows、iOS 与 FFF 多平台继续开发和验证，正式发布按各平台验收结果推进。 二、本阶段关键成果 6 次 Android 测试发布 9月18日 续费功能实现完成 9月7日 中国、台湾 Android 测试连接确认 FFF Apple macOS、iPhone 未签名构建通过 进展 交付结果 下一步 续费与购买 会员天数按等级与购买顺序使用的基础逻辑、购买接口及 Android 对接进入测试；暂停的天数保留。 覆盖重复购买、到期切换、支付回调和退款；商店自动续费单独验证。 连接与线路体验 先探测再选线、部分测速结果、缓存延迟、重连与剩余时间展示持续改进。 补齐协议、地区与设备回归；零配额仅测速仍属计划。 主页简化 9月18日与 SkyKing 讨论原设计；Timmy 明确采用最新简化 "
+    },
+    {
+      "id": "u_c846c3e923d72de5",
+      "kind": "text",
+      "source": "线路探测与主页简化",
+      "occurrence": 0,
+      "target": "Route probing and home-page simplification",
+      "context": "td @ line 92 · surrounding text: 一、本阶段关键决策与状态 续费功能于9月18日完成实现并进入测试交付；主页向单 IP 展示简化。Windows、iOS 与 FFF 多平台继续开发和验证，正式发布按各平台验收结果推进。 二、本阶段关键成果 6 次 Android 测试发布 9月18日 续费功能实现完成 9月7日 中国、台湾 Android 测试连接确认 FFF Apple macOS、iPhone 未签名构建通过 进展 交付结果 下一步 续费与购买 会员天数按等级与购买顺序使用的基础逻辑、购买接口及 Android 对接进入测试；暂停的天数保留。 覆盖重复购买、到期切换、支付回调和退款；商店自动续费单独验证。 连接与线路体验 先探测再选线、部分测速结果、缓存延迟、重连与剩余时间展示持续改进。 补齐协议、地区与设备回归；零配额仅测速仍属计划。 主页简化 9月18日与 SkyKing 讨论原设计；Timmy 明确采用最新简化 "
+    },
+    {
+      "id": "u_c49346f471d83ac3",
+      "kind": "text",
+      "source": "减少选线等待与状态理解成本，让连接结果更清楚。",
+      "occurrence": 0,
+      "target": "Reduces selection delays and makes connection status easier to understand.",
+      "context": "td @ line 92 · surrounding text: 一、本阶段关键决策与状态 续费功能于9月18日完成实现并进入测试交付；主页向单 IP 展示简化。Windows、iOS 与 FFF 多平台继续开发和验证，正式发布按各平台验收结果推进。 二、本阶段关键成果 6 次 Android 测试发布 9月18日 续费功能实现完成 9月7日 中国、台湾 Android 测试连接确认 FFF Apple macOS、iPhone 未签名构建通过 进展 交付结果 下一步 续费与购买 会员天数按等级与购买顺序使用的基础逻辑、购买接口及 Android 对接进入测试；暂停的天数保留。 覆盖重复购买、到期切换、支付回调和退款；商店自动续费单独验证。 连接与线路体验 先探测再选线、部分测速结果、缓存延迟、重连与剩余时间展示持续改进。 补齐协议、地区与设备回归；零配额仅测速仍属计划。 主页简化 9月18日与 SkyKing 讨论原设计；Timmy 明确采用最新简化 "
+    },
+    {
+      "id": "u_159141d60d8eac5f",
+      "kind": "text",
+      "source": "节点与后台修复",
+      "occurrence": 0,
+      "target": "VPN node and Back Office (BO) fixes",
+      "context": "td @ line 92 · surrounding text: 一、本阶段关键决策与状态 续费功能于9月18日完成实现并进入测试交付；主页向单 IP 展示简化。Windows、iOS 与 FFF 多平台继续开发和验证，正式发布按各平台验收结果推进。 二、本阶段关键成果 6 次 Android 测试发布 9月18日 续费功能实现完成 9月7日 中国、台湾 Android 测试连接确认 FFF Apple macOS、iPhone 未签名构建通过 进展 交付结果 下一步 续费与购买 会员天数按等级与购买顺序使用的基础逻辑、购买接口及 Android 对接进入测试；暂停的天数保留。 覆盖重复购买、到期切换、支付回调和退款；商店自动续费单独验证。 连接与线路体验 先探测再选线、部分测速结果、缓存延迟、重连与剩余时间展示持续改进。 补齐协议、地区与设备回归；零配额仅测速仍属计划。 主页简化 9月18日与 SkyKing 讨论原设计；Timmy 明确采用最新简化 "
+    },
+    {
+      "id": "u_30b3c729c9342799",
+      "kind": "text",
+      "source": "降低配置冲突与误操作风险，为后续发布提供可追踪的运维结果。",
+      "occurrence": 0,
+      "target": "Reduces configuration conflicts and operational mistakes, supporting traceable operations for later releases.",
+      "context": "td @ line 92 · surrounding text: 一、本阶段关键决策与状态 续费功能于9月18日完成实现并进入测试交付；主页向单 IP 展示简化。Windows、iOS 与 FFF 多平台继续开发和验证，正式发布按各平台验收结果推进。 二、本阶段关键成果 6 次 Android 测试发布 9月18日 续费功能实现完成 9月7日 中国、台湾 Android 测试连接确认 FFF Apple macOS、iPhone 未签名构建通过 进展 交付结果 下一步 续费与购买 会员天数按等级与购买顺序使用的基础逻辑、购买接口及 Android 对接进入测试；暂停的天数保留。 覆盖重复购买、到期切换、支付回调和退款；商店自动续费单独验证。 连接与线路体验 先探测再选线、部分测速结果、缓存延迟、重连与剩余时间展示持续改进。 补齐协议、地区与设备回归；零配额仅测速仍属计划。 主页简化 9月18日与 SkyKing 讨论原设计；Timmy 明确采用最新简化 "
+    },
+    {
+      "id": "u_58355b831694a677",
+      "kind": "text",
+      "source": "四、关键时间节点",
+      "occurrence": 0,
+      "target": "4. Key milestones",
+      "context": "h2 @ line 92 · surrounding text: 一、本阶段关键决策与状态 续费功能于9月18日完成实现并进入测试交付；主页向单 IP 展示简化。Windows、iOS 与 FFF 多平台继续开发和验证，正式发布按各平台验收结果推进。 二、本阶段关键成果 6 次 Android 测试发布 9月18日 续费功能实现完成 9月7日 中国、台湾 Android 测试连接确认 FFF Apple macOS、iPhone 未签名构建通过 进展 交付结果 下一步 续费与购买 会员天数按等级与购买顺序使用的基础逻辑、购买接口及 Android 对接进入测试；暂停的天数保留。 覆盖重复购买、到期切换、支付回调和退款；商店自动续费单独验证。 连接与线路体验 先探测再选线、部分测速结果、缓存延迟、重连与剩余时间展示持续改进。 补齐协议、地区与设备回归；零配额仅测速仍属计划。 主页简化 9月18日与 SkyKing 讨论原设计；Timmy 明确采用最新简化 "
+    },
+    {
+      "id": "u_345d60ddd593f6b2",
+      "kind": "text",
+      "source": "日期",
+      "occurrence": 0,
+      "target": "Date",
+      "context": "th @ line 92 · surrounding text: 一、本阶段关键决策与状态 续费功能于9月18日完成实现并进入测试交付；主页向单 IP 展示简化。Windows、iOS 与 FFF 多平台继续开发和验证，正式发布按各平台验收结果推进。 二、本阶段关键成果 6 次 Android 测试发布 9月18日 续费功能实现完成 9月7日 中国、台湾 Android 测试连接确认 FFF Apple macOS、iPhone 未签名构建通过 进展 交付结果 下一步 续费与购买 会员天数按等级与购买顺序使用的基础逻辑、购买接口及 Android 对接进入测试；暂停的天数保留。 覆盖重复购买、到期切换、支付回调和退款；商店自动续费单独验证。 连接与线路体验 先探测再选线、部分测速结果、缓存延迟、重连与剩余时间展示持续改进。 补齐协议、地区与设备回归；零配额仅测速仍属计划。 主页简化 9月18日与 SkyKing 讨论原设计；Timmy 明确采用最新简化 "
+    },
+    {
+      "id": "u_dd87dfbef71445df",
+      "kind": "text",
+      "source": "进展",
+      "occurrence": 1,
+      "target": "Progress",
+      "context": "th @ line 92 · surrounding text: 一、本阶段关键决策与状态 续费功能于9月18日完成实现并进入测试交付；主页向单 IP 展示简化。Windows、iOS 与 FFF 多平台继续开发和验证，正式发布按各平台验收结果推进。 二、本阶段关键成果 6 次 Android 测试发布 9月18日 续费功能实现完成 9月7日 中国、台湾 Android 测试连接确认 FFF Apple macOS、iPhone 未签名构建通过 进展 交付结果 下一步 续费与购买 会员天数按等级与购买顺序使用的基础逻辑、购买接口及 Android 对接进入测试；暂停的天数保留。 覆盖重复购买、到期切换、支付回调和退款；商店自动续费单独验证。 连接与线路体验 先探测再选线、部分测速结果、缓存延迟、重连与剩余时间展示持续改进。 补齐协议、地区与设备回归；零配额仅测速仍属计划。 主页简化 9月18日与 SkyKing 讨论原设计；Timmy 明确采用最新简化 "
+    },
+    {
+      "id": "u_ff2804577973621a",
+      "kind": "text",
+      "source": "9月7日",
+      "occurrence": 1,
+      "target": "7 Sep",
+      "context": "td @ line 92 · surrounding text: 一、本阶段关键决策与状态 续费功能于9月18日完成实现并进入测试交付；主页向单 IP 展示简化。Windows、iOS 与 FFF 多平台继续开发和验证，正式发布按各平台验收结果推进。 二、本阶段关键成果 6 次 Android 测试发布 9月18日 续费功能实现完成 9月7日 中国、台湾 Android 测试连接确认 FFF Apple macOS、iPhone 未签名构建通过 进展 交付结果 下一步 续费与购买 会员天数按等级与购买顺序使用的基础逻辑、购买接口及 Android 对接进入测试；暂停的天数保留。 覆盖重复购买、到期切换、支付回调和退款；商店自动续费单独验证。 连接与线路体验 先探测再选线、部分测速结果、缓存延迟、重连与剩余时间展示持续改进。 补齐协议、地区与设备回归；零配额仅测速仍属计划。 主页简化 9月18日与 SkyKing 讨论原设计；Timmy 明确采用最新简化 "
+    },
+    {
+      "id": "u_6a588a316ad14a5c",
+      "kind": "text",
+      "source": "Android 一次测试发布；中国与台湾测试连接结果获确认，范围限当次测试。",
+      "occurrence": 0,
+      "target": "One Android staging release; connectivity results in China and Taiwan were confirmed for that test scope.",
+      "context": "td @ line 92 · surrounding text: 一、本阶段关键决策与状态 续费功能于9月18日完成实现并进入测试交付；主页向单 IP 展示简化。Windows、iOS 与 FFF 多平台继续开发和验证，正式发布按各平台验收结果推进。 二、本阶段关键成果 6 次 Android 测试发布 9月18日 续费功能实现完成 9月7日 中国、台湾 Android 测试连接确认 FFF Apple macOS、iPhone 未签名构建通过 进展 交付结果 下一步 续费与购买 会员天数按等级与购买顺序使用的基础逻辑、购买接口及 Android 对接进入测试；暂停的天数保留。 覆盖重复购买、到期切换、支付回调和退款；商店自动续费单独验证。 连接与线路体验 先探测再选线、部分测速结果、缓存延迟、重连与剩余时间展示持续改进。 补齐协议、地区与设备回归；零配额仅测速仍属计划。 主页简化 9月18日与 SkyKing 讨论原设计；Timmy 明确采用最新简化 "
+    },
+    {
+      "id": "u_4a6e8873648ef02e",
+      "kind": "text",
+      "source": "9月8–11日",
+      "occurrence": 0,
+      "target": "8–11 Sep",
+      "context": "td @ line 92 · surrounding text: 一、本阶段关键决策与状态 续费功能于9月18日完成实现并进入测试交付；主页向单 IP 展示简化。Windows、iOS 与 FFF 多平台继续开发和验证，正式发布按各平台验收结果推进。 二、本阶段关键成果 6 次 Android 测试发布 9月18日 续费功能实现完成 9月7日 中国、台湾 Android 测试连接确认 FFF Apple macOS、iPhone 未签名构建通过 进展 交付结果 下一步 续费与购买 会员天数按等级与购买顺序使用的基础逻辑、购买接口及 Android 对接进入测试；暂停的天数保留。 覆盖重复购买、到期切换、支付回调和退款；商店自动续费单独验证。 连接与线路体验 先探测再选线、部分测速结果、缓存延迟、重连与剩余时间展示持续改进。 补齐协议、地区与设备回归；零配额仅测速仍属计划。 主页简化 9月18日与 SkyKing 讨论原设计；Timmy 明确采用最新简化 "
+    },
+    {
+      "id": "u_a4c3cd105a6c7a68",
+      "kind": "text",
+      "source": "会员生命周期与单笔计时模型推进；9月10日一次 Android 测试发布。",
+      "occurrence": 0,
+      "target": "Membership lifecycle and single-package timing progressed; one Android staging release on 10 Sep.",
+      "context": "td @ line 92 · surrounding text: 一、本阶段关键决策与状态 续费功能于9月18日完成实现并进入测试交付；主页向单 IP 展示简化。Windows、iOS 与 FFF 多平台继续开发和验证，正式发布按各平台验收结果推进。 二、本阶段关键成果 6 次 Android 测试发布 9月18日 续费功能实现完成 9月7日 中国、台湾 Android 测试连接确认 FFF Apple macOS、iPhone 未签名构建通过 进展 交付结果 下一步 续费与购买 会员天数按等级与购买顺序使用的基础逻辑、购买接口及 Android 对接进入测试；暂停的天数保留。 覆盖重复购买、到期切换、支付回调和退款；商店自动续费单独验证。 连接与线路体验 先探测再选线、部分测速结果、缓存延迟、重连与剩余时间展示持续改进。 补齐协议、地区与设备回归；零配额仅测速仍属计划。 主页简化 9月18日与 SkyKing 讨论原设计；Timmy 明确采用最新简化 "
+    },
+    {
+      "id": "u_f976746a88056fbe",
+      "kind": "text",
+      "source": "9月14–15日",
+      "occurrence": 0,
+      "target": "14–15 Sep",
+      "context": "td @ line 92 · surrounding text: 一、本阶段关键决策与状态 续费功能于9月18日完成实现并进入测试交付；主页向单 IP 展示简化。Windows、iOS 与 FFF 多平台继续开发和验证，正式发布按各平台验收结果推进。 二、本阶段关键成果 6 次 Android 测试发布 9月18日 续费功能实现完成 9月7日 中国、台湾 Android 测试连接确认 FFF Apple macOS、iPhone 未签名构建通过 进展 交付结果 下一步 续费与购买 会员天数按等级与购买顺序使用的基础逻辑、购买接口及 Android 对接进入测试；暂停的天数保留。 覆盖重复购买、到期切换、支付回调和退款；商店自动续费单独验证。 连接与线路体验 先探测再选线、部分测速结果、缓存延迟、重连与剩余时间展示持续改进。 补齐协议、地区与设备回归；零配额仅测速仍属计划。 主页简化 9月18日与 SkyKing 讨论原设计；Timmy 明确采用最新简化 "
+    },
+    {
+      "id": "u_8ffa2e5c331170a5",
+      "kind": "text",
+      "source": "后端迁移与分层收敛；FFF Apple 接入完成未签名构建验证。",
+      "occurrence": 0,
+      "target": "Backend migrations and layering were simplified; FFF Apple integration passed build validation without signing.",
+      "context": "td @ line 92 · surrounding text: 一、本阶段关键决策与状态 续费功能于9月18日完成实现并进入测试交付；主页向单 IP 展示简化。Windows、iOS 与 FFF 多平台继续开发和验证，正式发布按各平台验收结果推进。 二、本阶段关键成果 6 次 Android 测试发布 9月18日 续费功能实现完成 9月7日 中国、台湾 Android 测试连接确认 FFF Apple macOS、iPhone 未签名构建通过 进展 交付结果 下一步 续费与购买 会员天数按等级与购买顺序使用的基础逻辑、购买接口及 Android 对接进入测试；暂停的天数保留。 覆盖重复购买、到期切换、支付回调和退款；商店自动续费单独验证。 连接与线路体验 先探测再选线、部分测速结果、缓存延迟、重连与剩余时间展示持续改进。 补齐协议、地区与设备回归；零配额仅测速仍属计划。 主页简化 9月18日与 SkyKing 讨论原设计；Timmy 明确采用最新简化 "
+    },
+    {
+      "id": "u_9ff9024a2ead948f",
+      "kind": "text",
+      "source": "9月17日",
+      "occurrence": 0,
+      "target": "17 Sep",
+      "context": "td @ line 92 · surrounding text: 一、本阶段关键决策与状态 续费功能于9月18日完成实现并进入测试交付；主页向单 IP 展示简化。Windows、iOS 与 FFF 多平台继续开发和验证，正式发布按各平台验收结果推进。 二、本阶段关键成果 6 次 Android 测试发布 9月18日 续费功能实现完成 9月7日 中国、台湾 Android 测试连接确认 FFF Apple macOS、iPhone 未签名构建通过 进展 交付结果 下一步 续费与购买 会员天数按等级与购买顺序使用的基础逻辑、购买接口及 Android 对接进入测试；暂停的天数保留。 覆盖重复购买、到期切换、支付回调和退款；商店自动续费单独验证。 连接与线路体验 先探测再选线、部分测速结果、缓存延迟、重连与剩余时间展示持续改进。 补齐协议、地区与设备回归；零配额仅测速仍属计划。 主页简化 9月18日与 SkyKing 讨论原设计；Timmy 明确采用最新简化 "
+    },
+    {
+      "id": "u_cb6ed2637aff665c",
+      "kind": "text",
+      "source": "Android 三次测试发布，继续修复线路、测速和交互。",
+      "occurrence": 0,
+      "target": "Three Android staging releases continued route, latency and interaction fixes.",
+      "context": "td @ line 92 · surrounding text: 一、本阶段关键决策与状态 续费功能于9月18日完成实现并进入测试交付；主页向单 IP 展示简化。Windows、iOS 与 FFF 多平台继续开发和验证，正式发布按各平台验收结果推进。 二、本阶段关键成果 6 次 Android 测试发布 9月18日 续费功能实现完成 9月7日 中国、台湾 Android 测试连接确认 FFF Apple macOS、iPhone 未签名构建通过 进展 交付结果 下一步 续费与购买 会员天数按等级与购买顺序使用的基础逻辑、购买接口及 Android 对接进入测试；暂停的天数保留。 覆盖重复购买、到期切换、支付回调和退款；商店自动续费单独验证。 连接与线路体验 先探测再选线、部分测速结果、缓存延迟、重连与剩余时间展示持续改进。 补齐协议、地区与设备回归；零配额仅测速仍属计划。 主页简化 9月18日与 SkyKing 讨论原设计；Timmy 明确采用最新简化 "
+    },
+    {
+      "id": "u_9ca3d11d0503425f",
+      "kind": "text",
+      "source": "9月18日",
+      "occurrence": 1,
+      "target": "18 Sep",
+      "context": "td @ line 92 · surrounding text: 一、本阶段关键决策与状态 续费功能于9月18日完成实现并进入测试交付；主页向单 IP 展示简化。Windows、iOS 与 FFF 多平台继续开发和验证，正式发布按各平台验收结果推进。 二、本阶段关键成果 6 次 Android 测试发布 9月18日 续费功能实现完成 9月7日 中国、台湾 Android 测试连接确认 FFF Apple macOS、iPhone 未签名构建通过 进展 交付结果 下一步 续费与购买 会员天数按等级与购买顺序使用的基础逻辑、购买接口及 Android 对接进入测试；暂停的天数保留。 覆盖重复购买、到期切换、支付回调和退款；商店自动续费单独验证。 连接与线路体验 先探测再选线、部分测速结果、缓存延迟、重连与剩余时间展示持续改进。 补齐协议、地区与设备回归；零配额仅测速仍属计划。 主页简化 9月18日与 SkyKing 讨论原设计；Timmy 明确采用最新简化 "
+    },
+    {
+      "id": "u_3e721db752a7d161",
+      "kind": "text",
+      "source": "Android 一次测试发布；续费实现完成，主页简化方向明确；FFF Windows 打包工作推进。",
+      "occurrence": 0,
+      "target": "One Android staging release; renewal implementation completed, the home-page simplification direction was set, and FFF Windows packaging progressed.",
+      "context": "td @ line 92 · surrounding text: 一、本阶段关键决策与状态 续费功能于9月18日完成实现并进入测试交付；主页向单 IP 展示简化。Windows、iOS 与 FFF 多平台继续开发和验证，正式发布按各平台验收结果推进。 二、本阶段关键成果 6 次 Android 测试发布 9月18日 续费功能实现完成 9月7日 中国、台湾 Android 测试连接确认 FFF Apple macOS、iPhone 未签名构建通过 进展 交付结果 下一步 续费与购买 会员天数按等级与购买顺序使用的基础逻辑、购买接口及 Android 对接进入测试；暂停的天数保留。 覆盖重复购买、到期切换、支付回调和退款；商店自动续费单独验证。 连接与线路体验 先探测再选线、部分测速结果、缓存延迟、重连与剩余时间展示持续改进。 补齐协议、地区与设备回归；零配额仅测速仍属计划。 主页简化 9月18日与 SkyKing 讨论原设计；Timmy 明确采用最新简化 "
+    },
+    {
+      "id": "u_4d70dd3ab82de110",
+      "kind": "text",
+      "source": "五、测试发布与兼容要求",
+      "occurrence": 0,
+      "target": "5. Test releases and compatibility",
+      "context": "h2 @ line 92 · surrounding text: 一、本阶段关键决策与状态 续费功能于9月18日完成实现并进入测试交付；主页向单 IP 展示简化。Windows、iOS 与 FFF 多平台继续开发和验证，正式发布按各平台验收结果推进。 二、本阶段关键成果 6 次 Android 测试发布 9月18日 续费功能实现完成 9月7日 中国、台湾 Android 测试连接确认 FFF Apple macOS、iPhone 未签名构建通过 进展 交付结果 下一步 续费与购买 会员天数按等级与购买顺序使用的基础逻辑、购买接口及 Android 对接进入测试；暂停的天数保留。 覆盖重复购买、到期切换、支付回调和退款；商店自动续费单独验证。 连接与线路体验 先探测再选线、部分测速结果、缓存延迟、重连与剩余时间展示持续改进。 补齐协议、地区与设备回归；零配额仅测速仍属计划。 主页简化 9月18日与 SkyKing 讨论原设计；Timmy 明确采用最新简化 "
+    },
+    {
+      "id": "u_df58c14e79fd3fac",
+      "kind": "text",
+      "source": "六次 Android 发布均为测试环境，覆盖官方、Google、Huawei、Samsung 四个渠道包。续费完成实现和测试包交付，不代表全部支付渠道验收或生产上线；后端具体部署版本仍需与发布记录对应。",
+      "occurrence": 0,
+      "target": "All six Android releases were staging releases, covering Official, Google, Huawei and Samsung channel packages. Renewal implementation and test-package delivery do not establish acceptance testing across all payment providers or production launch; exact backend deployment versions still need release-record mapping.",
+      "context": "p @ line 92 · surrounding text: 一、本阶段关键决策与状态 续费功能于9月18日完成实现并进入测试交付；主页向单 IP 展示简化。Windows、iOS 与 FFF 多平台继续开发和验证，正式发布按各平台验收结果推进。 二、本阶段关键成果 6 次 Android 测试发布 9月18日 续费功能实现完成 9月7日 中国、台湾 Android 测试连接确认 FFF Apple macOS、iPhone 未签名构建通过 进展 交付结果 下一步 续费与购买 会员天数按等级与购买顺序使用的基础逻辑、购买接口及 Android 对接进入测试；暂停的天数保留。 覆盖重复购买、到期切换、支付回调和退款；商店自动续费单独验证。 连接与线路体验 先探测再选线、部分测速结果、缓存延迟、重连与剩余时间展示持续改进。 补齐协议、地区与设备回归；零配额仅测速仍属计划。 主页简化 9月18日与 SkyKing 讨论原设计；Timmy 明确采用最新简化 "
+    },
+    {
+      "id": "u_e33f340b1cd15fcb",
+      "kind": "text",
+      "source": "后端继续兼容可升级 Android、旧版 iOS HiYou 与 Windows。Windows 与 iOS 的源码进展分别进入安装、签名、连接和购买回归，不能用 Android 的连接结果替代。",
+      "occurrence": 0,
+      "target": "The backend remains compatible with upgradable Android, legacy iOS HiYou and Windows. Windows and iOS source progress requires separate installation, signing, connection and purchase regression; Android connectivity results cannot substitute for them.",
+      "context": "p @ line 92 · surrounding text: 一、本阶段关键决策与状态 续费功能于9月18日完成实现并进入测试交付；主页向单 IP 展示简化。Windows、iOS 与 FFF 多平台继续开发和验证，正式发布按各平台验收结果推进。 二、本阶段关键成果 6 次 Android 测试发布 9月18日 续费功能实现完成 9月7日 中国、台湾 Android 测试连接确认 FFF Apple macOS、iPhone 未签名构建通过 进展 交付结果 下一步 续费与购买 会员天数按等级与购买顺序使用的基础逻辑、购买接口及 Android 对接进入测试；暂停的天数保留。 覆盖重复购买、到期切换、支付回调和退款；商店自动续费单独验证。 连接与线路体验 先探测再选线、部分测速结果、缓存延迟、重连与剩余时间展示持续改进。 补齐协议、地区与设备回归；零配额仅测速仍属计划。 主页简化 9月18日与 SkyKing 讨论原设计；Timmy 明确采用最新简化 "
+    },
+    {
+      "id": "u_b1e61f160fb05a17",
+      "kind": "text",
+      "source": "六、安全与权限管控",
+      "occurrence": 0,
+      "target": "6. Security and access control",
+      "context": "h2 @ line 92 · surrounding text: 一、本阶段关键决策与状态 续费功能于9月18日完成实现并进入测试交付；主页向单 IP 展示简化。Windows、iOS 与 FFF 多平台继续开发和验证，正式发布按各平台验收结果推进。 二、本阶段关键成果 6 次 Android 测试发布 9月18日 续费功能实现完成 9月7日 中国、台湾 Android 测试连接确认 FFF Apple macOS、iPhone 未签名构建通过 进展 交付结果 下一步 续费与购买 会员天数按等级与购买顺序使用的基础逻辑、购买接口及 Android 对接进入测试；暂停的天数保留。 覆盖重复购买、到期切换、支付回调和退款；商店自动续费单独验证。 连接与线路体验 先探测再选线、部分测速结果、缓存延迟、重连与剩余时间展示持续改进。 补齐协议、地区与设备回归；零配额仅测速仍属计划。 主页简化 9月18日与 SkyKing 讨论原设计；Timmy 明确采用最新简化 "
+    },
+    {
+      "id": "u_27803208439a2920",
+      "kind": "text",
+      "source": "本期推进解析器职责隔离、防火墙规则冲突修复和 Windows 断线保护。现场配置、重启行为及无泄漏验收继续跟进；源码权限名单与生产异地恢复没有新的关闭结论。",
+      "occurrence": 0,
+      "target": "This period advanced resolver ownership separation, firewall-rule conflict fixes and Windows kill-switch protection. Live configuration, reboot behavior and leak acceptance testing remain follow-ups; there are no new closure conclusions for source access lists or production off-site recovery.",
+      "context": "p @ line 92 · surrounding text: 一、本阶段关键决策与状态 续费功能于9月18日完成实现并进入测试交付；主页向单 IP 展示简化。Windows、iOS 与 FFF 多平台继续开发和验证，正式发布按各平台验收结果推进。 二、本阶段关键成果 6 次 Android 测试发布 9月18日 续费功能实现完成 9月7日 中国、台湾 Android 测试连接确认 FFF Apple macOS、iPhone 未签名构建通过 进展 交付结果 下一步 续费与购买 会员天数按等级与购买顺序使用的基础逻辑、购买接口及 Android 对接进入测试；暂停的天数保留。 覆盖重复购买、到期切换、支付回调和退款；商店自动续费单独验证。 连接与线路体验 先探测再选线、部分测速结果、缓存延迟、重连与剩余时间展示持续改进。 补齐协议、地区与设备回归；零配额仅测速仍属计划。 主页简化 9月18日与 SkyKing 讨论原设计；Timmy 明确采用最新简化 "
+    },
+    {
+      "id": "u_e8f6752aa7134d56",
+      "kind": "text",
+      "source": "七、FFF 并行进展（Lex 实时口径，截至9月18日）",
+      "occurrence": 0,
+      "target": "7. FFF parallel progress (Lex, real-time reporting through 18 Sep)",
+      "context": "h2 @ line 92 · surrounding text: 一、本阶段关键决策与状态 续费功能于9月18日完成实现并进入测试交付；主页向单 IP 展示简化。Windows、iOS 与 FFF 多平台继续开发和验证，正式发布按各平台验收结果推进。 二、本阶段关键成果 6 次 Android 测试发布 9月18日 续费功能实现完成 9月7日 中国、台湾 Android 测试连接确认 FFF Apple macOS、iPhone 未签名构建通过 进展 交付结果 下一步 续费与购买 会员天数按等级与购买顺序使用的基础逻辑、购买接口及 Android 对接进入测试；暂停的天数保留。 覆盖重复购买、到期切换、支付回调和退款；商店自动续费单独验证。 连接与线路体验 先探测再选线、部分测速结果、缓存延迟、重连与剩余时间展示持续改进。 补齐协议、地区与设备回归；零配额仅测速仍属计划。 主页简化 9月18日与 SkyKing 讨论原设计；Timmy 明确采用最新简化 "
+    },
+    {
+      "id": "u_0746fc46bd87f1fb",
+      "kind": "text",
+      "source": "进展",
+      "occurrence": 2,
+      "target": "Progress",
+      "context": "th @ line 92 · surrounding text: 一、本阶段关键决策与状态 续费功能于9月18日完成实现并进入测试交付；主页向单 IP 展示简化。Windows、iOS 与 FFF 多平台继续开发和验证，正式发布按各平台验收结果推进。 二、本阶段关键成果 6 次 Android 测试发布 9月18日 续费功能实现完成 9月7日 中国、台湾 Android 测试连接确认 FFF Apple macOS、iPhone 未签名构建通过 进展 交付结果 下一步 续费与购买 会员天数按等级与购买顺序使用的基础逻辑、购买接口及 Android 对接进入测试；暂停的天数保留。 覆盖重复购买、到期切换、支付回调和退款；商店自动续费单独验证。 连接与线路体验 先探测再选线、部分测速结果、缓存延迟、重连与剩余时间展示持续改进。 补齐协议、地区与设备回归；零配额仅测速仍属计划。 主页简化 9月18日与 SkyKing 讨论原设计；Timmy 明确采用最新简化 "
+    },
+    {
+      "id": "u_1965870a1ba57b91",
+      "kind": "text",
+      "source": "交付结果",
+      "occurrence": 1,
+      "target": "Delivery result",
+      "context": "th @ line 92 · surrounding text: 一、本阶段关键决策与状态 续费功能于9月18日完成实现并进入测试交付；主页向单 IP 展示简化。Windows、iOS 与 FFF 多平台继续开发和验证，正式发布按各平台验收结果推进。 二、本阶段关键成果 6 次 Android 测试发布 9月18日 续费功能实现完成 9月7日 中国、台湾 Android 测试连接确认 FFF Apple macOS、iPhone 未签名构建通过 进展 交付结果 下一步 续费与购买 会员天数按等级与购买顺序使用的基础逻辑、购买接口及 Android 对接进入测试；暂停的天数保留。 覆盖重复购买、到期切换、支付回调和退款；商店自动续费单独验证。 连接与线路体验 先探测再选线、部分测速结果、缓存延迟、重连与剩余时间展示持续改进。 补齐协议、地区与设备回归；零配额仅测速仍属计划。 主页简化 9月18日与 SkyKing 讨论原设计；Timmy 明确采用最新简化 "
+    },
+    {
+      "id": "u_6196176c400a4211",
+      "kind": "text",
+      "source": "下一步",
+      "occurrence": 1,
+      "target": "Next Step",
+      "context": "th @ line 92 · surrounding text: 一、本阶段关键决策与状态 续费功能于9月18日完成实现并进入测试交付；主页向单 IP 展示简化。Windows、iOS 与 FFF 多平台继续开发和验证，正式发布按各平台验收结果推进。 二、本阶段关键成果 6 次 Android 测试发布 9月18日 续费功能实现完成 9月7日 中国、台湾 Android 测试连接确认 FFF Apple macOS、iPhone 未签名构建通过 进展 交付结果 下一步 续费与购买 会员天数按等级与购买顺序使用的基础逻辑、购买接口及 Android 对接进入测试；暂停的天数保留。 覆盖重复购买、到期切换、支付回调和退款；商店自动续费单独验证。 连接与线路体验 先探测再选线、部分测速结果、缓存延迟、重连与剩余时间展示持续改进。 补齐协议、地区与设备回归；零配额仅测速仍属计划。 主页简化 9月18日与 SkyKing 讨论原设计；Timmy 明确采用最新简化 "
+    },
+    {
+      "id": "u_d7f659d5a1d10af3",
+      "kind": "text",
+      "source": "TUN、辅助服务、流量与线路状态接入，打包脚本继续完善。",
+      "occurrence": 0,
+      "target": "TUN, helper services, traffic and route status were integrated; packaging scripts progressed.",
+      "context": "td @ line 92 · surrounding text: 一、本阶段关键决策与状态 续费功能于9月18日完成实现并进入测试交付；主页向单 IP 展示简化。Windows、iOS 与 FFF 多平台继续开发和验证，正式发布按各平台验收结果推进。 二、本阶段关键成果 6 次 Android 测试发布 9月18日 续费功能实现完成 9月7日 中国、台湾 Android 测试连接确认 FFF Apple macOS、iPhone 未签名构建通过 进展 交付结果 下一步 续费与购买 会员天数按等级与购买顺序使用的基础逻辑、购买接口及 Android 对接进入测试；暂停的天数保留。 覆盖重复购买、到期切换、支付回调和退款；商店自动续费单独验证。 连接与线路体验 先探测再选线、部分测速结果、缓存延迟、重连与剩余时间展示持续改进。 补齐协议、地区与设备回归；零配额仅测速仍属计划。 主页简化 9月18日与 SkyKing 讨论原设计；Timmy 明确采用最新简化 "
+    },
+    {
+      "id": "u_a5e4d130281828dd",
+      "kind": "text",
+      "source": "完成签名安装、权限、连接和清理验收。",
+      "occurrence": 0,
+      "target": "Complete signed installation, permissions, connectivity and cleanup acceptance testing.",
+      "context": "td @ line 92 · surrounding text: 一、本阶段关键决策与状态 续费功能于9月18日完成实现并进入测试交付；主页向单 IP 展示简化。Windows、iOS 与 FFF 多平台继续开发和验证，正式发布按各平台验收结果推进。 二、本阶段关键成果 6 次 Android 测试发布 9月18日 续费功能实现完成 9月7日 中国、台湾 Android 测试连接确认 FFF Apple macOS、iPhone 未签名构建通过 进展 交付结果 下一步 续费与购买 会员天数按等级与购买顺序使用的基础逻辑、购买接口及 Android 对接进入测试；暂停的天数保留。 覆盖重复购买、到期切换、支付回调和退款；商店自动续费单独验证。 连接与线路体验 先探测再选线、部分测速结果、缓存延迟、重连与剩余时间展示持续改进。 补齐协议、地区与设备回归；零配额仅测速仍属计划。 主页简化 9月18日与 SkyKing 讨论原设计；Timmy 明确采用最新简化 "
+    },
+    {
+      "id": "u_fd25c530ea1cfabc",
+      "kind": "text",
+      "source": "共享核心接入完成 macOS 双架构和 iPhone 未签名构建；已有原生与插件测试通过记录。",
+      "occurrence": 0,
+      "target": "Shared-core integration passed builds without signing for both macOS architectures and iPhone, with recorded native and plugin test passes.",
+      "context": "td @ line 92 · surrounding text: 一、本阶段关键决策与状态 续费功能于9月18日完成实现并进入测试交付；主页向单 IP 展示简化。Windows、iOS 与 FFF 多平台继续开发和验证，正式发布按各平台验收结果推进。 二、本阶段关键成果 6 次 Android 测试发布 9月18日 续费功能实现完成 9月7日 中国、台湾 Android 测试连接确认 FFF Apple macOS、iPhone 未签名构建通过 进展 交付结果 下一步 续费与购买 会员天数按等级与购买顺序使用的基础逻辑、购买接口及 Android 对接进入测试；暂停的天数保留。 覆盖重复购买、到期切换、支付回调和退款；商店自动续费单独验证。 连接与线路体验 先探测再选线、部分测速结果、缓存延迟、重连与剩余时间展示持续改进。 补齐协议、地区与设备回归；零配额仅测速仍属计划。 主页简化 9月18日与 SkyKing 讨论原设计；Timmy 明确采用最新简化 "
+    },
+    {
+      "id": "u_1e7f0a2bed34e8fd",
+      "kind": "text",
+      "source": "验证签名安装、系统扩展激活、真实 VPN 与断线保护。",
+      "occurrence": 0,
+      "target": "Validate signed installation, system-extension activation, live VPN and kill-switch protection.",
+      "context": "td @ line 92 · surrounding text: 一、本阶段关键决策与状态 续费功能于9月18日完成实现并进入测试交付；主页向单 IP 展示简化。Windows、iOS 与 FFF 多平台继续开发和验证，正式发布按各平台验收结果推进。 二、本阶段关键成果 6 次 Android 测试发布 9月18日 续费功能实现完成 9月7日 中国、台湾 Android 测试连接确认 FFF Apple macOS、iPhone 未签名构建通过 进展 交付结果 下一步 续费与购买 会员天数按等级与购买顺序使用的基础逻辑、购买接口及 Android 对接进入测试；暂停的天数保留。 覆盖重复购买、到期切换、支付回调和退款；商店自动续费单独验证。 连接与线路体验 先探测再选线、部分测速结果、缓存延迟、重连与剩余时间展示持续改进。 补齐协议、地区与设备回归；零配额仅测速仍属计划。 主页简化 9月18日与 SkyKing 讨论原设计；Timmy 明确采用最新简化 "
+    },
+    {
+      "id": "u_c961542c2e32e3f4",
+      "kind": "text",
+      "source": "接口与账号",
+      "occurrence": 0,
+      "target": "APIs and accounts",
+      "context": "td @ line 92 · surrounding text: 一、本阶段关键决策与状态 续费功能于9月18日完成实现并进入测试交付；主页向单 IP 展示简化。Windows、iOS 与 FFF 多平台继续开发和验证，正式发布按各平台验收结果推进。 二、本阶段关键成果 6 次 Android 测试发布 9月18日 续费功能实现完成 9月7日 中国、台湾 Android 测试连接确认 FFF Apple macOS、iPhone 未签名构建通过 进展 交付结果 下一步 续费与购买 会员天数按等级与购买顺序使用的基础逻辑、购买接口及 Android 对接进入测试；暂停的天数保留。 覆盖重复购买、到期切换、支付回调和退款；商店自动续费单独验证。 连接与线路体验 先探测再选线、部分测速结果、缓存延迟、重连与剩余时间展示持续改进。 补齐协议、地区与设备回归；零配额仅测速仍属计划。 主页简化 9月18日与 SkyKing 讨论原设计；Timmy 明确采用最新简化 "
+    },
+    {
+      "id": "u_891ea39d0760e2b2",
+      "kind": "text",
+      "source": "登录、套餐分配、支付通道、用户资料及账号清理持续对齐。",
+      "occurrence": 0,
+      "target": "Authentication, plan allocation, payment channels, profiles and account cleanup continued to align.",
+      "context": "td @ line 92 · surrounding text: 一、本阶段关键决策与状态 续费功能于9月18日完成实现并进入测试交付；主页向单 IP 展示简化。Windows、iOS 与 FFF 多平台继续开发和验证，正式发布按各平台验收结果推进。 二、本阶段关键成果 6 次 Android 测试发布 9月18日 续费功能实现完成 9月7日 中国、台湾 Android 测试连接确认 FFF Apple macOS、iPhone 未签名构建通过 进展 交付结果 下一步 续费与购买 会员天数按等级与购买顺序使用的基础逻辑、购买接口及 Android 对接进入测试；暂停的天数保留。 覆盖重复购买、到期切换、支付回调和退款；商店自动续费单独验证。 连接与线路体验 先探测再选线、部分测速结果、缓存延迟、重连与剩余时间展示持续改进。 补齐协议、地区与设备回归；零配额仅测速仍属计划。 主页简化 9月18日与 SkyKing 讨论原设计；Timmy 明确采用最新简化 "
+    },
+    {
+      "id": "u_1897894f23232bb9",
+      "kind": "text",
+      "source": "完成支付闭环与跨平台联调。",
+      "occurrence": 0,
+      "target": "Complete end-to-end payments and cross-platform integration tests.",
+      "context": "td @ line 92 · surrounding text: 一、本阶段关键决策与状态 续费功能于9月18日完成实现并进入测试交付；主页向单 IP 展示简化。Windows、iOS 与 FFF 多平台继续开发和验证，正式发布按各平台验收结果推进。 二、本阶段关键成果 6 次 Android 测试发布 9月18日 续费功能实现完成 9月7日 中国、台湾 Android 测试连接确认 FFF Apple macOS、iPhone 未签名构建通过 进展 交付结果 下一步 续费与购买 会员天数按等级与购买顺序使用的基础逻辑、购买接口及 Android 对接进入测试；暂停的天数保留。 覆盖重复购买、到期切换、支付回调和退款；商店自动续费单独验证。 连接与线路体验 先探测再选线、部分测速结果、缓存延迟、重连与剩余时间展示持续改进。 补齐协议、地区与设备回归；零配额仅测速仍属计划。 主页简化 9月18日与 SkyKing 讨论原设计；Timmy 明确采用最新简化 "
+    },
+    {
+      "id": "u_4de8d0ff4f290b8d",
+      "kind": "text",
+      "source": "FFF 保持独立运行环境、账号、数据库、缓存、凭证与迁移历史，只复用版本化源码。Roy 负责的注册及支付网关商务事项，本期没有新增确认。",
+      "occurrence": 0,
+      "target": "FFF retains separate runtime environments, accounts, databases, caches, credentials and migration history, reusing only versioned source. There is no new confirmation for registration and payment-gateway business matters owned by Roy.",
+      "context": "p @ line 92 · surrounding text: 一、本阶段关键决策与状态 续费功能于9月18日完成实现并进入测试交付；主页向单 IP 展示简化。Windows、iOS 与 FFF 多平台继续开发和验证，正式发布按各平台验收结果推进。 二、本阶段关键成果 6 次 Android 测试发布 9月18日 续费功能实现完成 9月7日 中国、台湾 Android 测试连接确认 FFF Apple macOS、iPhone 未签名构建通过 进展 交付结果 下一步 续费与购买 会员天数按等级与购买顺序使用的基础逻辑、购买接口及 Android 对接进入测试；暂停的天数保留。 覆盖重复购买、到期切换、支付回调和退款；商店自动续费单独验证。 连接与线路体验 先探测再选线、部分测速结果、缓存延迟、重连与剩余时间展示持续改进。 补齐协议、地区与设备回归；零配额仅测速仍属计划。 主页简化 9月18日与 SkyKing 讨论原设计；Timmy 明确采用最新简化 "
+    },
+    {
+      "id": "u_ebb15e422aa6fa81",
+      "kind": "text",
+      "source": "八、阻塞、下一步与中长期顺序",
+      "occurrence": 0,
+      "target": "8. Blockers, next steps and longer-term sequence",
+      "context": "h2 @ line 92 · surrounding text: 一、本阶段关键决策与状态 续费功能于9月18日完成实现并进入测试交付；主页向单 IP 展示简化。Windows、iOS 与 FFF 多平台继续开发和验证，正式发布按各平台验收结果推进。 二、本阶段关键成果 6 次 Android 测试发布 9月18日 续费功能实现完成 9月7日 中国、台湾 Android 测试连接确认 FFF Apple macOS、iPhone 未签名构建通过 进展 交付结果 下一步 续费与购买 会员天数按等级与购买顺序使用的基础逻辑、购买接口及 Android 对接进入测试；暂停的天数保留。 覆盖重复购买、到期切换、支付回调和退款；商店自动续费单独验证。 连接与线路体验 先探测再选线、部分测速结果、缓存延迟、重连与剩余时间展示持续改进。 补齐协议、地区与设备回归；零配额仅测速仍属计划。 主页简化 9月18日与 SkyKing 讨论原设计；Timmy 明确采用最新简化 "
+    },
+    {
+      "id": "u_272a35aa68e5f5ca",
+      "kind": "text",
+      "source": "截至9月18日，下一轮先完成续费与购买场景回归，再关闭 Android 线路与连接体验，随后按平台补齐 Windows、iOS 和 FFF 的签名及安装验收。具体上线日期以测试结果为准。",
+      "occurrence": 0,
+      "target": "As of 18 Sep, the next validation cycle prioritizes renewal and purchase regression, then Android route and connection experience, followed by signing and installation acceptance testing for Windows, iOS and FFF. Release dates depend on test results.",
+      "context": "p @ line 92 · surrounding text: 一、本阶段关键决策与状态 续费功能于9月18日完成实现并进入测试交付；主页向单 IP 展示简化。Windows、iOS 与 FFF 多平台继续开发和验证，正式发布按各平台验收结果推进。 二、本阶段关键成果 6 次 Android 测试发布 9月18日 续费功能实现完成 9月7日 中国、台湾 Android 测试连接确认 FFF Apple macOS、iPhone 未签名构建通过 进展 交付结果 下一步 续费与购买 会员天数按等级与购买顺序使用的基础逻辑、购买接口及 Android 对接进入测试；暂停的天数保留。 覆盖重复购买、到期切换、支付回调和退款；商店自动续费单独验证。 连接与线路体验 先探测再选线、部分测速结果、缓存延迟、重连与剩余时间展示持续改进。 补齐协议、地区与设备回归；零配额仅测速仍属计划。 主页简化 9月18日与 SkyKing 讨论原设计；Timmy 明确采用最新简化 "
+    },
+    {
+      "id": "u_7ece914e51f03f22",
+      "kind": "text",
+      "source": "零配额仅测速、智能分流和旧接口退出继续作为独立计划；不能把节点可见或相关源码修复写成这些能力已交付。异地恢复仍需实际演练结果。",
+      "occurrence": 0,
+      "target": "Probe-only access at zero quota, smart routing and legacy API retirement remain separate plans; VPN node visibility or related source fixes do not establish their delivery. Off-site recovery still requires actual drill results.",
+      "context": "p @ line 92 · surrounding text: 一、本阶段关键决策与状态 续费功能于9月18日完成实现并进入测试交付；主页向单 IP 展示简化。Windows、iOS 与 FFF 多平台继续开发和验证，正式发布按各平台验收结果推进。 二、本阶段关键成果 6 次 Android 测试发布 9月18日 续费功能实现完成 9月7日 中国、台湾 Android 测试连接确认 FFF Apple macOS、iPhone 未签名构建通过 进展 交付结果 下一步 续费与购买 会员天数按等级与购买顺序使用的基础逻辑、购买接口及 Android 对接进入测试；暂停的天数保留。 覆盖重复购买、到期切换、支付回调和退款；商店自动续费单独验证。 连接与线路体验 先探测再选线、部分测速结果、缓存延迟、重连与剩余时间展示持续改进。 补齐协议、地区与设备回归；零配额仅测速仍属计划。 主页简化 9月18日与 SkyKing 讨论原设计；Timmy 明确采用最新简化 "
+    },
+    {
+      "id": "u_5521c2d75497a1f1",
+      "kind": "text",
+      "source": "九、财务影响",
+      "occurrence": 0,
+      "target": "9. Financial impact",
+      "context": "h2 @ line 92 · surrounding text: 一、本阶段关键决策与状态 续费功能于9月18日完成实现并进入测试交付；主页向单 IP 展示简化。Windows、iOS 与 FFF 多平台继续开发和验证，正式发布按各平台验收结果推进。 二、本阶段关键成果 6 次 Android 测试发布 9月18日 续费功能实现完成 9月7日 中国、台湾 Android 测试连接确认 FFF Apple macOS、iPhone 未签名构建通过 进展 交付结果 下一步 续费与购买 会员天数按等级与购买顺序使用的基础逻辑、购买接口及 Android 对接进入测试；暂停的天数保留。 覆盖重复购买、到期切换、支付回调和退款；商店自动续费单独验证。 连接与线路体验 先探测再选线、部分测速结果、缓存延迟、重连与剩余时间展示持续改进。 补齐协议、地区与设备回归；零配额仅测速仍属计划。 主页简化 9月18日与 SkyKing 讨论原设计；Timmy 明确采用最新简化 "
+    },
+    {
+      "id": "u_f609923418319ad5",
+      "kind": "text",
+      "source": "本期主要保护续费收入、会员权益与连接体验。未新增生产收入或成本核验，因此不将测试发布换算为收入增长或节省金额。",
+      "occurrence": 0,
+      "target": "This period primarily protects renewal revenue, membership entitlements and connection experience. No new production revenue or cost verification was performed, so staging releases are not converted into revenue growth or savings amounts.",
+      "context": "p @ line 92 · surrounding text: 一、本阶段关键决策与状态 续费功能于9月18日完成实现并进入测试交付；主页向单 IP 展示简化。Windows、iOS 与 FFF 多平台继续开发和验证，正式发布按各平台验收结果推进。 二、本阶段关键成果 6 次 Android 测试发布 9月18日 续费功能实现完成 9月7日 中国、台湾 Android 测试连接确认 FFF Apple macOS、iPhone 未签名构建通过 进展 交付结果 下一步 续费与购买 会员天数按等级与购买顺序使用的基础逻辑、购买接口及 Android 对接进入测试；暂停的天数保留。 覆盖重复购买、到期切换、支付回调和退款；商店自动续费单独验证。 连接与线路体验 先探测再选线、部分测速结果、缓存延迟、重连与剩余时间展示持续改进。 补齐协议、地区与设备回归；零配额仅测速仍属计划。 主页简化 9月18日与 SkyKing 讨论原设计；Timmy 明确采用最新简化 "
+    },
+    {
+      "id": "u_f05334e17a2d83cd",
+      "kind": "text",
+      "source": "Arrowfish · FFF · 阶段进展报告",
+      "occurrence": 0,
+      "target": "Arrowfish · FFF · Sprint progress report",
+      "context": "footer.footer @ line 93"
+    }
+  ],
+  "blocks": {
+    "b0001": {
+      "type": "heading",
+      "source": "第12阶段 · 续费与多平台进展",
+      "occurrence": 0
+    },
+    "b0002": {
+      "type": "p",
+      "source": "报告周期 2026-09-05 至 2026-09-18 · 复核 2026-09-23",
+      "occurrence": 0
+    },
+    "b0003": {
+      "type": "p",
+      "source": "续费功能完成实现，Android 持续交付六次测试版本，连接与主页体验继续改善，FFF 向 Windows 和 Apple 平台推进。",
+      "occurrence": 0
+    },
+    "b0004": {
+      "type": "heading",
+      "source": "一、本阶段关键决策与状态",
+      "occurrence": 0
+    },
+    "b0005": {
+      "type": "p",
+      "source": "续费功能于9月18日完成实现并进入测试交付；主页向单 IP 展示简化。Windows、iOS 与 FFF 多平台继续开发和验证，正式发布按各平台验收结果推进。",
+      "occurrence": 0
+    },
+    "b0006": {
+      "type": "heading",
+      "source": "二、本阶段关键成果",
+      "occurrence": 0
+    },
+    "b0007": {
+      "type": "highlight",
+      "source": "6 次 Android 测试发布",
+      "occurrence": 0
+    },
+    "b0008": {
+      "type": "highlight",
+      "source": "9月18日 续费功能实现完成",
+      "occurrence": 0
+    },
+    "b0009": {
+      "type": "highlight",
+      "source": "9月7日 中国、台湾 Android 测试连接确认",
+      "occurrence": 0
+    },
+    "b0010": {
+      "type": "highlight",
+      "source": "FFF Apple macOS、iPhone 未签名构建通过",
+      "occurrence": 0
+    },
+    "b0011": {
+      "type": "table-row",
+      "source": "进展 交付结果 下一步",
+      "occurrence": 0
+    },
+    "b0012": {
+      "type": "table-row",
+      "source": "续费与购买 会员天数按等级与购买顺序使用的基础逻辑、购买接口及 Android 对接进入测试；暂停的天数保留。 覆盖重复购买、到期切换、支付回调和退款；商店自动续费单独验证。",
+      "occurrence": 0
+    },
+    "b0013": {
+      "type": "table-row",
+      "source": "连接与线路体验 先探测再选线、部分测速结果、缓存延迟、重连与剩余时间展示持续改进。 补齐协议、地区与设备回归；零配额仅测速仍属计划。",
+      "occurrence": 0
+    },
+    "b0014": {
+      "type": "table-row",
+      "source": "主页简化 9月18日与 SkyKing 讨论原设计；Timmy 明确采用最新简化 UI、单 IP 展示方向，Android 布局已调整。 继续核对视觉、连接状态和跨端一致性。",
+      "occurrence": 0
+    },
+    "b0015": {
+      "type": "table-row",
+      "source": "节点运维 解析器职责、防火墙冲突、节点分配与退役保护已有修复；协议应用继续优化。 补齐真实节点与重启后验收。",
+      "occurrence": 0
+    },
+    "b0016": {
+      "type": "table-row",
+      "source": "归因与统计 签名归因凭证、访问计数及后台展示继续修复。 验证重试与并发、安装归因及已知记录对账。",
+      "occurrence": 0
+    },
+    "b0017": {
+      "type": "table-row",
+      "source": "Windows 与 iOS Windows 推进订阅接口、断线保护与配额对齐；iOS 更新完整套餐目录、核心版本和本地化。 各端分别完成安装、连接、购买与签名发布验收。",
+      "occurrence": 0
+    },
+    "b0018": {
+      "type": "heading",
+      "source": "三、改善与商业价值",
+      "occurrence": 0
+    },
+    "b0019": {
+      "type": "table-row",
+      "source": "改善 业务价值",
+      "occurrence": 0
+    },
+    "b0020": {
+      "type": "table-row",
+      "source": "续费天数统一处理 支持同等级续购和高等级优先使用，减少会员天数重复消耗与丢失的风险。",
+      "occurrence": 0
+    },
+    "b0021": {
+      "type": "table-row",
+      "source": "线路探测与主页简化 减少选线等待与状态理解成本，让连接结果更清楚。",
+      "occurrence": 0
+    },
+    "b0022": {
+      "type": "table-row",
+      "source": "节点与后台修复 降低配置冲突与误操作风险，为后续发布提供可追踪的运维结果。",
+      "occurrence": 0
+    },
+    "b0023": {
+      "type": "heading",
+      "source": "四、关键时间节点",
+      "occurrence": 0
+    },
+    "b0024": {
+      "type": "table-row",
+      "source": "日期 进展",
+      "occurrence": 0
+    },
+    "b0025": {
+      "type": "table-row",
+      "source": "9月7日 Android 一次测试发布；中国与台湾测试连接结果获确认，范围限当次测试。",
+      "occurrence": 0
+    },
+    "b0026": {
+      "type": "table-row",
+      "source": "9月8–11日 会员生命周期与单笔计时模型推进；9月10日一次 Android 测试发布。",
+      "occurrence": 0
+    },
+    "b0027": {
+      "type": "table-row",
+      "source": "9月14–15日 后端迁移与分层收敛；FFF Apple 接入完成未签名构建验证。",
+      "occurrence": 0
+    },
+    "b0028": {
+      "type": "table-row",
+      "source": "9月17日 Android 三次测试发布，继续修复线路、测速和交互。",
+      "occurrence": 0
+    },
+    "b0029": {
+      "type": "table-row",
+      "source": "9月18日 Android 一次测试发布；续费实现完成，主页简化方向明确；FFF Windows 打包工作推进。",
+      "occurrence": 0
+    },
+    "b0030": {
+      "type": "heading",
+      "source": "五、测试发布与兼容要求",
+      "occurrence": 0
+    },
+    "b0031": {
+      "type": "p",
+      "source": "六次 Android 发布均为测试环境，覆盖官方、Google、Huawei、Samsung 四个渠道包。续费完成实现和测试包交付，不代表全部支付渠道验收或生产上线；后端具体部署版本仍需与发布记录对应。",
+      "occurrence": 0
+    },
+    "b0032": {
+      "type": "p",
+      "source": "后端继续兼容可升级 Android、旧版 iOS HiYou 与 Windows。Windows 与 iOS 的源码进展分别进入安装、签名、连接和购买回归，不能用 Android 的连接结果替代。",
+      "occurrence": 0
+    },
+    "b0033": {
+      "type": "heading",
+      "source": "六、安全与权限管控",
+      "occurrence": 0
+    },
+    "b0034": {
+      "type": "p",
+      "source": "本期推进解析器职责隔离、防火墙规则冲突修复和 Windows 断线保护。现场配置、重启行为及无泄漏验收继续跟进；源码权限名单与生产异地恢复没有新的关闭结论。",
+      "occurrence": 0
+    },
+    "b0035": {
+      "type": "heading",
+      "source": "七、FFF 并行进展（Lex 实时口径，截至9月18日）",
+      "occurrence": 0
+    },
+    "b0036": {
+      "type": "table-row",
+      "source": "进展 交付结果 下一步",
+      "occurrence": 1
+    },
+    "b0037": {
+      "type": "table-row",
+      "source": "Windows TUN、辅助服务、流量与线路状态接入，打包脚本继续完善。 完成签名安装、权限、连接和清理验收。",
+      "occurrence": 0
+    },
+    "b0038": {
+      "type": "table-row",
+      "source": "Apple 共享核心接入完成 macOS 双架构和 iPhone 未签名构建；已有原生与插件测试通过记录。 验证签名安装、系统扩展激活、真实 VPN 与断线保护。",
+      "occurrence": 0
+    },
+    "b0039": {
+      "type": "table-row",
+      "source": "接口与账号 登录、套餐分配、支付通道、用户资料及账号清理持续对齐。 完成支付闭环与跨平台联调。",
+      "occurrence": 0
+    },
+    "b0040": {
+      "type": "p",
+      "source": "FFF 保持独立运行环境、账号、数据库、缓存、凭证与迁移历史，只复用版本化源码。Roy 负责的注册及支付网关商务事项，本期没有新增确认。",
+      "occurrence": 0
+    },
+    "b0041": {
+      "type": "heading",
+      "source": "八、阻塞、下一步与中长期顺序",
+      "occurrence": 0
+    },
+    "b0042": {
+      "type": "p",
+      "source": "截至9月18日，下一轮先完成续费与购买场景回归，再关闭 Android 线路与连接体验，随后按平台补齐 Windows、iOS 和 FFF 的签名及安装验收。具体上线日期以测试结果为准。",
+      "occurrence": 0
+    },
+    "b0043": {
+      "type": "p",
+      "source": "零配额仅测速、智能分流和旧接口退出继续作为独立计划；不能把节点可见或相关源码修复写成这些能力已交付。异地恢复仍需实际演练结果。",
+      "occurrence": 0
+    },
+    "b0044": {
+      "type": "heading",
+      "source": "九、财务影响",
+      "occurrence": 0
+    },
+    "b0045": {
+      "type": "p",
+      "source": "本期主要保护续费收入、会员权益与连接体验。未新增生产收入或成本核验，因此不将测试发布换算为收入增长或节省金额。",
+      "occurrence": 0
+    }
+  },
+  "reviewedTargetHash": "59957fcad2807832"
+}

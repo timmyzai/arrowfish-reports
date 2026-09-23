@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-report-id="sprint-11-progress-20260923"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex, nofollow">
+<title>第11阶段 · 交付进展补充</title><meta name="description" content="Android 完成三次测试发布，Apple 测试分发取得有效构建，支付、身份与连接改动持续进入验证。">
+<script src="../../assets/ui-i18n.js"></script><script src="../../assets/site-preferences.js"></script><script src="../../assets/auth-gate.js"></script><link rel="stylesheet" href="../../assets/site-theme.css">
+<style>
+    :root {
+      --bg: var(--af-bg);
+      --paper: var(--af-surface);
+      --text: var(--af-text);
+      --muted: var(--af-text-muted);
+      --line: var(--af-border);
+      --blue: var(--af-primary);
+      --green: var(--af-success);
+      --green-bg: var(--af-success-soft);
+      --yellow: var(--af-warning);
+      --yellow-bg: var(--af-warning-soft);
+      --red: var(--af-danger);
+      --red-bg: var(--af-danger-soft);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", "Segoe UI", sans-serif;
+      line-height: 1.68;
+      -webkit-font-smoothing: antialiased;
+    }
+    main { max-width: 1120px; margin: 0 auto; padding: 32px 20px 56px; }
+    header { padding: 28px 0 18px; border-bottom: 1px solid var(--line); margin-bottom: 24px; }
+    .eyebrow { color: var(--blue); font-size: 14px; font-weight: 700; margin: 0 0 8px; }
+    h1 { font-size: 32px; line-height: 1.25; margin: 0 0 10px; letter-spacing: 0; }
+    .meta { color: var(--muted); margin: 0; font-size: 15px; }
+    section { background: var(--paper); border: 1px solid var(--line); border-radius: 8px; padding: 22px; margin: 18px 0; }
+    h2 { font-size: 21px; margin: 0 0 14px; letter-spacing: 0; display: flex; align-items: center; gap: 8px; }
+    h3 { font-size: 16px; margin: 18px 0 8px; color: var(--text); }
+    p { margin: 0 0 12px; }
+    p:last-child { margin-bottom: 0; }
+    .tldr { border-left: 5px solid var(--blue); background: var(--af-primary-soft); font-size: 18px; font-weight: 650; }
+    table { width: 100%; border-collapse: collapse; margin-top: 8px; font-size: 14.5px; }
+    th, td { border: 1px solid var(--line); padding: 10px 12px; text-align: left; vertical-align: top; }
+    th { background: var(--af-surface-muted); font-weight: 700; }
+    .score { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; margin: 12px 0; }
+    .metric { border: 1px solid var(--line); border-radius: 8px; padding: 14px; background: var(--af-surface-muted); }
+    .metric b, .metric strong { display: block; font-size: 21px; margin-bottom: 4px; }
+    .metric span { color: var(--muted); font-size: 12.5px; }
+    .note { color: var(--muted); font-size: 13.5px; margin-top: 10px; }
+    .ok { color: var(--green); font-weight: 700; }
+    .watch { color: var(--yellow); font-weight: 700; }
+    .risk { color: var(--red); font-weight: 700; }
+    .callout { border-radius: 8px; padding: 14px 16px; margin: 10px 0; border-left: 4px solid var(--blue); background: var(--af-primary-soft); font-size: 14.5px; }
+    .callout.risk, .callout.critical { border-left-color: var(--red); background: var(--red-bg); color: var(--text); }
+    .callout.watch { border-left-color: var(--yellow); background: var(--yellow-bg); color: var(--text); }
+    .callout.ok { border-left-color: var(--green); background: var(--green-bg); color: var(--text); }
+    .badge { display: inline-block; padding: 2px 9px; border-radius: 4px; font-size: 12.5px; font-weight: 700; white-space: nowrap; }
+    .badge.done { background: var(--af-success-soft); color: var(--af-success); }
+    .badge.progress { background: var(--af-warning-soft); color: var(--af-warning); }
+    .badge.pending { background: var(--af-surface-muted); color: var(--af-text-muted); }
+    .badge.risk { background: var(--af-danger-soft); color: var(--af-danger); }
+    .part {
+      margin: 30px 0 4px;
+      padding: 16px 20px;
+      border-radius: 8px;
+      background: linear-gradient(90deg, var(--af-primary) 0%, var(--af-primary) 100%);
+      color: var(--af-on-accent);
+    }
+    .part .pnum { font-size: 12.5px; font-weight: 700; opacity: .85; letter-spacing: .08em; }
+    .part .ptitle { font-size: 22px; font-weight: 700; margin-top: 2px; }
+    .part .psub { font-size: 13.5px; opacity: .9; margin-top: 4px; }
+    .part.fff { background: linear-gradient(90deg, var(--fff) 0%, var(--fff) 100%); }
+    ol, ul { padding-left: 22px; }
+    li { margin: 6px 0; }
+    .footer { margin-top: 24px; padding-top: 14px; border-top: 1px solid var(--line); font-size: 12.5px; color: var(--muted); text-align: center; }
+    @media (max-width: 760px) {
+      main { padding: 20px 12px 40px; }
+      h1 { font-size: 24px; }
+      section { padding: 16px; }
+      .score { grid-template-columns: 1fr 1fr; }
+      table { display: block; overflow-x: auto; font-size: 13px; }
+      th, td { padding: 7px 8px; }
+    }
+    @media (max-width: 480px) { .score { grid-template-columns: 1fr; } }
+    @media print { body { background: var(--af-surface); } main { max-width: none; padding: 0; } section { break-inside: avoid; } }
+
+nav a {display:inline-flex;align-items:center;min-height:44px} p {overflow-wrap:anywhere} a:focus-visible {outline:3px solid var(--af-primary);outline-offset:3px}
+
+header{padding:12px 0;margin-bottom:12px}section{padding:18px;margin:12px 0}.tldr{font-size:17px}main{padding-top:18px}.metric{padding:10px}.score{margin:8px 0}h1{font-size:28px}@media(max-width:480px){.score{grid-template-columns:1fr 1fr}h1{font-size:24px}}
+</style></head><body><main><nav><a href="../../index.html">返回报告目录</a></nav>
+<header data-report-header><h1>第11阶段 · 交付进展补充</h1><p class="meta">原周期 2026-08-22 至 2026-09-04 · 复核 2026-09-23</p></header>
+<section class="tldr"><p>Android 完成三次测试发布，Apple 测试分发取得有效构建，支付、身份与连接改动持续进入验证。</p></section>
+<section id="section-1"><h2>一、本阶段关键决策与状态</h2><p>Android 持续交付测试版本，Apple 测试分发恢复推进，支付与订阅规则开始统一；本阶段的测试发布不代表正式上线。</p></section><section id="section-2"><h2>二、本阶段关键成果</h2><div class="score"><div class="metric"><b>3 次</b><span>Android 测试发布</span></div><div class="metric"><b>TestFlight</b><span>8月24日有效测试构建</span></div><div class="metric"><b>6 项主题</b><span>支付、身份与连接等工程进展</span></div><div class="metric"><b>FFF 交 QA</b><span>8月28日 Android 安装包</span></div></div><table><thead><tr><th>进展</th><th>交付结果</th><th>下一步</th></tr></thead><tbody><tr><td>支付与订阅</td><td>共享规则、支付状态、回调、重试及后台展示进入验证，为续费功能奠定基础。</td><td>核对迁移，验证重复回调、并发及真实支付。</td></tr><tr><td>设备身份与下单</td><td>设备标识解析和下单会话标准化进入验证。</td><td>配套后端跨域配置，再验证网站与客户端。</td></tr><tr><td>连接与 DNS</td><td>节点解析、隧道内解析及异常时阻断流量已有实现。</td><td>完成节点配置应用、真实连接及无泄漏验收。</td></tr><tr><td>节点管理</td><td>管理职责分离、地域命名、安装锁及防火墙任务持续改进。</td><td>验证现场任务结果与重启后的行为。</td></tr><tr><td>套餐与专属线路</td><td>套餐目录及专属层级展示进入验证。</td><td>补齐购买后授权，分别验证人工授予与购买线路。</td></tr><tr><td>限速与证书</td><td>按用户限速和证书域名一致性进入验证，旧核心继续清理。</td><td>独立验证吞吐、节点发布与实际连接。</td></tr></tbody></table></section><section id="section-3"><h2>三、改善与商业价值</h2><p>支付规则统一为续费可靠性提供基础；设备身份标准化减少跨端账号差异；节点任务可追踪性帮助缩短失败排查。测试包交付使这些改动进入实际验证。</p></section><section id="section-4"><h2>四、关键时间节点</h2><table><thead><tr><th>日期</th><th>进展</th></tr></thead><tbody><tr><td>8月24日</td><td>Android 两次测试发布；Apple 测试构建取得 TestFlight 有效状态。</td></tr><tr><td>8月25–27日</td><td>节点、DNS、身份及支付改动推进；8月27日再交付一次 Android 测试版本。</td></tr><tr><td>8月28–30日</td><td>FFF Android 交 QA，节点命名、套餐目录与专属层级展示继续完善。</td></tr><tr><td>9月1–4日</td><td>安装锁、限速、防火墙任务及证书修复进入验证。</td></tr></tbody></table></section><section id="section-5"><h2>五、测试发布与兼容要求</h2><p>三次 Android 发布均为测试环境，包含官方、Google、Huawei、Samsung 四个渠道包；“官方”表示渠道，不表示生产。Apple TestFlight 有效构建也不等于 App Store 发布。</p><p>后端继续支持 Android、旧版 iOS HiYou 与 Windows。数据迁移和设备标识配置须与客户端发布配套，不能用单端测试替代跨端回归。</p></section><section id="section-6"><h2>六、安全与权限管控</h2><p>本阶段推进节点管理凭证隔离、任务输出脱敏及 DNS 异常阻断。真实环境应用与无泄漏结果分别跟进；源码权限及异地恢复没有新的复核结论。</p></section><section id="section-7"><h2>七、FFF 并行进展（Lex 实时口径）</h2><p>8月28日 Android 安装包已交 QA，连接核心复用 SkyTunnel。安装、升级、自动分组与协议测试结果仍需留档；Roy 负责的公司注册和支付网关商务事项，本期没有新增确认。</p></section><section id="section-8"><h2>八、阻塞、下一步与中长期顺序</h2><p>阶段收尾仍需核对数据库迁移重叠、后端跨域配置和购买线路授权。第12阶段先推进续费与客户端集成，再补齐真实支付、三端连接和节点运行验收；以验证结果安排正式发布。</p></section><section id="section-9"><h2>九、财务影响</h2><p>本期以收入链路可靠性为重点，没有新增生产收入查询或成本核验；不将开发完成换算为收入增长。</p></section>
+<footer class="footer">Arrowfish · FFF · 阶段进展报告</footer>
+</main></body></html>

@@ -9,13 +9,13 @@
     "id": "fff-payment-gate",
     "reportId": "goal-2026-20260827",
     "question": "支付闭环为什么是 Android 首发门槛？",
-    "expectedAll": ["支付接口尚无完成", "作为 Android 首发门槛关闭"]
+    "expectedAll": ["客户端集成已开始", "仍未完整验收", "首发支付门槛"]
   },
   {
     "id": "fff-routing-gaps",
     "reportId": "goal-2026-20260827",
     "question": "智能路由还缺什么？",
-    "expectedAll": ["自动分组仍待关闭", "blacklist／whitelist 尚未接入配置生成"]
+    "expectedAll": ["基础存在，完整能力待开发", "blacklist／whitelist 尚未接入配置生成"]
   },
   {
     "id": "fff-multihop-scope",
@@ -39,8 +39,8 @@
     "id": "follow-up-pronoun",
     "reportId": "goal-2026-20260827",
     "question": "那项完成了吗？",
-    "conversation": ["支付接口与支付闭环目前进展如何？"],
-    "expectedAll": ["客户端支付接口尚无完成"]
+    "conversation": ["FFF 支付接口与支付闭环目前进展如何？"],
+    "expectedAll": ["客户端集成已开始", "仍未完整验收"]
   },
   {
     "id": "exact-five-point-summary",

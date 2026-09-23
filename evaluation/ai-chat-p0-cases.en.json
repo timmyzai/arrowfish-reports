@@ -9,13 +9,13 @@
     "id": "fff-payment-gate",
     "reportId": "goal-2026-20260827",
     "question": "Why is payment closure a gate for the Android launch?",
-    "expectedAll": ["payment", "Android"]
+    "expectedAll": ["client integration has started", "acceptance testing remain incomplete", "initial-release payment gate"]
   },
   {
     "id": "fff-routing-gaps",
     "reportId": "goal-2026-20260827",
     "question": "What remains for smart routing?",
-    "expectedAll": ["auto grouping remains open", "blacklist/whitelist data is not wired into config generation"]
+    "expectedAll": ["Foundation exists; full capability pending development", "blacklist/whitelist data is not wired into config generation"]
   },
   {
     "id": "fff-multihop-scope",
@@ -39,8 +39,8 @@
     "id": "follow-up-pronoun",
     "reportId": "goal-2026-20260827",
     "question": "Has that item been completed?",
-    "conversation": ["What is the current progress of the payment API and payment closure?"],
-    "expectedAll": ["payment"]
+    "conversation": ["What is the current progress of the FFF payment API and payment closure?"],
+    "expectedAll": ["client integration has started", "acceptance testing remain incomplete"]
   },
   {
     "id": "exact-five-point-summary",

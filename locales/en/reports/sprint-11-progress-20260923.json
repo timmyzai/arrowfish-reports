@@ -1,0 +1,688 @@
+{
+  "schemaVersion": 1,
+  "reportId": "sprint-11-progress-20260923",
+  "sourceFile": "Stakeholder/Sprint-11/20260923_progress-update.html",
+  "sourceVersion": "f9eafa0124ab2dcb",
+  "units": [
+    {
+      "id": "u_9141da31940096dc",
+      "kind": "text",
+      "source": "第11阶段 · 交付进展补充",
+      "occurrence": 0,
+      "target": "Sprint 11 · Delivery Progress Addendum",
+      "context": "title @ line 4"
+    },
+    {
+      "id": "u_6d8c50e6fd22c67c",
+      "kind": "attribute",
+      "source": "Android 完成三次测试发布，Apple 测试分发取得有效构建，支付、身份与连接改动持续进入验证。",
+      "occurrence": 0,
+      "target": "Android completed three staging releases, Apple test distribution obtained a valid build, and payment, identity and connectivity changes continued into validation.",
+      "context": "meta @ line 4 · surrounding text: 第11阶段 · 交付进展补充",
+      "attribute": "content"
+    },
+    {
+      "id": "u_039d504d44e4d2f2",
+      "kind": "text",
+      "source": "返回报告目录",
+      "occurrence": 0,
+      "target": "Back to report index",
+      "context": "a @ line 89"
+    },
+    {
+      "id": "u_7b20951c204ab8bc",
+      "kind": "text",
+      "source": "第11阶段 · 交付进展补充",
+      "occurrence": 1,
+      "target": "Sprint 11 · Delivery Progress Addendum",
+      "context": "h1 @ line 90 · surrounding text: 第11阶段 · 交付进展补充 原周期 2026-08-22 至 2026-09-04 · 复核 2026-09-23"
+    },
+    {
+      "id": "u_9e5b0ea534877eca",
+      "kind": "text",
+      "source": "原周期 2026-08-22 至 2026-09-04 · 复核 2026-09-23",
+      "occurrence": 0,
+      "target": "Original period 2026-08-22 to 2026-09-04 · Reviewed 2026-09-23",
+      "context": "p.meta @ line 90 · surrounding text: 第11阶段 · 交付进展补充 原周期 2026-08-22 至 2026-09-04 · 复核 2026-09-23"
+    },
+    {
+      "id": "u_422f2f2c6c167943",
+      "kind": "text",
+      "source": "Android 完成三次测试发布，Apple 测试分发取得有效构建，支付、身份与连接改动持续进入验证。",
+      "occurrence": 0,
+      "target": "Android completed three staging releases, Apple test distribution obtained a valid build, and payment, identity and connectivity changes continued into validation.",
+      "context": "p @ line 91"
+    },
+    {
+      "id": "u_234c42375fd07130",
+      "kind": "text",
+      "source": "一、本阶段关键决策与状态",
+      "occurrence": 0,
+      "target": "1. Key decisions and status",
+      "context": "h2 @ line 92 · surrounding text: 一、本阶段关键决策与状态 Android 持续交付测试版本，Apple 测试分发恢复推进，支付与订阅规则开始统一；本阶段的测试发布不代表正式上线。 二、本阶段关键成果 3 次 Android 测试发布 TestFlight 8月24日有效测试构建 6 项主题 支付、身份与连接等工程进展 FFF 交 QA 8月28日 Android 安装包 进展 交付结果 下一步 支付与订阅 共享规则、支付状态、回调、重试及后台展示进入验证，为续费功能奠定基础。 核对迁移，验证重复回调、并发及真实支付。 设备身份与下单 设备标识解析和下单会话标准化进入验证。 配套后端跨域配置，再验证网站与客户端。 连接与 DNS 节点解析、隧道内解析及异常时阻断流量已有实现。 完成节点配置应用、真实连接及无泄漏验收。 节点管理 管理职责分离、地域命名、安装锁及防火墙任务持续改进。 验证现场任务结果与重启后的行为。 套餐与专"
+    },
+    {
+      "id": "u_0bd38e77d3c37002",
+      "kind": "text",
+      "source": "Android 持续交付测试版本，Apple 测试分发恢复推进，支付与订阅规则开始统一；本阶段的测试发布不代表正式上线。",
+      "occurrence": 0,
+      "target": "Android test builds continued, Apple test distribution advanced, and payment and subscription rules began converging; test releases in this period do not represent production launch.",
+      "context": "p @ line 92 · surrounding text: 一、本阶段关键决策与状态 Android 持续交付测试版本，Apple 测试分发恢复推进，支付与订阅规则开始统一；本阶段的测试发布不代表正式上线。 二、本阶段关键成果 3 次 Android 测试发布 TestFlight 8月24日有效测试构建 6 项主题 支付、身份与连接等工程进展 FFF 交 QA 8月28日 Android 安装包 进展 交付结果 下一步 支付与订阅 共享规则、支付状态、回调、重试及后台展示进入验证，为续费功能奠定基础。 核对迁移，验证重复回调、并发及真实支付。 设备身份与下单 设备标识解析和下单会话标准化进入验证。 配套后端跨域配置，再验证网站与客户端。 连接与 DNS 节点解析、隧道内解析及异常时阻断流量已有实现。 完成节点配置应用、真实连接及无泄漏验收。 节点管理 管理职责分离、地域命名、安装锁及防火墙任务持续改进。 验证现场任务结果与重启后的行为。 套餐与专"
+    },
+    {
+      "id": "u_2b5050daede546b6",
+      "kind": "text",
+      "source": "二、本阶段关键成果",
+      "occurrence": 0,
+      "target": "2. Key outcomes",
+      "context": "h2 @ line 92 · surrounding text: 一、本阶段关键决策与状态 Android 持续交付测试版本，Apple 测试分发恢复推进，支付与订阅规则开始统一；本阶段的测试发布不代表正式上线。 二、本阶段关键成果 3 次 Android 测试发布 TestFlight 8月24日有效测试构建 6 项主题 支付、身份与连接等工程进展 FFF 交 QA 8月28日 Android 安装包 进展 交付结果 下一步 支付与订阅 共享规则、支付状态、回调、重试及后台展示进入验证，为续费功能奠定基础。 核对迁移，验证重复回调、并发及真实支付。 设备身份与下单 设备标识解析和下单会话标准化进入验证。 配套后端跨域配置，再验证网站与客户端。 连接与 DNS 节点解析、隧道内解析及异常时阻断流量已有实现。 完成节点配置应用、真实连接及无泄漏验收。 节点管理 管理职责分离、地域命名、安装锁及防火墙任务持续改进。 验证现场任务结果与重启后的行为。 套餐与专"
+    },
+    {
+      "id": "u_9a1717a4e7af5f5d",
+      "kind": "text",
+      "source": "3 次",
+      "occurrence": 0,
+      "target": "3",
+      "context": "b @ line 92 · surrounding text: 一、本阶段关键决策与状态 Android 持续交付测试版本，Apple 测试分发恢复推进，支付与订阅规则开始统一；本阶段的测试发布不代表正式上线。 二、本阶段关键成果 3 次 Android 测试发布 TestFlight 8月24日有效测试构建 6 项主题 支付、身份与连接等工程进展 FFF 交 QA 8月28日 Android 安装包 进展 交付结果 下一步 支付与订阅 共享规则、支付状态、回调、重试及后台展示进入验证，为续费功能奠定基础。 核对迁移，验证重复回调、并发及真实支付。 设备身份与下单 设备标识解析和下单会话标准化进入验证。 配套后端跨域配置，再验证网站与客户端。 连接与 DNS 节点解析、隧道内解析及异常时阻断流量已有实现。 完成节点配置应用、真实连接及无泄漏验收。 节点管理 管理职责分离、地域命名、安装锁及防火墙任务持续改进。 验证现场任务结果与重启后的行为。 套餐与专"
+    },
+    {
+      "id": "u_19f8db9099caf6d1",
+      "kind": "text",
+      "source": "Android 测试发布",
+      "occurrence": 0,
+      "target": "Android staging releases",
+      "context": "span @ line 92 · surrounding text: 一、本阶段关键决策与状态 Android 持续交付测试版本，Apple 测试分发恢复推进，支付与订阅规则开始统一；本阶段的测试发布不代表正式上线。 二、本阶段关键成果 3 次 Android 测试发布 TestFlight 8月24日有效测试构建 6 项主题 支付、身份与连接等工程进展 FFF 交 QA 8月28日 Android 安装包 进展 交付结果 下一步 支付与订阅 共享规则、支付状态、回调、重试及后台展示进入验证，为续费功能奠定基础。 核对迁移，验证重复回调、并发及真实支付。 设备身份与下单 设备标识解析和下单会话标准化进入验证。 配套后端跨域配置，再验证网站与客户端。 连接与 DNS 节点解析、隧道内解析及异常时阻断流量已有实现。 完成节点配置应用、真实连接及无泄漏验收。 节点管理 管理职责分离、地域命名、安装锁及防火墙任务持续改进。 验证现场任务结果与重启后的行为。 套餐与专"
+    },
+    {
+      "id": "u_733f8656d97490d7",
+      "kind": "text",
+      "source": "8月24日有效测试构建",
+      "occurrence": 0,
+      "target": "Valid test build on 24 Aug",
+      "context": "span @ line 92 · surrounding text: 一、本阶段关键决策与状态 Android 持续交付测试版本，Apple 测试分发恢复推进，支付与订阅规则开始统一；本阶段的测试发布不代表正式上线。 二、本阶段关键成果 3 次 Android 测试发布 TestFlight 8月24日有效测试构建 6 项主题 支付、身份与连接等工程进展 FFF 交 QA 8月28日 Android 安装包 进展 交付结果 下一步 支付与订阅 共享规则、支付状态、回调、重试及后台展示进入验证，为续费功能奠定基础。 核对迁移，验证重复回调、并发及真实支付。 设备身份与下单 设备标识解析和下单会话标准化进入验证。 配套后端跨域配置，再验证网站与客户端。 连接与 DNS 节点解析、隧道内解析及异常时阻断流量已有实现。 完成节点配置应用、真实连接及无泄漏验收。 节点管理 管理职责分离、地域命名、安装锁及防火墙任务持续改进。 验证现场任务结果与重启后的行为。 套餐与专"
+    },
+    {
+      "id": "u_f94ff5bfc33eb43b",
+      "kind": "text",
+      "source": "6 项主题",
+      "occurrence": 0,
+      "target": "6 themes",
+      "context": "b @ line 92 · surrounding text: 一、本阶段关键决策与状态 Android 持续交付测试版本，Apple 测试分发恢复推进，支付与订阅规则开始统一；本阶段的测试发布不代表正式上线。 二、本阶段关键成果 3 次 Android 测试发布 TestFlight 8月24日有效测试构建 6 项主题 支付、身份与连接等工程进展 FFF 交 QA 8月28日 Android 安装包 进展 交付结果 下一步 支付与订阅 共享规则、支付状态、回调、重试及后台展示进入验证，为续费功能奠定基础。 核对迁移，验证重复回调、并发及真实支付。 设备身份与下单 设备标识解析和下单会话标准化进入验证。 配套后端跨域配置，再验证网站与客户端。 连接与 DNS 节点解析、隧道内解析及异常时阻断流量已有实现。 完成节点配置应用、真实连接及无泄漏验收。 节点管理 管理职责分离、地域命名、安装锁及防火墙任务持续改进。 验证现场任务结果与重启后的行为。 套餐与专"
+    },
+    {
+      "id": "u_59f088b87ee5dc79",
+      "kind": "text",
+      "source": "支付、身份与连接等工程进展",
+      "occurrence": 0,
+      "target": "Payment, identity, connectivity and related work",
+      "context": "span @ line 92 · surrounding text: 一、本阶段关键决策与状态 Android 持续交付测试版本，Apple 测试分发恢复推进，支付与订阅规则开始统一；本阶段的测试发布不代表正式上线。 二、本阶段关键成果 3 次 Android 测试发布 TestFlight 8月24日有效测试构建 6 项主题 支付、身份与连接等工程进展 FFF 交 QA 8月28日 Android 安装包 进展 交付结果 下一步 支付与订阅 共享规则、支付状态、回调、重试及后台展示进入验证，为续费功能奠定基础。 核对迁移，验证重复回调、并发及真实支付。 设备身份与下单 设备标识解析和下单会话标准化进入验证。 配套后端跨域配置，再验证网站与客户端。 连接与 DNS 节点解析、隧道内解析及异常时阻断流量已有实现。 完成节点配置应用、真实连接及无泄漏验收。 节点管理 管理职责分离、地域命名、安装锁及防火墙任务持续改进。 验证现场任务结果与重启后的行为。 套餐与专"
+    },
+    {
+      "id": "u_c95c378a85686479",
+      "kind": "text",
+      "source": "FFF 交 QA",
+      "occurrence": 0,
+      "target": "FFF QA handoff",
+      "context": "b @ line 92 · surrounding text: 一、本阶段关键决策与状态 Android 持续交付测试版本，Apple 测试分发恢复推进，支付与订阅规则开始统一；本阶段的测试发布不代表正式上线。 二、本阶段关键成果 3 次 Android 测试发布 TestFlight 8月24日有效测试构建 6 项主题 支付、身份与连接等工程进展 FFF 交 QA 8月28日 Android 安装包 进展 交付结果 下一步 支付与订阅 共享规则、支付状态、回调、重试及后台展示进入验证，为续费功能奠定基础。 核对迁移，验证重复回调、并发及真实支付。 设备身份与下单 设备标识解析和下单会话标准化进入验证。 配套后端跨域配置，再验证网站与客户端。 连接与 DNS 节点解析、隧道内解析及异常时阻断流量已有实现。 完成节点配置应用、真实连接及无泄漏验收。 节点管理 管理职责分离、地域命名、安装锁及防火墙任务持续改进。 验证现场任务结果与重启后的行为。 套餐与专"
+    },
+    {
+      "id": "u_1598999eaf7065be",
+      "kind": "text",
+      "source": "8月28日 Android 安装包",
+      "occurrence": 0,
+      "target": "Android package on 28 Aug",
+      "context": "span @ line 92 · surrounding text: 一、本阶段关键决策与状态 Android 持续交付测试版本，Apple 测试分发恢复推进，支付与订阅规则开始统一；本阶段的测试发布不代表正式上线。 二、本阶段关键成果 3 次 Android 测试发布 TestFlight 8月24日有效测试构建 6 项主题 支付、身份与连接等工程进展 FFF 交 QA 8月28日 Android 安装包 进展 交付结果 下一步 支付与订阅 共享规则、支付状态、回调、重试及后台展示进入验证，为续费功能奠定基础。 核对迁移，验证重复回调、并发及真实支付。 设备身份与下单 设备标识解析和下单会话标准化进入验证。 配套后端跨域配置，再验证网站与客户端。 连接与 DNS 节点解析、隧道内解析及异常时阻断流量已有实现。 完成节点配置应用、真实连接及无泄漏验收。 节点管理 管理职责分离、地域命名、安装锁及防火墙任务持续改进。 验证现场任务结果与重启后的行为。 套餐与专"
+    },
+    {
+      "id": "u_6d9853e20b0a8a07",
+      "kind": "text",
+      "source": "进展",
+      "occurrence": 0,
+      "target": "Progress",
+      "context": "th @ line 92 · surrounding text: 一、本阶段关键决策与状态 Android 持续交付测试版本，Apple 测试分发恢复推进，支付与订阅规则开始统一；本阶段的测试发布不代表正式上线。 二、本阶段关键成果 3 次 Android 测试发布 TestFlight 8月24日有效测试构建 6 项主题 支付、身份与连接等工程进展 FFF 交 QA 8月28日 Android 安装包 进展 交付结果 下一步 支付与订阅 共享规则、支付状态、回调、重试及后台展示进入验证，为续费功能奠定基础。 核对迁移，验证重复回调、并发及真实支付。 设备身份与下单 设备标识解析和下单会话标准化进入验证。 配套后端跨域配置，再验证网站与客户端。 连接与 DNS 节点解析、隧道内解析及异常时阻断流量已有实现。 完成节点配置应用、真实连接及无泄漏验收。 节点管理 管理职责分离、地域命名、安装锁及防火墙任务持续改进。 验证现场任务结果与重启后的行为。 套餐与专"
+    },
+    {
+      "id": "u_fca3b06cd211c4fb",
+      "kind": "text",
+      "source": "交付结果",
+      "occurrence": 0,
+      "target": "Delivery result",
+      "context": "th @ line 92 · surrounding text: 一、本阶段关键决策与状态 Android 持续交付测试版本，Apple 测试分发恢复推进，支付与订阅规则开始统一；本阶段的测试发布不代表正式上线。 二、本阶段关键成果 3 次 Android 测试发布 TestFlight 8月24日有效测试构建 6 项主题 支付、身份与连接等工程进展 FFF 交 QA 8月28日 Android 安装包 进展 交付结果 下一步 支付与订阅 共享规则、支付状态、回调、重试及后台展示进入验证，为续费功能奠定基础。 核对迁移，验证重复回调、并发及真实支付。 设备身份与下单 设备标识解析和下单会话标准化进入验证。 配套后端跨域配置，再验证网站与客户端。 连接与 DNS 节点解析、隧道内解析及异常时阻断流量已有实现。 完成节点配置应用、真实连接及无泄漏验收。 节点管理 管理职责分离、地域命名、安装锁及防火墙任务持续改进。 验证现场任务结果与重启后的行为。 套餐与专"
+    },
+    {
+      "id": "u_b4342d153ec1f6c4",
+      "kind": "text",
+      "source": "下一步",
+      "occurrence": 0,
+      "target": "Next Step",
+      "context": "th @ line 92 · surrounding text: 一、本阶段关键决策与状态 Android 持续交付测试版本，Apple 测试分发恢复推进，支付与订阅规则开始统一；本阶段的测试发布不代表正式上线。 二、本阶段关键成果 3 次 Android 测试发布 TestFlight 8月24日有效测试构建 6 项主题 支付、身份与连接等工程进展 FFF 交 QA 8月28日 Android 安装包 进展 交付结果 下一步 支付与订阅 共享规则、支付状态、回调、重试及后台展示进入验证，为续费功能奠定基础。 核对迁移，验证重复回调、并发及真实支付。 设备身份与下单 设备标识解析和下单会话标准化进入验证。 配套后端跨域配置，再验证网站与客户端。 连接与 DNS 节点解析、隧道内解析及异常时阻断流量已有实现。 完成节点配置应用、真实连接及无泄漏验收。 节点管理 管理职责分离、地域命名、安装锁及防火墙任务持续改进。 验证现场任务结果与重启后的行为。 套餐与专"
+    },
+    {
+      "id": "u_0ed948dd4da7487f",
+      "kind": "text",
+      "source": "支付与订阅",
+      "occurrence": 0,
+      "target": "Payments and subscriptions",
+      "context": "td @ line 92 · surrounding text: 一、本阶段关键决策与状态 Android 持续交付测试版本，Apple 测试分发恢复推进，支付与订阅规则开始统一；本阶段的测试发布不代表正式上线。 二、本阶段关键成果 3 次 Android 测试发布 TestFlight 8月24日有效测试构建 6 项主题 支付、身份与连接等工程进展 FFF 交 QA 8月28日 Android 安装包 进展 交付结果 下一步 支付与订阅 共享规则、支付状态、回调、重试及后台展示进入验证，为续费功能奠定基础。 核对迁移，验证重复回调、并发及真实支付。 设备身份与下单 设备标识解析和下单会话标准化进入验证。 配套后端跨域配置，再验证网站与客户端。 连接与 DNS 节点解析、隧道内解析及异常时阻断流量已有实现。 完成节点配置应用、真实连接及无泄漏验收。 节点管理 管理职责分离、地域命名、安装锁及防火墙任务持续改进。 验证现场任务结果与重启后的行为。 套餐与专"
+    },
+    {
+      "id": "u_b60a4e2f10e4f8be",
+      "kind": "text",
+      "source": "共享规则、支付状态、回调、重试及后台展示进入验证，为续费功能奠定基础。",
+      "occurrence": 0,
+      "target": "Shared rules, payment states, callbacks, retries and Back Office (BO) views entered validation, laying the foundation for renewals.",
+      "context": "td @ line 92 · surrounding text: 一、本阶段关键决策与状态 Android 持续交付测试版本，Apple 测试分发恢复推进，支付与订阅规则开始统一；本阶段的测试发布不代表正式上线。 二、本阶段关键成果 3 次 Android 测试发布 TestFlight 8月24日有效测试构建 6 项主题 支付、身份与连接等工程进展 FFF 交 QA 8月28日 Android 安装包 进展 交付结果 下一步 支付与订阅 共享规则、支付状态、回调、重试及后台展示进入验证，为续费功能奠定基础。 核对迁移，验证重复回调、并发及真实支付。 设备身份与下单 设备标识解析和下单会话标准化进入验证。 配套后端跨域配置，再验证网站与客户端。 连接与 DNS 节点解析、隧道内解析及异常时阻断流量已有实现。 完成节点配置应用、真实连接及无泄漏验收。 节点管理 管理职责分离、地域命名、安装锁及防火墙任务持续改进。 验证现场任务结果与重启后的行为。 套餐与专"
+    },
+    {
+      "id": "u_efa6220efabe9906",
+      "kind": "text",
+      "source": "核对迁移，验证重复回调、并发及真实支付。",
+      "occurrence": 0,
+      "target": "Reconcile migrations and validate duplicate callbacks, concurrency and real payments.",
+      "context": "td @ line 92 · surrounding text: 一、本阶段关键决策与状态 Android 持续交付测试版本，Apple 测试分发恢复推进，支付与订阅规则开始统一；本阶段的测试发布不代表正式上线。 二、本阶段关键成果 3 次 Android 测试发布 TestFlight 8月24日有效测试构建 6 项主题 支付、身份与连接等工程进展 FFF 交 QA 8月28日 Android 安装包 进展 交付结果 下一步 支付与订阅 共享规则、支付状态、回调、重试及后台展示进入验证，为续费功能奠定基础。 核对迁移，验证重复回调、并发及真实支付。 设备身份与下单 设备标识解析和下单会话标准化进入验证。 配套后端跨域配置，再验证网站与客户端。 连接与 DNS 节点解析、隧道内解析及异常时阻断流量已有实现。 完成节点配置应用、真实连接及无泄漏验收。 节点管理 管理职责分离、地域命名、安装锁及防火墙任务持续改进。 验证现场任务结果与重启后的行为。 套餐与专"
+    },
+    {
+      "id": "u_7b6747c8c69a11ba",
+      "kind": "text",
+      "source": "设备身份与下单",
+      "occurrence": 0,
+      "target": "Device identity and ordering",
+      "context": "td @ line 92 · surrounding text: 一、本阶段关键决策与状态 Android 持续交付测试版本，Apple 测试分发恢复推进，支付与订阅规则开始统一；本阶段的测试发布不代表正式上线。 二、本阶段关键成果 3 次 Android 测试发布 TestFlight 8月24日有效测试构建 6 项主题 支付、身份与连接等工程进展 FFF 交 QA 8月28日 Android 安装包 进展 交付结果 下一步 支付与订阅 共享规则、支付状态、回调、重试及后台展示进入验证，为续费功能奠定基础。 核对迁移，验证重复回调、并发及真实支付。 设备身份与下单 设备标识解析和下单会话标准化进入验证。 配套后端跨域配置，再验证网站与客户端。 连接与 DNS 节点解析、隧道内解析及异常时阻断流量已有实现。 完成节点配置应用、真实连接及无泄漏验收。 节点管理 管理职责分离、地域命名、安装锁及防火墙任务持续改进。 验证现场任务结果与重启后的行为。 套餐与专"
+    },
+    {
+      "id": "u_28103e5c60675c16",
+      "kind": "text",
+      "source": "设备标识解析和下单会话标准化进入验证。",
+      "occurrence": 0,
+      "target": "Device identity resolution and order-session standardization entered validation.",
+      "context": "td @ line 92 · surrounding text: 一、本阶段关键决策与状态 Android 持续交付测试版本，Apple 测试分发恢复推进，支付与订阅规则开始统一；本阶段的测试发布不代表正式上线。 二、本阶段关键成果 3 次 Android 测试发布 TestFlight 8月24日有效测试构建 6 项主题 支付、身份与连接等工程进展 FFF 交 QA 8月28日 Android 安装包 进展 交付结果 下一步 支付与订阅 共享规则、支付状态、回调、重试及后台展示进入验证，为续费功能奠定基础。 核对迁移，验证重复回调、并发及真实支付。 设备身份与下单 设备标识解析和下单会话标准化进入验证。 配套后端跨域配置，再验证网站与客户端。 连接与 DNS 节点解析、隧道内解析及异常时阻断流量已有实现。 完成节点配置应用、真实连接及无泄漏验收。 节点管理 管理职责分离、地域命名、安装锁及防火墙任务持续改进。 验证现场任务结果与重启后的行为。 套餐与专"
+    },
+    {
+      "id": "u_984da09b2f9b6335",
+      "kind": "text",
+      "source": "配套后端跨域配置，再验证网站与客户端。",
+      "occurrence": 0,
+      "target": "Align backend cross-origin configuration, then validate the website and clients.",
+      "context": "td @ line 92 · surrounding text: 一、本阶段关键决策与状态 Android 持续交付测试版本，Apple 测试分发恢复推进，支付与订阅规则开始统一；本阶段的测试发布不代表正式上线。 二、本阶段关键成果 3 次 Android 测试发布 TestFlight 8月24日有效测试构建 6 项主题 支付、身份与连接等工程进展 FFF 交 QA 8月28日 Android 安装包 进展 交付结果 下一步 支付与订阅 共享规则、支付状态、回调、重试及后台展示进入验证，为续费功能奠定基础。 核对迁移，验证重复回调、并发及真实支付。 设备身份与下单 设备标识解析和下单会话标准化进入验证。 配套后端跨域配置，再验证网站与客户端。 连接与 DNS 节点解析、隧道内解析及异常时阻断流量已有实现。 完成节点配置应用、真实连接及无泄漏验收。 节点管理 管理职责分离、地域命名、安装锁及防火墙任务持续改进。 验证现场任务结果与重启后的行为。 套餐与专"
+    },
+    {
+      "id": "u_697dbfd9a69f0de0",
+      "kind": "text",
+      "source": "连接与 DNS",
+      "occurrence": 0,
+      "target": "Connectivity and DNS",
+      "context": "td @ line 92 · surrounding text: 一、本阶段关键决策与状态 Android 持续交付测试版本，Apple 测试分发恢复推进，支付与订阅规则开始统一；本阶段的测试发布不代表正式上线。 二、本阶段关键成果 3 次 Android 测试发布 TestFlight 8月24日有效测试构建 6 项主题 支付、身份与连接等工程进展 FFF 交 QA 8月28日 Android 安装包 进展 交付结果 下一步 支付与订阅 共享规则、支付状态、回调、重试及后台展示进入验证，为续费功能奠定基础。 核对迁移，验证重复回调、并发及真实支付。 设备身份与下单 设备标识解析和下单会话标准化进入验证。 配套后端跨域配置，再验证网站与客户端。 连接与 DNS 节点解析、隧道内解析及异常时阻断流量已有实现。 完成节点配置应用、真实连接及无泄漏验收。 节点管理 管理职责分离、地域命名、安装锁及防火墙任务持续改进。 验证现场任务结果与重启后的行为。 套餐与专"
+    },
+    {
+      "id": "u_53113900cce36b7f",
+      "kind": "text",
+      "source": "节点解析、隧道内解析及异常时阻断流量已有实现。",
+      "occurrence": 0,
+      "target": "VPN node resolution, in-tunnel resolution and traffic blocking on failure were implemented.",
+      "context": "td @ line 92 · surrounding text: 一、本阶段关键决策与状态 Android 持续交付测试版本，Apple 测试分发恢复推进，支付与订阅规则开始统一；本阶段的测试发布不代表正式上线。 二、本阶段关键成果 3 次 Android 测试发布 TestFlight 8月24日有效测试构建 6 项主题 支付、身份与连接等工程进展 FFF 交 QA 8月28日 Android 安装包 进展 交付结果 下一步 支付与订阅 共享规则、支付状态、回调、重试及后台展示进入验证，为续费功能奠定基础。 核对迁移，验证重复回调、并发及真实支付。 设备身份与下单 设备标识解析和下单会话标准化进入验证。 配套后端跨域配置，再验证网站与客户端。 连接与 DNS 节点解析、隧道内解析及异常时阻断流量已有实现。 完成节点配置应用、真实连接及无泄漏验收。 节点管理 管理职责分离、地域命名、安装锁及防火墙任务持续改进。 验证现场任务结果与重启后的行为。 套餐与专"
+    },
+    {
+      "id": "u_130221e524318336",
+      "kind": "text",
+      "source": "完成节点配置应用、真实连接及无泄漏验收。",
+      "occurrence": 0,
+      "target": "Apply VPN node configuration and complete live connection and leak acceptance testing.",
+      "context": "td @ line 92 · surrounding text: 一、本阶段关键决策与状态 Android 持续交付测试版本，Apple 测试分发恢复推进，支付与订阅规则开始统一；本阶段的测试发布不代表正式上线。 二、本阶段关键成果 3 次 Android 测试发布 TestFlight 8月24日有效测试构建 6 项主题 支付、身份与连接等工程进展 FFF 交 QA 8月28日 Android 安装包 进展 交付结果 下一步 支付与订阅 共享规则、支付状态、回调、重试及后台展示进入验证，为续费功能奠定基础。 核对迁移，验证重复回调、并发及真实支付。 设备身份与下单 设备标识解析和下单会话标准化进入验证。 配套后端跨域配置，再验证网站与客户端。 连接与 DNS 节点解析、隧道内解析及异常时阻断流量已有实现。 完成节点配置应用、真实连接及无泄漏验收。 节点管理 管理职责分离、地域命名、安装锁及防火墙任务持续改进。 验证现场任务结果与重启后的行为。 套餐与专"
+    },
+    {
+      "id": "u_83f98ef58640fbc3",
+      "kind": "text",
+      "source": "节点管理",
+      "occurrence": 0,
+      "target": "VPN node management",
+      "context": "td @ line 92 · surrounding text: 一、本阶段关键决策与状态 Android 持续交付测试版本，Apple 测试分发恢复推进，支付与订阅规则开始统一；本阶段的测试发布不代表正式上线。 二、本阶段关键成果 3 次 Android 测试发布 TestFlight 8月24日有效测试构建 6 项主题 支付、身份与连接等工程进展 FFF 交 QA 8月28日 Android 安装包 进展 交付结果 下一步 支付与订阅 共享规则、支付状态、回调、重试及后台展示进入验证，为续费功能奠定基础。 核对迁移，验证重复回调、并发及真实支付。 设备身份与下单 设备标识解析和下单会话标准化进入验证。 配套后端跨域配置，再验证网站与客户端。 连接与 DNS 节点解析、隧道内解析及异常时阻断流量已有实现。 完成节点配置应用、真实连接及无泄漏验收。 节点管理 管理职责分离、地域命名、安装锁及防火墙任务持续改进。 验证现场任务结果与重启后的行为。 套餐与专"
+    },
+    {
+      "id": "u_6ad61152c3ccc346",
+      "kind": "text",
+      "source": "管理职责分离、地域命名、安装锁及防火墙任务持续改进。",
+      "occurrence": 0,
+      "target": "Management separation, geographic naming, installation locks and firewall tasks progressed for VPN nodes.",
+      "context": "td @ line 92 · surrounding text: 一、本阶段关键决策与状态 Android 持续交付测试版本，Apple 测试分发恢复推进，支付与订阅规则开始统一；本阶段的测试发布不代表正式上线。 二、本阶段关键成果 3 次 Android 测试发布 TestFlight 8月24日有效测试构建 6 项主题 支付、身份与连接等工程进展 FFF 交 QA 8月28日 Android 安装包 进展 交付结果 下一步 支付与订阅 共享规则、支付状态、回调、重试及后台展示进入验证，为续费功能奠定基础。 核对迁移，验证重复回调、并发及真实支付。 设备身份与下单 设备标识解析和下单会话标准化进入验证。 配套后端跨域配置，再验证网站与客户端。 连接与 DNS 节点解析、隧道内解析及异常时阻断流量已有实现。 完成节点配置应用、真实连接及无泄漏验收。 节点管理 管理职责分离、地域命名、安装锁及防火墙任务持续改进。 验证现场任务结果与重启后的行为。 套餐与专"
+    },
+    {
+      "id": "u_2552281a42a1d430",
+      "kind": "text",
+      "source": "验证现场任务结果与重启后的行为。",
+      "occurrence": 0,
+      "target": "Validate live task results and behavior after reboot.",
+      "context": "td @ line 92 · surrounding text: 一、本阶段关键决策与状态 Android 持续交付测试版本，Apple 测试分发恢复推进，支付与订阅规则开始统一；本阶段的测试发布不代表正式上线。 二、本阶段关键成果 3 次 Android 测试发布 TestFlight 8月24日有效测试构建 6 项主题 支付、身份与连接等工程进展 FFF 交 QA 8月28日 Android 安装包 进展 交付结果 下一步 支付与订阅 共享规则、支付状态、回调、重试及后台展示进入验证，为续费功能奠定基础。 核对迁移，验证重复回调、并发及真实支付。 设备身份与下单 设备标识解析和下单会话标准化进入验证。 配套后端跨域配置，再验证网站与客户端。 连接与 DNS 节点解析、隧道内解析及异常时阻断流量已有实现。 完成节点配置应用、真实连接及无泄漏验收。 节点管理 管理职责分离、地域命名、安装锁及防火墙任务持续改进。 验证现场任务结果与重启后的行为。 套餐与专"
+    },
+    {
+      "id": "u_a71ef16aa3319b74",
+      "kind": "text",
+      "source": "套餐与专属线路",
+      "occurrence": 0,
+      "target": "Plans and dedicated routes",
+      "context": "td @ line 92 · surrounding text: 一、本阶段关键决策与状态 Android 持续交付测试版本，Apple 测试分发恢复推进，支付与订阅规则开始统一；本阶段的测试发布不代表正式上线。 二、本阶段关键成果 3 次 Android 测试发布 TestFlight 8月24日有效测试构建 6 项主题 支付、身份与连接等工程进展 FFF 交 QA 8月28日 Android 安装包 进展 交付结果 下一步 支付与订阅 共享规则、支付状态、回调、重试及后台展示进入验证，为续费功能奠定基础。 核对迁移，验证重复回调、并发及真实支付。 设备身份与下单 设备标识解析和下单会话标准化进入验证。 配套后端跨域配置，再验证网站与客户端。 连接与 DNS 节点解析、隧道内解析及异常时阻断流量已有实现。 完成节点配置应用、真实连接及无泄漏验收。 节点管理 管理职责分离、地域命名、安装锁及防火墙任务持续改进。 验证现场任务结果与重启后的行为。 套餐与专"
+    },
+    {
+      "id": "u_38dca2de26c4f462",
+      "kind": "text",
+      "source": "套餐目录及专属层级展示进入验证。",
+      "occurrence": 0,
+      "target": "Plan catalog and dedicated-tier presentation entered validation.",
+      "context": "td @ line 92 · surrounding text: 一、本阶段关键决策与状态 Android 持续交付测试版本，Apple 测试分发恢复推进，支付与订阅规则开始统一；本阶段的测试发布不代表正式上线。 二、本阶段关键成果 3 次 Android 测试发布 TestFlight 8月24日有效测试构建 6 项主题 支付、身份与连接等工程进展 FFF 交 QA 8月28日 Android 安装包 进展 交付结果 下一步 支付与订阅 共享规则、支付状态、回调、重试及后台展示进入验证，为续费功能奠定基础。 核对迁移，验证重复回调、并发及真实支付。 设备身份与下单 设备标识解析和下单会话标准化进入验证。 配套后端跨域配置，再验证网站与客户端。 连接与 DNS 节点解析、隧道内解析及异常时阻断流量已有实现。 完成节点配置应用、真实连接及无泄漏验收。 节点管理 管理职责分离、地域命名、安装锁及防火墙任务持续改进。 验证现场任务结果与重启后的行为。 套餐与专"
+    },
+    {
+      "id": "u_ae1b259063dd5064",
+      "kind": "text",
+      "source": "补齐购买后授权，分别验证人工授予与购买线路。",
+      "occurrence": 0,
+      "target": "Complete purchase authorization and test manually granted and purchased routes separately.",
+      "context": "td @ line 92 · surrounding text: 一、本阶段关键决策与状态 Android 持续交付测试版本，Apple 测试分发恢复推进，支付与订阅规则开始统一；本阶段的测试发布不代表正式上线。 二、本阶段关键成果 3 次 Android 测试发布 TestFlight 8月24日有效测试构建 6 项主题 支付、身份与连接等工程进展 FFF 交 QA 8月28日 Android 安装包 进展 交付结果 下一步 支付与订阅 共享规则、支付状态、回调、重试及后台展示进入验证，为续费功能奠定基础。 核对迁移，验证重复回调、并发及真实支付。 设备身份与下单 设备标识解析和下单会话标准化进入验证。 配套后端跨域配置，再验证网站与客户端。 连接与 DNS 节点解析、隧道内解析及异常时阻断流量已有实现。 完成节点配置应用、真实连接及无泄漏验收。 节点管理 管理职责分离、地域命名、安装锁及防火墙任务持续改进。 验证现场任务结果与重启后的行为。 套餐与专"
+    },
+    {
+      "id": "u_7d934db0aaf206f9",
+      "kind": "text",
+      "source": "限速与证书",
+      "occurrence": 0,
+      "target": "Speed limits and certificates",
+      "context": "td @ line 92 · surrounding text: 一、本阶段关键决策与状态 Android 持续交付测试版本，Apple 测试分发恢复推进，支付与订阅规则开始统一；本阶段的测试发布不代表正式上线。 二、本阶段关键成果 3 次 Android 测试发布 TestFlight 8月24日有效测试构建 6 项主题 支付、身份与连接等工程进展 FFF 交 QA 8月28日 Android 安装包 进展 交付结果 下一步 支付与订阅 共享规则、支付状态、回调、重试及后台展示进入验证，为续费功能奠定基础。 核对迁移，验证重复回调、并发及真实支付。 设备身份与下单 设备标识解析和下单会话标准化进入验证。 配套后端跨域配置，再验证网站与客户端。 连接与 DNS 节点解析、隧道内解析及异常时阻断流量已有实现。 完成节点配置应用、真实连接及无泄漏验收。 节点管理 管理职责分离、地域命名、安装锁及防火墙任务持续改进。 验证现场任务结果与重启后的行为。 套餐与专"
+    },
+    {
+      "id": "u_735126d1f8cd224d",
+      "kind": "text",
+      "source": "按用户限速和证书域名一致性进入验证，旧核心继续清理。",
+      "occurrence": 0,
+      "target": "Per-user speed limits and certificate-name consistency entered validation; legacy core cleanup continued.",
+      "context": "td @ line 92 · surrounding text: 一、本阶段关键决策与状态 Android 持续交付测试版本，Apple 测试分发恢复推进，支付与订阅规则开始统一；本阶段的测试发布不代表正式上线。 二、本阶段关键成果 3 次 Android 测试发布 TestFlight 8月24日有效测试构建 6 项主题 支付、身份与连接等工程进展 FFF 交 QA 8月28日 Android 安装包 进展 交付结果 下一步 支付与订阅 共享规则、支付状态、回调、重试及后台展示进入验证，为续费功能奠定基础。 核对迁移，验证重复回调、并发及真实支付。 设备身份与下单 设备标识解析和下单会话标准化进入验证。 配套后端跨域配置，再验证网站与客户端。 连接与 DNS 节点解析、隧道内解析及异常时阻断流量已有实现。 完成节点配置应用、真实连接及无泄漏验收。 节点管理 管理职责分离、地域命名、安装锁及防火墙任务持续改进。 验证现场任务结果与重启后的行为。 套餐与专"
+    },
+    {
+      "id": "u_e74853267a65faee",
+      "kind": "text",
+      "source": "独立验证吞吐、节点发布与实际连接。",
+      "occurrence": 0,
+      "target": "Validate throughput, VPN node rollout and real connections separately.",
+      "context": "td @ line 92 · surrounding text: 一、本阶段关键决策与状态 Android 持续交付测试版本，Apple 测试分发恢复推进，支付与订阅规则开始统一；本阶段的测试发布不代表正式上线。 二、本阶段关键成果 3 次 Android 测试发布 TestFlight 8月24日有效测试构建 6 项主题 支付、身份与连接等工程进展 FFF 交 QA 8月28日 Android 安装包 进展 交付结果 下一步 支付与订阅 共享规则、支付状态、回调、重试及后台展示进入验证，为续费功能奠定基础。 核对迁移，验证重复回调、并发及真实支付。 设备身份与下单 设备标识解析和下单会话标准化进入验证。 配套后端跨域配置，再验证网站与客户端。 连接与 DNS 节点解析、隧道内解析及异常时阻断流量已有实现。 完成节点配置应用、真实连接及无泄漏验收。 节点管理 管理职责分离、地域命名、安装锁及防火墙任务持续改进。 验证现场任务结果与重启后的行为。 套餐与专"
+    },
+    {
+      "id": "u_a53de119bf814cb3",
+      "kind": "text",
+      "source": "三、改善与商业价值",
+      "occurrence": 0,
+      "target": "3. Improvements and business value",
+      "context": "h2 @ line 92 · surrounding text: 一、本阶段关键决策与状态 Android 持续交付测试版本，Apple 测试分发恢复推进，支付与订阅规则开始统一；本阶段的测试发布不代表正式上线。 二、本阶段关键成果 3 次 Android 测试发布 TestFlight 8月24日有效测试构建 6 项主题 支付、身份与连接等工程进展 FFF 交 QA 8月28日 Android 安装包 进展 交付结果 下一步 支付与订阅 共享规则、支付状态、回调、重试及后台展示进入验证，为续费功能奠定基础。 核对迁移，验证重复回调、并发及真实支付。 设备身份与下单 设备标识解析和下单会话标准化进入验证。 配套后端跨域配置，再验证网站与客户端。 连接与 DNS 节点解析、隧道内解析及异常时阻断流量已有实现。 完成节点配置应用、真实连接及无泄漏验收。 节点管理 管理职责分离、地域命名、安装锁及防火墙任务持续改进。 验证现场任务结果与重启后的行为。 套餐与专"
+    },
+    {
+      "id": "u_66f8ebd583243efd",
+      "kind": "text",
+      "source": "支付规则统一为续费可靠性提供基础；设备身份标准化减少跨端账号差异；节点任务可追踪性帮助缩短失败排查。测试包交付使这些改动进入实际验证。",
+      "occurrence": 0,
+      "target": "Unified payment rules support renewal reliability; standardized device identity reduces cross-client account differences; traceable VPN node tasks support faster diagnosis. Test-package delivery brings these changes into practical validation.",
+      "context": "p @ line 92 · surrounding text: 一、本阶段关键决策与状态 Android 持续交付测试版本，Apple 测试分发恢复推进，支付与订阅规则开始统一；本阶段的测试发布不代表正式上线。 二、本阶段关键成果 3 次 Android 测试发布 TestFlight 8月24日有效测试构建 6 项主题 支付、身份与连接等工程进展 FFF 交 QA 8月28日 Android 安装包 进展 交付结果 下一步 支付与订阅 共享规则、支付状态、回调、重试及后台展示进入验证，为续费功能奠定基础。 核对迁移，验证重复回调、并发及真实支付。 设备身份与下单 设备标识解析和下单会话标准化进入验证。 配套后端跨域配置，再验证网站与客户端。 连接与 DNS 节点解析、隧道内解析及异常时阻断流量已有实现。 完成节点配置应用、真实连接及无泄漏验收。 节点管理 管理职责分离、地域命名、安装锁及防火墙任务持续改进。 验证现场任务结果与重启后的行为。 套餐与专"
+    },
+    {
+      "id": "u_40e2646b4e780ee9",
+      "kind": "text",
+      "source": "四、关键时间节点",
+      "occurrence": 0,
+      "target": "4. Key milestones",
+      "context": "h2 @ line 92 · surrounding text: 一、本阶段关键决策与状态 Android 持续交付测试版本，Apple 测试分发恢复推进，支付与订阅规则开始统一；本阶段的测试发布不代表正式上线。 二、本阶段关键成果 3 次 Android 测试发布 TestFlight 8月24日有效测试构建 6 项主题 支付、身份与连接等工程进展 FFF 交 QA 8月28日 Android 安装包 进展 交付结果 下一步 支付与订阅 共享规则、支付状态、回调、重试及后台展示进入验证，为续费功能奠定基础。 核对迁移，验证重复回调、并发及真实支付。 设备身份与下单 设备标识解析和下单会话标准化进入验证。 配套后端跨域配置，再验证网站与客户端。 连接与 DNS 节点解析、隧道内解析及异常时阻断流量已有实现。 完成节点配置应用、真实连接及无泄漏验收。 节点管理 管理职责分离、地域命名、安装锁及防火墙任务持续改进。 验证现场任务结果与重启后的行为。 套餐与专"
+    },
+    {
+      "id": "u_aae56c4555fd79d0",
+      "kind": "text",
+      "source": "日期",
+      "occurrence": 0,
+      "target": "Date",
+      "context": "th @ line 92 · surrounding text: 一、本阶段关键决策与状态 Android 持续交付测试版本，Apple 测试分发恢复推进，支付与订阅规则开始统一；本阶段的测试发布不代表正式上线。 二、本阶段关键成果 3 次 Android 测试发布 TestFlight 8月24日有效测试构建 6 项主题 支付、身份与连接等工程进展 FFF 交 QA 8月28日 Android 安装包 进展 交付结果 下一步 支付与订阅 共享规则、支付状态、回调、重试及后台展示进入验证，为续费功能奠定基础。 核对迁移，验证重复回调、并发及真实支付。 设备身份与下单 设备标识解析和下单会话标准化进入验证。 配套后端跨域配置，再验证网站与客户端。 连接与 DNS 节点解析、隧道内解析及异常时阻断流量已有实现。 完成节点配置应用、真实连接及无泄漏验收。 节点管理 管理职责分离、地域命名、安装锁及防火墙任务持续改进。 验证现场任务结果与重启后的行为。 套餐与专"
+    },
+    {
+      "id": "u_1f1adda63dae0bde",
+      "kind": "text",
+      "source": "进展",
+      "occurrence": 1,
+      "target": "Progress",
+      "context": "th @ line 92 · surrounding text: 一、本阶段关键决策与状态 Android 持续交付测试版本，Apple 测试分发恢复推进，支付与订阅规则开始统一；本阶段的测试发布不代表正式上线。 二、本阶段关键成果 3 次 Android 测试发布 TestFlight 8月24日有效测试构建 6 项主题 支付、身份与连接等工程进展 FFF 交 QA 8月28日 Android 安装包 进展 交付结果 下一步 支付与订阅 共享规则、支付状态、回调、重试及后台展示进入验证，为续费功能奠定基础。 核对迁移，验证重复回调、并发及真实支付。 设备身份与下单 设备标识解析和下单会话标准化进入验证。 配套后端跨域配置，再验证网站与客户端。 连接与 DNS 节点解析、隧道内解析及异常时阻断流量已有实现。 完成节点配置应用、真实连接及无泄漏验收。 节点管理 管理职责分离、地域命名、安装锁及防火墙任务持续改进。 验证现场任务结果与重启后的行为。 套餐与专"
+    },
+    {
+      "id": "u_363ac848726cca42",
+      "kind": "text",
+      "source": "8月24日",
+      "occurrence": 0,
+      "target": "24 Aug",
+      "context": "td @ line 92 · surrounding text: 一、本阶段关键决策与状态 Android 持续交付测试版本，Apple 测试分发恢复推进，支付与订阅规则开始统一；本阶段的测试发布不代表正式上线。 二、本阶段关键成果 3 次 Android 测试发布 TestFlight 8月24日有效测试构建 6 项主题 支付、身份与连接等工程进展 FFF 交 QA 8月28日 Android 安装包 进展 交付结果 下一步 支付与订阅 共享规则、支付状态、回调、重试及后台展示进入验证，为续费功能奠定基础。 核对迁移，验证重复回调、并发及真实支付。 设备身份与下单 设备标识解析和下单会话标准化进入验证。 配套后端跨域配置，再验证网站与客户端。 连接与 DNS 节点解析、隧道内解析及异常时阻断流量已有实现。 完成节点配置应用、真实连接及无泄漏验收。 节点管理 管理职责分离、地域命名、安装锁及防火墙任务持续改进。 验证现场任务结果与重启后的行为。 套餐与专"
+    },
+    {
+      "id": "u_71b793ede1ea23b3",
+      "kind": "text",
+      "source": "Android 两次测试发布；Apple 测试构建取得 TestFlight 有效状态。",
+      "occurrence": 0,
+      "target": "Two Android staging releases; the Apple test build obtained valid TestFlight status.",
+      "context": "td @ line 92 · surrounding text: 一、本阶段关键决策与状态 Android 持续交付测试版本，Apple 测试分发恢复推进，支付与订阅规则开始统一；本阶段的测试发布不代表正式上线。 二、本阶段关键成果 3 次 Android 测试发布 TestFlight 8月24日有效测试构建 6 项主题 支付、身份与连接等工程进展 FFF 交 QA 8月28日 Android 安装包 进展 交付结果 下一步 支付与订阅 共享规则、支付状态、回调、重试及后台展示进入验证，为续费功能奠定基础。 核对迁移，验证重复回调、并发及真实支付。 设备身份与下单 设备标识解析和下单会话标准化进入验证。 配套后端跨域配置，再验证网站与客户端。 连接与 DNS 节点解析、隧道内解析及异常时阻断流量已有实现。 完成节点配置应用、真实连接及无泄漏验收。 节点管理 管理职责分离、地域命名、安装锁及防火墙任务持续改进。 验证现场任务结果与重启后的行为。 套餐与专"
+    },
+    {
+      "id": "u_bfb9d2823e32a5d0",
+      "kind": "text",
+      "source": "8月25–27日",
+      "occurrence": 0,
+      "target": "25–27 Aug",
+      "context": "td @ line 92 · surrounding text: 一、本阶段关键决策与状态 Android 持续交付测试版本，Apple 测试分发恢复推进，支付与订阅规则开始统一；本阶段的测试发布不代表正式上线。 二、本阶段关键成果 3 次 Android 测试发布 TestFlight 8月24日有效测试构建 6 项主题 支付、身份与连接等工程进展 FFF 交 QA 8月28日 Android 安装包 进展 交付结果 下一步 支付与订阅 共享规则、支付状态、回调、重试及后台展示进入验证，为续费功能奠定基础。 核对迁移，验证重复回调、并发及真实支付。 设备身份与下单 设备标识解析和下单会话标准化进入验证。 配套后端跨域配置，再验证网站与客户端。 连接与 DNS 节点解析、隧道内解析及异常时阻断流量已有实现。 完成节点配置应用、真实连接及无泄漏验收。 节点管理 管理职责分离、地域命名、安装锁及防火墙任务持续改进。 验证现场任务结果与重启后的行为。 套餐与专"
+    },
+    {
+      "id": "u_3737a61f93f047ec",
+      "kind": "text",
+      "source": "节点、DNS、身份及支付改动推进；8月27日再交付一次 Android 测试版本。",
+      "occurrence": 0,
+      "target": "VPN node, DNS, identity and payment work progressed; another Android staging build was delivered on 27 Aug.",
+      "context": "td @ line 92 · surrounding text: 一、本阶段关键决策与状态 Android 持续交付测试版本，Apple 测试分发恢复推进，支付与订阅规则开始统一；本阶段的测试发布不代表正式上线。 二、本阶段关键成果 3 次 Android 测试发布 TestFlight 8月24日有效测试构建 6 项主题 支付、身份与连接等工程进展 FFF 交 QA 8月28日 Android 安装包 进展 交付结果 下一步 支付与订阅 共享规则、支付状态、回调、重试及后台展示进入验证，为续费功能奠定基础。 核对迁移，验证重复回调、并发及真实支付。 设备身份与下单 设备标识解析和下单会话标准化进入验证。 配套后端跨域配置，再验证网站与客户端。 连接与 DNS 节点解析、隧道内解析及异常时阻断流量已有实现。 完成节点配置应用、真实连接及无泄漏验收。 节点管理 管理职责分离、地域命名、安装锁及防火墙任务持续改进。 验证现场任务结果与重启后的行为。 套餐与专"
+    },
+    {
+      "id": "u_c9ec4f7add0136ab",
+      "kind": "text",
+      "source": "8月28–30日",
+      "occurrence": 0,
+      "target": "28–30 Aug",
+      "context": "td @ line 92 · surrounding text: 一、本阶段关键决策与状态 Android 持续交付测试版本，Apple 测试分发恢复推进，支付与订阅规则开始统一；本阶段的测试发布不代表正式上线。 二、本阶段关键成果 3 次 Android 测试发布 TestFlight 8月24日有效测试构建 6 项主题 支付、身份与连接等工程进展 FFF 交 QA 8月28日 Android 安装包 进展 交付结果 下一步 支付与订阅 共享规则、支付状态、回调、重试及后台展示进入验证，为续费功能奠定基础。 核对迁移，验证重复回调、并发及真实支付。 设备身份与下单 设备标识解析和下单会话标准化进入验证。 配套后端跨域配置，再验证网站与客户端。 连接与 DNS 节点解析、隧道内解析及异常时阻断流量已有实现。 完成节点配置应用、真实连接及无泄漏验收。 节点管理 管理职责分离、地域命名、安装锁及防火墙任务持续改进。 验证现场任务结果与重启后的行为。 套餐与专"
+    },
+    {
+      "id": "u_b5f797fd611b7a31",
+      "kind": "text",
+      "source": "FFF Android 交 QA，节点命名、套餐目录与专属层级展示继续完善。",
+      "occurrence": 0,
+      "target": "FFF Android was handed to QA; VPN node naming, the plan catalog and dedicated-tier presentation progressed.",
+      "context": "td @ line 92 · surrounding text: 一、本阶段关键决策与状态 Android 持续交付测试版本，Apple 测试分发恢复推进，支付与订阅规则开始统一；本阶段的测试发布不代表正式上线。 二、本阶段关键成果 3 次 Android 测试发布 TestFlight 8月24日有效测试构建 6 项主题 支付、身份与连接等工程进展 FFF 交 QA 8月28日 Android 安装包 进展 交付结果 下一步 支付与订阅 共享规则、支付状态、回调、重试及后台展示进入验证，为续费功能奠定基础。 核对迁移，验证重复回调、并发及真实支付。 设备身份与下单 设备标识解析和下单会话标准化进入验证。 配套后端跨域配置，再验证网站与客户端。 连接与 DNS 节点解析、隧道内解析及异常时阻断流量已有实现。 完成节点配置应用、真实连接及无泄漏验收。 节点管理 管理职责分离、地域命名、安装锁及防火墙任务持续改进。 验证现场任务结果与重启后的行为。 套餐与专"
+    },
+    {
+      "id": "u_9e9fa44af8291425",
+      "kind": "text",
+      "source": "9月1–4日",
+      "occurrence": 0,
+      "target": "1–4 Sep",
+      "context": "td @ line 92 · surrounding text: 一、本阶段关键决策与状态 Android 持续交付测试版本，Apple 测试分发恢复推进，支付与订阅规则开始统一；本阶段的测试发布不代表正式上线。 二、本阶段关键成果 3 次 Android 测试发布 TestFlight 8月24日有效测试构建 6 项主题 支付、身份与连接等工程进展 FFF 交 QA 8月28日 Android 安装包 进展 交付结果 下一步 支付与订阅 共享规则、支付状态、回调、重试及后台展示进入验证，为续费功能奠定基础。 核对迁移，验证重复回调、并发及真实支付。 设备身份与下单 设备标识解析和下单会话标准化进入验证。 配套后端跨域配置，再验证网站与客户端。 连接与 DNS 节点解析、隧道内解析及异常时阻断流量已有实现。 完成节点配置应用、真实连接及无泄漏验收。 节点管理 管理职责分离、地域命名、安装锁及防火墙任务持续改进。 验证现场任务结果与重启后的行为。 套餐与专"
+    },
+    {
+      "id": "u_473aae5946e84cb6",
+      "kind": "text",
+      "source": "安装锁、限速、防火墙任务及证书修复进入验证。",
+      "occurrence": 0,
+      "target": "Installation locks, speed limits, firewall tasks and certificate fixes entered validation.",
+      "context": "td @ line 92 · surrounding text: 一、本阶段关键决策与状态 Android 持续交付测试版本，Apple 测试分发恢复推进，支付与订阅规则开始统一；本阶段的测试发布不代表正式上线。 二、本阶段关键成果 3 次 Android 测试发布 TestFlight 8月24日有效测试构建 6 项主题 支付、身份与连接等工程进展 FFF 交 QA 8月28日 Android 安装包 进展 交付结果 下一步 支付与订阅 共享规则、支付状态、回调、重试及后台展示进入验证，为续费功能奠定基础。 核对迁移，验证重复回调、并发及真实支付。 设备身份与下单 设备标识解析和下单会话标准化进入验证。 配套后端跨域配置，再验证网站与客户端。 连接与 DNS 节点解析、隧道内解析及异常时阻断流量已有实现。 完成节点配置应用、真实连接及无泄漏验收。 节点管理 管理职责分离、地域命名、安装锁及防火墙任务持续改进。 验证现场任务结果与重启后的行为。 套餐与专"
+    },
+    {
+      "id": "u_9de6e4120ac83e01",
+      "kind": "text",
+      "source": "五、测试发布与兼容要求",
+      "occurrence": 0,
+      "target": "5. Test releases and compatibility",
+      "context": "h2 @ line 92 · surrounding text: 一、本阶段关键决策与状态 Android 持续交付测试版本，Apple 测试分发恢复推进，支付与订阅规则开始统一；本阶段的测试发布不代表正式上线。 二、本阶段关键成果 3 次 Android 测试发布 TestFlight 8月24日有效测试构建 6 项主题 支付、身份与连接等工程进展 FFF 交 QA 8月28日 Android 安装包 进展 交付结果 下一步 支付与订阅 共享规则、支付状态、回调、重试及后台展示进入验证，为续费功能奠定基础。 核对迁移，验证重复回调、并发及真实支付。 设备身份与下单 设备标识解析和下单会话标准化进入验证。 配套后端跨域配置，再验证网站与客户端。 连接与 DNS 节点解析、隧道内解析及异常时阻断流量已有实现。 完成节点配置应用、真实连接及无泄漏验收。 节点管理 管理职责分离、地域命名、安装锁及防火墙任务持续改进。 验证现场任务结果与重启后的行为。 套餐与专"
+    },
+    {
+      "id": "u_3d37232c6fa8fb2f",
+      "kind": "text",
+      "source": "三次 Android 发布均为测试环境，包含官方、Google、Huawei、Samsung 四个渠道包；“官方”表示渠道，不表示生产。Apple TestFlight 有效构建也不等于 App Store 发布。",
+      "occurrence": 0,
+      "target": "All three Android releases were staging releases with Official, Google, Huawei and Samsung channel packages; “Official” identifies a channel, not production. A valid Apple TestFlight build also does not mean App Store publication.",
+      "context": "p @ line 92 · surrounding text: 一、本阶段关键决策与状态 Android 持续交付测试版本，Apple 测试分发恢复推进，支付与订阅规则开始统一；本阶段的测试发布不代表正式上线。 二、本阶段关键成果 3 次 Android 测试发布 TestFlight 8月24日有效测试构建 6 项主题 支付、身份与连接等工程进展 FFF 交 QA 8月28日 Android 安装包 进展 交付结果 下一步 支付与订阅 共享规则、支付状态、回调、重试及后台展示进入验证，为续费功能奠定基础。 核对迁移，验证重复回调、并发及真实支付。 设备身份与下单 设备标识解析和下单会话标准化进入验证。 配套后端跨域配置，再验证网站与客户端。 连接与 DNS 节点解析、隧道内解析及异常时阻断流量已有实现。 完成节点配置应用、真实连接及无泄漏验收。 节点管理 管理职责分离、地域命名、安装锁及防火墙任务持续改进。 验证现场任务结果与重启后的行为。 套餐与专"
+    },
+    {
+      "id": "u_c9002281cf2c457f",
+      "kind": "text",
+      "source": "后端继续支持 Android、旧版 iOS HiYou 与 Windows。数据迁移和设备标识配置须与客户端发布配套，不能用单端测试替代跨端回归。",
+      "occurrence": 0,
+      "target": "The backend continues to support Android, legacy iOS HiYou and Windows. Database migrations and device-identity configuration must accompany client releases; single-client tests cannot replace cross-client regression.",
+      "context": "p @ line 92 · surrounding text: 一、本阶段关键决策与状态 Android 持续交付测试版本，Apple 测试分发恢复推进，支付与订阅规则开始统一；本阶段的测试发布不代表正式上线。 二、本阶段关键成果 3 次 Android 测试发布 TestFlight 8月24日有效测试构建 6 项主题 支付、身份与连接等工程进展 FFF 交 QA 8月28日 Android 安装包 进展 交付结果 下一步 支付与订阅 共享规则、支付状态、回调、重试及后台展示进入验证，为续费功能奠定基础。 核对迁移，验证重复回调、并发及真实支付。 设备身份与下单 设备标识解析和下单会话标准化进入验证。 配套后端跨域配置，再验证网站与客户端。 连接与 DNS 节点解析、隧道内解析及异常时阻断流量已有实现。 完成节点配置应用、真实连接及无泄漏验收。 节点管理 管理职责分离、地域命名、安装锁及防火墙任务持续改进。 验证现场任务结果与重启后的行为。 套餐与专"
+    },
+    {
+      "id": "u_a887a0c5c54c08ad",
+      "kind": "text",
+      "source": "六、安全与权限管控",
+      "occurrence": 0,
+      "target": "6. Security and access control",
+      "context": "h2 @ line 92 · surrounding text: 一、本阶段关键决策与状态 Android 持续交付测试版本，Apple 测试分发恢复推进，支付与订阅规则开始统一；本阶段的测试发布不代表正式上线。 二、本阶段关键成果 3 次 Android 测试发布 TestFlight 8月24日有效测试构建 6 项主题 支付、身份与连接等工程进展 FFF 交 QA 8月28日 Android 安装包 进展 交付结果 下一步 支付与订阅 共享规则、支付状态、回调、重试及后台展示进入验证，为续费功能奠定基础。 核对迁移，验证重复回调、并发及真实支付。 设备身份与下单 设备标识解析和下单会话标准化进入验证。 配套后端跨域配置，再验证网站与客户端。 连接与 DNS 节点解析、隧道内解析及异常时阻断流量已有实现。 完成节点配置应用、真实连接及无泄漏验收。 节点管理 管理职责分离、地域命名、安装锁及防火墙任务持续改进。 验证现场任务结果与重启后的行为。 套餐与专"
+    },
+    {
+      "id": "u_fded92f69285bf52",
+      "kind": "text",
+      "source": "本阶段推进节点管理凭证隔离、任务输出脱敏及 DNS 异常阻断。真实环境应用与无泄漏结果分别跟进；源码权限及异地恢复没有新的复核结论。",
+      "occurrence": 0,
+      "target": "This stage advanced VPN node management credential isolation, task-output redaction and DNS failure blocking. Environment application and leak checks are tracked separately; there are no new audit conclusions for source access or off-site recovery.",
+      "context": "p @ line 92 · surrounding text: 一、本阶段关键决策与状态 Android 持续交付测试版本，Apple 测试分发恢复推进，支付与订阅规则开始统一；本阶段的测试发布不代表正式上线。 二、本阶段关键成果 3 次 Android 测试发布 TestFlight 8月24日有效测试构建 6 项主题 支付、身份与连接等工程进展 FFF 交 QA 8月28日 Android 安装包 进展 交付结果 下一步 支付与订阅 共享规则、支付状态、回调、重试及后台展示进入验证，为续费功能奠定基础。 核对迁移，验证重复回调、并发及真实支付。 设备身份与下单 设备标识解析和下单会话标准化进入验证。 配套后端跨域配置，再验证网站与客户端。 连接与 DNS 节点解析、隧道内解析及异常时阻断流量已有实现。 完成节点配置应用、真实连接及无泄漏验收。 节点管理 管理职责分离、地域命名、安装锁及防火墙任务持续改进。 验证现场任务结果与重启后的行为。 套餐与专"
+    },
+    {
+      "id": "u_ef88d054a9a7d28e",
+      "kind": "text",
+      "source": "七、FFF 并行进展（Lex 实时口径）",
+      "occurrence": 0,
+      "target": "7. FFF parallel progress (Lex, real-time reporting)",
+      "context": "h2 @ line 92 · surrounding text: 一、本阶段关键决策与状态 Android 持续交付测试版本，Apple 测试分发恢复推进，支付与订阅规则开始统一；本阶段的测试发布不代表正式上线。 二、本阶段关键成果 3 次 Android 测试发布 TestFlight 8月24日有效测试构建 6 项主题 支付、身份与连接等工程进展 FFF 交 QA 8月28日 Android 安装包 进展 交付结果 下一步 支付与订阅 共享规则、支付状态、回调、重试及后台展示进入验证，为续费功能奠定基础。 核对迁移，验证重复回调、并发及真实支付。 设备身份与下单 设备标识解析和下单会话标准化进入验证。 配套后端跨域配置，再验证网站与客户端。 连接与 DNS 节点解析、隧道内解析及异常时阻断流量已有实现。 完成节点配置应用、真实连接及无泄漏验收。 节点管理 管理职责分离、地域命名、安装锁及防火墙任务持续改进。 验证现场任务结果与重启后的行为。 套餐与专"
+    },
+    {
+      "id": "u_e0433806b97edbd4",
+      "kind": "text",
+      "source": "8月28日 Android 安装包已交 QA，连接核心复用 SkyTunnel。安装、升级、自动分组与协议测试结果仍需留档；Roy 负责的公司注册和支付网关商务事项，本期没有新增确认。",
+      "occurrence": 0,
+      "target": "The Android package was handed to QA on 28 Aug, using the shared SkyTunnel source core. Installation, upgrade, automatic grouping and protocol results still require records; there is no new confirmation for company registration or payment-gateway business matters owned by Roy.",
+      "context": "p @ line 92 · surrounding text: 一、本阶段关键决策与状态 Android 持续交付测试版本，Apple 测试分发恢复推进，支付与订阅规则开始统一；本阶段的测试发布不代表正式上线。 二、本阶段关键成果 3 次 Android 测试发布 TestFlight 8月24日有效测试构建 6 项主题 支付、身份与连接等工程进展 FFF 交 QA 8月28日 Android 安装包 进展 交付结果 下一步 支付与订阅 共享规则、支付状态、回调、重试及后台展示进入验证，为续费功能奠定基础。 核对迁移，验证重复回调、并发及真实支付。 设备身份与下单 设备标识解析和下单会话标准化进入验证。 配套后端跨域配置，再验证网站与客户端。 连接与 DNS 节点解析、隧道内解析及异常时阻断流量已有实现。 完成节点配置应用、真实连接及无泄漏验收。 节点管理 管理职责分离、地域命名、安装锁及防火墙任务持续改进。 验证现场任务结果与重启后的行为。 套餐与专"
+    },
+    {
+      "id": "u_2b14d9947b6b2b11",
+      "kind": "text",
+      "source": "八、阻塞、下一步与中长期顺序",
+      "occurrence": 0,
+      "target": "8. Blockers, next steps and longer-term sequence",
+      "context": "h2 @ line 92 · surrounding text: 一、本阶段关键决策与状态 Android 持续交付测试版本，Apple 测试分发恢复推进，支付与订阅规则开始统一；本阶段的测试发布不代表正式上线。 二、本阶段关键成果 3 次 Android 测试发布 TestFlight 8月24日有效测试构建 6 项主题 支付、身份与连接等工程进展 FFF 交 QA 8月28日 Android 安装包 进展 交付结果 下一步 支付与订阅 共享规则、支付状态、回调、重试及后台展示进入验证，为续费功能奠定基础。 核对迁移，验证重复回调、并发及真实支付。 设备身份与下单 设备标识解析和下单会话标准化进入验证。 配套后端跨域配置，再验证网站与客户端。 连接与 DNS 节点解析、隧道内解析及异常时阻断流量已有实现。 完成节点配置应用、真实连接及无泄漏验收。 节点管理 管理职责分离、地域命名、安装锁及防火墙任务持续改进。 验证现场任务结果与重启后的行为。 套餐与专"
+    },
+    {
+      "id": "u_977f15e90f12ed04",
+      "kind": "text",
+      "source": "阶段收尾仍需核对数据库迁移重叠、后端跨域配置和购买线路授权。第12阶段先推进续费与客户端集成，再补齐真实支付、三端连接和节点运行验收；以验证结果安排正式发布。",
+      "occurrence": 0,
+      "target": "At closeout, overlapping database migrations, backend cross-origin configuration and purchased-route authorization still required reconciliation. Sprint 12 prioritizes renewals and client integration, followed by real payments, cross-client connections and VPN node runtime acceptance testing; production scheduling depends on those results.",
+      "context": "p @ line 92 · surrounding text: 一、本阶段关键决策与状态 Android 持续交付测试版本，Apple 测试分发恢复推进，支付与订阅规则开始统一；本阶段的测试发布不代表正式上线。 二、本阶段关键成果 3 次 Android 测试发布 TestFlight 8月24日有效测试构建 6 项主题 支付、身份与连接等工程进展 FFF 交 QA 8月28日 Android 安装包 进展 交付结果 下一步 支付与订阅 共享规则、支付状态、回调、重试及后台展示进入验证，为续费功能奠定基础。 核对迁移，验证重复回调、并发及真实支付。 设备身份与下单 设备标识解析和下单会话标准化进入验证。 配套后端跨域配置，再验证网站与客户端。 连接与 DNS 节点解析、隧道内解析及异常时阻断流量已有实现。 完成节点配置应用、真实连接及无泄漏验收。 节点管理 管理职责分离、地域命名、安装锁及防火墙任务持续改进。 验证现场任务结果与重启后的行为。 套餐与专"
+    },
+    {
+      "id": "u_d13b3ecf7b665acc",
+      "kind": "text",
+      "source": "九、财务影响",
+      "occurrence": 0,
+      "target": "9. Financial impact",
+      "context": "h2 @ line 92 · surrounding text: 一、本阶段关键决策与状态 Android 持续交付测试版本，Apple 测试分发恢复推进，支付与订阅规则开始统一；本阶段的测试发布不代表正式上线。 二、本阶段关键成果 3 次 Android 测试发布 TestFlight 8月24日有效测试构建 6 项主题 支付、身份与连接等工程进展 FFF 交 QA 8月28日 Android 安装包 进展 交付结果 下一步 支付与订阅 共享规则、支付状态、回调、重试及后台展示进入验证，为续费功能奠定基础。 核对迁移，验证重复回调、并发及真实支付。 设备身份与下单 设备标识解析和下单会话标准化进入验证。 配套后端跨域配置，再验证网站与客户端。 连接与 DNS 节点解析、隧道内解析及异常时阻断流量已有实现。 完成节点配置应用、真实连接及无泄漏验收。 节点管理 管理职责分离、地域命名、安装锁及防火墙任务持续改进。 验证现场任务结果与重启后的行为。 套餐与专"
+    },
+    {
+      "id": "u_ff2afe3069f1b7a4",
+      "kind": "text",
+      "source": "本期以收入链路可靠性为重点，没有新增生产收入查询或成本核验；不将开发完成换算为收入增长。",
+      "occurrence": 0,
+      "target": "This period focused on revenue-path reliability. No new production revenue or cost validation was performed; development completion is not reported as revenue growth.",
+      "context": "p @ line 92 · surrounding text: 一、本阶段关键决策与状态 Android 持续交付测试版本，Apple 测试分发恢复推进，支付与订阅规则开始统一；本阶段的测试发布不代表正式上线。 二、本阶段关键成果 3 次 Android 测试发布 TestFlight 8月24日有效测试构建 6 项主题 支付、身份与连接等工程进展 FFF 交 QA 8月28日 Android 安装包 进展 交付结果 下一步 支付与订阅 共享规则、支付状态、回调、重试及后台展示进入验证，为续费功能奠定基础。 核对迁移，验证重复回调、并发及真实支付。 设备身份与下单 设备标识解析和下单会话标准化进入验证。 配套后端跨域配置，再验证网站与客户端。 连接与 DNS 节点解析、隧道内解析及异常时阻断流量已有实现。 完成节点配置应用、真实连接及无泄漏验收。 节点管理 管理职责分离、地域命名、安装锁及防火墙任务持续改进。 验证现场任务结果与重启后的行为。 套餐与专"
+    },
+    {
+      "id": "u_639a9c5e1d51d965",
+      "kind": "text",
+      "source": "Arrowfish · FFF · 阶段进展报告",
+      "occurrence": 0,
+      "target": "Arrowfish · FFF · Sprint progress report",
+      "context": "footer.footer @ line 93"
+    }
+  ],
+  "blocks": {
+    "b0001": {
+      "type": "heading",
+      "source": "第11阶段 · 交付进展补充",
+      "occurrence": 0
+    },
+    "b0002": {
+      "type": "p",
+      "source": "原周期 2026-08-22 至 2026-09-04 · 复核 2026-09-23",
+      "occurrence": 0
+    },
+    "b0003": {
+      "type": "p",
+      "source": "Android 完成三次测试发布，Apple 测试分发取得有效构建，支付、身份与连接改动持续进入验证。",
+      "occurrence": 0
+    },
+    "b0004": {
+      "type": "heading",
+      "source": "一、本阶段关键决策与状态",
+      "occurrence": 0
+    },
+    "b0005": {
+      "type": "p",
+      "source": "Android 持续交付测试版本，Apple 测试分发恢复推进，支付与订阅规则开始统一；本阶段的测试发布不代表正式上线。",
+      "occurrence": 0
+    },
+    "b0006": {
+      "type": "heading",
+      "source": "二、本阶段关键成果",
+      "occurrence": 0
+    },
+    "b0007": {
+      "type": "highlight",
+      "source": "3 次 Android 测试发布",
+      "occurrence": 0
+    },
+    "b0008": {
+      "type": "highlight",
+      "source": "TestFlight 8月24日有效测试构建",
+      "occurrence": 0
+    },
+    "b0009": {
+      "type": "highlight",
+      "source": "6 项主题 支付、身份与连接等工程进展",
+      "occurrence": 0
+    },
+    "b0010": {
+      "type": "highlight",
+      "source": "FFF 交 QA 8月28日 Android 安装包",
+      "occurrence": 0
+    },
+    "b0011": {
+      "type": "table-row",
+      "source": "进展 交付结果 下一步",
+      "occurrence": 0
+    },
+    "b0012": {
+      "type": "table-row",
+      "source": "支付与订阅 共享规则、支付状态、回调、重试及后台展示进入验证，为续费功能奠定基础。 核对迁移，验证重复回调、并发及真实支付。",
+      "occurrence": 0
+    },
+    "b0013": {
+      "type": "table-row",
+      "source": "设备身份与下单 设备标识解析和下单会话标准化进入验证。 配套后端跨域配置，再验证网站与客户端。",
+      "occurrence": 0
+    },
+    "b0014": {
+      "type": "table-row",
+      "source": "连接与 DNS 节点解析、隧道内解析及异常时阻断流量已有实现。 完成节点配置应用、真实连接及无泄漏验收。",
+      "occurrence": 0
+    },
+    "b0015": {
+      "type": "table-row",
+      "source": "节点管理 管理职责分离、地域命名、安装锁及防火墙任务持续改进。 验证现场任务结果与重启后的行为。",
+      "occurrence": 0
+    },
+    "b0016": {
+      "type": "table-row",
+      "source": "套餐与专属线路 套餐目录及专属层级展示进入验证。 补齐购买后授权，分别验证人工授予与购买线路。",
+      "occurrence": 0
+    },
+    "b0017": {
+      "type": "table-row",
+      "source": "限速与证书 按用户限速和证书域名一致性进入验证，旧核心继续清理。 独立验证吞吐、节点发布与实际连接。",
+      "occurrence": 0
+    },
+    "b0018": {
+      "type": "heading",
+      "source": "三、改善与商业价值",
+      "occurrence": 0
+    },
+    "b0019": {
+      "type": "p",
+      "source": "支付规则统一为续费可靠性提供基础；设备身份标准化减少跨端账号差异；节点任务可追踪性帮助缩短失败排查。测试包交付使这些改动进入实际验证。",
+      "occurrence": 0
+    },
+    "b0020": {
+      "type": "heading",
+      "source": "四、关键时间节点",
+      "occurrence": 0
+    },
+    "b0021": {
+      "type": "table-row",
+      "source": "日期 进展",
+      "occurrence": 0
+    },
+    "b0022": {
+      "type": "table-row",
+      "source": "8月24日 Android 两次测试发布；Apple 测试构建取得 TestFlight 有效状态。",
+      "occurrence": 0
+    },
+    "b0023": {
+      "type": "table-row",
+      "source": "8月25–27日 节点、DNS、身份及支付改动推进；8月27日再交付一次 Android 测试版本。",
+      "occurrence": 0
+    },
+    "b0024": {
+      "type": "table-row",
+      "source": "8月28–30日 FFF Android 交 QA，节点命名、套餐目录与专属层级展示继续完善。",
+      "occurrence": 0
+    },
+    "b0025": {
+      "type": "table-row",
+      "source": "9月1–4日 安装锁、限速、防火墙任务及证书修复进入验证。",
+      "occurrence": 0
+    },
+    "b0026": {
+      "type": "heading",
+      "source": "五、测试发布与兼容要求",
+      "occurrence": 0
+    },
+    "b0027": {
+      "type": "p",
+      "source": "三次 Android 发布均为测试环境，包含官方、Google、Huawei、Samsung 四个渠道包；“官方”表示渠道，不表示生产。Apple TestFlight 有效构建也不等于 App Store 发布。",
+      "occurrence": 0
+    },
+    "b0028": {
+      "type": "p",
+      "source": "后端继续支持 Android、旧版 iOS HiYou 与 Windows。数据迁移和设备标识配置须与客户端发布配套，不能用单端测试替代跨端回归。",
+      "occurrence": 0
+    },
+    "b0029": {
+      "type": "heading",
+      "source": "六、安全与权限管控",
+      "occurrence": 0
+    },
+    "b0030": {
+      "type": "p",
+      "source": "本阶段推进节点管理凭证隔离、任务输出脱敏及 DNS 异常阻断。真实环境应用与无泄漏结果分别跟进；源码权限及异地恢复没有新的复核结论。",
+      "occurrence": 0
+    },
+    "b0031": {
+      "type": "heading",
+      "source": "七、FFF 并行进展（Lex 实时口径）",
+      "occurrence": 0
+    },
+    "b0032": {
+      "type": "p",
+      "source": "8月28日 Android 安装包已交 QA，连接核心复用 SkyTunnel。安装、升级、自动分组与协议测试结果仍需留档；Roy 负责的公司注册和支付网关商务事项，本期没有新增确认。",
+      "occurrence": 0
+    },
+    "b0033": {
+      "type": "heading",
+      "source": "八、阻塞、下一步与中长期顺序",
+      "occurrence": 0
+    },
+    "b0034": {
+      "type": "p",
+      "source": "阶段收尾仍需核对数据库迁移重叠、后端跨域配置和购买线路授权。第12阶段先推进续费与客户端集成，再补齐真实支付、三端连接和节点运行验收；以验证结果安排正式发布。",
+      "occurrence": 0
+    },
+    "b0035": {
+      "type": "heading",
+      "source": "九、财务影响",
+      "occurrence": 0
+    },
+    "b0036": {
+      "type": "p",
+      "source": "本期以收入链路可靠性为重点，没有新增生产收入查询或成本核验；不将开发完成换算为收入增长。",
+      "occurrence": 0
+    }
+  },
+  "reviewedTargetHash": "7fd7163e89237e37"
+}
