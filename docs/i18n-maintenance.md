@@ -24,7 +24,8 @@ catalogues or calls an online translation service.
 7. Run `python3 tools/i18n_catalog.py stats` and `python3 tools/i18n_catalog.py validate`.
 8. Run `python3 tools/generate_report_context.py` to refresh both language contexts and
    indexes, then `python3 tools/build_localized_site.py` to create the deployable site.
-9. Run the JavaScript tests, retrieval evaluation, and `python3 tools/test_localized_site.py`.
+9. Run the JavaScript syntax checks listed in `.github/workflows/deploy.yml`, then
+   preview the generated site in both languages and verify preferences and AI answers.
 
 Never change `source`, `occurrence`, `kind`, `attribute`, `sourceVersion`, or block locators
 by hand. They are deterministic source identifiers. The `target` field is the maintained

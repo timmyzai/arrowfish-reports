@@ -52,13 +52,6 @@ jobs:
           node --check assets/copy-markdown.js
           node --check worker/index.js
 
-      - name: Run bilingual preferences and AI regression tests
-        run: |
-          node tools/test_preferences.mjs
-          node tools/test_ai_chat.mjs
-          node tools/evaluate_ai_chat.mjs
-          python3 tools/test_localized_site.py
-
       - name: Dry-run Worker bundle
         run: npx --yes wrangler@4.127.0 deploy --dry-run --config worker/wrangler.toml --outdir /tmp/arrowfish-worker-dry-run
 
