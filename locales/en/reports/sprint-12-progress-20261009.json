@@ -1,0 +1,652 @@
+{
+  "schemaVersion": 1,
+  "reportId": "sprint-12-progress-20261009",
+  "sourceFile": "Stakeholder/Sprint-12/20261009_progress-update.html",
+  "sourceVersion": "8ad9e19a4d4ec7a9",
+  "units": [
+    {
+      "id": "u_1b83d8f3d6c59132",
+      "kind": "text",
+      "source": "第12阶段 · 续费方案更正",
+      "occurrence": 0,
+      "target": "Sprint 12 · Renewal Decision Correction",
+      "context": "title @ line 4"
+    },
+    {
+      "id": "u_3552d57a3bfadc61",
+      "kind": "attribute",
+      "source": "更正第12阶段关于续费实现完成日期的说法：9月18日方案被否决，规则于10月1日确定，10月5日实现完成并进入测试。",
+      "occurrence": 0,
+      "target": "Corrects the Sprint 12 statement about when the renewal feature was completed: the September 18 scheme was rejected, the rules were settled on October 1, and implementation completed on October 5 and entered testing.",
+      "context": "meta @ line 4 · surrounding text: 第12阶段 · 续费方案更正",
+      "attribute": "content"
+    },
+    {
+      "id": "u_6e2a1c20786a126e",
+      "kind": "text",
+      "source": "返回报告目录",
+      "occurrence": 0,
+      "target": "Back to report index",
+      "context": "a @ line 89"
+    },
+    {
+      "id": "u_fc93f4254e68ac3a",
+      "kind": "text",
+      "source": "第12阶段 · 续费方案更正",
+      "occurrence": 1,
+      "target": "Sprint 12 · Renewal Decision Correction",
+      "context": "h1 @ line 90 · surrounding text: 第12阶段 · 续费方案更正 原周期 2026-09-05 至 2026-09-18 · 更正日期 2026-10-09"
+    },
+    {
+      "id": "u_5b778df04d3c508e",
+      "kind": "text",
+      "source": "原周期 2026-09-05 至 2026-09-18 · 更正日期 2026-10-09",
+      "occurrence": 0,
+      "target": "Original cycle 2026-09-05 to 2026-09-18 · Corrected 2026-10-09",
+      "context": "p.meta @ line 90 · surrounding text: 第12阶段 · 续费方案更正 原周期 2026-09-05 至 2026-09-18 · 更正日期 2026-10-09"
+    },
+    {
+      "id": "u_8c01428f80582ca5",
+      "kind": "text",
+      "source": "第12阶段报告写的「9月18日续费实现完成」有误：当天方案被否决，规则改到10月1日才确定，实现10月5日完成，目前测试中。",
+      "occurrence": 0,
+      "target": "The Sprint 12 statement \"renewal implementation completed on September 18\" is wrong: the scheme was rejected that day, the rules were only settled on October 1, implementation completed on October 5, and it is in testing now.",
+      "context": "p @ line 91"
+    },
+    {
+      "id": "u_810d69e53f29adda",
+      "kind": "text",
+      "source": "一、更正内容",
+      "occurrence": 0,
+      "target": "1. What is corrected",
+      "context": "h2 @ line 92"
+    },
+    {
+      "id": "u_94d038a0a234a1ff",
+      "kind": "text",
+      "source": "更正：",
+      "occurrence": 0,
+      "target": "Correction:",
+      "context": "b @ line 93 · surrounding text: 更正： 原第12阶段报告写明「续费功能于9月18日完成实现并进入测试交付」。9月18日实际上是把购买与续费逻辑发到群里、并被否决的日期，不是实现完成的日期。"
+    },
+    {
+      "id": "u_10bf12da05248f8e",
+      "kind": "text",
+      "source": "原第12阶段报告写明「续费功能于9月18日完成实现并进入测试交付」。9月18日实际上是把购买与续费逻辑发到群里、并被否决的日期，不是实现完成的日期。",
+      "occurrence": 0,
+      "target": "The original Sprint 12 report stated \"the renewal feature completed implementation on September 18 and entered test delivery\". September 18 was in fact the day the purchase and renewal logic was posted to the group and rejected, not the day implementation was completed.",
+      "context": "div.callout.critical @ line 93 · surrounding text: 更正： 原第12阶段报告写明「续费功能于9月18日完成实现并进入测试交付」。9月18日实际上是把购买与续费逻辑发到群里、并被否决的日期，不是实现完成的日期。"
+    },
+    {
+      "id": "u_24ccfd10099f8b8b",
+      "kind": "text",
+      "source": "当天存在的是「升级」模型：把正在使用的天数转换成更高等级，天数不增加、到期时间不变。该模型随后被放弃。规则在9月21日至9月24日重新设计，10月1日才最终确定。按确定后的规则实现，于10月5日完成，目前在开发人员测试中。",
+      "occurrence": 0,
+      "target": "What existed that day was the \"upgrade\" model: converting days already running to a higher tier, with no added days and no change of expiry. That model was then dropped. The rules were redesigned between September 21 and September 24 and only settled on October 1. Implementation of the settled rules completed on October 5 and is in developer testing.",
+      "context": "p @ line 94"
+    },
+    {
+      "id": "u_90a79217afa52eaa",
+      "kind": "text",
+      "source": "本次更正只更正产品决策的时间与内容，不代表新增任何部署或验收。原报告中的 Android 测试发布记录不受影响，继续有效。",
+      "occurrence": 0,
+      "target": "This correction changes only the date and content of a product decision. It does not assert any new deployment or acceptance. The Android staging release record in the original report is unaffected and remains valid.",
+      "context": "p @ line 95"
+    },
+    {
+      "id": "u_d639f39ec8711afb",
+      "kind": "text",
+      "source": "二、为什么改方向",
+      "occurrence": 0,
+      "target": "2. Why the direction changed",
+      "context": "h2 @ line 97"
+    },
+    {
+      "id": "u_b5d069204bb1197d",
+      "kind": "text",
+      "source": "日期",
+      "occurrence": 0,
+      "target": "Date",
+      "context": "th @ line 98 · surrounding text: 日期 经过"
+    },
+    {
+      "id": "u_e9c9b459048a5c71",
+      "kind": "text",
+      "source": "经过",
+      "occurrence": 0,
+      "target": "What happened",
+      "context": "th @ line 98 · surrounding text: 日期 经过"
+    },
+    {
+      "id": "u_66cc37a8c8bc4667",
+      "kind": "text",
+      "source": "9月18日",
+      "occurrence": 0,
+      "target": "September 18",
+      "context": "td @ line 99 · surrounding text: 9月18日 马来西亚把购买逻辑发到群里。马来西亚与台湾团队（含 SkyKing）当时认为没有问题；Lex 与 Amy 提出反对。"
+    },
+    {
+      "id": "u_8f354bad726802a8",
+      "kind": "text",
+      "source": "马来西亚把购买逻辑发到群里。马来西亚与台湾团队（含 SkyKing）当时认为没有问题；Lex 与 Amy 提出反对。",
+      "occurrence": 0,
+      "target": "Malaysia posted the purchase logic to the group. Malaysia and the Taiwan team, including SkyKing, saw no problem with it at the time; Lex and Amy objected.",
+      "context": "td @ line 99 · surrounding text: 9月18日 马来西亚把购买逻辑发到群里。马来西亚与台湾团队（含 SkyKing）当时认为没有问题；Lex 与 Amy 提出反对。"
+    },
+    {
+      "id": "u_53d2a47c79887bd0",
+      "kind": "text",
+      "source": "9月18日",
+      "occurrence": 1,
+      "target": "September 18",
+      "context": "td @ line 100 · surrounding text: 9月18日 中国用户是主要用户群，因此按中国同事的意见调整方向。"
+    },
+    {
+      "id": "u_40ef268b6f910cad",
+      "kind": "text",
+      "source": "中国用户是主要用户群，因此按中国同事的意见调整方向。",
+      "occurrence": 0,
+      "target": "China users are the primary user base, so the direction was adjusted according to the China colleagues' input.",
+      "context": "td @ line 100 · surrounding text: 9月18日 中国用户是主要用户群，因此按中国同事的意见调整方向。"
+    },
+    {
+      "id": "u_141dc6bdaffb5b42",
+      "kind": "text",
+      "source": "9月21日",
+      "occurrence": 0,
+      "target": "September 21",
+      "context": "td @ line 101 · surrounding text: 9月21日 与 Amy、Lex 最终确认：只保留「续订」，取消补差价「升级」入口。"
+    },
+    {
+      "id": "u_223879ebc0b4fe2b",
+      "kind": "text",
+      "source": "与 Amy、Lex 最终确认：只保留「续订」，取消补差价「升级」入口。",
+      "occurrence": 0,
+      "target": "Final confirmation with Amy and Lex: keep \"renewal\" only and remove the differential \"upgrade\" entry point.",
+      "context": "td @ line 101 · surrounding text: 9月21日 与 Amy、Lex 最终确认：只保留「续订」，取消补差价「升级」入口。"
+    },
+    {
+      "id": "u_9dc26ab7c512ec5e",
+      "kind": "text",
+      "source": "9月24日",
+      "occurrence": 0,
+      "target": "September 24",
+      "context": "td @ line 102 · surrounding text: 9月24日 规则扩展到两种付费模式：Stripe 订阅与支付宝一次性付款并行。"
+    },
+    {
+      "id": "u_080285027ef5a0d7",
+      "kind": "text",
+      "source": "规则扩展到两种付费模式：Stripe 订阅与支付宝一次性付款并行。",
+      "occurrence": 0,
+      "target": "Rules extended to both payment models: Stripe subscriptions and one-time Alipay payments running side by side.",
+      "context": "td @ line 102 · surrounding text: 9月24日 规则扩展到两种付费模式：Stripe 订阅与支付宝一次性付款并行。"
+    },
+    {
+      "id": "u_f73510113a75d63f",
+      "kind": "text",
+      "source": "10月1日",
+      "occurrence": 0,
+      "target": "October 1",
+      "context": "td @ line 103 · surrounding text: 10月1日 SkyKing 确认：所有订阅统一跟随 Google 的处理方式。"
+    },
+    {
+      "id": "u_98aad8745ccce43e",
+      "kind": "text",
+      "source": "SkyKing 确认：所有订阅统一跟随 Google 的处理方式。",
+      "occurrence": 0,
+      "target": "SkyKing confirmed that all subscriptions follow Google's handling.",
+      "context": "td @ line 103 · surrounding text: 10月1日 SkyKing 确认：所有订阅统一跟随 Google 的处理方式。"
+    },
+    {
+      "id": "u_35b3117c8792770d",
+      "kind": "text",
+      "source": "10月5日",
+      "occurrence": 0,
+      "target": "October 5",
+      "context": "td @ line 104 · surrounding text: 10月5日 按确定规则的实现完成，进入开发人员测试。"
+    },
+    {
+      "id": "u_e1ee4acd72a9ca0e",
+      "kind": "text",
+      "source": "按确定规则的实现完成，进入开发人员测试。",
+      "occurrence": 0,
+      "target": "Implementation of the settled rules completed and entered developer testing.",
+      "context": "td @ line 104 · surrounding text: 10月5日 按确定规则的实现完成，进入开发人员测试。"
+    },
+    {
+      "id": "u_d2dfcffd8df6077a",
+      "kind": "text",
+      "source": "Lex 的理由是「购买更高等级」「升级」「自动续费」三套逻辑并行过于复杂，并且反对抵扣旧套餐价值。Amy 的结论是：对已购买套餐的用户，只保留「续订」一个选项。",
+      "occurrence": 0,
+      "target": "Lex argued that running \"buy a higher tier\", \"upgrade\" and \"auto-renewal\" in parallel was too complex, and objected to crediting the value of the old package. Amy concluded that for a user who already holds a package there is only one option: renewal.",
+      "context": "p @ line 106"
+    },
+    {
+      "id": "u_107ab0653941c4e1",
+      "kind": "text",
+      "source": "三、确定后的规则",
+      "occurrence": 0,
+      "target": "3. The settled rules",
+      "context": "h2 @ line 108"
+    },
+    {
+      "id": "u_42ab7218e973e696",
+      "kind": "text",
+      "source": "一次性购买",
+      "occurrence": 0,
+      "target": "One-time purchase",
+      "context": "h3 @ line 109"
+    },
+    {
+      "id": "u_77e8983569eecfeb",
+      "kind": "text",
+      "source": "情形",
+      "occurrence": 0,
+      "target": "Case",
+      "context": "th @ line 110 · surrounding text: 情形 规则 例子"
+    },
+    {
+      "id": "u_2cdefdbcfd5a5170",
+      "kind": "text",
+      "source": "规则",
+      "occurrence": 0,
+      "target": "Rule",
+      "context": "th @ line 110 · surrounding text: 情形 规则 例子"
+    },
+    {
+      "id": "u_c962707ef4efec31",
+      "kind": "text",
+      "source": "例子",
+      "occurrence": 0,
+      "target": "Example",
+      "context": "th @ line 110 · surrounding text: 情形 规则 例子"
+    },
+    {
+      "id": "u_b9cfee966825769f",
+      "kind": "text",
+      "source": "新购",
+      "occurrence": 0,
+      "target": "New purchase",
+      "context": "td @ line 111 · surrounding text: 新购 没有付费会员时立即生效。 购买精品30天 → 精品30天"
+    },
+    {
+      "id": "u_bdcffea401703d17",
+      "kind": "text",
+      "source": "没有付费会员时立即生效。",
+      "occurrence": 0,
+      "target": "Takes effect immediately when there is no paid membership.",
+      "context": "td @ line 111 · surrounding text: 新购 没有付费会员时立即生效。 购买精品30天 → 精品30天"
+    },
+    {
+      "id": "u_6ebfd0752bc0a706",
+      "kind": "text",
+      "source": "购买精品30天 → 精品30天",
+      "occurrence": 0,
+      "target": "Buy Premium 30 days → Premium 30 days",
+      "context": "td @ line 111 · surrounding text: 新购 没有付费会员时立即生效。 购买精品30天 → 精品30天"
+    },
+    {
+      "id": "u_75f68b043349ef87",
+      "kind": "text",
+      "source": "同等级续费",
+      "occurrence": 0,
+      "target": "Same-tier renewal",
+      "context": "td @ line 112 · surrounding text: 同等级续费 天数直接累计，两笔不同时倒数。 精品剩20天 + 买30天 → 精品50天"
+    },
+    {
+      "id": "u_3f874e2f2ce26a8f",
+      "kind": "text",
+      "source": "天数直接累计，两笔不同时倒数。",
+      "occurrence": 0,
+      "target": "Days accumulate directly; the two blocks never count down at the same time.",
+      "context": "td @ line 112 · surrounding text: 同等级续费 天数直接累计，两笔不同时倒数。 精品剩20天 + 买30天 → 精品50天"
+    },
+    {
+      "id": "u_66415e811b49b3f6",
+      "kind": "text",
+      "source": "精品剩20天 + 买30天 → 精品50天",
+      "occurrence": 0,
+      "target": "Premium with 20 days left + buy 30 days → Premium 50 days",
+      "context": "td @ line 112 · surrounding text: 同等级续费 天数直接累计，两笔不同时倒数。 精品剩20天 + 买30天 → 精品50天"
+    },
+    {
+      "id": "u_9297e7fc36fb7171",
+      "kind": "text",
+      "source": "购买更高等级",
+      "occurrence": 0,
+      "target": "Buying a higher tier",
+      "context": "td @ line 113 · surrounding text: 购买更高等级 属于普通购买，不是升级。高等级立即生效，低等级暂停并完整保留，不抵扣价格。 标准90天 + 精品30天 → 精品30天 → 标准90天，共120天"
+    },
+    {
+      "id": "u_9234f4d4bfe64d86",
+      "kind": "text",
+      "source": "属于普通购买，不是升级。高等级立即生效，低等级暂停并完整保留，不抵扣价格。",
+      "occurrence": 0,
+      "target": "An ordinary purchase, not an upgrade. The higher tier takes effect immediately; the lower tier pauses and is preserved in full, with no price credit.",
+      "context": "td @ line 113 · surrounding text: 购买更高等级 属于普通购买，不是升级。高等级立即生效，低等级暂停并完整保留，不抵扣价格。 标准90天 + 精品30天 → 精品30天 → 标准90天，共120天"
+    },
+    {
+      "id": "u_8dcead09f91994ae",
+      "kind": "text",
+      "source": "标准90天 + 精品30天 → 精品30天 → 标准90天，共120天",
+      "occurrence": 0,
+      "target": "Standard 90 days + Premium 30 days → Premium 30 days → Standard 90 days, 120 days total",
+      "context": "td @ line 113 · surrounding text: 购买更高等级 属于普通购买，不是升级。高等级立即生效，低等级暂停并完整保留，不抵扣价格。 标准90天 + 精品30天 → 精品30天 → 标准90天，共120天"
+    },
+    {
+      "id": "u_8845b96eab55633b",
+      "kind": "text",
+      "source": "购买较低等级",
+      "occurrence": 0,
+      "target": "Buying a lower tier",
+      "context": "td @ line 114 · surrounding text: 购买较低等级 属于普通购买，不是降级。高等级继续使用，低等级排队等待。 精品30天 + 标准90天 → 共120天"
+    },
+    {
+      "id": "u_4c1a5b29cb4229b3",
+      "kind": "text",
+      "source": "属于普通购买，不是降级。高等级继续使用，低等级排队等待。",
+      "occurrence": 0,
+      "target": "An ordinary purchase, not a downgrade. The higher tier continues; the lower tier queues behind it.",
+      "context": "td @ line 114 · surrounding text: 购买较低等级 属于普通购买，不是降级。高等级继续使用，低等级排队等待。 精品30天 + 标准90天 → 共120天"
+    },
+    {
+      "id": "u_05f5f9ae294397ee",
+      "kind": "text",
+      "source": "精品30天 + 标准90天 → 共120天",
+      "occurrence": 0,
+      "target": "Premium 30 days + Standard 90 days → 120 days total",
+      "context": "td @ line 114 · surrounding text: 购买较低等级 属于普通购买，不是降级。高等级继续使用，低等级排队等待。 精品30天 + 标准90天 → 共120天"
+    },
+    {
+      "id": "u_11ebf72c2aa61ce3",
+      "kind": "text",
+      "source": "同一时间只有一笔会员天数在倒数；高等级优先；相同等级按购买时间先后使用；暂停或等待中的天数不会丢失。付款成功后才发放会员；退款取消该笔尚未使用的剩余天数。",
+      "occurrence": 0,
+      "target": "Only one block of membership days counts down at a time; the higher tier is used first; equal tiers are consumed in purchase order; paused or queued days are never lost. Membership is granted only after payment succeeds; a refund cancels the unused remaining days of that purchase.",
+      "context": "p.note @ line 116"
+    },
+    {
+      "id": "u_1f35468ed48578d1",
+      "kind": "text",
+      "source": "Stripe 订阅",
+      "occurrence": 0,
+      "target": "Stripe subscription",
+      "context": "h3 @ line 117"
+    },
+    {
+      "id": "u_4e8f7908444abb25",
+      "kind": "text",
+      "source": "新订阅付款成功即生效并按周期自动续费；同等级到期自动扣款，失败则不增加时间；升级直接在原订阅上进行，由 Stripe 计算未使用价值抵扣、用户补差额后立即生效，此处不另外保留原等级剩余时间；降级在本期结束后切换；取消自动续费只停止下一期扣款；退款金额与对应周期权益以 Stripe 实际计算为准。",
+      "occurrence": 0,
+      "target": "A new subscription takes effect once the first payment succeeds and renews automatically each cycle; a same-tier renewal is charged at period end, and a failed charge adds no time; an upgrade is applied directly to the existing subscription, with Stripe valuing the unused portion as a credit and the higher tier taking effect once the user pays the difference, so the original tier's remaining time is not separately preserved here; a downgrade switches at the end of the current period; cancelling auto-renewal only stops the next charge; refund amounts and the matching period's entitlement follow Stripe's own calculation.",
+      "context": "p @ line 118"
+    },
+    {
+      "id": "u_804aa7aa37686692",
+      "kind": "text",
+      "source": "四、对交付的影响",
+      "occurrence": 0,
+      "target": "4. Effect on delivery",
+      "context": "h2 @ line 120"
+    },
+    {
+      "id": "u_76f94999693dfffa",
+      "kind": "text",
+      "source": "项目",
+      "occurrence": 0,
+      "target": "Item",
+      "context": "th @ line 121 · surrounding text: 项目 当前状态"
+    },
+    {
+      "id": "u_96701485e5b91bb1",
+      "kind": "text",
+      "source": "当前状态",
+      "occurrence": 0,
+      "target": "Current Status",
+      "context": "th @ line 121 · surrounding text: 项目 当前状态"
+    },
+    {
+      "id": "u_ddac630248e04ed4",
+      "kind": "text",
+      "source": "购买与续费规则",
+      "occurrence": 0,
+      "target": "Purchase and renewal rules",
+      "context": "td @ line 122 · surrounding text: 购买与续费规则 10月1日确定，10月5日实现完成，开发人员测试中。"
+    },
+    {
+      "id": "u_d1c3365eafc70417",
+      "kind": "text",
+      "source": "10月1日确定，10月5日实现完成，开发人员测试中。",
+      "occurrence": 0,
+      "target": "Settled October 1, implementation completed October 5, in developer testing.",
+      "context": "td @ line 122 · surrounding text: 购买与续费规则 10月1日确定，10月5日实现完成，开发人员测试中。"
+    },
+    {
+      "id": "u_4f257b74cecd6000",
+      "kind": "text",
+      "source": "Android 测试发布",
+      "occurrence": 0,
+      "target": "Android staging releases",
+      "context": "td @ line 123 · surrounding text: Android 测试发布 第12阶段六次测试发布记录不变，继续有效。"
+    },
+    {
+      "id": "u_2902f6621a15f883",
+      "kind": "text",
+      "source": "第12阶段六次测试发布记录不变，继续有效。",
+      "occurrence": 0,
+      "target": "The six Sprint 12 staging release records are unchanged and remain valid.",
+      "context": "td @ line 123 · surrounding text: Android 测试发布 第12阶段六次测试发布记录不变，继续有效。"
+    },
+    {
+      "id": "u_85e9a0d9692fe272",
+      "kind": "text",
+      "source": "支付渠道验收",
+      "occurrence": 0,
+      "target": "Payment channel acceptance",
+      "context": "td @ line 124 · surrounding text: 支付渠道验收 待确认。跨渠道支付、退款与到期切换尚未完成验收。"
+    },
+    {
+      "id": "u_6ab95ccbbac201f9",
+      "kind": "text",
+      "source": "待确认。跨渠道支付、退款与到期切换尚未完成验收。",
+      "occurrence": 0,
+      "target": "To be confirmed. Cross-channel payment, refunds and expiry switching have not completed acceptance.",
+      "context": "td @ line 124 · surrounding text: 支付渠道验收 待确认。跨渠道支付、退款与到期切换尚未完成验收。"
+    },
+    {
+      "id": "u_f50262cc4501d350",
+      "kind": "text",
+      "source": "生产上线",
+      "occurrence": 0,
+      "target": "Production release",
+      "context": "td @ line 125 · surrounding text: 生产上线 待确认。代码合并不等于部署。"
+    },
+    {
+      "id": "u_6e5b77dcee840d8d",
+      "kind": "text",
+      "source": "待确认。代码合并不等于部署。",
+      "occurrence": 0,
+      "target": "To be confirmed. Merged code is not a deployment.",
+      "context": "td @ line 125 · surrounding text: 生产上线 待确认。代码合并不等于部署。"
+    },
+    {
+      "id": "u_3452b186eb52329b",
+      "kind": "text",
+      "source": "第13、14阶段的具体进展见同日发布的两份报告。",
+      "occurrence": 0,
+      "target": "Sprint 13 and Sprint 14 progress is covered in the two reports published the same day.",
+      "context": "p.note @ line 127"
+    },
+    {
+      "id": "u_f50b3e4ca4f1c679",
+      "kind": "text",
+      "source": "Arrowfish · 阶段进展报告",
+      "occurrence": 0,
+      "target": "Arrowfish · Progress Report",
+      "context": "footer.footer @ line 129"
+    }
+  ],
+  "blocks": {
+    "b0001": {
+      "type": "heading",
+      "source": "第12阶段 · 续费方案更正",
+      "occurrence": 0
+    },
+    "b0002": {
+      "type": "p",
+      "source": "原周期 2026-09-05 至 2026-09-18 · 更正日期 2026-10-09",
+      "occurrence": 0
+    },
+    "b0003": {
+      "type": "p",
+      "source": "第12阶段报告写的「9月18日续费实现完成」有误：当天方案被否决，规则改到10月1日才确定，实现10月5日完成，目前测试中。",
+      "occurrence": 0
+    },
+    "b0004": {
+      "type": "heading",
+      "source": "一、更正内容",
+      "occurrence": 0
+    },
+    "b0005": {
+      "type": "p",
+      "source": "当天存在的是「升级」模型：把正在使用的天数转换成更高等级，天数不增加、到期时间不变。该模型随后被放弃。规则在9月21日至9月24日重新设计，10月1日才最终确定。按确定后的规则实现，于10月5日完成，目前在开发人员测试中。",
+      "occurrence": 0
+    },
+    "b0006": {
+      "type": "p",
+      "source": "本次更正只更正产品决策的时间与内容，不代表新增任何部署或验收。原报告中的 Android 测试发布记录不受影响，继续有效。",
+      "occurrence": 0
+    },
+    "b0007": {
+      "type": "heading",
+      "source": "二、为什么改方向",
+      "occurrence": 0
+    },
+    "b0008": {
+      "type": "table-row",
+      "source": "日期 经过",
+      "occurrence": 0
+    },
+    "b0009": {
+      "type": "table-row",
+      "source": "9月18日 马来西亚把购买逻辑发到群里。马来西亚与台湾团队（含 SkyKing）当时认为没有问题；Lex 与 Amy 提出反对。",
+      "occurrence": 0
+    },
+    "b0010": {
+      "type": "table-row",
+      "source": "9月18日 中国用户是主要用户群，因此按中国同事的意见调整方向。",
+      "occurrence": 0
+    },
+    "b0011": {
+      "type": "table-row",
+      "source": "9月21日 与 Amy、Lex 最终确认：只保留「续订」，取消补差价「升级」入口。",
+      "occurrence": 0
+    },
+    "b0012": {
+      "type": "table-row",
+      "source": "9月24日 规则扩展到两种付费模式：Stripe 订阅与支付宝一次性付款并行。",
+      "occurrence": 0
+    },
+    "b0013": {
+      "type": "table-row",
+      "source": "10月1日 SkyKing 确认：所有订阅统一跟随 Google 的处理方式。",
+      "occurrence": 0
+    },
+    "b0014": {
+      "type": "table-row",
+      "source": "10月5日 按确定规则的实现完成，进入开发人员测试。",
+      "occurrence": 0
+    },
+    "b0015": {
+      "type": "p",
+      "source": "Lex 的理由是「购买更高等级」「升级」「自动续费」三套逻辑并行过于复杂，并且反对抵扣旧套餐价值。Amy 的结论是：对已购买套餐的用户，只保留「续订」一个选项。",
+      "occurrence": 0
+    },
+    "b0016": {
+      "type": "heading",
+      "source": "三、确定后的规则",
+      "occurrence": 0
+    },
+    "b0017": {
+      "type": "heading",
+      "source": "一次性购买",
+      "occurrence": 0
+    },
+    "b0018": {
+      "type": "table-row",
+      "source": "情形 规则 例子",
+      "occurrence": 0
+    },
+    "b0019": {
+      "type": "table-row",
+      "source": "新购 没有付费会员时立即生效。 购买精品30天 → 精品30天",
+      "occurrence": 0
+    },
+    "b0020": {
+      "type": "table-row",
+      "source": "同等级续费 天数直接累计，两笔不同时倒数。 精品剩20天 + 买30天 → 精品50天",
+      "occurrence": 0
+    },
+    "b0021": {
+      "type": "table-row",
+      "source": "购买更高等级 属于普通购买，不是升级。高等级立即生效，低等级暂停并完整保留，不抵扣价格。 标准90天 + 精品30天 → 精品30天 → 标准90天，共120天",
+      "occurrence": 0
+    },
+    "b0022": {
+      "type": "table-row",
+      "source": "购买较低等级 属于普通购买，不是降级。高等级继续使用，低等级排队等待。 精品30天 + 标准90天 → 共120天",
+      "occurrence": 0
+    },
+    "b0023": {
+      "type": "p",
+      "source": "同一时间只有一笔会员天数在倒数；高等级优先；相同等级按购买时间先后使用；暂停或等待中的天数不会丢失。付款成功后才发放会员；退款取消该笔尚未使用的剩余天数。",
+      "occurrence": 0
+    },
+    "b0024": {
+      "type": "heading",
+      "source": "Stripe 订阅",
+      "occurrence": 0
+    },
+    "b0025": {
+      "type": "p",
+      "source": "新订阅付款成功即生效并按周期自动续费；同等级到期自动扣款，失败则不增加时间；升级直接在原订阅上进行，由 Stripe 计算未使用价值抵扣、用户补差额后立即生效，此处不另外保留原等级剩余时间；降级在本期结束后切换；取消自动续费只停止下一期扣款；退款金额与对应周期权益以 Stripe 实际计算为准。",
+      "occurrence": 0
+    },
+    "b0026": {
+      "type": "heading",
+      "source": "四、对交付的影响",
+      "occurrence": 0
+    },
+    "b0027": {
+      "type": "table-row",
+      "source": "项目 当前状态",
+      "occurrence": 0
+    },
+    "b0028": {
+      "type": "table-row",
+      "source": "购买与续费规则 10月1日确定，10月5日实现完成，开发人员测试中。",
+      "occurrence": 0
+    },
+    "b0029": {
+      "type": "table-row",
+      "source": "Android 测试发布 第12阶段六次测试发布记录不变，继续有效。",
+      "occurrence": 0
+    },
+    "b0030": {
+      "type": "table-row",
+      "source": "支付渠道验收 待确认。跨渠道支付、退款与到期切换尚未完成验收。",
+      "occurrence": 0
+    },
+    "b0031": {
+      "type": "table-row",
+      "source": "生产上线 待确认。代码合并不等于部署。",
+      "occurrence": 0
+    },
+    "b0032": {
+      "type": "p",
+      "source": "第13、14阶段的具体进展见同日发布的两份报告。",
+      "occurrence": 0
+    }
+  },
+  "reviewedTargetHash": "31295c0f95358d5a"
+}

@@ -1,0 +1,1011 @@
+{
+  "schemaVersion": 1,
+  "reportId": "sprint-13-summary",
+  "sourceFile": "Stakeholder/Sprint-13/20261009_sprint_report.html",
+  "sourceVersion": "2cd2027b9da82277",
+  "units": [
+    {
+      "id": "u_94aee2e9ea41ec33",
+      "kind": "text",
+      "source": "第13阶段 · 续费改定与交接完成",
+      "occurrence": 0,
+      "target": "Sprint 13 · Renewal Rules Revised and Handover Closed",
+      "context": "title @ line 4"
+    },
+    {
+      "id": "u_9ee99c1d32856a35",
+      "kind": "attribute",
+      "source": "续费方案按中国同事意见改定并扩展到两种付费模式，Android 三次测试发布，Windows 上测试环境，交接于10月1日完成。",
+      "occurrence": 0,
+      "target": "The renewal scheme was revised following the China colleagues' input and extended to both payment models, Android delivered three staging releases, Windows reached staging, and the handover closed on October 1.",
+      "context": "meta @ line 4 · surrounding text: 第13阶段 · 续费改定与交接完成",
+      "attribute": "content"
+    },
+    {
+      "id": "u_80be69d9d44bf748",
+      "kind": "text",
+      "source": "返回报告目录",
+      "occurrence": 0,
+      "target": "Back to report index",
+      "context": "a @ line 89"
+    },
+    {
+      "id": "u_338e7a406862c6b2",
+      "kind": "text",
+      "source": "第13阶段 · 续费改定与交接完成",
+      "occurrence": 1,
+      "target": "Sprint 13 · Renewal Rules Revised and Handover Closed",
+      "context": "h1 @ line 90 · surrounding text: 第13阶段 · 续费改定与交接完成 报告周期 2026-09-19 至 2026-10-02 · 发布 2026-10-09"
+    },
+    {
+      "id": "u_6a5e6b842d50e1ef",
+      "kind": "text",
+      "source": "报告周期 2026-09-19 至 2026-10-02 · 发布 2026-10-09",
+      "occurrence": 0,
+      "target": "Reporting period 2026-09-19 to 2026-10-02 · Published 2026-10-09",
+      "context": "p.meta @ line 90 · surrounding text: 第13阶段 · 续费改定与交接完成 报告周期 2026-09-19 至 2026-10-02 · 发布 2026-10-09"
+    },
+    {
+      "id": "u_437fb26c41280dd5",
+      "kind": "text",
+      "source": "续费方案在9月21日改定为只保留续订，Android 交付三次测试版本，Windows 上测试环境，交接于10月1日完成。",
+      "occurrence": 0,
+      "target": "The renewal scheme was revised on September 21 to keep renewal only, Android delivered three staging builds, Windows reached staging, and the handover closed on October 1.",
+      "context": "p @ line 91"
+    },
+    {
+      "id": "u_7de788ef8bb226ff",
+      "kind": "text",
+      "source": "一、需要决定与配合",
+      "occurrence": 0,
+      "target": "1. Decisions and support needed",
+      "context": "h2 @ line 92"
+    },
+    {
+      "id": "u_b2aaadfdf3badccc",
+      "kind": "text",
+      "source": "1. 生产异地备份与恢复演练。",
+      "occurrence": 0,
+      "target": "1. Off-site production backup and restore drill.",
+      "context": "b @ line 93 · surrounding text: 1. 生产异地备份与恢复演练。 备份与恢复手册已在10月6日写好，但演练尚未执行。这是目前风险最高的未关闭项，需要安排一次真实演练的时间窗口。"
+    },
+    {
+      "id": "u_3104d931c45ac2c6",
+      "kind": "text",
+      "source": "备份与恢复手册已在10月6日写好，但演练尚未执行。这是目前风险最高的未关闭项，需要安排一次真实演练的时间窗口。",
+      "occurrence": 0,
+      "target": "The backup and restore runbook was written on October 6, but the drill has not been executed. This is the highest-risk open item and needs a scheduled window for a real drill.",
+      "context": "div.callout @ line 93 · surrounding text: 1. 生产异地备份与恢复演练。 备份与恢复手册已在10月6日写好，但演练尚未执行。这是目前风险最高的未关闭项，需要安排一次真实演练的时间窗口。"
+    },
+    {
+      "id": "u_cbe8057775004891",
+      "kind": "text",
+      "source": "2. 百度投放网站检查。",
+      "occurrence": 0,
+      "target": "2. Baidu placement website check.",
+      "context": "b @ line 94 · surrounding text: 2. 百度投放网站检查。 克隆站自9月25日交给投放方 Wendy 检查，至今未收到反馈。正式环境将部署到 jianyu-ip.com，上线时间取决于对方。"
+    },
+    {
+      "id": "u_a8de16b656e39191",
+      "kind": "text",
+      "source": "克隆站自9月25日交给投放方 Wendy 检查，至今未收到反馈。正式环境将部署到 jianyu-ip.com，上线时间取决于对方。",
+      "occurrence": 0,
+      "target": "The clone site was handed to the placement side (Wendy) for checking on September 25 and no feedback has come back. Production will deploy to jianyu-ip.com; the launch date depends on the other side.",
+      "context": "div.callout.watch @ line 94 · surrounding text: 2. 百度投放网站检查。 克隆站自9月25日交给投放方 Wendy 检查，至今未收到反馈。正式环境将部署到 jianyu-ip.com，上线时间取决于对方。"
+    },
+    {
+      "id": "u_efdbaedb1099ad0e",
+      "kind": "text",
+      "source": "3. 中国地区连接验收。",
+      "occurrence": 0,
+      "target": "3. China regional connection acceptance.",
+      "context": "b @ line 95 · surrounding text: 3. 中国地区连接验收。 三协议全量铺开与中国地区可达性仍未关闭，不能用马来西亚、台湾的测试结果替代。需要安排独立的中国 QA。"
+    },
+    {
+      "id": "u_a3cfac655443e6fc",
+      "kind": "text",
+      "source": "三协议全量铺开与中国地区可达性仍未关闭，不能用马来西亚、台湾的测试结果替代。需要安排独立的中国 QA。",
+      "occurrence": 0,
+      "target": "Full three-protocol rollout and China regional reachability remain open and cannot be substituted by Malaysia or Taiwan test results. An independent China QA pass needs to be scheduled.",
+      "context": "div.callout.watch @ line 95 · surrounding text: 3. 中国地区连接验收。 三协议全量铺开与中国地区可达性仍未关闭，不能用马来西亚、台湾的测试结果替代。需要安排独立的中国 QA。"
+    },
+    {
+      "id": "u_ac9abeb89d5659af",
+      "kind": "text",
+      "source": "二、本阶段关键成果",
+      "occurrence": 0,
+      "target": "2. Key results this cycle",
+      "context": "h2 @ line 97"
+    },
+    {
+      "id": "u_0bc574e72cb35755",
+      "kind": "text",
+      "source": "9月21日",
+      "occurrence": 0,
+      "target": "September 21",
+      "context": "b @ line 99 · surrounding text: 9月21日 续费方案改定「只保留续订」"
+    },
+    {
+      "id": "u_ea61a34e681d82b1",
+      "kind": "text",
+      "source": "续费方案改定「只保留续订」",
+      "occurrence": 0,
+      "target": "Renewal scheme revised to \"renewal only\"",
+      "context": "span @ line 99 · surrounding text: 9月21日 续费方案改定「只保留续订」"
+    },
+    {
+      "id": "u_1aeef37b35f585b9",
+      "kind": "text",
+      "source": "3 次",
+      "occurrence": 0,
+      "target": "3",
+      "context": "b @ line 100 · surrounding text: 3 次 Android 测试发布（v3.9.20–22）"
+    },
+    {
+      "id": "u_e0bbe7ebf999c888",
+      "kind": "text",
+      "source": "Android 测试发布（v3.9.20–22）",
+      "occurrence": 0,
+      "target": "Android staging releases (v3.9.20–22)",
+      "context": "span @ line 100 · surrounding text: 3 次 Android 测试发布（v3.9.20–22）"
+    },
+    {
+      "id": "u_1f77825554d2e288",
+      "kind": "text",
+      "source": "9月21日",
+      "occurrence": 1,
+      "target": "September 21",
+      "context": "b @ line 101 · surrounding text: 9月21日 Windows 测试环境部署"
+    },
+    {
+      "id": "u_be0b3c3f9577c469",
+      "kind": "text",
+      "source": "Windows 测试环境部署",
+      "occurrence": 0,
+      "target": "Windows staging deployment",
+      "context": "span @ line 101 · surrounding text: 9月21日 Windows 测试环境部署"
+    },
+    {
+      "id": "u_90ff7b27b86065dd",
+      "kind": "text",
+      "source": "9月30日",
+      "occurrence": 0,
+      "target": "September 30",
+      "context": "b @ line 102 · surrounding text: 9月30日 交接会议完成，权限接手"
+    },
+    {
+      "id": "u_0a9065762d64f29f",
+      "kind": "text",
+      "source": "交接会议完成，权限接手",
+      "occurrence": 0,
+      "target": "Handover meeting held, access taken over",
+      "context": "span @ line 102 · surrounding text: 9月30日 交接会议完成，权限接手"
+    },
+    {
+      "id": "u_1979a1c2e8fe09f9",
+      "kind": "text",
+      "source": "进展",
+      "occurrence": 0,
+      "target": "Area",
+      "context": "th @ line 104 · surrounding text: 进展 交付结果 边界"
+    },
+    {
+      "id": "u_d75ac915d42b0150",
+      "kind": "text",
+      "source": "交付结果",
+      "occurrence": 0,
+      "target": "Delivered",
+      "context": "th @ line 104 · surrounding text: 进展 交付结果 边界"
+    },
+    {
+      "id": "u_419ce6970c7551ca",
+      "kind": "text",
+      "source": "边界",
+      "occurrence": 0,
+      "target": "Boundary",
+      "context": "th @ line 104 · surrounding text: 进展 交付结果 边界"
+    },
+    {
+      "id": "u_51c2f7868efdad86",
+      "kind": "text",
+      "source": "购买与续费规则",
+      "occurrence": 0,
+      "target": "Purchase and renewal rules",
+      "context": "td @ line 105 · surrounding text: 购买与续费规则 9月18日的方案被中国同事否决后重新设计；9月21日确定只保留续订；9月24日扩展到订阅与一次性两种付费模式。 当时为决策完成，实现于10月5日才完成。"
+    },
+    {
+      "id": "u_367061ed4188b601",
+      "kind": "text",
+      "source": "9月18日的方案被中国同事否决后重新设计；9月21日确定只保留续订；9月24日扩展到订阅与一次性两种付费模式。",
+      "occurrence": 0,
+      "target": "After the September 18 scheme was rejected by the China colleagues it was redesigned; on September 21 renewal-only was settled; on September 24 it was extended to both the subscription and one-time payment models.",
+      "context": "td @ line 105 · surrounding text: 购买与续费规则 9月18日的方案被中国同事否决后重新设计；9月21日确定只保留续订；9月24日扩展到订阅与一次性两种付费模式。 当时为决策完成，实现于10月5日才完成。"
+    },
+    {
+      "id": "u_c499770d0e4106ab",
+      "kind": "text",
+      "source": "当时为决策完成，实现于10月5日才完成。",
+      "occurrence": 0,
+      "target": "This was the decision being completed; implementation only completed on October 5.",
+      "context": "td @ line 105 · surrounding text: 购买与续费规则 9月18日的方案被中国同事否决后重新设计；9月21日确定只保留续订；9月24日扩展到订阅与一次性两种付费模式。 当时为决策完成，实现于10月5日才完成。"
+    },
+    {
+      "id": "u_d9248f099436069f",
+      "kind": "text",
+      "source": "支付与订阅",
+      "occurrence": 0,
+      "target": "Payments and subscriptions",
+      "context": "td @ line 106 · surrounding text: 支付与订阅 支付网关工厂与 Stripe 生命周期梳理完成；Google 订阅迁到 v2 接口；套餐赠送天数、宽限期设置、到期无缝降级落地。 渠道验收待确认。"
+    },
+    {
+      "id": "u_e1544d87289ca741",
+      "kind": "text",
+      "source": "支付网关工厂与 Stripe 生命周期梳理完成；Google 订阅迁到 v2 接口；套餐赠送天数、宽限期设置、到期无缝降级落地。",
+      "occurrence": 0,
+      "target": "Payment gateway factory and Stripe lifecycle consolidated; Google subscriptions moved to the v2 API; plan bonus days, the grace-period setting and seamless downgrade at expiry landed.",
+      "context": "td @ line 106 · surrounding text: 支付与订阅 支付网关工厂与 Stripe 生命周期梳理完成；Google 订阅迁到 v2 接口；套餐赠送天数、宽限期设置、到期无缝降级落地。 渠道验收待确认。"
+    },
+    {
+      "id": "u_956bf3d57b9a5e3d",
+      "kind": "text",
+      "source": "渠道验收待确认。",
+      "occurrence": 0,
+      "target": "Channel acceptance to be confirmed.",
+      "context": "td @ line 106 · surrounding text: 支付与订阅 支付网关工厂与 Stripe 生命周期梳理完成；Google 订阅迁到 v2 接口；套餐赠送天数、宽限期设置、到期无缝降级落地。 渠道验收待确认。"
+    },
+    {
+      "id": "u_4b0aa8b5344a6a87",
+      "kind": "text",
+      "source": "后台专属资源",
+      "occurrence": 0,
+      "target": "Back Office (BO) exclusive resources",
+      "context": "td @ line 107 · surrounding text: 后台专属资源 购买后分配专属 IP 与专属线路的后台流程完成，并做了多项优化。这部分逻辑复杂，投入时间较多。 真实购买到配发的端到端验收待确认。"
+    },
+    {
+      "id": "u_45c05cc19d0e3816",
+      "kind": "text",
+      "source": "购买后分配专属 IP 与专属线路的后台流程完成，并做了多项优化。这部分逻辑复杂，投入时间较多。",
+      "occurrence": 0,
+      "target": "The Back Office (BO) flow for assigning Dedicated IPs and Dedicated Lines after purchase is complete, with several optimisations. This logic is complex and took considerable time.",
+      "context": "td @ line 107 · surrounding text: 后台专属资源 购买后分配专属 IP 与专属线路的后台流程完成，并做了多项优化。这部分逻辑复杂，投入时间较多。 真实购买到配发的端到端验收待确认。"
+    },
+    {
+      "id": "u_3c4cd4db2b0afc62",
+      "kind": "text",
+      "source": "真实购买到配发的端到端验收待确认。",
+      "occurrence": 0,
+      "target": "End-to-end acceptance from real purchase to assignment is to be confirmed.",
+      "context": "td @ line 107 · surrounding text: 后台专属资源 购买后分配专属 IP 与专属线路的后台流程完成，并做了多项优化。这部分逻辑复杂，投入时间较多。 真实购买到配发的端到端验收待确认。"
+    },
+    {
+      "id": "u_90ee3855c02587dc",
+      "kind": "text",
+      "source": "Android 客户端",
+      "occurrence": 0,
+      "target": "Android client",
+      "context": "td @ line 108 · surrounding text: Android 客户端 连接状态改由引擎统一掌管，解决卡住问题；免费计时、线路列表、黑白名单、注册页区号等多项修复。 v3.9.20–22 已上测试环境，设备验收待确认。"
+    },
+    {
+      "id": "u_0fb19f0f042ea26e",
+      "kind": "text",
+      "source": "连接状态改由引擎统一掌管，解决卡住问题；免费计时、线路列表、黑白名单、注册页区号等多项修复。",
+      "occurrence": 0,
+      "target": "Connection state is now owned by the engine, resolving the stuck-connecting problem; free-quota timing, route list, allow/block lists and the registration dial code were among the fixes.",
+      "context": "td @ line 108 · surrounding text: Android 客户端 连接状态改由引擎统一掌管，解决卡住问题；免费计时、线路列表、黑白名单、注册页区号等多项修复。 v3.9.20–22 已上测试环境，设备验收待确认。"
+    },
+    {
+      "id": "u_79b0de8c0d220bf0",
+      "kind": "text",
+      "source": "v3.9.20–22 已上测试环境，设备验收待确认。",
+      "occurrence": 0,
+      "target": "v3.9.20–22 are on staging; device acceptance to be confirmed.",
+      "context": "td @ line 108 · surrounding text: Android 客户端 连接状态改由引擎统一掌管，解决卡住问题；免费计时、线路列表、黑白名单、注册页区号等多项修复。 v3.9.20–22 已上测试环境，设备验收待确认。"
+    },
+    {
+      "id": "u_b152be485932d81c",
+      "kind": "text",
+      "source": "Windows 与 iOS",
+      "occurrence": 0,
+      "target": "Windows and iOS",
+      "context": "td @ line 109 · surrounding text: Windows 与 iOS Windows 跟随 Android 的主页与订阅界面改版，9月21日上测试环境；iOS 修复支付弹窗与网页结账处理。 Windows 安装包与具体版本的对应关系待确认；iOS 真机与商店验收未关闭。"
+    },
+    {
+      "id": "u_56db583e1ca4d0c1",
+      "kind": "text",
+      "source": "Windows 跟随 Android 的主页与订阅界面改版，9月21日上测试环境；iOS 修复支付弹窗与网页结账处理。",
+      "occurrence": 0,
+      "target": "Windows followed the Android home and subscription UI redesign and reached staging on September 21; iOS fixed payment popups and web checkout handling.",
+      "context": "td @ line 109 · surrounding text: Windows 与 iOS Windows 跟随 Android 的主页与订阅界面改版，9月21日上测试环境；iOS 修复支付弹窗与网页结账处理。 Windows 安装包与具体版本的对应关系待确认；iOS 真机与商店验收未关闭。"
+    },
+    {
+      "id": "u_06f2d57ffb388ea4",
+      "kind": "text",
+      "source": "Windows 安装包与具体版本的对应关系待确认；iOS 真机与商店验收未关闭。",
+      "occurrence": 0,
+      "target": "The mapping between the Windows installer and a specific version is to be confirmed; iOS device and App Store acceptance remain open.",
+      "context": "td @ line 109 · surrounding text: Windows 与 iOS Windows 跟随 Android 的主页与订阅界面改版，9月21日上测试环境；iOS 修复支付弹窗与网页结账处理。 Windows 安装包与具体版本的对应关系待确认；iOS 真机与商店验收未关闭。"
+    },
+    {
+      "id": "u_6587921cd61263ad",
+      "kind": "text",
+      "source": "网站",
+      "occurrence": 0,
+      "target": "Website",
+      "context": "td @ line 110 · surrounding text: 网站 两个版本都已制作：一版以箭鱼自身风格为主，一版以参考站风格为主。因为收到的需求只是「复制 Glory 网站到箭鱼」，没有书面规格，所以两版并行准备。9月16日选定参考站版本，9月23日修正完毕。 9月25日交投放方检查。"
+    },
+    {
+      "id": "u_1fd17124adc40cac",
+      "kind": "text",
+      "source": "两个版本都已制作：一版以箭鱼自身风格为主，一版以参考站风格为主。因为收到的需求只是「复制 Glory 网站到箭鱼」，没有书面规格，所以两版并行准备。9月16日选定参考站版本，9月23日修正完毕。",
+      "occurrence": 0,
+      "target": "Both versions were built: one led by Arrowfish's own style, one led by the reference site. The brief received was only \"copy the Glory site to Arrowfish\", with no written specification, so both were prepared in parallel. The reference-site version was selected on September 16 and corrections finished on September 23.",
+      "context": "td @ line 110 · surrounding text: 网站 两个版本都已制作：一版以箭鱼自身风格为主，一版以参考站风格为主。因为收到的需求只是「复制 Glory 网站到箭鱼」，没有书面规格，所以两版并行准备。9月16日选定参考站版本，9月23日修正完毕。 9月25日交投放方检查。"
+    },
+    {
+      "id": "u_975b91c406e8bd57",
+      "kind": "text",
+      "source": "9月25日交投放方检查。",
+      "occurrence": 0,
+      "target": "Handed to the placement side for checking on September 25.",
+      "context": "td @ line 110 · surrounding text: 网站 两个版本都已制作：一版以箭鱼自身风格为主，一版以参考站风格为主。因为收到的需求只是「复制 Glory 网站到箭鱼」，没有书面规格，所以两版并行准备。9月16日选定参考站版本，9月23日修正完毕。 9月25日交投放方检查。"
+    },
+    {
+      "id": "u_716d8db71c048041",
+      "kind": "text",
+      "source": "三、改善与商业价值",
+      "occurrence": 0,
+      "target": "3. Improvements and business value",
+      "context": "h2 @ line 113"
+    },
+    {
+      "id": "u_8eea2b607724e463",
+      "kind": "text",
+      "source": "改善",
+      "occurrence": 0,
+      "target": "Improvement",
+      "context": "th @ line 114 · surrounding text: 改善 业务价值"
+    },
+    {
+      "id": "u_bd3c0fc540475227",
+      "kind": "text",
+      "source": "业务价值",
+      "occurrence": 0,
+      "target": "Business value",
+      "context": "th @ line 114 · surrounding text: 改善 业务价值"
+    },
+    {
+      "id": "u_9aa02daeff3878be",
+      "kind": "text",
+      "source": "续费规则按中国用户意见改定",
+      "occurrence": 0,
+      "target": "Renewal rules revised to China users' input",
+      "context": "td @ line 115 · surrounding text: 续费规则按中国用户意见改定 中国用户是主要用户群。保留低等级剩余天数、不抵扣价格，减少用户对续费吃亏的顾虑。"
+    },
+    {
+      "id": "u_f02eaee6e5b26bf9",
+      "kind": "text",
+      "source": "中国用户是主要用户群。保留低等级剩余天数、不抵扣价格，减少用户对续费吃亏的顾虑。",
+      "occurrence": 0,
+      "target": "China users are the primary user base. Preserving the lower tier's remaining days with no price credit reduces the perception that renewing loses value.",
+      "context": "td @ line 115 · surrounding text: 续费规则按中国用户意见改定 中国用户是主要用户群。保留低等级剩余天数、不抵扣价格，减少用户对续费吃亏的顾虑。"
+    },
+    {
+      "id": "u_b7015176fb31934d",
+      "kind": "text",
+      "source": "连接状态由引擎统一掌管",
+      "occurrence": 0,
+      "target": "Connection state owned by the engine",
+      "context": "td @ line 116 · surrounding text: 连接状态由引擎统一掌管 减少 VPN 卡在连接中的情况，直接影响可用性与留存。"
+    },
+    {
+      "id": "u_354437e8d960e72b",
+      "kind": "text",
+      "source": "减少 VPN 卡在连接中的情况，直接影响可用性与留存。",
+      "occurrence": 0,
+      "target": "Fewer cases of the VPN sticking in connecting, which directly affects usability and retention.",
+      "context": "td @ line 116 · surrounding text: 连接状态由引擎统一掌管 减少 VPN 卡在连接中的情况，直接影响可用性与留存。"
+    },
+    {
+      "id": "u_79cafd341c5dd172",
+      "kind": "text",
+      "source": "专属 IP、专属线路后台配发",
+      "occurrence": 0,
+      "target": "Back Office (BO) assignment of Dedicated IPs and Lines",
+      "context": "td @ line 117 · surrounding text: 专属 IP、专属线路后台配发 高价值订单在后台可追踪配发，减少人工处理和错配。"
+    },
+    {
+      "id": "u_8de0a98542a13c3f",
+      "kind": "text",
+      "source": "高价值订单在后台可追踪配发，减少人工处理和错配。",
+      "occurrence": 0,
+      "target": "High-value orders can be tracked through assignment in the back office, reducing manual handling and misallocation.",
+      "context": "td @ line 117 · surrounding text: 专属 IP、专属线路后台配发 高价值订单在后台可追踪配发，减少人工处理和错配。"
+    },
+    {
+      "id": "u_d702340878596ca8",
+      "kind": "text",
+      "source": "网站两版并行准备",
+      "occurrence": 0,
+      "target": "Both website versions prepared in parallel",
+      "context": "td @ line 118 · surrounding text: 网站两版并行准备 需求不明确时不停工等待，选定后一周内即完成修正。"
+    },
+    {
+      "id": "u_6db3cd4abe7a18e6",
+      "kind": "text",
+      "source": "需求不明确时不停工等待，选定后一周内即完成修正。",
+      "occurrence": 0,
+      "target": "No idle waiting while the brief was unclear; corrections were finished within a week of selection.",
+      "context": "td @ line 118 · surrounding text: 网站两版并行准备 需求不明确时不停工等待，选定后一周内即完成修正。"
+    },
+    {
+      "id": "u_b9bd8730a94086ce",
+      "kind": "text",
+      "source": "四、关键时间节点",
+      "occurrence": 0,
+      "target": "4. Key dates",
+      "context": "h2 @ line 121"
+    },
+    {
+      "id": "u_1f87261ac970d6ed",
+      "kind": "text",
+      "source": "日期",
+      "occurrence": 0,
+      "target": "Date",
+      "context": "th @ line 122 · surrounding text: 日期 进展"
+    },
+    {
+      "id": "u_c24e99cdc575fae5",
+      "kind": "text",
+      "source": "进展",
+      "occurrence": 1,
+      "target": "Area",
+      "context": "th @ line 122 · surrounding text: 日期 进展"
+    },
+    {
+      "id": "u_667a2ca1162ffa71",
+      "kind": "text",
+      "source": "9月20日",
+      "occurrence": 0,
+      "target": "September 20",
+      "context": "td @ line 123 · surrounding text: 9月20日 FFF PC 测试环境版本（仅记录先后顺序，FFF 进展另行汇报）。"
+    },
+    {
+      "id": "u_35004815a41c4f2b",
+      "kind": "text",
+      "source": "FFF PC 测试环境版本（仅记录先后顺序，FFF 进展另行汇报）。",
+      "occurrence": 0,
+      "target": "FFF PC staging build (recorded for sequence only; FFF progress is reported separately).",
+      "context": "td @ line 123 · surrounding text: 9月20日 FFF PC 测试环境版本（仅记录先后顺序，FFF 进展另行汇报）。"
+    },
+    {
+      "id": "u_c7cfd642c5c887da",
+      "kind": "text",
+      "source": "9月21日",
+      "occurrence": 2,
+      "target": "September 21",
+      "context": "td @ line 124 · surrounding text: 9月21日 与 Amy、Lex 最终确认续费方案；Arrowfish Windows 上测试环境。"
+    },
+    {
+      "id": "u_e7c127aa3d3fc07d",
+      "kind": "text",
+      "source": "与 Amy、Lex 最终确认续费方案；Arrowfish Windows 上测试环境。",
+      "occurrence": 0,
+      "target": "Final confirmation of the renewal scheme with Amy and Lex; Arrowfish Windows reached staging.",
+      "context": "td @ line 124 · surrounding text: 9月21日 与 Amy、Lex 最终确认续费方案；Arrowfish Windows 上测试环境。"
+    },
+    {
+      "id": "u_89c988f46ca60eff",
+      "kind": "text",
+      "source": "9月23日",
+      "occurrence": 0,
+      "target": "September 23",
+      "context": "td @ line 125 · surrounding text: 9月23日 网站修正完毕；Android 三次测试发布 v3.9.20–v3.9.22。"
+    },
+    {
+      "id": "u_33b42b92c7552a28",
+      "kind": "text",
+      "source": "网站修正完毕；Android 三次测试发布 v3.9.20–v3.9.22。",
+      "occurrence": 0,
+      "target": "Website corrections finished; three Android staging releases, v3.9.20 to v3.9.22.",
+      "context": "td @ line 125 · surrounding text: 9月23日 网站修正完毕；Android 三次测试发布 v3.9.20–v3.9.22。"
+    },
+    {
+      "id": "u_52588a2cc34973b2",
+      "kind": "text",
+      "source": "9月24日",
+      "occurrence": 0,
+      "target": "September 24",
+      "context": "td @ line 126 · surrounding text: 9月24日 续费方案扩展到 Stripe 订阅与支付宝一次性付款两种模式。"
+    },
+    {
+      "id": "u_e1fc0a9c134b9ef1",
+      "kind": "text",
+      "source": "续费方案扩展到 Stripe 订阅与支付宝一次性付款两种模式。",
+      "occurrence": 0,
+      "target": "Renewal scheme extended to both Stripe subscriptions and one-time Alipay payments.",
+      "context": "td @ line 126 · surrounding text: 9月24日 续费方案扩展到 Stripe 订阅与支付宝一次性付款两种模式。"
+    },
+    {
+      "id": "u_0a964725f4c6c5b0",
+      "kind": "text",
+      "source": "9月25日",
+      "occurrence": 0,
+      "target": "September 25",
+      "context": "td @ line 127 · surrounding text: 9月25日 网站交百度投放方 Wendy 检查；收到第一版交接文档。"
+    },
+    {
+      "id": "u_0072c0f0f025ac9a",
+      "kind": "text",
+      "source": "网站交百度投放方 Wendy 检查；收到第一版交接文档。",
+      "occurrence": 0,
+      "target": "Website handed to the Baidu placement side (Wendy) for checking; first handover document received.",
+      "context": "td @ line 127 · surrounding text: 9月25日 网站交百度投放方 Wendy 检查；收到第一版交接文档。"
+    },
+    {
+      "id": "u_7ce5f52c0f50c288",
+      "kind": "text",
+      "source": "9月28–29日",
+      "occurrence": 0,
+      "target": "September 28–29",
+      "context": "td @ line 128 · surrounding text: 9月28–29日 会员与专属层级、订阅管理的源码梳理完成，列出待处理问题。"
+    },
+    {
+      "id": "u_c39dd38c39e77588",
+      "kind": "text",
+      "source": "会员与专属层级、订阅管理的源码梳理完成，列出待处理问题。",
+      "occurrence": 0,
+      "target": "Source study of membership, exclusive tiers and subscription management completed, with the open issues listed.",
+      "context": "td @ line 128 · surrounding text: 9月28–29日 会员与专属层级、订阅管理的源码梳理完成，列出待处理问题。"
+    },
+    {
+      "id": "u_ab52c410687e2f8a",
+      "kind": "text",
+      "source": "9月30日",
+      "occurrence": 1,
+      "target": "September 30",
+      "context": "td @ line 129 · surrounding text: 9月30日 收到第二版交接文档；交接会议完成，马来西亚接手。"
+    },
+    {
+      "id": "u_a7c72cf5ffc0f01b",
+      "kind": "text",
+      "source": "收到第二版交接文档；交接会议完成，马来西亚接手。",
+      "occurrence": 0,
+      "target": "Second handover document received; handover meeting held and Malaysia took over.",
+      "context": "td @ line 129 · surrounding text: 9月30日 收到第二版交接文档；交接会议完成，马来西亚接手。"
+    },
+    {
+      "id": "u_c8a57af319d16b54",
+      "kind": "text",
+      "source": "10月1日",
+      "occurrence": 0,
+      "target": "October 1",
+      "context": "td @ line 130 · surrounding text: 10月1日 SkyKing 确认所有订阅统一跟随 Google 的处理方式；停用 Roy 的 GitLab 权限。"
+    },
+    {
+      "id": "u_8673d5ac2b86f9f3",
+      "kind": "text",
+      "source": "SkyKing 确认所有订阅统一跟随 Google 的处理方式；停用 Roy 的 GitLab 权限。",
+      "occurrence": 0,
+      "target": "SkyKing confirmed that all subscriptions follow Google's handling; Roy's GitLab access was disabled.",
+      "context": "td @ line 130 · surrounding text: 10月1日 SkyKing 确认所有订阅统一跟随 Google 的处理方式；停用 Roy 的 GitLab 权限。"
+    },
+    {
+      "id": "u_ac88d8309bf945f7",
+      "kind": "text",
+      "source": "10月2日",
+      "occurrence": 0,
+      "target": "October 2",
+      "context": "td @ line 131 · surrounding text: 10月2日 新测试环境版本，覆盖购买与续费以外的问题清单及多项优化。"
+    },
+    {
+      "id": "u_4e0c265895d86a8b",
+      "kind": "text",
+      "source": "新测试环境版本，覆盖购买与续费以外的问题清单及多项优化。",
+      "occurrence": 0,
+      "target": "New staging build covering the issue list outside purchase and renewal, plus several optimisations.",
+      "context": "td @ line 131 · surrounding text: 10月2日 新测试环境版本，覆盖购买与续费以外的问题清单及多项优化。"
+    },
+    {
+      "id": "u_494f1613249e6dd2",
+      "kind": "text",
+      "source": "五、发布边界与兼容要求",
+      "occurrence": 0,
+      "target": "5. Release boundaries and compatibility",
+      "context": "h2 @ line 134"
+    },
+    {
+      "id": "u_dd572a187b66f35e",
+      "kind": "text",
+      "source": "本阶段的 Android 三次发布与 Windows 一次部署都在测试环境。代码合并、测试环境部署、设备验收、生产上线是四件独立的事，本报告不把其中任何一件当作另一件。生产部署与最终验收仍为待确认。",
+      "occurrence": 0,
+      "target": "The three Android releases and the one Windows deployment this cycle are all staging. Merging code, deploying to staging, device acceptance and production release are four independent facts, and this report treats none of them as another. Production deployment and final acceptance remain to be confirmed.",
+      "context": "p @ line 135"
+    },
+    {
+      "id": "u_f27d854885712d7c",
+      "kind": "text",
+      "source": "后端继续兼容可升级的 Android、旧版 iOS HiYou 与旧版 Windows 客户端。后端的任何改动都必须保持向后兼容，这是一项长期存在的约束，也是部分清理工作必须分步进行的原因。",
+      "occurrence": 0,
+      "target": "The backend continues to support upgradable Android, the older iOS HiYou client and the older Windows client. Any backend change must stay backward compatible; this is a long-standing constraint and the reason some cleanup work has to proceed in steps.",
+      "context": "p @ line 136"
+    },
+    {
+      "id": "u_33139ffba798a649",
+      "kind": "text",
+      "source": "六、交接与协作",
+      "occurrence": 0,
+      "target": "6. Handover and collaboration",
+      "context": "h2 @ line 138"
+    },
+    {
+      "id": "u_53c4124afeec6070",
+      "kind": "text",
+      "source": "8月31日通知 Roy 开始交接，此后权限陆续移交，期间 Roy 继续处理更换法人与 GDPR 跟进。9月25日收到第一版交接文档，9月30日收到第二版并召开交接会议，马来西亚同步并接手。10月1日停用其 GitLab 权限。",
+      "occurrence": 0,
+      "target": "Roy was notified on August 31 that the handover was starting; access was transferred progressively after that, and during this period Roy continued the legal-entity change and GDPR follow-up. The first handover document arrived on September 25; the second arrived on September 30 together with a handover meeting, where Malaysia synchronised and took over. His GitLab access was disabled on October 1.",
+      "context": "p @ line 139"
+    },
+    {
+      "id": "u_ef94752f73d0dd9e",
+      "kind": "text",
+      "source": "续费方案的讨论由马来西亚、台湾与中国三方共同参与：马来西亚与台湾先达成一致，中国同事提出不同意见后共同改定方案。这一机制在本阶段起到了作用，避免按不适合主要用户群的规则上线。",
+      "occurrence": 0,
+      "target": "The renewal discussion involved Malaysia, Taiwan and China together: Malaysia and Taiwan reached agreement first, and after the China colleagues raised objections the scheme was revised jointly. That mechanism did its job this cycle and prevented a launch on rules unsuited to the primary user base.",
+      "context": "p @ line 140"
+    },
+    {
+      "id": "u_8a78af8a3fa4fc2f",
+      "kind": "text",
+      "source": "七、安全与权限管控",
+      "occurrence": 0,
+      "target": "7. Security and access control",
+      "context": "h2 @ line 142"
+    },
+    {
+      "id": "u_67bbec9d4d63cae7",
+      "kind": "text",
+      "source": "本阶段完成交接权限收口：外部人员权限按文档逐项移交后于10月1日停用。支付渠道密钥已不再存放于数据库，改由 Key Vault 按环境命名的密文提供。",
+      "occurrence": 0,
+      "target": "Handover access reached closure this cycle: external access was transferred item by item against the documents and then disabled on October 1. Payment channel keys are no longer stored in the database; they now come from environment-named Key Vault secrets.",
+      "context": "p @ line 143"
+    },
+    {
+      "id": "u_cca7d62ae554f1a8",
+      "kind": "text",
+      "source": "生产异地备份与实际恢复演练仍未关闭，属于最高优先级。源码权限名单本阶段没有新的复核结论。",
+      "occurrence": 0,
+      "target": "Off-site production backup and an actual restore drill remain open and are the highest priority. There is no new review conclusion on the source-access list this cycle.",
+      "context": "p @ line 144"
+    },
+    {
+      "id": "u_fad970ffb5d19508",
+      "kind": "text",
+      "source": "八、阻塞与下一步",
+      "occurrence": 0,
+      "target": "8. Blockers and next steps",
+      "context": "h2 @ line 146"
+    },
+    {
+      "id": "u_3db0e6d4c5493356",
+      "kind": "text",
+      "source": "本阶段阻塞集中在等待外部反馈：百度投放站自9月25日起等待检查。工程侧的未关闭项为生产异地恢复演练、三协议全量铺开与中国地区验收、Windows 官网签名发布、iOS 真机与商店验收。",
+      "occurrence": 0,
+      "target": "Blockers this cycle are concentrated in waiting for external feedback: the Baidu placement site has been awaiting a check since September 25. On the engineering side the open items are the off-site production restore drill, full three-protocol rollout with China regional acceptance, the Windows signed release through the official site, and iOS device and App Store acceptance.",
+      "context": "p @ line 147"
+    },
+    {
+      "id": "u_6738e15aece2f13d",
+      "kind": "text",
+      "source": "下一阶段先完成购买与续费的实现与测试，再推进后台与运行服务的权责分离，网站按反馈修正后上正式环境。具体日期以测试结果为准。",
+      "occurrence": 0,
+      "target": "The next cycle first completes purchase and renewal implementation and testing, then advances the separation of Back Office (BO) and runtime responsibilities; the website goes to production after the feedback corrections. Specific dates depend on test results.",
+      "context": "p @ line 148"
+    },
+    {
+      "id": "u_dabbbb40c665d172",
+      "kind": "text",
+      "source": "九、FFF 并行进展",
+      "occurrence": 0,
+      "target": "9. FFF progress in parallel",
+      "context": "h2 @ line 150"
+    },
+    {
+      "id": "u_8c4020b0ffe7a29d",
+      "kind": "text",
+      "source": "本报告只覆盖 Arrowfish。FFF 的 Flutter 客户端进展由 Lex 另行汇报，FFF 的 iOS 与 macOS 由马来西亚团队负责，一并在收到 Lex 的进度报告后汇总。",
+      "occurrence": 0,
+      "target": "This report covers Arrowfish only. Progress on the FFF Flutter clients is reported separately by Lex, and FFF iOS and macOS sit with the Malaysia team; both will be summarised once Lex's progress report arrives.",
+      "context": "p @ line 151"
+    },
+    {
+      "id": "u_a0bf41a929f6b782",
+      "kind": "text",
+      "source": "FFF 保持独立的运行环境、账号、数据库、缓存、凭证与迁移历史，只复用版本化源码。",
+      "occurrence": 0,
+      "target": "FFF keeps its own runtime environment, accounts, database, cache, credentials and migration history, and reuses only versioned source code.",
+      "context": "p @ line 152"
+    },
+    {
+      "id": "u_7b0dd65348cb1984",
+      "kind": "text",
+      "source": "十、财务影响",
+      "occurrence": 0,
+      "target": "10. Financial impact",
+      "context": "h2 @ line 154"
+    },
+    {
+      "id": "u_648404a9cfc3ecf9",
+      "kind": "text",
+      "source": "本阶段以保护续费收入与会员权益为主。没有新增生产收入或成本核验，因此不把开发完成或测试发布换算成收入增长或节省金额。",
+      "occurrence": 0,
+      "target": "This cycle focused on protecting renewal revenue and membership entitlements. No new production revenue or cost verification was performed, so development completion and staging releases are not converted into revenue growth or savings figures.",
+      "context": "p @ line 155"
+    },
+    {
+      "id": "u_d9edd1fe5e16beae",
+      "kind": "text",
+      "source": "Arrowfish · 阶段进展报告",
+      "occurrence": 0,
+      "target": "Arrowfish · Progress Report",
+      "context": "footer.footer @ line 157"
+    }
+  ],
+  "blocks": {
+    "b0001": {
+      "type": "heading",
+      "source": "第13阶段 · 续费改定与交接完成",
+      "occurrence": 0
+    },
+    "b0002": {
+      "type": "p",
+      "source": "报告周期 2026-09-19 至 2026-10-02 · 发布 2026-10-09",
+      "occurrence": 0
+    },
+    "b0003": {
+      "type": "p",
+      "source": "续费方案在9月21日改定为只保留续订，Android 交付三次测试版本，Windows 上测试环境，交接于10月1日完成。",
+      "occurrence": 0
+    },
+    "b0004": {
+      "type": "heading",
+      "source": "一、需要决定与配合",
+      "occurrence": 0
+    },
+    "b0005": {
+      "type": "highlight",
+      "source": "1. 生产异地备份与恢复演练。 备份与恢复手册已在10月6日写好，但演练尚未执行。这是目前风险最高的未关闭项，需要安排一次真实演练的时间窗口。",
+      "occurrence": 0
+    },
+    "b0006": {
+      "type": "heading",
+      "source": "二、本阶段关键成果",
+      "occurrence": 0
+    },
+    "b0007": {
+      "type": "highlight",
+      "source": "9月21日 续费方案改定「只保留续订」",
+      "occurrence": 0
+    },
+    "b0008": {
+      "type": "highlight",
+      "source": "3 次 Android 测试发布（v3.9.20–22）",
+      "occurrence": 0
+    },
+    "b0009": {
+      "type": "highlight",
+      "source": "9月21日 Windows 测试环境部署",
+      "occurrence": 0
+    },
+    "b0010": {
+      "type": "highlight",
+      "source": "9月30日 交接会议完成，权限接手",
+      "occurrence": 0
+    },
+    "b0011": {
+      "type": "table-row",
+      "source": "进展 交付结果 边界",
+      "occurrence": 0
+    },
+    "b0012": {
+      "type": "table-row",
+      "source": "购买与续费规则 9月18日的方案被中国同事否决后重新设计；9月21日确定只保留续订；9月24日扩展到订阅与一次性两种付费模式。 当时为决策完成，实现于10月5日才完成。",
+      "occurrence": 0
+    },
+    "b0013": {
+      "type": "table-row",
+      "source": "支付与订阅 支付网关工厂与 Stripe 生命周期梳理完成；Google 订阅迁到 v2 接口；套餐赠送天数、宽限期设置、到期无缝降级落地。 渠道验收待确认。",
+      "occurrence": 0
+    },
+    "b0014": {
+      "type": "table-row",
+      "source": "后台专属资源 购买后分配专属 IP 与专属线路的后台流程完成，并做了多项优化。这部分逻辑复杂，投入时间较多。 真实购买到配发的端到端验收待确认。",
+      "occurrence": 0
+    },
+    "b0015": {
+      "type": "table-row",
+      "source": "Android 客户端 连接状态改由引擎统一掌管，解决卡住问题；免费计时、线路列表、黑白名单、注册页区号等多项修复。 v3.9.20–22 已上测试环境，设备验收待确认。",
+      "occurrence": 0
+    },
+    "b0016": {
+      "type": "table-row",
+      "source": "Windows 与 iOS Windows 跟随 Android 的主页与订阅界面改版，9月21日上测试环境；iOS 修复支付弹窗与网页结账处理。 Windows 安装包与具体版本的对应关系待确认；iOS 真机与商店验收未关闭。",
+      "occurrence": 0
+    },
+    "b0017": {
+      "type": "table-row",
+      "source": "网站 两个版本都已制作：一版以箭鱼自身风格为主，一版以参考站风格为主。因为收到的需求只是「复制 Glory 网站到箭鱼」，没有书面规格，所以两版并行准备。9月16日选定参考站版本，9月23日修正完毕。 9月25日交投放方检查。",
+      "occurrence": 0
+    },
+    "b0018": {
+      "type": "heading",
+      "source": "三、改善与商业价值",
+      "occurrence": 0
+    },
+    "b0019": {
+      "type": "table-row",
+      "source": "改善 业务价值",
+      "occurrence": 0
+    },
+    "b0020": {
+      "type": "table-row",
+      "source": "续费规则按中国用户意见改定 中国用户是主要用户群。保留低等级剩余天数、不抵扣价格，减少用户对续费吃亏的顾虑。",
+      "occurrence": 0
+    },
+    "b0021": {
+      "type": "table-row",
+      "source": "连接状态由引擎统一掌管 减少 VPN 卡在连接中的情况，直接影响可用性与留存。",
+      "occurrence": 0
+    },
+    "b0022": {
+      "type": "table-row",
+      "source": "专属 IP、专属线路后台配发 高价值订单在后台可追踪配发，减少人工处理和错配。",
+      "occurrence": 0
+    },
+    "b0023": {
+      "type": "table-row",
+      "source": "网站两版并行准备 需求不明确时不停工等待，选定后一周内即完成修正。",
+      "occurrence": 0
+    },
+    "b0024": {
+      "type": "heading",
+      "source": "四、关键时间节点",
+      "occurrence": 0
+    },
+    "b0025": {
+      "type": "table-row",
+      "source": "日期 进展",
+      "occurrence": 0
+    },
+    "b0026": {
+      "type": "table-row",
+      "source": "9月20日 FFF PC 测试环境版本（仅记录先后顺序，FFF 进展另行汇报）。",
+      "occurrence": 0
+    },
+    "b0027": {
+      "type": "table-row",
+      "source": "9月21日 与 Amy、Lex 最终确认续费方案；Arrowfish Windows 上测试环境。",
+      "occurrence": 0
+    },
+    "b0028": {
+      "type": "table-row",
+      "source": "9月23日 网站修正完毕；Android 三次测试发布 v3.9.20–v3.9.22。",
+      "occurrence": 0
+    },
+    "b0029": {
+      "type": "table-row",
+      "source": "9月24日 续费方案扩展到 Stripe 订阅与支付宝一次性付款两种模式。",
+      "occurrence": 0
+    },
+    "b0030": {
+      "type": "table-row",
+      "source": "9月25日 网站交百度投放方 Wendy 检查；收到第一版交接文档。",
+      "occurrence": 0
+    },
+    "b0031": {
+      "type": "table-row",
+      "source": "9月28–29日 会员与专属层级、订阅管理的源码梳理完成，列出待处理问题。",
+      "occurrence": 0
+    },
+    "b0032": {
+      "type": "table-row",
+      "source": "9月30日 收到第二版交接文档；交接会议完成，马来西亚接手。",
+      "occurrence": 0
+    },
+    "b0033": {
+      "type": "table-row",
+      "source": "10月1日 SkyKing 确认所有订阅统一跟随 Google 的处理方式；停用 Roy 的 GitLab 权限。",
+      "occurrence": 0
+    },
+    "b0034": {
+      "type": "table-row",
+      "source": "10月2日 新测试环境版本，覆盖购买与续费以外的问题清单及多项优化。",
+      "occurrence": 0
+    },
+    "b0035": {
+      "type": "heading",
+      "source": "五、发布边界与兼容要求",
+      "occurrence": 0
+    },
+    "b0036": {
+      "type": "p",
+      "source": "本阶段的 Android 三次发布与 Windows 一次部署都在测试环境。代码合并、测试环境部署、设备验收、生产上线是四件独立的事，本报告不把其中任何一件当作另一件。生产部署与最终验收仍为待确认。",
+      "occurrence": 0
+    },
+    "b0037": {
+      "type": "p",
+      "source": "后端继续兼容可升级的 Android、旧版 iOS HiYou 与旧版 Windows 客户端。后端的任何改动都必须保持向后兼容，这是一项长期存在的约束，也是部分清理工作必须分步进行的原因。",
+      "occurrence": 0
+    },
+    "b0038": {
+      "type": "heading",
+      "source": "六、交接与协作",
+      "occurrence": 0
+    },
+    "b0039": {
+      "type": "p",
+      "source": "8月31日通知 Roy 开始交接，此后权限陆续移交，期间 Roy 继续处理更换法人与 GDPR 跟进。9月25日收到第一版交接文档，9月30日收到第二版并召开交接会议，马来西亚同步并接手。10月1日停用其 GitLab 权限。",
+      "occurrence": 0
+    },
+    "b0040": {
+      "type": "p",
+      "source": "续费方案的讨论由马来西亚、台湾与中国三方共同参与：马来西亚与台湾先达成一致，中国同事提出不同意见后共同改定方案。这一机制在本阶段起到了作用，避免按不适合主要用户群的规则上线。",
+      "occurrence": 0
+    },
+    "b0041": {
+      "type": "heading",
+      "source": "七、安全与权限管控",
+      "occurrence": 0
+    },
+    "b0042": {
+      "type": "p",
+      "source": "本阶段完成交接权限收口：外部人员权限按文档逐项移交后于10月1日停用。支付渠道密钥已不再存放于数据库，改由 Key Vault 按环境命名的密文提供。",
+      "occurrence": 0
+    },
+    "b0043": {
+      "type": "p",
+      "source": "生产异地备份与实际恢复演练仍未关闭，属于最高优先级。源码权限名单本阶段没有新的复核结论。",
+      "occurrence": 0
+    },
+    "b0044": {
+      "type": "heading",
+      "source": "八、阻塞与下一步",
+      "occurrence": 0
+    },
+    "b0045": {
+      "type": "p",
+      "source": "本阶段阻塞集中在等待外部反馈：百度投放站自9月25日起等待检查。工程侧的未关闭项为生产异地恢复演练、三协议全量铺开与中国地区验收、Windows 官网签名发布、iOS 真机与商店验收。",
+      "occurrence": 0
+    },
+    "b0046": {
+      "type": "p",
+      "source": "下一阶段先完成购买与续费的实现与测试，再推进后台与运行服务的权责分离，网站按反馈修正后上正式环境。具体日期以测试结果为准。",
+      "occurrence": 0
+    },
+    "b0047": {
+      "type": "heading",
+      "source": "九、FFF 并行进展",
+      "occurrence": 0
+    },
+    "b0048": {
+      "type": "p",
+      "source": "本报告只覆盖 Arrowfish。FFF 的 Flutter 客户端进展由 Lex 另行汇报，FFF 的 iOS 与 macOS 由马来西亚团队负责，一并在收到 Lex 的进度报告后汇总。",
+      "occurrence": 0
+    },
+    "b0049": {
+      "type": "p",
+      "source": "FFF 保持独立的运行环境、账号、数据库、缓存、凭证与迁移历史，只复用版本化源码。",
+      "occurrence": 0
+    },
+    "b0050": {
+      "type": "heading",
+      "source": "十、财务影响",
+      "occurrence": 0
+    },
+    "b0051": {
+      "type": "p",
+      "source": "本阶段以保护续费收入与会员权益为主。没有新增生产收入或成本核验，因此不把开发完成或测试发布换算成收入增长或节省金额。",
+      "occurrence": 0
+    }
+  },
+  "reviewedTargetHash": "bb9565a4f23f55c7"
+}

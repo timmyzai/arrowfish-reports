@@ -128,15 +128,15 @@
   {
     "id": "goal-2026-20260827",
     "name": {
-      "zh-CN": "Arrowfish、FFF 与共享管理能力 · 目标进展 · 更新至 2026-09-18",
-      "en": "Arrowfish, FFF and Shared Capabilities · Goal Progress · Updated 2026-09-18"
+      "zh-CN": "Arrowfish、FFF 与共享管理能力 · 目标进展 · 更新至 2026-10-08",
+      "en": "Arrowfish, FFF and Shared Capabilities · Goal Progress · Updated 2026-10-08"
     },
-    "date": "2026-09-18",
+    "date": "2026-10-08",
     "file": "Stakeholder/Goal-2026/20260827_goals.html",
     "translations": {
       "en": "locales/en/reports/goal-2026-20260827.json"
     },
-    "version": "20260923-1"
+    "version": "20261009-1"
   },
   {
     "id": "sprint-10-status-20260908",
@@ -203,7 +203,49 @@
     "translations": {
       "en": "locales/en/reports/sprint-12-summary.json"
     },
-    "defaultForSprintPage": true,
+    "defaultForSprintPage": false,
     "version": "20260923-1"
+  },
+  {
+    "id": "sprint-12-progress-20261009",
+    "name": {
+      "zh-CN": "第12阶段 · 续费方案更正",
+      "en": "Sprint 12 · Renewal Decision Correction"
+    },
+    "date": "2026-10-09",
+    "file": "Stakeholder/Sprint-12/20261009_progress-update.html",
+    "translations": {
+      "en": "locales/en/reports/sprint-12-progress-20261009.json"
+    },
+    "defaultForSprintPage": true,
+    "version": "20261009-1"
+  },
+  {
+    "id": "sprint-13-summary",
+    "name": {
+      "zh-CN": "第13阶段 · 续费改定与交接完成 · 2026-09-19 至 2026-10-02",
+      "en": "Sprint 13 · Renewal Rules Revised and Handover Closed · 2026-09-19 to 2026-10-02"
+    },
+    "date": "2026-10-02",
+    "file": "Stakeholder/Sprint-13/20261009_sprint_report.html",
+    "translations": {
+      "en": "locales/en/reports/sprint-13-summary.json"
+    },
+    "defaultForSprintPage": true,
+    "version": "20261009-1"
+  },
+  {
+    "id": "sprint-14-progress-20261009",
+    "name": {
+      "zh-CN": "第14阶段 · 进度报告 · 截至 2026-10-08",
+      "en": "Sprint 14 · Progress Report · Through 2026-10-08"
+    },
+    "date": "2026-10-09",
+    "file": "Stakeholder/Sprint-14/20261009_progress-update.html",
+    "translations": {
+      "en": "locales/en/reports/sprint-14-progress-20261009.json"
+    },
+    "defaultForSprintPage": true,
+    "version": "20261009-1"
   }
 ]

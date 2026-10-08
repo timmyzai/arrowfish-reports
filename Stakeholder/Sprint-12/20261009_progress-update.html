@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-report-id="sprint-12-progress-20261009"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex, nofollow">
+<title>第12阶段 · 续费方案更正</title><meta name="description" content="更正第12阶段关于续费实现完成日期的说法：9月18日方案被否决，规则于10月1日确定，10月5日实现完成并进入测试。">
+<script src="../../assets/ui-i18n.js"></script><script src="../../assets/site-preferences.js"></script><script src="../../assets/auth-gate.js"></script><link rel="stylesheet" href="../../assets/site-theme.css">
+<style>
+    :root {
+      --bg: var(--af-bg);
+      --paper: var(--af-surface);
+      --text: var(--af-text);
+      --muted: var(--af-text-muted);
+      --line: var(--af-border);
+      --blue: var(--af-primary);
+      --green: var(--af-success);
+      --green-bg: var(--af-success-soft);
+      --yellow: var(--af-warning);
+      --yellow-bg: var(--af-warning-soft);
+      --red: var(--af-danger);
+      --red-bg: var(--af-danger-soft);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", "Segoe UI", sans-serif;
+      line-height: 1.68;
+      -webkit-font-smoothing: antialiased;
+    }
+    main { max-width: 1120px; margin: 0 auto; padding: 32px 20px 56px; }
+    header { padding: 28px 0 18px; border-bottom: 1px solid var(--line); margin-bottom: 24px; }
+    .eyebrow { color: var(--blue); font-size: 14px; font-weight: 700; margin: 0 0 8px; }
+    h1 { font-size: 32px; line-height: 1.25; margin: 0 0 10px; letter-spacing: 0; }
+    .meta { color: var(--muted); margin: 0; font-size: 15px; }
+    section { background: var(--paper); border: 1px solid var(--line); border-radius: 8px; padding: 22px; margin: 18px 0; }
+    h2 { font-size: 21px; margin: 0 0 14px; letter-spacing: 0; display: flex; align-items: center; gap: 8px; }
+    h3 { font-size: 16px; margin: 18px 0 8px; color: var(--text); }
+    p { margin: 0 0 12px; }
+    p:last-child { margin-bottom: 0; }
+    .tldr { border-left: 5px solid var(--blue); background: var(--af-primary-soft); font-size: 18px; font-weight: 650; }
+    table { width: 100%; border-collapse: collapse; margin-top: 8px; font-size: 14.5px; }
+    th, td { border: 1px solid var(--line); padding: 10px 12px; text-align: left; vertical-align: top; }
+    th { background: var(--af-surface-muted); font-weight: 700; }
+    .score { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; margin: 12px 0; }
+    .metric { border: 1px solid var(--line); border-radius: 8px; padding: 14px; background: var(--af-surface-muted); }
+    .metric b, .metric strong { display: block; font-size: 21px; margin-bottom: 4px; }
+    .metric span { color: var(--muted); font-size: 12.5px; }
+    .note { color: var(--muted); font-size: 13.5px; margin-top: 10px; }
+    .ok { color: var(--green); font-weight: 700; }
+    .watch { color: var(--yellow); font-weight: 700; }
+    .risk { color: var(--red); font-weight: 700; }
+    .callout { border-radius: 8px; padding: 14px 16px; margin: 10px 0; border-left: 4px solid var(--blue); background: var(--af-primary-soft); font-size: 14.5px; }
+    .callout.risk, .callout.critical { border-left-color: var(--red); background: var(--red-bg); color: var(--text); }
+    .callout.watch { border-left-color: var(--yellow); background: var(--yellow-bg); color: var(--text); }
+    .callout.ok { border-left-color: var(--green); background: var(--green-bg); color: var(--text); }
+    .badge { display: inline-block; padding: 2px 9px; border-radius: 4px; font-size: 12.5px; font-weight: 700; white-space: nowrap; }
+    .badge.done { background: var(--af-success-soft); color: var(--af-success); }
+    .badge.progress { background: var(--af-warning-soft); color: var(--af-warning); }
+    .badge.pending { background: var(--af-surface-muted); color: var(--af-text-muted); }
+    .badge.risk { background: var(--af-danger-soft); color: var(--af-danger); }
+    .part {
+      margin: 30px 0 4px;
+      padding: 16px 20px;
+      border-radius: 8px;
+      background: linear-gradient(90deg, var(--af-primary) 0%, var(--af-primary) 100%);
+      color: var(--af-on-accent);
+    }
+    .part .pnum { font-size: 12.5px; font-weight: 700; opacity: .85; letter-spacing: .08em; }
+    .part .ptitle { font-size: 22px; font-weight: 700; margin-top: 2px; }
+    .part .psub { font-size: 13.5px; opacity: .9; margin-top: 4px; }
+    .part.fff { background: linear-gradient(90deg, var(--fff) 0%, var(--fff) 100%); }
+    ol, ul { padding-left: 22px; }
+    li { margin: 6px 0; }
+    .footer { margin-top: 24px; padding-top: 14px; border-top: 1px solid var(--line); font-size: 12.5px; color: var(--muted); text-align: center; }
+    @media (max-width: 760px) {
+      main { padding: 20px 12px 40px; }
+      h1 { font-size: 24px; }
+      section { padding: 16px; }
+      .score { grid-template-columns: 1fr 1fr; }
+      table { display: block; overflow-x: auto; font-size: 13px; }
+      th, td { padding: 7px 8px; }
+    }
+    @media (max-width: 480px) { .score { grid-template-columns: 1fr; } }
+    @media print { body { background: var(--af-surface); } main { max-width: none; padding: 0; } section { break-inside: avoid; } }
+
+nav a {display:inline-flex;align-items:center;min-height:44px} p {overflow-wrap:anywhere} a:focus-visible {outline:3px solid var(--af-primary);outline-offset:3px}
+
+header{padding:12px 0;margin-bottom:12px}section{padding:18px;margin:12px 0}.tldr{font-size:17px}main{padding-top:18px}.metric{padding:10px}.score{margin:8px 0}h1{font-size:28px}@media(max-width:480px){.score{grid-template-columns:1fr 1fr}h1{font-size:24px}}
+</style></head><body><main><nav><a href="../../index.html">返回报告目录</a></nav>
+<header data-report-header><h1>第12阶段 · 续费方案更正</h1><p class="meta">原周期 2026-09-05 至 2026-09-18 · 更正日期 2026-10-09</p></header>
+<section class="tldr"><p>第12阶段报告写的「9月18日续费实现完成」有误：当天方案被否决，规则改到10月1日才确定，实现10月5日完成，目前测试中。</p></section>
+<section id="section-1"><h2>一、更正内容</h2>
+<div class="callout critical"><b>更正：</b>原第12阶段报告写明「续费功能于9月18日完成实现并进入测试交付」。9月18日实际上是把购买与续费逻辑发到群里、并被否决的日期，不是实现完成的日期。</div>
+<p>当天存在的是「升级」模型：把正在使用的天数转换成更高等级，天数不增加、到期时间不变。该模型随后被放弃。规则在9月21日至9月24日重新设计，10月1日才最终确定。按确定后的规则实现，于10月5日完成，目前在开发人员测试中。</p>
+<p>本次更正只更正产品决策的时间与内容，不代表新增任何部署或验收。原报告中的 Android 测试发布记录不受影响，继续有效。</p></section>
+
+<section id="section-2"><h2>二、为什么改方向</h2>
+<table><thead><tr><th>日期</th><th>经过</th></tr></thead><tbody>
+<tr><td>9月18日</td><td>马来西亚把购买逻辑发到群里。马来西亚与台湾团队（含 SkyKing）当时认为没有问题；Lex 与 Amy 提出反对。</td></tr>
+<tr><td>9月18日</td><td>中国用户是主要用户群，因此按中国同事的意见调整方向。</td></tr>
+<tr><td>9月21日</td><td>与 Amy、Lex 最终确认：只保留「续订」，取消补差价「升级」入口。</td></tr>
+<tr><td>9月24日</td><td>规则扩展到两种付费模式：Stripe 订阅与支付宝一次性付款并行。</td></tr>
+<tr><td>10月1日</td><td>SkyKing 确认：所有订阅统一跟随 Google 的处理方式。</td></tr>
+<tr><td>10月5日</td><td>按确定规则的实现完成，进入开发人员测试。</td></tr>
+</tbody></table>
+<p>Lex 的理由是「购买更高等级」「升级」「自动续费」三套逻辑并行过于复杂，并且反对抵扣旧套餐价值。Amy 的结论是：对已购买套餐的用户，只保留「续订」一个选项。</p></section>
+
+<section id="section-3"><h2>三、确定后的规则</h2>
+<h3>一次性购买</h3>
+<table><thead><tr><th>情形</th><th>规则</th><th>例子</th></tr></thead><tbody>
+<tr><td>新购</td><td>没有付费会员时立即生效。</td><td>购买精品30天 → 精品30天</td></tr>
+<tr><td>同等级续费</td><td>天数直接累计，两笔不同时倒数。</td><td>精品剩20天 + 买30天 → 精品50天</td></tr>
+<tr><td>购买更高等级</td><td>属于普通购买，不是升级。高等级立即生效，低等级暂停并完整保留，不抵扣价格。</td><td>标准90天 + 精品30天 → 精品30天 → 标准90天，共120天</td></tr>
+<tr><td>购买较低等级</td><td>属于普通购买，不是降级。高等级继续使用，低等级排队等待。</td><td>精品30天 + 标准90天 → 共120天</td></tr>
+</tbody></table>
+<p class="note">同一时间只有一笔会员天数在倒数；高等级优先；相同等级按购买时间先后使用；暂停或等待中的天数不会丢失。付款成功后才发放会员；退款取消该笔尚未使用的剩余天数。</p>
+<h3>Stripe 订阅</h3>
+<p>新订阅付款成功即生效并按周期自动续费；同等级到期自动扣款，失败则不增加时间；升级直接在原订阅上进行，由 Stripe 计算未使用价值抵扣、用户补差额后立即生效，此处不另外保留原等级剩余时间；降级在本期结束后切换；取消自动续费只停止下一期扣款；退款金额与对应周期权益以 Stripe 实际计算为准。</p></section>
+
+<section id="section-4"><h2>四、对交付的影响</h2>
+<table><thead><tr><th>项目</th><th>当前状态</th></tr></thead><tbody>
+<tr><td>购买与续费规则</td><td>10月1日确定，10月5日实现完成，开发人员测试中。</td></tr>
+<tr><td>Android 测试发布</td><td>第12阶段六次测试发布记录不变，继续有效。</td></tr>
+<tr><td>支付渠道验收</td><td>待确认。跨渠道支付、退款与到期切换尚未完成验收。</td></tr>
+<tr><td>生产上线</td><td>待确认。代码合并不等于部署。</td></tr>
+</tbody></table>
+<p class="note">第13、14阶段的具体进展见同日发布的两份报告。</p></section>
+
+<footer class="footer">Arrowfish · 阶段进展报告</footer>
+</main></body></html>

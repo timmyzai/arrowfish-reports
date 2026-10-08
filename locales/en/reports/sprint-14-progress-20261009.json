@@ -1,0 +1,1514 @@
+{
+  "schemaVersion": 1,
+  "reportId": "sprint-14-progress-20261009",
+  "sourceFile": "Stakeholder/Sprint-14/20261009_progress-update.html",
+  "sourceVersion": "9dd6c499a8f930d8",
+  "units": [
+    {
+      "id": "u_df6c46875e7f383a",
+      "kind": "text",
+      "source": "第14阶段 · 进度报告：做了什么、处理着什么、还欠什么",
+      "occurrence": 0,
+      "target": "Sprint 14 · Progress Report: Done, In Progress, Outstanding",
+      "context": "title @ line 4"
+    },
+    {
+      "id": "u_0faf5d1ca1112c8f",
+      "kind": "attribute",
+      "source": "本阶段计划开发10月5日全部完成并进入测试；支付结算、后台重建与设置权责分离落地；Stripe 测试环境今日对齐、网站字眼清查中；生产异地恢复演练仍未执行。",
+      "occurrence": 0,
+      "target": "Planned development for this cycle completed on October 5 and entered testing; payment settlement, the Back Office (BO) rebuild and the settings ownership split landed; Stripe staging is being aligned today and the website wording sweep is under way; the off-site production restore drill is still not executed.",
+      "context": "meta @ line 4 · surrounding text: 第14阶段 · 进度报告：做了什么、处理着什么、还欠什么",
+      "attribute": "content"
+    },
+    {
+      "id": "u_c74de6cd2d1cd1af",
+      "kind": "text",
+      "source": "返回报告目录",
+      "occurrence": 0,
+      "target": "Back to report index",
+      "context": "a @ line 89"
+    },
+    {
+      "id": "u_c954f2a1ef09755a",
+      "kind": "text",
+      "source": "第14阶段 · 进度报告：做了什么、处理着什么、还欠什么",
+      "occurrence": 1,
+      "target": "Sprint 14 · Progress Report: Done, In Progress, Outstanding",
+      "context": "h1 @ line 90 · surrounding text: 第14阶段 · 进度报告：做了什么、处理着什么、还欠什么 报告周期 2026-10-03 至 2026-10-08 · 发布 2026-10-09"
+    },
+    {
+      "id": "u_623ff231b2983384",
+      "kind": "text",
+      "source": "报告周期 2026-10-03 至 2026-10-08 · 发布 2026-10-09",
+      "occurrence": 0,
+      "target": "Reporting period 2026-10-03 to 2026-10-08 · Published 2026-10-09",
+      "context": "p.meta @ line 90 · surrounding text: 第14阶段 · 进度报告：做了什么、处理着什么、还欠什么 报告周期 2026-10-03 至 2026-10-08 · 发布 2026-10-09"
+    },
+    {
+      "id": "u_8317e1d26f2d885e",
+      "kind": "text",
+      "source": "本阶段计划开发已于10月5日全部完成并进入测试；Stripe 测试环境今日对齐、网站字眼清查中；生产异地恢复演练仍未执行，是目前风险最高的未关闭项。",
+      "occurrence": 0,
+      "target": "Planned development for this cycle completed on October 5 and entered testing; Stripe staging is being aligned today and the website wording sweep is under way; the off-site production restore drill is still not executed and is the highest-risk open item.",
+      "context": "p @ line 91"
+    },
+    {
+      "id": "u_56783a84661a3b26",
+      "kind": "text",
+      "source": "一、需要决定与配合",
+      "occurrence": 0,
+      "target": "1. Decisions and support needed",
+      "context": "h2 @ line 92"
+    },
+    {
+      "id": "u_8924e04a41920e60",
+      "kind": "text",
+      "source": "1. 生产异地备份与恢复演练（最高优先级）。",
+      "occurrence": 0,
+      "target": "1. Off-site production backup and restore drill (highest priority).",
+      "context": "b @ line 93 · surrounding text: 1. 生产异地备份与恢复演练（最高优先级）。 手册已于10月6日写好，演练未执行。手册不等于能力，需要安排一次真实演练并记录恢复时间与数据完整性。"
+    },
+    {
+      "id": "u_ad5eb65a11a99ac6",
+      "kind": "text",
+      "source": "手册已于10月6日写好，演练未执行。手册不等于能力，需要安排一次真实演练并记录恢复时间与数据完整性。",
+      "occurrence": 0,
+      "target": "The runbook was written on October 6; the drill has not been executed. A runbook is not a capability — a real drill needs to be scheduled, with recovery time and data integrity recorded.",
+      "context": "div.callout.critical @ line 93 · surrounding text: 1. 生产异地备份与恢复演练（最高优先级）。 手册已于10月6日写好，演练未执行。手册不等于能力，需要安排一次真实演练并记录恢复时间与数据完整性。"
+    },
+    {
+      "id": "u_54bd179971dafb1b",
+      "kind": "text",
+      "source": "2. 百度投放站检查已等待 13 天。",
+      "occurrence": 0,
+      "target": "2. The Baidu placement site check has been waiting 13 days.",
+      "context": "b @ line 94 · surrounding text: 2. 百度投放站检查已等待 13 天。 克隆站9月25日交 Wendy 检查，至今未收到反馈。正式环境目标 jianyu-ip.com。请协助推进。"
+    },
+    {
+      "id": "u_75559a465b97e5aa",
+      "kind": "text",
+      "source": "克隆站9月25日交 Wendy 检查，至今未收到反馈。正式环境目标 jianyu-ip.com。请协助推进。",
+      "occurrence": 0,
+      "target": "The clone site was handed to Wendy for checking on September 25 and no feedback has come back. The production target is jianyu-ip.com. Help moving this along is requested.",
+      "context": "div.callout.watch @ line 94 · surrounding text: 2. 百度投放站检查已等待 13 天。 克隆站9月25日交 Wendy 检查，至今未收到反馈。正式环境目标 jianyu-ip.com。请协助推进。"
+    },
+    {
+      "id": "u_55640b168ee90b5d",
+      "kind": "text",
+      "source": "3. 新官网上正式环境。",
+      "occurrence": 0,
+      "target": "3. New official site to production.",
+      "context": "b @ line 95 · surrounding text: 3. 新官网上正式环境。 staging.arrowfishvpn.com 将替代 arrowfishvpn.com。10月6日投放方反馈导航栏与标题仍写「箭鱼IP代理」，应为「箭鱼VPN」。正在逐句清查相关字眼，计划10月12日再检查一次，10月13日上正式环境。"
+    },
+    {
+      "id": "u_64e79ea940c6a1ad",
+      "kind": "text",
+      "source": "staging.arrowfishvpn.com 将替代 arrowfishvpn.com。10月6日投放方反馈导航栏与标题仍写「箭鱼IP代理」，应为「箭鱼VPN」。正在逐句清查相关字眼，计划10月12日再检查一次，10月13日上正式环境。",
+      "occurrence": 0,
+      "target": "staging.arrowfishvpn.com will replace arrowfishvpn.com. On October 6 the placement side reported that the navigation bar and title still read \"Arrowfish IP Proxy\" where they should read \"Arrowfish VPN\". A sentence-by-sentence sweep of that wording is under way, with a second check planned for October 12 and production for October 13.",
+      "context": "div.callout @ line 95 · surrounding text: 3. 新官网上正式环境。 staging.arrowfishvpn.com 将替代 arrowfishvpn.com。10月6日投放方反馈导航栏与标题仍写「箭鱼IP代理」，应为「箭鱼VPN」。正在逐句清查相关字眼，计划10月12日再检查一次，10月13日上正式环境。"
+    },
+    {
+      "id": "u_bfb9cf67db69b43a",
+      "kind": "text",
+      "source": "4. 中国地区连接验收。",
+      "occurrence": 0,
+      "target": "4. China regional connection acceptance.",
+      "context": "b @ line 96 · surrounding text: 4. 中国地区连接验收。 三协议全量铺开与中国地区可达性仍未关闭，需要独立的中国 QA，不能用马来西亚、台湾的结果替代。"
+    },
+    {
+      "id": "u_adaca2390c63f7da",
+      "kind": "text",
+      "source": "三协议全量铺开与中国地区可达性仍未关闭，需要独立的中国 QA，不能用马来西亚、台湾的结果替代。",
+      "occurrence": 0,
+      "target": "Full three-protocol rollout and China regional reachability remain open and need an independent China QA pass; Malaysia and Taiwan results cannot substitute for it.",
+      "context": "div.callout.watch @ line 96 · surrounding text: 4. 中国地区连接验收。 三协议全量铺开与中国地区可达性仍未关闭，需要独立的中国 QA，不能用马来西亚、台湾的结果替代。"
+    },
+    {
+      "id": "u_776f73c7db949711",
+      "kind": "text",
+      "source": "二、做了什么",
+      "occurrence": 0,
+      "target": "2. What was done",
+      "context": "h2 @ line 98"
+    },
+    {
+      "id": "u_f5977a5e41e2ecf9",
+      "kind": "text",
+      "source": "10月5日",
+      "occurrence": 0,
+      "target": "October 5",
+      "context": "b @ line 100 · surrounding text: 10月5日 本阶段计划开发全部完成"
+    },
+    {
+      "id": "u_65d79619f80051a1",
+      "kind": "text",
+      "source": "本阶段计划开发全部完成",
+      "occurrence": 0,
+      "target": "Planned development for this cycle complete",
+      "context": "span @ line 100 · surrounding text: 10月5日 本阶段计划开发全部完成"
+    },
+    {
+      "id": "u_358dbc6d3f034679",
+      "kind": "text",
+      "source": "5 组",
+      "occurrence": 0,
+      "target": "5 groups",
+      "context": "b @ line 101 · surrounding text: 5 组 后台无用页面与设置已移除"
+    },
+    {
+      "id": "u_ebd898726843c168",
+      "kind": "text",
+      "source": "后台无用页面与设置已移除",
+      "occurrence": 0,
+      "target": "Unused Back Office (BO) pages and settings removed",
+      "context": "span @ line 101 · surrounding text: 5 组 后台无用页面与设置已移除"
+    },
+    {
+      "id": "u_16a3528d77128b30",
+      "kind": "text",
+      "source": "10月1日",
+      "occurrence": 0,
+      "target": "October 1",
+      "context": "b @ line 102 · surrounding text: 10月1日 交接完成，外部权限停用"
+    },
+    {
+      "id": "u_97abf501d89db28d",
+      "kind": "text",
+      "source": "交接完成，外部权限停用",
+      "occurrence": 0,
+      "target": "Handover closed, external access disabled",
+      "context": "span @ line 102 · surrounding text: 10月1日 交接完成，外部权限停用"
+    },
+    {
+      "id": "u_75c4288b368da441",
+      "kind": "text",
+      "source": "GitLab 升级完成",
+      "occurrence": 0,
+      "target": "GitLab upgrade completed",
+      "context": "span @ line 103 · surrounding text: 19.4.1 GitLab 升级完成"
+    },
+    {
+      "id": "u_2241e767f9924314",
+      "kind": "text",
+      "source": "方向",
+      "occurrence": 0,
+      "target": "Area",
+      "context": "th @ line 105 · surrounding text: 方向 交付结果 边界"
+    },
+    {
+      "id": "u_c7c32d7f5bfed651",
+      "kind": "text",
+      "source": "交付结果",
+      "occurrence": 0,
+      "target": "Delivered",
+      "context": "th @ line 105 · surrounding text: 方向 交付结果 边界"
+    },
+    {
+      "id": "u_93291005eac2df29",
+      "kind": "text",
+      "source": "边界",
+      "occurrence": 0,
+      "target": "Boundary",
+      "context": "th @ line 105 · surrounding text: 方向 交付结果 边界"
+    },
+    {
+      "id": "u_7e1b1754d87465a1",
+      "kind": "text",
+      "source": "支付与结算",
+      "occurrence": 0,
+      "target": "Payments and settlement",
+      "context": "td @ line 106 · surrounding text: 支付与结算 订单状态成为付款完成的唯一判断依据，不再凭回调标志结算；支付流水表合并为一张；支付优惠与渠道代码取代逐渠道的第三方编号；币种目录在启动时装载，法币与加密货币分开定义并以美元为锚。 已合并，部署与验收待确认。"
+    },
+    {
+      "id": "u_6fc91ca2bbb3c997",
+      "kind": "text",
+      "source": "订单状态成为付款完成的唯一判断依据，不再凭回调标志结算；支付流水表合并为一张；支付优惠与渠道代码取代逐渠道的第三方编号；币种目录在启动时装载，法币与加密货币分开定义并以美元为锚。",
+      "occurrence": 0,
+      "target": "Order status is now the only basis for deciding that payment completed; settlement no longer relies on the callback flag. The payment transaction tables were merged into one; payment offers and channel codes replace the per-channel third-party identifiers; the currency catalog is loaded at startup, with fiat and crypto defined separately and anchored to USD.",
+      "context": "td @ line 106 · surrounding text: 支付与结算 订单状态成为付款完成的唯一判断依据，不再凭回调标志结算；支付流水表合并为一张；支付优惠与渠道代码取代逐渠道的第三方编号；币种目录在启动时装载，法币与加密货币分开定义并以美元为锚。 已合并，部署与验收待确认。"
+    },
+    {
+      "id": "u_6461a270ebe2b08b",
+      "kind": "text",
+      "source": "已合并，部署与验收待确认。",
+      "occurrence": 0,
+      "target": "Merged; deployment and acceptance to be confirmed.",
+      "context": "td @ line 106 · surrounding text: 支付与结算 订单状态成为付款完成的唯一判断依据，不再凭回调标志结算；支付流水表合并为一张；支付优惠与渠道代码取代逐渠道的第三方编号；币种目录在启动时装载，法币与加密货币分开定义并以美元为锚。 已合并，部署与验收待确认。"
+    },
+    {
+      "id": "u_634770c0c37d8fe8",
+      "kind": "text",
+      "source": "订阅渠道",
+      "occurrence": 0,
+      "target": "Subscription channels",
+      "context": "td @ line 107 · surrounding text: 订阅渠道 Google 订阅结账重试与换购修复，实时通知迁到 v2 接口；Stripe 免费天数订阅不再被误判为未付款，续费发票对账与失败重试恢复。 渠道端到端验收待确认。"
+    },
+    {
+      "id": "u_3481d7fd784165cc",
+      "kind": "text",
+      "source": "Google 订阅结账重试与换购修复，实时通知迁到 v2 接口；Stripe 免费天数订阅不再被误判为未付款，续费发票对账与失败重试恢复。",
+      "occurrence": 0,
+      "target": "Google subscription checkout retries and replaced purchases fixed, with real-time notifications moved to the v2 API; Stripe free-day subscriptions are no longer misread as unpaid, and renewal invoice reconciliation and failed-retry recovery are restored.",
+      "context": "td @ line 107 · surrounding text: 订阅渠道 Google 订阅结账重试与换购修复，实时通知迁到 v2 接口；Stripe 免费天数订阅不再被误判为未付款，续费发票对账与失败重试恢复。 渠道端到端验收待确认。"
+    },
+    {
+      "id": "u_11f2bea24b1d7815",
+      "kind": "text",
+      "source": "渠道端到端验收待确认。",
+      "occurrence": 0,
+      "target": "End-to-end channel acceptance to be confirmed.",
+      "context": "td @ line 107 · surrounding text: 订阅渠道 Google 订阅结账重试与换购修复，实时通知迁到 v2 接口；Stripe 免费天数订阅不再被误判为未付款，续费发票对账与失败重试恢复。 渠道端到端验收待确认。"
+    },
+    {
+      "id": "u_a3d4d53b389001ef",
+      "kind": "text",
+      "source": "会员与续费",
+      "occurrence": 0,
+      "target": "Membership and renewal",
+      "context": "td @ line 108 · surrounding text: 会员与续费 按10月1日确定的规则实现完成，10月5日起开发人员测试中。等级来源统一、套餐赠送天数、宽限期设置、到期无缝降级、订阅历史补齐。 测试中，未上生产。"
+    },
+    {
+      "id": "u_51701405186e4e86",
+      "kind": "text",
+      "source": "按10月1日确定的规则实现完成，10月5日起开发人员测试中。等级来源统一、套餐赠送天数、宽限期设置、到期无缝降级、订阅历史补齐。",
+      "occurrence": 0,
+      "target": "Implementation of the rules settled on October 1 is complete and has been in developer testing since October 5. Tier source unified, plan bonus days, grace-period setting, seamless downgrade at expiry, and subscription history completed.",
+      "context": "td @ line 108 · surrounding text: 会员与续费 按10月1日确定的规则实现完成，10月5日起开发人员测试中。等级来源统一、套餐赠送天数、宽限期设置、到期无缝降级、订阅历史补齐。 测试中，未上生产。"
+    },
+    {
+      "id": "u_1fa4ff56b433d9c6",
+      "kind": "text",
+      "source": "测试中，未上生产。",
+      "occurrence": 0,
+      "target": "In testing; not in production.",
+      "context": "td @ line 108 · surrounding text: 会员与续费 按10月1日确定的规则实现完成，10月5日起开发人员测试中。等级来源统一、套餐赠送天数、宽限期设置、到期无缝降级、订阅历史补齐。 测试中，未上生产。"
+    },
+    {
+      "id": "u_fcf241ab28ad90bf",
+      "kind": "text",
+      "source": "后台重建",
+      "occurrence": 0,
+      "target": "Back Office (BO) rebuild",
+      "context": "td @ line 109 · surrounding text: 后台重建 VM 主机页改为表格加详情面板；任务进度改为步骤网格加实时终端；防火墙预览改为深色终端并分 IPv4／IPv6；代理与任务设置改为清爽列表；重装对话框改为复核式；协议健康改用白话描述。 浏览器回归验收待确认。"
+    },
+    {
+      "id": "u_cdcb14cb6a075107",
+      "kind": "text",
+      "source": "VM 主机页改为表格加详情面板；任务进度改为步骤网格加实时终端；防火墙预览改为深色终端并分 IPv4／IPv6；代理与任务设置改为清爽列表；重装对话框改为复核式；协议健康改用白话描述。",
+      "occurrence": 0,
+      "target": "The VM Hosts page became a table with a details panel; job progress became a step grid with a live terminal; the firewall preview became a dark terminal view split into IPv4 and IPv6; agent and job settings became a clean list; the re-setup dialog became a review split; protocol health is now described in plain words.",
+      "context": "td @ line 109 · surrounding text: 后台重建 VM 主机页改为表格加详情面板；任务进度改为步骤网格加实时终端；防火墙预览改为深色终端并分 IPv4／IPv6；代理与任务设置改为清爽列表；重装对话框改为复核式；协议健康改用白话描述。 浏览器回归验收待确认。"
+    },
+    {
+      "id": "u_a42fe47bd3122402",
+      "kind": "text",
+      "source": "浏览器回归验收待确认。",
+      "occurrence": 0,
+      "target": "Browser regression acceptance to be confirmed.",
+      "context": "td @ line 109 · surrounding text: 后台重建 VM 主机页改为表格加详情面板；任务进度改为步骤网格加实时终端；防火墙预览改为深色终端并分 IPv4／IPv6；代理与任务设置改为清爽列表；重装对话框改为复核式；协议健康改用白话描述。 浏览器回归验收待确认。"
+    },
+    {
+      "id": "u_1e6274cc8d45c055",
+      "kind": "text",
+      "source": "后台精简",
+      "occurrence": 0,
+      "target": "Back Office (BO) reduction",
+      "context": "td @ line 110 · surrounding text: 后台精简 删除无用页面与设置：DNS 清理、滥用监控、短信与图形验证码、滥用阈值与告警开关、接口设置页；广告相关设置合并为一页并改名为服务设置。 已合并。"
+    },
+    {
+      "id": "u_c66846cedc3a6306",
+      "kind": "text",
+      "source": "删除无用页面与设置：DNS 清理、滥用监控、短信与图形验证码、滥用阈值与告警开关、接口设置页；广告相关设置合并为一页并改名为服务设置。",
+      "occurrence": 0,
+      "target": "Unused pages and settings removed: DNS cleanup, abuse watch, SMS and image captcha, abuse thresholds and the alert switch, and the interface settings page; ad-related settings were merged into one page renamed Service Settings.",
+      "context": "td @ line 110 · surrounding text: 后台精简 删除无用页面与设置：DNS 清理、滥用监控、短信与图形验证码、滥用阈值与告警开关、接口设置页；广告相关设置合并为一页并改名为服务设置。 已合并。"
+    },
+    {
+      "id": "u_cb47df1c3c4f8b98",
+      "kind": "text",
+      "source": "已合并。",
+      "occurrence": 0,
+      "target": "Merged.",
+      "context": "td @ line 110 · surrounding text: 后台精简 删除无用页面与设置：DNS 清理、滥用监控、短信与图形验证码、滥用阈值与告警开关、接口设置页；广告相关设置合并为一页并改名为服务设置。 已合并。"
+    },
+    {
+      "id": "u_eb129ea7f1e183e7",
+      "kind": "text",
+      "source": "权责分离",
+      "occurrence": 0,
+      "target": "Ownership separation",
+      "context": "td @ line 111 · surrounding text: 权责分离 后台专属设置迁出运行服务的设置表，定时任务不再播种这些设置；全部 VM 任务改用同一个「每次处理多少台」的保存设置。 已合并。"
+    },
+    {
+      "id": "u_cc6e0051060175db",
+      "kind": "text",
+      "source": "后台专属设置迁出运行服务的设置表，定时任务不再播种这些设置；全部 VM 任务改用同一个「每次处理多少台」的保存设置。",
+      "occurrence": 0,
+      "target": "Back Office (BO) owned settings moved out of the runtime settings table, and scheduled jobs no longer seed them; every VM job now uses the same saved \"VMs at a time\" setting.",
+      "context": "td @ line 111 · surrounding text: 权责分离 后台专属设置迁出运行服务的设置表，定时任务不再播种这些设置；全部 VM 任务改用同一个「每次处理多少台」的保存设置。 已合并。"
+    },
+    {
+      "id": "u_508a5d0368a80551",
+      "kind": "text",
+      "source": "已合并。",
+      "occurrence": 1,
+      "target": "Merged.",
+      "context": "td @ line 111 · surrounding text: 权责分离 后台专属设置迁出运行服务的设置表，定时任务不再播种这些设置；全部 VM 任务改用同一个「每次处理多少台」的保存设置。 已合并。"
+    },
+    {
+      "id": "u_76b0250ff04f19cb",
+      "kind": "text",
+      "source": "安全与清理",
+      "occurrence": 0,
+      "target": "Security and cleanup",
+      "context": "td @ line 112 · surrounding text: 安全与清理 SSH 防火墙统一为一份白名单；ShadowTLS 只使用 Shadowsocks 2022；移除旧客户端路径并强制会话安全；后台移除旧节点支持并强制当前管理员授权。 已合并，现场验收待确认。"
+    },
+    {
+      "id": "u_2cdac8ef4da2138b",
+      "kind": "text",
+      "source": "SSH 防火墙统一为一份白名单；ShadowTLS 只使用 Shadowsocks 2022；移除旧客户端路径并强制会话安全；后台移除旧节点支持并强制当前管理员授权。",
+      "occurrence": 0,
+      "target": "The SSH firewall was unified into a single allowlist; ShadowTLS now uses Shadowsocks 2022 only; legacy client paths were removed and session security enforced; the Back Office (BO) dropped legacy VPN node support and enforces current admin authorization.",
+      "context": "td @ line 112 · surrounding text: 安全与清理 SSH 防火墙统一为一份白名单；ShadowTLS 只使用 Shadowsocks 2022；移除旧客户端路径并强制会话安全；后台移除旧节点支持并强制当前管理员授权。 已合并，现场验收待确认。"
+    },
+    {
+      "id": "u_9af3ad330e05f66a",
+      "kind": "text",
+      "source": "已合并，现场验收待确认。",
+      "occurrence": 0,
+      "target": "Merged; on-site acceptance to be confirmed.",
+      "context": "td @ line 112 · surrounding text: 安全与清理 SSH 防火墙统一为一份白名单；ShadowTLS 只使用 Shadowsocks 2022；移除旧客户端路径并强制会话安全；后台移除旧节点支持并强制当前管理员授权。 已合并，现场验收待确认。"
+    },
+    {
+      "id": "u_3a00579cd459b117",
+      "kind": "text",
+      "source": "源码版本 3.9.25。本阶段修复：无可用支付方式时的空状态、切换协议卡在加载、断网时显示「未连接」而非「线路不稳定」、专属线路显示国旗、设置与黑白名单改为仅存手机端。",
+      "occurrence": 0,
+      "target": "Source version 3.9.25. Fixes this cycle: the empty state when no payment method is available, protocol switching stuck on loading, showing \"Not connected\" instead of \"route unstable\" when the network drops, country flags on exclusive lines, and settings and allow/block lists kept on the phone only.",
+      "context": "td @ line 113 · surrounding text: Android 源码版本 3.9.25。本阶段修复：无可用支付方式时的空状态、切换协议卡在加载、断网时显示「未连接」而非「线路不稳定」、专属线路显示国旗、设置与黑白名单改为仅存手机端。 测试环境版本以发布记录为准，设备验收待确认。"
+    },
+    {
+      "id": "u_b1ab9a6f3b792a3f",
+      "kind": "text",
+      "source": "测试环境版本以发布记录为准，设备验收待确认。",
+      "occurrence": 0,
+      "target": "Staging versions follow the release record; device acceptance to be confirmed.",
+      "context": "td @ line 113 · surrounding text: Android 源码版本 3.9.25。本阶段修复：无可用支付方式时的空状态、切换协议卡在加载、断网时显示「未连接」而非「线路不稳定」、专属线路显示国旗、设置与黑白名单改为仅存手机端。 测试环境版本以发布记录为准，设备验收待确认。"
+    },
+    {
+      "id": "u_5600d430206b7f7e",
+      "kind": "text",
+      "source": "10月2日修复支付弹窗与网页结账的后端处理；10月5日修复购买恢复并简化会员与线路选择。",
+      "occurrence": 0,
+      "target": "October 2 fixed the payment popups and the backend handling of web checkout; October 5 fixed purchase recovery and simplified membership and route selection.",
+      "context": "td @ line 114 · surrounding text: iOS 10月2日修复支付弹窗与网页结账的后端处理；10月5日修复购买恢复并简化会员与线路选择。 真机与商店验收未关闭。"
+    },
+    {
+      "id": "u_219a2556d9fc27ed",
+      "kind": "text",
+      "source": "真机与商店验收未关闭。",
+      "occurrence": 0,
+      "target": "Device and App Store acceptance remain open.",
+      "context": "td @ line 114 · surrounding text: iOS 10月2日修复支付弹窗与网页结账的后端处理；10月5日修复购买恢复并简化会员与线路选择。 真机与商店验收未关闭。"
+    },
+    {
+      "id": "u_57ee95b397282939",
+      "kind": "text",
+      "source": "运行与可观测",
+      "occurrence": 0,
+      "target": "Runtime and observability",
+      "context": "td @ line 115 · surrounding text: 运行与可观测 测试环境日志采集启用并修正接入地址；GeoIP 数据库改为启动时下载，并消除两处日志刷屏；启动配置统一注入接口、后台与定时任务三个服务。 已上测试环境。"
+    },
+    {
+      "id": "u_394e749f0b020c4c",
+      "kind": "text",
+      "source": "测试环境日志采集启用并修正接入地址；GeoIP 数据库改为启动时下载，并消除两处日志刷屏；启动配置统一注入接口、后台与定时任务三个服务。",
+      "occurrence": 0,
+      "target": "Staging log ingestion was enabled and its endpoint corrected; the GeoIP database is now downloaded at startup and two log floods were removed; startup configuration is injected uniformly into the API, Back Office (BO) and scheduled-job services.",
+      "context": "td @ line 115 · surrounding text: 运行与可观测 测试环境日志采集启用并修正接入地址；GeoIP 数据库改为启动时下载，并消除两处日志刷屏；启动配置统一注入接口、后台与定时任务三个服务。 已上测试环境。"
+    },
+    {
+      "id": "u_88261eb436c64075",
+      "kind": "text",
+      "source": "已上测试环境。",
+      "occurrence": 0,
+      "target": "On staging.",
+      "context": "td @ line 115 · surrounding text: 运行与可观测 测试环境日志采集启用并修正接入地址；GeoIP 数据库改为启动时下载，并消除两处日志刷屏；启动配置统一注入接口、后台与定时任务三个服务。 已上测试环境。"
+    },
+    {
+      "id": "u_720d92e9c9164436",
+      "kind": "text",
+      "source": "基础设施",
+      "occurrence": 0,
+      "target": "Infrastructure",
+      "context": "td @ line 116 · surrounding text: 基础设施 10月6日完成生产切换的备份与恢复手册；10月8日 GitLab 由 19.3.0 升级到 19.4.1。 手册已写，演练未执行。"
+    },
+    {
+      "id": "u_15708e26052559e1",
+      "kind": "text",
+      "source": "10月6日完成生产切换的备份与恢复手册；10月8日 GitLab 由 19.3.0 升级到 19.4.1。",
+      "occurrence": 0,
+      "target": "The backup and restore runbook for the production cutover was completed on October 6; GitLab was upgraded from 19.3.0 to 19.4.1 on October 8.",
+      "context": "td @ line 116 · surrounding text: 基础设施 10月6日完成生产切换的备份与恢复手册；10月8日 GitLab 由 19.3.0 升级到 19.4.1。 手册已写，演练未执行。"
+    },
+    {
+      "id": "u_98fc187352e68fdc",
+      "kind": "text",
+      "source": "手册已写，演练未执行。",
+      "occurrence": 0,
+      "target": "Runbook written; drill not executed.",
+      "context": "td @ line 116 · surrounding text: 基础设施 10月6日完成生产切换的备份与恢复手册；10月8日 GitLab 由 19.3.0 升级到 19.4.1。 手册已写，演练未执行。"
+    },
+    {
+      "id": "u_f6e63727c008853a",
+      "kind": "text",
+      "source": "三、处理着什么",
+      "occurrence": 0,
+      "target": "3. What is in progress",
+      "context": "h2 @ line 119"
+    },
+    {
+      "id": "u_af8c9918e4d62b25",
+      "kind": "text",
+      "source": "1. Stripe 升级：今日只做测试环境",
+      "occurrence": 0,
+      "target": "1. Stripe upgrade: staging only today",
+      "context": "h3 @ line 120"
+    },
+    {
+      "id": "u_80208e391a8d62eb",
+      "kind": "text",
+      "source": "源码已经是对的",
+      "occurrence": 0,
+      "target": "The source code is already correct",
+      "context": "strong @ line 121 · surrounding text: 源码已经是对的 ，后端送出的就是 2026-08-26.dahlia，Stripe 组件也已升级到最新。需要动的只是 Stripe 控制台的配置。"
+    },
+    {
+      "id": "u_88709768bf606f13",
+      "kind": "text",
+      "source": "，后端送出的就是 2026-08-26.dahlia，Stripe 组件也已升级到最新。需要动的只是 Stripe 控制台的配置。",
+      "occurrence": 0,
+      "target": " — the backend already sends 2026-08-26.dahlia and the Stripe component is on the latest version. All that remains is configuration in the Stripe console.",
+      "context": "p @ line 121 · surrounding text: 源码已经是对的 ，后端送出的就是 2026-08-26.dahlia，Stripe 组件也已升级到最新。需要动的只是 Stripe 控制台的配置。"
+    },
+    {
+      "id": "u_633a3058a1f96925",
+      "kind": "text",
+      "source": "环境",
+      "occurrence": 0,
+      "target": "Environment",
+      "context": "th @ line 122 · surrounding text: 环境 回调版本 何时更改"
+    },
+    {
+      "id": "u_26058045a0dd6bfc",
+      "kind": "text",
+      "source": "回调版本",
+      "occurrence": 0,
+      "target": "Webhook version",
+      "context": "th @ line 122 · surrounding text: 环境 回调版本 何时更改"
+    },
+    {
+      "id": "u_e637f62b5b6ad153",
+      "kind": "text",
+      "source": "何时更改",
+      "occurrence": 0,
+      "target": "When it changes",
+      "context": "th @ line 122 · surrounding text: 环境 回调版本 何时更改"
+    },
+    {
+      "id": "u_de6aac5e9d654e42",
+      "kind": "text",
+      "source": "测试环境",
+      "occurrence": 0,
+      "target": "Staging",
+      "context": "td @ line 123 · surrounding text: 测试环境 今日对齐到 2026-08-26.dahlia 10月8日"
+    },
+    {
+      "id": "u_1011edbfef8864fe",
+      "kind": "text",
+      "source": "今日对齐到 2026-08-26.dahlia",
+      "occurrence": 0,
+      "target": "Aligned to 2026-08-26.dahlia today",
+      "context": "td @ line 123 · surrounding text: 测试环境 今日对齐到 2026-08-26.dahlia 10月8日"
+    },
+    {
+      "id": "u_1b427f5b0f0e4d6e",
+      "kind": "text",
+      "source": "10月8日",
+      "occurrence": 0,
+      "target": "October 8",
+      "context": "td @ line 123 · surrounding text: 测试环境 今日对齐到 2026-08-26.dahlia 10月8日"
+    },
+    {
+      "id": "u_e58d7fe25229562a",
+      "kind": "text",
+      "source": "正式环境",
+      "occurrence": 0,
+      "target": "Production",
+      "context": "td @ line 124 · surrounding text: 正式环境 维持现状 待应用提交并通过审核、安排生产部署时，在 Stripe 控制台一并更新"
+    },
+    {
+      "id": "u_1c747c3abf25c66d",
+      "kind": "text",
+      "source": "维持现状",
+      "occurrence": 0,
+      "target": "Unchanged for now",
+      "context": "td @ line 124 · surrounding text: 正式环境 维持现状 待应用提交并通过审核、安排生产部署时，在 Stripe 控制台一并更新"
+    },
+    {
+      "id": "u_e2a85a107e3f64c2",
+      "kind": "text",
+      "source": "待应用提交并通过审核、安排生产部署时，在 Stripe 控制台一并更新",
+      "occurrence": 0,
+      "target": "Updated in the Stripe console together with the production deployment, once the app is submitted and approved",
+      "context": "td @ line 124 · surrounding text: 正式环境 维持现状 待应用提交并通过审核、安排生产部署时，在 Stripe 控制台一并更新"
+    },
+    {
+      "id": "u_17058a2d8565ea12",
+      "kind": "text",
+      "source": "今日的测试环境步骤：按正确版本新建一个回调目标，沿用相同地址与相同的 16 个事件；把新的签名密钥更新到 Key Vault；重启测试环境；停用旧回调；再做一次沙盒结账验证。最后一步通过之前，测试环境的 Stripe 回调不算验证通过。",
+      "occurrence": 0,
+      "target": "Staging steps today: create a replacement webhook destination on the correct version, keeping the same URL and the same 16 events; update the new signing secret in Key Vault; restart staging; disable the old endpoint; and run one more sandbox checkout to verify. Until that last step passes, the staging Stripe webhook is not verified.",
+      "context": "p @ line 126"
+    },
+    {
+      "id": "u_b708fc77d67e8fd4",
+      "kind": "text",
+      "source": "正式环境的回调版本留到生产部署时一起改，是刻意的先后顺序：先改控制台、后部署，会让 Stripe 控制台与线上运行的版本处在不同约定上。此前日志中出现的 2022-11-15 来自一笔重发的历史事件，不是当前配置；同时发现测试环境的回调域名一直设置错误、从未真正生效，现已更正。",
+      "occurrence": 0,
+      "target": "Holding the production webhook version until the production deployment is a deliberate order: changing the console before deploying would leave the Stripe console and the running production build on different contracts. The 2022-11-15 value seen earlier in the logs came from a resent historical event, not from the current configuration; the staging webhook domain was also found to have been misconfigured and never actually working, and has been corrected.",
+      "context": "p @ line 127"
+    },
+    {
+      "id": "u_859da74753f38c81",
+      "kind": "text",
+      "source": "2. 网站字眼清查",
+      "occurrence": 0,
+      "target": "2. Website wording sweep",
+      "context": "h3 @ line 128"
+    },
+    {
+      "id": "u_cc4c77bfb475af43",
+      "kind": "text",
+      "source": "按10月6日的反馈，逐句清查并移除残留的「IP 代理」说法，导航栏与标题已改为箭鱼VPN。计划10月12日再检查一次，10月13日上正式环境替代现有官网。",
+      "occurrence": 0,
+      "target": "Following the October 6 feedback, remaining \"IP proxy\" wording is being removed sentence by sentence; the navigation bar and title now read Arrowfish VPN. A second check is planned for October 12 and production for October 13, replacing the current official site.",
+      "context": "p @ line 129"
+    },
+    {
+      "id": "u_a9868535a8493cff",
+      "kind": "text",
+      "source": "3. 测试与技术债",
+      "occurrence": 0,
+      "target": "3. Testing and technical debt",
+      "context": "h3 @ line 130"
+    },
+    {
+      "id": "u_f35ea1752fe033cc",
+      "kind": "text",
+      "source": "10月5日开发全部完成后，开发人员一直在测试、修复并清理技术债。随系统接手过来的冗余开发路径与多余数据库表较多，本阶段的表合并与设置迁移就是其中一部分。",
+      "occurrence": 0,
+      "target": "Since development completed on October 5 the developers have been testing, fixing and clearing technical debt. The system was inherited with a considerable amount of redundant development and surplus database tables; the table merge and settings migration this cycle are part of that work.",
+      "context": "p @ line 131"
+    },
+    {
+      "id": "u_b588094fac53943f",
+      "kind": "text",
+      "source": "4. 等待外部反馈",
+      "occurrence": 0,
+      "target": "4. Waiting on external feedback",
+      "context": "h3 @ line 132"
+    },
+    {
+      "id": "u_e6268dcd421f616b",
+      "kind": "text",
+      "source": "百度投放站自9月25日起等待检查，已 13 天，无法给出上线日期。",
+      "occurrence": 0,
+      "target": "The Baidu placement site has been awaiting a check since September 25, now 13 days, so no launch date can be given.",
+      "context": "p @ line 133"
+    },
+    {
+      "id": "u_a56f9f797df8c746",
+      "kind": "text",
+      "source": "四、还欠什么",
+      "occurrence": 0,
+      "target": "4. What is outstanding",
+      "context": "h2 @ line 135"
+    },
+    {
+      "id": "u_8026fb08b9c30033",
+      "kind": "text",
+      "source": "项目",
+      "occurrence": 0,
+      "target": "Item",
+      "context": "th @ line 136 · surrounding text: 项目 状态 优先级"
+    },
+    {
+      "id": "u_9f22fd3572626471",
+      "kind": "text",
+      "source": "状态",
+      "occurrence": 0,
+      "target": "Status",
+      "context": "th @ line 136 · surrounding text: 项目 状态 优先级"
+    },
+    {
+      "id": "u_7edfafd543bde91a",
+      "kind": "text",
+      "source": "优先级",
+      "occurrence": 0,
+      "target": "Priority",
+      "context": "th @ line 136 · surrounding text: 项目 状态 优先级"
+    },
+    {
+      "id": "u_62f5dc2f037d5a18",
+      "kind": "text",
+      "source": "生产异地备份与实际恢复演练",
+      "occurrence": 0,
+      "target": "Off-site production backup and an actual restore drill",
+      "context": "td @ line 137 · surrounding text: 生产异地备份与实际恢复演练 手册已写，演练未执行 最高"
+    },
+    {
+      "id": "u_82d639a3d55a7561",
+      "kind": "text",
+      "source": "手册已写，演练未执行",
+      "occurrence": 0,
+      "target": "Runbook written, drill not executed",
+      "context": "td @ line 137 · surrounding text: 生产异地备份与实际恢复演练 手册已写，演练未执行 最高"
+    },
+    {
+      "id": "u_8982b00f19643cb5",
+      "kind": "text",
+      "source": "最高",
+      "occurrence": 0,
+      "target": "Highest",
+      "context": "span.risk @ line 137 · surrounding text: 生产异地备份与实际恢复演练 手册已写，演练未执行 最高"
+    },
+    {
+      "id": "u_1f4039c0288c9582",
+      "kind": "text",
+      "source": "生产发布的五类证据：发布、运行版本、数据库迁移、产品冒烟、地区 QA",
+      "occurrence": 0,
+      "target": "Five evidence classes for a production release: release, runtime version, database migration, product smoke test, regional QA",
+      "context": "td @ line 138 · surrounding text: 生产发布的五类证据：发布、运行版本、数据库迁移、产品冒烟、地区 QA 未补齐 最高"
+    },
+    {
+      "id": "u_e4be0143ae66cc75",
+      "kind": "text",
+      "source": "未补齐",
+      "occurrence": 0,
+      "target": "Not completed",
+      "context": "td @ line 138 · surrounding text: 生产发布的五类证据：发布、运行版本、数据库迁移、产品冒烟、地区 QA 未补齐 最高"
+    },
+    {
+      "id": "u_34e7df4fe4564751",
+      "kind": "text",
+      "source": "最高",
+      "occurrence": 1,
+      "target": "Highest",
+      "context": "span.risk @ line 138 · surrounding text: 生产发布的五类证据：发布、运行版本、数据库迁移、产品冒烟、地区 QA 未补齐 最高"
+    },
+    {
+      "id": "u_91f6eaec25639724",
+      "kind": "text",
+      "source": "设备标识与跨版本兼容验证",
+      "occurrence": 0,
+      "target": "Device identity and cross-version compatibility verification",
+      "context": "td @ line 139 · surrounding text: 设备标识与跨版本兼容验证 未关闭 最高"
+    },
+    {
+      "id": "u_0e10ba182e3aa547",
+      "kind": "text",
+      "source": "未关闭",
+      "occurrence": 0,
+      "target": "Not closed",
+      "context": "td @ line 139 · surrounding text: 设备标识与跨版本兼容验证 未关闭 最高"
+    },
+    {
+      "id": "u_be6031fc5689ab93",
+      "kind": "text",
+      "source": "最高",
+      "occurrence": 2,
+      "target": "Highest",
+      "context": "span.risk @ line 139 · surrounding text: 设备标识与跨版本兼容验证 未关闭 最高"
+    },
+    {
+      "id": "u_6f8b6cd2737a0b07",
+      "kind": "text",
+      "source": "本阶段改动的生产部署与验收",
+      "occurrence": 0,
+      "target": "Production deployment and acceptance of this cycle's changes",
+      "context": "td @ line 140 · surrounding text: 本阶段改动的生产部署与验收 待确认，仅完成合并 高"
+    },
+    {
+      "id": "u_01683c9f447cb25d",
+      "kind": "text",
+      "source": "待确认，仅完成合并",
+      "occurrence": 0,
+      "target": "To be confirmed; merged only",
+      "context": "td @ line 140 · surrounding text: 本阶段改动的生产部署与验收 待确认，仅完成合并 高"
+    },
+    {
+      "id": "u_567fbe24cd73098e",
+      "kind": "text",
+      "source": "高",
+      "occurrence": 0,
+      "target": "High",
+      "context": "span.watch @ line 140 · surrounding text: 本阶段改动的生产部署与验收 待确认，仅完成合并 高"
+    },
+    {
+      "id": "u_02de0f13550bbeff",
+      "kind": "text",
+      "source": "三协议全量铺开与中国地区验收",
+      "occurrence": 0,
+      "target": "Full three-protocol rollout and China regional acceptance",
+      "context": "td @ line 141 · surrounding text: 三协议全量铺开与中国地区验收 未关闭；34 台的数字仍是 8 月快照 高"
+    },
+    {
+      "id": "u_4976b5141ac5926f",
+      "kind": "text",
+      "source": "未关闭；34 台的数字仍是 8 月快照",
+      "occurrence": 0,
+      "target": "Not closed; the figure of 34 machines is still an August snapshot",
+      "context": "td @ line 141 · surrounding text: 三协议全量铺开与中国地区验收 未关闭；34 台的数字仍是 8 月快照 高"
+    },
+    {
+      "id": "u_1e6d15ad5f34ba93",
+      "kind": "text",
+      "source": "高",
+      "occurrence": 1,
+      "target": "High",
+      "context": "span.watch @ line 141 · surrounding text: 三协议全量铺开与中国地区验收 未关闭；34 台的数字仍是 8 月快照 高"
+    },
+    {
+      "id": "u_d3c426167f979be3",
+      "kind": "text",
+      "source": "Windows 官网签名发布",
+      "occurrence": 0,
+      "target": "Windows signed release through the official site",
+      "context": "td @ line 142 · surrounding text: Windows 官网签名发布 未关闭 高"
+    },
+    {
+      "id": "u_b2237c935a9a4d49",
+      "kind": "text",
+      "source": "未关闭",
+      "occurrence": 1,
+      "target": "Not closed",
+      "context": "td @ line 142 · surrounding text: Windows 官网签名发布 未关闭 高"
+    },
+    {
+      "id": "u_e3d4e35c64e9c671",
+      "kind": "text",
+      "source": "高",
+      "occurrence": 2,
+      "target": "High",
+      "context": "span.watch @ line 142 · surrounding text: Windows 官网签名发布 未关闭 高"
+    },
+    {
+      "id": "u_9f165d0147851621",
+      "kind": "text",
+      "source": "iOS 真机购买、连接与商店验收",
+      "occurrence": 0,
+      "target": "iOS device purchase, connection and App Store acceptance",
+      "context": "td @ line 143 · surrounding text: iOS 真机购买、连接与商店验收 未关闭 高"
+    },
+    {
+      "id": "u_7b9fac7753375864",
+      "kind": "text",
+      "source": "未关闭",
+      "occurrence": 2,
+      "target": "Not closed",
+      "context": "td @ line 143 · surrounding text: iOS 真机购买、连接与商店验收 未关闭 高"
+    },
+    {
+      "id": "u_96eaa39266052a9a",
+      "kind": "text",
+      "source": "高",
+      "occurrence": 3,
+      "target": "High",
+      "context": "span.watch @ line 143 · surrounding text: iOS 真机购买、连接与商店验收 未关闭 高"
+    },
+    {
+      "id": "u_55ea65419d1bbfff",
+      "kind": "text",
+      "source": "支付渠道接入缺口（Google、Apple、Stripe 共 15 项）",
+      "occurrence": 0,
+      "target": "Payment channel integration gaps (Google, Apple and Stripe, 15 items)",
+      "context": "td @ line 144 · surrounding text: 支付渠道接入缺口（Google、Apple、Stripe 共 15 项） 已列明，未处理完 中"
+    },
+    {
+      "id": "u_c96352ef716022ac",
+      "kind": "text",
+      "source": "已列明，未处理完",
+      "occurrence": 0,
+      "target": "Listed, not finished",
+      "context": "td @ line 144 · surrounding text: 支付渠道接入缺口（Google、Apple、Stripe 共 15 项） 已列明，未处理完 中"
+    },
+    {
+      "id": "u_6723bcc4c946de24",
+      "kind": "text",
+      "source": "中",
+      "occurrence": 0,
+      "target": "Medium",
+      "context": "td @ line 144 · surrounding text: 支付渠道接入缺口（Google、Apple、Stripe 共 15 项） 已列明，未处理完 中"
+    },
+    {
+      "id": "u_4f27c3bf5096b738",
+      "kind": "text",
+      "source": "Android P1 遗留 9 项",
+      "occurrence": 0,
+      "target": "Nine remaining Android P1 items",
+      "context": "td @ line 145 · surrounding text: Android P1 遗留 9 项 已列明，未处理完 中"
+    },
+    {
+      "id": "u_135e65cdabb8dd15",
+      "kind": "text",
+      "source": "已列明，未处理完",
+      "occurrence": 1,
+      "target": "Listed, not finished",
+      "context": "td @ line 145 · surrounding text: Android P1 遗留 9 项 已列明，未处理完 中"
+    },
+    {
+      "id": "u_a6916f13e05fb5b6",
+      "kind": "text",
+      "source": "中",
+      "occurrence": 1,
+      "target": "Medium",
+      "context": "td @ line 145 · surrounding text: Android P1 遗留 9 项 已列明，未处理完 中"
+    },
+    {
+      "id": "u_6b84ceac256160c9",
+      "kind": "text",
+      "source": "主体迁移：华为、Samsung、OPPO",
+      "occurrence": 0,
+      "target": "Entity migration: Huawei, Samsung, OPPO",
+      "context": "td @ line 146 · surrounding text: 主体迁移：华为、Samsung、OPPO 进行中（Google 已完成） 中"
+    },
+    {
+      "id": "u_6762c84698f25214",
+      "kind": "text",
+      "source": "进行中（Google 已完成）",
+      "occurrence": 0,
+      "target": "In progress (Google completed)",
+      "context": "td @ line 146 · surrounding text: 主体迁移：华为、Samsung、OPPO 进行中（Google 已完成） 中"
+    },
+    {
+      "id": "u_2cd5e19db83520b7",
+      "kind": "text",
+      "source": "中",
+      "occurrence": 2,
+      "target": "Medium",
+      "context": "td @ line 146 · surrounding text: 主体迁移：华为、Samsung、OPPO 进行中（Google 已完成） 中"
+    },
+    {
+      "id": "u_53b725fc0926f18b",
+      "kind": "text",
+      "source": "中国站点智能分流",
+      "occurrence": 0,
+      "target": "China site split tunneling",
+      "context": "td @ line 147 · surrounding text: 中国站点智能分流 待开发，未开始 待排期"
+    },
+    {
+      "id": "u_1f7220c3d3200432",
+      "kind": "text",
+      "source": "待开发，未开始",
+      "occurrence": 0,
+      "target": "To be developed, not started",
+      "context": "td @ line 147 · surrounding text: 中国站点智能分流 待开发，未开始 待排期"
+    },
+    {
+      "id": "u_8ab36e180f846a21",
+      "kind": "text",
+      "source": "待排期",
+      "occurrence": 0,
+      "target": "To be scheduled",
+      "context": "td @ line 147 · surrounding text: 中国站点智能分流 待开发，未开始 待排期"
+    },
+    {
+      "id": "u_0badd21140fad0ab",
+      "kind": "text",
+      "source": "五、关键时间节点",
+      "occurrence": 0,
+      "target": "5. Key dates",
+      "context": "h2 @ line 150"
+    },
+    {
+      "id": "u_850f284955645adc",
+      "kind": "text",
+      "source": "日期",
+      "occurrence": 0,
+      "target": "Date",
+      "context": "th @ line 151 · surrounding text: 日期 进展"
+    },
+    {
+      "id": "u_ade2bfba3b9b033f",
+      "kind": "text",
+      "source": "进展",
+      "occurrence": 0,
+      "target": "Area",
+      "context": "th @ line 151 · surrounding text: 日期 进展"
+    },
+    {
+      "id": "u_5eabf16986094ed3",
+      "kind": "text",
+      "source": "10月1日",
+      "occurrence": 1,
+      "target": "October 1",
+      "context": "td @ line 152 · surrounding text: 10月1日 SkyKing 确认所有订阅统一跟随 Google 的处理方式；停用 Roy 的 GitLab 权限，交接完成。"
+    },
+    {
+      "id": "u_149ed19840e28f88",
+      "kind": "text",
+      "source": "SkyKing 确认所有订阅统一跟随 Google 的处理方式；停用 Roy 的 GitLab 权限，交接完成。",
+      "occurrence": 0,
+      "target": "SkyKing confirmed that all subscriptions follow Google's handling; Roy's GitLab access was disabled and the handover closed.",
+      "context": "td @ line 152 · surrounding text: 10月1日 SkyKing 确认所有订阅统一跟随 Google 的处理方式；停用 Roy 的 GitLab 权限，交接完成。"
+    },
+    {
+      "id": "u_c1f9df7715fba46b",
+      "kind": "text",
+      "source": "10月2日",
+      "occurrence": 0,
+      "target": "October 2",
+      "context": "td @ line 153 · surrounding text: 10月2日 新测试环境版本，覆盖购买与续费以外的问题清单；四个网站仓库完成 Node 22 构建验证。"
+    },
+    {
+      "id": "u_7fa76b74652b68b8",
+      "kind": "text",
+      "source": "新测试环境版本，覆盖购买与续费以外的问题清单；四个网站仓库完成 Node 22 构建验证。",
+      "occurrence": 0,
+      "target": "New staging build covering the issue list outside purchase and renewal; all four website repositories passed Node 22 build verification.",
+      "context": "td @ line 153 · surrounding text: 10月2日 新测试环境版本，覆盖购买与续费以外的问题清单；四个网站仓库完成 Node 22 构建验证。"
+    },
+    {
+      "id": "u_9d9d28f2ff210b0a",
+      "kind": "text",
+      "source": "10月5日",
+      "occurrence": 1,
+      "target": "October 5",
+      "context": "td @ line 154 · surrounding text: 10月5日 本阶段计划开发全部完成，开发人员开始测试。"
+    },
+    {
+      "id": "u_881b84f785224f32",
+      "kind": "text",
+      "source": "本阶段计划开发全部完成，开发人员开始测试。",
+      "occurrence": 0,
+      "target": "Planned development for this cycle completed and developer testing began.",
+      "context": "td @ line 154 · surrounding text: 10月5日 本阶段计划开发全部完成，开发人员开始测试。"
+    },
+    {
+      "id": "u_1e229f53957a78f4",
+      "kind": "text",
+      "source": "10月6日",
+      "occurrence": 0,
+      "target": "October 6",
+      "context": "td @ line 155 · surrounding text: 10月6日 生产切换的备份与恢复手册完成；收到投放方关于网站字眼的反馈。"
+    },
+    {
+      "id": "u_e334d1c30c63aba8",
+      "kind": "text",
+      "source": "生产切换的备份与恢复手册完成；收到投放方关于网站字眼的反馈。",
+      "occurrence": 0,
+      "target": "The backup and restore runbook for the production cutover was completed; feedback on website wording was received from the placement side.",
+      "context": "td @ line 155 · surrounding text: 10月6日 生产切换的备份与恢复手册完成；收到投放方关于网站字眼的反馈。"
+    },
+    {
+      "id": "u_3a5eb05b22d38ac1",
+      "kind": "text",
+      "source": "10月7日",
+      "occurrence": 0,
+      "target": "October 7",
+      "context": "td @ line 156 · surrounding text: 10月7日 币种、设置权责分离与后台重建的主要改动落地。"
+    },
+    {
+      "id": "u_ec51deab451fe8c0",
+      "kind": "text",
+      "source": "币种、设置权责分离与后台重建的主要改动落地。",
+      "occurrence": 0,
+      "target": "The main currency, settings-ownership and Back Office (BO) rebuild changes landed.",
+      "context": "td @ line 156 · surrounding text: 10月7日 币种、设置权责分离与后台重建的主要改动落地。"
+    },
+    {
+      "id": "u_e9d4c8fcad50055b",
+      "kind": "text",
+      "source": "10月8日",
+      "occurrence": 1,
+      "target": "October 8",
+      "context": "td @ line 157 · surrounding text: 10月8日 Stripe 测试环境回调对齐到源码已在使用的版本，并更正回调域名；GitLab 升级到 19.4.1；支付流水表合并、GeoIP 与旧路径清理落地。"
+    },
+    {
+      "id": "u_7170559549eaa8c4",
+      "kind": "text",
+      "source": "Stripe 测试环境回调对齐到源码已在使用的版本，并更正回调域名；GitLab 升级到 19.4.1；支付流水表合并、GeoIP 与旧路径清理落地。",
+      "occurrence": 0,
+      "target": "The Stripe staging webhook was aligned to the version the code already uses and the webhook domain corrected; GitLab was upgraded to 19.4.1; the payment transaction table merge, GeoIP change and legacy path cleanup landed.",
+      "context": "td @ line 157 · surrounding text: 10月8日 Stripe 测试环境回调对齐到源码已在使用的版本，并更正回调域名；GitLab 升级到 19.4.1；支付流水表合并、GeoIP 与旧路径清理落地。"
+    },
+    {
+      "id": "u_1f44b033e0652d78",
+      "kind": "text",
+      "source": "六、发布边界与兼容要求",
+      "occurrence": 0,
+      "target": "6. Release boundaries and compatibility",
+      "context": "h2 @ line 160"
+    },
+    {
+      "id": "u_a998146f51a25c6e",
+      "kind": "text",
+      "source": "本报告按真实状态汇报，不做延后处理。但代码合并、测试环境部署、设备验收、生产上线是四件独立的事：本阶段大部分改动只到「已合并」，生产部署与验收为待确认。",
+      "occurrence": 0,
+      "target": "This report states the real status with no delay applied. But merging code, deploying to staging, device acceptance and production release are four independent facts: most changes this cycle have only reached \"merged\", and production deployment and acceptance are to be confirmed.",
+      "context": "p @ line 161"
+    },
+    {
+      "id": "u_7662fb7c5aedd0da",
+      "kind": "text",
+      "source": "后端继续兼容可升级的 Android、旧版 iOS HiYou 与旧版 Windows 客户端。本阶段移除旧客户端路径与旧节点支持，是在确认使用证据后分步进行的，不是一次性切断。",
+      "occurrence": 0,
+      "target": "The backend continues to support upgradable Android, the older iOS HiYou client and the older Windows client. The legacy client paths and legacy VPN node support removed this cycle were removed in steps after confirming usage evidence, not cut off at once.",
+      "context": "p @ line 162"
+    },
+    {
+      "id": "u_4279c220593e5ae2",
+      "kind": "text",
+      "source": "七、安全与权限管控",
+      "occurrence": 0,
+      "target": "7. Security and access control",
+      "context": "h2 @ line 164"
+    },
+    {
+      "id": "u_aa8ea30add30f24f",
+      "kind": "text",
+      "source": "本阶段完成：SSH 防火墙统一为一份白名单，与设置页一致；强制会话安全并移除旧客户端路径；后台强制当前管理员授权；ShadowTLS 收敛为单一协议组合，减少配置面。支付渠道密钥已不存放于数据库。",
+      "occurrence": 0,
+      "target": "Completed this cycle: the SSH firewall unified into a single allowlist matching the settings page; session security enforced and legacy client paths removed; the back office enforcing current admin authorization; ShadowTLS narrowed to a single protocol combination, reducing the configuration surface. Payment channel keys are no longer stored in the database.",
+      "context": "p @ line 165"
+    },
+    {
+      "id": "u_39e4366f5b568d10",
+      "kind": "text",
+      "source": "10月1日停用外部人员的源码权限，交接按文档逐项完成。生产异地恢复仍未关闭，是目前最大的安全与韧性缺口。",
+      "occurrence": 0,
+      "target": "External source access was disabled on October 1 and the handover completed item by item against the documents. Off-site production recovery remains open and is the largest security and resilience gap.",
+      "context": "p @ line 166"
+    },
+    {
+      "id": "u_0e4f5d29e5cd928b",
+      "kind": "text",
+      "source": "八、下一步与中长期顺序",
+      "occurrence": 0,
+      "target": "8. Next steps and medium-term order",
+      "context": "h2 @ line 168"
+    },
+    {
+      "id": "u_df4bd2131e83ad5a",
+      "kind": "text",
+      "source": "近期顺序：完成续费与购买的测试回归；完成测试环境 Stripe 回调替换与沙盒验证；网站10月12日复查、10月13日上正式环境；安排生产异地恢复演练。正式环境的 Stripe 回调版本在生产部署时一并更新。",
+      "occurrence": 0,
+      "target": "Near-term order: complete the renewal and purchase test regression; complete the staging Stripe webhook replacement and sandbox verification; recheck the website on October 12 and take it to production on October 13; and schedule the off-site production restore drill. The production Stripe webhook version is updated together with the production deployment.",
+      "context": "p @ line 169"
+    },
+    {
+      "id": "u_b1706b0726286a79",
+      "kind": "text",
+      "source": "随后按平台补齐 Windows 签名发布与 iOS 真机、商店验收，再推进三协议全量铺开与中国地区验收。中国站点智能分流仍是独立计划，尚未排期。具体上线日期以测试与验收结果为准。",
+      "occurrence": 0,
+      "target": "After that, complete the Windows signed release and iOS device and App Store acceptance platform by platform, then advance the full three-protocol rollout and China regional acceptance. China site split tunneling remains a separate plan and is not yet scheduled. Launch dates follow test and acceptance results.",
+      "context": "p @ line 170"
+    },
+    {
+      "id": "u_766b239a8aff8700",
+      "kind": "text",
+      "source": "九、FFF 并行进展",
+      "occurrence": 0,
+      "target": "9. FFF progress in parallel",
+      "context": "h2 @ line 172"
+    },
+    {
+      "id": "u_a041673bb140c2c8",
+      "kind": "text",
+      "source": "本报告只覆盖 Arrowfish。FFF 的 Flutter 客户端进展由 Lex 另行提供进度报告；FFF 的 iOS 与 macOS 由马来西亚团队负责。两部分在收到 Lex 的报告后一并汇总，本次不预先代为陈述。",
+      "occurrence": 0,
+      "target": "This report covers Arrowfish only. Progress on the FFF Flutter clients is provided separately by Lex; FFF iOS and macOS sit with the Malaysia team. Both will be summarised once Lex's report arrives; neither is pre-empted here.",
+      "context": "p @ line 173"
+    },
+    {
+      "id": "u_e15c9ae05a31a4e2",
+      "kind": "text",
+      "source": "十、财务影响",
+      "occurrence": 0,
+      "target": "10. Financial impact",
+      "context": "h2 @ line 175"
+    },
+    {
+      "id": "u_ed3d02569a63a42d",
+      "kind": "text",
+      "source": "本阶段以结算正确性与收入链路可靠性为主：付款完成改由订单状态判断，避免未实际付款的订单被当作已付；支付流水合并减少对账口径不一致。本期没有新增生产收入或成本核验，因此不换算成具体金额。",
+      "occurrence": 0,
+      "target": "This cycle focused on settlement correctness and revenue-path reliability: deciding payment completion by order status prevents an unpaid order being treated as paid, and merging the payment transaction tables reduces reconciliation inconsistency. No new production revenue or cost verification was performed this period, so no figures are given.",
+      "context": "p @ line 176"
+    },
+    {
+      "id": "u_96c8a05922ca3e47",
+      "kind": "text",
+      "source": "Arrowfish · 阶段进展报告",
+      "occurrence": 0,
+      "target": "Arrowfish · Progress Report",
+      "context": "footer.footer @ line 178"
+    }
+  ],
+  "blocks": {
+    "b0001": {
+      "type": "heading",
+      "source": "第14阶段 · 进度报告：做了什么、处理着什么、还欠什么",
+      "occurrence": 0
+    },
+    "b0002": {
+      "type": "p",
+      "source": "报告周期 2026-10-03 至 2026-10-08 · 发布 2026-10-09",
+      "occurrence": 0
+    },
+    "b0003": {
+      "type": "p",
+      "source": "本阶段计划开发已于10月5日全部完成并进入测试；Stripe 测试环境今日对齐、网站字眼清查中；生产异地恢复演练仍未执行，是目前风险最高的未关闭项。",
+      "occurrence": 0
+    },
+    "b0004": {
+      "type": "heading",
+      "source": "一、需要决定与配合",
+      "occurrence": 0
+    },
+    "b0005": {
+      "type": "highlight",
+      "source": "3. 新官网上正式环境。 staging.arrowfishvpn.com 将替代 arrowfishvpn.com。10月6日投放方反馈导航栏与标题仍写「箭鱼IP代理」，应为「箭鱼VPN」。正在逐句清查相关字眼，计划10月12日再检查一次，10月13日上正式环境。",
+      "occurrence": 0
+    },
+    "b0006": {
+      "type": "heading",
+      "source": "二、做了什么",
+      "occurrence": 0
+    },
+    "b0007": {
+      "type": "highlight",
+      "source": "10月5日 本阶段计划开发全部完成",
+      "occurrence": 0
+    },
+    "b0008": {
+      "type": "highlight",
+      "source": "5 组 后台无用页面与设置已移除",
+      "occurrence": 0
+    },
+    "b0009": {
+      "type": "highlight",
+      "source": "10月1日 交接完成，外部权限停用",
+      "occurrence": 0
+    },
+    "b0010": {
+      "type": "highlight",
+      "source": "19.4.1 GitLab 升级完成",
+      "occurrence": 0
+    },
+    "b0011": {
+      "type": "table-row",
+      "source": "方向 交付结果 边界",
+      "occurrence": 0
+    },
+    "b0012": {
+      "type": "table-row",
+      "source": "支付与结算 订单状态成为付款完成的唯一判断依据，不再凭回调标志结算；支付流水表合并为一张；支付优惠与渠道代码取代逐渠道的第三方编号；币种目录在启动时装载，法币与加密货币分开定义并以美元为锚。 已合并，部署与验收待确认。",
+      "occurrence": 0
+    },
+    "b0013": {
+      "type": "table-row",
+      "source": "订阅渠道 Google 订阅结账重试与换购修复，实时通知迁到 v2 接口；Stripe 免费天数订阅不再被误判为未付款，续费发票对账与失败重试恢复。 渠道端到端验收待确认。",
+      "occurrence": 0
+    },
+    "b0014": {
+      "type": "table-row",
+      "source": "会员与续费 按10月1日确定的规则实现完成，10月5日起开发人员测试中。等级来源统一、套餐赠送天数、宽限期设置、到期无缝降级、订阅历史补齐。 测试中，未上生产。",
+      "occurrence": 0
+    },
+    "b0015": {
+      "type": "table-row",
+      "source": "后台重建 VM 主机页改为表格加详情面板；任务进度改为步骤网格加实时终端；防火墙预览改为深色终端并分 IPv4／IPv6；代理与任务设置改为清爽列表；重装对话框改为复核式；协议健康改用白话描述。 浏览器回归验收待确认。",
+      "occurrence": 0
+    },
+    "b0016": {
+      "type": "table-row",
+      "source": "后台精简 删除无用页面与设置：DNS 清理、滥用监控、短信与图形验证码、滥用阈值与告警开关、接口设置页；广告相关设置合并为一页并改名为服务设置。 已合并。",
+      "occurrence": 0
+    },
+    "b0017": {
+      "type": "table-row",
+      "source": "权责分离 后台专属设置迁出运行服务的设置表，定时任务不再播种这些设置；全部 VM 任务改用同一个「每次处理多少台」的保存设置。 已合并。",
+      "occurrence": 0
+    },
+    "b0018": {
+      "type": "table-row",
+      "source": "安全与清理 SSH 防火墙统一为一份白名单；ShadowTLS 只使用 Shadowsocks 2022；移除旧客户端路径并强制会话安全；后台移除旧节点支持并强制当前管理员授权。 已合并，现场验收待确认。",
+      "occurrence": 0
+    },
+    "b0019": {
+      "type": "table-row",
+      "source": "Android 源码版本 3.9.25。本阶段修复：无可用支付方式时的空状态、切换协议卡在加载、断网时显示「未连接」而非「线路不稳定」、专属线路显示国旗、设置与黑白名单改为仅存手机端。 测试环境版本以发布记录为准，设备验收待确认。",
+      "occurrence": 0
+    },
+    "b0020": {
+      "type": "table-row",
+      "source": "iOS 10月2日修复支付弹窗与网页结账的后端处理；10月5日修复购买恢复并简化会员与线路选择。 真机与商店验收未关闭。",
+      "occurrence": 0
+    },
+    "b0021": {
+      "type": "table-row",
+      "source": "运行与可观测 测试环境日志采集启用并修正接入地址；GeoIP 数据库改为启动时下载，并消除两处日志刷屏；启动配置统一注入接口、后台与定时任务三个服务。 已上测试环境。",
+      "occurrence": 0
+    },
+    "b0022": {
+      "type": "table-row",
+      "source": "基础设施 10月6日完成生产切换的备份与恢复手册；10月8日 GitLab 由 19.3.0 升级到 19.4.1。 手册已写，演练未执行。",
+      "occurrence": 0
+    },
+    "b0023": {
+      "type": "heading",
+      "source": "三、处理着什么",
+      "occurrence": 0
+    },
+    "b0024": {
+      "type": "heading",
+      "source": "1. Stripe 升级：今日只做测试环境",
+      "occurrence": 0
+    },
+    "b0025": {
+      "type": "p",
+      "source": "源码已经是对的 ，后端送出的就是 2026-08-26.dahlia，Stripe 组件也已升级到最新。需要动的只是 Stripe 控制台的配置。",
+      "occurrence": 0
+    },
+    "b0026": {
+      "type": "table-row",
+      "source": "环境 回调版本 何时更改",
+      "occurrence": 0
+    },
+    "b0027": {
+      "type": "table-row",
+      "source": "测试环境 今日对齐到 2026-08-26.dahlia 10月8日",
+      "occurrence": 0
+    },
+    "b0028": {
+      "type": "table-row",
+      "source": "正式环境 维持现状 待应用提交并通过审核、安排生产部署时，在 Stripe 控制台一并更新",
+      "occurrence": 0
+    },
+    "b0029": {
+      "type": "p",
+      "source": "今日的测试环境步骤：按正确版本新建一个回调目标，沿用相同地址与相同的 16 个事件；把新的签名密钥更新到 Key Vault；重启测试环境；停用旧回调；再做一次沙盒结账验证。最后一步通过之前，测试环境的 Stripe 回调不算验证通过。",
+      "occurrence": 0
+    },
+    "b0030": {
+      "type": "p",
+      "source": "正式环境的回调版本留到生产部署时一起改，是刻意的先后顺序：先改控制台、后部署，会让 Stripe 控制台与线上运行的版本处在不同约定上。此前日志中出现的 2022-11-15 来自一笔重发的历史事件，不是当前配置；同时发现测试环境的回调域名一直设置错误、从未真正生效，现已更正。",
+      "occurrence": 0
+    },
+    "b0031": {
+      "type": "heading",
+      "source": "2. 网站字眼清查",
+      "occurrence": 0
+    },
+    "b0032": {
+      "type": "p",
+      "source": "按10月6日的反馈，逐句清查并移除残留的「IP 代理」说法，导航栏与标题已改为箭鱼VPN。计划10月12日再检查一次，10月13日上正式环境替代现有官网。",
+      "occurrence": 0
+    },
+    "b0033": {
+      "type": "heading",
+      "source": "3. 测试与技术债",
+      "occurrence": 0
+    },
+    "b0034": {
+      "type": "p",
+      "source": "10月5日开发全部完成后，开发人员一直在测试、修复并清理技术债。随系统接手过来的冗余开发路径与多余数据库表较多，本阶段的表合并与设置迁移就是其中一部分。",
+      "occurrence": 0
+    },
+    "b0035": {
+      "type": "heading",
+      "source": "4. 等待外部反馈",
+      "occurrence": 0
+    },
+    "b0036": {
+      "type": "p",
+      "source": "百度投放站自9月25日起等待检查，已 13 天，无法给出上线日期。",
+      "occurrence": 0
+    },
+    "b0037": {
+      "type": "heading",
+      "source": "四、还欠什么",
+      "occurrence": 0
+    },
+    "b0038": {
+      "type": "table-row",
+      "source": "项目 状态 优先级",
+      "occurrence": 0
+    },
+    "b0039": {
+      "type": "table-row",
+      "source": "生产异地备份与实际恢复演练 手册已写，演练未执行 最高",
+      "occurrence": 0
+    },
+    "b0040": {
+      "type": "table-row",
+      "source": "生产发布的五类证据：发布、运行版本、数据库迁移、产品冒烟、地区 QA 未补齐 最高",
+      "occurrence": 0
+    },
+    "b0041": {
+      "type": "table-row",
+      "source": "设备标识与跨版本兼容验证 未关闭 最高",
+      "occurrence": 0
+    },
+    "b0042": {
+      "type": "table-row",
+      "source": "本阶段改动的生产部署与验收 待确认，仅完成合并 高",
+      "occurrence": 0
+    },
+    "b0043": {
+      "type": "table-row",
+      "source": "三协议全量铺开与中国地区验收 未关闭；34 台的数字仍是 8 月快照 高",
+      "occurrence": 0
+    },
+    "b0044": {
+      "type": "table-row",
+      "source": "Windows 官网签名发布 未关闭 高",
+      "occurrence": 0
+    },
+    "b0045": {
+      "type": "table-row",
+      "source": "iOS 真机购买、连接与商店验收 未关闭 高",
+      "occurrence": 0
+    },
+    "b0046": {
+      "type": "table-row",
+      "source": "支付渠道接入缺口（Google、Apple、Stripe 共 15 项） 已列明，未处理完 中",
+      "occurrence": 0
+    },
+    "b0047": {
+      "type": "table-row",
+      "source": "Android P1 遗留 9 项 已列明，未处理完 中",
+      "occurrence": 0
+    },
+    "b0048": {
+      "type": "table-row",
+      "source": "主体迁移：华为、Samsung、OPPO 进行中（Google 已完成） 中",
+      "occurrence": 0
+    },
+    "b0049": {
+      "type": "table-row",
+      "source": "中国站点智能分流 待开发，未开始 待排期",
+      "occurrence": 0
+    },
+    "b0050": {
+      "type": "heading",
+      "source": "五、关键时间节点",
+      "occurrence": 0
+    },
+    "b0051": {
+      "type": "table-row",
+      "source": "日期 进展",
+      "occurrence": 0
+    },
+    "b0052": {
+      "type": "table-row",
+      "source": "10月1日 SkyKing 确认所有订阅统一跟随 Google 的处理方式；停用 Roy 的 GitLab 权限，交接完成。",
+      "occurrence": 0
+    },
+    "b0053": {
+      "type": "table-row",
+      "source": "10月2日 新测试环境版本，覆盖购买与续费以外的问题清单；四个网站仓库完成 Node 22 构建验证。",
+      "occurrence": 0
+    },
+    "b0054": {
+      "type": "table-row",
+      "source": "10月5日 本阶段计划开发全部完成，开发人员开始测试。",
+      "occurrence": 0
+    },
+    "b0055": {
+      "type": "table-row",
+      "source": "10月6日 生产切换的备份与恢复手册完成；收到投放方关于网站字眼的反馈。",
+      "occurrence": 0
+    },
+    "b0056": {
+      "type": "table-row",
+      "source": "10月7日 币种、设置权责分离与后台重建的主要改动落地。",
+      "occurrence": 0
+    },
+    "b0057": {
+      "type": "table-row",
+      "source": "10月8日 Stripe 测试环境回调对齐到源码已在使用的版本，并更正回调域名；GitLab 升级到 19.4.1；支付流水表合并、GeoIP 与旧路径清理落地。",
+      "occurrence": 0
+    },
+    "b0058": {
+      "type": "heading",
+      "source": "六、发布边界与兼容要求",
+      "occurrence": 0
+    },
+    "b0059": {
+      "type": "p",
+      "source": "本报告按真实状态汇报，不做延后处理。但代码合并、测试环境部署、设备验收、生产上线是四件独立的事：本阶段大部分改动只到「已合并」，生产部署与验收为待确认。",
+      "occurrence": 0
+    },
+    "b0060": {
+      "type": "p",
+      "source": "后端继续兼容可升级的 Android、旧版 iOS HiYou 与旧版 Windows 客户端。本阶段移除旧客户端路径与旧节点支持，是在确认使用证据后分步进行的，不是一次性切断。",
+      "occurrence": 0
+    },
+    "b0061": {
+      "type": "heading",
+      "source": "七、安全与权限管控",
+      "occurrence": 0
+    },
+    "b0062": {
+      "type": "p",
+      "source": "本阶段完成：SSH 防火墙统一为一份白名单，与设置页一致；强制会话安全并移除旧客户端路径；后台强制当前管理员授权；ShadowTLS 收敛为单一协议组合，减少配置面。支付渠道密钥已不存放于数据库。",
+      "occurrence": 0
+    },
+    "b0063": {
+      "type": "p",
+      "source": "10月1日停用外部人员的源码权限，交接按文档逐项完成。生产异地恢复仍未关闭，是目前最大的安全与韧性缺口。",
+      "occurrence": 0
+    },
+    "b0064": {
+      "type": "heading",
+      "source": "八、下一步与中长期顺序",
+      "occurrence": 0
+    },
+    "b0065": {
+      "type": "p",
+      "source": "近期顺序：完成续费与购买的测试回归；完成测试环境 Stripe 回调替换与沙盒验证；网站10月12日复查、10月13日上正式环境；安排生产异地恢复演练。正式环境的 Stripe 回调版本在生产部署时一并更新。",
+      "occurrence": 0
+    },
+    "b0066": {
+      "type": "p",
+      "source": "随后按平台补齐 Windows 签名发布与 iOS 真机、商店验收，再推进三协议全量铺开与中国地区验收。中国站点智能分流仍是独立计划，尚未排期。具体上线日期以测试与验收结果为准。",
+      "occurrence": 0
+    },
+    "b0067": {
+      "type": "heading",
+      "source": "九、FFF 并行进展",
+      "occurrence": 0
+    },
+    "b0068": {
+      "type": "p",
+      "source": "本报告只覆盖 Arrowfish。FFF 的 Flutter 客户端进展由 Lex 另行提供进度报告；FFF 的 iOS 与 macOS 由马来西亚团队负责。两部分在收到 Lex 的报告后一并汇总，本次不预先代为陈述。",
+      "occurrence": 0
+    },
+    "b0069": {
+      "type": "heading",
+      "source": "十、财务影响",
+      "occurrence": 0
+    },
+    "b0070": {
+      "type": "p",
+      "source": "本阶段以结算正确性与收入链路可靠性为主：付款完成改由订单状态判断，避免未实际付款的订单被当作已付；支付流水合并减少对账口径不一致。本期没有新增生产收入或成本核验，因此不换算成具体金额。",
+      "occurrence": 0
+    }
+  },
+  "reviewedTargetHash": "ed85d7632fadfe2e"
+}
