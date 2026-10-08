@@ -490,7 +490,7 @@
       "kind": "text",
       "source": "，后端送出的就是 2026-08-26.dahlia，Stripe 组件也已升级到最新。需要动的只是 Stripe 控制台的配置。",
       "occurrence": 0,
-      "target": " — the backend already sends 2026-08-26.dahlia and the Stripe component is on the latest version. All that remains is configuration in the Stripe console.",
+      "target": "— the backend already sends 2026-08-26.dahlia and the Stripe component is on the latest version. All that remains is configuration in the Stripe console.",
       "context": "p @ line 121 · surrounding text: 源码已经是对的 ，后端送出的就是 2026-08-26.dahlia，Stripe 组件也已升级到最新。需要动的只是 Stripe 控制台的配置。"
     },
     {

@@ -623,21 +623,28 @@
     },
     {
       "reportId": "sprint-12-progress-20261009",
-      "blockId": "b0025",
+      "blockId": "b0029",
       "reportDate": "2026-10-09",
       "section": "Stripe subscription",
-      "text": "A new subscription takes effect once the first payment succeeds and renews automatically each cycle; a same-tier renewal is charged at period end, and a failed charge adds no time; an upgrade is applied directly to the existing subscription, with Stripe valuing the unused portion as a credit and the higher tier taking effect once the user pays the difference, so the original tier's remaining time is not separately preserved here; a downgrade switches at the end of the current period; cancelling auto-renewal only stops the next charge; refund amounts and the matching period's entitlement follow Stripe's own calculation."
+      "text": "Upgrade to a shorter length Not offered"
     },
     {
       "reportId": "sprint-12-progress-20261009",
       "blockId": "b0030",
+      "reportDate": "2026-10-09",
+      "section": "Stripe subscription",
+      "text": "Free days = money left ÷ the new plan's price per day. No difference is charged to the customer on the day of an upgrade. The one exception is a Google same-product change to a longer length, where Google only allows a full-price charge and the money left is appended after the paid term. Only one pending change is allowed at a time; cancelling auto-renew stops only the next charge; refunds today are full only and admin-approved, and the days are revoked with them."
+    },
+    {
+      "reportId": "sprint-12-progress-20261009",
+      "blockId": "b0035",
       "reportDate": "2026-10-09",
       "section": "4. Effect on delivery",
       "text": "Payment channel acceptance To be confirmed. Cross-channel payment, refunds and expiry switching have not completed acceptance."
     },
     {
       "reportId": "sprint-12-progress-20261009",
-      "blockId": "b0031",
+      "blockId": "b0036",
       "reportDate": "2026-10-09",
       "section": "4. Effect on delivery",
       "text": "Production release To be confirmed. Merged code is not a deployment."

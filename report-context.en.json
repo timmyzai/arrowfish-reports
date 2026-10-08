@@ -17399,7 +17399,7 @@
       "name": "Sprint 12 · Renewal Decision Correction",
       "date": "2026-10-09",
       "file": "Stakeholder/Sprint-12/20261009_progress-update.html",
-      "version": "74a63d8bfb53f56d",
+      "version": "1cfd25bbd3a805e0",
       "blocks": [
         {
           "id": "b0001",
@@ -17574,55 +17574,90 @@
           "section": "Stripe subscription",
           "type": "p",
           "line": 118,
-          "text": "A new subscription takes effect once the first payment succeeds and renews automatically each cycle; a same-tier renewal is charged at period end, and a failed charge adds no time; an upgrade is applied directly to the existing subscription, with Stripe valuing the unused portion as a credit and the higher tier taking effect once the user pays the difference, so the original tier's remaining time is not separately preserved here; a downgrade switches at the end of the current period; cancelling auto-renewal only stops the next charge; refund amounts and the matching period's entitlement follow Stripe's own calculation."
+          "text": "Settled on October 1: auto-renew follows Google's handling throughout, so Stripe and Google Play behave the same."
         },
         {
           "id": "b0026",
-          "section": "4. Effect on delivery",
-          "type": "heading",
-          "line": 120,
-          "text": "4. Effect on delivery"
+          "section": "Stripe subscription",
+          "type": "table-row",
+          "line": 119,
+          "text": "Change Starts Charged today Money left Renewal date"
         },
         {
           "id": "b0027",
-          "section": "4. Effect on delivery",
+          "section": "Stripe subscription",
           "type": "table-row",
-          "line": 121,
-          "text": "Item Current Status"
+          "line": 120,
+          "text": "Upgrade (higher tier, or same tier at a longer length) Immediately Nothing Converted into free days on the new plan Moves to the end of those free days"
         },
         {
           "id": "b0028",
-          "section": "4. Effect on delivery",
+          "section": "Stripe subscription",
           "type": "table-row",
-          "line": 122,
-          "text": "Purchase and renewal rules Settled October 1, implementation completed October 5, in developer testing."
+          "line": 121,
+          "text": "Downgrade (any lower tier) At the end of the current plan Nothing Kept; the customer uses the original plan to its end Unchanged"
         },
         {
           "id": "b0029",
-          "section": "4. Effect on delivery",
+          "section": "Stripe subscription",
           "type": "table-row",
-          "line": 123,
-          "text": "Android staging releases The six Sprint 12 staging release records are unchanged and remain valid."
+          "line": 122,
+          "text": "Upgrade to a shorter length Not offered"
         },
         {
           "id": "b0030",
-          "section": "4. Effect on delivery",
-          "type": "table-row",
+          "section": "Stripe subscription",
+          "type": "p",
           "line": 124,
-          "text": "Payment channel acceptance To be confirmed. Cross-channel payment, refunds and expiry switching have not completed acceptance."
+          "text": "Free days = money left ÷ the new plan's price per day. No difference is charged to the customer on the day of an upgrade. The one exception is a Google same-product change to a longer length, where Google only allows a full-price charge and the money left is appended after the paid term. Only one pending change is allowed at a time; cancelling auto-renew stops only the next charge; refunds today are full only and admin-approved, and the days are revoked with them."
         },
         {
           "id": "b0031",
           "section": "4. Effect on delivery",
-          "type": "table-row",
-          "line": 125,
-          "text": "Production release To be confirmed. Merged code is not a deployment."
+          "type": "heading",
+          "line": 126,
+          "text": "4. Effect on delivery"
         },
         {
           "id": "b0032",
           "section": "4. Effect on delivery",
-          "type": "p",
+          "type": "table-row",
           "line": 127,
+          "text": "Item Current Status"
+        },
+        {
+          "id": "b0033",
+          "section": "4. Effect on delivery",
+          "type": "table-row",
+          "line": 128,
+          "text": "Purchase and renewal rules Settled October 1, implementation completed October 5, in developer testing."
+        },
+        {
+          "id": "b0034",
+          "section": "4. Effect on delivery",
+          "type": "table-row",
+          "line": 129,
+          "text": "Android staging releases The six Sprint 12 staging release records are unchanged and remain valid."
+        },
+        {
+          "id": "b0035",
+          "section": "4. Effect on delivery",
+          "type": "table-row",
+          "line": 130,
+          "text": "Payment channel acceptance To be confirmed. Cross-channel payment, refunds and expiry switching have not completed acceptance."
+        },
+        {
+          "id": "b0036",
+          "section": "4. Effect on delivery",
+          "type": "table-row",
+          "line": 131,
+          "text": "Production release To be confirmed. Merged code is not a deployment."
+        },
+        {
+          "id": "b0037",
+          "section": "4. Effect on delivery",
+          "type": "p",
+          "line": 133,
           "text": "Sprint 13 and Sprint 14 progress is covered in the two reports published the same day."
         }
       ]

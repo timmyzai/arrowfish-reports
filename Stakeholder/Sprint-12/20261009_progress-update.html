@@ -115,7 +115,13 @@ header{padding:12px 0;margin-bottom:12px}section{padding:18px;margin:12px 0}.tld
 </tbody></table>
 <p class="note">同一时间只有一笔会员天数在倒数；高等级优先；相同等级按购买时间先后使用；暂停或等待中的天数不会丢失。付款成功后才发放会员；退款取消该笔尚未使用的剩余天数。</p>
 <h3>Stripe 订阅</h3>
-<p>新订阅付款成功即生效并按周期自动续费；同等级到期自动扣款，失败则不增加时间；升级直接在原订阅上进行，由 Stripe 计算未使用价值抵扣、用户补差额后立即生效，此处不另外保留原等级剩余时间；降级在本期结束后切换；取消自动续费只停止下一期扣款；退款金额与对应周期权益以 Stripe 实际计算为准。</p></section>
+<p>10月1日确定：自动续费一律跟随 Google 的处理方式，Stripe 与 Google Play 行为一致。</p>
+<table><thead><tr><th>变更</th><th>何时生效</th><th>当天收费</th><th>剩余价值</th><th>续费日期</th></tr></thead><tbody>
+<tr><td>升级（更高等级，或同等级更长时长）</td><td>立即</td><td>不收费</td><td>折算成新套餐的免费天数</td><td>顺延到免费天数用完</td></tr>
+<tr><td>降级（任何较低等级）</td><td>当前套餐结束时</td><td>不收费</td><td>保留，继续用完原套餐</td><td>不变</td></tr>
+<tr><td>升级到更短时长</td><td colspan="4">不提供</td></tr>
+</tbody></table>
+<p class="note">免费天数 = 剩余金额 ÷ 新套餐每日价格。升级当天不向用户收取差价。唯一例外是 Google 同一产品换更长时长，Google 只允许按全价扣款，剩余价值顺延到付费期之后。同一时间只能有一笔待生效的变更；取消自动续费只停止下一期扣款；退款目前只做全额、由管理员审批，天数一并收回。</p></section>
 
 <section id="section-4"><h2>四、对交付的影响</h2>
 <table><thead><tr><th>项目</th><th>当前状态</th></tr></thead><tbody>
