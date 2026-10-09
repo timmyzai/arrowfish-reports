@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-report-id="sprint-14-android-qa-20261009"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="robots" content="noindex, nofollow">
+<title>第14阶段 · Arrowfish Android 3.9.26 测试交付补充</title>
+<meta name="description" content="Arrowfish Android 3.9.26 已交 Amy 做 staging 测试；记录待支付订单阻塞及继续支付、取消和可配置过期的后续方向。">
+<script src="../../assets/ui-i18n.js"></script><script src="../../assets/site-preferences.js"></script><script src="../../assets/auth-gate.js"></script><link rel="stylesheet" href="../../assets/site-theme.css">
+<style>*{box-sizing:border-box}body{margin:0;background:var(--af-bg);color:var(--af-text);font:16px/1.7 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}main{max-width:1100px;margin:auto;padding:32px 24px 56px}header{border-bottom:3px solid var(--af-primary);padding-bottom:20px}h1{font-size:clamp(1.6rem,3vw,2.3rem);line-height:1.3;margin:10px 0}h2{font-size:1.35rem;margin:0 0 16px}p{margin:12px 0}.meta,footer{color:var(--af-text-muted);font-size:.9rem}section{padding:24px;margin-top:22px;border:1px solid var(--af-border);border-radius:14px;background:var(--af-surface)}section:first-of-type{border-left:5px solid var(--af-primary)}a{color:var(--af-primary)}.metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:20px}.metrics article{background:var(--af-surface-muted);border-radius:10px;padding:14px}.metrics strong{display:block;font-size:1.8rem}.metrics span{display:block;color:var(--af-text-muted);font-size:.85rem}.table-wrap{overflow-x:auto}table{border-collapse:collapse;width:100%;font-size:.94rem}th,td{text-align:left;vertical-align:top;padding:12px;border-bottom:1px solid var(--af-border)}th{background:var(--af-surface-muted)}td:first-child{min-width:135px;font-weight:600}th:first-child{width:20%}.steps{padding-left:24px}.steps li{padding:7px 0}footer{padding-top:24px}@media(max-width:640px){main{padding:18px 12px 32px}section{padding:16px}.metrics{grid-template-columns:repeat(2,1fr)}table{min-width:620px}h2{font-size:1.18rem}}</style></head><body><main>
+<header data-report-header><h1>第14阶段 · Arrowfish Android 3.9.26 测试交付补充</h1><p class="meta">报告日期 2026-10-09 · 第14阶段 2026-10-03 至 2026-10-16 · 马来西亚时间</p></header>
+<section id="section-1">
+<h2>01 · 当前状态</h2>
+<p>10月9日，Arrowfish Android 3.9.26 已提供给 Amy 在 staging 测试；订阅边界情况仍待处理，待支付订单的继续支付、取消与自动过期功能列为后续改进。</p><p>本次确认的是测试交付，没有验收通过或生产发布结论。下列改进不计入本次版本已交付功能；完成日期待确认。</p>
+</section>
+<section id="section-2">
+<h2>02 · 待支付订单为何阻塞购买</h2>
+<p>用户下单后选择 Stripe 或 Google 支付，中途退出时订单保留为待支付。后端为避免重复订阅而阻止新的购买，但当前客户端缺少继续支付或取消该订单的有效入口。</p><p>影响是用户无法自行恢复购买流程；这不是已经发生重复扣款的结论，也没有受影响人数或收入损失统计。</p>
+</section>
+<section id="section-3">
+<h2>03 · 后续改善方向</h2>
+<div class="table-wrap"><table><thead><tr><th>范围</th><th>预期行为（计划）</th></tr></thead><tbody>
+<tr><td>查看待支付订单</td><td>展示待支付订单、当前状态及新购买被阻止的原因，让用户可找到原订单。</td></tr>
+<tr><td>继续支付</td><td>从原订单继续付款；Stripe 跳回对应支付页面。Google 的恢复路径需按渠道能力设计与验证。</td></tr>
+<tr><td>用户主动取消</td><td>允许取消待支付订单，正确关闭后解除新的购买阻塞，同时保留防重复订阅保护。</td></tr>
+<tr><td>超时自动过期</td><td>增加定时任务处理超时未支付订单；建议有效期为 60 分钟，最终规则待确认。</td></tr>
+<tr><td>后台管理员配置</td><td>将待支付有效期加入后台 BO 配置设置表，供管理员调整。60 分钟是有效期建议，不是已启用配置，也不是任务执行频率。</td></tr>
+</tbody></table></div>
+</section>
+<section id="section-4">
+<h2>04 · 测试与安全边界</h2>
+<p>Amy 接收本次 staging 测试版本，测试结果尚未提供。当前缺口来自 Timmy 的说明，本次汇报没有独立复现支付流程。</p><p>后续改进需验证：中途退出后可查看及恢复订单；取消或过期后可重新购买；支付结果延迟到达、重复回调及重复扫描时，不产生重复订阅，也不误取消或误过期已支付订单。</p><p>防重复订阅检查继续保留。这里的安全要求针对订单与订阅一致性，不代表本次完成基础设施或访问权限审计。</p>
+</section>
+<section id="section-5">
+<h2>05 · 时间线与下一步</h2>
+<div class="table-wrap"><table><thead><tr><th>日期／顺序</th><th>事实或下一门槛</th></tr></thead><tbody>
+<tr><td>2026-10-09</td><td>Timmy 确认 Android 3.9.26 已交 Amy 测试，环境为 staging；验收结果待确认。</td></tr>
+<tr><td>接下来</td><td>跟进本次测试结果，补齐订阅边界情况及待支付订单处理；实现、测试通过和发布分别记录。</td></tr>
+<tr><td>后续验收</td><td>待改进实现后，验证 Stripe / Google 恢复支付、取消、可配置过期及并发结果；完成和发布日期均待确认。</td></tr>
+</tbody></table></div>
+</section>
+<section id="section-6">
+<h2>06 · 本次补充的范围</h2>
+<p>本页补充此前截至10月8日的 Arrowfish 进度报告，仅新增10月9日的测试交付和待处理事项。此前报告保留原日期与口径，FFF 进展不受本次更新影响。</p><p><a href="20261009_progress-update.html">查看此前 Arrowfish 进度报告</a></p>
+</section>
+</main></body></html>

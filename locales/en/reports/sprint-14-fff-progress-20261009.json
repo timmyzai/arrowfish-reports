@@ -1,0 +1,832 @@
+{
+  "schemaVersion": 1,
+  "reportId": "sprint-14-fff-progress-20261009",
+  "sourceFile": "Stakeholder/Sprint-14/20261009_fff-progress.html",
+  "sourceVersion": "640b15e2dd48a71b",
+  "units": [
+    {
+      "id": "u_2edd5c0f03351d87",
+      "kind": "text",
+      "source": "第14阶段 · FFF 客户端产品完成度 · 2026-10-09",
+      "occurrence": 0,
+      "target": "Sprint 14 · FFF Client Product Completion · 2026-10-09",
+      "context": "title @ line 4"
+    },
+    {
+      "id": "u_c3f5d994ff349653",
+      "kind": "attribute",
+      "source": "FFF 截至2026-10-09的客户端进展、支付重构、平台发布门槛与已核对时间线。",
+      "occurrence": 0,
+      "target": "FFF client progress, payment reconstruction, platform release gates and reconciled timeline through 2026-10-09.",
+      "context": "meta @ line 4 · surrounding text: 第14阶段 · FFF 客户端产品完成度 · 2026-10-09",
+      "attribute": "content"
+    },
+    {
+      "id": "u_4925dac495adbcd6",
+      "kind": "text",
+      "source": "第14阶段 · FFF 客户端产品完成度 · 2026-10-09",
+      "occurrence": 1,
+      "target": "Sprint 14 · FFF Client Product Completion · 2026-10-09",
+      "context": "h1 @ line 8"
+    },
+    {
+      "id": "u_3a33de91088f6ed6",
+      "kind": "text",
+      "source": "报告日期 2026-10-09 · 第14阶段 2026-10-03 至 2026-10-16 · 马来西亚时间",
+      "occurrence": 0,
+      "target": "Report date 2026-10-09 · Sprint 14: 2026-10-03 to 2026-10-16 · Malaysia time",
+      "context": "p.meta @ line 9"
+    },
+    {
+      "id": "u_143a725175761289",
+      "kind": "text",
+      "source": "01 · 关键状态与业务影响",
+      "occurrence": 0,
+      "target": "01 · Key Status and Business Impact",
+      "context": "h2 @ line 11"
+    },
+    {
+      "id": "u_33edd47107d85ae5",
+      "kind": "text",
+      "source": "核心连接、选线与账户功能已有实现进展；四条购买链路仍在重构，App 尚不能完成收款。Apple 修复整合、Windows 重出包与各平台签名和实机验收仍是发布门槛。",
+      "occurrence": 0,
+      "target": "Core connection, route selection and account functionality have progressed in implementation. Four purchase flows are still being rebuilt, so the app cannot yet complete payment collection. Apple fix integration, Windows repackaging, platform signing and device acceptance testing remain release gates.",
+      "context": "p @ line 12"
+    },
+    {
+      "id": "u_78b8a58b2daeb24f",
+      "kind": "text",
+      "source": "Flutter 客户端由 Lex 负责；iOS 与 macOS 平台交付由马来西亚团队负责；支付网关商务事项由 Roy 负责。共用代码不代表四个平台已通过同等验收。",
+      "occurrence": 0,
+      "target": "Lex owns the Flutter client. The Malaysia team owns iOS and macOS platform delivery; Roy owns payment-gateway commercial matters. Shared code does not establish equivalent acceptance across all four platforms.",
+      "context": "p @ line 13"
+    },
+    {
+      "id": "u_9489e398b49b11e7",
+      "kind": "text",
+      "source": "目标平台",
+      "occurrence": 0,
+      "target": "Target platforms",
+      "context": "span @ line 14 · surrounding text: 4 目标平台 33 页面（Lex 统计） 3 界面语言 0 / 3 / 4 年度目标：完成 / 进行中 / 待执行"
+    },
+    {
+      "id": "u_ebf40b8a4d1f1ab5",
+      "kind": "text",
+      "source": "页面（Lex 统计）",
+      "occurrence": 0,
+      "target": "Pages (Lex inventory)",
+      "context": "span @ line 14 · surrounding text: 4 目标平台 33 页面（Lex 统计） 3 界面语言 0 / 3 / 4 年度目标：完成 / 进行中 / 待执行"
+    },
+    {
+      "id": "u_1b4ea7a9ddb49362",
+      "kind": "text",
+      "source": "界面语言",
+      "occurrence": 0,
+      "target": "Interface languages",
+      "context": "span @ line 14 · surrounding text: 4 目标平台 33 页面（Lex 统计） 3 界面语言 0 / 3 / 4 年度目标：完成 / 进行中 / 待执行"
+    },
+    {
+      "id": "u_0f9b21e2df78af58",
+      "kind": "text",
+      "source": "年度目标：完成 / 进行中 / 待执行",
+      "occurrence": 0,
+      "target": "Annual goals: done / in progress / planned",
+      "context": "span @ line 14 · surrounding text: 4 目标平台 33 页面（Lex 统计） 3 界面语言 0 / 3 / 4 年度目标：完成 / 进行中 / 待执行"
+    },
+    {
+      "id": "u_6cf2f4430d931b7e",
+      "kind": "text",
+      "source": "02 · 模块进展与用户影响",
+      "occurrence": 0,
+      "target": "02 · Module Progress and User Impact",
+      "context": "h2 @ line 17"
+    },
+    {
+      "id": "u_1d262c63ff929c8e",
+      "kind": "text",
+      "source": "模块",
+      "occurrence": 0,
+      "target": "Module",
+      "context": "th @ line 19 · surrounding text: 模块 实现与当前边界"
+    },
+    {
+      "id": "u_39124b8a8e557b7e",
+      "kind": "text",
+      "source": "实现与当前边界",
+      "occurrence": 0,
+      "target": "Implementation and Current Boundary",
+      "context": "th @ line 19 · surrounding text: 模块 实现与当前边界"
+    },
+    {
+      "id": "u_567075b2fd8161c8",
+      "kind": "text",
+      "source": "连接、线路与防护",
+      "occurrence": 0,
+      "target": "Connection, Routes and Protection",
+      "context": "td @ line 20 · surrounding text: 连接、线路与防护 Lex 报告连接、切换、测速、自动选优、阻断与额度提醒已实现；Apple 配置加载仍受阻，跨平台实际连接与防护验收待确认。"
+    },
+    {
+      "id": "u_8cb2919a3d1892f5",
+      "kind": "text",
+      "source": "Lex 报告连接、切换、测速、自动选优、阻断与额度提醒已实现；Apple 配置加载仍受阻，跨平台实际连接与防护验收待确认。",
+      "occurrence": 0,
+      "target": "Lex reports implementation of connection, switching, latency checks, automatic selection, blocking and quota reminders. Apple configuration loading remains blocked; cross-platform connection and protection acceptance is unconfirmed.",
+      "context": "td @ line 20 · surrounding text: 连接、线路与防护 Lex 报告连接、切换、测速、自动选优、阻断与额度提醒已实现；Apple 配置加载仍受阻，跨平台实际连接与防护验收待确认。"
+    },
+    {
+      "id": "u_2e6945777e4594d7",
+      "kind": "text",
+      "source": "商品浏览与交易",
+      "occurrence": 0,
+      "target": "Product Browsing and Transactions",
+      "context": "td @ line 21 · surrounding text: 商品浏览与交易 商品、渠道与优惠券选择已有界面；用户充值、基底套餐、独享专线、独享 IP 的下单、支付与结果同步仍在重构，尚不能收款。"
+    },
+    {
+      "id": "u_62d42d76adb7b3b7",
+      "kind": "text",
+      "source": "商品、渠道与优惠券选择已有界面；用户充值、基底套餐、独享专线、独享 IP 的下单、支付与结果同步仍在重构，尚不能收款。",
+      "occurrence": 0,
+      "target": "Product, channel and coupon selection interfaces exist. Ordering, payment and result synchronization for recharge, base plans, dedicated lines and dedicated IPs are still being rebuilt; payment collection is not yet available.",
+      "context": "td @ line 21 · surrounding text: 商品浏览与交易 商品、渠道与优惠券选择已有界面；用户充值、基底套餐、独享专线、独享 IP 的下单、支付与结果同步仍在重构，尚不能收款。"
+    },
+    {
+      "id": "u_539b6559a5ea6912",
+      "kind": "text",
+      "source": "订阅、会员与账户",
+      "occurrence": 0,
+      "target": "Subscriptions, Membership and Accounts",
+      "context": "td @ line 22 · surrounding text: 订阅、会员与账户 订阅展示、自动续费开关、签到、设备绑定及手机／邮箱绑定已有实现。管理界面不等于自动扣款、续期或购买闭环已验收。"
+    },
+    {
+      "id": "u_c88d8665255f2fe1",
+      "kind": "text",
+      "source": "订阅展示、自动续费开关、签到、设备绑定及手机／邮箱绑定已有实现。管理界面不等于自动扣款、续期或购买闭环已验收。",
+      "occurrence": 0,
+      "target": "Subscription views, an auto-renewal switch, check-in, device binding and phone/email binding are implemented. Management interfaces do not establish acceptance of automatic charging, renewal or purchase completion.",
+      "context": "td @ line 22 · surrounding text: 订阅、会员与账户 订阅展示、自动续费开关、签到、设备绑定及手机／邮箱绑定已有实现。管理界面不等于自动扣款、续期或购买闭环已验收。"
+    },
+    {
+      "id": "u_e73f71afc3f2461c",
+      "kind": "text",
+      "source": "用户可见断点",
+      "occurrence": 0,
+      "target": "User-facing Gaps",
+      "context": "td @ line 23 · surrounding text: 用户可见断点 找回密码与免密号入口、注册推荐人提交、优惠券入口、书签交互及官网品牌链接仍需补齐；充值按钮随交易重构接通。"
+    },
+    {
+      "id": "u_1b226bee08a0b2ab",
+      "kind": "text",
+      "source": "找回密码与免密号入口、注册推荐人提交、优惠券入口、书签交互及官网品牌链接仍需补齐；充值按钮随交易重构接通。",
+      "occurrence": 0,
+      "target": "Password and passwordless-number recovery, referral submission, coupon entry, bookmark interactions and the branded website link still need work. Recharge will be connected as part of transaction reconstruction.",
+      "context": "td @ line 23 · surrounding text: 用户可见断点 找回密码与免密号入口、注册推荐人提交、优惠券入口、书签交互及官网品牌链接仍需补齐；充值按钮随交易重构接通。"
+    },
+    {
+      "id": "u_96038093239811cf",
+      "kind": "text",
+      "source": "智能分流与进阶能力",
+      "occurrence": 0,
+      "target": "Smart Routing and Advanced Features",
+      "context": "td @ line 24 · surrounding text: 智能分流与进阶能力 当前内核尚未接通规则分流；全局／直连入口、自定义规则、分应用代理与自动连接／重连均未完成。配置或文案存在不代表能力可用，多跳保持独立目标。"
+    },
+    {
+      "id": "u_0bbe28ed2bdd4ac0",
+      "kind": "text",
+      "source": "当前内核尚未接通规则分流；全局／直连入口、自定义规则、分应用代理与自动连接／重连均未完成。配置或文案存在不代表能力可用，多跳保持独立目标。",
+      "occurrence": 0,
+      "target": "The current engine has not integrated rule-based traffic splitting. Global/direct controls, custom rules, per-app proxying and automatic connection/reconnection remain incomplete. Configuration or copy does not establish usable capability; multi-hop remains a separate goal.",
+      "context": "td @ line 24 · surrounding text: 智能分流与进阶能力 当前内核尚未接通规则分流；全局／直连入口、自定义规则、分应用代理与自动连接／重连均未完成。配置或文案存在不代表能力可用，多跳保持独立目标。"
+    },
+    {
+      "id": "u_78f8d597854feaad",
+      "kind": "text",
+      "source": "体验与发布资产",
+      "occurrence": 0,
+      "target": "Experience and Release Assets",
+      "context": "td @ line 25 · surrounding text: 体验与发布资产 三种语言与自适应界面已有实现；正式图标、正式广告配置、商店材料及发布验证仍需完成。测试广告配置不能计为广告收入能力。"
+    },
+    {
+      "id": "u_6087df34fd743d99",
+      "kind": "text",
+      "source": "三种语言与自适应界面已有实现；正式图标、正式广告配置、商店材料及发布验证仍需完成。测试广告配置不能计为广告收入能力。",
+      "occurrence": 0,
+      "target": "Three languages and adaptive layouts are implemented. Production icons, production advertising configuration, store materials and release validation remain outstanding. Test advertising configuration does not establish advertising revenue capability.",
+      "context": "td @ line 25 · surrounding text: 体验与发布资产 三种语言与自适应界面已有实现；正式图标、正式广告配置、商店材料及发布验证仍需完成。测试广告配置不能计为广告收入能力。"
+    },
+    {
+      "id": "u_cde01ee5b726c5bf",
+      "kind": "text",
+      "source": "页面、用例与模块完成度均来自 Lex 的功能盘点，不是整体完成率或验收率。开发分支可核对 45 个测试文件；约 234 个用例为 Lex 统计，本轮没有重新计数或运行测试。",
+      "occurrence": 0,
+      "target": "Page counts, test inventory and module completion assessments come from Lex, not an overall completion or acceptance rate. The development branch contains 45 test files; approximately 234 cases are reported by Lex and were not recounted or run in this review.",
+      "context": "p @ line 27"
+    },
+    {
+      "id": "u_167f44eff7808d51",
+      "kind": "text",
+      "source": "03 · 关键时间节点",
+      "occurrence": 0,
+      "target": "03 · Key Milestones",
+      "context": "h2 @ line 30"
+    },
+    {
+      "id": "u_a67bc2eeaa8590b5",
+      "kind": "text",
+      "source": "日期（马来西亚）",
+      "occurrence": 0,
+      "target": "Date (Malaysia)",
+      "context": "th @ line 32 · surrounding text: 日期（马来西亚） 事件 证据边界"
+    },
+    {
+      "id": "u_c62ea4313a4eec18",
+      "kind": "text",
+      "source": "事件",
+      "occurrence": 0,
+      "target": "Event",
+      "context": "th @ line 32 · surrounding text: 日期（马来西亚） 事件 证据边界"
+    },
+    {
+      "id": "u_a947e589c1d03279",
+      "kind": "text",
+      "source": "证据边界",
+      "occurrence": 0,
+      "target": "Evidence Boundary",
+      "context": "th @ line 32 · surrounding text: 日期（马来西亚） 事件 证据边界"
+    },
+    {
+      "id": "u_8691d058ca857233",
+      "kind": "text",
+      "source": "Android APK 交 QA",
+      "occurrence": 0,
+      "target": "Android APK handed to QA",
+      "context": "td @ line 33 · surrounding text: 2026-08-28 Android APK 交 QA 历史测试交付；当前版本验收待确认。"
+    },
+    {
+      "id": "u_2fdbd22648b7cd2e",
+      "kind": "text",
+      "source": "历史测试交付；当前版本验收待确认。",
+      "occurrence": 0,
+      "target": "Historical test delivery; current-version acceptance is unconfirmed.",
+      "context": "td @ line 33 · surrounding text: 2026-08-28 Android APK 交 QA 历史测试交付；当前版本验收待确认。"
+    },
+    {
+      "id": "u_8ac16f33e30c05d8",
+      "kind": "text",
+      "source": "macOS 与 iPhone 未签名构建记录",
+      "occurrence": 0,
+      "target": "macOS and iPhone builds without signing recorded",
+      "context": "td @ line 34 · surrounding text: 2026-09-15 macOS 与 iPhone 未签名构建记录 不等于签名安装、实机连接或商店发布。"
+    },
+    {
+      "id": "u_1b2b3b1165e33220",
+      "kind": "text",
+      "source": "不等于签名安装、实机连接或商店发布。",
+      "occurrence": 0,
+      "target": "Not evidence of signed installation, device connection or store release.",
+      "context": "td @ line 34 · surrounding text: 2026-09-15 macOS 与 iPhone 未签名构建记录 不等于签名安装、实机连接或商店发布。"
+    },
+    {
+      "id": "u_2b2bf7af48af44fb",
+      "kind": "text",
+      "source": "FFF Windows staging 部署获 Timmy 确认",
+      "occurrence": 0,
+      "target": "Timmy confirmed FFF Windows staging deployment",
+      "context": "td @ line 35 · surrounding text: 2026-09-20 FFF Windows staging 部署获 Timmy 确认 09-23 记入报告；版本、安装包、签名与后续提交覆盖范围待确认。"
+    },
+    {
+      "id": "u_13f293a525e429ad",
+      "kind": "text",
+      "source": "09-23 记入报告；版本、安装包、签名与后续提交覆盖范围待确认。",
+      "occurrence": 0,
+      "target": "Recorded on 09-23; version, installer, signing and coverage of subsequent commits remain unconfirmed.",
+      "context": "td @ line 35 · surrounding text: 2026-09-20 FFF Windows staging 部署获 Timmy 确认 09-23 记入报告；版本、安装包、签名与后续提交覆盖范围待确认。"
+    },
+    {
+      "id": "u_be19acd05f970b02",
+      "kind": "text",
+      "source": "Apple 客户端与插件分别提交修复",
+      "occurrence": 0,
+      "target": "Apple client and plugin fixes committed separately",
+      "context": "td @ line 36 · surrounding text: 2026-09-28 Apple 客户端与插件分别提交修复 两处修复仍在独立分支，尚未整合；需重新验证。"
+    },
+    {
+      "id": "u_b07b9cf3b725faf6",
+      "kind": "text",
+      "source": "两处修复仍在独立分支，尚未整合；需重新验证。",
+      "occurrence": 0,
+      "target": "Both fixes remain on separate branches and have not been integrated; revalidation is required.",
+      "context": "td @ line 36 · surrounding text: 2026-09-28 Apple 客户端与插件分别提交修复 两处修复仍在独立分支，尚未整合；需重新验证。"
+    },
+    {
+      "id": "u_c30d6253d3a457f3",
+      "kind": "text",
+      "source": "支付契约检查记录存在接口不一致",
+      "occurrence": 0,
+      "target": "Payment contract check recorded API mismatches",
+      "context": "td @ line 37 · surrounding text: 2026-10-02 支付契约检查记录存在接口不一致 历史诊断，不是本轮重新执行的测试。"
+    },
+    {
+      "id": "u_22adf2a165bbe06e",
+      "kind": "text",
+      "source": "历史诊断，不是本轮重新执行的测试。",
+      "occurrence": 0,
+      "target": "Historical diagnostic evidence, not a test rerun in this review.",
+      "context": "td @ line 37 · surrounding text: 2026-10-02 支付契约检查记录存在接口不一致 历史诊断，不是本轮重新执行的测试。"
+    },
+    {
+      "id": "u_f07a30da26e5b823",
+      "kind": "text",
+      "source": "Windows 双架构资产与探测实现",
+      "occurrence": 0,
+      "target": "Windows dual-architecture assets and detection implemented",
+      "context": "td @ line 38 · surrounding text: 2026-10-07 Windows 双架构资产与探测实现 打包脚本仍检查旧路径；ARM 应用产物与设备验收待确认。"
+    },
+    {
+      "id": "u_d0e34c14a6e3a79e",
+      "kind": "text",
+      "source": "打包脚本仍检查旧路径；ARM 应用产物与设备验收待确认。",
+      "occurrence": 0,
+      "target": "The packaging script still checks obsolete paths; ARM application artifacts and device acceptance are unconfirmed.",
+      "context": "td @ line 38 · surrounding text: 2026-10-07 Windows 双架构资产与探测实现 打包脚本仍检查旧路径；ARM 应用产物与设备验收待确认。"
+    },
+    {
+      "id": "u_99f25427517c71ce",
+      "kind": "text",
+      "source": "本轮检查的 Flutter 开发分支最新提交",
+      "occurrence": 0,
+      "target": "Latest Flutter development-branch commit inspected",
+      "context": "td @ line 39 · surrounding text: 2026-10-08 本轮检查的 Flutter 开发分支最新提交 源码截止日，不是部署或验收日期。"
+    },
+    {
+      "id": "u_f2966961e211770b",
+      "kind": "text",
+      "source": "源码截止日，不是部署或验收日期。",
+      "occurrence": 0,
+      "target": "Source cutoff, not a deployment or acceptance date.",
+      "context": "td @ line 39 · surrounding text: 2026-10-08 本轮检查的 Flutter 开发分支最新提交 源码截止日，不是部署或验收日期。"
+    },
+    {
+      "id": "u_cf0b59581ccab756",
+      "kind": "text",
+      "source": "收到 Lex 产品完成度报告并对账",
+      "occurrence": 0,
+      "target": "Lex completion report received and reconciled",
+      "context": "td @ line 40 · surrounding text: 2026-10-09 收到 Lex 产品完成度报告并对账 评估与报告日期，不代表所有功能在当日完成。"
+    },
+    {
+      "id": "u_4098ce452b3a86b1",
+      "kind": "text",
+      "source": "评估与报告日期，不代表所有功能在当日完成。",
+      "occurrence": 0,
+      "target": "Assessment and report date; not the completion date of every feature.",
+      "context": "td @ line 40 · surrounding text: 2026-10-09 收到 Lex 产品完成度报告并对账 评估与报告日期，不代表所有功能在当日完成。"
+    },
+    {
+      "id": "u_73a8e1010fe8236b",
+      "kind": "text",
+      "source": "04 · 各平台发布准备",
+      "occurrence": 0,
+      "target": "04 · Platform Release Readiness",
+      "context": "h2 @ line 44"
+    },
+    {
+      "id": "u_daff6521ffb8dafb",
+      "kind": "text",
+      "source": "平台",
+      "occurrence": 0,
+      "target": "Platform",
+      "context": "th @ line 46 · surrounding text: 平台 已记录进展 下一发布门槛"
+    },
+    {
+      "id": "u_0d25ff262e3f7cb7",
+      "kind": "text",
+      "source": "已记录进展",
+      "occurrence": 0,
+      "target": "Recorded Progress",
+      "context": "th @ line 46 · surrounding text: 平台 已记录进展 下一发布门槛"
+    },
+    {
+      "id": "u_589d64e63f37ab9f",
+      "kind": "text",
+      "source": "下一发布门槛",
+      "occurrence": 0,
+      "target": "Next Release Gate",
+      "context": "th @ line 46 · surrounding text: 平台 已记录进展 下一发布门槛"
+    },
+    {
+      "id": "u_95c9e776b5eb5848",
+      "kind": "text",
+      "source": "核心集成与历史 APK 交 QA 已有记录。",
+      "occurrence": 0,
+      "target": "Core integration and historical APK handoff to QA are recorded.",
+      "context": "td @ line 47 · surrounding text: Android 核心集成与历史 APK 交 QA 已有记录。 补正式图标与广告配置，完成购买、连接、升级及商店准备验收。"
+    },
+    {
+      "id": "u_4cecf3c0fc6e540b",
+      "kind": "text",
+      "source": "补正式图标与广告配置，完成购买、连接、升级及商店准备验收。",
+      "occurrence": 0,
+      "target": "Complete production icons and advertising configuration, then purchase, connection, upgrade and store-readiness acceptance.",
+      "context": "td @ line 47 · surrounding text: Android 核心集成与历史 APK 交 QA 已有记录。 补正式图标与广告配置，完成购买、连接、升级及商店准备验收。"
+    },
+    {
+      "id": "u_5b6ef50972b5bed9",
+      "kind": "text",
+      "source": "09-20 staging 部署已确认；10-07 资产目录调整。",
+      "occurrence": 0,
+      "target": "09-20 staging deployment is confirmed; asset directories changed on 10-07.",
+      "context": "td @ line 48 · surrounding text: Windows amd64 09-20 staging 部署已确认；10-07 资产目录调整。 修复当前重出包链路，记录具体产物，完成签名、安装升级、连接与支付验收。"
+    },
+    {
+      "id": "u_72a8dc8374ca1786",
+      "kind": "text",
+      "source": "修复当前重出包链路，记录具体产物，完成签名、安装升级、连接与支付验收。",
+      "occurrence": 0,
+      "target": "Repair current repackaging, identify the artifact, and complete signing, installation/upgrade, connection and payment acceptance.",
+      "context": "td @ line 48 · surrounding text: Windows amd64 09-20 staging 部署已确认；10-07 资产目录调整。 修复当前重出包链路，记录具体产物，完成签名、安装升级、连接与支付验收。"
+    },
+    {
+      "id": "u_c14c4240a8db4c52",
+      "kind": "text",
+      "source": "原生核心与辅助服务资产、真机架构探测已有实现。",
+      "occurrence": 0,
+      "target": "Native core/helper assets and physical-device architecture detection are implemented.",
+      "context": "td @ line 49 · surrounding text: Windows arm64 原生核心与辅助服务资产、真机架构探测已有实现。 核对应用产物架构并在 ARM 设备安装、实测；尚无验收结论。"
+    },
+    {
+      "id": "u_60c4cd340121f13c",
+      "kind": "text",
+      "source": "核对应用产物架构并在 ARM 设备安装、实测；尚无验收结论。",
+      "occurrence": 0,
+      "target": "Identify application artifact architecture and test installation and operation on ARM devices; no acceptance conclusion is available.",
+      "context": "td @ line 49 · surrounding text: Windows arm64 原生核心与辅助服务资产、真机架构探测已有实现。 核对应用产物架构并在 ARM 设备安装、实测；尚无验收结论。"
+    },
+    {
+      "id": "u_24f1cea04a9f2e7e",
+      "kind": "text",
+      "source": "历史未签名构建及独立分支修复已有记录。",
+      "occurrence": 0,
+      "target": "Historical builds without signing and separate-branch fixes are recorded.",
+      "context": "td @ line 50 · surrounding text: iOS 历史未签名构建及独立分支修复已有记录。 马来西亚团队整合客户端与插件修复，再完成签名、配置加载、连接、支付与实机验收。"
+    },
+    {
+      "id": "u_1acfd081f853b132",
+      "kind": "text",
+      "source": "马来西亚团队整合客户端与插件修复，再完成签名、配置加载、连接、支付与实机验收。",
+      "occurrence": 0,
+      "target": "The Malaysia team must integrate client and plugin fixes, then complete signing, configuration loading, connection, payment and device acceptance.",
+      "context": "td @ line 50 · surrounding text: iOS 历史未签名构建及独立分支修复已有记录。 马来西亚团队整合客户端与插件修复，再完成签名、配置加载、连接、支付与实机验收。"
+    },
+    {
+      "id": "u_644a8780733589ef",
+      "kind": "text",
+      "source": "历史未签名构建及独立分支修复已有记录。",
+      "occurrence": 1,
+      "target": "Historical builds without signing and separate-branch fixes are recorded.",
+      "context": "td @ line 51 · surrounding text: macOS 历史未签名构建及独立分支修复已有记录。 马来西亚团队整合修复，再完成签名、公证、安装、连接与支付验收。"
+    },
+    {
+      "id": "u_2a3a90f142470325",
+      "kind": "text",
+      "source": "马来西亚团队整合修复，再完成签名、公证、安装、连接与支付验收。",
+      "occurrence": 0,
+      "target": "The Malaysia team must integrate fixes, then complete signing, notarization, installation, connection and payment acceptance.",
+      "context": "td @ line 51 · surrounding text: macOS 历史未签名构建及独立分支修复已有记录。 马来西亚团队整合修复，再完成签名、公证、安装、连接与支付验收。"
+    },
+    {
+      "id": "u_3372359eed17d540",
+      "kind": "text",
+      "source": "正式发布顺序保留 Android → Windows → macOS/iOS，开发可并行。Linux 保留在后续路线中，不在本期交付范围。当前安装包目录缺失不能否定 09-20 的 Windows staging 部署，也不能证明历史安装包从未产出。",
+      "occurrence": 0,
+      "target": "The formal release order remains Android → Windows → macOS/iOS; development can proceed in parallel. Linux stays on the later roadmap and is not in this delivery scope. A missing current installer directory cannot negate the 09-20 Windows staging deployment or prove that no historical installer existed.",
+      "context": "p @ line 53"
+    },
+    {
+      "id": "u_e2184cac3434ff42",
+      "kind": "text",
+      "source": "05 · 阻塞与后续顺序",
+      "occurrence": 0,
+      "target": "05 · Blockers and Next Steps",
+      "context": "h2 @ line 56"
+    },
+    {
+      "id": "u_c721c5c7e02a4c9b",
+      "kind": "text",
+      "source": "优先接通四条交易链路：验证下单、支付成功／失败、重复事件、订单核对及余额／权益结果；支付网关商务事项由 Roy 负责。",
+      "occurrence": 0,
+      "target": "Prioritize the four transaction flows: verify ordering, payment success/failure, duplicate events, order reconciliation and resulting balances/entitlements. Roy owns payment-gateway commercial matters.",
+      "context": "li @ line 58"
+    },
+    {
+      "id": "u_a9080363c929ca12",
+      "kind": "text",
+      "source": "并行整合 Apple 两处修复：由马来西亚团队完成配置加载、分组、连接与账号清理回归；同时修复 Windows 当前打包链路。",
+      "occurrence": 0,
+      "target": "In parallel, the Malaysia team integrates both Apple fixes and verifies configuration loading, grouping, connection and account cleanup. Repair the current Windows packaging flow alongside this work.",
+      "context": "li @ line 59"
+    },
+    {
+      "id": "u_325e31b347d8eaeb",
+      "kind": "text",
+      "source": "关闭平台发布门槛：补用户可见断点、品牌与广告配置，逐平台记录产物、签名、安装升级、连接与支付验收。",
+      "occurrence": 0,
+      "target": "Close platform release gates: address user-facing gaps, branding and advertising configuration; record artifacts, signing, installation/upgrade, connection and payment acceptance for each platform.",
+      "context": "li @ line 60"
+    },
+    {
+      "id": "u_d908efa2a98fb3de",
+      "kind": "text",
+      "source": "另行排期进阶能力：智能分流依赖内核支持；多跳、应用内购、推送与站内信不因本次报告自动纳入首发承诺。",
+      "occurrence": 0,
+      "target": "Schedule advanced capabilities separately: smart routing depends on engine support. Multi-hop, in-app purchases, push and in-app messages are not automatically committed to the first release by this report.",
+      "context": "li @ line 61"
+    },
+    {
+      "id": "u_2a03a1cef28c28c7",
+      "kind": "text",
+      "source": "以上为依赖与优先顺序，不是承诺完成日期。G10 原目标为 2026 年 10 月，现保留为历史目标；当前完成与各平台发布日期均待确认。",
+      "occurrence": 0,
+      "target": "These are dependencies and priorities, not committed completion dates. G10 previously targeted October 2026; that is retained as the historical target. Current completion and platform release dates are unconfirmed.",
+      "context": "p @ line 62"
+    },
+    {
+      "id": "u_c9aa9a923f9d5265",
+      "kind": "text",
+      "source": "本期没有新增生产收入或成本核验，不换算收入或节省金额。支付链路未接通直接影响收款；测试广告配置与推荐人提交缺口也限制收入及归因验证。",
+      "occurrence": 0,
+      "target": "No new production revenue or cost verification was performed, so no revenue or savings amount is claimed. Incomplete payment flows directly block collection; test advertising configuration and missing referral submission also limit revenue and attribution verification.",
+      "context": "p @ line 63"
+    },
+    {
+      "id": "u_edcc30c537644a8c",
+      "kind": "text",
+      "source": "06 · 安全与独立后端边界",
+      "occurrence": 0,
+      "target": "06 · Security and Backend Isolation",
+      "context": "h2 @ line 66"
+    },
+    {
+      "id": "u_6a7b382539f41ea2",
+      "kind": "text",
+      "source": "FFF 必须独立部署运行环境、账号、数据库、Redis、凭证与迁移历史，仅复用版本化源码。本报告没有提供独立后端交付或安全权限变更证据，G14/G15 保持待执行；客户端支付重构不能替代后端隔离验收。",
+      "occurrence": 0,
+      "target": "FFF requires separate runtime deployment, accounts, databases, Redis, credentials and migration history; only versioned source modules are reused. This report provides no delivery evidence for the isolated backend or security-access changes, so G14/G15 remain planned. Client payment reconstruction does not establish backend-isolation acceptance.",
+      "context": "p @ line 67"
+    },
+    {
+      "id": "u_1cfcee84d456ae45",
+      "kind": "text",
+      "source": "断网保护已有实现报告，实际无泄漏与各平台权限行为仍需逐平台验收。本次未重新审计基础设施或源码访问权限。",
+      "occurrence": 0,
+      "target": "Blocking protection has reported implementation, but leak prevention and platform permissions still require platform-specific acceptance. Infrastructure and source-access permissions were not re-audited in this review.",
+      "context": "p @ line 68"
+    },
+    {
+      "id": "u_496d70cd425472e2",
+      "kind": "text",
+      "source": "本报告接续同日 Arrowfish 报告中“等待 Lex 报告”的记录；原报告保留当时口径，本页依据新收到的 FFF 报告及历史证据补充。",
+      "occurrence": 0,
+      "target": "This report follows the same-day Arrowfish report that was awaiting Lex’s update. The original report retains its earlier position; this page adds the newly received FFF report and historical evidence.",
+      "context": "p @ line 71"
+    },
+    {
+      "id": "u_998e20e03e48a889",
+      "kind": "text",
+      "source": "查看此前 Arrowfish 报告",
+      "occurrence": 0,
+      "target": "View the earlier Arrowfish report",
+      "context": "a @ line 72 · surrounding text: 查看此前 Arrowfish 报告 · 查看 FFF 年度目标"
+    },
+    {
+      "id": "u_3a743715eb38fd2d",
+      "kind": "text",
+      "source": "查看 FFF 年度目标",
+      "occurrence": 0,
+      "target": "View FFF annual goals",
+      "context": "a @ line 72 · surrounding text: 查看此前 Arrowfish 报告 · 查看 FFF 年度目标"
+    }
+  ],
+  "blocks": {
+    "b0001": {
+      "type": "heading",
+      "source": "第14阶段 · FFF 客户端产品完成度 · 2026-10-09",
+      "occurrence": 0
+    },
+    "b0002": {
+      "type": "p",
+      "source": "报告日期 2026-10-09 · 第14阶段 2026-10-03 至 2026-10-16 · 马来西亚时间",
+      "occurrence": 0
+    },
+    "b0003": {
+      "type": "heading",
+      "source": "01 · 关键状态与业务影响",
+      "occurrence": 0
+    },
+    "b0004": {
+      "type": "p",
+      "source": "核心连接、选线与账户功能已有实现进展；四条购买链路仍在重构，App 尚不能完成收款。Apple 修复整合、Windows 重出包与各平台签名和实机验收仍是发布门槛。",
+      "occurrence": 0
+    },
+    "b0005": {
+      "type": "p",
+      "source": "Flutter 客户端由 Lex 负责；iOS 与 macOS 平台交付由马来西亚团队负责；支付网关商务事项由 Roy 负责。共用代码不代表四个平台已通过同等验收。",
+      "occurrence": 0
+    },
+    "b0006": {
+      "type": "heading",
+      "source": "02 · 模块进展与用户影响",
+      "occurrence": 0
+    },
+    "b0007": {
+      "type": "table-row",
+      "source": "模块 实现与当前边界",
+      "occurrence": 0
+    },
+    "b0008": {
+      "type": "table-row",
+      "source": "连接、线路与防护 Lex 报告连接、切换、测速、自动选优、阻断与额度提醒已实现；Apple 配置加载仍受阻，跨平台实际连接与防护验收待确认。",
+      "occurrence": 0
+    },
+    "b0009": {
+      "type": "table-row",
+      "source": "商品浏览与交易 商品、渠道与优惠券选择已有界面；用户充值、基底套餐、独享专线、独享 IP 的下单、支付与结果同步仍在重构，尚不能收款。",
+      "occurrence": 0
+    },
+    "b0010": {
+      "type": "table-row",
+      "source": "订阅、会员与账户 订阅展示、自动续费开关、签到、设备绑定及手机／邮箱绑定已有实现。管理界面不等于自动扣款、续期或购买闭环已验收。",
+      "occurrence": 0
+    },
+    "b0011": {
+      "type": "table-row",
+      "source": "用户可见断点 找回密码与免密号入口、注册推荐人提交、优惠券入口、书签交互及官网品牌链接仍需补齐；充值按钮随交易重构接通。",
+      "occurrence": 0
+    },
+    "b0012": {
+      "type": "table-row",
+      "source": "智能分流与进阶能力 当前内核尚未接通规则分流；全局／直连入口、自定义规则、分应用代理与自动连接／重连均未完成。配置或文案存在不代表能力可用，多跳保持独立目标。",
+      "occurrence": 0
+    },
+    "b0013": {
+      "type": "table-row",
+      "source": "体验与发布资产 三种语言与自适应界面已有实现；正式图标、正式广告配置、商店材料及发布验证仍需完成。测试广告配置不能计为广告收入能力。",
+      "occurrence": 0
+    },
+    "b0014": {
+      "type": "p",
+      "source": "页面、用例与模块完成度均来自 Lex 的功能盘点，不是整体完成率或验收率。开发分支可核对 45 个测试文件；约 234 个用例为 Lex 统计，本轮没有重新计数或运行测试。",
+      "occurrence": 0
+    },
+    "b0015": {
+      "type": "heading",
+      "source": "03 · 关键时间节点",
+      "occurrence": 0
+    },
+    "b0016": {
+      "type": "table-row",
+      "source": "日期（马来西亚） 事件 证据边界",
+      "occurrence": 0
+    },
+    "b0017": {
+      "type": "table-row",
+      "source": "2026-08-28 Android APK 交 QA 历史测试交付；当前版本验收待确认。",
+      "occurrence": 0
+    },
+    "b0018": {
+      "type": "table-row",
+      "source": "2026-09-15 macOS 与 iPhone 未签名构建记录 不等于签名安装、实机连接或商店发布。",
+      "occurrence": 0
+    },
+    "b0019": {
+      "type": "table-row",
+      "source": "2026-09-20 FFF Windows staging 部署获 Timmy 确认 09-23 记入报告；版本、安装包、签名与后续提交覆盖范围待确认。",
+      "occurrence": 0
+    },
+    "b0020": {
+      "type": "table-row",
+      "source": "2026-09-28 Apple 客户端与插件分别提交修复 两处修复仍在独立分支，尚未整合；需重新验证。",
+      "occurrence": 0
+    },
+    "b0021": {
+      "type": "table-row",
+      "source": "2026-10-02 支付契约检查记录存在接口不一致 历史诊断，不是本轮重新执行的测试。",
+      "occurrence": 0
+    },
+    "b0022": {
+      "type": "table-row",
+      "source": "2026-10-07 Windows 双架构资产与探测实现 打包脚本仍检查旧路径；ARM 应用产物与设备验收待确认。",
+      "occurrence": 0
+    },
+    "b0023": {
+      "type": "table-row",
+      "source": "2026-10-08 本轮检查的 Flutter 开发分支最新提交 源码截止日，不是部署或验收日期。",
+      "occurrence": 0
+    },
+    "b0024": {
+      "type": "table-row",
+      "source": "2026-10-09 收到 Lex 产品完成度报告并对账 评估与报告日期，不代表所有功能在当日完成。",
+      "occurrence": 0
+    },
+    "b0025": {
+      "type": "heading",
+      "source": "04 · 各平台发布准备",
+      "occurrence": 0
+    },
+    "b0026": {
+      "type": "table-row",
+      "source": "平台 已记录进展 下一发布门槛",
+      "occurrence": 0
+    },
+    "b0027": {
+      "type": "table-row",
+      "source": "Android 核心集成与历史 APK 交 QA 已有记录。 补正式图标与广告配置，完成购买、连接、升级及商店准备验收。",
+      "occurrence": 0
+    },
+    "b0028": {
+      "type": "table-row",
+      "source": "Windows amd64 09-20 staging 部署已确认；10-07 资产目录调整。 修复当前重出包链路，记录具体产物，完成签名、安装升级、连接与支付验收。",
+      "occurrence": 0
+    },
+    "b0029": {
+      "type": "table-row",
+      "source": "Windows arm64 原生核心与辅助服务资产、真机架构探测已有实现。 核对应用产物架构并在 ARM 设备安装、实测；尚无验收结论。",
+      "occurrence": 0
+    },
+    "b0030": {
+      "type": "table-row",
+      "source": "iOS 历史未签名构建及独立分支修复已有记录。 马来西亚团队整合客户端与插件修复，再完成签名、配置加载、连接、支付与实机验收。",
+      "occurrence": 0
+    },
+    "b0031": {
+      "type": "table-row",
+      "source": "macOS 历史未签名构建及独立分支修复已有记录。 马来西亚团队整合修复，再完成签名、公证、安装、连接与支付验收。",
+      "occurrence": 0
+    },
+    "b0032": {
+      "type": "p",
+      "source": "正式发布顺序保留 Android → Windows → macOS/iOS，开发可并行。Linux 保留在后续路线中，不在本期交付范围。当前安装包目录缺失不能否定 09-20 的 Windows staging 部署，也不能证明历史安装包从未产出。",
+      "occurrence": 0
+    },
+    "b0033": {
+      "type": "heading",
+      "source": "05 · 阻塞与后续顺序",
+      "occurrence": 0
+    },
+    "b0034": {
+      "type": "li",
+      "source": "优先接通四条交易链路：验证下单、支付成功／失败、重复事件、订单核对及余额／权益结果；支付网关商务事项由 Roy 负责。",
+      "occurrence": 0
+    },
+    "b0035": {
+      "type": "li",
+      "source": "并行整合 Apple 两处修复：由马来西亚团队完成配置加载、分组、连接与账号清理回归；同时修复 Windows 当前打包链路。",
+      "occurrence": 0
+    },
+    "b0036": {
+      "type": "li",
+      "source": "关闭平台发布门槛：补用户可见断点、品牌与广告配置，逐平台记录产物、签名、安装升级、连接与支付验收。",
+      "occurrence": 0
+    },
+    "b0037": {
+      "type": "li",
+      "source": "另行排期进阶能力：智能分流依赖内核支持；多跳、应用内购、推送与站内信不因本次报告自动纳入首发承诺。",
+      "occurrence": 0
+    },
+    "b0038": {
+      "type": "p",
+      "source": "以上为依赖与优先顺序，不是承诺完成日期。G10 原目标为 2026 年 10 月，现保留为历史目标；当前完成与各平台发布日期均待确认。",
+      "occurrence": 0
+    },
+    "b0039": {
+      "type": "p",
+      "source": "本期没有新增生产收入或成本核验，不换算收入或节省金额。支付链路未接通直接影响收款；测试广告配置与推荐人提交缺口也限制收入及归因验证。",
+      "occurrence": 0
+    },
+    "b0040": {
+      "type": "heading",
+      "source": "06 · 安全与独立后端边界",
+      "occurrence": 0
+    },
+    "b0041": {
+      "type": "p",
+      "source": "FFF 必须独立部署运行环境、账号、数据库、Redis、凭证与迁移历史，仅复用版本化源码。本报告没有提供独立后端交付或安全权限变更证据，G14/G15 保持待执行；客户端支付重构不能替代后端隔离验收。",
+      "occurrence": 0
+    },
+    "b0042": {
+      "type": "p",
+      "source": "断网保护已有实现报告，实际无泄漏与各平台权限行为仍需逐平台验收。本次未重新审计基础设施或源码访问权限。",
+      "occurrence": 0
+    },
+    "b0043": {
+      "type": "p",
+      "source": "本报告接续同日 Arrowfish 报告中“等待 Lex 报告”的记录；原报告保留当时口径，本页依据新收到的 FFF 报告及历史证据补充。",
+      "occurrence": 0
+    },
+    "b0044": {
+      "type": "p",
+      "source": "查看此前 Arrowfish 报告 · 查看 FFF 年度目标",
+      "occurrence": 0
+    }
+  },
+  "reviewedTargetHash": "55f4955f09ea8f87"
+}

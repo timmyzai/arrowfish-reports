@@ -128,15 +128,15 @@
   {
     "id": "goal-2026-20260827",
     "name": {
-      "zh-CN": "Arrowfish、FFF 与共享管理能力 · 目标进展 · 更新至 2026-10-08",
-      "en": "Arrowfish, FFF and Shared Capabilities · Goal Progress · Updated 2026-10-08"
+      "zh-CN": "Arrowfish、FFF 与共享管理能力 · 目标进展 · 更新至 2026-10-09",
+      "en": "Arrowfish, FFF and Shared Capabilities · Goal Progress · Updated 2026-10-09"
     },
-    "date": "2026-10-08",
+    "date": "2026-10-09",
     "file": "Stakeholder/Goal-2026/20260827_goals.html",
     "translations": {
       "en": "locales/en/reports/goal-2026-20260827.json"
     },
-    "version": "20261009-1"
+    "version": "20261009-3"
   },
   {
     "id": "sprint-10-status-20260908",
@@ -246,6 +246,34 @@
       "en": "locales/en/reports/sprint-14-progress-20261009.json"
     },
     "defaultForSprintPage": true,
+    "version": "20261009-1"
+  },
+  {
+    "id": "sprint-14-fff-progress-20261009",
+    "name": {
+      "zh-CN": "第14阶段 · FFF 客户端产品完成度 · 2026-10-09",
+      "en": "Sprint 14 · FFF Client Product Completion · 2026-10-09"
+    },
+    "date": "2026-10-09",
+    "file": "Stakeholder/Sprint-14/20261009_fff-progress.html",
+    "translations": {
+      "en": "locales/en/reports/sprint-14-fff-progress-20261009.json"
+    },
+    "defaultForSprintPage": false,
+    "version": "20261009-1"
+  },
+  {
+    "id": "sprint-14-android-qa-20261009",
+    "name": {
+      "zh-CN": "第14阶段 · Arrowfish Android 3.9.26 测试交付补充",
+      "en": "Sprint 14 · Arrowfish Android 3.9.26 Test Delivery Update"
+    },
+    "date": "2026-10-09",
+    "file": "Stakeholder/Sprint-14/20261009_android-qa-update.html",
+    "translations": {
+      "en": "locales/en/reports/sprint-14-android-qa-20261009.json"
+    },
+    "defaultForSprintPage": false,
     "version": "20261009-1"
   }
 ]

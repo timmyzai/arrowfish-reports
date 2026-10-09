@@ -1,8 +1,10 @@
 {
   "order": [
+    "goal-2026-20260827",
     "sprint-12-progress-20261009",
     "sprint-14-progress-20261009",
-    "goal-2026-20260827",
+    "sprint-14-fff-progress-20261009",
+    "sprint-14-android-qa-20261009",
     "sprint-13-summary",
     "sprint-10-progress-20260923",
     "sprint-11-progress-20260923",
@@ -103,7 +105,7 @@
         {
           "label": "2026-08-22–09-18 · 第11–12阶段",
           "title": "会员生命周期与多端测试交付",
-          "result": "边界：9月18日的续费方案随后被否决，实现日期以第13–14阶段为准",
+          "result": "边界：9月18日是续费方案被否决的日期；确定规则的主流程于10月5日实现完成",
           "stage": "complete",
           "reportId": "goal-2026-20260827",
           "blockId": "b0066"
@@ -199,7 +201,7 @@
           "title": "可追溯生产发布与用户可用性验收",
           "status": "测试发布已留证，生产验收独立",
           "statusGroup": "progress",
-          "evidence": "8月12日生产整合事实保留；第11–13阶段新增 Android 测试发布记录及9月7日中国、台湾当次连接确认。第13–14阶段的改动大部分只到「已合并」，生产部署与验收为待确认。新增测试证据不代表生产发布或全部协议地区验收。",
+          "evidence": "8月12日生产整合事实保留；第11–13阶段新增 Android 测试发布记录及9月7日中国、台湾当次连接确认。10月9日 Timmy 确认 Android 3.9.26 已提供给 Amy 做 staging 测试，安装包到提交、渠道与具体时刻的映射尚未提供。其余第13–14阶段改动的部署与验收继续分别核对；本次测试交付不代表生产发布或验收通过。",
           "nextAction": "将客户端版本、后端运行版本、迁移、购买与连接结果对应；按实际生产发布补齐上线后验证。",
           "deadline": "P0 下次生产发布前",
           "timeline": "next-release",
@@ -301,10 +303,10 @@
         {
           "id": "G2",
           "title": "套餐续费与订阅管理",
-          "status": "规则10月1日确定，实现完成测试中",
+          "status": "主流程测试中，待支付边界待补齐",
           "statusGroup": "progress",
-          "evidence": "更正： 9月18日是方案被否决的日期，不是实现完成的日期。规则9月21日改为只保留续订、9月24日扩展到订阅与一次性两种模式、10月1日按 Google 的处理方式确定；实现10月5日完成，开发人员测试中。付款完成改由订单状态判断，支付流水表已合并。",
-          "nextAction": "完成测试环境 Stripe 回调对齐与沙盒验证，再完成重复购买、支付回调、退款和到期切换回归；分别记录客户端、后端部署与业务验收。正式环境的 Stripe 回调版本在生产部署时一并更新，源码已送出所需版本。",
+          "evidence": "更正： 9月18日是方案被否决的日期，不是实现完成的日期。规则9月21日改为只保留续订、9月24日扩展到订阅与一次性两种模式、10月1日按 Google 的处理方式确定；主流程10月5日实现完成并进入测试。10月9日 Android 3.9.26 提供给 Amy 做 staging 测试；Stripe / Google 中途退出后留下待支付订单，防重复订阅检查阻止再次购买，用户恢复与取消入口仍待补齐。",
+          "nextAction": "保留防重复订阅保护，补待支付订单查看、继续支付（Stripe 返回对应付款页面）、用户取消与定时过期；有效期拟由 BO 配置，60 分钟仅为建议值。Google 恢复流程按渠道验证，并覆盖取消／过期与延迟支付结果并发；既有 Stripe 回调、退款和到期切换回归继续按各自证据验收，完成日期待确认。",
           "deadline": "年底前 提前续费、自动续费、订阅管理",
           "timeline": "year-end",
           "atRisk": false,
@@ -426,9 +428,9 @@
       },
       "phases": [
         {
-          "label": "2026-05-18–09-18 · 客户端实时口径",
-          "title": "客户端基础与智能连接验收",
-          "result": "8月28日 APK 交 QA 后，继续推进线路、流量及跨端状态；连接与协议验收仍按平台关闭",
+          "label": "2026-05-18–10-09 · 客户端评估与历史证据",
+          "title": "基础连接与跨平台验收",
+          "result": "8月28日 Android APK 交 QA、9月20日 Windows staging 已记录；Apple 9月28日两处修复仍待整合，实际连接与协议按平台验收",
           "stage": "current",
           "reportId": "goal-2026-20260827",
           "blockId": "b0132"
@@ -444,7 +446,7 @@
         {
           "label": "G14 staging smoke test 后",
           "title": "Android 首发收口",
-          "result": "构建、staging 与端到端验收后发布",
+          "result": "先接通四条交易链路，再完成构建、staging 与端到端验收；多跳和完整智能路由独立排期",
           "stage": "next",
           "reportId": "goal-2026-20260827",
           "blockId": "b0138"
@@ -452,15 +454,15 @@
         {
           "label": "Android 发布后",
           "title": "Windows",
-          "result": "Windows 开发已推进；Android 验收关闭后进入正式发布阶段",
+          "result": "9月20日 staging 部署已确认；10月7日双架构资产变更后当前重出包受阻，签名与设备验收待确认",
           "stage": "planned",
           "reportId": "goal-2026-20260827",
           "blockId": "b0141"
         },
         {
           "label": "Windows 验收后",
-          "title": "Apple 平台 → Linux",
-          "result": "Apple 未签名构建已推进；各平台签名、连接与发布资格仍独立关闭",
+          "title": "Apple 平台；Linux 后续规划",
+          "result": "9月15日未签名构建为历史记录；先整合两处修复，再完成签名、macOS 公证及各端实机验收",
           "stage": "planned",
           "reportId": "goal-2026-20260827",
           "blockId": "b0144"
@@ -472,39 +474,39 @@
           "title": "独立 GitLab repo 与 staging backend",
           "status": "决策已定，待执行",
           "statusGroup": "planned",
-          "evidence": "确认复用 Arrowfish 成熟代码基线，但不复用其生产 runtime、数据库、账号或 secrets；避免对 400,347 个 live 账号和历史关系做高风险原地改造。",
-          "nextAction": "锁定 baseline，新建 repo、CI/CD、独立 backend／DB／Redis／域名，并用合成数据完成核心 smoke test。",
+          "evidence": "本次客户端报告没有提供独立后端交付证据。继续要求复用成熟源码基线，但隔离 FFF 与 Arrowfish 的运行环境、数据库、账号、Redis、凭证和迁移历史。",
+          "nextAction": "锁定基线，建立独立 repo、CI/CD、backend、数据库与 Redis，以合成数据完成核心流程验收。",
           "deadline": "Android 首发验收前",
-          "timeline": "gated",
-          "atRisk": false,
-          "reportId": "goal-2026-20260827",
-          "blockId": "b0150"
-        },
-        {
-          "id": "G15",
-          "title": "FFF 专属 schema、API 与模块重构",
-          "status": "隔离验收后开始",
-          "statusGroup": "planned",
-          "evidence": "重构范围尚未在隔离环境启动；当前原则是先得到行为一致、可回滚的 staging baseline，再改变 schema 和契约。",
-          "nextAction": "建立独立 migration history，按 FFF 需求重构；共享能力仅通过版本化源码模块接入。",
-          "deadline": "G14 验收后",
           "timeline": "gated",
           "atRisk": false,
           "reportId": "goal-2026-20260827",
           "blockId": "b0151"
         },
         {
+          "id": "G15",
+          "title": "FFF 专属 schema、API 与模块重构",
+          "status": "隔离验收后开始",
+          "statusGroup": "planned",
+          "evidence": "本次没有 FFF 独立环境中的 schema、API 与模块重构交付证据。客户端支付与订阅重构正在推进，不能据此认定独立后端重构已开始或完成。",
+          "nextAction": "G14 验收后建立独立迁移历史，再按 FFF 需求重构；共享能力仅通过版本化源码模块接入。",
+          "deadline": "G14 验收后",
+          "timeline": "gated",
+          "atRisk": false,
+          "reportId": "goal-2026-20260827",
+          "blockId": "b0152"
+        },
+        {
           "id": "G10",
           "title": "连接基础、自动选线与协议回归",
-          "status": "核心与跨端状态持续集成",
+          "status": "核心实现已推进，跨端验收未关闭",
           "statusGroup": "progress",
-          "evidence": "第12阶段继续接入线路选择、实时流量、出口状态与地区资料；Windows TUN 与辅助服务持续完善。各平台的自动分组、协议和实际连接仍分别验收，不能代替完整智能路由或多跳 VPN 验收。",
-          "nextAction": "固定各平台测试版本，完成选线、连接、断开、重连与账号清理验证。",
-          "deadline": "2026 年 10 月",
+          "evidence": "10月9日 Lex 报告连接、选线、测速与阻断等基础能力已有实现。Apple 客户端配置与插件分组两处修复于9月28日提交在独立分支，尚未整合；共用代码不等于四平台实际连接均已验收。",
+          "nextAction": "整合 Apple 两处修复，固定各平台测试产物，完成选线、连接、断开、手动重连、阻断与账号清理验收；自动重连另行开发。",
+          "deadline": "原目标：2026 年 10 月；当前完成日期待确认",
           "timeline": "dated",
           "atRisk": false,
           "reportId": "goal-2026-20260827",
-          "blockId": "b0153"
+          "blockId": "b0154"
         },
         {
           "id": "G16",
@@ -517,46 +519,46 @@
           "timeline": "unscheduled",
           "atRisk": false,
           "reportId": "goal-2026-20260827",
-          "blockId": "b0154"
+          "blockId": "b0155"
         },
         {
           "id": "G17",
           "title": "完整智能路由与分流策略",
-          "status": "基础存在，完整能力待开发",
+          "status": "配置基础存在，内核分流未接通",
           "statusGroup": "planned",
-          "evidence": "现有引擎具备 direct、域名规则和路由基础，但 blacklist／whitelist 尚未接入配置生成，也尚未形成可发布的完整能力：版本化规则、国内／本地资源直连、其他公网流量走 VPN、分流 DNS、规则失效保护、用户模式和跨平台验收均未关闭。",
-          "nextAction": "建立可版本化的域名／IP／应用规则与 split DNS；提供全局 VPN、智能路由和必要的用户例外模式；规则缺失或损坏时 fail closed，并依次完成 Android、Windows、Apple／Linux 与中国网络 QA。",
-          "deadline": "待排期 G10 稳定连接基线后实施",
+          "evidence": "更正当前能力口径：客户端与服务端配置已有基础，但当前 FFF 内核尚未接通规则解析与分流，实际仍按选中出口转发；direct 类型存在不等于用户可用的智能路由。全局／直连入口、自定义规则与分应用代理尚未完成。",
+          "nextAction": "完成内核规则支持、版本化域名／IP／应用规则、分流 DNS、用户模式与失效保护，再按平台及中国网络环境独立验收；Linux 属于后续范围。",
+          "deadline": "待排期；G10 稳定连接基线后实施",
           "timeline": "unscheduled",
-          "atRisk": false,
-          "reportId": "goal-2026-20260827",
-          "blockId": "b0155"
-        },
-        {
-          "id": "G12",
-          "title": "支付接口与支付闭环",
-          "status": "支付通道接口已推进，闭环待验收",
-          "statusGroup": "progress",
-          "evidence": "9月16–17日推进支付通道、登录、用户资料及套餐分配接口对齐；客户端集成已开始，支付成功、失败及订单核对仍未完整验收。Roy 继续负责支付网关商务事项。",
-          "nextAction": "完成支付成功与失败、订单状态核对和重复事件验证，再关闭首发支付门槛。",
-          "deadline": "Android 首发前 完成后才进入发布验收",
-          "timeline": "gated",
           "atRisk": false,
           "reportId": "goal-2026-20260827",
           "blockId": "b0156"
         },
         {
-          "id": "G13",
-          "title": "多平台顺序发布",
-          "status": "多平台开发与构建验证中",
+          "id": "G12",
+          "title": "支付接口与支付闭环",
+          "status": "四条交易链路重构中，尚不能收款",
           "statusGroup": "progress",
-          "evidence": "9月15日 macOS 双架构和 iPhone 未签名构建通过，已有原生及插件测试记录；Windows TUN 与打包工作推进至9月18日。未签名构建不等于可安装发布。",
-          "nextAction": "开发并行推进，发布保留 Android → Windows → macOS+iOS → Linux 顺序；每个平台独立关闭签名、安装、连接及支付验收。",
-          "deadline": "按平台门控 每个平台独立构建与验收",
+          "evidence": "10月9日 Lex 报告用户充值、基底套餐、独享专线与独享 IP 购买正随支付及订阅 API 重构。商品与选项界面已有实现，下单、支付及结果同步尚未接通；Roy 继续负责支付网关商务事项。",
+          "nextAction": "接通四条交易链路，验证支付成功／失败、订单核对、重复事件以及余额与权益结果，再关闭首发支付门槛。",
+          "deadline": "Android 首发前；完成日期待确认",
           "timeline": "gated",
           "atRisk": false,
           "reportId": "goal-2026-20260827",
-          "blockId": "b0158"
+          "blockId": "b0157"
+        },
+        {
+          "id": "G13",
+          "title": "多平台顺序发布",
+          "status": "历史测试交付已记录，正式发布门槛未关闭",
+          "statusGroup": "progress",
+          "evidence": "8月28日 Android APK 交 QA；9月15日 Apple 未签名构建；9月20日 Windows staging 部署获确认。10月7日 Windows 双架构资产与探测加入后，当前打包脚本仍检查旧路径；ARM 应用产物、签名、实机与支付验收待确认。",
+          "nextAction": "修复 Windows 当前重出包链路并核对产物；马来西亚团队整合 Apple 修复。正式发布保留 Android → Windows → macOS/iOS 顺序，各端分别完成签名、安装升级、连接与支付验收；Linux 不在本期范围。",
+          "deadline": "按平台门控；发布日期待确认",
+          "timeline": "gated",
+          "atRisk": false,
+          "reportId": "goal-2026-20260827",
+          "blockId": "b0159"
         }
       ]
     },
@@ -580,12 +582,103 @@
           "timeline": "gated",
           "atRisk": false,
           "reportId": "goal-2026-20260827",
-          "blockId": "b0164"
+          "blockId": "b0165"
         }
       ]
     }
   },
   "blockers": [
+    {
+      "reportId": "goal-2026-20260827",
+      "blockId": "b0005",
+      "reportDate": "2026-10-09",
+      "section": "项目组合现况与下一顺序",
+      "text": "续费规则在9月18日被否决后重新设计，10月1日确定，10月5日实现完成并进入测试。第13–14阶段完成支付结算口径、后台重建与设置权责分离，交接于10月1日关闭。当前处理中的是测试环境 Stripe 回调对齐与新官网字眼清查；生产异地恢复演练仍未执行，是风险最高的未关闭项。"
+    },
+    {
+      "reportId": "goal-2026-20260827",
+      "blockId": "b0060",
+      "reportDate": "2026-10-09",
+      "section": "生产整合与 iOS 合规重建",
+      "text": "2026-08-08–08-21 · 生产研究 08-28 · 第10阶段 生产整合与 iOS 合规重建 8 月 12 日生产环境整合部署完成，产品 acceptance 仍为 partial iOS 干净源码工程及 VPN 主路径建立 数据库迁移与 CI/CD 权责分离完成测试环境验证 生产研究量化用户质量、配额、设备和平台影响 边界：iOS 真机、TestFlight 及两项协议端到端验收尚未关闭"
+    },
+    {
+      "reportId": "goal-2026-20260827",
+      "blockId": "b0117",
+      "reportDate": "2026-10-09",
+      "section": "Arrowfish 目标清单",
+      "text": "G4 Siqo 多平台支付 结算口径已统一，渠道缺口待处理 Android staging 接入完成。第13–14阶段完成支付优惠与渠道代码改造、币种目录按法币与加密货币分开并以美元为锚、支付流水表合并；渠道密钥不再存放于数据库。Google、Apple 与 Stripe 的接入缺口共 15 项已列明，尚未处理完。 完成已列明的渠道接入缺口，再按 Windows 与其他平台逐一接入、回归和发布。 待排期 按平台分别验收"
+    },
+    {
+      "reportId": "goal-2026-20260827",
+      "blockId": "b0122",
+      "reportDate": "2026-10-09",
+      "section": "Arrowfish 目标清单",
+      "text": "G16 Windows 云签名与官网恢复发布 签名基础已有，订阅与连接验证中 保留此前云签名就绪结论；第12阶段推进订阅接口、配额、断线保护及隧道状态对齐。第13阶段跟随 Android 的主页与订阅界面改版并于9月21日上测试环境，但安装包与具体版本的对应关系未确认。截至10月8日没有新增正式发布验收记录。 完成干净机器签名安装、购买、连接、升级与卸载验收，再安排官网发布。 P0 下一发布窗口"
+    },
+    {
+      "reportId": "goal-2026-20260827",
+      "blockId": "b0154",
+      "reportDate": "2026-10-09",
+      "section": "FFF 目标清单",
+      "text": "FFF · G10 连接基础、自动选线与协议回归 核心实现已推进，跨端验收未关闭 10月9日 Lex 报告连接、选线、测速与阻断等基础能力已有实现。Apple 客户端配置与插件分组两处修复于9月28日提交在独立分支，尚未整合；共用代码不等于四平台实际连接均已验收。 整合 Apple 两处修复，固定各平台测试产物，完成选线、连接、断开、手动重连、阻断与账号清理验收；自动重连另行开发。 原目标：2026 年 10 月；当前完成日期待确认"
+    },
+    {
+      "reportId": "goal-2026-20260827",
+      "blockId": "b0156",
+      "reportDate": "2026-10-09",
+      "section": "FFF 目标清单",
+      "text": "FFF · G17 完整智能路由与分流策略 配置基础存在，内核分流未接通 更正当前能力口径：客户端与服务端配置已有基础，但当前 FFF 内核尚未接通规则解析与分流，实际仍按选中出口转发；direct 类型存在不等于用户可用的智能路由。全局／直连入口、自定义规则与分应用代理尚未完成。 完成内核规则支持、版本化域名／IP／应用规则、分流 DNS、用户模式与失效保护，再按平台及中国网络环境独立验收；Linux 属于后续范围。 待排期；G10 稳定连接基线后实施"
+    },
+    {
+      "reportId": "goal-2026-20260827",
+      "blockId": "b0159",
+      "reportDate": "2026-10-09",
+      "section": "FFF 目标清单",
+      "text": "FFF · G13 多平台顺序发布 历史测试交付已记录，正式发布门槛未关闭 8月28日 Android APK 交 QA；9月15日 Apple 未签名构建；9月20日 Windows staging 部署获确认。10月7日 Windows 双架构资产与探测加入后，当前打包脚本仍检查旧路径；ARM 应用产物、签名、实机与支付验收待确认。 修复 Windows 当前重出包链路并核对产物；马来西亚团队整合 Apple 修复。正式发布保留 Android → Windows → macOS/iOS 顺序，各端分别完成签名、安装升级、连接与支付验收；Linux 不在本期范围。 按平台门控；发布日期待确认"
+    },
+    {
+      "reportId": "goal-2026-20260827",
+      "blockId": "b0181",
+      "reportDate": "2026-10-09",
+      "section": "10月9日新增进展与历史记录",
+      "text": "10月9日 Lex 报告已收到：核心实现有进展，四条交易链路仍在重构。保留9月20日 Windows staging 事实；Apple 修复整合、当前打包与平台验收仍未关闭。"
+    },
+    {
+      "reportId": "goal-2026-20260827",
+      "blockId": "b0182",
+      "reportDate": "2026-10-09",
+      "section": "10月9日新增进展与历史记录",
+      "text": "FFF · G10／G12／G13 FFF 交易重构与平台发布门槛 10月9日 Lex 报告已收到：核心实现有进展，四条交易链路仍在重构。保留9月20日 Windows staging 事实；Apple 修复整合、当前打包与平台验收仍未关闭。"
+    },
+    {
+      "reportId": "goal-2026-20260827",
+      "blockId": "b0192",
+      "reportDate": "2026-10-09",
+      "section": "用户质量、配额、设备、平台与关键部署",
+      "text": "三协议 rollout 34台主机三协议监听全部 ready；64台仍是 Trojan-only；external state unverified。 G7 从“完成”改为“核心完成、rollout 与中国验收未关闭”。"
+    },
+    {
+      "reportId": "goal-2026-20260827",
+      "blockId": "b0222",
+      "reportDate": "2026-10-09",
+      "section": "订阅续费闭环",
+      "text": "第10阶段结论 续费／重复付费用户贡献周收入 83.1%，说明续费可靠性是直接的收入保护点；第10阶段没有订阅闭环开发完成或验收记录。"
+    },
+    {
+      "reportId": "goal-2026-20260827",
+      "blockId": "b0230",
+      "reportDate": "2026-10-09",
+      "section": "节点部署与管理自动化",
+      "text": "ARROWFISH · 第10阶段细节 03 验收未关闭 节点部署与管理自动化 第10阶段证据、供应商采购缺口与后续目标"
+    },
+    {
+      "reportId": "goal-2026-20260827",
+      "blockId": "b0235",
+      "reportDate": "2026-10-09",
+      "section": "节点部署与管理自动化",
+      "text": "协议与 BO 验收 第10阶段发现 2 项高优先级协议问题，源码修复 2 项，端到端验收关闭 0 项。 补齐测试环境 bootstrap、BO、Android 与 FFF 实连记录后关闭。 验收未关闭"
+    },
     {
       "reportId": "sprint-12-progress-20261009",
       "blockId": "b0023",
@@ -636,74 +729,32 @@
       "text": "随后按平台补齐 Windows 签名发布与 iOS 真机、商店验收，再推进三协议全量铺开与中国地区验收。中国站点智能分流仍是独立计划，尚未排期。具体上线日期以测试与验收结果为准。"
     },
     {
-      "reportId": "goal-2026-20260827",
+      "reportId": "sprint-14-fff-progress-20261009",
+      "blockId": "b0004",
+      "reportDate": "2026-10-09",
+      "section": "01 · 关键状态与业务影响",
+      "text": "核心连接、选线与账户功能已有实现进展；四条购买链路仍在重构，App 尚不能完成收款。Apple 修复整合、Windows 重出包与各平台签名和实机验收仍是发布门槛。"
+    },
+    {
+      "reportId": "sprint-14-fff-progress-20261009",
+      "blockId": "b0012",
+      "reportDate": "2026-10-09",
+      "section": "02 · 模块进展与用户影响",
+      "text": "智能分流与进阶能力 当前内核尚未接通规则分流；全局／直连入口、自定义规则、分应用代理与自动连接／重连均未完成。配置或文案存在不代表能力可用，多跳保持独立目标。"
+    },
+    {
+      "reportId": "sprint-14-fff-progress-20261009",
+      "blockId": "b0041",
+      "reportDate": "2026-10-09",
+      "section": "06 · 安全与独立后端边界",
+      "text": "FFF 必须独立部署运行环境、账号、数据库、Redis、凭证与迁移历史，仅复用版本化源码。本报告没有提供独立后端交付或安全权限变更证据，G14/G15 保持待执行；客户端支付重构不能替代后端隔离验收。"
+    },
+    {
+      "reportId": "sprint-14-android-qa-20261009",
       "blockId": "b0005",
-      "reportDate": "2026-10-08",
-      "section": "项目组合现况与下一顺序",
-      "text": "续费规则在9月18日被否决后重新设计，10月1日确定，10月5日实现完成并进入测试。第13–14阶段完成支付结算口径、后台重建与设置权责分离，交接于10月1日关闭。当前处理中的是测试环境 Stripe 回调对齐与新官网字眼清查；生产异地恢复演练仍未执行，是风险最高的未关闭项。"
-    },
-    {
-      "reportId": "goal-2026-20260827",
-      "blockId": "b0060",
-      "reportDate": "2026-10-08",
-      "section": "生产整合与 iOS 合规重建",
-      "text": "2026-08-08–08-21 · 生产研究 08-28 · 第10阶段 生产整合与 iOS 合规重建 8 月 12 日生产环境整合部署完成，产品 acceptance 仍为 partial iOS 干净源码工程及 VPN 主路径建立 数据库迁移与 CI/CD 权责分离完成测试环境验证 生产研究量化用户质量、配额、设备和平台影响 边界：iOS 真机、TestFlight 及两项协议端到端验收尚未关闭"
-    },
-    {
-      "reportId": "goal-2026-20260827",
-      "blockId": "b0117",
-      "reportDate": "2026-10-08",
-      "section": "Arrowfish 目标清单",
-      "text": "G4 Siqo 多平台支付 结算口径已统一，渠道缺口待处理 Android staging 接入完成。第13–14阶段完成支付优惠与渠道代码改造、币种目录按法币与加密货币分开并以美元为锚、支付流水表合并；渠道密钥不再存放于数据库。Google、Apple 与 Stripe 的接入缺口共 15 项已列明，尚未处理完。 完成已列明的渠道接入缺口，再按 Windows 与其他平台逐一接入、回归和发布。 待排期 按平台分别验收"
-    },
-    {
-      "reportId": "goal-2026-20260827",
-      "blockId": "b0122",
-      "reportDate": "2026-10-08",
-      "section": "Arrowfish 目标清单",
-      "text": "G16 Windows 云签名与官网恢复发布 签名基础已有，订阅与连接验证中 保留此前云签名就绪结论；第12阶段推进订阅接口、配额、断线保护及隧道状态对齐。第13阶段跟随 Android 的主页与订阅界面改版并于9月21日上测试环境，但安装包与具体版本的对应关系未确认。截至10月8日没有新增正式发布验收记录。 完成干净机器签名安装、购买、连接、升级与卸载验收，再安排官网发布。 P0 下一发布窗口"
-    },
-    {
-      "reportId": "goal-2026-20260827",
-      "blockId": "b0155",
-      "reportDate": "2026-10-08",
-      "section": "FFF 目标清单",
-      "text": "FFF · G17 完整智能路由与分流策略 基础存在，完整能力待开发 现有引擎具备 direct、域名规则和路由基础，但 blacklist／whitelist 尚未接入配置生成，也尚未形成可发布的完整能力：版本化规则、国内／本地资源直连、其他公网流量走 VPN、分流 DNS、规则失效保护、用户模式和跨平台验收均未关闭。 建立可版本化的域名／IP／应用规则与 split DNS；提供全局 VPN、智能路由和必要的用户例外模式；规则缺失或损坏时 fail closed，并依次完成 Android、Windows、Apple／Linux 与中国网络 QA。 待排期 G10 稳定连接基线后实施"
-    },
-    {
-      "reportId": "goal-2026-20260827",
-      "blockId": "b0156",
-      "reportDate": "2026-10-08",
-      "section": "FFF 目标清单",
-      "text": "FFF · G12 支付接口与支付闭环 支付通道接口已推进，闭环待验收 9月16–17日推进支付通道、登录、用户资料及套餐分配接口对齐；客户端集成已开始，支付成功、失败及订单核对仍未完整验收。Roy 继续负责支付网关商务事项。 完成支付成功与失败、订单状态核对和重复事件验证，再关闭首发支付门槛。 Android 首发前 完成后才进入发布验收"
-    },
-    {
-      "reportId": "goal-2026-20260827",
-      "blockId": "b0189",
-      "reportDate": "2026-10-08",
-      "section": "用户质量、配额、设备、平台与关键部署",
-      "text": "三协议 rollout 34台主机三协议监听全部 ready；64台仍是 Trojan-only；external state unverified。 G7 从“完成”改为“核心完成、rollout 与中国验收未关闭”。"
-    },
-    {
-      "reportId": "goal-2026-20260827",
-      "blockId": "b0219",
-      "reportDate": "2026-10-08",
-      "section": "订阅续费闭环",
-      "text": "第10阶段结论 续费／重复付费用户贡献周收入 83.1%，说明续费可靠性是直接的收入保护点；第10阶段没有订阅闭环开发完成或验收记录。"
-    },
-    {
-      "reportId": "goal-2026-20260827",
-      "blockId": "b0227",
-      "reportDate": "2026-10-08",
-      "section": "节点部署与管理自动化",
-      "text": "ARROWFISH · 第10阶段细节 03 验收未关闭 节点部署与管理自动化 第10阶段证据、供应商采购缺口与后续目标"
-    },
-    {
-      "reportId": "goal-2026-20260827",
-      "blockId": "b0232",
-      "reportDate": "2026-10-08",
-      "section": "节点部署与管理自动化",
-      "text": "协议与 BO 验收 第10阶段发现 2 项高优先级协议问题，源码修复 2 项，端到端验收关闭 0 项。 补齐测试环境 bootstrap、BO、Android 与 FFF 实连记录后关闭。 验收未关闭"
+      "reportDate": "2026-10-09",
+      "section": "01 · 当前状态",
+      "text": "本次确认的是测试交付，没有验收通过或生产发布结论。下列改进不计入本次版本已交付功能；完成日期待确认。"
     },
     {
       "reportId": "sprint-13-summary",

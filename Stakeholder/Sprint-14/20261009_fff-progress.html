@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-report-id="sprint-14-fff-progress-20261009"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="robots" content="noindex, nofollow">
+<title>第14阶段 · FFF 客户端产品完成度 · 2026-10-09</title><meta name="description" content="FFF 截至2026-10-09的客户端进展、支付重构、平台发布门槛与已核对时间线。">
+<script src="../../assets/ui-i18n.js"></script><script src="../../assets/site-preferences.js"></script><script src="../../assets/auth-gate.js"></script>
+<link rel="stylesheet" href="../../assets/site-theme.css">
+<style>*{box-sizing:border-box}body{margin:0;background:var(--af-bg);color:var(--af-text);font:16px/1.7 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}main{max-width:1100px;margin:auto;padding:32px 24px 56px}header{border-bottom:3px solid var(--fff);padding-bottom:20px}h1{font-size:clamp(1.6rem,3vw,2.3rem);line-height:1.3;margin:10px 0}h2{font-size:1.35rem;margin:0 0 16px}p{margin:12px 0}.meta,footer{color:var(--af-text-muted);font-size:.9rem}section{padding:24px;margin-top:22px;border:1px solid var(--af-border);border-radius:14px;background:var(--af-surface)}section:first-of-type{border-left:5px solid var(--fff)}a{color:var(--af-primary)}.metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:20px}.metrics article{background:var(--af-surface-muted);border-radius:10px;padding:14px}.metrics strong{display:block;font-size:1.8rem}.metrics span{display:block;color:var(--af-text-muted);font-size:.85rem}.table-wrap{overflow-x:auto}table{border-collapse:collapse;width:100%;font-size:.94rem}th,td{text-align:left;vertical-align:top;padding:12px;border-bottom:1px solid var(--af-border)}th{background:var(--af-surface-muted)}td:first-child{min-width:135px;font-weight:600}th:first-child{width:20%}.steps{padding-left:24px}.steps li{padding:7px 0}footer{padding-top:24px}@media(max-width:640px){main{padding:18px 12px 32px}section{padding:16px}.metrics{grid-template-columns:repeat(2,1fr)}table{min-width:620px}h2{font-size:1.18rem}}</style></head><body><main>
+<header data-report-header><h1>第14阶段 · FFF 客户端产品完成度 · 2026-10-09</h1>
+<p class="meta">报告日期 2026-10-09 · 第14阶段 2026-10-03 至 2026-10-16 · 马来西亚时间</p></header>
+<section id="section-1">
+<h2>01 · 关键状态与业务影响</h2>
+<p>核心连接、选线与账户功能已有实现进展；四条购买链路仍在重构，App 尚不能完成收款。Apple 修复整合、Windows 重出包与各平台签名和实机验收仍是发布门槛。</p>
+<p>Flutter 客户端由 Lex 负责；iOS 与 macOS 平台交付由马来西亚团队负责；支付网关商务事项由 Roy 负责。共用代码不代表四个平台已通过同等验收。</p>
+<div class="metrics"><article><strong>4</strong><span>目标平台</span></article><article><strong>33</strong><span>页面（Lex 统计）</span></article><article><strong>3</strong><span>界面语言</span></article><article><strong>0 / 3 / 4</strong><span>年度目标：完成 / 进行中 / 待执行</span></article></div>
+</section>
+<section id="section-2">
+<h2>02 · 模块进展与用户影响</h2>
+<div class="table-wrap"><table><thead>
+<tr><th>模块</th><th>实现与当前边界</th></tr></thead><tbody>
+<tr><td>连接、线路与防护</td><td>Lex 报告连接、切换、测速、自动选优、阻断与额度提醒已实现；Apple 配置加载仍受阻，跨平台实际连接与防护验收待确认。</td></tr>
+<tr><td>商品浏览与交易</td><td>商品、渠道与优惠券选择已有界面；用户充值、基底套餐、独享专线、独享 IP 的下单、支付与结果同步仍在重构，尚不能收款。</td></tr>
+<tr><td>订阅、会员与账户</td><td>订阅展示、自动续费开关、签到、设备绑定及手机／邮箱绑定已有实现。管理界面不等于自动扣款、续期或购买闭环已验收。</td></tr>
+<tr><td>用户可见断点</td><td>找回密码与免密号入口、注册推荐人提交、优惠券入口、书签交互及官网品牌链接仍需补齐；充值按钮随交易重构接通。</td></tr>
+<tr><td>智能分流与进阶能力</td><td>当前内核尚未接通规则分流；全局／直连入口、自定义规则、分应用代理与自动连接／重连均未完成。配置或文案存在不代表能力可用，多跳保持独立目标。</td></tr>
+<tr><td>体验与发布资产</td><td>三种语言与自适应界面已有实现；正式图标、正式广告配置、商店材料及发布验证仍需完成。测试广告配置不能计为广告收入能力。</td></tr>
+</tbody></table></div>
+<p>页面、用例与模块完成度均来自 Lex 的功能盘点，不是整体完成率或验收率。开发分支可核对 45 个测试文件；约 234 个用例为 Lex 统计，本轮没有重新计数或运行测试。</p>
+</section>
+<section id="section-3">
+<h2>03 · 关键时间节点</h2>
+<div class="table-wrap"><table><thead>
+<tr><th>日期（马来西亚）</th><th>事件</th><th>证据边界</th></tr></thead><tbody>
+<tr><td>2026-08-28</td><td>Android APK 交 QA</td><td>历史测试交付；当前版本验收待确认。</td></tr>
+<tr><td>2026-09-15</td><td>macOS 与 iPhone 未签名构建记录</td><td>不等于签名安装、实机连接或商店发布。</td></tr>
+<tr><td>2026-09-20</td><td>FFF Windows staging 部署获 Timmy 确认</td><td>09-23 记入报告；版本、安装包、签名与后续提交覆盖范围待确认。</td></tr>
+<tr><td>2026-09-28</td><td>Apple 客户端与插件分别提交修复</td><td>两处修复仍在独立分支，尚未整合；需重新验证。</td></tr>
+<tr><td>2026-10-02</td><td>支付契约检查记录存在接口不一致</td><td>历史诊断，不是本轮重新执行的测试。</td></tr>
+<tr><td>2026-10-07</td><td>Windows 双架构资产与探测实现</td><td>打包脚本仍检查旧路径；ARM 应用产物与设备验收待确认。</td></tr>
+<tr><td>2026-10-08</td><td>本轮检查的 Flutter 开发分支最新提交</td><td>源码截止日，不是部署或验收日期。</td></tr>
+<tr><td>2026-10-09</td><td>收到 Lex 产品完成度报告并对账</td><td>评估与报告日期，不代表所有功能在当日完成。</td></tr>
+</tbody></table></div>
+</section>
+<section id="section-4">
+<h2>04 · 各平台发布准备</h2>
+<div class="table-wrap"><table><thead>
+<tr><th>平台</th><th>已记录进展</th><th>下一发布门槛</th></tr></thead><tbody>
+<tr><td>Android</td><td>核心集成与历史 APK 交 QA 已有记录。</td><td>补正式图标与广告配置，完成购买、连接、升级及商店准备验收。</td></tr>
+<tr><td>Windows amd64</td><td>09-20 staging 部署已确认；10-07 资产目录调整。</td><td>修复当前重出包链路，记录具体产物，完成签名、安装升级、连接与支付验收。</td></tr>
+<tr><td>Windows arm64</td><td>原生核心与辅助服务资产、真机架构探测已有实现。</td><td>核对应用产物架构并在 ARM 设备安装、实测；尚无验收结论。</td></tr>
+<tr><td>iOS</td><td>历史未签名构建及独立分支修复已有记录。</td><td>马来西亚团队整合客户端与插件修复，再完成签名、配置加载、连接、支付与实机验收。</td></tr>
+<tr><td>macOS</td><td>历史未签名构建及独立分支修复已有记录。</td><td>马来西亚团队整合修复，再完成签名、公证、安装、连接与支付验收。</td></tr>
+</tbody></table></div>
+<p>正式发布顺序保留 Android → Windows → macOS/iOS，开发可并行。Linux 保留在后续路线中，不在本期交付范围。当前安装包目录缺失不能否定 09-20 的 Windows staging 部署，也不能证明历史安装包从未产出。</p>
+</section>
+<section id="section-5">
+<h2>05 · 阻塞与后续顺序</h2>
+<ol class="steps">
+<li>优先接通四条交易链路：验证下单、支付成功／失败、重复事件、订单核对及余额／权益结果；支付网关商务事项由 Roy 负责。</li>
+<li>并行整合 Apple 两处修复：由马来西亚团队完成配置加载、分组、连接与账号清理回归；同时修复 Windows 当前打包链路。</li>
+<li>关闭平台发布门槛：补用户可见断点、品牌与广告配置，逐平台记录产物、签名、安装升级、连接与支付验收。</li>
+<li>另行排期进阶能力：智能分流依赖内核支持；多跳、应用内购、推送与站内信不因本次报告自动纳入首发承诺。</li></ol>
+<p>以上为依赖与优先顺序，不是承诺完成日期。G10 原目标为 2026 年 10 月，现保留为历史目标；当前完成与各平台发布日期均待确认。</p>
+<p>本期没有新增生产收入或成本核验，不换算收入或节省金额。支付链路未接通直接影响收款；测试广告配置与推荐人提交缺口也限制收入及归因验证。</p>
+</section>
+<section id="section-6">
+<h2>06 · 安全与独立后端边界</h2>
+<p>FFF 必须独立部署运行环境、账号、数据库、Redis、凭证与迁移历史，仅复用版本化源码。本报告没有提供独立后端交付或安全权限变更证据，G14/G15 保持待执行；客户端支付重构不能替代后端隔离验收。</p>
+<p>断网保护已有实现报告，实际无泄漏与各平台权限行为仍需逐平台验收。本次未重新审计基础设施或源码访问权限。</p>
+</section>
+<footer>
+<p>本报告接续同日 Arrowfish 报告中“等待 Lex 报告”的记录；原报告保留当时口径，本页依据新收到的 FFF 报告及历史证据补充。</p>
+<p><a href="20261009_progress-update.html">查看此前 Arrowfish 报告</a> · <a href="../Goal-2026/20260827_goals.html#fff">查看 FFF 年度目标</a></p></footer>
+</main></body></html>

@@ -7,8 +7,8 @@
   <script src="../../assets/ui-i18n.js"></script>
   <script src="../../assets/site-preferences.js"></script>
 <meta name="robots" content="noindex, nofollow">
-  <meta name="description" content="Arrowfish、FFF 与共享管理能力截至2026年9月18日的续费、测试发布、多平台开发与独立目标进展；保留历史生产研究日期。">
-  <title>Arrowfish、FFF 与共享管理能力 · 目标进展 · 更新至 2026-09-18</title>
+  <meta name="description" content="目标看板更新于2026-10-09：FFF 更新至2026-10-09；Arrowfish 在截至2026-10-08的快照上补充10月9日 Android 3.9.26 staging 测试交付与待支付订单缺口；其余证据保留原日期。">
+  <title>Arrowfish、FFF 与共享管理能力 · 目标进展 · 更新于 2026-10-09</title>
   <style>
     :root {
       --bg: var(--af-bg);
@@ -412,8 +412,8 @@
 
     .sub-detail { margin-top: 14px; overflow: hidden; border: 1px solid var(--border); border-radius: 13px; }
     .sub-detail > summary { display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 56px; padding: 13px 16px; cursor: pointer; list-style: none; color: var(--text-soft); background: var(--surface-soft); font-size: 14px; font-weight: 750; }
-    .sub-detail > summary::after { content: "展开"; color: var(--primary); font-size: 11px; font-weight: 850; }
-    .sub-detail[open] > summary::after { content: "收起"; }
+    .sub-detail > summary::after { content: "+"; color: var(--primary); font-size: 11px; font-weight: 850; }
+    .sub-detail[open] > summary::after { content: "−"; }
     .sub-detail[open] > summary { border-bottom: 1px solid var(--border); }
     .sub-detail-content { padding: 16px; }
     .sub-detail-content > h3 { margin: 20px 0 10px; }
@@ -472,12 +472,7 @@
       .goal-table .group-row th { display: block; border: 0; border-radius: 9px; }
       .goal-table .goal-row { margin-bottom: 10px; overflow: hidden; border: 1px solid var(--border); border-radius: 13px; background: var(--surface); box-shadow: 0 4px 12px rgba(15, 23, 42, .04); }
       .goal-table .goal-row td { display: grid; grid-template-columns: 92px minmax(0, 1fr); gap: 10px; padding: 10px 12px; border-bottom: 1px solid var(--border); }
-      .goal-table .goal-row td::before { color: var(--muted); font-size: 11px; font-weight: 800; }
-      .goal-table .goal-row td:nth-child(1)::before { content: "目标"; }
-      .goal-table .goal-row td:nth-child(2)::before { content: "状态"; }
-      .goal-table .goal-row td:nth-child(3)::before { content: "最新进展"; }
-      .goal-table .goal-row td:nth-child(4)::before { content: "下一里程碑"; }
-      .goal-table .goal-row td:nth-child(5)::before { content: "目标时间"; }
+      .goal-table .goal-row td::before { content: attr(data-label); color: var(--muted); font-size: 11px; font-weight: 800; }
       .detail-shell > details > summary { min-height: 84px; padding: 17px 20px; }
       .detail-body { padding: 20px; }
       .table-wrap { overflow: visible; }
@@ -486,26 +481,7 @@
       .detail-table tr { padding: 8px 0; border-bottom: 1px solid var(--border); }
       .detail-table tr:last-child { border-bottom: 0; }
       .detail-table td { display: grid; grid-template-columns: 104px minmax(0, 1fr); gap: 10px; padding: 7px 10px; border: 0; }
-      .detail-table td::before { color: var(--muted); font-size: 11px; font-weight: 800; }
-      .tracking-table td:nth-child(1)::before { content: "范围"; }
-      .tracking-table td:nth-child(2)::before { content: "目前情况"; }
-      .tracking-table td:nth-child(3)::before { content: "待关闭"; }
-      .subscription-table td:nth-child(1)::before { content: "能力"; }
-      .subscription-table td:nth-child(2)::before { content: "当前问题"; }
-      .subscription-table td:nth-child(3)::before { content: "完成标准"; }
-      .node-overview-table td:nth-child(1)::before { content: "管理范围"; }
-      .node-overview-table td:nth-child(2)::before { content: "已有能力"; }
-      .node-overview-table td:nth-child(3)::before { content: "进度"; }
-      .automation-table td:nth-child(1)::before { content: "范围"; }
-      .automation-table td:nth-child(2)::before { content: "已有证据"; }
-      .automation-table td:nth-child(3)::before { content: "待完成"; }
-      .automation-table td:nth-child(4)::before { content: "状态"; }
-      .supplier-table td:nth-child(1)::before { content: "类型"; }
-      .supplier-table td:nth-child(2)::before { content: "执行方式"; }
-      .supplier-table td:nth-child(3)::before { content: "控制"; }
-      .standard-table td:nth-child(1)::before { content: "项目"; }
-      .standard-table td:nth-child(2)::before { content: "标准"; }
-      .standard-table td:nth-child(3)::before { content: "目的"; }
+      .detail-table td::before { content: attr(data-label); color: var(--muted); font-size: 11px; font-weight: 800; }
     }
     @media (max-width: 560px) {
       body { overflow-x: hidden; }
@@ -557,7 +533,7 @@
 <main id="main-content">
   <h1 class="sr-only">Arrowfish、FFF 与共享管理能力 2026 目标与路线</h1>
   <nav class="page-nav" data-report-header aria-label="目标报告导航">
-    <p class="updated">交付进展截至第14阶段 · 2026-10-08 · 复核 2026-10-09</p>
+    <p class="updated">第14阶段 · FFF 截至 2026-10-09 · Arrowfish 补充 2026-10-09 测试交付，其余保留 2026-10-08 快照</p>
     <div class="page-nav-links">
       <a href="#executive">管理看板</a>
       <a href="#arrowfish">Arrowfish</a>
@@ -570,7 +546,7 @@
   <section id="executive" class="surface executive-section" aria-labelledby="executive-title">
     <div class="section-head">
       <div>
-        <p class="section-kicker">日总／管理层 · 60 秒看板 · 截至 2026-10-08</p>
+        <p class="section-kicker">日总／管理层 · 60 秒看板 · 更新于 2026-10-09</p>
         <h2 id="executive-title">项目组合现况与下一顺序</h2>
         <p class="executive-lead">续费规则在9月18日被否决后重新设计，10月1日确定，10月5日实现完成并进入测试。第13–14阶段完成支付结算口径、后台重建与设置权责分离，交接于10月1日关闭。当前处理中的是测试环境 Stripe 回调对齐与新官网字眼清查；生产异地恢复演练仍未执行，是风险最高的未关闭项。</p>
       </div>
@@ -578,13 +554,13 @@
     <div class="executive-grid">
       <article class="executive-card arrowfish">
         <div class="executive-card-head"><span class="executive-card-label">Arrowfish</span><span class="badge progress">2 完成 · 18 进行中 · 1 待开发</span></div>
-        <h3>开发已完成并进入测试，验收与恢复能力待关闭</h3>
-        <p>21 项目标中，支付结算、会员续费、后台重建与设置权责分离均已合并，10月5日起在测试中。代码合并不等于部署：生产部署、设备与地区验收仍分别记录。</p>
+        <h3>主流程进入测试，待支付订单与验收缺口待补齐</h3>
+        <p>21 项目标中，原定支付结算、会员续费、后台重建与设置权责分离已合并，10月5日起进入测试。10月9日 Android 3.9.26 已提供给 Amy 做 staging 测试；待支付订单的继续支付、取消及可配置过期仍为后续改进，验收结果待确认。</p>
       </article>
       <article class="executive-card fff">
         <div class="executive-card-head"><span class="executive-card-label">FFF</span><span class="badge progress">3 进行中 · 4 待执行</span></div>
-        <h3>客户端持续开发，后端隔离是首发门槛</h3>
-        <p>Lex 实时口径截至9月18日：Windows TUN 与辅助服务持续集成，macOS 双架构及 iPhone 未签名构建通过，支付通道等接口继续对齐；签名安装、实际连接和支付闭环仍待验收。</p>
+        <h3>客户端主线已推进，收款与平台发布门槛未关闭</h3>
+        <p>Lex 的10月9日报告确认客户端核心功能已有实现进展，四条交易链路仍在重构，App 尚不能收款。Windows 9月20日 staging 部署已确认；Apple 修复尚未整合，当前 Windows 重出包、签名与实机验收仍需关闭。</p>
       </article>
       <article class="executive-card priority">
         <div class="executive-card-head"><span class="executive-card-label">管理层关注顺序</span><span class="badge planned">按验收证据关闭</span></div>
@@ -723,7 +699,7 @@
               <li>Apple 测试构建取得 TestFlight 有效状态；主页简化方向明确</li>
               <li>设备身份、归因凭证与节点运维修复持续进入验证</li>
             </ul>
-            <span class="route-result">边界：9月18日的续费方案随后被否决，实现日期以第13–14阶段为准</span>
+            <span class="route-result">边界：9月18日是续费方案被否决的日期；确定规则的主流程于10月5日实现完成</span>
           </div>
         </li>
         <li class="route-stage current" data-step="10">
@@ -745,7 +721,7 @@
     <div class="route-future" aria-labelledby="arrowfish-future-title">
       <div class="route-future-head">
         <h3 id="arrowfish-future-title">第13–14阶段进展与后续顺序</h3>
-        <p>第13阶段改定续费规则、交付三次 Android 测试版本并关闭交接；第14阶段的计划开发已于10月5日全部完成并进入测试。以下保留发布顺序，开发进展见目标清单。</p>
+        <p>第13阶段改定续费规则、交付三次 Android 测试版本并关闭交接；第14阶段原定主流程于10月5日实现完成并进入测试。10月9日新增 Android 3.9.26 staging 测试交付，订阅边界情况与待支付订单管理仍待补齐；以下保留发布顺序。</p>
       </div>
       <div class="route-future-track">
         <article class="route-future-card current">
@@ -813,7 +789,7 @@
           <tr class="goal-row" data-status="progress"><td class="goal-name"><span class="goal-id">G12</span>安全、无日志与最小权限治理</td><td><span class="badge progress">连接与节点安全持续验证</span></td><td>第11–12阶段推进节点凭证隔离、输出脱敏、DNS 异常阻断与解析器职责收敛。第13–14阶段把 SSH 防火墙统一为与设置页一致的一份白名单、强制会话安全并移除旧客户端路径、后台强制当前管理员授权；支付渠道密钥改由 Key Vault 按环境命名提供。10月1日停用外部人员源码权限。</td><td>完成真实节点、重启与无泄漏验收；权限复核、生产凭证与网络边界分别留证。</td><td class="goal-target">P0<small>与生产韧性同步收口</small></td></tr>
           <tr class="goal-row" data-status="progress"><td class="goal-name"><span class="goal-id">G13</span>CI/CD、自动测试与全链路可观测</td><td><span class="badge progress">测试交付持续运行</span></td><td>第11阶段三次、第12阶段六次、第13阶段三次 Android 测试发布，均覆盖四个渠道。第14阶段启用测试环境日志采集并修正接入地址、GeoIP 数据库改为启动时下载并消除两处日志刷屏；10月8日 GitLab 由 19.3.0 升级到 19.4.1。</td><td>补齐各平台签名产物、安装升级、回滚与部署版本映射；流水线成功和正式发布分别验收。</td><td class="goal-target">持续工程标准<small>七平台逐项覆盖</small></td></tr>
           <tr class="goal-row" data-status="progress"><td class="goal-name"><span class="goal-id">G17</span>生产韧性、监控、异地备份与恢复</td><td><span class="badge progress">整合完成，高风险未关</span></td><td>读副本、节点健康状态机与请求级诊断能力已建立；8月12日应用、MySQL 与 Redis 完成生产整合。10月6日完成生产切换的备份与恢复手册。<strong>手册不等于能力：演练尚未执行</strong>，最终数据库备份仍与生产主机同机，无法证明主机级故障恢复能力。</td><td>建立异地副本，执行实际恢复演练，补齐服务与节点告警，并记录 RTO、数据完整性和回切步骤。</td><td class="goal-target">P0</td></tr>
-          <tr class="goal-row" data-status="progress"><td class="goal-name"><span class="goal-id">G19</span>可追溯生产发布与用户可用性验收</td><td><span class="badge progress">测试发布已留证，生产验收独立</span></td><td>8月12日生产整合事实保留；第11–13阶段新增 Android 测试发布记录及9月7日中国、台湾当次连接确认。第13–14阶段的改动大部分只到「已合并」，生产部署与验收为待确认。新增测试证据不代表生产发布或全部协议地区验收。</td><td>将客户端版本、后端运行版本、迁移、购买与连接结果对应；按实际生产发布补齐上线后验证。</td><td class="goal-target">P0<small>下次生产发布前</small></td></tr>
+          <tr class="goal-row" data-status="progress"><td class="goal-name"><span class="goal-id">G19</span>可追溯生产发布与用户可用性验收</td><td><span class="badge progress">测试发布已留证，生产验收独立</span></td><td>8月12日生产整合事实保留；第11–13阶段新增 Android 测试发布记录及9月7日中国、台湾当次连接确认。10月9日 Timmy 确认 Android 3.9.26 已提供给 Amy 做 staging 测试，安装包到提交、渠道与具体时刻的映射尚未提供。其余第13–14阶段改动的部署与验收继续分别核对；本次测试交付不代表生产发布或验收通过。</td><td>将客户端版本、后端运行版本、迁移、购买与连接结果对应；按实际生产发布补齐上线后验证。</td><td class="goal-target">P0<small>下次生产发布前</small></td></tr>
 
           <tr class="group-row"><th colspan="5">02 · VPN 核心、节点与网络能力</th></tr>
           <tr class="goal-row" data-status="progress"><td class="goal-name"><span class="goal-id">G5</span>节点部署与管理自动化</td><td><span class="badge progress">节点操作与保护持续完善</span></td><td>第11–12阶段改进后台节点管理分离、地域命名、安装锁、防火墙任务、分配与退役保护。第13–14阶段把 VM 主机页改为表格加详情面板、任务进度改为步骤网格加实时终端、防火墙预览改为分 IPv4／IPv6 的终端视图，并让全部 VM 任务改用同一个「每次处理多少台」的保存设置。</td><td>完成真实节点、重启与客户端连接验收，再推进采购至配发自动化闭环。</td><td class="goal-target">年底前<small>采购至配发闭环</small></td></tr>
@@ -825,7 +801,7 @@
           <tr class="group-row"><th colspan="5">03 · 用户资格、身份与收入保护</th></tr>
           <tr class="goal-row" data-status="done"><td class="goal-name"><span class="goal-id">G14</span>后端权威配额、计时与会话</td><td><span class="badge done">核心已完成</span></td><td>8月29日复核时，同账号和同设备多 ACTIVE 均为 0；未付费用户最高月流量从3月 1,216.7 GiB 降至6月 39.0 GiB，4月后无人超过 100 GiB。5月25日同时出现活跃与流量骤降，因此不能把全部降幅只归因于配额成功。</td><td>持续监控 denial、expiry、replacement、免费流量分位数和用户可用性，并为 Redis 配额补充可审计快照。</td><td class="goal-target">持续监控</td></tr>
           <tr class="goal-row" data-status="progress"><td class="goal-name"><span class="goal-id">G15</span>唯一设备绑定与账号连续性</td><td><span class="badge progress">新流程有效，兼容待关</span></td><td>5月25日当周设备绑定率从83.08%升至93.61%，目前回看共享 device ID 率从21.73%降至2.59%；8月12日切换周却升至38.89%。这些比例是按8月29日现有关系回看，不是历史快照。</td><td>关闭 identity header、生产 CORS、Android／Windows 版本与 legacy fallback 验证，再制定历史关系治理方案。</td><td class="goal-target">P0<small>兼容验证后治理历史资料</small></td></tr>
-          <tr class="goal-row" data-status="progress"><td class="goal-name"><span class="goal-id">G2</span>套餐续费与订阅管理</td><td><span class="badge progress">规则10月1日确定，实现完成测试中</span></td><td><strong>更正：</strong>9月18日是方案被否决的日期，不是实现完成的日期。规则9月21日改为只保留续订、9月24日扩展到订阅与一次性两种模式、10月1日按 Google 的处理方式确定；实现10月5日完成，开发人员测试中。付款完成改由订单状态判断，支付流水表已合并。</td><td>完成测试环境 Stripe 回调对齐与沙盒验证，再完成重复购买、支付回调、退款和到期切换回归；分别记录客户端、后端部署与业务验收。正式环境的 Stripe 回调版本在生产部署时一并更新，源码已送出所需版本。</td><td class="goal-target">年底前<small>提前续费、自动续费、订阅管理</small></td></tr>
+          <tr class="goal-row" data-status="progress"><td class="goal-name"><span class="goal-id">G2</span>套餐续费与订阅管理</td><td><span class="badge progress">主流程测试中，待支付边界待补齐</span></td><td><strong>更正：</strong>9月18日是方案被否决的日期，不是实现完成的日期。规则9月21日改为只保留续订、9月24日扩展到订阅与一次性两种模式、10月1日按 Google 的处理方式确定；主流程10月5日实现完成并进入测试。10月9日 Android 3.9.26 提供给 Amy 做 staging 测试；Stripe / Google 中途退出后留下待支付订单，防重复订阅检查阻止再次购买，用户恢复与取消入口仍待补齐。</td><td>保留防重复订阅保护，补待支付订单查看、继续支付（Stripe 返回对应付款页面）、用户取消与定时过期；有效期拟由 BO 配置，60 分钟仅为建议值。Google 恢复流程按渠道验证，并覆盖取消／过期与延迟支付结果并发；既有 Stripe 回调、退款和到期切换回归继续按各自证据验收，完成日期待确认。</td><td class="goal-target">年底前<small>提前续费、自动续费、订阅管理</small></td></tr>
           <tr class="goal-row" data-status="progress"><td class="goal-name"><span class="goal-id">G4</span>Siqo 多平台支付</td><td><span class="badge progress">结算口径已统一，渠道缺口待处理</span></td><td>Android staging 接入完成。第13–14阶段完成支付优惠与渠道代码改造、币种目录按法币与加密货币分开并以美元为锚、支付流水表合并；渠道密钥不再存放于数据库。Google、Apple 与 Stripe 的接入缺口共 15 项已列明，尚未处理完。</td><td>完成已列明的渠道接入缺口，再按 Windows 与其他平台逐一接入、回归和发布。</td><td class="goal-target">待排期<small>按平台分别验收</small></td></tr>
 
           <tr class="group-row"><th colspan="5">04 · 多平台产品与易用性</th></tr>
@@ -846,19 +822,19 @@
   <section id="fff" class="surface project-section project-fff roadmap-section" aria-labelledby="fff-route-title">
     <div class="section-head">
       <div>
-        <p class="section-kicker">项目 02 · 新产品 · Lex 进展截至9月18日</p>
+        <p class="section-kicker">项目 02 · 新产品 · FFF 证据截至2026-10-09</p>
         <div class="project-title-row"><h2 id="fff-route-title">FFF 2026 路线图</h2><span class="project-label">独立项目</span></div>
-        <p class="section-copy">客户端按 Lex 实时口径更新至9月18日：Windows、Apple 与接口集成并行推进；FFF 继续使用独立 repo、staging、账号、数据库、Redis、凭证与迁移历史，复用能力仅通过版本化源码。</p>
+        <p class="section-copy">本次依据 Lex 的10月9日报告及历史交付记录更新。Flutter 由 Lex 负责，iOS/macOS 平台交付由马来西亚团队负责；同源实现不等于四平台已验收。FFF 独立 runtime、账号、数据库、Redis、凭证与迁移历史是必须关闭的架构门槛，本报告没有提供隔离环境交付证据。</p>
       </div>
       <div class="route-legend" role="list" aria-label="路线状态图例"><span class="complete" role="listitem">已完成</span><span class="current" role="listitem">当前阶段</span><span class="next" role="listitem">下一阶段</span></div>
     </div>
     <ol class="route-track" aria-label="FFF 2026 年目标交付路线">
       <li class="route-stage current">
         <div class="route-card">
-          <span class="route-date">2026-05-18–09-18 · 客户端实时口径</span>
-          <h3>客户端基础与智能连接验收</h3>
+          <span class="route-date">2026-05-18–10-09 · 客户端评估与历史证据</span>
+          <h3>基础连接与跨平台验收</h3>
           <p class="route-goals"><strong>G10</strong> SkyTunnel 核心迁移、自动选线与协议回归</p>
-          <span class="route-result">8月28日 APK 交 QA 后，继续推进线路、流量及跨端状态；连接与协议验收仍按平台关闭</span>
+          <span class="route-result">8月28日 Android APK 交 QA、9月20日 Windows staging 已记录；Apple 9月28日两处修复仍待整合，实际连接与协议按平台验收</span>
         </div>
       </li>
       <li class="route-stage current">
@@ -874,7 +850,7 @@
           <span class="route-date">G14 staging smoke test 后</span>
           <h3>Android 首发收口</h3>
           <p class="route-goals"><strong>G10</strong> 自动分组与协议补测<br><strong>G12</strong> 支付接口与支付闭环<br><strong>G16／G17</strong> 多跳 VPN 与完整智能路由独立开发、独立验收</p>
-          <span class="route-result">构建、staging 与端到端验收后发布</span>
+          <span class="route-result">先接通四条交易链路，再完成构建、staging 与端到端验收；多跳和完整智能路由独立排期</span>
         </div>
       </li>
       <li class="route-stage">
@@ -882,24 +858,26 @@
           <span class="route-date">Android 发布后</span>
           <h3>Windows</h3>
           <p class="route-goals"><strong>G13</strong> 桌面构建、VPN 主路径、支付与升级回归</p>
-          <span class="route-result">Windows 开发已推进；Android 验收关闭后进入正式发布阶段</span>
+          <span class="route-result">9月20日 staging 部署已确认；10月7日双架构资产变更后当前重出包受阻，签名与设备验收待确认</span>
         </div>
       </li>
       <li class="route-stage">
         <div class="route-card">
           <span class="route-date">Windows 验收后</span>
-          <h3>Apple 平台 → Linux</h3>
-          <p class="route-goals"><strong>G13</strong> macOS+iOS 分别验收，再进入 Linux 适配</p>
-          <span class="route-result">Apple 未签名构建已推进；各平台签名、连接与发布资格仍独立关闭</span>
+          <h3>Apple 平台；Linux 后续规划</h3>
+          <p class="route-goals"><strong>G13</strong> macOS+iOS 分别验收；Linux 不在本期交付范围</p>
+          <span class="route-result">9月15日未签名构建为历史记录；先整合两处修复，再完成签名、macOS 公证及各端实机验收</span>
         </div>
       </li>
     </ol>
   </section>
 
+  <p class="section-copy"><a href="../Sprint-14/20261009_fff-progress.html">查看10月9日 FFF 完整专题：模块、平台、时间线与证据边界</a></p>
+
   <section id="fff-goals" class="surface project-section project-fff goals-section" data-goal-group="fff" aria-labelledby="fff-goals-title">
     <div class="section-head">
       <div>
-        <p class="section-kicker">FFF · 目标清单 · 更新至 2026-09-18</p>
+        <p class="section-kicker">FFF · 目标清单 · 更新至 2026-10-09</p>
         <div class="project-title-row"><h2 id="fff-goals-title">FFF 目标清单</h2><span class="project-label">7 项目标</span></div>
         <p class="section-copy">FFF 当前有7项独立目标；多跳 VPN 与完整智能路由不再隐藏在基础连接范围内。后端隔离是客户端首发前的架构门槛，开发完成、构建、staging 验收与正式发布分别记录。</p>
       </div>
@@ -916,17 +894,17 @@
         <thead><tr><th>目标</th><th>状态</th><th>最新进展</th><th>下一里程碑</th><th>目标时间</th></tr></thead>
         <tbody>
           <tr class="group-row"><th colspan="5">01 · 独立后端与数据边界</th></tr>
-          <tr class="goal-row" data-status="planned"><td class="goal-name"><span class="goal-id">FFF · G14</span>独立 GitLab repo 与 staging backend</td><td><span class="badge planned">决策已定，待执行</span></td><td>确认复用 Arrowfish 成熟代码基线，但不复用其生产 runtime、数据库、账号或 secrets；避免对 400,347 个 live 账号和历史关系做高风险原地改造。</td><td>锁定 baseline，新建 repo、CI/CD、独立 backend／DB／Redis／域名，并用合成数据完成核心 smoke test。</td><td class="goal-target">Android 首发验收前</td></tr>
-          <tr class="goal-row" data-status="planned"><td class="goal-name"><span class="goal-id">FFF · G15</span>FFF 专属 schema、API 与模块重构</td><td><span class="badge planned">隔离验收后开始</span></td><td>重构范围尚未在隔离环境启动；当前原则是先得到行为一致、可回滚的 staging baseline，再改变 schema 和契约。</td><td>建立独立 migration history，按 FFF 需求重构；共享能力仅通过版本化源码模块接入。</td><td class="goal-target">G14 验收后</td></tr>
+          <tr class="goal-row" data-status="planned"><td class="goal-name"><span class="goal-id">FFF · G14</span>独立 GitLab repo 与 staging backend</td><td><span class="badge planned">决策已定，待执行</span></td><td>本次客户端报告没有提供独立后端交付证据。继续要求复用成熟源码基线，但隔离 FFF 与 Arrowfish 的运行环境、数据库、账号、Redis、凭证和迁移历史。</td><td>锁定基线，建立独立 repo、CI/CD、backend、数据库与 Redis，以合成数据完成核心流程验收。</td><td class="goal-target">Android 首发验收前</td></tr>
+          <tr class="goal-row" data-status="planned"><td class="goal-name"><span class="goal-id">FFF · G15</span>FFF 专属 schema、API 与模块重构</td><td><span class="badge planned">隔离验收后开始</span></td><td>本次没有 FFF 独立环境中的 schema、API 与模块重构交付证据。客户端支付与订阅重构正在推进，不能据此认定独立后端重构已开始或完成。</td><td>G14 验收后建立独立迁移历史，再按 FFF 需求重构；共享能力仅通过版本化源码模块接入。</td><td class="goal-target">G14 验收后</td></tr>
 
           <tr class="group-row"><th colspan="5">02 · Android 首发闭环</th></tr>
-          <tr class="goal-row" data-status="progress"><td class="goal-name"><span class="goal-id">FFF · G10</span>连接基础、自动选线与协议回归</td><td><span class="badge progress">核心与跨端状态持续集成</span></td><td>第12阶段继续接入线路选择、实时流量、出口状态与地区资料；Windows TUN 与辅助服务持续完善。各平台的自动分组、协议和实际连接仍分别验收，不能代替完整智能路由或多跳 VPN 验收。</td><td>固定各平台测试版本，完成选线、连接、断开、重连与账号清理验证。</td><td class="goal-target">2026 年 10 月</td></tr>
+          <tr class="goal-row" data-status="progress"><td class="goal-name"><span class="goal-id">FFF · G10</span>连接基础、自动选线与协议回归</td><td><span class="badge progress">核心实现已推进，跨端验收未关闭</span></td><td>10月9日 Lex 报告连接、选线、测速与阻断等基础能力已有实现。Apple 客户端配置与插件分组两处修复于9月28日提交在独立分支，尚未整合；共用代码不等于四平台实际连接均已验收。</td><td>整合 Apple 两处修复，固定各平台测试产物，完成选线、连接、断开、手动重连、阻断与账号清理验收；自动重连另行开发。</td><td class="goal-target">原目标：2026 年 10 月；当前完成日期待确认</td></tr>
           <tr class="goal-row" data-status="planned"><td class="goal-name"><span class="goal-id">FFF · G16</span>多跳 VPN（入口／出口双节点）</td><td><span class="badge planned">范围已确认，待开发</span></td><td>套餐和用户资料已有多跳资格与跳数资料，但客户端尚未建立入口节点、出口节点与连接链；当前隧道核心也没有可供 FFF 验收的通用双节点链路。SkyNode 可作为普通入口或出口，服务端指定上游节点的链式转发不在当前能力内。</td><td>采用客户端选择入口与出口的两跳方案；完成隧道核心链式拨号、后端拓扑与凭证配置、FFF 节点选择及状态／失败处理，并验证出口 IP、断线保护、性能与 Android 端到端连接。</td><td class="goal-target">待排期<small>若纳入首发，将影响当前时间线</small></td></tr>
-          <tr class="goal-row" data-status="planned"><td class="goal-name"><span class="goal-id">FFF · G17</span>完整智能路由与分流策略</td><td><span class="badge planned">基础存在，完整能力待开发</span></td><td>现有引擎具备 direct、域名规则和路由基础，但 blacklist／whitelist 尚未接入配置生成，也尚未形成可发布的完整能力：版本化规则、国内／本地资源直连、其他公网流量走 VPN、分流 DNS、规则失效保护、用户模式和跨平台验收均未关闭。</td><td>建立可版本化的域名／IP／应用规则与 split DNS；提供全局 VPN、智能路由和必要的用户例外模式；规则缺失或损坏时 fail closed，并依次完成 Android、Windows、Apple／Linux 与中国网络 QA。</td><td class="goal-target">待排期<small>G10 稳定连接基线后实施</small></td></tr>
-          <tr class="goal-row" data-status="progress"><td class="goal-name"><span class="goal-id">FFF · G12</span>支付接口与支付闭环</td><td><span class="badge progress">支付通道接口已推进，闭环待验收</span></td><td>9月16–17日推进支付通道、登录、用户资料及套餐分配接口对齐；客户端集成已开始，支付成功、失败及订单核对仍未完整验收。Roy 继续负责支付网关商务事项。</td><td>完成支付成功与失败、订单状态核对和重复事件验证，再关闭首发支付门槛。</td><td class="goal-target">Android 首发前<small>完成后才进入发布验收</small></td></tr>
+          <tr class="goal-row" data-status="planned"><td class="goal-name"><span class="goal-id">FFF · G17</span>完整智能路由与分流策略</td><td><span class="badge planned">配置基础存在，内核分流未接通</span></td><td>更正当前能力口径：客户端与服务端配置已有基础，但当前 FFF 内核尚未接通规则解析与分流，实际仍按选中出口转发；direct 类型存在不等于用户可用的智能路由。全局／直连入口、自定义规则与分应用代理尚未完成。</td><td>完成内核规则支持、版本化域名／IP／应用规则、分流 DNS、用户模式与失效保护，再按平台及中国网络环境独立验收；Linux 属于后续范围。</td><td class="goal-target">待排期；G10 稳定连接基线后实施</td></tr>
+          <tr class="goal-row" data-status="progress"><td class="goal-name"><span class="goal-id">FFF · G12</span>支付接口与支付闭环</td><td><span class="badge progress">四条交易链路重构中，尚不能收款</span></td><td>10月9日 Lex 报告用户充值、基底套餐、独享专线与独享 IP 购买正随支付及订阅 API 重构。商品与选项界面已有实现，下单、支付及结果同步尚未接通；Roy 继续负责支付网关商务事项。</td><td>接通四条交易链路，验证支付成功／失败、订单核对、重复事件以及余额与权益结果，再关闭首发支付门槛。</td><td class="goal-target">Android 首发前；完成日期待确认</td></tr>
 
           <tr class="group-row"><th colspan="5">03 · 多平台发布</th></tr>
-          <tr class="goal-row" data-status="progress"><td class="goal-name"><span class="goal-id">FFF · G13</span>多平台顺序发布</td><td><span class="badge progress">多平台开发与构建验证中</span></td><td>9月15日 macOS 双架构和 iPhone 未签名构建通过，已有原生及插件测试记录；Windows TUN 与打包工作推进至9月18日。未签名构建不等于可安装发布。</td><td>开发并行推进，发布保留 Android → Windows → macOS+iOS → Linux 顺序；每个平台独立关闭签名、安装、连接及支付验收。</td><td class="goal-target">按平台门控<small>每个平台独立构建与验收</small></td></tr>
+          <tr class="goal-row" data-status="progress"><td class="goal-name"><span class="goal-id">FFF · G13</span>多平台顺序发布</td><td><span class="badge progress">历史测试交付已记录，正式发布门槛未关闭</span></td><td>8月28日 Android APK 交 QA；9月15日 Apple 未签名构建；9月20日 Windows staging 部署获确认。10月7日 Windows 双架构资产与探测加入后，当前打包脚本仍检查旧路径；ARM 应用产物、签名、实机与支付验收待确认。</td><td>修复 Windows 当前重出包链路并核对产物；马来西亚团队整合 Apple 修复。正式发布保留 Android → Windows → macOS/iOS 顺序，各端分别完成签名、安装升级、连接与支付验收；Linux 不在本期范围。</td><td class="goal-target">按平台门控；发布日期待确认</td></tr>
         </tbody>
       </table>
     </div>
@@ -958,7 +936,7 @@
     </div>
   </section>
 
-<section id="latest" class="surface updates-section" aria-labelledby="latest-title"><div class="section-head"><div><p class="section-kicker">本次变化</p><h2 id="latest-title">第11–12阶段交付进展</h2><p class="section-copy">截至2026年9月18日；后续阶段不纳入本次快照。下方生产研究保留8月29日历史日期，不作为新的生产查询。</p></div></div><div class="updates-grid"><article class="update-card"><span class="update-id">G2</span><strong>续费实现完成，进入测试</strong><p>9月18日完成实现；购买、支付与到期切换继续验证。</p></article><article class="update-card"><span class="update-id">G13／G19</span><strong>六次 Android 测试发布</strong><p>第12阶段六次发布均为测试环境，版本与渠道已有记录。</p></article><article class="update-card"><span class="update-id">G7／G8</span><strong>连接与解析进入实测跟进</strong><p>9月7日中国、台湾当次连接获确认；后续节点、DNS 与协议验收继续推进。</p></article><article class="update-card"><span class="update-id">G20</span><strong>单 IP 主页简化推进</strong><p>Timmy 明确简化方向，Android 布局已调整；跨端视觉验收继续跟进。</p></article><article class="update-card"><span class="update-id">G11／G16</span><strong>Apple 与 Windows 分别验证</strong><p>TestFlight 有效构建与客户端源码进展已有记录；正式发布仍需各端独立验收。</p></article><article class="update-card"><span class="update-id">FFF · G10／G12／G13</span><strong>Windows、Apple 和支付接口推进</strong><p>未签名 Apple 构建通过，Windows 接入和支付通道对齐持续进行；安装、连接及支付闭环待验收。</p></article></div></section>
+<section id="latest" class="surface updates-section" aria-labelledby="latest-title"><div class="section-head"><div><p class="section-kicker">近期更新与历史快照</p><h2 id="latest-title">10月9日新增进展与历史记录</h2><p class="section-copy">FFF 与 Arrowfish 测试交付卡片更新至2026-10-09；续费日期按更正记录修正，其余卡片保留原有历史范围。下方生产研究保留8月29日历史日期，不作为新的生产查询。</p></div></div><div class="updates-grid"><article class="update-card"><span class="update-id">G2／G19</span><strong>Android 3.9.26 已交 Amy 做 staging 测试</strong><p>10月9日用户确认测试交付；验收结果待确认。继续支付、取消与可配置过期为后续计划，60 分钟为有效期建议。</p><a href="../Sprint-14/20261009_android-qa-update.html">查看 Android 测试交付与待支付订单补充</a></article><article class="update-card"><span class="update-id">G2</span><strong>续费主流程已实现，边界情况待补齐</strong><p>9月18日方案被否决；10月1日规则确定，10月5日主流程实现完成并进入测试。10月9日仍有待支付订单恢复、取消与过期待补齐。</p></article><article class="update-card"><span class="update-id">G13／G19</span><strong>六次 Android 测试发布</strong><p>第12阶段六次发布均为测试环境，版本与渠道已有记录。</p></article><article class="update-card"><span class="update-id">G7／G8</span><strong>连接与解析进入实测跟进</strong><p>9月7日中国、台湾当次连接获确认；后续节点、DNS 与协议验收继续推进。</p></article><article class="update-card"><span class="update-id">G20</span><strong>单 IP 主页简化推进</strong><p>Timmy 明确简化方向，Android 布局已调整；跨端视觉验收继续跟进。</p></article><article class="update-card"><span class="update-id">G11／G16</span><strong>Apple 与 Windows 分别验证</strong><p>TestFlight 有效构建与客户端源码进展已有记录；正式发布仍需各端独立验收。</p></article><article class="update-card"><span class="update-id">FFF · G10／G12／G13</span><strong>FFF 交易重构与平台发布门槛</strong><p>10月9日 Lex 报告已收到：核心实现有进展，四条交易链路仍在重构。保留9月20日 Windows staging 事实；Apple 修复整合、当前打包与平台验收仍未关闭。</p></article></div></section>
 
   <section id="production-study" class="detail-shell" aria-labelledby="production-study-title">
     <details open>
@@ -1042,7 +1020,7 @@
         <div><div class="summary-line"><span class="summary-number">ARROWFISH · 第10阶段细节 02</span><span class="badge planned">待开发</span></div><h2 id="subscription-title">订阅续费闭环</h2><p class="summary-copy">第10阶段收入事实与后续订阅闭环目标</p></div>
       </summary>
       <div class="detail-body">
-        <p class="callout">第12阶段更新：9月18日续费实现完成并进入测试交付；本节下方保留第10阶段的历史问题与原规划，当前状态以目标 G2 为准。</p>
+        <p class="callout">日期更正：9月18日续费方案被否决，10月1日规则确定，10月5日主流程实现完成并进入测试；10月9日待支付边界情况仍待补齐。本节下方保留第10阶段的历史问题与原规划，当前状态以目标 G2 为准。</p>
         <div class="callout"><strong>第10阶段结论</strong>续费／重复付费用户贡献周收入 83.1%，说明续费可靠性是直接的收入保护点；第10阶段没有订阅闭环开发完成或验收记录。</div>
         <div class="table-wrap">
           <table class="detail-table subscription-table">
@@ -1132,10 +1110,24 @@
     </details>
   </section>
 
-  <div class="footer">Arrowfish 与 FFF 交付进展截至第12阶段 · 2026-09-18 · 复核 2026-09-23 · 历史生产研究保留原日期 · 内部管理层阅读</div>
+  <div class="footer">FFF 截至 2026-10-09 · Arrowfish 新增 2026-10-09 测试交付，其余保留 2026-10-08 快照 · 共享能力与历史研究保留原日期 · 内部管理层阅读</div>
 </main>
 <script>
   (() => {
+    // Reuse translated column headings for the mobile card labels.
+    const updateTableLabels = () => {
+      document.querySelectorAll('.goal-table, .detail-table').forEach((table) => {
+        const headings = [...table.querySelectorAll('thead th')].map((cell) => cell.textContent.trim());
+        table.querySelectorAll('tbody tr').forEach((row) => {
+          [...row.children].forEach((cell, index) => {
+            if (cell.tagName === 'TD' && headings[index]) cell.dataset.label = headings[index];
+          });
+        });
+      });
+    };
+    updateTableLabels();
+    window.addEventListener('arrowfish:preferenceschange', updateTableLabels);
+
     const updateStatusSummaries = () => {
       document.querySelectorAll('[data-goal-group]').forEach((group) => {
         const goalRows = [...group.querySelectorAll('.goal-row[data-status]')];
@@ -1146,7 +1138,9 @@
           if (target) target.textContent = counts[status];
         });
         const summary = group.querySelector('[data-status-summary]');
-        const projectName = group.dataset.goalGroup === 'fff' ? 'FFF' : 'Arrowfish';
+        const projectName = group.dataset.goalGroup === 'shared'
+          ? group.querySelector('h2').textContent
+          : group.dataset.goalGroup === 'fff' ? 'FFF' : 'Arrowfish';
         if (summary) summary.setAttribute('aria-label', window.ArrowfishI18n.t('goal.statusSummary', {
           project: projectName,
           total: goalRows.length,

@@ -1,0 +1,451 @@
+{
+  "schemaVersion": 1,
+  "reportId": "sprint-14-android-qa-20261009",
+  "sourceFile": "Stakeholder/Sprint-14/20261009_android-qa-update.html",
+  "sourceVersion": "554b3b71fe513a8a",
+  "units": [
+    {
+      "id": "u_60da4719369045ca",
+      "kind": "text",
+      "source": "第14阶段 · Arrowfish Android 3.9.26 测试交付补充",
+      "occurrence": 0,
+      "target": "Sprint 14 · Arrowfish Android 3.9.26 Test Delivery Update",
+      "context": "title @ line 4"
+    },
+    {
+      "id": "u_360488fe126c04a2",
+      "kind": "attribute",
+      "source": "Arrowfish Android 3.9.26 已交 Amy 做 staging 测试；记录待支付订单阻塞及继续支付、取消和可配置过期的后续方向。",
+      "occurrence": 0,
+      "target": "Arrowfish Android 3.9.26 has been provided to Amy for staging testing; records pending-order blockage and planned payment recovery, cancellation and configurable expiry.",
+      "context": "meta @ line 5",
+      "attribute": "content"
+    },
+    {
+      "id": "u_a0f103c23f9f4862",
+      "kind": "text",
+      "source": "第14阶段 · Arrowfish Android 3.9.26 测试交付补充",
+      "occurrence": 1,
+      "target": "Sprint 14 · Arrowfish Android 3.9.26 Test Delivery Update",
+      "context": "h1 @ line 8 · surrounding text: 第14阶段 · Arrowfish Android 3.9.26 测试交付补充 报告日期 2026-10-09 · 第14阶段 2026-10-03 至 2026-10-16 · 马来西亚时间"
+    },
+    {
+      "id": "u_63dd314fc11b5788",
+      "kind": "text",
+      "source": "报告日期 2026-10-09 · 第14阶段 2026-10-03 至 2026-10-16 · 马来西亚时间",
+      "occurrence": 0,
+      "target": "Report date 2026-10-09 · Sprint 14: 2026-10-03 to 2026-10-16 · Malaysia time",
+      "context": "p.meta @ line 8 · surrounding text: 第14阶段 · Arrowfish Android 3.9.26 测试交付补充 报告日期 2026-10-09 · 第14阶段 2026-10-03 至 2026-10-16 · 马来西亚时间"
+    },
+    {
+      "id": "u_78ec28579443ac9a",
+      "kind": "text",
+      "source": "01 · 当前状态",
+      "occurrence": 0,
+      "target": "01 · Current Status",
+      "context": "h2 @ line 10"
+    },
+    {
+      "id": "u_85a5038fbf5d52c6",
+      "kind": "text",
+      "source": "10月9日，Arrowfish Android 3.9.26 已提供给 Amy 在 staging 测试；订阅边界情况仍待处理，待支付订单的继续支付、取消与自动过期功能列为后续改进。",
+      "occurrence": 0,
+      "target": "On October 9, Arrowfish Android 3.9.26 was provided to Amy for staging testing. Subscription edge cases remain outstanding; resuming, cancelling and automatically expiring pending orders are planned improvements.",
+      "context": "p @ line 11 · surrounding text: 10月9日，Arrowfish Android 3.9.26 已提供给 Amy 在 staging 测试；订阅边界情况仍待处理，待支付订单的继续支付、取消与自动过期功能列为后续改进。 本次确认的是测试交付，没有验收通过或生产发布结论。下列改进不计入本次版本已交付功能；完成日期待确认。"
+    },
+    {
+      "id": "u_24d06e2f893df3af",
+      "kind": "text",
+      "source": "本次确认的是测试交付，没有验收通过或生产发布结论。下列改进不计入本次版本已交付功能；完成日期待确认。",
+      "occurrence": 0,
+      "target": "This confirms test delivery, not acceptance or production release. The improvements below are not counted as delivered features in this version; their completion date is unconfirmed.",
+      "context": "p @ line 11 · surrounding text: 10月9日，Arrowfish Android 3.9.26 已提供给 Amy 在 staging 测试；订阅边界情况仍待处理，待支付订单的继续支付、取消与自动过期功能列为后续改进。 本次确认的是测试交付，没有验收通过或生产发布结论。下列改进不计入本次版本已交付功能；完成日期待确认。"
+    },
+    {
+      "id": "u_64a75dbcd5026bd8",
+      "kind": "text",
+      "source": "02 · 待支付订单为何阻塞购买",
+      "occurrence": 0,
+      "target": "02 · Why Pending Orders Block Purchases",
+      "context": "h2 @ line 14"
+    },
+    {
+      "id": "u_2fe1232e72a90b59",
+      "kind": "text",
+      "source": "用户下单后选择 Stripe 或 Google 支付，中途退出时订单保留为待支付。后端为避免重复订阅而阻止新的购买，但当前客户端缺少继续支付或取消该订单的有效入口。",
+      "occurrence": 0,
+      "target": "When a user places an order and exits Stripe or Google payment partway through, the order remains pending. The backend prevents another purchase to avoid duplicate subscriptions, but the client currently lacks effective controls to resume payment or cancel that order.",
+      "context": "p @ line 15 · surrounding text: 用户下单后选择 Stripe 或 Google 支付，中途退出时订单保留为待支付。后端为避免重复订阅而阻止新的购买，但当前客户端缺少继续支付或取消该订单的有效入口。 影响是用户无法自行恢复购买流程；这不是已经发生重复扣款的结论，也没有受影响人数或收入损失统计。"
+    },
+    {
+      "id": "u_271f8c9f951cdc8f",
+      "kind": "text",
+      "source": "影响是用户无法自行恢复购买流程；这不是已经发生重复扣款的结论，也没有受影响人数或收入损失统计。",
+      "occurrence": 0,
+      "target": "The impact is that users cannot recover the purchase flow themselves. This does not establish duplicate charges, and no affected-user count or revenue-loss figure is available.",
+      "context": "p @ line 15 · surrounding text: 用户下单后选择 Stripe 或 Google 支付，中途退出时订单保留为待支付。后端为避免重复订阅而阻止新的购买，但当前客户端缺少继续支付或取消该订单的有效入口。 影响是用户无法自行恢复购买流程；这不是已经发生重复扣款的结论，也没有受影响人数或收入损失统计。"
+    },
+    {
+      "id": "u_7ed7aeea7763f29e",
+      "kind": "text",
+      "source": "03 · 后续改善方向",
+      "occurrence": 0,
+      "target": "03 · Planned Improvements",
+      "context": "h2 @ line 18"
+    },
+    {
+      "id": "u_df1281cc529215d6",
+      "kind": "text",
+      "source": "范围",
+      "occurrence": 0,
+      "target": "Scope",
+      "context": "th @ line 19 · surrounding text: 范围 预期行为（计划）"
+    },
+    {
+      "id": "u_4fb641b531637cc3",
+      "kind": "text",
+      "source": "预期行为（计划）",
+      "occurrence": 0,
+      "target": "Expected Behavior (Planned)",
+      "context": "th @ line 19 · surrounding text: 范围 预期行为（计划）"
+    },
+    {
+      "id": "u_506ad92794f29db2",
+      "kind": "text",
+      "source": "查看待支付订单",
+      "occurrence": 0,
+      "target": "View Pending Orders",
+      "context": "td @ line 20 · surrounding text: 查看待支付订单 展示待支付订单、当前状态及新购买被阻止的原因，让用户可找到原订单。"
+    },
+    {
+      "id": "u_b72ffd62c1af7ef6",
+      "kind": "text",
+      "source": "展示待支付订单、当前状态及新购买被阻止的原因，让用户可找到原订单。",
+      "occurrence": 0,
+      "target": "Show the pending order, its current status and why another purchase is blocked, so the user can find the original order.",
+      "context": "td @ line 20 · surrounding text: 查看待支付订单 展示待支付订单、当前状态及新购买被阻止的原因，让用户可找到原订单。"
+    },
+    {
+      "id": "u_aa4f4bfd5b448c48",
+      "kind": "text",
+      "source": "继续支付",
+      "occurrence": 0,
+      "target": "Resume Payment",
+      "context": "td @ line 21 · surrounding text: 继续支付 从原订单继续付款；Stripe 跳回对应支付页面。Google 的恢复路径需按渠道能力设计与验证。"
+    },
+    {
+      "id": "u_184e5eeec929da94",
+      "kind": "text",
+      "source": "从原订单继续付款；Stripe 跳回对应支付页面。Google 的恢复路径需按渠道能力设计与验证。",
+      "occurrence": 0,
+      "target": "Resume payment from the original order; Stripe redirects to the corresponding payment page. The Google recovery path requires channel-specific design and verification.",
+      "context": "td @ line 21 · surrounding text: 继续支付 从原订单继续付款；Stripe 跳回对应支付页面。Google 的恢复路径需按渠道能力设计与验证。"
+    },
+    {
+      "id": "u_faca4015a46aaaf9",
+      "kind": "text",
+      "source": "用户主动取消",
+      "occurrence": 0,
+      "target": "User Cancellation",
+      "context": "td @ line 22 · surrounding text: 用户主动取消 允许取消待支付订单，正确关闭后解除新的购买阻塞，同时保留防重复订阅保护。"
+    },
+    {
+      "id": "u_ec58fe9ba1688283",
+      "kind": "text",
+      "source": "允许取消待支付订单，正确关闭后解除新的购买阻塞，同时保留防重复订阅保护。",
+      "occurrence": 0,
+      "target": "Allow users to cancel pending orders and unblock another purchase once the order is correctly closed, while retaining duplicate-subscription protection.",
+      "context": "td @ line 22 · surrounding text: 用户主动取消 允许取消待支付订单，正确关闭后解除新的购买阻塞，同时保留防重复订阅保护。"
+    },
+    {
+      "id": "u_04c9f4238bc13657",
+      "kind": "text",
+      "source": "超时自动过期",
+      "occurrence": 0,
+      "target": "Automatic Expiry",
+      "context": "td @ line 23 · surrounding text: 超时自动过期 增加定时任务处理超时未支付订单；建议有效期为 60 分钟，最终规则待确认。"
+    },
+    {
+      "id": "u_49524b6647227253",
+      "kind": "text",
+      "source": "增加定时任务处理超时未支付订单；建议有效期为 60 分钟，最终规则待确认。",
+      "occurrence": 0,
+      "target": "Add a scheduled job to handle overdue unpaid orders. The proposed validity period is 60 minutes; the final rule is unconfirmed.",
+      "context": "td @ line 23 · surrounding text: 超时自动过期 增加定时任务处理超时未支付订单；建议有效期为 60 分钟，最终规则待确认。"
+    },
+    {
+      "id": "u_fb6ae1996b5cfe59",
+      "kind": "text",
+      "source": "后台管理员配置",
+      "occurrence": 0,
+      "target": "Back Office (BO) Administrator Configuration",
+      "context": "td @ line 24 · surrounding text: 后台管理员配置 将待支付有效期加入后台 BO 配置设置表，供管理员调整。60 分钟是有效期建议，不是已启用配置，也不是任务执行频率。"
+    },
+    {
+      "id": "u_3b792d8bbe3b0f63",
+      "kind": "text",
+      "source": "将待支付有效期加入后台 BO 配置设置表，供管理员调整。60 分钟是有效期建议，不是已启用配置，也不是任务执行频率。",
+      "occurrence": 0,
+      "target": "Add pending-payment validity to the Back Office (BO) settings table for administrator control. The 60-minute period is a proposal, not an enabled setting or the job execution interval.",
+      "context": "td @ line 24 · surrounding text: 后台管理员配置 将待支付有效期加入后台 BO 配置设置表，供管理员调整。60 分钟是有效期建议，不是已启用配置，也不是任务执行频率。"
+    },
+    {
+      "id": "u_bea9e90276fff917",
+      "kind": "text",
+      "source": "04 · 测试与安全边界",
+      "occurrence": 0,
+      "target": "04 · Testing and Safety Boundaries",
+      "context": "h2 @ line 28"
+    },
+    {
+      "id": "u_bd327ea952678829",
+      "kind": "text",
+      "source": "Amy 接收本次 staging 测试版本，测试结果尚未提供。当前缺口来自 Timmy 的说明，本次汇报没有独立复现支付流程。",
+      "occurrence": 0,
+      "target": "Amy is the recipient of this staging test build; no test results have been supplied. The current gap is reported by Timmy, and this reporting review did not independently reproduce the payment flow.",
+      "context": "p @ line 29 · surrounding text: Amy 接收本次 staging 测试版本，测试结果尚未提供。当前缺口来自 Timmy 的说明，本次汇报没有独立复现支付流程。 后续改进需验证：中途退出后可查看及恢复订单；取消或过期后可重新购买；支付结果延迟到达、重复回调及重复扫描时，不产生重复订阅，也不误取消或误过期已支付订单。 防重复订阅检查继续保留。这里的安全要求针对订单与订阅一致性，不代表本次完成基础设施或访问权限审计。"
+    },
+    {
+      "id": "u_e57a95e41fd17681",
+      "kind": "text",
+      "source": "后续改进需验证：中途退出后可查看及恢复订单；取消或过期后可重新购买；支付结果延迟到达、重复回调及重复扫描时，不产生重复订阅，也不误取消或误过期已支付订单。",
+      "occurrence": 0,
+      "target": "Future improvements require verification that users can view and resume orders after exiting, and purchase again after cancellation or expiry. Delayed payment results, duplicate callbacks and repeated scans must not create duplicate subscriptions or incorrectly cancel or expire paid orders.",
+      "context": "p @ line 29 · surrounding text: Amy 接收本次 staging 测试版本，测试结果尚未提供。当前缺口来自 Timmy 的说明，本次汇报没有独立复现支付流程。 后续改进需验证：中途退出后可查看及恢复订单；取消或过期后可重新购买；支付结果延迟到达、重复回调及重复扫描时，不产生重复订阅，也不误取消或误过期已支付订单。 防重复订阅检查继续保留。这里的安全要求针对订单与订阅一致性，不代表本次完成基础设施或访问权限审计。"
+    },
+    {
+      "id": "u_095db764753e0023",
+      "kind": "text",
+      "source": "防重复订阅检查继续保留。这里的安全要求针对订单与订阅一致性，不代表本次完成基础设施或访问权限审计。",
+      "occurrence": 0,
+      "target": "Duplicate-subscription checks remain in place. These safety requirements concern order and subscription consistency; they do not establish an infrastructure or access-permission audit.",
+      "context": "p @ line 29 · surrounding text: Amy 接收本次 staging 测试版本，测试结果尚未提供。当前缺口来自 Timmy 的说明，本次汇报没有独立复现支付流程。 后续改进需验证：中途退出后可查看及恢复订单；取消或过期后可重新购买；支付结果延迟到达、重复回调及重复扫描时，不产生重复订阅，也不误取消或误过期已支付订单。 防重复订阅检查继续保留。这里的安全要求针对订单与订阅一致性，不代表本次完成基础设施或访问权限审计。"
+    },
+    {
+      "id": "u_e59528526a63ce9a",
+      "kind": "text",
+      "source": "05 · 时间线与下一步",
+      "occurrence": 0,
+      "target": "05 · Timeline and Next Steps",
+      "context": "h2 @ line 32"
+    },
+    {
+      "id": "u_15afb49c4e3cde2e",
+      "kind": "text",
+      "source": "日期／顺序",
+      "occurrence": 0,
+      "target": "Date / Sequence",
+      "context": "th @ line 33 · surrounding text: 日期／顺序 事实或下一门槛"
+    },
+    {
+      "id": "u_75be48afacae2d4d",
+      "kind": "text",
+      "source": "事实或下一门槛",
+      "occurrence": 0,
+      "target": "Fact or Next Gate",
+      "context": "th @ line 33 · surrounding text: 日期／顺序 事实或下一门槛"
+    },
+    {
+      "id": "u_bfc98b40b9069e78",
+      "kind": "text",
+      "source": "Timmy 确认 Android 3.9.26 已交 Amy 测试，环境为 staging；验收结果待确认。",
+      "occurrence": 0,
+      "target": "Timmy confirmed Android 3.9.26 was provided to Amy for testing against staging; acceptance results remain unconfirmed.",
+      "context": "td @ line 34 · surrounding text: 2026-10-09 Timmy 确认 Android 3.9.26 已交 Amy 测试，环境为 staging；验收结果待确认。"
+    },
+    {
+      "id": "u_49e86fcfb3a31405",
+      "kind": "text",
+      "source": "接下来",
+      "occurrence": 0,
+      "target": "Next",
+      "context": "td @ line 35 · surrounding text: 接下来 跟进本次测试结果，补齐订阅边界情况及待支付订单处理；实现、测试通过和发布分别记录。"
+    },
+    {
+      "id": "u_1657a393e84d4480",
+      "kind": "text",
+      "source": "跟进本次测试结果，补齐订阅边界情况及待支付订单处理；实现、测试通过和发布分别记录。",
+      "occurrence": 0,
+      "target": "Follow up on test results and address subscription edge cases and pending-order handling; record implementation, passed testing and release separately.",
+      "context": "td @ line 35 · surrounding text: 接下来 跟进本次测试结果，补齐订阅边界情况及待支付订单处理；实现、测试通过和发布分别记录。"
+    },
+    {
+      "id": "u_e290634da6706519",
+      "kind": "text",
+      "source": "后续验收",
+      "occurrence": 0,
+      "target": "Subsequent Acceptance",
+      "context": "td @ line 36 · surrounding text: 后续验收 待改进实现后，验证 Stripe / Google 恢复支付、取消、可配置过期及并发结果；完成和发布日期均待确认。"
+    },
+    {
+      "id": "u_73ffc8b68e963f10",
+      "kind": "text",
+      "source": "待改进实现后，验证 Stripe / Google 恢复支付、取消、可配置过期及并发结果；完成和发布日期均待确认。",
+      "occurrence": 0,
+      "target": "After implementation, verify Stripe / Google payment recovery, cancellation, configurable expiry and concurrent outcomes. Completion and release dates remain unconfirmed.",
+      "context": "td @ line 36 · surrounding text: 后续验收 待改进实现后，验证 Stripe / Google 恢复支付、取消、可配置过期及并发结果；完成和发布日期均待确认。"
+    },
+    {
+      "id": "u_a9eb785afacb1410",
+      "kind": "text",
+      "source": "06 · 本次补充的范围",
+      "occurrence": 0,
+      "target": "06 · Scope of This Update",
+      "context": "h2 @ line 40"
+    },
+    {
+      "id": "u_c6ec5390da3072c2",
+      "kind": "text",
+      "source": "本页补充此前截至10月8日的 Arrowfish 进度报告，仅新增10月9日的测试交付和待处理事项。此前报告保留原日期与口径，FFF 进展不受本次更新影响。",
+      "occurrence": 0,
+      "target": "This page supplements the earlier Arrowfish report through October 8, adding only October 9 test delivery and outstanding work. The earlier report retains its original date and evidence boundary; FFF progress is unaffected.",
+      "context": "p @ line 41 · surrounding text: 本页补充此前截至10月8日的 Arrowfish 进度报告，仅新增10月9日的测试交付和待处理事项。此前报告保留原日期与口径，FFF 进展不受本次更新影响。 查看此前 Arrowfish 进度报告"
+    },
+    {
+      "id": "u_696b2ae3fd96f252",
+      "kind": "text",
+      "source": "查看此前 Arrowfish 进度报告",
+      "occurrence": 0,
+      "target": "View the Earlier Arrowfish Progress Report",
+      "context": "a @ line 41 · surrounding text: 本页补充此前截至10月8日的 Arrowfish 进度报告，仅新增10月9日的测试交付和待处理事项。此前报告保留原日期与口径，FFF 进展不受本次更新影响。 查看此前 Arrowfish 进度报告"
+    }
+  ],
+  "blocks": {
+    "b0001": {
+      "type": "heading",
+      "source": "第14阶段 · Arrowfish Android 3.9.26 测试交付补充",
+      "occurrence": 0
+    },
+    "b0002": {
+      "type": "p",
+      "source": "报告日期 2026-10-09 · 第14阶段 2026-10-03 至 2026-10-16 · 马来西亚时间",
+      "occurrence": 0
+    },
+    "b0003": {
+      "type": "heading",
+      "source": "01 · 当前状态",
+      "occurrence": 0
+    },
+    "b0004": {
+      "type": "p",
+      "source": "10月9日，Arrowfish Android 3.9.26 已提供给 Amy 在 staging 测试；订阅边界情况仍待处理，待支付订单的继续支付、取消与自动过期功能列为后续改进。",
+      "occurrence": 0
+    },
+    "b0005": {
+      "type": "p",
+      "source": "本次确认的是测试交付，没有验收通过或生产发布结论。下列改进不计入本次版本已交付功能；完成日期待确认。",
+      "occurrence": 0
+    },
+    "b0006": {
+      "type": "heading",
+      "source": "02 · 待支付订单为何阻塞购买",
+      "occurrence": 0
+    },
+    "b0007": {
+      "type": "p",
+      "source": "用户下单后选择 Stripe 或 Google 支付，中途退出时订单保留为待支付。后端为避免重复订阅而阻止新的购买，但当前客户端缺少继续支付或取消该订单的有效入口。",
+      "occurrence": 0
+    },
+    "b0008": {
+      "type": "p",
+      "source": "影响是用户无法自行恢复购买流程；这不是已经发生重复扣款的结论，也没有受影响人数或收入损失统计。",
+      "occurrence": 0
+    },
+    "b0009": {
+      "type": "heading",
+      "source": "03 · 后续改善方向",
+      "occurrence": 0
+    },
+    "b0010": {
+      "type": "table-row",
+      "source": "范围 预期行为（计划）",
+      "occurrence": 0
+    },
+    "b0011": {
+      "type": "table-row",
+      "source": "查看待支付订单 展示待支付订单、当前状态及新购买被阻止的原因，让用户可找到原订单。",
+      "occurrence": 0
+    },
+    "b0012": {
+      "type": "table-row",
+      "source": "继续支付 从原订单继续付款；Stripe 跳回对应支付页面。Google 的恢复路径需按渠道能力设计与验证。",
+      "occurrence": 0
+    },
+    "b0013": {
+      "type": "table-row",
+      "source": "用户主动取消 允许取消待支付订单，正确关闭后解除新的购买阻塞，同时保留防重复订阅保护。",
+      "occurrence": 0
+    },
+    "b0014": {
+      "type": "table-row",
+      "source": "超时自动过期 增加定时任务处理超时未支付订单；建议有效期为 60 分钟，最终规则待确认。",
+      "occurrence": 0
+    },
+    "b0015": {
+      "type": "table-row",
+      "source": "后台管理员配置 将待支付有效期加入后台 BO 配置设置表，供管理员调整。60 分钟是有效期建议，不是已启用配置，也不是任务执行频率。",
+      "occurrence": 0
+    },
+    "b0016": {
+      "type": "heading",
+      "source": "04 · 测试与安全边界",
+      "occurrence": 0
+    },
+    "b0017": {
+      "type": "p",
+      "source": "Amy 接收本次 staging 测试版本，测试结果尚未提供。当前缺口来自 Timmy 的说明，本次汇报没有独立复现支付流程。",
+      "occurrence": 0
+    },
+    "b0018": {
+      "type": "p",
+      "source": "后续改进需验证：中途退出后可查看及恢复订单；取消或过期后可重新购买；支付结果延迟到达、重复回调及重复扫描时，不产生重复订阅，也不误取消或误过期已支付订单。",
+      "occurrence": 0
+    },
+    "b0019": {
+      "type": "p",
+      "source": "防重复订阅检查继续保留。这里的安全要求针对订单与订阅一致性，不代表本次完成基础设施或访问权限审计。",
+      "occurrence": 0
+    },
+    "b0020": {
+      "type": "heading",
+      "source": "05 · 时间线与下一步",
+      "occurrence": 0
+    },
+    "b0021": {
+      "type": "table-row",
+      "source": "日期／顺序 事实或下一门槛",
+      "occurrence": 0
+    },
+    "b0022": {
+      "type": "table-row",
+      "source": "2026-10-09 Timmy 确认 Android 3.9.26 已交 Amy 测试，环境为 staging；验收结果待确认。",
+      "occurrence": 0
+    },
+    "b0023": {
+      "type": "table-row",
+      "source": "接下来 跟进本次测试结果，补齐订阅边界情况及待支付订单处理；实现、测试通过和发布分别记录。",
+      "occurrence": 0
+    },
+    "b0024": {
+      "type": "table-row",
+      "source": "后续验收 待改进实现后，验证 Stripe / Google 恢复支付、取消、可配置过期及并发结果；完成和发布日期均待确认。",
+      "occurrence": 0
+    },
+    "b0025": {
+      "type": "heading",
+      "source": "06 · 本次补充的范围",
+      "occurrence": 0
+    },
+    "b0026": {
+      "type": "p",
+      "source": "本页补充此前截至10月8日的 Arrowfish 进度报告，仅新增10月9日的测试交付和待处理事项。此前报告保留原日期与口径，FFF 进展不受本次更新影响。",
+      "occurrence": 0
+    },
+    "b0027": {
+      "type": "p",
+      "source": "查看此前 Arrowfish 进度报告",
+      "occurrence": 0
+    }
+  },
+  "reviewedTargetHash": "490f1b374dbefd16"
+}
