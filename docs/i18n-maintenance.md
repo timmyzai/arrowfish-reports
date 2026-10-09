@@ -80,3 +80,42 @@ the matching canonical context, and returns `meta.locale`. API failures retain t
 `error` string and also include a stable uppercase `code`; the browser may localize by code
 without parsing server prose. Switching the UI language aborts the active request and removes
 the current `sessionStorage` conversation by design.
+
+## Reading order and catalogue maintenance
+
+The catalogue groups reports by numeric sprint range, newest first. Every sprint report
+requires `sprint: {start, end}`, `kind` (`correction`, `summary`, `report`, `addendum`,
+`study`) and bilingual `shortName`. Range reports retain their actual range, even when
+their file lives in the final sprint folder. Addenda stay in their original sprint.
+Only one entry per group may set `defaultForSprintPage: true`; `false` excludes an entry
+from the recommendation fallback. The catalogue validator runs in CI.
+
+Keep `id`, `file` and `date` stable for existing links. Optional `periodStart`/`periodEnd`,
+`contentThrough` and `publishedAt` describe separate facts. Copy these only from explicit
+report evidence; never infer publication from a filename. Presentation-only dashboard
+changes update its version, not the evidence date.
+
+New stakeholder reports lead with a short conclusion, then decisions/coordination and
+material risks, outcomes with business impact, release boundaries and next steps with
+known dates or dependencies. Put detailed chronology and context last. Preserve required
+report sections, attribution and independent implementation/deployment/acceptance facts.
+Do not reorder published sprint HTML to apply this convention retroactively.
+
+The living dashboard presents overview, attention, recent progress, next steps, complete
+goals and historical evidence. Full goal tables and historical details are collapsed by
+default; counts remain visible. Retain business modules, ordering goals within a module
+as `progress`, `planned`, `done`, stably within each status. Counts are not completion
+percentages. Goal IDs, product ownership and factual columns remain authoritative.
+
+Existing dashboard evidence is pinned with `data-evidence-id`. Never reuse a pinned ID
+for different content. Move its original evidence intact; add a new summary separately.
+`data-evidence-prefix="reading-"` keeps newly generated IDs separate from historical
+sequential IDs. Keep explicit IDs when later moving new sections too. Regenerate the
+sidecar/context/index/build together; never hand-edit generated block locators. Review
+repeated-source translation occurrences after a reorder. Old citations must still reveal
+the correct evidence through every enclosing details element. Copy includes collapsed
+content; printing expands details temporarily and restores their prior state.
+
+Run `node --test tools/report-catalog.test.cjs` and
+`python3 -m unittest discover -s tools -p 'test_evidence_ids.py'` alongside the publishing
+checks above. Preview the generated locale pages, not only the authoring HTML.

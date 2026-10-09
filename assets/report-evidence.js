@@ -277,6 +277,7 @@
 
       selected.push({
         id: 'S' + (selected.length + 1),
+        score: item.score,
         blockId: block.id,
         reportId: sourceReport.id,
         reportKey: sourceReport.file,

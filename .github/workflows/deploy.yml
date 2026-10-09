@@ -1,4 +1,4 @@
-name: Verify and deploy GitHub Pages
+name: Verify and deploy report Worker
 
 on:
   push:
@@ -12,24 +12,21 @@ on:
 
 permissions:
   contents: read
-  pages: write
-  id-token: write
 
 concurrency:
-  group: pages
+  group: report-worker
   cancel-in-progress: false
 
 jobs:
   deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
 
       - name: Validate HTML catalogue and generated report context
         run: |
+          node --test tools/report-catalog.test.cjs
+          python3 -m unittest discover -s tools -p 'test_evidence_ids.py'
           python3 -m json.tool reports.json >/dev/null
           python3 -m json.tool report-context.json >/dev/null
           python3 -m json.tool report-index.json >/dev/null
@@ -43,9 +40,9 @@ jobs:
 
       - name: Check browser and Worker JavaScript
         run: |
+          node --check assets/report-catalog.js
           node --check assets/ui-i18n.js
           node --check assets/site-preferences.js
-          node --check assets/auth-gate.js
           node --check assets/report-evidence.js
           node --check assets/report-brief.js
           node --check assets/ai-chat.js
@@ -53,17 +50,10 @@ jobs:
           node --check worker/index.js
 
       - name: Dry-run Worker bundle
-        run: npx --yes wrangler@4.127.0 deploy --dry-run --config worker/wrangler.toml --outdir /tmp/arrowfish-worker-dry-run
+        run: npx --yes wrangler@4.127.0 deploy --dry-run --outdir /tmp/arrowfish-worker-dry-run
 
-      - name: Deploy report AI Worker
+      - name: Deploy report Worker
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-        run: npx --yes wrangler@4.127.0 deploy --config worker/wrangler.toml
-
-      - uses: actions/configure-pages@v5
-      - uses: actions/upload-pages-artifact@v3
-        with:
-          path: _site
-      - id: deployment
-        uses: actions/deploy-pages@v4
+        run: npx --yes wrangler@4.127.0 deploy

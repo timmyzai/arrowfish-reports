@@ -321,6 +321,7 @@ def rewrite_asset_references(source: str, asset_names: dict[str, str]) -> str:
         name = match.group("name")
         return match.group("prefix") + asset_names.get(name, name)
 
+    source = re.sub(r'<script\b[^>]*\bsrc=["\'][^"\']*/auth-gate\.js(?:\?[^"\']*)?["\'][^>]*>\s*</script>', "", source, flags=re.IGNORECASE)
     return ASSET_REFERENCE_RE.sub(replace, source)
 
 

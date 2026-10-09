@@ -201,6 +201,18 @@
   }
 
   function initializeDocument() {
+    // A report can be embedded in the catalogue. Returning to that catalogue
+    // must replace the outer page rather than nest another copy in the iframe.
+    if (localeRoot && root.self !== root.top) {
+      root.document.querySelectorAll('a[href]').forEach(function (link) {
+        var target = new URL(link.href, root.location.href);
+        if (target.origin === localeRoot.origin &&
+            (target.pathname === localeRoot.pathname || target.pathname === localeRoot.pathname + 'index.html') &&
+            (!link.target || link.target === '_self')) {
+          link.target = '_top';
+        }
+      });
+    }
     installControls();
     renderControls();
   }

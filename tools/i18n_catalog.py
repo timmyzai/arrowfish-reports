@@ -540,7 +540,6 @@ def ui_catalog_errors() -> list[str]:
     usage_files = [
         ROOT / "index.html",
         ROOT / "assets" / "site-preferences.js",
-        ROOT / "assets" / "auth-gate.js",
         ROOT / "assets" / "copy-markdown.js",
         ROOT / "assets" / "ai-chat.js",
     ] + list((ROOT / "Stakeholder").rglob("*.html"))

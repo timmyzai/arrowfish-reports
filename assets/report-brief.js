@@ -192,7 +192,6 @@
       lines.push(t(TIMELINE_LABEL_KEYS[bucket]));
       matching.forEach(function (goal) {
         var text = goal.id + ' ' + goal.title + ' · ' + goal.status + ' · ' + goal.deadline;
-        if (goal.atRisk) text += ' ' + t('ai.atRisk');
         addIndexedLine(lines, sources, reports, text, goal);
       });
     });
@@ -220,7 +219,6 @@
       lines.push(t('ai.chainDated'));
       dated.forEach(function (goal) {
         var text = goal.id + ' ' + goal.title + ' - ' + goal.deadline;
-        if (goal.atRisk) text += ' ' + t('ai.atRisk');
         addIndexedLine(lines, sources, reports, text, goal);
       });
       lines.push('');
@@ -300,41 +298,48 @@
     var index = options.index;
     var reports = options.reports || [];
     var t = options.t;
-    var formatDate = options.formatDate || function (value) { return value; };
     var lines = [];
     var sources = [];
-    var used = new Set();
+    var order = ['now', 'next-release', 'dated', 'gated', 'year-end', 'ongoing', 'unscheduled'];
 
-    allGoals(index).filter(function (goal) {
+    var open = allGoals(index).filter(function (goal) {
       return goal.statusGroup !== 'done';
-    }).forEach(function (goal) {
+    }).sort(function (left, right) {
+      return order.indexOf(left.timeline) - order.indexOf(right.timeline) || left.id.localeCompare(right.id);
+    });
+
+    open.slice(0, MAX_CHAIN_BLOCKERS).forEach(function (goal) {
       addIndexedLine(
         lines,
         sources,
         reports,
-        goal.id + ' ' + goal.title + ' · ' + goal.status + ' - ' + goal.evidence + ' ' + t('ai.nextStep') + goal.nextAction,
+        goal.id + ' ' + goal.title + ' · ' + goal.status + ' - ' + t('ai.nextStep') + goal.nextAction,
         goal
       );
-      used.add(goal.reportId + ' ' + goal.blockId);
     });
+    var remaining = open.length - Math.min(open.length, MAX_CHAIN_BLOCKERS);
+    if (remaining > 0) lines.push(t('ai.openMoreGoals', { count: remaining }));
+    return result(lines, sources);
+  }
 
-    ((index && index.blockers) || []).forEach(function (blocker) {
-      var key = blocker.reportId + ' ' + blocker.blockId;
-      if (used.has(key)) return;
-      used.add(key);
-      addIndexedLine(
-        lines,
-        sources,
-        reports,
-        formatDate(blocker.reportDate) + ' · ' + blocker.section + ' - ' + blocker.text,
-        blocker
-      );
-    });
+  function goalStatus(options) {
+    options = options || {};
+    var goals = allGoals(options.index);
+    var title = evidence().normalizeText(options.goalTitle);
+    var goal = goals.find(function (item) { return item.id === options.goalId; }) ||
+      (title && goals.find(function (item) { return evidence().normalizeText(item.title).indexOf(title) !== -1; }));
+    var lines = [];
+    var sources = [];
+    if (!goal) return result(lines, sources);
+    addIndexedLine(lines, sources, options.reports, goal.id + ' ' + goal.title + ' · ' + goal.status, goal);
+    addIndexedLine(lines, sources, options.reports, goal.evidence, goal);
+    addIndexedLine(lines, sources, options.reports, options.t('ai.nextStep') + goal.nextAction + ' · ' + goal.deadline, goal);
     return result(lines, sources);
   }
 
   return {
     allGoals: allGoals,
+    goalStatus: goalStatus,
     deliveryChain: deliveryChain,
     indexedSource: indexedSource,
     reportBrief: reportBrief,

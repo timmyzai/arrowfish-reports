@@ -1,9 +1,8 @@
 import REPORT_CONTEXT from '../report-context.json';
 import REPORT_CONTEXT_EN from '../report-context.en.json';
 
-var DEFAULT_ORIGINS = ['https://timmyzai.github.io'];
 var DEFAULT_MODEL = 'openai/gpt-oss-20b';
-var PROMPT_VERSION = 'chat-v24-citation-marker-recovery';
+var PROMPT_VERSION = 'chat-v25-strict-citations';
 var MAX_BODY_BYTES = 60000;
 var MAX_QUESTION_CHARS = 1500;
 var MAX_SOURCES = 8;
@@ -13,17 +12,6 @@ var MAX_CONVERSATION_MESSAGES = 6;
 var MAX_ANSWER_CHARS = 600;
 var MAX_CITATIONS = 5;
 var UPSTREAM_TIMEOUT_MS = 28000;
-// Reasons where the model attempted a cited answer, or never produced one at all,
-// and quoting the selected evidence is more truthful than claiming the report has none.
-var EXTRACTIVE_FALLBACK_REASONS = [
-  'generation_failed',
-  'invalid_model_response',
-  'response_too_long',
-  'missing_citation_markers',
-  'citation_marker_mismatch',
-  'invalid_citation_quotes',
-  'unsupported_grounded_units'
-];
 var AUTH_FAILURE_COOLDOWN_MS = 30 * 60 * 1000;
 var keyCursor = Math.floor(Math.random() * 3);
 var keyCooldowns = new Map();
@@ -38,10 +26,8 @@ var ERROR_MESSAGES = {
   NOT_CONFIGURED: { 'zh-CN': '报告助手尚未配置。', en: 'The report assistant has not been configured.' },
   SERVICE_UNAVAILABLE: { 'zh-CN': 'AI 服务当前不可用。', en: 'The AI service is currently unavailable.' },
   UPSTREAM_TIMEOUT: { 'zh-CN': 'AI 服务响应超时，请重试。', en: 'The AI service timed out. Please try again.' },
-  GENERATION_FAILED: { 'zh-CN': 'AI 服务暂时无法生成回答，请重试。', en: 'The AI service could not generate an answer. Please try again.' },
   UPSTREAM_FAILED: { 'zh-CN': 'AI 服务暂时无法回答该问题。', en: 'The AI service could not answer this question.' },
   INVALID_UPSTREAM_RESPONSE: { 'zh-CN': 'AI 服务返回了无效响应。', en: 'The AI service returned an invalid response.' },
-  INVALID_MODEL_RESPONSE: { 'zh-CN': 'AI 服务返回了无效回答，请重试。', en: 'The AI service returned an invalid answer. Please try again.' },
   RATE_LIMITED: { 'zh-CN': '报告助手当前繁忙，请稍后再试。', en: 'The report assistant is busy. Please try again shortly.' },
   TOO_MANY_REQUESTS: { 'zh-CN': '报告助手请求过于频繁，请稍后再试。', en: 'Too many report assistant requests. Please try again shortly.' },
   INVALID_CONFIGURATION: { 'zh-CN': 'AI 服务配置无效。', en: 'The AI service configuration is invalid.' }
@@ -49,40 +35,32 @@ var ERROR_MESSAGES = {
 
 export default {
   async fetch(request, env) {
-    var origin = request.headers.get('Origin') || '';
-    var allowedOrigin = allowedRequestOrigin(origin, env);
-    var headerLocale = normalizeLocale(request.headers.get('Accept-Language'));
-
-    if (request.method === 'OPTIONS') {
-      if (!allowedOrigin) return errorResponse('ORIGIN_FORBIDDEN', 403, '', headerLocale);
-      return new Response(null, { status: 204, headers: corsHeaders(allowedOrigin) });
-    }
-
-    if (!allowedOrigin) return errorResponse('ORIGIN_FORBIDDEN', 403, '', headerLocale);
-
+    var origin = request.headers.get('Origin');
     var url = new URL(request.url);
-    if (url.pathname !== '/api/chat') return errorResponse('NOT_FOUND', 404, allowedOrigin, headerLocale);
-    if (request.method !== 'POST') return errorResponse('METHOD_NOT_ALLOWED', 405, allowedOrigin, headerLocale);
+    var headerLocale = normalizeLocale(request.headers.get('Accept-Language'));
+    if (origin !== null && origin !== url.origin) return errorResponse('ORIGIN_FORBIDDEN', 403, headerLocale);
+    if (url.pathname !== '/api/chat') return errorResponse('NOT_FOUND', 404, headerLocale);
+    if (request.method !== 'POST') return errorResponse('METHOD_NOT_ALLOWED', 405, headerLocale);
 
-    var limited = await rateLimitResponse(env, origin, allowedOrigin, headerLocale);
+    var limited = await rateLimitResponse(env, request, headerLocale);
     if (limited) return limited;
 
     var contentLength = Number(request.headers.get('Content-Length') || 0);
-    if (contentLength > MAX_BODY_BYTES) return errorResponse('PAYLOAD_TOO_LARGE', 413, allowedOrigin, headerLocale);
+    if (contentLength > MAX_BODY_BYTES) return errorResponse('PAYLOAD_TOO_LARGE', 413, headerLocale);
 
     var rawBody;
     var body;
     try {
       rawBody = await request.text();
       if (new TextEncoder().encode(rawBody).length > MAX_BODY_BYTES) {
-        return errorResponse('PAYLOAD_TOO_LARGE', 413, allowedOrigin, headerLocale);
+        return errorResponse('PAYLOAD_TOO_LARGE', 413, headerLocale);
       }
       body = JSON.parse(rawBody);
     } catch (error) {
-      return errorResponse('INVALID_JSON', 400, allowedOrigin, headerLocale);
+      return errorResponse('INVALID_JSON', 400, headerLocale);
     }
     if (!body || typeof body !== 'object' || Array.isArray(body)) {
-      return errorResponse('INVALID_JSON', 400, allowedOrigin, headerLocale);
+      return errorResponse('INVALID_JSON', 400, headerLocale);
     }
 
     var uiLocale = normalizeLocale(body.uiLocale || headerLocale);
@@ -91,16 +69,17 @@ export default {
     var report = canonicalReport(body.report, responseLocale);
     var conversation = cleanConversation(body.conversation);
 
-    if (!question) return errorResponse('QUESTION_REQUIRED', 400, allowedOrigin, uiLocale);
-    if (!report) return errorResponse('INVALID_REPORT', 409, allowedOrigin, uiLocale);
+    if (!question) return errorResponse('QUESTION_REQUIRED', 400, uiLocale);
+    if (!report) return errorResponse('INVALID_REPORT', 409, uiLocale);
     var sources = canonicalSources(body.sources, report);
     var keys = orderedKeys(env);
-    if (!keys.length) return errorResponse('NOT_CONFIGURED', 503, allowedOrigin, uiLocale);
+    if (!keys.length) return errorResponse('NOT_CONFIGURED', 503, uiLocale);
 
     var messages = buildMessages(question, report, sources, conversation, responseLocale);
     var responseFormat = buildResponseFormat(sources);
 
     var rateLimited = false;
+    var lastTransportFailure = '';
     var shortestRetrySeconds = Infinity;
 
     for (var index = 0; index < keys.length; index += 1) {
@@ -137,7 +116,8 @@ export default {
         });
       } catch (error) {
         var timedOut = error && (error.name === 'TimeoutError' || error.name === 'AbortError');
-        return errorResponse(timedOut ? 'UPSTREAM_TIMEOUT' : 'SERVICE_UNAVAILABLE', 502, allowedOrigin, uiLocale);
+        lastTransportFailure = timedOut ? 'UPSTREAM_TIMEOUT' : 'SERVICE_UNAVAILABLE';
+        continue;
       }
 
       if (upstream.status === 401 || upstream.status === 403) {
@@ -154,15 +134,15 @@ export default {
       }
 
       if (upstream.status === 400 || upstream.status === 422) {
-        return jsonResponse(fallbackOrRefusal(question, report, sources, env, 'generation_failed'), 200, allowedOrigin);
+        return jsonResponse(refusalPayload(question, report, env, 'generation_failed'), 200);
       }
-      if (!upstream.ok) return errorResponse('UPSTREAM_FAILED', 502, allowedOrigin, uiLocale);
+      if (!upstream.ok) return errorResponse('UPSTREAM_FAILED', 502, uiLocale);
 
       var result;
       try {
         result = await upstream.json();
       } catch (error) {
-        return errorResponse('INVALID_UPSTREAM_RESPONSE', 502, allowedOrigin, uiLocale);
+        return errorResponse('INVALID_UPSTREAM_RESPONSE', 502, uiLocale);
       }
 
       var content = result && result.choices && result.choices[0] &&
@@ -171,39 +151,32 @@ export default {
       try {
         modelOutput = JSON.parse(content);
       } catch (error) {
-        return jsonResponse(fallbackOrRefusal(question, report, sources, env, 'invalid_model_response'), 200, allowedOrigin);
+        return jsonResponse(refusalPayload(question, report, env, 'invalid_model_response'), 200);
       }
 
-      return jsonResponse(validateAnswer(modelOutput, question, report, sources, env), 200, allowedOrigin);
+      return jsonResponse(validateAnswer(modelOutput, question, report, sources, env), 200);
     }
 
     if (rateLimited) {
       return jsonResponse(
         errorPayload('RATE_LIMITED', uiLocale),
         429,
-        allowedOrigin,
         { 'Retry-After': String(Math.max(1, Number.isFinite(shortestRetrySeconds) ? shortestRetrySeconds : 60)) }
       );
     }
-    return errorResponse('INVALID_CONFIGURATION', 503, allowedOrigin, uiLocale);
+    if (lastTransportFailure) return errorResponse(lastTransportFailure, 502, uiLocale);
+    return errorResponse('INVALID_CONFIGURATION', 503, uiLocale);
   }
 };
 
-function allowedRequestOrigin(origin, env) {
-  var configured = env.ALLOWED_ORIGINS || DEFAULT_ORIGINS.join(',');
-  var allowed = configured.split(',').map(function (value) { return value.trim(); }).filter(Boolean);
-  return allowed.indexOf(origin) === -1 ? '' : origin;
-}
-
-async function rateLimitResponse(env, origin, allowedOrigin, locale) {
+async function rateLimitResponse(env, request, locale) {
   if (!env.CHAT_RATE_LIMITER || typeof env.CHAT_RATE_LIMITER.limit !== 'function') return null;
   try {
-    var result = await env.CHAT_RATE_LIMITER.limit({ key: origin + ':report-chat' });
+    var result = await env.CHAT_RATE_LIMITER.limit({ key: (request.headers.get('CF-Connecting-IP') || 'unknown') + ':report-chat' });
     if (result.success) return null;
     return jsonResponse(
       errorPayload('TOO_MANY_REQUESTS', locale),
       429,
-      allowedOrigin,
       { 'Retry-After': '60' }
     );
   } catch (error) {
@@ -312,8 +285,8 @@ function buildResponseFormat(sources) {
           kind: { type: 'string', enum: ['grounded', 'conversation', 'unanswerable'] },
           answer: {
             type: 'string',
-            description: '面向非技术利益相关者的完整短答，最多 ' + MAX_ANSWER_CHARS +
-              ' 个字符；数字答案必须包含指标主体和值，不得只返回裸数字。'
+            description: '面向非技术利益相关者的完整短答：普通回答最多两句话、360 个字符；摘要最多五条短要点、' + MAX_ANSWER_CHARS +
+              ' 个字符，每条最多 220 个字符；数字答案必须包含指标主体和值，不得只返回裸数字。'
           },
           citations: {
             type: 'array',
@@ -343,14 +316,14 @@ function validateAnswer(output, question, report, inputSources, env) {
   var kind = output && output.kind;
   var rawAnswer = typeof (output && output.answer) === 'string' ? output.answer.trim() : '';
   if (rawAnswer.length > MAX_ANSWER_CHARS) {
-    return fallbackOrRefusal(question, report, inputSources, env, 'response_too_long');
+    return refusalPayload(question, report, env, 'response_too_long');
   }
   var answer = cleanText(rawAnswer, MAX_ANSWER_CHARS);
   if (!answer || ['grounded', 'conversation', 'unanswerable'].indexOf(kind) === -1) {
-    return fallbackOrRefusal(question, report, inputSources, env, 'invalid_model_output');
+    return refusalPayload(question, report, env, 'invalid_model_output');
   }
   if (!withinAnswerLimits(answer, question)) {
-    return fallbackOrRefusal(question, report, inputSources, env, 'response_too_long');
+    return refusalPayload(question, report, env, 'response_too_long');
   }
 
   if (kind === 'conversation') {
@@ -373,10 +346,8 @@ function validateAnswer(output, question, report, inputSources, env) {
 
   if (kind === 'unanswerable') {
     if ((output.citations || []).length || /\[S\d+\]/.test(answer)) {
-      return fallbackOrRefusal(question, report, inputSources, env, 'invalid_unanswerable_citations');
+      return refusalPayload(question, report, env, 'invalid_unanswerable_citations');
     }
-    var unanswerableFallback = extractiveFallback(question, report, inputSources, env, 'model_unanswerable');
-    if (unanswerableFallback) return unanswerableFallback;
     return {
       answerable: false,
       answer: answer,
@@ -392,27 +363,20 @@ function validateAnswer(output, question, report, inputSources, env) {
   var markerIds = Array.from(new Set(Array.from(answer.matchAll(/\[(S\d+)\]/g), function (match) {
     return match[1];
   })));
-  if (!markerIds.length && citations.length) {
-    var attached = attachCitationMarkers(answer, citations);
-    if (attached) {
-      answer = attached.answer;
-      markerIds = attached.ids;
-    }
-  }
   if (!markerIds.length) {
-    return fallbackOrRefusal(question, report, inputSources, env, 'missing_citation_markers');
+    return refusalPayload(question, report, env, 'missing_citation_markers');
+  }
+  if (!citations.length) {
+    return refusalPayload(question, report, env, 'invalid_citation_quotes');
   }
   if (markerIds.some(function (id) { return !citedIds.has(id); })) {
-    return fallbackOrRefusal(question, report, inputSources, env, 'citation_marker_mismatch');
+    return refusalPayload(question, report, env, 'citation_marker_mismatch');
   }
   citations = citations.filter(function (citation) {
     return answer.indexOf('[' + citation.source.id + ']') !== -1;
   });
-  if (!citations.length) {
-    return fallbackOrRefusal(question, report, inputSources, env, 'invalid_citation_quotes');
-  }
   if (!groundedUnitsSupported(answer, citations)) {
-    return fallbackOrRefusal(question, report, inputSources, env, 'unsupported_grounded_units');
+    return refusalPayload(question, report, env, 'unsupported_grounded_units');
   }
 
   var seen = Object.create(null);
@@ -429,67 +393,6 @@ function validateAnswer(output, question, report, inputSources, env) {
     sources: responseSources,
     meta: responseMeta(report, env, 'grounded')
   };
-}
-
-function appendCitationMarkers(answer, sourceIds) {
-  var markers = sourceIds.map(function (id) { return '[' + id + ']'; }).join(' ');
-  var match = String(answer || '').match(/([。！？.!?])$/);
-  if (!match) return String(answer || '').trim() + ' ' + markers;
-  return String(answer || '').slice(0, -1).trimEnd() + ' ' + markers + match[1];
-}
-
-function attachCitationMarkers(answer, citations) {
-  var segments = markerSegments(answer);
-  var usedIds = [];
-  var marked = [];
-
-  for (var index = 0; index < segments.parts.length; index += 1) {
-    var part = segments.parts[index];
-    if (!part.trim()) {
-      marked.push(part);
-      continue;
-    }
-    var supporting = citations.filter(function (citation) {
-      return groundedAnswerSupported(part, [citation]);
-    });
-    if (!supporting.length && groundedAnswerSupported(part, citations)) supporting = citations;
-    if (!supporting.length) return null;
-    var ids = closestCitationIds(part, supporting);
-    var indent = part.match(/^\s*/)[0];
-    marked.push(indent + appendCitationMarkers(part, ids));
-    usedIds = usedIds.concat(ids);
-  }
-
-  if (!usedIds.length) return null;
-  return { answer: marked.join(segments.separator), ids: Array.from(new Set(usedIds)) };
-}
-
-function closestCitationIds(unit, citations) {
-  var scored = citations.map(function (citation) {
-    return {
-      id: citation.source.id,
-      ratio: supportOverlap(unit.replace(/\[S\d+\]/g, ''), citation.quote).ratio
-    };
-  });
-  var best = scored.reduce(function (highest, entry) {
-    return entry.ratio > highest ? entry.ratio : highest;
-  }, 0);
-  return Array.from(new Set(scored.filter(function (entry) {
-    return entry.ratio >= best;
-  }).map(function (entry) { return entry.id; })));
-}
-
-function markerSegments(answer) {
-  var value = String(answer || '');
-  var lines = value.split(/\n+/);
-  if (lines.filter(function (line) { return line.trim(); }).length > 1) {
-    return { separator: '\n', parts: lines };
-  }
-  var parts = value
-    .replace(/(\d)\.(\d)/g, '$1\u0001$2')
-    .split(/(?<=[。！？.!?])/)
-    .map(function (part) { return part.replace(/\u0001/g, '.'); });
-  return { separator: '', parts: parts };
 }
 
 function conversationQuestionAllowed(question) {
@@ -550,9 +453,18 @@ function groundedAnswerSupported(answer, citations) {
   if (!facts.every(function (fact) { return evidence.indexOf(normalized(fact)) !== -1; })) return false;
 
   var answerStatus = statusSignals(plainAnswer);
-  var evidenceStatus = statusSignals(evidence);
-  if (answerStatus.positive && !answerStatus.negative && evidenceStatus.negative && !evidenceStatus.positive) return false;
-  if (answerStatus.negative && !answerStatus.positive && evidenceStatus.positive && !evidenceStatus.negative) return false;
+  var answerTokens = new Set(supportTokens(plainAnswer));
+  var contradicted = citations.some(function (citation) {
+    return citation.quote.split(/[。；;.!?！？\n]/).filter(function (clause) {
+      return clause.trim();
+    }).some(function (clause) {
+      if (!supportTokens(clause).some(function (token) { return answerTokens.has(token); })) return false;
+      var clauseStatus = statusSignals(clause);
+      return (answerStatus.positive && !answerStatus.negative && clauseStatus.negative && !clauseStatus.positive) ||
+        (answerStatus.negative && !answerStatus.positive && clauseStatus.positive && !clauseStatus.negative);
+    });
+  });
+  if (contradicted) return false;
   return lexicalSupport(plainAnswer, evidence);
 }
 
@@ -620,80 +532,6 @@ function sourcePayload(source, quote) {
     line: source.line,
     quote: (quote || source.text).slice(0, 500)
   };
-}
-
-function fallbackOrRefusal(question, report, sources, env, reason) {
-  return extractiveFallback(question, report, sources, env, reason) ||
-    refusalPayload(question, report, env, reason);
-}
-
-function extractiveFallback(question, report, sources, env, reason) {
-  if (!Array.isArray(sources) || !sources.length) return null;
-
-  if (isSummaryQuestion(question)) {
-    var summarySources = sources.slice(0, 5);
-    var summaryQuotes = summarySources.map(function (source) {
-      return compactQuote(source.text, 96);
-    });
-    return {
-      answerable: true,
-      answer: summaryQuotes.map(function (quote, index) {
-        return '- ' + quote + ' [' + summarySources[index].id + ']';
-      }).join('\n'),
-      sources: summarySources.map(function (source, index) {
-        return sourcePayload(source, summaryQuotes[index]);
-      }),
-      meta: responseMeta(report, env, 'extractive_summary_' + reason)
-    };
-  }
-
-  if (isCompletionStatusQuestion(question)) {
-    var negativeSource = sources.find(function (source) {
-      return statusSignals(source.text).negative && statusTopicMatches(question, source.text);
-    });
-    if (!negativeSource) return null;
-    var negativeQuote = compactQuote(negativeSource.text, 180);
-    return {
-      answerable: true,
-      answer: negativeQuote + ' [' + negativeSource.id + ']',
-      sources: [sourcePayload(negativeSource, negativeQuote)],
-      meta: responseMeta(report, env, 'extractive_negative_status_' + reason)
-    };
-  }
-
-  if (EXTRACTIVE_FALLBACK_REASONS.indexOf(reason) === -1) return null;
-  var primarySource = sources[0];
-  var primaryQuote = compactQuote(primarySource.text, 220);
-  return {
-    answerable: true,
-    answer: primaryQuote + ' [' + primarySource.id + ']',
-    sources: [sourcePayload(primarySource, primaryQuote)],
-    meta: responseMeta(report, env, 'extractive_answer_' + reason)
-  };
-}
-
-function isSummaryQuestion(question) {
-  return /summary|summarize|overview|main points?|highlights?|摘要|概述|重点|要点|总结|主要内容|说了什么|讲了什么|说说.*报告/i.test(question);
-}
-
-function isCompletionStatusQuestion(question) {
-  return /(?:完成|上线|发布|验收|关闭|实现|可用|可以使用|ready|complete|completed|release|released|launch|acceptance|available)/i.test(question);
-}
-
-function statusTopicMatches(question, evidence) {
-  var ignored = new Set(['当前', '现在', '是否', '已经', '可以', '完成', '上线', '发布', '验收', '关闭', '实现', '可用']);
-  var questionTokens = supportTokens(question).filter(function (token) { return !ignored.has(token); });
-  var evidenceTokens = new Set(supportTokens(evidence));
-  return questionTokens.some(function (token) { return evidenceTokens.has(token); });
-}
-
-function compactQuote(value, maxLength) {
-  var text = String(value || '').replace(/\s+/g, ' ').trim();
-  if (text.length <= maxLength) return text;
-  var candidate = text.slice(0, maxLength);
-  var boundary = Math.max(candidate.lastIndexOf('。'), candidate.lastIndexOf('；'), candidate.lastIndexOf('，'), candidate.lastIndexOf('.'));
-  if (boundary >= Math.floor(maxLength * 0.55)) candidate = candidate.slice(0, boundary + 1);
-  return candidate.trim();
 }
 
 function refusalPayload(question, report, env, reason) {
@@ -825,39 +663,14 @@ function validCitations(value, sourceMap, answer) {
     var quote = cleanText(citation.quote, 500);
     if (!source) return items;
     if (quote.length < 4 || source.text.indexOf(quote) === -1 || !groundedAnswerSupported(answer, [{ quote: quote }])) {
-      quote = canonicalSourceExcerpt(source.text, answer);
+      return items;
     }
-    if (!quote || source.text.indexOf(quote) === -1) return items;
     var key = source.id + '\u0000' + quote;
     if (seen[key]) return items;
     seen[key] = true;
     items.push({ source: source, quote: quote });
     return items;
   }, []);
-}
-
-function canonicalSourceExcerpt(sourceText, answer) {
-  var text = String(sourceText || '').trim();
-  if (!text) return '';
-  if (text.length <= 500) return text;
-
-  var plainAnswer = String(answer || '').replace(/\[S\d+\]/g, '');
-  var facts = plainAnswer.match(/\d+(?:[.,:/-]\d+)*%?/g) || [];
-  var anchor = facts.reduce(function (position, fact) {
-    if (position >= 0) return position;
-    return text.indexOf(fact);
-  }, -1);
-  if (anchor < 0) {
-    anchor = supportTokens(plainAnswer).reduce(function (position, token) {
-      if (position >= 0) return position;
-      return text.toLowerCase().indexOf(token.toLowerCase());
-    }, -1);
-  }
-  if (anchor < 0) anchor = 0;
-
-  var start = Math.max(0, Math.min(anchor - 180, text.length - 500));
-  var excerpt = text.slice(start, start + 500).trim();
-  return excerpt;
 }
 
 function statusSignals(value) {
@@ -889,42 +702,24 @@ function errorPayload(code, locale) {
   return { code: code, error: messages[normalizedLocale] || messages['zh-CN'] };
 }
 
-function errorResponse(code, status, origin, locale, extraHeaders) {
-  return jsonResponse(errorPayload(code, locale), status, origin, extraHeaders);
+function errorResponse(code, status, locale, extraHeaders) {
+  return jsonResponse(errorPayload(code, locale), status, extraHeaders);
 }
 
-function corsHeaders(origin, extra) {
+function responseHeaders(extra) {
   var headers = {
-    'Access-Control-Allow-Headers': 'Content-Type',
-    'Access-Control-Allow-Methods': 'POST, OPTIONS',
     'Cache-Control': 'no-store',
     'Content-Type': 'application/json; charset=utf-8',
     'Vary': 'Origin',
     'X-Content-Type-Options': 'nosniff'
   };
-  if (origin) headers['Access-Control-Allow-Origin'] = origin;
   if (extra) Object.keys(extra).forEach(function (key) { headers[key] = extra[key]; });
   return headers;
 }
 
-function jsonResponse(payload, status, origin, extraHeaders) {
+function jsonResponse(payload, status, extraHeaders) {
   return new Response(JSON.stringify(payload), {
     status: status,
-    headers: corsHeaders(origin, extraHeaders)
+    headers: responseHeaders(extraHeaders)
   });
 }
-
-export {
-  buildMessages,
-  buildResponseFormat,
-  canonicalSources,
-  canonicalReport,
-  cleanConversation,
-  contextForLocale,
-  errorPayload,
-  extractiveFallback,
-  questionLocale,
-  orderedKeys,
-  parseRetrySeconds,
-  validateAnswer
-};

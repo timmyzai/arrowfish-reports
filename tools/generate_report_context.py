@@ -32,7 +32,9 @@ NEGATIVE_STATUS_RE = re.compile(
     re.IGNORECASE,
 )
 NEGATIVE_STATUS_RE_EN = re.compile(
-    r"\b(?:not\s+yet|not|never|no\s+longer|cannot|can't|unable|pending|blocked|incomplete|outstanding)\b",
+    r"\b(?:not\s+yet|not|never|cannot|can't|unable\s+to|no\s+longer)"
+    r"(?:\s+\w+){0,3}\s+(?:complete|completed|done|live|released|launched|shipped|"
+    r"accepted|closed|available|implemented|executed|verified)\b",
     re.IGNORECASE,
 )
 STAGE_STATES = ("complete", "current", "next", "planned")
@@ -45,7 +47,6 @@ TIMELINE_RULES = (
     ("unscheduled", re.compile(r"待排期")),
     ("now", re.compile(r"\bP0\b")),
 )
-AT_RISK_RE = re.compile(r"进度风险")
 
 
 def goal_timeline(source_deadline: str) -> str:
@@ -95,9 +96,13 @@ class ReportParser(HTMLParser):
         self.section = "Report overview"
         self.skip_depth = 0
         self.translations = TranslationLookup(translations)
+        self.evidence_prefix = ""
+        self.evidence_ids: set[str] = set()
 
     def handle_starttag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
         tag = tag.lower()
+        if tag == "html":
+            self.evidence_prefix = dict(attrs).get("data-evidence-prefix", "") or ""
         if tag in SKIP_TAGS:
             self.skip_depth += 1
         self.stack.append(
@@ -167,12 +172,18 @@ class ReportParser(HTMLParser):
         if not kind:
             return
 
-        if self.blocks and self.blocks[-1]["_source_text"] == source_text:
+        explicit_id = node["attrs"].get("data-evidence-id")
+        if not explicit_id and self.blocks and self.blocks[-1]["_source_text"] == source_text:
             return
+
+        block_id = explicit_id or f"{self.evidence_prefix}b{len(self.blocks) + 1:04d}"
+        if not re.fullmatch(r"[A-Za-z0-9_-]+", block_id) or block_id in self.evidence_ids:
+            raise ValueError(f"Invalid or duplicate evidence ID: {block_id}")
+        self.evidence_ids.add(block_id)
 
         self.blocks.append(
             {
-                "id": f"b{len(self.blocks) + 1:04d}",
+                "id": block_id,
                 "section": self.section,
                 "type": kind,
                 "line": node["line"],
@@ -335,7 +346,6 @@ class ReportIndexParser(HTMLParser):
                         "nextAction": cells[3],
                         "deadline": cells[4],
                         "timeline": goal_timeline(source_deadline),
-                        "atRisk": bool(AT_RISK_RE.search(source_deadline)),
                         "text": text,
                     }
                 )

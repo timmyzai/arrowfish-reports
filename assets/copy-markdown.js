@@ -9,7 +9,7 @@
   ]);
   var SKIP_SELECTOR = [
     'script', 'style', 'noscript', 'template', 'svg', 'canvas', 'form', 'button',
-    'input', 'select', 'textarea', '#auth-gate', '.page-nav', '.footer',
+    'input', 'select', 'textarea', '.page-nav', '.footer',
     '.report-footer', '[data-copy-markdown-ignore]'
   ].join(',');
 

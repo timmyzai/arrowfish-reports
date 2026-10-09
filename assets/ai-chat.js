@@ -1,12 +1,13 @@
 (function () {
   'use strict';
 
-  var API_URL = 'https://arrowfish-report-ai.yang-fan-node.workers.dev/api/chat';
+  var API_URL = '/api/chat';
   var CONTEXT_URLS = { 'zh-CN': 'report-context.json', en: 'report-context.en.json' };
   var INDEX_URLS = { 'zh-CN': 'report-index.json', en: 'report-index.en.json' };
   var STORAGE_KEY = 'arrowfish_ai_chat';
   var MAX_HISTORY_MESSAGES = 6;
   var MAX_QUESTION_CHARS = 1500;
+  var MIN_RELEVANCE_SCORE = 16;
   var TIMELINE_INTENT_RE = /时间线|时间表|排期|进度表|什么时候|何时|多久|预计|上线时间|发布日期|交付日期|estimate|timeline|schedule|\bwhen\b|\beta\b|launch date|release date|delivery date/i;
   var REQUEST_TIMEOUT_MS = 35000;
 
@@ -220,7 +221,10 @@
   async function loadContext(locale) {
     locale = locale === 'en' ? 'en' : 'zh-CN';
     if (contextPromises[locale]) return contextPromises[locale];
-    contextPromises[locale] = load();
+    contextPromises[locale] = load().catch(function (error) {
+      delete contextPromises[locale];
+      throw error;
+    });
     return contextPromises[locale];
 
     async function load() {
@@ -876,12 +880,34 @@
     strip.hidden = false;
   }
 
-  function timelineAnswer(question) {
-    if (!reportIndex || !TIMELINE_INTENT_RE.test(question)) return null;
+  function localAnswer(question) {
+    if (!reportIndex) return null;
+    var goalId = question.match(/\bG\d+\b/i);
+    var normalizedQuestion = Evidence.normalizeText(question);
+    var goal = Brief.allGoals(reportIndex).find(function (item) {
+      var title = Evidence.normalizeText(item.title);
+      return title && normalizedQuestion.indexOf(title) !== -1;
+    });
     var workstream = Evidence.detectWorkstream(question, reportIndex);
-    if (!workstream) return null;
-    var chain = Brief.deliveryChain(briefOptions({ workstream: workstream }));
-    return chain.content && chain.sources.length ? chain : null;
+    var timeline = TIMELINE_INTENT_RE.test(question);
+    var routes = [
+      { kind: 'goal', matches: goalId || goal, builder: Brief.goalStatus, options: { goalId: goalId ? goalId[0].toUpperCase() : '', goalTitle: goal ? goal.title : '' } },
+      { kind: 'chain', matches: timeline && workstream, builder: Brief.deliveryChain, options: { workstream: workstream } },
+      { kind: 'blockers', matches: /风险|阻塞|卡在|卡住|未完成|没完成|还差|剩下|待办|没关闭|未关闭|blocked|blocker|blockers|risk|risks|open items?|outstanding|what(?:'s| is) left|still open/i.test(question), builder: Brief.blockerSummary },
+      { kind: 'results', matches: /交付了?什么|完成了?什么|做完了什么|成果|战果|已交付|delivered|shipped|achievements?|what have we (?:done|delivered|shipped)/i.test(question), builder: Brief.resultsSummary },
+      { kind: 'milestones', matches: !workstream && (timeline || /里程碑|路线图|milestones?|roadmap/i.test(question)), builder: Brief.milestoneTimeline },
+      { kind: 'portfolio', matches: /整体|总体|总的来说|现在怎么样|进展如何|项目现况|全局|overall|portfolio|where are we|how are we doing|project status/i.test(question), builder: Brief.portfolioBrief }
+    ];
+    for (var index = 0; index < routes.length; index += 1) {
+      var route = routes[index];
+      if (!route.matches) continue;
+      var answer = route.builder(briefOptions(route.options));
+      if (answer.content && answer.sources.length) {
+        answer.kind = route.kind;
+        return answer;
+      }
+    }
+    return null;
   }
 
   function showBrief() {
@@ -942,11 +968,9 @@
       INVALID_CONFIGURATION: 'ai.api.notConfigured',
       UPSTREAM_TIMEOUT: 'ai.timeout',
       INVALID_UPSTREAM_RESPONSE: 'ai.invalidAnswer',
-      INVALID_MODEL_RESPONSE: 'ai.invalidAnswer',
       RATE_LIMITED: 'ai.busy',
       TOO_MANY_REQUESTS: 'ai.busy',
       SERVICE_UNAVAILABLE: 'ai.unavailable',
-      GENERATION_FAILED: 'ai.unavailable',
       UPSTREAM_FAILED: 'ai.unavailable'
     };
     return t(messages[code] || 'ai.unavailable');
@@ -994,15 +1018,15 @@
     renderMessages();
     saveConversation();
 
-    var chain = timelineAnswer(question);
-    if (chain) {
+    var result = localAnswer(question);
+    if (result) {
       messages.push({
         role: 'assistant',
-        content: chain.content,
+        content: result.content,
         answerable: true,
-        sources: chain.sources,
-        followUps: followUpsForSources(chain.sources, false),
-        meta: { result: 'local_timeline', reportVersion: currentReport.version }
+        sources: result.sources,
+        followUps: followUpsForSources(result.sources, false),
+        meta: { result: 'local_' + result.kind, reportVersion: currentReport.version }
       });
       messages = messages.slice(-MAX_HISTORY_MESSAGES);
       renderMessages('assistant-start');
@@ -1031,14 +1055,14 @@
       index: responseData.index
     });
 
-    if (!sources.length && !Evidence.reportMetadataIntent(question).allowed) {
+    if ((!sources.length || sources[0].score < MIN_RELEVANCE_SCORE) && !Evidence.reportMetadataIntent(question).allowed) {
       messages.push({
         role: 'assistant',
         content: t('ai.noDirectAnswer', corpusScope()),
         answerable: false,
         sources: [],
         followUps: followUpsForSources([], true),
-        meta: { result: 'no_local_evidence', reportVersion: currentReport.version }
+        meta: { result: 'below_relevance_floor', reportVersion: currentReport.version }
       });
       messages = messages.slice(-MAX_HISTORY_MESSAGES);
       renderMessages('assistant-start');
@@ -1071,7 +1095,11 @@
             date: responseReport.date,
             version: responseReport.version
           },
-          sources: sources,
+          sources: sources.map(function (source) {
+            var evidence = Object.assign({}, source);
+            delete evidence.score;
+            return evidence;
+          }),
           conversation: conversation,
           uiLocale: uiLocale(),
           responseLocale: answerLanguage

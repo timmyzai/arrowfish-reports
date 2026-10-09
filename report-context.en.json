@@ -14370,1777 +14370,2106 @@
       "name": "Arrowfish, FFF and Shared Capabilities · Goal Progress · Updated 2026-10-09",
       "date": "2026-10-09",
       "file": "Stakeholder/Goal-2026/20260827_goals.html",
-      "version": "df30abf9c914da38",
+      "version": "5e3907c91ee75b70",
       "blocks": [
         {
           "id": "b0001",
           "section": "Report overview",
           "type": "heading",
-          "line": 534,
+          "line": 571,
           "text": "Arrowfish, FFF, and Shared Management Capabilities 2026 Goals and Roadmap"
         },
         {
           "id": "b0002",
           "section": "Report overview",
           "type": "p",
-          "line": 536,
+          "line": 572,
           "text": "Sprint 14 · FFF through 2026-10-09 · Arrowfish adds 2026-10-09 test delivery; other areas retain the 2026-10-08 snapshot"
         },
         {
-          "id": "b0003",
+          "id": "reading-b0003",
           "section": "Report overview",
           "type": "p",
-          "line": 549,
-          "text": "General Manager Ri / Management · 60-second Dashboard · Updated 2026-10-09"
+          "line": 576,
+          "text": "60-second overview · Evidence through 2026-10-09"
         },
         {
-          "id": "b0004",
-          "section": "Current Status and Next Sequence of Project Portfolio",
+          "id": "reading-b0004",
+          "section": "Core flows are in testing; recovery and release prerequisites remain open",
           "type": "heading",
-          "line": 550,
-          "text": "Current Status and Next Sequence of Project Portfolio"
+          "line": 577,
+          "text": "Core flows are in testing; recovery and release prerequisites remain open"
         },
         {
-          "id": "b0005",
-          "section": "Current Status and Next Sequence of Project Portfolio",
+          "id": "reading-b0005",
+          "section": "Core flows are in testing; recovery and release prerequisites remain open",
           "type": "p",
-          "line": 551,
-          "text": "The renewal rules were redesigned after being rejected on September 18, settled on October 1, and implementation completed on October 5 and entered testing. Sprints 13–14 completed the payment settlement basis, the Back Office (BO) rebuild and the settings ownership split, and the handover closed on October 1. In progress now: aligning the Stripe staging webhook and sweeping the new official site's wording. The off-site production restore drill is still not executed and is the highest-risk open item."
+          "line": 578,
+          "text": "The Arrowfish renewal flow is in testing; FFF transaction flows are still being refactored and cannot yet collect payments. Arrange the off-site production recovery drill first, then close payment and release acceptance requirements individually."
         },
         {
-          "id": "b0006",
-          "section": "Main Flows in Testing; Pending-order and Acceptance Gaps Remain",
+          "id": "reading-b0006",
+          "section": "Arrowfish",
           "type": "heading",
-          "line": 557,
-          "text": "Main Flows in Testing; Pending-order and Acceptance Gaps Remain"
+          "line": 580,
+          "text": "Arrowfish"
         },
         {
-          "id": "b0007",
-          "section": "Main Flows in Testing; Pending-order and Acceptance Gaps Remain",
+          "id": "reading-b0007",
+          "section": "Arrowfish",
           "type": "p",
-          "line": 558,
-          "text": "Across 21 goals, the previously planned payment settlement, membership renewal, Back Office (BO) rebuild and settings-ownership separation changes were merged and entered testing on October 5. Android 3.9.26 was provided to Amy for staging testing on October 9; pending-order payment recovery, cancellation and configurable expiry remain planned, with acceptance results unconfirmed."
+          "line": 580,
+          "text": "Android 3.9.26 has been provided to Amy for staging tests; acceptance results remain unconfirmed. Resuming, cancelling and expiring pending-payment orders still need to be completed."
         },
         {
-          "id": "b0008",
-          "section": "Core client flows have progressed; payment collection and platform release gates remain open",
+          "id": "reading-b0008",
+          "section": "FFF",
           "type": "heading",
-          "line": 562,
-          "text": "Core client flows have progressed; payment collection and platform release gates remain open"
+          "line": 581,
+          "text": "FFF"
         },
         {
-          "id": "b0009",
-          "section": "Core client flows have progressed; payment collection and platform release gates remain open",
-          "type": "p",
-          "line": 563,
-          "text": "Lex’s October 9 report records implementation progress in core client functions. Four transaction flows are still being rebuilt and the app cannot yet collect payment. Windows staging deployment on September 20 is confirmed; Apple fixes remain unintegrated, while current Windows repackaging, signing and device acceptance gates remain open."
-        },
-        {
-          "id": "b0010",
-          "section": "Close the recovery capability first, then widen the release surface",
-          "type": "heading",
-          "line": 567,
-          "text": "Close the recovery capability first, then widen the release surface"
-        },
-        {
-          "id": "b0011",
-          "section": "Close the recovery capability first, then widen the release surface",
-          "type": "li",
-          "line": 569,
-          "text": "Schedule the off-site production restore drill and record the result. The runbook was written on October 6 but the drill has not been executed; this is the highest priority right now."
-        },
-        {
-          "id": "b0012",
-          "section": "Close the recovery capability first, then widen the release surface",
-          "type": "li",
-          "line": 570,
-          "text": "Complete the staging Stripe webhook alignment and sandbox verification and the renewal and purchase test regression, then advance production deployment and device identity compatibility verification."
-        },
-        {
-          "id": "b0013",
-          "section": "Close the recovery capability first, then widen the release surface",
-          "type": "li",
-          "line": 571,
-          "text": "The new official site is rechecked on October 12 and goes to production on October 13; the Baidu placement site is awaiting an external check, so no date can be given."
-        },
-        {
-          "id": "b0014",
-          "section": "Close the recovery capability first, then widen the release surface",
-          "type": "li",
-          "line": 572,
-          "text": "After that, complete the Windows signed release and iOS device and App Store acceptance testing, then advance the full three-protocol rollout and China regional acceptance testing."
-        },
-        {
-          "id": "b0015",
-          "section": "Close the recovery capability first, then widen the release surface",
+          "id": "reading-b0009",
+          "section": "FFF",
           "type": "p",
           "line": 581,
-          "text": "Project 01 · VPN · Historical route and Sprint 14 delivery progress"
+          "text": "Core connectivity implementation has progressed; four transaction flows are still being refactored. Apple fix integration, Windows rebuilding and platform acceptance remain incomplete."
         },
         {
-          "id": "b0016",
-          "section": "Arrowfish 2026 Roadmap",
+          "id": "reading-b0010",
+          "section": "Attention and coordination needed",
           "type": "heading",
-          "line": 582,
-          "text": "Arrowfish 2026 Roadmap"
+          "line": 585,
+          "text": "Attention and coordination needed"
         },
         {
-          "id": "b0017",
-          "section": "Arrowfish 2026 Roadmap",
+          "id": "reading-b0011",
+          "section": "Production recovery capability is not yet verified",
+          "type": "heading",
+          "line": 587,
+          "text": "Production recovery capability is not yet verified"
+        },
+        {
+          "id": "reading-b0012",
+          "section": "Production recovery capability is not yet verified",
           "type": "p",
-          "line": 583,
-          "text": "This roadmap follows the actual sequence: takeover and audit → user and revenue stabilization → architecture and operations engineering → in-house protocol core → multi-platform release and growth. Read-only production data from August 28 calibrates user scale, quota, device, protocol, and platform goals; FFF remains separate."
+          "line": 587,
+          "text": "The runbook was completed on 2026-10-06, but the off-site recovery drill has not been executed. Schedule an actual drill and record the recovery results. Timing is unconfirmed."
         },
         {
-          "id": "b0018",
-          "section": "Take over hemostasis and revenue recovery",
+          "id": "reading-b0013",
+          "section": "Production recovery capability is not yet verified",
+          "type": "li",
+          "line": 587,
+          "text": "Priority coordination Production recovery capability is not yet verified The runbook was completed on 2026-10-06, but the off-site recovery drill has not been executed. Schedule an actual drill and record the recovery results. Timing is unconfirmed. View recovery goal G17"
+        },
+        {
+          "id": "reading-b0014",
+          "section": "Purchase, renewal and payment acceptance gaps remain",
           "type": "heading",
-          "line": 592,
-          "text": "Take over hemostasis and revenue recovery"
+          "line": 588,
+          "text": "Purchase, renewal and payment acceptance gaps remain"
         },
         {
-          "id": "b0019",
-          "section": "Take over hemostasis and revenue recovery",
+          "id": "reading-b0015",
+          "section": "Purchase, renewal and payment acceptance gaps remain",
+          "type": "p",
+          "line": 588,
+          "text": "Complete Stripe test callback and sandbox verification, close pending-payment order gaps, then verify production deployment and compatibility acceptance separately. The completion date is unconfirmed."
+        },
+        {
+          "id": "reading-b0016",
+          "section": "Purchase, renewal and payment acceptance gaps remain",
           "type": "li",
-          "line": 594,
-          "text": "Moved from limited handover material into a full-system audit of code, production, infrastructure, revenue paths, and clients"
+          "line": 588,
+          "text": "Engineering follow-up Purchase, renewal and payment acceptance gaps remain Complete Stripe test callback and sandbox verification, close pending-payment order gaps, then verify production deployment and compatibility acceptance separately. The completion date is unconfirmed. View renewal goal G2 View release acceptance G19"
         },
         {
-          "id": "b0020",
-          "section": "Take over hemostasis and revenue recovery",
-          "type": "li",
-          "line": 595,
-          "text": "Restore Samsung IAP and AdMob production configurations"
+          "id": "reading-b0017",
+          "section": "FFF cannot yet collect payments; platform release prerequisites remain open",
+          "type": "heading",
+          "line": 589,
+          "text": "FFF cannot yet collect payments; platform release prerequisites remain open"
         },
         {
-          "id": "b0021",
-          "section": "Take over hemostasis and revenue recovery",
-          "type": "li",
-          "line": 596,
-          "text": "USDTPay rewritten from Java black-box to Go service"
+          "id": "reading-b0018",
+          "section": "FFF cannot yet collect payments; platform release prerequisites remain open",
+          "type": "p",
+          "line": 589,
+          "text": "Connect the four transaction flows and close the independent backend and platform acceptance requirements, then release Android, Windows and macOS/iOS in that order. Release dates are unconfirmed."
         },
         {
-          "id": "b0022",
-          "section": "Take over hemostasis and revenue recovery",
-          "type": "li",
-          "line": 597,
-          "text": "Focus on logless, security, and Android stability fixes"
-        },
-        {
-          "id": "b0023",
-          "section": "Take over hemostasis and revenue recovery",
+          "id": "reading-b0019",
+          "section": "FFF cannot yet collect payments; platform release prerequisites remain open",
           "type": "li",
           "line": 589,
-          "text": "March 2026 handover begins · Full production access obtained 03-26 · Sprints 0–1 Take over hemostasis and revenue recovery Moved from limited handover material into a full-system audit of code, production, infrastructure, revenue paths, and clients Restore Samsung IAP and AdMob production configurations USDTPay rewritten from Java black-box to Go service Focus on logless, security, and Android stability fixes Result: Identified over 56 critical issues; resolved 49+ during Sprints 0–1 and restored 2 revenue channels"
+          "text": "Release prerequisites FFF cannot yet collect payments; platform release prerequisites remain open Connect the four transaction flows and close the independent backend and platform acceptance requirements, then release Android, Windows and macOS/iOS in that order. Release dates are unconfirmed. View payment goal G12 View platform releases G13"
         },
         {
-          "id": "b0024",
-          "section": "Revenue management, anti-abuse, and experience reinforcement",
+          "id": "reading-b0020",
+          "section": "The main site has a schedule; the advertising site awaits feedback",
           "type": "heading",
-          "line": 605,
-          "text": "Revenue management, anti-abuse, and experience reinforcement"
+          "line": 590,
+          "text": "The main site has a schedule; the advertising site awaits feedback"
         },
         {
-          "id": "b0025",
-          "section": "Revenue management, anti-abuse, and experience reinforcement",
+          "id": "reading-b0021",
+          "section": "The main site has a schedule; the advertising site awaits feedback",
+          "type": "p",
+          "line": 590,
+          "text": "The main site is scheduled for review on 2026-10-12 and production release on 2026-10-13. The advertising site has awaited external review since 2026-09-25; no feedback has been received and its release date is unconfirmed."
+        },
+        {
+          "id": "reading-b0022",
+          "section": "The main site has a schedule; the advertising site awaits feedback",
+          "type": "li",
+          "line": 590,
+          "text": "External dependency The main site has a schedule; the advertising site awaits feedback The main site is scheduled for review on 2026-10-12 and production release on 2026-10-13. The advertising site has awaited external review since 2026-09-25; no feedback has been received and its release date is unconfirmed. View website goal G3"
+        },
+        {
+          "id": "reading-b0023",
+          "section": "Recent key progress",
+          "type": "heading",
+          "line": 594,
+          "text": "Recent key progress"
+        },
+        {
+          "id": "reading-b0024",
+          "section": "Android test build delivered",
+          "type": "heading",
+          "line": 596,
+          "text": "Android test build delivered"
+        },
+        {
+          "id": "reading-b0025",
+          "section": "Android test build delivered",
+          "type": "p",
+          "line": 596,
+          "text": "Arrowfish Android 3.9.26 has been provided to Amy for staging tests; acceptance results remain unconfirmed."
+        },
+        {
+          "id": "reading-b0026",
+          "section": "Core renewal flow entered testing",
+          "type": "heading",
+          "line": 597,
+          "text": "Core renewal flow entered testing"
+        },
+        {
+          "id": "reading-b0027",
+          "section": "Core renewal flow entered testing",
+          "type": "p",
+          "line": 597,
+          "text": "The rules were finalized on 2026-10-01 and the core flow was implemented on 2026-10-05. Pending-payment order edge cases remained open on 2026-10-09."
+        },
+        {
+          "id": "reading-b0028",
+          "section": "FFF client progress reported",
+          "type": "heading",
+          "line": 598,
+          "text": "FFF client progress reported"
+        },
+        {
+          "id": "reading-b0029",
+          "section": "FFF client progress reported",
+          "type": "p",
+          "line": 598,
+          "text": "Lex has reported progress on the core implementation. Transaction refactoring, Apple fix integration and platform acceptance continue."
+        },
+        {
+          "id": "reading-b0030",
+          "section": "Next steps and timing",
+          "type": "heading",
+          "line": 602,
+          "text": "Next steps and timing"
+        },
+        {
+          "id": "reading-b0031",
+          "section": "Next steps and timing",
+          "type": "p",
+          "line": 604,
+          "text": "Review the new website wording → release to production as scheduled."
+        },
+        {
+          "id": "reading-b0032",
+          "section": "Next steps and timing",
+          "type": "li",
+          "line": 604,
+          "text": "2026-10-12 → 2026-10-13 Review the new website wording → release to production as scheduled."
+        },
+        {
+          "id": "reading-b0033",
+          "section": "Next steps and timing",
+          "type": "p",
+          "line": 605,
+          "text": "Arrange the off-site production recovery drill and complete Stripe, purchase and renewal regression testing. Record deployment and acceptance evidence separately."
+        },
+        {
+          "id": "reading-b0034",
+          "section": "Next steps and timing",
+          "type": "li",
+          "line": 605,
+          "text": "Current priority · Timing unconfirmed Arrange the off-site production recovery drill and complete Stripe, purchase and renewal regression testing. Record deployment and acceptance evidence separately."
+        },
+        {
+          "id": "reading-b0035",
+          "section": "Next steps and timing",
+          "type": "p",
+          "line": 606,
+          "text": "Advance the signed Windows release and iOS device and store acceptance, then full rollout of the three protocols and China-region acceptance."
+        },
+        {
+          "id": "reading-b0036",
+          "section": "Next steps and timing",
+          "type": "li",
+          "line": 606,
+          "text": "After prerequisites close · Dates unconfirmed Advance the signed Windows release and iOS device and store acceptance, then full rollout of the three protocols and China-region acceptance."
+        },
+        {
+          "id": "reading-b0037",
+          "section": "Next steps and timing",
+          "type": "p",
+          "line": 607,
+          "text": "Close the independent backend, payment and platform prerequisites; release in the order Android → Windows → macOS/iOS."
+        },
+        {
+          "id": "reading-b0038",
+          "section": "Next steps and timing",
           "type": "li",
           "line": 607,
-          "text": "Exclusive IP, balance payment, and renewal date issue fixes"
+          "text": "FFF · Separate acceptance for each platform Close the independent backend, payment and platform prerequisites; release in the order Android → Windows → macOS/iOS."
         },
         {
-          "id": "b0026",
-          "section": "Revenue management, anti-abuse, and experience reinforcement",
-          "type": "li",
-          "line": 608,
-          "text": "Device fingerprinting, account binding, and five-layer anti-abuse protection implementation"
-        },
-        {
-          "id": "b0027",
-          "section": "Revenue management, anti-abuse, and experience reinforcement",
-          "type": "li",
-          "line": 609,
-          "text": "Read-write separation and automated test build implementation"
-        },
-        {
-          "id": "b0028",
-          "section": "Revenue management, anti-abuse, and experience reinforcement",
-          "type": "li",
-          "line": 602,
-          "text": "Apr 13, 2026 – Apr 24, 2026 · Sprint 2 Revenue management, anti-abuse, and experience reinforcement Exclusive IP, balance payment, and renewal date issue fixes Device fingerprinting, account binding, and five-layer anti-abuse protection implementation Read-write separation and automated test build implementation Result: Fixed over 30 defects, optimized over 20 experiences; APK size reduced by 28.7%"
-        },
-        {
-          "id": "b0029",
-          "section": "Back Office, infrastructure, and VPN node automation",
+          "id": "reading-b0039",
+          "section": "All goals and acceptance evidence",
           "type": "heading",
-          "line": 617,
-          "text": "Back Office, infrastructure, and VPN node automation"
+          "line": 610,
+          "text": "All goals and acceptance evidence"
         },
         {
-          "id": "b0030",
-          "section": "Back Office, infrastructure, and VPN node automation",
-          "type": "li",
-          "line": 619,
-          "text": "Free quota changed to VPN node authoritative accounting"
-        },
-        {
-          "id": "b0031",
-          "section": "Back Office, infrastructure, and VPN node automation",
-          "type": "li",
-          "line": 620,
-          "text": "Automatic backup, read replicas, and retirement of old ProxyBackend"
-        },
-        {
-          "id": "b0032",
-          "section": "Back Office, infrastructure, and VPN node automation",
-          "type": "li",
-          "line": 621,
-          "text": "Back Office one-click installation, recovery, batch upgrades, and health management"
-        },
-        {
-          "id": "b0033",
-          "section": "Back Office, infrastructure, and VPN node automation",
-          "type": "li",
-          "line": 614,
-          "text": "Apr 27, 2026 – May 10, 2026 · Sprint 3 Back Office, infrastructure, and VPN node automation Free quota changed to VPN node authoritative accounting Automatic backup, read replicas, and retirement of old ProxyBackend Back Office one-click installation, recovery, batch upgrades, and health management Result: 7 cross-regional VPN nodes recovered in 44 seconds with zero failures"
-        },
-        {
-          "id": "b0034",
-          "section": "Release framework and operational capability convergence",
-          "type": "heading",
-          "line": 629,
-          "text": "Release framework and operational capability convergence"
-        },
-        {
-          "id": "b0035",
-          "section": "Release framework and operational capability convergence",
-          "type": "li",
-          "line": 631,
-          "text": "Android, Back Office, and CI/CD release chain modernization"
-        },
-        {
-          "id": "b0036",
-          "section": "Release framework and operational capability convergence",
-          "type": "li",
-          "line": 632,
-          "text": "Dynamic event capabilities and Back Office (BO) configuration implementation"
-        },
-        {
-          "id": "b0037",
-          "section": "Release framework and operational capability convergence",
-          "type": "li",
-          "line": 633,
-          "text": "Arrowfish new official website enters staging"
-        },
-        {
-          "id": "b0038",
-          "section": "Release framework and operational capability convergence",
-          "type": "li",
-          "line": 634,
-          "text": "May 25: Session accounting began; improved device identity but concurrent user availability metrics declined."
-        },
-        {
-          "id": "b0039",
-          "section": "Release framework and operational capability convergence",
-          "type": "li",
-          "line": 626,
-          "text": "May 10, 2026 – Jun 26, 2026 · Sprints 4–6 Release framework and operational capability convergence Android, Back Office, and CI/CD release chain modernization Dynamic event capabilities and Back Office (BO) configuration implementation Arrowfish new official website enters staging May 25: Session accounting began; improved device identity but concurrent user availability metrics declined. Outcome: Control capabilities entered production, saving approximately USD 612.21 per month; the full release scope on May 25 still needs alignment with release operations records."
-        },
-        {
-          "id": "b0040",
-          "section": "China Connection Events and Self-Research Route Decision",
-          "type": "heading",
-          "line": 644,
-          "text": "China Connection Events and Self-Research Route Decision"
-        },
-        {
-          "id": "b0041",
-          "section": "China Connection Events and Self-Research Route Decision",
-          "type": "li",
-          "line": 646,
-          "text": "MY/TW QA accessible while Chinese QA inaccessible, forming a judgment for testing in China; database cannot prove that GFW is the sole reason for overall decline"
-        },
-        {
-          "id": "b0042",
-          "section": "China Connection Events and Self-Research Route Decision",
-          "type": "li",
-          "line": 647,
-          "text": "Four-day Delivery Agreement for Self-Test Tool, Seven Achievements Fully Green"
-        },
-        {
-          "id": "b0043",
-          "section": "China Connection Events and Self-Research Route Decision",
-          "type": "li",
-          "line": 648,
-          "text": "Decided to Develop SkyNode, SkyTunnel and Strengthen Protocol"
-        },
-        {
-          "id": "b0044",
-          "section": "China Connection Events and Self-Research Route Decision",
-          "type": "li",
-          "line": 641,
-          "text": "Jun 27, 2026 – Jul 10, 2026 · Sprint 7 China Connection Events and Self-Research Route Decision MY/TW QA accessible while Chinese QA inaccessible, forming a judgment for testing in China; database cannot prove that GFW is the sole reason for overall decline Four-day Delivery Agreement for Self-Test Tool, Seven Achievements Fully Green Decided to Develop SkyNode, SkyTunnel and Strengthen Protocol Result: Stop Relying on Old Single Trojan and Third-party Core; Regional Accessibility Still Needs Independent Acceptance Testing"
-        },
-        {
-          "id": "b0045",
-          "section": "SkyTunnel and Connection Stability",
-          "type": "heading",
-          "line": 656,
-          "text": "SkyTunnel and Connection Stability"
-        },
-        {
-          "id": "b0046",
-          "section": "SkyTunnel and Connection Stability",
-          "type": "li",
-          "line": 658,
-          "text": "Android Complete SkyTunnel Replacement Verification"
-        },
-        {
-          "id": "b0047",
-          "section": "SkyTunnel and Connection Stability",
-          "type": "li",
-          "line": 659,
-          "text": "Windows Access Same Shared Core"
-        },
-        {
-          "id": "b0048",
-          "section": "SkyTunnel and Connection Stability",
-          "type": "li",
-          "line": 660,
-          "text": "Windows Test Signature Linkage Opened and Continuously Converged"
-        },
-        {
-          "id": "b0049",
-          "section": "SkyTunnel and Connection Stability",
-          "type": "li",
-          "line": 653,
-          "text": "2026-07-11–07-24 · Sprint 8 SkyTunnel and Connection Stability Android Complete SkyTunnel Replacement Verification Windows Access Same Shared Core Windows Test Signature Linkage Opened and Continuously Converged Result: IPv6 Root Cause Fixed for 'Connected but No Traffic' Issue, True Machine Acceptance Completed"
-        },
-        {
-          "id": "b0050",
-          "section": "Attribution, Payment, and Desktop Delivery",
-          "type": "heading",
-          "line": 668,
-          "text": "Attribution, Payment, and Desktop Delivery"
-        },
-        {
-          "id": "b0051",
-          "section": "Attribution, Payment, and Desktop Delivery",
-          "type": "li",
-          "line": 670,
-          "text": "Back Office-led Android Attribution Linkage Completed"
-        },
-        {
-          "id": "b0052",
-          "section": "Attribution, Payment, and Desktop Delivery",
-          "type": "li",
-          "line": 671,
-          "text": "API Reduced from 207 to 141"
-        },
-        {
-          "id": "b0053",
-          "section": "Attribution, Payment, and Desktop Delivery",
-          "type": "li",
-          "line": 672,
-          "text": "Siqo Multi-chain Payment Enters Test Environment"
-        },
-        {
-          "id": "b0054",
-          "section": "Attribution, Payment, and Desktop Delivery",
-          "type": "li",
-          "line": 665,
-          "text": "2026-07-25–08-07 · Sprint 9 Attribution, Payment, and Desktop Delivery Back Office-led Android Attribution Linkage Completed API Reduced from 207 to 141 Siqo Multi-chain Payment Enters Test Environment Result: Windows Approximately 8 MB Test Package Delivered to QA, Build Time Halved"
-        },
-        {
-          "id": "b0055",
-          "section": "Production Integration and iOS Compliance Reconstruction",
-          "type": "heading",
-          "line": 680,
-          "text": "Production Integration and iOS Compliance Reconstruction"
-        },
-        {
-          "id": "b0056",
-          "section": "Production Integration and iOS Compliance Reconstruction",
-          "type": "li",
-          "line": 682,
-          "text": "Production environment integration and deployment completed on August 12, product acceptance still partial"
-        },
-        {
-          "id": "b0057",
-          "section": "Production Integration and iOS Compliance Reconstruction",
-          "type": "li",
-          "line": 683,
-          "text": "iOS clean source code engineering and main path establishment for VPN (BO) node"
-        },
-        {
-          "id": "b0058",
-          "section": "Production Integration and iOS Compliance Reconstruction",
-          "type": "li",
-          "line": 684,
-          "text": "Database migration and completion of testing environment validation with CI/CD responsibility separation"
-        },
-        {
-          "id": "b0059",
-          "section": "Production Integration and iOS Compliance Reconstruction",
-          "type": "li",
-          "line": 685,
-          "text": "Production research on quantitative user quality, quotas, devices, and platform impact"
-        },
-        {
-          "id": "b0060",
-          "section": "Production Integration and iOS Compliance Reconstruction",
-          "type": "li",
-          "line": 677,
-          "text": "2026-08-08–08-21 · Production Research Aug. 28 · Sprint 10 Production Integration and iOS Compliance Reconstruction Production environment integration and deployment completed on August 12, product acceptance still partial iOS clean source code engineering and main path establishment for VPN (BO) node Database migration and completion of testing environment validation with CI/CD responsibility separation Production research on quantitative user quality, quotas, devices, and platform impact Boundary: End-to-end acceptance testing for iOS physical devices, TestFlight, and both protocol ends has not reached closure"
-        },
-        {
-          "id": "b0061",
-          "section": "Membership lifecycle and multi-platform staging delivery",
-          "type": "heading",
-          "line": 695,
-          "text": "Membership lifecycle and multi-platform staging delivery"
-        },
-        {
-          "id": "b0062",
-          "section": "Membership lifecycle and multi-platform staging delivery",
-          "type": "li",
-          "line": 697,
-          "text": "Membership lifecycle and the single-countdown model unified; plan tiering and database migration advanced"
-        },
-        {
-          "id": "b0063",
-          "section": "Membership lifecycle and multi-platform staging delivery",
-          "type": "li",
-          "line": 698,
-          "text": "Three Android staging releases in Sprint 11 and six in Sprint 12, each covering four channels"
-        },
-        {
-          "id": "b0064",
-          "section": "Membership lifecycle and multi-platform staging delivery",
-          "type": "li",
-          "line": 699,
-          "text": "The Apple test build reached valid TestFlight status; the simplified home-page direction was settled"
-        },
-        {
-          "id": "b0065",
-          "section": "Membership lifecycle and multi-platform staging delivery",
-          "type": "li",
-          "line": 700,
-          "text": "Device identity, attribution tickets and VPN node operations fixes continued moving into validation"
-        },
-        {
-          "id": "b0066",
-          "section": "Membership lifecycle and multi-platform staging delivery",
-          "type": "li",
-          "line": 692,
-          "text": "2026-08-22–09-18 · Sprints 11–12 Membership lifecycle and multi-platform staging delivery Membership lifecycle and the single-countdown model unified; plan tiering and database migration advanced Three Android staging releases in Sprint 11 and six in Sprint 12, each covering four channels The Apple test build reached valid TestFlight status; the simplified home-page direction was settled Device identity, attribution tickets and VPN node operations fixes continued moving into validation Boundary: September 18 was the date the renewal proposal was rejected; the main flows for the settled rules were implemented on October 5."
-        },
-        {
-          "id": "b0067",
-          "section": "Settlement basis, Back Office (BO) rebuild and handover closure",
-          "type": "heading",
-          "line": 708,
-          "text": "Settlement basis, Back Office (BO) rebuild and handover closure"
-        },
-        {
-          "id": "b0068",
-          "section": "Settlement basis, Back Office (BO) rebuild and handover closure",
-          "type": "li",
-          "line": 710,
-          "text": "Renewal rules revised on September 21 and settled on October 1; implementation completed on October 5 and entered testing"
-        },
-        {
-          "id": "b0069",
-          "section": "Settlement basis, Back Office (BO) rebuild and handover closure",
-          "type": "li",
-          "line": 711,
-          "text": "Payment completion is now decided by order status, and the payment transaction tables were merged into one"
-        },
-        {
-          "id": "b0070",
-          "section": "Settlement basis, Back Office (BO) rebuild and handover closure",
-          "type": "li",
-          "line": 712,
-          "text": "Back Office (BO) rebuilt and reduced, with Back Office (BO) owned settings moved out of the runtime service"
-        },
-        {
-          "id": "b0071",
-          "section": "Settlement basis, Back Office (BO) rebuild and handover closure",
-          "type": "li",
-          "line": 713,
-          "text": "The handover closed on October 1 with external access disabled; GitLab was upgraded to 19.4.1"
-        },
-        {
-          "id": "b0072",
-          "section": "Settlement basis, Back Office (BO) rebuild and handover closure",
-          "type": "li",
-          "line": 705,
-          "text": "2026-09-19–10-16 · Progress through 10-08 · Sprints 13–14 Settlement basis, Back Office (BO) rebuild and handover closure Renewal rules revised on September 21 and settled on October 1; implementation completed on October 5 and entered testing Payment completion is now decided by order status, and the payment transaction tables were merged into one Back Office (BO) rebuilt and reduced, with Back Office (BO) owned settings moved out of the runtime service The handover closed on October 1 with external access disabled; GitLab was upgraded to 19.4.1 Boundary: most changes have only reached \"merged\", production deployment and acceptance testing are to be confirmed, and the off-site restore drill is not executed"
-        },
-        {
-          "id": "b0073",
-          "section": "Sprints 13–14 progress and the order that follows",
-          "type": "heading",
-          "line": 723,
-          "text": "Sprints 13–14 progress and the order that follows"
-        },
-        {
-          "id": "b0074",
-          "section": "Sprints 13–14 progress and the order that follows",
+          "id": "reading-b0040",
+          "section": "All goals and acceptance evidence",
           "type": "p",
-          "line": 724,
-          "text": "Sprint 13 revised renewal rules, delivered three Android test versions and closed the handover. The originally planned main flows in Sprint 14 were implemented on October 5 and entered testing. October 9 adds Android 3.9.26 staging test delivery; subscription edge cases and pending-order management remain outstanding. The release sequence below is retained."
-        },
-        {
-          "id": "b0075",
-          "section": "Close the recovery capability and the release evidence",
-          "type": "heading",
-          "line": 729,
-          "text": "Close the recovery capability and the release evidence"
-        },
-        {
-          "id": "b0076",
-          "section": "Close the recovery capability and the release evidence",
-          "type": "li",
-          "line": 731,
-          "text": "G17 Off-site production backup and an actual restore drill: the runbook was written on October 6, the drill is not executed"
-        },
-        {
-          "id": "b0077",
-          "section": "Close the recovery capability and the release evidence",
-          "type": "li",
-          "line": 732,
-          "text": "G19 Complete evidence for release, runtime, DB migration, product smoke testing, and regional QA"
-        },
-        {
-          "id": "b0078",
-          "section": "Close the recovery capability and the release evidence",
-          "type": "li",
-          "line": 733,
-          "text": "G15 identity header, CORS, and compatibility verification for Android/Windows"
-        },
-        {
-          "id": "b0079",
-          "section": "Close the recovery capability and the release evidence",
-          "type": "li",
-          "line": 734,
-          "text": "G2 Staging Stripe webhook alignment and sandbox verification, plus the renewal and purchase test regression"
-        },
-        {
-          "id": "b0080",
-          "section": "Close the recovery capability and the release evidence",
-          "type": "li",
-          "line": 735,
-          "text": "G3 The new official site is rechecked on October 12 and goes to production on October 13"
-        },
-        {
-          "id": "b0081",
-          "section": "Close the recovery capability and the release evidence",
-          "type": "highlight",
-          "line": 727,
-          "text": "Current closure Close the recovery capability and the release evidence G17 Off-site production backup and an actual restore drill: the runbook was written on October 6, the drill is not executed G19 Complete evidence for release, runtime, DB migration, product smoke testing, and regional QA G15 identity header, CORS, and compatibility verification for Android/Windows G2 Staging Stripe webhook alignment and sandbox verification, plus the renewal and purchase test regression G3 The new official site is rechecked on October 12 and goes to production on October 13 Closure of standards: deployment, connection, version compatibility, and recovery evidence complete"
-        },
-        {
-          "id": "b0082",
-          "section": "Platform releases, protocol rollout and China regional acceptance testing",
-          "type": "heading",
-          "line": 741,
-          "text": "Platform releases, protocol rollout and China regional acceptance testing"
-        },
-        {
-          "id": "b0083",
-          "section": "Platform releases, protocol rollout and China regional acceptance testing",
-          "type": "li",
-          "line": 743,
-          "text": "G16／G11 Windows signed release and iOS device and App Store acceptance testing"
-        },
-        {
-          "id": "b0084",
-          "section": "Platform releases, protocol rollout and China regional acceptance testing",
-          "type": "li",
-          "line": 744,
-          "text": "G7 The three agreements expanded from 34 units to the target fleet"
-        },
-        {
-          "id": "b0085",
-          "section": "Platform releases, protocol rollout and China regional acceptance testing",
-          "type": "li",
-          "line": 745,
-          "text": "G5／G7 Back Office (BO), Android and Windows End-to-End Regression"
-        },
-        {
-          "id": "b0086",
-          "section": "Platform releases, protocol rollout and China regional acceptance testing",
-          "type": "li",
-          "line": 746,
-          "text": "G20 Android first, Windows next, then the remaining five platforms"
-        },
-        {
-          "id": "b0087",
-          "section": "Platform releases, protocol rollout and China regional acceptance testing",
-          "type": "li",
-          "line": 747,
-          "text": "China QA independently closes regional accessibility; MY/TW results not to be substituted"
-        },
-        {
-          "id": "b0088",
-          "section": "Platform releases, protocol rollout and China regional acceptance testing",
-          "type": "highlight",
-          "line": 739,
-          "text": "P1 after P0 Platform releases, protocol rollout and China regional acceptance testing G16／G11 Windows signed release and iOS device and App Store acceptance testing G7 The three agreements expanded from 34 units to the target fleet G5／G7 Back Office (BO), Android and Windows End-to-End Regression G20 Android first, Windows next, then the remaining five platforms China QA independently closes regional accessibility; MY/TW results not to be substituted Closure criteria: Deployment, client regression, and regional acceptance testing are documented separately"
-        },
-        {
-          "id": "b0089",
-          "section": "Closure of remaining Arrowfish targets",
-          "type": "heading",
-          "line": 753,
-          "text": "Closure of remaining Arrowfish targets"
-        },
-        {
-          "id": "b0090",
-          "section": "Closure of remaining Arrowfish targets",
-          "type": "li",
-          "line": 755,
-          "text": "G1／G18 Attribution, user quality and conversion dashboards"
-        },
-        {
-          "id": "b0091",
-          "section": "Closure of remaining Arrowfish targets",
-          "type": "li",
-          "line": 756,
-          "text": "G21 Route China websites and local resources directly while continuing to send other public traffic through the VPN"
-        },
-        {
-          "id": "b0092",
-          "section": "Closure of remaining Arrowfish targets",
-          "type": "li",
-          "line": 757,
-          "text": "G4 Siqo multi-platform payments and the channel integration gaps"
-        },
-        {
-          "id": "b0093",
-          "section": "Closure of remaining Arrowfish targets",
-          "type": "li",
-          "line": 758,
-          "text": "G5／G8 VPN node Procurement Automation and Private DNS"
-        },
-        {
-          "id": "b0094",
-          "section": "Closure of remaining Arrowfish targets",
-          "type": "li",
-          "line": 759,
-          "text": "G9／G11 Subject Migration and Recovery of the Apple Platform"
-        },
-        {
-          "id": "b0095",
-          "section": "Closure of remaining Arrowfish targets",
-          "type": "li",
-          "line": 760,
-          "text": "G10／G13 Continue modular refactoring and seven-platform engineering-quality convergence"
-        },
-        {
-          "id": "b0096",
-          "section": "Closure of remaining Arrowfish targets",
-          "type": "highlight",
-          "line": 751,
-          "text": "By the end of 2026 Closure of remaining Arrowfish targets G1／G18 Attribution, user quality and conversion dashboards G21 Route China websites and local resources directly while continuing to send other public traffic through the VPN G4 Siqo multi-platform payments and the channel integration gaps G5／G8 VPN node Procurement Automation and Private DNS G9／G11 Subject Migration and Recovery of the Apple Platform G10／G13 Continue modular refactoring and seven-platform engineering-quality convergence Close and separately perform acceptance testing in order of priority"
+          "line": 610,
+          "text": "Browse by product and business module. Within each module, goals appear in progress, planned, then completed. Status counts do not represent a product completion percentage."
         },
         {
           "id": "b0097",
-          "section": "Closure of remaining Arrowfish targets",
+          "section": "All goals and acceptance evidence",
           "type": "p",
-          "line": 771,
+          "line": 614,
           "text": "Arrowfish Target List"
         },
         {
           "id": "b0098",
           "section": "Arrowfish Target List",
           "type": "heading",
-          "line": 772,
+          "line": 615,
           "text": "Arrowfish Target List"
+        },
+        {
+          "id": "reading-b0043",
+          "section": "Arrowfish Target List",
+          "type": "details-summary",
+          "line": 624,
+          "text": "View all 21 goals"
         },
         {
           "id": "b0099",
           "section": "Arrowfish Target List",
           "type": "p",
-          "line": 773,
+          "line": 624,
           "text": "Goals are ordered across five independently accepted modules rather than repeated by sprint. G1–G20 retain their stable IDs; G21 is the China smart-routing goal added on August 28. G10 system refactoring, G12 security governance, G13 engineering quality, and tag, runtime, DB migration, product smoke, and regional acceptance are each verified independently."
         },
         {
           "id": "b0100",
           "section": "Arrowfish Target List",
           "type": "table-row",
-          "line": 785,
+          "line": 628,
           "text": "Goal Status Latest Progress Next Milestone Target Time"
         },
         {
           "id": "b0101",
           "section": "Arrowfish Target List",
           "type": "table-row",
-          "line": 787,
+          "line": 630,
           "text": "01 · Takeover, architecture, and engineering governance"
         },
         {
           "id": "b0102",
           "section": "Arrowfish Target List",
           "type": "table-row",
-          "line": 788,
+          "line": 631,
           "text": "G10 Full-system takeover, architecture mapping, and modular refactoring Lifecycle and layering consolidation in progress Sprint 12 unified the membership lifecycle and the single-countdown model. Sprints 13–14 moved Back Office (BO) owned settings out of the runtime settings table, merged the payment transaction tables, removed legacy client paths and legacy VPN node support, and injected startup configuration uniformly into the API, Back Office (BO) and scheduled-job services. Cleanup of redundant development paths and surplus database tables continues. Complete cross-client purchase and startup-contract validation, then retire legacy APIs using usage evidence; migration scripts do not prove environment execution. Continue through year-end Independent acceptance testing for each module"
         },
         {
           "id": "b0103",
           "section": "Arrowfish Target List",
           "type": "table-row",
-          "line": 789,
+          "line": 632,
           "text": "G12 Security, no-logs, and least-privilege governance Connection and VPN node security under validation Sprints 11–12 advanced VPN node credential isolation, output redaction, DNS anomaly blocking and resolver responsibility closure. Sprints 13–14 unified the SSH firewall into a single allowlist matching the settings page, enforced session security and removed legacy client paths, and made the Back Office (BO) enforce current admin authorization; payment channel keys now come from environment-named Key Vault secrets. External source access was disabled on October 1. Complete live VPN node, reboot and leak acceptance testing; document access reviews, production credentials and network boundaries separately. P0 Closure alongside production resilience"
         },
         {
           "id": "b0104",
           "section": "Arrowfish Target List",
           "type": "table-row",
-          "line": 790,
+          "line": 633,
           "text": "G13 CI/CD, automated testing, and end-to-end observability Test delivery operating continuously Three Android staging releases in Sprint 11, six in Sprint 12 and three in Sprint 13, each covering four channels. Sprint 14 enabled staging log ingestion and corrected its endpoint, and moved the GeoIP database to a startup download while removing two log floods; GitLab was upgraded from 19.3.0 to 19.4.1 on October 8. Complete signed artifacts, install and upgrade results, rollback evidence and deployment-version mapping per platform; pipeline success and production releases require separate acceptance testing. Continuous engineering standard Cover all seven platforms independently"
         },
         {
           "id": "b0105",
           "section": "Arrowfish Target List",
           "type": "table-row",
-          "line": 791,
+          "line": 634,
           "text": "G17 Production resilience, monitoring, off-site backup, and recovery Integrated and High-Risk Not Closed Read replicas, the VPN node health state machine and request-level diagnostics are in place; the application, MySQL and Redis production consolidation completed on August 12. The backup and restore runbook for the production cutover was completed on October 6. A runbook is not a capability: the drill has not been executed . The final database backup still sits on the same host as production, so host-level failure recovery cannot be demonstrated. Establish an off-site replica, perform an actual recovery drill, complete service and VPN node alerting, and record the RTO, data integrity, and cutback procedure. P0"
         },
         {
           "id": "b0106",
           "section": "Arrowfish Target List",
           "type": "table-row",
-          "line": 792,
+          "line": 635,
           "text": "G19 Traceable production release and user-availability acceptance testing Staging releases documented; production acceptance separate The August 12 production consolidation remains established. Sprints 11–13 added Android test-release records and specific China/Taiwan connection confirmation on September 7. On October 9, Timmy confirmed Android 3.9.26 was provided to Amy for staging testing; artifact-to-commit mapping, channels and exact timing were not supplied. Deployment and acceptance of other changes in Sprints 13–14 remain separately tracked; this test delivery does not establish production release or passed acceptance. Map client versions, backend runtime versions, migrations, purchase and connection results; add post-release verification for each actual production release. P0 Prior to the next production release"
         },
         {
           "id": "b0107",
           "section": "Arrowfish Target List",
           "type": "table-row",
-          "line": 794,
+          "line": 637,
           "text": "02 · VPN core, VPN nodes, and network capabilities"
         },
         {
           "id": "b0108",
           "section": "Arrowfish Target List",
           "type": "table-row",
-          "line": 795,
+          "line": 638,
           "text": "G5 Automated Deployment and Management of VPN nodes VPN node operations and safeguards progressing Sprints 11–12 improved Back Office (BO) VPN node management separation, regional naming, install locks, firewall jobs, and assignment and decommission protection. Sprints 13–14 turned the VM Hosts page into a table with a details panel, job progress into a step grid with a live terminal, and the firewall preview into a terminal view split by IPv4 and IPv6, and made every VM job use the same saved \"VMs at a time\" setting. Complete live VPN node, reboot and client-connection acceptance testing, then advance procurement-to-allocation automation. Sprint completion Procurement to Distribution Closure"
-        },
-        {
-          "id": "b0109",
-          "section": "Arrowfish Target List",
-          "type": "table-row",
-          "line": 796,
-          "text": "G6 SkyTunnel In-House Tunnel Core completed Self-developed VPN tunnel core has been delivered; Android replacement verification is complete, Windows is integrated into the shared versioning core. Continuously returning and completing the official release of Windows and platform integration with Apple. Sprint Maintenance"
         },
         {
           "id": "b0110",
           "section": "Arrowfish Target List",
           "type": "table-row",
-          "line": 797,
+          "line": 639,
           "text": "G7 Sprint Completion, Full Rollout to China and Acceptance Testing Test connectivity progressed; full acceptance remains open The September 7 Android staging connection results in China and Taiwan were confirmed; route selection, probing and protocol application fixes continued afterwards. Sprint 14 narrowed ShadowTLS to Shadowsocks 2022 only and removed the code default. The earlier record of 34 machines on three protocols and 64 on Trojan only is still an August snapshot, with no new full inventory. Complete version-specific acceptance testing for all three protocols, the VPN node fleet, clients and China connectivity; one connection confirmation does not replace full acceptance testing. P1 P0 Closure after Sprints of Acceptance Testing"
-        },
-        {
-          "id": "b0111",
-          "section": "Arrowfish Target List",
-          "type": "table-row",
-          "line": 798,
-          "text": "G21 Smart routing and direct access to China sites Goal confirmed; development pending On August 28, Arrowfish adopted smart routing, which had previously been planned only for FFF. The goal is to connect mainland-China users directly to mainland-China websites and local resources, reducing unnecessary cross-border routing and latency, while other public traffic continues through the selected VPN. SkyTunnel and sing-box already provide routing, direct-outbound, and ruleset foundations, but no complete Arrowfish implementation, deployment, or acceptance testing evidence exists yet. Establish versioned China domain/IP rules and split DNS, and prevent public traffic from silently bypassing the VPN when rules are invalid. Verify Android first, then cover Windows and the remaining platforms and complete QA on China networks. To Schedule Not automatically added to Sprint 11"
         },
         {
           "id": "b0112",
           "section": "Arrowfish Target List",
           "type": "table-row",
-          "line": 799,
+          "line": 640,
           "text": "G8 Unbound Private DNS Resolver path implemented; runtime acceptance pending Sprints 11–12 implemented VPN node recursive resolution, in-tunnel resolution, failure blocking and host-resolver ownership fixes; work is no longer only a development plan. Complete VPN node reconfiguration, reboot, cache and real-device leak acceptance testing. Originally August 2026; now in runtime validation"
+        },
+        {
+          "id": "b0111",
+          "section": "Arrowfish Target List",
+          "type": "table-row",
+          "line": 641,
+          "text": "G21 Smart routing and direct access to China sites Goal confirmed; development pending On August 28, Arrowfish adopted smart routing, which had previously been planned only for FFF. The goal is to connect mainland-China users directly to mainland-China websites and local resources, reducing unnecessary cross-border routing and latency, while other public traffic continues through the selected VPN. SkyTunnel and sing-box already provide routing, direct-outbound, and ruleset foundations, but no complete Arrowfish implementation, deployment, or acceptance testing evidence exists yet. Establish versioned China domain/IP rules and split DNS, and prevent public traffic from silently bypassing the VPN when rules are invalid. Verify Android first, then cover Windows and the remaining platforms and complete QA on China networks. To Schedule Not automatically added to Sprint 11"
+        },
+        {
+          "id": "b0109",
+          "section": "Arrowfish Target List",
+          "type": "table-row",
+          "line": 642,
+          "text": "G6 SkyTunnel In-House Tunnel Core completed Self-developed VPN tunnel core has been delivered; Android replacement verification is complete, Windows is integrated into the shared versioning core. Continuously returning and completing the official release of Windows and platform integration with Apple. Sprint Maintenance"
         },
         {
           "id": "b0113",
           "section": "Arrowfish Target List",
           "type": "table-row",
-          "line": 801,
+          "line": 644,
           "text": "03 · User eligibility, identity, and revenue protection"
-        },
-        {
-          "id": "b0114",
-          "section": "Arrowfish Target List",
-          "type": "table-row",
-          "line": 802,
-          "text": "G14 Back Office Authority Quota, Timing and Session Core completed On August 29 review, multiple active sessions per account and device were all zero; the highest monthly traffic for free users dropped from 1,216.7 GiB in March to 39.0 GiB in June, with no one exceeding 100 GiB after April. A sudden drop in both activity and traffic on May 25th indicates that not all the decline can be attributed to quota success. Continue monitoring denials, expirations, replacements, free traffic percentiles, and user availability, and supplement Redis quotas with auditable snapshots. Continuous monitoring"
         },
         {
           "id": "b0115",
           "section": "Arrowfish Target List",
           "type": "table-row",
-          "line": 803,
+          "line": 645,
           "text": "G15 Unique Device Binding and Account Continuity New process effective, pending closure From May 25th to the following week, the device binding rate increased from 83.08% to 93.61%. Currently, the relooked shared device ID rate decreased from 21.73% to 2.59%; however, it rose to 38.89% on August 12th during the switch week. These ratios are based on the existing relationships as of August 29th and not historical snapshots. Closure of the identity header, production CORS, Android/Windows versions and legacy fallback validation, followed by the formulation of historical relationship governance strategy. P0 Compatibility validation post-governance historical records"
         },
         {
           "id": "b0116",
           "section": "Arrowfish Target List",
           "type": "table-row",
-          "line": 804,
+          "line": 646,
           "text": "G2 Renewal and Subscription Management Main Flows in Testing; Pending-payment Edge Cases Remain Correction: September 18 was the proposal rejection date, not implementation completion. Rules changed to renewal only on September 21, expanded to subscription and one-time modes on September 24, and were settled using Google’s approach on October 1. Main flows were implemented on October 5 and entered testing. Android 3.9.26 was provided to Amy for staging testing on October 9. Exiting Stripe / Google payment partway through leaves a pending order; duplicate-subscription checks block another purchase, while user recovery and cancellation controls remain outstanding. Retain duplicate-subscription protection and add pending-order viewing, payment recovery (Stripe returns to the corresponding payment page), user cancellation and scheduled expiry. BO-configured validity is planned, with 60 minutes only a proposed value. Verify Google recovery by channel, including cancellation/expiry racing delayed payment results. Existing Stripe callback, refund and expiry-transition regression work still requires its own acceptance evidence; completion dates are unconfirmed. Sprint target before end of the year Early renewal, automatic renewal, and subscription management"
         },
         {
           "id": "b0117",
           "section": "Arrowfish Target List",
           "type": "table-row",
-          "line": 805,
+          "line": 647,
           "text": "G4 Siqo Multi-Platform Payment Settlement basis unified, channel gaps still outstanding Android staging integration is complete. Sprints 13–14 delivered the payment offer and channel code rework, a currency catalog with fiat and crypto defined separately and anchored to USD, and the payment transaction table merge; channel keys are no longer stored in the database. 15 integration gaps across Google, Apple and Stripe are listed and not yet finished. Close the listed channel integration gaps, then integrate, regression-test and release Windows and the other platforms one by one. Awaiting Scheduling Sprint acceptance testing by platform"
+        },
+        {
+          "id": "b0114",
+          "section": "Arrowfish Target List",
+          "type": "table-row",
+          "line": 648,
+          "text": "G14 Back Office Authority Quota, Timing and Session Core completed On August 29 review, multiple active sessions per account and device were all zero; the highest monthly traffic for free users dropped from 1,216.7 GiB in March to 39.0 GiB in June, with no one exceeding 100 GiB after April. A sudden drop in both activity and traffic on May 25th indicates that not all the decline can be attributed to quota success. Continue monitoring denials, expirations, replacements, free traffic percentiles, and user availability, and supplement Redis quotas with auditable snapshots. Continuous monitoring"
         },
         {
           "id": "b0118",
           "section": "Arrowfish Target List",
           "type": "table-row",
-          "line": 807,
+          "line": 650,
           "text": "04 · Multi-platform product and usability"
         },
         {
           "id": "b0119",
           "section": "Arrowfish Target List",
           "type": "table-row",
-          "line": 808,
+          "line": 651,
           "text": "G20 Seven-platform simplified UI and advanced protocol mode Android simplification in progress; cross-client validation pending After the September 18 discussion of the original home-page design, Timmy settled on the latest simplified UI with a single-IP display; Android adjusted its layout and its IP and route name display, and Sprint 14 added the empty payment state, the network-loss wording and country flags on exclusive lines. Windows followed the same direction on September 21. This is implementation progress and does not mean cross-platform visual acceptance testing is complete. Validate simplified mode, connection states and the single IP display, then advance consistency on Windows and Apple platforms. Originally 2026-08-31–09-04; development and validation continued through 18 Sep"
         },
         {
           "id": "b0120",
           "section": "Arrowfish Target List",
           "type": "table-row",
-          "line": 809,
+          "line": 652,
           "text": "G9 New Company Entity Migration In Progress The Google platform is complete; Huawei, Samsung and OPPO are in progress. The related handover closed on October 1: notified on August 31, two handover documents received on September 25 and September 30, the handover meeting held on September 30, and external GitLab access disabled on October 1. Complete migration of the legal entity, accounts, and publishing eligibility one platform at a time. Scheduling pending Sprint-by-sprint acceptance testing"
         },
         {
           "id": "b0121",
           "section": "Arrowfish Target List",
           "type": "table-row",
-          "line": 810,
+          "line": 653,
           "text": "G11 iOS and macOS Apple Platform Recovery TestFlight progressed; device and store acceptance pending The August 24 test build reached valid TestFlight status. Sprint 14 fixed the payment popups, the backend handling of web checkout and purchase recovery, and simplified membership and route selection. There is no new App Store release or macOS acceptance testing conclusion. Complete iOS device purchase, connection, upgrade and App Store acceptance testing; advance Arrowfish macOS separately, without borrowing FFF build results. By Apple Threshold Two platforms are undergoing acceptance testing."
         },
         {
           "id": "b0122",
           "section": "Arrowfish Target List",
           "type": "table-row",
-          "line": 811,
+          "line": 654,
           "text": "G16 Windows Cloud Signature and Official Website Resume Release Signing foundation established; subscription and connection validation ongoing The earlier cloud-signing readiness conclusion is retained; Sprint 12 advanced the subscription API, quota, kill switch and tunnel status alignment. Sprint 13 followed the Android home and subscription UI redesign and reached staging on September 21, but the mapping between the installer and a specific version is unconfirmed. As of October 8 there is no new production release acceptance testing record. Complete clean-machine signed installation, purchase, connectivity, upgrade and uninstall acceptance testing before website release. P0 Next Release Window"
         },
         {
           "id": "b0123",
           "section": "Arrowfish Target List",
           "type": "table-row",
-          "line": 813,
+          "line": 656,
           "text": "05 · Growth, conversion, and market entry points"
         },
         {
           "id": "b0124",
           "section": "Arrowfish Target List",
           "type": "table-row",
-          "line": 814,
+          "line": 657,
           "text": "G1 Ad Attribution and Pay-Per-Click Analysis Attribution handoff and visit-statistics fixes in progress Sprint 12 advanced signed attribution tickets, cross-page handoff, visit counts and Back Office (BO) display fixes; the earlier registration-attribution gap is historical data, with no new production coverage verification. Validate install attribution, retries and concurrency, then reconcile known records before updating coverage. Sprint closure and stabilization D1／D7／D30"
         },
         {
           "id": "b0125",
           "section": "Arrowfish Target List",
           "type": "table-row",
-          "line": 815,
+          "line": 658,
           "text": "G18 Sprint User Quality and Conversion Dashboard Statistics sources and presentation aligning Sprint 12 corrected visit statistics and Back Office (BO) reporting sources. The August production study remains the historical baseline; no new revenue, activity or conversion-rate query was performed. Reconcile statistics against known records before updating user-quality, channel-conversion and revenue dashboards. Next Management Dashboard"
         },
         {
           "id": "b0126",
           "section": "Arrowfish Target List",
           "type": "table-row",
-          "line": 816,
+          "line": 659,
           "text": "G3 Baidu Ad New Website Main site pending launch, placement site awaiting an external check Because the brief was only \"copy the Glory site to Arrowfish\" with no written specification, both versions were built; the reference-site version was selected on September 16 and corrections finished on September 23. The main site on staging will replace the current official site; on October 6 the placement side reported that the navigation bar and title still read \"Arrowfish IP Proxy\", and a sentence-by-sentence sweep is under way. The Baidu placement clone site has been with an external check since September 25 with no feedback so far. Recheck the main site wording on October 12 and go to production on October 13; the placement site deploys to jianyu-ip.com once external feedback arrives. Ad attribution has its own acceptance testing under G1. Main site 2026-10-13 Placement site depends on external feedback"
         },
         {
-          "id": "b0127",
+          "id": "b0146",
           "section": "Arrowfish Target List",
           "type": "p",
-          "line": 825,
-          "text": "Project 02 · New Product · FFF evidence through 2026-10-09"
-        },
-        {
-          "id": "b0128",
-          "section": "FFF 2026 Roadmap",
-          "type": "heading",
-          "line": 826,
-          "text": "FFF 2026 Roadmap"
-        },
-        {
-          "id": "b0129",
-          "section": "FFF 2026 Roadmap",
-          "type": "p",
-          "line": 827,
-          "text": "This update uses Lex’s October 9 report and historical delivery records. Lex owns Flutter; the Malaysia team owns iOS/macOS platform delivery. Shared implementation does not establish acceptance across four platforms. Separate FFF runtime, accounts, databases, Redis, credentials and migration history remain architectural gates; this report provides no delivery evidence for the isolated environment."
-        },
-        {
-          "id": "b0130",
-          "section": "Basic Connection and Cross-platform Acceptance",
-          "type": "heading",
-          "line": 835,
-          "text": "Basic Connection and Cross-platform Acceptance"
-        },
-        {
-          "id": "b0131",
-          "section": "Basic Connection and Cross-platform Acceptance",
-          "type": "p",
-          "line": 836,
-          "text": "G10 SkyTunnel core migration, automatic route selection, and protocol regression"
-        },
-        {
-          "id": "b0132",
-          "section": "Basic Connection and Cross-platform Acceptance",
-          "type": "li",
-          "line": 832,
-          "text": "2026-05-18–10-09 · Client Assessment and Historical Evidence Basic Connection and Cross-platform Acceptance G10 SkyTunnel core migration, automatic route selection, and protocol regression Android APK handoff to QA on August 28 and Windows staging on September 20 are recorded. Both Apple fixes from September 28 await integration; connection and protocol acceptance is platform-specific."
-        },
-        {
-          "id": "b0133",
-          "section": "Independent Backend and staging",
-          "type": "heading",
-          "line": 843,
-          "text": "Independent Backend and staging"
-        },
-        {
-          "id": "b0134",
-          "section": "Independent Backend and staging",
-          "type": "p",
-          "line": 844,
-          "text": "G14 New GitLab Repository and Isolated Runtime G15 Independent Refactor After Acceptance"
-        },
-        {
-          "id": "b0135",
-          "section": "Independent Backend and staging",
-          "type": "li",
-          "line": 840,
-          "text": "Decision Aug 28, 2026 · Current Architecture Barrier Independent Backend and staging G14 New GitLab Repository and Isolated Runtime G15 Independent Refactor After Acceptance Do Not Copy Arrowfish Production Account, Database or Secrets"
-        },
-        {
-          "id": "b0136",
-          "section": "Android First Launch Closure",
-          "type": "heading",
-          "line": 851,
-          "text": "Android First Launch Closure"
-        },
-        {
-          "id": "b0137",
-          "section": "Android First Launch Closure",
-          "type": "p",
-          "line": 852,
-          "text": "G10 Automatic grouping and protocol regression testing G12 Payment Interface and Closed Loop G16／G17 Develop multi-hop VPN and full smart routing independently, with separate acceptance testing"
-        },
-        {
-          "id": "b0138",
-          "section": "Android First Launch Closure",
-          "type": "li",
-          "line": 848,
-          "text": "After the G14 staging Smoke Test Android First Launch Closure G10 Automatic grouping and protocol regression testing G12 Payment Interface and Closed Loop G16／G17 Develop multi-hop VPN and full smart routing independently, with separate acceptance testing Connect the four transaction flows, then complete builds, staging and end-to-end acceptance. Multi-hop and full smart routing are scheduled separately."
-        },
-        {
-          "id": "b0139",
-          "section": "Windows",
-          "type": "heading",
-          "line": 859,
-          "text": "Windows"
-        },
-        {
-          "id": "b0140",
-          "section": "Windows",
-          "type": "p",
-          "line": 860,
-          "text": "G13 Desktop Build, VPN Main Path, Payment and Upgrade Regression"
-        },
-        {
-          "id": "b0141",
-          "section": "Windows",
-          "type": "li",
-          "line": 856,
-          "text": "After Android Release Windows G13 Desktop Build, VPN Main Path, Payment and Upgrade Regression September 20 staging deployment is confirmed. Current repackaging is blocked after the October 7 dual-architecture asset change; signing and device acceptance remain unconfirmed."
-        },
-        {
-          "id": "b0142",
-          "section": "Apple Platforms; Linux on the Later Roadmap",
-          "type": "heading",
-          "line": 867,
-          "text": "Apple Platforms; Linux on the Later Roadmap"
-        },
-        {
-          "id": "b0143",
-          "section": "Apple Platforms; Linux on the Later Roadmap",
-          "type": "p",
-          "line": 868,
-          "text": "G13 Separate macOS+iOS acceptance; Linux is not in this delivery scope"
-        },
-        {
-          "id": "b0144",
-          "section": "Apple Platforms; Linux on the Later Roadmap",
-          "type": "li",
-          "line": 864,
-          "text": "After Windows Acceptance Apple Platforms; Linux on the Later Roadmap G13 Separate macOS+iOS acceptance; Linux is not in this delivery scope Builds without signing on September 15 are historical evidence. Integrate both fixes, then complete signing, macOS notarization and device acceptance for each platform."
-        },
-        {
-          "id": "b0145",
-          "section": "Apple Platforms; Linux on the Later Roadmap",
-          "type": "p",
-          "line": 875,
-          "text": "Read the full October 9 FFF report: modules, platforms, timeline and evidence boundaries"
-        },
-        {
-          "id": "b0146",
-          "section": "Apple Platforms; Linux on the Later Roadmap",
-          "type": "p",
-          "line": 880,
+          "line": 668,
           "text": "FFF · Goal List · Updated through 2026-10-09"
         },
         {
           "id": "b0147",
           "section": "FFF Goals List",
           "type": "heading",
-          "line": 881,
+          "line": 669,
           "text": "FFF Goals List"
+        },
+        {
+          "id": "reading-b0074",
+          "section": "FFF Goals List",
+          "type": "details-summary",
+          "line": 678,
+          "text": "View all 7 goals"
         },
         {
           "id": "b0148",
           "section": "FFF Goals List",
           "type": "p",
-          "line": 882,
+          "line": 678,
           "text": "FFF now has seven independent goals; multi-hop VPN and full smart routing are no longer hidden inside the basic connection scope. Backend isolation is the architecture gate before the first client release, while development completion, builds, staging acceptance, and formal release are recorded separately."
         },
         {
           "id": "b0149",
           "section": "FFF Goals List",
           "type": "table-row",
-          "line": 894,
+          "line": 682,
           "text": "Goal Status Current Progress Next Milestone Target Date"
         },
         {
           "id": "b0150",
           "section": "FFF Goals List",
           "type": "table-row",
-          "line": 896,
+          "line": 684,
           "text": "01 · Independent backend and data boundary"
         },
         {
           "id": "b0151",
           "section": "FFF Goals List",
           "type": "table-row",
-          "line": 897,
+          "line": 685,
           "text": "FFF · G14 Independent GitLab Repository and staging Backend Decision Made, Pending Implementation This client report provides no delivery evidence for an isolated backend. Reuse of a mature source baseline still requires separate FFF and Arrowfish runtime environments, databases, accounts, Redis, credentials and migration history. Freeze the baseline, establish an independent repo, CI/CD, backend, database and Redis, and complete core-flow acceptance using synthetic data. Before Android first-release acceptance"
         },
         {
           "id": "b0152",
           "section": "FFF Goals List",
           "type": "table-row",
-          "line": 898,
+          "line": 686,
           "text": "FFF · G15 FFF Exclusive Schema, API, and Module Rearchitecture Start After Isolation Acceptance There is no new delivery evidence for schema, API or module reconstruction in an isolated FFF environment. Client payment and subscription reconstruction is progressing, but does not establish that independent backend reconstruction has started or finished. After G14 acceptance, establish independent migration history and refactor for FFF requirements; shared capabilities enter only through versioned source modules. After G14 Acceptance"
         },
         {
           "id": "b0153",
           "section": "FFF Goals List",
           "type": "table-row",
-          "line": 900,
+          "line": 688,
           "text": "02 · Android initial-release closure"
         },
         {
           "id": "b0154",
           "section": "FFF Goals List",
           "type": "table-row",
-          "line": 901,
+          "line": 689,
           "text": "FFF · G10 Connection foundation, automatic route selection, and protocol regression Core Implementation Progressed; Cross-platform Acceptance Remains Open On October 9, Lex reported implementation of basic connection, selection, latency checking and blocking capabilities. Apple client configuration and plugin grouping fixes were committed on separate branches on September 28 and remain unintegrated. Shared code does not establish actual-connection acceptance on all four platforms. Integrate both Apple fixes, identify test artifacts for each platform, and complete acceptance of selection, connection, disconnection, manual reconnection, blocking and account cleanup. Automatic reconnection requires separate development. Previous target: October 2026; current completion date unconfirmed"
+        },
+        {
+          "id": "b0157",
+          "section": "FFF Goals List",
+          "type": "table-row",
+          "line": 690,
+          "text": "FFF · G12 Payment Interface and Payment Loop Closure Four Transaction Flows Are Being Rebuilt; Payment Collection Is Not Yet Available On October 9, Lex reported that recharge, base-plan, dedicated-line and dedicated-IP purchases are being rebuilt alongside payment and subscription APIs. Product and option interfaces exist, but ordering, payment and result synchronization are not connected. Roy continues to own payment-gateway commercial matters. Connect all four transaction flows and verify payment success/failure, order reconciliation, duplicate events and resulting balances/entitlements before closing the first-release payment gate. Before Android First Release; Completion Date Unconfirmed"
         },
         {
           "id": "b0155",
           "section": "FFF Goals List",
           "type": "table-row",
-          "line": 902,
+          "line": 691,
           "text": "FFF · G16 Multi-hop VPN (entry and exit VPN nodes) Scope confirmed; development pending Product and user records already contain multi-hop eligibility and hop-count data, but the client does not yet establish an entry VPN node, exit VPN node, and connection chain; the current tunnel core also lacks a general two-node chain ready for FFF acceptance testing. SkyNode can serve as a normal entry or exit, while server-assigned upstream chaining is not currently supported. Use a client-selected entry and exit two-hop design; complete chained dialing in the tunnel core, backend topology and credential configuration, FFF VPN node selection and status/failure handling, then verify the exit IP, disconnect protection, performance, and Android end-to-end connectivity. To schedule Including it in the first release will affect the current timeline"
         },
         {
           "id": "b0156",
           "section": "FFF Goals List",
           "type": "table-row",
-          "line": 903,
+          "line": 692,
           "text": "FFF · G17 Full smart routing and traffic-splitting policies Configuration Groundwork Exists; Engine Traffic Splitting Is Not Integrated Current capability correction: client and server configuration groundwork exists, but the current FFF engine has not integrated rule parsing and traffic splitting; forwarding still follows the selected outbound. A direct type does not establish user-facing smart routing. Global/direct controls, custom rules and per-app proxying remain incomplete. Implement engine rule support, versioned domain/IP/application rules, split DNS, user modes and failure protection, then complete separate acceptance by platform and in China network conditions. Linux belongs to later scope. Unscheduled; implement after the G10 stable-connection baseline"
-        },
-        {
-          "id": "b0157",
-          "section": "FFF Goals List",
-          "type": "table-row",
-          "line": 904,
-          "text": "FFF · G12 Payment Interface and Payment Loop Closure Four Transaction Flows Are Being Rebuilt; Payment Collection Is Not Yet Available On October 9, Lex reported that recharge, base-plan, dedicated-line and dedicated-IP purchases are being rebuilt alongside payment and subscription APIs. Product and option interfaces exist, but ordering, payment and result synchronization are not connected. Roy continues to own payment-gateway commercial matters. Connect all four transaction flows and verify payment success/failure, order reconciliation, duplicate events and resulting balances/entitlements before closing the first-release payment gate. Before Android First Release; Completion Date Unconfirmed"
         },
         {
           "id": "b0158",
           "section": "FFF Goals List",
           "type": "table-row",
-          "line": 906,
+          "line": 694,
           "text": "03 · Multi-platform release"
         },
         {
           "id": "b0159",
           "section": "FFF Goals List",
           "type": "table-row",
-          "line": 907,
+          "line": 695,
           "text": "FFF · G13 Sequential Multi-platform Releases Historical Test Delivery Recorded; Formal Release Gates Remain Open Android APK handoff to QA occurred on August 28; Apple unsigned builds were recorded on September 15; Windows staging deployment on September 20 is confirmed. After Windows dual-architecture assets and detection were added on October 7, the packaging script still checks obsolete paths. ARM application artifacts, signing, device and payment acceptance remain unconfirmed. Repair current Windows repackaging and identify artifacts; the Malaysia team integrates Apple fixes. Formal releases retain the Android → Windows → macOS/iOS order, with separate signing, installation/upgrade, connection and payment acceptance. Linux is not in this scope. Platform-specific Gates; Release Dates Unconfirmed"
         },
         {
           "id": "b0160",
           "section": "FFF Goals List",
           "type": "p",
-          "line": 916,
+          "line": 704,
           "text": "Cross-product · Management & Delivery Infrastructure · Updated to 2026-08-28"
         },
         {
           "id": "b0161",
           "section": "Shared Management Capabilities",
           "type": "heading",
-          "line": 917,
+          "line": 705,
           "text": "Shared Management Capabilities"
+        },
+        {
+          "id": "reading-b0089",
+          "section": "Shared Management Capabilities",
+          "type": "details-summary",
+          "line": 714,
+          "text": "View the 1 goal"
         },
         {
           "id": "b0162",
           "section": "Shared Management Capabilities",
           "type": "p",
-          "line": 918,
+          "line": 714,
           "text": "Carries Arrowfish and FFF shared management, reporting, and delivery capabilities; independent progress tracking avoids diluting any product line's status."
         },
         {
           "id": "b0163",
           "section": "Shared Management Capabilities",
           "type": "table-row",
-          "line": 930,
+          "line": 718,
           "text": "Goal Status Latest Progress Next Milestone Target Time"
         },
         {
           "id": "b0164",
           "section": "Shared Management Capabilities",
           "type": "table-row",
-          "line": 932,
+          "line": 720,
           "text": "Management Efficiency"
         },
         {
           "id": "b0165",
           "section": "Shared Management Capabilities",
           "type": "table-row",
-          "line": 933,
+          "line": 721,
           "text": "SHARED · G1 Evidence-based AI Reporting Assistant POC Ready for Production This capability does not belong to any product line. Current report isolation, local evidence retrieval, verifiable references, dialogue and summary boundaries have been implemented; all automated search evaluation and regression tests are 100%. Worker and reporting site releases completed with production environment summaries, digital Q&A, refusal responses, reference deep links, and mobile app acceptance. Worker and reporting site releases completed with production environment summaries, digital Q&A, refusal responses, reference deep links, and mobile app acceptance. POC Launch Closed after Production Acceptance"
         },
         {
-          "id": "b0166",
-          "section": "Shared Management Capabilities",
+          "id": "reading-b0094",
+          "section": "Historical roadmap and detailed evidence",
+          "type": "heading",
+          "line": 726,
+          "text": "Historical roadmap and detailed evidence"
+        },
+        {
+          "id": "reading-b0095",
+          "section": "Historical roadmap and detailed evidence",
           "type": "p",
-          "line": 939,
+          "line": 726,
+          "text": "The following records retain their original dates and statuses. For the current assessment, start with the overview and full goal register."
+        },
+        {
+          "id": "reading-b0096",
+          "section": "Historical roadmap and detailed evidence",
+          "type": "details-summary",
+          "line": 726,
+          "text": "View the original management summary and priorities · 2026-10-09 snapshot"
+        },
+        {
+          "id": "b0003",
+          "section": "Historical roadmap and detailed evidence",
+          "type": "p",
+          "line": 730,
+          "text": "General Manager Ri / Management · 60-second Dashboard · Updated 2026-10-09"
+        },
+        {
+          "id": "b0004",
+          "section": "Current Status and Next Sequence of Project Portfolio",
+          "type": "heading",
+          "line": 731,
+          "text": "Current Status and Next Sequence of Project Portfolio"
+        },
+        {
+          "id": "b0005",
+          "section": "Current Status and Next Sequence of Project Portfolio",
+          "type": "p",
+          "line": 732,
+          "text": "The renewal rules were redesigned after being rejected on September 18, settled on October 1, and implementation completed on October 5 and entered testing. Sprints 13–14 completed the payment settlement basis, the Back Office (BO) rebuild and the settings ownership split, and the handover closed on October 1. In progress now: aligning the Stripe staging webhook and sweeping the new official site's wording. The off-site production restore drill is still not executed and is the highest-risk open item."
+        },
+        {
+          "id": "b0006",
+          "section": "Main Flows in Testing; Pending-order and Acceptance Gaps Remain",
+          "type": "heading",
+          "line": 738,
+          "text": "Main Flows in Testing; Pending-order and Acceptance Gaps Remain"
+        },
+        {
+          "id": "b0007",
+          "section": "Main Flows in Testing; Pending-order and Acceptance Gaps Remain",
+          "type": "p",
+          "line": 739,
+          "text": "Across 21 goals, the previously planned payment settlement, membership renewal, Back Office (BO) rebuild and settings-ownership separation changes were merged and entered testing on October 5. Android 3.9.26 was provided to Amy for staging testing on October 9; pending-order payment recovery, cancellation and configurable expiry remain planned, with acceptance results unconfirmed."
+        },
+        {
+          "id": "b0008",
+          "section": "Core client flows have progressed; payment collection and platform release gates remain open",
+          "type": "heading",
+          "line": 743,
+          "text": "Core client flows have progressed; payment collection and platform release gates remain open"
+        },
+        {
+          "id": "b0009",
+          "section": "Core client flows have progressed; payment collection and platform release gates remain open",
+          "type": "p",
+          "line": 744,
+          "text": "Lex’s October 9 report records implementation progress in core client functions. Four transaction flows are still being rebuilt and the app cannot yet collect payment. Windows staging deployment on September 20 is confirmed; Apple fixes remain unintegrated, while current Windows repackaging, signing and device acceptance gates remain open."
+        },
+        {
+          "id": "b0010",
+          "section": "Close the recovery capability first, then widen the release surface",
+          "type": "heading",
+          "line": 748,
+          "text": "Close the recovery capability first, then widen the release surface"
+        },
+        {
+          "id": "b0011",
+          "section": "Close the recovery capability first, then widen the release surface",
+          "type": "li",
+          "line": 750,
+          "text": "Schedule the off-site production restore drill and record the result. The runbook was written on October 6 but the drill has not been executed; this is the highest priority right now."
+        },
+        {
+          "id": "b0012",
+          "section": "Close the recovery capability first, then widen the release surface",
+          "type": "li",
+          "line": 751,
+          "text": "Complete the staging Stripe webhook alignment and sandbox verification and the renewal and purchase test regression, then advance production deployment and device identity compatibility verification."
+        },
+        {
+          "id": "b0013",
+          "section": "Close the recovery capability first, then widen the release surface",
+          "type": "li",
+          "line": 752,
+          "text": "The new official site is rechecked on October 12 and goes to production on October 13; the Baidu placement site is awaiting an external check, so no date can be given."
+        },
+        {
+          "id": "b0014",
+          "section": "Close the recovery capability first, then widen the release surface",
+          "type": "li",
+          "line": 753,
+          "text": "After that, complete the Windows signed release and iOS device and App Store acceptance testing, then advance the full three-protocol rollout and China regional acceptance testing."
+        },
+        {
+          "id": "reading-b0109",
+          "section": "Close the recovery capability first, then widen the release surface",
+          "type": "details-summary",
+          "line": 758,
+          "text": "View other updates and historical snapshots · Original dates retained"
+        },
+        {
+          "id": "b0166",
+          "section": "Close the recovery capability first, then widen the release surface",
+          "type": "p",
+          "line": 759,
           "text": "Recent Updates and Historical Snapshots"
         },
         {
           "id": "b0167",
           "section": "October 9 Updates and Historical Records",
           "type": "heading",
-          "line": 939,
+          "line": 759,
           "text": "October 9 Updates and Historical Records"
         },
         {
           "id": "b0168",
           "section": "October 9 Updates and Historical Records",
           "type": "p",
-          "line": 939,
+          "line": 759,
           "text": "FFF and Arrowfish test-delivery cards are updated through 2026-10-09. Renewal dates follow the correction record; other cards retain their historical scope. Production research below retains its August 29 historical date and is not a new production query."
         },
         {
           "id": "b0169",
           "section": "October 9 Updates and Historical Records",
           "type": "p",
-          "line": 939,
+          "line": 759,
           "text": "Test delivery was user-confirmed on October 9; acceptance results are unconfirmed. Payment recovery, cancellation and configurable expiry are planned; 60 minutes is a proposed validity period."
         },
         {
           "id": "b0170",
           "section": "October 9 Updates and Historical Records",
           "type": "highlight",
-          "line": 939,
+          "line": 759,
           "text": "G2／G19 Android 3.9.26 Provided to Amy for staging Testing Test delivery was user-confirmed on October 9; acceptance results are unconfirmed. Payment recovery, cancellation and configurable expiry are planned; 60 minutes is a proposed validity period. View the Android Test Delivery and Pending-order Update"
         },
         {
           "id": "b0171",
           "section": "October 9 Updates and Historical Records",
           "type": "p",
-          "line": 939,
+          "line": 759,
           "text": "The proposal was rejected on September 18. Rules were settled on October 1; main flows were implemented on October 5 and entered testing. Pending-order recovery, cancellation and expiry remain outstanding on October 9."
         },
         {
           "id": "b0172",
           "section": "October 9 Updates and Historical Records",
           "type": "highlight",
-          "line": 939,
+          "line": 759,
           "text": "G2 Renewal Main Flows Implemented; Edge Cases Remain The proposal was rejected on September 18. Rules were settled on October 1; main flows were implemented on October 5 and entered testing. Pending-order recovery, cancellation and expiry remain outstanding on October 9."
         },
         {
           "id": "b0173",
           "section": "October 9 Updates and Historical Records",
           "type": "p",
-          "line": 939,
+          "line": 759,
           "text": "All six Sprint 12 releases were staging releases, with versions and channels recorded."
         },
         {
           "id": "b0174",
           "section": "October 9 Updates and Historical Records",
           "type": "highlight",
-          "line": 939,
+          "line": 759,
           "text": "G13／G19 Six Android staging releases All six Sprint 12 releases were staging releases, with versions and channels recorded."
         },
         {
           "id": "b0175",
           "section": "October 9 Updates and Historical Records",
           "type": "p",
-          "line": 939,
+          "line": 759,
           "text": "The 7 Sep China and Taiwan connection test was confirmed; further VPN node, DNS and protocol acceptance testing continues."
         },
         {
           "id": "b0176",
           "section": "October 9 Updates and Historical Records",
           "type": "highlight",
-          "line": 939,
+          "line": 759,
           "text": "G7／G8 Connectivity and resolution advance into live validation The 7 Sep China and Taiwan connection test was confirmed; further VPN node, DNS and protocol acceptance testing continues."
         },
         {
           "id": "b0177",
           "section": "October 9 Updates and Historical Records",
           "type": "p",
-          "line": 939,
+          "line": 759,
           "text": "Timmy set the simplification direction and Android layout changes were implemented; cross-client visual acceptance testing remains a follow-up."
         },
         {
           "id": "b0178",
           "section": "October 9 Updates and Historical Records",
           "type": "highlight",
-          "line": 939,
+          "line": 759,
           "text": "G20 Single-IP home-page simplification progresses Timmy set the simplification direction and Android layout changes were implemented; cross-client visual acceptance testing remains a follow-up."
         },
         {
           "id": "b0179",
           "section": "October 9 Updates and Historical Records",
           "type": "p",
-          "line": 939,
+          "line": 759,
           "text": "A valid TestFlight build and client source progress are recorded; production release still requires per-client acceptance testing."
         },
         {
           "id": "b0180",
           "section": "October 9 Updates and Historical Records",
           "type": "highlight",
-          "line": 939,
+          "line": 759,
           "text": "G11／G16 Apple and Windows validated separately A valid TestFlight build and client source progress are recorded; production release still requires per-client acceptance testing."
         },
         {
           "id": "b0181",
           "section": "October 9 Updates and Historical Records",
           "type": "p",
-          "line": 939,
+          "line": 759,
           "text": "Lex’s October 9 report has arrived: core implementation has progressed, while four transaction flows are still being rebuilt. The September 20 Windows staging deployment remains established; Apple fix integration, current packaging and platform acceptance remain open."
         },
         {
           "id": "b0182",
           "section": "October 9 Updates and Historical Records",
           "type": "highlight",
-          "line": 939,
+          "line": 759,
           "text": "FFF · G10／G12／G13 FFF Transaction Reconstruction and Platform Release Gates Lex’s October 9 report has arrived: core implementation has progressed, while four transaction flows are still being rebuilt. The September 20 Windows staging deployment remains established; Apple fix integration, current packaging and platform acceptance remain open."
+        },
+        {
+          "id": "reading-b0127",
+          "section": "October 9 Updates and Historical Records",
+          "type": "details-summary",
+          "line": 760,
+          "text": "View the Arrowfish historical roadmap and next steps · Updated through 2026-10-09"
+        },
+        {
+          "id": "b0015",
+          "section": "October 9 Updates and Historical Records",
+          "type": "p",
+          "line": 764,
+          "text": "Project 01 · VPN · Historical route and Sprint 14 delivery progress"
+        },
+        {
+          "id": "b0016",
+          "section": "Arrowfish 2026 Roadmap",
+          "type": "heading",
+          "line": 765,
+          "text": "Arrowfish 2026 Roadmap"
+        },
+        {
+          "id": "b0017",
+          "section": "Arrowfish 2026 Roadmap",
+          "type": "p",
+          "line": 766,
+          "text": "This roadmap follows the actual sequence: takeover and audit → user and revenue stabilization → architecture and operations engineering → in-house protocol core → multi-platform release and growth. Read-only production data from August 28 calibrates user scale, quota, device, protocol, and platform goals; FFF remains separate."
+        },
+        {
+          "id": "b0018",
+          "section": "Take over hemostasis and revenue recovery",
+          "type": "heading",
+          "line": 775,
+          "text": "Take over hemostasis and revenue recovery"
+        },
+        {
+          "id": "b0019",
+          "section": "Take over hemostasis and revenue recovery",
+          "type": "li",
+          "line": 777,
+          "text": "Moved from limited handover material into a full-system audit of code, production, infrastructure, revenue paths, and clients"
+        },
+        {
+          "id": "b0020",
+          "section": "Take over hemostasis and revenue recovery",
+          "type": "li",
+          "line": 778,
+          "text": "Restore Samsung IAP and AdMob production configurations"
+        },
+        {
+          "id": "b0021",
+          "section": "Take over hemostasis and revenue recovery",
+          "type": "li",
+          "line": 779,
+          "text": "USDTPay rewritten from Java black-box to Go service"
+        },
+        {
+          "id": "b0022",
+          "section": "Take over hemostasis and revenue recovery",
+          "type": "li",
+          "line": 780,
+          "text": "Focus on logless, security, and Android stability fixes"
+        },
+        {
+          "id": "b0023",
+          "section": "Take over hemostasis and revenue recovery",
+          "type": "li",
+          "line": 772,
+          "text": "March 2026 handover begins · Full production access obtained 03-26 · Sprints 0–1 Take over hemostasis and revenue recovery Moved from limited handover material into a full-system audit of code, production, infrastructure, revenue paths, and clients Restore Samsung IAP and AdMob production configurations USDTPay rewritten from Java black-box to Go service Focus on logless, security, and Android stability fixes Result: Identified over 56 critical issues; resolved 49+ during Sprints 0–1 and restored 2 revenue channels"
+        },
+        {
+          "id": "b0024",
+          "section": "Revenue management, anti-abuse, and experience reinforcement",
+          "type": "heading",
+          "line": 788,
+          "text": "Revenue management, anti-abuse, and experience reinforcement"
+        },
+        {
+          "id": "b0025",
+          "section": "Revenue management, anti-abuse, and experience reinforcement",
+          "type": "li",
+          "line": 790,
+          "text": "Exclusive IP, balance payment, and renewal date issue fixes"
+        },
+        {
+          "id": "b0026",
+          "section": "Revenue management, anti-abuse, and experience reinforcement",
+          "type": "li",
+          "line": 791,
+          "text": "Device fingerprinting, account binding, and five-layer anti-abuse protection implementation"
+        },
+        {
+          "id": "b0027",
+          "section": "Revenue management, anti-abuse, and experience reinforcement",
+          "type": "li",
+          "line": 792,
+          "text": "Read-write separation and automated test build implementation"
+        },
+        {
+          "id": "b0028",
+          "section": "Revenue management, anti-abuse, and experience reinforcement",
+          "type": "li",
+          "line": 785,
+          "text": "Apr 13, 2026 – Apr 24, 2026 · Sprint 2 Revenue management, anti-abuse, and experience reinforcement Exclusive IP, balance payment, and renewal date issue fixes Device fingerprinting, account binding, and five-layer anti-abuse protection implementation Read-write separation and automated test build implementation Result: Fixed over 30 defects, optimized over 20 experiences; APK size reduced by 28.7%"
+        },
+        {
+          "id": "b0029",
+          "section": "Back Office, infrastructure, and VPN node automation",
+          "type": "heading",
+          "line": 800,
+          "text": "Back Office, infrastructure, and VPN node automation"
+        },
+        {
+          "id": "b0030",
+          "section": "Back Office, infrastructure, and VPN node automation",
+          "type": "li",
+          "line": 802,
+          "text": "Free quota changed to VPN node authoritative accounting"
+        },
+        {
+          "id": "b0031",
+          "section": "Back Office, infrastructure, and VPN node automation",
+          "type": "li",
+          "line": 803,
+          "text": "Automatic backup, read replicas, and retirement of old ProxyBackend"
+        },
+        {
+          "id": "b0032",
+          "section": "Back Office, infrastructure, and VPN node automation",
+          "type": "li",
+          "line": 804,
+          "text": "Back Office one-click installation, recovery, batch upgrades, and health management"
+        },
+        {
+          "id": "b0033",
+          "section": "Back Office, infrastructure, and VPN node automation",
+          "type": "li",
+          "line": 797,
+          "text": "Apr 27, 2026 – May 10, 2026 · Sprint 3 Back Office, infrastructure, and VPN node automation Free quota changed to VPN node authoritative accounting Automatic backup, read replicas, and retirement of old ProxyBackend Back Office one-click installation, recovery, batch upgrades, and health management Result: 7 cross-regional VPN nodes recovered in 44 seconds with zero failures"
+        },
+        {
+          "id": "b0034",
+          "section": "Release framework and operational capability convergence",
+          "type": "heading",
+          "line": 812,
+          "text": "Release framework and operational capability convergence"
+        },
+        {
+          "id": "b0035",
+          "section": "Release framework and operational capability convergence",
+          "type": "li",
+          "line": 814,
+          "text": "Android, Back Office, and CI/CD release chain modernization"
+        },
+        {
+          "id": "b0036",
+          "section": "Release framework and operational capability convergence",
+          "type": "li",
+          "line": 815,
+          "text": "Dynamic event capabilities and Back Office (BO) configuration implementation"
+        },
+        {
+          "id": "b0037",
+          "section": "Release framework and operational capability convergence",
+          "type": "li",
+          "line": 816,
+          "text": "Arrowfish new official website enters staging"
+        },
+        {
+          "id": "b0038",
+          "section": "Release framework and operational capability convergence",
+          "type": "li",
+          "line": 817,
+          "text": "May 25: Session accounting began; improved device identity but concurrent user availability metrics declined."
+        },
+        {
+          "id": "b0039",
+          "section": "Release framework and operational capability convergence",
+          "type": "li",
+          "line": 809,
+          "text": "May 10, 2026 – Jun 26, 2026 · Sprints 4–6 Release framework and operational capability convergence Android, Back Office, and CI/CD release chain modernization Dynamic event capabilities and Back Office (BO) configuration implementation Arrowfish new official website enters staging May 25: Session accounting began; improved device identity but concurrent user availability metrics declined. Outcome: Control capabilities entered production, saving approximately USD 612.21 per month; the full release scope on May 25 still needs alignment with release operations records."
+        },
+        {
+          "id": "b0040",
+          "section": "China Connection Events and Self-Research Route Decision",
+          "type": "heading",
+          "line": 827,
+          "text": "China Connection Events and Self-Research Route Decision"
+        },
+        {
+          "id": "b0041",
+          "section": "China Connection Events and Self-Research Route Decision",
+          "type": "li",
+          "line": 829,
+          "text": "MY/TW QA accessible while Chinese QA inaccessible, forming a judgment for testing in China; database cannot prove that GFW is the sole reason for overall decline"
+        },
+        {
+          "id": "b0042",
+          "section": "China Connection Events and Self-Research Route Decision",
+          "type": "li",
+          "line": 830,
+          "text": "Four-day Delivery Agreement for Self-Test Tool, Seven Achievements Fully Green"
+        },
+        {
+          "id": "b0043",
+          "section": "China Connection Events and Self-Research Route Decision",
+          "type": "li",
+          "line": 831,
+          "text": "Decided to Develop SkyNode, SkyTunnel and Strengthen Protocol"
+        },
+        {
+          "id": "b0044",
+          "section": "China Connection Events and Self-Research Route Decision",
+          "type": "li",
+          "line": 824,
+          "text": "Jun 27, 2026 – Jul 10, 2026 · Sprint 7 China Connection Events and Self-Research Route Decision MY/TW QA accessible while Chinese QA inaccessible, forming a judgment for testing in China; database cannot prove that GFW is the sole reason for overall decline Four-day Delivery Agreement for Self-Test Tool, Seven Achievements Fully Green Decided to Develop SkyNode, SkyTunnel and Strengthen Protocol Result: Stop Relying on Old Single Trojan and Third-party Core; Regional Accessibility Still Needs Independent Acceptance Testing"
+        },
+        {
+          "id": "b0045",
+          "section": "SkyTunnel and Connection Stability",
+          "type": "heading",
+          "line": 839,
+          "text": "SkyTunnel and Connection Stability"
+        },
+        {
+          "id": "b0046",
+          "section": "SkyTunnel and Connection Stability",
+          "type": "li",
+          "line": 841,
+          "text": "Android Complete SkyTunnel Replacement Verification"
+        },
+        {
+          "id": "b0047",
+          "section": "SkyTunnel and Connection Stability",
+          "type": "li",
+          "line": 842,
+          "text": "Windows Access Same Shared Core"
+        },
+        {
+          "id": "b0048",
+          "section": "SkyTunnel and Connection Stability",
+          "type": "li",
+          "line": 843,
+          "text": "Windows Test Signature Linkage Opened and Continuously Converged"
+        },
+        {
+          "id": "b0049",
+          "section": "SkyTunnel and Connection Stability",
+          "type": "li",
+          "line": 836,
+          "text": "2026-07-11–07-24 · Sprint 8 SkyTunnel and Connection Stability Android Complete SkyTunnel Replacement Verification Windows Access Same Shared Core Windows Test Signature Linkage Opened and Continuously Converged Result: IPv6 Root Cause Fixed for 'Connected but No Traffic' Issue, True Machine Acceptance Completed"
+        },
+        {
+          "id": "b0050",
+          "section": "Attribution, Payment, and Desktop Delivery",
+          "type": "heading",
+          "line": 851,
+          "text": "Attribution, Payment, and Desktop Delivery"
+        },
+        {
+          "id": "b0051",
+          "section": "Attribution, Payment, and Desktop Delivery",
+          "type": "li",
+          "line": 853,
+          "text": "Back Office-led Android Attribution Linkage Completed"
+        },
+        {
+          "id": "b0052",
+          "section": "Attribution, Payment, and Desktop Delivery",
+          "type": "li",
+          "line": 854,
+          "text": "API Reduced from 207 to 141"
+        },
+        {
+          "id": "b0053",
+          "section": "Attribution, Payment, and Desktop Delivery",
+          "type": "li",
+          "line": 855,
+          "text": "Siqo Multi-chain Payment Enters Test Environment"
+        },
+        {
+          "id": "b0054",
+          "section": "Attribution, Payment, and Desktop Delivery",
+          "type": "li",
+          "line": 848,
+          "text": "2026-07-25–08-07 · Sprint 9 Attribution, Payment, and Desktop Delivery Back Office-led Android Attribution Linkage Completed API Reduced from 207 to 141 Siqo Multi-chain Payment Enters Test Environment Result: Windows Approximately 8 MB Test Package Delivered to QA, Build Time Halved"
+        },
+        {
+          "id": "b0055",
+          "section": "Production Integration and iOS Compliance Reconstruction",
+          "type": "heading",
+          "line": 863,
+          "text": "Production Integration and iOS Compliance Reconstruction"
+        },
+        {
+          "id": "b0056",
+          "section": "Production Integration and iOS Compliance Reconstruction",
+          "type": "li",
+          "line": 865,
+          "text": "Production environment integration and deployment completed on August 12, product acceptance still partial"
+        },
+        {
+          "id": "b0057",
+          "section": "Production Integration and iOS Compliance Reconstruction",
+          "type": "li",
+          "line": 866,
+          "text": "iOS clean source code engineering and main path establishment for VPN (BO) node"
+        },
+        {
+          "id": "b0058",
+          "section": "Production Integration and iOS Compliance Reconstruction",
+          "type": "li",
+          "line": 867,
+          "text": "Database migration and completion of testing environment validation with CI/CD responsibility separation"
+        },
+        {
+          "id": "b0059",
+          "section": "Production Integration and iOS Compliance Reconstruction",
+          "type": "li",
+          "line": 868,
+          "text": "Production research on quantitative user quality, quotas, devices, and platform impact"
+        },
+        {
+          "id": "b0060",
+          "section": "Production Integration and iOS Compliance Reconstruction",
+          "type": "li",
+          "line": 860,
+          "text": "2026-08-08–08-21 · Production Research Aug. 28 · Sprint 10 Production Integration and iOS Compliance Reconstruction Production environment integration and deployment completed on August 12, product acceptance still partial iOS clean source code engineering and main path establishment for VPN (BO) node Database migration and completion of testing environment validation with CI/CD responsibility separation Production research on quantitative user quality, quotas, devices, and platform impact Boundary: End-to-end acceptance testing for iOS physical devices, TestFlight, and both protocol ends has not reached closure"
+        },
+        {
+          "id": "b0061",
+          "section": "Membership lifecycle and multi-platform staging delivery",
+          "type": "heading",
+          "line": 878,
+          "text": "Membership lifecycle and multi-platform staging delivery"
+        },
+        {
+          "id": "b0062",
+          "section": "Membership lifecycle and multi-platform staging delivery",
+          "type": "li",
+          "line": 880,
+          "text": "Membership lifecycle and the single-countdown model unified; plan tiering and database migration advanced"
+        },
+        {
+          "id": "b0063",
+          "section": "Membership lifecycle and multi-platform staging delivery",
+          "type": "li",
+          "line": 881,
+          "text": "Three Android staging releases in Sprint 11 and six in Sprint 12, each covering four channels"
+        },
+        {
+          "id": "b0064",
+          "section": "Membership lifecycle and multi-platform staging delivery",
+          "type": "li",
+          "line": 882,
+          "text": "The Apple test build reached valid TestFlight status; the simplified home-page direction was settled"
+        },
+        {
+          "id": "b0065",
+          "section": "Membership lifecycle and multi-platform staging delivery",
+          "type": "li",
+          "line": 883,
+          "text": "Device identity, attribution tickets and VPN node operations fixes continued moving into validation"
+        },
+        {
+          "id": "b0066",
+          "section": "Membership lifecycle and multi-platform staging delivery",
+          "type": "li",
+          "line": 875,
+          "text": "2026-08-22–09-18 · Sprints 11–12 Membership lifecycle and multi-platform staging delivery Membership lifecycle and the single-countdown model unified; plan tiering and database migration advanced Three Android staging releases in Sprint 11 and six in Sprint 12, each covering four channels The Apple test build reached valid TestFlight status; the simplified home-page direction was settled Device identity, attribution tickets and VPN node operations fixes continued moving into validation Boundary: September 18 was the date the renewal proposal was rejected; the main flows for the settled rules were implemented on October 5."
+        },
+        {
+          "id": "b0067",
+          "section": "Settlement basis, Back Office (BO) rebuild and handover closure",
+          "type": "heading",
+          "line": 891,
+          "text": "Settlement basis, Back Office (BO) rebuild and handover closure"
+        },
+        {
+          "id": "b0068",
+          "section": "Settlement basis, Back Office (BO) rebuild and handover closure",
+          "type": "li",
+          "line": 893,
+          "text": "Renewal rules revised on September 21 and settled on October 1; implementation completed on October 5 and entered testing"
+        },
+        {
+          "id": "b0069",
+          "section": "Settlement basis, Back Office (BO) rebuild and handover closure",
+          "type": "li",
+          "line": 894,
+          "text": "Payment completion is now decided by order status, and the payment transaction tables were merged into one"
+        },
+        {
+          "id": "b0070",
+          "section": "Settlement basis, Back Office (BO) rebuild and handover closure",
+          "type": "li",
+          "line": 895,
+          "text": "Back Office (BO) rebuilt and reduced, with Back Office (BO) owned settings moved out of the runtime service"
+        },
+        {
+          "id": "b0071",
+          "section": "Settlement basis, Back Office (BO) rebuild and handover closure",
+          "type": "li",
+          "line": 896,
+          "text": "The handover closed on October 1 with external access disabled; GitLab was upgraded to 19.4.1"
+        },
+        {
+          "id": "b0072",
+          "section": "Settlement basis, Back Office (BO) rebuild and handover closure",
+          "type": "li",
+          "line": 888,
+          "text": "2026-09-19–10-16 · Progress through 10-08 · Sprints 13–14 Settlement basis, Back Office (BO) rebuild and handover closure Renewal rules revised on September 21 and settled on October 1; implementation completed on October 5 and entered testing Payment completion is now decided by order status, and the payment transaction tables were merged into one Back Office (BO) rebuilt and reduced, with Back Office (BO) owned settings moved out of the runtime service The handover closed on October 1 with external access disabled; GitLab was upgraded to 19.4.1 Boundary: most changes have only reached \"merged\", production deployment and acceptance testing are to be confirmed, and the off-site restore drill is not executed"
+        },
+        {
+          "id": "b0073",
+          "section": "Sprints 13–14 progress and the order that follows",
+          "type": "heading",
+          "line": 906,
+          "text": "Sprints 13–14 progress and the order that follows"
+        },
+        {
+          "id": "b0074",
+          "section": "Sprints 13–14 progress and the order that follows",
+          "type": "p",
+          "line": 907,
+          "text": "Sprint 13 revised renewal rules, delivered three Android test versions and closed the handover. The originally planned main flows in Sprint 14 were implemented on October 5 and entered testing. October 9 adds Android 3.9.26 staging test delivery; subscription edge cases and pending-order management remain outstanding. The release sequence below is retained."
+        },
+        {
+          "id": "b0075",
+          "section": "Close the recovery capability and the release evidence",
+          "type": "heading",
+          "line": 912,
+          "text": "Close the recovery capability and the release evidence"
+        },
+        {
+          "id": "b0076",
+          "section": "Close the recovery capability and the release evidence",
+          "type": "li",
+          "line": 914,
+          "text": "G17 Off-site production backup and an actual restore drill: the runbook was written on October 6, the drill is not executed"
+        },
+        {
+          "id": "b0077",
+          "section": "Close the recovery capability and the release evidence",
+          "type": "li",
+          "line": 915,
+          "text": "G19 Complete evidence for release, runtime, DB migration, product smoke testing, and regional QA"
+        },
+        {
+          "id": "b0078",
+          "section": "Close the recovery capability and the release evidence",
+          "type": "li",
+          "line": 916,
+          "text": "G15 identity header, CORS, and compatibility verification for Android/Windows"
+        },
+        {
+          "id": "b0079",
+          "section": "Close the recovery capability and the release evidence",
+          "type": "li",
+          "line": 917,
+          "text": "G2 Staging Stripe webhook alignment and sandbox verification, plus the renewal and purchase test regression"
+        },
+        {
+          "id": "b0080",
+          "section": "Close the recovery capability and the release evidence",
+          "type": "li",
+          "line": 918,
+          "text": "G3 The new official site is rechecked on October 12 and goes to production on October 13"
+        },
+        {
+          "id": "b0081",
+          "section": "Close the recovery capability and the release evidence",
+          "type": "highlight",
+          "line": 910,
+          "text": "Current closure Close the recovery capability and the release evidence G17 Off-site production backup and an actual restore drill: the runbook was written on October 6, the drill is not executed G19 Complete evidence for release, runtime, DB migration, product smoke testing, and regional QA G15 identity header, CORS, and compatibility verification for Android/Windows G2 Staging Stripe webhook alignment and sandbox verification, plus the renewal and purchase test regression G3 The new official site is rechecked on October 12 and goes to production on October 13 Closure of standards: deployment, connection, version compatibility, and recovery evidence complete"
+        },
+        {
+          "id": "b0082",
+          "section": "Platform releases, protocol rollout and China regional acceptance testing",
+          "type": "heading",
+          "line": 924,
+          "text": "Platform releases, protocol rollout and China regional acceptance testing"
+        },
+        {
+          "id": "b0083",
+          "section": "Platform releases, protocol rollout and China regional acceptance testing",
+          "type": "li",
+          "line": 926,
+          "text": "G16／G11 Windows signed release and iOS device and App Store acceptance testing"
+        },
+        {
+          "id": "b0084",
+          "section": "Platform releases, protocol rollout and China regional acceptance testing",
+          "type": "li",
+          "line": 927,
+          "text": "G7 The three agreements expanded from 34 units to the target fleet"
+        },
+        {
+          "id": "b0085",
+          "section": "Platform releases, protocol rollout and China regional acceptance testing",
+          "type": "li",
+          "line": 928,
+          "text": "G5／G7 Back Office (BO), Android and Windows End-to-End Regression"
+        },
+        {
+          "id": "b0086",
+          "section": "Platform releases, protocol rollout and China regional acceptance testing",
+          "type": "li",
+          "line": 929,
+          "text": "G20 Android first, Windows next, then the remaining five platforms"
+        },
+        {
+          "id": "b0087",
+          "section": "Platform releases, protocol rollout and China regional acceptance testing",
+          "type": "li",
+          "line": 930,
+          "text": "China QA independently closes regional accessibility; MY/TW results not to be substituted"
+        },
+        {
+          "id": "b0088",
+          "section": "Platform releases, protocol rollout and China regional acceptance testing",
+          "type": "highlight",
+          "line": 922,
+          "text": "P1 after P0 Platform releases, protocol rollout and China regional acceptance testing G16／G11 Windows signed release and iOS device and App Store acceptance testing G7 The three agreements expanded from 34 units to the target fleet G5／G7 Back Office (BO), Android and Windows End-to-End Regression G20 Android first, Windows next, then the remaining five platforms China QA independently closes regional accessibility; MY/TW results not to be substituted Closure criteria: Deployment, client regression, and regional acceptance testing are documented separately"
+        },
+        {
+          "id": "b0089",
+          "section": "Closure of remaining Arrowfish targets",
+          "type": "heading",
+          "line": 936,
+          "text": "Closure of remaining Arrowfish targets"
+        },
+        {
+          "id": "b0090",
+          "section": "Closure of remaining Arrowfish targets",
+          "type": "li",
+          "line": 938,
+          "text": "G1／G18 Attribution, user quality and conversion dashboards"
+        },
+        {
+          "id": "b0091",
+          "section": "Closure of remaining Arrowfish targets",
+          "type": "li",
+          "line": 939,
+          "text": "G21 Route China websites and local resources directly while continuing to send other public traffic through the VPN"
+        },
+        {
+          "id": "b0092",
+          "section": "Closure of remaining Arrowfish targets",
+          "type": "li",
+          "line": 940,
+          "text": "G4 Siqo multi-platform payments and the channel integration gaps"
+        },
+        {
+          "id": "b0093",
+          "section": "Closure of remaining Arrowfish targets",
+          "type": "li",
+          "line": 941,
+          "text": "G5／G8 VPN node Procurement Automation and Private DNS"
+        },
+        {
+          "id": "b0094",
+          "section": "Closure of remaining Arrowfish targets",
+          "type": "li",
+          "line": 942,
+          "text": "G9／G11 Subject Migration and Recovery of the Apple Platform"
+        },
+        {
+          "id": "b0095",
+          "section": "Closure of remaining Arrowfish targets",
+          "type": "li",
+          "line": 943,
+          "text": "G10／G13 Continue modular refactoring and seven-platform engineering-quality convergence"
+        },
+        {
+          "id": "b0096",
+          "section": "Closure of remaining Arrowfish targets",
+          "type": "highlight",
+          "line": 934,
+          "text": "By the end of 2026 Closure of remaining Arrowfish targets G1／G18 Attribution, user quality and conversion dashboards G21 Route China websites and local resources directly while continuing to send other public traffic through the VPN G4 Siqo multi-platform payments and the channel integration gaps G5／G8 VPN node Procurement Automation and Private DNS G9／G11 Subject Migration and Recovery of the Apple Platform G10／G13 Continue modular refactoring and seven-platform engineering-quality convergence Close and separately perform acceptance testing in order of priority"
+        },
+        {
+          "id": "reading-b0210",
+          "section": "Closure of remaining Arrowfish targets",
+          "type": "details-summary",
+          "line": 950,
+          "text": "View the FFF roadmap and release dependencies · Updated through 2026-10-09"
+        },
+        {
+          "id": "b0127",
+          "section": "Closure of remaining Arrowfish targets",
+          "type": "p",
+          "line": 954,
+          "text": "Project 02 · New Product · FFF evidence through 2026-10-09"
+        },
+        {
+          "id": "b0128",
+          "section": "FFF 2026 Roadmap",
+          "type": "heading",
+          "line": 955,
+          "text": "FFF 2026 Roadmap"
+        },
+        {
+          "id": "b0129",
+          "section": "FFF 2026 Roadmap",
+          "type": "p",
+          "line": 956,
+          "text": "This update uses Lex’s October 9 report and historical delivery records. Lex owns Flutter; the Malaysia team owns iOS/macOS platform delivery. Shared implementation does not establish acceptance across four platforms. Separate FFF runtime, accounts, databases, Redis, credentials and migration history remain architectural gates; this report provides no delivery evidence for the isolated environment."
+        },
+        {
+          "id": "b0130",
+          "section": "Basic Connection and Cross-platform Acceptance",
+          "type": "heading",
+          "line": 964,
+          "text": "Basic Connection and Cross-platform Acceptance"
+        },
+        {
+          "id": "b0131",
+          "section": "Basic Connection and Cross-platform Acceptance",
+          "type": "p",
+          "line": 965,
+          "text": "G10 SkyTunnel core migration, automatic route selection, and protocol regression"
+        },
+        {
+          "id": "b0132",
+          "section": "Basic Connection and Cross-platform Acceptance",
+          "type": "li",
+          "line": 961,
+          "text": "2026-05-18–10-09 · Client Assessment and Historical Evidence Basic Connection and Cross-platform Acceptance G10 SkyTunnel core migration, automatic route selection, and protocol regression Android APK handoff to QA on August 28 and Windows staging on September 20 are recorded. Both Apple fixes from September 28 await integration; connection and protocol acceptance is platform-specific."
+        },
+        {
+          "id": "b0133",
+          "section": "Independent Backend and staging",
+          "type": "heading",
+          "line": 972,
+          "text": "Independent Backend and staging"
+        },
+        {
+          "id": "b0134",
+          "section": "Independent Backend and staging",
+          "type": "p",
+          "line": 973,
+          "text": "G14 New GitLab Repository and Isolated Runtime G15 Independent Refactor After Acceptance"
+        },
+        {
+          "id": "b0135",
+          "section": "Independent Backend and staging",
+          "type": "li",
+          "line": 969,
+          "text": "Decision Aug 28, 2026 · Current Architecture Barrier Independent Backend and staging G14 New GitLab Repository and Isolated Runtime G15 Independent Refactor After Acceptance Do Not Copy Arrowfish Production Account, Database or Secrets"
+        },
+        {
+          "id": "b0136",
+          "section": "Android First Launch Closure",
+          "type": "heading",
+          "line": 980,
+          "text": "Android First Launch Closure"
+        },
+        {
+          "id": "b0137",
+          "section": "Android First Launch Closure",
+          "type": "p",
+          "line": 981,
+          "text": "G10 Automatic grouping and protocol regression testing G12 Payment Interface and Closed Loop G16／G17 Develop multi-hop VPN and full smart routing independently, with separate acceptance testing"
+        },
+        {
+          "id": "b0138",
+          "section": "Android First Launch Closure",
+          "type": "li",
+          "line": 977,
+          "text": "After the G14 staging Smoke Test Android First Launch Closure G10 Automatic grouping and protocol regression testing G12 Payment Interface and Closed Loop G16／G17 Develop multi-hop VPN and full smart routing independently, with separate acceptance testing Connect the four transaction flows, then complete builds, staging and end-to-end acceptance. Multi-hop and full smart routing are scheduled separately."
+        },
+        {
+          "id": "b0139",
+          "section": "Windows",
+          "type": "heading",
+          "line": 988,
+          "text": "Windows"
+        },
+        {
+          "id": "b0140",
+          "section": "Windows",
+          "type": "p",
+          "line": 989,
+          "text": "G13 Desktop Build, VPN Main Path, Payment and Upgrade Regression"
+        },
+        {
+          "id": "b0141",
+          "section": "Windows",
+          "type": "li",
+          "line": 985,
+          "text": "After Android Release Windows G13 Desktop Build, VPN Main Path, Payment and Upgrade Regression September 20 staging deployment is confirmed. Current repackaging is blocked after the October 7 dual-architecture asset change; signing and device acceptance remain unconfirmed."
+        },
+        {
+          "id": "b0142",
+          "section": "Apple Platforms; Linux on the Later Roadmap",
+          "type": "heading",
+          "line": 996,
+          "text": "Apple Platforms; Linux on the Later Roadmap"
+        },
+        {
+          "id": "b0143",
+          "section": "Apple Platforms; Linux on the Later Roadmap",
+          "type": "p",
+          "line": 997,
+          "text": "G13 Separate macOS+iOS acceptance; Linux is not in this delivery scope"
+        },
+        {
+          "id": "b0144",
+          "section": "Apple Platforms; Linux on the Later Roadmap",
+          "type": "li",
+          "line": 993,
+          "text": "After Windows Acceptance Apple Platforms; Linux on the Later Roadmap G13 Separate macOS+iOS acceptance; Linux is not in this delivery scope Builds without signing on September 15 are historical evidence. Integrate both fixes, then complete signing, macOS notarization and device acceptance for each platform."
+        },
+        {
+          "id": "b0145",
+          "section": "Apple Platforms; Linux on the Later Roadmap",
+          "type": "p",
+          "line": 1002,
+          "text": "Read the full October 9 FFF report: modules, platforms, timeline and evidence boundaries"
         },
         {
           "id": "b0183",
           "section": "User quality, quotas, devices, platforms, and key deployments",
           "type": "heading",
-          "line": 944,
+          "line": 1006,
           "text": "User quality, quotas, devices, platforms, and key deployments"
         },
         {
           "id": "b0184",
           "section": "User quality, quotas, devices, platforms, and key deployments",
           "type": "p",
-          "line": 944,
+          "line": 1006,
           "text": "Reconcile total registrations to real active and commercial users, and separately correct deployment, availability, identity, and regional acceptance status."
         },
         {
           "id": "b0185",
           "section": "User quality, quotas, devices, platforms, and key deployments",
           "type": "details-summary",
-          "line": 943,
+          "line": 1005,
           "text": "ARROWFISH · Production research and deployment boundary review as of 2026-08-29 Read-Only Aggregation User quality, quotas, devices, platforms, and key deployments Reconcile total registrations to real active and commercial users, and separately correct deployment, availability, identity, and regional acceptance status."
         },
         {
           "id": "b0186",
           "section": "User quality, quotas, devices, platforms, and key deployments",
           "type": "table-row",
-          "line": 950,
+          "line": 1012,
           "text": "Objective / Impact production evidence Management Conclusion"
         },
         {
           "id": "b0187",
           "section": "User quality, quotas, devices, platforms, and key deployments",
           "type": "table-row",
-          "line": 952,
+          "line": 1014,
           "text": "May 25 boundary Release tags pointed to Git objects starting at 06:14, with the first production session appearing at 06:52; device identity improved during the week, but D7 activation, revenue, users, and traffic all dropped sharply. G14 control capability evidence exists; G19 continues to align complete deployment scope with post-release availability, not a single cause-effect attribution can be made."
         },
         {
           "id": "b0188",
           "section": "User quality, quotas, devices, platforms, and key deployments",
           "type": "table-row",
-          "line": 953,
+          "line": 1015,
           "text": "August 12 boundary Cutover began at 05:00; the 06:05–06:09 DB restore metadata aligns. D7 and order indicators improved, but the shared device ID rate rose to 38.89%. Infrastructure deployment complete, product acceptance partial; G15 identity compatibility regression still needs closure."
         },
         {
           "id": "b0189",
           "section": "User quality, quotas, devices, platforms, and key deployments",
           "type": "table-row",
-          "line": 954,
+          "line": 1016,
           "text": "Back Office quotas and session On August 29, multiple ACTIVE sessions for the same account and device were all zero. Unpaid maximum monthly traffic dropped from 1,216.7 GiB in March to 39.0 GiB in June. G14 core complete; continue adding Redis quota snapshots, denial reasons, and user availability monitoring."
         },
         {
           "id": "b0190",
           "section": "User quality, quotas, devices, platforms, and key deployments",
           "type": "table-row",
-          "line": 955,
+          "line": 1017,
           "text": "Device Binding The shared device ID rate dropped from 21.73% to 2.59% during the week of May 25; it rose to 38.89% in the switch week of August 12. G15 ongoing; first check identity headers, CORS, client versions, and legacy fallbacks before deleting historical relationships en masse."
         },
         {
           "id": "b0191",
           "section": "User quality, quotas, devices, platforms, and key deployments",
           "type": "table-row",
-          "line": 956,
+          "line": 1018,
           "text": "China Connection China-registered VPN-active users fell from 11,457 in May to 3,842 in June; MY/TW registered-country cohorts also declined around May 25. MY/TW QA was available while China was unavailable; these are separate operational test results. DB does not prove that GFW was the sole cause of overall decline; G7 still requires independent acceptance in the Chinese region."
         },
         {
           "id": "b0192",
           "section": "User quality, quotas, devices, platforms, and key deployments",
           "type": "table-row",
-          "line": 957,
+          "line": 1019,
           "text": "Rollout of Three Agreements Ready for all Three Agreement listeners on 34 hosts; 64 remain Trojan-only; external state unverified. G7 changed from 'complete' to 'core complete, rollout not closed with China acceptance tests'."
         },
         {
           "id": "b0193",
           "section": "User quality, quotas, devices, platforms, and key deployments",
           "type": "table-row",
-          "line": 958,
+          "line": 1020,
           "text": "Platform Priority Android + Windows account for 94.86% of recent identifiable VPN users, 94.15% of recent traffic, and 89.04% of orders. Prioritize Android and Windows; Apple platform retains a recovery path, not described as permanent abandonment."
         },
         {
           "id": "b0194",
           "section": "Clone the code baseline but isolate production data",
           "type": "heading",
-          "line": 970,
+          "line": 1030,
           "text": "Clone the code baseline but isolate production data"
         },
         {
           "id": "b0195",
           "section": "Clone the code baseline but isolate production data",
           "type": "p",
-          "line": 970,
+          "line": 1030,
           "text": "Protect Arrowfish live users and give FFF independent re-architecture space."
         },
         {
           "id": "b0196",
           "section": "Clone the code baseline but isolate production data",
           "type": "details-summary",
-          "line": 969,
+          "line": 1029,
           "text": "FFF · Architectural Decisions 08/28/2026 To be Executed Clone the code baseline but isolate production data Protect Arrowfish live users and give FFF independent re-architecture space."
         },
         {
           "id": "b0197",
           "section": "Clone the code baseline but isolate production data",
           "type": "highlight",
-          "line": 973,
+          "line": 1033,
           "text": "Why separate Arrowfish has carried 400,347 accounts and ongoing subscriptions, devices, sessions, and traffic data. A large-scale in-place refactor would result in significant data loss and client compatibility risks. FFF reuses a mature source code baseline rather than Arrowfish's production runtime or database."
         },
         {
           "id": "b0198",
           "section": "Clone the code baseline but isolate production data",
           "type": "highlight",
-          "line": 975,
+          "line": 1035,
           "text": "1. Lock down the baseline Mark Arrowfish backend versions, dependencies, and behavior boundaries that can be cloned."
         },
         {
           "id": "b0199",
           "section": "Clone the code baseline but isolate production data",
           "type": "highlight",
-          "line": 976,
+          "line": 1036,
           "text": "2. Create a new repository FFF uses an independent GitLab ownership, CI/CD, secrets, and release history."
         },
         {
           "id": "b0200",
           "section": "Clone the code baseline but isolate production data",
           "type": "highlight",
-          "line": 977,
+          "line": 1037,
           "text": "3 · Isolate staging Deploy independent Back Office, DB, Redis, domain and configuration; do not copy production accounts or credentials."
         },
         {
           "id": "b0201",
           "section": "Clone the code baseline but isolate production data",
           "type": "highlight",
-          "line": 978,
+          "line": 1038,
           "text": "4 · Synthesized Data Acceptance Verify registration, login, bootstrap, VPN node, session, device binding, and payment stubs."
         },
         {
           "id": "b0202",
           "section": "Clone the code baseline but isolate production data",
           "type": "highlight",
-          "line": 979,
+          "line": 1039,
           "text": "5 · Independent Refactor After passing the smoke test, we modified the FFF schema, module, and API. Change FFF schema, modules, and APIs only after passing smoke tests."
         },
         {
           "id": "b0203",
           "section": "Advertising Tracking and Pay-Per-Click Analysis",
           "type": "heading",
-          "line": 989,
+          "line": 1047,
           "text": "Advertising Tracking and Pay-Per-Click Analysis"
         },
         {
           "id": "b0204",
           "section": "Advertising Tracking and Pay-Per-Click Analysis",
           "type": "p",
-          "line": 989,
+          "line": 1047,
           "text": "Quantifiable attribution gap for Sprint 10 and subsequent event tracking goals."
         },
         {
           "id": "b0205",
           "section": "Advertising Tracking and Pay-Per-Click Analysis",
           "type": "details-summary",
-          "line": 988,
+          "line": 1046,
           "text": "Arrowfish · Detail 01 of Sprint 10 Gap confirmed Advertising Tracking and Pay-Per-Click Analysis Quantifiable attribution gap for Sprint 10 and subsequent event tracking goals."
         },
         {
           "id": "b0206",
           "section": "Facts and Gaps as of Sprint 10",
           "type": "heading",
-          "line": 993,
+          "line": 1051,
           "text": "Facts and Gaps as of Sprint 10"
         },
         {
           "id": "b0207",
           "section": "Facts and Gaps as of Sprint 10",
           "type": "table-row",
-          "line": 996,
+          "line": 1054,
           "text": "Scope Current Status Issues to Close"
         },
         {
           "id": "b0208",
           "section": "Facts and Gaps as of Sprint 10",
           "type": "table-row",
-          "line": 998,
+          "line": 1056,
           "text": "Attribution Coverage 97.6% of new registrations lack marketing attribution. Establish verifiable channel sources and registration relationships first."
         },
         {
           "id": "b0209",
           "section": "Facts and Gaps as of Sprint 10",
           "type": "table-row",
-          "line": 999,
+          "line": 1057,
           "text": "Core Funnel Existing reports cannot establish stable connections between product pages, packages, checkout, payment callbacks, and channels. Add consistent events and association fields for five key stages."
         },
         {
           "id": "b0210",
           "section": "Facts and Gaps as of Sprint 10",
           "type": "table-row",
-          "line": 1000,
+          "line": 1058,
           "text": "Conversion Cycle No complete view of conversion cycles by source. Provide D1, D7, and D30 first-time payment conversions; integrate renewal and amount payments after G2 rules are clarified."
         },
         {
           "id": "b0211",
           "section": "Goals for Sprint 10 After",
           "type": "heading",
-          "line": 1004,
+          "line": 1062,
           "text": "Goals for Sprint 10 After"
         },
         {
           "id": "b0212",
           "section": "Goals for Sprint 10 After",
           "type": "highlight",
-          "line": 1006,
+          "line": 1064,
           "text": "1 · Define event measurement standards Standardize channel, access, package, checkout, payment, and first-time payment definitions."
         },
         {
           "id": "b0213",
           "section": "Goals for Sprint 10 After",
           "type": "highlight",
-          "line": 1007,
+          "line": 1065,
           "text": "2. Fill in Association Fields Ensure each stage can connect to the same source and avoid redundant calculations."
         },
         {
           "id": "b0214",
           "section": "Goals for Sprint 10 After",
           "type": "highlight",
-          "line": 1008,
+          "line": 1066,
           "text": "3. Data Verification Reconcile tracking results with back office registrations, orders, and actual payment records item by item."
         },
         {
           "id": "b0215",
           "section": "Goals for Sprint 10 After",
           "type": "highlight",
-          "line": 1009,
+          "line": 1067,
           "text": "4. Periodic View Deliver D1, D7, and D30 first-time payment conversions."
         },
         {
           "id": "b0216",
           "section": "Goals for Sprint 10 After",
           "type": "highlight",
-          "line": 1010,
+          "line": 1068,
           "text": "5. Integrate Renewals Clarify first-time payments, renewals, amounts, and order statuses after G2 rules are clarified."
         },
         {
           "id": "b0217",
           "section": "Goals for Sprint 10 After",
           "type": "highlight",
-          "line": 1012,
+          "line": 1070,
           "text": "Scope Boundaries The above is the target sequence confirmed for Sprint 10, not indicating that specific technical solutions have been locked or developed."
         },
         {
           "id": "b0218",
           "section": "Subscription Renewal Loop",
           "type": "heading",
-          "line": 1020,
+          "line": 1076,
           "text": "Subscription Renewal Loop"
         },
         {
           "id": "b0219",
           "section": "Subscription Renewal Loop",
           "type": "p",
-          "line": 1020,
+          "line": 1076,
           "text": "Sprint 10 Revenue Facts and Follow-Up Subscription Loop Goals"
         },
         {
           "id": "b0220",
           "section": "Subscription Renewal Loop",
           "type": "details-summary",
-          "line": 1019,
+          "line": 1075,
           "text": "ARROWFISH · Sprint 10 Details 02 To Develop Subscription Renewal Loop Sprint 10 Revenue Facts and Follow-Up Subscription Loop Goals"
         },
         {
           "id": "b0221",
           "section": "Subscription Renewal Loop",
           "type": "p",
-          "line": 1023,
+          "line": 1079,
           "text": "Date correction: the renewal proposal was rejected on September 18, rules were settled on October 1, and main flows were implemented on October 5 and entered testing. Pending-payment edge cases remain outstanding on October 9. Historical Sprint 10 issues and plans are retained below; goal G2 gives the current status."
         },
         {
           "id": "b0222",
           "section": "Subscription Renewal Loop",
           "type": "highlight",
-          "line": 1024,
+          "line": 1080,
           "text": "Sprint 10 Conclusion Renewal/Repeat-Pay Users Contribute 83.1% of Weekly Revenue, Indicating the Reliability of Renewals as a Direct Income Protection Point; No Records Exist for Subscription Loop Development Completion or Acceptance Testing in Sprint 10."
         },
         {
           "id": "b0223",
           "section": "Subscription Renewal Loop",
           "type": "table-row",
-          "line": 1027,
+          "line": 1083,
           "text": "Independent Capabilities Current Issues Year-End Completion Standards"
         },
         {
           "id": "b0224",
           "section": "Subscription Renewal Loop",
           "type": "table-row",
-          "line": 1029,
+          "line": 1085,
           "text": "Early Renewal Users cannot currently upgrade their plan in time before it expires. Clear rules for renewal must be established, ensuring that the package duration and benefits align with payments."
         },
         {
           "id": "b0225",
           "section": "Subscription Renewal Loop",
           "type": "table-row",
-          "line": 1030,
+          "line": 1086,
           "text": "Automatic Renewal The automatic renewal process has not yet formed a complete loop. All actions including payment, successful renewal, failure handling, and user notifications can be tracked."
         },
         {
           "id": "b0226",
           "section": "Subscription Renewal Loop",
           "type": "table-row",
-          "line": 1031,
+          "line": 1087,
           "text": "Stripe Subscription Management Subscription status and back office package status cannot be fully managed. Clear rules for creation, change, cancellation, recovery, and state synchronization exist to avoid duplication."
         },
         {
           "id": "b0227",
           "section": "Subscription Renewal Loop",
           "type": "table-row",
-          "line": 1032,
+          "line": 1088,
           "text": "Revenue Analysis Renewal and initial payment cannot be fully analyzed by source and cycle. Connected to the G1 attribution chain, distinguishing between initial payment, each renewal, amount, and actual order status."
         },
         {
           "id": "b0228",
           "section": "Automated Deployment and Management of VPN nodes",
           "type": "heading",
-          "line": 1044,
+          "line": 1098,
           "text": "Automated Deployment and Management of VPN nodes"
         },
         {
           "id": "b0229",
           "section": "Automated Deployment and Management of VPN nodes",
           "type": "p",
-          "line": 1044,
+          "line": 1098,
           "text": "Sprint 10 Evidence, Supplier Procurement Gap and Future Goals"
         },
         {
           "id": "b0230",
           "section": "Automated Deployment and Management of VPN nodes",
           "type": "details-summary",
-          "line": 1043,
+          "line": 1097,
           "text": "Sprint 10 Detail 03 Progress acceptance testing not closed Automated Deployment and Management of VPN nodes Sprint 10 Evidence, Supplier Procurement Gap and Future Goals"
         },
         {
           "id": "b0231",
           "section": "Automated Deployment and Management of VPN nodes",
           "type": "highlight",
-          "line": 1048,
+          "line": 1102,
           "text": "Data boundaries Page updates on August 28th only include read-only production status but do not describe the source code or BO operations for Sprint 10 delivery as part of Sprint 10. Separate records are kept for ready hosts, full rollout in China and regional acceptance."
         },
         {
           "id": "b0232",
           "section": "Automated Deployment and Management of VPN nodes",
           "type": "details-summary",
-          "line": 1052,
+          "line": 1106,
           "text": "Sprint 10 VPN node Automation Evidence"
         },
         {
           "id": "b0233",
           "section": "Automated Deployment and Management of VPN nodes",
           "type": "table-row",
-          "line": 1055,
+          "line": 1109,
           "text": "Scope Sprint 10 and earlier evidence Still to be completed Completion Status"
         },
         {
           "id": "b0234",
           "section": "Automated Deployment and Management of VPN nodes",
           "type": "table-row",
-          "line": 1057,
+          "line": 1111,
           "text": "Supplier Overview Supplier VPN node count, cost and health overview in Sprint 3. At that time, it was explicitly not used for procurement decisions. Standardize production data and convert inventory, costs, and stability into reviewable procurement conditions. Historical Basis"
         },
         {
           "id": "b0235",
           "section": "Automated Deployment and Management of VPN nodes",
           "type": "table-row",
-          "line": 1058,
+          "line": 1112,
           "text": "Agreements and Back Office (BO) acceptance testing Sprint 10 identified 2 high-priority protocol issues, completed source fixes for 2, and achieved closure on 0 through end-to-end acceptance testing. Complete records of the test environment bootstrap, BO, Android, and FFF integration to close out. Acceptance testing not closed"
         },
         {
           "id": "b0236",
           "section": "Automated Deployment and Management of VPN nodes",
           "type": "table-row",
-          "line": 1059,
+          "line": 1113,
           "text": "VM/IP automated procurement No evidence of supplier automatic orders, payments/top-ups, or VM/IP acquisition in Sprint 10. Establish a unified procurement task; use APIs directly when available, and evaluate controlled browser execution otherwise. Core Gap"
         },
         {
           "id": "b0237",
           "section": "Automated Deployment and Management of VPN nodes",
           "type": "details-summary",
-          "line": 1066,
+          "line": 1120,
           "text": "API + AI Browser Agent hybrid procurement recommendations after Sprint 10"
         },
         {
           "id": "b0238",
           "section": "Automated Deployment and Management of VPN nodes",
           "type": "table-row",
-          "line": 1070,
+          "line": 1124,
           "text": "Supplier Type Execution Method Necessary Controls"
         },
         {
           "id": "b0239",
           "section": "Automated Deployment and Management of VPN nodes",
           "type": "table-row",
-          "line": 1072,
+          "line": 1126,
           "text": "Complete API BO directly queries inventory and prices, creates VM/IP, obtains access details, and performs renewal/revoke/restart/rebuild. Supplier, region, specification, and amount whitelist; idempotent keys to prevent duplicate purchases; automatic retries on failure."
         },
         {
           "id": "b0240",
           "section": "Automated Deployment and Management of VPN nodes",
           "type": "table-row",
-          "line": 1073,
+          "line": 1127,
           "text": "Partial API API handles existing VM lifecycle; missing purchase/payment steps are handled by AI Browser Agent, which then returns to the same BO procurement task. Save state for each step; API and browser cannot execute the same order simultaneously."
         },
         {
           "id": "b0241",
           "section": "Automated Deployment and Management of VPN nodes",
           "type": "table-row",
-          "line": 1074,
+          "line": 1128,
           "text": "No API or Top Up Use OpenClaw-controlled browser agent to log into the supplier website, select approved packages and regions, establish a new order; cannot perform top-up when needed. Manual confirmation before the first payment; 2FA/verification codes transferred to manual processing; limit single transaction, daily, and monthly amounts; save evidence of the page, order number, and invoice."
         },
         {
           "id": "b0242",
           "section": "Automated Deployment and Management of VPN nodes",
           "type": "details-summary",
-          "line": 1083,
+          "line": 1137,
           "text": "Future Goals: Unified VPN node Standards"
         },
         {
           "id": "b0243",
           "section": "Automated Deployment and Management of VPN nodes",
           "type": "table-row",
-          "line": 1086,
+          "line": 1140,
           "text": "Project Unified Standard Objective"
         },
         {
           "id": "b0244",
           "section": "Automated Deployment and Management of VPN nodes",
           "type": "table-row",
-          "line": 1088,
+          "line": 1142,
           "text": "Compute Resources Minimum of 1 CPU core, 1 GB RAM, and 10 GB storage Form a Baseline for Procurement and Acceptance."
         },
         {
           "id": "b0245",
           "section": "Automated Deployment and Management of VPN nodes",
           "type": "table-row",
-          "line": 1089,
+          "line": 1143,
           "text": "Operating System Debian 12–13 Reduce Deployment Variance Due to Different Distributions."
         },
         {
           "id": "b0246",
           "section": "Automated Deployment and Management of VPN nodes",
           "type": "table-row",
-          "line": 1090,
+          "line": 1144,
           "text": "Traffic and Network 700 GB to unlimited; fixed public IPv4, ensuring a clear service foundation with VPN node Ensure that the VPN node has a clear service foundation."
         },
         {
           "id": "b0247",
           "section": "Automated Deployment and Management of VPN nodes",
           "type": "table-row",
-          "line": 1091,
+          "line": 1145,
           "text": "China VPN node Priorities IPv6 Priority As a Condition for Procurement and Deployment of the China VPN node."
         },
         {
           "id": "b0248",
           "section": "Automated Deployment and Management of VPN nodes",
           "type": "details-summary",
-          "line": 1098,
+          "line": 1152,
           "text": "Sprint 10 Afterward: Automated Loop Order for VPN nodes"
         },
         {
           "id": "b0249",
           "section": "Automated Deployment and Management of VPN nodes",
           "type": "highlight",
-          "line": 1101,
+          "line": 1155,
           "text": "1. Supplier Grading Record Available APIs, Web Login, Payment, Top Up, 2FA, Region, Specifications, and Budget Rules."
         },
         {
           "id": "b0250",
           "section": "Automated Deployment and Management of VPN nodes",
           "type": "highlight",
-          "line": 1102,
+          "line": 1156,
           "text": "2. Establish Procurement Tasks BO Save Trigger Reasons, Approval, Amount, Steps, Order Number, VM ID, IP, Failures, and Retries."
         },
         {
           "id": "b0251",
           "section": "Automated Deployment and Management of VPN nodes",
           "type": "highlight",
-          "line": 1103,
+          "line": 1157,
           "text": "3. Dual Driver Pilot Procure an AI browser with one API supplier and one non-API supplier, retaining pre-payment confirmation."
         },
         {
           "id": "b0252",
           "section": "Automated Deployment and Management of VPN nodes",
           "type": "highlight",
-          "line": 1104,
+          "line": 1158,
           "text": "4. Seamless Replenishment Automatically Replenish When Out of Stock, DNS, Deployment, Health Checks, Warehousing, and Distribution."
         },
         {
           "id": "b0253",
           "section": "Automated Deployment and Management of VPN nodes",
           "type": "highlight",
-          "line": 1105,
+          "line": 1159,
           "text": "5. Gradual Relaxation Cancel Manual Confirmation for Low-Value Whitelist SKUs Only After Stability; Exceptions and High-Value Items Always Go Through Manual Review."
         }
       ]
