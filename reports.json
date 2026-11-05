@@ -361,15 +361,15 @@
   {
     "id": "goal-2026-20260827",
     "name": {
-      "zh-CN": "Arrowfish、FFF 与共享管理能力 · 目标进展 · 更新至 2026-10-09",
-      "en": "Arrowfish, FFF and Shared Capabilities · Goal Progress · Updated 2026-10-09"
+      "zh-CN": "Arrowfish 与 FFF · 项目进度报告 · 资料截至 2026-11-05",
+      "en": "Arrowfish and FFF · Progress Report · Data through 2026-11-05"
     },
-    "date": "2026-10-09",
+    "date": "2026-11-05",
     "file": "Stakeholder/Goal-2026/20260827_goals.html",
     "translations": {
       "en": "locales/en/reports/goal-2026-20260827.json"
     },
-    "version": "20261009-4"
+    "version": "20261105-1"
   },
   {
     "id": "sprint-10-status-20260908",
