@@ -19391,6 +19391,351 @@
           "text": "View the Earlier Arrowfish Progress Report"
         }
       ]
+    },
+    {
+      "id": "sprint-14-16-progress-20261104",
+      "name": "Sprints 14–16 · Recovery, Payments and Release Progress · Through 2026-11-04",
+      "date": "2026-11-04",
+      "file": "Stakeholder/Sprint-16/20261104_progress-update.html",
+      "version": "64a432b5a0871353",
+      "blocks": [
+        {
+          "id": "b0001",
+          "section": "Report overview",
+          "type": "heading",
+          "line": 87,
+          "text": "Sprints 14–16 · Recovery, Payments and Release Progress"
+        },
+        {
+          "id": "b0002",
+          "section": "Report overview",
+          "type": "p",
+          "line": 87,
+          "text": "Evidence through 2026-11-04 · Coverage 2026-10-10 to 2026-11-04 · Previous site update 2026-10-09"
+        },
+        {
+          "id": "b0003",
+          "section": "Report overview",
+          "type": "p",
+          "line": 87,
+          "text": "Backend services and websites were restored after the Azure shutdown, while payment and renewal fixes progressed; next, align service versions and complete payment, client and recovery acceptance testing."
+        },
+        {
+          "id": "b0004",
+          "section": "1. Key decisions and current status",
+          "type": "heading",
+          "line": 87,
+          "text": "1. Key decisions and current status"
+        },
+        {
+          "id": "b0005",
+          "section": "1. Key decisions and current status",
+          "type": "table-row",
+          "line": 88,
+          "text": "Area Decision / Current Situation"
+        },
+        {
+          "id": "b0006",
+          "section": "1. Key decisions and current status",
+          "type": "table-row",
+          "line": 88,
+          "text": "Service recovery On October 14, services moved to AWS. The team reported backend recovery in about 2.5 hours with no data loss; future disaster recovery still needs independent verification."
+        },
+        {
+          "id": "b0007",
+          "section": "1. Key decisions and current status",
+          "type": "table-row",
+          "line": 88,
+          "text": "Payment release New fixes have source evidence. Shared component versions are not yet aligned across all backend services; merged code is not treated as a production release."
+        },
+        {
+          "id": "b0008",
+          "section": "1. Key decisions and current status",
+          "type": "table-row",
+          "line": 88,
+          "text": "Release sequence Align versions and test first, then verify deployment and acceptance separately. Production release dates remain unconfirmed."
+        },
+        {
+          "id": "b0009",
+          "section": "2. Key outcomes",
+          "type": "heading",
+          "line": 90,
+          "text": "2. Key outcomes"
+        },
+        {
+          "id": "b0010",
+          "section": "2. Key outcomes",
+          "type": "table-row",
+          "line": 91,
+          "text": "Outcome Verified boundary"
+        },
+        {
+          "id": "b0011",
+          "section": "2. Key outcomes",
+          "type": "table-row",
+          "line": 91,
+          "text": "Backend recovery The internal incident record confirms service restoration. The 2.5-hour duration and no-data-loss statement were reported by the team, not measured again in this review."
+        },
+        {
+          "id": "b0012",
+          "section": "2. Key outcomes",
+          "type": "table-row",
+          "line": 91,
+          "text": "2 landing sites Production releases completed on October 15–16 and HTTP smoke checks passed. This does not include login, purchase or visual acceptance testing."
+        },
+        {
+          "id": "b0013",
+          "section": "2. Key outcomes",
+          "type": "table-row",
+          "line": 91,
+          "text": "5 Windows contract fixes Membership tier, expiry, route data, purchase options and diagnostic fields were fixed in published source. Installer and device acceptance testing remain unconfirmed."
+        },
+        {
+          "id": "b0014",
+          "section": "2. Key outcomes",
+          "type": "table-row",
+          "line": 91,
+          "text": "VPN node recovery and deployment security On October 18, recovery-check changes passed local verification and related staging deployments. The October 30 deployment-hardening record documented 8 successful target pipelines."
+        },
+        {
+          "id": "b0015",
+          "section": "2. Key outcomes",
+          "type": "p",
+          "line": 92,
+          "text": "These results cover different delivery scopes and cannot be added into a completion percentage. Historical deployment, recovery and device tests were not rerun in this review."
+        },
+        {
+          "id": "b0016",
+          "section": "3. Improvements and business value",
+          "type": "heading",
+          "line": 94,
+          "text": "3. Improvements and business value"
+        },
+        {
+          "id": "b0017",
+          "section": "3. Improvements and business value",
+          "type": "table-row",
+          "line": 95,
+          "text": "Change Business value and limitation"
+        },
+        {
+          "id": "b0018",
+          "section": "3. Improvements and business value",
+          "type": "table-row",
+          "line": 95,
+          "text": "Payments, renewals and refunds Added pending-payment continuation, payment-method switching, plan conversion and refund rules. Google results are checked against the order, and remaining entitlement is retained after auto-renew is disabled. Acceptance testing with real payments and callbacks for the new behavior remains unconfirmed."
+        },
+        {
+          "id": "b0019",
+          "section": "3. Improvements and business value",
+          "type": "table-row",
+          "line": 95,
+          "text": "Dedicated resources and commissions Fixed renewal of resources awaiting assignment, dedicated IP entitlement and commission reporting. Later rules follow the latest implementation; the earlier agent-commission clawback approach was superseded. Deployment and financial outcomes remain unconfirmed."
+        },
+        {
+          "id": "b0020",
+          "section": "3. Improvements and business value",
+          "type": "table-row",
+          "line": 95,
+          "text": "Website attribution and Back Office (BO) operations Cross-client fixes now propagate referrals through share links, downloads and accounts. Back Office (BO) changes cover filters, read-only subscriptions and refund explanations. Acquisition conversion, order reconciliation and operational acceptance testing remain unconfirmed."
+        },
+        {
+          "id": "b0021",
+          "section": "3. Improvements and business value",
+          "type": "table-row",
+          "line": 95,
+          "text": "Financial impact This review has no new production verification of revenue, costs or refund losses; no savings amount is estimated."
+        },
+        {
+          "id": "b0022",
+          "section": "4. Release plan and backend compatibility",
+          "type": "heading",
+          "line": 97,
+          "text": "4. Release plan and backend compatibility"
+        },
+        {
+          "id": "b0023",
+          "section": "4. Release plan and backend compatibility",
+          "type": "p",
+          "line": 98,
+          "text": "Code integration, staging deployment, client regression, regional availability and production acceptance are recorded separately. Backend recovery does not mean every subsequent payment fix has been deployed or accepted."
+        },
+        {
+          "id": "b0024",
+          "section": "4. Release plan and backend compatibility",
+          "type": "p",
+          "line": 99,
+          "text": "The API uses a newer shared component, while Back Office (BO) and scheduled-job main branches still use an earlier version. Confirm that required fixes reach every consuming service before testing purchase, renewal, refund and entitlement results for the same account."
+        },
+        {
+          "id": "b0025",
+          "section": "4. Release plan and backend compatibility",
+          "type": "p",
+          "line": 100,
+          "text": "The backend must continue to support upgradable Android and retained legacy iOS and Windows clients. New client commits do not establish retirement of older versions; acceptance testing for each client and region requires its own evidence."
+        },
+        {
+          "id": "b0026",
+          "section": "5. FFF progress",
+          "type": "heading",
+          "line": 102,
+          "text": "5. FFF progress"
+        },
+        {
+          "id": "b0027",
+          "section": "5. FFF progress",
+          "type": "p",
+          "line": 103,
+          "text": "This is a source reconciliation, not a newly submitted progress report from Lex. Flutter has code for plan purchases, balance payment, recharge and payment events; the latest dedicated-line and dedicated-IP ordering integration is not yet on main. Formal completion status awaits Lex’s report and acceptance evidence."
+        },
+        {
+          "id": "b0028",
+          "section": "5. FFF progress",
+          "type": "p",
+          "line": 104,
+          "text": "A development-branch merge completed on November 2, but later changes remain outside main. Stored API-check results still list errors; historical passing-test counts do not establish current coverage."
+        },
+        {
+          "id": "b0029",
+          "section": "5. FFF progress",
+          "type": "p",
+          "line": 105,
+          "text": "Lex owns Flutter client reporting; the Malaysia team owns iOS and macOS acceptance testing; Roy owns payment-gateway and company-registration business matters. FFF runtime, account and data isolation still requires separate verification."
+        },
+        {
+          "id": "b0030",
+          "section": "6. Next steps",
+          "type": "heading",
+          "line": 107,
+          "text": "6. Next steps"
+        },
+        {
+          "id": "b0031",
+          "section": "6. Next steps",
+          "type": "table-row",
+          "line": 108,
+          "text": "Order / responsibility Acceptance outcome and timing"
+        },
+        {
+          "id": "b0032",
+          "section": "6. Next steps",
+          "type": "table-row",
+          "line": 108,
+          "text": "1 · Backend and client engineering First align service versions for payment fixes, then test Google purchases, disabled renewal, deferred downgrades, duplicate callbacks and dedicated-resource renewal. Prioritize verification in Sprint 16; completion date remains unconfirmed."
+        },
+        {
+          "id": "b0033",
+          "section": "6. Next steps",
+          "type": "table-row",
+          "line": 108,
+          "text": "2 · Release and operations Verify configuration and application versions, health checks and recovery steps. Close the recovery gate only after independent-account access and off-site restore-drill evidence is available. Completion date remains unconfirmed."
+        },
+        {
+          "id": "b0034",
+          "section": "6. Next steps",
+          "type": "table-row",
+          "line": 108,
+          "text": "3 · FFF and platform acceptance Lex consolidates Flutter status and checks API contracts. Each responsible team identifies platform artifacts and verifies the four purchase flows and connectivity. Releases depend on these acceptance results; dates remain unconfirmed."
+        },
+        {
+          "id": "b0035",
+          "section": "7. Security and access control",
+          "type": "heading",
+          "line": 110,
+          "text": "7. Security and access control"
+        },
+        {
+          "id": "b0036",
+          "section": "7. Security and access control",
+          "type": "table-row",
+          "line": 111,
+          "text": "Issue / risk Verified progress Still to verify"
+        },
+        {
+          "id": "b0037",
+          "section": "7. Security and access control",
+          "type": "table-row",
+          "line": 111,
+          "text": "Cloud-account failure interrupts service Backend service was restored on October 14; websites subsequently returned to production service. Independent-account fallback access and repeatable recovery; this review has no new drill results."
+        },
+        {
+          "id": "b0038",
+          "section": "7. Security and access control",
+          "type": "table-row",
+          "line": 111,
+          "text": "Deployment permissions and persistent credential exposure The October 30 record documents short-lived identity, a protected deployment runner, reduced permissions and removal of old staging SSH deployment configuration. Newer workflow changes removed manual rollback jobs and changed configuration delivery; older pipeline results cannot replace verification of the new recovery procedure."
+        },
+        {
+          "id": "b0039",
+          "section": "7. Security and access control",
+          "type": "table-row",
+          "line": 111,
+          "text": "Source access and backup recovery No new source-access roster or complete backup/restore review evidence was obtained in this period. The current access roster, backup integrity and off-site restore results remain unconfirmed; older snapshots are not presented as current state."
+        },
+        {
+          "id": "b0040",
+          "section": "8. Key dates",
+          "type": "heading",
+          "line": 113,
+          "text": "8. Key dates"
+        },
+        {
+          "id": "b0041",
+          "section": "8. Key dates",
+          "type": "table-row",
+          "line": 114,
+          "text": "Date Progress and evidence boundary"
+        },
+        {
+          "id": "b0042",
+          "section": "8. Key dates",
+          "type": "table-row",
+          "line": 114,
+          "text": "October 11 The main website repository consolidation and staging deployment completed, with a successful rollback drill; authenticated purchase acceptance testing was not included. Windows contract fixes were published as source."
+        },
+        {
+          "id": "b0043",
+          "section": "8. Key dates",
+          "type": "table-row",
+          "line": 114,
+          "text": "October 14–16 Services migrated to AWS after the Azure shutdown. Static website hosting and delivery were restored, and two landing sites completed production releases. Secret-store migration code and configuration checks completed, with separate service-read and payment acceptance gates still outstanding."
+        },
+        {
+          "id": "b0044",
+          "section": "8. Key dates",
+          "type": "table-row",
+          "line": 114,
+          "text": "October 18–30 Work progressed on VPN node recovery verification, Back Office (BO) operations, payment conversion, refunds and commissions. Deployment security was hardened in staging. Production status is assessed separately for each change."
+        },
+        {
+          "id": "b0045",
+          "section": "8. Key dates",
+          "type": "table-row",
+          "line": 114,
+          "text": "October 31–November 4 Further fixes cover Google subscriptions, dedicated-resource renewal and referral attribution. Deployment now carries configuration files with the release; some shared components still require alignment across services."
+        },
+        {
+          "id": "b0046",
+          "section": "9. Technical debt and reuse boundaries",
+          "type": "heading",
+          "line": 116,
+          "text": "9. Technical debt and reuse boundaries"
+        },
+        {
+          "id": "b0047",
+          "section": "9. Technical debt and reuse boundaries",
+          "type": "p",
+          "line": 117,
+          "text": "The established handover-cleanup background is not repeated. New evidence concerns cross-cloud recovery, payment-contract fixes and deployment hardening. FFF can reuse versioned source modules, but this does not establish readiness of its independent runtime."
+        },
+        {
+          "id": "b0048",
+          "section": "9. Technical debt and reuse boundaries",
+          "type": "p",
+          "line": 118,
+          "text": "This report covers evidence since the previous site update through 2026-11-04, spanning Sprints 14–16. The task system still shows an earlier active cycle. Filing follows the shared calendar, and task status is not used to infer delivery completion."
+        }
+      ]
     }
   ]
 }

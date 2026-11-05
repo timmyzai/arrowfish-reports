@@ -607,5 +607,31 @@
       "zh-CN": "Arrowfish Android 3.9.26 测试交付补充",
       "en": "Arrowfish Android 3.9.26 Test Delivery Update"
     }
+  },
+  {
+    "id": "sprint-14-16-progress-20261104",
+    "name": {
+      "zh-CN": "第14–16阶段 · 灾后恢复、支付与发布进展 · 截至2026-11-04",
+      "en": "Sprints 14–16 · Recovery, Payments and Release Progress · Through 2026-11-04"
+    },
+    "date": "2026-11-04",
+    "file": "Stakeholder/Sprint-16/20261104_progress-update.html",
+    "translations": {
+      "en": "locales/en/reports/sprint-14-16-progress-20261104.json"
+    },
+    "defaultForSprintPage": true,
+    "version": "20261104-1",
+    "sprint": {
+      "start": 14,
+      "end": 16
+    },
+    "kind": "report",
+    "shortName": {
+      "zh-CN": "灾后恢复、支付与发布进展",
+      "en": "Recovery, Payments and Release Progress"
+    },
+    "periodStart": "2026-10-10",
+    "periodEnd": "2026-11-04",
+    "contentThrough": "2026-11-04"
   }
 ]

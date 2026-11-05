@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-report-id="sprint-14-16-progress-20261104"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex, nofollow"><title>第14–16阶段 · 灾后恢复、支付与发布进展</title><meta name="description" content="截至2026-11-04：补齐10月9日之后的灾后恢复、网站发布、支付修正和 FFF 源码进展，分别说明部署与验收边界。"><script src="../../assets/ui-i18n.js"></script><script src="../../assets/site-preferences.js"></script><link rel="stylesheet" href="../../assets/site-theme.css"><style>
+    :root {
+      --bg: var(--af-bg);
+      --paper: var(--af-surface);
+      --text: var(--af-text);
+      --muted: var(--af-text-muted);
+      --line: var(--af-border);
+      --blue: var(--af-primary);
+      --green: var(--af-success);
+      --green-bg: var(--af-success-soft);
+      --yellow: var(--af-warning);
+      --yellow-bg: var(--af-warning-soft);
+      --red: var(--af-danger);
+      --red-bg: var(--af-danger-soft);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", "Segoe UI", sans-serif;
+      line-height: 1.68;
+      -webkit-font-smoothing: antialiased;
+    }
+    main { max-width: 1120px; margin: 0 auto; padding: 32px 20px 56px; }
+    header { padding: 28px 0 18px; border-bottom: 1px solid var(--line); margin-bottom: 24px; }
+    .eyebrow { color: var(--blue); font-size: 14px; font-weight: 700; margin: 0 0 8px; }
+    h1 { font-size: 32px; line-height: 1.25; margin: 0 0 10px; letter-spacing: 0; }
+    .meta { color: var(--muted); margin: 0; font-size: 15px; }
+    section { background: var(--paper); border: 1px solid var(--line); border-radius: 8px; padding: 22px; margin: 18px 0; }
+    h2 { font-size: 21px; margin: 0 0 14px; letter-spacing: 0; display: flex; align-items: center; gap: 8px; }
+    h3 { font-size: 16px; margin: 18px 0 8px; color: var(--text); }
+    p { margin: 0 0 12px; }
+    p:last-child { margin-bottom: 0; }
+    .tldr { border-left: 5px solid var(--blue); background: var(--af-primary-soft); font-size: 18px; font-weight: 650; }
+    table { width: 100%; border-collapse: collapse; margin-top: 8px; font-size: 14.5px; }
+    th, td { border: 1px solid var(--line); padding: 10px 12px; text-align: left; vertical-align: top; }
+    th { background: var(--af-surface-muted); font-weight: 700; }
+    .score { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; margin: 12px 0; }
+    .metric { border: 1px solid var(--line); border-radius: 8px; padding: 14px; background: var(--af-surface-muted); }
+    .metric b, .metric strong { display: block; font-size: 21px; margin-bottom: 4px; }
+    .metric span { color: var(--muted); font-size: 12.5px; }
+    .note { color: var(--muted); font-size: 13.5px; margin-top: 10px; }
+    .ok { color: var(--green); font-weight: 700; }
+    .watch { color: var(--yellow); font-weight: 700; }
+    .risk { color: var(--red); font-weight: 700; }
+    .callout { border-radius: 8px; padding: 14px 16px; margin: 10px 0; border-left: 4px solid var(--blue); background: var(--af-primary-soft); font-size: 14.5px; }
+    .callout.risk, .callout.critical { border-left-color: var(--red); background: var(--red-bg); color: var(--text); }
+    .callout.watch { border-left-color: var(--yellow); background: var(--yellow-bg); color: var(--text); }
+    .callout.ok { border-left-color: var(--green); background: var(--green-bg); color: var(--text); }
+    .badge { display: inline-block; padding: 2px 9px; border-radius: 4px; font-size: 12.5px; font-weight: 700; white-space: nowrap; }
+    .badge.done { background: var(--af-success-soft); color: var(--af-success); }
+    .badge.progress { background: var(--af-warning-soft); color: var(--af-warning); }
+    .badge.pending { background: var(--af-surface-muted); color: var(--af-text-muted); }
+    .badge.risk { background: var(--af-danger-soft); color: var(--af-danger); }
+    .part {
+      margin: 30px 0 4px;
+      padding: 16px 20px;
+      border-radius: 8px;
+      background: linear-gradient(90deg, var(--af-primary) 0%, var(--af-primary) 100%);
+      color: var(--af-on-accent);
+    }
+    .part .pnum { font-size: 12.5px; font-weight: 700; opacity: .85; letter-spacing: .08em; }
+    .part .ptitle { font-size: 22px; font-weight: 700; margin-top: 2px; }
+    .part .psub { font-size: 13.5px; opacity: .9; margin-top: 4px; }
+    .part.fff { background: linear-gradient(90deg, var(--fff) 0%, var(--fff) 100%); }
+    ol, ul { padding-left: 22px; }
+    li { margin: 6px 0; }
+    .footer { margin-top: 24px; padding-top: 14px; border-top: 1px solid var(--line); font-size: 12.5px; color: var(--muted); text-align: center; }
+    @media (max-width: 760px) {
+      main { padding: 20px 12px 40px; }
+      h1 { font-size: 24px; }
+      section { padding: 16px; }
+      .score { grid-template-columns: 1fr 1fr; }
+      table { display: block; overflow-x: auto; font-size: 13px; }
+      th, td { padding: 7px 8px; }
+    }
+    @media (max-width: 480px) { .score { grid-template-columns: 1fr; } }
+    @media print { body { background: var(--af-surface); } main { max-width: none; padding: 0; } section { break-inside: avoid; } }
+
+nav a {display:inline-flex;align-items:center;min-height:44px} p {overflow-wrap:anywhere} a:focus-visible {outline:3px solid var(--af-primary);outline-offset:3px}
+
+header{padding:12px 0;margin-bottom:12px}section{padding:18px;margin:12px 0}.tldr{font-size:17px}main{padding-top:18px}.metric{padding:10px}.score{margin:8px 0}h1{font-size:28px}@media(max-width:480px){.score{grid-template-columns:1fr 1fr}h1{font-size:24px}}
+
+.table-wrap{overflow-x:auto}th{white-space:normal}td{min-width:130px}section{scroll-margin-top:20px}table{font-size:14px} @media(max-width:760px){main{padding:16px 12px}section{padding:16px}th,td{padding:9px}h1{font-size:25px}}
+</style></head><body><main><nav><a href="../../index.html">返回报告目录</a></nav><header data-report-header><h1>第14–16阶段 · 灾后恢复、支付与发布进展</h1><p class="meta">证据截至 2026-11-04 · 覆盖 2026-10-10 至 2026-11-04 · 上次站点更新 2026-10-09</p></header><section class="tldr"><p>Azure 停机后的后端与网站已恢复，支付和续费修正持续推进；下一步是核对各服务版本并完成支付、客户端与灾备验收。</p></section><section id="decisions"><h2>一、关键决策与当前状态</h2>
+<div class="table-wrap"><table><thead><tr><th>事项</th><th>决策 / 现况</th></tr></thead><tbody><tr><td>业务恢复</td><td>10月14日迁至 AWS；团队报告约 2.5 小时恢复后端且无数据丢失，后续容灾能力仍需独立验证。</td></tr><tr><td>支付发布</td><td>新增修正已有代码证据；共享组件版本尚未在所有后端服务统一，不把合并当作已上线。</td></tr><tr><td>发布次序</td><td>先对齐版本和测试，再逐项确认部署与验收；正式发布时间待确认。</td></tr></tbody></table></div>
+</section>
+<section id="outcomes"><h2>二、本期关键成果</h2>
+<div class="table-wrap"><table><thead><tr><th>成果</th><th>已确认边界</th></tr></thead><tbody><tr><td>后端灾后恢复</td><td>内部事故记录确认服务恢复；2.5 小时和无数据丢失为团队报告，非本次重新测量。</td></tr><tr><td>2 个落地站</td><td>10月15–16日生产发布完成，HTTP 冒烟检查通过；登录、购买和视觉验收不包含在该结果中。</td></tr><tr><td>Windows 5 项契约修正</td><td>会员等级、到期时间、线路数据、购买选项和诊断字段已修正并发布代码；安装包与实机验收待确认。</td></tr><tr><td>节点恢复与部署安全</td><td>10月18日恢复检查改动通过本地验证及相关测试环境部署；10月30日部署安全加固记录了 8 条目标流水线通过。</td></tr></tbody></table></div>
+<p class="note">以上是不同交付范围的结果，不能相加为完成率；本次未重新运行历史部署、恢复或实机测试。</p>
+</section>
+<section id="value"><h2>三、改善与商业价值</h2>
+<div class="table-wrap"><table><thead><tr><th>改动</th><th>业务价值与限制</th></tr></thead><tbody><tr><td>支付、续费与退款</td><td>补齐待付款续付、支付方式切换、套餐转换及退款边界；Google 结果按订单核对，关闭自动续费后保留剩余权益。新增行为的真实支付与回调验收待确认。</td></tr><tr><td>独享资源与佣金</td><td>修正等待分配资源的续费、独享 IP 权益和佣金统计；后续规则以最新实现为准，旧的代理佣金追扣方案已被替代。部署与财务结果待确认。</td></tr><tr><td>网站归因与后台操作</td><td>分享链接、下载和账户推荐人传递已有跨端修正；后台补齐筛选、订阅只读视图及退款提示。实际获客转化、订单对账和操作验收待确认。</td></tr><tr><td>财务影响</td><td>本次没有新增收入、成本或退款损失的生产核验，不估算节省金额。</td></tr></tbody></table></div>
+</section>
+<section id="release"><h2>四、上线计划与后端兼容要求</h2>
+<p>代码合并、测试环境部署、客户端回归、地区可用性和正式验收分别记录。后端服务已在灾后恢复，不代表随后每一项支付修正都已部署或验收。</p>
+<p>当前 API 已采用较新的共享组件，后台与定时任务主线仍使用较早版本；应先确认所需修正已覆盖所有消费服务，再验证同一账户的购买、续费、退款和权益结果。</p>
+<p>后端仍需兼容可升级 Android 及保留使用的旧版 iOS、Windows 客户端。新客户端提交不代表旧版本已退出使用；各端、各地区验收均待相应证据确认。</p>
+</section>
+<section id="fff"><h2>五、FFF 并行进展</h2>
+<p>本次补充是源码对账，不是 Lex 新提交的进度报告：Flutter 已有套餐购买、余额支付、充值和支付事件处理代码；独享专线与独享 IP 下单的最新接线尚未合入主线。正式完成度仍待 Lex 报告与验收证据。</p>
+<p>11月2日已有一轮开发分支合并，之后仍有未合入主线的改动；存档的接口检查结果仍列出错误，历史测试通过数不能代表当前覆盖率。</p>
+<p>Lex 负责 Flutter 客户端报告；马来西亚团队负责 iOS、macOS 验收；Roy 负责支付网关及公司注册相关商务事项。FFF 独立运行环境、账户和数据隔离仍须单独验证。</p>
+</section>
+<section id="next"><h2>六、下一步计划</h2>
+<div class="table-wrap"><table><thead><tr><th>顺序 / 责任范围</th><th>验收结果与时间边界</th></tr></thead><tbody><tr><td>1 · 后端与客户端工程</td><td>先统一支付修正的服务版本，验证 Google 新购、关闭续费、延迟降级、重复回调与独享资源续费；作为第16阶段优先验证范围，完成日期待确认。</td></tr><tr><td>2 · 发布与运维</td><td>核对配置与程序版本、健康检查和恢复步骤；补充独立账户接入及异地恢复演练证据后，再关闭灾备门槛。完成日期待确认。</td></tr><tr><td>3 · FFF 与平台验收</td><td>Lex 汇总 Flutter 状态并核对接口；各责任团队分别固定平台产物、验证四条购买路径和连接。发布以这些验收结果为前提，日期待确认。</td></tr></tbody></table></div>
+</section>
+<section id="security"><h2>七、安全与权限管控</h2>
+<div class="table-wrap"><table><thead><tr><th>问题 / 风险</th><th>已确认进展</th><th>仍需确认</th></tr></thead><tbody><tr><td>云账户整体失效导致业务中断</td><td>10月14日已恢复后端；随后网站恢复生产服务。</td><td>独立账户备用接入和重复恢复能力；本次没有新的演练结果。</td></tr><tr><td>部署权限与长期凭据暴露</td><td>10月30日记录了短期身份、受保护部署运行器、权限收紧及测试环境旧 SSH 部署配置清理。</td><td>较新流程取消了手动回滚任务并更新配置传递；旧流水线结果不能替代新恢复流程验证。</td></tr><tr><td>源码访问与备份恢复</td><td>本期没有新的源码授权名单或完整备份恢复复核证据。</td><td>当前授权名单、备份完整性和异地恢复结果待确认，不沿用旧快照作为现况。</td></tr></tbody></table></div>
+</section>
+<section id="timeline"><h2>八、关键时间节点</h2>
+<div class="table-wrap"><table><thead><tr><th>日期</th><th>进展与证据边界</th></tr></thead><tbody><tr><td>10月11日</td><td>主网站仓库整合及测试环境部署完成，回滚演练通过；认证购买验收未包含在内。Windows 契约修正发布代码。</td></tr><tr><td>10月14–16日</td><td>Azure 停机后迁往 AWS；网站静态托管和分发恢复，两个落地站完成生产发布。密钥存储迁移代码与配置核对完成，服务读取和支付验收仍有独立门槛。</td></tr><tr><td>10月18–30日</td><td>推进节点恢复验证、后台操作、支付转换、退款与佣金；部署流程完成一轮测试环境安全加固。各项生产状态按独立证据判断。</td></tr><tr><td>10月31日–11月4日</td><td>继续修正 Google 订阅、独享资源续费和推荐归因；部署流程增加配置文件随版本更新，部分共享组件仍待跨服务统一。</td></tr></tbody></table></div>
+</section>
+<section id="context"><h2>九、技术债与后续复用边界</h2>
+<p>既有交接清理背景不重复展开；本期新增事实是跨云恢复、支付契约修正和部署加固，FFF 仅可复用版本化源码模块，不能据此认定其独立运行环境已就绪。</p>
+<p class="note">本报告覆盖上次站点更新后至 2026-11-04 的证据，横跨第14–16阶段；任务系统仍显示较早活动周期，本文按共享日历归档，不以任务状态推断交付完成。</p>
+</section><footer class="footer">Arrowfish / FFF · 累计进展报告 · 编制于 2026-11-04</footer></main></body></html>

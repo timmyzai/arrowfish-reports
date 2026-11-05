@@ -1,0 +1,916 @@
+{
+  "schemaVersion": 1,
+  "reportId": "sprint-14-16-progress-20261104",
+  "sourceFile": "Stakeholder/Sprint-16/20261104_progress-update.html",
+  "sourceVersion": "2defa874b3aec831",
+  "units": [
+    {
+      "id": "u_e1300c9b0205172f",
+      "kind": "text",
+      "source": "第14–16阶段 · 灾后恢复、支付与发布进展",
+      "occurrence": 0,
+      "target": "Sprints 14–16 · Recovery, Payments and Release Progress",
+      "context": "title @ line 2"
+    },
+    {
+      "id": "u_39ce19e02e72fff4",
+      "kind": "attribute",
+      "source": "截至2026-11-04：补齐10月9日之后的灾后恢复、网站发布、支付修正和 FFF 源码进展，分别说明部署与验收边界。",
+      "occurrence": 0,
+      "target": "Through 2026-11-04: recovery, website releases, payment fixes and FFF source progress since October 9, with deployment and acceptance boundaries stated separately.",
+      "context": "meta @ line 2 · surrounding text: 第14–16阶段 · 灾后恢复、支付与发布进展",
+      "attribute": "content"
+    },
+    {
+      "id": "u_324f148041fb6e72",
+      "kind": "text",
+      "source": "返回报告目录",
+      "occurrence": 0,
+      "target": "Back to report index",
+      "context": "a @ line 87 · surrounding text: 返回报告目录 第14–16阶段 · 灾后恢复、支付与发布进展 证据截至 2026-11-04 · 覆盖 2026-10-10 至 2026-11-04 · 上次站点更新 2026-10-09 Azure 停机后的后端与网站已恢复，支付和续费修正持续推进；下一步是核对各服务版本并完成支付、客户端与灾备验收。 一、关键决策与当前状态"
+    },
+    {
+      "id": "u_694091c2e843c2e5",
+      "kind": "text",
+      "source": "第14–16阶段 · 灾后恢复、支付与发布进展",
+      "occurrence": 1,
+      "target": "Sprints 14–16 · Recovery, Payments and Release Progress",
+      "context": "h1 @ line 87 · surrounding text: 返回报告目录 第14–16阶段 · 灾后恢复、支付与发布进展 证据截至 2026-11-04 · 覆盖 2026-10-10 至 2026-11-04 · 上次站点更新 2026-10-09 Azure 停机后的后端与网站已恢复，支付和续费修正持续推进；下一步是核对各服务版本并完成支付、客户端与灾备验收。 一、关键决策与当前状态"
+    },
+    {
+      "id": "u_05f154d7d5c8eb9b",
+      "kind": "text",
+      "source": "证据截至 2026-11-04 · 覆盖 2026-10-10 至 2026-11-04 · 上次站点更新 2026-10-09",
+      "occurrence": 0,
+      "target": "Evidence through 2026-11-04 · Coverage 2026-10-10 to 2026-11-04 · Previous site update 2026-10-09",
+      "context": "p.meta @ line 87 · surrounding text: 返回报告目录 第14–16阶段 · 灾后恢复、支付与发布进展 证据截至 2026-11-04 · 覆盖 2026-10-10 至 2026-11-04 · 上次站点更新 2026-10-09 Azure 停机后的后端与网站已恢复，支付和续费修正持续推进；下一步是核对各服务版本并完成支付、客户端与灾备验收。 一、关键决策与当前状态"
+    },
+    {
+      "id": "u_69a954bc73b75ac6",
+      "kind": "text",
+      "source": "Azure 停机后的后端与网站已恢复，支付和续费修正持续推进；下一步是核对各服务版本并完成支付、客户端与灾备验收。",
+      "occurrence": 0,
+      "target": "Backend services and websites were restored after the Azure shutdown, while payment and renewal fixes progressed; next, align service versions and complete payment, client and recovery acceptance testing.",
+      "context": "p @ line 87 · surrounding text: 返回报告目录 第14–16阶段 · 灾后恢复、支付与发布进展 证据截至 2026-11-04 · 覆盖 2026-10-10 至 2026-11-04 · 上次站点更新 2026-10-09 Azure 停机后的后端与网站已恢复，支付和续费修正持续推进；下一步是核对各服务版本并完成支付、客户端与灾备验收。 一、关键决策与当前状态"
+    },
+    {
+      "id": "u_bd3c57edc1acf7bf",
+      "kind": "text",
+      "source": "一、关键决策与当前状态",
+      "occurrence": 0,
+      "target": "1. Key decisions and current status",
+      "context": "h2 @ line 87 · surrounding text: 返回报告目录 第14–16阶段 · 灾后恢复、支付与发布进展 证据截至 2026-11-04 · 覆盖 2026-10-10 至 2026-11-04 · 上次站点更新 2026-10-09 Azure 停机后的后端与网站已恢复，支付和续费修正持续推进；下一步是核对各服务版本并完成支付、客户端与灾备验收。 一、关键决策与当前状态"
+    },
+    {
+      "id": "u_9ec2794f21f729b2",
+      "kind": "text",
+      "source": "事项",
+      "occurrence": 0,
+      "target": "Area",
+      "context": "th @ line 88 · surrounding text: 事项 决策 / 现况 业务恢复 10月14日迁至 AWS；团队报告约 2.5 小时恢复后端且无数据丢失，后续容灾能力仍需独立验证。 支付发布 新增修正已有代码证据；共享组件版本尚未在所有后端服务统一，不把合并当作已上线。 发布次序 先对齐版本和测试，再逐项确认部署与验收；正式发布时间待确认。"
+    },
+    {
+      "id": "u_f2c5bd6a8851a1aa",
+      "kind": "text",
+      "source": "决策 / 现况",
+      "occurrence": 0,
+      "target": "Decision / Current Situation",
+      "context": "th @ line 88 · surrounding text: 事项 决策 / 现况 业务恢复 10月14日迁至 AWS；团队报告约 2.5 小时恢复后端且无数据丢失，后续容灾能力仍需独立验证。 支付发布 新增修正已有代码证据；共享组件版本尚未在所有后端服务统一，不把合并当作已上线。 发布次序 先对齐版本和测试，再逐项确认部署与验收；正式发布时间待确认。"
+    },
+    {
+      "id": "u_ee9d034e979a2989",
+      "kind": "text",
+      "source": "业务恢复",
+      "occurrence": 0,
+      "target": "Service recovery",
+      "context": "td @ line 88 · surrounding text: 事项 决策 / 现况 业务恢复 10月14日迁至 AWS；团队报告约 2.5 小时恢复后端且无数据丢失，后续容灾能力仍需独立验证。 支付发布 新增修正已有代码证据；共享组件版本尚未在所有后端服务统一，不把合并当作已上线。 发布次序 先对齐版本和测试，再逐项确认部署与验收；正式发布时间待确认。"
+    },
+    {
+      "id": "u_9651f1ef25eb477c",
+      "kind": "text",
+      "source": "10月14日迁至 AWS；团队报告约 2.5 小时恢复后端且无数据丢失，后续容灾能力仍需独立验证。",
+      "occurrence": 0,
+      "target": "On October 14, services moved to AWS. The team reported backend recovery in about 2.5 hours with no data loss; future disaster recovery still needs independent verification.",
+      "context": "td @ line 88 · surrounding text: 事项 决策 / 现况 业务恢复 10月14日迁至 AWS；团队报告约 2.5 小时恢复后端且无数据丢失，后续容灾能力仍需独立验证。 支付发布 新增修正已有代码证据；共享组件版本尚未在所有后端服务统一，不把合并当作已上线。 发布次序 先对齐版本和测试，再逐项确认部署与验收；正式发布时间待确认。"
+    },
+    {
+      "id": "u_5e8331177d7b2fc1",
+      "kind": "text",
+      "source": "支付发布",
+      "occurrence": 0,
+      "target": "Payment release",
+      "context": "td @ line 88 · surrounding text: 事项 决策 / 现况 业务恢复 10月14日迁至 AWS；团队报告约 2.5 小时恢复后端且无数据丢失，后续容灾能力仍需独立验证。 支付发布 新增修正已有代码证据；共享组件版本尚未在所有后端服务统一，不把合并当作已上线。 发布次序 先对齐版本和测试，再逐项确认部署与验收；正式发布时间待确认。"
+    },
+    {
+      "id": "u_edd060819cae5b1a",
+      "kind": "text",
+      "source": "新增修正已有代码证据；共享组件版本尚未在所有后端服务统一，不把合并当作已上线。",
+      "occurrence": 0,
+      "target": "New fixes have source evidence. Shared component versions are not yet aligned across all backend services; merged code is not treated as a production release.",
+      "context": "td @ line 88 · surrounding text: 事项 决策 / 现况 业务恢复 10月14日迁至 AWS；团队报告约 2.5 小时恢复后端且无数据丢失，后续容灾能力仍需独立验证。 支付发布 新增修正已有代码证据；共享组件版本尚未在所有后端服务统一，不把合并当作已上线。 发布次序 先对齐版本和测试，再逐项确认部署与验收；正式发布时间待确认。"
+    },
+    {
+      "id": "u_530beece658e9d1f",
+      "kind": "text",
+      "source": "发布次序",
+      "occurrence": 0,
+      "target": "Release sequence",
+      "context": "td @ line 88 · surrounding text: 事项 决策 / 现况 业务恢复 10月14日迁至 AWS；团队报告约 2.5 小时恢复后端且无数据丢失，后续容灾能力仍需独立验证。 支付发布 新增修正已有代码证据；共享组件版本尚未在所有后端服务统一，不把合并当作已上线。 发布次序 先对齐版本和测试，再逐项确认部署与验收；正式发布时间待确认。"
+    },
+    {
+      "id": "u_3adf35589921f973",
+      "kind": "text",
+      "source": "先对齐版本和测试，再逐项确认部署与验收；正式发布时间待确认。",
+      "occurrence": 0,
+      "target": "Align versions and test first, then verify deployment and acceptance separately. Production release dates remain unconfirmed.",
+      "context": "td @ line 88 · surrounding text: 事项 决策 / 现况 业务恢复 10月14日迁至 AWS；团队报告约 2.5 小时恢复后端且无数据丢失，后续容灾能力仍需独立验证。 支付发布 新增修正已有代码证据；共享组件版本尚未在所有后端服务统一，不把合并当作已上线。 发布次序 先对齐版本和测试，再逐项确认部署与验收；正式发布时间待确认。"
+    },
+    {
+      "id": "u_d4a82840ecb29197",
+      "kind": "text",
+      "source": "二、本期关键成果",
+      "occurrence": 0,
+      "target": "2. Key outcomes",
+      "context": "h2 @ line 90"
+    },
+    {
+      "id": "u_41438b4938f180bb",
+      "kind": "text",
+      "source": "成果",
+      "occurrence": 0,
+      "target": "Outcome",
+      "context": "th @ line 91 · surrounding text: 成果 已确认边界 后端灾后恢复 内部事故记录确认服务恢复；2.5 小时和无数据丢失为团队报告，非本次重新测量。 2 个落地站 10月15–16日生产发布完成，HTTP 冒烟检查通过；登录、购买和视觉验收不包含在该结果中。 Windows 5 项契约修正 会员等级、到期时间、线路数据、购买选项和诊断字段已修正并发布代码；安装包与实机验收待确认。 节点恢复与部署安全 10月18日恢复检查改动通过本地验证及相关测试环境部署；10月30日部署安全加固记录了 8 条目标流水线通过。"
+    },
+    {
+      "id": "u_39a0f3f7d746c88e",
+      "kind": "text",
+      "source": "已确认边界",
+      "occurrence": 0,
+      "target": "Verified boundary",
+      "context": "th @ line 91 · surrounding text: 成果 已确认边界 后端灾后恢复 内部事故记录确认服务恢复；2.5 小时和无数据丢失为团队报告，非本次重新测量。 2 个落地站 10月15–16日生产发布完成，HTTP 冒烟检查通过；登录、购买和视觉验收不包含在该结果中。 Windows 5 项契约修正 会员等级、到期时间、线路数据、购买选项和诊断字段已修正并发布代码；安装包与实机验收待确认。 节点恢复与部署安全 10月18日恢复检查改动通过本地验证及相关测试环境部署；10月30日部署安全加固记录了 8 条目标流水线通过。"
+    },
+    {
+      "id": "u_86cbaca88f9f8e16",
+      "kind": "text",
+      "source": "后端灾后恢复",
+      "occurrence": 0,
+      "target": "Backend recovery",
+      "context": "td @ line 91 · surrounding text: 成果 已确认边界 后端灾后恢复 内部事故记录确认服务恢复；2.5 小时和无数据丢失为团队报告，非本次重新测量。 2 个落地站 10月15–16日生产发布完成，HTTP 冒烟检查通过；登录、购买和视觉验收不包含在该结果中。 Windows 5 项契约修正 会员等级、到期时间、线路数据、购买选项和诊断字段已修正并发布代码；安装包与实机验收待确认。 节点恢复与部署安全 10月18日恢复检查改动通过本地验证及相关测试环境部署；10月30日部署安全加固记录了 8 条目标流水线通过。"
+    },
+    {
+      "id": "u_e755b558a3728687",
+      "kind": "text",
+      "source": "内部事故记录确认服务恢复；2.5 小时和无数据丢失为团队报告，非本次重新测量。",
+      "occurrence": 0,
+      "target": "The internal incident record confirms service restoration. The 2.5-hour duration and no-data-loss statement were reported by the team, not measured again in this review.",
+      "context": "td @ line 91 · surrounding text: 成果 已确认边界 后端灾后恢复 内部事故记录确认服务恢复；2.5 小时和无数据丢失为团队报告，非本次重新测量。 2 个落地站 10月15–16日生产发布完成，HTTP 冒烟检查通过；登录、购买和视觉验收不包含在该结果中。 Windows 5 项契约修正 会员等级、到期时间、线路数据、购买选项和诊断字段已修正并发布代码；安装包与实机验收待确认。 节点恢复与部署安全 10月18日恢复检查改动通过本地验证及相关测试环境部署；10月30日部署安全加固记录了 8 条目标流水线通过。"
+    },
+    {
+      "id": "u_cf3de379e500af8d",
+      "kind": "text",
+      "source": "2 个落地站",
+      "occurrence": 0,
+      "target": "2 landing sites",
+      "context": "td @ line 91 · surrounding text: 成果 已确认边界 后端灾后恢复 内部事故记录确认服务恢复；2.5 小时和无数据丢失为团队报告，非本次重新测量。 2 个落地站 10月15–16日生产发布完成，HTTP 冒烟检查通过；登录、购买和视觉验收不包含在该结果中。 Windows 5 项契约修正 会员等级、到期时间、线路数据、购买选项和诊断字段已修正并发布代码；安装包与实机验收待确认。 节点恢复与部署安全 10月18日恢复检查改动通过本地验证及相关测试环境部署；10月30日部署安全加固记录了 8 条目标流水线通过。"
+    },
+    {
+      "id": "u_0c7452e9c3dcd2dc",
+      "kind": "text",
+      "source": "10月15–16日生产发布完成，HTTP 冒烟检查通过；登录、购买和视觉验收不包含在该结果中。",
+      "occurrence": 0,
+      "target": "Production releases completed on October 15–16 and HTTP smoke checks passed. This does not include login, purchase or visual acceptance testing.",
+      "context": "td @ line 91 · surrounding text: 成果 已确认边界 后端灾后恢复 内部事故记录确认服务恢复；2.5 小时和无数据丢失为团队报告，非本次重新测量。 2 个落地站 10月15–16日生产发布完成，HTTP 冒烟检查通过；登录、购买和视觉验收不包含在该结果中。 Windows 5 项契约修正 会员等级、到期时间、线路数据、购买选项和诊断字段已修正并发布代码；安装包与实机验收待确认。 节点恢复与部署安全 10月18日恢复检查改动通过本地验证及相关测试环境部署；10月30日部署安全加固记录了 8 条目标流水线通过。"
+    },
+    {
+      "id": "u_6a57a796ad2c385a",
+      "kind": "text",
+      "source": "Windows 5 项契约修正",
+      "occurrence": 0,
+      "target": "5 Windows contract fixes",
+      "context": "td @ line 91 · surrounding text: 成果 已确认边界 后端灾后恢复 内部事故记录确认服务恢复；2.5 小时和无数据丢失为团队报告，非本次重新测量。 2 个落地站 10月15–16日生产发布完成，HTTP 冒烟检查通过；登录、购买和视觉验收不包含在该结果中。 Windows 5 项契约修正 会员等级、到期时间、线路数据、购买选项和诊断字段已修正并发布代码；安装包与实机验收待确认。 节点恢复与部署安全 10月18日恢复检查改动通过本地验证及相关测试环境部署；10月30日部署安全加固记录了 8 条目标流水线通过。"
+    },
+    {
+      "id": "u_84a1f837ac95b7bc",
+      "kind": "text",
+      "source": "会员等级、到期时间、线路数据、购买选项和诊断字段已修正并发布代码；安装包与实机验收待确认。",
+      "occurrence": 0,
+      "target": "Membership tier, expiry, route data, purchase options and diagnostic fields were fixed in published source. Installer and device acceptance testing remain unconfirmed.",
+      "context": "td @ line 91 · surrounding text: 成果 已确认边界 后端灾后恢复 内部事故记录确认服务恢复；2.5 小时和无数据丢失为团队报告，非本次重新测量。 2 个落地站 10月15–16日生产发布完成，HTTP 冒烟检查通过；登录、购买和视觉验收不包含在该结果中。 Windows 5 项契约修正 会员等级、到期时间、线路数据、购买选项和诊断字段已修正并发布代码；安装包与实机验收待确认。 节点恢复与部署安全 10月18日恢复检查改动通过本地验证及相关测试环境部署；10月30日部署安全加固记录了 8 条目标流水线通过。"
+    },
+    {
+      "id": "u_15206dc121fc47e6",
+      "kind": "text",
+      "source": "节点恢复与部署安全",
+      "occurrence": 0,
+      "target": "VPN node recovery and deployment security",
+      "context": "td @ line 91 · surrounding text: 成果 已确认边界 后端灾后恢复 内部事故记录确认服务恢复；2.5 小时和无数据丢失为团队报告，非本次重新测量。 2 个落地站 10月15–16日生产发布完成，HTTP 冒烟检查通过；登录、购买和视觉验收不包含在该结果中。 Windows 5 项契约修正 会员等级、到期时间、线路数据、购买选项和诊断字段已修正并发布代码；安装包与实机验收待确认。 节点恢复与部署安全 10月18日恢复检查改动通过本地验证及相关测试环境部署；10月30日部署安全加固记录了 8 条目标流水线通过。"
+    },
+    {
+      "id": "u_96c6fc04616c2e3b",
+      "kind": "text",
+      "source": "10月18日恢复检查改动通过本地验证及相关测试环境部署；10月30日部署安全加固记录了 8 条目标流水线通过。",
+      "occurrence": 0,
+      "target": "On October 18, recovery-check changes passed local verification and related staging deployments. The October 30 deployment-hardening record documented 8 successful target pipelines.",
+      "context": "td @ line 91 · surrounding text: 成果 已确认边界 后端灾后恢复 内部事故记录确认服务恢复；2.5 小时和无数据丢失为团队报告，非本次重新测量。 2 个落地站 10月15–16日生产发布完成，HTTP 冒烟检查通过；登录、购买和视觉验收不包含在该结果中。 Windows 5 项契约修正 会员等级、到期时间、线路数据、购买选项和诊断字段已修正并发布代码；安装包与实机验收待确认。 节点恢复与部署安全 10月18日恢复检查改动通过本地验证及相关测试环境部署；10月30日部署安全加固记录了 8 条目标流水线通过。"
+    },
+    {
+      "id": "u_4e1f4d4cb75ae649",
+      "kind": "text",
+      "source": "以上是不同交付范围的结果，不能相加为完成率；本次未重新运行历史部署、恢复或实机测试。",
+      "occurrence": 0,
+      "target": "These results cover different delivery scopes and cannot be added into a completion percentage. Historical deployment, recovery and device tests were not rerun in this review.",
+      "context": "p.note @ line 92"
+    },
+    {
+      "id": "u_9d1d8bd2e9f6d1ac",
+      "kind": "text",
+      "source": "三、改善与商业价值",
+      "occurrence": 0,
+      "target": "3. Improvements and business value",
+      "context": "h2 @ line 94"
+    },
+    {
+      "id": "u_e36bdf222be7ea89",
+      "kind": "text",
+      "source": "改动",
+      "occurrence": 0,
+      "target": "Change",
+      "context": "th @ line 95 · surrounding text: 改动 业务价值与限制 支付、续费与退款 补齐待付款续付、支付方式切换、套餐转换及退款边界；Google 结果按订单核对，关闭自动续费后保留剩余权益。新增行为的真实支付与回调验收待确认。 独享资源与佣金 修正等待分配资源的续费、独享 IP 权益和佣金统计；后续规则以最新实现为准，旧的代理佣金追扣方案已被替代。部署与财务结果待确认。 网站归因与后台操作 分享链接、下载和账户推荐人传递已有跨端修正；后台补齐筛选、订阅只读视图及退款提示。实际获客转化、订单对账和操作验收待确认。 财务影响 本次没有新增收入、成本或退款损失的生产核验，不估算节省金额。"
+    },
+    {
+      "id": "u_22268da4750615c4",
+      "kind": "text",
+      "source": "业务价值与限制",
+      "occurrence": 0,
+      "target": "Business value and limitation",
+      "context": "th @ line 95 · surrounding text: 改动 业务价值与限制 支付、续费与退款 补齐待付款续付、支付方式切换、套餐转换及退款边界；Google 结果按订单核对，关闭自动续费后保留剩余权益。新增行为的真实支付与回调验收待确认。 独享资源与佣金 修正等待分配资源的续费、独享 IP 权益和佣金统计；后续规则以最新实现为准，旧的代理佣金追扣方案已被替代。部署与财务结果待确认。 网站归因与后台操作 分享链接、下载和账户推荐人传递已有跨端修正；后台补齐筛选、订阅只读视图及退款提示。实际获客转化、订单对账和操作验收待确认。 财务影响 本次没有新增收入、成本或退款损失的生产核验，不估算节省金额。"
+    },
+    {
+      "id": "u_cb842987751f8f99",
+      "kind": "text",
+      "source": "支付、续费与退款",
+      "occurrence": 0,
+      "target": "Payments, renewals and refunds",
+      "context": "td @ line 95 · surrounding text: 改动 业务价值与限制 支付、续费与退款 补齐待付款续付、支付方式切换、套餐转换及退款边界；Google 结果按订单核对，关闭自动续费后保留剩余权益。新增行为的真实支付与回调验收待确认。 独享资源与佣金 修正等待分配资源的续费、独享 IP 权益和佣金统计；后续规则以最新实现为准，旧的代理佣金追扣方案已被替代。部署与财务结果待确认。 网站归因与后台操作 分享链接、下载和账户推荐人传递已有跨端修正；后台补齐筛选、订阅只读视图及退款提示。实际获客转化、订单对账和操作验收待确认。 财务影响 本次没有新增收入、成本或退款损失的生产核验，不估算节省金额。"
+    },
+    {
+      "id": "u_bb5499f6f9e19223",
+      "kind": "text",
+      "source": "补齐待付款续付、支付方式切换、套餐转换及退款边界；Google 结果按订单核对，关闭自动续费后保留剩余权益。新增行为的真实支付与回调验收待确认。",
+      "occurrence": 0,
+      "target": "Added pending-payment continuation, payment-method switching, plan conversion and refund rules. Google results are checked against the order, and remaining entitlement is retained after auto-renew is disabled. Acceptance testing with real payments and callbacks for the new behavior remains unconfirmed.",
+      "context": "td @ line 95 · surrounding text: 改动 业务价值与限制 支付、续费与退款 补齐待付款续付、支付方式切换、套餐转换及退款边界；Google 结果按订单核对，关闭自动续费后保留剩余权益。新增行为的真实支付与回调验收待确认。 独享资源与佣金 修正等待分配资源的续费、独享 IP 权益和佣金统计；后续规则以最新实现为准，旧的代理佣金追扣方案已被替代。部署与财务结果待确认。 网站归因与后台操作 分享链接、下载和账户推荐人传递已有跨端修正；后台补齐筛选、订阅只读视图及退款提示。实际获客转化、订单对账和操作验收待确认。 财务影响 本次没有新增收入、成本或退款损失的生产核验，不估算节省金额。"
+    },
+    {
+      "id": "u_e9b0707eb8f22cf5",
+      "kind": "text",
+      "source": "独享资源与佣金",
+      "occurrence": 0,
+      "target": "Dedicated resources and commissions",
+      "context": "td @ line 95 · surrounding text: 改动 业务价值与限制 支付、续费与退款 补齐待付款续付、支付方式切换、套餐转换及退款边界；Google 结果按订单核对，关闭自动续费后保留剩余权益。新增行为的真实支付与回调验收待确认。 独享资源与佣金 修正等待分配资源的续费、独享 IP 权益和佣金统计；后续规则以最新实现为准，旧的代理佣金追扣方案已被替代。部署与财务结果待确认。 网站归因与后台操作 分享链接、下载和账户推荐人传递已有跨端修正；后台补齐筛选、订阅只读视图及退款提示。实际获客转化、订单对账和操作验收待确认。 财务影响 本次没有新增收入、成本或退款损失的生产核验，不估算节省金额。"
+    },
+    {
+      "id": "u_28f664f1feb70051",
+      "kind": "text",
+      "source": "修正等待分配资源的续费、独享 IP 权益和佣金统计；后续规则以最新实现为准，旧的代理佣金追扣方案已被替代。部署与财务结果待确认。",
+      "occurrence": 0,
+      "target": "Fixed renewal of resources awaiting assignment, dedicated IP entitlement and commission reporting. Later rules follow the latest implementation; the earlier agent-commission clawback approach was superseded. Deployment and financial outcomes remain unconfirmed.",
+      "context": "td @ line 95 · surrounding text: 改动 业务价值与限制 支付、续费与退款 补齐待付款续付、支付方式切换、套餐转换及退款边界；Google 结果按订单核对，关闭自动续费后保留剩余权益。新增行为的真实支付与回调验收待确认。 独享资源与佣金 修正等待分配资源的续费、独享 IP 权益和佣金统计；后续规则以最新实现为准，旧的代理佣金追扣方案已被替代。部署与财务结果待确认。 网站归因与后台操作 分享链接、下载和账户推荐人传递已有跨端修正；后台补齐筛选、订阅只读视图及退款提示。实际获客转化、订单对账和操作验收待确认。 财务影响 本次没有新增收入、成本或退款损失的生产核验，不估算节省金额。"
+    },
+    {
+      "id": "u_5557c27c3a6ce894",
+      "kind": "text",
+      "source": "网站归因与后台操作",
+      "occurrence": 0,
+      "target": "Website attribution and Back Office (BO) operations",
+      "context": "td @ line 95 · surrounding text: 改动 业务价值与限制 支付、续费与退款 补齐待付款续付、支付方式切换、套餐转换及退款边界；Google 结果按订单核对，关闭自动续费后保留剩余权益。新增行为的真实支付与回调验收待确认。 独享资源与佣金 修正等待分配资源的续费、独享 IP 权益和佣金统计；后续规则以最新实现为准，旧的代理佣金追扣方案已被替代。部署与财务结果待确认。 网站归因与后台操作 分享链接、下载和账户推荐人传递已有跨端修正；后台补齐筛选、订阅只读视图及退款提示。实际获客转化、订单对账和操作验收待确认。 财务影响 本次没有新增收入、成本或退款损失的生产核验，不估算节省金额。"
+    },
+    {
+      "id": "u_d9f5f361d28db6ff",
+      "kind": "text",
+      "source": "分享链接、下载和账户推荐人传递已有跨端修正；后台补齐筛选、订阅只读视图及退款提示。实际获客转化、订单对账和操作验收待确认。",
+      "occurrence": 0,
+      "target": "Cross-client fixes now propagate referrals through share links, downloads and accounts. Back Office (BO) changes cover filters, read-only subscriptions and refund explanations. Acquisition conversion, order reconciliation and operational acceptance testing remain unconfirmed.",
+      "context": "td @ line 95 · surrounding text: 改动 业务价值与限制 支付、续费与退款 补齐待付款续付、支付方式切换、套餐转换及退款边界；Google 结果按订单核对，关闭自动续费后保留剩余权益。新增行为的真实支付与回调验收待确认。 独享资源与佣金 修正等待分配资源的续费、独享 IP 权益和佣金统计；后续规则以最新实现为准，旧的代理佣金追扣方案已被替代。部署与财务结果待确认。 网站归因与后台操作 分享链接、下载和账户推荐人传递已有跨端修正；后台补齐筛选、订阅只读视图及退款提示。实际获客转化、订单对账和操作验收待确认。 财务影响 本次没有新增收入、成本或退款损失的生产核验，不估算节省金额。"
+    },
+    {
+      "id": "u_f15ecea2672f6413",
+      "kind": "text",
+      "source": "财务影响",
+      "occurrence": 0,
+      "target": "Financial impact",
+      "context": "td @ line 95 · surrounding text: 改动 业务价值与限制 支付、续费与退款 补齐待付款续付、支付方式切换、套餐转换及退款边界；Google 结果按订单核对，关闭自动续费后保留剩余权益。新增行为的真实支付与回调验收待确认。 独享资源与佣金 修正等待分配资源的续费、独享 IP 权益和佣金统计；后续规则以最新实现为准，旧的代理佣金追扣方案已被替代。部署与财务结果待确认。 网站归因与后台操作 分享链接、下载和账户推荐人传递已有跨端修正；后台补齐筛选、订阅只读视图及退款提示。实际获客转化、订单对账和操作验收待确认。 财务影响 本次没有新增收入、成本或退款损失的生产核验，不估算节省金额。"
+    },
+    {
+      "id": "u_72b0b4e618e516d8",
+      "kind": "text",
+      "source": "本次没有新增收入、成本或退款损失的生产核验，不估算节省金额。",
+      "occurrence": 0,
+      "target": "This review has no new production verification of revenue, costs or refund losses; no savings amount is estimated.",
+      "context": "td @ line 95 · surrounding text: 改动 业务价值与限制 支付、续费与退款 补齐待付款续付、支付方式切换、套餐转换及退款边界；Google 结果按订单核对，关闭自动续费后保留剩余权益。新增行为的真实支付与回调验收待确认。 独享资源与佣金 修正等待分配资源的续费、独享 IP 权益和佣金统计；后续规则以最新实现为准，旧的代理佣金追扣方案已被替代。部署与财务结果待确认。 网站归因与后台操作 分享链接、下载和账户推荐人传递已有跨端修正；后台补齐筛选、订阅只读视图及退款提示。实际获客转化、订单对账和操作验收待确认。 财务影响 本次没有新增收入、成本或退款损失的生产核验，不估算节省金额。"
+    },
+    {
+      "id": "u_7654a114804ad6fd",
+      "kind": "text",
+      "source": "四、上线计划与后端兼容要求",
+      "occurrence": 0,
+      "target": "4. Release plan and backend compatibility",
+      "context": "h2 @ line 97"
+    },
+    {
+      "id": "u_c0e5379a61450e2b",
+      "kind": "text",
+      "source": "代码合并、测试环境部署、客户端回归、地区可用性和正式验收分别记录。后端服务已在灾后恢复，不代表随后每一项支付修正都已部署或验收。",
+      "occurrence": 0,
+      "target": "Code integration, staging deployment, client regression, regional availability and production acceptance are recorded separately. Backend recovery does not mean every subsequent payment fix has been deployed or accepted.",
+      "context": "p @ line 98"
+    },
+    {
+      "id": "u_71ccafcc7f0fcf2d",
+      "kind": "text",
+      "source": "当前 API 已采用较新的共享组件，后台与定时任务主线仍使用较早版本；应先确认所需修正已覆盖所有消费服务，再验证同一账户的购买、续费、退款和权益结果。",
+      "occurrence": 0,
+      "target": "The API uses a newer shared component, while Back Office (BO) and scheduled-job main branches still use an earlier version. Confirm that required fixes reach every consuming service before testing purchase, renewal, refund and entitlement results for the same account.",
+      "context": "p @ line 99"
+    },
+    {
+      "id": "u_7275af3e1147b6d0",
+      "kind": "text",
+      "source": "后端仍需兼容可升级 Android 及保留使用的旧版 iOS、Windows 客户端。新客户端提交不代表旧版本已退出使用；各端、各地区验收均待相应证据确认。",
+      "occurrence": 0,
+      "target": "The backend must continue to support upgradable Android and retained legacy iOS and Windows clients. New client commits do not establish retirement of older versions; acceptance testing for each client and region requires its own evidence.",
+      "context": "p @ line 100"
+    },
+    {
+      "id": "u_ef63bd1f42dd9c24",
+      "kind": "text",
+      "source": "五、FFF 并行进展",
+      "occurrence": 0,
+      "target": "5. FFF progress",
+      "context": "h2 @ line 102"
+    },
+    {
+      "id": "u_a27a9273a204ac2d",
+      "kind": "text",
+      "source": "本次补充是源码对账，不是 Lex 新提交的进度报告：Flutter 已有套餐购买、余额支付、充值和支付事件处理代码；独享专线与独享 IP 下单的最新接线尚未合入主线。正式完成度仍待 Lex 报告与验收证据。",
+      "occurrence": 0,
+      "target": "This is a source reconciliation, not a newly submitted progress report from Lex. Flutter has code for plan purchases, balance payment, recharge and payment events; the latest dedicated-line and dedicated-IP ordering integration is not yet on main. Formal completion status awaits Lex’s report and acceptance evidence.",
+      "context": "p @ line 103"
+    },
+    {
+      "id": "u_c211095499d8403d",
+      "kind": "text",
+      "source": "11月2日已有一轮开发分支合并，之后仍有未合入主线的改动；存档的接口检查结果仍列出错误，历史测试通过数不能代表当前覆盖率。",
+      "occurrence": 0,
+      "target": "A development-branch merge completed on November 2, but later changes remain outside main. Stored API-check results still list errors; historical passing-test counts do not establish current coverage.",
+      "context": "p @ line 104"
+    },
+    {
+      "id": "u_bc8e71f6c1e39b44",
+      "kind": "text",
+      "source": "Lex 负责 Flutter 客户端报告；马来西亚团队负责 iOS、macOS 验收；Roy 负责支付网关及公司注册相关商务事项。FFF 独立运行环境、账户和数据隔离仍须单独验证。",
+      "occurrence": 0,
+      "target": "Lex owns Flutter client reporting; the Malaysia team owns iOS and macOS acceptance testing; Roy owns payment-gateway and company-registration business matters. FFF runtime, account and data isolation still requires separate verification.",
+      "context": "p @ line 105"
+    },
+    {
+      "id": "u_84ed450e39e175c1",
+      "kind": "text",
+      "source": "六、下一步计划",
+      "occurrence": 0,
+      "target": "6. Next steps",
+      "context": "h2 @ line 107"
+    },
+    {
+      "id": "u_89792839a6950711",
+      "kind": "text",
+      "source": "顺序 / 责任范围",
+      "occurrence": 0,
+      "target": "Order / responsibility",
+      "context": "th @ line 108 · surrounding text: 顺序 / 责任范围 验收结果与时间边界 1 · 后端与客户端工程 先统一支付修正的服务版本，验证 Google 新购、关闭续费、延迟降级、重复回调与独享资源续费；作为第16阶段优先验证范围，完成日期待确认。 2 · 发布与运维 核对配置与程序版本、健康检查和恢复步骤；补充独立账户接入及异地恢复演练证据后，再关闭灾备门槛。完成日期待确认。 3 · FFF 与平台验收 Lex 汇总 Flutter 状态并核对接口；各责任团队分别固定平台产物、验证四条购买路径和连接。发布以这些验收结果为前提，日期待确认。"
+    },
+    {
+      "id": "u_5e42ab98775fc2a7",
+      "kind": "text",
+      "source": "验收结果与时间边界",
+      "occurrence": 0,
+      "target": "Acceptance outcome and timing",
+      "context": "th @ line 108 · surrounding text: 顺序 / 责任范围 验收结果与时间边界 1 · 后端与客户端工程 先统一支付修正的服务版本，验证 Google 新购、关闭续费、延迟降级、重复回调与独享资源续费；作为第16阶段优先验证范围，完成日期待确认。 2 · 发布与运维 核对配置与程序版本、健康检查和恢复步骤；补充独立账户接入及异地恢复演练证据后，再关闭灾备门槛。完成日期待确认。 3 · FFF 与平台验收 Lex 汇总 Flutter 状态并核对接口；各责任团队分别固定平台产物、验证四条购买路径和连接。发布以这些验收结果为前提，日期待确认。"
+    },
+    {
+      "id": "u_721589690a5c47ba",
+      "kind": "text",
+      "source": "1 · 后端与客户端工程",
+      "occurrence": 0,
+      "target": "1 · Backend and client engineering",
+      "context": "td @ line 108 · surrounding text: 顺序 / 责任范围 验收结果与时间边界 1 · 后端与客户端工程 先统一支付修正的服务版本，验证 Google 新购、关闭续费、延迟降级、重复回调与独享资源续费；作为第16阶段优先验证范围，完成日期待确认。 2 · 发布与运维 核对配置与程序版本、健康检查和恢复步骤；补充独立账户接入及异地恢复演练证据后，再关闭灾备门槛。完成日期待确认。 3 · FFF 与平台验收 Lex 汇总 Flutter 状态并核对接口；各责任团队分别固定平台产物、验证四条购买路径和连接。发布以这些验收结果为前提，日期待确认。"
+    },
+    {
+      "id": "u_2dd8923dd032e26b",
+      "kind": "text",
+      "source": "先统一支付修正的服务版本，验证 Google 新购、关闭续费、延迟降级、重复回调与独享资源续费；作为第16阶段优先验证范围，完成日期待确认。",
+      "occurrence": 0,
+      "target": "First align service versions for payment fixes, then test Google purchases, disabled renewal, deferred downgrades, duplicate callbacks and dedicated-resource renewal. Prioritize verification in Sprint 16; completion date remains unconfirmed.",
+      "context": "td @ line 108 · surrounding text: 顺序 / 责任范围 验收结果与时间边界 1 · 后端与客户端工程 先统一支付修正的服务版本，验证 Google 新购、关闭续费、延迟降级、重复回调与独享资源续费；作为第16阶段优先验证范围，完成日期待确认。 2 · 发布与运维 核对配置与程序版本、健康检查和恢复步骤；补充独立账户接入及异地恢复演练证据后，再关闭灾备门槛。完成日期待确认。 3 · FFF 与平台验收 Lex 汇总 Flutter 状态并核对接口；各责任团队分别固定平台产物、验证四条购买路径和连接。发布以这些验收结果为前提，日期待确认。"
+    },
+    {
+      "id": "u_201f4af451670c92",
+      "kind": "text",
+      "source": "2 · 发布与运维",
+      "occurrence": 0,
+      "target": "2 · Release and operations",
+      "context": "td @ line 108 · surrounding text: 顺序 / 责任范围 验收结果与时间边界 1 · 后端与客户端工程 先统一支付修正的服务版本，验证 Google 新购、关闭续费、延迟降级、重复回调与独享资源续费；作为第16阶段优先验证范围，完成日期待确认。 2 · 发布与运维 核对配置与程序版本、健康检查和恢复步骤；补充独立账户接入及异地恢复演练证据后，再关闭灾备门槛。完成日期待确认。 3 · FFF 与平台验收 Lex 汇总 Flutter 状态并核对接口；各责任团队分别固定平台产物、验证四条购买路径和连接。发布以这些验收结果为前提，日期待确认。"
+    },
+    {
+      "id": "u_a366a7f259394e9f",
+      "kind": "text",
+      "source": "核对配置与程序版本、健康检查和恢复步骤；补充独立账户接入及异地恢复演练证据后，再关闭灾备门槛。完成日期待确认。",
+      "occurrence": 0,
+      "target": "Verify configuration and application versions, health checks and recovery steps. Close the recovery gate only after independent-account access and off-site restore-drill evidence is available. Completion date remains unconfirmed.",
+      "context": "td @ line 108 · surrounding text: 顺序 / 责任范围 验收结果与时间边界 1 · 后端与客户端工程 先统一支付修正的服务版本，验证 Google 新购、关闭续费、延迟降级、重复回调与独享资源续费；作为第16阶段优先验证范围，完成日期待确认。 2 · 发布与运维 核对配置与程序版本、健康检查和恢复步骤；补充独立账户接入及异地恢复演练证据后，再关闭灾备门槛。完成日期待确认。 3 · FFF 与平台验收 Lex 汇总 Flutter 状态并核对接口；各责任团队分别固定平台产物、验证四条购买路径和连接。发布以这些验收结果为前提，日期待确认。"
+    },
+    {
+      "id": "u_8348add5e95445fd",
+      "kind": "text",
+      "source": "3 · FFF 与平台验收",
+      "occurrence": 0,
+      "target": "3 · FFF and platform acceptance",
+      "context": "td @ line 108 · surrounding text: 顺序 / 责任范围 验收结果与时间边界 1 · 后端与客户端工程 先统一支付修正的服务版本，验证 Google 新购、关闭续费、延迟降级、重复回调与独享资源续费；作为第16阶段优先验证范围，完成日期待确认。 2 · 发布与运维 核对配置与程序版本、健康检查和恢复步骤；补充独立账户接入及异地恢复演练证据后，再关闭灾备门槛。完成日期待确认。 3 · FFF 与平台验收 Lex 汇总 Flutter 状态并核对接口；各责任团队分别固定平台产物、验证四条购买路径和连接。发布以这些验收结果为前提，日期待确认。"
+    },
+    {
+      "id": "u_a80d09e3e52833b6",
+      "kind": "text",
+      "source": "Lex 汇总 Flutter 状态并核对接口；各责任团队分别固定平台产物、验证四条购买路径和连接。发布以这些验收结果为前提，日期待确认。",
+      "occurrence": 0,
+      "target": "Lex consolidates Flutter status and checks API contracts. Each responsible team identifies platform artifacts and verifies the four purchase flows and connectivity. Releases depend on these acceptance results; dates remain unconfirmed.",
+      "context": "td @ line 108 · surrounding text: 顺序 / 责任范围 验收结果与时间边界 1 · 后端与客户端工程 先统一支付修正的服务版本，验证 Google 新购、关闭续费、延迟降级、重复回调与独享资源续费；作为第16阶段优先验证范围，完成日期待确认。 2 · 发布与运维 核对配置与程序版本、健康检查和恢复步骤；补充独立账户接入及异地恢复演练证据后，再关闭灾备门槛。完成日期待确认。 3 · FFF 与平台验收 Lex 汇总 Flutter 状态并核对接口；各责任团队分别固定平台产物、验证四条购买路径和连接。发布以这些验收结果为前提，日期待确认。"
+    },
+    {
+      "id": "u_cae3ac8fb5c5e8ab",
+      "kind": "text",
+      "source": "七、安全与权限管控",
+      "occurrence": 0,
+      "target": "7. Security and access control",
+      "context": "h2 @ line 110"
+    },
+    {
+      "id": "u_227bf992f07450a8",
+      "kind": "text",
+      "source": "问题 / 风险",
+      "occurrence": 0,
+      "target": "Issue / risk",
+      "context": "th @ line 111 · surrounding text: 问题 / 风险 已确认进展 仍需确认 云账户整体失效导致业务中断 10月14日已恢复后端；随后网站恢复生产服务。 独立账户备用接入和重复恢复能力；本次没有新的演练结果。 部署权限与长期凭据暴露 10月30日记录了短期身份、受保护部署运行器、权限收紧及测试环境旧 SSH 部署配置清理。 较新流程取消了手动回滚任务并更新配置传递；旧流水线结果不能替代新恢复流程验证。 源码访问与备份恢复 本期没有新的源码授权名单或完整备份恢复复核证据。 当前授权名单、备份完整性和异地恢复结果待确认，不沿用旧快照作为现况。"
+    },
+    {
+      "id": "u_0316ad725cf71345",
+      "kind": "text",
+      "source": "已确认进展",
+      "occurrence": 0,
+      "target": "Verified progress",
+      "context": "th @ line 111 · surrounding text: 问题 / 风险 已确认进展 仍需确认 云账户整体失效导致业务中断 10月14日已恢复后端；随后网站恢复生产服务。 独立账户备用接入和重复恢复能力；本次没有新的演练结果。 部署权限与长期凭据暴露 10月30日记录了短期身份、受保护部署运行器、权限收紧及测试环境旧 SSH 部署配置清理。 较新流程取消了手动回滚任务并更新配置传递；旧流水线结果不能替代新恢复流程验证。 源码访问与备份恢复 本期没有新的源码授权名单或完整备份恢复复核证据。 当前授权名单、备份完整性和异地恢复结果待确认，不沿用旧快照作为现况。"
+    },
+    {
+      "id": "u_d757f1e723e1e5df",
+      "kind": "text",
+      "source": "仍需确认",
+      "occurrence": 0,
+      "target": "Still to verify",
+      "context": "th @ line 111 · surrounding text: 问题 / 风险 已确认进展 仍需确认 云账户整体失效导致业务中断 10月14日已恢复后端；随后网站恢复生产服务。 独立账户备用接入和重复恢复能力；本次没有新的演练结果。 部署权限与长期凭据暴露 10月30日记录了短期身份、受保护部署运行器、权限收紧及测试环境旧 SSH 部署配置清理。 较新流程取消了手动回滚任务并更新配置传递；旧流水线结果不能替代新恢复流程验证。 源码访问与备份恢复 本期没有新的源码授权名单或完整备份恢复复核证据。 当前授权名单、备份完整性和异地恢复结果待确认，不沿用旧快照作为现况。"
+    },
+    {
+      "id": "u_5d96fa4bb51f1ab5",
+      "kind": "text",
+      "source": "云账户整体失效导致业务中断",
+      "occurrence": 0,
+      "target": "Cloud-account failure interrupts service",
+      "context": "td @ line 111 · surrounding text: 问题 / 风险 已确认进展 仍需确认 云账户整体失效导致业务中断 10月14日已恢复后端；随后网站恢复生产服务。 独立账户备用接入和重复恢复能力；本次没有新的演练结果。 部署权限与长期凭据暴露 10月30日记录了短期身份、受保护部署运行器、权限收紧及测试环境旧 SSH 部署配置清理。 较新流程取消了手动回滚任务并更新配置传递；旧流水线结果不能替代新恢复流程验证。 源码访问与备份恢复 本期没有新的源码授权名单或完整备份恢复复核证据。 当前授权名单、备份完整性和异地恢复结果待确认，不沿用旧快照作为现况。"
+    },
+    {
+      "id": "u_764b913fdba09a73",
+      "kind": "text",
+      "source": "10月14日已恢复后端；随后网站恢复生产服务。",
+      "occurrence": 0,
+      "target": "Backend service was restored on October 14; websites subsequently returned to production service.",
+      "context": "td @ line 111 · surrounding text: 问题 / 风险 已确认进展 仍需确认 云账户整体失效导致业务中断 10月14日已恢复后端；随后网站恢复生产服务。 独立账户备用接入和重复恢复能力；本次没有新的演练结果。 部署权限与长期凭据暴露 10月30日记录了短期身份、受保护部署运行器、权限收紧及测试环境旧 SSH 部署配置清理。 较新流程取消了手动回滚任务并更新配置传递；旧流水线结果不能替代新恢复流程验证。 源码访问与备份恢复 本期没有新的源码授权名单或完整备份恢复复核证据。 当前授权名单、备份完整性和异地恢复结果待确认，不沿用旧快照作为现况。"
+    },
+    {
+      "id": "u_f5960f89c771c86a",
+      "kind": "text",
+      "source": "独立账户备用接入和重复恢复能力；本次没有新的演练结果。",
+      "occurrence": 0,
+      "target": "Independent-account fallback access and repeatable recovery; this review has no new drill results.",
+      "context": "td @ line 111 · surrounding text: 问题 / 风险 已确认进展 仍需确认 云账户整体失效导致业务中断 10月14日已恢复后端；随后网站恢复生产服务。 独立账户备用接入和重复恢复能力；本次没有新的演练结果。 部署权限与长期凭据暴露 10月30日记录了短期身份、受保护部署运行器、权限收紧及测试环境旧 SSH 部署配置清理。 较新流程取消了手动回滚任务并更新配置传递；旧流水线结果不能替代新恢复流程验证。 源码访问与备份恢复 本期没有新的源码授权名单或完整备份恢复复核证据。 当前授权名单、备份完整性和异地恢复结果待确认，不沿用旧快照作为现况。"
+    },
+    {
+      "id": "u_07c5a3666a4887b6",
+      "kind": "text",
+      "source": "部署权限与长期凭据暴露",
+      "occurrence": 0,
+      "target": "Deployment permissions and persistent credential exposure",
+      "context": "td @ line 111 · surrounding text: 问题 / 风险 已确认进展 仍需确认 云账户整体失效导致业务中断 10月14日已恢复后端；随后网站恢复生产服务。 独立账户备用接入和重复恢复能力；本次没有新的演练结果。 部署权限与长期凭据暴露 10月30日记录了短期身份、受保护部署运行器、权限收紧及测试环境旧 SSH 部署配置清理。 较新流程取消了手动回滚任务并更新配置传递；旧流水线结果不能替代新恢复流程验证。 源码访问与备份恢复 本期没有新的源码授权名单或完整备份恢复复核证据。 当前授权名单、备份完整性和异地恢复结果待确认，不沿用旧快照作为现况。"
+    },
+    {
+      "id": "u_88c4651ec90891dc",
+      "kind": "text",
+      "source": "10月30日记录了短期身份、受保护部署运行器、权限收紧及测试环境旧 SSH 部署配置清理。",
+      "occurrence": 0,
+      "target": "The October 30 record documents short-lived identity, a protected deployment runner, reduced permissions and removal of old staging SSH deployment configuration.",
+      "context": "td @ line 111 · surrounding text: 问题 / 风险 已确认进展 仍需确认 云账户整体失效导致业务中断 10月14日已恢复后端；随后网站恢复生产服务。 独立账户备用接入和重复恢复能力；本次没有新的演练结果。 部署权限与长期凭据暴露 10月30日记录了短期身份、受保护部署运行器、权限收紧及测试环境旧 SSH 部署配置清理。 较新流程取消了手动回滚任务并更新配置传递；旧流水线结果不能替代新恢复流程验证。 源码访问与备份恢复 本期没有新的源码授权名单或完整备份恢复复核证据。 当前授权名单、备份完整性和异地恢复结果待确认，不沿用旧快照作为现况。"
+    },
+    {
+      "id": "u_b961a9f6ed4dec48",
+      "kind": "text",
+      "source": "较新流程取消了手动回滚任务并更新配置传递；旧流水线结果不能替代新恢复流程验证。",
+      "occurrence": 0,
+      "target": "Newer workflow changes removed manual rollback jobs and changed configuration delivery; older pipeline results cannot replace verification of the new recovery procedure.",
+      "context": "td @ line 111 · surrounding text: 问题 / 风险 已确认进展 仍需确认 云账户整体失效导致业务中断 10月14日已恢复后端；随后网站恢复生产服务。 独立账户备用接入和重复恢复能力；本次没有新的演练结果。 部署权限与长期凭据暴露 10月30日记录了短期身份、受保护部署运行器、权限收紧及测试环境旧 SSH 部署配置清理。 较新流程取消了手动回滚任务并更新配置传递；旧流水线结果不能替代新恢复流程验证。 源码访问与备份恢复 本期没有新的源码授权名单或完整备份恢复复核证据。 当前授权名单、备份完整性和异地恢复结果待确认，不沿用旧快照作为现况。"
+    },
+    {
+      "id": "u_db90323d40f36781",
+      "kind": "text",
+      "source": "源码访问与备份恢复",
+      "occurrence": 0,
+      "target": "Source access and backup recovery",
+      "context": "td @ line 111 · surrounding text: 问题 / 风险 已确认进展 仍需确认 云账户整体失效导致业务中断 10月14日已恢复后端；随后网站恢复生产服务。 独立账户备用接入和重复恢复能力；本次没有新的演练结果。 部署权限与长期凭据暴露 10月30日记录了短期身份、受保护部署运行器、权限收紧及测试环境旧 SSH 部署配置清理。 较新流程取消了手动回滚任务并更新配置传递；旧流水线结果不能替代新恢复流程验证。 源码访问与备份恢复 本期没有新的源码授权名单或完整备份恢复复核证据。 当前授权名单、备份完整性和异地恢复结果待确认，不沿用旧快照作为现况。"
+    },
+    {
+      "id": "u_d21e32ac6197d77c",
+      "kind": "text",
+      "source": "本期没有新的源码授权名单或完整备份恢复复核证据。",
+      "occurrence": 0,
+      "target": "No new source-access roster or complete backup/restore review evidence was obtained in this period.",
+      "context": "td @ line 111 · surrounding text: 问题 / 风险 已确认进展 仍需确认 云账户整体失效导致业务中断 10月14日已恢复后端；随后网站恢复生产服务。 独立账户备用接入和重复恢复能力；本次没有新的演练结果。 部署权限与长期凭据暴露 10月30日记录了短期身份、受保护部署运行器、权限收紧及测试环境旧 SSH 部署配置清理。 较新流程取消了手动回滚任务并更新配置传递；旧流水线结果不能替代新恢复流程验证。 源码访问与备份恢复 本期没有新的源码授权名单或完整备份恢复复核证据。 当前授权名单、备份完整性和异地恢复结果待确认，不沿用旧快照作为现况。"
+    },
+    {
+      "id": "u_c2abd82c13694cbc",
+      "kind": "text",
+      "source": "当前授权名单、备份完整性和异地恢复结果待确认，不沿用旧快照作为现况。",
+      "occurrence": 0,
+      "target": "The current access roster, backup integrity and off-site restore results remain unconfirmed; older snapshots are not presented as current state.",
+      "context": "td @ line 111 · surrounding text: 问题 / 风险 已确认进展 仍需确认 云账户整体失效导致业务中断 10月14日已恢复后端；随后网站恢复生产服务。 独立账户备用接入和重复恢复能力；本次没有新的演练结果。 部署权限与长期凭据暴露 10月30日记录了短期身份、受保护部署运行器、权限收紧及测试环境旧 SSH 部署配置清理。 较新流程取消了手动回滚任务并更新配置传递；旧流水线结果不能替代新恢复流程验证。 源码访问与备份恢复 本期没有新的源码授权名单或完整备份恢复复核证据。 当前授权名单、备份完整性和异地恢复结果待确认，不沿用旧快照作为现况。"
+    },
+    {
+      "id": "u_a06459c578537904",
+      "kind": "text",
+      "source": "八、关键时间节点",
+      "occurrence": 0,
+      "target": "8. Key dates",
+      "context": "h2 @ line 113"
+    },
+    {
+      "id": "u_4bedf79bb643b322",
+      "kind": "text",
+      "source": "日期",
+      "occurrence": 0,
+      "target": "Date",
+      "context": "th @ line 114 · surrounding text: 日期 进展与证据边界 10月11日 主网站仓库整合及测试环境部署完成，回滚演练通过；认证购买验收未包含在内。Windows 契约修正发布代码。 10月14–16日 Azure 停机后迁往 AWS；网站静态托管和分发恢复，两个落地站完成生产发布。密钥存储迁移代码与配置核对完成，服务读取和支付验收仍有独立门槛。 10月18–30日 推进节点恢复验证、后台操作、支付转换、退款与佣金；部署流程完成一轮测试环境安全加固。各项生产状态按独立证据判断。 10月31日–11月4日 继续修正 Google 订阅、独享资源续费和推荐归因；部署流程增加配置文件随版本更新，部分共享组件仍待跨服务统一。"
+    },
+    {
+      "id": "u_1d7b08e6653949cd",
+      "kind": "text",
+      "source": "进展与证据边界",
+      "occurrence": 0,
+      "target": "Progress and evidence boundary",
+      "context": "th @ line 114 · surrounding text: 日期 进展与证据边界 10月11日 主网站仓库整合及测试环境部署完成，回滚演练通过；认证购买验收未包含在内。Windows 契约修正发布代码。 10月14–16日 Azure 停机后迁往 AWS；网站静态托管和分发恢复，两个落地站完成生产发布。密钥存储迁移代码与配置核对完成，服务读取和支付验收仍有独立门槛。 10月18–30日 推进节点恢复验证、后台操作、支付转换、退款与佣金；部署流程完成一轮测试环境安全加固。各项生产状态按独立证据判断。 10月31日–11月4日 继续修正 Google 订阅、独享资源续费和推荐归因；部署流程增加配置文件随版本更新，部分共享组件仍待跨服务统一。"
+    },
+    {
+      "id": "u_c48f79644aad36fa",
+      "kind": "text",
+      "source": "10月11日",
+      "occurrence": 0,
+      "target": "October 11",
+      "context": "td @ line 114 · surrounding text: 日期 进展与证据边界 10月11日 主网站仓库整合及测试环境部署完成，回滚演练通过；认证购买验收未包含在内。Windows 契约修正发布代码。 10月14–16日 Azure 停机后迁往 AWS；网站静态托管和分发恢复，两个落地站完成生产发布。密钥存储迁移代码与配置核对完成，服务读取和支付验收仍有独立门槛。 10月18–30日 推进节点恢复验证、后台操作、支付转换、退款与佣金；部署流程完成一轮测试环境安全加固。各项生产状态按独立证据判断。 10月31日–11月4日 继续修正 Google 订阅、独享资源续费和推荐归因；部署流程增加配置文件随版本更新，部分共享组件仍待跨服务统一。"
+    },
+    {
+      "id": "u_5f307e36f23b387a",
+      "kind": "text",
+      "source": "主网站仓库整合及测试环境部署完成，回滚演练通过；认证购买验收未包含在内。Windows 契约修正发布代码。",
+      "occurrence": 0,
+      "target": "The main website repository consolidation and staging deployment completed, with a successful rollback drill; authenticated purchase acceptance testing was not included. Windows contract fixes were published as source.",
+      "context": "td @ line 114 · surrounding text: 日期 进展与证据边界 10月11日 主网站仓库整合及测试环境部署完成，回滚演练通过；认证购买验收未包含在内。Windows 契约修正发布代码。 10月14–16日 Azure 停机后迁往 AWS；网站静态托管和分发恢复，两个落地站完成生产发布。密钥存储迁移代码与配置核对完成，服务读取和支付验收仍有独立门槛。 10月18–30日 推进节点恢复验证、后台操作、支付转换、退款与佣金；部署流程完成一轮测试环境安全加固。各项生产状态按独立证据判断。 10月31日–11月4日 继续修正 Google 订阅、独享资源续费和推荐归因；部署流程增加配置文件随版本更新，部分共享组件仍待跨服务统一。"
+    },
+    {
+      "id": "u_5dbb518ab2534d35",
+      "kind": "text",
+      "source": "10月14–16日",
+      "occurrence": 0,
+      "target": "October 14–16",
+      "context": "td @ line 114 · surrounding text: 日期 进展与证据边界 10月11日 主网站仓库整合及测试环境部署完成，回滚演练通过；认证购买验收未包含在内。Windows 契约修正发布代码。 10月14–16日 Azure 停机后迁往 AWS；网站静态托管和分发恢复，两个落地站完成生产发布。密钥存储迁移代码与配置核对完成，服务读取和支付验收仍有独立门槛。 10月18–30日 推进节点恢复验证、后台操作、支付转换、退款与佣金；部署流程完成一轮测试环境安全加固。各项生产状态按独立证据判断。 10月31日–11月4日 继续修正 Google 订阅、独享资源续费和推荐归因；部署流程增加配置文件随版本更新，部分共享组件仍待跨服务统一。"
+    },
+    {
+      "id": "u_3660f732dfa53b0a",
+      "kind": "text",
+      "source": "Azure 停机后迁往 AWS；网站静态托管和分发恢复，两个落地站完成生产发布。密钥存储迁移代码与配置核对完成，服务读取和支付验收仍有独立门槛。",
+      "occurrence": 0,
+      "target": "Services migrated to AWS after the Azure shutdown. Static website hosting and delivery were restored, and two landing sites completed production releases. Secret-store migration code and configuration checks completed, with separate service-read and payment acceptance gates still outstanding.",
+      "context": "td @ line 114 · surrounding text: 日期 进展与证据边界 10月11日 主网站仓库整合及测试环境部署完成，回滚演练通过；认证购买验收未包含在内。Windows 契约修正发布代码。 10月14–16日 Azure 停机后迁往 AWS；网站静态托管和分发恢复，两个落地站完成生产发布。密钥存储迁移代码与配置核对完成，服务读取和支付验收仍有独立门槛。 10月18–30日 推进节点恢复验证、后台操作、支付转换、退款与佣金；部署流程完成一轮测试环境安全加固。各项生产状态按独立证据判断。 10月31日–11月4日 继续修正 Google 订阅、独享资源续费和推荐归因；部署流程增加配置文件随版本更新，部分共享组件仍待跨服务统一。"
+    },
+    {
+      "id": "u_88448de01d2041ce",
+      "kind": "text",
+      "source": "10月18–30日",
+      "occurrence": 0,
+      "target": "October 18–30",
+      "context": "td @ line 114 · surrounding text: 日期 进展与证据边界 10月11日 主网站仓库整合及测试环境部署完成，回滚演练通过；认证购买验收未包含在内。Windows 契约修正发布代码。 10月14–16日 Azure 停机后迁往 AWS；网站静态托管和分发恢复，两个落地站完成生产发布。密钥存储迁移代码与配置核对完成，服务读取和支付验收仍有独立门槛。 10月18–30日 推进节点恢复验证、后台操作、支付转换、退款与佣金；部署流程完成一轮测试环境安全加固。各项生产状态按独立证据判断。 10月31日–11月4日 继续修正 Google 订阅、独享资源续费和推荐归因；部署流程增加配置文件随版本更新，部分共享组件仍待跨服务统一。"
+    },
+    {
+      "id": "u_443ff4c0ae640c2a",
+      "kind": "text",
+      "source": "推进节点恢复验证、后台操作、支付转换、退款与佣金；部署流程完成一轮测试环境安全加固。各项生产状态按独立证据判断。",
+      "occurrence": 0,
+      "target": "Work progressed on VPN node recovery verification, Back Office (BO) operations, payment conversion, refunds and commissions. Deployment security was hardened in staging. Production status is assessed separately for each change.",
+      "context": "td @ line 114 · surrounding text: 日期 进展与证据边界 10月11日 主网站仓库整合及测试环境部署完成，回滚演练通过；认证购买验收未包含在内。Windows 契约修正发布代码。 10月14–16日 Azure 停机后迁往 AWS；网站静态托管和分发恢复，两个落地站完成生产发布。密钥存储迁移代码与配置核对完成，服务读取和支付验收仍有独立门槛。 10月18–30日 推进节点恢复验证、后台操作、支付转换、退款与佣金；部署流程完成一轮测试环境安全加固。各项生产状态按独立证据判断。 10月31日–11月4日 继续修正 Google 订阅、独享资源续费和推荐归因；部署流程增加配置文件随版本更新，部分共享组件仍待跨服务统一。"
+    },
+    {
+      "id": "u_46bb470ada064924",
+      "kind": "text",
+      "source": "10月31日–11月4日",
+      "occurrence": 0,
+      "target": "October 31–November 4",
+      "context": "td @ line 114 · surrounding text: 日期 进展与证据边界 10月11日 主网站仓库整合及测试环境部署完成，回滚演练通过；认证购买验收未包含在内。Windows 契约修正发布代码。 10月14–16日 Azure 停机后迁往 AWS；网站静态托管和分发恢复，两个落地站完成生产发布。密钥存储迁移代码与配置核对完成，服务读取和支付验收仍有独立门槛。 10月18–30日 推进节点恢复验证、后台操作、支付转换、退款与佣金；部署流程完成一轮测试环境安全加固。各项生产状态按独立证据判断。 10月31日–11月4日 继续修正 Google 订阅、独享资源续费和推荐归因；部署流程增加配置文件随版本更新，部分共享组件仍待跨服务统一。"
+    },
+    {
+      "id": "u_3dafa83694c71110",
+      "kind": "text",
+      "source": "继续修正 Google 订阅、独享资源续费和推荐归因；部署流程增加配置文件随版本更新，部分共享组件仍待跨服务统一。",
+      "occurrence": 0,
+      "target": "Further fixes cover Google subscriptions, dedicated-resource renewal and referral attribution. Deployment now carries configuration files with the release; some shared components still require alignment across services.",
+      "context": "td @ line 114 · surrounding text: 日期 进展与证据边界 10月11日 主网站仓库整合及测试环境部署完成，回滚演练通过；认证购买验收未包含在内。Windows 契约修正发布代码。 10月14–16日 Azure 停机后迁往 AWS；网站静态托管和分发恢复，两个落地站完成生产发布。密钥存储迁移代码与配置核对完成，服务读取和支付验收仍有独立门槛。 10月18–30日 推进节点恢复验证、后台操作、支付转换、退款与佣金；部署流程完成一轮测试环境安全加固。各项生产状态按独立证据判断。 10月31日–11月4日 继续修正 Google 订阅、独享资源续费和推荐归因；部署流程增加配置文件随版本更新，部分共享组件仍待跨服务统一。"
+    },
+    {
+      "id": "u_42949b13ea3425d1",
+      "kind": "text",
+      "source": "九、技术债与后续复用边界",
+      "occurrence": 0,
+      "target": "9. Technical debt and reuse boundaries",
+      "context": "h2 @ line 116"
+    },
+    {
+      "id": "u_fa61823b07aa7d9a",
+      "kind": "text",
+      "source": "既有交接清理背景不重复展开；本期新增事实是跨云恢复、支付契约修正和部署加固，FFF 仅可复用版本化源码模块，不能据此认定其独立运行环境已就绪。",
+      "occurrence": 0,
+      "target": "The established handover-cleanup background is not repeated. New evidence concerns cross-cloud recovery, payment-contract fixes and deployment hardening. FFF can reuse versioned source modules, but this does not establish readiness of its independent runtime.",
+      "context": "p @ line 117"
+    },
+    {
+      "id": "u_b5940ad38a7e38d4",
+      "kind": "text",
+      "source": "本报告覆盖上次站点更新后至 2026-11-04 的证据，横跨第14–16阶段；任务系统仍显示较早活动周期，本文按共享日历归档，不以任务状态推断交付完成。",
+      "occurrence": 0,
+      "target": "This report covers evidence since the previous site update through 2026-11-04, spanning Sprints 14–16. The task system still shows an earlier active cycle. Filing follows the shared calendar, and task status is not used to infer delivery completion.",
+      "context": "p.note @ line 118"
+    },
+    {
+      "id": "u_d4b4e660aea28ca0",
+      "kind": "text",
+      "source": "Arrowfish / FFF · 累计进展报告 · 编制于 2026-11-04",
+      "occurrence": 0,
+      "target": "Arrowfish / FFF · Cumulative progress report · Prepared on 2026-11-04",
+      "context": "footer.footer @ line 119"
+    }
+  ],
+  "blocks": {
+    "b0001": {
+      "type": "heading",
+      "source": "第14–16阶段 · 灾后恢复、支付与发布进展",
+      "occurrence": 0
+    },
+    "b0002": {
+      "type": "p",
+      "source": "证据截至 2026-11-04 · 覆盖 2026-10-10 至 2026-11-04 · 上次站点更新 2026-10-09",
+      "occurrence": 0
+    },
+    "b0003": {
+      "type": "p",
+      "source": "Azure 停机后的后端与网站已恢复，支付和续费修正持续推进；下一步是核对各服务版本并完成支付、客户端与灾备验收。",
+      "occurrence": 0
+    },
+    "b0004": {
+      "type": "heading",
+      "source": "一、关键决策与当前状态",
+      "occurrence": 0
+    },
+    "b0005": {
+      "type": "table-row",
+      "source": "事项 决策 / 现况",
+      "occurrence": 0
+    },
+    "b0006": {
+      "type": "table-row",
+      "source": "业务恢复 10月14日迁至 AWS；团队报告约 2.5 小时恢复后端且无数据丢失，后续容灾能力仍需独立验证。",
+      "occurrence": 0
+    },
+    "b0007": {
+      "type": "table-row",
+      "source": "支付发布 新增修正已有代码证据；共享组件版本尚未在所有后端服务统一，不把合并当作已上线。",
+      "occurrence": 0
+    },
+    "b0008": {
+      "type": "table-row",
+      "source": "发布次序 先对齐版本和测试，再逐项确认部署与验收；正式发布时间待确认。",
+      "occurrence": 0
+    },
+    "b0009": {
+      "type": "heading",
+      "source": "二、本期关键成果",
+      "occurrence": 0
+    },
+    "b0010": {
+      "type": "table-row",
+      "source": "成果 已确认边界",
+      "occurrence": 0
+    },
+    "b0011": {
+      "type": "table-row",
+      "source": "后端灾后恢复 内部事故记录确认服务恢复；2.5 小时和无数据丢失为团队报告，非本次重新测量。",
+      "occurrence": 0
+    },
+    "b0012": {
+      "type": "table-row",
+      "source": "2 个落地站 10月15–16日生产发布完成，HTTP 冒烟检查通过；登录、购买和视觉验收不包含在该结果中。",
+      "occurrence": 0
+    },
+    "b0013": {
+      "type": "table-row",
+      "source": "Windows 5 项契约修正 会员等级、到期时间、线路数据、购买选项和诊断字段已修正并发布代码；安装包与实机验收待确认。",
+      "occurrence": 0
+    },
+    "b0014": {
+      "type": "table-row",
+      "source": "节点恢复与部署安全 10月18日恢复检查改动通过本地验证及相关测试环境部署；10月30日部署安全加固记录了 8 条目标流水线通过。",
+      "occurrence": 0
+    },
+    "b0015": {
+      "type": "p",
+      "source": "以上是不同交付范围的结果，不能相加为完成率；本次未重新运行历史部署、恢复或实机测试。",
+      "occurrence": 0
+    },
+    "b0016": {
+      "type": "heading",
+      "source": "三、改善与商业价值",
+      "occurrence": 0
+    },
+    "b0017": {
+      "type": "table-row",
+      "source": "改动 业务价值与限制",
+      "occurrence": 0
+    },
+    "b0018": {
+      "type": "table-row",
+      "source": "支付、续费与退款 补齐待付款续付、支付方式切换、套餐转换及退款边界；Google 结果按订单核对，关闭自动续费后保留剩余权益。新增行为的真实支付与回调验收待确认。",
+      "occurrence": 0
+    },
+    "b0019": {
+      "type": "table-row",
+      "source": "独享资源与佣金 修正等待分配资源的续费、独享 IP 权益和佣金统计；后续规则以最新实现为准，旧的代理佣金追扣方案已被替代。部署与财务结果待确认。",
+      "occurrence": 0
+    },
+    "b0020": {
+      "type": "table-row",
+      "source": "网站归因与后台操作 分享链接、下载和账户推荐人传递已有跨端修正；后台补齐筛选、订阅只读视图及退款提示。实际获客转化、订单对账和操作验收待确认。",
+      "occurrence": 0
+    },
+    "b0021": {
+      "type": "table-row",
+      "source": "财务影响 本次没有新增收入、成本或退款损失的生产核验，不估算节省金额。",
+      "occurrence": 0
+    },
+    "b0022": {
+      "type": "heading",
+      "source": "四、上线计划与后端兼容要求",
+      "occurrence": 0
+    },
+    "b0023": {
+      "type": "p",
+      "source": "代码合并、测试环境部署、客户端回归、地区可用性和正式验收分别记录。后端服务已在灾后恢复，不代表随后每一项支付修正都已部署或验收。",
+      "occurrence": 0
+    },
+    "b0024": {
+      "type": "p",
+      "source": "当前 API 已采用较新的共享组件，后台与定时任务主线仍使用较早版本；应先确认所需修正已覆盖所有消费服务，再验证同一账户的购买、续费、退款和权益结果。",
+      "occurrence": 0
+    },
+    "b0025": {
+      "type": "p",
+      "source": "后端仍需兼容可升级 Android 及保留使用的旧版 iOS、Windows 客户端。新客户端提交不代表旧版本已退出使用；各端、各地区验收均待相应证据确认。",
+      "occurrence": 0
+    },
+    "b0026": {
+      "type": "heading",
+      "source": "五、FFF 并行进展",
+      "occurrence": 0
+    },
+    "b0027": {
+      "type": "p",
+      "source": "本次补充是源码对账，不是 Lex 新提交的进度报告：Flutter 已有套餐购买、余额支付、充值和支付事件处理代码；独享专线与独享 IP 下单的最新接线尚未合入主线。正式完成度仍待 Lex 报告与验收证据。",
+      "occurrence": 0
+    },
+    "b0028": {
+      "type": "p",
+      "source": "11月2日已有一轮开发分支合并，之后仍有未合入主线的改动；存档的接口检查结果仍列出错误，历史测试通过数不能代表当前覆盖率。",
+      "occurrence": 0
+    },
+    "b0029": {
+      "type": "p",
+      "source": "Lex 负责 Flutter 客户端报告；马来西亚团队负责 iOS、macOS 验收；Roy 负责支付网关及公司注册相关商务事项。FFF 独立运行环境、账户和数据隔离仍须单独验证。",
+      "occurrence": 0
+    },
+    "b0030": {
+      "type": "heading",
+      "source": "六、下一步计划",
+      "occurrence": 0
+    },
+    "b0031": {
+      "type": "table-row",
+      "source": "顺序 / 责任范围 验收结果与时间边界",
+      "occurrence": 0
+    },
+    "b0032": {
+      "type": "table-row",
+      "source": "1 · 后端与客户端工程 先统一支付修正的服务版本，验证 Google 新购、关闭续费、延迟降级、重复回调与独享资源续费；作为第16阶段优先验证范围，完成日期待确认。",
+      "occurrence": 0
+    },
+    "b0033": {
+      "type": "table-row",
+      "source": "2 · 发布与运维 核对配置与程序版本、健康检查和恢复步骤；补充独立账户接入及异地恢复演练证据后，再关闭灾备门槛。完成日期待确认。",
+      "occurrence": 0
+    },
+    "b0034": {
+      "type": "table-row",
+      "source": "3 · FFF 与平台验收 Lex 汇总 Flutter 状态并核对接口；各责任团队分别固定平台产物、验证四条购买路径和连接。发布以这些验收结果为前提，日期待确认。",
+      "occurrence": 0
+    },
+    "b0035": {
+      "type": "heading",
+      "source": "七、安全与权限管控",
+      "occurrence": 0
+    },
+    "b0036": {
+      "type": "table-row",
+      "source": "问题 / 风险 已确认进展 仍需确认",
+      "occurrence": 0
+    },
+    "b0037": {
+      "type": "table-row",
+      "source": "云账户整体失效导致业务中断 10月14日已恢复后端；随后网站恢复生产服务。 独立账户备用接入和重复恢复能力；本次没有新的演练结果。",
+      "occurrence": 0
+    },
+    "b0038": {
+      "type": "table-row",
+      "source": "部署权限与长期凭据暴露 10月30日记录了短期身份、受保护部署运行器、权限收紧及测试环境旧 SSH 部署配置清理。 较新流程取消了手动回滚任务并更新配置传递；旧流水线结果不能替代新恢复流程验证。",
+      "occurrence": 0
+    },
+    "b0039": {
+      "type": "table-row",
+      "source": "源码访问与备份恢复 本期没有新的源码授权名单或完整备份恢复复核证据。 当前授权名单、备份完整性和异地恢复结果待确认，不沿用旧快照作为现况。",
+      "occurrence": 0
+    },
+    "b0040": {
+      "type": "heading",
+      "source": "八、关键时间节点",
+      "occurrence": 0
+    },
+    "b0041": {
+      "type": "table-row",
+      "source": "日期 进展与证据边界",
+      "occurrence": 0
+    },
+    "b0042": {
+      "type": "table-row",
+      "source": "10月11日 主网站仓库整合及测试环境部署完成，回滚演练通过；认证购买验收未包含在内。Windows 契约修正发布代码。",
+      "occurrence": 0
+    },
+    "b0043": {
+      "type": "table-row",
+      "source": "10月14–16日 Azure 停机后迁往 AWS；网站静态托管和分发恢复，两个落地站完成生产发布。密钥存储迁移代码与配置核对完成，服务读取和支付验收仍有独立门槛。",
+      "occurrence": 0
+    },
+    "b0044": {
+      "type": "table-row",
+      "source": "10月18–30日 推进节点恢复验证、后台操作、支付转换、退款与佣金；部署流程完成一轮测试环境安全加固。各项生产状态按独立证据判断。",
+      "occurrence": 0
+    },
+    "b0045": {
+      "type": "table-row",
+      "source": "10月31日–11月4日 继续修正 Google 订阅、独享资源续费和推荐归因；部署流程增加配置文件随版本更新，部分共享组件仍待跨服务统一。",
+      "occurrence": 0
+    },
+    "b0046": {
+      "type": "heading",
+      "source": "九、技术债与后续复用边界",
+      "occurrence": 0
+    },
+    "b0047": {
+      "type": "p",
+      "source": "既有交接清理背景不重复展开；本期新增事实是跨云恢复、支付契约修正和部署加固，FFF 仅可复用版本化源码模块，不能据此认定其独立运行环境已就绪。",
+      "occurrence": 0
+    },
+    "b0048": {
+      "type": "p",
+      "source": "本报告覆盖上次站点更新后至 2026-11-04 的证据，横跨第14–16阶段；任务系统仍显示较早活动周期，本文按共享日历归档，不以任务状态推断交付完成。",
+      "occurrence": 0
+    }
+  },
+  "reviewedTargetHash": "d64c54455df0e904"
+}

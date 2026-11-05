@@ -1,5 +1,6 @@
 {
   "order": [
+    "sprint-14-16-progress-20261104",
     "goal-2026-20260827",
     "sprint-12-progress-20261009",
     "sprint-14-progress-20261009",
@@ -559,6 +560,13 @@
     }
   },
   "blockers": [
+    {
+      "reportId": "sprint-14-16-progress-20261104",
+      "blockId": "b0015",
+      "reportDate": "2026-11-04",
+      "section": "二、本期关键成果",
+      "text": "以上是不同交付范围的结果，不能相加为完成率；本次未重新运行历史部署、恢复或实机测试。"
+    },
     {
       "reportId": "goal-2026-20260827",
       "blockId": "reading-b0009",

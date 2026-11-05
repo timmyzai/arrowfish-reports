@@ -9,13 +9,15 @@ const fixture = (id, overrides = {}) => ({ id, file: id + '.html', date: '2026-1
 
 test('actual catalogue groups every report once and recommends the current main report', () => {
   const groups = groupReports(reports);
-  assert.equal(groups.flatMap(group => group.reports).length, 27);
-  assert.equal(new Set(groups.flatMap(group => group.reports.map(report => report.id))).size, 27);
-  assert.deepEqual(groups.slice(0, 5).map(group => group.key), ['14-14', '13-13', '12-12', '11-11', '10-10']);
-  assert.deepEqual(groups[0].reports.map(report => report.id), [
+  assert.equal(groups.flatMap(group => group.reports).length, 28);
+  assert.equal(new Set(groups.flatMap(group => group.reports.map(report => report.id))).size, 28);
+  assert.deepEqual(groups.slice(0, 5).map(group => group.key), ['14-16', '14-14', '13-13', '12-12', '11-11']);
+  assert.equal(groups[0].recommendedId, 'sprint-14-16-progress-20261104');
+  assert.deepEqual(groups[0].reports.map(report => report.id), ['sprint-14-16-progress-20261104']);
+  assert.deepEqual(groups[1].reports.map(report => report.id), [
     'sprint-14-progress-20261009', 'sprint-14-android-qa-20261009', 'sprint-14-fff-progress-20261009'
   ]);
-  assert.equal(groups[2].recommendedId, 'sprint-12-progress-20261009');
+  assert.equal(groups[3].recommendedId, 'sprint-12-progress-20261009');
   assert.equal(groups.at(-2).key, '0-1');
   assert.equal(groups.at(-1).key, '0-0');
 });
