@@ -18,7 +18,7 @@
       "source": "Arrowfish VPN — 项目进度汇报",
       "occurrence": 0,
       "target": "Arrowfish VPN - Project Progress Report",
-      "context": "h1 @ line 73"
+      "context": "h1 @ line 72"
     },
     {
       "id": "u_f7af4a9f9045a2d8",
@@ -26,7 +26,7 @@
       "source": "2026年4月24日 · 第2阶段完成摘要（4/13–4/24）· 第3阶段计划",
       "occurrence": 0,
       "target": "April 24, 2026 · Summary of Sprint 2 Completion (Apr 13–Apr 24) · Plan for Sprint 3",
-      "context": "div.subtitle @ line 74"
+      "context": "div.subtitle @ line 73"
     },
     {
       "id": "u_61bb979b5206e800",
@@ -34,7 +34,7 @@
       "source": "一句话",
       "occurrence": 0,
       "target": "One Sentence",
-      "context": "div.tldr-label @ line 79"
+      "context": "div.tldr-label @ line 78"
     },
     {
       "id": "u_1883cd661b9765fe",
@@ -42,7 +42,7 @@
       "source": "第2阶段收尾完成，对外发布版本 v3.0.4 已就绪。",
       "occurrence": 0,
       "target": "Sprint 2 Closure Complete, Version v3.0.4 Ready for External Release.",
-      "context": "strong @ line 81 · surrounding text: 第2阶段收尾完成，对外发布版本 v3.0.4 已就绪。 下周双团队 QA 联合签核 → 后端 v3.0.0 上 prod → Google Play 提交（生产基线 v1.7.38 → v3.0.4，跨度反映两轮重大升级）。 Arrowfish 正式版预计下周内上线。 第3阶段重点：清理后端技术债，让 FFF 直接复用同一套后端。"
+      "context": "strong @ line 80 · surrounding text: 第2阶段收尾完成，对外发布版本 v3.0.4 已就绪。 下周双团队 QA 联合签核 → 后端 v3.0.0 上 prod → Google Play 提交（生产基线 v1.7.38 → v3.0.4，跨度反映两轮重大升级）。 Arrowfish 正式版预计下周内上线。 第3阶段重点：清理后端技术债，让 FFF 直接复用同一套后端。"
     },
     {
       "id": "u_2ecffd7f8448de22",
@@ -50,7 +50,7 @@
       "source": "下周双团队 QA 联合签核 → 后端 v3.0.0 上 prod → Google Play 提交（生产基线 v1.7.38 → v3.0.4，跨度反映两轮重大升级）。",
       "occurrence": 0,
       "target": "Joint QA Review with the Other Team Next Week → Backend v3.0.0 to Prod → Google Play Submission (Baseline from v1.7.38 to v3.0.4, reflecting two major upgrades).",
-      "context": "div.tldr-text @ line 81 · surrounding text: 第2阶段收尾完成，对外发布版本 v3.0.4 已就绪。 下周双团队 QA 联合签核 → 后端 v3.0.0 上 prod → Google Play 提交（生产基线 v1.7.38 → v3.0.4，跨度反映两轮重大升级）。 Arrowfish 正式版预计下周内上线。 第3阶段重点：清理后端技术债，让 FFF 直接复用同一套后端。"
+      "context": "div.tldr-text @ line 80 · surrounding text: 第2阶段收尾完成，对外发布版本 v3.0.4 已就绪。 下周双团队 QA 联合签核 → 后端 v3.0.0 上 prod → Google Play 提交（生产基线 v1.7.38 → v3.0.4，跨度反映两轮重大升级）。 Arrowfish 正式版预计下周内上线。 第3阶段重点：清理后端技术债，让 FFF 直接复用同一套后端。"
     },
     {
       "id": "u_c390790ba590ad5b",
@@ -58,7 +58,7 @@
       "source": "Arrowfish 正式版预计下周内上线。",
       "occurrence": 0,
       "target": "Arrowfish Official Version Expected to Go Live Next Week.",
-      "context": "strong @ line 81 · surrounding text: 第2阶段收尾完成，对外发布版本 v3.0.4 已就绪。 下周双团队 QA 联合签核 → 后端 v3.0.0 上 prod → Google Play 提交（生产基线 v1.7.38 → v3.0.4，跨度反映两轮重大升级）。 Arrowfish 正式版预计下周内上线。 第3阶段重点：清理后端技术债，让 FFF 直接复用同一套后端。"
+      "context": "strong @ line 80 · surrounding text: 第2阶段收尾完成，对外发布版本 v3.0.4 已就绪。 下周双团队 QA 联合签核 → 后端 v3.0.0 上 prod → Google Play 提交（生产基线 v1.7.38 → v3.0.4，跨度反映两轮重大升级）。 Arrowfish 正式版预计下周内上线。 第3阶段重点：清理后端技术债，让 FFF 直接复用同一套后端。"
     },
     {
       "id": "u_1095e0feb3e8d0ae",
@@ -66,7 +66,7 @@
       "source": "第3阶段重点：清理后端技术债，让 FFF 直接复用同一套后端。",
       "occurrence": 0,
       "target": "Sprint 3 Focus: Clean Up Backend Technical Debt, Enable FFF Directly Reuse the Same Backend.",
-      "context": "div.tldr-text @ line 81 · surrounding text: 第2阶段收尾完成，对外发布版本 v3.0.4 已就绪。 下周双团队 QA 联合签核 → 后端 v3.0.0 上 prod → Google Play 提交（生产基线 v1.7.38 → v3.0.4，跨度反映两轮重大升级）。 Arrowfish 正式版预计下周内上线。 第3阶段重点：清理后端技术债，让 FFF 直接复用同一套后端。"
+      "context": "div.tldr-text @ line 80 · surrounding text: 第2阶段收尾完成，对外发布版本 v3.0.4 已就绪。 下周双团队 QA 联合签核 → 后端 v3.0.0 上 prod → Google Play 提交（生产基线 v1.7.38 → v3.0.4，跨度反映两轮重大升级）。 Arrowfish 正式版预计下周内上线。 第3阶段重点：清理后端技术债，让 FFF 直接复用同一套后端。"
     },
     {
       "id": "u_7c4e9ac471de5ae1",
@@ -74,7 +74,7 @@
       "source": "一、需要知悉事项",
       "occurrence": 0,
       "target": "I. Matters of Note",
-      "context": "h2 @ line 86"
+      "context": "h2 @ line 85"
     },
     {
       "id": "u_864f5af520f7663e",
@@ -82,7 +82,7 @@
       "source": "FFF 公司事项进展",
       "occurrence": 0,
       "target": "FFF Company Matters Update",
-      "context": "strong @ line 90 · surrounding text: FFF 公司事项进展 — FFF 公司欧盟电话号码注册与新支付通道办理仍在 Roy 一侧推进，进度待同步。"
+      "context": "strong @ line 89 · surrounding text: FFF 公司事项进展 — FFF 公司欧盟电话号码注册与新支付通道办理仍在 Roy 一侧推进，进度待同步。"
     },
     {
       "id": "u_1cc64ec71306fd2d",
@@ -90,7 +90,7 @@
       "source": "— FFF 公司欧盟电话号码注册与新支付通道办理仍在 Roy 一侧推进，进度待同步。",
       "occurrence": 0,
       "target": "— FFF Company EU phone number registration and new payment channel processing are still being advanced by Roy, progress to be synchronized.",
-      "context": "div @ line 90 · surrounding text: FFF 公司事项进展 — FFF 公司欧盟电话号码注册与新支付通道办理仍在 Roy 一侧推进，进度待同步。"
+      "context": "div @ line 89 · surrounding text: FFF 公司事项进展 — FFF 公司欧盟电话号码注册与新支付通道办理仍在 Roy 一侧推进，进度待同步。"
     },
     {
       "id": "u_34d903612da54fe6",
@@ -98,7 +98,7 @@
       "source": "🔴 合规预警",
       "occurrence": 0,
       "target": "🔴 Compliance Warning",
-      "context": "strong @ line 94 · surrounding text: 🔴 合规预警 — 本周审计发现后端 user_flows 表在长期保存「用户 × 节点 × 小时」的使用记录，与 VaaS 无日志承诺冲突。已排入第3阶段优先项（ mod-efficiency Phase 12 ）拆表处理。 在此修复完成前，对外不宜把「无日志」作为正式宣传语 ，尤其是 FFF 欧盟上线时的合规材料。详见第九节。"
+      "context": "strong @ line 93 · surrounding text: 🔴 合规预警 — 本周审计发现后端 user_flows 表在长期保存「用户 × 节点 × 小时」的使用记录，与 VaaS 无日志承诺冲突。已排入第3阶段优先项（ mod-efficiency Phase 12 ）拆表处理。 在此修复完成前，对外不宜把「无日志」作为正式宣传语 ，尤其是 FFF 欧盟上线时的合规材料。详见第九节。"
     },
     {
       "id": "u_ed9857679072ea39",
@@ -106,7 +106,7 @@
       "source": "— 本周审计发现后端",
       "occurrence": 0,
       "target": "- This week's audit found backend",
-      "context": "div @ line 94 · surrounding text: 🔴 合规预警 — 本周审计发现后端 user_flows 表在长期保存「用户 × 节点 × 小时」的使用记录，与 VaaS 无日志承诺冲突。已排入第3阶段优先项（ mod-efficiency Phase 12 ）拆表处理。 在此修复完成前，对外不宜把「无日志」作为正式宣传语 ，尤其是 FFF 欧盟上线时的合规材料。详见第九节。"
+      "context": "div @ line 93 · surrounding text: 🔴 合规预警 — 本周审计发现后端 user_flows 表在长期保存「用户 × 节点 × 小时」的使用记录，与 VaaS 无日志承诺冲突。已排入第3阶段优先项（ mod-efficiency Phase 12 ）拆表处理。 在此修复完成前，对外不宜把「无日志」作为正式宣传语 ，尤其是 FFF 欧盟上线时的合规材料。详见第九节。"
     },
     {
       "id": "u_c85f4dda860948f4",
@@ -114,7 +114,7 @@
       "source": "表在长期保存「用户 × 节点 × 小时」的使用记录，与 VaaS 无日志承诺冲突。已排入第3阶段优先项（",
       "occurrence": 0,
       "target": "The table retains long-term ‘user × VPN node × hour’ usage records, conflicting with VaaS's no-logging commitment. It has been prioritized for Sprint 3 (",
-      "context": "div @ line 94 · surrounding text: 🔴 合规预警 — 本周审计发现后端 user_flows 表在长期保存「用户 × 节点 × 小时」的使用记录，与 VaaS 无日志承诺冲突。已排入第3阶段优先项（ mod-efficiency Phase 12 ）拆表处理。 在此修复完成前，对外不宜把「无日志」作为正式宣传语 ，尤其是 FFF 欧盟上线时的合规材料。详见第九节。"
+      "context": "div @ line 93 · surrounding text: 🔴 合规预警 — 本周审计发现后端 user_flows 表在长期保存「用户 × 节点 × 小时」的使用记录，与 VaaS 无日志承诺冲突。已排入第3阶段优先项（ mod-efficiency Phase 12 ）拆表处理。 在此修复完成前，对外不宜把「无日志」作为正式宣传语 ，尤其是 FFF 欧盟上线时的合规材料。详见第九节。"
     },
     {
       "id": "u_d8925eca648dca6c",
@@ -122,7 +122,7 @@
       "source": "）拆表处理。",
       "occurrence": 0,
       "target": ") and will be split into a new table.",
-      "context": "div @ line 94 · surrounding text: 🔴 合规预警 — 本周审计发现后端 user_flows 表在长期保存「用户 × 节点 × 小时」的使用记录，与 VaaS 无日志承诺冲突。已排入第3阶段优先项（ mod-efficiency Phase 12 ）拆表处理。 在此修复完成前，对外不宜把「无日志」作为正式宣传语 ，尤其是 FFF 欧盟上线时的合规材料。详见第九节。"
+      "context": "div @ line 93 · surrounding text: 🔴 合规预警 — 本周审计发现后端 user_flows 表在长期保存「用户 × 节点 × 小时」的使用记录，与 VaaS 无日志承诺冲突。已排入第3阶段优先项（ mod-efficiency Phase 12 ）拆表处理。 在此修复完成前，对外不宜把「无日志」作为正式宣传语 ，尤其是 FFF 欧盟上线时的合规材料。详见第九节。"
     },
     {
       "id": "u_11b970217f8edea0",
@@ -130,7 +130,7 @@
       "source": "在此修复完成前，对外不宜把「无日志」作为正式宣传语",
       "occurrence": 0,
       "target": "- Until this fix is completed, we should not promote the phrase 'no logs' as a formal statement.",
-      "context": "strong @ line 94 · surrounding text: 🔴 合规预警 — 本周审计发现后端 user_flows 表在长期保存「用户 × 节点 × 小时」的使用记录，与 VaaS 无日志承诺冲突。已排入第3阶段优先项（ mod-efficiency Phase 12 ）拆表处理。 在此修复完成前，对外不宜把「无日志」作为正式宣传语 ，尤其是 FFF 欧盟上线时的合规材料。详见第九节。"
+      "context": "strong @ line 93 · surrounding text: 🔴 合规预警 — 本周审计发现后端 user_flows 表在长期保存「用户 × 节点 × 小时」的使用记录，与 VaaS 无日志承诺冲突。已排入第3阶段优先项（ mod-efficiency Phase 12 ）拆表处理。 在此修复完成前，对外不宜把「无日志」作为正式宣传语 ，尤其是 FFF 欧盟上线时的合规材料。详见第九节。"
     },
     {
       "id": "u_7c9afb9d3b9c20f9",
@@ -138,7 +138,7 @@
       "source": "，尤其是 FFF 欧盟上线时的合规材料。详见第九节。",
       "occurrence": 0,
       "target": "especially compliance materials during the launch of FFF Alliance. See Section 9.",
-      "context": "div @ line 94 · surrounding text: 🔴 合规预警 — 本周审计发现后端 user_flows 表在长期保存「用户 × 节点 × 小时」的使用记录，与 VaaS 无日志承诺冲突。已排入第3阶段优先项（ mod-efficiency Phase 12 ）拆表处理。 在此修复完成前，对外不宜把「无日志」作为正式宣传语 ，尤其是 FFF 欧盟上线时的合规材料。详见第九节。"
+      "context": "div @ line 93 · surrounding text: 🔴 合规预警 — 本周审计发现后端 user_flows 表在长期保存「用户 × 节点 × 小时」的使用记录，与 VaaS 无日志承诺冲突。已排入第3阶段优先项（ mod-efficiency Phase 12 ）拆表处理。 在此修复完成前，对外不宜把「无日志」作为正式宣传语 ，尤其是 FFF 欧盟上线时的合规材料。详见第九节。"
     },
     {
       "id": "u_0121d4b3a041d95e",
@@ -146,7 +146,7 @@
       "source": "专属线路（专线）续费体验缺口 — 新发现",
       "occurrence": 0,
       "target": "Gap in Dedicated Line Renewal Experience for Existing Customers — New Discovery",
-      "context": "strong @ line 98 · surrounding text: 专属线路（专线）续费体验缺口 — 新发现 — 现有付费客户的专线到期后， 系统不允许在同一个节点续费，必须重新购买一条新的专线 。重新购买会重新分配节点，客户原有的 IP 与路由习惯被打断，属于付费用户流失风险点。 团队规划： 引入「自动续费扣款」 — 到期前自动从余额 / 绑定支付通道扣款， 保留原节点绑定不变 （无需重新购买、无需重新分配节点）。第3阶段范围已锁定，列入 第4阶段候选 ，与节点自动化路线图、FFF 通用支付模块共用，避免两个产品各做一套。 商业价值： 专线是高客单价品类，续费摩擦直接影响 LTV；自动续费可同时降低客服干预与支付失败导致的非自愿流失。"
+      "context": "strong @ line 97 · surrounding text: 专属线路（专线）续费体验缺口 — 新发现 — 现有付费客户的专线到期后， 系统不允许在同一个节点续费，必须重新购买一条新的专线 。重新购买会重新分配节点，客户原有的 IP 与路由习惯被打断，属于付费用户流失风险点。 团队规划： 引入「自动续费扣款」 — 到期前自动从余额 / 绑定支付通道扣款， 保留原节点绑定不变 （无需重新购买、无需重新分配节点）。第3阶段范围已锁定，列入 第4阶段候选 ，与节点自动化路线图、FFF 通用支付模块共用，避免两个产品各做一套。 商业价值： 专线是高客单价品类，续费摩擦直接影响 LTV；自动续费可同时降低客服干预与支付失败导致的非自愿流失。"
     },
     {
       "id": "u_a53b5a7a3cfa08d0",
@@ -154,7 +154,7 @@
       "source": "— 现有付费客户的专线到期后，",
       "occurrence": 0,
       "target": "— After existing paid customers' dedicated lines expire,",
-      "context": "div @ line 98 · surrounding text: 专属线路（专线）续费体验缺口 — 新发现 — 现有付费客户的专线到期后， 系统不允许在同一个节点续费，必须重新购买一条新的专线 。重新购买会重新分配节点，客户原有的 IP 与路由习惯被打断，属于付费用户流失风险点。 团队规划： 引入「自动续费扣款」 — 到期前自动从余额 / 绑定支付通道扣款， 保留原节点绑定不变 （无需重新购买、无需重新分配节点）。第3阶段范围已锁定，列入 第4阶段候选 ，与节点自动化路线图、FFF 通用支付模块共用，避免两个产品各做一套。 商业价值： 专线是高客单价品类，续费摩擦直接影响 LTV；自动续费可同时降低客服干预与支付失败导致的非自愿流失。"
+      "context": "div @ line 97 · surrounding text: 专属线路（专线）续费体验缺口 — 新发现 — 现有付费客户的专线到期后， 系统不允许在同一个节点续费，必须重新购买一条新的专线 。重新购买会重新分配节点，客户原有的 IP 与路由习惯被打断，属于付费用户流失风险点。 团队规划： 引入「自动续费扣款」 — 到期前自动从余额 / 绑定支付通道扣款， 保留原节点绑定不变 （无需重新购买、无需重新分配节点）。第3阶段范围已锁定，列入 第4阶段候选 ，与节点自动化路线图、FFF 通用支付模块共用，避免两个产品各做一套。 商业价值： 专线是高客单价品类，续费摩擦直接影响 LTV；自动续费可同时降低客服干预与支付失败导致的非自愿流失。"
     },
     {
       "id": "u_f0200f67662dc408",
@@ -162,7 +162,7 @@
       "source": "系统不允许在同一个节点续费，必须重新购买一条新的专线",
       "occurrence": 0,
       "target": "The system does not allow renewal at the same VPN node; a new dedicated line must be purchased instead.",
-      "context": "strong @ line 98 · surrounding text: 专属线路（专线）续费体验缺口 — 新发现 — 现有付费客户的专线到期后， 系统不允许在同一个节点续费，必须重新购买一条新的专线 。重新购买会重新分配节点，客户原有的 IP 与路由习惯被打断，属于付费用户流失风险点。 团队规划： 引入「自动续费扣款」 — 到期前自动从余额 / 绑定支付通道扣款， 保留原节点绑定不变 （无需重新购买、无需重新分配节点）。第3阶段范围已锁定，列入 第4阶段候选 ，与节点自动化路线图、FFF 通用支付模块共用，避免两个产品各做一套。 商业价值： 专线是高客单价品类，续费摩擦直接影响 LTV；自动续费可同时降低客服干预与支付失败导致的非自愿流失。"
+      "context": "strong @ line 97 · surrounding text: 专属线路（专线）续费体验缺口 — 新发现 — 现有付费客户的专线到期后， 系统不允许在同一个节点续费，必须重新购买一条新的专线 。重新购买会重新分配节点，客户原有的 IP 与路由习惯被打断，属于付费用户流失风险点。 团队规划： 引入「自动续费扣款」 — 到期前自动从余额 / 绑定支付通道扣款， 保留原节点绑定不变 （无需重新购买、无需重新分配节点）。第3阶段范围已锁定，列入 第4阶段候选 ，与节点自动化路线图、FFF 通用支付模块共用，避免两个产品各做一套。 商业价值： 专线是高客单价品类，续费摩擦直接影响 LTV；自动续费可同时降低客服干预与支付失败导致的非自愿流失。"
     },
     {
       "id": "u_6b89e8d790694600",
@@ -170,7 +170,7 @@
       "source": "。重新购买会重新分配节点，客户原有的 IP 与路由习惯被打断，属于付费用户流失风险点。",
       "occurrence": 0,
       "target": "Rebuying will reallocate VPN nodes, disrupting customers' original IPs and routing habits, which is a risk point for paid user loss.",
-      "context": "div @ line 98 · surrounding text: 专属线路（专线）续费体验缺口 — 新发现 — 现有付费客户的专线到期后， 系统不允许在同一个节点续费，必须重新购买一条新的专线 。重新购买会重新分配节点，客户原有的 IP 与路由习惯被打断，属于付费用户流失风险点。 团队规划： 引入「自动续费扣款」 — 到期前自动从余额 / 绑定支付通道扣款， 保留原节点绑定不变 （无需重新购买、无需重新分配节点）。第3阶段范围已锁定，列入 第4阶段候选 ，与节点自动化路线图、FFF 通用支付模块共用，避免两个产品各做一套。 商业价值： 专线是高客单价品类，续费摩擦直接影响 LTV；自动续费可同时降低客服干预与支付失败导致的非自愿流失。"
+      "context": "div @ line 97 · surrounding text: 专属线路（专线）续费体验缺口 — 新发现 — 现有付费客户的专线到期后， 系统不允许在同一个节点续费，必须重新购买一条新的专线 。重新购买会重新分配节点，客户原有的 IP 与路由习惯被打断，属于付费用户流失风险点。 团队规划： 引入「自动续费扣款」 — 到期前自动从余额 / 绑定支付通道扣款， 保留原节点绑定不变 （无需重新购买、无需重新分配节点）。第3阶段范围已锁定，列入 第4阶段候选 ，与节点自动化路线图、FFF 通用支付模块共用，避免两个产品各做一套。 商业价值： 专线是高客单价品类，续费摩擦直接影响 LTV；自动续费可同时降低客服干预与支付失败导致的非自愿流失。"
     },
     {
       "id": "u_13d9ca092f493b45",
@@ -178,7 +178,7 @@
       "source": "团队规划：",
       "occurrence": 0,
       "target": "Team Planning:",
-      "context": "strong @ line 98 · surrounding text: 专属线路（专线）续费体验缺口 — 新发现 — 现有付费客户的专线到期后， 系统不允许在同一个节点续费，必须重新购买一条新的专线 。重新购买会重新分配节点，客户原有的 IP 与路由习惯被打断，属于付费用户流失风险点。 团队规划： 引入「自动续费扣款」 — 到期前自动从余额 / 绑定支付通道扣款， 保留原节点绑定不变 （无需重新购买、无需重新分配节点）。第3阶段范围已锁定，列入 第4阶段候选 ，与节点自动化路线图、FFF 通用支付模块共用，避免两个产品各做一套。 商业价值： 专线是高客单价品类，续费摩擦直接影响 LTV；自动续费可同时降低客服干预与支付失败导致的非自愿流失。"
+      "context": "strong @ line 97 · surrounding text: 专属线路（专线）续费体验缺口 — 新发现 — 现有付费客户的专线到期后， 系统不允许在同一个节点续费，必须重新购买一条新的专线 。重新购买会重新分配节点，客户原有的 IP 与路由习惯被打断，属于付费用户流失风险点。 团队规划： 引入「自动续费扣款」 — 到期前自动从余额 / 绑定支付通道扣款， 保留原节点绑定不变 （无需重新购买、无需重新分配节点）。第3阶段范围已锁定，列入 第4阶段候选 ，与节点自动化路线图、FFF 通用支付模块共用，避免两个产品各做一套。 商业价值： 专线是高客单价品类，续费摩擦直接影响 LTV；自动续费可同时降低客服干预与支付失败导致的非自愿流失。"
     },
     {
       "id": "u_cad8269074fff4e4",
@@ -186,7 +186,7 @@
       "source": "引入「自动续费扣款」 — 到期前自动从余额 / 绑定支付通道扣款，",
       "occurrence": 0,
       "target": "Introduce 'Automatic Renewal Deduction' — Automatically deduct from balance or bound payment channels before expiration,",
-      "context": "br @ line 98 · surrounding text: 专属线路（专线）续费体验缺口 — 新发现 — 现有付费客户的专线到期后， 系统不允许在同一个节点续费，必须重新购买一条新的专线 。重新购买会重新分配节点，客户原有的 IP 与路由习惯被打断，属于付费用户流失风险点。 团队规划： 引入「自动续费扣款」 — 到期前自动从余额 / 绑定支付通道扣款， 保留原节点绑定不变 （无需重新购买、无需重新分配节点）。第3阶段范围已锁定，列入 第4阶段候选 ，与节点自动化路线图、FFF 通用支付模块共用，避免两个产品各做一套。 商业价值： 专线是高客单价品类，续费摩擦直接影响 LTV；自动续费可同时降低客服干预与支付失败导致的非自愿流失。"
+      "context": "br @ line 97 · surrounding text: 专属线路（专线）续费体验缺口 — 新发现 — 现有付费客户的专线到期后， 系统不允许在同一个节点续费，必须重新购买一条新的专线 。重新购买会重新分配节点，客户原有的 IP 与路由习惯被打断，属于付费用户流失风险点。 团队规划： 引入「自动续费扣款」 — 到期前自动从余额 / 绑定支付通道扣款， 保留原节点绑定不变 （无需重新购买、无需重新分配节点）。第3阶段范围已锁定，列入 第4阶段候选 ，与节点自动化路线图、FFF 通用支付模块共用，避免两个产品各做一套。 商业价值： 专线是高客单价品类，续费摩擦直接影响 LTV；自动续费可同时降低客服干预与支付失败导致的非自愿流失。"
     },
     {
       "id": "u_6d4e6d18c73ec93a",
@@ -194,7 +194,7 @@
       "source": "保留原节点绑定不变",
       "occurrence": 0,
       "target": "Maintain original VPN node binding unchanged.",
-      "context": "strong @ line 98 · surrounding text: 专属线路（专线）续费体验缺口 — 新发现 — 现有付费客户的专线到期后， 系统不允许在同一个节点续费，必须重新购买一条新的专线 。重新购买会重新分配节点，客户原有的 IP 与路由习惯被打断，属于付费用户流失风险点。 团队规划： 引入「自动续费扣款」 — 到期前自动从余额 / 绑定支付通道扣款， 保留原节点绑定不变 （无需重新购买、无需重新分配节点）。第3阶段范围已锁定，列入 第4阶段候选 ，与节点自动化路线图、FFF 通用支付模块共用，避免两个产品各做一套。 商业价值： 专线是高客单价品类，续费摩擦直接影响 LTV；自动续费可同时降低客服干预与支付失败导致的非自愿流失。"
+      "context": "strong @ line 97 · surrounding text: 专属线路（专线）续费体验缺口 — 新发现 — 现有付费客户的专线到期后， 系统不允许在同一个节点续费，必须重新购买一条新的专线 。重新购买会重新分配节点，客户原有的 IP 与路由习惯被打断，属于付费用户流失风险点。 团队规划： 引入「自动续费扣款」 — 到期前自动从余额 / 绑定支付通道扣款， 保留原节点绑定不变 （无需重新购买、无需重新分配节点）。第3阶段范围已锁定，列入 第4阶段候选 ，与节点自动化路线图、FFF 通用支付模块共用，避免两个产品各做一套。 商业价值： 专线是高客单价品类，续费摩擦直接影响 LTV；自动续费可同时降低客服干预与支付失败导致的非自愿流失。"
     },
     {
       "id": "u_52a6f42e59567b57",
@@ -202,7 +202,7 @@
       "source": "（无需重新购买、无需重新分配节点）。第3阶段范围已锁定，列入",
       "occurrence": 0,
       "target": "(No re-purchase, no VPN node reallocation). The scope for Sprint 3 is locked and included in the",
-      "context": "br @ line 98 · surrounding text: 专属线路（专线）续费体验缺口 — 新发现 — 现有付费客户的专线到期后， 系统不允许在同一个节点续费，必须重新购买一条新的专线 。重新购买会重新分配节点，客户原有的 IP 与路由习惯被打断，属于付费用户流失风险点。 团队规划： 引入「自动续费扣款」 — 到期前自动从余额 / 绑定支付通道扣款， 保留原节点绑定不变 （无需重新购买、无需重新分配节点）。第3阶段范围已锁定，列入 第4阶段候选 ，与节点自动化路线图、FFF 通用支付模块共用，避免两个产品各做一套。 商业价值： 专线是高客单价品类，续费摩擦直接影响 LTV；自动续费可同时降低客服干预与支付失败导致的非自愿流失。"
+      "context": "br @ line 97 · surrounding text: 专属线路（专线）续费体验缺口 — 新发现 — 现有付费客户的专线到期后， 系统不允许在同一个节点续费，必须重新购买一条新的专线 。重新购买会重新分配节点，客户原有的 IP 与路由习惯被打断，属于付费用户流失风险点。 团队规划： 引入「自动续费扣款」 — 到期前自动从余额 / 绑定支付通道扣款， 保留原节点绑定不变 （无需重新购买、无需重新分配节点）。第3阶段范围已锁定，列入 第4阶段候选 ，与节点自动化路线图、FFF 通用支付模块共用，避免两个产品各做一套。 商业价值： 专线是高客单价品类，续费摩擦直接影响 LTV；自动续费可同时降低客服干预与支付失败导致的非自愿流失。"
     },
     {
       "id": "u_d76cf35a5a993844",
@@ -210,7 +210,7 @@
       "source": "第4阶段候选",
       "occurrence": 0,
       "target": "Sprint 4 candidates",
-      "context": "strong @ line 98 · surrounding text: 专属线路（专线）续费体验缺口 — 新发现 — 现有付费客户的专线到期后， 系统不允许在同一个节点续费，必须重新购买一条新的专线 。重新购买会重新分配节点，客户原有的 IP 与路由习惯被打断，属于付费用户流失风险点。 团队规划： 引入「自动续费扣款」 — 到期前自动从余额 / 绑定支付通道扣款， 保留原节点绑定不变 （无需重新购买、无需重新分配节点）。第3阶段范围已锁定，列入 第4阶段候选 ，与节点自动化路线图、FFF 通用支付模块共用，避免两个产品各做一套。 商业价值： 专线是高客单价品类，续费摩擦直接影响 LTV；自动续费可同时降低客服干预与支付失败导致的非自愿流失。"
+      "context": "strong @ line 97 · surrounding text: 专属线路（专线）续费体验缺口 — 新发现 — 现有付费客户的专线到期后， 系统不允许在同一个节点续费，必须重新购买一条新的专线 。重新购买会重新分配节点，客户原有的 IP 与路由习惯被打断，属于付费用户流失风险点。 团队规划： 引入「自动续费扣款」 — 到期前自动从余额 / 绑定支付通道扣款， 保留原节点绑定不变 （无需重新购买、无需重新分配节点）。第3阶段范围已锁定，列入 第4阶段候选 ，与节点自动化路线图、FFF 通用支付模块共用，避免两个产品各做一套。 商业价值： 专线是高客单价品类，续费摩擦直接影响 LTV；自动续费可同时降低客服干预与支付失败导致的非自愿流失。"
     },
     {
       "id": "u_7dd671f7f4350b71",
@@ -218,7 +218,7 @@
       "source": "，与节点自动化路线图、FFF 通用支付模块共用，避免两个产品各做一套。",
       "occurrence": 0,
       "target": ", shared with the VPN node automation roadmap and FFF Universal Payment module to avoid duplicating efforts on two products.",
-      "context": "br @ line 98 · surrounding text: 专属线路（专线）续费体验缺口 — 新发现 — 现有付费客户的专线到期后， 系统不允许在同一个节点续费，必须重新购买一条新的专线 。重新购买会重新分配节点，客户原有的 IP 与路由习惯被打断，属于付费用户流失风险点。 团队规划： 引入「自动续费扣款」 — 到期前自动从余额 / 绑定支付通道扣款， 保留原节点绑定不变 （无需重新购买、无需重新分配节点）。第3阶段范围已锁定，列入 第4阶段候选 ，与节点自动化路线图、FFF 通用支付模块共用，避免两个产品各做一套。 商业价值： 专线是高客单价品类，续费摩擦直接影响 LTV；自动续费可同时降低客服干预与支付失败导致的非自愿流失。"
+      "context": "br @ line 97 · surrounding text: 专属线路（专线）续费体验缺口 — 新发现 — 现有付费客户的专线到期后， 系统不允许在同一个节点续费，必须重新购买一条新的专线 。重新购买会重新分配节点，客户原有的 IP 与路由习惯被打断，属于付费用户流失风险点。 团队规划： 引入「自动续费扣款」 — 到期前自动从余额 / 绑定支付通道扣款， 保留原节点绑定不变 （无需重新购买、无需重新分配节点）。第3阶段范围已锁定，列入 第4阶段候选 ，与节点自动化路线图、FFF 通用支付模块共用，避免两个产品各做一套。 商业价值： 专线是高客单价品类，续费摩擦直接影响 LTV；自动续费可同时降低客服干预与支付失败导致的非自愿流失。"
     },
     {
       "id": "u_3a0c0947caf1cd29",
@@ -226,7 +226,7 @@
       "source": "商业价值：",
       "occurrence": 0,
       "target": "Business Value:",
-      "context": "strong @ line 98 · surrounding text: 专属线路（专线）续费体验缺口 — 新发现 — 现有付费客户的专线到期后， 系统不允许在同一个节点续费，必须重新购买一条新的专线 。重新购买会重新分配节点，客户原有的 IP 与路由习惯被打断，属于付费用户流失风险点。 团队规划： 引入「自动续费扣款」 — 到期前自动从余额 / 绑定支付通道扣款， 保留原节点绑定不变 （无需重新购买、无需重新分配节点）。第3阶段范围已锁定，列入 第4阶段候选 ，与节点自动化路线图、FFF 通用支付模块共用，避免两个产品各做一套。 商业价值： 专线是高客单价品类，续费摩擦直接影响 LTV；自动续费可同时降低客服干预与支付失败导致的非自愿流失。"
+      "context": "strong @ line 97 · surrounding text: 专属线路（专线）续费体验缺口 — 新发现 — 现有付费客户的专线到期后， 系统不允许在同一个节点续费，必须重新购买一条新的专线 。重新购买会重新分配节点，客户原有的 IP 与路由习惯被打断，属于付费用户流失风险点。 团队规划： 引入「自动续费扣款」 — 到期前自动从余额 / 绑定支付通道扣款， 保留原节点绑定不变 （无需重新购买、无需重新分配节点）。第3阶段范围已锁定，列入 第4阶段候选 ，与节点自动化路线图、FFF 通用支付模块共用，避免两个产品各做一套。 商业价值： 专线是高客单价品类，续费摩擦直接影响 LTV；自动续费可同时降低客服干预与支付失败导致的非自愿流失。"
     },
     {
       "id": "u_30b84f2d9623715c",
@@ -234,7 +234,7 @@
       "source": "专线是高客单价品类，续费摩擦直接影响 LTV；自动续费可同时降低客服干预与支付失败导致的非自愿流失。",
       "occurrence": 0,
       "target": "Dedicated lines are high-ticket items; renewal friction directly impacts LTV; automatic renewals can simultaneously reduce customer service intervention and involuntary churn due to payment failures.",
-      "context": "br @ line 98 · surrounding text: 专属线路（专线）续费体验缺口 — 新发现 — 现有付费客户的专线到期后， 系统不允许在同一个节点续费，必须重新购买一条新的专线 。重新购买会重新分配节点，客户原有的 IP 与路由习惯被打断，属于付费用户流失风险点。 团队规划： 引入「自动续费扣款」 — 到期前自动从余额 / 绑定支付通道扣款， 保留原节点绑定不变 （无需重新购买、无需重新分配节点）。第3阶段范围已锁定，列入 第4阶段候选 ，与节点自动化路线图、FFF 通用支付模块共用，避免两个产品各做一套。 商业价值： 专线是高客单价品类，续费摩擦直接影响 LTV；自动续费可同时降低客服干预与支付失败导致的非自愿流失。"
+      "context": "br @ line 97 · surrounding text: 专属线路（专线）续费体验缺口 — 新发现 — 现有付费客户的专线到期后， 系统不允许在同一个节点续费，必须重新购买一条新的专线 。重新购买会重新分配节点，客户原有的 IP 与路由习惯被打断，属于付费用户流失风险点。 团队规划： 引入「自动续费扣款」 — 到期前自动从余额 / 绑定支付通道扣款， 保留原节点绑定不变 （无需重新购买、无需重新分配节点）。第3阶段范围已锁定，列入 第4阶段候选 ，与节点自动化路线图、FFF 通用支付模块共用，避免两个产品各做一套。 商业价值： 专线是高客单价品类，续费摩擦直接影响 LTV；自动续费可同时降低客服干预与支付失败导致的非自愿流失。"
     },
     {
       "id": "u_946d84685f138a99",
@@ -242,7 +242,7 @@
       "source": "二、本阶段关键成果（4/13–4/24）",
       "occurrence": 0,
       "target": "II. Key Achievements of this Sprint (April 13 - April 24)",
-      "context": "h2 @ line 103"
+      "context": "h2 @ line 102"
     },
     {
       "id": "u_9fcd5b3899b3e948",
@@ -250,7 +250,7 @@
       "source": "指标",
       "occurrence": 0,
       "target": "Metrics",
-      "context": "th @ line 106 · surrounding text: 指标 数据"
+      "context": "th @ line 105 · surrounding text: 指标 数据"
     },
     {
       "id": "u_799c6c226e734255",
@@ -258,7 +258,7 @@
       "source": "数据",
       "occurrence": 0,
       "target": "Data",
-      "context": "th @ line 106 · surrounding text: 指标 数据"
+      "context": "th @ line 105 · surrounding text: 指标 数据"
     },
     {
       "id": "u_71398e21390c2c9e",
@@ -266,7 +266,7 @@
       "source": "版本迭代",
       "occurrence": 0,
       "target": "Version Iterations",
-      "context": "td @ line 107 · surrounding text: 版本迭代 对外 Android： v1.7.38 → v3.0.4 （一步到位，版本号与 versionCode 30004 对齐）；后端： v2.2.71 → v3.0.0 （主版本跨升，反映第1+第2阶段累计改动规模）；双端同步进入 3.x 系列；内部 staging 经历 2.0.0 → 3.0.4 共 11 次验证迭代"
+      "context": "td @ line 106 · surrounding text: 版本迭代 对外 Android： v1.7.38 → v3.0.4 （一步到位，版本号与 versionCode 30004 对齐）；后端： v2.2.71 → v3.0.0 （主版本跨升，反映第1+第2阶段累计改动规模）；双端同步进入 3.x 系列；内部 staging 经历 2.0.0 → 3.0.4 共 11 次验证迭代"
     },
     {
       "id": "u_21597fb7440fc0ba",
@@ -274,7 +274,7 @@
       "source": "对外 Android：",
       "occurrence": 0,
       "target": "Android:",
-      "context": "td @ line 107 · surrounding text: 版本迭代 对外 Android： v1.7.38 → v3.0.4 （一步到位，版本号与 versionCode 30004 对齐）；后端： v2.2.71 → v3.0.0 （主版本跨升，反映第1+第2阶段累计改动规模）；双端同步进入 3.x 系列；内部 staging 经历 2.0.0 → 3.0.4 共 11 次验证迭代"
+      "context": "td @ line 106 · surrounding text: 版本迭代 对外 Android： v1.7.38 → v3.0.4 （一步到位，版本号与 versionCode 30004 对齐）；后端： v2.2.71 → v3.0.0 （主版本跨升，反映第1+第2阶段累计改动规模）；双端同步进入 3.x 系列；内部 staging 经历 2.0.0 → 3.0.4 共 11 次验证迭代"
     },
     {
       "id": "u_4a577d1b0ead30dc",
@@ -282,7 +282,7 @@
       "source": "（一步到位，版本号与 versionCode 30004 对齐）；后端：",
       "occurrence": 0,
       "target": "(Full upgrade to version 30004, aligning with the versionCode; Backend:)",
-      "context": "td @ line 107 · surrounding text: 版本迭代 对外 Android： v1.7.38 → v3.0.4 （一步到位，版本号与 versionCode 30004 对齐）；后端： v2.2.71 → v3.0.0 （主版本跨升，反映第1+第2阶段累计改动规模）；双端同步进入 3.x 系列；内部 staging 经历 2.0.0 → 3.0.4 共 11 次验证迭代"
+      "context": "td @ line 106 · surrounding text: 版本迭代 对外 Android： v1.7.38 → v3.0.4 （一步到位，版本号与 versionCode 30004 对齐）；后端： v2.2.71 → v3.0.0 （主版本跨升，反映第1+第2阶段累计改动规模）；双端同步进入 3.x 系列；内部 staging 经历 2.0.0 → 3.0.4 共 11 次验证迭代"
     },
     {
       "id": "u_3299cd03da568e29",
@@ -290,7 +290,7 @@
       "source": "（主版本跨升，反映第1+第2阶段累计改动规模）；双端同步进入 3.x 系列；内部 staging 经历 2.0.0 → 3.0.4 共 11 次验证迭代",
       "occurrence": 0,
       "target": "(a major-version jump reflecting the cumulative scale of changes across Sprint 1 and Sprint 2); both clients moved into the 3.x series; internal staging completed 11 validation iterations from 2.0.0 to 3.0.4",
-      "context": "td @ line 107 · surrounding text: 版本迭代 对外 Android： v1.7.38 → v3.0.4 （一步到位，版本号与 versionCode 30004 对齐）；后端： v2.2.71 → v3.0.0 （主版本跨升，反映第1+第2阶段累计改动规模）；双端同步进入 3.x 系列；内部 staging 经历 2.0.0 → 3.0.4 共 11 次验证迭代"
+      "context": "td @ line 106 · surrounding text: 版本迭代 对外 Android： v1.7.38 → v3.0.4 （一步到位，版本号与 versionCode 30004 对齐）；后端： v2.2.71 → v3.0.0 （主版本跨升，反映第1+第2阶段累计改动规模）；双端同步进入 3.x 系列；内部 staging 经历 2.0.0 → 3.0.4 共 11 次验证迭代"
     },
     {
       "id": "u_3408f66f178e4f0e",
@@ -298,7 +298,7 @@
       "source": "App 大小（生产 APK）",
       "occurrence": 0,
       "target": "App Size (Production APK)",
-      "context": "td @ line 108 · surrounding text: App 大小（生产 APK） 99.8 MB → 71.1 MB（ −28.7% ）"
+      "context": "td @ line 107 · surrounding text: App 大小（生产 APK） 99.8 MB → 71.1 MB（ −28.7% ）"
     },
     {
       "id": "u_0d980a172d338b65",
@@ -306,7 +306,7 @@
       "source": "修复缺陷",
       "occurrence": 0,
       "target": "Bug Fixes",
-      "context": "td @ line 109 · surrounding text: 修复缺陷 30+ 项缺陷 + 20+ 项体验优化 （双团队 QA + AI 代码审查）"
+      "context": "td @ line 108 · surrounding text: 修复缺陷 30+ 项缺陷 + 20+ 项体验优化 （双团队 QA + AI 代码审查）"
     },
     {
       "id": "u_7379cfdd9bed127a",
@@ -314,7 +314,7 @@
       "source": "30+ 项缺陷 + 20+ 项体验优化",
       "occurrence": 0,
       "target": "Fixes 30+ defects + optimizes 20+ user experiences",
-      "context": "strong @ line 109 · surrounding text: 修复缺陷 30+ 项缺陷 + 20+ 项体验优化 （双团队 QA + AI 代码审查）"
+      "context": "strong @ line 108 · surrounding text: 修复缺陷 30+ 项缺陷 + 20+ 项体验优化 （双团队 QA + AI 代码审查）"
     },
     {
       "id": "u_4d0feed42b10fad7",
@@ -322,7 +322,7 @@
       "source": "（双团队 QA + AI 代码审查）",
       "occurrence": 0,
       "target": "(Dual-team QA + AI code review)",
-      "context": "td @ line 109 · surrounding text: 修复缺陷 30+ 项缺陷 + 20+ 项体验优化 （双团队 QA + AI 代码审查）"
+      "context": "td @ line 108 · surrounding text: 修复缺陷 30+ 项缺陷 + 20+ 项体验优化 （双团队 QA + AI 代码审查）"
     },
     {
       "id": "u_4b4d16cd1990a1d7",
@@ -330,7 +330,7 @@
       "source": "本周（W2）独立提交",
       "occurrence": 0,
       "target": "Submissions this week (Week 2)",
-      "context": "td @ line 110 · surrounding text: 本周（W2）独立提交 16 个（每个修复独立可回滚）"
+      "context": "td @ line 109 · surrounding text: 本周（W2）独立提交 16 个（每个修复独立可回滚）"
     },
     {
       "id": "u_7282280011ba089e",
@@ -338,7 +338,7 @@
       "source": "16 个（每个修复独立可回滚）",
       "occurrence": 0,
       "target": "16 fixes, each independently rollbackable",
-      "context": "td @ line 110 · surrounding text: 本周（W2）独立提交 16 个（每个修复独立可回滚）"
+      "context": "td @ line 109 · surrounding text: 本周（W2）独立提交 16 个（每个修复独立可回滚）"
     },
     {
       "id": "u_3eed7668ab00d9ff",
@@ -346,7 +346,7 @@
       "source": "反滥用防护层数",
       "occurrence": 0,
       "target": "Anti-abuse Protection Layers",
-      "context": "td @ line 111 · surrounding text: 反滥用防护层数 5 层（设备额度、设备绑定、模拟器检测、注册速率、单设备账号上限）"
+      "context": "td @ line 110 · surrounding text: 反滥用防护层数 5 层（设备额度、设备绑定、模拟器检测、注册速率、单设备账号上限）"
     },
     {
       "id": "u_5fbaf032f96d3ff1",
@@ -354,7 +354,7 @@
       "source": "5 层（设备额度、设备绑定、模拟器检测、注册速率、单设备账号上限）",
       "occurrence": 0,
       "target": "5 layers (device quota, device binding, emulator detection, registration rate, single-device account limit)",
-      "context": "td @ line 111 · surrounding text: 反滥用防护层数 5 层（设备额度、设备绑定、模拟器检测、注册速率、单设备账号上限）"
+      "context": "td @ line 110 · surrounding text: 反滥用防护层数 5 层（设备额度、设备绑定、模拟器检测、注册速率、单设备账号上限）"
     },
     {
       "id": "u_83f8e1a12604c35a",
@@ -362,7 +362,7 @@
       "source": "构建时间",
       "occurrence": 0,
       "target": "Build Time",
-      "context": "td @ line 112 · surrounding text: 构建时间 6 分钟 → 4 分 50 秒（ −20% ）"
+      "context": "td @ line 111 · surrounding text: 构建时间 6 分钟 → 4 分 50 秒（ −20% ）"
     },
     {
       "id": "u_e35fe9ca92b2e27f",
@@ -370,7 +370,7 @@
       "source": "6 分钟 → 4 分 50 秒（",
       "occurrence": 0,
       "target": "6 minutes → 4 minutes and 50 seconds (",
-      "context": "td @ line 112 · surrounding text: 构建时间 6 分钟 → 4 分 50 秒（ −20% ）"
+      "context": "td @ line 111 · surrounding text: 构建时间 6 分钟 → 4 分 50 秒（ −20% ）"
     },
     {
       "id": "u_97967418adfeb3a3",
@@ -378,7 +378,7 @@
       "source": "三大类成果",
       "occurrence": 0,
       "target": "Three Major Achievements",
-      "context": "h3 @ line 116"
+      "context": "h3 @ line 115"
     },
     {
       "id": "u_8c150d62faadd87e",
@@ -386,7 +386,7 @@
       "source": "① 营收类",
       "occurrence": 0,
       "target": "# Revenue",
-      "context": "strong @ line 118"
+      "context": "strong @ line 117"
     },
     {
       "id": "u_66189e82b26b8734",
@@ -394,7 +394,7 @@
       "source": "专属IP 付款全流程修复",
       "occurrence": 0,
       "target": "Complete Repair of Exclusive IP Payment Workflow",
-      "context": "strong @ line 120 · surrounding text: 专属IP 付款全流程修复 — 此前因台湾遗留代码缺陷，每笔购买均失败，品类零收入。本阶段修复并验证完成，下周上线后即可入账。"
+      "context": "strong @ line 119 · surrounding text: 专属IP 付款全流程修复 — 此前因台湾遗留代码缺陷，每笔购买均失败，品类零收入。本阶段修复并验证完成，下周上线后即可入账。"
     },
     {
       "id": "u_2d60bacb78fe6c76",
@@ -402,7 +402,7 @@
       "source": "— 此前因台湾遗留代码缺陷，每笔购买均失败，品类零收入。本阶段修复并验证完成，下周上线后即可入账。",
       "occurrence": 0,
       "target": "— Previously, due to legacy code defects in Taiwan, every purchase failed, resulting in zero revenue for the category. This issue was fixed and validated during this sprint; it will be billable upon release next week.",
-      "context": "li @ line 120 · surrounding text: 专属IP 付款全流程修复 — 此前因台湾遗留代码缺陷，每笔购买均失败，品类零收入。本阶段修复并验证完成，下周上线后即可入账。"
+      "context": "li @ line 119 · surrounding text: 专属IP 付款全流程修复 — 此前因台湾遗留代码缺陷，每笔购买均失败，品类零收入。本阶段修复并验证完成，下周上线后即可入账。"
     },
     {
       "id": "u_db790ae4a1b4da16",
@@ -410,7 +410,7 @@
       "source": "余额支付卡顿修复",
       "occurrence": 0,
       "target": "Balance Payment Card Stalling Fixes",
-      "context": "strong @ line 121 · surrounding text: 余额支付卡顿修复 — 新移动端 JSON 接口替代外部跳转，1 秒内返回结果。月余额支付约占总交易 15%，预期减少客服咨询与退款申请。"
+      "context": "strong @ line 120 · surrounding text: 余额支付卡顿修复 — 新移动端 JSON 接口替代外部跳转，1 秒内返回结果。月余额支付约占总交易 15%，预期减少客服咨询与退款申请。"
     },
     {
       "id": "u_3b80f8de5c147e66",
@@ -418,7 +418,7 @@
       "source": "— 新移动端 JSON 接口替代外部跳转，1 秒内返回结果。月余额支付约占总交易 15%，预期减少客服咨询与退款申请。",
       "occurrence": 0,
       "target": "- Replaced external redirection with new mobile JSON API, returning results in 1 second. Approximately 15% of total transactions involve monthly balance payments; expected to reduce customer service inquiries and refund applications.",
-      "context": "li @ line 121 · surrounding text: 余额支付卡顿修复 — 新移动端 JSON 接口替代外部跳转，1 秒内返回结果。月余额支付约占总交易 15%，预期减少客服咨询与退款申请。"
+      "context": "li @ line 120 · surrounding text: 余额支付卡顿修复 — 新移动端 JSON 接口替代外部跳转，1 秒内返回结果。月余额支付约占总交易 15%，预期减少客服咨询与退款申请。"
     },
     {
       "id": "u_fc4e48ea8bd0d9e3",
@@ -426,7 +426,7 @@
       "source": "订阅续费日期不刷新",
       "occurrence": 0,
       "target": "Subscription Renewal Dates Not Refreshing",
-      "context": "strong @ line 122 · surrounding text: 订阅续费日期不刷新 — 关联缺陷一并修复。"
+      "context": "strong @ line 121 · surrounding text: 订阅续费日期不刷新 — 关联缺陷一并修复。"
     },
     {
       "id": "u_9b488fc3425ce7e7",
@@ -434,7 +434,7 @@
       "source": "— 关联缺陷一并修复。",
       "occurrence": 0,
       "target": "- Associated defects have been fixed together.",
-      "context": "li @ line 122 · surrounding text: 订阅续费日期不刷新 — 关联缺陷一并修复。"
+      "context": "li @ line 121 · surrounding text: 订阅续费日期不刷新 — 关联缺陷一并修复。"
     },
     {
       "id": "u_d3bf7fe527383a31",
@@ -442,7 +442,7 @@
       "source": "② 反滥用 / 反欺诈类",
       "occurrence": 0,
       "target": "# Anti-abuse/Fraud",
-      "context": "strong @ line 126"
+      "context": "strong @ line 125"
     },
     {
       "id": "u_4ff140e210cd4453",
@@ -450,7 +450,7 @@
       "source": "5 层防护机制",
       "occurrence": 0,
       "target": "Five-layer protection mechanism",
-      "context": "strong @ line 128 · surrounding text: 5 层防护机制 上线 — 设备维度共享试用额度、卸载重装不发新额度、模拟器检测、IP 注册速率限制（每日 5 个）、单设备账号上限（3 个）。"
+      "context": "strong @ line 127 · surrounding text: 5 层防护机制 上线 — 设备维度共享试用额度、卸载重装不发新额度、模拟器检测、IP 注册速率限制（每日 5 个）、单设备账号上限（3 个）。"
     },
     {
       "id": "u_ab5cbc4f811ed949",
@@ -458,7 +458,7 @@
       "source": "上线 — 设备维度共享试用额度、卸载重装不发新额度、模拟器检测、IP 注册速率限制（每日 5 个）、单设备账号上限（3 个）。",
       "occurrence": 0,
       "target": "- Device-level shared trial usage quota, uninstall and reinstall does not grant new quota, emulator detection, IP registration rate limit (daily 5), single-device account limit (3).",
-      "context": "li @ line 128 · surrounding text: 5 层防护机制 上线 — 设备维度共享试用额度、卸载重装不发新额度、模拟器检测、IP 注册速率限制（每日 5 个）、单设备账号上限（3 个）。"
+      "context": "li @ line 127 · surrounding text: 5 层防护机制 上线 — 设备维度共享试用额度、卸载重装不发新额度、模拟器检测、IP 注册速率限制（每日 5 个）、单设备账号上限（3 个）。"
     },
     {
       "id": "u_aee17e48b2c75093",
@@ -466,7 +466,7 @@
       "source": "设备指纹识别",
       "occurrence": 0,
       "target": "# Fingerprint Recognition",
-      "context": "strong @ line 129 · surrounding text: 设备指纹识别 替代旧 ANDROID_ID 方案，加密验证，无法伪造。"
+      "context": "strong @ line 128 · surrounding text: 设备指纹识别 替代旧 ANDROID_ID 方案，加密验证，无法伪造。"
     },
     {
       "id": "u_3f303606306ea21b",
@@ -474,7 +474,7 @@
       "source": "替代旧 ANDROID_ID 方案，加密验证，无法伪造。",
       "occurrence": 0,
       "target": "Replaces the old ANDROID_ID solution with encrypted verification, which cannot be forged.",
-      "context": "li @ line 129 · surrounding text: 设备指纹识别 替代旧 ANDROID_ID 方案，加密验证，无法伪造。"
+      "context": "li @ line 128 · surrounding text: 设备指纹识别 替代旧 ANDROID_ID 方案，加密验证，无法伪造。"
     },
     {
       "id": "u_41acc9e2ad77e6fd",
@@ -482,7 +482,7 @@
       "source": "正常免费用户不受任何影响，每日 30 分钟权益完整。",
       "occurrence": 0,
       "target": "- Normal free users are unaffected; daily 30-minute benefits remain intact.",
-      "context": "li @ line 130"
+      "context": "li @ line 129"
     },
     {
       "id": "u_9308ae0e4268ab86",
@@ -490,7 +490,7 @@
       "source": "③ 稳定性 + 体验类",
       "occurrence": 0,
       "target": "# Stability & Experience",
-      "context": "strong @ line 134"
+      "context": "strong @ line 133"
     },
     {
       "id": "u_5754f8250f52da80",
@@ -498,7 +498,7 @@
       "source": "启动卡死修复",
       "occurrence": 0,
       "target": "Fix for launch hang",
-      "context": "strong @ line 136 · surrounding text: 启动卡死修复 — 新装用户因后端字段类型不一致导致启动卡死，已根因修复。"
+      "context": "strong @ line 135 · surrounding text: 启动卡死修复 — 新装用户因后端字段类型不一致导致启动卡死，已根因修复。"
     },
     {
       "id": "u_861fa56f4430b2fd",
@@ -506,7 +506,7 @@
       "source": "— 新装用户因后端字段类型不一致导致启动卡死，已根因修复。",
       "occurrence": 0,
       "target": "— New users experienced launch hangs due to inconsistent backend field types, which have been root-caused and fixed.",
-      "context": "li @ line 136 · surrounding text: 启动卡死修复 — 新装用户因后端字段类型不一致导致启动卡死，已根因修复。"
+      "context": "li @ line 135 · surrounding text: 启动卡死修复 — 新装用户因后端字段类型不一致导致启动卡死，已根因修复。"
     },
     {
       "id": "u_fddfeb11f05748b4",
@@ -514,7 +514,7 @@
       "source": "试用计时器三类问题",
       "occurrence": 0,
       "target": "Three issues with trial timer",
-      "context": "strong @ line 137 · surrounding text: 试用计时器三类问题 — 倒计时漂移、方向错误、登出归零异常，统一改为服务器权威。"
+      "context": "strong @ line 136 · surrounding text: 试用计时器三类问题 — 倒计时漂移、方向错误、登出归零异常，统一改为服务器权威。"
     },
     {
       "id": "u_09e686e52f8a5d24",
@@ -522,7 +522,7 @@
       "source": "— 倒计时漂移、方向错误、登出归零异常，统一改为服务器权威。",
       "occurrence": 0,
       "target": "— Sprint drift, wrong direction, logout zero anomaly unified as server authority.",
-      "context": "li @ line 137 · surrounding text: 试用计时器三类问题 — 倒计时漂移、方向错误、登出归零异常，统一改为服务器权威。"
+      "context": "li @ line 136 · surrounding text: 试用计时器三类问题 — 倒计时漂移、方向错误、登出归零异常，统一改为服务器权威。"
     },
     {
       "id": "u_e33c0631b236f002",
@@ -530,7 +530,7 @@
       "source": "错误提示本地化",
       "occurrence": 0,
       "target": "Localization of error prompts",
-      "context": "strong @ line 138 · surrounding text: 错误提示本地化 — 「Api Exception」改为明确中文（设备超过限制 / 账号被锁 / 余额不足等）。"
+      "context": "strong @ line 137 · surrounding text: 错误提示本地化 — 「Api Exception」改为明确中文（设备超过限制 / 账号被锁 / 余额不足等）。"
     },
     {
       "id": "u_cd71675227e70922",
@@ -538,7 +538,7 @@
       "source": "— 「Api Exception」改为明确中文（设备超过限制 / 账号被锁 / 余额不足等）。",
       "occurrence": 0,
       "target": "— 「Api Exception」changed to clear Chinese (device exceeds limit / account locked / balance insufficient, etc.).",
-      "context": "li @ line 138 · surrounding text: 错误提示本地化 — 「Api Exception」改为明确中文（设备超过限制 / 账号被锁 / 余额不足等）。"
+      "context": "li @ line 137 · surrounding text: 错误提示本地化 — 「Api Exception」改为明确中文（设备超过限制 / 账号被锁 / 余额不足等）。"
     },
     {
       "id": "u_255c5412e676ddb8",
@@ -546,7 +546,7 @@
       "source": "App 闪退修复",
       "occurrence": 0,
       "target": "Fix App crash issues",
-      "context": "strong @ line 139 · surrounding text: App 闪退修复 — 升级时点击立即更新概率性闪退已修复。"
+      "context": "strong @ line 138 · surrounding text: App 闪退修复 — 升级时点击立即更新概率性闪退已修复。"
     },
     {
       "id": "u_0edf761b44d6d7e9",
@@ -554,7 +554,7 @@
       "source": "— 升级时点击立即更新概率性闪退已修复。",
       "occurrence": 0,
       "target": "— Immediate update prompt crashes during upgrade have been fixed.",
-      "context": "li @ line 139 · surrounding text: App 闪退修复 — 升级时点击立即更新概率性闪退已修复。"
+      "context": "li @ line 138 · surrounding text: App 闪退修复 — 升级时点击立即更新概率性闪退已修复。"
     },
     {
       "id": "u_2ecb6271914f5218",
@@ -562,7 +562,7 @@
       "source": "UI 收尾",
       "occurrence": 0,
       "target": "UI cleanup",
-      "context": "strong @ line 140 · surrounding text: UI 收尾 — 抽奖弹窗图层重叠、空白名单静默屏蔽、收件箱已读延迟、推荐分享 QR 不显示等 9 项体验问题。"
+      "context": "strong @ line 139 · surrounding text: UI 收尾 — 抽奖弹窗图层重叠、空白名单静默屏蔽、收件箱已读延迟、推荐分享 QR 不显示等 9 项体验问题。"
     },
     {
       "id": "u_983a9b77f9b1ad62",
@@ -570,7 +570,7 @@
       "source": "— 抽奖弹窗图层重叠、空白名单静默屏蔽、收件箱已读延迟、推荐分享 QR 不显示等 9 项体验问题。",
       "occurrence": 0,
       "target": "— Lottery pop-up layer overlap, blank list silent exclusion, inbox delayed read status, QR code recommendation share not displayed, etc., nine experience issues.",
-      "context": "li @ line 140 · surrounding text: UI 收尾 — 抽奖弹窗图层重叠、空白名单静默屏蔽、收件箱已读延迟、推荐分享 QR 不显示等 9 项体验问题。"
+      "context": "li @ line 139 · surrounding text: UI 收尾 — 抽奖弹窗图层重叠、空白名单静默屏蔽、收件箱已读延迟、推荐分享 QR 不显示等 9 项体验问题。"
     },
     {
       "id": "u_787a799bf26ef413",
@@ -578,7 +578,7 @@
       "source": "三、改善与商业价值",
       "occurrence": 0,
       "target": "III. Improvement and Business Value",
-      "context": "h2 @ line 145"
+      "context": "h2 @ line 144"
     },
     {
       "id": "u_0a8c54f73b784fe9",
@@ -586,7 +586,7 @@
       "source": "本节将技术改善对应到具体商业价值，所有数字均可在内部技术文档（CHANGELOG-v2.2.71-to-current.md）追溯。",
       "occurrence": 0,
       "target": "This section maps technical improvements to specific business value, all numbers can be traced in internal technical documents (CHANGELOG-v2.2.71-to-current.md).",
-      "context": "div.card.highlight @ line 146"
+      "context": "div.card.highlight @ line 145"
     },
     {
       "id": "u_74be15fe0957950d",
@@ -594,7 +594,7 @@
       "source": "性能改善",
       "occurrence": 0,
       "target": "Performance improvement",
-      "context": "h3 @ line 150"
+      "context": "h3 @ line 149"
     },
     {
       "id": "u_7a7d8bd3937b801a",
@@ -602,7 +602,7 @@
       "source": "指标",
       "occurrence": 1,
       "target": "Indicators",
-      "context": "th @ line 152 · surrounding text: 指标 之前 之后 商业价值"
+      "context": "th @ line 151 · surrounding text: 指标 之前 之后 商业价值"
     },
     {
       "id": "u_0ace6970b2c03823",
@@ -610,7 +610,7 @@
       "source": "之前",
       "occurrence": 0,
       "target": "Before",
-      "context": "th @ line 152 · surrounding text: 指标 之前 之后 商业价值"
+      "context": "th @ line 151 · surrounding text: 指标 之前 之后 商业价值"
     },
     {
       "id": "u_b36b804438f2f730",
@@ -618,7 +618,7 @@
       "source": "之后",
       "occurrence": 0,
       "target": "After",
-      "context": "th @ line 152 · surrounding text: 指标 之前 之后 商业价值"
+      "context": "th @ line 151 · surrounding text: 指标 之前 之后 商业价值"
     },
     {
       "id": "u_ea50b01febeff131",
@@ -626,7 +626,7 @@
       "source": "商业价值",
       "occurrence": 0,
       "target": "Business value",
-      "context": "th @ line 152 · surrounding text: 指标 之前 之后 商业价值"
+      "context": "th @ line 151 · surrounding text: 指标 之前 之后 商业价值"
     },
     {
       "id": "u_0be1dc9ed8ccefb7",
@@ -634,7 +634,7 @@
       "source": "App 大小",
       "occurrence": 0,
       "target": "App size",
-      "context": "td @ line 153 · surrounding text: App 大小 99.8 MB 71.1 MB（−28.7%） 低端机 / 流量敏感用户安装率提升；下载等待时间缩短约 1/3"
+      "context": "td @ line 152 · surrounding text: App 大小 99.8 MB 71.1 MB（−28.7%） 低端机 / 流量敏感用户安装率提升；下载等待时间缩短约 1/3"
     },
     {
       "id": "u_46b95b997a3f742e",
@@ -642,7 +642,7 @@
       "source": "低端机 / 流量敏感用户安装率提升；下载等待时间缩短约 1/3",
       "occurrence": 0,
       "target": "Installation rate of low-end phones / users sensitive to traffic improved; download waiting time shortened by about 1/3",
-      "context": "td @ line 153 · surrounding text: App 大小 99.8 MB 71.1 MB（−28.7%） 低端机 / 流量敏感用户安装率提升；下载等待时间缩短约 1/3"
+      "context": "td @ line 152 · surrounding text: App 大小 99.8 MB 71.1 MB（−28.7%） 低端机 / 流量敏感用户安装率提升；下载等待时间缩短约 1/3"
     },
     {
       "id": "u_7fadd325373fbe7b",
@@ -650,7 +650,7 @@
       "source": "节点列表过滤",
       "occurrence": 0,
       "target": "VPN node list filtering",
-      "context": "td @ line 154 · surrounding text: 节点列表过滤 ~500 ms（500 节点） ~50 ms（10 倍） 切换节点不再卡顿，流畅度提升"
+      "context": "td @ line 153 · surrounding text: 节点列表过滤 ~500 ms（500 节点） ~50 ms（10 倍） 切换节点不再卡顿，流畅度提升"
     },
     {
       "id": "u_8b9ec2fbb54059a6",
@@ -658,7 +658,7 @@
       "source": "~500 ms（500 节点）",
       "occurrence": 0,
       "target": "~500 ms (500 VPN nodes)",
-      "context": "td @ line 154 · surrounding text: 节点列表过滤 ~500 ms（500 节点） ~50 ms（10 倍） 切换节点不再卡顿，流畅度提升"
+      "context": "td @ line 153 · surrounding text: 节点列表过滤 ~500 ms（500 节点） ~50 ms（10 倍） 切换节点不再卡顿，流畅度提升"
     },
     {
       "id": "u_6ef6cf594e8d2f8a",
@@ -666,7 +666,7 @@
       "source": "~50 ms（10 倍）",
       "occurrence": 0,
       "target": "~50 ms (10x)",
-      "context": "td @ line 154 · surrounding text: 节点列表过滤 ~500 ms（500 节点） ~50 ms（10 倍） 切换节点不再卡顿，流畅度提升"
+      "context": "td @ line 153 · surrounding text: 节点列表过滤 ~500 ms（500 节点） ~50 ms（10 倍） 切换节点不再卡顿，流畅度提升"
     },
     {
       "id": "u_702bf2216236b936",
@@ -674,7 +674,7 @@
       "source": "切换节点不再卡顿，流畅度提升",
       "occurrence": 0,
       "target": "VPN node switching no longer lags, smoothness improved",
-      "context": "td @ line 154 · surrounding text: 节点列表过滤 ~500 ms（500 节点） ~50 ms（10 倍） 切换节点不再卡顿，流畅度提升"
+      "context": "td @ line 153 · surrounding text: 节点列表过滤 ~500 ms（500 节点） ~50 ms（10 倍） 切换节点不再卡顿，流畅度提升"
     },
     {
       "id": "u_035ca601e5920a41",
@@ -682,7 +682,7 @@
       "source": "构建时间",
       "occurrence": 1,
       "target": "Build time",
-      "context": "td @ line 155 · surrounding text: 构建时间 6 分钟 4 分 50 秒（−20%） 每次发版节省约 70 秒；QA 等待时间缩短"
+      "context": "td @ line 154 · surrounding text: 构建时间 6 分钟 4 分 50 秒（−20%） 每次发版节省约 70 秒；QA 等待时间缩短"
     },
     {
       "id": "u_b70b4a4ab6bd1f0f",
@@ -690,7 +690,7 @@
       "source": "6 分钟",
       "occurrence": 0,
       "target": "6 minutes",
-      "context": "td @ line 155 · surrounding text: 构建时间 6 分钟 4 分 50 秒（−20%） 每次发版节省约 70 秒；QA 等待时间缩短"
+      "context": "td @ line 154 · surrounding text: 构建时间 6 分钟 4 分 50 秒（−20%） 每次发版节省约 70 秒；QA 等待时间缩短"
     },
     {
       "id": "u_ac6251e85e798084",
@@ -698,7 +698,7 @@
       "source": "4 分 50 秒（−20%）",
       "occurrence": 0,
       "target": "~4 minutes 50 seconds (−20%)",
-      "context": "td @ line 155 · surrounding text: 构建时间 6 分钟 4 分 50 秒（−20%） 每次发版节省约 70 秒；QA 等待时间缩短"
+      "context": "td @ line 154 · surrounding text: 构建时间 6 分钟 4 分 50 秒（−20%） 每次发版节省约 70 秒；QA 等待时间缩短"
     },
     {
       "id": "u_b42120affcadc962",
@@ -706,7 +706,7 @@
       "source": "每次发版节省约 70 秒；QA 等待时间缩短",
       "occurrence": 0,
       "target": "Save about 70 seconds per release; QA waiting time shortened",
-      "context": "td @ line 155 · surrounding text: 构建时间 6 分钟 4 分 50 秒（−20%） 每次发版节省约 70 秒；QA 等待时间缩短"
+      "context": "td @ line 154 · surrounding text: 构建时间 6 分钟 4 分 50 秒（−20%） 每次发版节省约 70 秒；QA 等待时间缩短"
     },
     {
       "id": "u_eca6e4866abbeb23",
@@ -714,7 +714,7 @@
       "source": "数据库查询次数",
       "occurrence": 0,
       "target": "Database query count",
-      "context": "td @ line 156 · surrounding text: 数据库查询次数 每用户每分钟约 20 次 约 12 次（−40%） 支撑用户规模 3 倍扩展无需新增服务器"
+      "context": "td @ line 155 · surrounding text: 数据库查询次数 每用户每分钟约 20 次 约 12 次（−40%） 支撑用户规模 3 倍扩展无需新增服务器"
     },
     {
       "id": "u_6822acc39f377acc",
@@ -722,7 +722,7 @@
       "source": "每用户每分钟约 20 次",
       "occurrence": 0,
       "target": "Approximately 20 times per user per minute",
-      "context": "td @ line 156 · surrounding text: 数据库查询次数 每用户每分钟约 20 次 约 12 次（−40%） 支撑用户规模 3 倍扩展无需新增服务器"
+      "context": "td @ line 155 · surrounding text: 数据库查询次数 每用户每分钟约 20 次 约 12 次（−40%） 支撑用户规模 3 倍扩展无需新增服务器"
     },
     {
       "id": "u_e6f3e94b0f558aa0",
@@ -730,7 +730,7 @@
       "source": "约 12 次（−40%）",
       "occurrence": 0,
       "target": "~12 times (−40%)",
-      "context": "td @ line 156 · surrounding text: 数据库查询次数 每用户每分钟约 20 次 约 12 次（−40%） 支撑用户规模 3 倍扩展无需新增服务器"
+      "context": "td @ line 155 · surrounding text: 数据库查询次数 每用户每分钟约 20 次 约 12 次（−40%） 支撑用户规模 3 倍扩展无需新增服务器"
     },
     {
       "id": "u_494380742dc42b87",
@@ -738,7 +738,7 @@
       "source": "支撑用户规模 3 倍扩展无需新增服务器",
       "occurrence": 0,
       "target": "Supports a 3-fold increase in user scale without additional servers",
-      "context": "td @ line 156 · surrounding text: 数据库查询次数 每用户每分钟约 20 次 约 12 次（−40%） 支撑用户规模 3 倍扩展无需新增服务器"
+      "context": "td @ line 155 · surrounding text: 数据库查询次数 每用户每分钟约 20 次 约 12 次（−40%） 支撑用户规模 3 倍扩展无需新增服务器"
     },
     {
       "id": "u_5cda24b0e0877e98",
@@ -746,7 +746,7 @@
       "source": "读写分离",
       "occurrence": 0,
       "target": "Read-write separation",
-      "context": "td @ line 157 · surrounding text: 读写分离 0%（写库承担全部） 100% 客户端读取走只读副本 主库负载减轻，写入更稳定"
+      "context": "td @ line 156 · surrounding text: 读写分离 0%（写库承担全部） 100% 客户端读取走只读副本 主库负载减轻，写入更稳定"
     },
     {
       "id": "u_792eb21e6080619d",
@@ -754,7 +754,7 @@
       "source": "0%（写库承担全部）",
       "occurrence": 0,
       "target": "0% (write database bears all)",
-      "context": "td @ line 157 · surrounding text: 读写分离 0%（写库承担全部） 100% 客户端读取走只读副本 主库负载减轻，写入更稳定"
+      "context": "td @ line 156 · surrounding text: 读写分离 0%（写库承担全部） 100% 客户端读取走只读副本 主库负载减轻，写入更稳定"
     },
     {
       "id": "u_fdfad8e945fdd7f5",
@@ -762,7 +762,7 @@
       "source": "100% 客户端读取走只读副本",
       "occurrence": 0,
       "target": "100% client reads only from read-only replica",
-      "context": "td @ line 157 · surrounding text: 读写分离 0%（写库承担全部） 100% 客户端读取走只读副本 主库负载减轻，写入更稳定"
+      "context": "td @ line 156 · surrounding text: 读写分离 0%（写库承担全部） 100% 客户端读取走只读副本 主库负载减轻，写入更稳定"
     },
     {
       "id": "u_03059c4e44963076",
@@ -770,7 +770,7 @@
       "source": "主库负载减轻，写入更稳定",
       "occurrence": 0,
       "target": "Main database load reduced, writes more stable",
-      "context": "td @ line 157 · surrounding text: 读写分离 0%（写库承担全部） 100% 客户端读取走只读副本 主库负载减轻，写入更稳定"
+      "context": "td @ line 156 · surrounding text: 读写分离 0%（写库承担全部） 100% 客户端读取走只读副本 主库负载减轻，写入更稳定"
     },
     {
       "id": "u_d00fe59466f2dbf5",
@@ -778,7 +778,7 @@
       "source": "内存泄漏",
       "occurrence": 0,
       "target": "Memory Leaks",
-      "context": "td @ line 158 · surrounding text: 内存泄漏 每会话约 2 MB 已修复 低端机长时间使用不再变慢；崩溃率下降"
+      "context": "td @ line 157 · surrounding text: 内存泄漏 每会话约 2 MB 已修复 低端机长时间使用不再变慢；崩溃率下降"
     },
     {
       "id": "u_723eec72451ab1ec",
@@ -786,7 +786,7 @@
       "source": "每会话约 2 MB",
       "occurrence": 0,
       "target": "Approx. 2 MB per session",
-      "context": "td @ line 158 · surrounding text: 内存泄漏 每会话约 2 MB 已修复 低端机长时间使用不再变慢；崩溃率下降"
+      "context": "td @ line 157 · surrounding text: 内存泄漏 每会话约 2 MB 已修复 低端机长时间使用不再变慢；崩溃率下降"
     },
     {
       "id": "u_3ec0a3c9fe64fb78",
@@ -794,7 +794,7 @@
       "source": "已修复",
       "occurrence": 0,
       "target": "Fixed",
-      "context": "td @ line 158 · surrounding text: 内存泄漏 每会话约 2 MB 已修复 低端机长时间使用不再变慢；崩溃率下降"
+      "context": "td @ line 157 · surrounding text: 内存泄漏 每会话约 2 MB 已修复 低端机长时间使用不再变慢；崩溃率下降"
     },
     {
       "id": "u_0578a9d13267c3a3",
@@ -802,7 +802,7 @@
       "source": "低端机长时间使用不再变慢；崩溃率下降",
       "occurrence": 0,
       "target": "No longer slows down on low-end devices for long periods of use; crash rate decreases",
-      "context": "td @ line 158 · surrounding text: 内存泄漏 每会话约 2 MB 已修复 低端机长时间使用不再变慢；崩溃率下降"
+      "context": "td @ line 157 · surrounding text: 内存泄漏 每会话约 2 MB 已修复 低端机长时间使用不再变慢；崩溃率下降"
     },
     {
       "id": "u_85e6208cf076c7bc",
@@ -810,7 +810,7 @@
       "source": "稳定性改善",
       "occurrence": 0,
       "target": "Stability Improvement",
-      "context": "h3 @ line 161"
+      "context": "h3 @ line 160"
     },
     {
       "id": "u_14fa00cfc3ae75bb",
@@ -818,7 +818,7 @@
       "source": "问题",
       "occurrence": 0,
       "target": "Issue",
-      "context": "th @ line 163 · surrounding text: 问题 之前 之后 商业价值"
+      "context": "th @ line 162 · surrounding text: 问题 之前 之后 商业价值"
     },
     {
       "id": "u_acb4838e7fbf2439",
@@ -826,7 +826,7 @@
       "source": "之前",
       "occurrence": 1,
       "target": "Previous",
-      "context": "th @ line 163 · surrounding text: 问题 之前 之后 商业价值"
+      "context": "th @ line 162 · surrounding text: 问题 之前 之后 商业价值"
     },
     {
       "id": "u_f1668ddb4b6704e6",
@@ -834,7 +834,7 @@
       "source": "之后",
       "occurrence": 1,
       "target": "Afterwards",
-      "context": "th @ line 163 · surrounding text: 问题 之前 之后 商业价值"
+      "context": "th @ line 162 · surrounding text: 问题 之前 之后 商业价值"
     },
     {
       "id": "u_800e0383e0480b9a",
@@ -842,7 +842,7 @@
       "source": "商业价值",
       "occurrence": 1,
       "target": "Business Value",
-      "context": "th @ line 163 · surrounding text: 问题 之前 之后 商业价值"
+      "context": "th @ line 162 · surrounding text: 问题 之前 之后 商业价值"
     },
     {
       "id": "u_eefb57d96f053366",
@@ -850,7 +850,7 @@
       "source": "启动卡死",
       "occurrence": 0,
       "target": "Stuck at Startup",
-      "context": "td @ line 164 · surrounding text: 启动卡死 新装用户偶发卡 60 秒以上 根因修复，网络异常自动跳转登录页 避免「装了不能用」的差评"
+      "context": "td @ line 163 · surrounding text: 启动卡死 新装用户偶发卡 60 秒以上 根因修复，网络异常自动跳转登录页 避免「装了不能用」的差评"
     },
     {
       "id": "u_9667f60666b6664d",
@@ -858,7 +858,7 @@
       "source": "新装用户偶发卡 60 秒以上",
       "occurrence": 0,
       "target": "Occasional Stalls for New Users Over 60 Seconds",
-      "context": "td @ line 164 · surrounding text: 启动卡死 新装用户偶发卡 60 秒以上 根因修复，网络异常自动跳转登录页 避免「装了不能用」的差评"
+      "context": "td @ line 163 · surrounding text: 启动卡死 新装用户偶发卡 60 秒以上 根因修复，网络异常自动跳转登录页 避免「装了不能用」的差评"
     },
     {
       "id": "u_6123d0dac91bfb93",
@@ -866,7 +866,7 @@
       "source": "根因修复，网络异常自动跳转登录页",
       "occurrence": 0,
       "target": "Root Cause Fixed, Network Abnormal Automatically Redirects to Login Page",
-      "context": "td @ line 164 · surrounding text: 启动卡死 新装用户偶发卡 60 秒以上 根因修复，网络异常自动跳转登录页 避免「装了不能用」的差评"
+      "context": "td @ line 163 · surrounding text: 启动卡死 新装用户偶发卡 60 秒以上 根因修复，网络异常自动跳转登录页 避免「装了不能用」的差评"
     },
     {
       "id": "u_a95a8ceaf57401fb",
@@ -874,7 +874,7 @@
       "source": "避免「装了不能用」的差评",
       "occurrence": 0,
       "target": "Avoiding the 'Cannot Use After Installation' Bad Reviews",
-      "context": "td @ line 164 · surrounding text: 启动卡死 新装用户偶发卡 60 秒以上 根因修复，网络异常自动跳转登录页 避免「装了不能用」的差评"
+      "context": "td @ line 163 · surrounding text: 启动卡死 新装用户偶发卡 60 秒以上 根因修复，网络异常自动跳转登录页 避免「装了不能用」的差评"
     },
     {
       "id": "u_af735d7a3d22cd9d",
@@ -882,7 +882,7 @@
       "source": "VPN 连接 / 断开崩溃",
       "occurrence": 0,
       "target": "VPN Connection/Disconnection Crashes",
-      "context": "td @ line 165 · surrounding text: VPN 连接 / 断开崩溃 偶发崩溃 三类深层崩溃风险已修复 崩溃率下降，客服投诉量下降"
+      "context": "td @ line 164 · surrounding text: VPN 连接 / 断开崩溃 偶发崩溃 三类深层崩溃风险已修复 崩溃率下降，客服投诉量下降"
     },
     {
       "id": "u_e7a6889cebb33453",
@@ -890,7 +890,7 @@
       "source": "偶发崩溃",
       "occurrence": 0,
       "target": "Occasional Crashes",
-      "context": "td @ line 165 · surrounding text: VPN 连接 / 断开崩溃 偶发崩溃 三类深层崩溃风险已修复 崩溃率下降，客服投诉量下降"
+      "context": "td @ line 164 · surrounding text: VPN 连接 / 断开崩溃 偶发崩溃 三类深层崩溃风险已修复 崩溃率下降，客服投诉量下降"
     },
     {
       "id": "u_ef0b5eee88a6f499",
@@ -898,7 +898,7 @@
       "source": "三类深层崩溃风险已修复",
       "occurrence": 0,
       "target": "Three Levels of Deep Crash Risks Fixed",
-      "context": "td @ line 165 · surrounding text: VPN 连接 / 断开崩溃 偶发崩溃 三类深层崩溃风险已修复 崩溃率下降，客服投诉量下降"
+      "context": "td @ line 164 · surrounding text: VPN 连接 / 断开崩溃 偶发崩溃 三类深层崩溃风险已修复 崩溃率下降，客服投诉量下降"
     },
     {
       "id": "u_f6f46d7e3ac28443",
@@ -906,7 +906,7 @@
       "source": "崩溃率下降，客服投诉量下降",
       "occurrence": 0,
       "target": "Crash Rate Decreases, Customer Service Complaints Decrease",
-      "context": "td @ line 165 · surrounding text: VPN 连接 / 断开崩溃 偶发崩溃 三类深层崩溃风险已修复 崩溃率下降，客服投诉量下降"
+      "context": "td @ line 164 · surrounding text: VPN 连接 / 断开崩溃 偶发崩溃 三类深层崩溃风险已修复 崩溃率下降，客服投诉量下降"
     },
     {
       "id": "u_78382fcabacf191f",
@@ -914,7 +914,7 @@
       "source": "试用计时器漂移",
       "occurrence": 0,
       "target": "Timer Skew When Screen is Off",
-      "context": "td @ line 166 · surrounding text: 试用计时器漂移 息屏后倒计时与真实时间脱节 统一改为服务器权威 用户对试用时间的信任度提升"
+      "context": "td @ line 165 · surrounding text: 试用计时器漂移 息屏后倒计时与真实时间脱节 统一改为服务器权威 用户对试用时间的信任度提升"
     },
     {
       "id": "u_c1e66213c02b464e",
@@ -922,7 +922,7 @@
       "source": "息屏后倒计时与真实时间脱节",
       "occurrence": 0,
       "target": "Unified to Server Authority",
-      "context": "td @ line 166 · surrounding text: 试用计时器漂移 息屏后倒计时与真实时间脱节 统一改为服务器权威 用户对试用时间的信任度提升"
+      "context": "td @ line 165 · surrounding text: 试用计时器漂移 息屏后倒计时与真实时间脱节 统一改为服务器权威 用户对试用时间的信任度提升"
     },
     {
       "id": "u_e461a25eb76d0196",
@@ -930,7 +930,7 @@
       "source": "统一改为服务器权威",
       "occurrence": 0,
       "target": "Increased User Trust in Trial Time",
-      "context": "td @ line 166 · surrounding text: 试用计时器漂移 息屏后倒计时与真实时间脱节 统一改为服务器权威 用户对试用时间的信任度提升"
+      "context": "td @ line 165 · surrounding text: 试用计时器漂移 息屏后倒计时与真实时间脱节 统一改为服务器权威 用户对试用时间的信任度提升"
     },
     {
       "id": "u_532324c9c639922c",
@@ -938,7 +938,7 @@
       "source": "用户对试用时间的信任度提升",
       "occurrence": 0,
       "target": "Error Messages Without Meaning",
-      "context": "td @ line 166 · surrounding text: 试用计时器漂移 息屏后倒计时与真实时间脱节 统一改为服务器权威 用户对试用时间的信任度提升"
+      "context": "td @ line 165 · surrounding text: 试用计时器漂移 息屏后倒计时与真实时间脱节 统一改为服务器权威 用户对试用时间的信任度提升"
     },
     {
       "id": "u_24f475f961fad7d0",
@@ -946,7 +946,7 @@
       "source": "错误提示无意义",
       "occurrence": 0,
       "target": "Error messages are meaningless",
-      "context": "td @ line 167 · surrounding text: 错误提示无意义 统一英文「Api Exception」 本地化清晰说明 用户自助解决能力提升，客服咨询下降"
+      "context": "td @ line 166 · surrounding text: 错误提示无意义 统一英文「Api Exception」 本地化清晰说明 用户自助解决能力提升，客服咨询下降"
     },
     {
       "id": "u_f64af8db563c4ae2",
@@ -954,7 +954,7 @@
       "source": "统一英文「Api Exception」",
       "occurrence": 0,
       "target": "Unified to English 'Api Exception'",
-      "context": "td @ line 167 · surrounding text: 错误提示无意义 统一英文「Api Exception」 本地化清晰说明 用户自助解决能力提升，客服咨询下降"
+      "context": "td @ line 166 · surrounding text: 错误提示无意义 统一英文「Api Exception」 本地化清晰说明 用户自助解决能力提升，客服咨询下降"
     },
     {
       "id": "u_5189de8e6eed88ba",
@@ -962,7 +962,7 @@
       "source": "本地化清晰说明",
       "occurrence": 0,
       "target": "Clear Localized Explanations",
-      "context": "td @ line 167 · surrounding text: 错误提示无意义 统一英文「Api Exception」 本地化清晰说明 用户自助解决能力提升，客服咨询下降"
+      "context": "td @ line 166 · surrounding text: 错误提示无意义 统一英文「Api Exception」 本地化清晰说明 用户自助解决能力提升，客服咨询下降"
     },
     {
       "id": "u_a6b23e50baf7ef73",
@@ -970,7 +970,7 @@
       "source": "用户自助解决能力提升，客服咨询下降",
       "occurrence": 0,
       "target": "User Self-Solving Ability Improves, Customer Service Consultation Decreases",
-      "context": "td @ line 167 · surrounding text: 错误提示无意义 统一英文「Api Exception」 本地化清晰说明 用户自助解决能力提升，客服咨询下降"
+      "context": "td @ line 166 · surrounding text: 错误提示无意义 统一英文「Api Exception」 本地化清晰说明 用户自助解决能力提升，客服咨询下降"
     },
     {
       "id": "u_7a91ecfab71a9028",
@@ -978,7 +978,7 @@
       "source": "余额支付卡单",
       "occurrence": 0,
       "target": "Balance Payment Card Issues",
-      "context": "td @ line 168 · surrounding text: 余额支付卡单 外部网页跳转，偶发「处理中」 App 内 1 秒返回结果 消除重复扣款隐患，减少退款"
+      "context": "td @ line 167 · surrounding text: 余额支付卡单 外部网页跳转，偶发「处理中」 App 内 1 秒返回结果 消除重复扣款隐患，减少退款"
     },
     {
       "id": "u_9bfc399fca5ba292",
@@ -986,7 +986,7 @@
       "source": "外部网页跳转，偶发「处理中」",
       "occurrence": 0,
       "target": "External Webpage Redirects, Occasional 'Processing'",
-      "context": "td @ line 168 · surrounding text: 余额支付卡单 外部网页跳转，偶发「处理中」 App 内 1 秒返回结果 消除重复扣款隐患，减少退款"
+      "context": "td @ line 167 · surrounding text: 余额支付卡单 外部网页跳转，偶发「处理中」 App 内 1 秒返回结果 消除重复扣款隐患，减少退款"
     },
     {
       "id": "u_74d26332950bbc6e",
@@ -994,7 +994,7 @@
       "source": "App 内 1 秒返回结果",
       "occurrence": 0,
       "target": "App Returns Results in 1 Second",
-      "context": "td @ line 168 · surrounding text: 余额支付卡单 外部网页跳转，偶发「处理中」 App 内 1 秒返回结果 消除重复扣款隐患，减少退款"
+      "context": "td @ line 167 · surrounding text: 余额支付卡单 外部网页跳转，偶发「处理中」 App 内 1 秒返回结果 消除重复扣款隐患，减少退款"
     },
     {
       "id": "u_81d3c7798d0d3ede",
@@ -1002,7 +1002,7 @@
       "source": "消除重复扣款隐患，减少退款",
       "occurrence": 0,
       "target": "Eliminates the Risk of Duplicate Deductions, Reduces Refunds",
-      "context": "td @ line 168 · surrounding text: 余额支付卡单 外部网页跳转，偶发「处理中」 App 内 1 秒返回结果 消除重复扣款隐患，减少退款"
+      "context": "td @ line 167 · surrounding text: 余额支付卡单 外部网页跳转，偶发「处理中」 App 内 1 秒返回结果 消除重复扣款隐患，减少退款"
     },
     {
       "id": "u_92a41999ea08c6cd",
@@ -1010,7 +1010,7 @@
       "source": "升级 App 闪退",
       "occurrence": 0,
       "target": "App Upgrade Crashes",
-      "context": "td @ line 169 · surrounding text: 升级 App 闪退 下载链接异常时闪退 友好提示 升级路径不再失败导致流失"
+      "context": "td @ line 168 · surrounding text: 升级 App 闪退 下载链接异常时闪退 友好提示 升级路径不再失败导致流失"
     },
     {
       "id": "u_ba7525be1bb60a7f",
@@ -1018,7 +1018,7 @@
       "source": "下载链接异常时闪退",
       "occurrence": 0,
       "target": "Crashes When Download Link is Abnormal",
-      "context": "td @ line 169 · surrounding text: 升级 App 闪退 下载链接异常时闪退 友好提示 升级路径不再失败导致流失"
+      "context": "td @ line 168 · surrounding text: 升级 App 闪退 下载链接异常时闪退 友好提示 升级路径不再失败导致流失"
     },
     {
       "id": "u_f01eaca80a8a4f5f",
@@ -1026,7 +1026,7 @@
       "source": "友好提示",
       "occurrence": 0,
       "target": "Friendly Alerts",
-      "context": "td @ line 169 · surrounding text: 升级 App 闪退 下载链接异常时闪退 友好提示 升级路径不再失败导致流失"
+      "context": "td @ line 168 · surrounding text: 升级 App 闪退 下载链接异常时闪退 友好提示 升级路径不再失败导致流失"
     },
     {
       "id": "u_177d491e1cc4382b",
@@ -1034,7 +1034,7 @@
       "source": "升级路径不再失败导致流失",
       "occurrence": 0,
       "target": "Upgrade path no longer fails leading to churn",
-      "context": "td @ line 169 · surrounding text: 升级 App 闪退 下载链接异常时闪退 友好提示 升级路径不再失败导致流失"
+      "context": "td @ line 168 · surrounding text: 升级 App 闪退 下载链接异常时闪退 友好提示 升级路径不再失败导致流失"
     },
     {
       "id": "u_e3abd5755a479be2",
@@ -1042,7 +1042,7 @@
       "source": "安全 / 反欺诈改善",
       "occurrence": 0,
       "target": "Security / Fraud Prevention Improvements",
-      "context": "h3 @ line 172"
+      "context": "h3 @ line 171"
     },
     {
       "id": "u_08e7d6482ea4f6d3",
@@ -1050,7 +1050,7 @@
       "source": "风险",
       "occurrence": 0,
       "target": "Risk",
-      "context": "th @ line 174 · surrounding text: 风险 之前 之后 商业价值"
+      "context": "th @ line 173 · surrounding text: 风险 之前 之后 商业价值"
     },
     {
       "id": "u_549a2c22a793a6f9",
@@ -1058,7 +1058,7 @@
       "source": "之前",
       "occurrence": 2,
       "target": "Prior to",
-      "context": "th @ line 174 · surrounding text: 风险 之前 之后 商业价值"
+      "context": "th @ line 173 · surrounding text: 风险 之前 之后 商业价值"
     },
     {
       "id": "u_f3ba24738465fe98",
@@ -1066,7 +1066,7 @@
       "source": "之后",
       "occurrence": 2,
       "target": "Afterwards",
-      "context": "th @ line 174 · surrounding text: 风险 之前 之后 商业价值"
+      "context": "th @ line 173 · surrounding text: 风险 之前 之后 商业价值"
     },
     {
       "id": "u_7d3370a2dfa767c8",
@@ -1074,7 +1074,7 @@
       "source": "商业价值",
       "occurrence": 2,
       "target": "Business Value",
-      "context": "th @ line 174 · surrounding text: 风险 之前 之后 商业价值"
+      "context": "th @ line 173 · surrounding text: 风险 之前 之后 商业价值"
     },
     {
       "id": "u_f05d876f811746c1",
@@ -1082,7 +1082,7 @@
       "source": "试用额度被滥用",
       "occurrence": 0,
       "target": "Abuse of trial quota",
-      "context": "td @ line 175 · surrounding text: 试用额度被滥用 同设备无限注册重置免费时间；模拟器可批量注册 5 层防护 带宽资源集中服务真实用户；预期付费转化率提升 0.3–0.5 个百分点"
+      "context": "td @ line 174 · surrounding text: 试用额度被滥用 同设备无限注册重置免费时间；模拟器可批量注册 5 层防护 带宽资源集中服务真实用户；预期付费转化率提升 0.3–0.5 个百分点"
     },
     {
       "id": "u_87c601d6511d6f1d",
@@ -1090,7 +1090,7 @@
       "source": "同设备无限注册重置免费时间；模拟器可批量注册",
       "occurrence": 0,
       "target": "Free reset time for unlimited device registration; batch registration available with emulator",
-      "context": "td @ line 175 · surrounding text: 试用额度被滥用 同设备无限注册重置免费时间；模拟器可批量注册 5 层防护 带宽资源集中服务真实用户；预期付费转化率提升 0.3–0.5 个百分点"
+      "context": "td @ line 174 · surrounding text: 试用额度被滥用 同设备无限注册重置免费时间；模拟器可批量注册 5 层防护 带宽资源集中服务真实用户；预期付费转化率提升 0.3–0.5 个百分点"
     },
     {
       "id": "u_e70a1c99fa259a0b",
@@ -1098,7 +1098,7 @@
       "source": "5 层防护",
       "occurrence": 0,
       "target": "Five-layer protection",
-      "context": "td @ line 175 · surrounding text: 试用额度被滥用 同设备无限注册重置免费时间；模拟器可批量注册 5 层防护 带宽资源集中服务真实用户；预期付费转化率提升 0.3–0.5 个百分点"
+      "context": "td @ line 174 · surrounding text: 试用额度被滥用 同设备无限注册重置免费时间；模拟器可批量注册 5 层防护 带宽资源集中服务真实用户；预期付费转化率提升 0.3–0.5 个百分点"
     },
     {
       "id": "u_4b044bb4edde1090",
@@ -1106,7 +1106,7 @@
       "source": "带宽资源集中服务真实用户；预期付费转化率提升 0.3–0.5 个百分点",
       "occurrence": 0,
       "target": "Bandwidth resources concentrated for real users; expected payback conversion rate improves by 0.3-0.5 percentage points",
-      "context": "td @ line 175 · surrounding text: 试用额度被滥用 同设备无限注册重置免费时间；模拟器可批量注册 5 层防护 带宽资源集中服务真实用户；预期付费转化率提升 0.3–0.5 个百分点"
+      "context": "td @ line 174 · surrounding text: 试用额度被滥用 同设备无限注册重置免费时间；模拟器可批量注册 5 层防护 带宽资源集中服务真实用户；预期付费转化率提升 0.3–0.5 个百分点"
     },
     {
       "id": "u_85d5798f57ac3298",
@@ -1114,7 +1114,7 @@
       "source": "付费节点被白嫖",
       "occurrence": 0,
       "target": "Paid VPN nodes being exploited",
-      "context": "td @ line 176 · surrounding text: 付费节点被白嫖 API 直接返回所有节点凭证 无权用户拿不到付费节点凭证 付费品类的差异化价值得到保护"
+      "context": "td @ line 175 · surrounding text: 付费节点被白嫖 API 直接返回所有节点凭证 无权用户拿不到付费节点凭证 付费品类的差异化价值得到保护"
     },
     {
       "id": "u_f305fb776174cae3",
@@ -1122,7 +1122,7 @@
       "source": "API 直接返回所有节点凭证",
       "occurrence": 0,
       "target": "API returns all VPN node credentials directly",
-      "context": "td @ line 176 · surrounding text: 付费节点被白嫖 API 直接返回所有节点凭证 无权用户拿不到付费节点凭证 付费品类的差异化价值得到保护"
+      "context": "td @ line 175 · surrounding text: 付费节点被白嫖 API 直接返回所有节点凭证 无权用户拿不到付费节点凭证 付费品类的差异化价值得到保护"
     },
     {
       "id": "u_7f8f413838d717bc",
@@ -1130,7 +1130,7 @@
       "source": "无权用户拿不到付费节点凭证",
       "occurrence": 0,
       "target": "Unauthorized users cannot access paid VPN nodes",
-      "context": "td @ line 176 · surrounding text: 付费节点被白嫖 API 直接返回所有节点凭证 无权用户拿不到付费节点凭证 付费品类的差异化价值得到保护"
+      "context": "td @ line 175 · surrounding text: 付费节点被白嫖 API 直接返回所有节点凭证 无权用户拿不到付费节点凭证 付费品类的差异化价值得到保护"
     },
     {
       "id": "u_4803c475dad02a4c",
@@ -1138,7 +1138,7 @@
       "source": "付费品类的差异化价值得到保护",
       "occurrence": 0,
       "target": "Differentiated value of paid categories is protected",
-      "context": "td @ line 176 · surrounding text: 付费节点被白嫖 API 直接返回所有节点凭证 无权用户拿不到付费节点凭证 付费品类的差异化价值得到保护"
+      "context": "td @ line 175 · surrounding text: 付费节点被白嫖 API 直接返回所有节点凭证 无权用户拿不到付费节点凭证 付费品类的差异化价值得到保护"
     },
     {
       "id": "u_6e307dd5b3fc8092",
@@ -1146,7 +1146,7 @@
       "source": "密码暴力破解",
       "occurrence": 0,
       "target": "Password brute force attacks",
-      "context": "td @ line 177 · surrounding text: 密码暴力破解 无登录失败次数限制 5 次失败自动锁 30 分钟 账号被盗风险下降"
+      "context": "td @ line 176 · surrounding text: 密码暴力破解 无登录失败次数限制 5 次失败自动锁 30 分钟 账号被盗风险下降"
     },
     {
       "id": "u_b54b40b073ddd3cc",
@@ -1154,7 +1154,7 @@
       "source": "无登录失败次数限制",
       "occurrence": 0,
       "target": "No login failure count limit",
-      "context": "td @ line 177 · surrounding text: 密码暴力破解 无登录失败次数限制 5 次失败自动锁 30 分钟 账号被盗风险下降"
+      "context": "td @ line 176 · surrounding text: 密码暴力破解 无登录失败次数限制 5 次失败自动锁 30 分钟 账号被盗风险下降"
     },
     {
       "id": "u_ecfbb3cba9938849",
@@ -1162,7 +1162,7 @@
       "source": "5 次失败自动锁 30 分钟",
       "occurrence": 0,
       "target": "Five failed attempts lock out for 30 minutes",
-      "context": "td @ line 177 · surrounding text: 密码暴力破解 无登录失败次数限制 5 次失败自动锁 30 分钟 账号被盗风险下降"
+      "context": "td @ line 176 · surrounding text: 密码暴力破解 无登录失败次数限制 5 次失败自动锁 30 分钟 账号被盗风险下降"
     },
     {
       "id": "u_2827a70379a5bf46",
@@ -1170,7 +1170,7 @@
       "source": "账号被盗风险下降",
       "occurrence": 0,
       "target": "Risk of account theft decreases",
-      "context": "td @ line 177 · surrounding text: 密码暴力破解 无登录失败次数限制 5 次失败自动锁 30 分钟 账号被盗风险下降"
+      "context": "td @ line 176 · surrounding text: 密码暴力破解 无登录失败次数限制 5 次失败自动锁 30 分钟 账号被盗风险下降"
     },
     {
       "id": "u_1041721230212ec9",
@@ -1178,7 +1178,7 @@
       "source": "设备身份伪造",
       "occurrence": 0,
       "target": "Device identity spoofing",
-      "context": "td @ line 178 · surrounding text: 设备身份伪造 ANDROID_ID 易伪造 设备指纹识别（加密验证） 反欺诈纵深防御能力提升"
+      "context": "td @ line 177 · surrounding text: 设备身份伪造 ANDROID_ID 易伪造 设备指纹识别（加密验证） 反欺诈纵深防御能力提升"
     },
     {
       "id": "u_5444601140aea8c8",
@@ -1186,7 +1186,7 @@
       "source": "ANDROID_ID 易伪造",
       "occurrence": 0,
       "target": "ANDROID_ID is easily forged",
-      "context": "td @ line 178 · surrounding text: 设备身份伪造 ANDROID_ID 易伪造 设备指纹识别（加密验证） 反欺诈纵深防御能力提升"
+      "context": "td @ line 177 · surrounding text: 设备身份伪造 ANDROID_ID 易伪造 设备指纹识别（加密验证） 反欺诈纵深防御能力提升"
     },
     {
       "id": "u_3218f98e687678c1",
@@ -1194,7 +1194,7 @@
       "source": "设备指纹识别（加密验证）",
       "occurrence": 0,
       "target": "Device fingerprint recognition (encrypted verification)",
-      "context": "td @ line 178 · surrounding text: 设备身份伪造 ANDROID_ID 易伪造 设备指纹识别（加密验证） 反欺诈纵深防御能力提升"
+      "context": "td @ line 177 · surrounding text: 设备身份伪造 ANDROID_ID 易伪造 设备指纹识别（加密验证） 反欺诈纵深防御能力提升"
     },
     {
       "id": "u_d72501ba49d2467a",
@@ -1202,7 +1202,7 @@
       "source": "反欺诈纵深防御能力提升",
       "occurrence": 0,
       "target": "Enhanced depth of fraud prevention",
-      "context": "td @ line 178 · surrounding text: 设备身份伪造 ANDROID_ID 易伪造 设备指纹识别（加密验证） 反欺诈纵深防御能力提升"
+      "context": "td @ line 177 · surrounding text: 设备身份伪造 ANDROID_ID 易伪造 设备指纹识别（加密验证） 反欺诈纵深防御能力提升"
     },
     {
       "id": "u_21cee3b9a5e431e1",
@@ -1210,7 +1210,7 @@
       "source": "无日志合规",
       "occurrence": 0,
       "target": "No logging compliance issues",
-      "context": "td @ line 179 · surrounding text: 无日志合规 部分场景仍记敏感信息 系统层 + 应用层大部分已清理（详见第九节新发现一项，第3阶段 Phase 12 处理） 完成后方可正式对外宣传「无日志」，亦是 FFF 欧盟上线前提"
+      "context": "td @ line 178 · surrounding text: 无日志合规 部分场景仍记敏感信息 系统层 + 应用层大部分已清理（详见第九节新发现一项，第3阶段 Phase 12 处理） 完成后方可正式对外宣传「无日志」，亦是 FFF 欧盟上线前提"
     },
     {
       "id": "u_56be9628fb52579d",
@@ -1218,7 +1218,7 @@
       "source": "部分场景仍记敏感信息",
       "occurrence": 0,
       "target": "Sensitive information still recorded in some scenarios",
-      "context": "td @ line 179 · surrounding text: 无日志合规 部分场景仍记敏感信息 系统层 + 应用层大部分已清理（详见第九节新发现一项，第3阶段 Phase 12 处理） 完成后方可正式对外宣传「无日志」，亦是 FFF 欧盟上线前提"
+      "context": "td @ line 178 · surrounding text: 无日志合规 部分场景仍记敏感信息 系统层 + 应用层大部分已清理（详见第九节新发现一项，第3阶段 Phase 12 处理） 完成后方可正式对外宣传「无日志」，亦是 FFF 欧盟上线前提"
     },
     {
       "id": "u_771c1eb7ca69862e",
@@ -1226,7 +1226,7 @@
       "source": "系统层 + 应用层大部分已清理（详见第九节新发现一项，第3阶段 Phase 12 处理）",
       "occurrence": 0,
       "target": "Most of the system and application layers have been cleaned up (see new findings in Section 9, Sprint 3, Phase 12 for details)",
-      "context": "td @ line 179 · surrounding text: 无日志合规 部分场景仍记敏感信息 系统层 + 应用层大部分已清理（详见第九节新发现一项，第3阶段 Phase 12 处理） 完成后方可正式对外宣传「无日志」，亦是 FFF 欧盟上线前提"
+      "context": "td @ line 178 · surrounding text: 无日志合规 部分场景仍记敏感信息 系统层 + 应用层大部分已清理（详见第九节新发现一项，第3阶段 Phase 12 处理） 完成后方可正式对外宣传「无日志」，亦是 FFF 欧盟上线前提"
     },
     {
       "id": "u_07cb8c76b52491a4",
@@ -1234,7 +1234,7 @@
       "source": "完成后方可正式对外宣传「无日志」，亦是 FFF 欧盟上线前提",
       "occurrence": 0,
       "target": "Can only be formally promoted after compliance with 'no logging' is completed; also a prerequisite for the FFF Alliance launch",
-      "context": "td @ line 179 · surrounding text: 无日志合规 部分场景仍记敏感信息 系统层 + 应用层大部分已清理（详见第九节新发现一项，第3阶段 Phase 12 处理） 完成后方可正式对外宣传「无日志」，亦是 FFF 欧盟上线前提"
+      "context": "td @ line 178 · surrounding text: 无日志合规 部分场景仍记敏感信息 系统层 + 应用层大部分已清理（详见第九节新发现一项，第3阶段 Phase 12 处理） 完成后方可正式对外宣传「无日志」，亦是 FFF 欧盟上线前提"
     },
     {
       "id": "u_eb31f3d5a07f88a5",
@@ -1242,7 +1242,7 @@
       "source": "开发效率与可维护性",
       "occurrence": 0,
       "target": "Development Efficiency and Maintainability",
-      "context": "h3 @ line 182"
+      "context": "h3 @ line 181"
     },
     {
       "id": "u_57ece8bb159173a1",
@@ -1250,7 +1250,7 @@
       "source": "项目",
       "occurrence": 0,
       "target": "Project",
-      "context": "th @ line 184 · surrounding text: 项目 之前 之后 商业价值"
+      "context": "th @ line 183 · surrounding text: 项目 之前 之后 商业价值"
     },
     {
       "id": "u_04e580a77573fbe9",
@@ -1258,7 +1258,7 @@
       "source": "之前",
       "occurrence": 3,
       "target": "Prior to",
-      "context": "th @ line 184 · surrounding text: 项目 之前 之后 商业价值"
+      "context": "th @ line 183 · surrounding text: 项目 之前 之后 商业价值"
     },
     {
       "id": "u_974c1075ffdc8416",
@@ -1266,7 +1266,7 @@
       "source": "之后",
       "occurrence": 3,
       "target": "Afterwards",
-      "context": "th @ line 184 · surrounding text: 项目 之前 之后 商业价值"
+      "context": "th @ line 183 · surrounding text: 项目 之前 之后 商业价值"
     },
     {
       "id": "u_1f381bc07506aea4",
@@ -1274,7 +1274,7 @@
       "source": "商业价值",
       "occurrence": 3,
       "target": "Business Value",
-      "context": "th @ line 184 · surrounding text: 项目 之前 之后 商业价值"
+      "context": "th @ line 183 · surrounding text: 项目 之前 之后 商业价值"
     },
     {
       "id": "u_50b6acc1066d09af",
@@ -1282,7 +1282,7 @@
       "source": "代码总量",
       "occurrence": 0,
       "target": "Code Volume",
-      "context": "td @ line 185 · surrounding text: 代码总量 原始基线 清理 20,847 行死代码 / 重复实现 新人上手成本下降；后续迭代更快"
+      "context": "td @ line 184 · surrounding text: 代码总量 原始基线 清理 20,847 行死代码 / 重复实现 新人上手成本下降；后续迭代更快"
     },
     {
       "id": "u_1b448a3f952e4a16",
@@ -1290,7 +1290,7 @@
       "source": "原始基线",
       "occurrence": 0,
       "target": "Original Baseline",
-      "context": "td @ line 185 · surrounding text: 代码总量 原始基线 清理 20,847 行死代码 / 重复实现 新人上手成本下降；后续迭代更快"
+      "context": "td @ line 184 · surrounding text: 代码总量 原始基线 清理 20,847 行死代码 / 重复实现 新人上手成本下降；后续迭代更快"
     },
     {
       "id": "u_b197abf316c34c23",
@@ -1298,7 +1298,7 @@
       "source": "清理 20,847 行死代码 / 重复实现",
       "occurrence": 0,
       "target": "Cleaned up 20,847 dead lines / duplicated implementations",
-      "context": "td @ line 185 · surrounding text: 代码总量 原始基线 清理 20,847 行死代码 / 重复实现 新人上手成本下降；后续迭代更快"
+      "context": "td @ line 184 · surrounding text: 代码总量 原始基线 清理 20,847 行死代码 / 重复实现 新人上手成本下降；后续迭代更快"
     },
     {
       "id": "u_893863143c98b970",
@@ -1306,7 +1306,7 @@
       "source": "新人上手成本下降；后续迭代更快",
       "occurrence": 0,
       "target": "New hire onboarding costs reduced; subsequent iterations faster",
-      "context": "td @ line 185 · surrounding text: 代码总量 原始基线 清理 20,847 行死代码 / 重复实现 新人上手成本下降；后续迭代更快"
+      "context": "td @ line 184 · surrounding text: 代码总量 原始基线 清理 20,847 行死代码 / 重复实现 新人上手成本下降；后续迭代更快"
     },
     {
       "id": "u_956d9facc0dfcd62",
@@ -1314,7 +1314,7 @@
       "source": "日志体系",
       "occurrence": 0,
       "target": "Logging System",
-      "context": "td @ line 186 · surrounding text: 日志体系 多套混用 统一 Timber，结构化日志 线上问题定位更快"
+      "context": "td @ line 185 · surrounding text: 日志体系 多套混用 统一 Timber，结构化日志 线上问题定位更快"
     },
     {
       "id": "u_e89faf248ece58d7",
@@ -1322,7 +1322,7 @@
       "source": "多套混用",
       "occurrence": 0,
       "target": "Mixed Use",
-      "context": "td @ line 186 · surrounding text: 日志体系 多套混用 统一 Timber，结构化日志 线上问题定位更快"
+      "context": "td @ line 185 · surrounding text: 日志体系 多套混用 统一 Timber，结构化日志 线上问题定位更快"
     },
     {
       "id": "u_3b9cd7f8cfb66182",
@@ -1330,7 +1330,7 @@
       "source": "统一 Timber，结构化日志",
       "occurrence": 0,
       "target": "Unified Timber, Structured Logging",
-      "context": "td @ line 186 · surrounding text: 日志体系 多套混用 统一 Timber，结构化日志 线上问题定位更快"
+      "context": "td @ line 185 · surrounding text: 日志体系 多套混用 统一 Timber，结构化日志 线上问题定位更快"
     },
     {
       "id": "u_53f9b274f6c7afc9",
@@ -1338,7 +1338,7 @@
       "source": "线上问题定位更快",
       "occurrence": 0,
       "target": "Faster Issue Localization Online",
-      "context": "td @ line 186 · surrounding text: 日志体系 多套混用 统一 Timber，结构化日志 线上问题定位更快"
+      "context": "td @ line 185 · surrounding text: 日志体系 多套混用 统一 Timber，结构化日志 线上问题定位更快"
     },
     {
       "id": "u_bd573ee60b942a42",
@@ -1346,7 +1346,7 @@
       "source": "测试 / 部署流水线",
       "occurrence": 0,
       "target": "Test/Deployment Pipeline",
-      "context": "td @ line 187 · surrounding text: 测试 / 部署流水线 手工出包 提交即自动构建推送 staging APK 每次发版节省约 15 分钟；快速闭环"
+      "context": "td @ line 186 · surrounding text: 测试 / 部署流水线 手工出包 提交即自动构建推送 staging APK 每次发版节省约 15 分钟；快速闭环"
     },
     {
       "id": "u_e6f55ba5c3de0aeb",
@@ -1354,7 +1354,7 @@
       "source": "手工出包",
       "occurrence": 0,
       "target": "Manual Release",
-      "context": "td @ line 187 · surrounding text: 测试 / 部署流水线 手工出包 提交即自动构建推送 staging APK 每次发版节省约 15 分钟；快速闭环"
+      "context": "td @ line 186 · surrounding text: 测试 / 部署流水线 手工出包 提交即自动构建推送 staging APK 每次发版节省约 15 分钟；快速闭环"
     },
     {
       "id": "u_51f67c5d3a817fac",
@@ -1362,7 +1362,7 @@
       "source": "提交即自动构建推送 staging APK",
       "occurrence": 0,
       "target": "Build and Push staging APK upon submission",
-      "context": "td @ line 187 · surrounding text: 测试 / 部署流水线 手工出包 提交即自动构建推送 staging APK 每次发版节省约 15 分钟；快速闭环"
+      "context": "td @ line 186 · surrounding text: 测试 / 部署流水线 手工出包 提交即自动构建推送 staging APK 每次发版节省约 15 分钟；快速闭环"
     },
     {
       "id": "u_15e1a6a379dce361",
@@ -1370,7 +1370,7 @@
       "source": "每次发版节省约 15 分钟；快速闭环",
       "occurrence": 0,
       "target": "Save about 15 minutes per release; Quick Closure",
-      "context": "td @ line 187 · surrounding text: 测试 / 部署流水线 手工出包 提交即自动构建推送 staging APK 每次发版节省约 15 分钟；快速闭环"
+      "context": "td @ line 186 · surrounding text: 测试 / 部署流水线 手工出包 提交即自动构建推送 staging APK 每次发版节省约 15 分钟；快速闭环"
     },
     {
       "id": "u_541e82d0f5006c44",
@@ -1378,7 +1378,7 @@
       "source": "崩溃监控",
       "occurrence": 0,
       "target": "Crash Monitoring",
-      "context": "td @ line 188 · surrounding text: 崩溃监控 未接入 Crashlytics 已上线 线上问题首次出现即可发现"
+      "context": "td @ line 187 · surrounding text: 崩溃监控 未接入 Crashlytics 已上线 线上问题首次出现即可发现"
     },
     {
       "id": "u_a31d15d8f453f1d7",
@@ -1386,7 +1386,7 @@
       "source": "未接入",
       "occurrence": 0,
       "target": "Not Integrated",
-      "context": "td @ line 188 · surrounding text: 崩溃监控 未接入 Crashlytics 已上线 线上问题首次出现即可发现"
+      "context": "td @ line 187 · surrounding text: 崩溃监控 未接入 Crashlytics 已上线 线上问题首次出现即可发现"
     },
     {
       "id": "u_175d5047562657a4",
@@ -1394,7 +1394,7 @@
       "source": "Crashlytics 已上线",
       "occurrence": 0,
       "target": "Crashlytics is Live",
-      "context": "td @ line 188 · surrounding text: 崩溃监控 未接入 Crashlytics 已上线 线上问题首次出现即可发现"
+      "context": "td @ line 187 · surrounding text: 崩溃监控 未接入 Crashlytics 已上线 线上问题首次出现即可发现"
     },
     {
       "id": "u_b8e07169920f1acd",
@@ -1402,7 +1402,7 @@
       "source": "线上问题首次出现即可发现",
       "occurrence": 0,
       "target": "Online Issues Can Be Found at First Appearance",
-      "context": "td @ line 188 · surrounding text: 崩溃监控 未接入 Crashlytics 已上线 线上问题首次出现即可发现"
+      "context": "td @ line 187 · surrounding text: 崩溃监控 未接入 Crashlytics 已上线 线上问题首次出现即可发现"
     },
     {
       "id": "u_62cb1ccf170b210b",
@@ -1410,7 +1410,7 @@
       "source": "四、关键时间节点",
       "occurrence": 0,
       "target": "IV. Key Milestones",
-      "context": "h2 @ line 192"
+      "context": "h2 @ line 191"
     },
     {
       "id": "u_a982aaba1b5b99fe",
@@ -1418,7 +1418,7 @@
       "source": "第2阶段启动 — 双团队 QA（台湾 + 马来西亚）联合测试启动，发现 30 项缺陷 + 15 项优化建议",
       "occurrence": 0,
       "target": "Sprint 2 Launch - Joint QA Testing Initiated by Two Teams (Taiwan + Malaysia), Identifying 30 Defects + 15 Optimization Suggestions",
-      "context": "div.timeline-text @ line 196"
+      "context": "div.timeline-text @ line 195"
     },
     {
       "id": "u_1b9003ccadf27aed",
@@ -1426,7 +1426,7 @@
       "source": "营收阻断、反滥用、稳定性三轨并行修复；内部 staging 版本 v2.0.0 → v2.0.6 共 6 次迭代；测试环境自动构建上线",
       "occurrence": 0,
       "target": "Revenue Blockage, Anti-abuse, Stability Tracked and Fixed Simultaneously; Internal staging version v2.0.0 → v2.0.6, Total of 6 Iterations; Automatic Build and Deployment in Test Environment",
-      "context": "div.timeline-text @ line 200"
+      "context": "div.timeline-text @ line 199"
     },
     {
       "id": "u_25efd9925d39c5a1",
@@ -1434,7 +1434,7 @@
       "source": "启动卡死根因定位 — 后端字段类型不一致导致 JSON 解析崩溃；内部 staging 升至 v3.0.0",
       "occurrence": 0,
       "target": "Root Cause Identification for Stuck Issues - Backend Field Types Inconsistent Led to JSON Parsing Failures; Internal staging version upgraded to v3.0.0",
-      "context": "div.timeline-text @ line 204"
+      "context": "div.timeline-text @ line 203"
     },
     {
       "id": "u_72fd5c6a2464a392",
@@ -1442,7 +1442,7 @@
       "source": "服务器权威配额系统上线；Android 模块合并完成（baseLib + proxyLib → :app）",
       "occurrence": 0,
       "target": "Server Authority Quota System Live; Android Module Merged (baseLib + proxyLib → :app)",
-      "context": "div.timeline-text @ line 208"
+      "context": "div.timeline-text @ line 207"
     },
     {
       "id": "u_d98ba0f5b6736021",
@@ -1450,7 +1450,7 @@
       "source": "设备指纹识别系统上线（迁移脚本幂等执行）；第2阶段 W1 内部技术报告完成",
       "occurrence": 0,
       "target": "Device Fingerprint Recognition System Live (Script Idempotent Execution); Internal Sprint 2 W1 Technical Report Completed",
-      "context": "div.timeline-text @ line 212"
+      "context": "div.timeline-text @ line 211"
     },
     {
       "id": "u_0297ab37f0f21d0b",
@@ -1458,7 +1458,7 @@
       "source": "QA 收尾批次 — 错误码本地化、余额支付 JSON 接口、交易记录分页、推荐 QR、抽奖弹窗等 16 个独立提交完成；台湾 QA 返岗",
       "occurrence": 0,
       "target": "QA closure batch — 16 independent commits completed, covering error-code localization, the balance-payment JSON API, transaction-history pagination, referral QR codes, the prize-draw pop-up, and other items; Taiwan QA returned",
-      "context": "div.timeline-text @ line 216"
+      "context": "div.timeline-text @ line 215"
     },
     {
       "id": "u_37eee10392c3b061",
@@ -1466,7 +1466,7 @@
       "source": "下周",
       "occurrence": 0,
       "target": "Next Week",
-      "context": "div.timeline-date @ line 219"
+      "context": "div.timeline-date @ line 218"
     },
     {
       "id": "u_63765163e9dfd071",
@@ -1474,7 +1474,7 @@
       "source": "双团队 QA 联合签核 → 后端 v3.0.0 上 prod → Google Play 提交",
       "occurrence": 0,
       "target": "Joint QA Team Sign-off → Backend v3.0.0 to Prod → Google Play Submission",
-      "context": "strong @ line 220"
+      "context": "strong @ line 219"
     },
     {
       "id": "u_20625f643614a2fe",
@@ -1482,7 +1482,7 @@
       "source": "五、Arrowfish 正式版上线 — 下周",
       "occurrence": 0,
       "target": "Five, Arrowfish formal version release — Next week",
-      "context": "h2 @ line 225"
+      "context": "h2 @ line 224"
     },
     {
       "id": "u_ffaec81126ab31ab",
@@ -1490,7 +1490,7 @@
       "source": "对外发布版本：v3.0.4",
       "occurrence": 0,
       "target": "Official Release Version: v3.0.4",
-      "context": "strong @ line 227 · surrounding text: 对外发布版本：v3.0.4 （versionCode 30004，版本号与 versionCode 完全对齐；从生产 v1.7.38 跨升）· 后端：v3.0.0（待打 tag）· 目标：下周内"
+      "context": "strong @ line 226 · surrounding text: 对外发布版本：v3.0.4 （versionCode 30004，版本号与 versionCode 完全对齐；从生产 v1.7.38 跨升）· 后端：v3.0.0（待打 tag）· 目标：下周内"
     },
     {
       "id": "u_44fd66b0d5d4b6b3",
@@ -1498,7 +1498,7 @@
       "source": "（versionCode 30004，版本号与 versionCode 完全对齐；从生产 v1.7.38 跨升）· 后端：v3.0.0（待打 tag）· 目标：下周内",
       "occurrence": 0,
       "target": "(versionCode 30004, fully aligned with the version number; upgrade from production v1.7.38)· Back Office: v3.0.0 (awaiting tagging)· Target: Next week",
-      "context": "div.card.highlight @ line 227 · surrounding text: 对外发布版本：v3.0.4 （versionCode 30004，版本号与 versionCode 完全对齐；从生产 v1.7.38 跨升）· 后端：v3.0.0（待打 tag）· 目标：下周内"
+      "context": "div.card.highlight @ line 226 · surrounding text: 对外发布版本：v3.0.4 （versionCode 30004，版本号与 versionCode 完全对齐；从生产 v1.7.38 跨升）· 后端：v3.0.0（待打 tag）· 目标：下周内"
     },
     {
       "id": "u_49275ac04b0d6a44",
@@ -1506,7 +1506,7 @@
       "source": "项目",
       "occurrence": 1,
       "target": "Project",
-      "context": "th @ line 229 · surrounding text: 项目 状态 说明"
+      "context": "th @ line 228 · surrounding text: 项目 状态 说明"
     },
     {
       "id": "u_8c5ccfd8fb29a965",
@@ -1514,7 +1514,7 @@
       "source": "状态",
       "occurrence": 0,
       "target": "Status",
-      "context": "th @ line 229 · surrounding text: 项目 状态 说明"
+      "context": "th @ line 228 · surrounding text: 项目 状态 说明"
     },
     {
       "id": "u_b3949e56a26a43b2",
@@ -1522,7 +1522,7 @@
       "source": "说明",
       "occurrence": 0,
       "target": "Description",
-      "context": "th @ line 229 · surrounding text: 项目 状态 说明"
+      "context": "th @ line 228 · surrounding text: 项目 状态 说明"
     },
     {
       "id": "u_2972b03175942d44",
@@ -1530,7 +1530,7 @@
       "source": "所有计划修复",
       "occurrence": 0,
       "target": "All Planned Fixes",
-      "context": "td @ line 230 · surrounding text: 所有计划修复 完成 开发自测通过，发布候选版本就绪"
+      "context": "td @ line 229 · surrounding text: 所有计划修复 完成 开发自测通过，发布候选版本就绪"
     },
     {
       "id": "u_1e47838e88297dca",
@@ -1538,7 +1538,7 @@
       "source": "完成",
       "occurrence": 0,
       "target": "Done",
-      "context": "span.status-done @ line 230 · surrounding text: 所有计划修复 完成 开发自测通过，发布候选版本就绪"
+      "context": "span.status-done @ line 229 · surrounding text: 所有计划修复 完成 开发自测通过，发布候选版本就绪"
     },
     {
       "id": "u_b6502922f546265f",
@@ -1546,7 +1546,7 @@
       "source": "开发自测通过，发布候选版本就绪",
       "occurrence": 0,
       "target": "Development self-test passed, candidate version for release ready",
-      "context": "td @ line 230 · surrounding text: 所有计划修复 完成 开发自测通过，发布候选版本就绪"
+      "context": "td @ line 229 · surrounding text: 所有计划修复 完成 开发自测通过，发布候选版本就绪"
     },
     {
       "id": "u_279b9ad94104a510",
@@ -1554,7 +1554,7 @@
       "source": "双团队 QA 联合回归测试",
       "occurrence": 0,
       "target": "Joint regression testing by two teams of QA",
-      "context": "td @ line 231 · surrounding text: 双团队 QA 联合回归测试 下周一启动 台湾 QA 已返岗"
+      "context": "td @ line 230 · surrounding text: 双团队 QA 联合回归测试 下周一启动 台湾 QA 已返岗"
     },
     {
       "id": "u_0936e44b781ba212",
@@ -1562,7 +1562,7 @@
       "source": "下周一启动",
       "occurrence": 0,
       "target": "Start on Monday next week",
-      "context": "span.status-progress @ line 231 · surrounding text: 双团队 QA 联合回归测试 下周一启动 台湾 QA 已返岗"
+      "context": "span.status-progress @ line 230 · surrounding text: 双团队 QA 联合回归测试 下周一启动 台湾 QA 已返岗"
     },
     {
       "id": "u_52f1d1bc67ed2a84",
@@ -1570,7 +1570,7 @@
       "source": "台湾 QA 已返岗",
       "occurrence": 0,
       "target": "Taiwan QA has returned to work",
-      "context": "td @ line 231 · surrounding text: 双团队 QA 联合回归测试 下周一启动 台湾 QA 已返岗"
+      "context": "td @ line 230 · surrounding text: 双团队 QA 联合回归测试 下周一启动 台湾 QA 已返岗"
     },
     {
       "id": "u_4004dac458076789",
@@ -1578,7 +1578,7 @@
       "source": "QA 双方签核（上线门控）",
       "occurrence": 0,
       "target": "Both parties sign off (go live gate) on joint verification after both sides have signed off",
-      "context": "td @ line 232 · surrounding text: QA 双方签核（上线门控） 下周中 双方完成全量回归后签核"
+      "context": "td @ line 231 · surrounding text: QA 双方签核（上线门控） 下周中 双方完成全量回归后签核"
     },
     {
       "id": "u_bcf7a78565769941",
@@ -1586,7 +1586,7 @@
       "source": "下周中",
       "occurrence": 0,
       "target": "Next week mid-week",
-      "context": "span.status-pending @ line 232 · surrounding text: QA 双方签核（上线门控） 下周中 双方完成全量回归后签核"
+      "context": "span.status-pending @ line 231 · surrounding text: QA 双方签核（上线门控） 下周中 双方完成全量回归后签核"
     },
     {
       "id": "u_b2d25cfdcd6b8ea5",
@@ -1594,7 +1594,7 @@
       "source": "双方完成全量回归后签核",
       "occurrence": 0,
       "target": "Both sides complete full-scale regression testing and sign off together",
-      "context": "td @ line 232 · surrounding text: QA 双方签核（上线门控） 下周中 双方完成全量回归后签核"
+      "context": "td @ line 231 · surrounding text: QA 双方签核（上线门控） 下周中 双方完成全量回归后签核"
     },
     {
       "id": "u_789a2a296400745a",
@@ -1602,7 +1602,7 @@
       "source": "后端 v3.0.0 上 prod",
       "occurrence": 0,
       "target": "Backend v3.0.0 deployed to prod",
-      "context": "td @ line 233 · surrounding text: 后端 v3.0.0 上 prod 下周中 先于客户端上线，监控 1 小时再推送 App"
+      "context": "td @ line 232 · surrounding text: 后端 v3.0.0 上 prod 下周中 先于客户端上线，监控 1 小时再推送 App"
     },
     {
       "id": "u_c3d4db73ccd2210d",
@@ -1610,7 +1610,7 @@
       "source": "下周中",
       "occurrence": 1,
       "target": "Next week mid-week",
-      "context": "span.status-pending @ line 233 · surrounding text: 后端 v3.0.0 上 prod 下周中 先于客户端上线，监控 1 小时再推送 App"
+      "context": "span.status-pending @ line 232 · surrounding text: 后端 v3.0.0 上 prod 下周中 先于客户端上线，监控 1 小时再推送 App"
     },
     {
       "id": "u_3aa2573e645dea0e",
@@ -1618,7 +1618,7 @@
       "source": "先于客户端上线，监控 1 小时再推送 App",
       "occurrence": 0,
       "target": "Client-side deployment precedes app, monitor for one hour before pushing to App Store",
-      "context": "td @ line 233 · surrounding text: 后端 v3.0.0 上 prod 下周中 先于客户端上线，监控 1 小时再推送 App"
+      "context": "td @ line 232 · surrounding text: 后端 v3.0.0 上 prod 下周中 先于客户端上线，监控 1 小时再推送 App"
     },
     {
       "id": "u_dad31968ab5e1472",
@@ -1626,7 +1626,7 @@
       "source": "App v3.0.4 提交 Google Play",
       "occurrence": 0,
       "target": "App v3.0.4 submitted to Google Play",
-      "context": "td @ line 234 · surrounding text: App v3.0.4 提交 Google Play 下周末 同步部署 Google / Official / Huawei / Samsung 四个渠道"
+      "context": "td @ line 233 · surrounding text: App v3.0.4 提交 Google Play 下周末 同步部署 Google / Official / Huawei / Samsung 四个渠道"
     },
     {
       "id": "u_261518ab5e8df891",
@@ -1634,7 +1634,7 @@
       "source": "下周末",
       "occurrence": 0,
       "target": "Next weekend",
-      "context": "span.status-pending @ line 234 · surrounding text: App v3.0.4 提交 Google Play 下周末 同步部署 Google / Official / Huawei / Samsung 四个渠道"
+      "context": "span.status-pending @ line 233 · surrounding text: App v3.0.4 提交 Google Play 下周末 同步部署 Google / Official / Huawei / Samsung 四个渠道"
     },
     {
       "id": "u_73cba6e2d7b6dc6e",
@@ -1642,7 +1642,7 @@
       "source": "同步部署 Google / Official / Huawei / Samsung 四个渠道",
       "occurrence": 0,
       "target": "Synchronize deployment to Google / Official / Huawei / Samsung channels",
-      "context": "td @ line 234 · surrounding text: App v3.0.4 提交 Google Play 下周末 同步部署 Google / Official / Huawei / Samsung 四个渠道"
+      "context": "td @ line 233 · surrounding text: App v3.0.4 提交 Google Play 下周末 同步部署 Google / Official / Huawei / Samsung 四个渠道"
     },
     {
       "id": "u_7626d9e56bfe60a9",
@@ -1650,7 +1650,7 @@
       "source": "发布顺序约束：",
       "occurrence": 0,
       "target": "Release sequence constraints:",
-      "context": "strong @ line 238 · surrounding text: 发布顺序约束： 后端必须先于 App 上线。本阶段新增的余额支付接口与交易记录分页接口，App v3.0.4 依赖它们；若后端未上线就发版，付款与交易页会 404。此约束已写入内部技术文档，作为发版强制顺序。"
+      "context": "strong @ line 237 · surrounding text: 发布顺序约束： 后端必须先于 App 上线。本阶段新增的余额支付接口与交易记录分页接口，App v3.0.4 依赖它们；若后端未上线就发版，付款与交易页会 404。此约束已写入内部技术文档，作为发版强制顺序。"
     },
     {
       "id": "u_b0139cf64f1bde43",
@@ -1658,7 +1658,7 @@
       "source": "后端必须先于 App 上线。本阶段新增的余额支付接口与交易记录分页接口，App v3.0.4 依赖它们；若后端未上线就发版，付款与交易页会 404。此约束已写入内部技术文档，作为发版强制顺序。",
       "occurrence": 0,
       "target": "Backend must be deployed before the app. This stage introduces new balance payment and transaction record pagination interfaces, which are dependent on App v3.0.4; if the backend is not deployed first, pages for payments and transactions will return a 404 error. This constraint has been documented internally as a mandatory sequence requirement for release.",
-      "context": "div.card.warning @ line 238 · surrounding text: 发布顺序约束： 后端必须先于 App 上线。本阶段新增的余额支付接口与交易记录分页接口，App v3.0.4 依赖它们；若后端未上线就发版，付款与交易页会 404。此约束已写入内部技术文档，作为发版强制顺序。"
+      "context": "div.card.warning @ line 237 · surrounding text: 发布顺序约束： 后端必须先于 App 上线。本阶段新增的余额支付接口与交易记录分页接口，App v3.0.4 依赖它们；若后端未上线就发版，付款与交易页会 404。此约束已写入内部技术文档，作为发版强制顺序。"
     },
     {
       "id": "u_8244c2a6b67ffe07",
@@ -1666,7 +1666,7 @@
       "source": "本阶段后端改动的特殊挑战",
       "occurrence": 0,
       "target": "Special challenges in backend changes this stage:",
-      "context": "h3 @ line 241"
+      "context": "h3 @ line 240"
     },
     {
       "id": "u_9d2d9d3c69b7d07d",
@@ -1674,7 +1674,7 @@
       "source": "后端同时服务 3 类生产客户端，其中 2 类目前无法升级，每次后端改动都需额外保证向后兼容。",
       "occurrence": 0,
       "target": "Backend serves three types of production clients, two of which are currently unupgradeable. Each backend change requires additional compatibility guarantees.",
-      "context": "strong @ line 243"
+      "context": "strong @ line 242"
     },
     {
       "id": "u_3b2f0f76b0e82ecf",
@@ -1682,7 +1682,7 @@
       "source": "客户端",
       "occurrence": 0,
       "target": "Client",
-      "context": "th @ line 245 · surrounding text: 客户端 当前生产版本 能否升级 对后端改动的影响"
+      "context": "th @ line 244 · surrounding text: 客户端 当前生产版本 能否升级 对后端改动的影响"
     },
     {
       "id": "u_e50a7ebccedbedee",
@@ -1690,7 +1690,7 @@
       "source": "当前生产版本",
       "occurrence": 0,
       "target": "Current production version",
-      "context": "th @ line 245 · surrounding text: 客户端 当前生产版本 能否升级 对后端改动的影响"
+      "context": "th @ line 244 · surrounding text: 客户端 当前生产版本 能否升级 对后端改动的影响"
     },
     {
       "id": "u_024cb7b89590e189",
@@ -1698,7 +1698,7 @@
       "source": "能否升级",
       "occurrence": 0,
       "target": "Upgradable?",
-      "context": "th @ line 245 · surrounding text: 客户端 当前生产版本 能否升级 对后端改动的影响"
+      "context": "th @ line 244 · surrounding text: 客户端 当前生产版本 能否升级 对后端改动的影响"
     },
     {
       "id": "u_019442a5f44ba9a5",
@@ -1706,7 +1706,7 @@
       "source": "对后端改动的影响",
       "occurrence": 0,
       "target": "Impact on backend changes",
-      "context": "th @ line 245 · surrounding text: 客户端 当前生产版本 能否升级 对后端改动的影响"
+      "context": "th @ line 244 · surrounding text: 客户端 当前生产版本 能否升级 对后端改动的影响"
     },
     {
       "id": "u_2bb078cad151eef9",
@@ -1714,7 +1714,7 @@
       "source": "✅ 可升级（本周发 v3.0.4）",
       "occurrence": 0,
       "target": "✅ Upgradable (v3.0.4 release this week)",
-      "context": "td @ line 249"
+      "context": "td @ line 248"
     },
     {
       "id": "u_3922e6105149df3a",
@@ -1722,7 +1722,7 @@
       "source": "新接口可正常使用",
       "occurrence": 0,
       "target": "New interfaces are fully usable",
-      "context": "td @ line 250"
+      "context": "td @ line 249"
     },
     {
       "id": "u_a4d114f87f7b88e0",
@@ -1730,7 +1730,7 @@
       "source": "v1.3.0（已冻结）",
       "occurrence": 0,
       "target": "v1.3.0 (frozen)",
-      "context": "td @ line 254"
+      "context": "td @ line 253"
     },
     {
       "id": "u_09ad8e2bd8c9d2fd",
@@ -1738,7 +1738,7 @@
       "source": "不能升级",
       "occurrence": 0,
       "target": "Cannot upgrade",
-      "context": "strong @ line 255 · surrounding text: ❌ 不能升级 — Apple 开发者账号被封禁，无法提交 App Store 更新"
+      "context": "strong @ line 254 · surrounding text: ❌ 不能升级 — Apple 开发者账号被封禁，无法提交 App Store 更新"
     },
     {
       "id": "u_36e2142c74c11a5b",
@@ -1746,7 +1746,7 @@
       "source": "— Apple 开发者账号被封禁，无法提交 App Store 更新",
       "occurrence": 0,
       "target": "- Apple Developer account is banned, unable to submit updates to App Store",
-      "context": "td @ line 255 · surrounding text: ❌ 不能升级 — Apple 开发者账号被封禁，无法提交 App Store 更新"
+      "context": "td @ line 254 · surrounding text: ❌ 不能升级 — Apple 开发者账号被封禁，无法提交 App Store 更新"
     },
     {
       "id": "u_9294228012335f34",
@@ -1754,7 +1754,7 @@
       "source": "所有后端接口必须对 iOS v1.3.0 保持完全兼容；新接口不能假设 iOS 会更新",
       "occurrence": 0,
       "target": "All backend interfaces must be fully compatible with iOS v1.3.0; new interfaces cannot assume iOS will update",
-      "context": "td @ line 256"
+      "context": "td @ line 255"
     },
     {
       "id": "u_34c448bbc6f5ffeb",
@@ -1762,7 +1762,7 @@
       "source": "v2.2.71（已冻结）",
       "occurrence": 0,
       "target": "v2.2.71 (frozen)",
-      "context": "td @ line 260"
+      "context": "td @ line 259"
     },
     {
       "id": "u_ba1363ecb1c21a36",
@@ -1770,7 +1770,7 @@
       "source": "暂时不能升级",
       "occurrence": 0,
       "target": "Unable to update temporarily",
-      "context": "strong @ line 261 · surrounding text: ❌ 暂时不能升级 — Windows 客户端部署机制尚未研究清楚；原签名方案 WoSign（硬件签名，需配合 Windows SSL Wizard 工具）证书已过期，需研究虚拟签名（virtual sign）替代方案后才能再发版"
+      "context": "strong @ line 260 · surrounding text: ❌ 暂时不能升级 — Windows 客户端部署机制尚未研究清楚；原签名方案 WoSign（硬件签名，需配合 Windows SSL Wizard 工具）证书已过期，需研究虚拟签名（virtual sign）替代方案后才能再发版"
     },
     {
       "id": "u_14ff7560d2425206",
@@ -1778,7 +1778,7 @@
       "source": "— Windows 客户端部署机制尚未研究清楚；原签名方案 WoSign（硬件签名，需配合 Windows SSL Wizard 工具）证书已过期，需研究虚拟签名（virtual sign）替代方案后才能再发版",
       "occurrence": 0,
       "target": "— Updates are currently unavailable because the Windows client deployment mechanism remains unclear. The original WoSign certificate for hardware signing, which requires the Windows SSL Wizard tool, has expired. A virtual-signing alternative must be researched before another release can be issued.",
-      "context": "td @ line 261 · surrounding text: ❌ 暂时不能升级 — Windows 客户端部署机制尚未研究清楚；原签名方案 WoSign（硬件签名，需配合 Windows SSL Wizard 工具）证书已过期，需研究虚拟签名（virtual sign）替代方案后才能再发版"
+      "context": "td @ line 260 · surrounding text: ❌ 暂时不能升级 — Windows 客户端部署机制尚未研究清楚；原签名方案 WoSign（硬件签名，需配合 Windows SSL Wizard 工具）证书已过期，需研究虚拟签名（virtual sign）替代方案后才能再发版"
     },
     {
       "id": "u_c7e1491bb3b4bf55",
@@ -1786,7 +1786,7 @@
       "source": "所有后端接口必须对 PC v2.2.71 保持完全兼容；分页等新功能只能通过 opt-in 方式增加，不能改变默认响应格式",
       "occurrence": 0,
       "target": "All backend interfaces must remain fully compatible with PC v2.2.71; new features such as pagination can only be added through opt-in, and cannot change the default response format",
-      "context": "td @ line 262"
+      "context": "td @ line 261"
     },
     {
       "id": "u_cc1eaffb6166f97f",
@@ -1794,7 +1794,7 @@
       "source": "结果：",
       "occurrence": 0,
       "target": "Result:",
-      "context": "strong @ line 266 · surrounding text: 结果： 本阶段每一项后端改动（余额支付 JSON 接口、交易记录分页、错误码扩展）都额外做了向后兼容设计 + 实测验证。具体方法：新接口采用「新路径」或「opt-in 查询参数」，原接口完全不动。开发团队为此付出额外约 30% 的设计与测试时间，但确保 iOS / PC 用户零感知。"
+      "context": "strong @ line 265 · surrounding text: 结果： 本阶段每一项后端改动（余额支付 JSON 接口、交易记录分页、错误码扩展）都额外做了向后兼容设计 + 实测验证。具体方法：新接口采用「新路径」或「opt-in 查询参数」，原接口完全不动。开发团队为此付出额外约 30% 的设计与测试时间，但确保 iOS / PC 用户零感知。"
     },
     {
       "id": "u_b597a445e9958b4e",
@@ -1802,7 +1802,7 @@
       "source": "本阶段每一项后端改动（余额支付 JSON 接口、交易记录分页、错误码扩展）都额外做了向后兼容设计 + 实测验证。具体方法：新接口采用「新路径」或「opt-in 查询参数」，原接口完全不动。开发团队为此付出额外约 30% 的设计与测试时间，但确保 iOS / PC 用户零感知。",
       "occurrence": 0,
       "target": "All backend changes (balance payment JSON interface, transaction record pagination, error code expansion) have been designed with backward compatibility and tested. The method: the new interface uses a 'new path' or an 'opt-in query parameter', while the original interface remains unchanged. Development team spent about 30% extra time on design and testing but ensured zero perception for iOS/PC users.",
-      "context": "div @ line 266 · surrounding text: 结果： 本阶段每一项后端改动（余额支付 JSON 接口、交易记录分页、错误码扩展）都额外做了向后兼容设计 + 实测验证。具体方法：新接口采用「新路径」或「opt-in 查询参数」，原接口完全不动。开发团队为此付出额外约 30% 的设计与测试时间，但确保 iOS / PC 用户零感知。"
+      "context": "div @ line 265 · surrounding text: 结果： 本阶段每一项后端改动（余额支付 JSON 接口、交易记录分页、错误码扩展）都额外做了向后兼容设计 + 实测验证。具体方法：新接口采用「新路径」或「opt-in 查询参数」，原接口完全不动。开发团队为此付出额外约 30% 的设计与测试时间，但确保 iOS / PC 用户零感知。"
     },
     {
       "id": "u_277035431d9b446d",
@@ -1810,7 +1810,7 @@
       "source": "下阶段需推进：",
       "occurrence": 0,
       "target": "Next phase will focus on:",
-      "context": "strong @ line 269 · surrounding text: 下阶段需推进： (1) iOS Apple 账号申诉 / 新账号注册；(2) Windows 虚拟签名方案研究 + 部署流程文档化。两项不解决，后端长期被「兼容包袱」拖累，重大架构改动会越来越困难。"
+      "context": "strong @ line 268 · surrounding text: 下阶段需推进： (1) iOS Apple 账号申诉 / 新账号注册；(2) Windows 虚拟签名方案研究 + 部署流程文档化。两项不解决，后端长期被「兼容包袱」拖累，重大架构改动会越来越困难。"
     },
     {
       "id": "u_383fa54abb922951",
@@ -1818,7 +1818,7 @@
       "source": "(1) iOS Apple 账号申诉 / 新账号注册；(2) Windows 虚拟签名方案研究 + 部署流程文档化。两项不解决，后端长期被「兼容包袱」拖累，重大架构改动会越来越困难。",
       "occurrence": 0,
       "target": "(1) iOS Apple account appeal / new account registration; (2) Research on Windows virtual signing scheme + documentation of deployment process. These two issues unresolved will long-term burden the backend with 'compatibility baggage', making major architectural changes increasingly difficult.",
-      "context": "div @ line 269 · surrounding text: 下阶段需推进： (1) iOS Apple 账号申诉 / 新账号注册；(2) Windows 虚拟签名方案研究 + 部署流程文档化。两项不解决，后端长期被「兼容包袱」拖累，重大架构改动会越来越困难。"
+      "context": "div @ line 268 · surrounding text: 下阶段需推进： (1) iOS Apple 账号申诉 / 新账号注册；(2) Windows 虚拟签名方案研究 + 部署流程文档化。两项不解决，后端长期被「兼容包袱」拖累，重大架构改动会越来越困难。"
     },
     {
       "id": "u_8c3b64f57715d6e6",
@@ -1826,7 +1826,7 @@
       "source": "六、FFF 新产品并行进展（实时口径）",
       "occurrence": 0,
       "target": "VI. FFF New Product Progress (Real-Time Basis)",
-      "context": "h2 @ line 274"
+      "context": "h2 @ line 273"
     },
     {
       "id": "u_63cc13f8a249bfc7",
@@ -1834,7 +1834,7 @@
       "source": "Lex 团队（中国）",
       "occurrence": 0,
       "target": "Lex Team (China)",
-      "context": "strong @ line 276 · surrounding text: Lex 团队（中国） 本阶段技术储备工作已完成。与 Arrowfish 发布并行推进，互不影响。"
+      "context": "strong @ line 275 · surrounding text: Lex 团队（中国） 本阶段技术储备工作已完成。与 Arrowfish 发布并行推进，互不影响。"
     },
     {
       "id": "u_cc9664fc044e01cb",
@@ -1842,7 +1842,7 @@
       "source": "本阶段技术储备工作已完成。与 Arrowfish 发布并行推进，互不影响。",
       "occurrence": 0,
       "target": "Technical reserve work for FFF has been completed. It is in parallel with Arrowfish, no impact on each other.",
-      "context": "div.card @ line 276 · surrounding text: Lex 团队（中国） 本阶段技术储备工作已完成。与 Arrowfish 发布并行推进，互不影响。"
+      "context": "div.card @ line 275 · surrounding text: Lex 团队（中国） 本阶段技术储备工作已完成。与 Arrowfish 发布并行推进，互不影响。"
     },
     {
       "id": "u_1ba625b6e4157adb",
@@ -1850,7 +1850,7 @@
       "source": "Flutter 框架技术评估完成",
       "occurrence": 0,
       "target": "Flutter framework technical assessment completed",
-      "context": "strong @ line 278 · surrounding text: Flutter 框架技术评估完成 — 现有 flutter_vpn 代码库底层 VPN 层可保留，UI 与状态层需重写。"
+      "context": "strong @ line 277 · surrounding text: Flutter 框架技术评估完成 — 现有 flutter_vpn 代码库底层 VPN 层可保留，UI 与状态层需重写。"
     },
     {
       "id": "u_dbe92a3e737b5b00",
@@ -1858,7 +1858,7 @@
       "source": "— 现有 flutter_vpn 代码库底层 VPN 层可保留，UI 与状态层需重写。",
       "occurrence": 0,
       "target": "- The existing flutter_vpn codebase's underlying VPN layer can be retained, while the UI and state layer need to be rewritten.",
-      "context": "li @ line 278 · surrounding text: Flutter 框架技术评估完成 — 现有 flutter_vpn 代码库底层 VPN 层可保留，UI 与状态层需重写。"
+      "context": "li @ line 277 · surrounding text: Flutter 框架技术评估完成 — 现有 flutter_vpn 代码库底层 VPN 层可保留，UI 与状态层需重写。"
     },
     {
       "id": "u_94d3460753a78717",
@@ -1866,7 +1866,7 @@
       "source": "FFF 后端架构方案确认",
       "occurrence": 0,
       "target": "FFF backend architecture scheme confirmed",
-      "context": "strong @ line 279 · surrounding text: FFF 后端架构方案确认 — 后端独立、数据库独立、不与 Arrowfish 共账户（依日总 4/10 决定）。后端可复用支付 / 配额 / 节点管理等公共模块，避免重复开发。"
+      "context": "strong @ line 278 · surrounding text: FFF 后端架构方案确认 — 后端独立、数据库独立、不与 Arrowfish 共账户（依日总 4/10 决定）。后端可复用支付 / 配额 / 节点管理等公共模块，避免重复开发。"
     },
     {
       "id": "u_2a4fae4dabc90c16",
@@ -1874,7 +1874,7 @@
       "source": "— 后端独立、数据库独立、不与 Arrowfish 共账户（依日总 4/10 决定）。后端可复用支付 / 配额 / 节点管理等公共模块，避免重复开发。",
       "occurrence": 0,
       "target": "- Backend independent, database independent, no shared account with Arrowfish (as decided by General Manager Ri on April 10). The backend can reuse public modules for payment / quota / VPN node management to avoid redundant development.",
-      "context": "li @ line 279 · surrounding text: FFF 后端架构方案确认 — 后端独立、数据库独立、不与 Arrowfish 共账户（依日总 4/10 决定）。后端可复用支付 / 配额 / 节点管理等公共模块，避免重复开发。"
+      "context": "li @ line 278 · surrounding text: FFF 后端架构方案确认 — 后端独立、数据库独立、不与 Arrowfish 共账户（依日总 4/10 决定）。后端可复用支付 / 配额 / 节点管理等公共模块，避免重复开发。"
     },
     {
       "id": "u_c8bd5568fad0061a",
@@ -1882,7 +1882,7 @@
       "source": "下阶段第一里程碑",
       "occurrence": 0,
       "target": "Next phase's first milestone",
-      "context": "strong @ line 280 · surrounding text: 下阶段第一里程碑 — 注册、登录、节点列表、连接节点（暂无支付）。"
+      "context": "strong @ line 279 · surrounding text: 下阶段第一里程碑 — 注册、登录、节点列表、连接节点（暂无支付）。"
     },
     {
       "id": "u_cd0697aec3b225d0",
@@ -1890,7 +1890,7 @@
       "source": "— 注册、登录、节点列表、连接节点（暂无支付）。",
       "occurrence": 0,
       "target": "- Registration, login, VPN node list, connect VPN node (no payment).",
-      "context": "li @ line 280 · surrounding text: 下阶段第一里程碑 — 注册、登录、节点列表、连接节点（暂无支付）。"
+      "context": "li @ line 279 · surrounding text: 下阶段第一里程碑 — 注册、登录、节点列表、连接节点（暂无支付）。"
     },
     {
       "id": "u_f8eb80799edbce37",
@@ -1898,7 +1898,7 @@
       "source": "FFF 阻塞项（待商务侧推进）",
       "occurrence": 0,
       "target": "FFF bottleneck items (to be pushed by business side)",
-      "context": "strong @ line 284"
+      "context": "strong @ line 283"
     },
     {
       "id": "u_c18a39f7138513dc",
@@ -1906,7 +1906,7 @@
       "source": "FFF 公司欧盟电话号码尚未到位（Roy 跟进） → 暂无法开通 SMS 验证 → 注册流程上线初期需用邮箱免密替代。",
       "occurrence": 0,
       "target": "- FFF company EU phone number is still being handled by Roy (follow-up) → SMS verification cannot be enabled → Email-free registration process will be used in the initial phase.",
-      "context": "li @ line 286"
+      "context": "li @ line 285"
     },
     {
       "id": "u_0266ea512c920e99",
@@ -1914,7 +1914,7 @@
       "source": "FFF 公司名下新支付通道仍在对接中 → 上线初期暂无在线收款能力，后端预留接口。",
       "occurrence": 0,
       "target": "- FFF company's new payment channel is still being connected → Online receipt capability cannot be enabled initially, but a reserved interface will be available in the backend.",
-      "context": "li @ line 287"
+      "context": "li @ line 286"
     },
     {
       "id": "u_b85490753d69c81c",
@@ -1922,7 +1922,7 @@
       "source": "两项均不影响本周 Arrowfish 发布。",
       "occurrence": 0,
       "target": "Neither affects Arrowfish's release this week.",
-      "context": "div.card.warning @ line 288"
+      "context": "div.card.warning @ line 287"
     },
     {
       "id": "u_5faebbc1db904901",
@@ -1930,7 +1930,7 @@
       "source": "七、第3阶段计划（5 月初启动）— 后端通用化优先",
       "occurrence": 0,
       "target": "Seven, Sprint 3 Plan (starting in May) — Backend standardization priority",
-      "context": "h2 @ line 293"
+      "context": "h2 @ line 292"
     },
     {
       "id": "u_407373bf1b947db8",
@@ -1938,7 +1938,7 @@
       "source": "主轴：",
       "occurrence": 0,
       "target": "Axis:",
-      "context": "strong @ line 295 · surrounding text: 主轴： 清理后端技术债 → 让 FFF 直接复用同一套后端模块 → 同时启动 FFF Flutter 重建 + 节点自动化加速。"
+      "context": "strong @ line 294 · surrounding text: 主轴： 清理后端技术债 → 让 FFF 直接复用同一套后端模块 → 同时启动 FFF Flutter 重建 + 节点自动化加速。"
     },
     {
       "id": "u_526637f50425c313",
@@ -1946,7 +1946,7 @@
       "source": "清理后端技术债 → 让 FFF 直接复用同一套后端模块 → 同时启动 FFF Flutter 重建 + 节点自动化加速。",
       "occurrence": 0,
       "target": "- Clean up backend technical debt → Let FFF directly reuse the same backend modules → Start FFF Flutter rebuild + VPN node automation acceleration simultaneously.",
-      "context": "div.card.highlight @ line 295 · surrounding text: 主轴： 清理后端技术债 → 让 FFF 直接复用同一套后端模块 → 同时启动 FFF Flutter 重建 + 节点自动化加速。"
+      "context": "div.card.highlight @ line 294 · surrounding text: 主轴： 清理后端技术债 → 让 FFF 直接复用同一套后端模块 → 同时启动 FFF Flutter 重建 + 节点自动化加速。"
     },
     {
       "id": "u_4a44ecef659a89d4",
@@ -1954,7 +1954,7 @@
       "source": "阶段",
       "occurrence": 0,
       "target": "Phase",
-      "context": "th @ line 298 · surrounding text: 阶段 主要工作 负责"
+      "context": "th @ line 297 · surrounding text: 阶段 主要工作 负责"
     },
     {
       "id": "u_011d6546dea8d5aa",
@@ -1962,7 +1962,7 @@
       "source": "主要工作",
       "occurrence": 0,
       "target": "Main work",
-      "context": "th @ line 298 · surrounding text: 阶段 主要工作 负责"
+      "context": "th @ line 297 · surrounding text: 阶段 主要工作 负责"
     },
     {
       "id": "u_f7ae405542e03a83",
@@ -1970,7 +1970,7 @@
       "source": "负责",
       "occurrence": 0,
       "target": "Responsible for",
-      "context": "th @ line 298 · surrounding text: 阶段 主要工作 负责"
+      "context": "th @ line 297 · surrounding text: 阶段 主要工作 负责"
     },
     {
       "id": "u_e5965e06d07c1f0c",
@@ -1978,7 +1978,7 @@
       "source": "A. 后端通用化",
       "occurrence": 0,
       "target": "A. Backend standardization",
-      "context": "strong @ line 300 · surrounding text: A. 后端通用化 （5/1 起 1 周密集，Sprint-3 内滚动收尾）"
+      "context": "strong @ line 299 · surrounding text: A. 后端通用化 （5/1 起 1 周密集，Sprint-3 内滚动收尾）"
     },
     {
       "id": "u_03964687998120ec",
@@ -1986,7 +1986,7 @@
       "source": "（5/1 起 1 周密集，Sprint-3 内滚动收尾）",
       "occurrence": 0,
       "target": "(5/1 start, intensive for 1 week, Sprint-3 finish)",
-      "context": "br @ line 300 · surrounding text: A. 后端通用化 （5/1 起 1 周密集，Sprint-3 内滚动收尾）"
+      "context": "br @ line 299 · surrounding text: A. 后端通用化 （5/1 起 1 周密集，Sprint-3 内滚动收尾）"
     },
     {
       "id": "u_0ade8b0145b80ce3",
@@ -1994,7 +1994,7 @@
       "source": "API 版本化策略、X-App-Id 头识别两个产品、列表接口分页扩展、错误码映射扩展、第2阶段数据迁移收尾（专属IP 年度价、4K 广告链接），",
       "occurrence": 0,
       "target": "- API versioning strategy, X-App-Id header recognition for two products, list interface pagination expansion, error code mapping expansion, data migration from Sprint 2 (exclusive IP annual price, 4K ad link),",
-      "context": "td @ line 301 · surrounding text: API 版本化策略、X-App-Id 头识别两个产品、列表接口分页扩展、错误码映射扩展、第2阶段数据迁移收尾（专属IP 年度价、4K 广告链接）， 外加 4/24 审计新增 5 项结构级遗留债 + 1 项合规 P0 （详见第九节）— Phase A 主题不变，范围扩展到约 13 项"
+      "context": "td @ line 300 · surrounding text: API 版本化策略、X-App-Id 头识别两个产品、列表接口分页扩展、错误码映射扩展、第2阶段数据迁移收尾（专属IP 年度价、4K 广告链接）， 外加 4/24 审计新增 5 项结构级遗留债 + 1 项合规 P0 （详见第九节）— Phase A 主题不变，范围扩展到约 13 项"
     },
     {
       "id": "u_38492cc09d02124f",
@@ -2002,7 +2002,7 @@
       "source": "外加 4/24 审计新增 5 项结构级遗留债 + 1 项合规 P0",
       "occurrence": 0,
       "target": "Additional 5 structural legacy debts and 1 compliance P0 added on 4/24 audit",
-      "context": "strong @ line 301 · surrounding text: API 版本化策略、X-App-Id 头识别两个产品、列表接口分页扩展、错误码映射扩展、第2阶段数据迁移收尾（专属IP 年度价、4K 广告链接）， 外加 4/24 审计新增 5 项结构级遗留债 + 1 项合规 P0 （详见第九节）— Phase A 主题不变，范围扩展到约 13 项"
+      "context": "strong @ line 300 · surrounding text: API 版本化策略、X-App-Id 头识别两个产品、列表接口分页扩展、错误码映射扩展、第2阶段数据迁移收尾（专属IP 年度价、4K 广告链接）， 外加 4/24 审计新增 5 项结构级遗留债 + 1 项合规 P0 （详见第九节）— Phase A 主题不变，范围扩展到约 13 项"
     },
     {
       "id": "u_47d5a7d1df1a86ee",
@@ -2010,7 +2010,7 @@
       "source": "（详见第九节）— Phase A 主题不变，范围扩展到约 13 项",
       "occurrence": 0,
       "target": "(see Section 9 for details) — the Phase A theme is unchanged, while its scope has expanded to approximately 13 items",
-      "context": "td @ line 301 · surrounding text: API 版本化策略、X-App-Id 头识别两个产品、列表接口分页扩展、错误码映射扩展、第2阶段数据迁移收尾（专属IP 年度价、4K 广告链接）， 外加 4/24 审计新增 5 项结构级遗留债 + 1 项合规 P0 （详见第九节）— Phase A 主题不变，范围扩展到约 13 项"
+      "context": "td @ line 300 · surrounding text: API 版本化策略、X-App-Id 头识别两个产品、列表接口分页扩展、错误码映射扩展、第2阶段数据迁移收尾（专属IP 年度价、4K 广告链接）， 外加 4/24 审计新增 5 项结构级遗留债 + 1 项合规 P0 （详见第九节）— Phase A 主题不变，范围扩展到约 13 项"
     },
     {
       "id": "u_f1c13df9bd8679d4",
@@ -2018,7 +2018,7 @@
       "source": "B. FFF 重建",
       "occurrence": 0,
       "target": "B. FFF Rebuild",
-      "context": "strong @ line 305 · surrounding text: B. FFF 重建 （5/4 起 2 周）"
+      "context": "strong @ line 304 · surrounding text: B. FFF 重建 （5/4 起 2 周）"
     },
     {
       "id": "u_fb1e2b7300d2b772",
@@ -2026,7 +2026,7 @@
       "source": "（5/4 起 2 周）",
       "occurrence": 0,
       "target": "- Starting on May 4th, intensive for 2 weeks",
-      "context": "br @ line 305 · surrounding text: B. FFF 重建 （5/4 起 2 周）"
+      "context": "br @ line 304 · surrounding text: B. FFF 重建 （5/4 起 2 周）"
     },
     {
       "id": "u_d9f383814d5c6860",
@@ -2034,7 +2034,7 @@
       "source": "FFF 后端独立部署、Go 公共模块抽取、Flutter 框架重建第一里程碑（注册 / 登录 / 节点列表 / 连接）",
       "occurrence": 0,
       "target": "- FFF backend independent deployment, Go public module extraction, Flutter framework rebuild first milestone (registration / login / VPN node list / connect)",
-      "context": "td @ line 306"
+      "context": "td @ line 305"
     },
     {
       "id": "u_7df9217abf45d9bd",
@@ -2042,7 +2042,7 @@
       "source": "C. 节点自动化",
       "occurrence": 0,
       "target": "C. VPN node automation",
-      "context": "strong @ line 310 · surrounding text: C. 节点自动化 （5/初 并行）"
+      "context": "strong @ line 309 · surrounding text: C. 节点自动化 （5/初 并行）"
     },
     {
       "id": "u_9f9c4be5a0546434",
@@ -2050,7 +2050,7 @@
       "source": "（5/初 并行）",
       "occurrence": 0,
       "target": "- Parallel with May initial",
-      "context": "br @ line 310 · surrounding text: C. 节点自动化 （5/初 并行）"
+      "context": "br @ line 309 · surrounding text: C. 节点自动化 （5/初 并行）"
     },
     {
       "id": "u_67ac022df801b731",
@@ -2058,7 +2058,7 @@
       "source": "信心打分模型 + 采购助手（应对中国封锁加速节点替换）",
       "occurrence": 0,
       "target": "Confidence Scoring Model + Procurement Assistant (Accelerate VPN node Replacement in Response to China Lockdown)",
-      "context": "td @ line 311"
+      "context": "td @ line 310"
     },
     {
       "id": "u_6b8c47a233bfcd53",
@@ -2066,7 +2066,7 @@
       "source": "D. Arrowfish 收尾",
       "occurrence": 0,
       "target": "D. Arrowfish Closure",
-      "context": "strong @ line 315 · surrounding text: D. Arrowfish 收尾 （背景任务）"
+      "context": "strong @ line 314 · surrounding text: D. Arrowfish 收尾 （背景任务）"
     },
     {
       "id": "u_55266a6508c9dad3",
@@ -2074,7 +2074,7 @@
       "source": "（背景任务）",
       "occurrence": 0,
       "target": "(Background Task)",
-      "context": "br @ line 315 · surrounding text: D. Arrowfish 收尾 （背景任务）"
+      "context": "br @ line 314 · surrounding text: D. Arrowfish 收尾 （背景任务）"
     },
     {
       "id": "u_e2731537bb3816b4",
@@ -2082,7 +2082,7 @@
       "source": "杀戮开关 QA 复现、反馈 / 会员 / 路线列表性能优化（低优先级，有时间才做）",
       "occurrence": 0,
       "target": "Kill Switch QA Reproduction, Feedback / Members / Route List Performance Optimization (Low Priority, Do When Time Allows)",
-      "context": "td @ line 316"
+      "context": "td @ line 315"
     },
     {
       "id": "u_893d9b8c6d27b328",
@@ -2090,7 +2090,7 @@
       "source": "移动端",
       "occurrence": 0,
       "target": "Mobile",
-      "context": "td @ line 317"
+      "context": "td @ line 316"
     },
     {
       "id": "u_4c4b505bc528edef",
@@ -2098,7 +2098,7 @@
       "source": "八、安全与权限管理",
       "occurrence": 0,
       "target": "Eight. Security and Permission Management",
-      "context": "h2 @ line 322"
+      "context": "h2 @ line 321"
     },
     {
       "id": "u_b955a31295d94fd0",
@@ -2106,7 +2106,7 @@
       "source": "原则：最小权限（Least Privilege）。",
       "occurrence": 0,
       "target": "Principle: Least Privilege.",
-      "context": "strong @ line 324 · surrounding text: 原则：最小权限（Least Privilege）。 每个人只能看到自己工作所需的资源，不开放冗余权限。"
+      "context": "strong @ line 323 · surrounding text: 原则：最小权限（Least Privilege）。 每个人只能看到自己工作所需的资源，不开放冗余权限。"
     },
     {
       "id": "u_93d5cbbd759a4615",
@@ -2114,7 +2114,7 @@
       "source": "每个人只能看到自己工作所需的资源，不开放冗余权限。",
       "occurrence": 0,
       "target": "Everyone can only see the resources they need for their work, not redundant permissions.",
-      "context": "div.card.highlight @ line 324 · surrounding text: 原则：最小权限（Least Privilege）。 每个人只能看到自己工作所需的资源，不开放冗余权限。"
+      "context": "div.card.highlight @ line 323 · surrounding text: 原则：最小权限（Least Privilege）。 每个人只能看到自己工作所需的资源，不开放冗余权限。"
     },
     {
       "id": "u_a4d224db694e8fb1",
@@ -2122,7 +2122,7 @@
       "source": "源代码访问权限收敛",
       "occurrence": 0,
       "target": "Source Code Access Restriction",
-      "context": "h3 @ line 327"
+      "context": "h3 @ line 326"
     },
     {
       "id": "u_d641bf0edeba9d82",
@@ -2130,7 +2130,7 @@
       "source": "角色",
       "occurrence": 0,
       "target": "Role",
-      "context": "th @ line 329 · surrounding text: 角色 GitLab 源代码访问 说明"
+      "context": "th @ line 328 · surrounding text: 角色 GitLab 源代码访问 说明"
     },
     {
       "id": "u_6a51f660d918a64e",
@@ -2138,7 +2138,7 @@
       "source": "GitLab 源代码访问",
       "occurrence": 0,
       "target": "GitLab Source Code Access",
-      "context": "th @ line 329 · surrounding text: 角色 GitLab 源代码访问 说明"
+      "context": "th @ line 328 · surrounding text: 角色 GitLab 源代码访问 说明"
     },
     {
       "id": "u_f721760359f90d3b",
@@ -2146,7 +2146,7 @@
       "source": "说明",
       "occurrence": 1,
       "target": "Description",
-      "context": "th @ line 329 · surrounding text: 角色 GitLab 源代码访问 说明"
+      "context": "th @ line 328 · surrounding text: 角色 GitLab 源代码访问 说明"
     },
     {
       "id": "u_98206ea0a1300cda",
@@ -2154,7 +2154,7 @@
       "source": "（项目对接）",
       "occurrence": 0,
       "target": "(Project Coordination)",
-      "context": "td @ line 330 · surrounding text: Roy （项目对接） ✅ 保留 需了解项目结构以推进商务对接"
+      "context": "td @ line 329 · surrounding text: Roy （项目对接） ✅ 保留 需了解项目结构以推进商务对接"
     },
     {
       "id": "u_485ba71fe4edca39",
@@ -2162,7 +2162,7 @@
       "source": "✅ 保留",
       "occurrence": 0,
       "target": "✅ Retain",
-      "context": "td @ line 330 · surrounding text: Roy （项目对接） ✅ 保留 需了解项目结构以推进商务对接"
+      "context": "td @ line 329 · surrounding text: Roy （项目对接） ✅ 保留 需了解项目结构以推进商务对接"
     },
     {
       "id": "u_0653b86cd470a891",
@@ -2170,7 +2170,7 @@
       "source": "需了解项目结构以推进商务对接",
       "occurrence": 0,
       "target": "Need to understand project structure for business coordination",
-      "context": "td @ line 330 · surrounding text: Roy （项目对接） ✅ 保留 需了解项目结构以推进商务对接"
+      "context": "td @ line 329 · surrounding text: Roy （项目对接） ✅ 保留 需了解项目结构以推进商务对接"
     },
     {
       "id": "u_db50fd72bb6d303d",
@@ -2178,7 +2178,7 @@
       "source": "（项目相关）",
       "occurrence": 0,
       "target": "(Project-related)",
-      "context": "td @ line 331 · surrounding text: Morgan （项目相关） ✅ 保留 历史项目背景"
+      "context": "td @ line 330 · surrounding text: Morgan （项目相关） ✅ 保留 历史项目背景"
     },
     {
       "id": "u_1bb31eea57a80054",
@@ -2186,7 +2186,7 @@
       "source": "✅ 保留",
       "occurrence": 1,
       "target": "✅ Retain",
-      "context": "td @ line 331 · surrounding text: Morgan （项目相关） ✅ 保留 历史项目背景"
+      "context": "td @ line 330 · surrounding text: Morgan （项目相关） ✅ 保留 历史项目背景"
     },
     {
       "id": "u_1152bec97c77a77a",
@@ -2194,7 +2194,7 @@
       "source": "历史项目背景",
       "occurrence": 0,
       "target": "(Historical Project Background)",
-      "context": "td @ line 331 · surrounding text: Morgan （项目相关） ✅ 保留 历史项目背景"
+      "context": "td @ line 330 · surrounding text: Morgan （项目相关） ✅ 保留 历史项目背景"
     },
     {
       "id": "u_d486eacf9e818a67",
@@ -2202,7 +2202,7 @@
       "source": "（中国 Flutter）",
       "occurrence": 0,
       "target": "(China Flutter)",
-      "context": "td @ line 332 · surrounding text: Lex （中国 Flutter） ✅ 保留 FFF 重建工作必须访问代码"
+      "context": "td @ line 331 · surrounding text: Lex （中国 Flutter） ✅ 保留 FFF 重建工作必须访问代码"
     },
     {
       "id": "u_b3f6857b3b396eac",
@@ -2210,7 +2210,7 @@
       "source": "✅ 保留",
       "occurrence": 2,
       "target": "✅ Retain",
-      "context": "td @ line 332 · surrounding text: Lex （中国 Flutter） ✅ 保留 FFF 重建工作必须访问代码"
+      "context": "td @ line 331 · surrounding text: Lex （中国 Flutter） ✅ 保留 FFF 重建工作必须访问代码"
     },
     {
       "id": "u_682e3ead1b53681b",
@@ -2218,7 +2218,7 @@
       "source": "FFF 重建工作必须访问代码",
       "occurrence": 0,
       "target": "FFF Reconstruction Work Requires Access to Code",
-      "context": "td @ line 332 · surrounding text: Lex （中国 Flutter） ✅ 保留 FFF 重建工作必须访问代码"
+      "context": "td @ line 331 · surrounding text: Lex （中国 Flutter） ✅ 保留 FFF 重建工作必须访问代码"
     },
     {
       "id": "u_8d0455473bb2e519",
@@ -2226,7 +2226,7 @@
       "source": "马来西亚开发团队",
       "occurrence": 0,
       "target": "(Malaysian Development Team)",
-      "context": "strong @ line 333 · surrounding text: 马来西亚开发团队 ✅ 保留 当前主开发力量"
+      "context": "strong @ line 332 · surrounding text: 马来西亚开发团队 ✅ 保留 当前主开发力量"
     },
     {
       "id": "u_4f6dd74f46afd489",
@@ -2234,7 +2234,7 @@
       "source": "✅ 保留",
       "occurrence": 3,
       "target": "✅ Retain",
-      "context": "td @ line 333 · surrounding text: 马来西亚开发团队 ✅ 保留 当前主开发力量"
+      "context": "td @ line 332 · surrounding text: 马来西亚开发团队 ✅ 保留 当前主开发力量"
     },
     {
       "id": "u_d6e3358d827b0727",
@@ -2242,7 +2242,7 @@
       "source": "当前主开发力量",
       "occurrence": 0,
       "target": "(Current Main Development Force)",
-      "context": "td @ line 333 · surrounding text: 马来西亚开发团队 ✅ 保留 当前主开发力量"
+      "context": "td @ line 332 · surrounding text: 马来西亚开发团队 ✅ 保留 当前主开发力量"
     },
     {
       "id": "u_65f69fac07623b48",
@@ -2250,7 +2250,7 @@
       "source": "其他台湾团队成员",
       "occurrence": 0,
       "target": "(Taiwanese Team Members)",
-      "context": "td @ line 334 · surrounding text: 其他台湾团队成员 ❌ 已收回 移交完成后访问权限收回，符合最小权限原则"
+      "context": "td @ line 333 · surrounding text: 其他台湾团队成员 ❌ 已收回 移交完成后访问权限收回，符合最小权限原则"
     },
     {
       "id": "u_00405b9b97360abe",
@@ -2258,7 +2258,7 @@
       "source": "❌ 已收回",
       "occurrence": 0,
       "target": "❌ Retracted",
-      "context": "td @ line 334 · surrounding text: 其他台湾团队成员 ❌ 已收回 移交完成后访问权限收回，符合最小权限原则"
+      "context": "td @ line 333 · surrounding text: 其他台湾团队成员 ❌ 已收回 移交完成后访问权限收回，符合最小权限原则"
     },
     {
       "id": "u_7ec90adcf1c42e2c",
@@ -2266,7 +2266,7 @@
       "source": "移交完成后访问权限收回，符合最小权限原则",
       "occurrence": 0,
       "target": "(Access Rights Reclaimed Post-Transfer, in Compliance with Least Privilege Principle)",
-      "context": "td @ line 334 · surrounding text: 其他台湾团队成员 ❌ 已收回 移交完成后访问权限收回，符合最小权限原则"
+      "context": "td @ line 333 · surrounding text: 其他台湾团队成员 ❌ 已收回 移交完成后访问权限收回，符合最小权限原则"
     },
     {
       "id": "u_62357d79a0667a7a",
@@ -2274,7 +2274,7 @@
       "source": "接手时发现的安全 / 基础设施隐患（持续整改）",
       "occurrence": 0,
       "target": "(Security and Infrastructure Hazards Identified During Takeover - Continuous Remediation Required)",
-      "context": "h3 @ line 337"
+      "context": "h3 @ line 336"
     },
     {
       "id": "u_37ebfe79a14e630f",
@@ -2282,7 +2282,7 @@
       "source": "问题",
       "occurrence": 1,
       "target": "Issue",
-      "context": "th @ line 339 · surrounding text: 问题 风险 状态"
+      "context": "th @ line 338 · surrounding text: 问题 风险 状态"
     },
     {
       "id": "u_20720e20b11523e1",
@@ -2290,7 +2290,7 @@
       "source": "风险",
       "occurrence": 1,
       "target": "Risk",
-      "context": "th @ line 339 · surrounding text: 问题 风险 状态"
+      "context": "th @ line 338 · surrounding text: 问题 风险 状态"
     },
     {
       "id": "u_a6835523fecf3c74",
@@ -2298,7 +2298,7 @@
       "source": "状态",
       "occurrence": 1,
       "target": "Status",
-      "context": "th @ line 339 · surrounding text: 问题 风险 状态"
+      "context": "th @ line 338 · surrounding text: 问题 风险 状态"
     },
     {
       "id": "u_1ab5c6b6267fd294",
@@ -2306,7 +2306,7 @@
       "source": "Staging 与 Production 共用同一个 Azure NSG（网络安全组）",
       "occurrence": 0,
       "target": "(Staging and Production Share the Same Azure NSG)",
-      "context": "strong @ line 341"
+      "context": "strong @ line 340"
     },
     {
       "id": "u_6c8a1a5c25ac2314",
@@ -2314,7 +2314,7 @@
       "source": "测试环境改动可能波及生产；攻击面无法隔离",
       "occurrence": 0,
       "target": "Testing environment changes could impact production; the attack surface cannot be isolated.",
-      "context": "td @ line 342"
+      "context": "td @ line 341"
     },
     {
       "id": "u_17eb8e2710df8e6e",
@@ -2322,7 +2322,7 @@
       "source": "已识别，第3阶段隔离 NSG",
       "occurrence": 0,
       "target": "Sprint 3 identified, NSG isolation",
-      "context": "td @ line 343"
+      "context": "td @ line 342"
     },
     {
       "id": "u_8aea1a17b19f9d07",
@@ -2330,7 +2330,7 @@
       "source": "数据库无定期备份",
       "occurrence": 0,
       "target": "Database lacks regular backups.",
-      "context": "strong @ line 346"
+      "context": "strong @ line 345"
     },
     {
       "id": "u_e2ef8257a437fd9d",
@@ -2338,7 +2338,7 @@
       "source": "磁盘损坏 / 误操作 / 攻击会导致全量数据丢失，无法恢复",
       "occurrence": 0,
       "target": "Disk damage, operator error, or an attack could cause total data loss that cannot be recovered",
-      "context": "td @ line 347"
+      "context": "td @ line 346"
     },
     {
       "id": "u_66c04d6758a0c574",
@@ -2346,7 +2346,7 @@
       "source": "第3阶段优先项，启用自动备份 + 异地副本",
       "occurrence": 0,
       "target": "Sprint 3 priority: enable automated backups and an off-site replica",
-      "context": "td @ line 348"
+      "context": "td @ line 347"
     },
     {
       "id": "u_8818a5dd8d003979",
@@ -2354,7 +2354,7 @@
       "source": "HK VM 上的 Proxybackend 服务长期不稳定",
       "occurrence": 0,
       "target": "Proxybackend service on HK VM is unstable for long-term.",
-      "context": "strong @ line 351"
+      "context": "strong @ line 350"
     },
     {
       "id": "u_639b0fda0fe7d4e1",
@@ -2362,7 +2362,7 @@
       "source": "影响节点状态同步；该服务本应已被新版后端替代",
       "occurrence": 0,
       "target": "VPN node synchronization affected; the service should have been replaced by a new backend version",
-      "context": "td @ line 352"
+      "context": "td @ line 351"
     },
     {
       "id": "u_a59ebaa1170f18c1",
@@ -2370,7 +2370,7 @@
       "source": "第3阶段彻底淘汰 Proxybackend，全量切到 orebackend",
       "occurrence": 0,
       "target": "Sprint 3 will completely eliminate Proxybackend and fully switch to orebackend.",
-      "context": "td @ line 353"
+      "context": "td @ line 352"
     },
     {
       "id": "u_1c7ee7be1a0c01ff",
@@ -2378,7 +2378,7 @@
       "source": "SSH 访问未统一使用 PEM 密钥",
       "occurrence": 0,
       "target": "SSH access is not uniformly using PEM keys.",
-      "context": "strong @ line 356"
+      "context": "strong @ line 355"
     },
     {
       "id": "u_bf0f7e63648e8cd8",
@@ -2386,7 +2386,7 @@
       "source": "密码登录易被暴力破解；密钥泄露时无法精细回收",
       "occurrence": 0,
       "target": "Password login can be brute-forced; key leaks cannot be recovered precisely.",
-      "context": "td @ line 357"
+      "context": "td @ line 356"
     },
     {
       "id": "u_a782dfa311d106ed",
@@ -2394,7 +2394,7 @@
       "source": "部分已 PEM 化（如 AWS 台湾 GitLab 服务器）；第3阶段全面铺开",
       "occurrence": 0,
       "target": "Some are already PEM-ized (such as AWS Taiwan GitLab server); Sprint 3 will fully roll out.",
-      "context": "td @ line 358"
+      "context": "td @ line 357"
     },
     {
       "id": "u_1fbb8b5a55529614",
@@ -2402,7 +2402,7 @@
       "source": "读写分离副本未被使用",
       "occurrence": 0,
       "target": "Read-write separation replicas are not being used.",
-      "context": "strong @ line 361"
+      "context": "strong @ line 360"
     },
     {
       "id": "u_18560a62935a4d10",
@@ -2410,7 +2410,7 @@
       "source": "主库承担全部读写流量，故障 / 性能问题影响面大",
       "occurrence": 0,
       "target": "The master database bears all read/write traffic; issues or performance problems affect a large area.",
-      "context": "td @ line 362"
+      "context": "td @ line 361"
     },
     {
       "id": "u_42dde03c8eae5d35",
@@ -2418,7 +2418,7 @@
       "source": "本阶段已修复",
       "occurrence": 0,
       "target": "Fixed in this stage.",
-      "context": "strong @ line 363 · surrounding text: ✅ 本阶段已修复 — 100% 客户端读取流量已走只读副本"
+      "context": "strong @ line 362 · surrounding text: ✅ 本阶段已修复 — 100% 客户端读取流量已走只读副本"
     },
     {
       "id": "u_dd18a6d07415a5bc",
@@ -2426,7 +2426,7 @@
       "source": "— 100% 客户端读取流量已走只读副本",
       "occurrence": 0,
       "target": "- 100% client read traffic is now routed to read-only replicas.",
-      "context": "td @ line 363 · surrounding text: ✅ 本阶段已修复 — 100% 客户端读取流量已走只读副本"
+      "context": "td @ line 362 · surrounding text: ✅ 本阶段已修复 — 100% 客户端读取流量已走只读副本"
     },
     {
       "id": "u_0a9fcdf2a1027bf5",
@@ -2434,7 +2434,7 @@
       "source": "本阶段已修一项（读写分离），剩余项已纳入第3阶段。",
       "occurrence": 0,
       "target": "One issue in this stage has been fixed (read-write separation), and the remaining issues have been included in Sprint 3.",
-      "context": "strong @ line 367 · surrounding text: 本阶段已修一项（读写分离），剩余项已纳入第3阶段。 这些都是台湾团队遗留的基础设施问题，不是新增风险。接手后必须正视并依次清理，否则上线规模一扩大就会暴露。"
+      "context": "strong @ line 366 · surrounding text: 本阶段已修一项（读写分离），剩余项已纳入第3阶段。 这些都是台湾团队遗留的基础设施问题，不是新增风险。接手后必须正视并依次清理，否则上线规模一扩大就会暴露。"
     },
     {
       "id": "u_9e0bdc62a6c5c139",
@@ -2442,7 +2442,7 @@
       "source": "这些都是台湾团队遗留的基础设施问题，不是新增风险。接手后必须正视并依次清理，否则上线规模一扩大就会暴露。",
       "occurrence": 0,
       "target": "These are legacy infrastructure issues from Taiwan team, not new risks. They must be addressed and cleaned up one by one; otherwise, they will expose the scale expansion at the next stage.",
-      "context": "div.card.warning @ line 367 · surrounding text: 本阶段已修一项（读写分离），剩余项已纳入第3阶段。 这些都是台湾团队遗留的基础设施问题，不是新增风险。接手后必须正视并依次清理，否则上线规模一扩大就会暴露。"
+      "context": "div.card.warning @ line 366 · surrounding text: 本阶段已修一项（读写分离），剩余项已纳入第3阶段。 这些都是台湾团队遗留的基础设施问题，不是新增风险。接手后必须正视并依次清理，否则上线规模一扩大就会暴露。"
     },
     {
       "id": "u_6393a226b25c76ac",
@@ -2450,7 +2450,7 @@
       "source": "九、为什么第3阶段必须先清理技术债 — FFF 复用同一套后端",
       "occurrence": 0,
       "target": "IX. Why Sprint 3 Must Clean Technical Debt First — FFF Reuse Same Back Office",
-      "context": "h2 @ line 371"
+      "context": "h2 @ line 370"
     },
     {
       "id": "u_cf1286ac99a53aa1",
@@ -2458,7 +2458,7 @@
       "source": "关键背景：",
       "occurrence": 0,
       "target": "Key background:",
-      "context": "strong @ line 373 · surrounding text: 关键背景： FFF 新产品将复用 orebackend 后端。技术债不修，会被 FFF 继承一遍，问题翻倍。第3阶段的后端通用化不是「锦上添花」，而是 FFF 顺利上线的前提。"
+      "context": "strong @ line 372 · surrounding text: 关键背景： FFF 新产品将复用 orebackend 后端。技术债不修，会被 FFF 继承一遍，问题翻倍。第3阶段的后端通用化不是「锦上添花」，而是 FFF 顺利上线的前提。"
     },
     {
       "id": "u_274d525bd0acecb9",
@@ -2466,7 +2466,7 @@
       "source": "FFF 新产品将复用 orebackend 后端。技术债不修，会被 FFF 继承一遍，问题翻倍。第3阶段的后端通用化不是「锦上添花」，而是 FFF 顺利上线的前提。",
       "occurrence": 0,
       "target": "FFF's new product will reuse the orebackend backend. If technical debt is not cleared, FFF will inherit it and face twice as many issues. Clearing technical debt in Sprint 3 is not a bonus but a prerequisite for FFF to successfully go live.",
-      "context": "div.card.critical @ line 373 · surrounding text: 关键背景： FFF 新产品将复用 orebackend 后端。技术债不修，会被 FFF 继承一遍，问题翻倍。第3阶段的后端通用化不是「锦上添花」，而是 FFF 顺利上线的前提。"
+      "context": "div.card.critical @ line 372 · surrounding text: 关键背景： FFF 新产品将复用 orebackend 后端。技术债不修，会被 FFF 继承一遍，问题翻倍。第3阶段的后端通用化不是「锦上添花」，而是 FFF 顺利上线的前提。"
     },
     {
       "id": "u_867dd014e2322996",
@@ -2474,7 +2474,7 @@
       "source": "🔴 本周审计新发现的合规级问题（已有大量清理，但仍剩一项须修）",
       "occurrence": 0,
       "target": "🔴 This week's audit found new compliance-level issues (a lot has already been cleaned up, but one issue still needs fixing)",
-      "context": "h3 @ line 376"
+      "context": "h3 @ line 375"
     },
     {
       "id": "u_ceb9005170d712ad",
@@ -2482,7 +2482,7 @@
       "source": "背景：",
       "occurrence": 0,
       "target": "Background:",
-      "context": "strong @ line 378 · surrounding text: 背景： 第1、2阶段已经在无日志方向做了大量清理 — 节点侧关闭 rsyslog / journald、应用侧移除敏感字段、反欺诈从 ANDROID_ID 改为指纹、节点凭证权限收紧。这些都已在第三节「安全 / 反欺诈改善」汇总。"
+      "context": "strong @ line 377 · surrounding text: 背景： 第1、2阶段已经在无日志方向做了大量清理 — 节点侧关闭 rsyslog / journald、应用侧移除敏感字段、反欺诈从 ANDROID_ID 改为指纹、节点凭证权限收紧。这些都已在第三节「安全 / 反欺诈改善」汇总。"
     },
     {
       "id": "u_b83eb33a834dfc0f",
@@ -2490,7 +2490,7 @@
       "source": "第1、2阶段已经在无日志方向做了大量清理 — 节点侧关闭 rsyslog / journald、应用侧移除敏感字段、反欺诈从 ANDROID_ID 改为指纹、节点凭证权限收紧。这些都已在第三节「安全 / 反欺诈改善」汇总。",
       "occurrence": 0,
       "target": "Sprint 1 and Sprint 2 already delivered substantial no-logging cleanup: disabling rsyslog and journald on VPN nodes, removing sensitive fields from the app, replacing ANDROID_ID with fingerprinting for anti-fraud controls, and tightening VPN node credential permissions. These measures are summarized in Section 3, ‘Security / Anti-Fraud Improvements.’",
-      "context": "div.card.critical @ line 378 · surrounding text: 背景： 第1、2阶段已经在无日志方向做了大量清理 — 节点侧关闭 rsyslog / journald、应用侧移除敏感字段、反欺诈从 ANDROID_ID 改为指纹、节点凭证权限收紧。这些都已在第三节「安全 / 反欺诈改善」汇总。"
+      "context": "div.card.critical @ line 377 · surrounding text: 背景： 第1、2阶段已经在无日志方向做了大量清理 — 节点侧关闭 rsyslog / journald、应用侧移除敏感字段、反欺诈从 ANDROID_ID 改为指纹、节点凭证权限收紧。这些都已在第三节「安全 / 反欺诈改善」汇总。"
     },
     {
       "id": "u_714cabd4e0396659",
@@ -2498,7 +2498,7 @@
       "source": "本周新发现：",
       "occurrence": 0,
       "target": "This week's new issue is:",
-      "context": "strong @ line 380 · surrounding text: 本周新发现： 流量记录表 user_flows 以「每小时」粒度把「某用户 × 某节点」的使用量持久化到数据库。语义上等同于「长期保存每位用户用过哪些节点、在哪个时段」。当前 280 万行，每月继续增长。"
+      "context": "strong @ line 379 · surrounding text: 本周新发现： 流量记录表 user_flows 以「每小时」粒度把「某用户 × 某节点」的使用量持久化到数据库。语义上等同于「长期保存每位用户用过哪些节点、在哪个时段」。当前 280 万行，每月继续增长。"
     },
     {
       "id": "u_a8250cebc1673bd2",
@@ -2506,7 +2506,7 @@
       "source": "流量记录表",
       "occurrence": 0,
       "target": "<br>",
-      "context": "br @ line 380 · surrounding text: 本周新发现： 流量记录表 user_flows 以「每小时」粒度把「某用户 × 某节点」的使用量持久化到数据库。语义上等同于「长期保存每位用户用过哪些节点、在哪个时段」。当前 280 万行，每月继续增长。"
+      "context": "br @ line 379 · surrounding text: 本周新发现： 流量记录表 user_flows 以「每小时」粒度把「某用户 × 某节点」的使用量持久化到数据库。语义上等同于「长期保存每位用户用过哪些节点、在哪个时段」。当前 280 万行，每月继续增长。"
     },
     {
       "id": "u_97746f64313f5818",
@@ -2514,7 +2514,7 @@
       "source": "以「每小时」粒度把「某用户 × 某节点」的使用量持久化到数据库。语义上等同于「长期保存每位用户用过哪些节点、在哪个时段」。当前 280 万行，每月继续增长。",
       "occurrence": 0,
       "target": "Persist hourly usage of 'user × VPN node' to the database. Semantically, this is equivalent to 'record which VPN nodes each user used and when'. Currently 2.8 million rows, growing monthly.",
-      "context": "br @ line 380 · surrounding text: 本周新发现： 流量记录表 user_flows 以「每小时」粒度把「某用户 × 某节点」的使用量持久化到数据库。语义上等同于「长期保存每位用户用过哪些节点、在哪个时段」。当前 280 万行，每月继续增长。"
+      "context": "br @ line 379 · surrounding text: 本周新发现： 流量记录表 user_flows 以「每小时」粒度把「某用户 × 某节点」的使用量持久化到数据库。语义上等同于「长期保存每位用户用过哪些节点、在哪个时段」。当前 280 万行，每月继续增长。"
     },
     {
       "id": "u_f565ee513ae47db9",
@@ -2522,7 +2522,7 @@
       "source": "为什么是 P0：",
       "occurrence": 0,
       "target": "Why P0:",
-      "context": "strong @ line 382 · surrounding text: 为什么是 P0： VaaS 无日志政策（日总已明确指示、未来 FFF 合规前提）禁止记录「用户连接到哪些节点」。这是前面清理工作里漏掉的最后一块 — 因为它表面上是「流量统计」，不是「用户行为日志」，很容易被忽略。"
+      "context": "strong @ line 381 · surrounding text: 为什么是 P0： VaaS 无日志政策（日总已明确指示、未来 FFF 合规前提）禁止记录「用户连接到哪些节点」。这是前面清理工作里漏掉的最后一块 — 因为它表面上是「流量统计」，不是「用户行为日志」，很容易被忽略。"
     },
     {
       "id": "u_fbe0dced4c5d619c",
@@ -2530,7 +2530,7 @@
       "source": "VaaS 无日志政策（日总已明确指示、未来 FFF 合规前提）禁止记录「用户连接到哪些节点」。这是前面清理工作里漏掉的最后一块 — 因为它表面上是「流量统计」，不是「用户行为日志」，很容易被忽略。",
       "occurrence": 0,
       "target": "VaaS logless policy (General Manager Ri has explicitly instructed and is a prerequisite for future FFF compliance) prohibits recording 'which VPN nodes users connect to'. This was the last piece left out of previous cleanup efforts — it can easily be overlooked as it appears to be 'traffic statistics' rather than 'user behavior logs'.",
-      "context": "br @ line 382 · surrounding text: 为什么是 P0： VaaS 无日志政策（日总已明确指示、未来 FFF 合规前提）禁止记录「用户连接到哪些节点」。这是前面清理工作里漏掉的最后一块 — 因为它表面上是「流量统计」，不是「用户行为日志」，很容易被忽略。"
+      "context": "br @ line 381 · surrounding text: 为什么是 P0： VaaS 无日志政策（日总已明确指示、未来 FFF 合规前提）禁止记录「用户连接到哪些节点」。这是前面清理工作里漏掉的最后一块 — 因为它表面上是「流量统计」，不是「用户行为日志」，很容易被忽略。"
     },
     {
       "id": "u_57713ee2044f5967",
@@ -2538,7 +2538,7 @@
       "source": "业务影响：",
       "occurrence": 0,
       "target": "Business impact:",
-      "context": "strong @ line 384"
+      "context": "strong @ line 383"
     },
     {
       "id": "u_263eddb666af00d0",
@@ -2546,7 +2546,7 @@
       "source": "合规风险 — 在此修复完成前，对外宣传「无日志」的语句暂不成立",
       "occurrence": 0,
       "target": "Compliance risk — Until this issue is fixed, the statement 'no logs' cannot be publicly announced.",
-      "context": "li @ line 386"
+      "context": "li @ line 385"
     },
     {
       "id": "u_9203e65bbc7974e6",
@@ -2554,7 +2554,7 @@
       "source": "FFF 欧盟体系更严格（GDPR + 爱沙尼亚法律），若照搬同一张表上线，监管敞口翻倍。",
       "occurrence": 0,
       "target": "FFF's EU system is stricter (GDPR + Estonian law), doubling the regulatory exposure if it goes live with the same table.",
-      "context": "li @ line 387 · surrounding text: FFF 欧盟体系更严格（GDPR + 爱沙尼亚法律），若照搬同一张表上线，监管敞口翻倍。 GDPR 违规罚款上限为全球年营收 4% 或 2,000 万欧元（取高） ，远超此次清理成本"
+      "context": "li @ line 386 · surrounding text: FFF 欧盟体系更严格（GDPR + 爱沙尼亚法律），若照搬同一张表上线，监管敞口翻倍。 GDPR 违规罚款上限为全球年营收 4% 或 2,000 万欧元（取高） ，远超此次清理成本"
     },
     {
       "id": "u_1b7acd757415b1e6",
@@ -2562,7 +2562,7 @@
       "source": "GDPR 违规罚款上限为全球年营收 4% 或 2,000 万欧元（取高）",
       "occurrence": 0,
       "target": "GDPR fines are capped at 4% of global annual revenue or twenty million euros (2 × ten million, with zero discretion to select the lower amount), whichever is higher",
-      "context": "strong @ line 387 · surrounding text: FFF 欧盟体系更严格（GDPR + 爱沙尼亚法律），若照搬同一张表上线，监管敞口翻倍。 GDPR 违规罚款上限为全球年营收 4% 或 2,000 万欧元（取高） ，远超此次清理成本"
+      "context": "strong @ line 386 · surrounding text: FFF 欧盟体系更严格（GDPR + 爱沙尼亚法律），若照搬同一张表上线，监管敞口翻倍。 GDPR 违规罚款上限为全球年营收 4% 或 2,000 万欧元（取高） ，远超此次清理成本"
     },
     {
       "id": "u_fa591ae4c39ac2ee",
@@ -2570,7 +2570,7 @@
       "source": "，远超此次清理成本",
       "occurrence": 0,
       "target": "Sprint exceeds the cost of this cleanup",
-      "context": "li @ line 387 · surrounding text: FFF 欧盟体系更严格（GDPR + 爱沙尼亚法律），若照搬同一张表上线，监管敞口翻倍。 GDPR 违规罚款上限为全球年营收 4% 或 2,000 万欧元（取高） ，远超此次清理成本"
+      "context": "li @ line 386 · surrounding text: FFF 欧盟体系更严格（GDPR + 爱沙尼亚法律），若照搬同一张表上线，监管敞口翻倍。 GDPR 违规罚款上限为全球年营收 4% 或 2,000 万欧元（取高） ，远超此次清理成本"
     },
     {
       "id": "u_19ca2a6a1a167a8b",
@@ -2578,7 +2578,7 @@
       "source": "数据体量 —",
       "occurrence": 0,
       "target": "Data Volume —",
-      "context": "li @ line 388 · surrounding text: 数据体量 — user_flows 已 280 万行、约 2.8 GB，每月按活跃用户数持续增长，占用主库空间并拖慢统计查询"
+      "context": "li @ line 387 · surrounding text: 数据体量 — user_flows 已 280 万行、约 2.8 GB，每月按活跃用户数持续增长，占用主库空间并拖慢统计查询"
     },
     {
       "id": "u_e838e92226a9173f",
@@ -2586,7 +2586,7 @@
       "source": "已 280 万行、约 2.8 GB，每月按活跃用户数持续增长，占用主库空间并拖慢统计查询",
       "occurrence": 0,
       "target": "Size: user_flows at 2.8 million rows, approximately 2.8 GB, growing monthly with active users, occupying main database space and slowing down statistical queries",
-      "context": "li @ line 388 · surrounding text: 数据体量 — user_flows 已 280 万行、约 2.8 GB，每月按活跃用户数持续增长，占用主库空间并拖慢统计查询"
+      "context": "li @ line 387 · surrounding text: 数据体量 — user_flows 已 280 万行、约 2.8 GB，每月按活跃用户数持续增长，占用主库空间并拖慢统计查询"
     },
     {
       "id": "u_11106af32f06eb93",
@@ -2594,7 +2594,7 @@
       "source": "处理方案：",
       "occurrence": 0,
       "target": "Solution:",
-      "context": "strong @ line 390 · surrounding text: 处理方案： 已排入第3阶段 mod-efficiency Phase 12 ，拆成两张表 — 一张只保留「用户 × 日期」总量（免费额度统计用），另一张只保留「节点 × 小时」总量（节点健康监控用），彼此不再交叉。灰度期双写、验证一致后删除旧表。"
+      "context": "strong @ line 389 · surrounding text: 处理方案： 已排入第3阶段 mod-efficiency Phase 12 ，拆成两张表 — 一张只保留「用户 × 日期」总量（免费额度统计用），另一张只保留「节点 × 小时」总量（节点健康监控用），彼此不再交叉。灰度期双写、验证一致后删除旧表。"
     },
     {
       "id": "u_c06d762141673fed",
@@ -2602,7 +2602,7 @@
       "source": "已排入第3阶段",
       "occurrence": 0,
       "target": "Scheduled for Sprint 3",
-      "context": "br @ line 390 · surrounding text: 处理方案： 已排入第3阶段 mod-efficiency Phase 12 ，拆成两张表 — 一张只保留「用户 × 日期」总量（免费额度统计用），另一张只保留「节点 × 小时」总量（节点健康监控用），彼此不再交叉。灰度期双写、验证一致后删除旧表。"
+      "context": "br @ line 389 · surrounding text: 处理方案： 已排入第3阶段 mod-efficiency Phase 12 ，拆成两张表 — 一张只保留「用户 × 日期」总量（免费额度统计用），另一张只保留「节点 × 小时」总量（节点健康监控用），彼此不再交叉。灰度期双写、验证一致后删除旧表。"
     },
     {
       "id": "u_169dd95d73908938",
@@ -2610,7 +2610,7 @@
       "source": "，拆成两张表 — 一张只保留「用户 × 日期」总量（免费额度统计用），另一张只保留「节点 × 小时」总量（节点健康监控用），彼此不再交叉。灰度期双写、验证一致后删除旧表。",
       "occurrence": 0,
       "target": "split into two tables — one only retains the total of \"user × date\" (for free quota statistics), and another only retains the total of \"VPN node × hour\" (for VPN node health monitoring). They no longer cross-reference. During the gray release period, write both in parallel to verify consistency before deleting old tables.",
-      "context": "br @ line 390 · surrounding text: 处理方案： 已排入第3阶段 mod-efficiency Phase 12 ，拆成两张表 — 一张只保留「用户 × 日期」总量（免费额度统计用），另一张只保留「节点 × 小时」总量（节点健康监控用），彼此不再交叉。灰度期双写、验证一致后删除旧表。"
+      "context": "br @ line 389 · surrounding text: 处理方案： 已排入第3阶段 mod-efficiency Phase 12 ，拆成两张表 — 一张只保留「用户 × 日期」总量（免费额度统计用），另一张只保留「节点 × 小时」总量（节点健康监控用），彼此不再交叉。灰度期双写、验证一致后删除旧表。"
     },
     {
       "id": "u_18354a8be859c447",
@@ -2618,7 +2618,7 @@
       "source": "发现路径：",
       "occurrence": 0,
       "target": "Discovery Path:",
-      "context": "strong @ line 392 · surrounding text: 发现路径： 团队本周主动对后端做结构审计（非 Bug 触发），同日定位 → 同日排期 → 同日写入执行计划。 能找到这一项，说明无日志清理的节奏在持续推进，不是一次性工作。"
+      "context": "strong @ line 391 · surrounding text: 发现路径： 团队本周主动对后端做结构审计（非 Bug 触发），同日定位 → 同日排期 → 同日写入执行计划。 能找到这一项，说明无日志清理的节奏在持续推进，不是一次性工作。"
     },
     {
       "id": "u_dc0f9fa6f68923b9",
@@ -2626,7 +2626,7 @@
       "source": "团队本周主动对后端做结构审计（非 Bug 触发），同日定位 → 同日排期 → 同日写入执行计划。",
       "occurrence": 0,
       "target": "The team actively audited the backend this week (not triggered by a bug), pinpointed it on the same day, scheduled it for the same day, and wrote down the execution plan for the same day.",
-      "context": "br @ line 392 · surrounding text: 发现路径： 团队本周主动对后端做结构审计（非 Bug 触发），同日定位 → 同日排期 → 同日写入执行计划。 能找到这一项，说明无日志清理的节奏在持续推进，不是一次性工作。"
+      "context": "br @ line 391 · surrounding text: 发现路径： 团队本周主动对后端做结构审计（非 Bug 触发），同日定位 → 同日排期 → 同日写入执行计划。 能找到这一项，说明无日志清理的节奏在持续推进，不是一次性工作。"
     },
     {
       "id": "u_3497cc2504862a7a",
@@ -2634,7 +2634,7 @@
       "source": "能找到这一项，说明无日志清理的节奏在持续推进，不是一次性工作。",
       "occurrence": 0,
       "target": "Finding this item indicates that the rhythm of log cleanup is still ongoing, not a one-time job.",
-      "context": "strong @ line 392 · surrounding text: 发现路径： 团队本周主动对后端做结构审计（非 Bug 触发），同日定位 → 同日排期 → 同日写入执行计划。 能找到这一项，说明无日志清理的节奏在持续推进，不是一次性工作。"
+      "context": "strong @ line 391 · surrounding text: 发现路径： 团队本周主动对后端做结构审计（非 Bug 触发），同日定位 → 同日排期 → 同日写入执行计划。 能找到这一项，说明无日志清理的节奏在持续推进，不是一次性工作。"
     },
     {
       "id": "u_21ef35ee7619e6bc",
@@ -2642,7 +2642,7 @@
       "source": "接手时发现的固有问题（已清理不少，仍有优化空间）",
       "occurrence": 0,
       "target": "Issues found upon takeover (many have been cleaned up but there's still room for improvement)",
-      "context": "h3 @ line 395"
+      "context": "h3 @ line 394"
     },
     {
       "id": "u_5c78e5f49adaf5f6",
@@ -2650,7 +2650,7 @@
       "source": "第2阶段已清理 4 项重大遗留债",
       "occurrence": 0,
       "target": "Sprint 2 cleared four major technical debts",
-      "context": "strong @ line 397 · surrounding text: 第2阶段已清理 4 项重大遗留债 — 读写分离、专属 IP 支付链路、试用额度滥用、错误提示本地化（详见第二、三节，每项均有实测数据）。这些是「最影响发布」的坑，拦掉了不少用户投诉与营收损失。"
+      "context": "strong @ line 396 · surrounding text: 第2阶段已清理 4 项重大遗留债 — 读写分离、专属 IP 支付链路、试用额度滥用、错误提示本地化（详见第二、三节，每项均有实测数据）。这些是「最影响发布」的坑，拦掉了不少用户投诉与营收损失。"
     },
     {
       "id": "u_7587312bbe33ed62",
@@ -2658,7 +2658,7 @@
       "source": "— 读写分离、专属 IP 支付链路、试用额度滥用、错误提示本地化（详见第二、三节，每项均有实测数据）。这些是「最影响发布」的坑，拦掉了不少用户投诉与营收损失。",
       "occurrence": 0,
       "target": "— Read/write separation, the dedicated-IP payment path, trial-quota abuse, and localized error messages, each supported by measured data in the relevant sections. These were the issues most likely to block release; resolving them prevented user complaints and revenue loss.",
-      "context": "div.card.highlight @ line 397 · surrounding text: 第2阶段已清理 4 项重大遗留债 — 读写分离、专属 IP 支付链路、试用额度滥用、错误提示本地化（详见第二、三节，每项均有实测数据）。这些是「最影响发布」的坑，拦掉了不少用户投诉与营收损失。"
+      "context": "div.card.highlight @ line 396 · surrounding text: 第2阶段已清理 4 项重大遗留债 — 读写分离、专属 IP 支付链路、试用额度滥用、错误提示本地化（详见第二、三节，每项均有实测数据）。这些是「最影响发布」的坑，拦掉了不少用户投诉与营收损失。"
     },
     {
       "id": "u_06f10cb75d75f2ba",
@@ -2666,7 +2666,7 @@
       "source": "同时，第2阶段收尾审计又新找出 5 项结构级优化空间",
       "occurrence": 0,
       "target": "At the same time, a new audit at the end of Sprint 2 found another 5 structural optimization opportunities",
-      "context": "strong @ line 399 · surrounding text: 同时，第2阶段收尾审计又新找出 5 项结构级优化空间 （表格中标【本周新增】）。不是新 Bug，而是「可以做得更好」的长期优化 — 不修不会立刻出事，但继续迭代代码就会越来越重、FFF 复用时就会继承同一套负担。"
+      "context": "strong @ line 398 · surrounding text: 同时，第2阶段收尾审计又新找出 5 项结构级优化空间 （表格中标【本周新增】）。不是新 Bug，而是「可以做得更好」的长期优化 — 不修不会立刻出事，但继续迭代代码就会越来越重、FFF 复用时就会继承同一套负担。"
     },
     {
       "id": "u_1ad50a8355d785bb",
@@ -2674,7 +2674,7 @@
       "source": "（表格中标【本周新增】）。不是新 Bug，而是「可以做得更好」的长期优化 — 不修不会立刻出事，但继续迭代代码就会越来越重、FFF 复用时就会继承同一套负担。",
       "occurrence": 0,
       "target": "(marked ‘New This Week’ in the table). These are not new bugs, but long-term opportunities to improve the structure. Leaving them unresolved will not cause an immediate incident, but continued development will make the code increasingly burdensome and FFF will inherit the same burden when it reuses the platform.",
-      "context": "br @ line 399 · surrounding text: 同时，第2阶段收尾审计又新找出 5 项结构级优化空间 （表格中标【本周新增】）。不是新 Bug，而是「可以做得更好」的长期优化 — 不修不会立刻出事，但继续迭代代码就会越来越重、FFF 复用时就会继承同一套负担。"
+      "context": "br @ line 398 · surrounding text: 同时，第2阶段收尾审计又新找出 5 项结构级优化空间 （表格中标【本周新增】）。不是新 Bug，而是「可以做得更好」的长期优化 — 不修不会立刻出事，但继续迭代代码就会越来越重、FFF 复用时就会继承同一套负担。"
     },
     {
       "id": "u_3d76bf761fc6203c",
@@ -2682,7 +2682,7 @@
       "source": "节奏上选「边清边稳」",
       "occurrence": 0,
       "target": "Choose a steady approach of clearing and stabilizing",
-      "context": "strong @ line 401 · surrounding text: 节奏上选「边清边稳」 ：每阶段集中处理一两个方向，不做一次性大重构，降低回归风险。台湾团队 8 年迭代 + 4–5 天交接的历史包袱，我们以结构化方式、分期清理。"
+      "context": "strong @ line 400 · surrounding text: 节奏上选「边清边稳」 ：每阶段集中处理一两个方向，不做一次性大重构，降低回归风险。台湾团队 8 年迭代 + 4–5 天交接的历史包袱，我们以结构化方式、分期清理。"
     },
     {
       "id": "u_604969a70c289198",
@@ -2690,7 +2690,7 @@
       "source": "：每阶段集中处理一两个方向，不做一次性大重构，降低回归风险。台湾团队 8 年迭代 + 4–5 天交接的历史包袱，我们以结构化方式、分期清理。",
       "occurrence": 0,
       "target": "- Focus on one or two directions per sprint, avoid large-scale refactoring to reduce regression risks. The Taiwan team's 8-year iteration + 4-5 days of handover history burden has been handled in a structured way and phased.",
-      "context": "br @ line 401 · surrounding text: 节奏上选「边清边稳」 ：每阶段集中处理一两个方向，不做一次性大重构，降低回归风险。台湾团队 8 年迭代 + 4–5 天交接的历史包袱，我们以结构化方式、分期清理。"
+      "context": "br @ line 400 · surrounding text: 节奏上选「边清边稳」 ：每阶段集中处理一两个方向，不做一次性大重构，降低回归风险。台湾团队 8 年迭代 + 4–5 天交接的历史包袱，我们以结构化方式、分期清理。"
     },
     {
       "id": "u_5db08f9d9389a18c",
@@ -2698,7 +2698,7 @@
       "source": "问题",
       "occurrence": 2,
       "target": "Issue",
-      "context": "th @ line 405"
+      "context": "th @ line 404"
     },
     {
       "id": "u_3d215a9d4583b194",
@@ -2706,7 +2706,7 @@
       "source": "为什么影响 FFF",
       "occurrence": 0,
       "target": "Why it affects FFF",
-      "context": "th @ line 406"
+      "context": "th @ line 405"
     },
     {
       "id": "u_366099d10e6b845c",
@@ -2714,7 +2714,7 @@
       "source": "第2阶段处理",
       "occurrence": 0,
       "target": "Sprint 2 handled",
-      "context": "th @ line 407"
+      "context": "th @ line 406"
     },
     {
       "id": "u_21bda8573b3b5a30",
@@ -2722,7 +2722,7 @@
       "source": "第3阶段计划",
       "occurrence": 0,
       "target": "Sprint 3 plan",
-      "context": "th @ line 408"
+      "context": "th @ line 407"
     },
     {
       "id": "u_a5bb1d26b4b0757f",
@@ -2730,7 +2730,7 @@
       "source": "列表接口普遍无分页（本周又新识别 10 个接口）",
       "occurrence": 0,
       "target": "List API generally lacks pagination (another 10 interfaces were identified this week)",
-      "context": "td @ line 410 · surrounding text: 列表接口普遍无分页（本周又新识别 10 个接口） FFF 高活用户同样会卡顿 已修交易记录接口 扩展到优惠券、站内信、活动、FAQ 等 10 个接口"
+      "context": "td @ line 409 · surrounding text: 列表接口普遍无分页（本周又新识别 10 个接口） FFF 高活用户同样会卡顿 已修交易记录接口 扩展到优惠券、站内信、活动、FAQ 等 10 个接口"
     },
     {
       "id": "u_3b2690a966b85367",
@@ -2738,7 +2738,7 @@
       "source": "FFF 高活用户同样会卡顿",
       "occurrence": 0,
       "target": "FFF high-activity users also experience lag",
-      "context": "td @ line 410 · surrounding text: 列表接口普遍无分页（本周又新识别 10 个接口） FFF 高活用户同样会卡顿 已修交易记录接口 扩展到优惠券、站内信、活动、FAQ 等 10 个接口"
+      "context": "td @ line 409 · surrounding text: 列表接口普遍无分页（本周又新识别 10 个接口） FFF 高活用户同样会卡顿 已修交易记录接口 扩展到优惠券、站内信、活动、FAQ 等 10 个接口"
     },
     {
       "id": "u_524f2454ff2c52d7",
@@ -2746,7 +2746,7 @@
       "source": "已修交易记录接口",
       "occurrence": 0,
       "target": "Fixed transaction record API",
-      "context": "td @ line 410 · surrounding text: 列表接口普遍无分页（本周又新识别 10 个接口） FFF 高活用户同样会卡顿 已修交易记录接口 扩展到优惠券、站内信、活动、FAQ 等 10 个接口"
+      "context": "td @ line 409 · surrounding text: 列表接口普遍无分页（本周又新识别 10 个接口） FFF 高活用户同样会卡顿 已修交易记录接口 扩展到优惠券、站内信、活动、FAQ 等 10 个接口"
     },
     {
       "id": "u_7480f2d9bf201d76",
@@ -2754,7 +2754,7 @@
       "source": "扩展到优惠券、站内信、活动、FAQ 等 10 个接口",
       "occurrence": 0,
       "target": "Extended to 10 more APIs including coupons, in-app messages, activities, FAQ (and others)",
-      "context": "td @ line 410 · surrounding text: 列表接口普遍无分页（本周又新识别 10 个接口） FFF 高活用户同样会卡顿 已修交易记录接口 扩展到优惠券、站内信、活动、FAQ 等 10 个接口"
+      "context": "td @ line 409 · surrounding text: 列表接口普遍无分页（本周又新识别 10 个接口） FFF 高活用户同样会卡顿 已修交易记录接口 扩展到优惠券、站内信、活动、FAQ 等 10 个接口"
     },
     {
       "id": "u_bf5ec55fc759b0c3",
@@ -2762,7 +2762,7 @@
       "source": "错误处理不统一",
       "occurrence": 0,
       "target": "Error handling is inconsistent",
-      "context": "td @ line 411 · surrounding text: 错误处理不统一 FFF 用户也会看到无意义错误 注册路径已上线 扩展到全部接口；定义统一规范"
+      "context": "td @ line 410 · surrounding text: 错误处理不统一 FFF 用户也会看到无意义错误 注册路径已上线 扩展到全部接口；定义统一规范"
     },
     {
       "id": "u_48b2e53f60618eb7",
@@ -2770,7 +2770,7 @@
       "source": "FFF 用户也会看到无意义错误",
       "occurrence": 0,
       "target": "FFF users also see meaningless errors",
-      "context": "td @ line 411 · surrounding text: 错误处理不统一 FFF 用户也会看到无意义错误 注册路径已上线 扩展到全部接口；定义统一规范"
+      "context": "td @ line 410 · surrounding text: 错误处理不统一 FFF 用户也会看到无意义错误 注册路径已上线 扩展到全部接口；定义统一规范"
     },
     {
       "id": "u_ecb49d2ac8eaef5a",
@@ -2778,7 +2778,7 @@
       "source": "注册路径已上线",
       "occurrence": 0,
       "target": "Registration path has been released",
-      "context": "td @ line 411 · surrounding text: 错误处理不统一 FFF 用户也会看到无意义错误 注册路径已上线 扩展到全部接口；定义统一规范"
+      "context": "td @ line 410 · surrounding text: 错误处理不统一 FFF 用户也会看到无意义错误 注册路径已上线 扩展到全部接口；定义统一规范"
     },
     {
       "id": "u_fe1f30a993212e4b",
@@ -2786,7 +2786,7 @@
       "source": "扩展到全部接口；定义统一规范",
       "occurrence": 0,
       "target": "Extended to all APIs; defined a unified standard",
-      "context": "td @ line 411 · surrounding text: 错误处理不统一 FFF 用户也会看到无意义错误 注册路径已上线 扩展到全部接口；定义统一规范"
+      "context": "td @ line 410 · surrounding text: 错误处理不统一 FFF 用户也会看到无意义错误 注册路径已上线 扩展到全部接口；定义统一规范"
     },
     {
       "id": "u_50bbc2a683973572",
@@ -2794,7 +2794,7 @@
       "source": "支付回调代码重复粘贴（审计发现有 7 个通道，每个约 130 行高度相似）",
       "occurrence": 0,
       "target": "Payment callback code is duplicated (audit found 7 channels, each about 130 lines of highly similar code)",
-      "context": "td @ line 412 · surrounding text: 支付回调代码重复粘贴（审计发现有 7 个通道，每个约 130 行高度相似） FFF 新支付通道又要复制一份；Bug 修一处要改 7 处（单次维护成本 ×7） — 抽公共服务 internal/payment/callback → Arrowfish + FFF 共用（mod-efficiency Phase 15），一次接入复用于所有通道"
+      "context": "td @ line 411 · surrounding text: 支付回调代码重复粘贴（审计发现有 7 个通道，每个约 130 行高度相似） FFF 新支付通道又要复制一份；Bug 修一处要改 7 处（单次维护成本 ×7） — 抽公共服务 internal/payment/callback → Arrowfish + FFF 共用（mod-efficiency Phase 15），一次接入复用于所有通道"
     },
     {
       "id": "u_15ba14464cb49a47",
@@ -2802,7 +2802,7 @@
       "source": "FFF 新支付通道又要复制一份；Bug 修一处要改 7 处（单次维护成本 ×7）",
       "occurrence": 0,
       "target": "Need to duplicate payment channel code for new FFF; fixing one bug requires modifying 7 places (cost × 7)",
-      "context": "td @ line 412 · surrounding text: 支付回调代码重复粘贴（审计发现有 7 个通道，每个约 130 行高度相似） FFF 新支付通道又要复制一份；Bug 修一处要改 7 处（单次维护成本 ×7） — 抽公共服务 internal/payment/callback → Arrowfish + FFF 共用（mod-efficiency Phase 15），一次接入复用于所有通道"
+      "context": "td @ line 411 · surrounding text: 支付回调代码重复粘贴（审计发现有 7 个通道，每个约 130 行高度相似） FFF 新支付通道又要复制一份；Bug 修一处要改 7 处（单次维护成本 ×7） — 抽公共服务 internal/payment/callback → Arrowfish + FFF 共用（mod-efficiency Phase 15），一次接入复用于所有通道"
     },
     {
       "id": "u_a03920b2e4d9e343",
@@ -2810,7 +2810,7 @@
       "source": "抽公共服务",
       "occurrence": 0,
       "target": "Extract public services",
-      "context": "td @ line 412 · surrounding text: 支付回调代码重复粘贴（审计发现有 7 个通道，每个约 130 行高度相似） FFF 新支付通道又要复制一份；Bug 修一处要改 7 处（单次维护成本 ×7） — 抽公共服务 internal/payment/callback → Arrowfish + FFF 共用（mod-efficiency Phase 15），一次接入复用于所有通道"
+      "context": "td @ line 411 · surrounding text: 支付回调代码重复粘贴（审计发现有 7 个通道，每个约 130 行高度相似） FFF 新支付通道又要复制一份；Bug 修一处要改 7 处（单次维护成本 ×7） — 抽公共服务 internal/payment/callback → Arrowfish + FFF 共用（mod-efficiency Phase 15），一次接入复用于所有通道"
     },
     {
       "id": "u_24f3eefcb54e91ca",
@@ -2818,7 +2818,7 @@
       "source": "→ Arrowfish + FFF 共用（mod-efficiency Phase 15），一次接入复用于所有通道",
       "occurrence": 0,
       "target": "-> Arrowfish + FFF share (mod-efficiency Phase 15), once integrated, reused across all channels",
-      "context": "td @ line 412 · surrounding text: 支付回调代码重复粘贴（审计发现有 7 个通道，每个约 130 行高度相似） FFF 新支付通道又要复制一份；Bug 修一处要改 7 处（单次维护成本 ×7） — 抽公共服务 internal/payment/callback → Arrowfish + FFF 共用（mod-efficiency Phase 15），一次接入复用于所有通道"
+      "context": "td @ line 411 · surrounding text: 支付回调代码重复粘贴（审计发现有 7 个通道，每个约 130 行高度相似） FFF 新支付通道又要复制一份；Bug 修一处要改 7 处（单次维护成本 ×7） — 抽公共服务 internal/payment/callback → Arrowfish + FFF 共用（mod-efficiency Phase 15），一次接入复用于所有通道"
     },
     {
       "id": "u_e5b59642f26a9e60",
@@ -2826,7 +2826,7 @@
       "source": "数据库关系设计不规范",
       "occurrence": 0,
       "target": "Database relational design is not standardized",
-      "context": "td @ line 413 · surrounding text: 数据库关系设计不规范 表结构若照搬错误就翻倍 设备表已重构 用户 / 订单 / 节点关系审计；FFF 用规范后的设计"
+      "context": "td @ line 412 · surrounding text: 数据库关系设计不规范 表结构若照搬错误就翻倍 设备表已重构 用户 / 订单 / 节点关系审计；FFF 用规范后的设计"
     },
     {
       "id": "u_59435d6408aad37e",
@@ -2834,7 +2834,7 @@
       "source": "表结构若照搬错误就翻倍",
       "occurrence": 0,
       "target": "If the table structure is copied incorrectly, it doubles the errors.",
-      "context": "td @ line 413 · surrounding text: 数据库关系设计不规范 表结构若照搬错误就翻倍 设备表已重构 用户 / 订单 / 节点关系审计；FFF 用规范后的设计"
+      "context": "td @ line 412 · surrounding text: 数据库关系设计不规范 表结构若照搬错误就翻倍 设备表已重构 用户 / 订单 / 节点关系审计；FFF 用规范后的设计"
     },
     {
       "id": "u_1b620e5a1731054d",
@@ -2842,7 +2842,7 @@
       "source": "设备表已重构",
       "occurrence": 0,
       "target": "Device table has been restructured",
-      "context": "td @ line 413 · surrounding text: 数据库关系设计不规范 表结构若照搬错误就翻倍 设备表已重构 用户 / 订单 / 节点关系审计；FFF 用规范后的设计"
+      "context": "td @ line 412 · surrounding text: 数据库关系设计不规范 表结构若照搬错误就翻倍 设备表已重构 用户 / 订单 / 节点关系审计；FFF 用规范后的设计"
     },
     {
       "id": "u_ab6f4454d3e9d648",
@@ -2850,7 +2850,7 @@
       "source": "用户 / 订单 / 节点关系审计；FFF 用规范后的设计",
       "occurrence": 0,
       "target": "Audit of user/order/VPN node relationship; use the standardized design for FFF.",
-      "context": "td @ line 413 · surrounding text: 数据库关系设计不规范 表结构若照搬错误就翻倍 设备表已重构 用户 / 订单 / 节点关系审计；FFF 用规范后的设计"
+      "context": "td @ line 412 · surrounding text: 数据库关系设计不规范 表结构若照搬错误就翻倍 设备表已重构 用户 / 订单 / 节点关系审计；FFF 用规范后的设计"
     },
     {
       "id": "u_03998965f9463d76",
@@ -2858,7 +2858,7 @@
       "source": "API 缺乏版本化策略",
       "occurrence": 0,
       "target": "API lacks versioning strategy",
-      "context": "td @ line 414 · surrounding text: API 缺乏版本化策略 FFF 改接口会破坏 Arrowfish 旧版本（PC / iOS） — 制定 v1 / v2 升级策略 + X-App-Id 头识别两个产品"
+      "context": "td @ line 413 · surrounding text: API 缺乏版本化策略 FFF 改接口会破坏 Arrowfish 旧版本（PC / iOS） — 制定 v1 / v2 升级策略 + X-App-Id 头识别两个产品"
     },
     {
       "id": "u_c197dac864a26f05",
@@ -2866,7 +2866,7 @@
       "source": "FFF 改接口会破坏 Arrowfish 旧版本（PC / iOS）",
       "occurrence": 0,
       "target": "Changing the interface for FFF will break Arrowfish's old versions (PC / iOS).",
-      "context": "td @ line 414 · surrounding text: API 缺乏版本化策略 FFF 改接口会破坏 Arrowfish 旧版本（PC / iOS） — 制定 v1 / v2 升级策略 + X-App-Id 头识别两个产品"
+      "context": "td @ line 413 · surrounding text: API 缺乏版本化策略 FFF 改接口会破坏 Arrowfish 旧版本（PC / iOS） — 制定 v1 / v2 升级策略 + X-App-Id 头识别两个产品"
     },
     {
       "id": "u_9272b5c556634a68",
@@ -2874,7 +2874,7 @@
       "source": "制定 v1 / v2 升级策略 + X-App-Id 头识别两个产品",
       "occurrence": 0,
       "target": "Develop upgrade strategy for v1/v2 and identify two products with X-App-Id header.",
-      "context": "td @ line 414 · surrounding text: API 缺乏版本化策略 FFF 改接口会破坏 Arrowfish 旧版本（PC / iOS） — 制定 v1 / v2 升级策略 + X-App-Id 头识别两个产品"
+      "context": "td @ line 413 · surrounding text: API 缺乏版本化策略 FFF 改接口会破坏 Arrowfish 旧版本（PC / iOS） — 制定 v1 / v2 升级策略 + X-App-Id 头识别两个产品"
     },
     {
       "id": "u_94e73bf7f6740d92",
@@ -2882,7 +2882,7 @@
       "source": "缺乏跨端调试 / 监控工具",
       "occurrence": 0,
       "target": "Lack of cross-platform debugging/maintenance tools",
-      "context": "td @ line 415 · surrounding text: 缺乏跨端调试 / 监控工具 FFF 上线后定位问题同样困难 崩溃监控已接入 跨前后端 trace ID 串联"
+      "context": "td @ line 414 · surrounding text: 缺乏跨端调试 / 监控工具 FFF 上线后定位问题同样困难 崩溃监控已接入 跨前后端 trace ID 串联"
     },
     {
       "id": "u_66334cf8cb0911db",
@@ -2890,7 +2890,7 @@
       "source": "FFF 上线后定位问题同样困难",
       "occurrence": 0,
       "target": "After FFF goes live, it's still difficult to locate issues.",
-      "context": "td @ line 415 · surrounding text: 缺乏跨端调试 / 监控工具 FFF 上线后定位问题同样困难 崩溃监控已接入 跨前后端 trace ID 串联"
+      "context": "td @ line 414 · surrounding text: 缺乏跨端调试 / 监控工具 FFF 上线后定位问题同样困难 崩溃监控已接入 跨前后端 trace ID 串联"
     },
     {
       "id": "u_c8244558d6e47693",
@@ -2898,7 +2898,7 @@
       "source": "崩溃监控已接入",
       "occurrence": 0,
       "target": "Crash monitoring has been integrated",
-      "context": "td @ line 415 · surrounding text: 缺乏跨端调试 / 监控工具 FFF 上线后定位问题同样困难 崩溃监控已接入 跨前后端 trace ID 串联"
+      "context": "td @ line 414 · surrounding text: 缺乏跨端调试 / 监控工具 FFF 上线后定位问题同样困难 崩溃监控已接入 跨前后端 trace ID 串联"
     },
     {
       "id": "u_88a0ce8a572df05c",
@@ -2906,7 +2906,7 @@
       "source": "跨前后端 trace ID 串联",
       "occurrence": 0,
       "target": "Cross-backend trace ID is linked.",
-      "context": "td @ line 415 · surrounding text: 缺乏跨端调试 / 监控工具 FFF 上线后定位问题同样困难 崩溃监控已接入 跨前后端 trace ID 串联"
+      "context": "td @ line 414 · surrounding text: 缺乏跨端调试 / 监控工具 FFF 上线后定位问题同样困难 崩溃监控已接入 跨前后端 trace ID 串联"
     },
     {
       "id": "u_55869976950a72f0",
@@ -2914,7 +2914,7 @@
       "source": "节点维护手工操作多",
       "occurrence": 0,
       "target": "Manual maintenance of VPN nodes remains high",
-      "context": "td @ line 416 · surrounding text: 节点维护手工操作多 FFF 也用同一套节点 4 项自动化完成 信心打分 + 采购助手"
+      "context": "td @ line 415 · surrounding text: 节点维护手工操作多 FFF 也用同一套节点 4 项自动化完成 信心打分 + 采购助手"
     },
     {
       "id": "u_4ebaed44cc1c1289",
@@ -2922,7 +2922,7 @@
       "source": "FFF 也用同一套节点",
       "occurrence": 0,
       "target": "FFF uses the same set of VPN nodes.",
-      "context": "td @ line 416 · surrounding text: 节点维护手工操作多 FFF 也用同一套节点 4 项自动化完成 信心打分 + 采购助手"
+      "context": "td @ line 415 · surrounding text: 节点维护手工操作多 FFF 也用同一套节点 4 项自动化完成 信心打分 + 采购助手"
     },
     {
       "id": "u_1802ddf61c62b34e",
@@ -2930,7 +2930,7 @@
       "source": "4 项自动化完成",
       "occurrence": 0,
       "target": "Four automated tasks are completed",
-      "context": "td @ line 416 · surrounding text: 节点维护手工操作多 FFF 也用同一套节点 4 项自动化完成 信心打分 + 采购助手"
+      "context": "td @ line 415 · surrounding text: 节点维护手工操作多 FFF 也用同一套节点 4 项自动化完成 信心打分 + 采购助手"
     },
     {
       "id": "u_62f723fb86401dbe",
@@ -2938,7 +2938,7 @@
       "source": "信心打分 + 采购助手",
       "occurrence": 0,
       "target": "Confidence score + Purchase assistant.",
-      "context": "td @ line 416 · surrounding text: 节点维护手工操作多 FFF 也用同一套节点 4 项自动化完成 信心打分 + 采购助手"
+      "context": "td @ line 415 · surrounding text: 节点维护手工操作多 FFF 也用同一套节点 4 项自动化完成 信心打分 + 采购助手"
     },
     {
       "id": "u_88ed6e52b42c538d",
@@ -2946,7 +2946,7 @@
       "source": "依赖库即将 EOL（MySQL 5.7、Redis 6.2、Go 1.20）",
       "occurrence": 0,
       "target": "Dependencies are about to reach End of Life (MySQL 5.7, Redis 6.2, Go 1.20).",
-      "context": "td @ line 417 · surrounding text: 依赖库即将 EOL（MySQL 5.7、Redis 6.2、Go 1.20） FFF 不可能用过期库起步 风险记录 评估升级窗口"
+      "context": "td @ line 416 · surrounding text: 依赖库即将 EOL（MySQL 5.7、Redis 6.2、Go 1.20） FFF 不可能用过期库起步 风险记录 评估升级窗口"
     },
     {
       "id": "u_c7969570f51b125b",
@@ -2954,7 +2954,7 @@
       "source": "FFF 不可能用过期库起步",
       "occurrence": 0,
       "target": "FFF cannot start with expired libraries.",
-      "context": "td @ line 417 · surrounding text: 依赖库即将 EOL（MySQL 5.7、Redis 6.2、Go 1.20） FFF 不可能用过期库起步 风险记录 评估升级窗口"
+      "context": "td @ line 416 · surrounding text: 依赖库即将 EOL（MySQL 5.7、Redis 6.2、Go 1.20） FFF 不可能用过期库起步 风险记录 评估升级窗口"
     },
     {
       "id": "u_627d20e7398b0b6e",
@@ -2962,7 +2962,7 @@
       "source": "风险记录",
       "occurrence": 0,
       "target": "Risk records",
-      "context": "td @ line 417 · surrounding text: 依赖库即将 EOL（MySQL 5.7、Redis 6.2、Go 1.20） FFF 不可能用过期库起步 风险记录 评估升级窗口"
+      "context": "td @ line 416 · surrounding text: 依赖库即将 EOL（MySQL 5.7、Redis 6.2、Go 1.20） FFF 不可能用过期库起步 风险记录 评估升级窗口"
     },
     {
       "id": "u_723a3c84708d8e8d",
@@ -2970,7 +2970,7 @@
       "source": "评估升级窗口",
       "occurrence": 0,
       "target": "Assess upgrade window.",
-      "context": "td @ line 417 · surrounding text: 依赖库即将 EOL（MySQL 5.7、Redis 6.2、Go 1.20） FFF 不可能用过期库起步 风险记录 评估升级窗口"
+      "context": "td @ line 416 · surrounding text: 依赖库即将 EOL（MySQL 5.7、Redis 6.2、Go 1.20） FFF 不可能用过期库起步 风险记录 评估升级窗口"
     },
     {
       "id": "u_5ef0b2a3f9252432",
@@ -2978,7 +2978,7 @@
       "source": "交接资料缺失（域名 ↔ 仓库映射不全）",
       "occurrence": 0,
       "target": "Handover materials are missing (domain ↔ warehouse mapping is incomplete).",
-      "context": "td @ line 418 · surrounding text: 交接资料缺失（域名 ↔ 仓库映射不全） FFF 上线时无法快速分辨已用 / 可用域名 边做边补 剩余空白向台湾团队询问"
+      "context": "td @ line 417 · surrounding text: 交接资料缺失（域名 ↔ 仓库映射不全） FFF 上线时无法快速分辨已用 / 可用域名 边做边补 剩余空白向台湾团队询问"
     },
     {
       "id": "u_75d8bf708a4965cb",
@@ -2986,7 +2986,7 @@
       "source": "FFF 上线时无法快速分辨已用 / 可用域名",
       "occurrence": 0,
       "target": "When FFF goes live, it cannot quickly distinguish used vs available domains.",
-      "context": "td @ line 418 · surrounding text: 交接资料缺失（域名 ↔ 仓库映射不全） FFF 上线时无法快速分辨已用 / 可用域名 边做边补 剩余空白向台湾团队询问"
+      "context": "td @ line 417 · surrounding text: 交接资料缺失（域名 ↔ 仓库映射不全） FFF 上线时无法快速分辨已用 / 可用域名 边做边补 剩余空白向台湾团队询问"
     },
     {
       "id": "u_fffa46bb3672ad2d",
@@ -2994,7 +2994,7 @@
       "source": "边做边补",
       "occurrence": 0,
       "target": "Patch as we go",
-      "context": "td @ line 418 · surrounding text: 交接资料缺失（域名 ↔ 仓库映射不全） FFF 上线时无法快速分辨已用 / 可用域名 边做边补 剩余空白向台湾团队询问"
+      "context": "td @ line 417 · surrounding text: 交接资料缺失（域名 ↔ 仓库映射不全） FFF 上线时无法快速分辨已用 / 可用域名 边做边补 剩余空白向台湾团队询问"
     },
     {
       "id": "u_c92b5539bd820723",
@@ -3002,7 +3002,7 @@
       "source": "剩余空白向台湾团队询问",
       "occurrence": 0,
       "target": "Ask Taiwan team for remaining blanks.",
-      "context": "td @ line 418 · surrounding text: 交接资料缺失（域名 ↔ 仓库映射不全） FFF 上线时无法快速分辨已用 / 可用域名 边做边补 剩余空白向台湾团队询问"
+      "context": "td @ line 417 · surrounding text: 交接资料缺失（域名 ↔ 仓库映射不全） FFF 上线时无法快速分辨已用 / 可用域名 边做边补 剩余空白向台湾团队询问"
     },
     {
       "id": "u_b301b1934e0f735e",
@@ -3010,7 +3010,7 @@
       "source": "【本周新增】用户 ↔ 设备关系未正规化 — 设备品牌 / 型号 / 指纹 / IMEI 在每条绑定记录里重复存储",
       "occurrence": 0,
       "target": "This week, user ↔ device relationship is not normalized — Device brand / model / fingerprint / IMEI are stored redundantly in each binding record.",
-      "context": "td @ line 419 · surrounding text: 【本周新增】用户 ↔ 设备关系未正规化 — 设备品牌 / 型号 / 指纹 / IMEI 在每条绑定记录里重复存储 FFF 想做「同一设备多账号」风控，目前全表扫描才能查到；同样问题会带入 FFF — 新增 devices 主表 + 正规化多对多关系（Phase 14），去重约数万行冗余数据"
+      "context": "td @ line 418 · surrounding text: 【本周新增】用户 ↔ 设备关系未正规化 — 设备品牌 / 型号 / 指纹 / IMEI 在每条绑定记录里重复存储 FFF 想做「同一设备多账号」风控，目前全表扫描才能查到；同样问题会带入 FFF — 新增 devices 主表 + 正规化多对多关系（Phase 14），去重约数万行冗余数据"
     },
     {
       "id": "u_282c1c1f2bcde9c9",
@@ -3018,7 +3018,7 @@
       "source": "FFF 想做「同一设备多账号」风控，目前全表扫描才能查到；同样问题会带入 FFF",
       "occurrence": 0,
       "target": "FFF wants to do risk control for 'same device multiple accounts', currently a full table scan is needed; the same issue will be brought into FFF.",
-      "context": "td @ line 419 · surrounding text: 【本周新增】用户 ↔ 设备关系未正规化 — 设备品牌 / 型号 / 指纹 / IMEI 在每条绑定记录里重复存储 FFF 想做「同一设备多账号」风控，目前全表扫描才能查到；同样问题会带入 FFF — 新增 devices 主表 + 正规化多对多关系（Phase 14），去重约数万行冗余数据"
+      "context": "td @ line 418 · surrounding text: 【本周新增】用户 ↔ 设备关系未正规化 — 设备品牌 / 型号 / 指纹 / IMEI 在每条绑定记录里重复存储 FFF 想做「同一设备多账号」风控，目前全表扫描才能查到；同样问题会带入 FFF — 新增 devices 主表 + 正规化多对多关系（Phase 14），去重约数万行冗余数据"
     },
     {
       "id": "u_37fcd45e8f6d9ba7",
@@ -3026,7 +3026,7 @@
       "source": "新增",
       "occurrence": 0,
       "target": "New",
-      "context": "td @ line 419 · surrounding text: 【本周新增】用户 ↔ 设备关系未正规化 — 设备品牌 / 型号 / 指纹 / IMEI 在每条绑定记录里重复存储 FFF 想做「同一设备多账号」风控，目前全表扫描才能查到；同样问题会带入 FFF — 新增 devices 主表 + 正规化多对多关系（Phase 14），去重约数万行冗余数据"
+      "context": "td @ line 418 · surrounding text: 【本周新增】用户 ↔ 设备关系未正规化 — 设备品牌 / 型号 / 指纹 / IMEI 在每条绑定记录里重复存储 FFF 想做「同一设备多账号」风控，目前全表扫描才能查到；同样问题会带入 FFF — 新增 devices 主表 + 正规化多对多关系（Phase 14），去重约数万行冗余数据"
     },
     {
       "id": "u_d09f569f641d6dc3",
@@ -3034,7 +3034,7 @@
       "source": "主表 + 正规化多对多关系（Phase 14），去重约数万行冗余数据",
       "occurrence": 0,
       "target": "Main table + Normalized many-to-many relationships (Phase 14), remove about ten thousand rows of redundant data.",
-      "context": "td @ line 419 · surrounding text: 【本周新增】用户 ↔ 设备关系未正规化 — 设备品牌 / 型号 / 指纹 / IMEI 在每条绑定记录里重复存储 FFF 想做「同一设备多账号」风控，目前全表扫描才能查到；同样问题会带入 FFF — 新增 devices 主表 + 正规化多对多关系（Phase 14），去重约数万行冗余数据"
+      "context": "td @ line 418 · surrounding text: 【本周新增】用户 ↔ 设备关系未正规化 — 设备品牌 / 型号 / 指纹 / IMEI 在每条绑定记录里重复存储 FFF 想做「同一设备多账号」风控，目前全表扫描才能查到；同样问题会带入 FFF — 新增 devices 主表 + 正规化多对多关系（Phase 14），去重约数万行冗余数据"
     },
     {
       "id": "u_3e358db127c05468",
@@ -3042,7 +3042,7 @@
       "source": "【本周新增】代码层级边界被打破 — 通用包反向依赖业务包（9 处违规 import）",
       "occurrence": 0,
       "target": "[New This Week] Code-layer boundaries are broken: common packages import business packages in 9 places",
-      "context": "td @ line 420 · surrounding text: 【本周新增】代码层级边界被打破 — 通用包反向依赖业务包（9 处违规 import） Arrowfish 和 FFF 无法各自独立构建、重用；改一处牵连全局 — Phase 13 — 把 cron、错误提示等业务逻辑从通用包抽出，恢复单向依赖"
+      "context": "td @ line 419 · surrounding text: 【本周新增】代码层级边界被打破 — 通用包反向依赖业务包（9 处违规 import） Arrowfish 和 FFF 无法各自独立构建、重用；改一处牵连全局 — Phase 13 — 把 cron、错误提示等业务逻辑从通用包抽出，恢复单向依赖"
     },
     {
       "id": "u_322f9386b3ca9d9b",
@@ -3050,7 +3050,7 @@
       "source": "Arrowfish 和 FFF 无法各自独立构建、重用；改一处牵连全局",
       "occurrence": 0,
       "target": "Arrowfish and FFF cannot be built or reused independently; changing one affects the whole.",
-      "context": "td @ line 420 · surrounding text: 【本周新增】代码层级边界被打破 — 通用包反向依赖业务包（9 处违规 import） Arrowfish 和 FFF 无法各自独立构建、重用；改一处牵连全局 — Phase 13 — 把 cron、错误提示等业务逻辑从通用包抽出，恢复单向依赖"
+      "context": "td @ line 419 · surrounding text: 【本周新增】代码层级边界被打破 — 通用包反向依赖业务包（9 处违规 import） Arrowfish 和 FFF 无法各自独立构建、重用；改一处牵连全局 — Phase 13 — 把 cron、错误提示等业务逻辑从通用包抽出，恢复单向依赖"
     },
     {
       "id": "u_f11b56538fa284f8",
@@ -3058,7 +3058,7 @@
       "source": "Phase 13 — 把 cron、错误提示等业务逻辑从通用包抽出，恢复单向依赖",
       "occurrence": 0,
       "target": "Phase 13 — Extract business logic such as cron, error prompts from general packages to restore unidirectional dependencies.",
-      "context": "td @ line 420 · surrounding text: 【本周新增】代码层级边界被打破 — 通用包反向依赖业务包（9 处违规 import） Arrowfish 和 FFF 无法各自独立构建、重用；改一处牵连全局 — Phase 13 — 把 cron、错误提示等业务逻辑从通用包抽出，恢复单向依赖"
+      "context": "td @ line 419 · surrounding text: 【本周新增】代码层级边界被打破 — 通用包反向依赖业务包（9 处违规 import） Arrowfish 和 FFF 无法各自独立构建、重用；改一处牵连全局 — Phase 13 — 把 cron、错误提示等业务逻辑从通用包抽出，恢复单向依赖"
     },
     {
       "id": "u_961ec6f192f02051",
@@ -3066,7 +3066,7 @@
       "source": "【本周新增】",
       "occurrence": 0,
       "target": "This week",
-      "context": "td @ line 421 · surrounding text: 【本周新增】 mod/tables 与 mod/models 字段重复定义（User 等核心实体两处维护） FFF 新增字段时要在两处改，漏改一处就是线上 Bug（线上数据不一致定位成本约 0.5–1 人日/次） — Phase 16 — 用类型别名合并，删除约 4,600 行冗余代码"
+      "context": "td @ line 420 · surrounding text: 【本周新增】 mod/tables 与 mod/models 字段重复定义（User 等核心实体两处维护） FFF 新增字段时要在两处改，漏改一处就是线上 Bug（线上数据不一致定位成本约 0.5–1 人日/次） — Phase 16 — 用类型别名合并，删除约 4,600 行冗余代码"
     },
     {
       "id": "u_aff09bee59c4b8e0",
@@ -3074,7 +3074,7 @@
       "source": "与",
       "occurrence": 0,
       "target": "and",
-      "context": "td @ line 421 · surrounding text: 【本周新增】 mod/tables 与 mod/models 字段重复定义（User 等核心实体两处维护） FFF 新增字段时要在两处改，漏改一处就是线上 Bug（线上数据不一致定位成本约 0.5–1 人日/次） — Phase 16 — 用类型别名合并，删除约 4,600 行冗余代码"
+      "context": "td @ line 420 · surrounding text: 【本周新增】 mod/tables 与 mod/models 字段重复定义（User 等核心实体两处维护） FFF 新增字段时要在两处改，漏改一处就是线上 Bug（线上数据不一致定位成本约 0.5–1 人日/次） — Phase 16 — 用类型别名合并，删除约 4,600 行冗余代码"
     },
     {
       "id": "u_2ea0096b0b9412c9",
@@ -3082,7 +3082,7 @@
       "source": "字段重复定义（User 等核心实体两处维护）",
       "occurrence": 0,
       "target": "Duplicate Definition (User and Core Entities)",
-      "context": "td @ line 421 · surrounding text: 【本周新增】 mod/tables 与 mod/models 字段重复定义（User 等核心实体两处维护） FFF 新增字段时要在两处改，漏改一处就是线上 Bug（线上数据不一致定位成本约 0.5–1 人日/次） — Phase 16 — 用类型别名合并，删除约 4,600 行冗余代码"
+      "context": "td @ line 420 · surrounding text: 【本周新增】 mod/tables 与 mod/models 字段重复定义（User 等核心实体两处维护） FFF 新增字段时要在两处改，漏改一处就是线上 Bug（线上数据不一致定位成本约 0.5–1 人日/次） — Phase 16 — 用类型别名合并，删除约 4,600 行冗余代码"
     },
     {
       "id": "u_1c1314e3bfbb9ce8",
@@ -3090,7 +3090,7 @@
       "source": "FFF 新增字段时要在两处改，漏改一处就是线上 Bug（线上数据不一致定位成本约 0.5–1 人日/次）",
       "occurrence": 0,
       "target": "Adding a field for FFF requires changes in two locations; missing either change creates a production bug (investigation cost for production data inconsistency: approximately 0.5–1 person-day per incident)",
-      "context": "td @ line 421 · surrounding text: 【本周新增】 mod/tables 与 mod/models 字段重复定义（User 等核心实体两处维护） FFF 新增字段时要在两处改，漏改一处就是线上 Bug（线上数据不一致定位成本约 0.5–1 人日/次） — Phase 16 — 用类型别名合并，删除约 4,600 行冗余代码"
+      "context": "td @ line 420 · surrounding text: 【本周新增】 mod/tables 与 mod/models 字段重复定义（User 等核心实体两处维护） FFF 新增字段时要在两处改，漏改一处就是线上 Bug（线上数据不一致定位成本约 0.5–1 人日/次） — Phase 16 — 用类型别名合并，删除约 4,600 行冗余代码"
     },
     {
       "id": "u_586c86e7c44bb118",
@@ -3098,7 +3098,7 @@
       "source": "Phase 16 — 用类型别名合并，删除约 4,600 行冗余代码",
       "occurrence": 0,
       "target": "Phase 16 — Merge Type Aliases to Remove Approximately 4,600 Lines of Redundant Code",
-      "context": "td @ line 421 · surrounding text: 【本周新增】 mod/tables 与 mod/models 字段重复定义（User 等核心实体两处维护） FFF 新增字段时要在两处改，漏改一处就是线上 Bug（线上数据不一致定位成本约 0.5–1 人日/次） — Phase 16 — 用类型别名合并，删除约 4,600 行冗余代码"
+      "context": "td @ line 420 · surrounding text: 【本周新增】 mod/tables 与 mod/models 字段重复定义（User 等核心实体两处维护） FFF 新增字段时要在两处改，漏改一处就是线上 Bug（线上数据不一致定位成本约 0.5–1 人日/次） — Phase 16 — 用类型别名合并，删除约 4,600 行冗余代码"
     },
     {
       "id": "u_3e9cad65d13feac6",
@@ -3106,7 +3106,7 @@
       "source": "【本周新增】测试覆盖率约 4%，核心支付回调无任何自动化测试",
       "occurrence": 0,
       "target": "【This Week Added】Test Coverage is About 4%, No Automated Tests for Core Payment Callbacks",
-      "context": "td @ line 422 · surrounding text: 【本周新增】测试覆盖率约 4%，核心支付回调无任何自动化测试 FFF 若复用这些回调，一次回归就能把两个产品一起打挂 — Phase 15 拆出公共服务的同时补表驱动测试"
+      "context": "td @ line 421 · surrounding text: 【本周新增】测试覆盖率约 4%，核心支付回调无任何自动化测试 FFF 若复用这些回调，一次回归就能把两个产品一起打挂 — Phase 15 拆出公共服务的同时补表驱动测试"
     },
     {
       "id": "u_c3ec39caa7a4d552",
@@ -3114,7 +3114,7 @@
       "source": "FFF 若复用这些回调，一次回归就能把两个产品一起打挂",
       "occurrence": 0,
       "target": "FFF If Reused, Regression Testing Could Downgrade Both Products at Once",
-      "context": "td @ line 422 · surrounding text: 【本周新增】测试覆盖率约 4%，核心支付回调无任何自动化测试 FFF 若复用这些回调，一次回归就能把两个产品一起打挂 — Phase 15 拆出公共服务的同时补表驱动测试"
+      "context": "td @ line 421 · surrounding text: 【本周新增】测试覆盖率约 4%，核心支付回调无任何自动化测试 FFF 若复用这些回调，一次回归就能把两个产品一起打挂 — Phase 15 拆出公共服务的同时补表驱动测试"
     },
     {
       "id": "u_119c92de2077214b",
@@ -3122,7 +3122,7 @@
       "source": "Phase 15 拆出公共服务的同时补表驱动测试",
       "occurrence": 0,
       "target": "Phase 15 — Supplement Test Data to Support Public Services Extraction",
-      "context": "td @ line 422 · surrounding text: 【本周新增】测试覆盖率约 4%，核心支付回调无任何自动化测试 FFF 若复用这些回调，一次回归就能把两个产品一起打挂 — Phase 15 拆出公共服务的同时补表驱动测试"
+      "context": "td @ line 421 · surrounding text: 【本周新增】测试覆盖率约 4%，核心支付回调无任何自动化测试 FFF 若复用这些回调，一次回归就能把两个产品一起打挂 — Phase 15 拆出公共服务的同时补表驱动测试"
     },
     {
       "id": "u_849be4fdb0e08c95",
@@ -3130,7 +3130,7 @@
       "source": "【本周新增】请求上下文链断裂（68 处使用空 context）",
       "occurrence": 0,
       "target": "【This Week Added】Context Chain Breakage in Requests (68 Places Used Empty Context)",
-      "context": "td @ line 423 · surrounding text: 【本周新增】请求上下文链断裂（68 处使用空 context） FFF 问题定位同样困难；请求追踪、超时传递、慢查询排查全部失效 — Phase 17 — 统一改用请求 context，支持贯穿全链路的 trace"
+      "context": "td @ line 422 · surrounding text: 【本周新增】请求上下文链断裂（68 处使用空 context） FFF 问题定位同样困难；请求追踪、超时传递、慢查询排查全部失效 — Phase 17 — 统一改用请求 context，支持贯穿全链路的 trace"
     },
     {
       "id": "u_8e240731a523aa5a",
@@ -3138,7 +3138,7 @@
       "source": "FFF 问题定位同样困难；请求追踪、超时传递、慢查询排查全部失效",
       "occurrence": 0,
       "target": "FFF Issue Localization is Also Difficult; Trace Tracking, Timeout Propagation, and Slow Query Analysis Fail",
-      "context": "td @ line 423 · surrounding text: 【本周新增】请求上下文链断裂（68 处使用空 context） FFF 问题定位同样困难；请求追踪、超时传递、慢查询排查全部失效 — Phase 17 — 统一改用请求 context，支持贯穿全链路的 trace"
+      "context": "td @ line 422 · surrounding text: 【本周新增】请求上下文链断裂（68 处使用空 context） FFF 问题定位同样困难；请求追踪、超时传递、慢查询排查全部失效 — Phase 17 — 统一改用请求 context，支持贯穿全链路的 trace"
     },
     {
       "id": "u_e9525ca506c87f94",
@@ -3146,7 +3146,7 @@
       "source": "Phase 17 — 统一改用请求 context，支持贯穿全链路的 trace",
       "occurrence": 0,
       "target": "Phase 17 — Unify to Use Request Context for Full-Chain Trace Support",
-      "context": "td @ line 423 · surrounding text: 【本周新增】请求上下文链断裂（68 处使用空 context） FFF 问题定位同样困难；请求追踪、超时传递、慢查询排查全部失效 — Phase 17 — 统一改用请求 context，支持贯穿全链路的 trace"
+      "context": "td @ line 422 · surrounding text: 【本周新增】请求上下文链断裂（68 处使用空 context） FFF 问题定位同样困难；请求追踪、超时传递、慢查询排查全部失效 — Phase 17 — 统一改用请求 context，支持贯穿全链路的 trace"
     },
     {
       "id": "u_818096e1f5e7be0f",
@@ -3154,7 +3154,7 @@
       "source": "提醒：",
       "occurrence": 0,
       "target": "Reminder:",
-      "context": "strong @ line 427 · surrounding text: 提醒： Phase 12（拆 user_flows ）、Phase 14（设备表正规化）、Phase 15（支付回调抽象）等所有新排期的后端改动，都受 iOS HiYou v1.3.0 / Windows skytree_pc v2.2.71 冻结客户端 约束 — 必须通过 v1 / v2 接口并存策略保持向后兼容。详细情况与根本解除前提见第五节「本阶段后端改动的特殊挑战」。"
+      "context": "strong @ line 426 · surrounding text: 提醒： Phase 12（拆 user_flows ）、Phase 14（设备表正规化）、Phase 15（支付回调抽象）等所有新排期的后端改动，都受 iOS HiYou v1.3.0 / Windows skytree_pc v2.2.71 冻结客户端 约束 — 必须通过 v1 / v2 接口并存策略保持向后兼容。详细情况与根本解除前提见第五节「本阶段后端改动的特殊挑战」。"
     },
     {
       "id": "u_e511fb51e77d019a",
@@ -3162,7 +3162,7 @@
       "source": "Phase 12（拆",
       "occurrence": 0,
       "target": "Phase 12 (Split)",
-      "context": "div.card.warning @ line 427 · surrounding text: 提醒： Phase 12（拆 user_flows ）、Phase 14（设备表正规化）、Phase 15（支付回调抽象）等所有新排期的后端改动，都受 iOS HiYou v1.3.0 / Windows skytree_pc v2.2.71 冻结客户端 约束 — 必须通过 v1 / v2 接口并存策略保持向后兼容。详细情况与根本解除前提见第五节「本阶段后端改动的特殊挑战」。"
+      "context": "div.card.warning @ line 426 · surrounding text: 提醒： Phase 12（拆 user_flows ）、Phase 14（设备表正规化）、Phase 15（支付回调抽象）等所有新排期的后端改动，都受 iOS HiYou v1.3.0 / Windows skytree_pc v2.2.71 冻结客户端 约束 — 必须通过 v1 / v2 接口并存策略保持向后兼容。详细情况与根本解除前提见第五节「本阶段后端改动的特殊挑战」。"
     },
     {
       "id": "u_87fd33b93d0ca12b",
@@ -3170,7 +3170,7 @@
       "source": "）、Phase 14（设备表正规化）、Phase 15（支付回调抽象）等所有新排期的后端改动，都受",
       "occurrence": 0,
       "target": "), Phase 14 (Device Table Normalization), Phase 15 (Payment Callback Abstraction) — All New Sprints for Backend Changes",
-      "context": "div.card.warning @ line 427 · surrounding text: 提醒： Phase 12（拆 user_flows ）、Phase 14（设备表正规化）、Phase 15（支付回调抽象）等所有新排期的后端改动，都受 iOS HiYou v1.3.0 / Windows skytree_pc v2.2.71 冻结客户端 约束 — 必须通过 v1 / v2 接口并存策略保持向后兼容。详细情况与根本解除前提见第五节「本阶段后端改动的特殊挑战」。"
+      "context": "div.card.warning @ line 426 · surrounding text: 提醒： Phase 12（拆 user_flows ）、Phase 14（设备表正规化）、Phase 15（支付回调抽象）等所有新排期的后端改动，都受 iOS HiYou v1.3.0 / Windows skytree_pc v2.2.71 冻结客户端 约束 — 必须通过 v1 / v2 接口并存策略保持向后兼容。详细情况与根本解除前提见第五节「本阶段后端改动的特殊挑战」。"
     },
     {
       "id": "u_e42ca5aca22c3db8",
@@ -3178,7 +3178,7 @@
       "source": "iOS HiYou v1.3.0 / Windows skytree_pc v2.2.71 冻结客户端",
       "occurrence": 0,
       "target": "iOS HiYou v1.3.0 / Windows skytree_pc v2.2.71 Frozen Client",
-      "context": "strong @ line 427 · surrounding text: 提醒： Phase 12（拆 user_flows ）、Phase 14（设备表正规化）、Phase 15（支付回调抽象）等所有新排期的后端改动，都受 iOS HiYou v1.3.0 / Windows skytree_pc v2.2.71 冻结客户端 约束 — 必须通过 v1 / v2 接口并存策略保持向后兼容。详细情况与根本解除前提见第五节「本阶段后端改动的特殊挑战」。"
+      "context": "strong @ line 426 · surrounding text: 提醒： Phase 12（拆 user_flows ）、Phase 14（设备表正规化）、Phase 15（支付回调抽象）等所有新排期的后端改动，都受 iOS HiYou v1.3.0 / Windows skytree_pc v2.2.71 冻结客户端 约束 — 必须通过 v1 / v2 接口并存策略保持向后兼容。详细情况与根本解除前提见第五节「本阶段后端改动的特殊挑战」。"
     },
     {
       "id": "u_ca6de762b343565a",
@@ -3186,7 +3186,7 @@
       "source": "约束 — 必须通过 v1 / v2 接口并存策略保持向后兼容。详细情况与根本解除前提见第五节「本阶段后端改动的特殊挑战」。",
       "occurrence": 0,
       "target": "constraints — must maintain backward compatibility through coexistence strategies for v1 / v2 interfaces. Detailed information and fundamental resolution conditions are in section five 'Special Challenges of Backend Changes in This Phase'.",
-      "context": "div.card.warning @ line 427 · surrounding text: 提醒： Phase 12（拆 user_flows ）、Phase 14（设备表正规化）、Phase 15（支付回调抽象）等所有新排期的后端改动，都受 iOS HiYou v1.3.0 / Windows skytree_pc v2.2.71 冻结客户端 约束 — 必须通过 v1 / v2 接口并存策略保持向后兼容。详细情况与根本解除前提见第五节「本阶段后端改动的特殊挑战」。"
+      "context": "div.card.warning @ line 426 · surrounding text: 提醒： Phase 12（拆 user_flows ）、Phase 14（设备表正规化）、Phase 15（支付回调抽象）等所有新排期的后端改动，都受 iOS HiYou v1.3.0 / Windows skytree_pc v2.2.71 冻结客户端 约束 — 必须通过 v1 / v2 接口并存策略保持向后兼容。详细情况与根本解除前提见第五节「本阶段后端改动的特殊挑战」。"
     },
     {
       "id": "u_88cb9238ad475693",
@@ -3194,7 +3194,7 @@
       "source": "Sprint-3 范围说明（诚实口径）：",
       "occurrence": 0,
       "target": "Sprint-3 Scope (Honest Estimate):",
-      "context": "strong @ line 431 · surrounding text: Sprint-3 范围说明（诚实口径）： 本周新增 5 项结构级遗留债 + 1 项合规 P0，合并到 Sprint-3 原定 Phase A「后端通用化」中 — Phase A 主题不变（backend hardening for FFF reuse），但范围扩大 ，从最初的 5–6 项扩展到约 13 项。Phase A 是 Sprint-3 头等目标，容量从一开始就预留给后端清理；Phases B（FFF 启动）、C（节点自动化）、D（Arrowfish 收尾）、E（基础设施）未被挤占。若执行中发现 Phase A 吃满容量，优先保留 Phase 12（合规）与 Phase 15（FFF 复用），其他项顺延至 Sprint-4。Sprint 总容量不变。"
+      "context": "strong @ line 430 · surrounding text: Sprint-3 范围说明（诚实口径）： 本周新增 5 项结构级遗留债 + 1 项合规 P0，合并到 Sprint-3 原定 Phase A「后端通用化」中 — Phase A 主题不变（backend hardening for FFF reuse），但范围扩大 ，从最初的 5–6 项扩展到约 13 项。Phase A 是 Sprint-3 头等目标，容量从一开始就预留给后端清理；Phases B（FFF 启动）、C（节点自动化）、D（Arrowfish 收尾）、E（基础设施）未被挤占。若执行中发现 Phase A 吃满容量，优先保留 Phase 12（合规）与 Phase 15（FFF 复用），其他项顺延至 Sprint-4。Sprint 总容量不变。"
     },
     {
       "id": "u_2b396cf2f3a30f26",
@@ -3202,7 +3202,7 @@
       "source": "本周新增 5 项结构级遗留债 + 1 项合规 P0，合并到 Sprint-3 原定 Phase A「后端通用化」中 —",
       "occurrence": 0,
       "target": "This week, 5 structural legacy-debt items and 1 compliance P0 were added to Sprint 3's planned Phase A, ‘Backend Generalization’ —",
-      "context": "div.card.highlight @ line 431 · surrounding text: Sprint-3 范围说明（诚实口径）： 本周新增 5 项结构级遗留债 + 1 项合规 P0，合并到 Sprint-3 原定 Phase A「后端通用化」中 — Phase A 主题不变（backend hardening for FFF reuse），但范围扩大 ，从最初的 5–6 项扩展到约 13 项。Phase A 是 Sprint-3 头等目标，容量从一开始就预留给后端清理；Phases B（FFF 启动）、C（节点自动化）、D（Arrowfish 收尾）、E（基础设施）未被挤占。若执行中发现 Phase A 吃满容量，优先保留 Phase 12（合规）与 Phase 15（FFF 复用），其他项顺延至 Sprint-4。Sprint 总容量不变。"
+      "context": "div.card.highlight @ line 430 · surrounding text: Sprint-3 范围说明（诚实口径）： 本周新增 5 项结构级遗留债 + 1 项合规 P0，合并到 Sprint-3 原定 Phase A「后端通用化」中 — Phase A 主题不变（backend hardening for FFF reuse），但范围扩大 ，从最初的 5–6 项扩展到约 13 项。Phase A 是 Sprint-3 头等目标，容量从一开始就预留给后端清理；Phases B（FFF 启动）、C（节点自动化）、D（Arrowfish 收尾）、E（基础设施）未被挤占。若执行中发现 Phase A 吃满容量，优先保留 Phase 12（合规）与 Phase 15（FFF 复用），其他项顺延至 Sprint-4。Sprint 总容量不变。"
     },
     {
       "id": "u_eed71371fdd409a4",
@@ -3210,7 +3210,7 @@
       "source": "Phase A 主题不变（backend hardening for FFF reuse），但范围扩大",
       "occurrence": 0,
       "target": "Phase A Theme Remains the Same (Backend Hardening for FFF Reuse), but Scope Expands",
-      "context": "strong @ line 431 · surrounding text: Sprint-3 范围说明（诚实口径）： 本周新增 5 项结构级遗留债 + 1 项合规 P0，合并到 Sprint-3 原定 Phase A「后端通用化」中 — Phase A 主题不变（backend hardening for FFF reuse），但范围扩大 ，从最初的 5–6 项扩展到约 13 项。Phase A 是 Sprint-3 头等目标，容量从一开始就预留给后端清理；Phases B（FFF 启动）、C（节点自动化）、D（Arrowfish 收尾）、E（基础设施）未被挤占。若执行中发现 Phase A 吃满容量，优先保留 Phase 12（合规）与 Phase 15（FFF 复用），其他项顺延至 Sprint-4。Sprint 总容量不变。"
+      "context": "strong @ line 430 · surrounding text: Sprint-3 范围说明（诚实口径）： 本周新增 5 项结构级遗留债 + 1 项合规 P0，合并到 Sprint-3 原定 Phase A「后端通用化」中 — Phase A 主题不变（backend hardening for FFF reuse），但范围扩大 ，从最初的 5–6 项扩展到约 13 项。Phase A 是 Sprint-3 头等目标，容量从一开始就预留给后端清理；Phases B（FFF 启动）、C（节点自动化）、D（Arrowfish 收尾）、E（基础设施）未被挤占。若执行中发现 Phase A 吃满容量，优先保留 Phase 12（合规）与 Phase 15（FFF 复用），其他项顺延至 Sprint-4。Sprint 总容量不变。"
     },
     {
       "id": "u_8d44ca037d3a7bee",
@@ -3218,7 +3218,7 @@
       "source": "，从最初的 5–6 项扩展到约 13 项。Phase A 是 Sprint-3 头等目标，容量从一开始就预留给后端清理；Phases B（FFF 启动）、C（节点自动化）、D（Arrowfish 收尾）、E（基础设施）未被挤占。若执行中发现 Phase A 吃满容量，优先保留 Phase 12（合规）与 Phase 15（FFF 复用），其他项顺延至 Sprint-4。Sprint 总容量不变。",
       "occurrence": 0,
       "target": "From Initial 5-6 Items to Approximately 13 Items. Phase A Is the Sprint-3 Top Priority, Capacity Reserved from the Start for Backend Cleanup; Phases B (FFF Launch), C (VPN node Automation), D (Arrowfish Closeout), E (Infrastructure) Are Not Overlapped. If Phase A Hits Its Capacity, Prioritize Phase 12 (Compliance) and Phase 15 (FFR Reuse). Other Items Delay to Sprint-4. Sprint Total Capacity Remains Unchanged.",
-      "context": "div.card.highlight @ line 431 · surrounding text: Sprint-3 范围说明（诚实口径）： 本周新增 5 项结构级遗留债 + 1 项合规 P0，合并到 Sprint-3 原定 Phase A「后端通用化」中 — Phase A 主题不变（backend hardening for FFF reuse），但范围扩大 ，从最初的 5–6 项扩展到约 13 项。Phase A 是 Sprint-3 头等目标，容量从一开始就预留给后端清理；Phases B（FFF 启动）、C（节点自动化）、D（Arrowfish 收尾）、E（基础设施）未被挤占。若执行中发现 Phase A 吃满容量，优先保留 Phase 12（合规）与 Phase 15（FFF 复用），其他项顺延至 Sprint-4。Sprint 总容量不变。"
+      "context": "div.card.highlight @ line 430 · surrounding text: Sprint-3 范围说明（诚实口径）： 本周新增 5 项结构级遗留债 + 1 项合规 P0，合并到 Sprint-3 原定 Phase A「后端通用化」中 — Phase A 主题不变（backend hardening for FFF reuse），但范围扩大 ，从最初的 5–6 项扩展到约 13 项。Phase A 是 Sprint-3 头等目标，容量从一开始就预留给后端清理；Phases B（FFF 启动）、C（节点自动化）、D（Arrowfish 收尾）、E（基础设施）未被挤占。若执行中发现 Phase A 吃满容量，优先保留 Phase 12（合规）与 Phase 15（FFF 复用），其他项顺延至 Sprint-4。Sprint 总容量不变。"
     },
     {
       "id": "u_754722152f0c2f13",
@@ -3226,7 +3226,7 @@
       "source": "遗留债进度看板（截至 2026-04-24）",
       "occurrence": 0,
       "target": "Legacy Debt Progress Board (As of April 24, 2026)",
-      "context": "strong @ line 435"
+      "context": "strong @ line 434"
     },
     {
       "id": "u_c38131ca65e94a7a",
@@ -3234,7 +3234,7 @@
       "source": "状态",
       "occurrence": 2,
       "target": "Status",
-      "context": "th @ line 437 · surrounding text: 状态 数量 项目"
+      "context": "th @ line 436 · surrounding text: 状态 数量 项目"
     },
     {
       "id": "u_d7f45a5e8282e993",
@@ -3242,7 +3242,7 @@
       "source": "数量",
       "occurrence": 0,
       "target": "Number",
-      "context": "th @ line 437 · surrounding text: 状态 数量 项目"
+      "context": "th @ line 436 · surrounding text: 状态 数量 项目"
     },
     {
       "id": "u_018931d48dd00e28",
@@ -3250,7 +3250,7 @@
       "source": "项目",
       "occurrence": 2,
       "target": "Project",
-      "context": "th @ line 437 · surrounding text: 状态 数量 项目"
+      "context": "th @ line 436 · surrounding text: 状态 数量 项目"
     },
     {
       "id": "u_94291da193e56479",
@@ -3258,7 +3258,7 @@
       "source": "✅ Sprint-2 完整交付",
       "occurrence": 0,
       "target": "✅ Sprint-2 Complete Delivery",
-      "context": "td @ line 438 · surrounding text: ✅ Sprint-2 完整交付 4 项 读写分离、专属 IP 支付、反滥用 5 层防护、错误提示本地化（详见第二、三节）"
+      "context": "td @ line 437 · surrounding text: ✅ Sprint-2 完整交付 4 项 读写分离、专属 IP 支付、反滥用 5 层防护、错误提示本地化（详见第二、三节）"
     },
     {
       "id": "u_c32763c1d00d4d38",
@@ -3266,7 +3266,7 @@
       "source": "4 项",
       "occurrence": 0,
       "target": "4 Items",
-      "context": "td @ line 438 · surrounding text: ✅ Sprint-2 完整交付 4 项 读写分离、专属 IP 支付、反滥用 5 层防护、错误提示本地化（详见第二、三节）"
+      "context": "td @ line 437 · surrounding text: ✅ Sprint-2 完整交付 4 项 读写分离、专属 IP 支付、反滥用 5 层防护、错误提示本地化（详见第二、三节）"
     },
     {
       "id": "u_9b058ace00b19958",
@@ -3274,7 +3274,7 @@
       "source": "读写分离、专属 IP 支付、反滥用 5 层防护、错误提示本地化（详见第二、三节）",
       "occurrence": 0,
       "target": "Read/Write Separation, Dedicated IP Payment, Abuse Prevention Layers (5), Localized Error Messages (See Sections II and III)",
-      "context": "td @ line 438 · surrounding text: ✅ Sprint-2 完整交付 4 项 读写分离、专属 IP 支付、反滥用 5 层防护、错误提示本地化（详见第二、三节）"
+      "context": "td @ line 437 · surrounding text: ✅ Sprint-2 完整交付 4 项 读写分离、专属 IP 支付、反滥用 5 层防护、错误提示本地化（详见第二、三节）"
     },
     {
       "id": "u_5ca23065768da068",
@@ -3282,7 +3282,7 @@
       "source": "🟢 Sprint-2 部分收尾",
       "occurrence": 0,
       "target": "🟢 Sprint-2 Partial Completion",
-      "context": "td @ line 439 · surrounding text: 🟢 Sprint-2 部分收尾 5 项 分页（交易记录）、错误处理（注册路径）、数据库关系（设备表）、节点维护（4 项自动化）、跨端调试（崩溃监控）— 剩余部分 Sprint-3 收尾"
+      "context": "td @ line 438 · surrounding text: 🟢 Sprint-2 部分收尾 5 项 分页（交易记录）、错误处理（注册路径）、数据库关系（设备表）、节点维护（4 项自动化）、跨端调试（崩溃监控）— 剩余部分 Sprint-3 收尾"
     },
     {
       "id": "u_045d774e0993149a",
@@ -3290,7 +3290,7 @@
       "source": "5 项",
       "occurrence": 0,
       "target": "5 Items",
-      "context": "td @ line 439 · surrounding text: 🟢 Sprint-2 部分收尾 5 项 分页（交易记录）、错误处理（注册路径）、数据库关系（设备表）、节点维护（4 项自动化）、跨端调试（崩溃监控）— 剩余部分 Sprint-3 收尾"
+      "context": "td @ line 438 · surrounding text: 🟢 Sprint-2 部分收尾 5 项 分页（交易记录）、错误处理（注册路径）、数据库关系（设备表）、节点维护（4 项自动化）、跨端调试（崩溃监控）— 剩余部分 Sprint-3 收尾"
     },
     {
       "id": "u_6a2f8e64cee3d8a3",
@@ -3298,7 +3298,7 @@
       "source": "分页（交易记录）、错误处理（注册路径）、数据库关系（设备表）、节点维护（4 项自动化）、跨端调试（崩溃监控）— 剩余部分 Sprint-3 收尾",
       "occurrence": 0,
       "target": "Pagination (Transaction Records), Error Handling (Registration Path), Database Relationships (Device Table), VPN node Maintenance (4 Automated Tasks), Cross-Platform Debugging (Crash Monitoring) — Remaining Items for Sprint-3 Completion",
-      "context": "td @ line 439 · surrounding text: 🟢 Sprint-2 部分收尾 5 项 分页（交易记录）、错误处理（注册路径）、数据库关系（设备表）、节点维护（4 项自动化）、跨端调试（崩溃监控）— 剩余部分 Sprint-3 收尾"
+      "context": "td @ line 438 · surrounding text: 🟢 Sprint-2 部分收尾 5 项 分页（交易记录）、错误处理（注册路径）、数据库关系（设备表）、节点维护（4 项自动化）、跨端调试（崩溃监控）— 剩余部分 Sprint-3 收尾"
     },
     {
       "id": "u_ddf507bc3473a909",
@@ -3306,7 +3306,7 @@
       "source": "🟠 Sprint-3 排期",
       "occurrence": 0,
       "target": "🟠 Sprint-3 Sprints",
-      "context": "td @ line 440 · surrounding text: 🟠 Sprint-3 排期 8 项 含本周新增 5 项 + 合规 P0（user_flows）+ 支付回调抽象 + API 版本化"
+      "context": "td @ line 439 · surrounding text: 🟠 Sprint-3 排期 8 项 含本周新增 5 项 + 合规 P0（user_flows）+ 支付回调抽象 + API 版本化"
     },
     {
       "id": "u_7ebf0ff508548fb3",
@@ -3314,7 +3314,7 @@
       "source": "8 项",
       "occurrence": 0,
       "target": "8 Items",
-      "context": "td @ line 440 · surrounding text: 🟠 Sprint-3 排期 8 项 含本周新增 5 项 + 合规 P0（user_flows）+ 支付回调抽象 + API 版本化"
+      "context": "td @ line 439 · surrounding text: 🟠 Sprint-3 排期 8 项 含本周新增 5 项 + 合规 P0（user_flows）+ 支付回调抽象 + API 版本化"
     },
     {
       "id": "u_1689434b815a3c3a",
@@ -3322,7 +3322,7 @@
       "source": "含本周新增 5 项 + 合规 P0（user_flows）+ 支付回调抽象 + API 版本化",
       "occurrence": 0,
       "target": "Including This Week's New 5 Items + Compliance P0 (user_flows) + Payment Callback Abstraction + API Versioning",
-      "context": "td @ line 440 · surrounding text: 🟠 Sprint-3 排期 8 项 含本周新增 5 项 + 合规 P0（user_flows）+ 支付回调抽象 + API 版本化"
+      "context": "td @ line 439 · surrounding text: 🟠 Sprint-3 排期 8 项 含本周新增 5 项 + 合规 P0（user_flows）+ 支付回调抽象 + API 版本化"
     },
     {
       "id": "u_c171fab71d4a61e4",
@@ -3330,7 +3330,7 @@
       "source": "🔵 后续阶段",
       "occurrence": 0,
       "target": "🔵 Future Phases",
-      "context": "td @ line 441 · surrounding text: 🔵 后续阶段 2 项 依赖库升级窗口、交接资料补全"
+      "context": "td @ line 440 · surrounding text: 🔵 后续阶段 2 项 依赖库升级窗口、交接资料补全"
     },
     {
       "id": "u_dbc4a3298359fd1f",
@@ -3338,7 +3338,7 @@
       "source": "2 项",
       "occurrence": 0,
       "target": "Sprint-2",
-      "context": "td @ line 441 · surrounding text: 🔵 后续阶段 2 项 依赖库升级窗口、交接资料补全"
+      "context": "td @ line 440 · surrounding text: 🔵 后续阶段 2 项 依赖库升级窗口、交接资料补全"
     },
     {
       "id": "u_166622f7bc83f803",
@@ -3346,7 +3346,7 @@
       "source": "依赖库升级窗口、交接资料补全",
       "occurrence": 0,
       "target": "Dependency library upgrade window, handover documents completion",
-      "context": "td @ line 441 · surrounding text: 🔵 后续阶段 2 项 依赖库升级窗口、交接资料补全"
+      "context": "td @ line 440 · surrounding text: 🔵 后续阶段 2 项 依赖库升级窗口、交接资料补全"
     },
     {
       "id": "u_747880fb24bdd14d",
@@ -3354,7 +3354,7 @@
       "source": "累计识别",
       "occurrence": 0,
       "target": "Cumulative identification",
-      "context": "strong @ line 442 · surrounding text: 累计识别 19 项 Sprint-2 结束清理率 21% （4 / 19）；Sprint-3 结束预计 89% （17 / 19）"
+      "context": "strong @ line 441 · surrounding text: 累计识别 19 项 Sprint-2 结束清理率 21% （4 / 19）；Sprint-3 结束预计 89% （17 / 19）"
     },
     {
       "id": "u_f3ab77ac0bc494a7",
@@ -3362,7 +3362,7 @@
       "source": "19 项",
       "occurrence": 0,
       "target": "19 items",
-      "context": "strong @ line 442 · surrounding text: 累计识别 19 项 Sprint-2 结束清理率 21% （4 / 19）；Sprint-3 结束预计 89% （17 / 19）"
+      "context": "strong @ line 441 · surrounding text: 累计识别 19 项 Sprint-2 结束清理率 21% （4 / 19）；Sprint-3 结束预计 89% （17 / 19）"
     },
     {
       "id": "u_617761b95a1e2000",
@@ -3370,7 +3370,7 @@
       "source": "Sprint-2 结束清理率",
       "occurrence": 0,
       "target": "Sprint-2 closure rate",
-      "context": "td @ line 442 · surrounding text: 累计识别 19 项 Sprint-2 结束清理率 21% （4 / 19）；Sprint-3 结束预计 89% （17 / 19）"
+      "context": "td @ line 441 · surrounding text: 累计识别 19 项 Sprint-2 结束清理率 21% （4 / 19）；Sprint-3 结束预计 89% （17 / 19）"
     },
     {
       "id": "u_7b74c8dbed39553a",
@@ -3378,7 +3378,7 @@
       "source": "（4 / 19）；Sprint-3 结束预计",
       "occurrence": 0,
       "target": "(4 / 19); Sprint-3 expected",
-      "context": "td @ line 442 · surrounding text: 累计识别 19 项 Sprint-2 结束清理率 21% （4 / 19）；Sprint-3 结束预计 89% （17 / 19）"
+      "context": "td @ line 441 · surrounding text: 累计识别 19 项 Sprint-2 结束清理率 21% （4 / 19）；Sprint-3 结束预计 89% （17 / 19）"
     },
     {
       "id": "u_46a5f0cef2ddbfcd",
@@ -3386,7 +3386,7 @@
       "source": "关键信息：",
       "occurrence": 0,
       "target": "Key information:",
-      "context": "strong @ line 445 · surrounding text: 关键信息： 每次深入一个模块都可能再找出 1–2 项优化空间 — 这是「手工作坊 → 工程化」必经过程，不是失控。所有项均在内部技术计划 plans/mod-efficiency 留痕，编号可追溯。"
+      "context": "strong @ line 444 · surrounding text: 关键信息： 每次深入一个模块都可能再找出 1–2 项优化空间 — 这是「手工作坊 → 工程化」必经过程，不是失控。所有项均在内部技术计划 plans/mod-efficiency 留痕，编号可追溯。"
     },
     {
       "id": "u_bde0dddb59b9ac40",
@@ -3394,7 +3394,7 @@
       "source": "每次深入一个模块都可能再找出 1–2 项优化空间 — 这是「手工作坊 → 工程化」必经过程，不是失控。所有项均在内部技术计划",
       "occurrence": 0,
       "target": "Each in-depth module review can uncover 1–2 further opportunities for improvement. This is a normal part of moving from a manual workshop model to an engineered platform, not a loss of control. Every item is documented in the internal technical plan",
-      "context": "br @ line 445 · surrounding text: 关键信息： 每次深入一个模块都可能再找出 1–2 项优化空间 — 这是「手工作坊 → 工程化」必经过程，不是失控。所有项均在内部技术计划 plans/mod-efficiency 留痕，编号可追溯。"
+      "context": "br @ line 444 · surrounding text: 关键信息： 每次深入一个模块都可能再找出 1–2 项优化空间 — 这是「手工作坊 → 工程化」必经过程，不是失控。所有项均在内部技术计划 plans/mod-efficiency 留痕，编号可追溯。"
     },
     {
       "id": "u_e8f2cc36156a5fd4",
@@ -3402,7 +3402,7 @@
       "source": "留痕，编号可追溯。",
       "occurrence": 0,
       "target": "Documentation and numbered tracking.",
-      "context": "br @ line 445 · surrounding text: 关键信息： 每次深入一个模块都可能再找出 1–2 项优化空间 — 这是「手工作坊 → 工程化」必经过程，不是失控。所有项均在内部技术计划 plans/mod-efficiency 留痕，编号可追溯。"
+      "context": "br @ line 444 · surrounding text: 关键信息： 每次深入一个模块都可能再找出 1–2 项优化空间 — 这是「手工作坊 → 工程化」必经过程，不是失控。所有项均在内部技术计划 plans/mod-efficiency 留痕，编号可追溯。"
     },
     {
       "id": "u_834f9925f9d13c57",
@@ -3410,7 +3410,7 @@
       "source": "报告日期：2026年4月24日 · 第2阶段完成摘要 · 下次更新：2026年5月初（第3阶段启动）",
       "occurrence": 0,
       "target": "Report date: April 24, 2026 · Summary of Sprint 2 completion · Next update: Early May (Phase 3 launch)",
-      "context": "div.footer @ line 448"
+      "context": "div.footer @ line 447"
     }
   ],
   "blocks": {

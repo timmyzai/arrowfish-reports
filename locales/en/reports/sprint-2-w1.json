@@ -18,7 +18,7 @@
       "source": "第2阶段进展报告（第1周）：Arrowfish 发布冲刺",
       "occurrence": 0,
       "target": "Sprint 2 Progress Report (Week 1): Arrowfish Release Sprint",
-      "context": "h1.report-title @ line 79"
+      "context": "h1.report-title @ line 78"
     },
     {
       "id": "u_27d26ed9cdeab675",
@@ -26,7 +26,7 @@
       "source": "本期",
       "occurrence": 0,
       "target": "Current Period",
-      "context": "span.meta-label @ line 82"
+      "context": "span.meta-label @ line 81"
     },
     {
       "id": "u_7ef67b9cbbcebc44",
@@ -34,7 +34,7 @@
       "source": "2026年4月13日 – 4月17日",
       "occurrence": 0,
       "target": "April 13, 2026 - April 17, 2026",
-      "context": "span.meta-value @ line 83"
+      "context": "span.meta-value @ line 82"
     },
     {
       "id": "u_c0e26eee54ec68f9",
@@ -42,7 +42,7 @@
       "source": "正式版目标",
       "occurrence": 0,
       "target": "Target Version",
-      "context": "span.meta-label @ line 86"
+      "context": "span.meta-label @ line 85"
     },
     {
       "id": "u_cc089b8b9e3f8e7c",
@@ -50,7 +50,7 @@
       "source": "4月底（QA验收通过后）",
       "occurrence": 0,
       "target": "End of April (after QA acceptance)",
-      "context": "span.meta-value @ line 87"
+      "context": "span.meta-value @ line 86"
     },
     {
       "id": "u_71f56ad6594e1c16",
@@ -58,7 +58,7 @@
       "source": "报告对象",
       "occurrence": 0,
       "target": "Report Recipient",
-      "context": "span.meta-label @ line 90"
+      "context": "span.meta-label @ line 89"
     },
     {
       "id": "u_b94880f63b291f61",
@@ -66,7 +66,7 @@
       "source": "日总",
       "occurrence": 0,
       "target": "General Manager Ri",
-      "context": "span.meta-value @ line 91"
+      "context": "span.meta-value @ line 90"
     },
     {
       "id": "u_41200cd93dfe68ea",
@@ -74,7 +74,7 @@
       "source": "本阶段目标：",
       "occurrence": 0,
       "target": "Sprint Goal:",
-      "context": "strong @ line 95 · surrounding text: 本阶段目标： 完成Arrowfish稳定版全面验收，通过QA测试后提交Google Play，4月底正式上线。第3阶段已相应顺延，待本阶段交付完成后启动。"
+      "context": "strong @ line 94 · surrounding text: 本阶段目标： 完成Arrowfish稳定版全面验收，通过QA测试后提交Google Play，4月底正式上线。第3阶段已相应顺延，待本阶段交付完成后启动。"
     },
     {
       "id": "u_ec5f33c8b2dfd126",
@@ -82,7 +82,7 @@
       "source": "完成Arrowfish稳定版全面验收，通过QA测试后提交Google Play，4月底正式上线。第3阶段已相应顺延，待本阶段交付完成后启动。",
       "occurrence": 0,
       "target": "Complete comprehensive acceptance testing of the stable Arrowfish release, submit it to Google Play after QA approval, and go live by the end of April. Sprint 3 has been postponed accordingly and will begin after this Sprint is delivered.",
-      "context": "div @ line 95 · surrounding text: 本阶段目标： 完成Arrowfish稳定版全面验收，通过QA测试后提交Google Play，4月底正式上线。第3阶段已相应顺延，待本阶段交付完成后启动。"
+      "context": "div @ line 94 · surrounding text: 本阶段目标： 完成Arrowfish稳定版全面验收，通过QA测试后提交Google Play，4月底正式上线。第3阶段已相应顺延，待本阶段交付完成后启动。"
     },
     {
       "id": "u_4d1636ea2b6c6649",
@@ -90,7 +90,7 @@
       "source": "关键风险与技术债务",
       "occurrence": 0,
       "target": "Key Risks and Technical Debt",
-      "context": "h2.section-heading @ line 101"
+      "context": "h2.section-heading @ line 100"
     },
     {
       "id": "u_c1d97a3aaf04bed7",
@@ -98,7 +98,7 @@
       "source": "以下为本阶段发现的关键风险，均源自台湾团队遗留代码。按影响优先级排列，营收阻断类问题优先处理。",
       "occurrence": 0,
       "target": "The following are the key risks identified in this phase, all stemming from legacy code left by the Taiwan team. Priorities are based on impact; revenue-blocking issues take precedence.",
-      "context": "div.section-body @ line 102"
+      "context": "div.section-body @ line 101"
     },
     {
       "id": "u_a40a012baa5aaa41",
@@ -106,7 +106,7 @@
       "source": "【营收风险·已处理】专属IP付款完全失效",
       "occurrence": 0,
       "target": "Revenue Risk Resolved: Complete Failure of Exclusive IP Payments",
-      "context": "div.finding-title.resolved @ line 109"
+      "context": "div.finding-title.resolved @ line 108"
     },
     {
       "id": "u_b11a0740c5ec4a61",
@@ -114,7 +114,7 @@
       "source": "台湾遗留代码缺陷导致每笔专属IP购买均以失败告终，该品类自上线起即零收入。若未发现，用户投诉将在正式上线后集中爆发，影响应用评分与用户留存。团队发现后当天完成定位与修复，目前正在全流程测试验证中。",
       "occurrence": 0,
       "target": "Legacy code defects in Taiwan's team caused every exclusive IP purchase to fail. Since launch, this category has generated no revenue. If not identified, user complaints will concentrate after the official release, impacting application ratings and user retention. The issue was located and fixed on the same day; it is currently undergoing full lifecycle testing.",
-      "context": "div.finding-content @ line 110"
+      "context": "div.finding-content @ line 109"
     },
     {
       "id": "u_c403ed1f2a391d33",
@@ -122,7 +122,7 @@
       "source": "【营收风险·修复中】付款页面未自动关闭——重复扣款隐患",
       "occurrence": 0,
       "target": "Revenue Risk Under Repair: Unautomated Payment Page - Repeated Deduction Hazard",
-      "context": "div.finding-title @ line 116"
+      "context": "div.finding-title @ line 115"
     },
     {
       "id": "u_978fca735ff66ff7",
@@ -130,7 +130,7 @@
       "source": "用户完成付款后，支付页面偶尔不会自动关闭。若用户误触重试，存在重复发起支付的风险。修复方案本周已启动，预计本阶段内完成验证。",
       "occurrence": 0,
       "target": "Users occasionally encounter issues where the payment page does not automatically close after completing a transaction. If users mistakenly retry, there is a risk of duplicate payments. The fix has been initiated and is expected to be completed within this sprint.",
-      "context": "div.finding-content @ line 117"
+      "context": "div.finding-content @ line 116"
     },
     {
       "id": "u_57badd848246ef44",
@@ -138,7 +138,7 @@
       "source": "【安全风险·已处理】免费节点流量被大规模滥用——多层防护体系已建立",
       "occurrence": 0,
       "target": "【Security Risks · Resolved】Free VPN node Traffic Being Abused on a Large Scale — A Multi-Layered Protection System Has Been Established",
-      "context": "div.finding-title.resolved @ line 123"
+      "context": "div.finding-title.resolved @ line 122"
     },
     {
       "id": "u_d9d121d537f79d0b",
@@ -146,7 +146,7 @@
       "source": "台湾遗留系统允许同一设备通过多次注册无限重置每日免费额度，并可被模拟器自动批量注册。若不处理，随规模增长，带宽成本将持续被无转化价值的滥用流量侵蚀，付费用户连接质量也随之下降。",
       "occurrence": 0,
       "target": "The Taiwan legacy system allows devices to register multiple times, resetting daily free quotas indefinitely, and can be automatically registered in bulk by simulators. If not addressed, as the scale grows, bandwidth costs will continue to be eroded by non-revenue-generating traffic, leading to a decline in paid user experience.",
-      "context": "p @ line 125"
+      "context": "p @ line 124"
     },
     {
       "id": "u_3d2f8f7639686b20",
@@ -154,7 +154,7 @@
       "source": "本阶段建立了五层防护机制（验证中），",
       "occurrence": 0,
       "target": "This Sprint established a five-layer protection mechanism (under review).",
-      "context": "p @ line 126 · surrounding text: 本阶段建立了五层防护机制（验证中）， 正常免费用户不受任何影响，完整享有每日30分钟权益："
+      "context": "p @ line 125 · surrounding text: 本阶段建立了五层防护机制（验证中）， 正常免费用户不受任何影响，完整享有每日30分钟权益："
     },
     {
       "id": "u_b3630f05406e3e5f",
@@ -162,7 +162,7 @@
       "source": "正常免费用户不受任何影响，完整享有每日30分钟权益：",
       "occurrence": 0,
       "target": "Normal free users are unaffected and fully enjoy the daily 30-minute benefit:",
-      "context": "span @ line 126 · surrounding text: 本阶段建立了五层防护机制（验证中）， 正常免费用户不受任何影响，完整享有每日30分钟权益："
+      "context": "span @ line 125 · surrounding text: 本阶段建立了五层防护机制（验证中）， 正常免费用户不受任何影响，完整享有每日30分钟权益："
     },
     {
       "id": "u_3f79a3f69c147ef1",
@@ -170,7 +170,7 @@
       "source": "防护层",
       "occurrence": 0,
       "target": "Layer",
-      "context": "th @ line 130"
+      "context": "th @ line 129"
     },
     {
       "id": "u_dbbfad113bcb6c70",
@@ -178,7 +178,7 @@
       "source": "机制",
       "occurrence": 0,
       "target": "Mechanism",
-      "context": "th @ line 131"
+      "context": "th @ line 130"
     },
     {
       "id": "u_2a38c7edd47665bf",
@@ -186,7 +186,7 @@
       "source": "封堵的滥用行为",
       "occurrence": 0,
       "target": "Blocked Abusive Behaviors",
-      "context": "th @ line 132"
+      "context": "th @ line 131"
     },
     {
       "id": "u_33c738fd9eee44f2",
@@ -194,7 +194,7 @@
       "source": "① 设备维度额度",
       "occurrence": 0,
       "target": "① Device Dimension Quota",
-      "context": "td @ line 137"
+      "context": "td @ line 136"
     },
     {
       "id": "u_4bc0a8af7d36a3ab",
@@ -202,7 +202,7 @@
       "source": "同一设备所有账号共享每日额度，换号不重置",
       "occurrence": 0,
       "target": "All accounts share daily quotas across devices; changing numbers does not reset them",
-      "context": "td @ line 138"
+      "context": "td @ line 137"
     },
     {
       "id": "u_e0eb5a437140308d",
@@ -210,7 +210,7 @@
       "source": "多账号循环重置试用时间",
       "occurrence": 0,
       "target": "Reset trial usage time for multiple accounts cycling.",
-      "context": "td @ line 139"
+      "context": "td @ line 138"
     },
     {
       "id": "u_5bac39fecf95e124",
@@ -218,7 +218,7 @@
       "source": "② 设备绑定",
       "occurrence": 0,
       "target": "② Device binding",
-      "context": "td @ line 142"
+      "context": "td @ line 141"
     },
     {
       "id": "u_a74a661b28a2d76a",
@@ -226,7 +226,7 @@
       "source": "卸载重装后返回原账号，不发放新额度",
       "occurrence": 0,
       "target": "After reinstalling the app, users return to their original account and do not receive a new quota.",
-      "context": "td @ line 143"
+      "context": "td @ line 142"
     },
     {
       "id": "u_03cc1627c47a7a74",
@@ -234,7 +234,7 @@
       "source": "卸载重装刷新试用资格",
       "occurrence": 0,
       "target": "Refresh trial eligibility after uninstalling and reinstalling.",
-      "context": "td @ line 144"
+      "context": "td @ line 143"
     },
     {
       "id": "u_9e3ddb0577233b4f",
@@ -242,7 +242,7 @@
       "source": "③ 模拟器检测",
       "occurrence": 0,
       "target": "③ Simulator detection",
-      "context": "td @ line 147"
+      "context": "td @ line 146"
     },
     {
       "id": "u_58e8c0a3ddb9afff",
@@ -250,7 +250,7 @@
       "source": "应用启动时检测模拟器环境，直接拦截注册",
       "occurrence": 0,
       "target": "Simulator environment check at application startup, directly intercepts registration.",
-      "context": "td @ line 148"
+      "context": "td @ line 147"
     },
     {
       "id": "u_23fb220a1b699bb5",
@@ -258,7 +258,7 @@
       "source": "模拟器自动批量注册账号工厂",
       "occurrence": 0,
       "target": "Automated batch account creation in the simulator factory.",
-      "context": "td @ line 149"
+      "context": "td @ line 148"
     },
     {
       "id": "u_3b32845bd557b82d",
@@ -266,7 +266,7 @@
       "source": "④ 注册速率限制",
       "occurrence": 0,
       "target": "④ Rate Limit for Registration",
-      "context": "td @ line 152"
+      "context": "td @ line 151"
     },
     {
       "id": "u_e29e3372b1a2baaf",
@@ -274,7 +274,7 @@
       "source": "每个IP每天最多注册5个新账号",
       "occurrence": 0,
       "target": "Each IP can register up to 5 new accounts per day",
-      "context": "td @ line 153"
+      "context": "td @ line 152"
     },
     {
       "id": "u_75241d49715471c8",
@@ -282,7 +282,7 @@
       "source": "单IP批量注册",
       "occurrence": 0,
       "target": "Batch Registration by Device",
-      "context": "td @ line 154"
+      "context": "td @ line 153"
     },
     {
       "id": "u_c56e9d518cd41e8e",
@@ -290,7 +290,7 @@
       "source": "⑤ 单设备账号上限",
       "occurrence": 0,
       "target": "⑤ Account Limit per Device",
-      "context": "td @ line 157"
+      "context": "td @ line 156"
     },
     {
       "id": "u_aba51cb58e37426b",
@@ -298,7 +298,7 @@
       "source": "每台设备最多绑定3个账号",
       "occurrence": 0,
       "target": "Up to 3 accounts can be bound per device",
-      "context": "td @ line 158"
+      "context": "td @ line 157"
     },
     {
       "id": "u_06a4d57ba6feed19",
@@ -306,7 +306,7 @@
       "source": "单设备无限注册账号",
       "occurrence": 0,
       "target": "Unlimited Registration per Device",
-      "context": "td @ line 159"
+      "context": "td @ line 158"
     },
     {
       "id": "u_f3844018a65c9dcf",
@@ -314,7 +314,7 @@
       "source": "【稳定性·已处理】免费用户核心使用流程多处中断",
       "occurrence": 0,
       "target": "[Stability - Resolved] Frequent Disruptions in Free User Core Usage Flows",
-      "context": "div.finding-title.resolved @ line 167"
+      "context": "div.finding-title.resolved @ line 166"
     },
     {
       "id": "u_057318a3d86c95ab",
@@ -322,7 +322,7 @@
       "source": "测试中发现免费用户登录后VPN无法正常启动、切换账号后节点列表为空、计时器不显示等问题，均源于台湾遗留的会话状态管理缺陷。相关问题已完成排查，修复正在测试环境验证中。",
       "occurrence": 0,
       "target": "Testing revealed multiple issues such as VPN not starting normally after login, empty VPN node list upon switching accounts, and timers not displaying. All these were due to session state management defects left over from Taiwan. The related problems have been thoroughly investigated and are currently being tested in the test environment.",
-      "context": "div.finding-content @ line 168"
+      "context": "div.finding-content @ line 167"
     },
     {
       "id": "u_1ef8e004f5086e2e",
@@ -330,7 +330,7 @@
       "source": "【运维·规划中】节点离线误报频繁——告警系统待优化",
       "occurrence": 0,
       "target": "[Operations & Planning - In Progress] Frequent False Alarms for VPN node Offline — Alert System Needs Optimization",
-      "context": "div.finding-title @ line 174"
+      "context": "div.finding-title @ line 173"
     },
     {
       "id": "u_db6bc8cbc187d257",
@@ -338,7 +338,7 @@
       "source": "当前系统对每次探测失败均发送告警，导致大量误报干扰运维判断。新方案将在发送通知前自动多次核验，并附带节点负载数据，区分真实故障与短暂波动。方案本阶段内启动开发。",
       "occurrence": 0,
       "target": "The current system sends alerts every time a probe fails, leading to frequent false alarms that interfere with operations. A new solution will automatically verify multiple times before sending notifications and include VPN node load data, distinguishing between real faults and temporary fluctuations. Development of this solution is scheduled for the next phase.",
-      "context": "div.finding-content @ line 175"
+      "context": "div.finding-content @ line 174"
     },
     {
       "id": "u_9e2eb26c2f7c52ff",
@@ -346,7 +346,7 @@
       "source": "本期进展",
       "occurrence": 0,
       "target": "Progress So Far",
-      "context": "h2.section-heading @ line 185"
+      "context": "h2.section-heading @ line 184"
     },
     {
       "id": "u_dba1d208fa931063",
@@ -354,7 +354,7 @@
       "source": "第2阶段于4月13日启动，以QA全量回归测试结果为基线，系统性清理遗留缺陷。本阶段最直观的成果是版本迭代速度：自第1阶段交付的v2.0.0起，团队已完成多轮修复迭代，应用稳定性、启动速度与流畅度均有明显提升。",
       "occurrence": 0,
       "target": "Sprint 2 began on April 13th, using the full regression test results from Phase 1 as a baseline. The systematic cleanup of legacy defects was completed during this phase. One of the most noticeable achievements is the speed at which versions are iterated: since v2.0.0 (from Phase 1), the team has completed multiple rounds of fixes and optimizations, resulting in significant improvements to application stability, startup speed, and fluidity.",
-      "context": "div.section-body @ line 187"
+      "context": "div.section-body @ line 186"
     },
     {
       "id": "u_4c070ea789eda5d8",
@@ -362,7 +362,7 @@
       "source": "版本迭代进展",
       "occurrence": 0,
       "target": "Version Iteration Progress",
-      "context": "div @ line 193"
+      "context": "div @ line 192"
     },
     {
       "id": "u_bd58adaa015cde0c",
@@ -370,7 +370,7 @@
       "source": "v2.0.6 ✦ 本周",
       "occurrence": 0,
       "target": "v2.0.6 ✦ This Week",
-      "context": "span @ line 205"
+      "context": "span @ line 204"
     },
     {
       "id": "u_3751c629e4d9d709",
@@ -378,7 +378,7 @@
       "source": "应用此前版本为v1.7.38。第1阶段完成了一次全面架构重写，直接跳升至v2.0.0——这不是常规小版本升级，而是底层代码的系统性重建，因此QA需要覆盖的测试范围远大于普通版本，本阶段发现问题较多属正常预期。v2.0.6相比v2.0.0：崩溃率显著下降、启动速度加快、连接更稳定流畅。每一版均经QA确认改善后方才推进。",
       "occurrence": 0,
       "target": "The previous app version was v1.7.38. Sprint 1 delivered a comprehensive architectural rewrite, jumping directly to v2.0.0. This was not a routine minor update, but a systematic rebuild of the underlying code, so QA coverage had to be far broader than for a normal release and the higher number of issues found in this Sprint was expected. Compared with v2.0.0, v2.0.6 has a significantly lower crash rate, faster startup, and more stable, responsive connections. Each version progressed only after QA confirmed the improvements.",
-      "context": "div @ line 207"
+      "context": "div @ line 206"
     },
     {
       "id": "u_de526fcd40c5467c",
@@ -386,7 +386,7 @@
       "source": "第1阶段",
       "occurrence": 0,
       "target": "Sprint 1",
-      "context": "div.milestone-date @ line 214 · surrounding text: 第1阶段 收尾"
+      "context": "div.milestone-date @ line 213 · surrounding text: 第1阶段 收尾"
     },
     {
       "id": "u_5ae2c6af6f4f92d7",
@@ -394,7 +394,7 @@
       "source": "收尾",
       "occurrence": 0,
       "target": "Wrap-Up",
-      "context": "br @ line 214 · surrounding text: 第1阶段 收尾"
+      "context": "br @ line 213 · surrounding text: 第1阶段 收尾"
     },
     {
       "id": "u_53cd389d27935d17",
@@ -402,7 +402,7 @@
       "source": "双团队QA测试启动，发现45项问题。",
       "occurrence": 0,
       "target": "Dual-team QA testing has commenced, identifying 45 issues.",
-      "context": "strong @ line 215 · surrounding text: 双团队QA测试启动，发现45项问题。 台湾QA与马来西亚QA联合测试，发现30项缺陷及15项优化建议，其中付款失效、计费逻辑错误、界面异常为最高优先级，均已第一时间介入处理。"
+      "context": "strong @ line 214 · surrounding text: 双团队QA测试启动，发现45项问题。 台湾QA与马来西亚QA联合测试，发现30项缺陷及15项优化建议，其中付款失效、计费逻辑错误、界面异常为最高优先级，均已第一时间介入处理。"
     },
     {
       "id": "u_3fad8797c1218d84",
@@ -410,7 +410,7 @@
       "source": "台湾QA与马来西亚QA联合测试，发现30项缺陷及15项优化建议，其中付款失效、计费逻辑错误、界面异常为最高优先级，均已第一时间介入处理。",
       "occurrence": 0,
       "target": "Taiwan QA and Malaysia QA conducted joint tests, uncovering 30 defects and 15 optimization suggestions. Issues such as payment failures, billing logic errors, and interface anomalies were given the highest priority and addressed immediately.",
-      "context": "div.milestone-text @ line 215 · surrounding text: 双团队QA测试启动，发现45项问题。 台湾QA与马来西亚QA联合测试，发现30项缺陷及15项优化建议，其中付款失效、计费逻辑错误、界面异常为最高优先级，均已第一时间介入处理。"
+      "context": "div.milestone-text @ line 214 · surrounding text: 双团队QA测试启动，发现45项问题。 台湾QA与马来西亚QA联合测试，发现30项缺陷及15项优化建议，其中付款失效、计费逻辑错误、界面异常为最高优先级，均已第一时间介入处理。"
     },
     {
       "id": "u_dbd8da4d46dbd290",
@@ -418,7 +418,7 @@
       "source": "第2阶段",
       "occurrence": 0,
       "target": "Sprint 2",
-      "context": "div.milestone-date @ line 218 · surrounding text: 第2阶段 第1周"
+      "context": "div.milestone-date @ line 217 · surrounding text: 第2阶段 第1周"
     },
     {
       "id": "u_7dc52c01e1621971",
@@ -426,7 +426,7 @@
       "source": "第1周",
       "occurrence": 0,
       "target": "Week 1",
-      "context": "br @ line 218 · surrounding text: 第2阶段 第1周"
+      "context": "br @ line 217 · surrounding text: 第2阶段 第1周"
     },
     {
       "id": "u_20d52aa3fb58730c",
@@ -434,7 +434,7 @@
       "source": "缺陷修复与功能优化同步推进。",
       "occurrence": 0,
       "target": "Defect fixes and feature optimizations are being pursued concurrently.",
-      "context": "strong @ line 219 · surrounding text: 缺陷修复与功能优化同步推进。 按优先级分三类并行处理：营收阻断类（专属IP付款、订阅日期）、安全类（试用额度绕过、模拟器刷号）、稳定性类（连接流程、计时器、崩溃根因）。每批修复完成后发布新版本供QA复测，形成快速闭环。"
+      "context": "strong @ line 218 · surrounding text: 缺陷修复与功能优化同步推进。 按优先级分三类并行处理：营收阻断类（专属IP付款、订阅日期）、安全类（试用额度绕过、模拟器刷号）、稳定性类（连接流程、计时器、崩溃根因）。每批修复完成后发布新版本供QA复测，形成快速闭环。"
     },
     {
       "id": "u_3a5498bd0e58af7e",
@@ -442,7 +442,7 @@
       "source": "按优先级分三类并行处理：营收阻断类（专属IP付款、订阅日期）、安全类（试用额度绕过、模拟器刷号）、稳定性类（连接流程、计时器、崩溃根因）。每批修复完成后发布新版本供QA复测，形成快速闭环。",
       "occurrence": 0,
       "target": "Revenue-blocking issues (exclusive IP payments, subscription dates), security-related issues (overriding trial limits, simulator hacking), and stability-related issues (connection processes, timers, root causes of crashes) are being addressed in parallel. After each batch is fixed, a new version is released for QA retesting to form a quick feedback loop.",
-      "context": "div.milestone-text @ line 219 · surrounding text: 缺陷修复与功能优化同步推进。 按优先级分三类并行处理：营收阻断类（专属IP付款、订阅日期）、安全类（试用额度绕过、模拟器刷号）、稳定性类（连接流程、计时器、崩溃根因）。每批修复完成后发布新版本供QA复测，形成快速闭环。"
+      "context": "div.milestone-text @ line 218 · surrounding text: 缺陷修复与功能优化同步推进。 按优先级分三类并行处理：营收阻断类（专属IP付款、订阅日期）、安全类（试用额度绕过、模拟器刷号）、稳定性类（连接流程、计时器、崩溃根因）。每批修复完成后发布新版本供QA复测，形成快速闭环。"
     },
     {
       "id": "u_57227927863487b9",
@@ -450,7 +450,7 @@
       "source": "本周",
       "occurrence": 0,
       "target": "This Week",
-      "context": "div.milestone-date @ line 222"
+      "context": "div.milestone-date @ line 221"
     },
     {
       "id": "u_9b23500efd953006",
@@ -458,7 +458,7 @@
       "source": "测试环境自动化构建已上线。",
       "occurrence": 0,
       "target": "The automated build of the test environment has been launched.",
-      "context": "strong @ line 223 · surrounding text: 测试环境自动化构建已上线。 代码提交后自动编译并推送安装包，测试团队可即时获取最新版本，大幅缩短每轮验证周期——这是支撑v2.0.0→v2.0.6高频迭代的基础设施。"
+      "context": "strong @ line 222 · surrounding text: 测试环境自动化构建已上线。 代码提交后自动编译并推送安装包，测试团队可即时获取最新版本，大幅缩短每轮验证周期——这是支撑v2.0.0→v2.0.6高频迭代的基础设施。"
     },
     {
       "id": "u_e0cbc0e5a60519b1",
@@ -466,7 +466,7 @@
       "source": "代码提交后自动编译并推送安装包，测试团队可即时获取最新版本，大幅缩短每轮验证周期——这是支撑v2.0.0→v2.0.6高频迭代的基础设施。",
       "occurrence": 0,
       "target": "After code commits, the compilation and deployment process is automatically triggered. The testing team can immediately access the latest version, significantly reducing the time needed for each round of validation — this is a critical infrastructure supporting frequent v2.0.0 → v2.0.6 iterations.",
-      "context": "div.milestone-text @ line 223 · surrounding text: 测试环境自动化构建已上线。 代码提交后自动编译并推送安装包，测试团队可即时获取最新版本，大幅缩短每轮验证周期——这是支撑v2.0.0→v2.0.6高频迭代的基础设施。"
+      "context": "div.milestone-text @ line 222 · surrounding text: 测试环境自动化构建已上线。 代码提交后自动编译并推送安装包，测试团队可即时获取最新版本，大幅缩短每轮验证周期——这是支撑v2.0.0→v2.0.6高频迭代的基础设施。"
     },
     {
       "id": "u_8c54558decf8cc0b",
@@ -474,7 +474,7 @@
       "source": "本周",
       "occurrence": 1,
       "target": "This Week",
-      "context": "div.milestone-date @ line 226"
+      "context": "div.milestone-date @ line 225"
     },
     {
       "id": "u_87093e57877a8321",
@@ -482,7 +482,7 @@
       "source": "深层崩溃根因系统排查完成。",
       "occurrence": 0,
       "target": "The deep root cause system has been thoroughly investigated.",
-      "context": "strong @ line 227 · surrounding text: 深层崩溃根因系统排查完成。 AI辅助代码审查发现台湾原始代码中多处可能引发崩溃的深层问题，逐项修复后应用启动速度与稳定性均有明显改善，是v2.0.0→v2.0.6质量提升的核心驱动。"
+      "context": "strong @ line 226 · surrounding text: 深层崩溃根因系统排查完成。 AI辅助代码审查发现台湾原始代码中多处可能引发崩溃的深层问题，逐项修复后应用启动速度与稳定性均有明显改善，是v2.0.0→v2.0.6质量提升的核心驱动。"
     },
     {
       "id": "u_84313f0cf658084b",
@@ -490,7 +490,7 @@
       "source": "AI辅助代码审查发现台湾原始代码中多处可能引发崩溃的深层问题，逐项修复后应用启动速度与稳定性均有明显改善，是v2.0.0→v2.0.6质量提升的核心驱动。",
       "occurrence": 0,
       "target": "AI-assisted code reviews identified multiple potential crash-causing issues in the original Taiwan code. After fixing these, application startup speed and stability have improved significantly, driving quality improvements from v2.0.0 to v2.0.6.",
-      "context": "div.milestone-text @ line 227 · surrounding text: 深层崩溃根因系统排查完成。 AI辅助代码审查发现台湾原始代码中多处可能引发崩溃的深层问题，逐项修复后应用启动速度与稳定性均有明显改善，是v2.0.0→v2.0.6质量提升的核心驱动。"
+      "context": "div.milestone-text @ line 226 · surrounding text: 深层崩溃根因系统排查完成。 AI辅助代码审查发现台湾原始代码中多处可能引发崩溃的深层问题，逐项修复后应用启动速度与稳定性均有明显改善，是v2.0.0→v2.0.6质量提升的核心驱动。"
     },
     {
       "id": "u_1fc45c04fa67d77b",
@@ -498,7 +498,7 @@
       "source": "本阶段进度总览",
       "occurrence": 0,
       "target": "Overview of Phase Progress",
-      "context": "div.section-body @ line 233"
+      "context": "div.section-body @ line 232"
     },
     {
       "id": "u_3381d63e7c08dae8",
@@ -506,7 +506,7 @@
       "source": "已上线",
       "occurrence": 0,
       "target": "Released",
-      "context": "div.status-legend-item @ line 235"
+      "context": "div.status-legend-item @ line 234"
     },
     {
       "id": "u_d1cbe1e597ace5af",
@@ -514,7 +514,7 @@
       "source": "延迟",
       "occurrence": 0,
       "target": "Delayed",
-      "context": "div.status-legend-item @ line 236"
+      "context": "div.status-legend-item @ line 235"
     },
     {
       "id": "u_b1b2876faa0d0939",
@@ -522,7 +522,7 @@
       "source": "风险",
       "occurrence": 0,
       "target": "Risk",
-      "context": "div.status-legend-item @ line 237"
+      "context": "div.status-legend-item @ line 236"
     },
     {
       "id": "u_ca2396b7f02624d4",
@@ -530,7 +530,7 @@
       "source": "进行中",
       "occurrence": 0,
       "target": "In Progress",
-      "context": "div.status-legend-item @ line 238"
+      "context": "div.status-legend-item @ line 237"
     },
     {
       "id": "u_4e71569cd3bc7937",
@@ -538,7 +538,7 @@
       "source": "项目",
       "occurrence": 0,
       "target": "Project",
-      "context": "th @ line 243"
+      "context": "th @ line 242"
     },
     {
       "id": "u_9e6cdc322dafcc5e",
@@ -546,7 +546,7 @@
       "source": "状态",
       "occurrence": 0,
       "target": "Status",
-      "context": "th @ line 244"
+      "context": "th @ line 243"
     },
     {
       "id": "u_772f099df905818c",
@@ -554,7 +554,7 @@
       "source": "说明",
       "occurrence": 0,
       "target": "Description",
-      "context": "th @ line 245"
+      "context": "th @ line 244"
     },
     {
       "id": "u_22f287bef7c61113",
@@ -562,7 +562,7 @@
       "source": "专属IP付款修复",
       "occurrence": 0,
       "target": "Exclusive IP Payment Repair",
-      "context": "strong @ line 250 · surrounding text: 专属IP付款修复 （营收优先）"
+      "context": "strong @ line 249 · surrounding text: 专属IP付款修复 （营收优先）"
     },
     {
       "id": "u_0791c78dea23cc3a",
@@ -570,7 +570,7 @@
       "source": "（营收优先）",
       "occurrence": 0,
       "target": "(Revenue Priority)",
-      "context": "td @ line 250 · surrounding text: 专属IP付款修复 （营收优先）"
+      "context": "td @ line 249 · surrounding text: 专属IP付款修复 （营收优先）"
     },
     {
       "id": "u_542d78dcdd7a9676",
@@ -578,7 +578,7 @@
       "source": "验证中",
       "occurrence": 0,
       "target": "In Validation",
-      "context": "span.status-badge.status-default @ line 251"
+      "context": "span.status-badge.status-default @ line 250"
     },
     {
       "id": "u_f1a51b6b26a8a2b3",
@@ -586,7 +586,7 @@
       "source": "修复方案已完成，正在测试环境全流程验证",
       "occurrence": 0,
       "target": "Repair Solution Completed and Being Tested in the Test Environment for Full-Process Validation",
-      "context": "td @ line 252"
+      "context": "td @ line 251"
     },
     {
       "id": "u_6ff100f2d29fe513",
@@ -594,7 +594,7 @@
       "source": "免费试用防滥用",
       "occurrence": 0,
       "target": "Prevent abuse of free trials",
-      "context": "strong @ line 255 · surrounding text: 免费试用防滥用 （保护转化率）"
+      "context": "strong @ line 254 · surrounding text: 免费试用防滥用 （保护转化率）"
     },
     {
       "id": "u_9e92d8f351c2390c",
@@ -602,7 +602,7 @@
       "source": "（保护转化率）",
       "occurrence": 0,
       "target": "(Revenue Priority)",
-      "context": "td @ line 255 · surrounding text: 免费试用防滥用 （保护转化率）"
+      "context": "td @ line 254 · surrounding text: 免费试用防滥用 （保护转化率）"
     },
     {
       "id": "u_5d509b68c57fb5f6",
@@ -610,7 +610,7 @@
       "source": "验证中",
       "occurrence": 1,
       "target": "In Validation",
-      "context": "span.status-badge.status-default @ line 256"
+      "context": "span.status-badge.status-default @ line 255"
     },
     {
       "id": "u_f9399503b7343191",
@@ -618,7 +618,7 @@
       "source": "设备维度额度限制 + 注册速率限制，测试验证中",
       "occurrence": 0,
       "target": "Device Dimension Limitations + Registration Rate Limiting, Under Validation in the Test Environment",
-      "context": "td @ line 257"
+      "context": "td @ line 256"
     },
     {
       "id": "u_b89932f2e2b4e698",
@@ -626,7 +626,7 @@
       "source": "免费用户连接流程",
       "occurrence": 0,
       "target": "Free User Connection Process",
-      "context": "td @ line 260"
+      "context": "td @ line 259"
     },
     {
       "id": "u_d6a3a2d20d3beeb1",
@@ -634,7 +634,7 @@
       "source": "修复中",
       "occurrence": 0,
       "target": "Under Repair",
-      "context": "span.status-badge.status-default @ line 261"
+      "context": "span.status-badge.status-default @ line 260"
     },
     {
       "id": "u_826c1cc43b246dbf",
@@ -642,7 +642,7 @@
       "source": "计时器、会话重置、试用时长计算等问题修复推进中",
       "occurrence": 0,
       "target": "Timer, Session Reset, and Trial Duration Calculation Issues Under Repair",
-      "context": "td @ line 262"
+      "context": "td @ line 261"
     },
     {
       "id": "u_ec8254478642e23a",
@@ -650,7 +650,7 @@
       "source": "付款页面重复支付风险",
       "occurrence": 0,
       "target": "Payment Page Duplicate Payment Risk",
-      "context": "td @ line 265"
+      "context": "td @ line 264"
     },
     {
       "id": "u_4d2f5eeadf601239",
@@ -658,7 +658,7 @@
       "source": "修复中",
       "occurrence": 1,
       "target": "Under Repair",
-      "context": "span.status-badge.status-default @ line 266"
+      "context": "span.status-badge.status-default @ line 265"
     },
     {
       "id": "u_215dcaa368407e11",
@@ -666,7 +666,7 @@
       "source": "付款成功后页面自动关闭逻辑，本周内完成",
       "occurrence": 0,
       "target": "Payment Success Page Auto-Closing Logic, to be Completed within This Week",
-      "context": "td @ line 267"
+      "context": "td @ line 266"
     },
     {
       "id": "u_1a976d025ca265a0",
@@ -674,7 +674,7 @@
       "source": "应用稳定性深度修复",
       "occurrence": 0,
       "target": "Deep Application Stability Repair",
-      "context": "td @ line 270"
+      "context": "td @ line 269"
     },
     {
       "id": "u_6a15e8bc8c2ba8f1",
@@ -682,7 +682,7 @@
       "source": "修复中",
       "occurrence": 2,
       "target": "Under Repair",
-      "context": "span.status-badge.status-default @ line 271"
+      "context": "span.status-badge.status-default @ line 270"
     },
     {
       "id": "u_fe21df33febee96b",
@@ -690,7 +690,7 @@
       "source": "AI审查发现的崩溃风险（内存泄漏、并发问题）逐项修复中",
       "occurrence": 0,
       "target": "AI Review-Found Crash Risks (Memory Leaks, Concurrency Issues) Under Repair",
-      "context": "td @ line 272"
+      "context": "td @ line 271"
     },
     {
       "id": "u_0fd14ea5237c2495",
@@ -698,7 +698,7 @@
       "source": "测试环境自动构建（CI/CD）",
       "occurrence": 0,
       "target": "Automated Build Environment in the Test Environment (CI/CD)",
-      "context": "td @ line 275"
+      "context": "td @ line 274"
     },
     {
       "id": "u_45a5ca8553db58b0",
@@ -706,7 +706,7 @@
       "source": "已上线",
       "occurrence": 1,
       "target": "Live",
-      "context": "span.status-badge.status-green @ line 276"
+      "context": "span.status-badge.status-green @ line 275"
     },
     {
       "id": "u_767a6304adcb6aff",
@@ -714,7 +714,7 @@
       "source": "提交即自动构建推送，缩短测试版本交付时间",
       "occurrence": 0,
       "target": "(Automated Build and Push Upon Submission Shortens Test Version Delivery Time)",
-      "context": "td @ line 277"
+      "context": "td @ line 276"
     },
     {
       "id": "u_c5adc277c56ba37a",
@@ -722,7 +722,7 @@
       "source": "后台节点管理自动化",
       "occurrence": 0,
       "target": "Automated back office VPN node management",
-      "context": "td @ line 280"
+      "context": "td @ line 279"
     },
     {
       "id": "u_8f6920e8b0848f0e",
@@ -730,7 +730,7 @@
       "source": "部分完成",
       "occurrence": 0,
       "target": "Partially Completed",
-      "context": "span.status-badge.status-default @ line 281"
+      "context": "span.status-badge.status-default @ line 280"
     },
     {
       "id": "u_8e5fff131493cbff",
@@ -738,7 +738,7 @@
       "source": "节点自动分配与到期管理已完成；其余功能推至下阶段",
       "occurrence": 0,
       "target": "VPN node Automatic Allocation and Expiry Management Completed; Other Features Pushed to the Next Phase",
-      "context": "td @ line 282"
+      "context": "td @ line 281"
     },
     {
       "id": "u_4fee554ce96644d9",
@@ -746,7 +746,7 @@
       "source": "节点告警智能化（误报过滤）",
       "occurrence": 0,
       "target": "Smart VPN node Alarm (False Alarm Filtering)",
-      "context": "td @ line 285"
+      "context": "td @ line 284"
     },
     {
       "id": "u_7410dedc5022366e",
@@ -754,7 +754,7 @@
       "source": "规划中",
       "occurrence": 0,
       "target": "Planning",
-      "context": "span.status-badge.status-default @ line 286"
+      "context": "span.status-badge.status-default @ line 285"
     },
     {
       "id": "u_af16f0f5a34c49a1",
@@ -762,7 +762,7 @@
       "source": "多次核验 + 负载数据告警方案，本阶段内启动",
       "occurrence": 0,
       "target": "Multiple Verification + Load Data Alert Scheme, to be Activated within This Phase",
-      "context": "td @ line 287"
+      "context": "td @ line 286"
     },
     {
       "id": "u_f844a4abd0b58938",
@@ -770,7 +770,7 @@
       "source": "QA回归测试（进行中）",
       "occurrence": 0,
       "target": "(Under Regression Testing)",
-      "context": "td @ line 290"
+      "context": "td @ line 289"
     },
     {
       "id": "u_5491a3df0065ecef",
@@ -778,7 +778,7 @@
       "source": "进行中",
       "occurrence": 1,
       "target": "In Progress",
-      "context": "span.status-badge.status-default @ line 291"
+      "context": "span.status-badge.status-default @ line 290"
     },
     {
       "id": "u_7106ec66b4082dcc",
@@ -786,7 +786,7 @@
       "source": "双团队已发现30项缺陷 + 15项优化，开发与QA紧密协作，逐版本修复复测",
       "occurrence": 0,
       "target": "Two teams have identified 30 defects and 15 optimizations. Development and QA are closely collaborating to fix and retest versions.",
-      "context": "td @ line 292"
+      "context": "td @ line 291"
     },
     {
       "id": "u_2fb0fca447834730",
@@ -794,7 +794,7 @@
       "source": "QA最终签核（上线门控）",
       "occurrence": 0,
       "target": "QA Final Approval (Go-Live Gate)",
-      "context": "td @ line 295"
+      "context": "td @ line 294"
     },
     {
       "id": "u_21f5b749c000b23a",
@@ -802,7 +802,7 @@
       "source": "待台湾QA返岗",
       "occurrence": 0,
       "target": "Taiwan QA needs to return to work",
-      "context": "span.status-badge.status-yellow @ line 296"
+      "context": "span.status-badge.status-yellow @ line 295"
     },
     {
       "id": "u_2e67ee759698f8db",
@@ -810,7 +810,7 @@
       "source": "正式版须台湾QA与马来西亚QA双方联合签核后方可提交",
       "occurrence": 0,
       "target": "Both Taiwan and Malaysia QA need to jointly approve the final version before submission.",
-      "context": "td @ line 297"
+      "context": "td @ line 296"
     },
     {
       "id": "u_84bd33ba905c6a49",
@@ -818,7 +818,7 @@
       "source": "Arrowfish正式版上线",
       "occurrence": 0,
       "target": "Arrowfish Final Version Released",
-      "context": "strong @ line 300 · surrounding text: Arrowfish正式版上线 （Google Play + 生产环境）"
+      "context": "strong @ line 299 · surrounding text: Arrowfish正式版上线 （Google Play + 生产环境）"
     },
     {
       "id": "u_cd752b0f48971066",
@@ -826,7 +826,7 @@
       "source": "（Google Play + 生产环境）",
       "occurrence": 0,
       "target": "(Google Play + Production Environment)",
-      "context": "td @ line 300 · surrounding text: Arrowfish正式版上线 （Google Play + 生产环境）"
+      "context": "td @ line 299 · surrounding text: Arrowfish正式版上线 （Google Play + 生产环境）"
     },
     {
       "id": "u_e56862041b6c393a",
@@ -834,7 +834,7 @@
       "source": "目标4月底",
       "occurrence": 0,
       "target": "End of April",
-      "context": "span.status-badge.status-yellow @ line 301"
+      "context": "span.status-badge.status-yellow @ line 300"
     },
     {
       "id": "u_8d6ce2ebcb4e62d4",
@@ -842,7 +842,7 @@
       "source": "QA双方签核后提交Play，同步部署生产环境（含所有后端修复）",
       "occurrence": 0,
       "target": "Submit to Play after both QA teams approve and deploy in production environment (including all backend fixes).",
-      "context": "td @ line 302"
+      "context": "td @ line 301"
     },
     {
       "id": "u_c1df68f8d3e3cb5c",
@@ -850,7 +850,7 @@
       "source": "本周最新版本（v2.0.0起共6次迭代）",
       "occurrence": 0,
       "target": "Latest version of this week (v2.0.0 onwards with 6 iterations)",
-      "context": "div.score-label @ line 312"
+      "context": "div.score-label @ line 311"
     },
     {
       "id": "u_2bda180762bdaa39",
@@ -858,7 +858,7 @@
       "source": "QA发现缺陷（双团队，修复推进中）",
       "occurrence": 0,
       "target": "QA has found defects (both teams) and is working on them.",
-      "context": "div.score-label @ line 316"
+      "context": "div.score-label @ line 315"
     },
     {
       "id": "u_c20bc974da922e59",
@@ -866,7 +866,7 @@
       "source": "功能优化项（双团队发现，处理中）",
       "occurrence": 0,
       "target": "Optimization items have been identified by both teams and are being handled.",
-      "context": "div.score-label @ line 320"
+      "context": "div.score-label @ line 319"
     },
     {
       "id": "u_57d6308a23168d75",
@@ -874,7 +874,7 @@
       "source": "4月底",
       "occurrence": 0,
       "target": "End of April",
-      "context": "div.score-number @ line 323"
+      "context": "div.score-number @ line 322"
     },
     {
       "id": "u_0caef0cb34c0aad2",
@@ -882,7 +882,7 @@
       "source": "正式版目标上线",
       "occurrence": 0,
       "target": "Target for Final Version Release",
-      "context": "div.score-label @ line 324"
+      "context": "div.score-label @ line 323"
     },
     {
       "id": "u_c5353ab6211c66c1",
@@ -890,7 +890,7 @@
       "source": "开发与QA紧密协作",
       "occurrence": 0,
       "target": "Both development and QA are collaborating closely.",
-      "context": "div @ line 328"
+      "context": "div @ line 327"
     },
     {
       "id": "u_82eee83ec2dd4e04",
@@ -898,7 +898,7 @@
       "source": "本阶段开发团队与台湾、马来西亚两地QA保持高频协作——QA发现问题、开发当天定位修复、发布新版本、QA立即复测，形成快速闭环。\n                    45项问题（30缺陷 + 15优化）反映的是测试覆盖全面，而非产品不稳定；从v2.0.0到v2.0.6的6次迭代，每一版都是QA确认改善后才继续推进。\n                    用户在正式版上线后将感受到的提升：",
       "occurrence": 0,
       "target": "During this sprint, the development team maintained high-frequency collaboration with QA teams in Taiwan and Malaysia — issues were identified by QA, fixed on the same day, new versions released, and QA immediately retested. The 45 reported issues (30 defects + 15 optimizations) reflect comprehensive test coverage rather than product instability; from v2.0.0 to v2.0.6, six iterations have been completed, each version was only advanced after QA confirmed improvements. Users will experience enhanced performance upon the official release.",
-      "context": "div @ line 329"
+      "context": "div @ line 328"
     },
     {
       "id": "u_e99f2cf5375bf85e",
@@ -906,7 +906,7 @@
       "source": "启动更快、连接更稳定、付款流程顺畅、试用体验一致可靠。",
       "occurrence": 0,
       "target": "Faster start-up, more stable connections, smoother payment flows, and consistent reliability in the trial experience.",
-      "context": "strong @ line 332 · surrounding text: 用户在正式版上线后将感受到的提升： 启动更快、连接更稳定、付款流程顺畅、试用体验一致可靠。"
+      "context": "strong @ line 331 · surrounding text: 用户在正式版上线后将感受到的提升： 启动更快、连接更稳定、付款流程顺畅、试用体验一致可靠。"
     },
     {
       "id": "u_7c6b8283e2e33286",
@@ -914,7 +914,7 @@
       "source": "阻塞与延迟",
       "occurrence": 0,
       "target": "Blockages and Delays",
-      "context": "h2.section-heading @ line 339"
+      "context": "h2.section-heading @ line 338"
     },
     {
       "id": "u_b37bacb5b36ddf44",
@@ -922,7 +922,7 @@
       "source": "发布时间调整至4月底 — QA双团队验收门控",
       "occurrence": 0,
       "target": "Release scheduled for late April — dual QA acceptance gating",
-      "context": "div.finding-title.risk @ line 343"
+      "context": "div.finding-title.risk @ line 342"
     },
     {
       "id": "u_e8171a752a5794ce",
@@ -930,7 +930,7 @@
       "source": "Arrowfish正式版须同时通过台湾QA与马来西亚QA两方验收确认方可上线。台湾QA目前休假中，联合回归测试须等其返岗后启动；此外，本周代码审查发现遗留代码中额外的崩溃风险，这些问题必须修复并重新测试方可提交。团队决定以全面验收为优先，4月底为目标上线时间——正式版上线后应达到零崩溃标准，而非上线后再持续处理用户投诉。",
       "occurrence": 0,
       "target": "The Arrowfish formal version must pass both Taiwan and Malaysia QA to go live. Currently, the Taiwan QA is on leave; joint regression testing will commence upon their return. Additionally, code reviews this week identified additional crash risks in legacy code that need fixing before retesting can be conducted. The team prioritizes comprehensive acceptance testing with a target release date of late April — zero crashes post-release to avoid ongoing user complaints.",
-      "context": "div.finding-content @ line 344"
+      "context": "div.finding-content @ line 343"
     },
     {
       "id": "u_b69406ee67fe8cb0",
@@ -938,7 +938,7 @@
       "source": "Google Play 提交",
       "occurrence": 0,
       "target": "Google Play Submission",
-      "context": "strong @ line 351 · surrounding text: Google Play 提交 ：台湾QA返岗 → 联合回归 → 双方通过 → 提交，目标4月底完成"
+      "context": "strong @ line 350 · surrounding text: Google Play 提交 ：台湾QA返岗 → 联合回归 → 双方通过 → 提交，目标4月底完成"
     },
     {
       "id": "u_b56328570cb32d93",
@@ -946,7 +946,7 @@
       "source": "：台湾QA返岗 → 联合回归 → 双方通过 → 提交，目标4月底完成",
       "occurrence": 0,
       "target": "- Taiwan QA returns to work → Joint regression testing → Both teams approve → Submit, target end of April.",
-      "context": "li @ line 351 · surrounding text: Google Play 提交 ：台湾QA返岗 → 联合回归 → 双方通过 → 提交，目标4月底完成"
+      "context": "li @ line 350 · surrounding text: Google Play 提交 ：台湾QA返岗 → 联合回归 → 双方通过 → 提交，目标4月底完成"
     },
     {
       "id": "u_3d793dbe913ff7c1",
@@ -954,7 +954,7 @@
       "source": "正式版部署",
       "occurrence": 0,
       "target": "Deployment of Final Version",
-      "context": "strong @ line 352 · surrounding text: 正式版部署 ：与Play提交同步，第1阶段所有后端修复一并上线"
+      "context": "strong @ line 351 · surrounding text: 正式版部署 ：与Play提交同步，第1阶段所有后端修复一并上线"
     },
     {
       "id": "u_1cf88b9369aae100",
@@ -962,7 +962,7 @@
       "source": "：与Play提交同步，第1阶段所有后端修复一并上线",
       "occurrence": 0,
       "target": "Backend fixes from Sprint 1 will go live in tandem with Play submission",
-      "context": "li @ line 352 · surrounding text: 正式版部署 ：与Play提交同步，第1阶段所有后端修复一并上线"
+      "context": "li @ line 351 · surrounding text: 正式版部署 ：与Play提交同步，第1阶段所有后端修复一并上线"
     },
     {
       "id": "u_4f4c0474c14e40bf",
@@ -970,7 +970,7 @@
       "source": "合规事项",
       "occurrence": 0,
       "target": "Compliance Matters",
-      "context": "strong @ line 353 · surrounding text: 合规事项 ：瑞士注册号码及FFF品牌支付通道办理中，由项目对接方跟进，不影响Arrowfish发布"
+      "context": "strong @ line 352 · surrounding text: 合规事项 ：瑞士注册号码及FFF品牌支付通道办理中，由项目对接方跟进，不影响Arrowfish发布"
     },
     {
       "id": "u_19cdfe8791391a01",
@@ -978,7 +978,7 @@
       "source": "：瑞士注册号码及FFF品牌支付通道办理中，由项目对接方跟进，不影响Arrowfish发布",
       "occurrence": 0,
       "target": "- Registration of Swiss phone numbers and FFF payment channel is in progress, handled by the project liaison. This does not affect Arrowfish release.",
-      "context": "li @ line 353 · surrounding text: 合规事项 ：瑞士注册号码及FFF品牌支付通道办理中，由项目对接方跟进，不影响Arrowfish发布"
+      "context": "li @ line 352 · surrounding text: 合规事项 ：瑞士注册号码及FFF品牌支付通道办理中，由项目对接方跟进，不影响Arrowfish发布"
     },
     {
       "id": "u_52f81556e945807e",
@@ -986,7 +986,7 @@
       "source": "下一步计划",
       "occurrence": 0,
       "target": "Next Steps",
-      "context": "h2.section-heading @ line 359"
+      "context": "h2.section-heading @ line 358"
     },
     {
       "id": "u_12ff710397496541",
@@ -994,7 +994,7 @@
       "source": "本周完成",
       "occurrence": 0,
       "target": "Completed this week",
-      "context": "div.milestone-date @ line 362"
+      "context": "div.milestone-date @ line 361"
     },
     {
       "id": "u_792ec8efb9cb3afb",
@@ -1002,7 +1002,7 @@
       "source": "完成所有修复项测试环境验证",
       "occurrence": 0,
       "target": "All fix items tested and verified in the test environment",
-      "context": "strong @ line 363 · surrounding text: 完成所有修复项测试环境验证 — 专属IP付款、免费用户流程、稳定性修复全部在测试环境确认通过，形成最终候选版本"
+      "context": "strong @ line 362 · surrounding text: 完成所有修复项测试环境验证 — 专属IP付款、免费用户流程、稳定性修复全部在测试环境确认通过，形成最终候选版本"
     },
     {
       "id": "u_9df6380e3fb95469",
@@ -1010,7 +1010,7 @@
       "source": "— 专属IP付款、免费用户流程、稳定性修复全部在测试环境确认通过，形成最终候选版本",
       "occurrence": 0,
       "target": "- Complete all repair items and verify them in the test environment, form a final candidate version for next step.",
-      "context": "div.milestone-text @ line 363 · surrounding text: 完成所有修复项测试环境验证 — 专属IP付款、免费用户流程、稳定性修复全部在测试环境确认通过，形成最终候选版本"
+      "context": "div.milestone-text @ line 362 · surrounding text: 完成所有修复项测试环境验证 — 专属IP付款、免费用户流程、稳定性修复全部在测试环境确认通过，形成最终候选版本"
     },
     {
       "id": "u_a7f6272af86a79dd",
@@ -1018,7 +1018,7 @@
       "source": "下周",
       "occurrence": 0,
       "target": "- Next week",
-      "context": "div.milestone-date @ line 366"
+      "context": "div.milestone-date @ line 365"
     },
     {
       "id": "u_186cb2437917dbb5",
@@ -1026,7 +1026,7 @@
       "source": "双团队QA联合回归测试",
       "occurrence": 0,
       "target": "- Joint QA regression testing for the final version.",
-      "context": "strong @ line 367 · surrounding text: 双团队QA联合回归测试 — 台湾QA返岗后与马来西亚QA同步启动，覆盖第2阶段全部修复项；后台节点管理自动化核心功能上线，剩余部分推至下阶段"
+      "context": "strong @ line 366 · surrounding text: 双团队QA联合回归测试 — 台湾QA返岗后与马来西亚QA同步启动，覆盖第2阶段全部修复项；后台节点管理自动化核心功能上线，剩余部分推至下阶段"
     },
     {
       "id": "u_703bb66db995bf0b",
@@ -1034,7 +1034,7 @@
       "source": "— 台湾QA返岗后与马来西亚QA同步启动，覆盖第2阶段全部修复项；后台节点管理自动化核心功能上线，剩余部分推至下阶段",
       "occurrence": 0,
       "target": "Upon Taiwan QA’s return, joint regression testing with Malaysia QA will commence for Sprint 2 fixes; back office VPN node management automation core function goes live, with remaining parts deferred to subsequent phases.",
-      "context": "div.milestone-text @ line 367 · surrounding text: 双团队QA联合回归测试 — 台湾QA返岗后与马来西亚QA同步启动，覆盖第2阶段全部修复项；后台节点管理自动化核心功能上线，剩余部分推至下阶段"
+      "context": "div.milestone-text @ line 366 · surrounding text: 双团队QA联合回归测试 — 台湾QA返岗后与马来西亚QA同步启动，覆盖第2阶段全部修复项；后台节点管理自动化核心功能上线，剩余部分推至下阶段"
     },
     {
       "id": "u_224025c2d63166ff",
@@ -1042,7 +1042,7 @@
       "source": "4月底",
       "occurrence": 1,
       "target": "Q4",
-      "context": "div.milestone-date @ line 370"
+      "context": "div.milestone-date @ line 369"
     },
     {
       "id": "u_f647715585e7b3f7",
@@ -1050,7 +1050,7 @@
       "source": "Arrowfish正式版上线",
       "occurrence": 1,
       "target": "Release Arrowfish formal version",
-      "context": "strong @ line 371 · surrounding text: Arrowfish正式版上线 — QA双方通过后提交Google Play；生产环境全量部署（含第1、2阶段所有修复）；生产自动化构建上线（版本强制/可选更新配置自动同步后台）"
+      "context": "strong @ line 370 · surrounding text: Arrowfish正式版上线 — QA双方通过后提交Google Play；生产环境全量部署（含第1、2阶段所有修复）；生产自动化构建上线（版本强制/可选更新配置自动同步后台）"
     },
     {
       "id": "u_dfb19e5dc7f6d1f8",
@@ -1058,7 +1058,7 @@
       "source": "— QA双方通过后提交Google Play；生产环境全量部署（含第1、2阶段所有修复）；生产自动化构建上线（版本强制/可选更新配置自动同步后台）",
       "occurrence": 0,
       "target": "Submit to Google Play after dual QA approval; full production deployment (including fixes from Phases 1 and 2); live automation build goes online (version mandatory/optional updates automatically sync with back office)",
-      "context": "div.milestone-text @ line 371 · surrounding text: Arrowfish正式版上线 — QA双方通过后提交Google Play；生产环境全量部署（含第1、2阶段所有修复）；生产自动化构建上线（版本强制/可选更新配置自动同步后台）"
+      "context": "div.milestone-text @ line 370 · surrounding text: Arrowfish正式版上线 — QA双方通过后提交Google Play；生产环境全量部署（含第1、2阶段所有修复）；生产自动化构建上线（版本强制/可选更新配置自动同步后台）"
     },
     {
       "id": "u_2f60b00cb038b2a7",
@@ -1066,7 +1066,7 @@
       "source": "中长期规划",
       "occurrence": 0,
       "target": "Long-term Planning",
-      "context": "h2.section-heading @ line 378"
+      "context": "h2.section-heading @ line 377"
     },
     {
       "id": "u_eb3152b4986b8abb",
@@ -1074,7 +1074,7 @@
       "source": "以下为项目主要里程碑，按优先级顺序排列。Arrowfish正式版上线是所有后续计划的前提，第3阶段已顺延至正式版交付后启动。",
       "occurrence": 0,
       "target": "The following are the project’s key milestones, prioritized. The Arrowfish formal version release is a prerequisite for all subsequent plans; Sprint 3 has been deferred until after the formal version delivery.",
-      "context": "div.section-body @ line 379"
+      "context": "div.section-body @ line 378"
     },
     {
       "id": "u_3701678dd0624feb",
@@ -1082,7 +1082,7 @@
       "source": "优先级",
       "occurrence": 0,
       "target": "Priority",
-      "context": "th @ line 385"
+      "context": "th @ line 384"
     },
     {
       "id": "u_b586ba9f2c6fbd16",
@@ -1090,7 +1090,7 @@
       "source": "里程碑",
       "occurrence": 0,
       "target": "Milestone",
-      "context": "th @ line 386"
+      "context": "th @ line 385"
     },
     {
       "id": "u_b835d5874ace23bb",
@@ -1098,7 +1098,7 @@
       "source": "目标时间",
       "occurrence": 0,
       "target": "Target Time",
-      "context": "th @ line 387"
+      "context": "th @ line 386"
     },
     {
       "id": "u_3468d27e413f39eb",
@@ -1106,7 +1106,7 @@
       "source": "Arrowfish 正式版上线",
       "occurrence": 0,
       "target": "Release Arrowfish formal version",
-      "context": "strong @ line 393 · surrounding text: Arrowfish 正式版上线 — Google Play提交 + 生产环境部署"
+      "context": "strong @ line 392 · surrounding text: Arrowfish 正式版上线 — Google Play提交 + 生产环境部署"
     },
     {
       "id": "u_80c1e0d6394393d2",
@@ -1114,7 +1114,7 @@
       "source": "— Google Play提交 + 生产环境部署",
       "occurrence": 0,
       "target": "Submit to Google Play; full production deployment",
-      "context": "td @ line 393 · surrounding text: Arrowfish 正式版上线 — Google Play提交 + 生产环境部署"
+      "context": "td @ line 392 · surrounding text: Arrowfish 正式版上线 — Google Play提交 + 生产环境部署"
     },
     {
       "id": "u_77b7858dfddcf955",
@@ -1122,7 +1122,7 @@
       "source": "2026年4月底",
       "occurrence": 0,
       "target": "End of April 2026",
-      "context": "strong @ line 394"
+      "context": "strong @ line 393"
     },
     {
       "id": "u_3819d9679858f856",
@@ -1130,7 +1130,7 @@
       "source": "生产自动化构建上线 — 版本更新强制/可选配置自动同步后台",
       "occurrence": 0,
       "target": "Automated production build release — version update mandatory/optional configuration automatic synchronization to the Back Office",
-      "context": "td @ line 398"
+      "context": "td @ line 397"
     },
     {
       "id": "u_d8c6f46ec4fc414c",
@@ -1138,7 +1138,7 @@
       "source": "2026年4月底",
       "occurrence": 1,
       "target": "By end of April 2026",
-      "context": "td @ line 399"
+      "context": "td @ line 398"
     },
     {
       "id": "u_e070d9f143a86795",
@@ -1146,7 +1146,7 @@
       "source": "第3阶段启动（Arrowfish正式版上线后）— 节点合规配置、后台自动化完善",
       "occurrence": 0,
       "target": "Sprint 3 launch (after Arrowfish official release) — VPN node compliance configuration, Back Office automation refinement",
-      "context": "td @ line 403"
+      "context": "td @ line 402"
     },
     {
       "id": "u_29143139f303a6c4",
@@ -1154,7 +1154,7 @@
       "source": "2026年5月初起",
       "occurrence": 0,
       "target": "Starting from early May 2026",
-      "context": "td @ line 404"
+      "context": "td @ line 403"
     },
     {
       "id": "u_67351b8e8cbf6c1a",
@@ -1162,7 +1162,7 @@
       "source": "FFF 新产品底层基础完成，主应用开发正式启动",
       "occurrence": 0,
       "target": "FFF new product foundational layer complete, main application development officially initiated",
-      "context": "td @ line 408"
+      "context": "td @ line 407"
     },
     {
       "id": "u_b96ae33ef073f915",
@@ -1170,7 +1170,7 @@
       "source": "第3阶段",
       "occurrence": 0,
       "target": "Sprint 3",
-      "context": "td @ line 409"
+      "context": "td @ line 408"
     },
     {
       "id": "u_554bce4ed23b529d",
@@ -1178,7 +1178,7 @@
       "source": "FFF 正式版发布（Android / Windows / iOS）",
       "occurrence": 0,
       "target": "FFF official release (Android / Windows / iOS)",
-      "context": "td @ line 413"
+      "context": "td @ line 412"
     },
     {
       "id": "u_fcef2c50d134a01d",
@@ -1186,7 +1186,7 @@
       "source": "第3–6阶段",
       "occurrence": 0,
       "target": "Sprints 3–6",
-      "context": "td @ line 414"
+      "context": "td @ line 413"
     },
     {
       "id": "u_cc1975278fc5a801",
@@ -1194,7 +1194,7 @@
       "source": "第3阶段因Arrowfish发布顺延而推迟启动。FFF新产品底层技术储备工作目前已在并行推进，不影响Arrowfish交付节奏。",
       "occurrence": 0,
       "target": "Due to the release of Arrowfish, Sprint 3 has been postponed. The foundational technology reserve work for FFF new product is currently being carried out in parallel without affecting the delivery schedule of Arrowfish.",
-      "context": "div.section-note @ line 418"
+      "context": "div.section-note @ line 417"
     },
     {
       "id": "u_5ea18b278031d72c",
@@ -1202,7 +1202,7 @@
       "source": "财务影响",
       "occurrence": 0,
       "target": "Financial Impact",
-      "context": "h2.section-heading @ line 425"
+      "context": "h2.section-heading @ line 424"
     },
     {
       "id": "u_a1e2c2d8964ba6b4",
@@ -1210,7 +1210,7 @@
       "source": "专属IP营收通道 — 修复后可正常接收付款",
       "occurrence": 0,
       "target": "Exclusive IP Revenue Channel — Payment issues resolved, can now receive payments normally.",
-      "context": "div.finding-title.resolved @ line 428"
+      "context": "div.finding-title.resolved @ line 427"
     },
     {
       "id": "u_d793077c728a7987",
@@ -1218,7 +1218,7 @@
       "source": "当前月收入约¥35,000，94%来自支付宝与微信。专属IP属高单价品类，付款修复后将直接新增该营收来源，验证进行中。",
       "occurrence": 0,
       "target": "Current monthly income is approximately ¥35,000, with 94% coming from Alipay and WeChat. The Exclusive IP belongs to a high-priced category; after payment issues are resolved, it will directly add this revenue source for verification.",
-      "context": "div.finding-content @ line 429"
+      "context": "div.finding-content @ line 428"
     },
     {
       "id": "u_94b73e446c287b7e",
@@ -1226,7 +1226,7 @@
       "source": "免费节点带宽滥用成本 — 防护体系验证中",
       "occurrence": 0,
       "target": "Cost of Bandwidth Abuse on Free VPN nodes — Verification in progress",
-      "context": "div.finding-title.resolved @ line 434"
+      "context": "div.finding-title.resolved @ line 433"
     },
     {
       "id": "u_2175daa4cd52d0e9",
@@ -1234,7 +1234,7 @@
       "source": "每日约400–500个新注册，部分为无转化价值的刷号账号，每个高频滥用账号每月带宽成本约¥700–¥1,000。五层防护机制上线后，带宽资源将集中服务真实付费潜力用户，预计同步提升0.3–0.5个百分点付费转化率。",
       "occurrence": 0,
       "target": "Approximately 400–500 new registrations daily, some from valueless bot accounts. Each high-frequency abuse account incurs a monthly bandwidth cost of RMB 700–1,000. After the five-layer protection mechanism is released, bandwidth resources will be concentrated on genuine paying potential users, expected to boost the paying conversion rate by 0.3–0.5 percentage points.",
-      "context": "div.finding-content @ line 435"
+      "context": "div.finding-content @ line 434"
     },
     {
       "id": "u_4a6a769561b02447",
@@ -1242,7 +1242,7 @@
       "source": "重复扣款风险 — 修复验证中",
       "occurrence": 0,
       "target": "Risk of Duplicate Deductions — Verification in progress",
-      "context": "div.finding-title @ line 440"
+      "context": "div.finding-title @ line 439"
     },
     {
       "id": "u_184b155d25a0d769",
@@ -1250,7 +1250,7 @@
       "source": "付款页面偶发不关闭问题存在重复扣款隐患。当前月交易量约5,000笔，修复上线后消除该财务风险与潜在退款纠纷。",
       "occurrence": 0,
       "target": "Occasional failure in payment page closure poses a risk of duplicate charges. With current monthly transaction volume at approximately 5,000 transactions, the fix upon release will eliminate this financial risk and potential refund disputes.",
-      "context": "div.finding-content @ line 441"
+      "context": "div.finding-content @ line 440"
     },
     {
       "id": "u_087bdceeb448244b",
@@ -1258,7 +1258,7 @@
       "source": "报告日期：2026年4月17日 · 下次更新：2026年4月24日（第2周收尾） · 阶段截止：2026年4月底",
       "occurrence": 0,
       "target": "Report date: April 17, 2026 · Next update: April 24, 2026 (end of Week 2) · Sprint end: End of April 2026",
-      "context": "div.report-footer @ line 449"
+      "context": "div.report-footer @ line 448"
     }
   ],
   "blocks": {

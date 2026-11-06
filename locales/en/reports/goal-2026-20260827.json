@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "reportId": "goal-2026-20260827",
   "sourceFile": "Stakeholder/Goal-2026/20260827_goals.html",
-  "sourceVersion": "37d11d83eba50207",
+  "sourceVersion": "4d8dcc74681a75ec",
   "units": [
     {
       "id": "u_df2028facde0314a",
@@ -27,7 +27,7 @@
       "source": "项目进度报告",
       "occurrence": 0,
       "target": "Progress Report",
-      "context": "h1 @ line 169"
+      "context": "h1 @ line 168"
     },
     {
       "id": "u_f4dfcfc6993ed6fd",
@@ -35,7 +35,7 @@
       "source": "资料截至 2026-11-05 · 下次更新 11-17（周二），届时补齐各目标的承诺日期",
       "occurrence": 0,
       "target": "Data through 2026-11-05 · Next update 11-17 (Tuesday), which will add committed dates for every goal",
-      "context": "p.period.num @ line 170"
+      "context": "p.period.num @ line 169"
     },
     {
       "id": "u_180b77367050a73a",
@@ -43,7 +43,7 @@
       "source": "选择项目",
       "occurrence": 0,
       "target": "Select project",
-      "context": "div.switch @ line 172",
+      "context": "div.switch @ line 171",
       "attribute": "aria-label"
     },
     {
@@ -52,7 +52,7 @@
       "source": "Android 3.9.48 于 11-04 通过 QA 并提交 Google Play 审核（原定 11-03，QA 临时发现问题，当天修复）。10-14 迁至 AWS 后业务已恢复。审核通过后决定维护日期，部署后端到正式环境；灾备演练仍待安排。",
       "occurrence": 0,
       "target": "Android 3.9.48 passed QA on 11-04 and was submitted to Google Play review (originally 11-03; QA found an issue at the last minute and it was fixed the same day). The business recovered after the move to AWS on 10-14. After approval we set a maintenance date and deploy the backend to production; the disaster recovery drill is still to be scheduled.",
-      "context": "p.headline @ line 180"
+      "context": "p.headline @ line 179"
     },
     {
       "id": "u_b8202e08264e4002",
@@ -60,7 +60,7 @@
       "source": "21 个目标：已完成 2，进行中 18，待开发 1",
       "occurrence": 0,
       "target": "21 goals: 2 completed, 18 in progress, 1 planned",
-      "context": "div.bar @ line 181",
+      "context": "div.bar @ line 180",
       "attribute": "aria-label"
     },
     {
@@ -69,7 +69,7 @@
       "source": "已完成",
       "occurrence": 0,
       "target": "Completed",
-      "context": "span.c-done @ line 182 · surrounding text: 2 已完成 18 进行中 1 待开发 5 需要关注"
+      "context": "span.c-done @ line 181 · surrounding text: 2 已完成 18 进行中 1 待开发 5 需要关注"
     },
     {
       "id": "u_d576f6c9ccdccba1",
@@ -77,7 +77,7 @@
       "source": "进行中",
       "occurrence": 0,
       "target": "In Progress",
-      "context": "span.c-doing @ line 182 · surrounding text: 2 已完成 18 进行中 1 待开发 5 需要关注"
+      "context": "span.c-doing @ line 181 · surrounding text: 2 已完成 18 进行中 1 待开发 5 需要关注"
     },
     {
       "id": "u_982a4fe46c718f39",
@@ -85,7 +85,7 @@
       "source": "待开发",
       "occurrence": 0,
       "target": "To Be Developed",
-      "context": "span.c-todo @ line 182 · surrounding text: 2 已完成 18 进行中 1 待开发 5 需要关注"
+      "context": "span.c-todo @ line 181 · surrounding text: 2 已完成 18 进行中 1 待开发 5 需要关注"
     },
     {
       "id": "u_587004f2ff2f3f3b",
@@ -93,7 +93,7 @@
       "source": "需要关注",
       "occurrence": 0,
       "target": "Needs Attention",
-      "context": "span.c-late @ line 182 · surrounding text: 2 已完成 18 进行中 1 待开发 5 需要关注"
+      "context": "span.c-late @ line 181 · surrounding text: 2 已完成 18 进行中 1 待开发 5 需要关注"
     },
     {
       "id": "u_7c7da916ccce6eb6",
@@ -101,15 +101,15 @@
       "source": "共 21 个年度目标，按目标数统计，不代表产品完成百分比。",
       "occurrence": 0,
       "target": "21 annual goals in total, counted by goal; not a product completion percentage.",
-      "context": "p.note @ line 183"
+      "context": "p.note @ line 182"
     },
     {
-      "id": "u_530000fb0e44cd5d",
+      "id": "u_182b2c194e4051f8",
       "kind": "text",
-      "source": "下载 Arrowfish 安装包",
+      "source": "下载中心",
       "occurrence": 0,
-      "target": "Download Arrowfish installers",
-      "context": "a.download @ line 184"
+      "target": "Download Center",
+      "context": "a.download @ line 183"
     },
     {
       "id": "u_20a95059c773faf4",
@@ -117,7 +117,7 @@
       "source": "需要你关注与配合",
       "occurrence": 0,
       "target": "Needs Your Attention and Support",
-      "context": "h2 @ line 187 · surrounding text: 需要你关注与配合 4"
+      "context": "h2 @ line 186 · surrounding text: 需要你关注与配合 4"
     },
     {
       "id": "u_7657649b794bfb26",
@@ -125,7 +125,7 @@
       "source": "优先配合",
       "occurrence": 0,
       "target": "Priority coordination",
-      "context": "span.tag.late @ line 190 · surrounding text: 优先配合 生产恢复能力尚未验证 G17"
+      "context": "span.tag.late @ line 189 · surrounding text: 优先配合 生产恢复能力尚未验证 G17"
     },
     {
       "id": "u_cffd7e1371dc827c",
@@ -133,7 +133,7 @@
       "source": "生产恢复能力尚未验证",
       "occurrence": 0,
       "target": "Production recovery capability is not yet verified",
-      "context": "h3 @ line 190 · surrounding text: 优先配合 生产恢复能力尚未验证 G17"
+      "context": "h3 @ line 189 · surrounding text: 优先配合 生产恢复能力尚未验证 G17"
     },
     {
       "id": "u_b8c1cfa6eb09c48a",
@@ -141,7 +141,7 @@
       "source": "10月14日迁到 AWS 恢复了业务，但独立账户备用接入和异地恢复演练仍没有结果。需要安排真实演练窗口并记录恢复结果。",
       "occurrence": 0,
       "target": "Moving to AWS on October 14 restored the business, but independent account backup access and an off-site restore drill still have no result. A real drill window needs to be scheduled and the recovery result recorded.",
-      "context": "p @ line 191"
+      "context": "p @ line 190"
     },
     {
       "id": "u_b7d5f1bf1ff7798e",
@@ -149,7 +149,7 @@
       "source": "发布安排",
       "occurrence": 0,
       "target": "Release schedule",
-      "context": "span.tag.risk @ line 194 · surrounding text: 发布安排 Google 审核通过后定维护日期，部署后端正式环境 G19 · G2"
+      "context": "span.tag.risk @ line 193 · surrounding text: 发布安排 Google 审核通过后定维护日期，部署后端正式环境 G19 · G2"
     },
     {
       "id": "u_91aff35874d4cc96",
@@ -157,7 +157,7 @@
       "source": "Google 审核通过后定维护日期，部署后端正式环境",
       "occurrence": 0,
       "target": "Set a maintenance date after Google approval, then deploy the backend to production",
-      "context": "h3 @ line 194 · surrounding text: 发布安排 Google 审核通过后定维护日期，部署后端正式环境 G19 · G2"
+      "context": "h3 @ line 193 · surrounding text: 发布安排 Google 审核通过后定维护日期，部署后端正式环境 G19 · G2"
     },
     {
       "id": "u_d26586aea5728fd6",
@@ -165,7 +165,7 @@
       "source": "Android 3.9.48 已提交 Google Play 审核。审核通过后决定维护日期并对外公告，在维护时把后端部署到正式环境，取消订阅、推荐人和降级修正随之生效。部署前，定时任务和后台也要升级到 API 使用的共享组件版本。",
       "occurrence": 0,
       "target": "Android 3.9.48 has been submitted to Google Play review. After approval we set and announce a maintenance date, then deploy the backend to production during maintenance, which activates the cancellation, referrer and downgrade fixes. Before deployment, the scheduler and Back Office (BO) must also move to the shared component version used by the API.",
-      "context": "p @ line 195"
+      "context": "p @ line 194"
     },
     {
       "id": "u_fdc3a3f117eafae9",
@@ -173,7 +173,7 @@
       "source": "运营配合",
       "occurrence": 0,
       "target": "Operations support",
-      "context": "span.tag.risk @ line 198 · surrounding text: 运营配合 独享专线／IP 购买后靠人工配置 G2"
+      "context": "span.tag.risk @ line 197 · surrounding text: 运营配合 独享专线／IP 购买后靠人工配置 G2"
     },
     {
       "id": "u_609ea8ddf4062076",
@@ -181,7 +181,7 @@
       "source": "独享专线／IP 购买后靠人工配置",
       "occurrence": 0,
       "target": "Dedicated line / IP purchases rely on manual setup",
-      "context": "h3 @ line 198 · surrounding text: 运营配合 独享专线／IP 购买后靠人工配置 G2"
+      "context": "h3 @ line 197 · surrounding text: 运营配合 独享专线／IP 购买后靠人工配置 G2"
     },
     {
       "id": "u_1b775e82b9708760",
@@ -189,7 +189,7 @@
       "source": "用户付款后有效期立即开始计算，但节点需要运营购买并手动配置，没有备用节点。配得越慢，用户损失的时长越多。建议给运营定一个配置时限。",
       "occurrence": 0,
       "target": "Validity starts as soon as the user pays, but VPN nodes must be bought and set up manually by operations, with no spare VPN nodes. The slower the setup, the more time users lose. We suggest a setup time limit for operations.",
-      "context": "p @ line 199"
+      "context": "p @ line 198"
     },
     {
       "id": "u_6ac46480d9fbbc21",
@@ -197,7 +197,7 @@
       "source": "外部等待",
       "occurrence": 0,
       "target": "External dependency",
-      "context": "span.tag.todo @ line 202 · surrounding text: 外部等待 官网与投放站上线状态未更新 G3"
+      "context": "span.tag.todo @ line 201 · surrounding text: 外部等待 官网与投放站上线状态未更新 G3"
     },
     {
       "id": "u_5b341c0ae808ff31",
@@ -205,7 +205,7 @@
       "source": "官网与投放站上线状态未更新",
       "occurrence": 0,
       "target": "Release status of the official website and ad site not updated",
-      "context": "h3 @ line 202 · surrounding text: 外部等待 官网与投放站上线状态未更新 G3"
+      "context": "h3 @ line 201 · surrounding text: 外部等待 官网与投放站上线状态未更新 G3"
     },
     {
       "id": "u_948e6a7a4b691cdc",
@@ -213,7 +213,7 @@
       "source": "10-09 时主站排定 10月13日上正式环境、投放站自 9月25日等外部检查；11-04 报告没有写这两项的结果。",
       "occurrence": 0,
       "target": "As of 10-09 the main site was scheduled for production on October 13 and the ad site had awaited external review since September 25; the 11-04 report gives no result for either.",
-      "context": "p @ line 203"
+      "context": "p @ line 202"
     },
     {
       "id": "u_09f4fcf87df55ce6",
@@ -221,7 +221,7 @@
       "source": "本期完成 · 10-10 至 11-05",
       "occurrence": 0,
       "target": "Completed This Period · 10-10 to 11-05",
-      "context": "h2 @ line 208 · surrounding text: 本期完成 · 10-10 至 11-05 12"
+      "context": "h2 @ line 207 · surrounding text: 本期完成 · 10-10 至 11-05 12"
     },
     {
       "id": "u_8807fcbfc6ba31ab",
@@ -229,7 +229,7 @@
       "source": "节点恢复检查（本地验证与测试环境部署）",
       "occurrence": 0,
       "target": "VPN node recovery check (local verification and staging deployment)",
-      "context": "span.row-name @ line 211"
+      "context": "span.row-name @ line 210"
     },
     {
       "id": "u_229965aeb4e8f648",
@@ -237,7 +237,7 @@
       "source": "完成",
       "occurrence": 0,
       "target": "Completed",
-      "context": "span @ line 213 · surrounding text: 完成 2026-10-18"
+      "context": "span @ line 212 · surrounding text: 完成 2026-10-18"
     },
     {
       "id": "u_c2af7b29e5a68d47",
@@ -245,7 +245,7 @@
       "source": "主网站仓库整合与测试环境部署",
       "occurrence": 0,
       "target": "Main website repository consolidation and staging deployment",
-      "context": "span.row-name @ line 216"
+      "context": "span.row-name @ line 215"
     },
     {
       "id": "u_35d6c68495023b8f",
@@ -253,7 +253,7 @@
       "source": "完成",
       "occurrence": 1,
       "target": "Completed",
-      "context": "span @ line 218 · surrounding text: 完成 2026-10-11 回滚演练通过；认证购买验收不在其中。"
+      "context": "span @ line 217 · surrounding text: 完成 2026-10-11 回滚演练通过；认证购买验收不在其中。"
     },
     {
       "id": "u_0ee9fe94b0d5380a",
@@ -261,7 +261,7 @@
       "source": "回滚演练通过；认证购买验收不在其中。",
       "occurrence": 0,
       "target": "Rollback drill passed; authenticated purchase acceptance testing was not included.",
-      "context": "span @ line 218 · surrounding text: 完成 2026-10-11 回滚演练通过；认证购买验收不在其中。"
+      "context": "span @ line 217 · surrounding text: 完成 2026-10-11 回滚演练通过；认证购买验收不在其中。"
     },
     {
       "id": "u_7e34a78d9804f3fb",
@@ -269,7 +269,7 @@
       "source": "Windows 5 项契约修正（代码发布）",
       "occurrence": 0,
       "target": "Windows 5 contract fixes (code released)",
-      "context": "span.row-name @ line 221"
+      "context": "span.row-name @ line 220"
     },
     {
       "id": "u_7d9c1b351c2834b1",
@@ -277,7 +277,7 @@
       "source": "完成",
       "occurrence": 2,
       "target": "Completed",
-      "context": "span @ line 223 · surrounding text: 完成 2026-10-11 安装包与实机验收待确认。"
+      "context": "span @ line 222 · surrounding text: 完成 2026-10-11 安装包与实机验收待确认。"
     },
     {
       "id": "u_ce0ba8bab4e284b4",
@@ -285,7 +285,7 @@
       "source": "安装包与实机验收待确认。",
       "occurrence": 0,
       "target": "Installer and real-device acceptance testing to be confirmed.",
-      "context": "span @ line 223 · surrounding text: 完成 2026-10-11 安装包与实机验收待确认。"
+      "context": "span @ line 222 · surrounding text: 完成 2026-10-11 安装包与实机验收待确认。"
     },
     {
       "id": "u_5198fdc31000fc41",
@@ -293,7 +293,7 @@
       "source": "Azure 停机后后端迁至 AWS 恢复",
       "occurrence": 0,
       "target": "Backend moved to AWS and restored after the Azure outage",
-      "context": "span.row-name @ line 226"
+      "context": "span.row-name @ line 225"
     },
     {
       "id": "u_2baaa176a289aa77",
@@ -301,7 +301,7 @@
       "source": "完成",
       "occurrence": 3,
       "target": "Completed",
-      "context": "span @ line 228 · surrounding text: 完成 2026-10-14 约 2.5 小时恢复、无数据丢失为团队报告，非重新测量。"
+      "context": "span @ line 227 · surrounding text: 完成 2026-10-14 约 2.5 小时恢复、无数据丢失为团队报告，非重新测量。"
     },
     {
       "id": "u_e76ffc0f354a8b9c",
@@ -309,7 +309,7 @@
       "source": "约 2.5 小时恢复、无数据丢失为团队报告，非重新测量。",
       "occurrence": 0,
       "target": "About 2.5 hours to recover with no data loss, as reported by the team; not re-measured.",
-      "context": "span @ line 228 · surrounding text: 完成 2026-10-14 约 2.5 小时恢复、无数据丢失为团队报告，非重新测量。"
+      "context": "span @ line 227 · surrounding text: 完成 2026-10-14 约 2.5 小时恢复、无数据丢失为团队报告，非重新测量。"
     },
     {
       "id": "u_a791b88995829c0c",
@@ -317,7 +317,7 @@
       "source": "网站恢复与 2 个落地站生产发布",
       "occurrence": 0,
       "target": "Website recovery and 2 landing sites released to production",
-      "context": "span.row-name @ line 231"
+      "context": "span.row-name @ line 230"
     },
     {
       "id": "u_40235b1d91a8e67f",
@@ -325,7 +325,7 @@
       "source": "完成",
       "occurrence": 4,
       "target": "Completed",
-      "context": "span @ line 233 · surrounding text: 完成 2026-10-15–16 HTTP 冒烟检查通过；登录、购买和视觉验收不在其中。"
+      "context": "span @ line 232 · surrounding text: 完成 2026-10-15–16 HTTP 冒烟检查通过；登录、购买和视觉验收不在其中。"
     },
     {
       "id": "u_c9a016d3e2416a85",
@@ -333,7 +333,7 @@
       "source": "HTTP 冒烟检查通过；登录、购买和视觉验收不在其中。",
       "occurrence": 0,
       "target": "HTTP smoke checks passed; sign-in, purchase and visual acceptance testing were not included.",
-      "context": "span @ line 233 · surrounding text: 完成 2026-10-15–16 HTTP 冒烟检查通过；登录、购买和视觉验收不在其中。"
+      "context": "span @ line 232 · surrounding text: 完成 2026-10-15–16 HTTP 冒烟检查通过；登录、购买和视觉验收不在其中。"
     },
     {
       "id": "u_d66f8aef8ff9f4db",
@@ -341,7 +341,7 @@
       "source": "密钥存储迁移（代码与配置核对）",
       "occurrence": 0,
       "target": "Key storage migration (code and configuration check)",
-      "context": "span.row-name @ line 236"
+      "context": "span.row-name @ line 235"
     },
     {
       "id": "u_abef6469cd32c659",
@@ -349,7 +349,7 @@
       "source": "完成",
       "occurrence": 5,
       "target": "Completed",
-      "context": "span @ line 238 · surrounding text: 完成 2026-10-14–16 服务读取和支付验收另有门槛。"
+      "context": "span @ line 237 · surrounding text: 完成 2026-10-14–16 服务读取和支付验收另有门槛。"
     },
     {
       "id": "u_46e629322dfc3bb2",
@@ -357,7 +357,7 @@
       "source": "服务读取和支付验收另有门槛。",
       "occurrence": 0,
       "target": "Service configuration loading and payment acceptance testing have separate gates.",
-      "context": "span @ line 238 · surrounding text: 完成 2026-10-14–16 服务读取和支付验收另有门槛。"
+      "context": "span @ line 237 · surrounding text: 完成 2026-10-14–16 服务读取和支付验收另有门槛。"
     },
     {
       "id": "u_d5550ce183bddc55",
@@ -365,7 +365,7 @@
       "source": "部署安全加固（测试环境）",
       "occurrence": 0,
       "target": "Deployment security hardening (staging)",
-      "context": "span.row-name @ line 241"
+      "context": "span.row-name @ line 240"
     },
     {
       "id": "u_214c98f7f142eb0e",
@@ -373,7 +373,7 @@
       "source": "完成",
       "occurrence": 6,
       "target": "Completed",
-      "context": "span @ line 243 · surrounding text: 完成 2026-10-30 短期身份、受保护部署运行器、权限收紧，清理旧 SSH 部署配置；8 条目标流水线通过。"
+      "context": "span @ line 242 · surrounding text: 完成 2026-10-30 短期身份、受保护部署运行器、权限收紧，清理旧 SSH 部署配置；8 条目标流水线通过。"
     },
     {
       "id": "u_1640495ce2e46aef",
@@ -381,7 +381,7 @@
       "source": "短期身份、受保护部署运行器、权限收紧，清理旧 SSH 部署配置；8 条目标流水线通过。",
       "occurrence": 0,
       "target": "Short-lived identities, protected deployment runners, tighter permissions and removal of old SSH deployment settings; 8 target pipelines passed.",
-      "context": "span @ line 243 · surrounding text: 完成 2026-10-30 短期身份、受保护部署运行器、权限收紧，清理旧 SSH 部署配置；8 条目标流水线通过。"
+      "context": "span @ line 242 · surrounding text: 完成 2026-10-30 短期身份、受保护部署运行器、权限收紧，清理旧 SSH 部署配置；8 条目标流水线通过。"
     },
     {
       "id": "u_4495fdd8a476ae45",
@@ -389,7 +389,7 @@
       "source": "部署流程：配置文件随版本更新",
       "occurrence": 0,
       "target": "Deployment flow: configuration files ship with each release",
-      "context": "span.row-name @ line 246"
+      "context": "span.row-name @ line 245"
     },
     {
       "id": "u_6f169be7a03a9a2a",
@@ -397,7 +397,7 @@
       "source": "完成未确认",
       "occurrence": 0,
       "target": "Completion date unconfirmed",
-      "context": "span.unknown @ line 248"
+      "context": "span.unknown @ line 247"
     },
     {
       "id": "u_1147bb8caa734db0",
@@ -405,7 +405,7 @@
       "source": "Android 3.9.48 通过 QA，提交 Google Play 审核",
       "occurrence": 0,
       "target": "Android 3.9.48 passed QA and was submitted to Google Play review",
-      "context": "span.row-name @ line 251"
+      "context": "span.row-name @ line 250"
     },
     {
       "id": "u_771b2c4751b2ea14",
@@ -413,7 +413,7 @@
       "source": "完成",
       "occurrence": 7,
       "target": "Completed",
-      "context": "span @ line 253 · surrounding text: 完成 2026-11-04 原定 11-03；QA 临时发现问题，当天修复后通过并提交。"
+      "context": "span @ line 252 · surrounding text: 完成 2026-11-04 原定 11-03；QA 临时发现问题，当天修复后通过并提交。"
     },
     {
       "id": "u_3479eae7ea0596d2",
@@ -421,7 +421,7 @@
       "source": "原定 11-03；QA 临时发现问题，当天修复后通过并提交。",
       "occurrence": 0,
       "target": "Originally 11-03; QA found an issue at the last minute, it was fixed the same day, then passed and was submitted.",
-      "context": "span @ line 253 · surrounding text: 完成 2026-11-04 原定 11-03；QA 临时发现问题，当天修复后通过并提交。"
+      "context": "span @ line 252 · surrounding text: 完成 2026-11-04 原定 11-03；QA 临时发现问题，当天修复后通过并提交。"
     },
     {
       "id": "u_1ca6bfc2196f9d69",
@@ -429,7 +429,7 @@
       "source": "渠道链接下载、免密登录后不显示推荐人",
       "occurrence": 0,
       "target": "Referrer not shown after channel-link download and passwordless sign-in",
-      "context": "span.row-name @ line 256"
+      "context": "span.row-name @ line 255"
     },
     {
       "id": "u_82df11c6ab20732e",
@@ -437,7 +437,7 @@
       "source": "主动发现",
       "occurrence": 0,
       "target": "Found by the team",
-      "context": "span.tag.found @ line 257"
+      "context": "span.tag.found @ line 256"
     },
     {
       "id": "u_e1611df155a3b9ba",
@@ -445,7 +445,7 @@
       "source": "完成",
       "occurrence": 8,
       "target": "Completed",
-      "context": "span @ line 258 · surrounding text: 完成 2026-11-04 App 3.9.46 与后端同日修正：没有推荐人的账户都会保存链接推荐人。"
+      "context": "span @ line 257 · surrounding text: 完成 2026-11-04 App 3.9.46 与后端同日修正：没有推荐人的账户都会保存链接推荐人。"
     },
     {
       "id": "u_b68c374616932568",
@@ -453,7 +453,7 @@
       "source": "App 3.9.46 与后端同日修正：没有推荐人的账户都会保存链接推荐人。",
       "occurrence": 0,
       "target": "App 3.9.46 and backend fixed the same day: any account without a referrer now saves the link referrer.",
-      "context": "span @ line 258 · surrounding text: 完成 2026-11-04 App 3.9.46 与后端同日修正：没有推荐人的账户都会保存链接推荐人。"
+      "context": "span @ line 257 · surrounding text: 完成 2026-11-04 App 3.9.46 与后端同日修正：没有推荐人的账户都会保存链接推荐人。"
     },
     {
       "id": "u_3afb69448ba70ec4",
@@ -461,7 +461,7 @@
       "source": "移动端取消订阅误报「服务暂时不可用」",
       "occurrence": 0,
       "target": "Mobile subscription cancellation falsely reported \"service temporarily unavailable\"",
-      "context": "span.row-name @ line 261"
+      "context": "span.row-name @ line 260"
     },
     {
       "id": "u_be94da0678fb3f84",
@@ -469,7 +469,7 @@
       "source": "主动发现",
       "occurrence": 1,
       "target": "Found by the team",
-      "context": "span.tag.found @ line 262"
+      "context": "span.tag.found @ line 261"
     },
     {
       "id": "u_6b0175812300f67a",
@@ -477,7 +477,7 @@
       "source": "完成",
       "occurrence": 9,
       "target": "Completed",
-      "context": "span @ line 263 · surrounding text: 完成 2026-11-04 续订其实已关闭，只是提示错误；后端修正 Stripe 关闭续费时的自锁。此前用户无法在 App 内自行取消，QA 都在后台操作。"
+      "context": "span @ line 262 · surrounding text: 完成 2026-11-04 续订其实已关闭，只是提示错误；后端修正 Stripe 关闭续费时的自锁。此前用户无法在 App 内自行取消，QA 都在后台操作。"
     },
     {
       "id": "u_e4d9c438b468f8c8",
@@ -485,7 +485,7 @@
       "source": "续订其实已关闭，只是提示错误；后端修正 Stripe 关闭续费时的自锁。此前用户无法在 App 内自行取消，QA 都在后台操作。",
       "occurrence": 0,
       "target": "Renewal was in fact turned off; only the message was wrong. The backend fixed a self-lock when turning off Stripe auto-renew. Previously users could not cancel in the app themselves, and QA did it in the Back Office (BO).",
-      "context": "span @ line 263 · surrounding text: 完成 2026-11-04 续订其实已关闭，只是提示错误；后端修正 Stripe 关闭续费时的自锁。此前用户无法在 App 内自行取消，QA 都在后台操作。"
+      "context": "span @ line 262 · surrounding text: 完成 2026-11-04 续订其实已关闭，只是提示错误；后端修正 Stripe 关闭续费时的自锁。此前用户无法在 App 内自行取消，QA 都在后台操作。"
     },
     {
       "id": "u_28831dedfdba7c9b",
@@ -493,7 +493,7 @@
       "source": "关闭自动续费时撤销排队中的降级",
       "occurrence": 0,
       "target": "Cancel a queued downgrade when auto-renew is turned off",
-      "context": "span.row-name @ line 266"
+      "context": "span.row-name @ line 265"
     },
     {
       "id": "u_d23c54f0d48a6564",
@@ -501,7 +501,7 @@
       "source": "主动发现",
       "occurrence": 2,
       "target": "Found by the team",
-      "context": "span.tag.found @ line 267"
+      "context": "span.tag.found @ line 266"
     },
     {
       "id": "u_b811cddd4e3278e4",
@@ -509,7 +509,7 @@
       "source": "完成",
       "occurrence": 10,
       "target": "Completed",
-      "context": "span @ line 268 · surrounding text: 完成 2026-11-04 QA 用 3.9.46 发现后端仍保留降级计划；后端同日修正，3.9.47 起关闭续费前会提示降级将被取消。"
+      "context": "span @ line 267 · surrounding text: 完成 2026-11-04 QA 用 3.9.46 发现后端仍保留降级计划；后端同日修正，3.9.47 起关闭续费前会提示降级将被取消。"
     },
     {
       "id": "u_5781eab2bd848651",
@@ -517,7 +517,7 @@
       "source": "QA 用 3.9.46 发现后端仍保留降级计划；后端同日修正，3.9.47 起关闭续费前会提示降级将被取消。",
       "occurrence": 0,
       "target": "QA found with 3.9.46 that the backend still kept the downgrade plan; the backend was fixed the same day, and from 3.9.47 the app warns that turning off auto-renew cancels the downgrade.",
-      "context": "span @ line 268 · surrounding text: 完成 2026-11-04 QA 用 3.9.46 发现后端仍保留降级计划；后端同日修正，3.9.47 起关闭续费前会提示降级将被取消。"
+      "context": "span @ line 267 · surrounding text: 完成 2026-11-04 QA 用 3.9.46 发现后端仍保留降级计划；后端同日修正，3.9.47 起关闭续费前会提示降级将被取消。"
     },
     {
       "id": "u_90eca6c4370045ae",
@@ -525,7 +525,7 @@
       "source": "目标进度",
       "occurrence": 0,
       "target": "Goal Progress",
-      "context": "h2 @ line 273 · surrounding text: 目标进度 21"
+      "context": "h2 @ line 272 · surrounding text: 目标进度 21"
     },
     {
       "id": "u_cea8f1c163b7662e",
@@ -533,7 +533,7 @@
       "source": "接手、架构与工程治理",
       "occurrence": 0,
       "target": "Takeover, architecture and engineering governance",
-      "context": "p.group-name @ line 275"
+      "context": "p.group-name @ line 274"
     },
     {
       "id": "u_9f7d2019e4e0f9f4",
@@ -541,7 +541,7 @@
       "source": "全系统接管、架构梳理与模块化重构",
       "occurrence": 0,
       "target": "Full-system takeover, architecture mapping, and modular refactoring",
-      "context": "span.goal-name @ line 277 · surrounding text: G10 全系统接管、架构梳理与模块化重构 进行中"
+      "context": "span.goal-name @ line 276 · surrounding text: G10 全系统接管、架构梳理与模块化重构 进行中"
     },
     {
       "id": "u_1e9acb1cfd4be04b",
@@ -549,7 +549,7 @@
       "source": "进行中",
       "occurrence": 1,
       "target": "In Progress",
-      "context": "span.tag.doing @ line 277 · surrounding text: G10 全系统接管、架构梳理与模块化重构 进行中"
+      "context": "span.tag.doing @ line 276 · surrounding text: G10 全系统接管、架构梳理与模块化重构 进行中"
     },
     {
       "id": "u_3d29075639f33b54",
@@ -557,7 +557,7 @@
       "source": "生命周期与分层收敛中",
       "occurrence": 0,
       "target": "Lifecycle and layering consolidation in progress",
-      "context": "p.label @ line 279"
+      "context": "p.label @ line 278"
     },
     {
       "id": "u_9a61e30d125df852",
@@ -565,7 +565,7 @@
       "source": "统一会员生命周期与计时模型，后台专属设置迁出运行服务，合并支付流水表，移除旧客户端路径。",
       "occurrence": 0,
       "target": "Unified membership lifecycle and timing model, moved Back Office (BO) settings out of runtime services, merged payment ledger tables, removed old client paths.",
-      "context": "p @ line 280"
+      "context": "p @ line 279"
     },
     {
       "id": "u_c90e5d7ab5b67a04",
@@ -573,7 +573,7 @@
       "source": "最新：",
       "occurrence": 0,
       "target": "Latest:",
-      "context": "b @ line 281 · surrounding text: 最新： 共享组件版本跨服务统一仍待完成；后端须继续兼容可升级 Android 与保留使用的旧版 iOS、Windows。"
+      "context": "b @ line 280 · surrounding text: 最新： 共享组件版本跨服务统一仍待完成；后端须继续兼容可升级 Android 与保留使用的旧版 iOS、Windows。"
     },
     {
       "id": "u_ed5a40eb58b30218",
@@ -581,7 +581,7 @@
       "source": "共享组件版本跨服务统一仍待完成；后端须继续兼容可升级 Android 与保留使用的旧版 iOS、Windows。",
       "occurrence": 0,
       "target": "Unifying shared component versions across services is still pending; the backend must remain compatible with upgradable Android and older iOS and Windows clients still in use.",
-      "context": "p.update @ line 281 · surrounding text: 最新： 共享组件版本跨服务统一仍待完成；后端须继续兼容可升级 Android 与保留使用的旧版 iOS、Windows。"
+      "context": "p.update @ line 280 · surrounding text: 最新： 共享组件版本跨服务统一仍待完成；后端须继续兼容可升级 Android 与保留使用的旧版 iOS、Windows。"
     },
     {
       "id": "u_e1e9671f75260f72",
@@ -589,7 +589,7 @@
       "source": "下一步：",
       "occurrence": 0,
       "target": "Next step:",
-      "context": "b @ line 282 · surrounding text: 下一步： 完成跨端购买与启动契约验证，再按使用证据逐项退出旧接口。"
+      "context": "b @ line 281 · surrounding text: 下一步： 完成跨端购买与启动契约验证，再按使用证据逐项退出旧接口。"
     },
     {
       "id": "u_709749a4597a9130",
@@ -597,7 +597,7 @@
       "source": "完成跨端购买与启动契约验证，再按使用证据逐项退出旧接口。",
       "occurrence": 0,
       "target": "Complete cross-platform purchase and startup contract verification, then retire old APIs one by one based on usage evidence.",
-      "context": "p @ line 282 · surrounding text: 下一步： 完成跨端购买与启动契约验证，再按使用证据逐项退出旧接口。"
+      "context": "p @ line 281 · surrounding text: 下一步： 完成跨端购买与启动契约验证，再按使用证据逐项退出旧接口。"
     },
     {
       "id": "u_6be3fdd4ced72931",
@@ -605,7 +605,7 @@
       "source": "目标时间",
       "occurrence": 0,
       "target": "Target Time",
-      "context": "span @ line 283 · surrounding text: 目标时间 持续至年底 待办 2 项"
+      "context": "span @ line 282 · surrounding text: 目标时间 持续至年底 待办 2 项"
     },
     {
       "id": "u_2c054bb6c6ac9651",
@@ -613,7 +613,7 @@
       "source": "持续至年底",
       "occurrence": 0,
       "target": "Continue through year-end",
-      "context": "b @ line 283 · surrounding text: 目标时间 持续至年底 待办 2 项"
+      "context": "b @ line 282 · surrounding text: 目标时间 持续至年底 待办 2 项"
     },
     {
       "id": "u_8568794f672fdf58",
@@ -621,7 +621,7 @@
       "source": "待办",
       "occurrence": 0,
       "target": "To-do",
-      "context": "span @ line 283 · surrounding text: 目标时间 持续至年底 待办 2 项"
+      "context": "span @ line 282 · surrounding text: 目标时间 持续至年底 待办 2 项"
     },
     {
       "id": "u_b61f9d176627f0de",
@@ -629,7 +629,7 @@
       "source": "项",
       "occurrence": 0,
       "target": "items",
-      "context": "span @ line 283 · surrounding text: 目标时间 持续至年底 待办 2 项"
+      "context": "span @ line 282 · surrounding text: 目标时间 持续至年底 待办 2 项"
     },
     {
       "id": "u_a58039a4c38a99f5",
@@ -637,7 +637,7 @@
       "source": "安全、无日志与最小权限治理",
       "occurrence": 0,
       "target": "Security, no-logs, and least-privilege governance",
-      "context": "span.goal-name @ line 287 · surrounding text: G12 安全、无日志与最小权限治理 进行中"
+      "context": "span.goal-name @ line 286 · surrounding text: G12 安全、无日志与最小权限治理 进行中"
     },
     {
       "id": "u_618c42fb88cd3b79",
@@ -645,7 +645,7 @@
       "source": "进行中",
       "occurrence": 2,
       "target": "In Progress",
-      "context": "span.tag.doing @ line 287 · surrounding text: G12 安全、无日志与最小权限治理 进行中"
+      "context": "span.tag.doing @ line 286 · surrounding text: G12 安全、无日志与最小权限治理 进行中"
     },
     {
       "id": "u_d36bdc4f69ff3cda",
@@ -653,7 +653,7 @@
       "source": "连接与节点安全持续验证",
       "occurrence": 0,
       "target": "Connection and VPN node security under validation",
-      "context": "p.label @ line 289"
+      "context": "p.label @ line 288"
     },
     {
       "id": "u_5536199f7cc7373a",
@@ -661,7 +661,7 @@
       "source": "节点凭证隔离、输出脱敏、DNS 异常阻断；SSH 白名单统一；支付密钥改由 Key Vault 按环境提供；10月1日停用外部源码权限。",
       "occurrence": 0,
       "target": "VPN node credential isolation, output masking, DNS anomaly blocking; one SSH allowlist; payment keys now supplied per environment by Key Vault; external source access disabled October 1.",
-      "context": "p @ line 290"
+      "context": "p @ line 289"
     },
     {
       "id": "u_2fb1df34851e0631",
@@ -669,7 +669,7 @@
       "source": "最新：",
       "occurrence": 1,
       "target": "Latest:",
-      "context": "b @ line 291 · surrounding text: 最新： 10月30日部署安全加固：短期身份、受保护部署运行器、权限收紧，清理测试环境旧 SSH 部署配置。当前源码授权名单待确认。"
+      "context": "b @ line 290 · surrounding text: 最新： 10月30日部署安全加固：短期身份、受保护部署运行器、权限收紧，清理测试环境旧 SSH 部署配置。当前源码授权名单待确认。"
     },
     {
       "id": "u_b22b4344cd9665c0",
@@ -677,7 +677,7 @@
       "source": "10月30日部署安全加固：短期身份、受保护部署运行器、权限收紧，清理测试环境旧 SSH 部署配置。当前源码授权名单待确认。",
       "occurrence": 0,
       "target": "October 30 deployment security hardening: short-lived identities, protected deployment runners, tighter permissions, and removal of old staging SSH deployment settings. The current source-access list is to be confirmed.",
-      "context": "p.update @ line 291 · surrounding text: 最新： 10月30日部署安全加固：短期身份、受保护部署运行器、权限收紧，清理测试环境旧 SSH 部署配置。当前源码授权名单待确认。"
+      "context": "p.update @ line 290 · surrounding text: 最新： 10月30日部署安全加固：短期身份、受保护部署运行器、权限收紧，清理测试环境旧 SSH 部署配置。当前源码授权名单待确认。"
     },
     {
       "id": "u_e43d2fd1dd64b259",
@@ -685,7 +685,7 @@
       "source": "下一步：",
       "occurrence": 1,
       "target": "Next step:",
-      "context": "b @ line 292 · surrounding text: 下一步： 完成真实节点、重启与无泄漏验收；权限复核、生产凭证与网络边界分别留证。"
+      "context": "b @ line 291 · surrounding text: 下一步： 完成真实节点、重启与无泄漏验收；权限复核、生产凭证与网络边界分别留证。"
     },
     {
       "id": "u_7a1658b5df22b77c",
@@ -693,7 +693,7 @@
       "source": "完成真实节点、重启与无泄漏验收；权限复核、生产凭证与网络边界分别留证。",
       "occurrence": 0,
       "target": "Complete live VPN node, reboot and leak acceptance testing; document access reviews, production credentials and network boundaries separately.",
-      "context": "p @ line 292 · surrounding text: 下一步： 完成真实节点、重启与无泄漏验收；权限复核、生产凭证与网络边界分别留证。"
+      "context": "p @ line 291 · surrounding text: 下一步： 完成真实节点、重启与无泄漏验收；权限复核、生产凭证与网络边界分别留证。"
     },
     {
       "id": "u_0d1f207c96a26fe5",
@@ -701,7 +701,7 @@
       "source": "目标时间",
       "occurrence": 1,
       "target": "Target Date",
-      "context": "span @ line 293 · surrounding text: 目标时间 与 P0 同步收口 待办 0 项"
+      "context": "span @ line 292 · surrounding text: 目标时间 与 P0 同步收口 待办 0 项"
     },
     {
       "id": "u_fe12f645ad070f8d",
@@ -709,7 +709,7 @@
       "source": "与 P0 同步收口",
       "occurrence": 0,
       "target": "Closure together with P0",
-      "context": "b @ line 293 · surrounding text: 目标时间 与 P0 同步收口 待办 0 项"
+      "context": "b @ line 292 · surrounding text: 目标时间 与 P0 同步收口 待办 0 项"
     },
     {
       "id": "u_7ea5fd27bedac634",
@@ -717,7 +717,7 @@
       "source": "待办",
       "occurrence": 1,
       "target": "To-do",
-      "context": "span @ line 293 · surrounding text: 目标时间 与 P0 同步收口 待办 0 项"
+      "context": "span @ line 292 · surrounding text: 目标时间 与 P0 同步收口 待办 0 项"
     },
     {
       "id": "u_8ddd35d1bf74f5c7",
@@ -725,7 +725,7 @@
       "source": "项",
       "occurrence": 1,
       "target": "items",
-      "context": "span @ line 293 · surrounding text: 目标时间 与 P0 同步收口 待办 0 项"
+      "context": "span @ line 292 · surrounding text: 目标时间 与 P0 同步收口 待办 0 项"
     },
     {
       "id": "u_a104a07adac25010",
@@ -733,7 +733,7 @@
       "source": "CI/CD、自动测试与全链路可观测",
       "occurrence": 0,
       "target": "CI/CD, automated testing, and end-to-end observability",
-      "context": "span.goal-name @ line 297 · surrounding text: G13 CI/CD、自动测试与全链路可观测 进行中"
+      "context": "span.goal-name @ line 296 · surrounding text: G13 CI/CD、自动测试与全链路可观测 进行中"
     },
     {
       "id": "u_5778e5b3a2a6d507",
@@ -741,7 +741,7 @@
       "source": "进行中",
       "occurrence": 3,
       "target": "In Progress",
-      "context": "span.tag.doing @ line 297 · surrounding text: G13 CI/CD、自动测试与全链路可观测 进行中"
+      "context": "span.tag.doing @ line 296 · surrounding text: G13 CI/CD、自动测试与全链路可观测 进行中"
     },
     {
       "id": "u_d6bd8e2c79c4127a",
@@ -749,7 +749,7 @@
       "source": "测试交付持续运行",
       "occurrence": 0,
       "target": "Test delivery operating continuously",
-      "context": "p.label @ line 299"
+      "context": "p.label @ line 298"
     },
     {
       "id": "u_8df96d404a898951",
@@ -757,7 +757,7 @@
       "source": "Android 测试发布第11阶段 3 次、第12阶段 6 次、第13阶段 3 次；测试环境日志采集启用；GitLab 升级到 19.4.1。",
       "occurrence": 0,
       "target": "Android test releases: 3 in Sprint 11, 6 in Sprint 12, 3 in Sprint 13; staging log collection enabled; GitLab upgraded to 19.4.1.",
-      "context": "p @ line 300"
+      "context": "p @ line 299"
     },
     {
       "id": "u_9abd8cb808f31858",
@@ -765,7 +765,7 @@
       "source": "最新：",
       "occurrence": 2,
       "target": "Latest:",
-      "context": "b @ line 301 · surrounding text: 最新： 部署流程增加配置文件随版本更新；新流程取消了手动回滚任务，旧流水线结果不能替代新恢复流程验证。"
+      "context": "b @ line 300 · surrounding text: 最新： 部署流程增加配置文件随版本更新；新流程取消了手动回滚任务，旧流水线结果不能替代新恢复流程验证。"
     },
     {
       "id": "u_090aa59833a4a2f9",
@@ -773,7 +773,7 @@
       "source": "部署流程增加配置文件随版本更新；新流程取消了手动回滚任务，旧流水线结果不能替代新恢复流程验证。",
       "occurrence": 0,
       "target": "Configuration files now ship with each release; the new flow removed the manual rollback job, so old pipeline results cannot stand in for verifying the new recovery flow.",
-      "context": "p.update @ line 301 · surrounding text: 最新： 部署流程增加配置文件随版本更新；新流程取消了手动回滚任务，旧流水线结果不能替代新恢复流程验证。"
+      "context": "p.update @ line 300 · surrounding text: 最新： 部署流程增加配置文件随版本更新；新流程取消了手动回滚任务，旧流水线结果不能替代新恢复流程验证。"
     },
     {
       "id": "u_4ca13bd87e327093",
@@ -781,7 +781,7 @@
       "source": "下一步：",
       "occurrence": 2,
       "target": "Next step:",
-      "context": "b @ line 302 · surrounding text: 下一步： 补齐各平台签名产物、安装升级、回滚与部署版本映射。"
+      "context": "b @ line 301 · surrounding text: 下一步： 补齐各平台签名产物、安装升级、回滚与部署版本映射。"
     },
     {
       "id": "u_77696fc8d58f8ed2",
@@ -789,7 +789,7 @@
       "source": "补齐各平台签名产物、安装升级、回滚与部署版本映射。",
       "occurrence": 0,
       "target": "Complete signed builds, install/upgrade, rollback and deployment version mapping for each platform.",
-      "context": "p @ line 302 · surrounding text: 下一步： 补齐各平台签名产物、安装升级、回滚与部署版本映射。"
+      "context": "p @ line 301 · surrounding text: 下一步： 补齐各平台签名产物、安装升级、回滚与部署版本映射。"
     },
     {
       "id": "u_eb1f8d1504f35621",
@@ -797,7 +797,7 @@
       "source": "目标时间",
       "occurrence": 2,
       "target": "Target Time",
-      "context": "span @ line 303 · surrounding text: 目标时间 持续 待办 0 项"
+      "context": "span @ line 302 · surrounding text: 目标时间 持续 待办 0 项"
     },
     {
       "id": "u_2ae9d8acdfcd9de4",
@@ -805,7 +805,7 @@
       "source": "持续",
       "occurrence": 0,
       "target": "Ongoing",
-      "context": "b @ line 303 · surrounding text: 目标时间 持续 待办 0 项"
+      "context": "b @ line 302 · surrounding text: 目标时间 持续 待办 0 项"
     },
     {
       "id": "u_2f38065baaf50b6f",
@@ -813,7 +813,7 @@
       "source": "待办",
       "occurrence": 2,
       "target": "To-do",
-      "context": "span @ line 303 · surrounding text: 目标时间 持续 待办 0 项"
+      "context": "span @ line 302 · surrounding text: 目标时间 持续 待办 0 项"
     },
     {
       "id": "u_fd97c772a41983d6",
@@ -821,7 +821,7 @@
       "source": "项",
       "occurrence": 2,
       "target": "items",
-      "context": "span @ line 303 · surrounding text: 目标时间 持续 待办 0 项"
+      "context": "span @ line 302 · surrounding text: 目标时间 持续 待办 0 项"
     },
     {
       "id": "u_540c2c89d6e9b90f",
@@ -829,7 +829,7 @@
       "source": "生产韧性、监控、异地备份与恢复",
       "occurrence": 0,
       "target": "Production resilience, monitoring, off-site backup, and recovery",
-      "context": "span.goal-name @ line 307 · surrounding text: G17 生产韧性、监控、异地备份与恢复 有风险 进行中"
+      "context": "span.goal-name @ line 306 · surrounding text: G17 生产韧性、监控、异地备份与恢复 有风险 进行中"
     },
     {
       "id": "u_c2c014829bdd7dda",
@@ -837,7 +837,7 @@
       "source": "有风险",
       "occurrence": 0,
       "target": "At Risk",
-      "context": "span.tag.risk @ line 307 · surrounding text: G17 生产韧性、监控、异地备份与恢复 有风险 进行中"
+      "context": "span.tag.risk @ line 306 · surrounding text: G17 生产韧性、监控、异地备份与恢复 有风险 进行中"
     },
     {
       "id": "u_c5a9dac950818674",
@@ -845,7 +845,7 @@
       "source": "进行中",
       "occurrence": 4,
       "target": "In Progress",
-      "context": "span.tag.doing @ line 307 · surrounding text: G17 生产韧性、监控、异地备份与恢复 有风险 进行中"
+      "context": "span.tag.doing @ line 306 · surrounding text: G17 生产韧性、监控、异地备份与恢复 有风险 进行中"
     },
     {
       "id": "u_0c58f61ac9023896",
@@ -853,7 +853,7 @@
       "source": "整合完成，高风险未关",
       "occurrence": 0,
       "target": "Integrated and High-Risk Not Closed",
-      "context": "p.label @ line 309"
+      "context": "p.label @ line 308"
     },
     {
       "id": "u_53ef5bcffcc20ff3",
@@ -861,7 +861,7 @@
       "source": "读副本、节点健康状态机已建立；8月12日生产整合；10月6日备份与恢复手册完成，演练未执行。",
       "occurrence": 0,
       "target": "Read replica and VPN node health state machine in place; production consolidated on August 12; backup and recovery runbook finished October 6, drill not yet run.",
-      "context": "p @ line 310"
+      "context": "p @ line 309"
     },
     {
       "id": "u_fdf940285ff44023",
@@ -869,7 +869,7 @@
       "source": "最新：",
       "occurrence": 3,
       "target": "Latest:",
-      "context": "b @ line 311 · surrounding text: 最新： 10月14日 Azure 停机后迁至 AWS，团队报告约 2.5 小时恢复后端、无数据丢失（非重新测量）。独立账户备用接入和异地恢复演练仍无结果。"
+      "context": "b @ line 310 · surrounding text: 最新： 10月14日 Azure 停机后迁至 AWS，团队报告约 2.5 小时恢复后端、无数据丢失（非重新测量）。独立账户备用接入和异地恢复演练仍无结果。"
     },
     {
       "id": "u_77cd71051472b5fa",
@@ -877,7 +877,7 @@
       "source": "10月14日 Azure 停机后迁至 AWS，团队报告约 2.5 小时恢复后端、无数据丢失（非重新测量）。独立账户备用接入和异地恢复演练仍无结果。",
       "occurrence": 0,
       "target": "After the Azure outage the backend moved to AWS on October 14; the team reports about 2.5 hours to recover with no data loss (not re-measured). Independent account backup access and the off-site restore drill still have no result.",
-      "context": "p.update @ line 311 · surrounding text: 最新： 10月14日 Azure 停机后迁至 AWS，团队报告约 2.5 小时恢复后端、无数据丢失（非重新测量）。独立账户备用接入和异地恢复演练仍无结果。"
+      "context": "p.update @ line 310 · surrounding text: 最新： 10月14日 Azure 停机后迁至 AWS，团队报告约 2.5 小时恢复后端、无数据丢失（非重新测量）。独立账户备用接入和异地恢复演练仍无结果。"
     },
     {
       "id": "u_da44ed8776435cc5",
@@ -885,7 +885,7 @@
       "source": "风险：",
       "occurrence": 0,
       "target": "Risk:",
-      "context": "b @ line 312 · surrounding text: 风险： 目前风险最高的未关闭项：恢复能力没有演练证据。"
+      "context": "b @ line 311 · surrounding text: 风险： 目前风险最高的未关闭项：恢复能力没有演练证据。"
     },
     {
       "id": "u_cba63a2b4744a509",
@@ -893,7 +893,7 @@
       "source": "目前风险最高的未关闭项：恢复能力没有演练证据。",
       "occurrence": 0,
       "target": "Highest open risk: recovery capability has no drill evidence.",
-      "context": "p.why.risk @ line 312 · surrounding text: 风险： 目前风险最高的未关闭项：恢复能力没有演练证据。"
+      "context": "p.why.risk @ line 311 · surrounding text: 风险： 目前风险最高的未关闭项：恢复能力没有演练证据。"
     },
     {
       "id": "u_86ad3308f6e282de",
@@ -901,7 +901,7 @@
       "source": "下一步：",
       "occurrence": 3,
       "target": "Next step:",
-      "context": "b @ line 313 · surrounding text: 下一步： 建立异地副本，执行实际恢复演练，记录 RTO、数据完整性和回切步骤。"
+      "context": "b @ line 312 · surrounding text: 下一步： 建立异地副本，执行实际恢复演练，记录 RTO、数据完整性和回切步骤。"
     },
     {
       "id": "u_fa679c62267bcf8c",
@@ -909,7 +909,7 @@
       "source": "建立异地副本，执行实际恢复演练，记录 RTO、数据完整性和回切步骤。",
       "occurrence": 0,
       "target": "Set up an off-site copy, run a real restore drill, and record RTO, data integrity and failback steps.",
-      "context": "p @ line 313 · surrounding text: 下一步： 建立异地副本，执行实际恢复演练，记录 RTO、数据完整性和回切步骤。"
+      "context": "p @ line 312 · surrounding text: 下一步： 建立异地副本，执行实际恢复演练，记录 RTO、数据完整性和回切步骤。"
     },
     {
       "id": "u_1daa0157b8e0861b",
@@ -917,7 +917,7 @@
       "source": "目标时间",
       "occurrence": 3,
       "target": "Target date",
-      "context": "span @ line 314 · surrounding text: 目标时间 P0 待办 1 项"
+      "context": "span @ line 313 · surrounding text: 目标时间 P0 待办 1 项"
     },
     {
       "id": "u_7e8bd50ff5ac04f8",
@@ -925,7 +925,7 @@
       "source": "待办",
       "occurrence": 3,
       "target": "To-do",
-      "context": "span @ line 314 · surrounding text: 目标时间 P0 待办 1 项"
+      "context": "span @ line 313 · surrounding text: 目标时间 P0 待办 1 项"
     },
     {
       "id": "u_576b3484d6ff2912",
@@ -933,7 +933,7 @@
       "source": "项",
       "occurrence": 3,
       "target": "items",
-      "context": "span @ line 314 · surrounding text: 目标时间 P0 待办 1 项"
+      "context": "span @ line 313 · surrounding text: 目标时间 P0 待办 1 项"
     },
     {
       "id": "u_bda16de7957ee3e2",
@@ -941,7 +941,7 @@
       "source": "可追溯生产发布与用户可用性验收",
       "occurrence": 0,
       "target": "Traceable production release and user-availability acceptance testing",
-      "context": "span.goal-name @ line 318 · surrounding text: G19 可追溯生产发布与用户可用性验收 进行中"
+      "context": "span.goal-name @ line 317 · surrounding text: G19 可追溯生产发布与用户可用性验收 进行中"
     },
     {
       "id": "u_89aaf737878e7348",
@@ -949,7 +949,7 @@
       "source": "进行中",
       "occurrence": 5,
       "target": "In Progress",
-      "context": "span.tag.doing @ line 318 · surrounding text: G19 可追溯生产发布与用户可用性验收 进行中"
+      "context": "span.tag.doing @ line 317 · surrounding text: G19 可追溯生产发布与用户可用性验收 进行中"
     },
     {
       "id": "u_933dbe5c0e909122",
@@ -957,7 +957,7 @@
       "source": "测试发布已留证，生产验收独立",
       "occurrence": 0,
       "target": "Staging releases documented; production acceptance separate",
-      "context": "p.label @ line 320"
+      "context": "p.label @ line 319"
     },
     {
       "id": "u_d99487ca9c36ff41",
@@ -965,7 +965,7 @@
       "source": "8月12日生产整合；Android 测试发布有记录；9月7日中国、台湾当次连接确认；10月9日 Android 3.9.26 交 staging 测试。",
       "occurrence": 0,
       "target": "Production consolidated August 12; Android test releases recorded; China and Taiwan connection confirmed once on September 7; Android 3.9.26 delivered to staging testing October 9.",
-      "context": "p @ line 321"
+      "context": "p @ line 320"
     },
     {
       "id": "u_424a9a9790dc7f1c",
@@ -973,7 +973,7 @@
       "source": "最新：",
       "occurrence": 4,
       "target": "Latest:",
-      "context": "b @ line 322 · surrounding text: 最新： 11-04 Android 3.9.48 通过 QA 并提交 Google Play 审核。审核通过后决定维护日期，部署后端正式环境；GitLab 记录的上一次后端正式发布是 8月21日 v3.3.26。"
+      "context": "b @ line 321 · surrounding text: 最新： 11-04 Android 3.9.48 通过 QA 并提交 Google Play 审核。审核通过后决定维护日期，部署后端正式环境；GitLab 记录的上一次后端正式发布是 8月21日 v3.3.26。"
     },
     {
       "id": "u_8bacfce645301022",
@@ -981,7 +981,7 @@
       "source": "11-04 Android 3.9.48 通过 QA 并提交 Google Play 审核。审核通过后决定维护日期，部署后端正式环境；GitLab 记录的上一次后端正式发布是 8月21日 v3.3.26。",
       "occurrence": 0,
       "target": "11-04: Android 3.9.48 passed QA and was submitted to Google Play review. After approval we set a maintenance date and deploy the backend to production; the last backend production release in GitLab records is v3.3.26 on August 21.",
-      "context": "p.update @ line 322 · surrounding text: 最新： 11-04 Android 3.9.48 通过 QA 并提交 Google Play 审核。审核通过后决定维护日期，部署后端正式环境；GitLab 记录的上一次后端正式发布是 8月21日 v3.3.26。"
+      "context": "p.update @ line 321 · surrounding text: 最新： 11-04 Android 3.9.48 通过 QA 并提交 Google Play 审核。审核通过后决定维护日期，部署后端正式环境；GitLab 记录的上一次后端正式发布是 8月21日 v3.3.26。"
     },
     {
       "id": "u_68b20d9fbaf3f357",
@@ -989,7 +989,7 @@
       "source": "下一步：",
       "occurrence": 4,
       "target": "Next step:",
-      "context": "b @ line 323 · surrounding text: 下一步： 把客户端版本、后端版本、迁移、购买与连接结果对应，按实际生产发布补齐上线后验证。"
+      "context": "b @ line 322 · surrounding text: 下一步： 把客户端版本、后端版本、迁移、购买与连接结果对应，按实际生产发布补齐上线后验证。"
     },
     {
       "id": "u_b446ffb8345f9379",
@@ -997,7 +997,7 @@
       "source": "把客户端版本、后端版本、迁移、购买与连接结果对应，按实际生产发布补齐上线后验证。",
       "occurrence": 0,
       "target": "Map client versions, backend versions, migrations, purchase and connection results, and complete post-release checks for each real production release.",
-      "context": "p @ line 323 · surrounding text: 下一步： 把客户端版本、后端版本、迁移、购买与连接结果对应，按实际生产发布补齐上线后验证。"
+      "context": "p @ line 322 · surrounding text: 下一步： 把客户端版本、后端版本、迁移、购买与连接结果对应，按实际生产发布补齐上线后验证。"
     },
     {
       "id": "u_be2f107bc85a3db0",
@@ -1005,7 +1005,7 @@
       "source": "目标时间",
       "occurrence": 4,
       "target": "Target date",
-      "context": "span @ line 324 · surrounding text: 目标时间 P0 · 下次生产发布前 待办 3 项"
+      "context": "span @ line 323 · surrounding text: 目标时间 P0 · 下次生产发布前 待办 3 项"
     },
     {
       "id": "u_1dd9df32cabadcf1",
@@ -1013,7 +1013,7 @@
       "source": "P0 · 下次生产发布前",
       "occurrence": 0,
       "target": "P0 · before the next production release",
-      "context": "b @ line 324 · surrounding text: 目标时间 P0 · 下次生产发布前 待办 3 项"
+      "context": "b @ line 323 · surrounding text: 目标时间 P0 · 下次生产发布前 待办 3 项"
     },
     {
       "id": "u_681f03ca57fee3b7",
@@ -1021,7 +1021,7 @@
       "source": "待办",
       "occurrence": 4,
       "target": "To-do",
-      "context": "span @ line 324 · surrounding text: 目标时间 P0 · 下次生产发布前 待办 3 项"
+      "context": "span @ line 323 · surrounding text: 目标时间 P0 · 下次生产发布前 待办 3 项"
     },
     {
       "id": "u_8a5dae10c664d237",
@@ -1029,7 +1029,7 @@
       "source": "项",
       "occurrence": 4,
       "target": "items",
-      "context": "span @ line 324 · surrounding text: 目标时间 P0 · 下次生产发布前 待办 3 项"
+      "context": "span @ line 323 · surrounding text: 目标时间 P0 · 下次生产发布前 待办 3 项"
     },
     {
       "id": "u_4c94d3bea44f8e4e",
@@ -1037,7 +1037,7 @@
       "source": "VPN 核心、节点与网络能力",
       "occurrence": 0,
       "target": "VPN core, VPN nodes and network capabilities",
-      "context": "p.group-name @ line 327"
+      "context": "p.group-name @ line 326"
     },
     {
       "id": "u_7b258394b24bbcef",
@@ -1045,7 +1045,7 @@
       "source": "节点部署与管理自动化",
       "occurrence": 0,
       "target": "Automated Deployment and Management of VPN nodes",
-      "context": "span.goal-name @ line 329 · surrounding text: G5 节点部署与管理自动化 进行中"
+      "context": "span.goal-name @ line 328 · surrounding text: G5 节点部署与管理自动化 进行中"
     },
     {
       "id": "u_8f7a4a888edeaa1a",
@@ -1053,7 +1053,7 @@
       "source": "进行中",
       "occurrence": 6,
       "target": "In Progress",
-      "context": "span.tag.doing @ line 329 · surrounding text: G5 节点部署与管理自动化 进行中"
+      "context": "span.tag.doing @ line 328 · surrounding text: G5 节点部署与管理自动化 进行中"
     },
     {
       "id": "u_9c89d841a4cb1072",
@@ -1061,7 +1061,7 @@
       "source": "节点操作与保护持续完善",
       "occurrence": 0,
       "target": "VPN node operations and safeguards progressing",
-      "context": "p.label @ line 331"
+      "context": "p.label @ line 330"
     },
     {
       "id": "u_2a6e88892678db3f",
@@ -1069,7 +1069,7 @@
       "source": "后台节点管理分离、地域命名、安装锁、防火墙任务、分配与退役保护；VM 任务统一批量设置。",
       "occurrence": 0,
       "target": "Back Office (BO) VPN node management split, region naming, install locks, firewall tasks, assignment and retirement protection; one batch setting for VM tasks.",
-      "context": "p @ line 332"
+      "context": "p @ line 331"
     },
     {
       "id": "u_b057089e1a1acec2",
@@ -1077,7 +1077,7 @@
       "source": "最新：",
       "occurrence": 5,
       "target": "Latest:",
-      "context": "b @ line 333 · surrounding text: 最新： 10月18日节点恢复检查通过本地验证及测试环境部署。"
+      "context": "b @ line 332 · surrounding text: 最新： 10月18日节点恢复检查通过本地验证及测试环境部署。"
     },
     {
       "id": "u_831cfff01c2e79bc",
@@ -1085,7 +1085,7 @@
       "source": "10月18日节点恢复检查通过本地验证及测试环境部署。",
       "occurrence": 0,
       "target": "On October 18 the VPN node recovery check passed local verification and staging deployment.",
-      "context": "p.update @ line 333 · surrounding text: 最新： 10月18日节点恢复检查通过本地验证及测试环境部署。"
+      "context": "p.update @ line 332 · surrounding text: 最新： 10月18日节点恢复检查通过本地验证及测试环境部署。"
     },
     {
       "id": "u_8368fca4fe97fd67",
@@ -1093,7 +1093,7 @@
       "source": "下一步：",
       "occurrence": 5,
       "target": "Next step:",
-      "context": "b @ line 334 · surrounding text: 下一步： 完成真实节点、重启与客户端连接验收，再推进采购至配发自动化。"
+      "context": "b @ line 333 · surrounding text: 下一步： 完成真实节点、重启与客户端连接验收，再推进采购至配发自动化。"
     },
     {
       "id": "u_4ced654adf68f58d",
@@ -1101,7 +1101,7 @@
       "source": "完成真实节点、重启与客户端连接验收，再推进采购至配发自动化。",
       "occurrence": 0,
       "target": "Complete real VPN node, restart and client connection acceptance testing, then automate purchase-to-assignment.",
-      "context": "p @ line 334 · surrounding text: 下一步： 完成真实节点、重启与客户端连接验收，再推进采购至配发自动化。"
+      "context": "p @ line 333 · surrounding text: 下一步： 完成真实节点、重启与客户端连接验收，再推进采购至配发自动化。"
     },
     {
       "id": "u_35bc2933210778c4",
@@ -1109,7 +1109,7 @@
       "source": "目标时间",
       "occurrence": 5,
       "target": "Target date",
-      "context": "span @ line 335 · surrounding text: 目标时间 年底前 待办 0 项"
+      "context": "span @ line 334 · surrounding text: 目标时间 年底前 待办 0 项"
     },
     {
       "id": "u_b4aa04e247371576",
@@ -1117,7 +1117,7 @@
       "source": "年底前",
       "occurrence": 0,
       "target": "Sprint completion",
-      "context": "b @ line 335 · surrounding text: 目标时间 年底前 待办 0 项"
+      "context": "b @ line 334 · surrounding text: 目标时间 年底前 待办 0 项"
     },
     {
       "id": "u_c1223553bb446b68",
@@ -1125,7 +1125,7 @@
       "source": "待办",
       "occurrence": 5,
       "target": "To-do",
-      "context": "span @ line 335 · surrounding text: 目标时间 年底前 待办 0 项"
+      "context": "span @ line 334 · surrounding text: 目标时间 年底前 待办 0 项"
     },
     {
       "id": "u_30cb4ddb56dd0927",
@@ -1133,7 +1133,7 @@
       "source": "项",
       "occurrence": 5,
       "target": "items",
-      "context": "span @ line 335 · surrounding text: 目标时间 年底前 待办 0 项"
+      "context": "span @ line 334 · surrounding text: 目标时间 年底前 待办 0 项"
     },
     {
       "id": "u_0252b7c3655732e7",
@@ -1141,7 +1141,7 @@
       "source": "三协议实现、全量铺开与中国验收",
       "occurrence": 0,
       "target": "Three-protocol implementation, full rollout and China acceptance testing",
-      "context": "span.goal-name @ line 339 · surrounding text: G7 三协议实现、全量铺开与中国验收 进行中"
+      "context": "span.goal-name @ line 338 · surrounding text: G7 三协议实现、全量铺开与中国验收 进行中"
     },
     {
       "id": "u_f40099bf13df7516",
@@ -1149,7 +1149,7 @@
       "source": "进行中",
       "occurrence": 7,
       "target": "In Progress",
-      "context": "span.tag.doing @ line 339 · surrounding text: G7 三协议实现、全量铺开与中国验收 进行中"
+      "context": "span.tag.doing @ line 338 · surrounding text: G7 三协议实现、全量铺开与中国验收 进行中"
     },
     {
       "id": "u_2a6306373837ca00",
@@ -1157,7 +1157,7 @@
       "source": "测试连接有进展，全量验收未关",
       "occurrence": 0,
       "target": "Test connectivity progressed; full acceptance remains open",
-      "context": "p.label @ line 341"
+      "context": "p.label @ line 340"
     },
     {
       "id": "u_9e1d1805067553cb",
@@ -1165,7 +1165,7 @@
       "source": "9月7日中国、台湾测试连接确认；ShadowTLS 收敛为只用 Shadowsocks 2022。34 台三协议仍是 8 月快照。",
       "occurrence": 0,
       "target": "China and Taiwan test connections confirmed September 7; ShadowTLS narrowed to Shadowsocks 2022 only. The 34 three-protocol servers figure is still an August snapshot.",
-      "context": "p @ line 342"
+      "context": "p @ line 341"
     },
     {
       "id": "u_ba8fb3ba471ea772",
@@ -1173,7 +1173,7 @@
       "source": "下一步：",
       "occurrence": 6,
       "target": "Next step:",
-      "context": "b @ line 343 · surrounding text: 下一步： 以具体版本补齐三协议、全量节点、跨端及中国地区验收。"
+      "context": "b @ line 342 · surrounding text: 下一步： 以具体版本补齐三协议、全量节点、跨端及中国地区验收。"
     },
     {
       "id": "u_356ac4582669b926",
@@ -1181,7 +1181,7 @@
       "source": "以具体版本补齐三协议、全量节点、跨端及中国地区验收。",
       "occurrence": 0,
       "target": "Complete three-protocol, full VPN node, cross-platform and China acceptance testing against specific versions.",
-      "context": "p @ line 343 · surrounding text: 下一步： 以具体版本补齐三协议、全量节点、跨端及中国地区验收。"
+      "context": "p @ line 342 · surrounding text: 下一步： 以具体版本补齐三协议、全量节点、跨端及中国地区验收。"
     },
     {
       "id": "u_d4018666bcac859e",
@@ -1189,7 +1189,7 @@
       "source": "目标时间",
       "occurrence": 6,
       "target": "Target date",
-      "context": "span @ line 344 · surrounding text: 目标时间 P1 · P0 关闭后 待办 1 项"
+      "context": "span @ line 343 · surrounding text: 目标时间 P1 · P0 关闭后 待办 1 项"
     },
     {
       "id": "u_8e8ca7dfcd99d7ac",
@@ -1197,7 +1197,7 @@
       "source": "P1 · P0 关闭后",
       "occurrence": 0,
       "target": "P1 · after P0 is closed",
-      "context": "b @ line 344 · surrounding text: 目标时间 P1 · P0 关闭后 待办 1 项"
+      "context": "b @ line 343 · surrounding text: 目标时间 P1 · P0 关闭后 待办 1 项"
     },
     {
       "id": "u_56b7c05b670a27df",
@@ -1205,7 +1205,7 @@
       "source": "待办",
       "occurrence": 6,
       "target": "To-do",
-      "context": "span @ line 344 · surrounding text: 目标时间 P1 · P0 关闭后 待办 1 项"
+      "context": "span @ line 343 · surrounding text: 目标时间 P1 · P0 关闭后 待办 1 项"
     },
     {
       "id": "u_c004220353b84b72",
@@ -1213,7 +1213,7 @@
       "source": "项",
       "occurrence": 6,
       "target": "items",
-      "context": "span @ line 344 · surrounding text: 目标时间 P1 · P0 关闭后 待办 1 项"
+      "context": "span @ line 343 · surrounding text: 目标时间 P1 · P0 关闭后 待办 1 项"
     },
     {
       "id": "u_af17875f3ac375ad",
@@ -1221,7 +1221,7 @@
       "source": "Unbound 私有 DNS",
       "occurrence": 0,
       "target": "Unbound Private DNS",
-      "context": "span.goal-name @ line 348 · surrounding text: G8 Unbound 私有 DNS 已延误 进行中"
+      "context": "span.goal-name @ line 347 · surrounding text: G8 Unbound 私有 DNS 已延误 进行中"
     },
     {
       "id": "u_203964d5a76c8269",
@@ -1229,7 +1229,7 @@
       "source": "已延误",
       "occurrence": 0,
       "target": "Delayed",
-      "context": "span.tag.late @ line 348 · surrounding text: G8 Unbound 私有 DNS 已延误 进行中"
+      "context": "span.tag.late @ line 347 · surrounding text: G8 Unbound 私有 DNS 已延误 进行中"
     },
     {
       "id": "u_baa1e00b6e9331c5",
@@ -1237,7 +1237,7 @@
       "source": "进行中",
       "occurrence": 8,
       "target": "In Progress",
-      "context": "span.tag.doing @ line 348 · surrounding text: G8 Unbound 私有 DNS 已延误 进行中"
+      "context": "span.tag.doing @ line 347 · surrounding text: G8 Unbound 私有 DNS 已延误 进行中"
     },
     {
       "id": "u_bb41b590990d173b",
@@ -1245,7 +1245,7 @@
       "source": "解析链路已实现，运行待验收",
       "occurrence": 0,
       "target": "Resolver path implemented; runtime acceptance pending",
-      "context": "p.label @ line 350"
+      "context": "p.label @ line 349"
     },
     {
       "id": "u_a306cbb8a9ce3788",
@@ -1253,7 +1253,7 @@
       "source": "节点递归解析、隧道内解析、异常阻断和解析器职责修复已实现。",
       "occurrence": 0,
       "target": "VPN node recursive resolution, in-tunnel resolution, anomaly blocking and resolver responsibility fixes are implemented.",
-      "context": "p @ line 351"
+      "context": "p @ line 350"
     },
     {
       "id": "u_882c03acf05a4618",
@@ -1261,7 +1261,7 @@
       "source": "原因：",
       "occurrence": 0,
       "target": "Reason:",
-      "context": "b @ line 352 · surrounding text: 原因： 原定 8 月；目标看板写现进入运行验证，没有新日期。"
+      "context": "b @ line 351 · surrounding text: 原因： 原定 8 月；目标看板写现进入运行验证，没有新日期。"
     },
     {
       "id": "u_076ce86457f4d58f",
@@ -1269,7 +1269,7 @@
       "source": "原定 8 月；目标看板写现进入运行验证，没有新日期。",
       "occurrence": 0,
       "target": "Originally August; the goal dashboard says it is now in runtime verification, with no new date.",
-      "context": "p.why.late @ line 352 · surrounding text: 原因： 原定 8 月；目标看板写现进入运行验证，没有新日期。"
+      "context": "p.why.late @ line 351 · surrounding text: 原因： 原定 8 月；目标看板写现进入运行验证，没有新日期。"
     },
     {
       "id": "u_cfd0d0b3f0240db6",
@@ -1277,7 +1277,7 @@
       "source": "下一步：",
       "occurrence": 7,
       "target": "Next step:",
-      "context": "b @ line 353 · surrounding text: 下一步： 完成节点重新配置、重启、缓存和真实设备无泄漏验收。"
+      "context": "b @ line 352 · surrounding text: 下一步： 完成节点重新配置、重启、缓存和真实设备无泄漏验收。"
     },
     {
       "id": "u_5a9b751724d0ccad",
@@ -1285,7 +1285,7 @@
       "source": "完成节点重新配置、重启、缓存和真实设备无泄漏验收。",
       "occurrence": 0,
       "target": "Complete VPN node reconfiguration, reboot, cache and real-device leak acceptance testing.",
-      "context": "p @ line 353 · surrounding text: 下一步： 完成节点重新配置、重启、缓存和真实设备无泄漏验收。"
+      "context": "p @ line 352 · surrounding text: 下一步： 完成节点重新配置、重启、缓存和真实设备无泄漏验收。"
     },
     {
       "id": "u_3bbb57f2da286078",
@@ -1293,7 +1293,7 @@
       "source": "目标时间",
       "occurrence": 7,
       "target": "Target date",
-      "context": "span @ line 354 · surrounding text: 目标时间 原定 2026 年 8 月 待办 0 项"
+      "context": "span @ line 353 · surrounding text: 目标时间 原定 2026 年 8 月 待办 0 项"
     },
     {
       "id": "u_b8be59b91c7c1016",
@@ -1301,7 +1301,7 @@
       "source": "原定 2026 年 8 月",
       "occurrence": 0,
       "target": "Originally August 2026",
-      "context": "b @ line 354 · surrounding text: 目标时间 原定 2026 年 8 月 待办 0 项"
+      "context": "b @ line 353 · surrounding text: 目标时间 原定 2026 年 8 月 待办 0 项"
     },
     {
       "id": "u_b5c1ccb84ec07da2",
@@ -1309,7 +1309,7 @@
       "source": "待办",
       "occurrence": 7,
       "target": "To-do",
-      "context": "span @ line 354 · surrounding text: 目标时间 原定 2026 年 8 月 待办 0 项"
+      "context": "span @ line 353 · surrounding text: 目标时间 原定 2026 年 8 月 待办 0 项"
     },
     {
       "id": "u_08900aabb1cfc8d8",
@@ -1317,7 +1317,7 @@
       "source": "项",
       "occurrence": 7,
       "target": "items",
-      "context": "span @ line 354 · surrounding text: 目标时间 原定 2026 年 8 月 待办 0 项"
+      "context": "span @ line 353 · surrounding text: 目标时间 原定 2026 年 8 月 待办 0 项"
     },
     {
       "id": "u_d12dc00c9b5dc10a",
@@ -1325,7 +1325,7 @@
       "source": "智能分流与中国站点直连",
       "occurrence": 0,
       "target": "Smart routing and direct access to China sites",
-      "context": "span.goal-name @ line 358 · surrounding text: G21 智能分流与中国站点直连 待开发"
+      "context": "span.goal-name @ line 357 · surrounding text: G21 智能分流与中国站点直连 待开发"
     },
     {
       "id": "u_66133da306e072e0",
@@ -1333,7 +1333,7 @@
       "source": "待开发",
       "occurrence": 1,
       "target": "To Develop",
-      "context": "span.tag.todo @ line 358 · surrounding text: G21 智能分流与中国站点直连 待开发"
+      "context": "span.tag.todo @ line 357 · surrounding text: G21 智能分流与中国站点直连 待开发"
     },
     {
       "id": "u_31823af252b797ca",
@@ -1341,7 +1341,7 @@
       "source": "目标已确认，待开发",
       "occurrence": 0,
       "target": "Goal confirmed; development pending",
-      "context": "p.label @ line 360"
+      "context": "p.label @ line 359"
     },
     {
       "id": "u_5b6155fde261483a",
@@ -1349,7 +1349,7 @@
       "source": "8月28日决定加入 Arrowfish：中国用户访问中国网站直连，其他公网流量继续走 VPN。没有实现或部署记录。",
       "occurrence": 0,
       "target": "Decided on August 28 to add this to Arrowfish: China users reach China websites directly, other public traffic stays on the VPN. No implementation or deployment record yet.",
-      "context": "p @ line 361"
+      "context": "p @ line 360"
     },
     {
       "id": "u_862d14b3a1c1f54d",
@@ -1357,7 +1357,7 @@
       "source": "下一步：",
       "occurrence": 8,
       "target": "Next step:",
-      "context": "b @ line 362 · surrounding text: 下一步： 建立中国域名／IP 规则与分流 DNS，先由 Android 验证。"
+      "context": "b @ line 361 · surrounding text: 下一步： 建立中国域名／IP 规则与分流 DNS，先由 Android 验证。"
     },
     {
       "id": "u_1afeb1a6b8e749d1",
@@ -1365,7 +1365,7 @@
       "source": "建立中国域名／IP 规则与分流 DNS，先由 Android 验证。",
       "occurrence": 0,
       "target": "Build China domain / IP rules and split DNS, validated first on Android.",
-      "context": "p @ line 362 · surrounding text: 下一步： 建立中国域名／IP 规则与分流 DNS，先由 Android 验证。"
+      "context": "p @ line 361 · surrounding text: 下一步： 建立中国域名／IP 规则与分流 DNS，先由 Android 验证。"
     },
     {
       "id": "u_75a9e20e1f877a46",
@@ -1373,7 +1373,7 @@
       "source": "目标时间",
       "occurrence": 8,
       "target": "Target date",
-      "context": "span @ line 363 · surrounding text: 目标时间 待排期 待办 1 项"
+      "context": "span @ line 362 · surrounding text: 目标时间 待排期 待办 1 项"
     },
     {
       "id": "u_b2196b3a65010b92",
@@ -1381,7 +1381,7 @@
       "source": "待排期",
       "occurrence": 0,
       "target": "To Schedule",
-      "context": "b @ line 363 · surrounding text: 目标时间 待排期 待办 1 项"
+      "context": "b @ line 362 · surrounding text: 目标时间 待排期 待办 1 项"
     },
     {
       "id": "u_183d689e7244862e",
@@ -1389,7 +1389,7 @@
       "source": "待办",
       "occurrence": 8,
       "target": "To-do",
-      "context": "span @ line 363 · surrounding text: 目标时间 待排期 待办 1 项"
+      "context": "span @ line 362 · surrounding text: 目标时间 待排期 待办 1 项"
     },
     {
       "id": "u_43813ed84dabb2dc",
@@ -1397,7 +1397,7 @@
       "source": "项",
       "occurrence": 8,
       "target": "items",
-      "context": "span @ line 363 · surrounding text: 目标时间 待排期 待办 1 项"
+      "context": "span @ line 362 · surrounding text: 目标时间 待排期 待办 1 项"
     },
     {
       "id": "u_ca03e8b9be3d55e0",
@@ -1405,7 +1405,7 @@
       "source": "SkyTunnel 自研隧道",
       "occurrence": 0,
       "target": "SkyTunnel In-House Tunnel",
-      "context": "span.goal-name @ line 367 · surrounding text: G6 SkyTunnel 自研隧道 已完成"
+      "context": "span.goal-name @ line 366 · surrounding text: G6 SkyTunnel 自研隧道 已完成"
     },
     {
       "id": "u_a80791f51d8818fc",
@@ -1413,7 +1413,7 @@
       "source": "已完成",
       "occurrence": 1,
       "target": "Completed",
-      "context": "span.tag.done @ line 367 · surrounding text: G6 SkyTunnel 自研隧道 已完成"
+      "context": "span.tag.done @ line 366 · surrounding text: G6 SkyTunnel 自研隧道 已完成"
     },
     {
       "id": "u_c1ed282830eefd55",
@@ -1421,7 +1421,7 @@
       "source": "核心已完成",
       "occurrence": 0,
       "target": "Core completed",
-      "context": "p.label @ line 369"
+      "context": "p.label @ line 368"
     },
     {
       "id": "u_30a8a5f7237327ce",
@@ -1429,7 +1429,7 @@
       "source": "自研隧道核心已交付；Android 完成替代验证，Windows 已接入共享核心。",
       "occurrence": 0,
       "target": "The in-house tunnel core is delivered; Android replacement verified and Windows uses the shared core.",
-      "context": "p @ line 370"
+      "context": "p @ line 369"
     },
     {
       "id": "u_870e66d0089f2776",
@@ -1437,7 +1437,7 @@
       "source": "下一步：",
       "occurrence": 9,
       "target": "Next step:",
-      "context": "b @ line 371 · surrounding text: 下一步： 持续回归，完成 Windows 正式发布与 Apple 平台接入。"
+      "context": "b @ line 370 · surrounding text: 下一步： 持续回归，完成 Windows 正式发布与 Apple 平台接入。"
     },
     {
       "id": "u_63f3fa5d791d8fbf",
@@ -1445,7 +1445,7 @@
       "source": "持续回归，完成 Windows 正式发布与 Apple 平台接入。",
       "occurrence": 0,
       "target": "Keep regression testing; complete the Windows production release and Apple platform integration.",
-      "context": "p @ line 371 · surrounding text: 下一步： 持续回归，完成 Windows 正式发布与 Apple 平台接入。"
+      "context": "p @ line 370 · surrounding text: 下一步： 持续回归，完成 Windows 正式发布与 Apple 平台接入。"
     },
     {
       "id": "u_6bd5fc0f5dff9615",
@@ -1453,7 +1453,7 @@
       "source": "目标时间",
       "occurrence": 9,
       "target": "Target date",
-      "context": "span @ line 372 · surrounding text: 目标时间 持续维护 待办 0 项"
+      "context": "span @ line 371 · surrounding text: 目标时间 持续维护 待办 0 项"
     },
     {
       "id": "u_5627b2921e550021",
@@ -1461,7 +1461,7 @@
       "source": "持续维护",
       "occurrence": 0,
       "target": "Sprint Maintenance",
-      "context": "b @ line 372 · surrounding text: 目标时间 持续维护 待办 0 项"
+      "context": "b @ line 371 · surrounding text: 目标时间 持续维护 待办 0 项"
     },
     {
       "id": "u_74758690bb744f31",
@@ -1469,7 +1469,7 @@
       "source": "待办",
       "occurrence": 9,
       "target": "To-do",
-      "context": "span @ line 372 · surrounding text: 目标时间 持续维护 待办 0 项"
+      "context": "span @ line 371 · surrounding text: 目标时间 持续维护 待办 0 项"
     },
     {
       "id": "u_3aae98e7a55aec73",
@@ -1477,7 +1477,7 @@
       "source": "项",
       "occurrence": 9,
       "target": "items",
-      "context": "span @ line 372 · surrounding text: 目标时间 持续维护 待办 0 项"
+      "context": "span @ line 371 · surrounding text: 目标时间 持续维护 待办 0 项"
     },
     {
       "id": "u_cd770a8da306412d",
@@ -1485,7 +1485,7 @@
       "source": "用户资格、身份与收入保护",
       "occurrence": 0,
       "target": "User eligibility, identity and revenue protection",
-      "context": "p.group-name @ line 375"
+      "context": "p.group-name @ line 374"
     },
     {
       "id": "u_42fe8bc76b10a482",
@@ -1493,7 +1493,7 @@
       "source": "唯一设备绑定与账号连续性",
       "occurrence": 0,
       "target": "Unique Device Binding and Account Continuity",
-      "context": "span.goal-name @ line 377 · surrounding text: G15 唯一设备绑定与账号连续性 有风险 进行中"
+      "context": "span.goal-name @ line 376 · surrounding text: G15 唯一设备绑定与账号连续性 有风险 进行中"
     },
     {
       "id": "u_01f3a3611d5ad2de",
@@ -1501,7 +1501,7 @@
       "source": "有风险",
       "occurrence": 1,
       "target": "At Risk",
-      "context": "span.tag.risk @ line 377 · surrounding text: G15 唯一设备绑定与账号连续性 有风险 进行中"
+      "context": "span.tag.risk @ line 376 · surrounding text: G15 唯一设备绑定与账号连续性 有风险 进行中"
     },
     {
       "id": "u_c9bc915404247186",
@@ -1509,7 +1509,7 @@
       "source": "进行中",
       "occurrence": 9,
       "target": "In Progress",
-      "context": "span.tag.doing @ line 377 · surrounding text: G15 唯一设备绑定与账号连续性 有风险 进行中"
+      "context": "span.tag.doing @ line 376 · surrounding text: G15 唯一设备绑定与账号连续性 有风险 进行中"
     },
     {
       "id": "u_56b074d995fbf404",
@@ -1517,7 +1517,7 @@
       "source": "新流程有效，兼容待关",
       "occurrence": 0,
       "target": "New process effective, pending closure",
-      "context": "p.label @ line 379"
+      "context": "p.label @ line 378"
     },
     {
       "id": "u_7dfc4eef47de76c3",
@@ -1525,7 +1525,7 @@
       "source": "5月25日当周设备绑定率 83.08% → 93.61%；共享设备 ID 率 21.73% → 2.59%。",
       "occurrence": 0,
       "target": "Week of May 25: device binding rate 83.08% → 93.61%; shared device ID rate 21.73% → 2.59%.",
-      "context": "p @ line 380"
+      "context": "p @ line 379"
     },
     {
       "id": "u_7ec859fda6da9779",
@@ -1533,7 +1533,7 @@
       "source": "风险：",
       "occurrence": 1,
       "target": "Risk:",
-      "context": "b @ line 381 · surrounding text: 风险： 设备标识与跨版本兼容验证未关闭，列为最高优先级。"
+      "context": "b @ line 380 · surrounding text: 风险： 设备标识与跨版本兼容验证未关闭，列为最高优先级。"
     },
     {
       "id": "u_216dad8cfd081f56",
@@ -1541,7 +1541,7 @@
       "source": "设备标识与跨版本兼容验证未关闭，列为最高优先级。",
       "occurrence": 0,
       "target": "Device identifier and cross-version compatibility verification not closed; listed as top priority.",
-      "context": "p.why.risk @ line 381 · surrounding text: 风险： 设备标识与跨版本兼容验证未关闭，列为最高优先级。"
+      "context": "p.why.risk @ line 380 · surrounding text: 风险： 设备标识与跨版本兼容验证未关闭，列为最高优先级。"
     },
     {
       "id": "u_78fcbb1f0b4bcafa",
@@ -1549,7 +1549,7 @@
       "source": "下一步：",
       "occurrence": 10,
       "target": "Next step:",
-      "context": "b @ line 382 · surrounding text: 下一步： 关闭 identity header、生产 CORS、Android／Windows 兼容验证，再治理历史关系。"
+      "context": "b @ line 381 · surrounding text: 下一步： 关闭 identity header、生产 CORS、Android／Windows 兼容验证，再治理历史关系。"
     },
     {
       "id": "u_ed2fad6080febaad",
@@ -1557,7 +1557,7 @@
       "source": "关闭 identity header、生产 CORS、Android／Windows 兼容验证，再治理历史关系。",
       "occurrence": 0,
       "target": "Close identity header, production CORS and Android / Windows compatibility verification, then clean up historical relationships.",
-      "context": "p @ line 382 · surrounding text: 下一步： 关闭 identity header、生产 CORS、Android／Windows 兼容验证，再治理历史关系。"
+      "context": "p @ line 381 · surrounding text: 下一步： 关闭 identity header、生产 CORS、Android／Windows 兼容验证，再治理历史关系。"
     },
     {
       "id": "u_2c97a3429f26aa55",
@@ -1565,7 +1565,7 @@
       "source": "目标时间",
       "occurrence": 10,
       "target": "Target date",
-      "context": "span @ line 383 · surrounding text: 目标时间 P0 待办 1 项"
+      "context": "span @ line 382 · surrounding text: 目标时间 P0 待办 1 项"
     },
     {
       "id": "u_17e64a3692b69be4",
@@ -1573,7 +1573,7 @@
       "source": "待办",
       "occurrence": 10,
       "target": "To-do",
-      "context": "span @ line 383 · surrounding text: 目标时间 P0 待办 1 项"
+      "context": "span @ line 382 · surrounding text: 目标时间 P0 待办 1 项"
     },
     {
       "id": "u_a644ca9db11f7f34",
@@ -1581,7 +1581,7 @@
       "source": "项",
       "occurrence": 10,
       "target": "items",
-      "context": "span @ line 383 · surrounding text: 目标时间 P0 待办 1 项"
+      "context": "span @ line 382 · surrounding text: 目标时间 P0 待办 1 项"
     },
     {
       "id": "u_0025012f5360369c",
@@ -1589,7 +1589,7 @@
       "source": "套餐续费与订阅管理",
       "occurrence": 0,
       "target": "Renewal and Subscription Management",
-      "context": "span.goal-name @ line 387 · surrounding text: G2 套餐续费与订阅管理 进行中"
+      "context": "span.goal-name @ line 386 · surrounding text: G2 套餐续费与订阅管理 进行中"
     },
     {
       "id": "u_eb8f92bc03baf1b2",
@@ -1597,7 +1597,7 @@
       "source": "进行中",
       "occurrence": 10,
       "target": "In Progress",
-      "context": "span.tag.doing @ line 387 · surrounding text: G2 套餐续费与订阅管理 进行中"
+      "context": "span.tag.doing @ line 386 · surrounding text: G2 套餐续费与订阅管理 进行中"
     },
     {
       "id": "u_5079569eeed576fa",
@@ -1605,7 +1605,7 @@
       "source": "主流程测试中，修正待验收",
       "occurrence": 0,
       "target": "Main flow in testing; fixes awaiting acceptance testing",
-      "context": "p.label @ line 389"
+      "context": "p.label @ line 388"
     },
     {
       "id": "u_c3c9a24623d8c3a2",
@@ -1613,7 +1613,7 @@
       "source": "规则 10月1日确定，主流程 10月5日实现完成并进入测试；10月9日 Android 3.9.26 交 staging 测试。",
       "occurrence": 0,
       "target": "Rules confirmed October 1; main flow implemented October 5 and moved to testing; Android 3.9.26 delivered to staging testing on October 9.",
-      "context": "p @ line 390"
+      "context": "p @ line 389"
     },
     {
       "id": "u_fda6a3b3c13e40f6",
@@ -1621,7 +1621,7 @@
       "source": "最新：",
       "occurrence": 6,
       "target": "Latest:",
-      "context": "b @ line 391 · surrounding text: 最新： 补齐待付款续付、支付方式切换、套餐转换及退款边界；关闭自动续费后保留剩余权益；修正独享资源续费与佣金统计。11-04 修好移动端取消订阅误报错误，以及关闭续费后未撤销排队降级的问题。真实支付与回调验收待确认。"
+      "context": "b @ line 390 · surrounding text: 最新： 补齐待付款续付、支付方式切换、套餐转换及退款边界；关闭自动续费后保留剩余权益；修正独享资源续费与佣金统计。11-04 修好移动端取消订阅误报错误，以及关闭续费后未撤销排队降级的问题。真实支付与回调验收待确认。"
     },
     {
       "id": "u_fb5bcd574403fa93",
@@ -1629,7 +1629,7 @@
       "source": "补齐待付款续付、支付方式切换、套餐转换及退款边界；关闭自动续费后保留剩余权益；修正独享资源续费与佣金统计。11-04 修好移动端取消订阅误报错误，以及关闭续费后未撤销排队降级的问题。真实支付与回调验收待确认。",
       "occurrence": 0,
       "target": "Added pending-order resume payment, payment method switch, plan conversion and refund edge cases; remaining entitlement kept after turning off auto-renew; dedicated-resource renewal and commission statistics fixed. On 11-04 the false error on mobile subscription cancellation and the queued downgrade not being cancelled after turning off renewal were fixed. Real payment and callback acceptance testing to be confirmed.",
-      "context": "p.update @ line 391 · surrounding text: 最新： 补齐待付款续付、支付方式切换、套餐转换及退款边界；关闭自动续费后保留剩余权益；修正独享资源续费与佣金统计。11-04 修好移动端取消订阅误报错误，以及关闭续费后未撤销排队降级的问题。真实支付与回调验收待确认。"
+      "context": "p.update @ line 390 · surrounding text: 最新： 补齐待付款续付、支付方式切换、套餐转换及退款边界；关闭自动续费后保留剩余权益；修正独享资源续费与佣金统计。11-04 修好移动端取消订阅误报错误，以及关闭续费后未撤销排队降级的问题。真实支付与回调验收待确认。"
     },
     {
       "id": "u_d41f4a16058e2a76",
@@ -1637,7 +1637,7 @@
       "source": "下一步：",
       "occurrence": 11,
       "target": "Next step:",
-      "context": "b @ line 392 · surrounding text: 下一步： 统一服务版本后验证 Google 新购、关闭续费、延迟降级、重复回调与独享资源续费。"
+      "context": "b @ line 391 · surrounding text: 下一步： 统一服务版本后验证 Google 新购、关闭续费、延迟降级、重复回调与独享资源续费。"
     },
     {
       "id": "u_43a5b0c7ae677ac9",
@@ -1645,7 +1645,7 @@
       "source": "统一服务版本后验证 Google 新购、关闭续费、延迟降级、重复回调与独享资源续费。",
       "occurrence": 0,
       "target": "After unifying service versions, verify Google new purchase, auto-renew off, delayed downgrade, duplicate callbacks and dedicated-resource renewal.",
-      "context": "p @ line 392 · surrounding text: 下一步： 统一服务版本后验证 Google 新购、关闭续费、延迟降级、重复回调与独享资源续费。"
+      "context": "p @ line 391 · surrounding text: 下一步： 统一服务版本后验证 Google 新购、关闭续费、延迟降级、重复回调与独享资源续费。"
     },
     {
       "id": "u_b420d3ebba24a21a",
@@ -1653,7 +1653,7 @@
       "source": "目标时间",
       "occurrence": 11,
       "target": "Target date",
-      "context": "span @ line 393 · surrounding text: 目标时间 年底前 待办 3 项"
+      "context": "span @ line 392 · surrounding text: 目标时间 年底前 待办 3 项"
     },
     {
       "id": "u_e9d906ada6ba10d4",
@@ -1661,7 +1661,7 @@
       "source": "年底前",
       "occurrence": 1,
       "target": "Sprint target before end of the year",
-      "context": "b @ line 393 · surrounding text: 目标时间 年底前 待办 3 项"
+      "context": "b @ line 392 · surrounding text: 目标时间 年底前 待办 3 项"
     },
     {
       "id": "u_bb9f6d444eca1c80",
@@ -1669,7 +1669,7 @@
       "source": "待办",
       "occurrence": 11,
       "target": "To-do",
-      "context": "span @ line 393 · surrounding text: 目标时间 年底前 待办 3 项"
+      "context": "span @ line 392 · surrounding text: 目标时间 年底前 待办 3 项"
     },
     {
       "id": "u_c5004aa65a939b98",
@@ -1677,7 +1677,7 @@
       "source": "项",
       "occurrence": 11,
       "target": "items",
-      "context": "span @ line 393 · surrounding text: 目标时间 年底前 待办 3 项"
+      "context": "span @ line 392 · surrounding text: 目标时间 年底前 待办 3 项"
     },
     {
       "id": "u_3c9cc8648acd6753",
@@ -1685,7 +1685,7 @@
       "source": "Siqo 多平台支付",
       "occurrence": 0,
       "target": "Siqo Multi-Platform Payment",
-      "context": "span.goal-name @ line 397 · surrounding text: G4 Siqo 多平台支付 进行中"
+      "context": "span.goal-name @ line 396 · surrounding text: G4 Siqo 多平台支付 进行中"
     },
     {
       "id": "u_3bfb8b549b4e468f",
@@ -1693,7 +1693,7 @@
       "source": "进行中",
       "occurrence": 11,
       "target": "In Progress",
-      "context": "span.tag.doing @ line 397 · surrounding text: G4 Siqo 多平台支付 进行中"
+      "context": "span.tag.doing @ line 396 · surrounding text: G4 Siqo 多平台支付 进行中"
     },
     {
       "id": "u_62c70b98ca8dda13",
@@ -1701,7 +1701,7 @@
       "source": "结算口径已统一，渠道缺口待处理",
       "occurrence": 0,
       "target": "Settlement basis unified, channel gaps still outstanding",
-      "context": "p.label @ line 399"
+      "context": "p.label @ line 398"
     },
     {
       "id": "u_e619f27c2b163354",
@@ -1709,7 +1709,7 @@
       "source": "Android staging 接入完成；币种目录按法币与加密货币分开；Google、Apple 与 Stripe 接入缺口 15 项已列明，尚未处理完。",
       "occurrence": 0,
       "target": "Android staging integration done; currency catalog split into fiat and crypto; 15 Google, Apple and Stripe integration gaps listed, not yet all resolved.",
-      "context": "p @ line 400"
+      "context": "p @ line 399"
     },
     {
       "id": "u_4cb8995ade39efaa",
@@ -1717,7 +1717,7 @@
       "source": "下一步：",
       "occurrence": 12,
       "target": "Next step:",
-      "context": "b @ line 401 · surrounding text: 下一步： 完成已列明的渠道缺口，再按平台逐一接入、回归和发布。"
+      "context": "b @ line 400 · surrounding text: 下一步： 完成已列明的渠道缺口，再按平台逐一接入、回归和发布。"
     },
     {
       "id": "u_c7b6006fd84d0070",
@@ -1725,7 +1725,7 @@
       "source": "完成已列明的渠道缺口，再按平台逐一接入、回归和发布。",
       "occurrence": 0,
       "target": "Close the listed channel gaps, then integrate, regression-test and release platform by platform.",
-      "context": "p @ line 401 · surrounding text: 下一步： 完成已列明的渠道缺口，再按平台逐一接入、回归和发布。"
+      "context": "p @ line 400 · surrounding text: 下一步： 完成已列明的渠道缺口，再按平台逐一接入、回归和发布。"
     },
     {
       "id": "u_0b1e2b1035d37c97",
@@ -1733,7 +1733,7 @@
       "source": "目标时间",
       "occurrence": 12,
       "target": "Target date",
-      "context": "span @ line 402 · surrounding text: 目标时间 待排期 待办 0 项"
+      "context": "span @ line 401 · surrounding text: 目标时间 待排期 待办 0 项"
     },
     {
       "id": "u_65d017af8ca8c8a4",
@@ -1741,7 +1741,7 @@
       "source": "待排期",
       "occurrence": 1,
       "target": "Awaiting Scheduling",
-      "context": "b @ line 402 · surrounding text: 目标时间 待排期 待办 0 项"
+      "context": "b @ line 401 · surrounding text: 目标时间 待排期 待办 0 项"
     },
     {
       "id": "u_f835f5add4eb241d",
@@ -1749,7 +1749,7 @@
       "source": "待办",
       "occurrence": 12,
       "target": "To-do",
-      "context": "span @ line 402 · surrounding text: 目标时间 待排期 待办 0 项"
+      "context": "span @ line 401 · surrounding text: 目标时间 待排期 待办 0 项"
     },
     {
       "id": "u_498f859a494520b9",
@@ -1757,7 +1757,7 @@
       "source": "项",
       "occurrence": 12,
       "target": "items",
-      "context": "span @ line 402 · surrounding text: 目标时间 待排期 待办 0 项"
+      "context": "span @ line 401 · surrounding text: 目标时间 待排期 待办 0 项"
     },
     {
       "id": "u_3150422b8b7a3d3d",
@@ -1765,7 +1765,7 @@
       "source": "后端权威配额、计时与会话",
       "occurrence": 0,
       "target": "Back Office Authority Quota, Timing and Session",
-      "context": "span.goal-name @ line 406 · surrounding text: G14 后端权威配额、计时与会话 已完成"
+      "context": "span.goal-name @ line 405 · surrounding text: G14 后端权威配额、计时与会话 已完成"
     },
     {
       "id": "u_54bd50ef90072eba",
@@ -1773,7 +1773,7 @@
       "source": "已完成",
       "occurrence": 2,
       "target": "Completed",
-      "context": "span.tag.done @ line 406 · surrounding text: G14 后端权威配额、计时与会话 已完成"
+      "context": "span.tag.done @ line 405 · surrounding text: G14 后端权威配额、计时与会话 已完成"
     },
     {
       "id": "u_da6fb441b8db3b1f",
@@ -1781,7 +1781,7 @@
       "source": "核心已完成",
       "occurrence": 1,
       "target": "Core completed",
-      "context": "p.label @ line 408"
+      "context": "p.label @ line 407"
     },
     {
       "id": "u_8f8fcb1d3ae78672",
@@ -1789,7 +1789,7 @@
       "source": "同账号、同设备多 ACTIVE 为 0；未付费用户最高月流量 1,216.7 GiB → 39.0 GiB。",
       "occurrence": 0,
       "target": "Zero accounts or devices with multiple ACTIVE sessions; highest monthly traffic of non-paying users 1,216.7 GiB → 39.0 GiB.",
-      "context": "p @ line 409"
+      "context": "p @ line 408"
     },
     {
       "id": "u_7124c208fa321d98",
@@ -1797,7 +1797,7 @@
       "source": "下一步：",
       "occurrence": 13,
       "target": "Next step:",
-      "context": "b @ line 410 · surrounding text: 下一步： 持续监控，并为 Redis 配额补充可审计快照。"
+      "context": "b @ line 409 · surrounding text: 下一步： 持续监控，并为 Redis 配额补充可审计快照。"
     },
     {
       "id": "u_b0d348c78092f351",
@@ -1805,7 +1805,7 @@
       "source": "持续监控，并为 Redis 配额补充可审计快照。",
       "occurrence": 0,
       "target": "Keep monitoring, and add auditable snapshots for Redis quotas.",
-      "context": "p @ line 410 · surrounding text: 下一步： 持续监控，并为 Redis 配额补充可审计快照。"
+      "context": "p @ line 409 · surrounding text: 下一步： 持续监控，并为 Redis 配额补充可审计快照。"
     },
     {
       "id": "u_46d7cdddd00b3fc2",
@@ -1813,7 +1813,7 @@
       "source": "目标时间",
       "occurrence": 13,
       "target": "Target date",
-      "context": "span @ line 411 · surrounding text: 目标时间 持续监控 待办 0 项"
+      "context": "span @ line 410 · surrounding text: 目标时间 持续监控 待办 0 项"
     },
     {
       "id": "u_67192c1b2be03b6c",
@@ -1821,7 +1821,7 @@
       "source": "持续监控",
       "occurrence": 0,
       "target": "Continuous monitoring",
-      "context": "b @ line 411 · surrounding text: 目标时间 持续监控 待办 0 项"
+      "context": "b @ line 410 · surrounding text: 目标时间 持续监控 待办 0 项"
     },
     {
       "id": "u_6fc0c734b7f6fb01",
@@ -1829,7 +1829,7 @@
       "source": "待办",
       "occurrence": 13,
       "target": "To-do",
-      "context": "span @ line 411 · surrounding text: 目标时间 持续监控 待办 0 项"
+      "context": "span @ line 410 · surrounding text: 目标时间 持续监控 待办 0 项"
     },
     {
       "id": "u_ec016703ed6eb0a6",
@@ -1837,7 +1837,7 @@
       "source": "项",
       "occurrence": 13,
       "target": "items",
-      "context": "span @ line 411 · surrounding text: 目标时间 持续监控 待办 0 项"
+      "context": "span @ line 410 · surrounding text: 目标时间 持续监控 待办 0 项"
     },
     {
       "id": "u_6c7cf4265234eb44",
@@ -1845,7 +1845,7 @@
       "source": "多平台产品与易用性",
       "occurrence": 0,
       "target": "Multi-platform product and usability",
-      "context": "p.group-name @ line 414"
+      "context": "p.group-name @ line 413"
     },
     {
       "id": "u_a0710f81d19a0008",
@@ -1853,7 +1853,7 @@
       "source": "七平台简化 UI 与高级协议模式",
       "occurrence": 0,
       "target": "Seven-platform simplified UI and advanced protocol mode",
-      "context": "span.goal-name @ line 416 · surrounding text: G20 七平台简化 UI 与高级协议模式 已延误 进行中"
+      "context": "span.goal-name @ line 415 · surrounding text: G20 七平台简化 UI 与高级协议模式 已延误 进行中"
     },
     {
       "id": "u_27aa98eaa2c54a7d",
@@ -1861,7 +1861,7 @@
       "source": "已延误",
       "occurrence": 1,
       "target": "Delayed",
-      "context": "span.tag.late @ line 416 · surrounding text: G20 七平台简化 UI 与高级协议模式 已延误 进行中"
+      "context": "span.tag.late @ line 415 · surrounding text: G20 七平台简化 UI 与高级协议模式 已延误 进行中"
     },
     {
       "id": "u_d224979f0ca52510",
@@ -1869,7 +1869,7 @@
       "source": "进行中",
       "occurrence": 12,
       "target": "In Progress",
-      "context": "span.tag.doing @ line 416 · surrounding text: G20 七平台简化 UI 与高级协议模式 已延误 进行中"
+      "context": "span.tag.doing @ line 415 · surrounding text: G20 七平台简化 UI 与高级协议模式 已延误 进行中"
     },
     {
       "id": "u_0af7c57f552f1bac",
@@ -1877,7 +1877,7 @@
       "source": "Android 简化中，多端待验证",
       "occurrence": 0,
       "target": "Android simplification in progress; cross-client validation pending",
-      "context": "p.label @ line 418"
+      "context": "p.label @ line 417"
     },
     {
       "id": "u_3f8707f9cdef60d6",
@@ -1885,7 +1885,7 @@
       "source": "9月18日确定简化 UI、单 IP 展示方向；Android 已调整布局并补上空支付状态、断网文案与专属线路国旗；Windows 9月21日跟随改版。",
       "occurrence": 0,
       "target": "Simplified UI with single-IP display chosen September 18; Android layout updated with empty payment state, offline message and dedicated-line flags; Windows followed on September 21.",
-      "context": "p @ line 419"
+      "context": "p @ line 418"
     },
     {
       "id": "u_6ee4d537fc743f9f",
@@ -1893,7 +1893,7 @@
       "source": "原因：",
       "occurrence": 1,
       "target": "Reason:",
-      "context": "b @ line 420 · surrounding text: 原因： 原定 08-31 至 09-04；目标看板写截至 9月18日继续开发与验证，没有新日期。"
+      "context": "b @ line 419 · surrounding text: 原因： 原定 08-31 至 09-04；目标看板写截至 9月18日继续开发与验证，没有新日期。"
     },
     {
       "id": "u_a3a139931a28cb81",
@@ -1901,7 +1901,7 @@
       "source": "原定 08-31 至 09-04；目标看板写截至 9月18日继续开发与验证，没有新日期。",
       "occurrence": 0,
       "target": "Originally 08-31 to 09-04; the goal dashboard says development and validation continued as of September 18, with no new date.",
-      "context": "p.why.late @ line 420 · surrounding text: 原因： 原定 08-31 至 09-04；目标看板写截至 9月18日继续开发与验证，没有新日期。"
+      "context": "p.why.late @ line 419 · surrounding text: 原因： 原定 08-31 至 09-04；目标看板写截至 9月18日继续开发与验证，没有新日期。"
     },
     {
       "id": "u_85d228c670bfb1bb",
@@ -1909,7 +1909,7 @@
       "source": "下一步：",
       "occurrence": 14,
       "target": "Next step:",
-      "context": "b @ line 421 · surrounding text: 下一步： 验证简化模式与单 IP 展示，再推进 Windows 与 Apple 一致性。"
+      "context": "b @ line 420 · surrounding text: 下一步： 验证简化模式与单 IP 展示，再推进 Windows 与 Apple 一致性。"
     },
     {
       "id": "u_8aff04004236050f",
@@ -1917,7 +1917,7 @@
       "source": "验证简化模式与单 IP 展示，再推进 Windows 与 Apple 一致性。",
       "occurrence": 0,
       "target": "Verify simplified mode and single-IP display, then align Windows and Apple.",
-      "context": "p @ line 421 · surrounding text: 下一步： 验证简化模式与单 IP 展示，再推进 Windows 与 Apple 一致性。"
+      "context": "p @ line 420 · surrounding text: 下一步： 验证简化模式与单 IP 展示，再推进 Windows 与 Apple 一致性。"
     },
     {
       "id": "u_d14f0904bbb2d97e",
@@ -1925,7 +1925,7 @@
       "source": "目标时间",
       "occurrence": 14,
       "target": "Target date",
-      "context": "span @ line 422 · surrounding text: 目标时间 原定 2026-08-31–09-04 待办 1 项"
+      "context": "span @ line 421 · surrounding text: 目标时间 原定 2026-08-31–09-04 待办 1 项"
     },
     {
       "id": "u_20d039b51596cd57",
@@ -1933,7 +1933,7 @@
       "source": "原定 2026-08-31–09-04",
       "occurrence": 0,
       "target": "Originally 2026-08-31–09-04",
-      "context": "b @ line 422 · surrounding text: 目标时间 原定 2026-08-31–09-04 待办 1 项"
+      "context": "b @ line 421 · surrounding text: 目标时间 原定 2026-08-31–09-04 待办 1 项"
     },
     {
       "id": "u_c449b1c4960fa824",
@@ -1941,7 +1941,7 @@
       "source": "待办",
       "occurrence": 14,
       "target": "To-do",
-      "context": "span @ line 422 · surrounding text: 目标时间 原定 2026-08-31–09-04 待办 1 项"
+      "context": "span @ line 421 · surrounding text: 目标时间 原定 2026-08-31–09-04 待办 1 项"
     },
     {
       "id": "u_06bf07d14b2a9dac",
@@ -1949,7 +1949,7 @@
       "source": "项",
       "occurrence": 14,
       "target": "items",
-      "context": "span @ line 422 · surrounding text: 目标时间 原定 2026-08-31–09-04 待办 1 项"
+      "context": "span @ line 421 · surrounding text: 目标时间 原定 2026-08-31–09-04 待办 1 项"
     },
     {
       "id": "u_b3a6da035701263c",
@@ -1957,7 +1957,7 @@
       "source": "新公司主体迁移",
       "occurrence": 0,
       "target": "New Company Entity Migration",
-      "context": "span.goal-name @ line 426 · surrounding text: G9 新公司主体迁移 进行中"
+      "context": "span.goal-name @ line 425 · surrounding text: G9 新公司主体迁移 进行中"
     },
     {
       "id": "u_04c83e6c9441077e",
@@ -1965,7 +1965,7 @@
       "source": "进行中",
       "occurrence": 13,
       "target": "In Progress",
-      "context": "span.tag.doing @ line 426 · surrounding text: G9 新公司主体迁移 进行中"
+      "context": "span.tag.doing @ line 425 · surrounding text: G9 新公司主体迁移 进行中"
     },
     {
       "id": "u_d5d30f4674d5ed82",
@@ -1973,7 +1973,7 @@
       "source": "Google 平台完成；华为、Samsung、OPPO 进行中。交接 9月30日完成，10月1日停用外部 GitLab 权限。",
       "occurrence": 0,
       "target": "Google platform done; Huawei, Samsung and OPPO in progress. Handover finished September 30; external GitLab access disabled October 1.",
-      "context": "p @ line 428"
+      "context": "p @ line 427"
     },
     {
       "id": "u_e2eeaaf8f560172a",
@@ -1981,7 +1981,7 @@
       "source": "下一步：",
       "occurrence": 15,
       "target": "Next step:",
-      "context": "b @ line 429 · surrounding text: 下一步： 逐个平台关闭主体、账号及发布资格迁移。"
+      "context": "b @ line 428 · surrounding text: 下一步： 逐个平台关闭主体、账号及发布资格迁移。"
     },
     {
       "id": "u_c6d0baa0c4b0ee03",
@@ -1989,7 +1989,7 @@
       "source": "逐个平台关闭主体、账号及发布资格迁移。",
       "occurrence": 0,
       "target": "Complete migration of the legal entity, accounts, and publishing eligibility one platform at a time.",
-      "context": "p @ line 429 · surrounding text: 下一步： 逐个平台关闭主体、账号及发布资格迁移。"
+      "context": "p @ line 428 · surrounding text: 下一步： 逐个平台关闭主体、账号及发布资格迁移。"
     },
     {
       "id": "u_78e6ac4afb4c663d",
@@ -1997,7 +1997,7 @@
       "source": "目标时间",
       "occurrence": 15,
       "target": "Target date",
-      "context": "span @ line 430 · surrounding text: 目标时间 待排期 待办 0 项"
+      "context": "span @ line 429 · surrounding text: 目标时间 待排期 待办 0 项"
     },
     {
       "id": "u_119dfea56e8da3c9",
@@ -2005,7 +2005,7 @@
       "source": "待排期",
       "occurrence": 2,
       "target": "Scheduling pending",
-      "context": "b @ line 430 · surrounding text: 目标时间 待排期 待办 0 项"
+      "context": "b @ line 429 · surrounding text: 目标时间 待排期 待办 0 项"
     },
     {
       "id": "u_e61ff505456bd530",
@@ -2013,7 +2013,7 @@
       "source": "待办",
       "occurrence": 15,
       "target": "To-do",
-      "context": "span @ line 430 · surrounding text: 目标时间 待排期 待办 0 项"
+      "context": "span @ line 429 · surrounding text: 目标时间 待排期 待办 0 项"
     },
     {
       "id": "u_00920b10eaf5e903",
@@ -2021,7 +2021,7 @@
       "source": "项",
       "occurrence": 15,
       "target": "items",
-      "context": "span @ line 430 · surrounding text: 目标时间 待排期 待办 0 项"
+      "context": "span @ line 429 · surrounding text: 目标时间 待排期 待办 0 项"
     },
     {
       "id": "u_07eb298d56ac7fcc",
@@ -2029,7 +2029,7 @@
       "source": "iOS 与 macOS Apple 平台恢复",
       "occurrence": 0,
       "target": "iOS and macOS Apple Platform Recovery",
-      "context": "span.goal-name @ line 434 · surrounding text: G11 iOS 与 macOS Apple 平台恢复 进行中"
+      "context": "span.goal-name @ line 433 · surrounding text: G11 iOS 与 macOS Apple 平台恢复 进行中"
     },
     {
       "id": "u_86291882b9bb433f",
@@ -2037,7 +2037,7 @@
       "source": "进行中",
       "occurrence": 14,
       "target": "In Progress",
-      "context": "span.tag.doing @ line 434 · surrounding text: G11 iOS 与 macOS Apple 平台恢复 进行中"
+      "context": "span.tag.doing @ line 433 · surrounding text: G11 iOS 与 macOS Apple 平台恢复 进行中"
     },
     {
       "id": "u_3b65e4b5d026b95c",
@@ -2045,7 +2045,7 @@
       "source": "TestFlight 已推进，真机与商店待验收",
       "occurrence": 0,
       "target": "TestFlight progressed; device and store acceptance pending",
-      "context": "p.label @ line 436"
+      "context": "p.label @ line 435"
     },
     {
       "id": "u_ef9cc3204b947539",
@@ -2053,7 +2053,7 @@
       "source": "8月24日测试构建取得 TestFlight 有效状态；修复支付弹窗与网页结账、购买恢复。没有新的 App Store 发布结论。",
       "occurrence": 0,
       "target": "Test build reached valid TestFlight status on August 24; payment pop-up, web checkout and purchase restore fixed. No new App Store release decision.",
-      "context": "p @ line 437"
+      "context": "p @ line 436"
     },
     {
       "id": "u_7e87bf832bec9d54",
@@ -2061,7 +2061,7 @@
       "source": "下一步：",
       "occurrence": 16,
       "target": "Next step:",
-      "context": "b @ line 438 · surrounding text: 下一步： 完成 iOS 真机购买、连接、升级及 App Store 验收；macOS 独立推进。"
+      "context": "b @ line 437 · surrounding text: 下一步： 完成 iOS 真机购买、连接、升级及 App Store 验收；macOS 独立推进。"
     },
     {
       "id": "u_eb060998382afbc5",
@@ -2069,7 +2069,7 @@
       "source": "完成 iOS 真机购买、连接、升级及 App Store 验收；macOS 独立推进。",
       "occurrence": 0,
       "target": "Complete iOS real-device purchase, connection, upgrade and App Store acceptance testing; macOS proceeds separately.",
-      "context": "p @ line 438 · surrounding text: 下一步： 完成 iOS 真机购买、连接、升级及 App Store 验收；macOS 独立推进。"
+      "context": "p @ line 437 · surrounding text: 下一步： 完成 iOS 真机购买、连接、升级及 App Store 验收；macOS 独立推进。"
     },
     {
       "id": "u_12ccecafffc348db",
@@ -2077,7 +2077,7 @@
       "source": "目标时间",
       "occurrence": 16,
       "target": "Target date",
-      "context": "span @ line 439 · surrounding text: 目标时间 按 Apple 门槛 待办 1 项"
+      "context": "span @ line 438 · surrounding text: 目标时间 按 Apple 门槛 待办 1 项"
     },
     {
       "id": "u_3d9102f7d825bb46",
@@ -2085,7 +2085,7 @@
       "source": "按 Apple 门槛",
       "occurrence": 0,
       "target": "By Apple Threshold",
-      "context": "b @ line 439 · surrounding text: 目标时间 按 Apple 门槛 待办 1 项"
+      "context": "b @ line 438 · surrounding text: 目标时间 按 Apple 门槛 待办 1 项"
     },
     {
       "id": "u_c5e9b35bbe587f6e",
@@ -2093,7 +2093,7 @@
       "source": "待办",
       "occurrence": 16,
       "target": "To-do",
-      "context": "span @ line 439 · surrounding text: 目标时间 按 Apple 门槛 待办 1 项"
+      "context": "span @ line 438 · surrounding text: 目标时间 按 Apple 门槛 待办 1 项"
     },
     {
       "id": "u_7026fa10a940a048",
@@ -2101,7 +2101,7 @@
       "source": "项",
       "occurrence": 16,
       "target": "items",
-      "context": "span @ line 439 · surrounding text: 目标时间 按 Apple 门槛 待办 1 项"
+      "context": "span @ line 438 · surrounding text: 目标时间 按 Apple 门槛 待办 1 项"
     },
     {
       "id": "u_dfaa649bc43a9aed",
@@ -2109,7 +2109,7 @@
       "source": "Windows 云签名与官网恢复发布",
       "occurrence": 0,
       "target": "Windows Cloud Signature and Official Website Resume Release",
-      "context": "span.goal-name @ line 443 · surrounding text: G16 Windows 云签名与官网恢复发布 进行中"
+      "context": "span.goal-name @ line 442 · surrounding text: G16 Windows 云签名与官网恢复发布 进行中"
     },
     {
       "id": "u_33b5e7d216ac433f",
@@ -2117,7 +2117,7 @@
       "source": "进行中",
       "occurrence": 15,
       "target": "In Progress",
-      "context": "span.tag.doing @ line 443 · surrounding text: G16 Windows 云签名与官网恢复发布 进行中"
+      "context": "span.tag.doing @ line 442 · surrounding text: G16 Windows 云签名与官网恢复发布 进行中"
     },
     {
       "id": "u_f1dbb7c94cb7ef44",
@@ -2125,7 +2125,7 @@
       "source": "签名基础已有，订阅与连接验证中",
       "occurrence": 0,
       "target": "Signing foundation established; subscription and connection validation ongoing",
-      "context": "p.label @ line 445"
+      "context": "p.label @ line 444"
     },
     {
       "id": "u_21902076bcb6ec05",
@@ -2133,7 +2133,7 @@
       "source": "云签名就绪；订阅接口、配额、断线保护对齐；9月21日上测试环境。",
       "occurrence": 0,
       "target": "Cloud signing ready; subscription APIs, quotas and kill switch aligned; on staging since September 21.",
-      "context": "p @ line 446"
+      "context": "p @ line 445"
     },
     {
       "id": "u_c3d61836109067c3",
@@ -2141,7 +2141,7 @@
       "source": "最新：",
       "occurrence": 7,
       "target": "Latest:",
-      "context": "b @ line 447 · surrounding text: 最新： 10月11日会员等级、到期时间、线路数据、购买选项和诊断字段 5 项契约修正发布代码；安装包与实机验收待确认。"
+      "context": "b @ line 446 · surrounding text: 最新： 10月11日会员等级、到期时间、线路数据、购买选项和诊断字段 5 项契约修正发布代码；安装包与实机验收待确认。"
     },
     {
       "id": "u_8c97b57c8b3abefd",
@@ -2149,7 +2149,7 @@
       "source": "10月11日会员等级、到期时间、线路数据、购买选项和诊断字段 5 项契约修正发布代码；安装包与实机验收待确认。",
       "occurrence": 0,
       "target": "On October 11, 5 contract fixes for membership level, expiry time, line data, purchase options and diagnostic fields were released in code; installer and real-device acceptance testing to be confirmed.",
-      "context": "p.update @ line 447 · surrounding text: 最新： 10月11日会员等级、到期时间、线路数据、购买选项和诊断字段 5 项契约修正发布代码；安装包与实机验收待确认。"
+      "context": "p.update @ line 446 · surrounding text: 最新： 10月11日会员等级、到期时间、线路数据、购买选项和诊断字段 5 项契约修正发布代码；安装包与实机验收待确认。"
     },
     {
       "id": "u_4498697cdb243260",
@@ -2157,7 +2157,7 @@
       "source": "下一步：",
       "occurrence": 17,
       "target": "Next step:",
-      "context": "b @ line 448 · surrounding text: 下一步： 完成干净机器签名安装、购买、连接、升级与卸载验收，再安排官网发布。"
+      "context": "b @ line 447 · surrounding text: 下一步： 完成干净机器签名安装、购买、连接、升级与卸载验收，再安排官网发布。"
     },
     {
       "id": "u_3ba55de29ce7ec15",
@@ -2165,7 +2165,7 @@
       "source": "完成干净机器签名安装、购买、连接、升级与卸载验收，再安排官网发布。",
       "occurrence": 0,
       "target": "Complete clean-machine signed installation, purchase, connectivity, upgrade and uninstall acceptance testing before website release.",
-      "context": "p @ line 448 · surrounding text: 下一步： 完成干净机器签名安装、购买、连接、升级与卸载验收，再安排官网发布。"
+      "context": "p @ line 447 · surrounding text: 下一步： 完成干净机器签名安装、购买、连接、升级与卸载验收，再安排官网发布。"
     },
     {
       "id": "u_2d40e01ca9f8e392",
@@ -2173,7 +2173,7 @@
       "source": "目标时间",
       "occurrence": 17,
       "target": "Target date",
-      "context": "span @ line 449 · surrounding text: 目标时间 P0 · 下一发布窗口 待办 1 项"
+      "context": "span @ line 448 · surrounding text: 目标时间 P0 · 下一发布窗口 待办 1 项"
     },
     {
       "id": "u_3b8486a354dd3e61",
@@ -2181,7 +2181,7 @@
       "source": "P0 · 下一发布窗口",
       "occurrence": 0,
       "target": "P0 · next release window",
-      "context": "b @ line 449 · surrounding text: 目标时间 P0 · 下一发布窗口 待办 1 项"
+      "context": "b @ line 448 · surrounding text: 目标时间 P0 · 下一发布窗口 待办 1 项"
     },
     {
       "id": "u_0825af5dc4671162",
@@ -2189,7 +2189,7 @@
       "source": "待办",
       "occurrence": 17,
       "target": "To-do",
-      "context": "span @ line 449 · surrounding text: 目标时间 P0 · 下一发布窗口 待办 1 项"
+      "context": "span @ line 448 · surrounding text: 目标时间 P0 · 下一发布窗口 待办 1 项"
     },
     {
       "id": "u_f38e6218faeebe9c",
@@ -2197,7 +2197,7 @@
       "source": "项",
       "occurrence": 17,
       "target": "items",
-      "context": "span @ line 449 · surrounding text: 目标时间 P0 · 下一发布窗口 待办 1 项"
+      "context": "span @ line 448 · surrounding text: 目标时间 P0 · 下一发布窗口 待办 1 项"
     },
     {
       "id": "u_6f24266acb0da613",
@@ -2205,7 +2205,7 @@
       "source": "增长、转化与市场入口",
       "occurrence": 0,
       "target": "Growth, conversion and market entry points",
-      "context": "p.group-name @ line 452"
+      "context": "p.group-name @ line 451"
     },
     {
       "id": "u_aa9eb96b10a76010",
@@ -2213,7 +2213,7 @@
       "source": "广告归因与付费分析",
       "occurrence": 0,
       "target": "Ad Attribution and Pay-Per-Click Analysis",
-      "context": "span.goal-name @ line 454 · surrounding text: G1 广告归因与付费分析 进行中"
+      "context": "span.goal-name @ line 453 · surrounding text: G1 广告归因与付费分析 进行中"
     },
     {
       "id": "u_1754f3c084724a48",
@@ -2221,7 +2221,7 @@
       "source": "进行中",
       "occurrence": 16,
       "target": "In Progress",
-      "context": "span.tag.doing @ line 454 · surrounding text: G1 广告归因与付费分析 进行中"
+      "context": "span.tag.doing @ line 453 · surrounding text: G1 广告归因与付费分析 进行中"
     },
     {
       "id": "u_c1af0bfdccb353e7",
@@ -2229,7 +2229,7 @@
       "source": "归因与访问统计修复中",
       "occurrence": 0,
       "target": "Attribution and visit statistics fixes in progress",
-      "context": "p.label @ line 456"
+      "context": "p.label @ line 455"
     },
     {
       "id": "u_f80c91cfc8c92c73",
@@ -2237,7 +2237,7 @@
       "source": "签名归因凭证、跨页交接、访问计数与后台展示修复；尚无新的生产覆盖率核验。",
       "occurrence": 0,
       "target": "Signed attribution tokens, cross-page hand-off, visit counts and Back Office (BO) display fixed; no new production coverage check yet.",
-      "context": "p @ line 457"
+      "context": "p @ line 456"
     },
     {
       "id": "u_c8b5598f6d621e59",
@@ -2245,7 +2245,7 @@
       "source": "最新：",
       "occurrence": 8,
       "target": "Latest:",
-      "context": "b @ line 458 · surrounding text: 最新： 分享链接、下载和账户推荐人传递已有跨端修正；11-04 修好渠道链接下载、免密登录后不显示推荐人的问题。实际获客转化待确认。"
+      "context": "b @ line 457 · surrounding text: 最新： 分享链接、下载和账户推荐人传递已有跨端修正；11-04 修好渠道链接下载、免密登录后不显示推荐人的问题。实际获客转化待确认。"
     },
     {
       "id": "u_293daa510872072a",
@@ -2253,7 +2253,7 @@
       "source": "分享链接、下载和账户推荐人传递已有跨端修正；11-04 修好渠道链接下载、免密登录后不显示推荐人的问题。实际获客转化待确认。",
       "occurrence": 0,
       "target": "Share links, downloads and account referrer hand-off fixed across platforms; on 11-04 the missing referrer after channel-link download and passwordless sign-in was fixed. Actual acquisition conversion to be confirmed.",
-      "context": "p.update @ line 458 · surrounding text: 最新： 分享链接、下载和账户推荐人传递已有跨端修正；11-04 修好渠道链接下载、免密登录后不显示推荐人的问题。实际获客转化待确认。"
+      "context": "p.update @ line 457 · surrounding text: 最新： 分享链接、下载和账户推荐人传递已有跨端修正；11-04 修好渠道链接下载、免密登录后不显示推荐人的问题。实际获客转化待确认。"
     },
     {
       "id": "u_c61de26ad8437b2d",
@@ -2261,7 +2261,7 @@
       "source": "下一步：",
       "occurrence": 18,
       "target": "Next step:",
-      "context": "b @ line 459 · surrounding text: 下一步： 完成安装归因、重试和并发验证，对账后更新覆盖率。"
+      "context": "b @ line 458 · surrounding text: 下一步： 完成安装归因、重试和并发验证，对账后更新覆盖率。"
     },
     {
       "id": "u_9af38ccc8712f8fd",
@@ -2269,7 +2269,7 @@
       "source": "完成安装归因、重试和并发验证，对账后更新覆盖率。",
       "occurrence": 0,
       "target": "Complete install attribution, retry and concurrency verification, reconcile, then update coverage.",
-      "context": "p @ line 459 · surrounding text: 下一步： 完成安装归因、重试和并发验证，对账后更新覆盖率。"
+      "context": "p @ line 458 · surrounding text: 下一步： 完成安装归因、重试和并发验证，对账后更新覆盖率。"
     },
     {
       "id": "u_b08eb69e3dbdbb7e",
@@ -2277,7 +2277,7 @@
       "source": "目标时间",
       "occurrence": 18,
       "target": "Target date",
-      "context": "span @ line 460 · surrounding text: 目标时间 年底前 待办 1 项"
+      "context": "span @ line 459 · surrounding text: 目标时间 年底前 待办 1 项"
     },
     {
       "id": "u_61b502a0eb5a9ae2",
@@ -2285,7 +2285,7 @@
       "source": "年底前",
       "occurrence": 2,
       "target": "Sprint closure and stabilization",
-      "context": "b @ line 460 · surrounding text: 目标时间 年底前 待办 1 项"
+      "context": "b @ line 459 · surrounding text: 目标时间 年底前 待办 1 项"
     },
     {
       "id": "u_5ae5d66fb3fbfcc4",
@@ -2293,7 +2293,7 @@
       "source": "待办",
       "occurrence": 18,
       "target": "To-do",
-      "context": "span @ line 460 · surrounding text: 目标时间 年底前 待办 1 项"
+      "context": "span @ line 459 · surrounding text: 目标时间 年底前 待办 1 项"
     },
     {
       "id": "u_acd50eb1affbee45",
@@ -2301,7 +2301,7 @@
       "source": "项",
       "occurrence": 18,
       "target": "items",
-      "context": "span @ line 460 · surrounding text: 目标时间 年底前 待办 1 项"
+      "context": "span @ line 459 · surrounding text: 目标时间 年底前 待办 1 项"
     },
     {
       "id": "u_592aba8e58443ca7",
@@ -2309,7 +2309,7 @@
       "source": "真实用户质量与转化看板",
       "occurrence": 0,
       "target": "Sprint User Quality and Conversion Dashboard",
-      "context": "span.goal-name @ line 464 · surrounding text: G18 真实用户质量与转化看板 进行中"
+      "context": "span.goal-name @ line 463 · surrounding text: G18 真实用户质量与转化看板 进行中"
     },
     {
       "id": "u_9c22f9441fa2e9d9",
@@ -2317,7 +2317,7 @@
       "source": "进行中",
       "occurrence": 17,
       "target": "In Progress",
-      "context": "span.tag.doing @ line 464 · surrounding text: G18 真实用户质量与转化看板 进行中"
+      "context": "span.tag.doing @ line 463 · surrounding text: G18 真实用户质量与转化看板 进行中"
     },
     {
       "id": "u_fa817cfa40268610",
@@ -2325,7 +2325,7 @@
       "source": "统计来源与展示对齐中",
       "occurrence": 0,
       "target": "Statistics sources and presentation aligning",
-      "context": "p.label @ line 466"
+      "context": "p.label @ line 465"
     },
     {
       "id": "u_a9cf250d54524082",
@@ -2333,7 +2333,7 @@
       "source": "访问统计及后台报表来源已修复；没有新的收入、活跃或转化率查询。",
       "occurrence": 0,
       "target": "Visit statistics and Back Office (BO) report sources fixed; no new revenue, activity or conversion query.",
-      "context": "p @ line 467"
+      "context": "p @ line 466"
     },
     {
       "id": "u_395c11cf91803888",
@@ -2341,7 +2341,7 @@
       "source": "最新：",
       "occurrence": 9,
       "target": "Latest:",
-      "context": "b @ line 468 · surrounding text: 最新： 本期没有新增收入、成本或退款损失的生产核验。"
+      "context": "b @ line 467 · surrounding text: 最新： 本期没有新增收入、成本或退款损失的生产核验。"
     },
     {
       "id": "u_ea84da4807afd6b3",
@@ -2349,7 +2349,7 @@
       "source": "本期没有新增收入、成本或退款损失的生产核验。",
       "occurrence": 0,
       "target": "No new production check of revenue, cost or refund losses this period.",
-      "context": "p.update @ line 468 · surrounding text: 最新： 本期没有新增收入、成本或退款损失的生产核验。"
+      "context": "p.update @ line 467 · surrounding text: 最新： 本期没有新增收入、成本或退款损失的生产核验。"
     },
     {
       "id": "u_5d47ab4ed28855dd",
@@ -2357,7 +2357,7 @@
       "source": "下一步：",
       "occurrence": 19,
       "target": "Next step:",
-      "context": "b @ line 469 · surrounding text: 下一步： 核对统计后更新用户质量、渠道转化和收入看板。"
+      "context": "b @ line 468 · surrounding text: 下一步： 核对统计后更新用户质量、渠道转化和收入看板。"
     },
     {
       "id": "u_758ee87893ca63cb",
@@ -2365,7 +2365,7 @@
       "source": "核对统计后更新用户质量、渠道转化和收入看板。",
       "occurrence": 0,
       "target": "Check the statistics, then update the user quality, channel conversion and revenue dashboard.",
-      "context": "p @ line 469 · surrounding text: 下一步： 核对统计后更新用户质量、渠道转化和收入看板。"
+      "context": "p @ line 468 · surrounding text: 下一步： 核对统计后更新用户质量、渠道转化和收入看板。"
     },
     {
       "id": "u_d2d8fbd813340899",
@@ -2373,7 +2373,7 @@
       "source": "目标时间",
       "occurrence": 19,
       "target": "Target date",
-      "context": "span @ line 470 · surrounding text: 目标时间 下一管理看板 待办 0 项"
+      "context": "span @ line 469 · surrounding text: 目标时间 下一管理看板 待办 0 项"
     },
     {
       "id": "u_2cc1e9cdccfc33fa",
@@ -2381,7 +2381,7 @@
       "source": "下一管理看板",
       "occurrence": 0,
       "target": "Next Management Dashboard",
-      "context": "b @ line 470 · surrounding text: 目标时间 下一管理看板 待办 0 项"
+      "context": "b @ line 469 · surrounding text: 目标时间 下一管理看板 待办 0 项"
     },
     {
       "id": "u_d579c3cfd8862201",
@@ -2389,7 +2389,7 @@
       "source": "待办",
       "occurrence": 19,
       "target": "To-do",
-      "context": "span @ line 470 · surrounding text: 目标时间 下一管理看板 待办 0 项"
+      "context": "span @ line 469 · surrounding text: 目标时间 下一管理看板 待办 0 项"
     },
     {
       "id": "u_b1161f80803aabcf",
@@ -2397,7 +2397,7 @@
       "source": "项",
       "occurrence": 19,
       "target": "items",
-      "context": "span @ line 470 · surrounding text: 目标时间 下一管理看板 待办 0 项"
+      "context": "span @ line 469 · surrounding text: 目标时间 下一管理看板 待办 0 项"
     },
     {
       "id": "u_972e994150a139f3",
@@ -2405,7 +2405,7 @@
       "source": "百度广告新网站",
       "occurrence": 0,
       "target": "Baidu Ad New Website",
-      "context": "span.goal-name @ line 474 · surrounding text: G3 百度广告新网站 有风险 进行中"
+      "context": "span.goal-name @ line 473 · surrounding text: G3 百度广告新网站 有风险 进行中"
     },
     {
       "id": "u_69092095fbdf7d9c",
@@ -2413,7 +2413,7 @@
       "source": "有风险",
       "occurrence": 2,
       "target": "At Risk",
-      "context": "span.tag.risk @ line 474 · surrounding text: G3 百度广告新网站 有风险 进行中"
+      "context": "span.tag.risk @ line 473 · surrounding text: G3 百度广告新网站 有风险 进行中"
     },
     {
       "id": "u_04e7e414349109df",
@@ -2421,7 +2421,7 @@
       "source": "进行中",
       "occurrence": 18,
       "target": "In Progress",
-      "context": "span.tag.doing @ line 474 · surrounding text: G3 百度广告新网站 有风险 进行中"
+      "context": "span.tag.doing @ line 473 · surrounding text: G3 百度广告新网站 有风险 进行中"
     },
     {
       "id": "u_e7815fcccd243d46",
@@ -2429,7 +2429,7 @@
       "source": "主站待上线，投放站等待外部检查",
       "occurrence": 0,
       "target": "Main site pending launch, placement site awaiting an external check",
-      "context": "p.label @ line 476"
+      "context": "p.label @ line 475"
     },
     {
       "id": "u_357540bf64a87057",
@@ -2437,7 +2437,7 @@
       "source": "9月16日选定参考站版本、9月23日修正完毕；10月6日投放方指出仍写「箭鱼IP代理」，逐句清查；投放站 9月25日起等外部检查。",
       "occurrence": 0,
       "target": "Reference-site version chosen September 16 and corrected by September 23; on October 6 the ad agency noted it still said \"Jianyu IP Proxy\", now reviewed line by line; the ad site has awaited external review since September 25.",
-      "context": "p @ line 477"
+      "context": "p @ line 476"
     },
     {
       "id": "u_6d2aeee19133c096",
@@ -2445,7 +2445,7 @@
       "source": "最新：",
       "occurrence": 10,
       "target": "Latest:",
-      "context": "b @ line 478 · surrounding text: 最新： 10月15–16日 2 个落地站完成生产发布、HTTP 冒烟检查通过；报告没有写是否包括主站和投放站。"
+      "context": "b @ line 477 · surrounding text: 最新： 10月15–16日 2 个落地站完成生产发布、HTTP 冒烟检查通过；报告没有写是否包括主站和投放站。"
     },
     {
       "id": "u_f468d25162380a37",
@@ -2453,7 +2453,7 @@
       "source": "10月15–16日 2 个落地站完成生产发布、HTTP 冒烟检查通过；报告没有写是否包括主站和投放站。",
       "occurrence": 0,
       "target": "On October 15–16, 2 landing sites were released to production and passed HTTP smoke checks; the report does not say whether this includes the main site and ad site.",
-      "context": "p.update @ line 478 · surrounding text: 最新： 10月15–16日 2 个落地站完成生产发布、HTTP 冒烟检查通过；报告没有写是否包括主站和投放站。"
+      "context": "p.update @ line 477 · surrounding text: 最新： 10月15–16日 2 个落地站完成生产发布、HTTP 冒烟检查通过；报告没有写是否包括主站和投放站。"
     },
     {
       "id": "u_ce0c7cce1f7bb18e",
@@ -2461,7 +2461,7 @@
       "source": "风险：",
       "occurrence": 2,
       "target": "Risk:",
-      "context": "b @ line 479 · surrounding text: 风险： 主站 10月13日是否上线、投放站有无反馈，11-04 报告都没有写。"
+      "context": "b @ line 478 · surrounding text: 风险： 主站 10月13日是否上线、投放站有无反馈，11-04 报告都没有写。"
     },
     {
       "id": "u_17804968c0a590c6",
@@ -2469,7 +2469,7 @@
       "source": "主站 10月13日是否上线、投放站有无反馈，11-04 报告都没有写。",
       "occurrence": 0,
       "target": "The 11-04 report does not say whether the main site went live on October 13 or whether the ad site received feedback.",
-      "context": "p.why.risk @ line 479 · surrounding text: 风险： 主站 10月13日是否上线、投放站有无反馈，11-04 报告都没有写。"
+      "context": "p.why.risk @ line 478 · surrounding text: 风险： 主站 10月13日是否上线、投放站有无反馈，11-04 报告都没有写。"
     },
     {
       "id": "u_c567240b97fc324e",
@@ -2477,7 +2477,7 @@
       "source": "下一步：",
       "occurrence": 20,
       "target": "Next step:",
-      "context": "b @ line 480 · surrounding text: 下一步： 复查主站字眼后上正式环境；投放站待外部反馈后部署。"
+      "context": "b @ line 479 · surrounding text: 下一步： 复查主站字眼后上正式环境；投放站待外部反馈后部署。"
     },
     {
       "id": "u_24317ce193753f2c",
@@ -2485,7 +2485,7 @@
       "source": "复查主站字眼后上正式环境；投放站待外部反馈后部署。",
       "occurrence": 0,
       "target": "Recheck the main site wording, then release it to production; deploy the ad site after external feedback.",
-      "context": "p @ line 480 · surrounding text: 下一步： 复查主站字眼后上正式环境；投放站待外部反馈后部署。"
+      "context": "p @ line 479 · surrounding text: 下一步： 复查主站字眼后上正式环境；投放站待外部反馈后部署。"
     },
     {
       "id": "u_c41446b0188d70e3",
@@ -2493,7 +2493,7 @@
       "source": "目标时间",
       "occurrence": 20,
       "target": "Target date",
-      "context": "span @ line 481 · surrounding text: 目标时间 主站原定 2026-10-13 待办 2 项"
+      "context": "span @ line 480 · surrounding text: 目标时间 主站原定 2026-10-13 待办 2 项"
     },
     {
       "id": "u_520420258e678590",
@@ -2501,7 +2501,7 @@
       "source": "主站原定 2026-10-13",
       "occurrence": 0,
       "target": "Main site originally 2026-10-13",
-      "context": "b @ line 481 · surrounding text: 目标时间 主站原定 2026-10-13 待办 2 项"
+      "context": "b @ line 480 · surrounding text: 目标时间 主站原定 2026-10-13 待办 2 项"
     },
     {
       "id": "u_5b336821d1227c6e",
@@ -2509,7 +2509,7 @@
       "source": "待办",
       "occurrence": 20,
       "target": "To-do",
-      "context": "span @ line 481 · surrounding text: 目标时间 主站原定 2026-10-13 待办 2 项"
+      "context": "span @ line 480 · surrounding text: 目标时间 主站原定 2026-10-13 待办 2 项"
     },
     {
       "id": "u_1a2cec970fdff2e0",
@@ -2517,7 +2517,7 @@
       "source": "项",
       "occurrence": 20,
       "target": "items",
-      "context": "span @ line 481 · surrounding text: 目标时间 主站原定 2026-10-13 待办 2 项"
+      "context": "span @ line 480 · surrounding text: 目标时间 主站原定 2026-10-13 待办 2 项"
     },
     {
       "id": "u_46a4c744a98c3e31",
@@ -2525,7 +2525,7 @@
       "source": "待办",
       "occurrence": 21,
       "target": "To-do",
-      "context": "h2 @ line 487 · surrounding text: 待办 18"
+      "context": "h2 @ line 486 · surrounding text: 待办 18"
     },
     {
       "id": "u_3331a9bba1489c66",
@@ -2533,7 +2533,7 @@
       "source": "百度广告新网站",
       "occurrence": 1,
       "target": "New Baidu advertising website",
-      "context": "p.group-name @ line 489 · surrounding text: G3 百度广告新网站"
+      "context": "p.group-name @ line 488 · surrounding text: G3 百度广告新网站"
     },
     {
       "id": "u_a2311c6ea3a3166f",
@@ -2541,7 +2541,7 @@
       "source": "新官网上正式环境",
       "occurrence": 0,
       "target": "New official website goes to production",
-      "context": "span.row-name @ line 491"
+      "context": "span.row-name @ line 490"
     },
     {
       "id": "u_9e6dc33b3c9ed387",
@@ -2549,7 +2549,7 @@
       "source": "已延误",
       "occurrence": 2,
       "target": "Delayed",
-      "context": "span.tag.late @ line 492 · surrounding text: 已延误 进行中"
+      "context": "span.tag.late @ line 491 · surrounding text: 已延误 进行中"
     },
     {
       "id": "u_e8452c274d0c19bd",
@@ -2557,7 +2557,7 @@
       "source": "进行中",
       "occurrence": 19,
       "target": "In Progress",
-      "context": "span.tag.doing @ line 492 · surrounding text: 已延误 进行中"
+      "context": "span.tag.doing @ line 491 · surrounding text: 已延误 进行中"
     },
     {
       "id": "u_70d61bf149da137a",
@@ -2565,7 +2565,7 @@
       "source": "目标",
       "occurrence": 0,
       "target": "Goal",
-      "context": "span @ line 493 · surrounding text: 目标 2026-10-13"
+      "context": "span @ line 492 · surrounding text: 目标 2026-10-13"
     },
     {
       "id": "u_1c90d8d2bf3faefd",
@@ -2573,7 +2573,7 @@
       "source": "原因待补",
       "occurrence": 0,
       "target": "Reason not yet provided",
-      "context": "div.row-why.late @ line 494"
+      "context": "div.row-why.late @ line 493"
     },
     {
       "id": "u_21b3b79416f3a987",
@@ -2581,7 +2581,7 @@
       "source": "百度投放网站",
       "occurrence": 0,
       "target": "Baidu ad landing site",
-      "context": "span.row-name @ line 497"
+      "context": "span.row-name @ line 496"
     },
     {
       "id": "u_1d49427bae800b03",
@@ -2589,7 +2589,7 @@
       "source": "有风险",
       "occurrence": 3,
       "target": "At Risk",
-      "context": "span.tag.risk @ line 498 · surrounding text: 有风险 进行中"
+      "context": "span.tag.risk @ line 497 · surrounding text: 有风险 进行中"
     },
     {
       "id": "u_6220b9b36246b2b4",
@@ -2597,7 +2597,7 @@
       "source": "进行中",
       "occurrence": 20,
       "target": "In Progress",
-      "context": "span.tag.doing @ line 498 · surrounding text: 有风险 进行中"
+      "context": "span.tag.doing @ line 497 · surrounding text: 有风险 进行中"
     },
     {
       "id": "u_af9f4044fa050aad",
@@ -2605,7 +2605,7 @@
       "source": "目标未确认",
       "occurrence": 0,
       "target": "Target date unconfirmed",
-      "context": "span.unknown @ line 499"
+      "context": "span.unknown @ line 498"
     },
     {
       "id": "u_eef5baa544ca26c0",
@@ -2613,7 +2613,7 @@
       "source": "风险：已等 13 天无反馈，无法给出上线日期。",
       "occurrence": 0,
       "target": "Risk: no feedback after 13 days; no release date can be given.",
-      "context": "div.row-why.risk @ line 500"
+      "context": "div.row-why.risk @ line 499"
     },
     {
       "id": "u_5e6c1e548d53f381",
@@ -2621,7 +2621,7 @@
       "source": "生产韧性、监控、异地备份与恢复",
       "occurrence": 1,
       "target": "Production resilience, monitoring, off-site backup and recovery",
-      "context": "p.group-name @ line 502 · surrounding text: G17 生产韧性、监控、异地备份与恢复"
+      "context": "p.group-name @ line 501 · surrounding text: G17 生产韧性、监控、异地备份与恢复"
     },
     {
       "id": "u_01c2b1749b48ae5d",
@@ -2629,7 +2629,7 @@
       "source": "灾备：独立账户接入与异地恢复演练",
       "occurrence": 0,
       "target": "Disaster recovery: independent account access and off-site restore drill",
-      "context": "span.row-name @ line 504"
+      "context": "span.row-name @ line 503"
     },
     {
       "id": "u_34157d3928e3bfd2",
@@ -2637,7 +2637,7 @@
       "source": "主动发现",
       "occurrence": 3,
       "target": "Found by the team",
-      "context": "span.tag.found @ line 505 · surrounding text: 主动发现 有风险 待开始"
+      "context": "span.tag.found @ line 504 · surrounding text: 主动发现 有风险 待开始"
     },
     {
       "id": "u_a5ea14b247664233",
@@ -2645,7 +2645,7 @@
       "source": "有风险",
       "occurrence": 4,
       "target": "At Risk",
-      "context": "span.tag.risk @ line 505 · surrounding text: 主动发现 有风险 待开始"
+      "context": "span.tag.risk @ line 504 · surrounding text: 主动发现 有风险 待开始"
     },
     {
       "id": "u_afd9ca034a562315",
@@ -2653,7 +2653,7 @@
       "source": "待开始",
       "occurrence": 0,
       "target": "Not Started",
-      "context": "span.tag.todo @ line 505 · surrounding text: 主动发现 有风险 待开始"
+      "context": "span.tag.todo @ line 504 · surrounding text: 主动发现 有风险 待开始"
     },
     {
       "id": "u_4eaf6ad2b5a646dd",
@@ -2661,7 +2661,7 @@
       "source": "目标",
       "occurrence": 1,
       "target": "Goal",
-      "context": "span @ line 506 · surrounding text: 目标 待确认"
+      "context": "span @ line 505 · surrounding text: 目标 待确认"
     },
     {
       "id": "u_4278fbb68c2f77ac",
@@ -2669,7 +2669,7 @@
       "source": "待确认",
       "occurrence": 0,
       "target": "To be confirmed",
-      "context": "b.num @ line 506 · surrounding text: 目标 待确认"
+      "context": "b.num @ line 505 · surrounding text: 目标 待确认"
     },
     {
       "id": "u_a76ba0cf6ab241fe",
@@ -2677,7 +2677,7 @@
       "source": "风险：补齐独立账户接入与异地恢复演练证据后，才能关闭灾备门槛。",
       "occurrence": 0,
       "target": "Risk: the disaster recovery gate closes only after independent account access and off-site restore drill evidence are in place.",
-      "context": "div.row-why.risk @ line 507"
+      "context": "div.row-why.risk @ line 506"
     },
     {
       "id": "u_c2882726409a0cc5",
@@ -2685,7 +2685,7 @@
       "source": "唯一设备绑定与账号连续性",
       "occurrence": 1,
       "target": "Unique device binding and account continuity",
-      "context": "p.group-name @ line 509 · surrounding text: G15 唯一设备绑定与账号连续性"
+      "context": "p.group-name @ line 508 · surrounding text: G15 唯一设备绑定与账号连续性"
     },
     {
       "id": "u_1d9494985d5dd566",
@@ -2693,7 +2693,7 @@
       "source": "设备标识与跨版本兼容验证",
       "occurrence": 0,
       "target": "Device identifier and cross-version compatibility verification",
-      "context": "span.row-name @ line 511"
+      "context": "span.row-name @ line 510"
     },
     {
       "id": "u_44f77a45a9f60ed3",
@@ -2701,7 +2701,7 @@
       "source": "主动发现",
       "occurrence": 4,
       "target": "Found by the team",
-      "context": "span.tag.found @ line 512 · surrounding text: 主动发现 有风险 进行中"
+      "context": "span.tag.found @ line 511 · surrounding text: 主动发现 有风险 进行中"
     },
     {
       "id": "u_f225d1e676fad02b",
@@ -2709,7 +2709,7 @@
       "source": "有风险",
       "occurrence": 5,
       "target": "At Risk",
-      "context": "span.tag.risk @ line 512 · surrounding text: 主动发现 有风险 进行中"
+      "context": "span.tag.risk @ line 511 · surrounding text: 主动发现 有风险 进行中"
     },
     {
       "id": "u_1e07e8da7f3b6eff",
@@ -2717,7 +2717,7 @@
       "source": "进行中",
       "occurrence": 21,
       "target": "In Progress",
-      "context": "span.tag.doing @ line 512 · surrounding text: 主动发现 有风险 进行中"
+      "context": "span.tag.doing @ line 511 · surrounding text: 主动发现 有风险 进行中"
     },
     {
       "id": "u_9f2615a42559f24f",
@@ -2725,7 +2725,7 @@
       "source": "目标未确认",
       "occurrence": 1,
       "target": "Target date unconfirmed",
-      "context": "span.unknown @ line 513"
+      "context": "span.unknown @ line 512"
     },
     {
       "id": "u_cd8cf61f8b4ad9ce",
@@ -2733,7 +2733,7 @@
       "source": "风险：未关闭，列为最高优先级。",
       "occurrence": 0,
       "target": "Risk: not closed; listed as top priority.",
-      "context": "div.row-why.risk @ line 514"
+      "context": "div.row-why.risk @ line 513"
     },
     {
       "id": "u_a27ac7687616e999",
@@ -2741,7 +2741,7 @@
       "source": "全系统接管、架构梳理与模块化重构",
       "occurrence": 1,
       "target": "Full-system takeover, architecture mapping and modular refactoring",
-      "context": "p.group-name @ line 516 · surrounding text: G10 全系统接管、架构梳理与模块化重构"
+      "context": "p.group-name @ line 515 · surrounding text: G10 全系统接管、架构梳理与模块化重构"
     },
     {
       "id": "u_4221c6f59708c5a9",
@@ -2749,7 +2749,7 @@
       "source": "后台操作修正（筛选、订阅只读视图、退款提示）",
       "occurrence": 0,
       "target": "Back Office (BO) operation fixes (filters, read-only subscription view, refund prompts)",
-      "context": "span.row-name @ line 518"
+      "context": "span.row-name @ line 517"
     },
     {
       "id": "u_6eff4ed103d2ac40",
@@ -2757,7 +2757,7 @@
       "source": "进行中",
       "occurrence": 22,
       "target": "In Progress",
-      "context": "span.tag.doing @ line 519"
+      "context": "span.tag.doing @ line 518"
     },
     {
       "id": "u_1930c4d025489e7c",
@@ -2765,7 +2765,7 @@
       "source": "目标未确认",
       "occurrence": 2,
       "target": "Target date unconfirmed",
-      "context": "span.unknown @ line 520"
+      "context": "span.unknown @ line 519"
     },
     {
       "id": "u_70f6bad2bc9d0129",
@@ -2773,7 +2773,7 @@
       "source": "共享组件版本跨服务统一",
       "occurrence": 0,
       "target": "Unify shared component versions across services",
-      "context": "span.row-name @ line 523"
+      "context": "span.row-name @ line 522"
     },
     {
       "id": "u_f6d1bb9ad1fbc608",
@@ -2781,7 +2781,7 @@
       "source": "主动发现",
       "occurrence": 5,
       "target": "Found by the team",
-      "context": "span.tag.found @ line 524 · surrounding text: 主动发现 进行中"
+      "context": "span.tag.found @ line 523 · surrounding text: 主动发现 进行中"
     },
     {
       "id": "u_0c50b87fd48729ff",
@@ -2789,7 +2789,7 @@
       "source": "进行中",
       "occurrence": 23,
       "target": "In Progress",
-      "context": "span.tag.doing @ line 524 · surrounding text: 主动发现 进行中"
+      "context": "span.tag.doing @ line 523 · surrounding text: 主动发现 进行中"
     },
     {
       "id": "u_b82b3553578da240",
@@ -2797,7 +2797,7 @@
       "source": "目标未确认",
       "occurrence": 3,
       "target": "Target date unconfirmed",
-      "context": "span.unknown @ line 525"
+      "context": "span.unknown @ line 524"
     },
     {
       "id": "u_6b3c8453e8df94f7",
@@ -2805,7 +2805,7 @@
       "source": "套餐续费与订阅管理",
       "occurrence": 1,
       "target": "Plan renewal and subscription management",
-      "context": "p.group-name @ line 527 · surrounding text: G2 套餐续费与订阅管理"
+      "context": "p.group-name @ line 526 · surrounding text: G2 套餐续费与订阅管理"
     },
     {
       "id": "u_98665e5388796c6d",
@@ -2813,7 +2813,7 @@
       "source": "续费与支付修正验证（Google 新购、关闭续费、延迟降级、重复回调、独享资源续费）",
       "occurrence": 0,
       "target": "Renewal and payment fix verification (Google new purchase, auto-renew off, delayed downgrade, duplicate callbacks, dedicated-resource renewal)",
-      "context": "span.row-name @ line 529"
+      "context": "span.row-name @ line 528"
     },
     {
       "id": "u_c6e5f84c16b68610",
@@ -2821,7 +2821,7 @@
       "source": "进行中",
       "occurrence": 24,
       "target": "In Progress",
-      "context": "span.tag.doing @ line 530"
+      "context": "span.tag.doing @ line 529"
     },
     {
       "id": "u_6d8dc4ae3cf36f2b",
@@ -2829,7 +2829,7 @@
       "source": "目标",
       "occurrence": 2,
       "target": "Goal",
-      "context": "span @ line 531 · surrounding text: 目标 待确认"
+      "context": "span @ line 530 · surrounding text: 目标 待确认"
     },
     {
       "id": "u_9fae0e980f66a329",
@@ -2837,7 +2837,7 @@
       "source": "待确认",
       "occurrence": 1,
       "target": "To be confirmed",
-      "context": "b.num @ line 531 · surrounding text: 目标 待确认"
+      "context": "b.num @ line 530 · surrounding text: 目标 待确认"
     },
     {
       "id": "u_b7fb074d6f135f2c",
@@ -2845,7 +2845,7 @@
       "source": "Google 订阅与独享资源续费修正",
       "occurrence": 0,
       "target": "Google subscription and dedicated-resource renewal fixes",
-      "context": "span.row-name @ line 534"
+      "context": "span.row-name @ line 533"
     },
     {
       "id": "u_e0d3cee934216053",
@@ -2853,7 +2853,7 @@
       "source": "进行中",
       "occurrence": 25,
       "target": "In Progress",
-      "context": "span.tag.doing @ line 535"
+      "context": "span.tag.doing @ line 534"
     },
     {
       "id": "u_8fef11bdc9b92e8a",
@@ -2861,7 +2861,7 @@
       "source": "目标未确认",
       "occurrence": 4,
       "target": "Target date unconfirmed",
-      "context": "span.unknown @ line 536"
+      "context": "span.unknown @ line 535"
     },
     {
       "id": "u_4c221ebe0da13029",
@@ -2869,7 +2869,7 @@
       "source": "Stripe 测试环境回调对齐",
       "occurrence": 0,
       "target": "Stripe staging callback alignment",
-      "context": "span.row-name @ line 539"
+      "context": "span.row-name @ line 538"
     },
     {
       "id": "u_611775d5d42d0b94",
@@ -2877,7 +2877,7 @@
       "source": "主动发现",
       "occurrence": 6,
       "target": "Found by the team",
-      "context": "span.tag.found @ line 540 · surrounding text: 主动发现 进行中"
+      "context": "span.tag.found @ line 539 · surrounding text: 主动发现 进行中"
     },
     {
       "id": "u_c16deb5db8ad9368",
@@ -2885,7 +2885,7 @@
       "source": "进行中",
       "occurrence": 26,
       "target": "In Progress",
-      "context": "span.tag.doing @ line 540 · surrounding text: 主动发现 进行中"
+      "context": "span.tag.doing @ line 539 · surrounding text: 主动发现 进行中"
     },
     {
       "id": "u_69ce6a5296f0d71b",
@@ -2893,7 +2893,7 @@
       "source": "目标未确认",
       "occurrence": 5,
       "target": "Target date unconfirmed",
-      "context": "span.unknown @ line 541"
+      "context": "span.unknown @ line 540"
     },
     {
       "id": "u_a48ca9e3dd8b4129",
@@ -2901,7 +2901,7 @@
       "source": "七平台简化 UI 与高级协议模式",
       "occurrence": 1,
       "target": "Simplified UI and advanced protocol mode on seven platforms",
-      "context": "p.group-name @ line 543 · surrounding text: G20 七平台简化 UI 与高级协议模式"
+      "context": "p.group-name @ line 542 · surrounding text: G20 七平台简化 UI 与高级协议模式"
     },
     {
       "id": "u_e0114e2e595af200",
@@ -2909,7 +2909,7 @@
       "source": "Android 3.9.25 修复（空支付状态、断网文案、专属线路国旗等）",
       "occurrence": 0,
       "target": "Android 3.9.25 fixes (empty payment state, offline message, dedicated-line flags, etc.)",
-      "context": "span.row-name @ line 545"
+      "context": "span.row-name @ line 544"
     },
     {
       "id": "u_55c08e3c05fa5f5f",
@@ -2917,7 +2917,7 @@
       "source": "进行中",
       "occurrence": 27,
       "target": "In Progress",
-      "context": "span.tag.doing @ line 546"
+      "context": "span.tag.doing @ line 545"
     },
     {
       "id": "u_fac16cfe3649cf92",
@@ -2925,7 +2925,7 @@
       "source": "目标未确认",
       "occurrence": 6,
       "target": "Target date unconfirmed",
-      "context": "span.unknown @ line 547"
+      "context": "span.unknown @ line 546"
     },
     {
       "id": "u_9ecac929fcc3c622",
@@ -2933,7 +2933,7 @@
       "source": "iOS 与 macOS Apple 平台恢复",
       "occurrence": 1,
       "target": "iOS and macOS Apple platform recovery",
-      "context": "p.group-name @ line 549 · surrounding text: G11 iOS 与 macOS Apple 平台恢复"
+      "context": "p.group-name @ line 548 · surrounding text: G11 iOS 与 macOS Apple 平台恢复"
     },
     {
       "id": "u_ddbf8c7d673520f8",
@@ -2941,7 +2941,7 @@
       "source": "iOS 真机购买、连接与商店验收",
       "occurrence": 0,
       "target": "iOS real-device purchase, connection and store acceptance testing",
-      "context": "span.row-name @ line 551"
+      "context": "span.row-name @ line 550"
     },
     {
       "id": "u_8b6a9e30a3a9ce41",
@@ -2949,7 +2949,7 @@
       "source": "进行中",
       "occurrence": 28,
       "target": "In Progress",
-      "context": "span.tag.doing @ line 552"
+      "context": "span.tag.doing @ line 551"
     },
     {
       "id": "u_00dd077dbf7bb0b5",
@@ -2957,7 +2957,7 @@
       "source": "目标未确认",
       "occurrence": 7,
       "target": "Target date unconfirmed",
-      "context": "span.unknown @ line 553"
+      "context": "span.unknown @ line 552"
     },
     {
       "id": "u_53194770b2112625",
@@ -2965,7 +2965,7 @@
       "source": "Windows 云签名与官网恢复发布",
       "occurrence": 1,
       "target": "Windows cloud signing and official-website release",
-      "context": "p.group-name @ line 555 · surrounding text: G16 Windows 云签名与官网恢复发布"
+      "context": "p.group-name @ line 554 · surrounding text: G16 Windows 云签名与官网恢复发布"
     },
     {
       "id": "u_510e90ef465ca908",
@@ -2973,7 +2973,7 @@
       "source": "Windows 官网签名发布",
       "occurrence": 0,
       "target": "Windows signed release on the official website",
-      "context": "span.row-name @ line 557"
+      "context": "span.row-name @ line 556"
     },
     {
       "id": "u_c3752cbac31f0bfc",
@@ -2981,7 +2981,7 @@
       "source": "进行中",
       "occurrence": 29,
       "target": "In Progress",
-      "context": "span.tag.doing @ line 558"
+      "context": "span.tag.doing @ line 557"
     },
     {
       "id": "u_45daef493bb34ad9",
@@ -2989,7 +2989,7 @@
       "source": "目标未确认",
       "occurrence": 8,
       "target": "Target date unconfirmed",
-      "context": "span.unknown @ line 559"
+      "context": "span.unknown @ line 558"
     },
     {
       "id": "u_ab04778a9de371be",
@@ -2997,7 +2997,7 @@
       "source": "广告归因与付费分析",
       "occurrence": 1,
       "target": "Ad attribution and paid-user analysis",
-      "context": "p.group-name @ line 561 · surrounding text: G1 广告归因与付费分析"
+      "context": "p.group-name @ line 560 · surrounding text: G1 广告归因与付费分析"
     },
     {
       "id": "u_1f3df7b8796783c5",
@@ -3005,7 +3005,7 @@
       "source": "推荐归因修正（分享链接、下载、账户推荐人传递）",
       "occurrence": 0,
       "target": "Referral attribution fixes (share links, downloads, account referrer hand-off)",
-      "context": "span.row-name @ line 563"
+      "context": "span.row-name @ line 562"
     },
     {
       "id": "u_267b4db71f1a0134",
@@ -3013,7 +3013,7 @@
       "source": "主动发现",
       "occurrence": 7,
       "target": "Found by the team",
-      "context": "span.tag.found @ line 564 · surrounding text: 主动发现 进行中"
+      "context": "span.tag.found @ line 563 · surrounding text: 主动发现 进行中"
     },
     {
       "id": "u_6201f2749fed0f90",
@@ -3021,7 +3021,7 @@
       "source": "进行中",
       "occurrence": 30,
       "target": "In Progress",
-      "context": "span.tag.doing @ line 564 · surrounding text: 主动发现 进行中"
+      "context": "span.tag.doing @ line 563 · surrounding text: 主动发现 进行中"
     },
     {
       "id": "u_90611e3d825d5bc2",
@@ -3029,7 +3029,7 @@
       "source": "目标未确认",
       "occurrence": 9,
       "target": "Target date unconfirmed",
-      "context": "span.unknown @ line 565"
+      "context": "span.unknown @ line 564"
     },
     {
       "id": "u_620a6f530edea676",
@@ -3037,7 +3037,7 @@
       "source": "可追溯生产发布与用户可用性验收",
       "occurrence": 1,
       "target": "Traceable production releases and user availability acceptance testing",
-      "context": "p.group-name @ line 567 · surrounding text: G19 可追溯生产发布与用户可用性验收"
+      "context": "p.group-name @ line 566 · surrounding text: G19 可追溯生产发布与用户可用性验收"
     },
     {
       "id": "u_20f95ebf6a9cc54c",
@@ -3045,7 +3045,7 @@
       "source": "核对配置与程序版本、健康检查和恢复步骤",
       "occurrence": 0,
       "target": "Check configuration and program versions, health checks and recovery steps",
-      "context": "span.row-name @ line 569"
+      "context": "span.row-name @ line 568"
     },
     {
       "id": "u_d34234fdfab575a7",
@@ -3053,7 +3053,7 @@
       "source": "待开始",
       "occurrence": 1,
       "target": "Not Started",
-      "context": "span.tag.todo @ line 570"
+      "context": "span.tag.todo @ line 569"
     },
     {
       "id": "u_c25e7d3a5d871b5e",
@@ -3061,7 +3061,7 @@
       "source": "目标",
       "occurrence": 3,
       "target": "Goal",
-      "context": "span @ line 571 · surrounding text: 目标 待确认"
+      "context": "span @ line 570 · surrounding text: 目标 待确认"
     },
     {
       "id": "u_d3dc1e16439d3af7",
@@ -3069,7 +3069,7 @@
       "source": "待确认",
       "occurrence": 2,
       "target": "To be confirmed",
-      "context": "b.num @ line 571 · surrounding text: 目标 待确认"
+      "context": "b.num @ line 570 · surrounding text: 目标 待确认"
     },
     {
       "id": "u_cf5ac1a9fcb9ed14",
@@ -3077,7 +3077,7 @@
       "source": "正式发布",
       "occurrence": 0,
       "target": "Production release",
-      "context": "span.row-name @ line 574"
+      "context": "span.row-name @ line 573"
     },
     {
       "id": "u_b2a4b91a2d8aace6",
@@ -3085,7 +3085,7 @@
       "source": "待开始",
       "occurrence": 2,
       "target": "Not Started",
-      "context": "span.tag.todo @ line 575"
+      "context": "span.tag.todo @ line 574"
     },
     {
       "id": "u_96a09d6f82367fb5",
@@ -3093,7 +3093,7 @@
       "source": "目标",
       "occurrence": 4,
       "target": "Goal",
-      "context": "span @ line 576 · surrounding text: 目标 审核通过后定维护日期"
+      "context": "span @ line 575 · surrounding text: 目标 审核通过后定维护日期"
     },
     {
       "id": "u_c3920764522eaece",
@@ -3101,7 +3101,7 @@
       "source": "审核通过后定维护日期",
       "occurrence": 0,
       "target": "Maintenance date set after approval",
-      "context": "b.num @ line 576 · surrounding text: 目标 审核通过后定维护日期"
+      "context": "b.num @ line 575 · surrounding text: 目标 审核通过后定维护日期"
     },
     {
       "id": "u_4b3c3b649c278d9c",
@@ -3109,7 +3109,7 @@
       "source": "后端正式发布（含 11-03、11-04 修正）",
       "occurrence": 0,
       "target": "Backend production release (with the 11-03 and 11-04 fixes)",
-      "context": "span.row-name @ line 579"
+      "context": "span.row-name @ line 578"
     },
     {
       "id": "u_62283e027320ffa1",
@@ -3117,7 +3117,7 @@
       "source": "待开始",
       "occurrence": 3,
       "target": "Not Started",
-      "context": "span.tag.todo @ line 580"
+      "context": "span.tag.todo @ line 579"
     },
     {
       "id": "u_dce0bd84cd2a9dea",
@@ -3125,7 +3125,7 @@
       "source": "目标",
       "occurrence": 5,
       "target": "Goal",
-      "context": "span @ line 581 · surrounding text: 目标 审核通过后定维护日期"
+      "context": "span @ line 580 · surrounding text: 目标 审核通过后定维护日期"
     },
     {
       "id": "u_5b190bf0be30c053",
@@ -3133,7 +3133,7 @@
       "source": "审核通过后定维护日期",
       "occurrence": 1,
       "target": "Maintenance date set after approval",
-      "context": "b.num @ line 581 · surrounding text: 目标 审核通过后定维护日期"
+      "context": "b.num @ line 580 · surrounding text: 目标 审核通过后定维护日期"
     },
     {
       "id": "u_6752304eea79d8f4",
@@ -3141,7 +3141,7 @@
       "source": "三协议实现、全量铺开与中国验收",
       "occurrence": 1,
       "target": "Three-protocol implementation, full rollout and China acceptance testing",
-      "context": "p.group-name @ line 583 · surrounding text: G7 三协议实现、全量铺开与中国验收"
+      "context": "p.group-name @ line 582 · surrounding text: G7 三协议实现、全量铺开与中国验收"
     },
     {
       "id": "u_410a5e1bcf244ef8",
@@ -3149,7 +3149,7 @@
       "source": "三协议全量铺开与中国地区验收",
       "occurrence": 0,
       "target": "Full three-protocol rollout and China acceptance testing",
-      "context": "span.row-name @ line 585"
+      "context": "span.row-name @ line 584"
     },
     {
       "id": "u_e0f00ad4286c58bf",
@@ -3157,7 +3157,7 @@
       "source": "待开始",
       "occurrence": 4,
       "target": "Not Started",
-      "context": "span.tag.todo @ line 586"
+      "context": "span.tag.todo @ line 585"
     },
     {
       "id": "u_e9f7ad65844519cb",
@@ -3165,7 +3165,7 @@
       "source": "目标未确认",
       "occurrence": 10,
       "target": "Target date unconfirmed",
-      "context": "span.unknown @ line 587"
+      "context": "span.unknown @ line 586"
     },
     {
       "id": "u_0f5a9402c9599f0a",
@@ -3173,7 +3173,7 @@
       "source": "智能分流与中国站点直连",
       "occurrence": 1,
       "target": "Smart routing with direct access to China websites",
-      "context": "p.group-name @ line 589 · surrounding text: G21 智能分流与中国站点直连"
+      "context": "p.group-name @ line 588 · surrounding text: G21 智能分流与中国站点直连"
     },
     {
       "id": "u_80fbcc2ce5ea3d1c",
@@ -3181,7 +3181,7 @@
       "source": "中国站点智能分流",
       "occurrence": 0,
       "target": "Smart routing for China websites",
-      "context": "span.row-name @ line 591"
+      "context": "span.row-name @ line 590"
     },
     {
       "id": "u_495e13efc2d892e5",
@@ -3189,7 +3189,7 @@
       "source": "待开始",
       "occurrence": 5,
       "target": "Not Started",
-      "context": "span.tag.todo @ line 592"
+      "context": "span.tag.todo @ line 591"
     },
     {
       "id": "u_e8917167c978816a",
@@ -3197,7 +3197,7 @@
       "source": "目标未确认",
       "occurrence": 11,
       "target": "Target date unconfirmed",
-      "context": "span.unknown @ line 593"
+      "context": "span.unknown @ line 592"
     },
     {
       "id": "u_9569bc38ebaabcd5",
@@ -3205,7 +3205,7 @@
       "source": "Flutter 已有套餐购买、余额支付、充值和支付事件代码，但独享专线与独享 IP 下单接线未合入主线，App 尚不能收款；正式完成度待 Lex 报告与验收证据。",
       "occurrence": 0,
       "target": "Flutter has plan purchase, balance payment, top-up and payment event code, but order wiring for dedicated lines and dedicated IPs is not yet merged into the main branch, so the app cannot collect payments yet; formal completion awaits Lex's report and acceptance testing evidence.",
-      "context": "p.headline @ line 601"
+      "context": "p.headline @ line 600"
     },
     {
       "id": "u_469a1549e42a9c97",
@@ -3213,7 +3213,7 @@
       "source": "7 个目标：已完成 0，进行中 3，待开发 4",
       "occurrence": 0,
       "target": "7 goals: 0 completed, 3 in progress, 4 planned",
-      "context": "div.bar @ line 602",
+      "context": "div.bar @ line 601",
       "attribute": "aria-label"
     },
     {
@@ -3222,7 +3222,7 @@
       "source": "已完成",
       "occurrence": 3,
       "target": "Completed",
-      "context": "span.c-done @ line 603 · surrounding text: 0 已完成 3 进行中 4 待开发 3 需要关注"
+      "context": "span.c-done @ line 602 · surrounding text: 0 已完成 3 进行中 4 待开发 3 需要关注"
     },
     {
       "id": "u_0884ea0f79bcbf11",
@@ -3230,7 +3230,7 @@
       "source": "进行中",
       "occurrence": 31,
       "target": "In Progress",
-      "context": "span.c-doing @ line 603 · surrounding text: 0 已完成 3 进行中 4 待开发 3 需要关注"
+      "context": "span.c-doing @ line 602 · surrounding text: 0 已完成 3 进行中 4 待开发 3 需要关注"
     },
     {
       "id": "u_9a7c93a8cf27e5d5",
@@ -3238,7 +3238,7 @@
       "source": "待开发",
       "occurrence": 2,
       "target": "To Develop",
-      "context": "span.c-todo @ line 603 · surrounding text: 0 已完成 3 进行中 4 待开发 3 需要关注"
+      "context": "span.c-todo @ line 602 · surrounding text: 0 已完成 3 进行中 4 待开发 3 需要关注"
     },
     {
       "id": "u_1aada4af1dc49dfa",
@@ -3246,7 +3246,7 @@
       "source": "需要关注",
       "occurrence": 1,
       "target": "Needs Attention",
-      "context": "span.c-late @ line 603 · surrounding text: 0 已完成 3 进行中 4 待开发 3 需要关注"
+      "context": "span.c-late @ line 602 · surrounding text: 0 已完成 3 进行中 4 待开发 3 需要关注"
     },
     {
       "id": "u_69f157c96afa69a4",
@@ -3254,15 +3254,15 @@
       "source": "共 7 个年度目标，按目标数统计，不代表产品完成百分比。",
       "occurrence": 0,
       "target": "7 annual goals in total, counted by goal; not a product completion percentage.",
-      "context": "p.note @ line 604"
+      "context": "p.note @ line 603"
     },
     {
-      "id": "u_fe1bb8984acc7f98",
+      "id": "u_bd3da6facafec8f5",
       "kind": "text",
-      "source": "下载 FFF 安装包",
-      "occurrence": 0,
-      "target": "Download FFF installers",
-      "context": "a.download @ line 605"
+      "source": "下载中心",
+      "occurrence": 1,
+      "target": "Download Center",
+      "context": "a.download @ line 604"
     },
     {
       "id": "u_ecdfbf367e3364a6",
@@ -3270,7 +3270,7 @@
       "source": "需要你关注与配合",
       "occurrence": 1,
       "target": "Needs Your Attention and Support",
-      "context": "h2 @ line 608 · surrounding text: 需要你关注与配合 2"
+      "context": "h2 @ line 607 · surrounding text: 需要你关注与配合 2"
     },
     {
       "id": "u_e8d3afc956fea1e0",
@@ -3278,7 +3278,7 @@
       "source": "发布前置",
       "occurrence": 0,
       "target": "Release prerequisites",
-      "context": "span.tag.risk @ line 611 · surrounding text: 发布前置 FFF 尚不能收款，平台发布门槛未关闭 G12 · G13"
+      "context": "span.tag.risk @ line 610 · surrounding text: 发布前置 FFF 尚不能收款，平台发布门槛未关闭 G12 · G13"
     },
     {
       "id": "u_cd59a370aa60686f",
@@ -3286,7 +3286,7 @@
       "source": "FFF 尚不能收款，平台发布门槛未关闭",
       "occurrence": 0,
       "target": "FFF cannot yet collect payments; platform release prerequisites remain open",
-      "context": "h3 @ line 611 · surrounding text: 发布前置 FFF 尚不能收款，平台发布门槛未关闭 G12 · G13"
+      "context": "h3 @ line 610 · surrounding text: 发布前置 FFF 尚不能收款，平台发布门槛未关闭 G12 · G13"
     },
     {
       "id": "u_685d921bb7c430ae",
@@ -3294,7 +3294,7 @@
       "source": "先接通四条交易链路并合入主线，各平台固定产物、验证购买路径和连接，再按 Android → Windows → macOS/iOS 发布。",
       "occurrence": 0,
       "target": "First connect the four purchase flows and merge them into the main branch, freeze builds per platform, verify purchase paths and connection, then release Android → Windows → macOS/iOS.",
-      "context": "p @ line 612"
+      "context": "p @ line 611"
     },
     {
       "id": "u_1541e0dcbcee3319",
@@ -3302,7 +3302,7 @@
       "source": "工程跟进",
       "occurrence": 0,
       "target": "Engineering follow-up",
-      "context": "span.tag.risk @ line 615 · surrounding text: 工程跟进 等待 Lex 汇报 Flutter 正式进度 G10"
+      "context": "span.tag.risk @ line 614 · surrounding text: 工程跟进 等待 Lex 汇报 Flutter 正式进度 G10"
     },
     {
       "id": "u_25347e19c29ba70a",
@@ -3310,7 +3310,7 @@
       "source": "等待 Lex 汇报 Flutter 正式进度",
       "occurrence": 0,
       "target": "Waiting for Lex's formal Flutter progress report",
-      "context": "h3 @ line 615 · surrounding text: 工程跟进 等待 Lex 汇报 Flutter 正式进度 G10"
+      "context": "h3 @ line 614 · surrounding text: 工程跟进 等待 Lex 汇报 Flutter 正式进度 G10"
     },
     {
       "id": "u_3a5dd89a71bf141d",
@@ -3318,7 +3318,7 @@
       "source": "11-04 的 FFF 内容是源码对账，不是 Lex 的进度报告；原定 10月完成的连接基础目标已过期，需要新日期。",
       "occurrence": 0,
       "target": "The 11-04 FFF content is a source-code reconciliation, not Lex's progress report; the connection-foundation goal originally due in October has passed and needs a new date.",
-      "context": "p @ line 616"
+      "context": "p @ line 615"
     },
     {
       "id": "u_4985abf74a416fca",
@@ -3326,7 +3326,7 @@
       "source": "本期完成 · 10-10 至 11-05",
       "occurrence": 1,
       "target": "Completed This Period · 10-10 to 11-05",
-      "context": "h2 @ line 621 · surrounding text: 本期完成 · 10-10 至 11-05 1"
+      "context": "h2 @ line 620 · surrounding text: 本期完成 · 10-10 至 11-05 1"
     },
     {
       "id": "u_adf5057fe13b2c50",
@@ -3334,7 +3334,7 @@
       "source": "开发分支合并一轮",
       "occurrence": 0,
       "target": "One round of development-branch merges",
-      "context": "span.row-name @ line 624"
+      "context": "span.row-name @ line 623"
     },
     {
       "id": "u_4ac0cb580d5c3007",
@@ -3342,7 +3342,7 @@
       "source": "完成",
       "occurrence": 11,
       "target": "Completed",
-      "context": "span @ line 626 · surrounding text: 完成 2026-11-02 之后仍有未合入主线的改动。"
+      "context": "span @ line 625 · surrounding text: 完成 2026-11-02 之后仍有未合入主线的改动。"
     },
     {
       "id": "u_58c750993466f812",
@@ -3350,7 +3350,7 @@
       "source": "之后仍有未合入主线的改动。",
       "occurrence": 0,
       "target": "Some changes have not yet been merged into the main branch since then.",
-      "context": "span @ line 626 · surrounding text: 完成 2026-11-02 之后仍有未合入主线的改动。"
+      "context": "span @ line 625 · surrounding text: 完成 2026-11-02 之后仍有未合入主线的改动。"
     },
     {
       "id": "u_d6536225a75d8946",
@@ -3358,7 +3358,7 @@
       "source": "目标进度",
       "occurrence": 1,
       "target": "Goal Progress",
-      "context": "h2 @ line 631 · surrounding text: 目标进度 7"
+      "context": "h2 @ line 630 · surrounding text: 目标进度 7"
     },
     {
       "id": "u_bbfe3b22f0d4d542",
@@ -3366,7 +3366,7 @@
       "source": "独立后端与数据边界",
       "occurrence": 0,
       "target": "Independent backend and data boundary",
-      "context": "p.group-name @ line 633"
+      "context": "p.group-name @ line 632"
     },
     {
       "id": "u_95b3b7ddf791e36d",
@@ -3374,7 +3374,7 @@
       "source": "独立 GitLab repo 与 staging 后端",
       "occurrence": 0,
       "target": "Independent GitLab repo and staging backend",
-      "context": "span.goal-name @ line 635 · surrounding text: G14 独立 GitLab repo 与 staging 后端 待开发"
+      "context": "span.goal-name @ line 634 · surrounding text: G14 独立 GitLab repo 与 staging 后端 待开发"
     },
     {
       "id": "u_9bc4ad0d8e683d90",
@@ -3382,7 +3382,7 @@
       "source": "待开发",
       "occurrence": 3,
       "target": "To Develop",
-      "context": "span.tag.todo @ line 635 · surrounding text: G14 独立 GitLab repo 与 staging 后端 待开发"
+      "context": "span.tag.todo @ line 634 · surrounding text: G14 独立 GitLab repo 与 staging 后端 待开发"
     },
     {
       "id": "u_834c2d3ed8df7d39",
@@ -3390,7 +3390,7 @@
       "source": "决策已定，待执行",
       "occurrence": 0,
       "target": "Decision Made, Pending Implementation",
-      "context": "p.label @ line 637"
+      "context": "p.label @ line 636"
     },
     {
       "id": "u_cfe881b599427b82",
@@ -3398,7 +3398,7 @@
       "source": "要求复用成熟源码基线，但隔离 FFF 与 Arrowfish 的运行环境、数据库、账号、Redis、凭证和迁移历史；没有交付证据。",
       "occurrence": 0,
       "target": "Reuse the mature source baseline but isolate FFF from Arrowfish in runtime, database, accounts, Redis, credentials and migration history; no delivery evidence yet.",
-      "context": "p @ line 638"
+      "context": "p @ line 637"
     },
     {
       "id": "u_5e6b1a1d73bcc3b8",
@@ -3406,7 +3406,7 @@
       "source": "最新：",
       "occurrence": 11,
       "target": "Latest:",
-      "context": "b @ line 639 · surrounding text: 最新： FFF 独立运行环境、账户和数据隔离仍须单独验证。"
+      "context": "b @ line 638 · surrounding text: 最新： FFF 独立运行环境、账户和数据隔离仍须单独验证。"
     },
     {
       "id": "u_f7e9a419551fce22",
@@ -3414,7 +3414,7 @@
       "source": "FFF 独立运行环境、账户和数据隔离仍须单独验证。",
       "occurrence": 0,
       "target": "FFF independent runtime, accounts and data isolation still require separate verification.",
-      "context": "p.update @ line 639 · surrounding text: 最新： FFF 独立运行环境、账户和数据隔离仍须单独验证。"
+      "context": "p.update @ line 638 · surrounding text: 最新： FFF 独立运行环境、账户和数据隔离仍须单独验证。"
     },
     {
       "id": "u_2dd99ad485913e71",
@@ -3422,7 +3422,7 @@
       "source": "下一步：",
       "occurrence": 21,
       "target": "Next step:",
-      "context": "b @ line 640 · surrounding text: 下一步： 建立独立 repo、CI/CD、后端、数据库与 Redis，以合成数据完成核心流程验收。"
+      "context": "b @ line 639 · surrounding text: 下一步： 建立独立 repo、CI/CD、后端、数据库与 Redis，以合成数据完成核心流程验收。"
     },
     {
       "id": "u_db6e2bcd24b67b38",
@@ -3430,7 +3430,7 @@
       "source": "建立独立 repo、CI/CD、后端、数据库与 Redis，以合成数据完成核心流程验收。",
       "occurrence": 0,
       "target": "Create an independent repo, CI/CD, backend, database and Redis, and complete core-flow acceptance testing with synthetic data.",
-      "context": "p @ line 640 · surrounding text: 下一步： 建立独立 repo、CI/CD、后端、数据库与 Redis，以合成数据完成核心流程验收。"
+      "context": "p @ line 639 · surrounding text: 下一步： 建立独立 repo、CI/CD、后端、数据库与 Redis，以合成数据完成核心流程验收。"
     },
     {
       "id": "u_2fc21417d1753db8",
@@ -3438,7 +3438,7 @@
       "source": "目标时间",
       "occurrence": 21,
       "target": "Target date",
-      "context": "span @ line 641 · surrounding text: 目标时间 Android 首发验收前 待办 1 项"
+      "context": "span @ line 640 · surrounding text: 目标时间 Android 首发验收前 待办 1 项"
     },
     {
       "id": "u_b42ad7f10504c79d",
@@ -3446,7 +3446,7 @@
       "source": "Android 首发验收前",
       "occurrence": 0,
       "target": "Before Android first-release acceptance",
-      "context": "b @ line 641 · surrounding text: 目标时间 Android 首发验收前 待办 1 项"
+      "context": "b @ line 640 · surrounding text: 目标时间 Android 首发验收前 待办 1 项"
     },
     {
       "id": "u_0ac55749b55b3db1",
@@ -3454,7 +3454,7 @@
       "source": "待办",
       "occurrence": 22,
       "target": "To-do",
-      "context": "span @ line 641 · surrounding text: 目标时间 Android 首发验收前 待办 1 项"
+      "context": "span @ line 640 · surrounding text: 目标时间 Android 首发验收前 待办 1 项"
     },
     {
       "id": "u_ea8e2ebc0e27a833",
@@ -3462,7 +3462,7 @@
       "source": "项",
       "occurrence": 21,
       "target": "items",
-      "context": "span @ line 641 · surrounding text: 目标时间 Android 首发验收前 待办 1 项"
+      "context": "span @ line 640 · surrounding text: 目标时间 Android 首发验收前 待办 1 项"
     },
     {
       "id": "u_8eb3e220868e2264",
@@ -3470,7 +3470,7 @@
       "source": "FFF 专属 schema、API 与模块重构",
       "occurrence": 0,
       "target": "FFF Exclusive Schema, API, and Module Rearchitecture",
-      "context": "span.goal-name @ line 645 · surrounding text: G15 FFF 专属 schema、API 与模块重构 待开发"
+      "context": "span.goal-name @ line 644 · surrounding text: G15 FFF 专属 schema、API 与模块重构 待开发"
     },
     {
       "id": "u_0bbed426e53c518f",
@@ -3478,7 +3478,7 @@
       "source": "待开发",
       "occurrence": 4,
       "target": "Planned",
-      "context": "span.tag.todo @ line 645 · surrounding text: G15 FFF 专属 schema、API 与模块重构 待开发"
+      "context": "span.tag.todo @ line 644 · surrounding text: G15 FFF 专属 schema、API 与模块重构 待开发"
     },
     {
       "id": "u_62e350b08cfc24da",
@@ -3486,7 +3486,7 @@
       "source": "隔离验收后开始",
       "occurrence": 0,
       "target": "Start After Isolation Acceptance",
-      "context": "p.label @ line 647"
+      "context": "p.label @ line 646"
     },
     {
       "id": "u_45f6fa0571d584eb",
@@ -3494,7 +3494,7 @@
       "source": "没有 FFF 独立环境中的 schema、API 与模块重构交付证据。",
       "occurrence": 0,
       "target": "No delivery evidence yet for schema, API and module refactoring in an independent FFF environment.",
-      "context": "p @ line 648"
+      "context": "p @ line 647"
     },
     {
       "id": "u_a4b7ffa1b1c69051",
@@ -3502,7 +3502,7 @@
       "source": "下一步：",
       "occurrence": 22,
       "target": "Next step:",
-      "context": "b @ line 649 · surrounding text: 下一步： G14 验收后建立独立迁移历史，再按 FFF 需求重构。"
+      "context": "b @ line 648 · surrounding text: 下一步： G14 验收后建立独立迁移历史，再按 FFF 需求重构。"
     },
     {
       "id": "u_e9516266261a3955",
@@ -3510,7 +3510,7 @@
       "source": "G14 验收后建立独立迁移历史，再按 FFF 需求重构。",
       "occurrence": 0,
       "target": "After G14 acceptance testing, create a separate migration history and refactor for FFF requirements.",
-      "context": "p @ line 649 · surrounding text: 下一步： G14 验收后建立独立迁移历史，再按 FFF 需求重构。"
+      "context": "p @ line 648 · surrounding text: 下一步： G14 验收后建立独立迁移历史，再按 FFF 需求重构。"
     },
     {
       "id": "u_064788db4b04ee61",
@@ -3518,7 +3518,7 @@
       "source": "目标时间",
       "occurrence": 22,
       "target": "Target date",
-      "context": "span @ line 650 · surrounding text: 目标时间 G14 验收后 待办 0 项"
+      "context": "span @ line 649 · surrounding text: 目标时间 G14 验收后 待办 0 项"
     },
     {
       "id": "u_b74e9735263253a6",
@@ -3526,7 +3526,7 @@
       "source": "G14 验收后",
       "occurrence": 0,
       "target": "After G14 Acceptance",
-      "context": "b @ line 650 · surrounding text: 目标时间 G14 验收后 待办 0 项"
+      "context": "b @ line 649 · surrounding text: 目标时间 G14 验收后 待办 0 项"
     },
     {
       "id": "u_f8df4e491ecd5392",
@@ -3534,7 +3534,7 @@
       "source": "待办",
       "occurrence": 23,
       "target": "To-do",
-      "context": "span @ line 650 · surrounding text: 目标时间 G14 验收后 待办 0 项"
+      "context": "span @ line 649 · surrounding text: 目标时间 G14 验收后 待办 0 项"
     },
     {
       "id": "u_f0a41420381b4201",
@@ -3542,7 +3542,7 @@
       "source": "项",
       "occurrence": 22,
       "target": "items",
-      "context": "span @ line 650 · surrounding text: 目标时间 G14 验收后 待办 0 项"
+      "context": "span @ line 649 · surrounding text: 目标时间 G14 验收后 待办 0 项"
     },
     {
       "id": "u_fd32d4d468456195",
@@ -3550,7 +3550,7 @@
       "source": "Android 首发闭环",
       "occurrence": 0,
       "target": "First Android release closure",
-      "context": "p.group-name @ line 653"
+      "context": "p.group-name @ line 652"
     },
     {
       "id": "u_6896d344ad02a33d",
@@ -3558,7 +3558,7 @@
       "source": "连接基础、自动选线与协议回归",
       "occurrence": 0,
       "target": "Connection foundation, automatic route selection, and protocol regression",
-      "context": "span.goal-name @ line 655 · surrounding text: G10 连接基础、自动选线与协议回归 已延误 进行中"
+      "context": "span.goal-name @ line 654 · surrounding text: G10 连接基础、自动选线与协议回归 已延误 进行中"
     },
     {
       "id": "u_3c33d2dff6740350",
@@ -3566,7 +3566,7 @@
       "source": "已延误",
       "occurrence": 3,
       "target": "Delayed",
-      "context": "span.tag.late @ line 655 · surrounding text: G10 连接基础、自动选线与协议回归 已延误 进行中"
+      "context": "span.tag.late @ line 654 · surrounding text: G10 连接基础、自动选线与协议回归 已延误 进行中"
     },
     {
       "id": "u_166cb6bed98c40ae",
@@ -3574,7 +3574,7 @@
       "source": "进行中",
       "occurrence": 32,
       "target": "In Progress",
-      "context": "span.tag.doing @ line 655 · surrounding text: G10 连接基础、自动选线与协议回归 已延误 进行中"
+      "context": "span.tag.doing @ line 654 · surrounding text: G10 连接基础、自动选线与协议回归 已延误 进行中"
     },
     {
       "id": "u_5f3b35338e6a3153",
@@ -3582,7 +3582,7 @@
       "source": "核心实现已推进，跨端验收未关闭",
       "occurrence": 0,
       "target": "Core Implementation Progressed; Cross-platform Acceptance Remains Open",
-      "context": "p.label @ line 657"
+      "context": "p.label @ line 656"
     },
     {
       "id": "u_be714ac0dcf71884",
@@ -3590,7 +3590,7 @@
       "source": "10月9日 Lex 报告连接、选线、测速与阻断已有实现；Apple 两处修复 9月28日提交在独立分支，尚未整合。",
       "occurrence": 0,
       "target": "On October 9 Lex reported connection, line selection, speed test and blocking are implemented; two Apple fixes submitted on September 28 sit on a separate branch, not yet integrated.",
-      "context": "p @ line 658"
+      "context": "p @ line 657"
     },
     {
       "id": "u_dd935b59f6c6b3d7",
@@ -3598,7 +3598,7 @@
       "source": "最新：",
       "occurrence": 12,
       "target": "Latest:",
-      "context": "b @ line 659 · surrounding text: 最新： 正式完成度仍待 Lex 报告与验收证据。"
+      "context": "b @ line 658 · surrounding text: 最新： 正式完成度仍待 Lex 报告与验收证据。"
     },
     {
       "id": "u_8ece37e16b423725",
@@ -3606,7 +3606,7 @@
       "source": "正式完成度仍待 Lex 报告与验收证据。",
       "occurrence": 0,
       "target": "Formal completion still awaits Lex's report and acceptance testing evidence.",
-      "context": "p.update @ line 659 · surrounding text: 最新： 正式完成度仍待 Lex 报告与验收证据。"
+      "context": "p.update @ line 658 · surrounding text: 最新： 正式完成度仍待 Lex 报告与验收证据。"
     },
     {
       "id": "u_c5db2401f609327b",
@@ -3614,7 +3614,7 @@
       "source": "原因：",
       "occurrence": 2,
       "target": "Reason:",
-      "context": "b @ line 660 · surrounding text: 原因： 原目标 10月已过；当前完成日期待确认。"
+      "context": "b @ line 659 · surrounding text: 原因： 原目标 10月已过；当前完成日期待确认。"
     },
     {
       "id": "u_ef8f7208d4fd9df5",
@@ -3622,7 +3622,7 @@
       "source": "原目标 10月已过；当前完成日期待确认。",
       "occurrence": 0,
       "target": "Original October target has passed; the current completion date is to be confirmed.",
-      "context": "p.why.late @ line 660 · surrounding text: 原因： 原目标 10月已过；当前完成日期待确认。"
+      "context": "p.why.late @ line 659 · surrounding text: 原因： 原目标 10月已过；当前完成日期待确认。"
     },
     {
       "id": "u_7869d7acc3b03299",
@@ -3630,7 +3630,7 @@
       "source": "下一步：",
       "occurrence": 23,
       "target": "Next step:",
-      "context": "b @ line 661 · surrounding text: 下一步： 整合 Apple 修复，固定各平台测试产物，完成选线、连接、断开、重连验收。"
+      "context": "b @ line 660 · surrounding text: 下一步： 整合 Apple 修复，固定各平台测试产物，完成选线、连接、断开、重连验收。"
     },
     {
       "id": "u_c6c659494fa13dbc",
@@ -3638,7 +3638,7 @@
       "source": "整合 Apple 修复，固定各平台测试产物，完成选线、连接、断开、重连验收。",
       "occurrence": 0,
       "target": "Integrate the Apple fixes, freeze test builds per platform, and complete acceptance testing for line selection, connect, disconnect and reconnect.",
-      "context": "p @ line 661 · surrounding text: 下一步： 整合 Apple 修复，固定各平台测试产物，完成选线、连接、断开、重连验收。"
+      "context": "p @ line 660 · surrounding text: 下一步： 整合 Apple 修复，固定各平台测试产物，完成选线、连接、断开、重连验收。"
     },
     {
       "id": "u_c9278931689d9406",
@@ -3646,7 +3646,7 @@
       "source": "目标时间",
       "occurrence": 23,
       "target": "Target date",
-      "context": "span @ line 662 · surrounding text: 目标时间 原目标 2026 年 10 月 待办 3 项"
+      "context": "span @ line 661 · surrounding text: 目标时间 原目标 2026 年 10 月 待办 3 项"
     },
     {
       "id": "u_fb0cfd2e4b2a9338",
@@ -3654,7 +3654,7 @@
       "source": "原目标 2026 年 10 月",
       "occurrence": 0,
       "target": "Original target October 2026",
-      "context": "b @ line 662 · surrounding text: 目标时间 原目标 2026 年 10 月 待办 3 项"
+      "context": "b @ line 661 · surrounding text: 目标时间 原目标 2026 年 10 月 待办 3 项"
     },
     {
       "id": "u_aab7c7d23f65a907",
@@ -3662,7 +3662,7 @@
       "source": "待办",
       "occurrence": 24,
       "target": "To-do",
-      "context": "span @ line 662 · surrounding text: 目标时间 原目标 2026 年 10 月 待办 3 项"
+      "context": "span @ line 661 · surrounding text: 目标时间 原目标 2026 年 10 月 待办 3 项"
     },
     {
       "id": "u_96209d8915ac45dd",
@@ -3670,7 +3670,7 @@
       "source": "项",
       "occurrence": 23,
       "target": "items",
-      "context": "span @ line 662 · surrounding text: 目标时间 原目标 2026 年 10 月 待办 3 项"
+      "context": "span @ line 661 · surrounding text: 目标时间 原目标 2026 年 10 月 待办 3 项"
     },
     {
       "id": "u_4612ad466fc9dd9d",
@@ -3678,7 +3678,7 @@
       "source": "支付接口与支付闭环",
       "occurrence": 0,
       "target": "Payment Interface and Payment Loop Closure",
-      "context": "span.goal-name @ line 666 · surrounding text: G12 支付接口与支付闭环 有风险 进行中"
+      "context": "span.goal-name @ line 665 · surrounding text: G12 支付接口与支付闭环 有风险 进行中"
     },
     {
       "id": "u_2805d4be3a513284",
@@ -3686,7 +3686,7 @@
       "source": "有风险",
       "occurrence": 6,
       "target": "At Risk",
-      "context": "span.tag.risk @ line 666 · surrounding text: G12 支付接口与支付闭环 有风险 进行中"
+      "context": "span.tag.risk @ line 665 · surrounding text: G12 支付接口与支付闭环 有风险 进行中"
     },
     {
       "id": "u_02cc09175835822e",
@@ -3694,7 +3694,7 @@
       "source": "进行中",
       "occurrence": 33,
       "target": "In Progress",
-      "context": "span.tag.doing @ line 666 · surrounding text: G12 支付接口与支付闭环 有风险 进行中"
+      "context": "span.tag.doing @ line 665 · surrounding text: G12 支付接口与支付闭环 有风险 进行中"
     },
     {
       "id": "u_3b115806ab140fa9",
@@ -3702,7 +3702,7 @@
       "source": "交易链路重构中，尚不能收款",
       "occurrence": 0,
       "target": "Purchase flows being rebuilt; payments cannot be collected yet",
-      "context": "p.label @ line 668"
+      "context": "p.label @ line 667"
     },
     {
       "id": "u_d096313378539082",
@@ -3710,7 +3710,7 @@
       "source": "10月9日 Lex 报告充值、基底套餐、独享专线与独享 IP 购买正随支付及订阅 API 重构；Roy 负责支付网关商务。",
       "occurrence": 0,
       "target": "On October 9 Lex reported that top-up, base plan, dedicated line and dedicated IP purchases are being rebuilt with the payment and subscription APIs; Roy handles payment-gateway business matters.",
-      "context": "p @ line 669"
+      "context": "p @ line 668"
     },
     {
       "id": "u_aaf8b057a36e406d",
@@ -3718,7 +3718,7 @@
       "source": "最新：",
       "occurrence": 13,
       "target": "Latest:",
-      "context": "b @ line 670 · surrounding text: 最新： 源码对账：已有套餐购买、余额支付、充值和支付事件代码；独享专线与独享 IP 下单接线未合入主线，接口检查仍列出错误。"
+      "context": "b @ line 669 · surrounding text: 最新： 源码对账：已有套餐购买、余额支付、充值和支付事件代码；独享专线与独享 IP 下单接线未合入主线，接口检查仍列出错误。"
     },
     {
       "id": "u_36430eec587c060b",
@@ -3726,7 +3726,7 @@
       "source": "源码对账：已有套餐购买、余额支付、充值和支付事件代码；独享专线与独享 IP 下单接线未合入主线，接口检查仍列出错误。",
       "occurrence": 0,
       "target": "Source reconciliation: plan purchase, balance payment, top-up and payment event code exists; order wiring for dedicated lines and dedicated IPs is not yet merged into the main branch, and API checks still list errors.",
-      "context": "p.update @ line 670 · surrounding text: 最新： 源码对账：已有套餐购买、余额支付、充值和支付事件代码；独享专线与独享 IP 下单接线未合入主线，接口检查仍列出错误。"
+      "context": "p.update @ line 669 · surrounding text: 最新： 源码对账：已有套餐购买、余额支付、充值和支付事件代码；独享专线与独享 IP 下单接线未合入主线，接口检查仍列出错误。"
     },
     {
       "id": "u_40738c7cb7c386cd",
@@ -3734,7 +3734,7 @@
       "source": "风险：",
       "occurrence": 3,
       "target": "Risk:",
-      "context": "b @ line 671 · surrounding text: 风险： App 尚不能收款，是首发门槛。"
+      "context": "b @ line 670 · surrounding text: 风险： App 尚不能收款，是首发门槛。"
     },
     {
       "id": "u_aad367cce05f6bec",
@@ -3742,7 +3742,7 @@
       "source": "App 尚不能收款，是首发门槛。",
       "occurrence": 0,
       "target": "The app cannot collect payments yet; this gates the first release.",
-      "context": "p.why.risk @ line 671 · surrounding text: 风险： App 尚不能收款，是首发门槛。"
+      "context": "p.why.risk @ line 670 · surrounding text: 风险： App 尚不能收款，是首发门槛。"
     },
     {
       "id": "u_851f2e5b02802f4e",
@@ -3750,7 +3750,7 @@
       "source": "下一步：",
       "occurrence": 24,
       "target": "Next step:",
-      "context": "b @ line 672 · surrounding text: 下一步： 接通四条交易链路，验证支付成功／失败、订单核对、重复事件以及余额与权益。"
+      "context": "b @ line 671 · surrounding text: 下一步： 接通四条交易链路，验证支付成功／失败、订单核对、重复事件以及余额与权益。"
     },
     {
       "id": "u_7ea005046d893ad0",
@@ -3758,7 +3758,7 @@
       "source": "接通四条交易链路，验证支付成功／失败、订单核对、重复事件以及余额与权益。",
       "occurrence": 0,
       "target": "Connect the four purchase flows and verify payment success/failure, order reconciliation, duplicate events, balance and entitlements.",
-      "context": "p @ line 672 · surrounding text: 下一步： 接通四条交易链路，验证支付成功／失败、订单核对、重复事件以及余额与权益。"
+      "context": "p @ line 671 · surrounding text: 下一步： 接通四条交易链路，验证支付成功／失败、订单核对、重复事件以及余额与权益。"
     },
     {
       "id": "u_a22b5dc4f9697daf",
@@ -3766,7 +3766,7 @@
       "source": "目标时间",
       "occurrence": 24,
       "target": "Target date",
-      "context": "span @ line 673 · surrounding text: 目标时间 Android 首发前 待办 2 项"
+      "context": "span @ line 672 · surrounding text: 目标时间 Android 首发前 待办 2 项"
     },
     {
       "id": "u_98e536363a390259",
@@ -3774,7 +3774,7 @@
       "source": "Android 首发前",
       "occurrence": 0,
       "target": "Before the first Android release",
-      "context": "b @ line 673 · surrounding text: 目标时间 Android 首发前 待办 2 项"
+      "context": "b @ line 672 · surrounding text: 目标时间 Android 首发前 待办 2 项"
     },
     {
       "id": "u_f9e32044b08fcb87",
@@ -3782,7 +3782,7 @@
       "source": "待办",
       "occurrence": 25,
       "target": "To-do",
-      "context": "span @ line 673 · surrounding text: 目标时间 Android 首发前 待办 2 项"
+      "context": "span @ line 672 · surrounding text: 目标时间 Android 首发前 待办 2 项"
     },
     {
       "id": "u_e9e53e8eba0f37eb",
@@ -3790,7 +3790,7 @@
       "source": "项",
       "occurrence": 24,
       "target": "items",
-      "context": "span @ line 673 · surrounding text: 目标时间 Android 首发前 待办 2 项"
+      "context": "span @ line 672 · surrounding text: 目标时间 Android 首发前 待办 2 项"
     },
     {
       "id": "u_42800d4e6ee6d50c",
@@ -3798,7 +3798,7 @@
       "source": "多跳 VPN（入口／出口双节点）",
       "occurrence": 0,
       "target": "Multi-hop VPN (entry and exit VPN nodes)",
-      "context": "span.goal-name @ line 677 · surrounding text: G16 多跳 VPN（入口／出口双节点） 待开发"
+      "context": "span.goal-name @ line 676 · surrounding text: G16 多跳 VPN（入口／出口双节点） 待开发"
     },
     {
       "id": "u_4971d8691d99934a",
@@ -3806,7 +3806,7 @@
       "source": "待开发",
       "occurrence": 5,
       "target": "Planned",
-      "context": "span.tag.todo @ line 677 · surrounding text: G16 多跳 VPN（入口／出口双节点） 待开发"
+      "context": "span.tag.todo @ line 676 · surrounding text: G16 多跳 VPN（入口／出口双节点） 待开发"
     },
     {
       "id": "u_ee28fc06e48976a5",
@@ -3814,7 +3814,7 @@
       "source": "范围已确认，待开发",
       "occurrence": 0,
       "target": "Scope confirmed; development pending",
-      "context": "p.label @ line 679"
+      "context": "p.label @ line 678"
     },
     {
       "id": "u_c178b8ee84de8f4c",
@@ -3822,7 +3822,7 @@
       "source": "套餐和用户资料已有多跳资格字段，但客户端没有入口、出口节点与连接链。",
       "occurrence": 0,
       "target": "Plans and user profiles already have multi-hop eligibility fields, but the client has no entry/exit VPN nodes or chained connection.",
-      "context": "p @ line 680"
+      "context": "p @ line 679"
     },
     {
       "id": "u_1034924787296ba7",
@@ -3830,7 +3830,7 @@
       "source": "下一步：",
       "occurrence": 25,
       "target": "Next step:",
-      "context": "b @ line 681 · surrounding text: 下一步： 隧道核心链式拨号、后端拓扑与凭证、节点选择，并验证 Android 端到端连接。"
+      "context": "b @ line 680 · surrounding text: 下一步： 隧道核心链式拨号、后端拓扑与凭证、节点选择，并验证 Android 端到端连接。"
     },
     {
       "id": "u_0d143149a7e320bc",
@@ -3838,7 +3838,7 @@
       "source": "隧道核心链式拨号、后端拓扑与凭证、节点选择，并验证 Android 端到端连接。",
       "occurrence": 0,
       "target": "Chained dialing in the tunnel core, backend topology and credentials, VPN node selection, and end-to-end Android connection verification.",
-      "context": "p @ line 681 · surrounding text: 下一步： 隧道核心链式拨号、后端拓扑与凭证、节点选择，并验证 Android 端到端连接。"
+      "context": "p @ line 680 · surrounding text: 下一步： 隧道核心链式拨号、后端拓扑与凭证、节点选择，并验证 Android 端到端连接。"
     },
     {
       "id": "u_08d6f7ce7df2f90b",
@@ -3846,7 +3846,7 @@
       "source": "目标时间",
       "occurrence": 25,
       "target": "Target date",
-      "context": "span @ line 682 · surrounding text: 目标时间 待排期 待办 0 项"
+      "context": "span @ line 681 · surrounding text: 目标时间 待排期 待办 0 项"
     },
     {
       "id": "u_d9dd3a658385fe8e",
@@ -3854,7 +3854,7 @@
       "source": "待排期",
       "occurrence": 3,
       "target": "To schedule",
-      "context": "b @ line 682 · surrounding text: 目标时间 待排期 待办 0 项"
+      "context": "b @ line 681 · surrounding text: 目标时间 待排期 待办 0 项"
     },
     {
       "id": "u_0b06df0e2da0d01a",
@@ -3862,7 +3862,7 @@
       "source": "待办",
       "occurrence": 26,
       "target": "To-do",
-      "context": "span @ line 682 · surrounding text: 目标时间 待排期 待办 0 项"
+      "context": "span @ line 681 · surrounding text: 目标时间 待排期 待办 0 项"
     },
     {
       "id": "u_2bd8838da02c3e71",
@@ -3870,7 +3870,7 @@
       "source": "项",
       "occurrence": 25,
       "target": "items",
-      "context": "span @ line 682 · surrounding text: 目标时间 待排期 待办 0 项"
+      "context": "span @ line 681 · surrounding text: 目标时间 待排期 待办 0 项"
     },
     {
       "id": "u_5a5013ab88f41775",
@@ -3878,7 +3878,7 @@
       "source": "完整智能路由与分流策略",
       "occurrence": 0,
       "target": "Full smart routing and traffic-splitting policies",
-      "context": "span.goal-name @ line 686 · surrounding text: G17 完整智能路由与分流策略 待开发"
+      "context": "span.goal-name @ line 685 · surrounding text: G17 完整智能路由与分流策略 待开发"
     },
     {
       "id": "u_a48400ffe8d824a1",
@@ -3886,7 +3886,7 @@
       "source": "待开发",
       "occurrence": 6,
       "target": "Planned",
-      "context": "span.tag.todo @ line 686 · surrounding text: G17 完整智能路由与分流策略 待开发"
+      "context": "span.tag.todo @ line 685 · surrounding text: G17 完整智能路由与分流策略 待开发"
     },
     {
       "id": "u_93d8d84593b4c00a",
@@ -3894,7 +3894,7 @@
       "source": "配置基础存在，内核分流未接通",
       "occurrence": 0,
       "target": "Configuration Groundwork Exists; Engine Traffic Splitting Is Not Integrated",
-      "context": "p.label @ line 688"
+      "context": "p.label @ line 687"
     },
     {
       "id": "u_c0da480cd36e976d",
@@ -3902,7 +3902,7 @@
       "source": "客户端与服务端配置已有基础，但内核尚未接通规则解析与分流，实际仍按选中出口转发。",
       "occurrence": 0,
       "target": "Client and server configuration exists, but the kernel does not yet parse rules or split traffic; traffic still goes through the selected exit.",
-      "context": "p @ line 689"
+      "context": "p @ line 688"
     },
     {
       "id": "u_05c7c05115067c88",
@@ -3910,7 +3910,7 @@
       "source": "下一步：",
       "occurrence": 26,
       "target": "Next step:",
-      "context": "b @ line 690 · surrounding text: 下一步： 完成内核规则、版本化规则、分流 DNS 与失效保护，再按平台验收。"
+      "context": "b @ line 689 · surrounding text: 下一步： 完成内核规则、版本化规则、分流 DNS 与失效保护，再按平台验收。"
     },
     {
       "id": "u_62123dc9e485be52",
@@ -3918,7 +3918,7 @@
       "source": "完成内核规则、版本化规则、分流 DNS 与失效保护，再按平台验收。",
       "occurrence": 0,
       "target": "Complete kernel rules, versioned rule sets, split DNS and fail-safe protection, then run acceptance testing per platform.",
-      "context": "p @ line 690 · surrounding text: 下一步： 完成内核规则、版本化规则、分流 DNS 与失效保护，再按平台验收。"
+      "context": "p @ line 689 · surrounding text: 下一步： 完成内核规则、版本化规则、分流 DNS 与失效保护，再按平台验收。"
     },
     {
       "id": "u_f43443a515db2fe8",
@@ -3926,7 +3926,7 @@
       "source": "目标时间",
       "occurrence": 26,
       "target": "Target date",
-      "context": "span @ line 691 · surrounding text: 目标时间 待排期 待办 1 项"
+      "context": "span @ line 690 · surrounding text: 目标时间 待排期 待办 1 项"
     },
     {
       "id": "u_7d69c02573812eb9",
@@ -3934,7 +3934,7 @@
       "source": "待排期",
       "occurrence": 4,
       "target": "To be scheduled",
-      "context": "b @ line 691 · surrounding text: 目标时间 待排期 待办 1 项"
+      "context": "b @ line 690 · surrounding text: 目标时间 待排期 待办 1 项"
     },
     {
       "id": "u_ae69731953be02f7",
@@ -3942,7 +3942,7 @@
       "source": "待办",
       "occurrence": 27,
       "target": "To-do",
-      "context": "span @ line 691 · surrounding text: 目标时间 待排期 待办 1 项"
+      "context": "span @ line 690 · surrounding text: 目标时间 待排期 待办 1 项"
     },
     {
       "id": "u_62abf1ebc0db7a63",
@@ -3950,7 +3950,7 @@
       "source": "项",
       "occurrence": 26,
       "target": "items",
-      "context": "span @ line 691 · surrounding text: 目标时间 待排期 待办 1 项"
+      "context": "span @ line 690 · surrounding text: 目标时间 待排期 待办 1 项"
     },
     {
       "id": "u_44647ea51531c975",
@@ -3958,7 +3958,7 @@
       "source": "多平台发布",
       "occurrence": 0,
       "target": "Multi-platform release",
-      "context": "p.group-name @ line 694"
+      "context": "p.group-name @ line 693"
     },
     {
       "id": "u_2877b02cea0a6102",
@@ -3966,7 +3966,7 @@
       "source": "多平台顺序发布",
       "occurrence": 0,
       "target": "Sequential Multi-platform Releases",
-      "context": "span.goal-name @ line 696 · surrounding text: G13 多平台顺序发布 已延误 进行中"
+      "context": "span.goal-name @ line 695 · surrounding text: G13 多平台顺序发布 已延误 进行中"
     },
     {
       "id": "u_900a11966b6b2ea4",
@@ -3974,7 +3974,7 @@
       "source": "已延误",
       "occurrence": 4,
       "target": "Delayed",
-      "context": "span.tag.late @ line 696 · surrounding text: G13 多平台顺序发布 已延误 进行中"
+      "context": "span.tag.late @ line 695 · surrounding text: G13 多平台顺序发布 已延误 进行中"
     },
     {
       "id": "u_5075211dd717001d",
@@ -3982,7 +3982,7 @@
       "source": "进行中",
       "occurrence": 34,
       "target": "In Progress",
-      "context": "span.tag.doing @ line 696 · surrounding text: G13 多平台顺序发布 已延误 进行中"
+      "context": "span.tag.doing @ line 695 · surrounding text: G13 多平台顺序发布 已延误 进行中"
     },
     {
       "id": "u_541a94977c671bf8",
@@ -3990,7 +3990,7 @@
       "source": "测试交付已记录，正式发布门槛未关闭",
       "occurrence": 0,
       "target": "Test deliveries are recorded; the production release gate is not yet closed",
-      "context": "p.label @ line 698"
+      "context": "p.label @ line 697"
     },
     {
       "id": "u_a51ad136f96affcd",
@@ -3998,7 +3998,7 @@
       "source": "8月28日 Android APK 交 QA；9月15日 Apple 未签名构建；9月20日 Windows staging 部署确认；10月7日后 Windows 打包脚本仍检查旧路径。",
       "occurrence": 0,
       "target": "Android APK delivered to QA August 28; Apple builds (not yet signed) September 15; Windows staging deployment confirmed September 20; after October 7 the Windows packaging script still checks old paths.",
-      "context": "p @ line 699"
+      "context": "p @ line 698"
     },
     {
       "id": "u_2f5d4b0d2bf11b70",
@@ -4006,7 +4006,7 @@
       "source": "最新：",
       "occurrence": 14,
       "target": "Latest:",
-      "context": "b @ line 700 · surrounding text: 最新： 11月2日一轮开发分支合并，之后仍有未合入主线的改动；发布以各平台购买路径与连接验收为前提，日期待确认。"
+      "context": "b @ line 699 · surrounding text: 最新： 11月2日一轮开发分支合并，之后仍有未合入主线的改动；发布以各平台购买路径与连接验收为前提，日期待确认。"
     },
     {
       "id": "u_96d774f0cdc292d5",
@@ -4014,7 +4014,7 @@
       "source": "11月2日一轮开发分支合并，之后仍有未合入主线的改动；发布以各平台购买路径与连接验收为前提，日期待确认。",
       "occurrence": 0,
       "target": "One round of development-branch merges on November 2; some changes are not yet merged into the main branch; release requires acceptance testing of purchase paths and connection on each platform; date to be confirmed.",
-      "context": "p.update @ line 700 · surrounding text: 最新： 11月2日一轮开发分支合并，之后仍有未合入主线的改动；发布以各平台购买路径与连接验收为前提，日期待确认。"
+      "context": "p.update @ line 699 · surrounding text: 最新： 11月2日一轮开发分支合并，之后仍有未合入主线的改动；发布以各平台购买路径与连接验收为前提，日期待确认。"
     },
     {
       "id": "u_5c32d8f6e7fce27e",
@@ -4022,7 +4022,7 @@
       "source": "原因：",
       "occurrence": 3,
       "target": "Reason:",
-      "context": "b @ line 701 · surrounding text: 原因： Sprint 1 报告原定 6月下旬全平台发布；交易链路未接通、各平台验收未关闭，日期待确认。"
+      "context": "b @ line 700 · surrounding text: 原因： Sprint 1 报告原定 6月下旬全平台发布；交易链路未接通、各平台验收未关闭，日期待确认。"
     },
     {
       "id": "u_35bf04eff1bfddb9",
@@ -4030,7 +4030,7 @@
       "source": "Sprint 1 报告原定 6月下旬全平台发布；交易链路未接通、各平台验收未关闭，日期待确认。",
       "occurrence": 0,
       "target": "The Sprint 1 report planned an all-platform release in late June; purchase flows are not connected and platform acceptance testing is not closed; date to be confirmed.",
-      "context": "p.why.late @ line 701 · surrounding text: 原因： Sprint 1 报告原定 6月下旬全平台发布；交易链路未接通、各平台验收未关闭，日期待确认。"
+      "context": "p.why.late @ line 700 · surrounding text: 原因： Sprint 1 报告原定 6月下旬全平台发布；交易链路未接通、各平台验收未关闭，日期待确认。"
     },
     {
       "id": "u_2b21a1c4043c072c",
@@ -4038,7 +4038,7 @@
       "source": "下一步：",
       "occurrence": 27,
       "target": "Next step:",
-      "context": "b @ line 702 · surrounding text: 下一步： 修复 Windows 重出包；按 Android → Windows → macOS/iOS 顺序，各端分别完成签名、安装、连接与支付验收。"
+      "context": "b @ line 701 · surrounding text: 下一步： 修复 Windows 重出包；按 Android → Windows → macOS/iOS 顺序，各端分别完成签名、安装、连接与支付验收。"
     },
     {
       "id": "u_e2c06e17f55645eb",
@@ -4046,7 +4046,7 @@
       "source": "修复 Windows 重出包；按 Android → Windows → macOS/iOS 顺序，各端分别完成签名、安装、连接与支付验收。",
       "occurrence": 0,
       "target": "Fix the Windows package rebuild; in the order Android → Windows → macOS/iOS, complete signing, installation, connection and payment acceptance testing on each platform.",
-      "context": "p @ line 702 · surrounding text: 下一步： 修复 Windows 重出包；按 Android → Windows → macOS/iOS 顺序，各端分别完成签名、安装、连接与支付验收。"
+      "context": "p @ line 701 · surrounding text: 下一步： 修复 Windows 重出包；按 Android → Windows → macOS/iOS 顺序，各端分别完成签名、安装、连接与支付验收。"
     },
     {
       "id": "u_f35a0cb41ff2a548",
@@ -4054,7 +4054,7 @@
       "source": "目标时间",
       "occurrence": 27,
       "target": "Target date",
-      "context": "span @ line 703 · surrounding text: 目标时间 原定 6月下旬 待办 2 项"
+      "context": "span @ line 702 · surrounding text: 目标时间 原定 6月下旬 待办 2 项"
     },
     {
       "id": "u_ce56755dd8c36f23",
@@ -4062,7 +4062,7 @@
       "source": "原定 6月下旬",
       "occurrence": 0,
       "target": "Originally late June",
-      "context": "b @ line 703 · surrounding text: 目标时间 原定 6月下旬 待办 2 项"
+      "context": "b @ line 702 · surrounding text: 目标时间 原定 6月下旬 待办 2 项"
     },
     {
       "id": "u_27432323539625e5",
@@ -4070,7 +4070,7 @@
       "source": "待办",
       "occurrence": 28,
       "target": "To-do",
-      "context": "span @ line 703 · surrounding text: 目标时间 原定 6月下旬 待办 2 项"
+      "context": "span @ line 702 · surrounding text: 目标时间 原定 6月下旬 待办 2 项"
     },
     {
       "id": "u_7995e42a2c1bf7ca",
@@ -4078,7 +4078,7 @@
       "source": "项",
       "occurrence": 27,
       "target": "items",
-      "context": "span @ line 703 · surrounding text: 目标时间 原定 6月下旬 待办 2 项"
+      "context": "span @ line 702 · surrounding text: 目标时间 原定 6月下旬 待办 2 项"
     },
     {
       "id": "u_9500276c5994e9bb",
@@ -4086,7 +4086,7 @@
       "source": "待办",
       "occurrence": 29,
       "target": "To-do",
-      "context": "h2 @ line 709 · surrounding text: 待办 9"
+      "context": "h2 @ line 708 · surrounding text: 待办 9"
     },
     {
       "id": "u_7ffa96b270953206",
@@ -4094,7 +4094,7 @@
       "source": "连接基础、自动选线与协议回归",
       "occurrence": 1,
       "target": "Connection foundation, automatic line selection and protocol regression",
-      "context": "p.group-name @ line 711 · surrounding text: G10 连接基础、自动选线与协议回归"
+      "context": "p.group-name @ line 710 · surrounding text: G10 连接基础、自动选线与协议回归"
     },
     {
       "id": "u_0a428825165c82d0",
@@ -4102,7 +4102,7 @@
       "source": "连接基础与平台验收",
       "occurrence": 0,
       "target": "Connection foundation and platform acceptance testing",
-      "context": "span.row-name @ line 713"
+      "context": "span.row-name @ line 712"
     },
     {
       "id": "u_f8876cbf57ba27ea",
@@ -4110,7 +4110,7 @@
       "source": "已延误",
       "occurrence": 5,
       "target": "Delayed",
-      "context": "span.tag.late @ line 714 · surrounding text: 已延误 进行中"
+      "context": "span.tag.late @ line 713 · surrounding text: 已延误 进行中"
     },
     {
       "id": "u_cc3758e5e5aea4ec",
@@ -4118,7 +4118,7 @@
       "source": "进行中",
       "occurrence": 35,
       "target": "In Progress",
-      "context": "span.tag.doing @ line 714 · surrounding text: 已延误 进行中"
+      "context": "span.tag.doing @ line 713 · surrounding text: 已延误 进行中"
     },
     {
       "id": "u_261eb3a14dfb2c51",
@@ -4126,7 +4126,7 @@
       "source": "目标",
       "occurrence": 6,
       "target": "Goal",
-      "context": "span @ line 715 · surrounding text: 目标 2026-10"
+      "context": "span @ line 714 · surrounding text: 目标 2026-10"
     },
     {
       "id": "u_cd0cfb2133ab8970",
@@ -4134,7 +4134,7 @@
       "source": "原因：原目标 10月；11-04 报告写正式完成度仍待 Lex 报告与验收证据。",
       "occurrence": 0,
       "target": "Reason: original target October; the 11-04 report says formal completion still awaits Lex's report and acceptance testing evidence.",
-      "context": "div.row-why.late @ line 716"
+      "context": "div.row-why.late @ line 715"
     },
     {
       "id": "u_86542fcedad41fec",
@@ -4142,7 +4142,7 @@
       "source": "Apple 两处修复整合",
       "occurrence": 0,
       "target": "Integrate the two Apple fixes",
-      "context": "span.row-name @ line 719"
+      "context": "span.row-name @ line 718"
     },
     {
       "id": "u_e010666989215d5b",
@@ -4150,7 +4150,7 @@
       "source": "待开始",
       "occurrence": 6,
       "target": "Not Started",
-      "context": "span.tag.todo @ line 720"
+      "context": "span.tag.todo @ line 719"
     },
     {
       "id": "u_af9d434ea2d957bf",
@@ -4158,7 +4158,7 @@
       "source": "目标未确认",
       "occurrence": 12,
       "target": "Target date unconfirmed",
-      "context": "span.unknown @ line 721"
+      "context": "span.unknown @ line 720"
     },
     {
       "id": "u_32942d4a731e363f",
@@ -4166,7 +4166,7 @@
       "source": "Lex 汇总 Flutter 状态并核对接口",
       "occurrence": 0,
       "target": "Lex summarizes Flutter status and checks the APIs",
-      "context": "span.row-name @ line 724"
+      "context": "span.row-name @ line 723"
     },
     {
       "id": "u_bc8e2c3e491d9570",
@@ -4174,7 +4174,7 @@
       "source": "待开始",
       "occurrence": 7,
       "target": "Not Started",
-      "context": "span.tag.todo @ line 725"
+      "context": "span.tag.todo @ line 724"
     },
     {
       "id": "u_443d87e908c179c3",
@@ -4182,7 +4182,7 @@
       "source": "目标",
       "occurrence": 7,
       "target": "Goal",
-      "context": "span @ line 726 · surrounding text: 目标 待确认"
+      "context": "span @ line 725 · surrounding text: 目标 待确认"
     },
     {
       "id": "u_bc2e87e4e3ce9054",
@@ -4190,7 +4190,7 @@
       "source": "待确认",
       "occurrence": 3,
       "target": "To be confirmed",
-      "context": "b.num @ line 726 · surrounding text: 目标 待确认"
+      "context": "b.num @ line 725 · surrounding text: 目标 待确认"
     },
     {
       "id": "u_359aee6f690e89ad",
@@ -4198,7 +4198,7 @@
       "source": "多平台顺序发布",
       "occurrence": 1,
       "target": "Sequential multi-platform release",
-      "context": "p.group-name @ line 728 · surrounding text: G13 多平台顺序发布"
+      "context": "p.group-name @ line 727 · surrounding text: G13 多平台顺序发布"
     },
     {
       "id": "u_9c7add2b24b8b698",
@@ -4206,7 +4206,7 @@
       "source": "多平台发布",
       "occurrence": 1,
       "target": "Multi-platform release",
-      "context": "span.row-name @ line 730"
+      "context": "span.row-name @ line 729"
     },
     {
       "id": "u_bc9a5b2ca57dd408",
@@ -4214,7 +4214,7 @@
       "source": "已延误",
       "occurrence": 6,
       "target": "Delayed",
-      "context": "span.tag.late @ line 731 · surrounding text: 已延误 待开始"
+      "context": "span.tag.late @ line 730 · surrounding text: 已延误 待开始"
     },
     {
       "id": "u_d4432b0951122c59",
@@ -4222,7 +4222,7 @@
       "source": "待开始",
       "occurrence": 8,
       "target": "Not Started",
-      "context": "span.tag.todo @ line 731 · surrounding text: 已延误 待开始"
+      "context": "span.tag.todo @ line 730 · surrounding text: 已延误 待开始"
     },
     {
       "id": "u_64b6c078b3d66e59",
@@ -4230,7 +4230,7 @@
       "source": "目标",
       "occurrence": 8,
       "target": "Goal",
-      "context": "span @ line 732 · surrounding text: 目标 待确认"
+      "context": "span @ line 731 · surrounding text: 目标 待确认"
     },
     {
       "id": "u_a27f9e2023223bb2",
@@ -4238,7 +4238,7 @@
       "source": "待确认",
       "occurrence": 4,
       "target": "To be confirmed",
-      "context": "b.num @ line 732 · surrounding text: 目标 待确认"
+      "context": "b.num @ line 731 · surrounding text: 目标 待确认"
     },
     {
       "id": "u_6c2d3eb8f45dc8af",
@@ -4246,7 +4246,7 @@
       "source": "原因：发布以各平台四条购买路径与连接的验收结果为前提，日期待确认。",
       "occurrence": 0,
       "target": "Reason: release requires acceptance testing of the four purchase paths and connection on each platform; date to be confirmed.",
-      "context": "div.row-why.late @ line 733"
+      "context": "div.row-why.late @ line 732"
     },
     {
       "id": "u_4079ef906318ba0e",
@@ -4254,7 +4254,7 @@
       "source": "Windows 重出包",
       "occurrence": 0,
       "target": "Windows package rebuild",
-      "context": "span.row-name @ line 736"
+      "context": "span.row-name @ line 735"
     },
     {
       "id": "u_274ddc777b33e322",
@@ -4262,7 +4262,7 @@
       "source": "进行中",
       "occurrence": 36,
       "target": "In Progress",
-      "context": "span.tag.doing @ line 737"
+      "context": "span.tag.doing @ line 736"
     },
     {
       "id": "u_1b008a0379d083b9",
@@ -4270,7 +4270,7 @@
       "source": "目标未确认",
       "occurrence": 13,
       "target": "Target date unconfirmed",
-      "context": "span.unknown @ line 738"
+      "context": "span.unknown @ line 737"
     },
     {
       "id": "u_73aa3d6e81b69baf",
@@ -4278,7 +4278,7 @@
       "source": "支付接口与支付闭环",
       "occurrence": 1,
       "target": "Payment Interface and Closed Loop",
-      "context": "p.group-name @ line 740 · surrounding text: G12 支付接口与支付闭环"
+      "context": "p.group-name @ line 739 · surrounding text: G12 支付接口与支付闭环"
     },
     {
       "id": "u_5c9a81baebaf3ac3",
@@ -4286,7 +4286,7 @@
       "source": "购买、余额支付、充值与支付事件（代码）",
       "occurrence": 0,
       "target": "Purchase, balance payment, top-up and payment events (code)",
-      "context": "span.row-name @ line 742"
+      "context": "span.row-name @ line 741"
     },
     {
       "id": "u_3a6388c7fdaae0b6",
@@ -4294,7 +4294,7 @@
       "source": "进行中",
       "occurrence": 37,
       "target": "In Progress",
-      "context": "span.tag.doing @ line 743"
+      "context": "span.tag.doing @ line 742"
     },
     {
       "id": "u_e0b8f2d581801949",
@@ -4302,7 +4302,7 @@
       "source": "目标未确认",
       "occurrence": 14,
       "target": "Target date unconfirmed",
-      "context": "span.unknown @ line 744"
+      "context": "span.unknown @ line 743"
     },
     {
       "id": "u_be0bedcff75567e0",
@@ -4310,7 +4310,7 @@
       "source": "独享专线与独享 IP 下单接线",
       "occurrence": 0,
       "target": "Order wiring for dedicated lines and dedicated IPs",
-      "context": "span.row-name @ line 747"
+      "context": "span.row-name @ line 746"
     },
     {
       "id": "u_71c3f85429fa7942",
@@ -4318,7 +4318,7 @@
       "source": "进行中",
       "occurrence": 38,
       "target": "In Progress",
-      "context": "span.tag.doing @ line 748"
+      "context": "span.tag.doing @ line 747"
     },
     {
       "id": "u_eb3fe7a0ced800a4",
@@ -4326,7 +4326,7 @@
       "source": "目标未确认",
       "occurrence": 15,
       "target": "Target date unconfirmed",
-      "context": "span.unknown @ line 749"
+      "context": "span.unknown @ line 748"
     },
     {
       "id": "u_ecbdac3bf6341b95",
@@ -4334,7 +4334,7 @@
       "source": "独立 GitLab repo 与 staging 后端",
       "occurrence": 1,
       "target": "Independent GitLab repo and staging backend",
-      "context": "p.group-name @ line 751 · surrounding text: G14 独立 GitLab repo 与 staging 后端"
+      "context": "p.group-name @ line 750 · surrounding text: G14 独立 GitLab repo 与 staging 后端"
     },
     {
       "id": "u_22f8c9a4616d14e0",
@@ -4342,7 +4342,7 @@
       "source": "FFF 独立运行环境与数据隔离验证",
       "occurrence": 0,
       "target": "FFF independent runtime and data isolation verification",
-      "context": "span.row-name @ line 753"
+      "context": "span.row-name @ line 752"
     },
     {
       "id": "u_f758913e05bbbaca",
@@ -4350,7 +4350,7 @@
       "source": "待开始",
       "occurrence": 9,
       "target": "Not Started",
-      "context": "span.tag.todo @ line 754"
+      "context": "span.tag.todo @ line 753"
     },
     {
       "id": "u_24c3bb5f82a51c7c",
@@ -4358,7 +4358,7 @@
       "source": "目标未确认",
       "occurrence": 16,
       "target": "Target date unconfirmed",
-      "context": "span.unknown @ line 755"
+      "context": "span.unknown @ line 754"
     },
     {
       "id": "u_b5494f6bf90123ec",
@@ -4366,7 +4366,7 @@
       "source": "完整智能路由与分流策略",
       "occurrence": 1,
       "target": "Full smart routing and traffic-split policy",
-      "context": "p.group-name @ line 757 · surrounding text: G17 完整智能路由与分流策略"
+      "context": "p.group-name @ line 756 · surrounding text: G17 完整智能路由与分流策略"
     },
     {
       "id": "u_6508a24fc09e1e16",
@@ -4374,7 +4374,7 @@
       "source": "智能分流与进阶能力",
       "occurrence": 0,
       "target": "Smart routing and advanced capabilities",
-      "context": "span.row-name @ line 759"
+      "context": "span.row-name @ line 758"
     },
     {
       "id": "u_0cda0ed6ffa33274",
@@ -4382,7 +4382,7 @@
       "source": "待开始",
       "occurrence": 10,
       "target": "Not Started",
-      "context": "span.tag.todo @ line 760"
+      "context": "span.tag.todo @ line 759"
     },
     {
       "id": "u_7ba1850b79db2be8",
@@ -4390,7 +4390,7 @@
       "source": "目标未确认",
       "occurrence": 17,
       "target": "Target date unconfirmed",
-      "context": "span.unknown @ line 761"
+      "context": "span.unknown @ line 760"
     },
     {
       "id": "u_fc81f5c6c8815eb5",
@@ -4398,7 +4398,7 @@
       "source": "来源：年度目标看板（2026-10-09）、第14–16阶段报告（2026-11-04），以及 11-05 补充的 QA 结果与代码、发布记录。",
       "occurrence": 0,
       "target": "Sources: annual goal dashboard (2026-10-09), Sprints 14–16 report (2026-11-04), and QA results plus code and release records added on 11-05.",
-      "context": "div @ line 767"
+      "context": "div @ line 766"
     },
     {
       "id": "u_65efd82fcbc14c25",
@@ -4406,7 +4406,7 @@
       "source": "判定规则",
       "occurrence": 0,
       "target": "How statuses are judged",
-      "context": "summary @ line 769"
+      "context": "summary @ line 768"
     },
     {
       "id": "u_9f3793bce07e1c0f",
@@ -4414,7 +4414,7 @@
       "source": "目标、编号与状态取自年度目标看板，之后的新进展标为「最新」。目标数量不代表产品完成百分比。本期完成是 10-10 以来确认完成的事项；待办是仍未完成、且最近报告有提及的事项。",
       "occurrence": 0,
       "target": "Goals, IDs and statuses come from the annual goal dashboard; later progress is marked \"Latest\". Goal counts are not a product completion percentage. Completed this period lists items confirmed done since 10-10; to-dos are items still open and mentioned in recent reports.",
-      "context": "p @ line 770"
+      "context": "p @ line 769"
     },
     {
       "id": "u_25c72c858e6741af",
@@ -4422,7 +4422,7 @@
       "source": "已延误：报告写明延迟，或目标日期已过仍未完成；报告没写原因时显示「原因待补」。有风险：报告写明的风险或未关闭的最高优先项。主动发现：团队在开发、审计或核对中自行发现并上报的问题。",
       "occurrence": 0,
       "target": "Delayed: a report states a delay, or the target date has passed without completion; when no reason is given it shows \"Reason not yet provided\". At risk: a risk stated in a report, or an open top-priority item. Found by the team: issues the team discovered and reported itself during development, audits or checks.",
-      "context": "p @ line 771"
+      "context": "p @ line 770"
     }
   ],
   "blocks": {
@@ -5372,5 +5372,5 @@
       "occurrence": 0
     }
   },
-  "reviewedTargetHash": "d3c602261b4c68b5"
+  "reviewedTargetHash": "e189f038cdf07203"
 }

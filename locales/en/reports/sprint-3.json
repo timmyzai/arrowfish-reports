@@ -18,7 +18,7 @@
       "source": "Arrowfish VPN — 第3阶段一页摘要",
       "occurrence": 0,
       "target": "Arrowfish VPN — Sprint 3 One Page Summary",
-      "context": "h1 @ line 75"
+      "context": "h1 @ line 74"
     },
     {
       "id": "u_867f42b49cf3913a",
@@ -26,7 +26,7 @@
       "source": "2026年5月10日 · 第3阶段提前收官 · 关键决策点速览",
       "occurrence": 0,
       "target": "Early Closure for Sprint 3 · Key Decisions Overview · May 10, 2026",
-      "context": "div.subtitle @ line 76"
+      "context": "div.subtitle @ line 75"
     },
     {
       "id": "u_ed634880fe5f8ba2",
@@ -34,7 +34,7 @@
       "source": "TL;DR · 三句话",
       "occurrence": 0,
       "target": "TL;DR · Three Lines",
-      "context": "div.tldr-label @ line 80"
+      "context": "div.tldr-label @ line 79"
     },
     {
       "id": "u_e461c4709fa8d295",
@@ -42,7 +42,7 @@
       "source": "第一，Arrowfish 安卓 v3.7.0 进入最终 QA — 接手以来首个本团队完整把控的稳定基线，QA 通过即发布生产。",
       "occurrence": 0,
       "target": "First, Arrowfish Android v3.7.0 enters final QA — the first complete stable baseline taken over by our team, passing QA means release to production.",
-      "context": "strong @ line 82"
+      "context": "strong @ line 81"
     },
     {
       "id": "u_380a46d1d6286340",
@@ -50,7 +50,7 @@
       "source": "第二，本阶段补齐三项基础加固：Azure 数据库自动备份首次开启、读副本真正被后端使用（之前一直「有但没用」）、香港旧 ProxyBackend 退出客户端关键路径；USDT 支付由台湾团队遗留 Java 黑盒重写为团队自有 Go 服务，ETH + TRX 双链联测通过。",
       "occurrence": 0,
       "target": "Second, this sprint completes three foundational reinforcement tasks: Azure database automatic backup is turned on for the first time, read replicas are truly used by backend (previously 'there but not in use'), and the old Hong Kong ProxyBackend is removed from the client's critical path. USDT payments have been rewritten as a team-owned Go service from the legacy Java black box left by the Taiwan team, and dual-chain ETH + TRX testing has passed.",
-      "context": "strong @ line 83"
+      "context": "strong @ line 82"
     },
     {
       "id": "u_9c0eb36134edccf0",
@@ -58,7 +58,7 @@
       "source": "第三，5/12 启动第4阶段，P0 锁定测试 / 生产网络隔离 + FFF Flutter 重写启动。",
       "occurrence": 0,
       "target": "Third, Sprint 4 is launched on May 12th with P0 lock for test/production network isolation and FFF Flutter rewrite.",
-      "context": "strong @ line 84"
+      "context": "strong @ line 83"
     },
     {
       "id": "u_1491a4f1e5990461",
@@ -66,7 +66,7 @@
       "source": "支撑数字：后端发布 4–6 倍提速 · 节点开通 20 分钟 → 30 秒 · 移动端 4 渠道全量发布 35 分钟 → 15 分 52 秒（全自动） · 本机 Kotlin 冷编译 70 → 34 秒。",
       "occurrence": 0,
       "target": "Supporting Numbers: Backend release 4-6 times faster · VPN node activation from 20 minutes to 30 seconds · Full-scale mobile app releases for 4 channels in 35 minutes (automated) to 15 minutes and 52 seconds on the device with Kotlin cold compilation time reduced from 70 seconds to 34 seconds.",
-      "context": "p @ line 85"
+      "context": "p @ line 84"
     },
     {
       "id": "u_e161d3cbfcb243f6",
@@ -74,7 +74,7 @@
       "source": "一、关键指标",
       "occurrence": 0,
       "target": "1. Key Metrics",
-      "context": "h2 @ line 89"
+      "context": "h2 @ line 88"
     },
     {
       "id": "u_35a34655d8404c17",
@@ -82,7 +82,7 @@
       "source": "稳定测试版",
       "occurrence": 0,
       "target": "Stable Test Version",
-      "context": "div.metric-label @ line 92"
+      "context": "div.metric-label @ line 91"
     },
     {
       "id": "u_ce765e6ecf409470",
@@ -90,7 +90,7 @@
       "source": "最终 QA 中",
       "occurrence": 0,
       "target": "Final QA Phase",
-      "context": "div.metric-sub @ line 94"
+      "context": "div.metric-sub @ line 93"
     },
     {
       "id": "u_7125f497f6acee19",
@@ -98,7 +98,7 @@
       "source": "APK 体积",
       "occurrence": 0,
       "target": "APK Size",
-      "context": "div.metric-label @ line 97"
+      "context": "div.metric-label @ line 96"
     },
     {
       "id": "u_36f8a8541cbd20f6",
@@ -106,7 +106,7 @@
       "source": "33 MB（接手时 101 MB）",
       "occurrence": 0,
       "target": "33 MB (from 101 MB when taken over)",
-      "context": "div.metric-sub @ line 99"
+      "context": "div.metric-sub @ line 98"
     },
     {
       "id": "u_c0a39bb2df4d5b71",
@@ -114,7 +114,7 @@
       "source": "后端 CI",
       "occurrence": 0,
       "target": "Backend CI",
-      "context": "div.metric-label @ line 102"
+      "context": "div.metric-label @ line 101"
     },
     {
       "id": "u_c8a5eec6e00ab468",
@@ -122,7 +122,7 @@
       "source": "2:30–3:00 → 30–50 秒",
       "occurrence": 0,
       "target": "2:30–3:00 → 30–50 seconds",
-      "context": "div.metric-sub @ line 104"
+      "context": "div.metric-sub @ line 103"
     },
     {
       "id": "u_d8b5e1b6221cc44a",
@@ -130,7 +130,7 @@
       "source": "节点开通",
       "occurrence": 0,
       "target": "VPN Node Provisioning",
-      "context": "div.metric-label @ line 107"
+      "context": "div.metric-label @ line 106"
     },
     {
       "id": "u_822a6e699f8d6b28",
@@ -138,7 +138,7 @@
       "source": "~30 秒",
       "occurrence": 0,
       "target": "~30 seconds",
-      "context": "div.metric-value @ line 108"
+      "context": "div.metric-value @ line 107"
     },
     {
       "id": "u_5e21331870b476a4",
@@ -146,7 +146,7 @@
       "source": "原 SSH 手工 ~20 分钟",
       "occurrence": 0,
       "target": "original SSH manual ~20 minutes",
-      "context": "div.metric-sub @ line 109"
+      "context": "div.metric-sub @ line 108"
     },
     {
       "id": "u_a49645682bfa9f7a",
@@ -154,7 +154,7 @@
       "source": "移动端 4 渠道构建",
       "occurrence": 0,
       "target": "mobile app 4 channels build",
-      "context": "div.metric-label @ line 112"
+      "context": "div.metric-label @ line 111"
     },
     {
       "id": "u_2d97540379f794b6",
@@ -162,7 +162,7 @@
       "source": "15 分 52 秒",
       "occurrence": 0,
       "target": "15 minutes 52 seconds",
-      "context": "div.metric-value @ line 113"
+      "context": "div.metric-value @ line 112"
     },
     {
       "id": "u_4b2976b52cbf020a",
@@ -170,7 +170,7 @@
       "source": "全自动上传至下载站",
       "occurrence": 0,
       "target": "fully automated upload to download station",
-      "context": "div.metric-sub @ line 114"
+      "context": "div.metric-sub @ line 113"
     },
     {
       "id": "u_f347c3aee6866e75",
@@ -178,7 +178,7 @@
       "source": "QA 复验",
       "occurrence": 0,
       "target": "QA recheck",
-      "context": "div.metric-label @ line 117"
+      "context": "div.metric-label @ line 116"
     },
     {
       "id": "u_9d9ee69765ed2578",
@@ -186,7 +186,7 @@
       "source": "通过 / 已结案",
       "occurrence": 0,
       "target": "passed / closed",
-      "context": "div.metric-sub @ line 119"
+      "context": "div.metric-sub @ line 118"
     },
     {
       "id": "u_621e057ee37bbed8",
@@ -194,7 +194,7 @@
       "source": "本机构建",
       "occurrence": 0,
       "target": "institutional build",
-      "context": "div.metric-label @ line 122"
+      "context": "div.metric-label @ line 121"
     },
     {
       "id": "u_a7887b3b4ccf4fe0",
@@ -202,7 +202,7 @@
       "source": "70 秒 → 34 秒（M4 Pro 实测）",
       "occurrence": 0,
       "target": "from 70 seconds to 34 seconds (M4 Pro measured)",
-      "context": "div.metric-sub @ line 124"
+      "context": "div.metric-sub @ line 123"
     },
     {
       "id": "u_ec2ea89d198a6dba",
@@ -210,7 +210,7 @@
       "source": "代码净行数",
       "occurrence": 0,
       "target": "code net lines",
-      "context": "div.metric-label @ line 127"
+      "context": "div.metric-label @ line 126"
     },
     {
       "id": "u_c56556d4dc78b281",
@@ -218,7 +218,7 @@
       "source": "清理为主，1,123 个文件",
       "occurrence": 0,
       "target": "mainly cleanup, 1,123 files",
-      "context": "div.metric-sub @ line 129"
+      "context": "div.metric-sub @ line 128"
     },
     {
       "id": "u_396ed4eb47bc79cf",
@@ -226,7 +226,7 @@
       "source": "构建速度提速（两端实测）",
       "occurrence": 0,
       "target": "build speed improvement (both ends measured)",
-      "context": "h3 @ line 134"
+      "context": "h3 @ line 133"
     },
     {
       "id": "u_05283ca0a33b4a2c",
@@ -234,7 +234,7 @@
       "source": "场景",
       "occurrence": 0,
       "target": "scenario",
-      "context": "th @ line 136 · surrounding text: 场景 接手时 现在"
+      "context": "th @ line 135 · surrounding text: 场景 接手时 现在"
     },
     {
       "id": "u_138e86c38adc6dfa",
@@ -242,7 +242,7 @@
       "source": "接手时",
       "occurrence": 0,
       "target": "handover time",
-      "context": "th @ line 136 · surrounding text: 场景 接手时 现在"
+      "context": "th @ line 135 · surrounding text: 场景 接手时 现在"
     },
     {
       "id": "u_c43e74195aaf35c2",
@@ -250,7 +250,7 @@
       "source": "现在",
       "occurrence": 0,
       "target": "now",
-      "context": "th @ line 136 · surrounding text: 场景 接手时 现在"
+      "context": "th @ line 135 · surrounding text: 场景 接手时 现在"
     },
     {
       "id": "u_d90b167f78a3d948",
@@ -258,7 +258,7 @@
       "source": "开发本机 · Kotlin 冷编译",
       "occurrence": 0,
       "target": "development locally · Kotlin cold compilation",
-      "context": "td @ line 137 · surrounding text: 开发本机 · Kotlin 冷编译 M4 Pro 24GB 实测 70 秒 34 秒（−51%）"
+      "context": "td @ line 136 · surrounding text: 开发本机 · Kotlin 冷编译 M4 Pro 24GB 实测 70 秒 34 秒（−51%）"
     },
     {
       "id": "u_b16f6f958fc0184c",
@@ -266,7 +266,7 @@
       "source": "M4 Pro 24GB 实测",
       "occurrence": 0,
       "target": "M4 Pro 24GB Real Test",
-      "context": "span @ line 137 · surrounding text: 开发本机 · Kotlin 冷编译 M4 Pro 24GB 实测 70 秒 34 秒（−51%）"
+      "context": "span @ line 136 · surrounding text: 开发本机 · Kotlin 冷编译 M4 Pro 24GB 实测 70 秒 34 秒（−51%）"
     },
     {
       "id": "u_91119e8e544998ba",
@@ -274,7 +274,7 @@
       "source": "70 秒",
       "occurrence": 0,
       "target": "70 seconds",
-      "context": "td @ line 137 · surrounding text: 开发本机 · Kotlin 冷编译 M4 Pro 24GB 实测 70 秒 34 秒（−51%）"
+      "context": "td @ line 136 · surrounding text: 开发本机 · Kotlin 冷编译 M4 Pro 24GB 实测 70 秒 34 秒（−51%）"
     },
     {
       "id": "u_ce862f6ccdefff17",
@@ -282,7 +282,7 @@
       "source": "34 秒（−51%）",
       "occurrence": 0,
       "target": "34 seconds (−51%)",
-      "context": "strong @ line 137 · surrounding text: 开发本机 · Kotlin 冷编译 M4 Pro 24GB 实测 70 秒 34 秒（−51%）"
+      "context": "strong @ line 136 · surrounding text: 开发本机 · Kotlin 冷编译 M4 Pro 24GB 实测 70 秒 34 秒（−51%）"
     },
     {
       "id": "u_e58f150c2117c938",
@@ -290,7 +290,7 @@
       "source": "CI 流水线 · 4 渠道全量发布",
       "occurrence": 0,
       "target": "CI Pipeline · Full Release for 4 Channels",
-      "context": "td @ line 138 · surrounding text: CI 流水线 · 4 渠道全量发布 8GB Linux CI Runner 实测 ~35 分钟 单渠道、需人工组合 15 分 52 秒（全自动） 4 渠道一次构建 + 签名 + 上传"
+      "context": "td @ line 137 · surrounding text: CI 流水线 · 4 渠道全量发布 8GB Linux CI Runner 实测 ~35 分钟 单渠道、需人工组合 15 分 52 秒（全自动） 4 渠道一次构建 + 签名 + 上传"
     },
     {
       "id": "u_172aa73ae5eb7aa5",
@@ -298,7 +298,7 @@
       "source": "8GB Linux CI Runner 实测",
       "occurrence": 0,
       "target": "8GB Linux CI Runner Real Test",
-      "context": "span @ line 138 · surrounding text: CI 流水线 · 4 渠道全量发布 8GB Linux CI Runner 实测 ~35 分钟 单渠道、需人工组合 15 分 52 秒（全自动） 4 渠道一次构建 + 签名 + 上传"
+      "context": "span @ line 137 · surrounding text: CI 流水线 · 4 渠道全量发布 8GB Linux CI Runner 实测 ~35 分钟 单渠道、需人工组合 15 分 52 秒（全自动） 4 渠道一次构建 + 签名 + 上传"
     },
     {
       "id": "u_ce48a2160e8f17a2",
@@ -306,7 +306,7 @@
       "source": "~35 分钟",
       "occurrence": 0,
       "target": "~35 minutes",
-      "context": "td @ line 138 · surrounding text: CI 流水线 · 4 渠道全量发布 8GB Linux CI Runner 实测 ~35 分钟 单渠道、需人工组合 15 分 52 秒（全自动） 4 渠道一次构建 + 签名 + 上传"
+      "context": "td @ line 137 · surrounding text: CI 流水线 · 4 渠道全量发布 8GB Linux CI Runner 实测 ~35 分钟 单渠道、需人工组合 15 分 52 秒（全自动） 4 渠道一次构建 + 签名 + 上传"
     },
     {
       "id": "u_19edc6006d55182b",
@@ -314,7 +314,7 @@
       "source": "单渠道、需人工组合",
       "occurrence": 0,
       "target": "Single Channel, Requires Manual Combination",
-      "context": "span @ line 138 · surrounding text: CI 流水线 · 4 渠道全量发布 8GB Linux CI Runner 实测 ~35 分钟 单渠道、需人工组合 15 分 52 秒（全自动） 4 渠道一次构建 + 签名 + 上传"
+      "context": "span @ line 137 · surrounding text: CI 流水线 · 4 渠道全量发布 8GB Linux CI Runner 实测 ~35 分钟 单渠道、需人工组合 15 分 52 秒（全自动） 4 渠道一次构建 + 签名 + 上传"
     },
     {
       "id": "u_fbeee06708d9d258",
@@ -322,7 +322,7 @@
       "source": "15 分 52 秒（全自动）",
       "occurrence": 0,
       "target": "15 minutes 52 seconds (Fully Automated)",
-      "context": "strong @ line 138 · surrounding text: CI 流水线 · 4 渠道全量发布 8GB Linux CI Runner 实测 ~35 分钟 单渠道、需人工组合 15 分 52 秒（全自动） 4 渠道一次构建 + 签名 + 上传"
+      "context": "strong @ line 137 · surrounding text: CI 流水线 · 4 渠道全量发布 8GB Linux CI Runner 实测 ~35 分钟 单渠道、需人工组合 15 分 52 秒（全自动） 4 渠道一次构建 + 签名 + 上传"
     },
     {
       "id": "u_701ddc090f99a439",
@@ -330,7 +330,7 @@
       "source": "4 渠道一次构建 + 签名 + 上传",
       "occurrence": 0,
       "target": "4 Channels Build + Sign + Upload",
-      "context": "span @ line 138 · surrounding text: CI 流水线 · 4 渠道全量发布 8GB Linux CI Runner 实测 ~35 分钟 单渠道、需人工组合 15 分 52 秒（全自动） 4 渠道一次构建 + 签名 + 上传"
+      "context": "span @ line 137 · surrounding text: CI 流水线 · 4 渠道全量发布 8GB Linux CI Runner 实测 ~35 分钟 单渠道、需人工组合 15 分 52 秒（全自动） 4 渠道一次构建 + 签名 + 上传"
     },
     {
       "id": "u_c12e975dc35d46c4",
@@ -338,7 +338,7 @@
       "source": "本机提速来自 Gradle 9 + Kotlin 2.3 (K2) + 模块合并 + 配置缓存默认启用；CI 提速来自流水线重构（构建/发布解耦、按 SHA 复用产物、增量上传）。",
       "occurrence": 0,
       "target": "On-device Speedup comes from Gradle 9 + Kotlin 2.3 (K2) + Module Merge + Default Cache Enable; CI Speedup comes from Pipeline Refactoring (Decoupling Build/Publish, Reusing Products by SHA, Incremental Upload).",
-      "context": "p @ line 140 · surrounding text: 本机提速来自 Gradle 9 + Kotlin 2.3 (K2) + 模块合并 + 配置缓存默认启用；CI 提速来自流水线重构（构建/发布解耦、按 SHA 复用产物、增量上传）。 同一台 CI Runner 上，4 渠道完整发布所需时间比接手时单渠道还少约 55%。"
+      "context": "p @ line 139 · surrounding text: 本机提速来自 Gradle 9 + Kotlin 2.3 (K2) + 模块合并 + 配置缓存默认启用；CI 提速来自流水线重构（构建/发布解耦、按 SHA 复用产物、增量上传）。 同一台 CI Runner 上，4 渠道完整发布所需时间比接手时单渠道还少约 55%。"
     },
     {
       "id": "u_28386c26eb89aff5",
@@ -346,7 +346,7 @@
       "source": "同一台 CI Runner 上，4 渠道完整发布所需时间比接手时单渠道还少约 55%。",
       "occurrence": 0,
       "target": "On the Same CI Runner, a Full Release for 4 Channels Takes About 55% Less Time Than When We Took Over.",
-      "context": "strong @ line 140 · surrounding text: 本机提速来自 Gradle 9 + Kotlin 2.3 (K2) + 模块合并 + 配置缓存默认启用；CI 提速来自流水线重构（构建/发布解耦、按 SHA 复用产物、增量上传）。 同一台 CI Runner 上，4 渠道完整发布所需时间比接手时单渠道还少约 55%。"
+      "context": "strong @ line 139 · surrounding text: 本机提速来自 Gradle 9 + Kotlin 2.3 (K2) + 模块合并 + 配置缓存默认启用；CI 提速来自流水线重构（构建/发布解耦、按 SHA 复用产物、增量上传）。 同一台 CI Runner 上，4 渠道完整发布所需时间比接手时单渠道还少约 55%。"
     },
     {
       "id": "u_d522c50ed34788e3",
@@ -354,7 +354,7 @@
       "source": "二、需要知悉与配合",
       "occurrence": 0,
       "target": "II. Matters to Be Informed and Cooperated With",
-      "context": "h2 @ line 143"
+      "context": "h2 @ line 142"
     },
     {
       "id": "u_613ad51839a78ad0",
@@ -362,7 +362,7 @@
       "source": "v3.7.0 最终 QA 进行中",
       "occurrence": 0,
       "target": "v3.7.0 Final QA in Progress",
-      "context": "strong @ line 146 · surrounding text: v3.7.0 最终 QA 进行中 — 通过后即发布生产（Google Play / 官网 / 华为）；任何回归走热修分支"
+      "context": "strong @ line 145 · surrounding text: v3.7.0 最终 QA 进行中 — 通过后即发布生产（Google Play / 官网 / 华为）；任何回归走热修分支"
     },
     {
       "id": "u_ed57d06624d13200",
@@ -370,7 +370,7 @@
       "source": "— 通过后即发布生产（Google Play / 官网 / 华为）；任何回归走热修分支",
       "occurrence": 0,
       "target": "— Approved, Release to Production (Google Play / Official Website / Huawei); Any Regression Goes Through Hotfix Branch",
-      "context": "li @ line 146 · surrounding text: v3.7.0 最终 QA 进行中 — 通过后即发布生产（Google Play / 官网 / 华为）；任何回归走热修分支"
+      "context": "li @ line 145 · surrounding text: v3.7.0 最终 QA 进行中 — 通过后即发布生产（Google Play / 官网 / 华为）；任何回归走热修分支"
     },
     {
       "id": "u_9bf80c292430d812",
@@ -378,7 +378,7 @@
       "source": "FFF 公司事项（Roy 跟进）",
       "occurrence": 0,
       "target": "FFF Company Matters (Roy Follow-up)",
-      "context": "strong @ line 147 · surrounding text: FFF 公司事项（Roy 跟进） — 欧盟电话号码 + 新支付通道，工程侧基础平台已就绪"
+      "context": "strong @ line 146 · surrounding text: FFF 公司事项（Roy 跟进） — 欧盟电话号码 + 新支付通道，工程侧基础平台已就绪"
     },
     {
       "id": "u_3313c2213ff77e4c",
@@ -386,7 +386,7 @@
       "source": "— 欧盟电话号码 + 新支付通道，工程侧基础平台已就绪",
       "occurrence": 0,
       "target": "— EU Phone Number + New Payment Channel, Engineering Side Foundation Platform Ready",
-      "context": "li @ line 147 · surrounding text: FFF 公司事项（Roy 跟进） — 欧盟电话号码 + 新支付通道，工程侧基础平台已就绪"
+      "context": "li @ line 146 · surrounding text: FFF 公司事项（Roy 跟进） — 欧盟电话号码 + 新支付通道，工程侧基础平台已就绪"
     },
     {
       "id": "u_7fe3d0115966b452",
@@ -394,7 +394,7 @@
       "source": "数据库备份「能真正恢复」演练待做",
       "occurrence": 0,
       "target": "Sprint database backup 'can truly recover' test to be done",
-      "context": "strong @ line 148 · surrounding text: 数据库备份「能真正恢复」演练待做 — 本阶段已开启 Azure 自动每日备份（接手时是「完全没备份」）；第4阶段 P0 把恢复演练 + 异地副本流程化补齐"
+      "context": "strong @ line 147 · surrounding text: 数据库备份「能真正恢复」演练待做 — 本阶段已开启 Azure 自动每日备份（接手时是「完全没备份」）；第4阶段 P0 把恢复演练 + 异地副本流程化补齐"
     },
     {
       "id": "u_8e31b3548bb64369",
@@ -402,7 +402,7 @@
       "source": "— 本阶段已开启 Azure 自动每日备份（接手时是「完全没备份」）；第4阶段 P0 把恢复演练 + 异地副本流程化补齐",
       "occurrence": 0,
       "target": "— Azure automated daily backups were enabled in this Sprint (there were no backups at handover); Sprint 4 P0 will complete recovery drills and formalize the off-site replica process",
-      "context": "li @ line 148 · surrounding text: 数据库备份「能真正恢复」演练待做 — 本阶段已开启 Azure 自动每日备份（接手时是「完全没备份」）；第4阶段 P0 把恢复演练 + 异地副本流程化补齐"
+      "context": "li @ line 147 · surrounding text: 数据库备份「能真正恢复」演练待做 — 本阶段已开启 Azure 自动每日备份（接手时是「完全没备份」）；第4阶段 P0 把恢复演练 + 异地副本流程化补齐"
     },
     {
       "id": "u_62ae9bc2cfc14ae0",
@@ -410,7 +410,7 @@
       "source": "专线续费缺口",
       "occurrence": 0,
       "target": "Dedicated-Line Renewal Gap",
-      "context": "strong @ line 149 · surrounding text: 专线续费缺口 — 到期释放已修复；自动续费保留绑定列入第4阶段 P1"
+      "context": "strong @ line 148 · surrounding text: 专线续费缺口 — 到期释放已修复；自动续费保留绑定列入第4阶段 P1"
     },
     {
       "id": "u_7bf038150f504dd5",
@@ -418,7 +418,7 @@
       "source": "— 到期释放已修复；自动续费保留绑定列入第4阶段 P1",
       "occurrence": 0,
       "target": "— Release on expiry has been fixed; automatic renewal while retaining the binding is scheduled for Sprint 4 P1",
-      "context": "li @ line 149 · surrounding text: 专线续费缺口 — 到期释放已修复；自动续费保留绑定列入第4阶段 P1"
+      "context": "li @ line 148 · surrounding text: 专线续费缺口 — 到期释放已修复；自动续费保留绑定列入第4阶段 P1"
     },
     {
       "id": "u_692fa0c218b53ccb",
@@ -426,7 +426,7 @@
       "source": "无日志合规对外宣传时机",
       "occurrence": 0,
       "target": "Sprintlog compliance external promotion timing",
-      "context": "strong @ line 150 · surrounding text: 无日志合规对外宣传时机 — 等第4阶段节点系统层加固完后再统一发布；v3.7.0 生产发布只主推稳定/可靠/速度"
+      "context": "strong @ line 149 · surrounding text: 无日志合规对外宣传时机 — 等第4阶段节点系统层加固完后再统一发布；v3.7.0 生产发布只主推稳定/可靠/速度"
     },
     {
       "id": "u_25588a35cd579cfe",
@@ -434,7 +434,7 @@
       "source": "— 等第4阶段节点系统层加固完后再统一发布；v3.7.0 生产发布只主推稳定/可靠/速度",
       "occurrence": 0,
       "target": "— Publish the unified no-logging claim only after Sprint 4 hardens the VPN node system layer; the v3.7.0 production release will emphasize stability, reliability, and speed",
-      "context": "li @ line 150 · surrounding text: 无日志合规对外宣传时机 — 等第4阶段节点系统层加固完后再统一发布；v3.7.0 生产发布只主推稳定/可靠/速度"
+      "context": "li @ line 149 · surrounding text: 无日志合规对外宣传时机 — 等第4阶段节点系统层加固完后再统一发布；v3.7.0 生产发布只主推稳定/可靠/速度"
     },
     {
       "id": "u_665250e475b645df",
@@ -442,7 +442,7 @@
       "source": "iOS / Windows 老客户端 — 持续抽走产能的真实税负",
       "occurrence": 0,
       "target": "SprintiOS / Windows old client — Continuously draining the real tax burden of productivity",
-      "context": "strong @ line 151 · surrounding text: iOS / Windows 老客户端 — 持续抽走产能的真实税负 （运营 / 商务议程）："
+      "context": "strong @ line 150 · surrounding text: iOS / Windows 老客户端 — 持续抽走产能的真实税负 （运营 / 商务议程）："
     },
     {
       "id": "u_d4875088950b35de",
@@ -450,7 +450,7 @@
       "source": "（运营 / 商务议程）：",
       "occurrence": 0,
       "target": "(Operational/Business Agenda):",
-      "context": "li @ line 151 · surrounding text: iOS / Windows 老客户端 — 持续抽走产能的真实税负 （运营 / 商务议程）："
+      "context": "li @ line 150 · surrounding text: iOS / Windows 老客户端 — 持续抽走产能的真实税负 （运营 / 商务议程）："
     },
     {
       "id": "u_b406716e18623ea0",
@@ -458,7 +458,7 @@
       "source": "：Apple 账号被标记 / 封禁，无法发布更新 → 后端必须保持向后兼容",
       "occurrence": 0,
       "target": ":Apple account marked / banned, unable to release updates → Backend must maintain backward compatibility",
-      "context": "li @ line 153 · surrounding text: iOS HiYou v1.3.0 ：Apple 账号被标记 / 封禁，无法发布更新 → 后端必须保持向后兼容"
+      "context": "li @ line 152 · surrounding text: iOS HiYou v1.3.0 ：Apple 账号被标记 / 封禁，无法发布更新 → 后端必须保持向后兼容"
     },
     {
       "id": "u_292b74a5fed5e453",
@@ -466,7 +466,7 @@
       "source": "WoSign 实体物理设备签名证书过期",
       "occurrence": 0,
       "target": "SprintWoSign physical device certificate expired",
-      "context": "strong @ line 154 · surrounding text: Windows skytree_pc v2.2.71 ： WoSign 实体物理设备签名证书过期 → 新版可以编但 无法签名 → 用户安装被 SmartScreen 阻断 。需要 (a) 研究 WoSign 续签 + (b) 迁移到云代码签名（CI 自动签）"
+      "context": "strong @ line 153 · surrounding text: Windows skytree_pc v2.2.71 ： WoSign 实体物理设备签名证书过期 → 新版可以编但 无法签名 → 用户安装被 SmartScreen 阻断 。需要 (a) 研究 WoSign 续签 + (b) 迁移到云代码签名（CI 自动签）"
     },
     {
       "id": "u_c48b176a76a5977c",
@@ -474,7 +474,7 @@
       "source": "→ 新版可以编但",
       "occurrence": 0,
       "target": ":New version can be compiled but",
-      "context": "li @ line 154 · surrounding text: Windows skytree_pc v2.2.71 ： WoSign 实体物理设备签名证书过期 → 新版可以编但 无法签名 → 用户安装被 SmartScreen 阻断 。需要 (a) 研究 WoSign 续签 + (b) 迁移到云代码签名（CI 自动签）"
+      "context": "li @ line 153 · surrounding text: Windows skytree_pc v2.2.71 ： WoSign 实体物理设备签名证书过期 → 新版可以编但 无法签名 → 用户安装被 SmartScreen 阻断 。需要 (a) 研究 WoSign 续签 + (b) 迁移到云代码签名（CI 自动签）"
     },
     {
       "id": "u_12c6d3e32681d423",
@@ -482,7 +482,7 @@
       "source": "无法签名 → 用户安装被 SmartScreen 阻断",
       "occurrence": 0,
       "target": "cannot sign → User installation is blocked by SmartScreen",
-      "context": "strong @ line 154 · surrounding text: Windows skytree_pc v2.2.71 ： WoSign 实体物理设备签名证书过期 → 新版可以编但 无法签名 → 用户安装被 SmartScreen 阻断 。需要 (a) 研究 WoSign 续签 + (b) 迁移到云代码签名（CI 自动签）"
+      "context": "strong @ line 153 · surrounding text: Windows skytree_pc v2.2.71 ： WoSign 实体物理设备签名证书过期 → 新版可以编但 无法签名 → 用户安装被 SmartScreen 阻断 。需要 (a) 研究 WoSign 续签 + (b) 迁移到云代码签名（CI 自动签）"
     },
     {
       "id": "u_683f890794f66a2d",
@@ -490,7 +490,7 @@
       "source": "。需要 (a) 研究 WoSign 续签 + (b) 迁移到云代码签名（CI 自动签）",
       "occurrence": 0,
       "target": ". Need (a) to research WoSign renewal + (b) to migrate to cloud code signing (CI automatic signing)",
-      "context": "li @ line 154 · surrounding text: Windows skytree_pc v2.2.71 ： WoSign 实体物理设备签名证书过期 → 新版可以编但 无法签名 → 用户安装被 SmartScreen 阻断 。需要 (a) 研究 WoSign 续签 + (b) 迁移到云代码签名（CI 自动签）"
+      "context": "li @ line 153 · surrounding text: Windows skytree_pc v2.2.71 ： WoSign 实体物理设备签名证书过期 → 新版可以编但 无法签名 → 用户安装被 SmartScreen 阻断 。需要 (a) 研究 WoSign 续签 + (b) 迁移到云代码签名（CI 自动签）"
     },
     {
       "id": "u_86cb1aef9004d8b5",
@@ -498,7 +498,7 @@
       "source": "每个后端 / API 改动需 +~30% 兼容矩阵设计 + 测试开销",
       "occurrence": 0,
       "target": "Each backend/API change requires +~30% compatibility matrix design and testing overhead",
-      "context": "strong @ line 155 · surrounding text: 每个后端 / API 改动需 +~30% 兼容矩阵设计 + 测试开销 — 每个 Sprint 产能预估必须计入"
+      "context": "strong @ line 154 · surrounding text: 每个后端 / API 改动需 +~30% 兼容矩阵设计 + 测试开销 — 每个 Sprint 产能预估必须计入"
     },
     {
       "id": "u_559a907672e23118",
@@ -506,7 +506,7 @@
       "source": "— 每个 Sprint 产能预估必须计入",
       "occurrence": 0,
       "target": ". Compatibility matrix design and testing costs must be included in each sprint's productivity estimate",
-      "context": "li @ line 155 · surrounding text: 每个后端 / API 改动需 +~30% 兼容矩阵设计 + 测试开销 — 每个 Sprint 产能预估必须计入"
+      "context": "li @ line 154 · surrounding text: 每个后端 / API 改动需 +~30% 兼容矩阵设计 + 测试开销 — 每个 Sprint 产能预估必须计入"
     },
     {
       "id": "u_a88ce1862accfd8d",
@@ -514,7 +514,7 @@
       "source": "三、本阶段三大件主要变动（后端 / 移动端 / 基础设施）",
       "occurrence": 0,
       "target": "3. Three Major Areas of Change in This Sprint (Backend / Mobile / Infrastructure)",
-      "context": "h2 @ line 161"
+      "context": "h2 @ line 160"
     },
     {
       "id": "u_0ca3683d5d7a5e69",
@@ -522,7 +522,7 @@
       "source": "后端",
       "occurrence": 0,
       "target": "Back Office (BO)",
-      "context": "h3 @ line 164 · surrounding text: 后端 orebackend · v2.2.71 → 当前 main"
+      "context": "h3 @ line 163 · surrounding text: 后端 orebackend · v2.2.71 → 当前 main"
     },
     {
       "id": "u_5ba71f9b399c17e5",
@@ -530,7 +530,7 @@
       "source": "· v2.2.71 → 当前 main",
       "occurrence": 0,
       "target": "v2.2.71 → current main",
-      "context": "h3 @ line 164 · surrounding text: 后端 orebackend · v2.2.71 → 当前 main"
+      "context": "h3 @ line 163 · surrounding text: 后端 orebackend · v2.2.71 → 当前 main"
     },
     {
       "id": "u_7377c7a5f0bd76af",
@@ -538,7 +538,7 @@
       "source": "累计",
       "occurrence": 0,
       "target": "Cumulative",
-      "context": "li @ line 166 · surrounding text: 累计 637 个非合并提交 （本阶段窗内 147 个）"
+      "context": "li @ line 165 · surrounding text: 累计 637 个非合并提交 （本阶段窗内 147 个）"
     },
     {
       "id": "u_9e610dfc1efe838f",
@@ -546,7 +546,7 @@
       "source": "637 个非合并提交",
       "occurrence": 0,
       "target": "637 non-merge commits",
-      "context": "strong @ line 166 · surrounding text: 累计 637 个非合并提交 （本阶段窗内 147 个）"
+      "context": "strong @ line 165 · surrounding text: 累计 637 个非合并提交 （本阶段窗内 147 个）"
     },
     {
       "id": "u_091703eb2b9fc1de",
@@ -554,7 +554,7 @@
       "source": "（本阶段窗内 147 个）",
       "occurrence": 0,
       "target": "(in-sprint: 147)",
-      "context": "li @ line 166 · surrounding text: 累计 637 个非合并提交 （本阶段窗内 147 个）"
+      "context": "li @ line 165 · surrounding text: 累计 637 个非合并提交 （本阶段窗内 147 个）"
     },
     {
       "id": "u_eb28bcbe705acbf4",
@@ -562,7 +562,7 @@
       "source": "免费配额改为节点驱动",
       "occurrence": 0,
       "target": "Free quota switched to VPN node-driven",
-      "context": "strong @ line 167 · surrounding text: 免费配额改为节点驱动 （关闭 UUID 抽取漏洞）"
+      "context": "strong @ line 166 · surrounding text: 免费配额改为节点驱动 （关闭 UUID 抽取漏洞）"
     },
     {
       "id": "u_8f65ffb98a55dc61",
@@ -570,7 +570,7 @@
       "source": "（关闭 UUID 抽取漏洞）",
       "occurrence": 0,
       "target": "Closed UUID extraction vulnerability (closed)",
-      "context": "li @ line 167 · surrounding text: 免费配额改为节点驱动 （关闭 UUID 抽取漏洞）"
+      "context": "li @ line 166 · surrounding text: 免费配额改为节点驱动 （关闭 UUID 抽取漏洞）"
     },
     {
       "id": "u_eb0195d0770f0b01",
@@ -578,7 +578,7 @@
       "source": "IAP 续订代币推进修复（关闭「扣款不发 VIP」）",
       "occurrence": 0,
       "target": "IAP renewal tokens progress repair (closed 'payment not sent to VIP')",
-      "context": "li @ line 168"
+      "context": "li @ line 167"
     },
     {
       "id": "u_bbfc7e081af0cbd0",
@@ -586,7 +586,7 @@
       "source": "免费注册跨账号串号 + ASN 滥用上限",
       "occurrence": 0,
       "target": "Free registration cross-account serial number + ASN abuse limit",
-      "context": "li @ line 169"
+      "context": "li @ line 168"
     },
     {
       "id": "u_12bfdde950453323",
@@ -594,7 +594,7 @@
       "source": "USDT 支付 Java 黑盒 → 团队自有 Go",
       "occurrence": 0,
       "target": "USDT payment Java blackbox → team-owned Go (ETH+TRX joint test)",
-      "context": "strong @ line 170 · surrounding text: USDT 支付 Java 黑盒 → 团队自有 Go （ETH+TRX 联测）"
+      "context": "strong @ line 169 · surrounding text: USDT 支付 Java 黑盒 → 团队自有 Go （ETH+TRX 联测）"
     },
     {
       "id": "u_44d68f7f59394c36",
@@ -602,7 +602,7 @@
       "source": "（ETH+TRX 联测）",
       "occurrence": 0,
       "target": "(ETH+TRX joint test)",
-      "context": "li @ line 170 · surrounding text: USDT 支付 Java 黑盒 → 团队自有 Go （ETH+TRX 联测）"
+      "context": "li @ line 169 · surrounding text: USDT 支付 Java 黑盒 → 团队自有 Go （ETH+TRX 联测）"
     },
     {
       "id": "u_64c0b91a2d30ef71",
@@ -610,7 +610,7 @@
       "source": "关联日志 / 协程崩溃保护 / Swagger 自动文档",
       "occurrence": 0,
       "target": "Associated logs / coroutine crash protection / Swagger auto-documentation",
-      "context": "li @ line 171"
+      "context": "li @ line 170"
     },
     {
       "id": "u_e234b94b0b9fe502",
@@ -618,7 +618,7 @@
       "source": "客户端只读切到读副本 + 分页全审计",
       "occurrence": 0,
       "target": "Client read-only cut to read replica + full audit by page",
-      "context": "li @ line 172"
+      "context": "li @ line 171"
     },
     {
       "id": "u_c909733db6eaa888",
@@ -626,7 +626,7 @@
       "source": "多语言三语补齐 + 写入语言守门",
       "occurrence": 0,
       "target": "Multi-language three-way supplement / write language gate",
-      "context": "li @ line 173"
+      "context": "li @ line 172"
     },
     {
       "id": "u_73cc282f06443493",
@@ -634,7 +634,7 @@
       "source": "移动端 · v1.7.38 → v3.7.0（最终 QA）",
       "occurrence": 0,
       "target": "Mobile app v1.7.38 → v3.7.0 (final QA)",
-      "context": "h3 @ line 177"
+      "context": "h3 @ line 176"
     },
     {
       "id": "u_f493d4fdcd8b77c8",
@@ -642,7 +642,7 @@
       "source": "累计",
       "occurrence": 1,
       "target": "Cumulative",
-      "context": "li @ line 179 · surrounding text: 累计 509 个非合并提交 （本阶段窗内 228 个）"
+      "context": "li @ line 178 · surrounding text: 累计 509 个非合并提交 （本阶段窗内 228 个）"
     },
     {
       "id": "u_6bc3d1e790b6a87b",
@@ -650,7 +650,7 @@
       "source": "509 个非合并提交",
       "occurrence": 0,
       "target": "509 Non-Merged Commits",
-      "context": "strong @ line 179 · surrounding text: 累计 509 个非合并提交 （本阶段窗内 228 个）"
+      "context": "strong @ line 178 · surrounding text: 累计 509 个非合并提交 （本阶段窗内 228 个）"
     },
     {
       "id": "u_191f153c3366f68b",
@@ -658,7 +658,7 @@
       "source": "（本阶段窗内 228 个）",
       "occurrence": 0,
       "target": "(228 within this Sprint)",
-      "context": "li @ line 179 · surrounding text: 累计 509 个非合并提交 （本阶段窗内 228 个）"
+      "context": "li @ line 178 · surrounding text: 累计 509 个非合并提交 （本阶段窗内 228 个）"
     },
     {
       "id": "u_46dd5b5eaef24c5c",
@@ -666,7 +666,7 @@
       "source": "本机 Kotlin 冷编译",
       "occurrence": 0,
       "target": "In-Place Kotlin Warm Compilation",
-      "context": "li @ line 181 · surrounding text: 本机 Kotlin 冷编译 70 → 34 秒（−51%）"
+      "context": "li @ line 180 · surrounding text: 本机 Kotlin 冷编译 70 → 34 秒（−51%）"
     },
     {
       "id": "u_2d83add1f8e9e4df",
@@ -674,7 +674,7 @@
       "source": "70 → 34 秒（−51%）",
       "occurrence": 0,
       "target": "From 70 to 34 seconds (−51%)",
-      "context": "strong @ line 181 · surrounding text: 本机 Kotlin 冷编译 70 → 34 秒（−51%）"
+      "context": "strong @ line 180 · surrounding text: 本机 Kotlin 冷编译 70 → 34 秒（−51%）"
     },
     {
       "id": "u_ae60e91c91645fd7",
@@ -682,7 +682,7 @@
       "source": "工具链：Gradle 8.14→9.3 / Kotlin 2.1→2.3 (K2) / AGP 8.11→9.1 / Java 17→22",
       "occurrence": 0,
       "target": "Toolchain: Gradle 8.14→9.3 / Kotlin 2.1→2.3 (K2) / AGP 8.11→9.1 / Java 17→22",
-      "context": "li @ line 182"
+      "context": "li @ line 181"
     },
     {
       "id": "u_c7736932614b48f2",
@@ -690,7 +690,7 @@
       "source": "VPN 网络切换不掉线 + 闪断误判修复 + 升级 v2.x→v3.x 自愈",
       "occurrence": 0,
       "target": "VPN Network Switches Off Without Drops + Flash Disconnect Fixes + Upgrade v2.x→v3.x Self-Recovery",
-      "context": "li @ line 183"
+      "context": "li @ line 182"
     },
     {
       "id": "u_bc22de33777130e3",
@@ -698,7 +698,7 @@
       "source": "移除 utilcodex（5 MB + 80 传递依赖）+ Compose 完全下线 + 三星渠道下线",
       "occurrence": 0,
       "target": "Remove utilcodex (5 MB + 80 Transitive Dependencies) + Compose Full Offline + Samsung Channel Offline",
-      "context": "li @ line 184"
+      "context": "li @ line 183"
     },
     {
       "id": "u_34b5f0ef203666e1",
@@ -706,7 +706,7 @@
       "source": "4 渠道一次构建",
       "occurrence": 0,
       "target": "Build Once for 4 Channels",
-      "context": "li @ line 185 · surrounding text: 4 渠道一次构建 ~35 分钟 → 15 分 52 秒（全自动）"
+      "context": "li @ line 184 · surrounding text: 4 渠道一次构建 ~35 分钟 → 15 分 52 秒（全自动）"
     },
     {
       "id": "u_ea9ecf434fa64788",
@@ -714,7 +714,7 @@
       "source": "~35 分钟 → 15 分 52 秒（全自动）",
       "occurrence": 0,
       "target": "~35 minutes → 15 minutes and 52 seconds (Fully Automated)",
-      "context": "strong @ line 185 · surrounding text: 4 渠道一次构建 ~35 分钟 → 15 分 52 秒（全自动）"
+      "context": "strong @ line 184 · surrounding text: 4 渠道一次构建 ~35 分钟 → 15 分 52 秒（全自动）"
     },
     {
       "id": "u_354937b577d06297",
@@ -722,7 +722,7 @@
       "source": "基础设施 · 数据 + 节点 + 路由",
       "occurrence": 0,
       "target": "Infrastructure - Data + VPN nodes + Routing",
-      "context": "h3 @ line 189"
+      "context": "h3 @ line 188"
     },
     {
       "id": "u_72ecb7dc8c90547d",
@@ -730,7 +730,7 @@
       "source": "Azure 数据库自动备份首次开启",
       "occurrence": 0,
       "target": "Azure Database Automatic Backup First Enabled",
-      "context": "strong @ line 191 · surrounding text: Azure 数据库自动备份首次开启 （接手时完全没备份）"
+      "context": "strong @ line 190 · surrounding text: Azure 数据库自动备份首次开启 （接手时完全没备份）"
     },
     {
       "id": "u_4a7904497eb80175",
@@ -738,7 +738,7 @@
       "source": "（接手时完全没备份）",
       "occurrence": 0,
       "target": "(No Backups when I took over)",
-      "context": "li @ line 191 · surrounding text: Azure 数据库自动备份首次开启 （接手时完全没备份）"
+      "context": "li @ line 190 · surrounding text: Azure 数据库自动备份首次开启 （接手时完全没备份）"
     },
     {
       "id": "u_9bbeb7eac8c8726e",
@@ -746,7 +746,7 @@
       "source": "读副本真正接入",
       "occurrence": 0,
       "target": "Read Replica Truly Connected",
-      "context": "strong @ line 192 · surrounding text: 读副本真正接入 （之前是「有但没用」）"
+      "context": "strong @ line 191 · surrounding text: 读副本真正接入 （之前是「有但没用」）"
     },
     {
       "id": "u_f340e29067d762f6",
@@ -754,7 +754,7 @@
       "source": "（之前是「有但没用」）",
       "occurrence": 0,
       "target": "(Previously it was 'There but not used')",
-      "context": "li @ line 192 · surrounding text: 读副本真正接入 （之前是「有但没用」）"
+      "context": "li @ line 191 · surrounding text: 读副本真正接入 （之前是「有但没用」）"
     },
     {
       "id": "u_d700d4cf23dc024a",
@@ -762,7 +762,7 @@
       "source": "HK 旧 ProxyBackend 退出客户端关键路径",
       "occurrence": 0,
       "target": "HK Old ProxyBackend Removed from Key Path in Client",
-      "context": "strong @ line 193 · surrounding text: HK 旧 ProxyBackend 退出客户端关键路径 （少一跳跨区延迟）"
+      "context": "strong @ line 192 · surrounding text: HK 旧 ProxyBackend 退出客户端关键路径 （少一跳跨区延迟）"
     },
     {
       "id": "u_764c9f876197637b",
@@ -770,7 +770,7 @@
       "source": "（少一跳跨区延迟）",
       "occurrence": 0,
       "target": "(One less hop, cross-region latency)",
-      "context": "li @ line 193 · surrounding text: HK 旧 ProxyBackend 退出客户端关键路径 （少一跳跨区延迟）"
+      "context": "li @ line 192 · surrounding text: HK 旧 ProxyBackend 退出客户端关键路径 （少一跳跨区延迟）"
     },
     {
       "id": "u_113c36aadf87a1c0",
@@ -778,7 +778,7 @@
       "source": "XRayR → singbox-agent 自研代理（系统 systemd 单一管控）",
       "occurrence": 0,
       "target": "XRayR → in-house singbox-agent (single process manager: systemd)",
-      "context": "li @ line 194"
+      "context": "li @ line 193"
     },
     {
       "id": "u_6bec540ca93018ac",
@@ -786,7 +786,7 @@
       "source": "新增 Hysteria2 / TUIC 协议（中国应对必需）",
       "occurrence": 0,
       "target": "Added Hysteria2 / TUIC protocols (essential for the response in China)",
-      "context": "li @ line 195"
+      "context": "li @ line 194"
     },
     {
       "id": "u_9cd20d06df4c5541",
@@ -794,7 +794,7 @@
       "source": "sing-box 二进制本地镜像 + SHA256（中国封锁应对 + 供应链防御）",
       "occurrence": 0,
       "target": "Local sing-box binary mirror + SHA256 (response to blocking in China + supply-chain protection)",
-      "context": "li @ line 196"
+      "context": "li @ line 195"
     },
     {
       "id": "u_00a4703dfc11714a",
@@ -802,7 +802,7 @@
       "source": "NAT 表脏数据自动清理 + 强制 IPv4 出站",
       "occurrence": 0,
       "target": "Automatic cleanup of stale NAT-table data + enforced IPv4 egress",
-      "context": "li @ line 197"
+      "context": "li @ line 196"
     },
     {
       "id": "u_6055469feea07ecf",
@@ -810,7 +810,7 @@
       "source": "节点 SSH 标准化 35698；一次性引导令牌（Redis 1h TTL）",
       "occurrence": 0,
       "target": "Standardized VPN node SSH port: 35698; one-time bootstrap token (Redis 1 h TTL)",
-      "context": "li @ line 198"
+      "context": "li @ line 197"
     },
     {
       "id": "u_95704c4dfb105b65",
@@ -818,7 +818,7 @@
       "source": "四、节点与后台自动化（本阶段最大的运维杠杆）",
       "occurrence": 0,
       "target": "4. VPN Node and Back Office (BO) Automation (This Sprint's Greatest Operational Lever)",
-      "context": "h2 @ line 203"
+      "context": "h2 @ line 202"
     },
     {
       "id": "u_b301b3e3bb89dafa",
@@ -826,7 +826,7 @@
       "source": "★ 现场实测（5/10）— 测试环境全部 7 台节点跨 3 大洲并行回收",
       "occurrence": 0,
       "target": "★ Live Benchmark (5/10) — All 7 VPN nodes in the test environment reclaimed in parallel across 3 continents",
-      "context": "h3 @ line 205"
+      "context": "h3 @ line 204"
     },
     {
       "id": "u_b004609083a18fe7",
@@ -834,7 +834,7 @@
       "source": "单次后台 API 调用同时触发 7 台节点全擦重装（中国 / 香港 / 越南 / 菲律宾 / 丹麦 / 加拿大 / 法国）：",
       "occurrence": 0,
       "target": "A single Back Office (BO) API call triggered a full wipe and reinstall on 7 VPN nodes at once (China / Hong Kong / Vietnam / Philippines / Denmark / Canada / France):",
-      "context": "p @ line 206 · surrounding text: 单次后台 API 调用同时触发 7 台节点全擦重装（中国 / 香港 / 越南 / 菲律宾 / 丹麦 / 加拿大 / 法国）： 最快 15 秒（Vancouver 175 ms RTT 最远反而最快）· 最慢 44 秒（广州 ACME 走 GFW）· 整批端到端 44 秒 · 0 失败 。"
+      "context": "p @ line 205 · surrounding text: 单次后台 API 调用同时触发 7 台节点全擦重装（中国 / 香港 / 越南 / 菲律宾 / 丹麦 / 加拿大 / 法国）： 最快 15 秒（Vancouver 175 ms RTT 最远反而最快）· 最慢 44 秒（广州 ACME 走 GFW）· 整批端到端 44 秒 · 0 失败 。"
     },
     {
       "id": "u_ae6af904816cbe8e",
@@ -842,7 +842,7 @@
       "source": "最快 15 秒（Vancouver 175 ms RTT 最远反而最快）· 最慢 44 秒（广州 ACME 走 GFW）· 整批端到端 44 秒 · 0 失败",
       "occurrence": 0,
       "target": "Fastest: 15 seconds (Vancouver was farthest at 175 ms RTT but fastest) · Slowest: 44 seconds (Guangzhou ACME traversed the GFW) · Full-batch end to end: 44 seconds · 0 failures",
-      "context": "strong @ line 206 · surrounding text: 单次后台 API 调用同时触发 7 台节点全擦重装（中国 / 香港 / 越南 / 菲律宾 / 丹麦 / 加拿大 / 法国）： 最快 15 秒（Vancouver 175 ms RTT 最远反而最快）· 最慢 44 秒（广州 ACME 走 GFW）· 整批端到端 44 秒 · 0 失败 。"
+      "context": "strong @ line 205 · surrounding text: 单次后台 API 调用同时触发 7 台节点全擦重装（中国 / 香港 / 越南 / 菲律宾 / 丹麦 / 加拿大 / 法国）： 最快 15 秒（Vancouver 175 ms RTT 最远反而最快）· 最慢 44 秒（广州 ACME 走 GFW）· 整批端到端 44 秒 · 0 失败 。"
     },
     {
       "id": "u_8f56e34364063f33",
@@ -850,7 +850,7 @@
       "source": "真正的赢面不是「44 秒」，而是「学习曲线归零」",
       "occurrence": 0,
       "target": "The true win is not '44 seconds', but the 'learning curve reset'",
-      "context": "strong @ line 207 · surrounding text: 真正的赢面不是「44 秒」，而是「学习曲线归零」 — 接手时要翻文档、判断节点系统、选进程管理器、SSH 跑命令、看日志验证（老员工也要开手册）；现在勾「全擦重装」→ 选主机 → 点确认即可，第一天报到的新人都能做。同时消除「关键人物风险」、统一了节点池上 7 种不同的进程管理装法。"
+      "context": "strong @ line 206 · surrounding text: 真正的赢面不是「44 秒」，而是「学习曲线归零」 — 接手时要翻文档、判断节点系统、选进程管理器、SSH 跑命令、看日志验证（老员工也要开手册）；现在勾「全擦重装」→ 选主机 → 点确认即可，第一天报到的新人都能做。同时消除「关键人物风险」、统一了节点池上 7 种不同的进程管理装法。"
     },
     {
       "id": "u_3fdb3e8304bbd8bb",
@@ -858,7 +858,7 @@
       "source": "— 接手时要翻文档、判断节点系统、选进程管理器、SSH 跑命令、看日志验证（老员工也要开手册）；现在勾「全擦重装」→ 选主机 → 点确认即可，第一天报到的新人都能做。同时消除「关键人物风险」、统一了节点池上 7 种不同的进程管理装法。",
       "occurrence": 0,
       "target": "Onboarding new employees: Flipping 'full reinstall' → Select Host → Confirm immediately, even beginners can do it. Eliminate 'key person risk' and standardize 7 different process management methods on the VPN node pool.",
-      "context": "p @ line 207 · surrounding text: 真正的赢面不是「44 秒」，而是「学习曲线归零」 — 接手时要翻文档、判断节点系统、选进程管理器、SSH 跑命令、看日志验证（老员工也要开手册）；现在勾「全擦重装」→ 选主机 → 点确认即可，第一天报到的新人都能做。同时消除「关键人物风险」、统一了节点池上 7 种不同的进程管理装法。"
+      "context": "p @ line 206 · surrounding text: 真正的赢面不是「44 秒」，而是「学习曲线归零」 — 接手时要翻文档、判断节点系统、选进程管理器、SSH 跑命令、看日志验证（老员工也要开手册）；现在勾「全擦重装」→ 选主机 → 点确认即可，第一天报到的新人都能做。同时消除「关键人物风险」、统一了节点池上 7 种不同的进程管理装法。"
     },
     {
       "id": "u_f75f1f8ff9730f9b",
@@ -866,7 +866,7 @@
       "source": "详细实测报告（7 国节点规格、地理 RTT、时间线、学习曲线对比、可复现步骤）",
       "occurrence": 0,
       "target": "Detailed Testing Report (VPN node Specifications in 7 Countries, Geographic RTT, Timeline, Learning Curve Comparison, Reproducible Steps)",
-      "context": "a @ line 208 · surrounding text: → 详细实测报告（7 国节点规格、地理 RTT、时间线、学习曲线对比、可复现步骤）"
+      "context": "a @ line 207 · surrounding text: → 详细实测报告（7 国节点规格、地理 RTT、时间线、学习曲线对比、可复现步骤）"
     },
     {
       "id": "u_2e3607241d15b80f",
@@ -874,7 +874,7 @@
       "source": "已上线（生产）",
       "occurrence": 0,
       "target": "Live (Production) - In Progress",
-      "context": "th @ line 211 · surrounding text: 已上线（生产） 测试中（晋升至第4阶段决策驱动）"
+      "context": "th @ line 210 · surrounding text: 已上线（生产） 测试中（晋升至第4阶段决策驱动）"
     },
     {
       "id": "u_3e88fa7bfc7526bd",
@@ -882,7 +882,7 @@
       "source": "测试中（晋升至第4阶段决策驱动）",
       "occurrence": 0,
       "target": "In Progress - Moving to Sprint 4 Decision-Making",
-      "context": "th @ line 211 · surrounding text: 已上线（生产） 测试中（晋升至第4阶段决策驱动）"
+      "context": "th @ line 210 · surrounding text: 已上线（生产） 测试中（晋升至第4阶段决策驱动）"
     },
     {
       "id": "u_2b5698964a47b63e",
@@ -890,7 +890,7 @@
       "source": "安装新节点",
       "occurrence": 0,
       "target": "Provision a New VPN Node",
-      "context": "li @ line 215 · surrounding text: 安装新节点 ~30 秒 （原 SSH ~20 分钟）"
+      "context": "li @ line 214 · surrounding text: 安装新节点 ~30 秒 （原 SSH ~20 分钟）"
     },
     {
       "id": "u_6f1f2b1391d7164b",
@@ -898,7 +898,7 @@
       "source": "~30 秒",
       "occurrence": 1,
       "target": "~30 seconds",
-      "context": "strong @ line 215 · surrounding text: 安装新节点 ~30 秒 （原 SSH ~20 分钟）"
+      "context": "strong @ line 214 · surrounding text: 安装新节点 ~30 秒 （原 SSH ~20 分钟）"
     },
     {
       "id": "u_2eb54a7652369c9f",
@@ -906,7 +906,7 @@
       "source": "（原 SSH ~20 分钟）",
       "occurrence": 0,
       "target": "Sprint (originally SSH ~20 minutes)",
-      "context": "li @ line 215 · surrounding text: 安装新节点 ~30 秒 （原 SSH ~20 分钟）"
+      "context": "li @ line 214 · surrounding text: 安装新节点 ~30 秒 （原 SSH ~20 分钟）"
     },
     {
       "id": "u_769535d39ef75d1b",
@@ -914,7 +914,7 @@
       "source": "全擦重装回收被封节点",
       "occurrence": 0,
       "target": "Rebuild and recycle blocked VPN nodes",
-      "context": "li @ line 216 · surrounding text: 全擦重装回收被封节点 ~25-60 秒 （原人工 ~30+ 分钟）"
+      "context": "li @ line 215 · surrounding text: 全擦重装回收被封节点 ~25-60 秒 （原人工 ~30+ 分钟）"
     },
     {
       "id": "u_d15c5119f85e09d0",
@@ -922,7 +922,7 @@
       "source": "~25-60 秒",
       "occurrence": 0,
       "target": "~25–60 seconds",
-      "context": "strong @ line 216 · surrounding text: 全擦重装回收被封节点 ~25-60 秒 （原人工 ~30+ 分钟）"
+      "context": "strong @ line 215 · surrounding text: 全擦重装回收被封节点 ~25-60 秒 （原人工 ~30+ 分钟）"
     },
     {
       "id": "u_b86281412726af49",
@@ -930,7 +930,7 @@
       "source": "（原人工 ~30+ 分钟）",
       "occurrence": 0,
       "target": "(originally manual ~30+ minutes)",
-      "context": "li @ line 216 · surrounding text: 全擦重装回收被封节点 ~25-60 秒 （原人工 ~30+ 分钟）"
+      "context": "li @ line 215 · surrounding text: 全擦重装回收被封节点 ~25-60 秒 （原人工 ~30+ 分钟）"
     },
     {
       "id": "u_9b8c0ad3317b7226",
@@ -938,7 +938,7 @@
       "source": "批量升级并行 12 台 + 流式进度 + 失败可重试",
       "occurrence": 0,
       "target": "Batch upgrade in parallel with 12 nodes + real-time progress + retry on failure",
-      "context": "li @ line 217"
+      "context": "li @ line 216"
     },
     {
       "id": "u_e7506a3679064fda",
@@ -946,7 +946,7 @@
       "source": "Reheal（令牌轮换 + 重新自注册）",
       "occurrence": 0,
       "target": "Reheal (token rotation + re-register)",
-      "context": "li @ line 218"
+      "context": "li @ line 217"
     },
     {
       "id": "u_5510e6b7aa093ab0",
@@ -954,7 +954,7 @@
       "source": "SSH 防火墙策略一键应用",
       "occurrence": 0,
       "target": "Apply the SSH firewall policy with one click",
-      "context": "li @ line 219"
+      "context": "li @ line 218"
     },
     {
       "id": "u_c6ae96ed68c3582b",
@@ -962,7 +962,7 @@
       "source": "到期自动释放节点回库存",
       "occurrence": 0,
       "target": "Auto-release VPN nodes upon expiration and return to inventory",
-      "context": "li @ line 220"
+      "context": "li @ line 219"
     },
     {
       "id": "u_a85f509165bf11c5",
@@ -970,7 +970,7 @@
       "source": "节点健康状态机（auto-remove / auto-restore）",
       "occurrence": 0,
       "target": "VPN node health state machine (auto-remove / auto-restore)",
-      "context": "li @ line 221"
+      "context": "li @ line 220"
     },
     {
       "id": "u_d8966ddef3fcbc42",
@@ -978,7 +978,7 @@
       "source": "自动分配节点（专线下单 → 自动绑定）",
       "occurrence": 0,
       "target": "Auto-distribute VPN nodes (special line order → automatic binding)",
-      "context": "li @ line 226"
+      "context": "li @ line 225"
     },
     {
       "id": "u_1f07229d44fc6f28",
@@ -986,7 +986,7 @@
       "source": "专属 IP 自动续费（保留原节点绑定）— 设计中",
       "occurrence": 0,
       "target": "Exclusive IP auto-renewal (keep original VPN node binding) — Design in progress",
-      "context": "li @ line 227"
+      "context": "li @ line 226"
     },
     {
       "id": "u_f0c7f95ef4c612f4",
@@ -994,7 +994,7 @@
       "source": "供应商总览（按供应商汇总成本/健康）— 暂未驱动采购",
       "occurrence": 0,
       "target": "Supplier overview (summarize costs and health by supplier) — Not yet driving procurement",
-      "context": "li @ line 228"
+      "context": "li @ line 227"
     },
     {
       "id": "u_6837424c65d736b0",
@@ -1002,7 +1002,7 @@
       "source": "异常观察（同 UUID 多 IP 计数）— 仅观察、不自动处置",
       "occurrence": 0,
       "target": "Anomaly observation (count of multiple IPs with the same UUID) — Only observe, no automatic resolution",
-      "context": "li @ line 229"
+      "context": "li @ line 228"
     },
     {
       "id": "u_02dfbe5f964922a8",
@@ -1010,7 +1010,7 @@
       "source": "DNS 孤立记录清理 — 列表可见、批量删除暂未开放",
       "occurrence": 0,
       "target": "DNS isolated record cleanup — List visible, batch deletion not yet open",
-      "context": "li @ line 230"
+      "context": "li @ line 229"
     },
     {
       "id": "u_87b921ee4049c386",
@@ -1018,7 +1018,7 @@
       "source": "五、大重构 + 堆灭的风险与滥用",
       "occurrence": 0,
       "target": "Five: Major restructure + heap smashing risks and abuses",
-      "context": "h2 @ line 236"
+      "context": "h2 @ line 235"
     },
     {
       "id": "u_917a81bbee2a359f",
@@ -1026,7 +1026,7 @@
       "source": "大重构",
       "occurrence": 0,
       "target": "Major Refactoring",
-      "context": "th @ line 239 · surrounding text: 大重构 堆灭的具体风险 / 滥用"
+      "context": "th @ line 238 · surrounding text: 大重构 堆灭的具体风险 / 滥用"
     },
     {
       "id": "u_dbf646d248e7e024",
@@ -1034,7 +1034,7 @@
       "source": "堆灭的具体风险 / 滥用",
       "occurrence": 0,
       "target": "Specific risks / Abuse of destruction",
-      "context": "th @ line 239 · surrounding text: 大重构 堆灭的具体风险 / 滥用"
+      "context": "th @ line 238 · surrounding text: 大重构 堆灭的具体风险 / 滥用"
     },
     {
       "id": "u_7a34669d33979bfd",
@@ -1042,7 +1042,7 @@
       "source": "免费配额信任链反转",
       "occurrence": 0,
       "target": "Reversal of free quota trust chain",
-      "context": "strong @ line 243 · surrounding text: 免费配额信任链反转 （客户端记账 → 节点驱动）"
+      "context": "strong @ line 242 · surrounding text: 免费配额信任链反转 （客户端记账 → 节点驱动）"
     },
     {
       "id": "u_1abcee60f4f48a16",
@@ -1050,7 +1050,7 @@
       "source": "（客户端记账 → 节点驱动）",
       "occurrence": 0,
       "target": "(Client Accounting → VPN node Driven)",
-      "context": "li @ line 243 · surrounding text: 免费配额信任链反转 （客户端记账 → 节点驱动）"
+      "context": "li @ line 242 · surrounding text: 免费配额信任链反转 （客户端记账 → 节点驱动）"
     },
     {
       "id": "u_273ec4f3f82ad4fd",
@@ -1058,7 +1058,7 @@
       "source": "节点配置单源化",
       "occurrence": 0,
       "target": "Unified VPN node configuration",
-      "context": "strong @ line 244 · surrounding text: 节点配置单源化 （YAML 散落 → 后端唯一可信来源）"
+      "context": "strong @ line 243 · surrounding text: 节点配置单源化 （YAML 散落 → 后端唯一可信来源）"
     },
     {
       "id": "u_1fb0a80994a9f067",
@@ -1066,7 +1066,7 @@
       "source": "（YAML 散落 → 后端唯一可信来源）",
       "occurrence": 0,
       "target": "(YAML Dispersed → Backend Single Trusted Source)",
-      "context": "li @ line 244 · surrounding text: 节点配置单源化 （YAML 散落 → 后端唯一可信来源）"
+      "context": "li @ line 243 · surrounding text: 节点配置单源化 （YAML 散落 → 后端唯一可信来源）"
     },
     {
       "id": "u_1ab793bf8eaf5de4",
@@ -1074,7 +1074,7 @@
       "source": "节点进程管理统一",
       "occurrence": 0,
       "target": "Unified VPN node process management",
-      "context": "strong @ line 245 · surrounding text: 节点进程管理统一 （PM2/systemd/Docker → systemd 单一）"
+      "context": "strong @ line 244 · surrounding text: 节点进程管理统一 （PM2/systemd/Docker → systemd 单一）"
     },
     {
       "id": "u_23ea4edbd299138d",
@@ -1082,7 +1082,7 @@
       "source": "（PM2/systemd/Docker → systemd 单一）",
       "occurrence": 0,
       "target": "(PM2/systemd/Docker → systemd Singular)",
-      "context": "li @ line 245 · surrounding text: 节点进程管理统一 （PM2/systemd/Docker → systemd 单一）"
+      "context": "li @ line 244 · surrounding text: 节点进程管理统一 （PM2/systemd/Docker → systemd 单一）"
     },
     {
       "id": "u_b790909754b76d36",
@@ -1090,7 +1090,7 @@
       "source": "USDT 支付 Java→Go 重写",
       "occurrence": 0,
       "target": "Rewrite of Java to Go for USDT payments",
-      "context": "strong @ line 246 · surrounding text: USDT 支付 Java→Go 重写 （黑盒 → 源码可审）"
+      "context": "strong @ line 245 · surrounding text: USDT 支付 Java→Go 重写 （黑盒 → 源码可审）"
     },
     {
       "id": "u_b58226efc4c76fbb",
@@ -1098,7 +1098,7 @@
       "source": "（黑盒 → 源码可审）",
       "occurrence": 0,
       "target": "(Black Box → Source Code Auditable)",
-      "context": "li @ line 246 · surrounding text: USDT 支付 Java→Go 重写 （黑盒 → 源码可审）"
+      "context": "li @ line 245 · surrounding text: USDT 支付 Java→Go 重写 （黑盒 → 源码可审）"
     },
     {
       "id": "u_2cd311d4eec2acdd",
@@ -1106,7 +1106,7 @@
       "source": "节点身份重构",
       "occurrence": 0,
       "target": "Reconstruction of VPN node identity",
-      "context": "strong @ line 247 · surrounding text: 节点身份重构 （数字 ID → main_ip 自注册）"
+      "context": "strong @ line 246 · surrounding text: 节点身份重构 （数字 ID → main_ip 自注册）"
     },
     {
       "id": "u_f4558d90bb0efa35",
@@ -1114,7 +1114,7 @@
       "source": "（数字 ID → main_ip 自注册）",
       "occurrence": 0,
       "target": "(Digital ID → Main_IP Self-Registration)",
-      "context": "li @ line 247 · surrounding text: 节点身份重构 （数字 ID → main_ip 自注册）"
+      "context": "li @ line 246 · surrounding text: 节点身份重构 （数字 ID → main_ip 自注册）"
     },
     {
       "id": "u_371fbda7089520b1",
@@ -1122,7 +1122,7 @@
       "source": "后台 SPA 流水线独立化",
       "occurrence": 0,
       "target": "Independent Back Office (BO) SPA pipeline",
-      "context": "strong @ line 248 · surrounding text: 后台 SPA 流水线独立化 （admin 失败不再阻塞后端发布）"
+      "context": "strong @ line 247 · surrounding text: 后台 SPA 流水线独立化 （admin 失败不再阻塞后端发布）"
     },
     {
       "id": "u_a4eeb1a62b67dbdd",
@@ -1130,7 +1130,7 @@
       "source": "（admin 失败不再阻塞后端发布）",
       "occurrence": 0,
       "target": "(Backend Release No Longer Blocked by Admin Failure)",
-      "context": "li @ line 248 · surrounding text: 后台 SPA 流水线独立化 （admin 失败不再阻塞后端发布）"
+      "context": "li @ line 247 · surrounding text: 后台 SPA 流水线独立化 （admin 失败不再阻塞后端发布）"
     },
     {
       "id": "u_a9907f71bbd46e2e",
@@ -1138,7 +1138,7 @@
       "source": "后端 CI 重构",
       "occurrence": 0,
       "target": "Reconstruction of backend CI",
-      "context": "strong @ line 249 · surrounding text: 后端 CI 重构 （6 阶段 → 4 阶段单一职责，4-6 倍提速）"
+      "context": "strong @ line 248 · surrounding text: 后端 CI 重构 （6 阶段 → 4 阶段单一职责，4-6 倍提速）"
     },
     {
       "id": "u_499a06fee3992065",
@@ -1146,7 +1146,7 @@
       "source": "（6 阶段 → 4 阶段单一职责，4-6 倍提速）",
       "occurrence": 0,
       "target": "(6 Stages → 4 Single Responsibility Stages, 4-6 Times Faster)",
-      "context": "li @ line 249 · surrounding text: 后端 CI 重构 （6 阶段 → 4 阶段单一职责，4-6 倍提速）"
+      "context": "li @ line 248 · surrounding text: 后端 CI 重构 （6 阶段 → 4 阶段单一职责，4-6 倍提速）"
     },
     {
       "id": "u_1026d34743d35cd0",
@@ -1154,7 +1154,7 @@
       "source": "移动端架构清理",
       "occurrence": 0,
       "target": "Mobile architecture cleanup",
-      "context": "strong @ line 250 · surrounding text: 移动端架构清理 （utilcodex / Compose / 三星 / Gradle 模块合并）"
+      "context": "strong @ line 249 · surrounding text: 移动端架构清理 （utilcodex / Compose / 三星 / Gradle 模块合并）"
     },
     {
       "id": "u_2872819d7c7ec059",
@@ -1162,7 +1162,7 @@
       "source": "（utilcodex / Compose / 三星 / Gradle 模块合并）",
       "occurrence": 0,
       "target": "Sprint / Compose / Samsung / Gradle Module Merge",
-      "context": "li @ line 250 · surrounding text: 移动端架构清理 （utilcodex / Compose / 三星 / Gradle 模块合并）"
+      "context": "li @ line 249 · surrounding text: 移动端架构清理 （utilcodex / Compose / 三星 / Gradle 模块合并）"
     },
     {
       "id": "u_99cbf4f9c16f57ed",
@@ -1170,7 +1170,7 @@
       "source": "移动端工具链跃升",
       "occurrence": 0,
       "target": "Mobile Toolchain Upgrade",
-      "context": "strong @ line 251 · surrounding text: 移动端工具链跃升 （Gradle 9 / Kotlin 2.3 K2 / AGP 9.1 / Java 22）"
+      "context": "strong @ line 250 · surrounding text: 移动端工具链跃升 （Gradle 9 / Kotlin 2.3 K2 / AGP 9.1 / Java 22）"
     },
     {
       "id": "u_15eae6fa9cbc9a4b",
@@ -1178,7 +1178,7 @@
       "source": "节点防火墙单一来源",
       "occurrence": 0,
       "target": "Single Source for VPN node Firewall",
-      "context": "strong @ line 252 · surrounding text: 节点防火墙单一来源 （三套并存 → apply-iptables.sh）"
+      "context": "strong @ line 251 · surrounding text: 节点防火墙单一来源 （三套并存 → apply-iptables.sh）"
     },
     {
       "id": "u_82675271a90cfbbd",
@@ -1186,7 +1186,7 @@
       "source": "（三套并存 → apply-iptables.sh）",
       "occurrence": 0,
       "target": "Single Source for Node Firewall (Three Coexist → apply-iptables.sh)",
-      "context": "li @ line 252 · surrounding text: 节点防火墙单一来源 （三套并存 → apply-iptables.sh）"
+      "context": "li @ line 251 · surrounding text: 节点防火墙单一来源 （三套并存 → apply-iptables.sh）"
     },
     {
       "id": "u_278f7cc75c911030",
@@ -1194,7 +1194,7 @@
       "source": "协程崩溃保护",
       "occurrence": 0,
       "target": "Coroutine Crash Protection",
-      "context": "strong @ line 253 · surrounding text: 协程崩溃保护 （顶层 recover + safego 包装）"
+      "context": "strong @ line 252 · surrounding text: 协程崩溃保护 （顶层 recover + safego 包装）"
     },
     {
       "id": "u_11dfbb38069151e1",
@@ -1202,7 +1202,7 @@
       "source": "（顶层 recover + safego 包装）",
       "occurrence": 0,
       "target": "Coroutine Crash Protection (Top-Level recover + safego Packaging)",
-      "context": "li @ line 253 · surrounding text: 协程崩溃保护 （顶层 recover + safego 包装）"
+      "context": "li @ line 252 · surrounding text: 协程崩溃保护 （顶层 recover + safego 包装）"
     },
     {
       "id": "u_207d7adc3c53918f",
@@ -1210,7 +1210,7 @@
       "source": "跨端关联日志",
       "occurrence": 0,
       "target": "Cross-Platform Log Association",
-      "context": "strong @ line 254 · surrounding text: 跨端关联日志 （X-Request-ID 端到端）"
+      "context": "strong @ line 253 · surrounding text: 跨端关联日志 （X-Request-ID 端到端）"
     },
     {
       "id": "u_0df24b622a24f315",
@@ -1218,7 +1218,7 @@
       "source": "（X-Request-ID 端到端）",
       "occurrence": 0,
       "target": "Cross-Platform Log Association (X-Request-ID End-to-End)",
-      "context": "li @ line 254 · surrounding text: 跨端关联日志 （X-Request-ID 端到端）"
+      "context": "li @ line 253 · surrounding text: 跨端关联日志 （X-Request-ID 端到端）"
     },
     {
       "id": "u_57d08b4f0f0401d3",
@@ -1226,7 +1226,7 @@
       "source": "UUID 抽取 = 无限免费 VPN",
       "occurrence": 0,
       "target": "UUID Extraction = Infinite Free VPN",
-      "context": "strong @ line 259 · surrounding text: UUID 抽取 = 无限免费 VPN → 关闭（节点驱动配额）"
+      "context": "strong @ line 258 · surrounding text: UUID 抽取 = 无限免费 VPN → 关闭（节点驱动配额）"
     },
     {
       "id": "u_a55df7fc257d3e89",
@@ -1234,7 +1234,7 @@
       "source": "→ 关闭（节点驱动配额）",
       "occurrence": 0,
       "target": "Infinite Free VPN (VPN node Quota)",
-      "context": "li @ line 259 · surrounding text: UUID 抽取 = 无限免费 VPN → 关闭（节点驱动配额）"
+      "context": "li @ line 258 · surrounding text: UUID 抽取 = 无限免费 VPN → 关闭（节点驱动配额）"
     },
     {
       "id": "u_40819ae89b2a8fee",
@@ -1242,7 +1242,7 @@
       "source": "挂时长绕过抽奖在线时长",
       "occurrence": 0,
       "target": "Duration Override for Lottery Online Duration",
-      "context": "strong @ line 260 · surrounding text: 挂时长绕过抽奖在线时长 → 关闭（节点统计真实通信）"
+      "context": "strong @ line 259 · surrounding text: 挂时长绕过抽奖在线时长 → 关闭（节点统计真实通信）"
     },
     {
       "id": "u_58d71e0b6cf56f17",
@@ -1250,7 +1250,7 @@
       "source": "→ 关闭（节点统计真实通信）",
       "occurrence": 0,
       "target": "VPN node Statistics Real Communication (VPN node Quota)",
-      "context": "li @ line 260 · surrounding text: 挂时长绕过抽奖在线时长 → 关闭（节点统计真实通信）"
+      "context": "li @ line 259 · surrounding text: 挂时长绕过抽奖在线时长 → 关闭（节点统计真实通信）"
     },
     {
       "id": "u_12dcf9f3a5d1b296",
@@ -1258,7 +1258,7 @@
       "source": "免费注册跨账号串号 + ASN 段滥用",
       "occurrence": 0,
       "target": "Cross-Account Serial Number + ASN Segment Abuse",
-      "context": "strong @ line 261 · surrounding text: 免费注册跨账号串号 + ASN 段滥用 → 关闭"
+      "context": "strong @ line 260 · surrounding text: 免费注册跨账号串号 + ASN 段滥用 → 关闭"
     },
     {
       "id": "u_cfaa724ce84faa47",
@@ -1266,7 +1266,7 @@
       "source": "→ 关闭",
       "occurrence": 0,
       "target": "→ Closed",
-      "context": "li @ line 261 · surrounding text: 免费注册跨账号串号 + ASN 段滥用 → 关闭"
+      "context": "li @ line 260 · surrounding text: 免费注册跨账号串号 + ASN 段滥用 → 关闭"
     },
     {
       "id": "u_589c17c6ae120f52",
@@ -1274,7 +1274,7 @@
       "source": "IAP 续订代币不推进",
       "occurrence": 0,
       "target": "IAP Renewal Tokens Not Proceeding",
-      "context": "strong @ line 262 · surrounding text: IAP 续订代币不推进 （扣款不发 VIP） → 修复"
+      "context": "strong @ line 261 · surrounding text: IAP 续订代币不推进 （扣款不发 VIP） → 修复"
     },
     {
       "id": "u_aaf5c7685fdfaee5",
@@ -1282,7 +1282,7 @@
       "source": "（扣款不发 VIP） → 修复",
       "occurrence": 0,
       "target": "IAP Renewal Tokens Not Proceeding (No VIP)",
-      "context": "li @ line 262 · surrounding text: IAP 续订代币不推进 （扣款不发 VIP） → 修复"
+      "context": "li @ line 261 · surrounding text: IAP 续订代币不推进 （扣款不发 VIP） → 修复"
     },
     {
       "id": "u_286da0d89fc4cb36",
@@ -1290,7 +1290,7 @@
       "source": "专线到期不释放节点",
       "occurrence": 0,
       "target": "Sprint Expiration Not Released VPN node",
-      "context": "strong @ line 263 · surrounding text: 专线到期不释放节点 （节点池虚耗） → 修复"
+      "context": "strong @ line 262 · surrounding text: 专线到期不释放节点 （节点池虚耗） → 修复"
     },
     {
       "id": "u_bb4546175f463bf8",
@@ -1298,7 +1298,7 @@
       "source": "（节点池虚耗） → 修复",
       "occurrence": 0,
       "target": "VPN node Pool Waste → Fixed",
-      "context": "li @ line 263 · surrounding text: 专线到期不释放节点 （节点池虚耗） → 修复"
+      "context": "li @ line 262 · surrounding text: 专线到期不释放节点 （节点池虚耗） → 修复"
     },
     {
       "id": "u_1eb3635458881020",
@@ -1306,7 +1306,7 @@
       "source": "iptables NAT 表脏数据",
       "occurrence": 0,
       "target": "Dirty Data in iptables NAT Table",
-      "context": "strong @ line 264 · surrounding text: iptables NAT 表脏数据 （连接不稳隐性故障） → 自动清理"
+      "context": "strong @ line 263 · surrounding text: iptables NAT 表脏数据 （连接不稳隐性故障） → 自动清理"
     },
     {
       "id": "u_be107d08e03c1faf",
@@ -1314,7 +1314,7 @@
       "source": "（连接不稳隐性故障） → 自动清理",
       "occurrence": 0,
       "target": "Stable Connection Hidden Fault → Automated Cleanup",
-      "context": "li @ line 264 · surrounding text: iptables NAT 表脏数据 （连接不稳隐性故障） → 自动清理"
+      "context": "li @ line 263 · surrounding text: iptables NAT 表脏数据 （连接不稳隐性故障） → 自动清理"
     },
     {
       "id": "u_d9b38efb3ec79525",
@@ -1322,7 +1322,7 @@
       "source": "数据库无任何自动备份",
       "occurrence": 0,
       "target": "No Any Automatic Backups in Database → Enabled Azure Daily",
-      "context": "strong @ line 265 · surrounding text: 数据库无任何自动备份 （区级故障即丢库） → 已开启 Azure 自动每日"
+      "context": "strong @ line 264 · surrounding text: 数据库无任何自动备份 （区级故障即丢库） → 已开启 Azure 自动每日"
     },
     {
       "id": "u_d9082610897a6451",
@@ -1330,7 +1330,7 @@
       "source": "（区级故障即丢库） → 已开启 Azure 自动每日",
       "occurrence": 0,
       "target": "Database Level Failure Loss → Enabled Azure Daily",
-      "context": "li @ line 265 · surrounding text: 数据库无任何自动备份 （区级故障即丢库） → 已开启 Azure 自动每日"
+      "context": "li @ line 264 · surrounding text: 数据库无任何自动备份 （区级故障即丢库） → 已开启 Azure 自动每日"
     },
     {
       "id": "u_dc2515f855e24bb6",
@@ -1338,7 +1338,7 @@
       "source": "读副本「有但没用」",
       "occurrence": 0,
       "target": "Read Replica Useless → Switch to Read Replica",
-      "context": "strong @ line 266 · surrounding text: 读副本「有但没用」 （主库压力大） → 切到读副本"
+      "context": "strong @ line 265 · surrounding text: 读副本「有但没用」 （主库压力大） → 切到读副本"
     },
     {
       "id": "u_98662a3922cfc995",
@@ -1346,7 +1346,7 @@
       "source": "（主库压力大） → 切到读副本",
       "occurrence": 0,
       "target": "High Main Database Load → Switch to Read Replica",
-      "context": "li @ line 266 · surrounding text: 读副本「有但没用」 （主库压力大） → 切到读副本"
+      "context": "li @ line 265 · surrounding text: 读副本「有但没用」 （主库压力大） → 切到读副本"
     },
     {
       "id": "u_f2d5c09c5ccf549c",
@@ -1354,7 +1354,7 @@
       "source": "HK 旧 ProxyBackend 长期不稳定",
       "occurrence": 0,
       "target": "HK Old ProxyBackend Long Unstable → Exit Key Path",
-      "context": "strong @ line 267 · surrounding text: HK 旧 ProxyBackend 长期不稳定 （每次请求多一跳） → 退出关键路径"
+      "context": "strong @ line 266 · surrounding text: HK 旧 ProxyBackend 长期不稳定 （每次请求多一跳） → 退出关键路径"
     },
     {
       "id": "u_b286e562c4526ef2",
@@ -1362,7 +1362,7 @@
       "source": "（每次请求多一跳） → 退出关键路径",
       "occurrence": 0,
       "target": "One Extra Hop per Request → Exit Key Path",
-      "context": "li @ line 267 · surrounding text: HK 旧 ProxyBackend 长期不稳定 （每次请求多一跳） → 退出关键路径"
+      "context": "li @ line 266 · surrounding text: HK 旧 ProxyBackend 长期不稳定 （每次请求多一跳） → 退出关键路径"
     },
     {
       "id": "u_c1d59a7e909a6953",
@@ -1370,7 +1370,7 @@
       "source": "USDT 支付黑盒",
       "occurrence": 0,
       "target": "USDT Payment Black Box → Rewrite in Go, Source Code Reviewable",
-      "context": "strong @ line 268 · surrounding text: USDT 支付黑盒 （jar 无源码） → Go 重写，源码可审"
+      "context": "strong @ line 267 · surrounding text: USDT 支付黑盒 （jar 无源码） → Go 重写，源码可审"
     },
     {
       "id": "u_106d7ff8be3a6d05",
@@ -1378,7 +1378,7 @@
       "source": "（jar 无源码） → Go 重写，源码可审",
       "occurrence": 0,
       "target": "Jar Without Source Code → Rewrite in Go, Source Code Reviewable",
-      "context": "li @ line 268 · surrounding text: USDT 支付黑盒 （jar 无源码） → Go 重写，源码可审"
+      "context": "li @ line 267 · surrounding text: USDT 支付黑盒 （jar 无源码） → Go 重写，源码可审"
     },
     {
       "id": "u_b19b77640d9962c9",
@@ -1386,7 +1386,7 @@
       "source": "节点 7 种装法漂移",
       "occurrence": 0,
       "target": "VPN node 7 Installation Methods Drift → Single Systemd",
-      "context": "strong @ line 269 · surrounding text: 节点 7 种装法漂移 （运维负债） → systemd 单一"
+      "context": "strong @ line 268 · surrounding text: 节点 7 种装法漂移 （运维负债） → systemd 单一"
     },
     {
       "id": "u_11cdc8d2a5ad8ab8",
@@ -1394,7 +1394,7 @@
       "source": "（运维负债） → systemd 单一",
       "occurrence": 0,
       "target": "Maintenance Liability → Single Systemd",
-      "context": "li @ line 269 · surrounding text: 节点 7 种装法漂移 （运维负债） → systemd 单一"
+      "context": "li @ line 268 · surrounding text: 节点 7 种装法漂移 （运维负债） → systemd 单一"
     },
     {
       "id": "u_8932b85664579ea2",
@@ -1402,7 +1402,7 @@
       "source": "swagger 文档过期",
       "occurrence": 0,
       "target": "Expired Swagger Documentation → Auto Generated from Code",
-      "context": "strong @ line 270 · surrounding text: swagger 文档过期 （移动端依赖错的契约） → 自动从代码生成"
+      "context": "strong @ line 269 · surrounding text: swagger 文档过期 （移动端依赖错的契约） → 自动从代码生成"
     },
     {
       "id": "u_0c098247d9d52148",
@@ -1410,7 +1410,7 @@
       "source": "（移动端依赖错的契约） → 自动从代码生成",
       "occurrence": 0,
       "target": "Wrong Contract Dependency for Mobile App → Auto Generated from Code",
-      "context": "li @ line 270 · surrounding text: swagger 文档过期 （移动端依赖错的契约） → 自动从代码生成"
+      "context": "li @ line 269 · surrounding text: swagger 文档过期 （移动端依赖错的契约） → 自动从代码生成"
     },
     {
       "id": "u_721bb530ecf1cde2",
@@ -1418,7 +1418,7 @@
       "source": "sing-box 二进制依赖 GitHub",
       "occurrence": 0,
       "target": "sing-box binary depends on GitHub",
-      "context": "strong @ line 271 · surrounding text: sing-box 二进制依赖 GitHub （中国封锁失败） → 本地镜像 + SHA256"
+      "context": "strong @ line 270 · surrounding text: sing-box 二进制依赖 GitHub （中国封锁失败） → 本地镜像 + SHA256"
     },
     {
       "id": "u_c41ce2e45aefc6b7",
@@ -1426,7 +1426,7 @@
       "source": "（中国封锁失败） → 本地镜像 + SHA256",
       "occurrence": 0,
       "target": "Sprint Binary Dependency GitHub (China Blockdown Failure) → Local Mirror + SHA256",
-      "context": "li @ line 271 · surrounding text: sing-box 二进制依赖 GitHub （中国封锁失败） → 本地镜像 + SHA256"
+      "context": "li @ line 270 · surrounding text: sing-box 二进制依赖 GitHub （中国封锁失败） → 本地镜像 + SHA256"
     },
     {
       "id": "u_adac7a89be421a80",
@@ -1434,7 +1434,7 @@
       "source": "滥用观察原始 IP 落地",
       "occurrence": 0,
       "target": "Abuse Observation of Original IP Landing",
-      "context": "strong @ line 272 · surrounding text: 滥用观察原始 IP 落地 （违无日志承诺） → 节点端单向哈希，仅计数上报"
+      "context": "strong @ line 271 · surrounding text: 滥用观察原始 IP 落地 （违无日志承诺） → 节点端单向哈希，仅计数上报"
     },
     {
       "id": "u_8148dc36da92d297",
@@ -1442,7 +1442,7 @@
       "source": "（违无日志承诺） → 节点端单向哈希，仅计数上报",
       "occurrence": 0,
       "target": "Abuse Observation of Original IP Landing (Violates Log Commitment) → Unidirectional Hashing at VPN node, Only Count Reporting",
-      "context": "li @ line 272 · surrounding text: 滥用观察原始 IP 落地 （违无日志承诺） → 节点端单向哈希，仅计数上报"
+      "context": "li @ line 271 · surrounding text: 滥用观察原始 IP 落地 （违无日志承诺） → 节点端单向哈希，仅计数上报"
     },
     {
       "id": "u_aa26b4cbc908843c",
@@ -1450,7 +1450,7 @@
       "source": "六、本阶段关键成果",
       "occurrence": 0,
       "target": "Six. Key Achievements of This Sprint",
-      "context": "h2 @ line 279"
+      "context": "h2 @ line 278"
     },
     {
       "id": "u_80de0b6e950b5a0a",
@@ -1458,7 +1458,7 @@
       "source": "移动端",
       "occurrence": 0,
       "target": "Mobile",
-      "context": "h3 @ line 282"
+      "context": "h3 @ line 281"
     },
     {
       "id": "u_5de2ace9a5bdd1f1",
@@ -1466,7 +1466,7 @@
       "source": "稳定测试版定型（接手后首个本团队稳定基线，最终 QA 中）",
       "occurrence": 0,
       "target": "Stable Test Version Finalized (First Stable Baseline After Takeover, Under Final QA)",
-      "context": "li @ line 284 · surrounding text: v3.7.0 稳定测试版定型（接手后首个本团队稳定基线，最终 QA 中）"
+      "context": "li @ line 283 · surrounding text: v3.7.0 稳定测试版定型（接手后首个本团队稳定基线，最终 QA 中）"
     },
     {
       "id": "u_ad89042da865d94c",
@@ -1474,7 +1474,7 @@
       "source": "APK 体积 −67%（−68 MB）",
       "occurrence": 0,
       "target": "-67% APK Volume Reduction (-68 MB)",
-      "context": "li @ line 285"
+      "context": "li @ line 284"
     },
     {
       "id": "u_8f901acf4db4c5af",
@@ -1482,7 +1482,7 @@
       "source": "VPN 网络切换不掉线（隧道持久重连）",
       "occurrence": 0,
       "target": "VPN Network Switches Without Drops (Persistent Tunnel Reconnection)",
-      "context": "li @ line 286"
+      "context": "li @ line 285"
     },
     {
       "id": "u_269f2f4be3cc7937",
@@ -1490,7 +1490,7 @@
       "source": "VPN 闪断（Wi-Fi 抖动）误判修复",
       "occurrence": 0,
       "target": "Fixed VPN Flash Disconnects Due to Wi-Fi Jitter",
-      "context": "li @ line 287"
+      "context": "li @ line 286"
     },
     {
       "id": "u_f12241f547be034e",
@@ -1498,7 +1498,7 @@
       "source": "升级 v2.x → v3.x 不再连接失败",
       "occurrence": 0,
       "target": "Upgrade from v2.x to v3.x No Longer Fails to Connect",
-      "context": "li @ line 288"
+      "context": "li @ line 287"
     },
     {
       "id": "u_b1405705b3df0394",
@@ -1506,7 +1506,7 @@
       "source": "切换线路单次重连不抖动",
       "occurrence": 0,
       "target": "Single Reconnect Without Jitter When Switching Lines",
-      "context": "li @ line 289"
+      "context": "li @ line 288"
     },
     {
       "id": "u_8a2913f3801a68b0",
@@ -1514,7 +1514,7 @@
       "source": "移除 utilcodex（5 MB + 80 个传递依赖）",
       "occurrence": 0,
       "target": "Removed utilcodex (5 MB + 80 Transitive Dependencies)",
-      "context": "li @ line 290"
+      "context": "li @ line 289"
     },
     {
       "id": "u_e90a44c8a4966184",
@@ -1522,7 +1522,7 @@
       "source": "Compose 框架完全下线",
       "occurrence": 0,
       "target": "Compose Framework Completely Offline",
-      "context": "li @ line 291"
+      "context": "li @ line 290"
     },
     {
       "id": "u_156d2af37061f295",
@@ -1530,7 +1530,7 @@
       "source": "后端",
       "occurrence": 1,
       "target": "Back End",
-      "context": "h3 @ line 295"
+      "context": "h3 @ line 294"
     },
     {
       "id": "u_b484f72dccf71adf",
@@ -1538,7 +1538,7 @@
       "source": "P0：续订代币推进修复（关闭「扣款没生效」）",
       "occurrence": 0,
       "target": "P0: Token Renewal Process Fix (Closed «Payment Not Effective»)",
-      "context": "li @ line 297"
+      "context": "li @ line 296"
     },
     {
       "id": "u_81df9c7abcf4f823",
@@ -1546,7 +1546,7 @@
       "source": "P0：免费注册跨账号串号修复",
       "occurrence": 0,
       "target": "P0: Free Registration for Cross-Account Serial Number Fix",
-      "context": "li @ line 298"
+      "context": "li @ line 297"
     },
     {
       "id": "u_dd6337878f7d78ee",
@@ -1554,7 +1554,7 @@
       "source": "专线到期自动释放节点",
       "occurrence": 0,
       "target": "Automatic Release of VPN nodes upon Expiry of Dedicated Line",
-      "context": "li @ line 299"
+      "context": "li @ line 298"
     },
     {
       "id": "u_55a816bb9b547c78",
@@ -1562,7 +1562,7 @@
       "source": "免费额度断开后实时显示真实余额",
       "occurrence": 0,
       "target": "Real-Time Display of Real Balance After Free Quota is Disconnected",
-      "context": "li @ line 300"
+      "context": "li @ line 299"
     },
     {
       "id": "u_c96c0fde33667b35",
@@ -1570,7 +1570,7 @@
       "source": "抽奖在线时长由节点统计 + 并发结算修复",
       "occurrence": 0,
       "target": "Prize-draw online time measured by the VPN node + concurrent-settlement fix",
-      "context": "li @ line 301"
+      "context": "li @ line 300"
     },
     {
       "id": "u_b40d2c5f2fcecc0a",
@@ -1578,7 +1578,7 @@
       "source": "线路分级能力配置统一化",
       "occurrence": 0,
       "target": "Unified Configuration for Line Tier Capabilities",
-      "context": "li @ line 302"
+      "context": "li @ line 301"
     },
     {
       "id": "u_47fda90b58e9994f",
@@ -1586,7 +1586,7 @@
       "source": "Swagger 自动文档（80+ 接口）",
       "occurrence": 0,
       "target": "Swagger Automated Documentation (80+ APIs)",
-      "context": "li @ line 303"
+      "context": "li @ line 302"
     },
     {
       "id": "u_2c5d36bdfb7c5344",
@@ -1594,7 +1594,7 @@
       "source": "节点 / 基础设施",
       "occurrence": 0,
       "target": "VPN nodes / Infrastructure",
-      "context": "h3 @ line 307"
+      "context": "h3 @ line 306"
     },
     {
       "id": "u_905aa9c3c3629ae1",
@@ -1602,7 +1602,7 @@
       "source": "后台一键开通节点 ~30 秒",
       "occurrence": 0,
       "target": "One-click VPN node provisioning through the Back Office (BO): ~30 seconds",
-      "context": "strong @ line 309 · surrounding text: 后台一键开通节点 ~30 秒 （原 SSH 手工 20 分钟） — 本汇报附图 所示「安装新节点」"
+      "context": "strong @ line 308 · surrounding text: 后台一键开通节点 ~30 秒 （原 SSH 手工 20 分钟） — 本汇报附图 所示「安装新节点」"
     },
     {
       "id": "u_49ccc48ff714a6a8",
@@ -1610,7 +1610,7 @@
       "source": "（原 SSH 手工 20 分钟） —",
       "occurrence": 0,
       "target": "(Originally SSH Manual for 20 Minutes)",
-      "context": "li @ line 309 · surrounding text: 后台一键开通节点 ~30 秒 （原 SSH 手工 20 分钟） — 本汇报附图 所示「安装新节点」"
+      "context": "li @ line 308 · surrounding text: 后台一键开通节点 ~30 秒 （原 SSH 手工 20 分钟） — 本汇报附图 所示「安装新节点」"
     },
     {
       "id": "u_38d4cc6305d317a0",
@@ -1618,7 +1618,7 @@
       "source": "本汇报附图",
       "occurrence": 0,
       "target": "Shown in the Attached Diagram",
-      "context": "strong @ line 309 · surrounding text: 后台一键开通节点 ~30 秒 （原 SSH 手工 20 分钟） — 本汇报附图 所示「安装新节点」"
+      "context": "strong @ line 308 · surrounding text: 后台一键开通节点 ~30 秒 （原 SSH 手工 20 分钟） — 本汇报附图 所示「安装新节点」"
     },
     {
       "id": "u_d349e3592f6ae8dc",
@@ -1626,7 +1626,7 @@
       "source": "所示「安装新节点」",
       "occurrence": 0,
       "target": "the ‘Provision a New VPN Node’ shown",
-      "context": "li @ line 309 · surrounding text: 后台一键开通节点 ~30 秒 （原 SSH 手工 20 分钟） — 本汇报附图 所示「安装新节点」"
+      "context": "li @ line 308 · surrounding text: 后台一键开通节点 ~30 秒 （原 SSH 手工 20 分钟） — 本汇报附图 所示「安装新节点」"
     },
     {
       "id": "u_e4949878d6717c20",
@@ -1634,7 +1634,7 @@
       "source": "一键全擦回收被封节点 ~2 分钟",
       "occurrence": 0,
       "target": "Full Erase and Reinstallation of Blocked VPN nodes in 2 Minutes",
-      "context": "strong @ line 310 · surrounding text: 一键全擦回收被封节点 ~2 分钟 — 附图所示「全擦重装」勾选后批量擦 XrayR / sing-box / singbox-agent 并重装"
+      "context": "strong @ line 309 · surrounding text: 一键全擦回收被封节点 ~2 分钟 — 附图所示「全擦重装」勾选后批量擦 XrayR / sing-box / singbox-agent 并重装"
     },
     {
       "id": "u_fb738de265ac27ad",
@@ -1642,7 +1642,7 @@
       "source": "— 附图所示「全擦重装」勾选后批量擦 XrayR / sing-box / singbox-agent 并重装",
       "occurrence": 0,
       "target": "Shown in the Attached Diagram (Select 'Full Erase and Reinstallation' to Batch Remove XrayR, sing-box, and singbox-agent and reinstall)",
-      "context": "li @ line 310 · surrounding text: 一键全擦回收被封节点 ~2 分钟 — 附图所示「全擦重装」勾选后批量擦 XrayR / sing-box / singbox-agent 并重装"
+      "context": "li @ line 309 · surrounding text: 一键全擦回收被封节点 ~2 分钟 — 附图所示「全擦重装」勾选后批量擦 XrayR / sing-box / singbox-agent 并重装"
     },
     {
       "id": "u_a917a14564d6b9c7",
@@ -1650,7 +1650,7 @@
       "source": "批量升级并行 12 台 + 流式进度 + 失败可单独重试",
       "occurrence": 0,
       "target": "Parallel Upgrade of 12 Nodes + Real-Time Progress + Failures Can Be Retried Individually",
-      "context": "li @ line 311"
+      "context": "li @ line 310"
     },
     {
       "id": "u_e5a523dc521b6376",
@@ -1658,7 +1658,7 @@
       "source": "XRayR → singbox-agent 渐进迁移（自研、配置中心化）",
       "occurrence": 0,
       "target": "Gradual Migration from XRayR to singbox-agent (In-House Development, Centralized Configuration)",
-      "context": "li @ line 312"
+      "context": "li @ line 311"
     },
     {
       "id": "u_54937a399af3317f",
@@ -1666,7 +1666,7 @@
       "source": "NAT 表脏数据自动清理（连接稳定性）",
       "occurrence": 0,
       "target": "Automatic Cleanup of Dirty NAT Table Data (Connection Stability)",
-      "context": "li @ line 313"
+      "context": "li @ line 312"
     },
     {
       "id": "u_816608a0a49fb6c4",
@@ -1674,7 +1674,7 @@
       "source": "强制 IPv4 出站（中国 ISP 兼容）",
       "occurrence": 0,
       "target": "Forced IPv4 Egress (China ISP Compatible)",
-      "context": "li @ line 314"
+      "context": "li @ line 313"
     },
     {
       "id": "u_d2edb36442f1ccc2",
@@ -1682,7 +1682,7 @@
       "source": "sing-box 二进制本地镜像 + SHA256（中国封锁应对 + 供应链防御）",
       "occurrence": 1,
       "target": "sing-box Binary Local Mirror + SHA256 (China Blockade Response + Supply Chain Defense)",
-      "context": "li @ line 315"
+      "context": "li @ line 314"
     },
     {
       "id": "u_2793d291d14f1a62",
@@ -1690,7 +1690,7 @@
       "source": "5 个新管理后台页（VM 主机 ✅ / 节点健康 ✅ / 测试中：DNS 孤立清理 / 供应商总览 / 异常观察）",
       "occurrence": 0,
       "target": "5 New Management Back Office Pages (VM Host ✅ / VPN node Health ✅ / In Progress: DNS Isolation Cleanup / Supplier Overview / Exception Observation)",
-      "context": "li @ line 316"
+      "context": "li @ line 315"
     },
     {
       "id": "u_a7329af0951f6c7f",
@@ -1698,7 +1698,7 @@
       "source": "HK 旧 ProxyBackend 退出移动客户端关键路径 → 每次请求少一跳跨区延迟",
       "occurrence": 0,
       "target": "HK Old ProxyBackend Exit Mobile Client Key Path → Each Request Saves One Hop Cross-Region Delay",
-      "context": "strong @ line 317"
+      "context": "strong @ line 316"
     },
     {
       "id": "u_7ce4804d338042a3",
@@ -1706,7 +1706,7 @@
       "source": "数据库 / 后端基础",
       "occurrence": 0,
       "target": "Database / Backend Foundation",
-      "context": "h3 @ line 321"
+      "context": "h3 @ line 320"
     },
     {
       "id": "u_69947dfda7d30834",
@@ -1714,7 +1714,7 @@
       "source": "Azure 数据库自动备份首次开启",
       "occurrence": 1,
       "target": "Azure Database Automatic Backup First Enabled",
-      "context": "strong @ line 323 · surrounding text: Azure 数据库自动备份首次开启 （接手时是「完全没备份」）"
+      "context": "strong @ line 322 · surrounding text: Azure 数据库自动备份首次开启 （接手时是「完全没备份」）"
     },
     {
       "id": "u_c6c56ec09ca53812",
@@ -1722,7 +1722,7 @@
       "source": "（接手时是「完全没备份」）",
       "occurrence": 0,
       "target": "(was \"totally no backup\" when I took over)",
-      "context": "li @ line 323 · surrounding text: Azure 数据库自动备份首次开启 （接手时是「完全没备份」）"
+      "context": "li @ line 322 · surrounding text: Azure 数据库自动备份首次开启 （接手时是「完全没备份」）"
     },
     {
       "id": "u_0e5ef0a85adff887",
@@ -1730,7 +1730,7 @@
       "source": "读副本真正接入",
       "occurrence": 1,
       "target": "Read Replica Truly Connected",
-      "context": "strong @ line 324 · surrounding text: 读副本真正接入 （基础设施第2阶段已有，但 后端从未使用 过；本阶段把客户端只读路径切到读副本）"
+      "context": "strong @ line 323 · surrounding text: 读副本真正接入 （基础设施第2阶段已有，但 后端从未使用 过；本阶段把客户端只读路径切到读副本）"
     },
     {
       "id": "u_3da9f842fc3fd09f",
@@ -1738,7 +1738,7 @@
       "source": "（基础设施第2阶段已有，但",
       "occurrence": 0,
       "target": "(Infrastructure Sprint 2 already had this, but",
-      "context": "li @ line 324 · surrounding text: 读副本真正接入 （基础设施第2阶段已有，但 后端从未使用 过；本阶段把客户端只读路径切到读副本）"
+      "context": "li @ line 323 · surrounding text: 读副本真正接入 （基础设施第2阶段已有，但 后端从未使用 过；本阶段把客户端只读路径切到读副本）"
     },
     {
       "id": "u_d612ec04b842ae0d",
@@ -1746,7 +1746,7 @@
       "source": "后端从未使用",
       "occurrence": 0,
       "target": "the backend never used",
-      "context": "strong @ line 324 · surrounding text: 读副本真正接入 （基础设施第2阶段已有，但 后端从未使用 过；本阶段把客户端只读路径切到读副本）"
+      "context": "strong @ line 323 · surrounding text: 读副本真正接入 （基础设施第2阶段已有，但 后端从未使用 过；本阶段把客户端只读路径切到读副本）"
     },
     {
       "id": "u_1aa6fc544448fe73",
@@ -1754,7 +1754,7 @@
       "source": "过；本阶段把客户端只读路径切到读副本）",
       "occurrence": 0,
       "target": "the client read path to the read replica)",
-      "context": "li @ line 324 · surrounding text: 读副本真正接入 （基础设施第2阶段已有，但 后端从未使用 过；本阶段把客户端只读路径切到读副本）"
+      "context": "li @ line 323 · surrounding text: 读副本真正接入 （基础设施第2阶段已有，但 后端从未使用 过；本阶段把客户端只读路径切到读副本）"
     },
     {
       "id": "u_5031a4d474160552",
@@ -1762,7 +1762,7 @@
       "source": "主库 CPU / IO 压力下降；客户端冷启动 + 重连查询延迟下降",
       "occurrence": 0,
       "target": "Main Database CPU / IO Pressure Decreased; Client Cold Start + Reconnect Query Delay Decreased",
-      "context": "li @ line 325"
+      "context": "li @ line 324"
     },
     {
       "id": "u_35b6b09ac71bfbf5",
@@ -1770,7 +1770,7 @@
       "source": "SQL 迁移流水线门（合并前必须能在临时 MySQL 跑通）",
       "occurrence": 0,
       "target": "SQL Migration Pipeline Gate (Must Run Through Temporary MySQL Before Merge)",
-      "context": "li @ line 326"
+      "context": "li @ line 325"
     },
     {
       "id": "u_6490c63a009bc29b",
@@ -1778,7 +1778,7 @@
       "source": "USDT 支付 Java→Go 重写",
       "occurrence": 1,
       "target": "USDT Payment Java → Go Rewrite",
-      "context": "strong @ line 327 · surrounding text: USDT 支付 Java→Go 重写 ：原台湾团队遗留 jar（需 CFR 反编译才能改）→ 团队自有 Go 服务；ETH + TRX 双链联测验证"
+      "context": "strong @ line 326 · surrounding text: USDT 支付 Java→Go 重写 ：原台湾团队遗留 jar（需 CFR 反编译才能改）→ 团队自有 Go 服务；ETH + TRX 双链联测验证"
     },
     {
       "id": "u_586d90722295a848",
@@ -1786,7 +1786,7 @@
       "source": "：原台湾团队遗留 jar（需 CFR 反编译才能改）→ 团队自有 Go 服务；ETH + TRX 双链联测验证",
       "occurrence": 0,
       "target": "(legacy jar from Taiwan team needs CFR decompilation to modify) → Team's own Go service; ETH + TRX Dual Chain Joint Testing and Verification",
-      "context": "li @ line 327 · surrounding text: USDT 支付 Java→Go 重写 ：原台湾团队遗留 jar（需 CFR 反编译才能改）→ 团队自有 Go 服务；ETH + TRX 双链联测验证"
+      "context": "li @ line 326 · surrounding text: USDT 支付 Java→Go 重写 ：原台湾团队遗留 jar（需 CFR 反编译才能改）→ 团队自有 Go 服务；ETH + TRX 双链联测验证"
     },
     {
       "id": "u_722ce039bd3e913b",
@@ -1794,7 +1794,7 @@
       "source": "共享平台基础（关联日志 / 协程崩溃保护 / Swagger 自动 / 共享日志模板 / 多语言字段）— FFF 第4阶段直接复用",
       "occurrence": 0,
       "target": "Shared Platform Foundation (Associated Logs / Coroutine Crash Protection / Swagger Auto / Shared Log Templates / Multi-Language Fields) — FFF Sprint 4 Directly Reused",
-      "context": "li @ line 328"
+      "context": "li @ line 327"
     },
     {
       "id": "u_52df459dd9faadaf",
@@ -1802,7 +1802,7 @@
       "source": "研发与发布 + 工作流",
       "occurrence": 0,
       "target": "Research and Development + Workflow",
-      "context": "h3 @ line 332"
+      "context": "h3 @ line 331"
     },
     {
       "id": "u_b0b91c4aae47a878",
@@ -1810,7 +1810,7 @@
       "source": "后端 CI 4–6 倍提速",
       "occurrence": 0,
       "target": "Backend CI accelerated by 4–6×",
-      "context": "strong @ line 334 · surrounding text: 后端 CI 4–6 倍提速 （2:30 → 30 秒）"
+      "context": "strong @ line 333 · surrounding text: 后端 CI 4–6 倍提速 （2:30 → 30 秒）"
     },
     {
       "id": "u_e3102cdf5dcdc20a",
@@ -1818,7 +1818,7 @@
       "source": "（2:30 → 30 秒）",
       "occurrence": 0,
       "target": "(2:30 → 30 seconds)",
-      "context": "li @ line 334 · surrounding text: 后端 CI 4–6 倍提速 （2:30 → 30 秒）"
+      "context": "li @ line 333 · surrounding text: 后端 CI 4–6 倍提速 （2:30 → 30 秒）"
     },
     {
       "id": "u_f1e3ea8cc1d53737",
@@ -1826,7 +1826,7 @@
       "source": "移动端 4 渠道一次构建 15 分 52 秒，全自动上传下载站",
       "occurrence": 0,
       "target": "Mobile app builds four channels in 15 minutes and 52 seconds, fully automated upload/download station",
-      "context": "li @ line 335"
+      "context": "li @ line 334"
     },
     {
       "id": "u_d53a301ac4fbce36",
@@ -1834,7 +1834,7 @@
       "source": "QA 自助拉取双语下载页",
       "occurrence": 0,
       "target": "QA Self-service Pull of Dual-language Download Page",
-      "context": "li @ line 336"
+      "context": "li @ line 335"
     },
     {
       "id": "u_5a7bd3d41243c337",
@@ -1842,7 +1842,7 @@
       "source": "MR 路径化构建 + 数据库迁移自动校验",
       "occurrence": 0,
       "target": "MR Pathification + Database Migration Automated Validation",
-      "context": "li @ line 337"
+      "context": "li @ line 336"
     },
     {
       "id": "u_341b5d5dc48721a3",
@@ -1850,7 +1850,7 @@
       "source": "管理后台流水线独立化（不再阻塞后端发布）",
       "occurrence": 0,
       "target": "Independent Back Office (BO) pipeline (no longer blocks backend releases)",
-      "context": "li @ line 338"
+      "context": "li @ line 337"
     },
     {
       "id": "u_715a011085fad725",
@@ -1858,7 +1858,7 @@
       "source": "三星渠道下线（保留 Google / 官网 / 华为）",
       "occurrence": 0,
       "target": "Samsung Channel Offline (retained Google / Official Website / Huawei)",
-      "context": "li @ line 339"
+      "context": "li @ line 338"
     },
     {
       "id": "u_8b2affc7c6412f7b",
@@ -1866,7 +1866,7 @@
       "source": "统一 Git 流",
       "occurrence": 0,
       "target": "Unified Git Workflow",
-      "context": "strong @ line 340 · surrounding text: 统一 Git 流 ：分支命名 ( fea/enh/fix/hot/ref/ ) + MR 标题即 Release Note；多人并行 + AI 协作（Claude Code 技能 / 规则 / 知识库均走仓库内 MR 评审）"
+      "context": "strong @ line 339 · surrounding text: 统一 Git 流 ：分支命名 ( fea/enh/fix/hot/ref/ ) + MR 标题即 Release Note；多人并行 + AI 协作（Claude Code 技能 / 规则 / 知识库均走仓库内 MR 评审）"
     },
     {
       "id": "u_9ddc65662e829a71",
@@ -1874,7 +1874,7 @@
       "source": "：分支命名 (",
       "occurrence": 0,
       "target": ": branch naming (",
-      "context": "li @ line 340 · surrounding text: 统一 Git 流 ：分支命名 ( fea/enh/fix/hot/ref/ ) + MR 标题即 Release Note；多人并行 + AI 协作（Claude Code 技能 / 规则 / 知识库均走仓库内 MR 评审）"
+      "context": "li @ line 339 · surrounding text: 统一 Git 流 ：分支命名 ( fea/enh/fix/hot/ref/ ) + MR 标题即 Release Note；多人并行 + AI 协作（Claude Code 技能 / 规则 / 知识库均走仓库内 MR 评审）"
     },
     {
       "id": "u_a9fe2eb7f2721716",
@@ -1882,7 +1882,7 @@
       "source": ") + MR 标题即 Release Note；多人并行 + AI 协作（Claude Code 技能 / 规则 / 知识库均走仓库内 MR 评审）",
       "occurrence": 0,
       "target": ") + MR titles serve as release notes; parallel development and AI collaboration (Claude Code skills, rules, and knowledge-base changes are all reviewed through in-repository MRs)",
-      "context": "li @ line 340 · surrounding text: 统一 Git 流 ：分支命名 ( fea/enh/fix/hot/ref/ ) + MR 标题即 Release Note；多人并行 + AI 协作（Claude Code 技能 / 规则 / 知识库均走仓库内 MR 评审）"
+      "context": "li @ line 339 · surrounding text: 统一 Git 流 ：分支命名 ( fea/enh/fix/hot/ref/ ) + MR 标题即 Release Note；多人并行 + AI 协作（Claude Code 技能 / 规则 / 知识库均走仓库内 MR 评审）"
     },
     {
       "id": "u_85fd0162bdab52fb",
@@ -1890,7 +1890,7 @@
       "source": "工具链整体升级",
       "occurrence": 0,
       "target": "Overall Toolchain Upgrade",
-      "context": "strong @ line 341 · surrounding text: 工具链整体升级 ：Gradle 9 + Kotlin 2.3 (K2) + AGP 9.1（本机冷编译 −51%）；Go 1.26 + gocron v2"
+      "context": "strong @ line 340 · surrounding text: 工具链整体升级 ：Gradle 9 + Kotlin 2.3 (K2) + AGP 9.1（本机冷编译 −51%）；Go 1.26 + gocron v2"
     },
     {
       "id": "u_8f7d685d130cfba1",
@@ -1898,7 +1898,7 @@
       "source": "：Gradle 9 + Kotlin 2.3 (K2) + AGP 9.1（本机冷编译 −51%）；Go 1.26 + gocron v2",
       "occurrence": 0,
       "target": ": Gradle 9 + Kotlin 2.3 (K2) + AGP 9.1 (local cold build −51%); Go 1.26 + gocron v2",
-      "context": "li @ line 341 · surrounding text: 工具链整体升级 ：Gradle 9 + Kotlin 2.3 (K2) + AGP 9.1（本机冷编译 −51%）；Go 1.26 + gocron v2"
+      "context": "li @ line 340 · surrounding text: 工具链整体升级 ：Gradle 9 + Kotlin 2.3 (K2) + AGP 9.1（本机冷编译 −51%）；Go 1.26 + gocron v2"
     },
     {
       "id": "u_fb614b90e22a9f73",
@@ -1906,7 +1906,7 @@
       "source": "★ 业务安全核心改造 — 免费额度由「客户端记账」改为「节点记账」",
       "occurrence": 0,
       "target": "★ Core Business Security Transformation — Free quota changed from 'client-side accounting' to 'VPN node-side accounting'",
-      "context": "h3 @ line 347"
+      "context": "h3 @ line 346"
     },
     {
       "id": "u_c3f459b651fffa79",
@@ -1914,7 +1914,7 @@
       "source": "接手时",
       "occurrence": 1,
       "target": "At Handover",
-      "context": "p @ line 348 · surrounding text: 接手时 移动 App 自己计时 免费时长，再「告诉」后端 — 任何修改 App / 抓包伪造汇报的人都能拿到无限免费 VPN。本阶段把这条信任链整体反转： 由 VPN 节点（服务器侧）按真实流量计时，节点每 30 秒上报，后端是唯一可信来源 。"
+      "context": "p @ line 347 · surrounding text: 接手时 移动 App 自己计时 免费时长，再「告诉」后端 — 任何修改 App / 抓包伪造汇报的人都能拿到无限免费 VPN。本阶段把这条信任链整体反转： 由 VPN 节点（服务器侧）按真实流量计时，节点每 30 秒上报，后端是唯一可信来源 。"
     },
     {
       "id": "u_ea61ce2f7d97a89a",
@@ -1922,7 +1922,7 @@
       "source": "移动 App 自己计时",
       "occurrence": 0,
       "target": "The mobile app tracked time itself",
-      "context": "strong @ line 348 · surrounding text: 接手时 移动 App 自己计时 免费时长，再「告诉」后端 — 任何修改 App / 抓包伪造汇报的人都能拿到无限免费 VPN。本阶段把这条信任链整体反转： 由 VPN 节点（服务器侧）按真实流量计时，节点每 30 秒上报，后端是唯一可信来源 。"
+      "context": "strong @ line 347 · surrounding text: 接手时 移动 App 自己计时 免费时长，再「告诉」后端 — 任何修改 App / 抓包伪造汇报的人都能拿到无限免费 VPN。本阶段把这条信任链整体反转： 由 VPN 节点（服务器侧）按真实流量计时，节点每 30 秒上报，后端是唯一可信来源 。"
     },
     {
       "id": "u_41ae7aefccc836da",
@@ -1930,7 +1930,7 @@
       "source": "免费时长，再「告诉」后端 — 任何修改 App / 抓包伪造汇报的人都能拿到无限免费 VPN。本阶段把这条信任链整体反转：",
       "occurrence": 0,
       "target": "free time and then ‘tell’ the backend. Anyone who modifies the app or falsifies captured traffic reports can obtain unlimited free VPN access. This Sprint reverses the entire trust model:",
-      "context": "p @ line 348 · surrounding text: 接手时 移动 App 自己计时 免费时长，再「告诉」后端 — 任何修改 App / 抓包伪造汇报的人都能拿到无限免费 VPN。本阶段把这条信任链整体反转： 由 VPN 节点（服务器侧）按真实流量计时，节点每 30 秒上报，后端是唯一可信来源 。"
+      "context": "p @ line 347 · surrounding text: 接手时 移动 App 自己计时 免费时长，再「告诉」后端 — 任何修改 App / 抓包伪造汇报的人都能拿到无限免费 VPN。本阶段把这条信任链整体反转： 由 VPN 节点（服务器侧）按真实流量计时，节点每 30 秒上报，后端是唯一可信来源 。"
     },
     {
       "id": "u_c85155bc22a75132",
@@ -1938,7 +1938,7 @@
       "source": "由 VPN 节点（服务器侧）按真实流量计时，节点每 30 秒上报，后端是唯一可信来源",
       "occurrence": 0,
       "target": "The VPN nodes (server-side) will time based on real traffic and report every 30 seconds; the backend is the only trusted source.",
-      "context": "strong @ line 348 · surrounding text: 接手时 移动 App 自己计时 免费时长，再「告诉」后端 — 任何修改 App / 抓包伪造汇报的人都能拿到无限免费 VPN。本阶段把这条信任链整体反转： 由 VPN 节点（服务器侧）按真实流量计时，节点每 30 秒上报，后端是唯一可信来源 。"
+      "context": "strong @ line 347 · surrounding text: 接手时 移动 App 自己计时 免费时长，再「告诉」后端 — 任何修改 App / 抓包伪造汇报的人都能拿到无限免费 VPN。本阶段把这条信任链整体反转： 由 VPN 节点（服务器侧）按真实流量计时，节点每 30 秒上报，后端是唯一可信来源 。"
     },
     {
       "id": "u_ab891f74c739be2f",
@@ -1946,7 +1946,7 @@
       "source": "维度",
       "occurrence": 0,
       "target": "Dimension",
-      "context": "th @ line 350 · surrounding text: 维度 改造前 改造后"
+      "context": "th @ line 349 · surrounding text: 维度 改造前 改造后"
     },
     {
       "id": "u_d5dc154cd03f674f",
@@ -1954,7 +1954,7 @@
       "source": "改造前",
       "occurrence": 0,
       "target": "Before",
-      "context": "th @ line 350 · surrounding text: 维度 改造前 改造后"
+      "context": "th @ line 349 · surrounding text: 维度 改造前 改造后"
     },
     {
       "id": "u_2580c7e51484ab47",
@@ -1962,7 +1962,7 @@
       "source": "改造后",
       "occurrence": 0,
       "target": "After",
-      "context": "th @ line 350 · surrounding text: 维度 改造前 改造后"
+      "context": "th @ line 349 · surrounding text: 维度 改造前 改造后"
     },
     {
       "id": "u_ec89f4990d78c32d",
@@ -1970,7 +1970,7 @@
       "source": "谁说了算",
       "occurrence": 0,
       "target": "Who decides?",
-      "context": "td @ line 351 · surrounding text: 谁说了算 移动 App 自己计时 VPN 节点上报真实流量，后端是唯一可信来源"
+      "context": "td @ line 350 · surrounding text: 谁说了算 移动 App 自己计时 VPN 节点上报真实流量，后端是唯一可信来源"
     },
     {
       "id": "u_8a7cce0039be9739",
@@ -1978,7 +1978,7 @@
       "source": "移动 App 自己计时",
       "occurrence": 1,
       "target": "The app itself times.",
-      "context": "td @ line 351 · surrounding text: 谁说了算 移动 App 自己计时 VPN 节点上报真实流量，后端是唯一可信来源"
+      "context": "td @ line 350 · surrounding text: 谁说了算 移动 App 自己计时 VPN 节点上报真实流量，后端是唯一可信来源"
     },
     {
       "id": "u_48225b6cb5ee2341",
@@ -1986,7 +1986,7 @@
       "source": "VPN 节点上报真实流量，后端是唯一可信来源",
       "occurrence": 0,
       "target": "VPN nodes report real traffic; the backend is the only trusted source.",
-      "context": "td @ line 351 · surrounding text: 谁说了算 移动 App 自己计时 VPN 节点上报真实流量，后端是唯一可信来源"
+      "context": "td @ line 350 · surrounding text: 谁说了算 移动 App 自己计时 VPN 节点上报真实流量，后端是唯一可信来源"
     },
     {
       "id": "u_abc3820b6ef389be",
@@ -1994,7 +1994,7 @@
       "source": "UUID 被抽取",
       "occurrence": 0,
       "target": "UUID extracted.",
-      "context": "td @ line 352 · surrounding text: UUID 被抽取 =「无限免费 VPN」 后端可即时撤销账号，节点立即踢出"
+      "context": "td @ line 351 · surrounding text: UUID 被抽取 =「无限免费 VPN」 后端可即时撤销账号，节点立即踢出"
     },
     {
       "id": "u_a3074b5bd1b1ef73",
@@ -2002,7 +2002,7 @@
       "source": "=「无限免费 VPN」",
       "occurrence": 0,
       "target": "=\"Unlimited free VPN\"",
-      "context": "td @ line 352 · surrounding text: UUID 被抽取 =「无限免费 VPN」 后端可即时撤销账号，节点立即踢出"
+      "context": "td @ line 351 · surrounding text: UUID 被抽取 =「无限免费 VPN」 后端可即时撤销账号，节点立即踢出"
     },
     {
       "id": "u_2bcb2afdf43a98a1",
@@ -2010,7 +2010,7 @@
       "source": "后端可即时撤销账号，节点立即踢出",
       "occurrence": 0,
       "target": "The backend can revoke accounts instantly, and the VPN nodes will kick out immediately.",
-      "context": "td @ line 352 · surrounding text: UUID 被抽取 =「无限免费 VPN」 后端可即时撤销账号，节点立即踢出"
+      "context": "td @ line 351 · surrounding text: UUID 被抽取 =「无限免费 VPN」 后端可即时撤销账号，节点立即踢出"
     },
     {
       "id": "u_cab7d0123bb8e329",
@@ -2018,7 +2018,7 @@
       "source": "挂 VPN 不用",
       "occurrence": 0,
       "target": "Leave the VPN connected without using it",
-      "context": "td @ line 353 · surrounding text: 挂 VPN 不用 计时仍累积 不产生流量 = 不计时"
+      "context": "td @ line 352 · surrounding text: 挂 VPN 不用 计时仍累积 不产生流量 = 不计时"
     },
     {
       "id": "u_282348e672aae7a6",
@@ -2026,7 +2026,7 @@
       "source": "计时仍累积",
       "occurrence": 0,
       "target": "Time still accumulates",
-      "context": "td @ line 353 · surrounding text: 挂 VPN 不用 计时仍累积 不产生流量 = 不计时"
+      "context": "td @ line 352 · surrounding text: 挂 VPN 不用 计时仍累积 不产生流量 = 不计时"
     },
     {
       "id": "u_4c137a18fd5fc381",
@@ -2034,7 +2034,7 @@
       "source": "不产生流量 = 不计时",
       "occurrence": 0,
       "target": "No traffic generated = no timing.",
-      "context": "td @ line 353 · surrounding text: 挂 VPN 不用 计时仍累积 不产生流量 = 不计时"
+      "context": "td @ line 352 · surrounding text: 挂 VPN 不用 计时仍累积 不产生流量 = 不计时"
     },
     {
       "id": "u_8421fc8aca6c973b",
@@ -2042,7 +2042,7 @@
       "source": "抽奖在线时长",
       "occurrence": 0,
       "target": "Draw duration online",
-      "context": "td @ line 354 · surrounding text: 抽奖在线时长 客户端可被绕过 由节点统计真实通信时长"
+      "context": "td @ line 353 · surrounding text: 抽奖在线时长 客户端可被绕过 由节点统计真实通信时长"
     },
     {
       "id": "u_9ae47fd2540c41ef",
@@ -2050,7 +2050,7 @@
       "source": "客户端可被绕过",
       "occurrence": 0,
       "target": "Client-side controls can be bypassed",
-      "context": "td @ line 354 · surrounding text: 抽奖在线时长 客户端可被绕过 由节点统计真实通信时长"
+      "context": "td @ line 353 · surrounding text: 抽奖在线时长 客户端可被绕过 由节点统计真实通信时长"
     },
     {
       "id": "u_21e940bb1497aa65",
@@ -2058,7 +2058,7 @@
       "source": "由节点统计真实通信时长",
       "occurrence": 0,
       "target": "Sprint by VPN node to measure actual communication duration",
-      "context": "td @ line 354 · surrounding text: 抽奖在线时长 客户端可被绕过 由节点统计真实通信时长"
+      "context": "td @ line 353 · surrounding text: 抽奖在线时长 客户端可被绕过 由节点统计真实通信时长"
     },
     {
       "id": "u_2670f0f6676a6685",
@@ -2066,7 +2066,7 @@
       "source": "对业务的保护",
       "occurrence": 0,
       "target": "Protection of the business",
-      "context": "strong @ line 356 · surrounding text: 对业务的保护 ：关闭 Trojan UUID 提取漏洞 · 消除「挂时长」绕过 · 免费额度展示与真实一致 · 守住付费转化率（约 5%）的护城河 · 节点级真实数据为后续转化优化与采购决策打基础。"
+      "context": "strong @ line 355 · surrounding text: 对业务的保护 ：关闭 Trojan UUID 提取漏洞 · 消除「挂时长」绕过 · 免费额度展示与真实一致 · 守住付费转化率（约 5%）的护城河 · 节点级真实数据为后续转化优化与采购决策打基础。"
     },
     {
       "id": "u_4171e0b2105eb57e",
@@ -2074,7 +2074,7 @@
       "source": "：关闭 Trojan UUID 提取漏洞 · 消除「挂时长」绕过 · 免费额度展示与真实一致 · 守住付费转化率（约 5%）的护城河 · 节点级真实数据为后续转化优化与采购决策打基础。",
       "occurrence": 0,
       "target": "Sprint by VPN node to measure actual communication duration · Eliminate bypassing of 'hang time' · Free quota display consistent with reality · Guard against conversion rate (approximately 5%) as a moat · VPN node-level real data lays the foundation for subsequent optimization and procurement decisions.",
-      "context": "p @ line 356 · surrounding text: 对业务的保护 ：关闭 Trojan UUID 提取漏洞 · 消除「挂时长」绕过 · 免费额度展示与真实一致 · 守住付费转化率（约 5%）的护城河 · 节点级真实数据为后续转化优化与采购决策打基础。"
+      "context": "p @ line 355 · surrounding text: 对业务的保护 ：关闭 Trojan UUID 提取漏洞 · 消除「挂时长」绕过 · 免费额度展示与真实一致 · 守住付费转化率（约 5%）的护城河 · 节点级真实数据为后续转化优化与采购决策打基础。"
     },
     {
       "id": "u_1e54fd0cdfe66d29",
@@ -2082,7 +2082,7 @@
       "source": "七、已解决的历史问题（接手清理）",
       "occurrence": 0,
       "target": "Seven, resolved historical issues (takeover and cleanup)",
-      "context": "h2 @ line 359"
+      "context": "h2 @ line 358"
     },
     {
       "id": "u_9aed7594f563b64c",
@@ -2090,7 +2090,7 @@
       "source": "类别",
       "occurrence": 0,
       "target": "Category",
-      "context": "th @ line 362 · surrounding text: 类别 问题"
+      "context": "th @ line 361 · surrounding text: 类别 问题"
     },
     {
       "id": "u_8d8c91740e05b45a",
@@ -2098,7 +2098,7 @@
       "source": "问题",
       "occurrence": 0,
       "target": "Issue",
-      "context": "th @ line 362 · surrounding text: 类别 问题"
+      "context": "th @ line 361 · surrounding text: 类别 问题"
     },
     {
       "id": "u_101b0531623beff0",
@@ -2106,7 +2106,7 @@
       "source": "翻译混乱",
       "occurrence": 0,
       "target": "Translation confusion",
-      "context": "td @ line 363 · surrounding text: 翻译混乱 数据库存在中英文混用、临时占位符遗留行；前端偶发显示原始模板（ {{plan_name}} ） — 写入守门 + 三语补齐 + 迁移清理"
+      "context": "td @ line 362 · surrounding text: 翻译混乱 数据库存在中英文混用、临时占位符遗留行；前端偶发显示原始模板（ {{plan_name}} ） — 写入守门 + 三语补齐 + 迁移清理"
     },
     {
       "id": "u_3b1654375f64d1ea",
@@ -2114,7 +2114,7 @@
       "source": "数据库存在中英文混用、临时占位符遗留行；前端偶发显示原始模板（",
       "occurrence": 0,
       "target": "Database contains mixed Chinese and English, temporary placeholder remains; frontend occasionally displays original template ({{plan_name}}) — Write in gate + trilingual supplementation + migration cleanup.",
-      "context": "td @ line 363 · surrounding text: 翻译混乱 数据库存在中英文混用、临时占位符遗留行；前端偶发显示原始模板（ {{plan_name}} ） — 写入守门 + 三语补齐 + 迁移清理"
+      "context": "td @ line 362 · surrounding text: 翻译混乱 数据库存在中英文混用、临时占位符遗留行；前端偶发显示原始模板（ {{plan_name}} ） — 写入守门 + 三语补齐 + 迁移清理"
     },
     {
       "id": "u_40ae05cd193e62d5",
@@ -2122,7 +2122,7 @@
       "source": "） — 写入守门 + 三语补齐 + 迁移清理",
       "occurrence": 0,
       "target": "— Write in gate + trilingual supplementation + migration cleanup",
-      "context": "td @ line 363 · surrounding text: 翻译混乱 数据库存在中英文混用、临时占位符遗留行；前端偶发显示原始模板（ {{plan_name}} ） — 写入守门 + 三语补齐 + 迁移清理"
+      "context": "td @ line 362 · surrounding text: 翻译混乱 数据库存在中英文混用、临时占位符遗留行；前端偶发显示原始模板（ {{plan_name}} ） — 写入守门 + 三语补齐 + 迁移清理"
     },
     {
       "id": "u_6f4337cf497a82f3",
@@ -2130,7 +2130,7 @@
       "source": "启动屏冻屏",
       "occurrence": 0,
       "target": "Freezing splash and freeze screen",
-      "context": "td @ line 364 · surrounding text: 启动屏冻屏 原方案在 3 秒以上场景下「冻屏」 — 启动屏 + 进度条决策树重做"
+      "context": "td @ line 363 · surrounding text: 启动屏冻屏 原方案在 3 秒以上场景下「冻屏」 — 启动屏 + 进度条决策树重做"
     },
     {
       "id": "u_55f4a1358669d39f",
@@ -2138,7 +2138,7 @@
       "source": "原方案在 3 秒以上场景下「冻屏」 — 启动屏 + 进度条决策树重做",
       "occurrence": 0,
       "target": "Re-do decision tree for splash and progress bar freezing scenario with original solution taking 3 seconds or more.",
-      "context": "td @ line 364 · surrounding text: 启动屏冻屏 原方案在 3 秒以上场景下「冻屏」 — 启动屏 + 进度条决策树重做"
+      "context": "td @ line 363 · surrounding text: 启动屏冻屏 原方案在 3 秒以上场景下「冻屏」 — 启动屏 + 进度条决策树重做"
     },
     {
       "id": "u_4330db9d4113ed91",
@@ -2146,7 +2146,7 @@
       "source": "登录失效弹窗打断",
       "occurrence": 0,
       "target": "Login invalidation popup interruption",
-      "context": "td @ line 365 · surrounding text: 登录失效弹窗打断 会话过期时弹出错误对话框 — 改为静默重新认证"
+      "context": "td @ line 364 · surrounding text: 登录失效弹窗打断 会话过期时弹出错误对话框 — 改为静默重新认证"
     },
     {
       "id": "u_3bc07ebdb3480630",
@@ -2154,7 +2154,7 @@
       "source": "会话过期时弹出错误对话框 — 改为静默重新认证",
       "occurrence": 0,
       "target": "Change silent re-authentication for error dialog box when session expires.",
-      "context": "td @ line 365 · surrounding text: 登录失效弹窗打断 会话过期时弹出错误对话框 — 改为静默重新认证"
+      "context": "td @ line 364 · surrounding text: 登录失效弹窗打断 会话过期时弹出错误对话框 — 改为静默重新认证"
     },
     {
       "id": "u_1e7c63548cfb3925",
@@ -2162,7 +2162,7 @@
       "source": "升级老版本断连",
       "occurrence": 0,
       "target": "Disconnecting old version upgrade",
-      "context": "td @ line 366 · surrounding text: 升级老版本断连 v2.x → v3.x 用户因本地缓存格式不兼容 — 历史本地状态自愈"
+      "context": "td @ line 365 · surrounding text: 升级老版本断连 v2.x → v3.x 用户因本地缓存格式不兼容 — 历史本地状态自愈"
     },
     {
       "id": "u_0722c526f8973eb7",
@@ -2170,7 +2170,7 @@
       "source": "v2.x → v3.x 用户因本地缓存格式不兼容 — 历史本地状态自愈",
       "occurrence": 0,
       "target": "Self-healing of historical local state for users upgrading from v2.x to v3.x due to incompatible local cache format.",
-      "context": "td @ line 366 · surrounding text: 升级老版本断连 v2.x → v3.x 用户因本地缓存格式不兼容 — 历史本地状态自愈"
+      "context": "td @ line 365 · surrounding text: 升级老版本断连 v2.x → v3.x 用户因本地缓存格式不兼容 — 历史本地状态自愈"
     },
     {
       "id": "u_2097c34c910a32b3",
@@ -2178,7 +2178,7 @@
       "source": "选择线路抖动",
       "occurrence": 0,
       "target": "Jitter in selecting line",
-      "context": "td @ line 367 · surrounding text: 选择线路抖动 切换线路时连接重连两次 — 合并为单次切换"
+      "context": "td @ line 366 · surrounding text: 选择线路抖动 切换线路时连接重连两次 — 合并为单次切换"
     },
     {
       "id": "u_651000756b67c07d",
@@ -2186,7 +2186,7 @@
       "source": "切换线路时连接重连两次 — 合并为单次切换",
       "occurrence": 0,
       "target": "Switch lines and reconnect twice during switching - combine into single switch",
-      "context": "td @ line 367 · surrounding text: 选择线路抖动 切换线路时连接重连两次 — 合并为单次切换"
+      "context": "td @ line 366 · surrounding text: 选择线路抖动 切换线路时连接重连两次 — 合并为单次切换"
     },
     {
       "id": "u_284d24f4a570ef7c",
@@ -2194,7 +2194,7 @@
       "source": "设备 ID 不一致",
       "occurrence": 0,
       "target": "Device ID Mismatch",
-      "context": "td @ line 368 · surrounding text: 设备 ID 不一致 华为渠道走独立分支 — 全渠道统一"
+      "context": "td @ line 367 · surrounding text: 设备 ID 不一致 华为渠道走独立分支 — 全渠道统一"
     },
     {
       "id": "u_cd3be3d327814e93",
@@ -2202,7 +2202,7 @@
       "source": "华为渠道走独立分支 — 全渠道统一",
       "occurrence": 0,
       "target": "Huawei channel operates independently - unified across channels",
-      "context": "td @ line 368 · surrounding text: 设备 ID 不一致 华为渠道走独立分支 — 全渠道统一"
+      "context": "td @ line 367 · surrounding text: 设备 ID 不一致 华为渠道走独立分支 — 全渠道统一"
     },
     {
       "id": "u_0ddca96460ba34fa",
@@ -2210,7 +2210,7 @@
       "source": "密度判断错误",
       "occurrence": 0,
       "target": "Incorrect intensity judgment",
-      "context": "td @ line 369 · surrounding text: 密度判断错误 按可折叠状态判断不可靠 — 改用屏幕宽度"
+      "context": "td @ line 368 · surrounding text: 密度判断错误 按可折叠状态判断不可靠 — 改用屏幕宽度"
     },
     {
       "id": "u_a71c26404d88ef08",
@@ -2218,7 +2218,7 @@
       "source": "按可折叠状态判断不可靠 — 改用屏幕宽度",
       "occurrence": 0,
       "target": "Inaccurate based on foldable state - use screen width instead",
-      "context": "td @ line 369 · surrounding text: 密度判断错误 按可折叠状态判断不可靠 — 改用屏幕宽度"
+      "context": "td @ line 368 · surrounding text: 密度判断错误 按可折叠状态判断不可靠 — 改用屏幕宽度"
     },
     {
       "id": "u_e65f541f73b48c12",
@@ -2226,7 +2226,7 @@
       "source": "swagger 文档过期",
       "occurrence": 1,
       "target": "Swagger documentation is outdated",
-      "context": "td @ line 370 · surrounding text: swagger 文档过期 浏览器缓存 + 80+ 接口注解 30% 飘移 — 禁用缓存 + 自动从代码生成"
+      "context": "td @ line 369 · surrounding text: swagger 文档过期 浏览器缓存 + 80+ 接口注解 30% 飘移 — 禁用缓存 + 自动从代码生成"
     },
     {
       "id": "u_80f3df3b9b42c3c0",
@@ -2234,7 +2234,7 @@
       "source": "浏览器缓存 + 80+ 接口注解 30% 飘移 — 禁用缓存 + 自动从代码生成",
       "occurrence": 0,
       "target": "Browser caching + 30% drift across 80+ API annotations — disable caching + generate automatically from code",
-      "context": "td @ line 370 · surrounding text: swagger 文档过期 浏览器缓存 + 80+ 接口注解 30% 飘移 — 禁用缓存 + 自动从代码生成"
+      "context": "td @ line 369 · surrounding text: swagger 文档过期 浏览器缓存 + 80+ 接口注解 30% 飘移 — 禁用缓存 + 自动从代码生成"
     },
     {
       "id": "u_5c08e3e0eb5243c4",
@@ -2242,7 +2242,7 @@
       "source": "抽奖结算并发",
       "occurrence": 0,
       "target": "Lottery settlement concurrency issues",
-      "context": "td @ line 371 · surrounding text: 抽奖结算并发 同秒重复领取 — 合并为原子操作"
+      "context": "td @ line 370 · surrounding text: 抽奖结算并发 同秒重复领取 — 合并为原子操作"
     },
     {
       "id": "u_e7dc66222cedf32a",
@@ -2250,7 +2250,7 @@
       "source": "同秒重复领取 — 合并为原子操作",
       "occurrence": 0,
       "target": "Duplicate lottery draws in the same second - combine into atomic operation",
-      "context": "td @ line 371 · surrounding text: 抽奖结算并发 同秒重复领取 — 合并为原子操作"
+      "context": "td @ line 370 · surrounding text: 抽奖结算并发 同秒重复领取 — 合并为原子操作"
     },
     {
       "id": "u_9ac2c4c6aca80082",
@@ -2258,7 +2258,7 @@
       "source": "无密注册资料丢失",
       "occurrence": 0,
       "target": "Lost registration data without passwords",
-      "context": "td @ line 372 · surrounding text: 无密注册资料丢失 转换后下次启动会被静默回退 — 转换流程显式持久化"
+      "context": "td @ line 371 · surrounding text: 无密注册资料丢失 转换后下次启动会被静默回退 — 转换流程显式持久化"
     },
     {
       "id": "u_5365742e61936fa6",
@@ -2266,7 +2266,7 @@
       "source": "转换后下次启动会被静默回退 — 转换流程显式持久化",
       "occurrence": 0,
       "target": "Registration data lost after conversion - make the conversion process explicit and persistent",
-      "context": "td @ line 372 · surrounding text: 无密注册资料丢失 转换后下次启动会被静默回退 — 转换流程显式持久化"
+      "context": "td @ line 371 · surrounding text: 无密注册资料丢失 转换后下次启动会被静默回退 — 转换流程显式持久化"
     },
     {
       "id": "u_02e7a0aa6ec82067",
@@ -2274,7 +2274,7 @@
       "source": "账号切换抽奖串号",
       "occurrence": 0,
       "target": "Account switch lottery serial number",
-      "context": "td @ line 373 · surrounding text: 账号切换抽奖串号 登出未清空抽奖缓存 — 修复"
+      "context": "td @ line 372 · surrounding text: 账号切换抽奖串号 登出未清空抽奖缓存 — 修复"
     },
     {
       "id": "u_6347447e13f7e2a0",
@@ -2282,7 +2282,7 @@
       "source": "登出未清空抽奖缓存 — 修复",
       "occurrence": 0,
       "target": "Logout not clearing the lottery cache - fix it",
-      "context": "td @ line 373 · surrounding text: 账号切换抽奖串号 登出未清空抽奖缓存 — 修复"
+      "context": "td @ line 372 · surrounding text: 账号切换抽奖串号 登出未清空抽奖缓存 — 修复"
     },
     {
       "id": "u_9e62d9a55fb75d62",
@@ -2290,7 +2290,7 @@
       "source": "主页冷启动崩溃",
       "occurrence": 0,
       "target": "Homepage cold start crash",
-      "context": "td @ line 374 · surrounding text: 主页冷启动崩溃 主线程调用数据库 — 调度到 IO 线程"
+      "context": "td @ line 373 · surrounding text: 主页冷启动崩溃 主线程调用数据库 — 调度到 IO 线程"
     },
     {
       "id": "u_fe9e6ff59448f5fe",
@@ -2298,7 +2298,7 @@
       "source": "主线程调用数据库 — 调度到 IO 线程",
       "occurrence": 0,
       "target": "Main thread calls database - schedule to IO thread",
-      "context": "td @ line 374 · surrounding text: 主页冷启动崩溃 主线程调用数据库 — 调度到 IO 线程"
+      "context": "td @ line 373 · surrounding text: 主页冷启动崩溃 主线程调用数据库 — 调度到 IO 线程"
     },
     {
       "id": "u_ec2baf23d48d31dd",
@@ -2306,7 +2306,7 @@
       "source": "历史 token 残留",
       "occurrence": 0,
       "target": "Remaining historical tokens",
-      "context": "td @ line 375 · surrounding text: 历史 token 残留 启动后接口 401 — 启动时孤儿 JWT 自动清理"
+      "context": "td @ line 374 · surrounding text: 历史 token 残留 启动后接口 401 — 启动时孤儿 JWT 自动清理"
     },
     {
       "id": "u_8dd34eed114b79bb",
@@ -2314,7 +2314,7 @@
       "source": "启动后接口 401 — 启动时孤儿 JWT 自动清理",
       "occurrence": 0,
       "target": "Post-Startup Interface 401 — Automatic Cleanup of Orphan JWT After Startup",
-      "context": "td @ line 375 · surrounding text: 历史 token 残留 启动后接口 401 — 启动时孤儿 JWT 自动清理"
+      "context": "td @ line 374 · surrounding text: 历史 token 残留 启动后接口 401 — 启动时孤儿 JWT 自动清理"
     },
     {
       "id": "u_5ad32f952779b4fe",
@@ -2322,7 +2322,7 @@
       "source": "八、关键风险（开口）",
       "occurrence": 0,
       "target": "Eight Key Risks (Open)",
-      "context": "h2 @ line 379"
+      "context": "h2 @ line 378"
     },
     {
       "id": "u_522523ffc100140c",
@@ -2330,7 +2330,7 @@
       "source": "风险",
       "occurrence": 0,
       "target": "Risk",
-      "context": "th @ line 381 · surrounding text: 风险 缓解"
+      "context": "th @ line 380 · surrounding text: 风险 缓解"
     },
     {
       "id": "u_d8e04cb0f8d0098f",
@@ -2338,7 +2338,7 @@
       "source": "缓解",
       "occurrence": 0,
       "target": "Mitigation",
-      "context": "th @ line 381 · surrounding text: 风险 缓解"
+      "context": "th @ line 380 · surrounding text: 风险 缓解"
     },
     {
       "id": "u_8c892106fdecaaed",
@@ -2346,7 +2346,7 @@
       "source": "v3.7.0 最终 QA 期间的回归",
       "occurrence": 0,
       "target": "Regressions during final QA for v3.7.0",
-      "context": "strong @ line 382 · surrounding text: v3.7.0 最终 QA 期间的回归 热修分支模板 + 全渠道全版本下载站可即时回滚 + Crashlytics 新接关联 ID"
+      "context": "strong @ line 381 · surrounding text: v3.7.0 最终 QA 期间的回归 热修分支模板 + 全渠道全版本下载站可即时回滚 + Crashlytics 新接关联 ID"
     },
     {
       "id": "u_d49563f555781174",
@@ -2354,7 +2354,7 @@
       "source": "热修分支模板 + 全渠道全版本下载站可即时回滚 + Crashlytics 新接关联 ID",
       "occurrence": 0,
       "target": "Hotfix Branch Template, Full Channel and Version Download Station Instant Rollback Capabilities, and New Crashlytics Connection ID",
-      "context": "td @ line 382 · surrounding text: v3.7.0 最终 QA 期间的回归 热修分支模板 + 全渠道全版本下载站可即时回滚 + Crashlytics 新接关联 ID"
+      "context": "td @ line 381 · surrounding text: v3.7.0 最终 QA 期间的回归 热修分支模板 + 全渠道全版本下载站可即时回滚 + Crashlytics 新接关联 ID"
     },
     {
       "id": "u_e9daa34de275296a",
@@ -2362,7 +2362,7 @@
       "source": "数据库备份开启但恢复演练未做",
       "occurrence": 0,
       "target": "Database Backup Enabled but No Recovery Drillout Conducted",
-      "context": "strong @ line 383 · surrounding text: 数据库备份开启但恢复演练未做 第4阶段 P0 — 把备份恢复成临时库 + 跑 smoke 查询；落地保留期与异地副本运维手册"
+      "context": "strong @ line 382 · surrounding text: 数据库备份开启但恢复演练未做 第4阶段 P0 — 把备份恢复成临时库 + 跑 smoke 查询；落地保留期与异地副本运维手册"
     },
     {
       "id": "u_21eba5cd079bf930",
@@ -2370,7 +2370,7 @@
       "source": "第4阶段 P0 — 把备份恢复成临时库 + 跑 smoke 查询；落地保留期与异地副本运维手册",
       "occurrence": 0,
       "target": "Sprint 4 P0 — restore a backup into a temporary database and run smoke queries; define the retention period and complete the off-site replica operations runbook",
-      "context": "td @ line 383 · surrounding text: 数据库备份开启但恢复演练未做 第4阶段 P0 — 把备份恢复成临时库 + 跑 smoke 查询；落地保留期与异地副本运维手册"
+      "context": "td @ line 382 · surrounding text: 数据库备份开启但恢复演练未做 第4阶段 P0 — 把备份恢复成临时库 + 跑 smoke 查询；落地保留期与异地副本运维手册"
     },
     {
       "id": "u_5de7991f28a9b000",
@@ -2378,7 +2378,7 @@
       "source": "测试 / 生产共用网络安全组",
       "occurrence": 0,
       "target": "Shared Security Group for Testing and Production Environments",
-      "context": "strong @ line 384 · surrounding text: 测试 / 生产共用网络安全组 （遗留缺口） 第4阶段 P0 — NSG 拆分 + 收紧生产入站规则"
+      "context": "strong @ line 383 · surrounding text: 测试 / 生产共用网络安全组 （遗留缺口） 第4阶段 P0 — NSG 拆分 + 收紧生产入站规则"
     },
     {
       "id": "u_dd7e8502d5db3b69",
@@ -2386,7 +2386,7 @@
       "source": "（遗留缺口）",
       "occurrence": 0,
       "target": "(Inherited Gap)",
-      "context": "td @ line 384 · surrounding text: 测试 / 生产共用网络安全组 （遗留缺口） 第4阶段 P0 — NSG 拆分 + 收紧生产入站规则"
+      "context": "td @ line 383 · surrounding text: 测试 / 生产共用网络安全组 （遗留缺口） 第4阶段 P0 — NSG 拆分 + 收紧生产入站规则"
     },
     {
       "id": "u_619829f88a8d2dd7",
@@ -2394,7 +2394,7 @@
       "source": "第4阶段 P0 — NSG 拆分 + 收紧生产入站规则",
       "occurrence": 0,
       "target": "Sprint 4 P0 — Split NSG and Tighten Production Inbound Rules",
-      "context": "td @ line 384 · surrounding text: 测试 / 生产共用网络安全组 （遗留缺口） 第4阶段 P0 — NSG 拆分 + 收紧生产入站规则"
+      "context": "td @ line 383 · surrounding text: 测试 / 生产共用网络安全组 （遗留缺口） 第4阶段 P0 — NSG 拆分 + 收紧生产入站规则"
     },
     {
       "id": "u_fbfe91d18baf95ab",
@@ -2402,7 +2402,7 @@
       "source": "HK 旧 ProxyBackend 已退出关键路径，但仓库 / Azure 实例尚未最终下架",
       "occurrence": 0,
       "target": "HK Old ProxyBackend Has Been Removed from Critical Path, but Repository/Azure Instances Have Not Yet Been Finalized",
-      "context": "strong @ line 385 · surrounding text: HK 旧 ProxyBackend 已退出关键路径，但仓库 / Azure 实例尚未最终下架 已不在客户端调用路径上；第4阶段 P1 走最终下架（关闭实例 + 归档仓库）"
+      "context": "strong @ line 384 · surrounding text: HK 旧 ProxyBackend 已退出关键路径，但仓库 / Azure 实例尚未最终下架 已不在客户端调用路径上；第4阶段 P1 走最终下架（关闭实例 + 归档仓库）"
     },
     {
       "id": "u_c088e1f4e0112df7",
@@ -2410,7 +2410,7 @@
       "source": "已不在客户端调用路径上；第4阶段 P1 走最终下架（关闭实例 + 归档仓库）",
       "occurrence": 0,
       "target": "HK Old ProxyBackend Has Been Removed from Critical Path, and It Is No Longer on the Client Call Path; Sprint 4 P1 — Finalization of Removal (Shut Down Instances + Archive Repository)",
-      "context": "td @ line 385 · surrounding text: HK 旧 ProxyBackend 已退出关键路径，但仓库 / Azure 实例尚未最终下架 已不在客户端调用路径上；第4阶段 P1 走最终下架（关闭实例 + 归档仓库）"
+      "context": "td @ line 384 · surrounding text: HK 旧 ProxyBackend 已退出关键路径，但仓库 / Azure 实例尚未最终下架 已不在客户端调用路径上；第4阶段 P1 走最终下架（关闭实例 + 归档仓库）"
     },
     {
       "id": "u_279d8509aa821808",
@@ -2418,7 +2418,7 @@
       "source": "专线续费仍需重新购买",
       "occurrence": 0,
       "target": "Old HK ProxyBackend Node Renewal Still Requires Re-Purchase",
-      "context": "strong @ line 386 · surrounding text: 专线续费仍需重新购买 第4阶段 P1 — 自动续费 + 保留原节点绑定"
+      "context": "strong @ line 385 · surrounding text: 专线续费仍需重新购买 第4阶段 P1 — 自动续费 + 保留原节点绑定"
     },
     {
       "id": "u_6f029bd0da4c38c2",
@@ -2426,7 +2426,7 @@
       "source": "第4阶段 P1 — 自动续费 + 保留原节点绑定",
       "occurrence": 0,
       "target": "Sprint 4 P1 — Automatic Renewal and Retain Original VPN node Binding",
-      "context": "td @ line 386 · surrounding text: 专线续费仍需重新购买 第4阶段 P1 — 自动续费 + 保留原节点绑定"
+      "context": "td @ line 385 · surrounding text: 专线续费仍需重新购买 第4阶段 P1 — 自动续费 + 保留原节点绑定"
     },
     {
       "id": "u_7e6e0ee79e70532c",
@@ -2434,7 +2434,7 @@
       "source": "XRayR 老节点尚未全部迁移",
       "occurrence": 0,
       "target": "Old XRayR VPN nodes Have Not Yet Been Fully Migrated",
-      "context": "strong @ line 387 · surrounding text: XRayR 老节点尚未全部迁移 新节点全部 singbox-agent；老节点全擦时自然替换；第4阶段定下线日期"
+      "context": "strong @ line 386 · surrounding text: XRayR 老节点尚未全部迁移 新节点全部 singbox-agent；老节点全擦时自然替换；第4阶段定下线日期"
     },
     {
       "id": "u_fbce2171a3092541",
@@ -2442,7 +2442,7 @@
       "source": "新节点全部 singbox-agent；老节点全擦时自然替换；第4阶段定下线日期",
       "occurrence": 0,
       "target": "All new VPN nodes use singbox-agent; old VPN nodes are replaced naturally during full wipes; Sprint 4 will set the decommission date",
-      "context": "td @ line 387 · surrounding text: XRayR 老节点尚未全部迁移 新节点全部 singbox-agent；老节点全擦时自然替换；第4阶段定下线日期"
+      "context": "td @ line 386 · surrounding text: XRayR 老节点尚未全部迁移 新节点全部 singbox-agent；老节点全擦时自然替换；第4阶段定下线日期"
     },
     {
       "id": "u_067f15c9c0016078",
@@ -2450,7 +2450,7 @@
       "source": "测试中的管理后台页（供应商总览 / DNS 孤立清理 / 异常观察 / 自动分配节点）尚未驱动决策",
       "occurrence": 0,
       "target": "The Back Office (BO) pages under test—supplier overview, orphaned DNS cleanup, anomaly monitoring, and automatic VPN node allocation—have not yet driven decisions",
-      "context": "td @ line 388 · surrounding text: 测试中的管理后台页（供应商总览 / DNS 孤立清理 / 异常观察 / 自动分配节点）尚未驱动决策 需要更长 soak 期定型阈值；第4阶段晋升为决策驱动"
+      "context": "td @ line 387 · surrounding text: 测试中的管理后台页（供应商总览 / DNS 孤立清理 / 异常观察 / 自动分配节点）尚未驱动决策 需要更长 soak 期定型阈值；第4阶段晋升为决策驱动"
     },
     {
       "id": "u_c7b8b4cc89927396",
@@ -2458,7 +2458,7 @@
       "source": "需要更长 soak 期定型阈值；第4阶段晋升为决策驱动",
       "occurrence": 0,
       "target": "A longer soak period is required to establish thresholds; promote to decision-driven operation in Sprint 4",
-      "context": "td @ line 388 · surrounding text: 测试中的管理后台页（供应商总览 / DNS 孤立清理 / 异常观察 / 自动分配节点）尚未驱动决策 需要更长 soak 期定型阈值；第4阶段晋升为决策驱动"
+      "context": "td @ line 387 · surrounding text: 测试中的管理后台页（供应商总览 / DNS 孤立清理 / 异常观察 / 自动分配节点）尚未驱动决策 需要更长 soak 期定型阈值；第4阶段晋升为决策驱动"
     },
     {
       "id": "u_08b502d5ef3174cb",
@@ -2466,7 +2466,7 @@
       "source": "九、安全与权限",
       "occurrence": 0,
       "target": "Nine, Security and Permissions",
-      "context": "h2 @ line 391"
+      "context": "h2 @ line 390"
     },
     {
       "id": "u_66eb3db2430b9d73",
@@ -2474,7 +2474,7 @@
       "source": "项目",
       "occurrence": 0,
       "target": "Project",
-      "context": "th @ line 393 · surrounding text: 项目 状态"
+      "context": "th @ line 392 · surrounding text: 项目 状态"
     },
     {
       "id": "u_698ffc43f8c41b0d",
@@ -2482,7 +2482,7 @@
       "source": "状态",
       "occurrence": 0,
       "target": "Status",
-      "context": "th @ line 393 · surrounding text: 项目 状态"
+      "context": "th @ line 392 · surrounding text: 项目 状态"
     },
     {
       "id": "u_37ee9f6b901a950f",
@@ -2490,7 +2490,7 @@
       "source": "源代码访问最小化（Roy / Morgan / Lex / 大马团队）",
       "occurrence": 0,
       "target": "Minimize Source Code Access (Roy / Morgan / Lex / Mala Team)",
-      "context": "td @ line 394 · surrounding text: 源代码访问最小化（Roy / Morgan / Lex / 大马团队） 维持"
+      "context": "td @ line 393 · surrounding text: 源代码访问最小化（Roy / Morgan / Lex / 大马团队） 维持"
     },
     {
       "id": "u_98305951a613333b",
@@ -2498,7 +2498,7 @@
       "source": "维持",
       "occurrence": 0,
       "target": "Maintain",
-      "context": "span.status-done @ line 394 · surrounding text: 源代码访问最小化（Roy / Morgan / Lex / 大马团队） 维持"
+      "context": "span.status-done @ line 393 · surrounding text: 源代码访问最小化（Roy / Morgan / Lex / 大马团队） 维持"
     },
     {
       "id": "u_3f9a11d5d4e3e0a5",
@@ -2506,7 +2506,7 @@
       "source": "数据库备份（Azure 自动每日）",
       "occurrence": 0,
       "target": "Database Backup (Azure Automated Daily)",
-      "context": "strong @ line 395 · surrounding text: 数据库备份（Azure 自动每日） ✅ 本阶段开启（接手时完全无备份）"
+      "context": "strong @ line 394 · surrounding text: 数据库备份（Azure 自动每日） ✅ 本阶段开启（接手时完全无备份）"
     },
     {
       "id": "u_15a04bfc3b534b89",
@@ -2514,7 +2514,7 @@
       "source": "✅ 本阶段开启（接手时完全无备份）",
       "occurrence": 0,
       "target": "✅ This phase is enabled (no backup when we took over).",
-      "context": "span.status-done @ line 395 · surrounding text: 数据库备份（Azure 自动每日） ✅ 本阶段开启（接手时完全无备份）"
+      "context": "span.status-done @ line 394 · surrounding text: 数据库备份（Azure 自动每日） ✅ 本阶段开启（接手时完全无备份）"
     },
     {
       "id": "u_0e5ec5fd0374bce3",
@@ -2522,7 +2522,7 @@
       "source": "读副本真正接入后端",
       "occurrence": 0,
       "target": "Read Replica Truly Connected to the Backend",
-      "context": "strong @ line 396 · surrounding text: 读副本真正接入后端 （之前是「有但没用」） ✅ 本阶段"
+      "context": "strong @ line 395 · surrounding text: 读副本真正接入后端 （之前是「有但没用」） ✅ 本阶段"
     },
     {
       "id": "u_df3171f2721232f5",
@@ -2530,7 +2530,7 @@
       "source": "（之前是「有但没用」）",
       "occurrence": 1,
       "target": "(Previously it was 'there but not useful')",
-      "context": "td @ line 396 · surrounding text: 读副本真正接入后端 （之前是「有但没用」） ✅ 本阶段"
+      "context": "td @ line 395 · surrounding text: 读副本真正接入后端 （之前是「有但没用」） ✅ 本阶段"
     },
     {
       "id": "u_ee9ff4940b90afeb",
@@ -2538,7 +2538,7 @@
       "source": "✅ 本阶段",
       "occurrence": 0,
       "target": "✅ This phase",
-      "context": "span.status-done @ line 396 · surrounding text: 读副本真正接入后端 （之前是「有但没用」） ✅ 本阶段"
+      "context": "span.status-done @ line 395 · surrounding text: 读副本真正接入后端 （之前是「有但没用」） ✅ 本阶段"
     },
     {
       "id": "u_2d7d811dd37964d0",
@@ -2546,7 +2546,7 @@
       "source": "HK 旧 ProxyBackend 退出客户端关键路径",
       "occurrence": 1,
       "target": "HK Old ProxyBackend Exit from the Client Key Path",
-      "context": "strong @ line 397 · surrounding text: HK 旧 ProxyBackend 退出客户端关键路径 ✅ 本阶段"
+      "context": "strong @ line 396 · surrounding text: HK 旧 ProxyBackend 退出客户端关键路径 ✅ 本阶段"
     },
     {
       "id": "u_d24496e2738b76b3",
@@ -2554,7 +2554,7 @@
       "source": "✅ 本阶段",
       "occurrence": 1,
       "target": "✅ This phase",
-      "context": "span.status-done @ line 397 · surrounding text: HK 旧 ProxyBackend 退出客户端关键路径 ✅ 本阶段"
+      "context": "span.status-done @ line 396 · surrounding text: HK 旧 ProxyBackend 退出客户端关键路径 ✅ 本阶段"
     },
     {
       "id": "u_b98634a8b206c83c",
@@ -2562,7 +2562,7 @@
       "source": "登录失败锁定 + 设备注册速率限制",
       "occurrence": 0,
       "target": "Failed-login lockout + device-registration rate limiting",
-      "context": "td @ line 398 · surrounding text: 登录失败锁定 + 设备注册速率限制 ✅ 第2阶段"
+      "context": "td @ line 397 · surrounding text: 登录失败锁定 + 设备注册速率限制 ✅ 第2阶段"
     },
     {
       "id": "u_744cb81b11c8da64",
@@ -2570,7 +2570,7 @@
       "source": "✅ 第2阶段",
       "occurrence": 0,
       "target": "✅ Sprint 2",
-      "context": "span.status-done @ line 398 · surrounding text: 登录失败锁定 + 设备注册速率限制 ✅ 第2阶段"
+      "context": "span.status-done @ line 397 · surrounding text: 登录失败锁定 + 设备注册速率限制 ✅ 第2阶段"
     },
     {
       "id": "u_30fa09b2d53f0f67",
@@ -2578,7 +2578,7 @@
       "source": "免费注册跨账号串号修复（含 ASN 段滥用上限）",
       "occurrence": 0,
       "target": "Free Registration Cross-Account Serial Number Fix (Includes ASN Segment Abuse Limit)",
-      "context": "td @ line 399 · surrounding text: 免费注册跨账号串号修复（含 ASN 段滥用上限） ✅ 本阶段"
+      "context": "td @ line 398 · surrounding text: 免费注册跨账号串号修复（含 ASN 段滥用上限） ✅ 本阶段"
     },
     {
       "id": "u_e365f786747dda45",
@@ -2586,7 +2586,7 @@
       "source": "✅ 本阶段",
       "occurrence": 2,
       "target": "✅ This Sprint",
-      "context": "span.status-done @ line 399 · surrounding text: 免费注册跨账号串号修复（含 ASN 段滥用上限） ✅ 本阶段"
+      "context": "span.status-done @ line 398 · surrounding text: 免费注册跨账号串号修复（含 ASN 段滥用上限） ✅ 本阶段"
     },
     {
       "id": "u_a6bcb7810be4c5d4",
@@ -2594,7 +2594,7 @@
       "source": "免费额度由「客户端记账」改为「节点记账」（关闭 UUID 抽取无限免费 VPN 漏洞）",
       "occurrence": 0,
       "target": "Free-quota accounting moved from the client to the VPN node, closing the infinite-free-VPN exploit based on UUID extraction",
-      "context": "td @ line 400 · surrounding text: 免费额度由「客户端记账」改为「节点记账」（关闭 UUID 抽取无限免费 VPN 漏洞） ✅ 本阶段"
+      "context": "td @ line 399 · surrounding text: 免费额度由「客户端记账」改为「节点记账」（关闭 UUID 抽取无限免费 VPN 漏洞） ✅ 本阶段"
     },
     {
       "id": "u_3f5d8b435e5e5109",
@@ -2602,7 +2602,7 @@
       "source": "✅ 本阶段",
       "occurrence": 3,
       "target": "✅ This Sprint",
-      "context": "span.status-done @ line 400 · surrounding text: 免费额度由「客户端记账」改为「节点记账」（关闭 UUID 抽取无限免费 VPN 漏洞） ✅ 本阶段"
+      "context": "span.status-done @ line 399 · surrounding text: 免费额度由「客户端记账」改为「节点记账」（关闭 UUID 抽取无限免费 VPN 漏洞） ✅ 本阶段"
     },
     {
       "id": "u_12858a4074fa79d6",
@@ -2610,7 +2610,7 @@
       "source": "iptables NAT 表脏数据自动清理",
       "occurrence": 0,
       "target": "Automatic cleanup of stale data in the iptables NAT table",
-      "context": "td @ line 401 · surrounding text: iptables NAT 表脏数据自动清理 ✅ 本阶段"
+      "context": "td @ line 400 · surrounding text: iptables NAT 表脏数据自动清理 ✅ 本阶段"
     },
     {
       "id": "u_41ffcbf574325a11",
@@ -2618,7 +2618,7 @@
       "source": "✅ 本阶段",
       "occurrence": 4,
       "target": "✅ This Sprint",
-      "context": "span.status-done @ line 401 · surrounding text: iptables NAT 表脏数据自动清理 ✅ 本阶段"
+      "context": "span.status-done @ line 400 · surrounding text: iptables NAT 表脏数据自动清理 ✅ 本阶段"
     },
     {
       "id": "u_7e56919cb3fd4625",
@@ -2626,7 +2626,7 @@
       "source": "节点 systemd 单一供应商 + 一次性引导令牌（1h TTL）",
       "occurrence": 0,
       "target": "VPN node systemd Single Supplier + One-Time Boot Token (1h TTL)",
-      "context": "td @ line 402 · surrounding text: 节点 systemd 单一供应商 + 一次性引导令牌（1h TTL） ✅ 本阶段"
+      "context": "td @ line 401 · surrounding text: 节点 systemd 单一供应商 + 一次性引导令牌（1h TTL） ✅ 本阶段"
     },
     {
       "id": "u_8bb64250a5419f60",
@@ -2634,7 +2634,7 @@
       "source": "✅ 本阶段",
       "occurrence": 5,
       "target": "✅ This Sprint",
-      "context": "span.status-done @ line 402 · surrounding text: 节点 systemd 单一供应商 + 一次性引导令牌（1h TTL） ✅ 本阶段"
+      "context": "span.status-done @ line 401 · surrounding text: 节点 systemd 单一供应商 + 一次性引导令牌（1h TTL） ✅ 本阶段"
     },
     {
       "id": "u_c7982b575a295d65",
@@ -2642,7 +2642,7 @@
       "source": "sing-box 二进制 SHA256 校验（供应链防御）",
       "occurrence": 0,
       "target": "sing-box Binary SHA256 Validation (Supply Chain Defense)",
-      "context": "td @ line 403 · surrounding text: sing-box 二进制 SHA256 校验（供应链防御） ✅ 本阶段"
+      "context": "td @ line 402 · surrounding text: sing-box 二进制 SHA256 校验（供应链防御） ✅ 本阶段"
     },
     {
       "id": "u_e809ef7da822e895",
@@ -2650,7 +2650,7 @@
       "source": "✅ 本阶段",
       "occurrence": 6,
       "target": "✅ This Sprint",
-      "context": "span.status-done @ line 403 · surrounding text: sing-box 二进制 SHA256 校验（供应链防御） ✅ 本阶段"
+      "context": "span.status-done @ line 402 · surrounding text: sing-box 二进制 SHA256 校验（供应链防御） ✅ 本阶段"
     },
     {
       "id": "u_38194dcb22a65c3e",
@@ -2658,7 +2658,7 @@
       "source": "USDT 支付（Java 黑盒 → Go 自有服务，systemd 接管）",
       "occurrence": 0,
       "target": "USDT payment (Java black box → owned Go service, managed by systemd)",
-      "context": "td @ line 404 · surrounding text: USDT 支付（Java 黑盒 → Go 自有服务，systemd 接管） ✅ 本阶段"
+      "context": "td @ line 403 · surrounding text: USDT 支付（Java 黑盒 → Go 自有服务，systemd 接管） ✅ 本阶段"
     },
     {
       "id": "u_66df25ff61291599",
@@ -2666,7 +2666,7 @@
       "source": "✅ 本阶段",
       "occurrence": 7,
       "target": "✅ This Sprint",
-      "context": "span.status-done @ line 404 · surrounding text: USDT 支付（Java 黑盒 → Go 自有服务，systemd 接管） ✅ 本阶段"
+      "context": "span.status-done @ line 403 · surrounding text: USDT 支付（Java 黑盒 → Go 自有服务，systemd 接管） ✅ 本阶段"
     },
     {
       "id": "u_794c198edb9cd4f5",
@@ -2674,7 +2674,7 @@
       "source": "数据库备份恢复演练（备份本身已开启）",
       "occurrence": 0,
       "target": "Database Backup and Recovery Drill (Backup is already enabled)",
-      "context": "td @ line 405 · surrounding text: 数据库备份恢复演练（备份本身已开启） 第4阶段 P0"
+      "context": "td @ line 404 · surrounding text: 数据库备份恢复演练（备份本身已开启） 第4阶段 P0"
     },
     {
       "id": "u_2141a5b5797893d7",
@@ -2682,7 +2682,7 @@
       "source": "第4阶段 P0",
       "occurrence": 0,
       "target": "Sprint 4 P0",
-      "context": "span.status-defer @ line 405 · surrounding text: 数据库备份恢复演练（备份本身已开启） 第4阶段 P0"
+      "context": "span.status-defer @ line 404 · surrounding text: 数据库备份恢复演练（备份本身已开启） 第4阶段 P0"
     },
     {
       "id": "u_132fccc12ba854b1",
@@ -2690,7 +2690,7 @@
       "source": "测试 / 生产网络隔离（NSG 拆分）",
       "occurrence": 0,
       "target": "Test/Production Network Isolation (NSG Split)",
-      "context": "td @ line 406 · surrounding text: 测试 / 生产网络隔离（NSG 拆分） 第4阶段 P0"
+      "context": "td @ line 405 · surrounding text: 测试 / 生产网络隔离（NSG 拆分） 第4阶段 P0"
     },
     {
       "id": "u_6a31dd9b0296b8cc",
@@ -2698,7 +2698,7 @@
       "source": "第4阶段 P0",
       "occurrence": 1,
       "target": "Sprint 4 P0",
-      "context": "span.status-defer @ line 406 · surrounding text: 测试 / 生产网络隔离（NSG 拆分） 第4阶段 P0"
+      "context": "span.status-defer @ line 405 · surrounding text: 测试 / 生产网络隔离（NSG 拆分） 第4阶段 P0"
     },
     {
       "id": "u_1e1f0d58033cf534",
@@ -2706,7 +2706,7 @@
       "source": "HK 旧 ProxyBackend 仓库 + Azure 实例最终下架",
       "occurrence": 0,
       "target": "Final Downgrade of Old HK ProxyBackend Repository and Azure Instances",
-      "context": "td @ line 407 · surrounding text: HK 旧 ProxyBackend 仓库 + Azure 实例最终下架 第4阶段 P1"
+      "context": "td @ line 406 · surrounding text: HK 旧 ProxyBackend 仓库 + Azure 实例最终下架 第4阶段 P1"
     },
     {
       "id": "u_3ffcc49f3c3561b5",
@@ -2714,7 +2714,7 @@
       "source": "第4阶段 P1",
       "occurrence": 0,
       "target": "Sprint 4 P1",
-      "context": "span.status-defer @ line 407 · surrounding text: HK 旧 ProxyBackend 仓库 + Azure 实例最终下架 第4阶段 P1"
+      "context": "span.status-defer @ line 406 · surrounding text: HK 旧 ProxyBackend 仓库 + Azure 实例最终下架 第4阶段 P1"
     },
     {
       "id": "u_d86a8f7f787228d4",
@@ -2722,7 +2722,7 @@
       "source": "SSH 全量证书化 + 权限审计",
       "occurrence": 0,
       "target": "SSH Full Certificateization + Permission Auditing",
-      "context": "td @ line 408 · surrounding text: SSH 全量证书化 + 权限审计 第4阶段 P1"
+      "context": "td @ line 407 · surrounding text: SSH 全量证书化 + 权限审计 第4阶段 P1"
     },
     {
       "id": "u_9846ba541b257c9b",
@@ -2730,7 +2730,7 @@
       "source": "第4阶段 P1",
       "occurrence": 1,
       "target": "Sprint 4 P1",
-      "context": "span.status-defer @ line 408 · surrounding text: SSH 全量证书化 + 权限审计 第4阶段 P1"
+      "context": "span.status-defer @ line 407 · surrounding text: SSH 全量证书化 + 权限审计 第4阶段 P1"
     },
     {
       "id": "u_09de8c5334467553",
@@ -2738,7 +2738,7 @@
       "source": "十、第4阶段 5/12 启动 — 锁定优先级",
       "occurrence": 0,
       "target": "10. Sprint 4 Launches on 5/12 — Priorities Locked",
-      "context": "h2 @ line 411"
+      "context": "h2 @ line 410"
     },
     {
       "id": "u_5d910bd22b779999",
@@ -2746,7 +2746,7 @@
       "source": "v3.7.0 最终 QA 通过 → 生产发布",
       "occurrence": 0,
       "target": "v3.7.0 Final QA Passed → Production Release",
-      "context": "li @ line 414 · surrounding text: P0 v3.7.0 最终 QA 通过 → 生产发布"
+      "context": "li @ line 413 · surrounding text: P0 v3.7.0 最终 QA 通过 → 生产发布"
     },
     {
       "id": "u_6564ae1a9c315cca",
@@ -2754,7 +2754,7 @@
       "source": "数据库备份「能真正恢复」演练 + 异地副本流程化（备份本身已开）",
       "occurrence": 0,
       "target": "Database backup recovery drills and a formal off-site replica process (backups are already enabled)",
-      "context": "li @ line 415 · surrounding text: P0 数据库备份「能真正恢复」演练 + 异地副本流程化（备份本身已开）"
+      "context": "li @ line 414 · surrounding text: P0 数据库备份「能真正恢复」演练 + 异地副本流程化（备份本身已开）"
     },
     {
       "id": "u_9df1d92c44142fcb",
@@ -2762,7 +2762,7 @@
       "source": "测试 / 生产网络隔离（5/12 当周完成）",
       "occurrence": 0,
       "target": "Testing / Production Network Isolation (Completed in the current week of May 12)",
-      "context": "li @ line 416 · surrounding text: P0 测试 / 生产网络隔离（5/12 当周完成）"
+      "context": "li @ line 415 · surrounding text: P0 测试 / 生产网络隔离（5/12 当周完成）"
     },
     {
       "id": "u_83551755b198f97e",
@@ -2770,7 +2770,7 @@
       "source": "FFF Flutter 重写启动（5/12 – 5/26）",
       "occurrence": 0,
       "target": "FFF Flutter Rewrite Launch (May 12 – May 26)",
-      "context": "li @ line 417 · surrounding text: P0 FFF Flutter 重写启动（5/12 – 5/26）"
+      "context": "li @ line 416 · surrounding text: P0 FFF Flutter 重写启动（5/12 – 5/26）"
     },
     {
       "id": "u_24d60217ff8de626",
@@ -2778,7 +2778,7 @@
       "source": "FFF 后端共享公用模块化（5/12 – 5/19）",
       "occurrence": 0,
       "target": "FFF Backend Shared Utility Moduleization (May 12 – May 19)",
-      "context": "li @ line 418 · surrounding text: P0 FFF 后端共享公用模块化（5/12 – 5/19）"
+      "context": "li @ line 417 · surrounding text: P0 FFF 后端共享公用模块化（5/12 – 5/19）"
     },
     {
       "id": "u_f0d4ad9ce368b93d",
@@ -2786,7 +2786,7 @@
       "source": "FFF 第一里程碑：注册 / 登录 / 列出节点 / 连接节点",
       "occurrence": 0,
       "target": "FFF initial milestone: registration / login / list VPN nodes / connect to a VPN node",
-      "context": "li @ line 419 · surrounding text: P0 FFF 第一里程碑：注册 / 登录 / 列出节点 / 连接节点"
+      "context": "li @ line 418 · surrounding text: P0 FFF 第一里程碑：注册 / 登录 / 列出节点 / 连接节点"
     },
     {
       "id": "u_73f0240fad33a5e3",
@@ -2794,7 +2794,7 @@
       "source": "专线自动续费（保留原节点绑定）",
       "occurrence": 0,
       "target": "Automatic dedicated-line renewal (retaining the original VPN node binding)",
-      "context": "li @ line 420 · surrounding text: P1 专线自动续费（保留原节点绑定）"
+      "context": "li @ line 419 · surrounding text: P1 专线自动续费（保留原节点绑定）"
     },
     {
       "id": "u_fc64e9339f29c59c",
@@ -2802,7 +2802,7 @@
       "source": "节点置信度评分（接入本阶段已完成的后台一键回收流）",
       "occurrence": 0,
       "target": "VPN node confidence scoring (integrated with the one-click Back Office (BO) reclamation workflow completed in this Sprint)",
-      "context": "li @ line 421 · surrounding text: P1 节点置信度评分（接入本阶段已完成的后台一键回收流）"
+      "context": "li @ line 420 · surrounding text: P1 节点置信度评分（接入本阶段已完成的后台一键回收流）"
     },
     {
       "id": "u_8e1cb9d82c6662df",
@@ -2810,7 +2810,7 @@
       "source": "SSH 全量证书化 + 权限审计 + HK 旧 ProxyBackend 仓库 / 实例最终下架",
       "occurrence": 0,
       "target": "SSH Full Certificateization + Permission Auditing + Final Downgrade of Old HK ProxyBackend Repository and Azure Instances",
-      "context": "li @ line 422 · surrounding text: P1 SSH 全量证书化 + 权限审计 + HK 旧 ProxyBackend 仓库 / 实例最终下架"
+      "context": "li @ line 421 · surrounding text: P1 SSH 全量证书化 + 权限审计 + HK 旧 ProxyBackend 仓库 / 实例最终下架"
     },
     {
       "id": "u_167fe61cc83467d4",
@@ -2818,7 +2818,7 @@
       "source": "测试中的管理后台页晋升为决策驱动（供应商总览 → 采购建议；异常观察 → 触发暂停；DNS 孤立 → 批量清理）",
       "occurrence": 0,
       "target": "Promote the Back Office (BO) pages under test to decision-driven operation (supplier overview → purchase recommendations; anomaly monitoring → trigger suspension; orphaned DNS records → bulk cleanup)",
-      "context": "li @ line 423 · surrounding text: P1 测试中的管理后台页晋升为决策驱动（供应商总览 → 采购建议；异常观察 → 触发暂停；DNS 孤立 → 批量清理）"
+      "context": "li @ line 422 · surrounding text: P1 测试中的管理后台页晋升为决策驱动（供应商总览 → 采购建议；异常观察 → 触发暂停；DNS 孤立 → 批量清理）"
     },
     {
       "id": "u_e0936cf330c6162f",
@@ -2826,7 +2826,7 @@
       "source": "查看完整版（按类别浏览）：",
       "occurrence": 0,
       "target": "View full version (browse by category):",
-      "context": "div.footer @ line 427"
+      "context": "div.footer @ line 426"
     },
     {
       "id": "u_fcb7a72875f3ecb6",
@@ -2834,7 +2834,7 @@
       "source": "第3阶段完整汇报",
       "occurrence": 0,
       "target": "Sprint 3 Comprehensive Report",
-      "context": "a @ line 428 · surrounding text: 查看完整版（按类别浏览）： 第3阶段完整汇报"
+      "context": "a @ line 427 · surrounding text: 查看完整版（按类别浏览）： 第3阶段完整汇报"
     }
   ],
   "blocks": {

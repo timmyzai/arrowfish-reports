@@ -29,4 +29,3 @@ Static stakeholder-report site. Internal plans and execution evidence belong in
 - Durable reporting context: use [the knowledge index](.claude/knowledge/INDEX.md).
 - Before publishing, verify catalogue file paths and report titles/dates match.
   Use `python3 -m http.server 8000` for visual review; there is no compiled build.
-  For auth-gate changes, run `node --check assets/auth-gate.js`.
