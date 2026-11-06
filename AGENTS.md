@@ -7,6 +7,10 @@ Static stakeholder-report site. Internal plans and execution evidence belong in
 
 ## Publishing contracts
 
+- The live site is served by the Worker at https://arrowfish-report-ai.yang-fan-node.workers.dev;
+  GitHub Pages only redirects to it.
+- `index.html` opens the progress report (`Stakeholder/Goal-2026/20260827_goals.html`),
+  updated every two weeks; old `#<report-id>` links open that report.
 - Reports are self-contained HTML under `Stakeholder/Sprint-<N>/YYYYMMDD_<type>.html`.
   Published weekly/sprint reports are immutable; corrections retain historical evidence.
 - The sole living dashboard is `Stakeholder/Goal-2026/20260827_goals.html`.
