@@ -10,7 +10,7 @@
     <title>Arrowfish VPN — 阶段报告</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/ai-chat.css?v=20260829-13">
     <link rel="stylesheet" href="assets/copy-markdown.css">
     <script src="assets/report-evidence.js?v=20260829-13" defer></script>
@@ -18,7 +18,7 @@
     <script src="assets/ai-chat.js?v=20260829-13" defer></script>
     <script src="assets/copy-markdown.js" defer></script>
     <style>
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; height: 100vh; display: flex; flex-direction: column; }
+        body { font-family: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans SC", sans-serif; height: 100vh; display: flex; flex-direction: column; }
         .toolbar {
             display: flex; align-items: center; gap: 16px; padding: 12px 24px;
             background: var(--af-surface); border-bottom: 1px solid var(--af-border);
@@ -26,17 +26,59 @@
         }
         .toolbar h1 { font-size: 16px; font-weight: 600; color: var(--af-primary); white-space: nowrap; margin: 0; }
         .toolbar .copy-markdown-action { margin-left: auto; }
+        .toolbar .preference-controls { margin-left: 0; }
         [hidden] { display: none !important; }
         #app-content[data-view="goal"] .ai-brief-strip { display: none; }
         iframe { min-height: 0; flex: 1; width: 100%; border: none; }
         .loading { flex: 1; display: flex; align-items: center; justify-content: center; color: var(--af-text-muted); font-size: 15px; background: var(--af-bg); }
         @media (max-width: 720px) {
             .toolbar { gap: 8px; padding: 10px 12px; }
+            .toolbar .copy-markdown-action { width: auto; }
             .toolbar .copy-markdown-button { width: 44px; padding: 10px; }
             .toolbar .copy-markdown-label { display: none; }
         }
     </style>
     <link rel="stylesheet" href="assets/site-theme.css">
+    <style>
+        :root {
+            --af-bg: #f3f5f8;
+            --af-surface: #ffffff;
+            --af-surface-muted: #eef1f5;
+            --af-text: #111827;
+            --af-text-muted: #5b6577;
+            --af-border: #e3e7ee;
+            --af-primary: #155e8a;
+            --af-primary-hover: #155e8a;
+            --af-primary-soft: #e3eff7;
+            --af-on-accent: #ffffff;
+            --af-focus: #155e8a;
+            --af-success: #1d7a46;
+            --af-success-soft: #e2f3e9;
+            --af-warning: #a15c00;
+            --af-warning-soft: #fdf1dc;
+            --af-danger: #c0362c;
+            --af-danger-soft: #fcebe9;
+        }
+        html[data-theme="dark"] {
+            --af-bg: #0e1218;
+            --af-surface: #161c25;
+            --af-surface-muted: #1c2430;
+            --af-text: #e8edf4;
+            --af-text-muted: #a0abbb;
+            --af-border: #263041;
+            --af-primary: #6cb4e4;
+            --af-primary-hover: #6cb4e4;
+            --af-primary-soft: #17304a;
+            --af-on-accent: #0e1218;
+            --af-focus: #6cb4e4;
+            --af-success: #6fd39b;
+            --af-success-soft: #15301f;
+            --af-warning: #f3c062;
+            --af-warning-soft: #372a12;
+            --af-danger: #ff8a7f;
+            --af-danger-soft: #3a1b19;
+        }
+    </style>
 </head>
 <body>
     <div id="app-content" data-view="goal" style="display:flex; flex-direction:column; height:100vh;">

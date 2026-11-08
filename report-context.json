@@ -14376,1323 +14376,1323 @@
           "id": "b0001",
           "section": "Report overview",
           "type": "p",
-          "line": 167,
+          "line": 172,
           "text": "Arrowfish · FFF"
         },
         {
           "id": "b0002",
           "section": "Report overview",
           "type": "heading",
-          "line": 168,
+          "line": 173,
           "text": "项目进度报告"
         },
         {
           "id": "b0003",
           "section": "Report overview",
           "type": "p",
-          "line": 169,
+          "line": 174,
           "text": "资料截至 2026-11-05 · 下次更新 11-17（周二），届时补齐各目标的承诺日期"
         },
         {
           "id": "b0004",
           "section": "Report overview",
           "type": "p",
-          "line": 179,
+          "line": 184,
           "text": "Android 3.9.48 于 11-04 通过 QA 并提交 Google Play 审核（原定 11-03，QA 临时发现问题，当天修复）。10-14 迁至 AWS 后业务已恢复。审核通过后决定维护日期，部署后端到正式环境；灾备演练仍待安排。"
         },
         {
           "id": "b0005",
           "section": "Report overview",
           "type": "p",
-          "line": 182,
+          "line": 187,
           "text": "共 21 个年度目标，按目标数统计，不代表产品完成百分比。"
         },
         {
           "id": "b0006",
           "section": "需要你关注与配合 4",
           "type": "heading",
-          "line": 186,
+          "line": 191,
           "text": "需要你关注与配合 4"
         },
         {
           "id": "b0007",
           "section": "生产恢复能力尚未验证",
           "type": "heading",
-          "line": 189,
+          "line": 194,
           "text": "生产恢复能力尚未验证"
         },
         {
           "id": "b0008",
           "section": "生产恢复能力尚未验证",
           "type": "p",
-          "line": 190,
+          "line": 195,
           "text": "10月14日迁到 AWS 恢复了业务，但独立账户备用接入和异地恢复演练仍没有结果。需要安排真实演练窗口并记录恢复结果。"
         },
         {
           "id": "b0009",
           "section": "Google 审核通过后定维护日期，部署后端正式环境",
           "type": "heading",
-          "line": 193,
+          "line": 198,
           "text": "Google 审核通过后定维护日期，部署后端正式环境"
         },
         {
           "id": "b0010",
           "section": "Google 审核通过后定维护日期，部署后端正式环境",
           "type": "p",
-          "line": 194,
+          "line": 199,
           "text": "Android 3.9.48 已提交 Google Play 审核。审核通过后决定维护日期并对外公告，在维护时把后端部署到正式环境，取消订阅、推荐人和降级修正随之生效。部署前，定时任务和后台也要升级到 API 使用的共享组件版本。"
         },
         {
           "id": "b0011",
           "section": "独享专线／IP 购买后靠人工配置",
           "type": "heading",
-          "line": 197,
+          "line": 202,
           "text": "独享专线／IP 购买后靠人工配置"
         },
         {
           "id": "b0012",
           "section": "独享专线／IP 购买后靠人工配置",
           "type": "p",
-          "line": 198,
+          "line": 203,
           "text": "用户付款后有效期立即开始计算，但节点需要运营购买并手动配置，没有备用节点。配得越慢，用户损失的时长越多。建议给运营定一个配置时限。"
         },
         {
           "id": "b0013",
           "section": "官网与投放站上线状态未更新",
           "type": "heading",
-          "line": 201,
+          "line": 206,
           "text": "官网与投放站上线状态未更新"
         },
         {
           "id": "b0014",
           "section": "官网与投放站上线状态未更新",
           "type": "p",
-          "line": 202,
+          "line": 207,
           "text": "10-09 时主站排定 10月13日上正式环境、投放站自 9月25日等外部检查；11-04 报告没有写这两项的结果。"
         },
         {
           "id": "b0015",
           "section": "本期完成 · 10-10 至 11-05 12",
           "type": "heading",
-          "line": 207,
+          "line": 212,
           "text": "本期完成 · 10-10 至 11-05 12"
         },
         {
           "id": "b0016",
           "section": "目标进度 21",
           "type": "heading",
-          "line": 272,
+          "line": 277,
           "text": "目标进度 21"
         },
         {
           "id": "b0017",
           "section": "目标进度 21",
           "type": "p",
-          "line": 274,
+          "line": 279,
           "text": "接手、架构与工程治理"
         },
         {
           "id": "b0018",
           "section": "目标进度 21",
           "type": "details-summary",
-          "line": 276,
+          "line": 281,
           "text": "G10 全系统接管、架构梳理与模块化重构 进行中"
         },
         {
           "id": "b0019",
           "section": "目标进度 21",
           "type": "p",
-          "line": 278,
+          "line": 283,
           "text": "生命周期与分层收敛中"
         },
         {
           "id": "b0020",
           "section": "目标进度 21",
           "type": "p",
-          "line": 279,
+          "line": 284,
           "text": "统一会员生命周期与计时模型，后台专属设置迁出运行服务，合并支付流水表，移除旧客户端路径。"
         },
         {
           "id": "b0021",
           "section": "目标进度 21",
           "type": "p",
-          "line": 280,
+          "line": 285,
           "text": "最新： 共享组件版本跨服务统一仍待完成；后端须继续兼容可升级 Android 与保留使用的旧版 iOS、Windows。"
         },
         {
           "id": "b0022",
           "section": "目标进度 21",
           "type": "p",
-          "line": 281,
+          "line": 286,
           "text": "下一步： 完成跨端购买与启动契约验证，再按使用证据逐项退出旧接口。"
         },
         {
           "id": "b0023",
           "section": "目标进度 21",
           "type": "details-summary",
-          "line": 286,
+          "line": 291,
           "text": "G12 安全、无日志与最小权限治理 进行中"
         },
         {
           "id": "b0024",
           "section": "目标进度 21",
           "type": "p",
-          "line": 288,
+          "line": 293,
           "text": "连接与节点安全持续验证"
         },
         {
           "id": "b0025",
           "section": "目标进度 21",
           "type": "p",
-          "line": 289,
+          "line": 294,
           "text": "节点凭证隔离、输出脱敏、DNS 异常阻断；SSH 白名单统一；支付密钥改由 Key Vault 按环境提供；10月1日停用外部源码权限。"
         },
         {
           "id": "b0026",
           "section": "目标进度 21",
           "type": "p",
-          "line": 290,
+          "line": 295,
           "text": "最新： 10月30日部署安全加固：短期身份、受保护部署运行器、权限收紧，清理测试环境旧 SSH 部署配置。当前源码授权名单待确认。"
         },
         {
           "id": "b0027",
           "section": "目标进度 21",
           "type": "p",
-          "line": 291,
+          "line": 296,
           "text": "下一步： 完成真实节点、重启与无泄漏验收；权限复核、生产凭证与网络边界分别留证。"
         },
         {
           "id": "b0028",
           "section": "目标进度 21",
           "type": "details-summary",
-          "line": 296,
+          "line": 301,
           "text": "G13 CI/CD、自动测试与全链路可观测 进行中"
         },
         {
           "id": "b0029",
           "section": "目标进度 21",
           "type": "p",
-          "line": 298,
+          "line": 303,
           "text": "测试交付持续运行"
         },
         {
           "id": "b0030",
           "section": "目标进度 21",
           "type": "p",
-          "line": 299,
+          "line": 304,
           "text": "Android 测试发布第11阶段 3 次、第12阶段 6 次、第13阶段 3 次；测试环境日志采集启用；GitLab 升级到 19.4.1。"
         },
         {
           "id": "b0031",
           "section": "目标进度 21",
           "type": "p",
-          "line": 300,
+          "line": 305,
           "text": "最新： 部署流程增加配置文件随版本更新；新流程取消了手动回滚任务，旧流水线结果不能替代新恢复流程验证。"
         },
         {
           "id": "b0032",
           "section": "目标进度 21",
           "type": "p",
-          "line": 301,
+          "line": 306,
           "text": "下一步： 补齐各平台签名产物、安装升级、回滚与部署版本映射。"
         },
         {
           "id": "b0033",
           "section": "目标进度 21",
           "type": "details-summary",
-          "line": 306,
+          "line": 311,
           "text": "G17 生产韧性、监控、异地备份与恢复 有风险 进行中"
         },
         {
           "id": "b0034",
           "section": "目标进度 21",
           "type": "p",
-          "line": 308,
+          "line": 313,
           "text": "整合完成，高风险未关"
         },
         {
           "id": "b0035",
           "section": "目标进度 21",
           "type": "p",
-          "line": 309,
+          "line": 314,
           "text": "读副本、节点健康状态机已建立；8月12日生产整合；10月6日备份与恢复手册完成，演练未执行。"
         },
         {
           "id": "b0036",
           "section": "目标进度 21",
           "type": "p",
-          "line": 310,
+          "line": 315,
           "text": "最新： 10月14日 Azure 停机后迁至 AWS，团队报告约 2.5 小时恢复后端、无数据丢失（非重新测量）。独立账户备用接入和异地恢复演练仍无结果。"
         },
         {
           "id": "b0037",
           "section": "目标进度 21",
           "type": "p",
-          "line": 311,
+          "line": 316,
           "text": "风险： 目前风险最高的未关闭项：恢复能力没有演练证据。"
         },
         {
           "id": "b0038",
           "section": "目标进度 21",
           "type": "p",
-          "line": 312,
+          "line": 317,
           "text": "下一步： 建立异地副本，执行实际恢复演练，记录 RTO、数据完整性和回切步骤。"
         },
         {
           "id": "b0039",
           "section": "目标进度 21",
           "type": "details-summary",
-          "line": 317,
+          "line": 322,
           "text": "G19 可追溯生产发布与用户可用性验收 进行中"
         },
         {
           "id": "b0040",
           "section": "目标进度 21",
           "type": "p",
-          "line": 319,
+          "line": 324,
           "text": "测试发布已留证，生产验收独立"
         },
         {
           "id": "b0041",
           "section": "目标进度 21",
           "type": "p",
-          "line": 320,
+          "line": 325,
           "text": "8月12日生产整合；Android 测试发布有记录；9月7日中国、台湾当次连接确认；10月9日 Android 3.9.26 交 staging 测试。"
         },
         {
           "id": "b0042",
           "section": "目标进度 21",
           "type": "p",
-          "line": 321,
+          "line": 326,
           "text": "最新： 11-04 Android 3.9.48 通过 QA 并提交 Google Play 审核。审核通过后决定维护日期，部署后端正式环境；GitLab 记录的上一次后端正式发布是 8月21日 v3.3.26。"
         },
         {
           "id": "b0043",
           "section": "目标进度 21",
           "type": "p",
-          "line": 322,
+          "line": 327,
           "text": "下一步： 把客户端版本、后端版本、迁移、购买与连接结果对应，按实际生产发布补齐上线后验证。"
         },
         {
           "id": "b0044",
           "section": "目标进度 21",
           "type": "p",
-          "line": 326,
+          "line": 331,
           "text": "VPN 核心、节点与网络能力"
         },
         {
           "id": "b0045",
           "section": "目标进度 21",
           "type": "details-summary",
-          "line": 328,
+          "line": 333,
           "text": "G5 节点部署与管理自动化 进行中"
         },
         {
           "id": "b0046",
           "section": "目标进度 21",
           "type": "p",
-          "line": 330,
+          "line": 335,
           "text": "节点操作与保护持续完善"
         },
         {
           "id": "b0047",
           "section": "目标进度 21",
           "type": "p",
-          "line": 331,
+          "line": 336,
           "text": "后台节点管理分离、地域命名、安装锁、防火墙任务、分配与退役保护；VM 任务统一批量设置。"
         },
         {
           "id": "b0048",
           "section": "目标进度 21",
           "type": "p",
-          "line": 332,
+          "line": 337,
           "text": "最新： 10月18日节点恢复检查通过本地验证及测试环境部署。"
         },
         {
           "id": "b0049",
           "section": "目标进度 21",
           "type": "p",
-          "line": 333,
+          "line": 338,
           "text": "下一步： 完成真实节点、重启与客户端连接验收，再推进采购至配发自动化。"
         },
         {
           "id": "b0050",
           "section": "目标进度 21",
           "type": "details-summary",
-          "line": 338,
+          "line": 343,
           "text": "G7 三协议实现、全量铺开与中国验收 进行中"
         },
         {
           "id": "b0051",
           "section": "目标进度 21",
           "type": "p",
-          "line": 340,
+          "line": 345,
           "text": "测试连接有进展，全量验收未关"
         },
         {
           "id": "b0052",
           "section": "目标进度 21",
           "type": "p",
-          "line": 341,
+          "line": 346,
           "text": "9月7日中国、台湾测试连接确认；ShadowTLS 收敛为只用 Shadowsocks 2022。34 台三协议仍是 8 月快照。"
         },
         {
           "id": "b0053",
           "section": "目标进度 21",
           "type": "p",
-          "line": 342,
+          "line": 347,
           "text": "下一步： 以具体版本补齐三协议、全量节点、跨端及中国地区验收。"
         },
         {
           "id": "b0054",
           "section": "目标进度 21",
           "type": "details-summary",
-          "line": 347,
+          "line": 352,
           "text": "G8 Unbound 私有 DNS 已延误 进行中"
         },
         {
           "id": "b0055",
           "section": "目标进度 21",
           "type": "p",
-          "line": 349,
+          "line": 354,
           "text": "解析链路已实现，运行待验收"
         },
         {
           "id": "b0056",
           "section": "目标进度 21",
           "type": "p",
-          "line": 350,
+          "line": 355,
           "text": "节点递归解析、隧道内解析、异常阻断和解析器职责修复已实现。"
         },
         {
           "id": "b0057",
           "section": "目标进度 21",
           "type": "p",
-          "line": 351,
+          "line": 356,
           "text": "原因： 原定 8 月；目标看板写现进入运行验证，没有新日期。"
         },
         {
           "id": "b0058",
           "section": "目标进度 21",
           "type": "p",
-          "line": 352,
+          "line": 357,
           "text": "下一步： 完成节点重新配置、重启、缓存和真实设备无泄漏验收。"
         },
         {
           "id": "b0059",
           "section": "目标进度 21",
           "type": "details-summary",
-          "line": 357,
+          "line": 362,
           "text": "G21 智能分流与中国站点直连 待开发"
         },
         {
           "id": "b0060",
           "section": "目标进度 21",
           "type": "p",
-          "line": 359,
+          "line": 364,
           "text": "目标已确认，待开发"
         },
         {
           "id": "b0061",
           "section": "目标进度 21",
           "type": "p",
-          "line": 360,
+          "line": 365,
           "text": "8月28日决定加入 Arrowfish：中国用户访问中国网站直连，其他公网流量继续走 VPN。没有实现或部署记录。"
         },
         {
           "id": "b0062",
           "section": "目标进度 21",
           "type": "p",
-          "line": 361,
+          "line": 366,
           "text": "下一步： 建立中国域名／IP 规则与分流 DNS，先由 Android 验证。"
         },
         {
           "id": "b0063",
           "section": "目标进度 21",
           "type": "details-summary",
-          "line": 366,
+          "line": 371,
           "text": "G6 SkyTunnel 自研隧道 已完成"
         },
         {
           "id": "b0064",
           "section": "目标进度 21",
           "type": "p",
-          "line": 368,
+          "line": 373,
           "text": "核心已完成"
         },
         {
           "id": "b0065",
           "section": "目标进度 21",
           "type": "p",
-          "line": 369,
+          "line": 374,
           "text": "自研隧道核心已交付；Android 完成替代验证，Windows 已接入共享核心。"
         },
         {
           "id": "b0066",
           "section": "目标进度 21",
           "type": "p",
-          "line": 370,
+          "line": 375,
           "text": "下一步： 持续回归，完成 Windows 正式发布与 Apple 平台接入。"
         },
         {
           "id": "b0067",
           "section": "目标进度 21",
           "type": "p",
-          "line": 374,
+          "line": 379,
           "text": "用户资格、身份与收入保护"
         },
         {
           "id": "b0068",
           "section": "目标进度 21",
           "type": "details-summary",
-          "line": 376,
+          "line": 381,
           "text": "G15 唯一设备绑定与账号连续性 有风险 进行中"
         },
         {
           "id": "b0069",
           "section": "目标进度 21",
           "type": "p",
-          "line": 378,
+          "line": 383,
           "text": "新流程有效，兼容待关"
         },
         {
           "id": "b0070",
           "section": "目标进度 21",
           "type": "p",
-          "line": 379,
+          "line": 384,
           "text": "5月25日当周设备绑定率 83.08% → 93.61%；共享设备 ID 率 21.73% → 2.59%。"
         },
         {
           "id": "b0071",
           "section": "目标进度 21",
           "type": "p",
-          "line": 380,
+          "line": 385,
           "text": "风险： 设备标识与跨版本兼容验证未关闭，列为最高优先级。"
         },
         {
           "id": "b0072",
           "section": "目标进度 21",
           "type": "p",
-          "line": 381,
+          "line": 386,
           "text": "下一步： 关闭 identity header、生产 CORS、Android／Windows 兼容验证，再治理历史关系。"
         },
         {
           "id": "b0073",
           "section": "目标进度 21",
           "type": "details-summary",
-          "line": 386,
+          "line": 391,
           "text": "G2 套餐续费与订阅管理 进行中"
         },
         {
           "id": "b0074",
           "section": "目标进度 21",
           "type": "p",
-          "line": 388,
+          "line": 393,
           "text": "主流程测试中，修正待验收"
         },
         {
           "id": "b0075",
           "section": "目标进度 21",
           "type": "p",
-          "line": 389,
+          "line": 394,
           "text": "规则 10月1日确定，主流程 10月5日实现完成并进入测试；10月9日 Android 3.9.26 交 staging 测试。"
         },
         {
           "id": "b0076",
           "section": "目标进度 21",
           "type": "p",
-          "line": 390,
+          "line": 395,
           "text": "最新： 补齐待付款续付、支付方式切换、套餐转换及退款边界；关闭自动续费后保留剩余权益；修正独享资源续费与佣金统计。11-04 修好移动端取消订阅误报错误，以及关闭续费后未撤销排队降级的问题。真实支付与回调验收待确认。"
         },
         {
           "id": "b0077",
           "section": "目标进度 21",
           "type": "p",
-          "line": 391,
+          "line": 396,
           "text": "下一步： 统一服务版本后验证 Google 新购、关闭续费、延迟降级、重复回调与独享资源续费。"
         },
         {
           "id": "b0078",
           "section": "目标进度 21",
           "type": "details-summary",
-          "line": 396,
+          "line": 401,
           "text": "G4 Siqo 多平台支付 进行中"
         },
         {
           "id": "b0079",
           "section": "目标进度 21",
           "type": "p",
-          "line": 398,
+          "line": 403,
           "text": "结算口径已统一，渠道缺口待处理"
         },
         {
           "id": "b0080",
           "section": "目标进度 21",
           "type": "p",
-          "line": 399,
+          "line": 404,
           "text": "Android staging 接入完成；币种目录按法币与加密货币分开；Google、Apple 与 Stripe 接入缺口 15 项已列明，尚未处理完。"
         },
         {
           "id": "b0081",
           "section": "目标进度 21",
           "type": "p",
-          "line": 400,
+          "line": 405,
           "text": "下一步： 完成已列明的渠道缺口，再按平台逐一接入、回归和发布。"
         },
         {
           "id": "b0082",
           "section": "目标进度 21",
           "type": "details-summary",
-          "line": 405,
+          "line": 410,
           "text": "G14 后端权威配额、计时与会话 已完成"
         },
         {
           "id": "b0083",
           "section": "目标进度 21",
           "type": "p",
-          "line": 407,
+          "line": 412,
           "text": "核心已完成"
         },
         {
           "id": "b0084",
           "section": "目标进度 21",
           "type": "p",
-          "line": 408,
+          "line": 413,
           "text": "同账号、同设备多 ACTIVE 为 0；未付费用户最高月流量 1,216.7 GiB → 39.0 GiB。"
         },
         {
           "id": "b0085",
           "section": "目标进度 21",
           "type": "p",
-          "line": 409,
+          "line": 414,
           "text": "下一步： 持续监控，并为 Redis 配额补充可审计快照。"
         },
         {
           "id": "b0086",
           "section": "目标进度 21",
           "type": "p",
-          "line": 413,
+          "line": 418,
           "text": "多平台产品与易用性"
         },
         {
           "id": "b0087",
           "section": "目标进度 21",
           "type": "details-summary",
-          "line": 415,
+          "line": 420,
           "text": "G20 七平台简化 UI 与高级协议模式 已延误 进行中"
         },
         {
           "id": "b0088",
           "section": "目标进度 21",
           "type": "p",
-          "line": 417,
+          "line": 422,
           "text": "Android 简化中，多端待验证"
         },
         {
           "id": "b0089",
           "section": "目标进度 21",
           "type": "p",
-          "line": 418,
+          "line": 423,
           "text": "9月18日确定简化 UI、单 IP 展示方向；Android 已调整布局并补上空支付状态、断网文案与专属线路国旗；Windows 9月21日跟随改版。"
         },
         {
           "id": "b0090",
           "section": "目标进度 21",
           "type": "p",
-          "line": 419,
+          "line": 424,
           "text": "原因： 原定 08-31 至 09-04；目标看板写截至 9月18日继续开发与验证，没有新日期。"
         },
         {
           "id": "b0091",
           "section": "目标进度 21",
           "type": "p",
-          "line": 420,
+          "line": 425,
           "text": "下一步： 验证简化模式与单 IP 展示，再推进 Windows 与 Apple 一致性。"
         },
         {
           "id": "b0092",
           "section": "目标进度 21",
           "type": "details-summary",
-          "line": 425,
+          "line": 430,
           "text": "G9 新公司主体迁移 进行中"
         },
         {
           "id": "b0093",
           "section": "目标进度 21",
           "type": "p",
-          "line": 427,
+          "line": 432,
           "text": "Google 平台完成；华为、Samsung、OPPO 进行中。交接 9月30日完成，10月1日停用外部 GitLab 权限。"
         },
         {
           "id": "b0094",
           "section": "目标进度 21",
           "type": "p",
-          "line": 428,
+          "line": 433,
           "text": "下一步： 逐个平台关闭主体、账号及发布资格迁移。"
         },
         {
           "id": "b0095",
           "section": "目标进度 21",
           "type": "details-summary",
-          "line": 433,
+          "line": 438,
           "text": "G11 iOS 与 macOS Apple 平台恢复 进行中"
         },
         {
           "id": "b0096",
           "section": "目标进度 21",
           "type": "p",
-          "line": 435,
+          "line": 440,
           "text": "TestFlight 已推进，真机与商店待验收"
         },
         {
           "id": "b0097",
           "section": "目标进度 21",
           "type": "p",
-          "line": 436,
+          "line": 441,
           "text": "8月24日测试构建取得 TestFlight 有效状态；修复支付弹窗与网页结账、购买恢复。没有新的 App Store 发布结论。"
         },
         {
           "id": "b0098",
           "section": "目标进度 21",
           "type": "p",
-          "line": 437,
+          "line": 442,
           "text": "下一步： 完成 iOS 真机购买、连接、升级及 App Store 验收；macOS 独立推进。"
         },
         {
           "id": "b0099",
           "section": "目标进度 21",
           "type": "details-summary",
-          "line": 442,
+          "line": 447,
           "text": "G16 Windows 云签名与官网恢复发布 进行中"
         },
         {
           "id": "b0100",
           "section": "目标进度 21",
           "type": "p",
-          "line": 444,
+          "line": 449,
           "text": "签名基础已有，订阅与连接验证中"
         },
         {
           "id": "b0101",
           "section": "目标进度 21",
           "type": "p",
-          "line": 445,
+          "line": 450,
           "text": "云签名就绪；订阅接口、配额、断线保护对齐；9月21日上测试环境。"
         },
         {
           "id": "b0102",
           "section": "目标进度 21",
           "type": "p",
-          "line": 446,
+          "line": 451,
           "text": "最新： 10月11日会员等级、到期时间、线路数据、购买选项和诊断字段 5 项契约修正发布代码；安装包与实机验收待确认。"
         },
         {
           "id": "b0103",
           "section": "目标进度 21",
           "type": "p",
-          "line": 447,
+          "line": 452,
           "text": "下一步： 完成干净机器签名安装、购买、连接、升级与卸载验收，再安排官网发布。"
         },
         {
           "id": "b0104",
           "section": "目标进度 21",
           "type": "p",
-          "line": 451,
+          "line": 456,
           "text": "增长、转化与市场入口"
         },
         {
           "id": "b0105",
           "section": "目标进度 21",
           "type": "details-summary",
-          "line": 453,
+          "line": 458,
           "text": "G1 广告归因与付费分析 进行中"
         },
         {
           "id": "b0106",
           "section": "目标进度 21",
           "type": "p",
-          "line": 455,
+          "line": 460,
           "text": "归因与访问统计修复中"
         },
         {
           "id": "b0107",
           "section": "目标进度 21",
           "type": "p",
-          "line": 456,
+          "line": 461,
           "text": "签名归因凭证、跨页交接、访问计数与后台展示修复；尚无新的生产覆盖率核验。"
         },
         {
           "id": "b0108",
           "section": "目标进度 21",
           "type": "p",
-          "line": 457,
+          "line": 462,
           "text": "最新： 分享链接、下载和账户推荐人传递已有跨端修正；11-04 修好渠道链接下载、免密登录后不显示推荐人的问题。实际获客转化待确认。"
         },
         {
           "id": "b0109",
           "section": "目标进度 21",
           "type": "p",
-          "line": 458,
+          "line": 463,
           "text": "下一步： 完成安装归因、重试和并发验证，对账后更新覆盖率。"
         },
         {
           "id": "b0110",
           "section": "目标进度 21",
           "type": "details-summary",
-          "line": 463,
+          "line": 468,
           "text": "G18 真实用户质量与转化看板 进行中"
         },
         {
           "id": "b0111",
           "section": "目标进度 21",
           "type": "p",
-          "line": 465,
+          "line": 470,
           "text": "统计来源与展示对齐中"
         },
         {
           "id": "b0112",
           "section": "目标进度 21",
           "type": "p",
-          "line": 466,
+          "line": 471,
           "text": "访问统计及后台报表来源已修复；没有新的收入、活跃或转化率查询。"
         },
         {
           "id": "b0113",
           "section": "目标进度 21",
           "type": "p",
-          "line": 467,
+          "line": 472,
           "text": "最新： 本期没有新增收入、成本或退款损失的生产核验。"
         },
         {
           "id": "b0114",
           "section": "目标进度 21",
           "type": "p",
-          "line": 468,
+          "line": 473,
           "text": "下一步： 核对统计后更新用户质量、渠道转化和收入看板。"
         },
         {
           "id": "b0115",
           "section": "目标进度 21",
           "type": "details-summary",
-          "line": 473,
+          "line": 478,
           "text": "G3 百度广告新网站 有风险 进行中"
         },
         {
           "id": "b0116",
           "section": "目标进度 21",
           "type": "p",
-          "line": 475,
+          "line": 480,
           "text": "主站待上线，投放站等待外部检查"
         },
         {
           "id": "b0117",
           "section": "目标进度 21",
           "type": "p",
-          "line": 476,
+          "line": 481,
           "text": "9月16日选定参考站版本、9月23日修正完毕；10月6日投放方指出仍写「箭鱼IP代理」，逐句清查；投放站 9月25日起等外部检查。"
         },
         {
           "id": "b0118",
           "section": "目标进度 21",
           "type": "p",
-          "line": 477,
+          "line": 482,
           "text": "最新： 10月15–16日 2 个落地站完成生产发布、HTTP 冒烟检查通过；报告没有写是否包括主站和投放站。"
         },
         {
           "id": "b0119",
           "section": "目标进度 21",
           "type": "p",
-          "line": 478,
+          "line": 483,
           "text": "风险： 主站 10月13日是否上线、投放站有无反馈，11-04 报告都没有写。"
         },
         {
           "id": "b0120",
           "section": "目标进度 21",
           "type": "p",
-          "line": 479,
+          "line": 484,
           "text": "下一步： 复查主站字眼后上正式环境；投放站待外部反馈后部署。"
         },
         {
           "id": "b0121",
           "section": "待办 18",
           "type": "heading",
-          "line": 486,
+          "line": 491,
           "text": "待办 18"
         },
         {
           "id": "b0122",
           "section": "待办 18",
           "type": "p",
-          "line": 488,
+          "line": 493,
           "text": "G3 百度广告新网站"
         },
         {
           "id": "b0123",
           "section": "待办 18",
           "type": "p",
-          "line": 501,
+          "line": 506,
           "text": "G17 生产韧性、监控、异地备份与恢复"
         },
         {
           "id": "b0124",
           "section": "待办 18",
           "type": "p",
-          "line": 508,
+          "line": 513,
           "text": "G15 唯一设备绑定与账号连续性"
         },
         {
           "id": "b0125",
           "section": "待办 18",
           "type": "p",
-          "line": 515,
+          "line": 520,
           "text": "G10 全系统接管、架构梳理与模块化重构"
         },
         {
           "id": "b0126",
           "section": "待办 18",
           "type": "p",
-          "line": 526,
+          "line": 531,
           "text": "G2 套餐续费与订阅管理"
         },
         {
           "id": "b0127",
           "section": "待办 18",
           "type": "p",
-          "line": 542,
+          "line": 547,
           "text": "G20 七平台简化 UI 与高级协议模式"
         },
         {
           "id": "b0128",
           "section": "待办 18",
           "type": "p",
-          "line": 548,
+          "line": 553,
           "text": "G11 iOS 与 macOS Apple 平台恢复"
         },
         {
           "id": "b0129",
           "section": "待办 18",
           "type": "p",
-          "line": 554,
+          "line": 559,
           "text": "G16 Windows 云签名与官网恢复发布"
         },
         {
           "id": "b0130",
           "section": "待办 18",
           "type": "p",
-          "line": 560,
+          "line": 565,
           "text": "G1 广告归因与付费分析"
         },
         {
           "id": "b0131",
           "section": "待办 18",
           "type": "p",
-          "line": 566,
+          "line": 571,
           "text": "G19 可追溯生产发布与用户可用性验收"
         },
         {
           "id": "b0132",
           "section": "待办 18",
           "type": "p",
-          "line": 582,
+          "line": 587,
           "text": "G7 三协议实现、全量铺开与中国验收"
         },
         {
           "id": "b0133",
           "section": "待办 18",
           "type": "p",
-          "line": 588,
+          "line": 593,
           "text": "G21 智能分流与中国站点直连"
         },
         {
           "id": "b0134",
           "section": "待办 18",
           "type": "p",
-          "line": 600,
+          "line": 605,
           "text": "Flutter 已有套餐购买、余额支付、充值和支付事件代码，但独享专线与独享 IP 下单接线未合入主线，App 尚不能收款；正式完成度待 Lex 报告与验收证据。"
         },
         {
           "id": "b0135",
           "section": "待办 18",
           "type": "p",
-          "line": 603,
+          "line": 608,
           "text": "共 7 个年度目标，按目标数统计，不代表产品完成百分比。"
         },
         {
           "id": "b0136",
           "section": "需要你关注与配合 2",
           "type": "heading",
-          "line": 607,
+          "line": 612,
           "text": "需要你关注与配合 2"
         },
         {
           "id": "b0137",
           "section": "FFF 尚不能收款，平台发布门槛未关闭",
           "type": "heading",
-          "line": 610,
+          "line": 615,
           "text": "FFF 尚不能收款，平台发布门槛未关闭"
         },
         {
           "id": "b0138",
           "section": "FFF 尚不能收款，平台发布门槛未关闭",
           "type": "p",
-          "line": 611,
+          "line": 616,
           "text": "先接通四条交易链路并合入主线，各平台固定产物、验证购买路径和连接，再按 Android → Windows → macOS/iOS 发布。"
         },
         {
           "id": "b0139",
           "section": "等待 Lex 汇报 Flutter 正式进度",
           "type": "heading",
-          "line": 614,
+          "line": 619,
           "text": "等待 Lex 汇报 Flutter 正式进度"
         },
         {
           "id": "b0140",
           "section": "等待 Lex 汇报 Flutter 正式进度",
           "type": "p",
-          "line": 615,
+          "line": 620,
           "text": "11-04 的 FFF 内容是源码对账，不是 Lex 的进度报告；原定 10月完成的连接基础目标已过期，需要新日期。"
         },
         {
           "id": "b0141",
           "section": "本期完成 · 10-10 至 11-05 1",
           "type": "heading",
-          "line": 620,
+          "line": 625,
           "text": "本期完成 · 10-10 至 11-05 1"
         },
         {
           "id": "b0142",
           "section": "目标进度 7",
           "type": "heading",
-          "line": 630,
+          "line": 635,
           "text": "目标进度 7"
         },
         {
           "id": "b0143",
           "section": "目标进度 7",
           "type": "p",
-          "line": 632,
+          "line": 637,
           "text": "独立后端与数据边界"
         },
         {
           "id": "b0144",
           "section": "目标进度 7",
           "type": "details-summary",
-          "line": 634,
+          "line": 639,
           "text": "G14 独立 GitLab repo 与 staging 后端 待开发"
         },
         {
           "id": "b0145",
           "section": "目标进度 7",
           "type": "p",
-          "line": 636,
+          "line": 641,
           "text": "决策已定，待执行"
         },
         {
           "id": "b0146",
           "section": "目标进度 7",
           "type": "p",
-          "line": 637,
+          "line": 642,
           "text": "要求复用成熟源码基线，但隔离 FFF 与 Arrowfish 的运行环境、数据库、账号、Redis、凭证和迁移历史；没有交付证据。"
         },
         {
           "id": "b0147",
           "section": "目标进度 7",
           "type": "p",
-          "line": 638,
+          "line": 643,
           "text": "最新： FFF 独立运行环境、账户和数据隔离仍须单独验证。"
         },
         {
           "id": "b0148",
           "section": "目标进度 7",
           "type": "p",
-          "line": 639,
+          "line": 644,
           "text": "下一步： 建立独立 repo、CI/CD、后端、数据库与 Redis，以合成数据完成核心流程验收。"
         },
         {
           "id": "b0149",
           "section": "目标进度 7",
           "type": "details-summary",
-          "line": 644,
+          "line": 649,
           "text": "G15 FFF 专属 schema、API 与模块重构 待开发"
         },
         {
           "id": "b0150",
           "section": "目标进度 7",
           "type": "p",
-          "line": 646,
+          "line": 651,
           "text": "隔离验收后开始"
         },
         {
           "id": "b0151",
           "section": "目标进度 7",
           "type": "p",
-          "line": 647,
+          "line": 652,
           "text": "没有 FFF 独立环境中的 schema、API 与模块重构交付证据。"
         },
         {
           "id": "b0152",
           "section": "目标进度 7",
           "type": "p",
-          "line": 648,
+          "line": 653,
           "text": "下一步： G14 验收后建立独立迁移历史，再按 FFF 需求重构。"
         },
         {
           "id": "b0153",
           "section": "目标进度 7",
           "type": "p",
-          "line": 652,
+          "line": 657,
           "text": "Android 首发闭环"
         },
         {
           "id": "b0154",
           "section": "目标进度 7",
           "type": "details-summary",
-          "line": 654,
+          "line": 659,
           "text": "G10 连接基础、自动选线与协议回归 已延误 进行中"
         },
         {
           "id": "b0155",
           "section": "目标进度 7",
           "type": "p",
-          "line": 656,
+          "line": 661,
           "text": "核心实现已推进，跨端验收未关闭"
         },
         {
           "id": "b0156",
           "section": "目标进度 7",
           "type": "p",
-          "line": 657,
+          "line": 662,
           "text": "10月9日 Lex 报告连接、选线、测速与阻断已有实现；Apple 两处修复 9月28日提交在独立分支，尚未整合。"
         },
         {
           "id": "b0157",
           "section": "目标进度 7",
           "type": "p",
-          "line": 658,
+          "line": 663,
           "text": "最新： 正式完成度仍待 Lex 报告与验收证据。"
         },
         {
           "id": "b0158",
           "section": "目标进度 7",
           "type": "p",
-          "line": 659,
+          "line": 664,
           "text": "原因： 原目标 10月已过；当前完成日期待确认。"
         },
         {
           "id": "b0159",
           "section": "目标进度 7",
           "type": "p",
-          "line": 660,
+          "line": 665,
           "text": "下一步： 整合 Apple 修复，固定各平台测试产物，完成选线、连接、断开、重连验收。"
         },
         {
           "id": "b0160",
           "section": "目标进度 7",
           "type": "details-summary",
-          "line": 665,
+          "line": 670,
           "text": "G12 支付接口与支付闭环 有风险 进行中"
         },
         {
           "id": "b0161",
           "section": "目标进度 7",
           "type": "p",
-          "line": 667,
+          "line": 672,
           "text": "交易链路重构中，尚不能收款"
         },
         {
           "id": "b0162",
           "section": "目标进度 7",
           "type": "p",
-          "line": 668,
+          "line": 673,
           "text": "10月9日 Lex 报告充值、基底套餐、独享专线与独享 IP 购买正随支付及订阅 API 重构；Roy 负责支付网关商务。"
         },
         {
           "id": "b0163",
           "section": "目标进度 7",
           "type": "p",
-          "line": 669,
+          "line": 674,
           "text": "最新： 源码对账：已有套餐购买、余额支付、充值和支付事件代码；独享专线与独享 IP 下单接线未合入主线，接口检查仍列出错误。"
         },
         {
           "id": "b0164",
           "section": "目标进度 7",
           "type": "p",
-          "line": 670,
+          "line": 675,
           "text": "风险： App 尚不能收款，是首发门槛。"
         },
         {
           "id": "b0165",
           "section": "目标进度 7",
           "type": "p",
-          "line": 671,
+          "line": 676,
           "text": "下一步： 接通四条交易链路，验证支付成功／失败、订单核对、重复事件以及余额与权益。"
         },
         {
           "id": "b0166",
           "section": "目标进度 7",
           "type": "details-summary",
-          "line": 676,
+          "line": 681,
           "text": "G16 多跳 VPN（入口／出口双节点） 待开发"
         },
         {
           "id": "b0167",
           "section": "目标进度 7",
           "type": "p",
-          "line": 678,
+          "line": 683,
           "text": "范围已确认，待开发"
         },
         {
           "id": "b0168",
           "section": "目标进度 7",
           "type": "p",
-          "line": 679,
+          "line": 684,
           "text": "套餐和用户资料已有多跳资格字段，但客户端没有入口、出口节点与连接链。"
         },
         {
           "id": "b0169",
           "section": "目标进度 7",
           "type": "p",
-          "line": 680,
+          "line": 685,
           "text": "下一步： 隧道核心链式拨号、后端拓扑与凭证、节点选择，并验证 Android 端到端连接。"
         },
         {
           "id": "b0170",
           "section": "目标进度 7",
           "type": "details-summary",
-          "line": 685,
+          "line": 690,
           "text": "G17 完整智能路由与分流策略 待开发"
         },
         {
           "id": "b0171",
           "section": "目标进度 7",
           "type": "p",
-          "line": 687,
+          "line": 692,
           "text": "配置基础存在，内核分流未接通"
         },
         {
           "id": "b0172",
           "section": "目标进度 7",
           "type": "p",
-          "line": 688,
+          "line": 693,
           "text": "客户端与服务端配置已有基础，但内核尚未接通规则解析与分流，实际仍按选中出口转发。"
         },
         {
           "id": "b0173",
           "section": "目标进度 7",
           "type": "p",
-          "line": 689,
+          "line": 694,
           "text": "下一步： 完成内核规则、版本化规则、分流 DNS 与失效保护，再按平台验收。"
         },
         {
           "id": "b0174",
           "section": "目标进度 7",
           "type": "p",
-          "line": 693,
+          "line": 698,
           "text": "多平台发布"
         },
         {
           "id": "b0175",
           "section": "目标进度 7",
           "type": "details-summary",
-          "line": 695,
+          "line": 700,
           "text": "G13 多平台顺序发布 已延误 进行中"
         },
         {
           "id": "b0176",
           "section": "目标进度 7",
           "type": "p",
-          "line": 697,
+          "line": 702,
           "text": "测试交付已记录，正式发布门槛未关闭"
         },
         {
           "id": "b0177",
           "section": "目标进度 7",
           "type": "p",
-          "line": 698,
+          "line": 703,
           "text": "8月28日 Android APK 交 QA；9月15日 Apple 未签名构建；9月20日 Windows staging 部署确认；10月7日后 Windows 打包脚本仍检查旧路径。"
         },
         {
           "id": "b0178",
           "section": "目标进度 7",
           "type": "p",
-          "line": 699,
+          "line": 704,
           "text": "最新： 11月2日一轮开发分支合并，之后仍有未合入主线的改动；发布以各平台购买路径与连接验收为前提，日期待确认。"
         },
         {
           "id": "b0179",
           "section": "目标进度 7",
           "type": "p",
-          "line": 700,
+          "line": 705,
           "text": "原因： Sprint 1 报告原定 6月下旬全平台发布；交易链路未接通、各平台验收未关闭，日期待确认。"
         },
         {
           "id": "b0180",
           "section": "目标进度 7",
           "type": "p",
-          "line": 701,
+          "line": 706,
           "text": "下一步： 修复 Windows 重出包；按 Android → Windows → macOS/iOS 顺序，各端分别完成签名、安装、连接与支付验收。"
         },
         {
           "id": "b0181",
           "section": "待办 9",
           "type": "heading",
-          "line": 708,
+          "line": 713,
           "text": "待办 9"
         },
         {
           "id": "b0182",
           "section": "待办 9",
           "type": "p",
-          "line": 710,
+          "line": 715,
           "text": "G10 连接基础、自动选线与协议回归"
         },
         {
           "id": "b0183",
           "section": "待办 9",
           "type": "p",
-          "line": 727,
+          "line": 732,
           "text": "G13 多平台顺序发布"
         },
         {
           "id": "b0184",
           "section": "待办 9",
           "type": "p",
-          "line": 739,
+          "line": 744,
           "text": "G12 支付接口与支付闭环"
         },
         {
           "id": "b0185",
           "section": "待办 9",
           "type": "p",
-          "line": 750,
+          "line": 755,
           "text": "G14 独立 GitLab repo 与 staging 后端"
         },
         {
           "id": "b0186",
           "section": "待办 9",
           "type": "p",
-          "line": 756,
+          "line": 761,
           "text": "G17 完整智能路由与分流策略"
         },
         {
           "id": "b0187",
           "section": "待办 9",
           "type": "details-summary",
-          "line": 768,
+          "line": 773,
           "text": "判定规则"
         },
         {
           "id": "b0188",
           "section": "待办 9",
           "type": "p",
-          "line": 769,
+          "line": 774,
           "text": "目标、编号与状态取自年度目标看板，之后的新进展标为「最新」。目标数量不代表产品完成百分比。本期完成是 10-10 以来确认完成的事项；待办是仍未完成、且最近报告有提及的事项。"
         },
         {
           "id": "b0189",
           "section": "待办 9",
           "type": "p",
-          "line": 770,
+          "line": 775,
           "text": "已延误：报告写明延迟，或目标日期已过仍未完成；报告没写原因时显示「原因待补」。有风险：报告写明的风险或未关闭的最高优先项。主动发现：团队在开发、审计或核对中自行发现并上报的问题。"
         }
       ]

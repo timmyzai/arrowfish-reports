@@ -493,12 +493,13 @@ def validation_errors(report: dict, extracted: dict, existing: dict | None) -> l
         f'data-report-id="{report["id"]}"': "report ID",
         "assets/ui-i18n.js": "shared UI catalogue",
         "assets/site-preferences.js": "shared preferences runtime",
-        "assets/site-theme.css": "shared theme",
         "data-report-header": "semantic report header",
     }
     for marker, label in required_markup.items():
         if marker not in source_html:
             errors.append(f"{report['id']} is missing its {label} wiring")
+    if "assets/site-theme.css" not in source_html and "data-own-theme" not in source_html:
+        errors.append(f"{report['id']} is missing its shared theme wiring")
     svg_text = re.findall(r"<text\b[^>]*>([\s\S]*?)</text>", source_html, flags=re.IGNORECASE)
     if any(CJK_RE.search(re.sub(r"<[^>]+>", "", value)) for value in svg_text):
         errors.append(f"{report['id']} contains translatable SVG <text>, which is not supported")
@@ -701,7 +702,7 @@ def command_wire(_: argparse.Namespace) -> int:
                 updated = updated[:viewport.end()] + "\n" + preference_assets + updated[viewport.end():]
             else:
                 updated = updated.replace("<head>", "<head>\n" + preference_assets, 1)
-        if "../../assets/site-theme.css" not in updated:
+        if "../../assets/site-theme.css" not in updated and "data-own-theme" not in updated:
             updated = updated.replace(
                 "</head>",
                 '  <link rel="stylesheet" href="../../assets/site-theme.css">\n</head>',

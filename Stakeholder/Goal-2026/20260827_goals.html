@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-CN" data-report-id="goal-2026-20260827">
+<html lang="zh-CN" data-report-id="goal-2026-20260827" data-own-theme>
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +8,6 @@
   <meta name="robots" content="noindex, nofollow">
   <meta name="description" content="Arrowfish 与 FFF 项目进度报告，资料截至 2026-11-05：年度目标进度、需要配合的事项、本期完成与待办。">
   <title>项目进度报告 · 资料截至 2026-11-05</title>
-  <link rel="stylesheet" href="../../assets/site-theme.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap">
@@ -158,6 +157,12 @@ footer details p { margin: 8px 0 0; }
 @media (prefers-reduced-motion: no-preference) {
   .switch button, .goal summary { transition: background-color .15s, color .15s; }
 }
+.preference-controls { order: -1; width: 100%; display: flex; justify-content: flex-end; gap: 8px; }
+.preference-button { display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; padding: 0; border: 1px solid var(--line); border-radius: 10px; background: var(--surface); color: var(--muted); cursor: pointer; }
+.preference-button svg { width: 20px; height: 20px; }
+.preference-button:hover { color: var(--accent); background: var(--accent-soft); border-color: var(--accent); }
+.preference-button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.ai-report-highlight { outline: 3px solid var(--risk) !important; outline-offset: 4px !important; background: var(--risk-soft) !important; border-radius: 4px; scroll-margin-block: 24px; }
 </style>
 </head>
 <body>

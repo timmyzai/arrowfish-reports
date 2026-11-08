@@ -14376,1323 +14376,1323 @@
           "id": "b0001",
           "section": "Report overview",
           "type": "p",
-          "line": 167,
+          "line": 172,
           "text": "Arrowfish · FFF"
         },
         {
           "id": "b0002",
           "section": "Report overview",
           "type": "heading",
-          "line": 168,
+          "line": 173,
           "text": "Progress Report"
         },
         {
           "id": "b0003",
           "section": "Report overview",
           "type": "p",
-          "line": 169,
+          "line": 174,
           "text": "Data through 2026-11-05 · Next update 11-17 (Tuesday), which will add committed dates for every goal"
         },
         {
           "id": "b0004",
           "section": "Report overview",
           "type": "p",
-          "line": 179,
+          "line": 184,
           "text": "Android 3.9.48 passed QA on 11-04 and was submitted to Google Play review (originally 11-03; QA found an issue at the last minute and it was fixed the same day). The business recovered after the move to AWS on 10-14. After approval we set a maintenance date and deploy the backend to production; the disaster recovery drill is still to be scheduled."
         },
         {
           "id": "b0005",
           "section": "Report overview",
           "type": "p",
-          "line": 182,
+          "line": 187,
           "text": "21 annual goals in total, counted by goal; not a product completion percentage."
         },
         {
           "id": "b0006",
           "section": "Needs Your Attention and Support 4",
           "type": "heading",
-          "line": 186,
+          "line": 191,
           "text": "Needs Your Attention and Support 4"
         },
         {
           "id": "b0007",
           "section": "Production recovery capability is not yet verified",
           "type": "heading",
-          "line": 189,
+          "line": 194,
           "text": "Production recovery capability is not yet verified"
         },
         {
           "id": "b0008",
           "section": "Production recovery capability is not yet verified",
           "type": "p",
-          "line": 190,
+          "line": 195,
           "text": "Moving to AWS on October 14 restored the business, but independent account backup access and an off-site restore drill still have no result. A real drill window needs to be scheduled and the recovery result recorded."
         },
         {
           "id": "b0009",
           "section": "Set a maintenance date after Google approval, then deploy the backend to production",
           "type": "heading",
-          "line": 193,
+          "line": 198,
           "text": "Set a maintenance date after Google approval, then deploy the backend to production"
         },
         {
           "id": "b0010",
           "section": "Set a maintenance date after Google approval, then deploy the backend to production",
           "type": "p",
-          "line": 194,
+          "line": 199,
           "text": "Android 3.9.48 has been submitted to Google Play review. After approval we set and announce a maintenance date, then deploy the backend to production during maintenance, which activates the cancellation, referrer and downgrade fixes. Before deployment, the scheduler and Back Office (BO) must also move to the shared component version used by the API."
         },
         {
           "id": "b0011",
           "section": "Dedicated line / IP purchases rely on manual setup",
           "type": "heading",
-          "line": 197,
+          "line": 202,
           "text": "Dedicated line / IP purchases rely on manual setup"
         },
         {
           "id": "b0012",
           "section": "Dedicated line / IP purchases rely on manual setup",
           "type": "p",
-          "line": 198,
+          "line": 203,
           "text": "Validity starts as soon as the user pays, but VPN nodes must be bought and set up manually by operations, with no spare VPN nodes. The slower the setup, the more time users lose. We suggest a setup time limit for operations."
         },
         {
           "id": "b0013",
           "section": "Release status of the official website and ad site not updated",
           "type": "heading",
-          "line": 201,
+          "line": 206,
           "text": "Release status of the official website and ad site not updated"
         },
         {
           "id": "b0014",
           "section": "Release status of the official website and ad site not updated",
           "type": "p",
-          "line": 202,
+          "line": 207,
           "text": "As of 10-09 the main site was scheduled for production on October 13 and the ad site had awaited external review since September 25; the 11-04 report gives no result for either."
         },
         {
           "id": "b0015",
           "section": "Completed This Period · 10-10 to 11-05 12",
           "type": "heading",
-          "line": 207,
+          "line": 212,
           "text": "Completed This Period · 10-10 to 11-05 12"
         },
         {
           "id": "b0016",
           "section": "Goal Progress 21",
           "type": "heading",
-          "line": 272,
+          "line": 277,
           "text": "Goal Progress 21"
         },
         {
           "id": "b0017",
           "section": "Goal Progress 21",
           "type": "p",
-          "line": 274,
+          "line": 279,
           "text": "Takeover, architecture and engineering governance"
         },
         {
           "id": "b0018",
           "section": "Goal Progress 21",
           "type": "details-summary",
-          "line": 276,
+          "line": 281,
           "text": "G10 Full-system takeover, architecture mapping, and modular refactoring In Progress"
         },
         {
           "id": "b0019",
           "section": "Goal Progress 21",
           "type": "p",
-          "line": 278,
+          "line": 283,
           "text": "Lifecycle and layering consolidation in progress"
         },
         {
           "id": "b0020",
           "section": "Goal Progress 21",
           "type": "p",
-          "line": 279,
+          "line": 284,
           "text": "Unified membership lifecycle and timing model, moved Back Office (BO) settings out of runtime services, merged payment ledger tables, removed old client paths."
         },
         {
           "id": "b0021",
           "section": "Goal Progress 21",
           "type": "p",
-          "line": 280,
+          "line": 285,
           "text": "Latest: Unifying shared component versions across services is still pending; the backend must remain compatible with upgradable Android and older iOS and Windows clients still in use."
         },
         {
           "id": "b0022",
           "section": "Goal Progress 21",
           "type": "p",
-          "line": 281,
+          "line": 286,
           "text": "Next step: Complete cross-platform purchase and startup contract verification, then retire old APIs one by one based on usage evidence."
         },
         {
           "id": "b0023",
           "section": "Goal Progress 21",
           "type": "details-summary",
-          "line": 286,
+          "line": 291,
           "text": "G12 Security, no-logs, and least-privilege governance In Progress"
         },
         {
           "id": "b0024",
           "section": "Goal Progress 21",
           "type": "p",
-          "line": 288,
+          "line": 293,
           "text": "Connection and VPN node security under validation"
         },
         {
           "id": "b0025",
           "section": "Goal Progress 21",
           "type": "p",
-          "line": 289,
+          "line": 294,
           "text": "VPN node credential isolation, output masking, DNS anomaly blocking; one SSH allowlist; payment keys now supplied per environment by Key Vault; external source access disabled October 1."
         },
         {
           "id": "b0026",
           "section": "Goal Progress 21",
           "type": "p",
-          "line": 290,
+          "line": 295,
           "text": "Latest: October 30 deployment security hardening: short-lived identities, protected deployment runners, tighter permissions, and removal of old staging SSH deployment settings. The current source-access list is to be confirmed."
         },
         {
           "id": "b0027",
           "section": "Goal Progress 21",
           "type": "p",
-          "line": 291,
+          "line": 296,
           "text": "Next step: Complete live VPN node, reboot and leak acceptance testing; document access reviews, production credentials and network boundaries separately."
         },
         {
           "id": "b0028",
           "section": "Goal Progress 21",
           "type": "details-summary",
-          "line": 296,
+          "line": 301,
           "text": "G13 CI/CD, automated testing, and end-to-end observability In Progress"
         },
         {
           "id": "b0029",
           "section": "Goal Progress 21",
           "type": "p",
-          "line": 298,
+          "line": 303,
           "text": "Test delivery operating continuously"
         },
         {
           "id": "b0030",
           "section": "Goal Progress 21",
           "type": "p",
-          "line": 299,
+          "line": 304,
           "text": "Android test releases: 3 in Sprint 11, 6 in Sprint 12, 3 in Sprint 13; staging log collection enabled; GitLab upgraded to 19.4.1."
         },
         {
           "id": "b0031",
           "section": "Goal Progress 21",
           "type": "p",
-          "line": 300,
+          "line": 305,
           "text": "Latest: Configuration files now ship with each release; the new flow removed the manual rollback job, so old pipeline results cannot stand in for verifying the new recovery flow."
         },
         {
           "id": "b0032",
           "section": "Goal Progress 21",
           "type": "p",
-          "line": 301,
+          "line": 306,
           "text": "Next step: Complete signed builds, install/upgrade, rollback and deployment version mapping for each platform."
         },
         {
           "id": "b0033",
           "section": "Goal Progress 21",
           "type": "details-summary",
-          "line": 306,
+          "line": 311,
           "text": "G17 Production resilience, monitoring, off-site backup, and recovery At Risk In Progress"
         },
         {
           "id": "b0034",
           "section": "Goal Progress 21",
           "type": "p",
-          "line": 308,
+          "line": 313,
           "text": "Integrated and High-Risk Not Closed"
         },
         {
           "id": "b0035",
           "section": "Goal Progress 21",
           "type": "p",
-          "line": 309,
+          "line": 314,
           "text": "Read replica and VPN node health state machine in place; production consolidated on August 12; backup and recovery runbook finished October 6, drill not yet run."
         },
         {
           "id": "b0036",
           "section": "Goal Progress 21",
           "type": "p",
-          "line": 310,
+          "line": 315,
           "text": "Latest: After the Azure outage the backend moved to AWS on October 14; the team reports about 2.5 hours to recover with no data loss (not re-measured). Independent account backup access and the off-site restore drill still have no result."
         },
         {
           "id": "b0037",
           "section": "Goal Progress 21",
           "type": "p",
-          "line": 311,
+          "line": 316,
           "text": "Risk: Highest open risk: recovery capability has no drill evidence."
         },
         {
           "id": "b0038",
           "section": "Goal Progress 21",
           "type": "p",
-          "line": 312,
+          "line": 317,
           "text": "Next step: Set up an off-site copy, run a real restore drill, and record RTO, data integrity and failback steps."
         },
         {
           "id": "b0039",
           "section": "Goal Progress 21",
           "type": "details-summary",
-          "line": 317,
+          "line": 322,
           "text": "G19 Traceable production release and user-availability acceptance testing In Progress"
         },
         {
           "id": "b0040",
           "section": "Goal Progress 21",
           "type": "p",
-          "line": 319,
+          "line": 324,
           "text": "Staging releases documented; production acceptance separate"
         },
         {
           "id": "b0041",
           "section": "Goal Progress 21",
           "type": "p",
-          "line": 320,
+          "line": 325,
           "text": "Production consolidated August 12; Android test releases recorded; China and Taiwan connection confirmed once on September 7; Android 3.9.26 delivered to staging testing October 9."
         },
         {
           "id": "b0042",
           "section": "Goal Progress 21",
           "type": "p",
-          "line": 321,
+          "line": 326,
           "text": "Latest: 11-04: Android 3.9.48 passed QA and was submitted to Google Play review. After approval we set a maintenance date and deploy the backend to production; the last backend production release in GitLab records is v3.3.26 on August 21."
         },
         {
           "id": "b0043",
           "section": "Goal Progress 21",
           "type": "p",
-          "line": 322,
+          "line": 327,
           "text": "Next step: Map client versions, backend versions, migrations, purchase and connection results, and complete post-release checks for each real production release."
         },
         {
           "id": "b0044",
           "section": "Goal Progress 21",
           "type": "p",
-          "line": 326,
+          "line": 331,
           "text": "VPN core, VPN nodes and network capabilities"
         },
         {
           "id": "b0045",
           "section": "Goal Progress 21",
           "type": "details-summary",
-          "line": 328,
+          "line": 333,
           "text": "G5 Automated Deployment and Management of VPN nodes In Progress"
         },
         {
           "id": "b0046",
           "section": "Goal Progress 21",
           "type": "p",
-          "line": 330,
+          "line": 335,
           "text": "VPN node operations and safeguards progressing"
         },
         {
           "id": "b0047",
           "section": "Goal Progress 21",
           "type": "p",
-          "line": 331,
+          "line": 336,
           "text": "Back Office (BO) VPN node management split, region naming, install locks, firewall tasks, assignment and retirement protection; one batch setting for VM tasks."
         },
         {
           "id": "b0048",
           "section": "Goal Progress 21",
           "type": "p",
-          "line": 332,
+          "line": 337,
           "text": "Latest: On October 18 the VPN node recovery check passed local verification and staging deployment."
         },
         {
           "id": "b0049",
           "section": "Goal Progress 21",
           "type": "p",
-          "line": 333,
+          "line": 338,
           "text": "Next step: Complete real VPN node, restart and client connection acceptance testing, then automate purchase-to-assignment."
         },
         {
           "id": "b0050",
           "section": "Goal Progress 21",
           "type": "details-summary",
-          "line": 338,
+          "line": 343,
           "text": "G7 Three-protocol implementation, full rollout and China acceptance testing In Progress"
         },
         {
           "id": "b0051",
           "section": "Goal Progress 21",
           "type": "p",
-          "line": 340,
+          "line": 345,
           "text": "Test connectivity progressed; full acceptance remains open"
         },
         {
           "id": "b0052",
           "section": "Goal Progress 21",
           "type": "p",
-          "line": 341,
+          "line": 346,
           "text": "China and Taiwan test connections confirmed September 7; ShadowTLS narrowed to Shadowsocks 2022 only. The 34 three-protocol servers figure is still an August snapshot."
         },
         {
           "id": "b0053",
           "section": "Goal Progress 21",
           "type": "p",
-          "line": 342,
+          "line": 347,
           "text": "Next step: Complete three-protocol, full VPN node, cross-platform and China acceptance testing against specific versions."
         },
         {
           "id": "b0054",
           "section": "Goal Progress 21",
           "type": "details-summary",
-          "line": 347,
+          "line": 352,
           "text": "G8 Unbound Private DNS Delayed In Progress"
         },
         {
           "id": "b0055",
           "section": "Goal Progress 21",
           "type": "p",
-          "line": 349,
+          "line": 354,
           "text": "Resolver path implemented; runtime acceptance pending"
         },
         {
           "id": "b0056",
           "section": "Goal Progress 21",
           "type": "p",
-          "line": 350,
+          "line": 355,
           "text": "VPN node recursive resolution, in-tunnel resolution, anomaly blocking and resolver responsibility fixes are implemented."
         },
         {
           "id": "b0057",
           "section": "Goal Progress 21",
           "type": "p",
-          "line": 351,
+          "line": 356,
           "text": "Reason: Originally August; the goal dashboard says it is now in runtime verification, with no new date."
         },
         {
           "id": "b0058",
           "section": "Goal Progress 21",
           "type": "p",
-          "line": 352,
+          "line": 357,
           "text": "Next step: Complete VPN node reconfiguration, reboot, cache and real-device leak acceptance testing."
         },
         {
           "id": "b0059",
           "section": "Goal Progress 21",
           "type": "details-summary",
-          "line": 357,
+          "line": 362,
           "text": "G21 Smart routing and direct access to China sites To Develop"
         },
         {
           "id": "b0060",
           "section": "Goal Progress 21",
           "type": "p",
-          "line": 359,
+          "line": 364,
           "text": "Goal confirmed; development pending"
         },
         {
           "id": "b0061",
           "section": "Goal Progress 21",
           "type": "p",
-          "line": 360,
+          "line": 365,
           "text": "Decided on August 28 to add this to Arrowfish: China users reach China websites directly, other public traffic stays on the VPN. No implementation or deployment record yet."
         },
         {
           "id": "b0062",
           "section": "Goal Progress 21",
           "type": "p",
-          "line": 361,
+          "line": 366,
           "text": "Next step: Build China domain / IP rules and split DNS, validated first on Android."
         },
         {
           "id": "b0063",
           "section": "Goal Progress 21",
           "type": "details-summary",
-          "line": 366,
+          "line": 371,
           "text": "G6 SkyTunnel In-House Tunnel Completed"
         },
         {
           "id": "b0064",
           "section": "Goal Progress 21",
           "type": "p",
-          "line": 368,
+          "line": 373,
           "text": "Core completed"
         },
         {
           "id": "b0065",
           "section": "Goal Progress 21",
           "type": "p",
-          "line": 369,
+          "line": 374,
           "text": "The in-house tunnel core is delivered; Android replacement verified and Windows uses the shared core."
         },
         {
           "id": "b0066",
           "section": "Goal Progress 21",
           "type": "p",
-          "line": 370,
+          "line": 375,
           "text": "Next step: Keep regression testing; complete the Windows production release and Apple platform integration."
         },
         {
           "id": "b0067",
           "section": "Goal Progress 21",
           "type": "p",
-          "line": 374,
+          "line": 379,
           "text": "User eligibility, identity and revenue protection"
         },
         {
           "id": "b0068",
           "section": "Goal Progress 21",
           "type": "details-summary",
-          "line": 376,
+          "line": 381,
           "text": "G15 Unique Device Binding and Account Continuity At Risk In Progress"
         },
         {
           "id": "b0069",
           "section": "Goal Progress 21",
           "type": "p",
-          "line": 378,
+          "line": 383,
           "text": "New process effective, pending closure"
         },
         {
           "id": "b0070",
           "section": "Goal Progress 21",
           "type": "p",
-          "line": 379,
+          "line": 384,
           "text": "Week of May 25: device binding rate 83.08% → 93.61%; shared device ID rate 21.73% → 2.59%."
         },
         {
           "id": "b0071",
           "section": "Goal Progress 21",
           "type": "p",
-          "line": 380,
+          "line": 385,
           "text": "Risk: Device identifier and cross-version compatibility verification not closed; listed as top priority."
         },
         {
           "id": "b0072",
           "section": "Goal Progress 21",
           "type": "p",
-          "line": 381,
+          "line": 386,
           "text": "Next step: Close identity header, production CORS and Android / Windows compatibility verification, then clean up historical relationships."
         },
         {
           "id": "b0073",
           "section": "Goal Progress 21",
           "type": "details-summary",
-          "line": 386,
+          "line": 391,
           "text": "G2 Renewal and Subscription Management In Progress"
         },
         {
           "id": "b0074",
           "section": "Goal Progress 21",
           "type": "p",
-          "line": 388,
+          "line": 393,
           "text": "Main flow in testing; fixes awaiting acceptance testing"
         },
         {
           "id": "b0075",
           "section": "Goal Progress 21",
           "type": "p",
-          "line": 389,
+          "line": 394,
           "text": "Rules confirmed October 1; main flow implemented October 5 and moved to testing; Android 3.9.26 delivered to staging testing on October 9."
         },
         {
           "id": "b0076",
           "section": "Goal Progress 21",
           "type": "p",
-          "line": 390,
+          "line": 395,
           "text": "Latest: Added pending-order resume payment, payment method switch, plan conversion and refund edge cases; remaining entitlement kept after turning off auto-renew; dedicated-resource renewal and commission statistics fixed. On 11-04 the false error on mobile subscription cancellation and the queued downgrade not being cancelled after turning off renewal were fixed. Real payment and callback acceptance testing to be confirmed."
         },
         {
           "id": "b0077",
           "section": "Goal Progress 21",
           "type": "p",
-          "line": 391,
+          "line": 396,
           "text": "Next step: After unifying service versions, verify Google new purchase, auto-renew off, delayed downgrade, duplicate callbacks and dedicated-resource renewal."
         },
         {
           "id": "b0078",
           "section": "Goal Progress 21",
           "type": "details-summary",
-          "line": 396,
+          "line": 401,
           "text": "G4 Siqo Multi-Platform Payment In Progress"
         },
         {
           "id": "b0079",
           "section": "Goal Progress 21",
           "type": "p",
-          "line": 398,
+          "line": 403,
           "text": "Settlement basis unified, channel gaps still outstanding"
         },
         {
           "id": "b0080",
           "section": "Goal Progress 21",
           "type": "p",
-          "line": 399,
+          "line": 404,
           "text": "Android staging integration done; currency catalog split into fiat and crypto; 15 Google, Apple and Stripe integration gaps listed, not yet all resolved."
         },
         {
           "id": "b0081",
           "section": "Goal Progress 21",
           "type": "p",
-          "line": 400,
+          "line": 405,
           "text": "Next step: Close the listed channel gaps, then integrate, regression-test and release platform by platform."
         },
         {
           "id": "b0082",
           "section": "Goal Progress 21",
           "type": "details-summary",
-          "line": 405,
+          "line": 410,
           "text": "G14 Back Office Authority Quota, Timing and Session Completed"
         },
         {
           "id": "b0083",
           "section": "Goal Progress 21",
           "type": "p",
-          "line": 407,
+          "line": 412,
           "text": "Core completed"
         },
         {
           "id": "b0084",
           "section": "Goal Progress 21",
           "type": "p",
-          "line": 408,
+          "line": 413,
           "text": "Zero accounts or devices with multiple ACTIVE sessions; highest monthly traffic of non-paying users 1,216.7 GiB → 39.0 GiB."
         },
         {
           "id": "b0085",
           "section": "Goal Progress 21",
           "type": "p",
-          "line": 409,
+          "line": 414,
           "text": "Next step: Keep monitoring, and add auditable snapshots for Redis quotas."
         },
         {
           "id": "b0086",
           "section": "Goal Progress 21",
           "type": "p",
-          "line": 413,
+          "line": 418,
           "text": "Multi-platform product and usability"
         },
         {
           "id": "b0087",
           "section": "Goal Progress 21",
           "type": "details-summary",
-          "line": 415,
+          "line": 420,
           "text": "G20 Seven-platform simplified UI and advanced protocol mode Delayed In Progress"
         },
         {
           "id": "b0088",
           "section": "Goal Progress 21",
           "type": "p",
-          "line": 417,
+          "line": 422,
           "text": "Android simplification in progress; cross-client validation pending"
         },
         {
           "id": "b0089",
           "section": "Goal Progress 21",
           "type": "p",
-          "line": 418,
+          "line": 423,
           "text": "Simplified UI with single-IP display chosen September 18; Android layout updated with empty payment state, offline message and dedicated-line flags; Windows followed on September 21."
         },
         {
           "id": "b0090",
           "section": "Goal Progress 21",
           "type": "p",
-          "line": 419,
+          "line": 424,
           "text": "Reason: Originally 08-31 to 09-04; the goal dashboard says development and validation continued as of September 18, with no new date."
         },
         {
           "id": "b0091",
           "section": "Goal Progress 21",
           "type": "p",
-          "line": 420,
+          "line": 425,
           "text": "Next step: Verify simplified mode and single-IP display, then align Windows and Apple."
         },
         {
           "id": "b0092",
           "section": "Goal Progress 21",
           "type": "details-summary",
-          "line": 425,
+          "line": 430,
           "text": "G9 New Company Entity Migration In Progress"
         },
         {
           "id": "b0093",
           "section": "Goal Progress 21",
           "type": "p",
-          "line": 427,
+          "line": 432,
           "text": "Google platform done; Huawei, Samsung and OPPO in progress. Handover finished September 30; external GitLab access disabled October 1."
         },
         {
           "id": "b0094",
           "section": "Goal Progress 21",
           "type": "p",
-          "line": 428,
+          "line": 433,
           "text": "Next step: Complete migration of the legal entity, accounts, and publishing eligibility one platform at a time."
         },
         {
           "id": "b0095",
           "section": "Goal Progress 21",
           "type": "details-summary",
-          "line": 433,
+          "line": 438,
           "text": "G11 iOS and macOS Apple Platform Recovery In Progress"
         },
         {
           "id": "b0096",
           "section": "Goal Progress 21",
           "type": "p",
-          "line": 435,
+          "line": 440,
           "text": "TestFlight progressed; device and store acceptance pending"
         },
         {
           "id": "b0097",
           "section": "Goal Progress 21",
           "type": "p",
-          "line": 436,
+          "line": 441,
           "text": "Test build reached valid TestFlight status on August 24; payment pop-up, web checkout and purchase restore fixed. No new App Store release decision."
         },
         {
           "id": "b0098",
           "section": "Goal Progress 21",
           "type": "p",
-          "line": 437,
+          "line": 442,
           "text": "Next step: Complete iOS real-device purchase, connection, upgrade and App Store acceptance testing; macOS proceeds separately."
         },
         {
           "id": "b0099",
           "section": "Goal Progress 21",
           "type": "details-summary",
-          "line": 442,
+          "line": 447,
           "text": "G16 Windows Cloud Signature and Official Website Resume Release In Progress"
         },
         {
           "id": "b0100",
           "section": "Goal Progress 21",
           "type": "p",
-          "line": 444,
+          "line": 449,
           "text": "Signing foundation established; subscription and connection validation ongoing"
         },
         {
           "id": "b0101",
           "section": "Goal Progress 21",
           "type": "p",
-          "line": 445,
+          "line": 450,
           "text": "Cloud signing ready; subscription APIs, quotas and kill switch aligned; on staging since September 21."
         },
         {
           "id": "b0102",
           "section": "Goal Progress 21",
           "type": "p",
-          "line": 446,
+          "line": 451,
           "text": "Latest: On October 11, 5 contract fixes for membership level, expiry time, line data, purchase options and diagnostic fields were released in code; installer and real-device acceptance testing to be confirmed."
         },
         {
           "id": "b0103",
           "section": "Goal Progress 21",
           "type": "p",
-          "line": 447,
+          "line": 452,
           "text": "Next step: Complete clean-machine signed installation, purchase, connectivity, upgrade and uninstall acceptance testing before website release."
         },
         {
           "id": "b0104",
           "section": "Goal Progress 21",
           "type": "p",
-          "line": 451,
+          "line": 456,
           "text": "Growth, conversion and market entry points"
         },
         {
           "id": "b0105",
           "section": "Goal Progress 21",
           "type": "details-summary",
-          "line": 453,
+          "line": 458,
           "text": "G1 Ad Attribution and Pay-Per-Click Analysis In Progress"
         },
         {
           "id": "b0106",
           "section": "Goal Progress 21",
           "type": "p",
-          "line": 455,
+          "line": 460,
           "text": "Attribution and visit statistics fixes in progress"
         },
         {
           "id": "b0107",
           "section": "Goal Progress 21",
           "type": "p",
-          "line": 456,
+          "line": 461,
           "text": "Signed attribution tokens, cross-page hand-off, visit counts and Back Office (BO) display fixed; no new production coverage check yet."
         },
         {
           "id": "b0108",
           "section": "Goal Progress 21",
           "type": "p",
-          "line": 457,
+          "line": 462,
           "text": "Latest: Share links, downloads and account referrer hand-off fixed across platforms; on 11-04 the missing referrer after channel-link download and passwordless sign-in was fixed. Actual acquisition conversion to be confirmed."
         },
         {
           "id": "b0109",
           "section": "Goal Progress 21",
           "type": "p",
-          "line": 458,
+          "line": 463,
           "text": "Next step: Complete install attribution, retry and concurrency verification, reconcile, then update coverage."
         },
         {
           "id": "b0110",
           "section": "Goal Progress 21",
           "type": "details-summary",
-          "line": 463,
+          "line": 468,
           "text": "G18 Sprint User Quality and Conversion Dashboard In Progress"
         },
         {
           "id": "b0111",
           "section": "Goal Progress 21",
           "type": "p",
-          "line": 465,
+          "line": 470,
           "text": "Statistics sources and presentation aligning"
         },
         {
           "id": "b0112",
           "section": "Goal Progress 21",
           "type": "p",
-          "line": 466,
+          "line": 471,
           "text": "Visit statistics and Back Office (BO) report sources fixed; no new revenue, activity or conversion query."
         },
         {
           "id": "b0113",
           "section": "Goal Progress 21",
           "type": "p",
-          "line": 467,
+          "line": 472,
           "text": "Latest: No new production check of revenue, cost or refund losses this period."
         },
         {
           "id": "b0114",
           "section": "Goal Progress 21",
           "type": "p",
-          "line": 468,
+          "line": 473,
           "text": "Next step: Check the statistics, then update the user quality, channel conversion and revenue dashboard."
         },
         {
           "id": "b0115",
           "section": "Goal Progress 21",
           "type": "details-summary",
-          "line": 473,
+          "line": 478,
           "text": "G3 Baidu Ad New Website At Risk In Progress"
         },
         {
           "id": "b0116",
           "section": "Goal Progress 21",
           "type": "p",
-          "line": 475,
+          "line": 480,
           "text": "Main site pending launch, placement site awaiting an external check"
         },
         {
           "id": "b0117",
           "section": "Goal Progress 21",
           "type": "p",
-          "line": 476,
+          "line": 481,
           "text": "Reference-site version chosen September 16 and corrected by September 23; on October 6 the ad agency noted it still said \"Jianyu IP Proxy\", now reviewed line by line; the ad site has awaited external review since September 25."
         },
         {
           "id": "b0118",
           "section": "Goal Progress 21",
           "type": "p",
-          "line": 477,
+          "line": 482,
           "text": "Latest: On October 15–16, 2 landing sites were released to production and passed HTTP smoke checks; the report does not say whether this includes the main site and ad site."
         },
         {
           "id": "b0119",
           "section": "Goal Progress 21",
           "type": "p",
-          "line": 478,
+          "line": 483,
           "text": "Risk: The 11-04 report does not say whether the main site went live on October 13 or whether the ad site received feedback."
         },
         {
           "id": "b0120",
           "section": "Goal Progress 21",
           "type": "p",
-          "line": 479,
+          "line": 484,
           "text": "Next step: Recheck the main site wording, then release it to production; deploy the ad site after external feedback."
         },
         {
           "id": "b0121",
           "section": "To-do 18",
           "type": "heading",
-          "line": 486,
+          "line": 491,
           "text": "To-do 18"
         },
         {
           "id": "b0122",
           "section": "To-do 18",
           "type": "p",
-          "line": 488,
+          "line": 493,
           "text": "G3 New Baidu advertising website"
         },
         {
           "id": "b0123",
           "section": "To-do 18",
           "type": "p",
-          "line": 501,
+          "line": 506,
           "text": "G17 Production resilience, monitoring, off-site backup and recovery"
         },
         {
           "id": "b0124",
           "section": "To-do 18",
           "type": "p",
-          "line": 508,
+          "line": 513,
           "text": "G15 Unique device binding and account continuity"
         },
         {
           "id": "b0125",
           "section": "To-do 18",
           "type": "p",
-          "line": 515,
+          "line": 520,
           "text": "G10 Full-system takeover, architecture mapping and modular refactoring"
         },
         {
           "id": "b0126",
           "section": "To-do 18",
           "type": "p",
-          "line": 526,
+          "line": 531,
           "text": "G2 Plan renewal and subscription management"
         },
         {
           "id": "b0127",
           "section": "To-do 18",
           "type": "p",
-          "line": 542,
+          "line": 547,
           "text": "G20 Simplified UI and advanced protocol mode on seven platforms"
         },
         {
           "id": "b0128",
           "section": "To-do 18",
           "type": "p",
-          "line": 548,
+          "line": 553,
           "text": "G11 iOS and macOS Apple platform recovery"
         },
         {
           "id": "b0129",
           "section": "To-do 18",
           "type": "p",
-          "line": 554,
+          "line": 559,
           "text": "G16 Windows cloud signing and official-website release"
         },
         {
           "id": "b0130",
           "section": "To-do 18",
           "type": "p",
-          "line": 560,
+          "line": 565,
           "text": "G1 Ad attribution and paid-user analysis"
         },
         {
           "id": "b0131",
           "section": "To-do 18",
           "type": "p",
-          "line": 566,
+          "line": 571,
           "text": "G19 Traceable production releases and user availability acceptance testing"
         },
         {
           "id": "b0132",
           "section": "To-do 18",
           "type": "p",
-          "line": 582,
+          "line": 587,
           "text": "G7 Three-protocol implementation, full rollout and China acceptance testing"
         },
         {
           "id": "b0133",
           "section": "To-do 18",
           "type": "p",
-          "line": 588,
+          "line": 593,
           "text": "G21 Smart routing with direct access to China websites"
         },
         {
           "id": "b0134",
           "section": "To-do 18",
           "type": "p",
-          "line": 600,
+          "line": 605,
           "text": "Flutter has plan purchase, balance payment, top-up and payment event code, but order wiring for dedicated lines and dedicated IPs is not yet merged into the main branch, so the app cannot collect payments yet; formal completion awaits Lex's report and acceptance testing evidence."
         },
         {
           "id": "b0135",
           "section": "To-do 18",
           "type": "p",
-          "line": 603,
+          "line": 608,
           "text": "7 annual goals in total, counted by goal; not a product completion percentage."
         },
         {
           "id": "b0136",
           "section": "Needs Your Attention and Support 2",
           "type": "heading",
-          "line": 607,
+          "line": 612,
           "text": "Needs Your Attention and Support 2"
         },
         {
           "id": "b0137",
           "section": "FFF cannot yet collect payments; platform release prerequisites remain open",
           "type": "heading",
-          "line": 610,
+          "line": 615,
           "text": "FFF cannot yet collect payments; platform release prerequisites remain open"
         },
         {
           "id": "b0138",
           "section": "FFF cannot yet collect payments; platform release prerequisites remain open",
           "type": "p",
-          "line": 611,
+          "line": 616,
           "text": "First connect the four purchase flows and merge them into the main branch, freeze builds per platform, verify purchase paths and connection, then release Android → Windows → macOS/iOS."
         },
         {
           "id": "b0139",
           "section": "Waiting for Lex's formal Flutter progress report",
           "type": "heading",
-          "line": 614,
+          "line": 619,
           "text": "Waiting for Lex's formal Flutter progress report"
         },
         {
           "id": "b0140",
           "section": "Waiting for Lex's formal Flutter progress report",
           "type": "p",
-          "line": 615,
+          "line": 620,
           "text": "The 11-04 FFF content is a source-code reconciliation, not Lex's progress report; the connection-foundation goal originally due in October has passed and needs a new date."
         },
         {
           "id": "b0141",
           "section": "Completed This Period · 10-10 to 11-05 1",
           "type": "heading",
-          "line": 620,
+          "line": 625,
           "text": "Completed This Period · 10-10 to 11-05 1"
         },
         {
           "id": "b0142",
           "section": "Goal Progress 7",
           "type": "heading",
-          "line": 630,
+          "line": 635,
           "text": "Goal Progress 7"
         },
         {
           "id": "b0143",
           "section": "Goal Progress 7",
           "type": "p",
-          "line": 632,
+          "line": 637,
           "text": "Independent backend and data boundary"
         },
         {
           "id": "b0144",
           "section": "Goal Progress 7",
           "type": "details-summary",
-          "line": 634,
+          "line": 639,
           "text": "G14 Independent GitLab repo and staging backend To Develop"
         },
         {
           "id": "b0145",
           "section": "Goal Progress 7",
           "type": "p",
-          "line": 636,
+          "line": 641,
           "text": "Decision Made, Pending Implementation"
         },
         {
           "id": "b0146",
           "section": "Goal Progress 7",
           "type": "p",
-          "line": 637,
+          "line": 642,
           "text": "Reuse the mature source baseline but isolate FFF from Arrowfish in runtime, database, accounts, Redis, credentials and migration history; no delivery evidence yet."
         },
         {
           "id": "b0147",
           "section": "Goal Progress 7",
           "type": "p",
-          "line": 638,
+          "line": 643,
           "text": "Latest: FFF independent runtime, accounts and data isolation still require separate verification."
         },
         {
           "id": "b0148",
           "section": "Goal Progress 7",
           "type": "p",
-          "line": 639,
+          "line": 644,
           "text": "Next step: Create an independent repo, CI/CD, backend, database and Redis, and complete core-flow acceptance testing with synthetic data."
         },
         {
           "id": "b0149",
           "section": "Goal Progress 7",
           "type": "details-summary",
-          "line": 644,
+          "line": 649,
           "text": "G15 FFF Exclusive Schema, API, and Module Rearchitecture Planned"
         },
         {
           "id": "b0150",
           "section": "Goal Progress 7",
           "type": "p",
-          "line": 646,
+          "line": 651,
           "text": "Start After Isolation Acceptance"
         },
         {
           "id": "b0151",
           "section": "Goal Progress 7",
           "type": "p",
-          "line": 647,
+          "line": 652,
           "text": "No delivery evidence yet for schema, API and module refactoring in an independent FFF environment."
         },
         {
           "id": "b0152",
           "section": "Goal Progress 7",
           "type": "p",
-          "line": 648,
+          "line": 653,
           "text": "Next step: After G14 acceptance testing, create a separate migration history and refactor for FFF requirements."
         },
         {
           "id": "b0153",
           "section": "Goal Progress 7",
           "type": "p",
-          "line": 652,
+          "line": 657,
           "text": "First Android release closure"
         },
         {
           "id": "b0154",
           "section": "Goal Progress 7",
           "type": "details-summary",
-          "line": 654,
+          "line": 659,
           "text": "G10 Connection foundation, automatic route selection, and protocol regression Delayed In Progress"
         },
         {
           "id": "b0155",
           "section": "Goal Progress 7",
           "type": "p",
-          "line": 656,
+          "line": 661,
           "text": "Core Implementation Progressed; Cross-platform Acceptance Remains Open"
         },
         {
           "id": "b0156",
           "section": "Goal Progress 7",
           "type": "p",
-          "line": 657,
+          "line": 662,
           "text": "On October 9 Lex reported connection, line selection, speed test and blocking are implemented; two Apple fixes submitted on September 28 sit on a separate branch, not yet integrated."
         },
         {
           "id": "b0157",
           "section": "Goal Progress 7",
           "type": "p",
-          "line": 658,
+          "line": 663,
           "text": "Latest: Formal completion still awaits Lex's report and acceptance testing evidence."
         },
         {
           "id": "b0158",
           "section": "Goal Progress 7",
           "type": "p",
-          "line": 659,
+          "line": 664,
           "text": "Reason: Original October target has passed; the current completion date is to be confirmed."
         },
         {
           "id": "b0159",
           "section": "Goal Progress 7",
           "type": "p",
-          "line": 660,
+          "line": 665,
           "text": "Next step: Integrate the Apple fixes, freeze test builds per platform, and complete acceptance testing for line selection, connect, disconnect and reconnect."
         },
         {
           "id": "b0160",
           "section": "Goal Progress 7",
           "type": "details-summary",
-          "line": 665,
+          "line": 670,
           "text": "G12 Payment Interface and Payment Loop Closure At Risk In Progress"
         },
         {
           "id": "b0161",
           "section": "Goal Progress 7",
           "type": "p",
-          "line": 667,
+          "line": 672,
           "text": "Purchase flows being rebuilt; payments cannot be collected yet"
         },
         {
           "id": "b0162",
           "section": "Goal Progress 7",
           "type": "p",
-          "line": 668,
+          "line": 673,
           "text": "On October 9 Lex reported that top-up, base plan, dedicated line and dedicated IP purchases are being rebuilt with the payment and subscription APIs; Roy handles payment-gateway business matters."
         },
         {
           "id": "b0163",
           "section": "Goal Progress 7",
           "type": "p",
-          "line": 669,
+          "line": 674,
           "text": "Latest: Source reconciliation: plan purchase, balance payment, top-up and payment event code exists; order wiring for dedicated lines and dedicated IPs is not yet merged into the main branch, and API checks still list errors."
         },
         {
           "id": "b0164",
           "section": "Goal Progress 7",
           "type": "p",
-          "line": 670,
+          "line": 675,
           "text": "Risk: The app cannot collect payments yet; this gates the first release."
         },
         {
           "id": "b0165",
           "section": "Goal Progress 7",
           "type": "p",
-          "line": 671,
+          "line": 676,
           "text": "Next step: Connect the four purchase flows and verify payment success/failure, order reconciliation, duplicate events, balance and entitlements."
         },
         {
           "id": "b0166",
           "section": "Goal Progress 7",
           "type": "details-summary",
-          "line": 676,
+          "line": 681,
           "text": "G16 Multi-hop VPN (entry and exit VPN nodes) Planned"
         },
         {
           "id": "b0167",
           "section": "Goal Progress 7",
           "type": "p",
-          "line": 678,
+          "line": 683,
           "text": "Scope confirmed; development pending"
         },
         {
           "id": "b0168",
           "section": "Goal Progress 7",
           "type": "p",
-          "line": 679,
+          "line": 684,
           "text": "Plans and user profiles already have multi-hop eligibility fields, but the client has no entry/exit VPN nodes or chained connection."
         },
         {
           "id": "b0169",
           "section": "Goal Progress 7",
           "type": "p",
-          "line": 680,
+          "line": 685,
           "text": "Next step: Chained dialing in the tunnel core, backend topology and credentials, VPN node selection, and end-to-end Android connection verification."
         },
         {
           "id": "b0170",
           "section": "Goal Progress 7",
           "type": "details-summary",
-          "line": 685,
+          "line": 690,
           "text": "G17 Full smart routing and traffic-splitting policies Planned"
         },
         {
           "id": "b0171",
           "section": "Goal Progress 7",
           "type": "p",
-          "line": 687,
+          "line": 692,
           "text": "Configuration Groundwork Exists; Engine Traffic Splitting Is Not Integrated"
         },
         {
           "id": "b0172",
           "section": "Goal Progress 7",
           "type": "p",
-          "line": 688,
+          "line": 693,
           "text": "Client and server configuration exists, but the kernel does not yet parse rules or split traffic; traffic still goes through the selected exit."
         },
         {
           "id": "b0173",
           "section": "Goal Progress 7",
           "type": "p",
-          "line": 689,
+          "line": 694,
           "text": "Next step: Complete kernel rules, versioned rule sets, split DNS and fail-safe protection, then run acceptance testing per platform."
         },
         {
           "id": "b0174",
           "section": "Goal Progress 7",
           "type": "p",
-          "line": 693,
+          "line": 698,
           "text": "Multi-platform release"
         },
         {
           "id": "b0175",
           "section": "Goal Progress 7",
           "type": "details-summary",
-          "line": 695,
+          "line": 700,
           "text": "G13 Sequential Multi-platform Releases Delayed In Progress"
         },
         {
           "id": "b0176",
           "section": "Goal Progress 7",
           "type": "p",
-          "line": 697,
+          "line": 702,
           "text": "Test deliveries are recorded; the production release gate is not yet closed"
         },
         {
           "id": "b0177",
           "section": "Goal Progress 7",
           "type": "p",
-          "line": 698,
+          "line": 703,
           "text": "Android APK delivered to QA August 28; Apple builds (not yet signed) September 15; Windows staging deployment confirmed September 20; after October 7 the Windows packaging script still checks old paths."
         },
         {
           "id": "b0178",
           "section": "Goal Progress 7",
           "type": "p",
-          "line": 699,
+          "line": 704,
           "text": "Latest: One round of development-branch merges on November 2; some changes are not yet merged into the main branch; release requires acceptance testing of purchase paths and connection on each platform; date to be confirmed."
         },
         {
           "id": "b0179",
           "section": "Goal Progress 7",
           "type": "p",
-          "line": 700,
+          "line": 705,
           "text": "Reason: The Sprint 1 report planned an all-platform release in late June; purchase flows are not connected and platform acceptance testing is not closed; date to be confirmed."
         },
         {
           "id": "b0180",
           "section": "Goal Progress 7",
           "type": "p",
-          "line": 701,
+          "line": 706,
           "text": "Next step: Fix the Windows package rebuild; in the order Android → Windows → macOS/iOS, complete signing, installation, connection and payment acceptance testing on each platform."
         },
         {
           "id": "b0181",
           "section": "To-do 9",
           "type": "heading",
-          "line": 708,
+          "line": 713,
           "text": "To-do 9"
         },
         {
           "id": "b0182",
           "section": "To-do 9",
           "type": "p",
-          "line": 710,
+          "line": 715,
           "text": "G10 Connection foundation, automatic line selection and protocol regression"
         },
         {
           "id": "b0183",
           "section": "To-do 9",
           "type": "p",
-          "line": 727,
+          "line": 732,
           "text": "G13 Sequential multi-platform release"
         },
         {
           "id": "b0184",
           "section": "To-do 9",
           "type": "p",
-          "line": 739,
+          "line": 744,
           "text": "G12 Payment Interface and Closed Loop"
         },
         {
           "id": "b0185",
           "section": "To-do 9",
           "type": "p",
-          "line": 750,
+          "line": 755,
           "text": "G14 Independent GitLab repo and staging backend"
         },
         {
           "id": "b0186",
           "section": "To-do 9",
           "type": "p",
-          "line": 756,
+          "line": 761,
           "text": "G17 Full smart routing and traffic-split policy"
         },
         {
           "id": "b0187",
           "section": "To-do 9",
           "type": "details-summary",
-          "line": 768,
+          "line": 773,
           "text": "How statuses are judged"
         },
         {
           "id": "b0188",
           "section": "To-do 9",
           "type": "p",
-          "line": 769,
+          "line": 774,
           "text": "Goals, IDs and statuses come from the annual goal dashboard; later progress is marked \"Latest\". Goal counts are not a product completion percentage. Completed this period lists items confirmed done since 10-10; to-dos are items still open and mentioned in recent reports."
         },
         {
           "id": "b0189",
           "section": "To-do 9",
           "type": "p",
-          "line": 770,
+          "line": 775,
           "text": "Delayed: a report states a delay, or the target date has passed without completion; when no reason is given it shows \"Reason not yet provided\". At risk: a risk stated in a report, or an open top-priority item. Found by the team: issues the team discovered and reported itself during development, audits or checks."
         }
       ]

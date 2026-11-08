@@ -20,6 +20,9 @@ Static stakeholder-report site. Internal plans and execution evidence belong in
 - Goal status is strategic aggregation; a completed Jira ticket does not itself
   complete a goal. Preserve Arrowfish/FFF runtime, account, database, Redis,
   secret, and migration-history isolation when reporting shared work.
+- The progress report declares `data-own-theme`, carries its own light and dark
+  tokens, and must not load `assets/site-theme.css`; the shell maps `--af-*` to
+  the same palette in `index.html`.
 - Publish no internal plans, issues, credentials, or infrastructure inventory.
 
 ## When relevant
